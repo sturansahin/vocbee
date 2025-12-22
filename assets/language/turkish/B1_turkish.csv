@@ -1,0 +1,806 @@
+word|sentence1|sentence2
+kesinlikle.|Bu kitaba bayılıyorum.|Kararından kesinlikle emindi.
+akademik|Fizik alanında akademik bir geçmişi var.|Akademik yıl Eylül'de başlar.
+erişim|Sistemi açmak için bir şifreye ihtiyacın var.|Bilgiye erişim çok önemlidir.
+konaklama|Geceyi geçirmek için bir yer bulmalıyız.|Otel mükemmel konaklama imkanı sunuyor.
+hesap|Geçen hafta bir banka hesabı açtım.|Lütfen hesabınızın bakiyesini kontrol edin.
+başarı|En büyük başarısı şampiyonluğu kazanmaktı.|Akademik başarılarıyla gurur duyuyordu.
+eylem|Bu durumda hızlı hareket etmelisin.|İçgüdülerine göre hareket etmeye karar verdi.
+ekle|Lütfen adını listeye ekle.|Son dokunuşları yapmayı unutma.
+ekleme|Yeni özelliklerin eklenmesi yazılımı geliştirdi.|Maaşına ek olarak, ikramiye de alıyor.
+hayran olmak|İşine olan bağlılığına hayranım.|Birçok insan onun sanatsal yeteneğine hayran.
+itiraf et|O, hatasını kabul etti ve özür diledi.|Yanıldığını itiraf etmek istemedi.
+Gelişmiş|O, matematikte ileri bir ders aldı.|Teknoloji gelişmiş ve verimli.
+tavsiye|Sana iş teklifini kabul etmeni tavsiye ediyorum.|Ona bir doktora görünmesi tavsiye edildi.
+Yeterli.|Yeni bir araba almaya gücüm yetmez.|Lüks bir yaşam tarzına sahip olabilirler.
+yaş|Kaç yaşındasın?|O, okul çağındadır.
+Yaşlı|Yaşlı adam bankta oturdu.|Yaşlı peynirin daha güçlü bir tadı vardır.
+Ajan|Gizli bir ajan olarak çalışıyor.|Seyahat acentesi yolculuğumuzu planlamamıza yardım etti.
+anlaşma|Uzun müzakerelerden sonra bir anlaşmaya vardılar.|Anlaşma her iki taraf tarafından da imzalanmıştır.
+İleri.|Önümüzdeki yol inşaat için kapalı.|Proje için önceden plan yapmalıyız.
+Hedef|Amacım İngilizce becerilerimi geliştirmek.|Kariyeri için net bir hedefi var.
+alarm|Alarmı sabah 7'ye ayarladım.|Yangın alarmı beklenmedik bir şekilde çaldı.
+albüm|En sevdiğim grubun yeni albümünü aldım.|Fotoğraf albümü yolculuğumuzdan hatıralar içeriyor.
+alkol|O alkol içmez.|Alkol büyük miktarlarda zararlı olabilir.
+alkollü|O iyileşen bir alkolik.|Alkollü içeceklerin buraya girmesine izin verilmez.
+alternatif|Alternatif bir çözüm bulmalıyız.|Birçok alternatif enerji kaynağı vardır.
+şaşkın|Performans beni şaşırttı.|Manzaranın güzelliğine hayran kaldı.
+hırslı|Onun hırsı başarılı bir girişimci olmak.|Başarılı olmak için güçlü bir hırsı var.
+Hırslı.|O hırslı bir genç kadın.|Onun hırslı planları herkesi etkiledi.
+analiz et|Verileri dikkatlice analiz etmeliyiz.|Rapor, politikanın etkisini analiz edecek.
+analiz|Analiz önemli eğilimleri ortaya çıkardı.|Karar vermek için kapsamlı bir analiz şarttır.
+İlan et.|Sonuçları yarın duyuracaklar.|Nişanını ailesine duyurdu.
+duyuru|İlan toplantı sırasında yapıldı.|Yeni politika hakkında bir duyuru aldık.
+can sıkıcı|Onun sürekli şikayet etmesi beni rahatsız ediyor.|Küçük kardeşini rahatsız etme.
+kızgın|Yüksek gürültü onu rahatsız etti.|Gecikme onu rahatsız etti.
+Can sıkıcı.|Sineklerin uğultusu can sıkıcıdır.|İnsanların sözünü kesmesi can sıkıcıdır.
+ayrı ayrı|İki bina birbirinden ayrı.|Yıllar geçtikçe birbirlerinden uzaklaştılar.
+Özür dilerim.|Hata için özür dilemeliyim.|Geç kaldığı için özür diledi.
+başvuru|İş için başvurumu yaptım.|Başvuru süreci oldukça basit.
+atama|Saat 3'te doktor randevum var.|Randevuyu kaçırmış ve randevunu değiştirmek zorunda kalmış.
+takdir et.|Yardımın için gerçekten minnettarım.|O, doğanın güzelliğini takdir eder.
+Yaklaşık|Toplantı yaklaşık iki saat sürecek.|Etkinlikte yaklaşık 100 kişi vardı.
+Tutuklama|Polis dün gece şüpheliyi tutukladı.|O, alkolün etkisi altında araba kullanmaktan tutuklandı.
+varış|Trenin gelişi gecikti.|Misafirlerimizin gelişi için heyecanlıydık.
+görevlendirme|Yarın matematik ödevim var.|Öğretmen bize zor bir görev verdi.
+Yardım et.|Bu görevde bana yardım edebilir misin?|O, müdürün asistanı olarak işe alındı.
+Atmosfer|Odadaki atmosfer gergindi.|Öğrenme için olumlu bir atmosfer yaratmalıyız.
+Bağla.|Lütfen dosyayı e-postanıza ekleyin.|Belgeyi eklemeyi unuttum.
+tavır|Projeye karşı tutumu olumluydu.|İş yerinde iyi bir tavır sergilemek önemlidir.
+çekmek|Reklam, müşterileri çekmek için tasarlanmıştır.|Çiçekler arıları ve diğer tozlandırıcıları cezbeder.
+çekicilik|İki karakter arasında güçlü bir çekim var.|Eğlence parkı aileler için popüler bir cazibe merkezidir.
+yetkili|O, eski tarih konusunda bir otorite.|Öğretmenlerinizin otoritesine saygı duymalısınız.
+ortalama|Temmuz ayındaki ortalama sıcaklık 30 derece.|Matematikte ortalama bir puanı var.
+ödül|Olağanüstü performansından ötürü bir ödül aldı.|Nobel Ödülü prestijli bir ödüldür.
+farkındayım|Programdaki değişikliklerden haberiniz var mı?|O, potansiyel risklerin farkında değildi.
+Geriye doğru.|Araba tepeden geriye doğru yuvarlandı.|Birkaç adım geriye gitti.
+pişirin.|Hafta sonları kurabiye pişirmeyi severim.|Parti için lezzetli bir pasta pişirdi.
+denge|İş ve hayat arasında dengeyi korumak önemlidir.|Sorumlulukları arasında iyi bir denge var.
+yasaklama|Okul, sınıfta cep telefonlarını yasaklamaya karar verdi.|Uygunsuz davranışlar yüzünden kulüpten uzaklaştırıldı.
+banka (nehir)|Nehrin kıyısında piknik yaptık.|Çocuklar nehrin kıyısında oynadılar.
+taban|Heykelin tabanı mermerden yapılmıştır.|Projemiz için sağlam bir temel bulmalıyız.
+Temel|Bu ders, ekonominin temel ilkelerini kapsar.|Matematiğin temel anlayışına sahip olmak önemlidir.
+Temel|Onun argümanının temeli kusurludur.|Araştırmamız için sağlam bir temel oluşturmalıyız.
+batarya|Uzaktan kumandamın pilini değiştirmem gerek.|Telefonumun pil ömrü azalıyor.
+savaş|Savaş birkaç gün sürdü.|Savaşta cesurca savaştılar.
+güzellik|Günbatımının güzelliği nefesimi aldı.|O, doğal güzelliği ile bilinir.
+arı|Arı önemli bir tozlandırıcıdır.|Arıcılık büyüleyici bir hobidir.
+inanç|Adalete olan inancı sarsılmaz.|Birçok insan eğitimin önemli olduğuna inanıyor.
+Çan çalıyor.|Okul zili sabah 8'de çalıyor.|Bahçesinde güzel bir çan var.
+bükülmek|Kağıdı bükmemeye dikkat et.|Ayakkabılarını bağlamak için eğilmek zorunda kaldı.
+ödeme|Yeni politika birçok insana fayda sağlayacak.|Sağlıklı bir yaşam tarzının yararlarından zevk alıyor.
+Daha iyi.|İyi bir uykudan sonra kendimi daha iyi hissediyorum.|Bu çözüm önceki çözümden daha iyidir.
+ısır|Dilini ısırmamaya dikkat et.|Köpek oyuncaklarını ısırmayı sever.
+blok|Bir araba ile yolu kapatmaya çalıştılar.|Yeni yasa, haksız uygulamaları engelleyecek.
+tahta|Öğretmen dersleri tahtaya yazdı.|Bu proje için daha büyük bir tahtaya ihtiyacımız var.
+Bomba.|Bomba şehir merkezinde patladı.|Terk edilmiş binada bir bomba bulmuşlar.
+sınır|Nehir iki ülke arasında doğal bir sınır oluşturur.|Sınırı herhangi bir sorun olmadan geçtiler.
+can sıkıntısı|Çalışırken beni rahatsız etme.|İnsanların geç kalması beni rahatsız ediyor.
+dalı|Ağacın güçlü bir dalı var.|Dalın üzerine oturdu ve bir kitap okudu.
+marka|Nike popüler bir spor markasıdır.|Ben bu kahve markasını tercih ederim.
+cesur|Cesur asker çocuğu kurtardı.|Doğru olanı savunmak için cesur bir insan gerekir.
+nefes|Derin bir nefes al ve rahatla.|Nefesinde sarımsak kokusu vardı.
+Nefes al.|Derin nefes almayı unutma.|Yüzürken nefes almayı unuttu.
+nefes alma|Nefes egzersizleri stresi azaltabilir.|Nefes alma sorunu var.
+gelin|Gelin düğün gününde çok güzel görünüyordu.|O, gelinin arkadaşıdır.
+kabarcık|Çocuklar parkta baloncuk üflediler.|Havada bir baloncuk patladı.
+gömmek|Zaman kapsülünü gömmeye karar verdiler.|Geçmişini gömmek istiyor.
+tarafından|Kitap ünlü bir yazar tarafından yazıldı.|O, trenle seyahat etti.
+Sakin ol.|Lütfen acil durum sırasında sakin kalın.|O sakin bir sesle konuştu.
+kampanya|Kampanya başarılı oldu.|Yeni bir reklam kampanyası başlattılar.
+kampüs|Üniversite kampüsü çok güzel.|Kampüste birçok ağaç var.
+aday|O, pozisyon için bir aday.|Adayların yarın görüşmeleri olacak.
+Kapak|Beyzbol şapkası takıyordu.|Şapka gözlerinizi güneşten korur.
+Yüzbaşı.|Takımın kaptanı çok tecrübeli.|O, geçen yıl kaptan olarak atandı.
+dikkatsiz|Onun dikkatsiz hataları şirkete para kazandırdı.|Daha dikkatli ol; bu kadar dikkatsiz olma.
+kategori|Bu kitap kurgu kategorisine ait.|Birçok müzik kategorisi var.
+tavan|Tavan beyaz boyalı.|Şamdan tavandan asılı.
+kutlama|Onun doğum günü için büyük bir kutlama yaptık.|Kutlama bütün gece sürdü.
+Merkezi|Central Park dinlenmek için harika bir yer.|Temel sorun hala çözülememiştir.
+merkez|Alışveriş merkezi hafta sonları çok meşguldür.|Şehir merkezinde yaşıyor.
+tören|Mezuniyet töreni Haziran ayında yapılacak.|Geleneksel bir düğün töreni yaptılar.
+zincir|Bisiklet zincirle kilitli.|Boynuna bir zincir takıyordu.
+meydan okumak|Dağa tırmanmak büyük bir meydan okumaydı.|İyi bir meydan okumayı seviyor.
+Şampiyon|O turnuvanın şampiyonu.|O, final maçını kazandıktan sonra şampiyon oldu.
+kanal|Bu kanaldan en sevdiğim programları izliyorum.|Kanal 7/24 haber yayınlıyor.
+bölüm|Bu kitabın ilk bölümü.|Her bölümün sonunda bir özet vardır.
+yükleme|Burada park etmek için bir ücret var.|Ekstra hizmetler için sizden ücret alacaklar.
+ucuz|Bu gömlek çok ucuz.|Tatil için ucuz bir otel buldum.
+hile yapmak|Sınavda kopya çekme.|O hile yaparken yakalandı.
+neşeli|Onun neşeli bir kişiliği var.|Neşeli müzik ruhumu yükseltti.
+kimyasal|Su bir kimyasal bileşiktir.|Kimyasal reaksiyon ısı üretti.
+göğüs|Göğsünde bir dövmesi var.|Hazine sandığı altınla doluydu.
+çocukluk|Mutlu bir çocukluk geçirdim.|Çocukluk anıları çok değerlidir.
+İddia|Ürünle ilgili bir iddia yaptı.|İddiası kanıtlarla desteklendi.
+madde|Bu yasal bir madde.|Sözleşmede gizlilik şartı var.
+Açık.|Talimatlar açık.|Gelecek için net hedefleri var.
+Tıkla.|Lütfen bağlantıyı tıklayın.|Bir tıklama sesi duydum.
+müşteri|Müşteri her zaman haklıdır.|Müşteriyle görüşmemiz gerek.
+tırmanmak|Dağa tırmanmayı planlıyorlar.|Ağaçlara tırmanmayı sever.
+Yakın|Lütfen kapıyı kapatın.|Dükkan evime yakın.
+kumaş|Bu kumaş pamuktan yapılmıştır.|Proje için bir parça kumaşa ihtiyacım var.
+İpucu|Gizem hakkında bir fikrim var.|Dedektif önemli bir ipucu buldu.
+koç|O bir futbol koçu.|Koç bize değerli tavsiyeler verdi.
+kömür|Tren kömürle çalışıyor.|Bir kömür madeni keşfettiler.
+madeni para|Sokakta bir para buldum.|O nadir paralar toplar.
+toplama|Onun bir pul koleksiyonu var.|Müzenin yeni bir sanat koleksiyonu var.
+Renkli|Renkli kalemleri severim.|Duvarlar parlak renklere boyanmıştır.
+Birleştir|Çabalarımızı birleştirelim.|Tarif tatlı ve ekşi lezzetleri birleştirir.
+Yorum|Bir yorum bırakabilir miyim?|Onun yorumu çok anlayışlıydı.
+Ticari|Bu ticari bir ürün.|Reklam çok eğlenceliydi.
+Bağlanmak|Projeyi bitirmeye kararlıyım.|O davasına kendini adadı.
+İletişim|İyi iletişim anahtarıdır.|İletişimimizi geliştirmemiz gerek.
+karşılaştırma|Bu bir fiyat karşılaştırması.|Geçen yıla kıyasla, satışlar arttı.
+Rakip|Ana rakipimiz çok güçlü.|Rakiplerimizi analiz etmeliyiz.
+rekabetçi|Bu rekabetçi bir pazar.|O, sporda çok rekabetçidir.
+Şikayet|Hizmet hakkında bir şikayetim var.|Şikayet çabucak çözüldü.
+karmaşık|Bu karmaşık bir problem.|Talimatlar çok karmaşık.
+konsantrasyon|İşime konsantre olmalıyım.|Konsantre olmakta zorluk çekiyor.
+Sonuç|Toplantıyı şimdi bitirebiliriz.|O, konuşmasını bir alıntı ile bitirdi.
+sonuç|Sonuç ne?|Sonuç kanıtlara dayanıyor.
+Kendine güveniyorum.|O, kendi yeteneklerine güveniyor.|Kendine güvenle konuştu.
+onayla.|Randevuyu doğrulayabilir misiniz?|Bir onay e-postası aldım.
+karıştırmak|Bu soru bazı insanları şaşırtabilir.|Sorunu karıştırma.
+Kafası karışmış.|Talimatlar yüzünden kafası karışmıştı.|Toplantı sırasında kafası karışmış görünüyordu.
+bağlantı|Aralarında güçlü bir bağlantı var.|İnternet bağlantısı yavaş.
+sonuç|Her eylemin bir sonucu vardır.|Kararın sonuçları ciddi oldu.
+oluşur.|Ekip beş üyeden oluşur.|Komite, alan uzmanlarından oluşur.
+tüketmek|Daha az enerji tüketmeliyiz.|Yangın tüm binayı yakmış.
+tüketici|Tüketicinin her zaman hakkı vardır.|Tüketici davranışlarını anlamamız gerekiyor.
+temas|Lütfen benimle iletişime geçin.|Eski arkadaşlarımla iletişimi kaybettim.
+konteyner|Nakliye konteynırı dolu.|Depolamak için daha fazla konteynere ihtiyacımız var.
+İçerik|Kitabın içeriği ilginçtir.|Lütfen içeriği dikkatlice gözden geçirin.
+Sürekli|Sürekli gürültü can sıkıcıdır.|Ailesinden sürekli destek alıyor.
+karşıtlık|İki tablo arasında bir zıtlık var.|Geçen yıla göre satışlar arttı.
+Uygun|Burası çok uygun bir yer.|Senin için uygun bir zaman var mı?
+inandırmak|Onu bize yardım etmesi için ikna etmeliyim.|Beni yeni restoranı denemeye ikna etti.
+Havalı|O ceket çok havalı.|Harika bir stili var.
+kostüm|Süper kahraman kostümü giyiyordu.|Kostüm partisi çok eğlenceliydi.
+kulübe|Dağlarda bir kulübeleri var.|Kulübe çok rahat.
+pamuk|Bu gömlek pamuktan yapılmıştır.|Pamuk yumuşak bir malzemedir.
+Sayın|On'a kadar sayabilir misin?|Parayı sayabilirim.
+kırsal|Onlar kırsalda yaşıyorlar.|Kırsal bölge baharda güzeldir.
+mahkeme|Mahkeme oturumu başlıyor.|Suç için mahkemeye götürüldü.
+kapak|Lütfen masayı bir bezle örtün.|Kar yeryüzünü kapladı.
+kapalı|Kitap toz içinde.|Araba karla kaplı.
+kremalı|Kahveme krema koymayı severim.|Cildine krem sürdü.
+suçlu|Suçlu polis tarafından yakalandı.|Sabıka kaydı var.
+zalim|Ona bu şekilde davranmak zalimceydi.|Bu acımasız ceza herkesi şok etti.
+kültürel|Kültürel farklılıklar zorluk yaratabilir.|O, kültürel antropoloji okuyor.
+para birimi|Japonya'nın para birimi yen'dir.|Para değişimi yapmalıyım.
+Akım|Mevcut durum zor.|Şu anki işiniz nedir?
+Şu anda|Şu anda bir proje üzerinde çalışıyorum.|Şu anda yurtdışında okuyor.
+Perde|Perde mavi.|Lütfen perdeyi kapatın.
+âdet|Bu özel bir tasarım.|Özel çözümler sunuyorlar.
+kesilmiş|Lütfen kağıdı kes.|O, pastayı parçalara ayırdı.
+her gün|Haberleri her gün okuyorum.|Günlük bir rutini var.
+hasar|Fırtına çatıya zarar verdi.|Hasarı değerlendirmemiz gerek.
+anlaşma|İşbirliği için bir anlaşma yaptılar.|Anlaşma her iki taraf için de yararlıydı.
+on yıl|On yıl on yıl demektir.|Son on yılda önemli değişiklikler oldu.
+Dekore et.|Parti için odayı dekore edeceğiz.|Evini dekore etmeyi sever.
+Derin|Göl çok derin.|Dalmadan önce derin bir nefes aldı.
+tanımla.|Kelimeyi tanımlayabilir misin?|Mutluluğu tanımlamak zordur.
+Kesin|Bu sorunun kesin bir cevabı var.|Kesin bir plana ihtiyacımız var.
+tanımlama|Bu kelimenin tanımı nedir?|Tanımı açık değil.
+teslim etmek|Paketi yarın teslim edeceğim.|Yiyecek teslim etmeyi teklif ediyorlar.
+çıkış|Kalkış saati sabah 10'da.|Onun ayrılması bizi üzüyor.
+Ne var ki|Yağmura rağmen yürüyüşe çıktık.|O, zorluklara rağmen başarılı oldu.
+varış yeri|Paris popüler bir turistik yerdir.|Hayalindeki seyahat hedefin nedir?
+belirlemek|Sorunun nedenini belirlemeliyiz.|Test seviyenizi belirlemeye yardımcı olacak.
+belirlenmiş|Başarılı olmak için kararlı.|Zorluklara rağmen kararlılığını korudu.
+gelişme|Teknoloji hızla gelişiyor.|Kişisel gelişimimize odaklanıyoruz.
+diyagram|Açıklama için lütfen diyagrama bakın.|Şekil süreci gösteriyor.
+elmas|Elmas çok değerli.|O bir elmas yüzük aldı.
+zorluk|Birçok zorlukla karşılaştı.|Görevin zorluğu beklenmedikti.
+Doğrudan|Lütfen bana doğrudan cevap ver.|Yol şehre doğrudan giden bir yoldur.
+doğrudan|Onunla doğrudan konuştum.|Bilgi doğrudan ona gönderildi.
+Kirli|Ayakkabılarınızdaki kir gözle görülüyor.|Lütfen yerden pisliği temizleyin.
+zararlı|Asıl dezavantaj maliyet.|Bu yaklaşımın avantajları ve dezavantajları var.
+hayal kırıklığına uğradım.|Sonuçlarla hayal kırıklığına uğradı.|Filmden sonra hayal kırıklığına uğradım.
+hayal kırıklığı|Performans hayal kırıklığı yarattı.|İlerleme kaydetmemek hayal kırıklığı.
+indirim|Ürün için indirim teklif ettiler.|Tatil indirimleri sırasında alışveriş yapmayı seviyorum.
+sevmemek|Yüksek sesleri sevmem.|Baharatlı yiyeceklerden hoşlanmaz.
+bölmek|Görevleri takım arasında bölmemiz gerekiyor.|Pasta eşit parçalara bölündü.
+belgesel|Büyüleyici bir belgesel izledim.|Belgesel iklim değişikliğini araştırıyor.
+bağışla.|Hayır kurumuna bağış yapmak istiyorum.|İnsanları kan bağışına teşvik ediyorlar.
+İki katı|Çift espresso alabilir miyim?|Fiyat geçen yıl iki katına çıktı.
+şüphe|Onun dürüstlüğü hakkında bazı şüphelerim var.|Onun yetenekli olduğuna şüphe yok.
+giyinmiş|O, güzel bir elbise giydi.|Olay için iyi giyinmişti.
+düşüş|Bardağı düşürmemeye dikkat et.|Sıcaklık bir gecede düşecek.
+davul|Grupta davul çalar.|Davulun sesi yüksek sesleydi.
+sarhoş|Partiden sonra sarhoştu.|Sarhoşken içip araba kullanma.
+ödenen|Ödeme gelecek hafta yapılacak.|Mayıs ayında doğum yapacak.
+toz|Raftaki toz kalın.|Lütfen masanın tozunu sil.
+görev|Başkalarına yardım etmek senin görevin.|Görevlerini ciddiye alıyor.
+Deprem|Deprem önemli hasarlara neden oldu.|Depremi kilometrelerce uzaktan hissettik.
+Doğu|Ülkenin doğu kısmı dağlık.|Doğu kıyısına gittiler.
+ekonomik|Ekonomik durum iyileşiyor.|Onlar ekonomik politikaları tartıştılar.
+ekonomi|Ekonomi istikrarlı bir şekilde büyüyor.|Güçlü bir ekonomi herkese fayda sağlar.
+kenar|Uçurumun kenarında dikkatli ol.|Bıçağın keskin bir ucu var.
+editör|Editör makaleyi yayınlanmadan önce gözden geçirdi.|O bir dergi editörü olarak çalışıyor.
+eğitmek|Okullar öğrencileri etkili bir şekilde eğitmeyi amaçlar.|Halkı sağlık sorunları hakkında eğitmek önemlidir.
+eğitimli|O, diploması olan eğitimli bir kadındır.|Eğitimli kişiler genellikle daha iyi iş beklentilerine sahiptir.
+eğitimsel|Belgesel hem eğlenceli hem de eğiticiydi.|Eğitim programları çocukların gelişimi için gereklidir.
+etkili|Yeni pazarlama stratejisi etkili olduğunu kanıtladı.|Etkili iletişim başarılı bir ilişkinin anahtarıdır.
+etkili olarak|O, zamanını etkin bir şekilde yöneterek son tarihi karşıladı.|Ekip, sorunu çözmek için etkili bir şekilde birlikte çalıştı.
+çaba|Projeyi tamamlamak çok çaba gerektirdi.|Yeteneklerini geliştirmek için gösterdiği çabalar karşılığını verdi.
+seçim|Seçim gelecek ay yapılacak.|Seçmen katılım oranı son seçimlerde yüksekti.
+element|Su, tüm canlılar için hayati bir unsurdur.|Planın temel unsuru takım çalışması.
+Utanıyorum.|Onun adını unuttuktan sonra utanç hissetti.|O, hatasından dolayı utandı.
+utanç verici|Bu, ilgili herkes için utanç verici bir an oldu.|Utanç verici durum çabucak unutuldu.
+acil durum|Acil bir durumda 911'i arayın.|Acil servis hızla geldi.
+duygu|Duygularını sanat yoluyla ifade etti.|Duygularını anlamak önemlidir.
+iş|İşsizlik oranları bu yıl arttı.|Kendi alanında iş arıyor.
+boş|Oda boş ve sessizdi.|Kaybettikten sonra içi boş hissetti.
+teşvik et|Öğretmenler öğrencileri soru sormaya teşvik ederler.|Ebeveynler çocuklarını okumaya teşvik etmeliler.
+Düşman|Bir zamanlar arkadaşlardı, ama şimdi düşman.|Düşman kuvvetleri savaşta yenildi.
+Nişanlı|Gelecek yıl evlenecekleri için nişanlılar.|Arkadaşıyla bir konuşmaya başlamıştı.
+mühendislik|Üniversitede mühendislik okudu.|Mühendislik zorlu bir alan.
+eğlendirmek|Palyaçonun işi çocukları eğlendirmek.|Misafirlerimizi eğlendirmenin bir yolunu bulmalıyız.
+eğlence|Şehir çok çeşitli eğlence seçenekleri sunar.|Eğlence sektöründe çalışıyor.
+Giriş|Müzenin girişi sol tarafta.|O, partide büyük bir giriş yaptı.
+giriş|Etkinliğe giriş ücretsizdir.|Lütfen giriş biletinizi güvenli bir yerde tutun.
+çevre|Çevre sorunları giderek daha önemli hale geliyor.|Örgüt çevre korumasına odaklanmaktadır.
+Bölüm|Dizinin son bölümü heyecan vericiydi.|Her bölüm farklı bir konuyu ele alıyor.
+eşit|Tüm insanlar eşit olarak muamele edilmelidir.|Yasa, tüm vatandaşlar için eşit hakları garanti eder.
+Aynı şekilde.|Ödül tüm kazananlara eşit olarak verilecektir.|Geçmişlerine bakılmaksızın eşit muamele görmeleri gerekir.
+Kaçış|Gerçeklikten kaçmanın tek yolu hayal gücüdür.|Kaçışını dikkatlice planladı.
+gerekli|Su yaşam için gereklidir.|Talimatlara uymak çok önemli.
+Sonunda|Sonunda soruna bir çözüm buldular.|Sonunda teklifi kabul etmeye karar verdi.
+incelemek|Doktor şimdi seni muayene edecek.|Tüm kanıtları incelemek önemlidir.
+hariç|John hariç herkes davetlidir.|Muz dışında tüm meyveleri severim.
+Değişim|Partide hediye alışverişi yaptılar.|Fikir alışverişi ilerleme için önemlidir.
+heyecan|Havadaki heyecan hissedilebilirdi.|Seyahatle ilgili heyecanını gizleyemedi.
+sergi|Sanat sergisi birçok ziyaretçi çekti.|İlk kişisel sergisine hazırlanıyor.
+genişletmek|Şirket, operasyonlarını denizaşırı ülkelere genişletmeyi planlıyor.|Ürün serimizi genişletmemiz gerekiyor.
+beklenen|Sonuçlar beklenenden daha iyiydi.|Yarışmanın beklenen kazananı o.
+yolculuk|Güney Kutbu'na yapılan keşif başarılı oldu.|Sefer için aylarca hazırlık yaptılar.
+tecrübe|Pazarlamada çok deneyimi var.|Yurtdışına seyahat etmek onun için değerli bir deneyimdi.
+tecrübeli|O deneyimli bir öğretmendir.|Takımın deneyimli oyunculara ihtiyacı var.
+deney|Bilim adamları bir deney yaptılar.|Deney ilginç sonuçlar verdi.
+Patla|Havai fişekler gece yarısı patlayacak.|Balon aşırı şişilirse patlayabilir.
+keşfet|Mağarayı keşfetmeyi planlıyorlar.|Yeni yerleri keşfetmeyi sever.
+patlama|Patlama kilometrelerce uzakta duyuldu.|Patlamanın nedenini araştırdılar.
+ihracat|Ülke diğer uluslara petrol ihraç ediyor.|Ürünlerini ihraç etmek için yeni pazarlar bulmaları gerekiyor.
+Ekstra|Projeyi tamamlamak için fazladan zamana ihtiyacın olacak.|Yolculuk için fazladan atıştırmalık getirdi.
+yüzü|O, kalabalığa yüz çevirdi.|Olanlardan sonra onunla yüzleşmeye dayanamadı.
+Oldukça.|Test oldukça kolaydı.|Kararından oldukça emindir.
+tanıdık|Burası tanıdık geliyor.|Bu kavramı pek tanımıyorum.
+fantezi|Partiye süslü bir elbise giydi.|Lüks bir otelde kalmışlar.
+Uzak|Mağaza buradan çok uzakta.|Çok uzakta, kırsalda yaşıyor.
+büyüleyici|Belgesel büyüleyiciydi.|Anlatacak büyüleyici bir hikayesi var.
+Modalı|O her zaman moda kıyafetler giyer.|Bu sezonun renkleri çok moda.
+Bağla.|Lütfen emniyet kemerinizi bağlayın.|Kağıtları birbirine bağlamak için bir klip kullandı.
+iyilik|Bana bir iyilik yapar mısın?|O, yeni politikayı destekliyor.
+korku|Yükseklik korkusu var.|Başarısızlık korkusu insanı felç edebilir.
+özellik|Yeni telefonun birkaç ilginç özelliği var.|Ana özelliklerinden biri de kamerası.
+çit|Bahçenin etrafına bir çit yaptılar.|Çitin boyanması gerekiyor.
+dövüşmek|Bölgedeki çatışmalar arttı.|Hakları için savaşıyorlardı.
+dosya|Lütfen dosyayı kapatmadan önce kaydet.|Dosyalarımı düzenlemem gerek.
+finansal|Şirketin güçlü bir finansal durumu var.|Öğrencilere finansal yardım sunuyorlar.
+Ateş|Yangın orman boyunca hızla yayıldı.|İtfaiyeciler yangını kontrol altına almak için çalıştılar.
+uygunluk|O, fitness hedeflerine odaklanmıştır.|Düzenli egzersiz, fitness için önemlidir.
+sabit|Sabit fiyat pazarlık edilemez.|Her hafta sabit bir programı var.
+bayrak|Bayrak rüzgarda dalgalanıyordu.|Kutlamak için bayrağı kaldırdılar.
+sel|Sel önemli hasarlara neden oldu.|Gelecekteki sellerin önlenmesi için çalışıyorlar.
+Un|Ekmek pişirmek için un lazım.|Tarif iki fincan un istiyor.
+akış|Nehrin akışı güçlüdür.|Bilgi akışını iyileştirmemiz gerekiyor.
+katlan|Lütfen kağıdı ikiye katla.|Bir çarşafı nasıl katlayacağını biliyor.
+Halk|Halk müziği bu bölgede popülerdir.|Festival halk geleneklerini kutlar.
+Sonraki|Ertesi gün güneşliydi.|Sadık hayranları vardı.
+kuvvet|Patlamanın gücü muazzamdı.|Arabayı itmek için tüm güçlerini kullandılar.
+Sonsuza kadar.|Seni sonsuza dek seveceğim.|Bu an hafızamda sonsuza dek kalacak.
+çerçeve|Resim için yeni bir çerçeve satın aldı.|Çerçeve katı ahşaptan yapılmıştı.
+Dondur|Sıcaklık düşerse su donur.|Geri kalanları dondurmayı unuttum.
+sık sık|İş için sık sık seyahat ediyor.|Otobüs gün boyunca sık sık hareket eder.
+dostluk|Onların arkadaşlığı yıllardır sürüyor.|Onunla olan dostluğuna değer veriyor.
+korkutmak|Yüksek gürültü çocukları korkutabilir.|Seni korkutmak istemedi.
+Korkuyorum.|Aniden gelen gürültüden korktu.|Korkmuş kedi yatağın altına saklandı.
+Korkutucu.|Film o kadar korkutucuydu ki uyuyamadım.|Geleceği öngörme konusunda korkutucu bir yeteneği var.
+Dondurulmuş|Göl kışın donmuştur.|Dondurucuda dondurulmuş bir pizza buldu.
+kızartma|Sebzeleri zeytinyağında kızartmayı severim.|Patatesleri altın kahverengi olana kadar kızartmalısın.
+yakıt|Araba dizel yakıtla çalışıyor.|Jeneratör için bir yakıt kaynağı bulmalıyız.
+fonksiyon|Kalbin ana işlevi kan pompalamaktır.|Bu düğmenin yazılımda belirli bir işlevi var.
+kürk|Ceket gerçek kürkten yapılmış.|Bazı hayvanların sıcak tutmak için kalın kürkleri vardır.
+Daha fazla|Bu konuyu daha fazla araştırmamız gerekiyor.|Proje hakkında daha fazla ayrıntı verebilir misiniz?
+garaj|Arabasını garaja park etti.|Garaj eski aletlerle dolu.
+toplanın.|İhtiyacımız olan tüm malzemeleri toplayalım.|O, baharda çiçek toplamayı sever.
+genel olarak|Genellikle erken kalkarım.|Hava genellikle sonbaharda yumuşak olur.
+nesli|Bu kuşak daha teknoloji bilgili.|Her neslin kendine özgü zorlukları vardır.
+cömert|Zamanıyla çok cömert.|Onun cömert bağışı birçok insana yardım etti.
+nazik|Nazik bir tavır sergiliyor.|Nazik esinti ferahlatıcıydı.
+Bayım.|O gerçek bir beyefendidir.|Beyefendi onun için kapıyı açtı.
+hayalet|Hayalet gece yarısı ortaya çıktı.|Hayaletlere ve ruhlara inanır.
+dev|Dev ağaç ormanın üzerinde yükseldi.|Onun dev bir pul koleksiyonu var.
+Memnun oldum.|Seni tekrar gördüğüme sevindim.|O, iyi haberi duymaktan memnun oldu.
+küresel|İklim değişikliği küresel bir sorundur.|Bu sorun için küresel bir çözüme ihtiyacımız var.
+eldiven|Dışarı çıkmadan önce eldivenlerini giydi.|Bu eldivenler sıcak yünden yapılmıştır.
+Gidin.|Mağazaya gitmem gerek.|Haydi biraz yürüyelim.
+Mallar|Mağaza çeşitli mallar satar.|Bu malları depoya taşımalıyız.
+sınıf|O, sınavında yüksek not aldı.|Öğretmen bu hafta sonu ödevleri notlayacak.
+mezun|Gelecek yıl üniversiteden mezun olacağım.|Onur derecesiyle mezun olmaktan gurur duyuyor.
+tahıl|Buğday, ekmek için kullanılan yaygın bir tahildir.|Çiftçi bu mevsim yeni bir tahıl ürünü ekti.
+minnettar|Yardımın için minnettarım.|Arkadaşlarının desteği için minnettar hissetti.
+büyüme|Bitki bu bahar önemli bir büyüme gösterdi.|Ekonomik büyüme, kalkınma için gereklidir.
+koruyan|Güvenlik görevlisi girişi izliyor.|İnternette mahremiyetimizi korumalıyız.
+Suçlu|Yardım etmediği için kendini suçlu hissetti.|Suçlu kararı açıklandı.
+el|Bir soru sormak için elini kaldırdı.|O, herkesle el sıkıştı.
+Asın.|Resmi duvara asmaya karar verdiler.|Ceketini asmayı unutma.
+Mutluluk|Mutluluk tatmin edici bir hayatın anahtarıdır.|Nereye giderse gitsin mutluluk yayar.
+Hiç de değil.|Seni duyamıyorum.|Neredeyse hiç dışarı çıkmıyor.
+nefret etmek|Sıra beklemekten nefret ederim.|Adaletsizlikten nefret eder.
+Baş|O, onay olarak kafasını salladı.|O, başını yukarı kaldırdı.
+başlık|Başlık dikkatimi çekti.|Bir gazete için manşet yazıyor.
+ısıtma|Isıtma sistemi çalışmıyor.|Kıştan önce ısıtmayı tamir etmeliyiz.
+Çok fazla.|Bütün gece şiddetli yağmur yağdı.|Egzersizden sonra ağır nefes alıyordu.
+helikopter|Helikopter şehrin üzerinde uçtu.|Helikopterle adanın turuna çıktık.
+vurgula|Lütfen önemli noktaları vurgulayın.|Öğretmen metni vurgulamak için bir işaretçi kullandı.
+çok|O, mesleğinde çok yetenekli.|Film eleştirmenler tarafından çok övüldü.
+kiralama|Daha fazla personel tutmamız gerekiyor.|O bir proje yöneticisi olarak işe alındı.
+tarihi|Antlaşmanın imzalanması tarihi bir olaydı.|O, şehirdeki birçok tarihi yeri ziyaret etti.
+tarihsel|Müzede tarihi eserler koleksiyonu vardır.|Romanın tarihsel bağlamını incelediler.
+dürüst|İlişkilerinizde dürüst olmak önemlidir.|O, soruya dürüst bir cevap verdi.
+Korkunç.|Film o kadar korkunçtu ki izleyemedim.|Yolculuk sırasında korkunç bir deneyim yaşadı.
+dehşet|Korku filmi beni koltuğumun kenarında tuttu.|Korku hikayeleri okumayı sever.
+ev sahibi|Evlerinde ev sahipliği yapacaklar.|O, akşam yemeği partileri için harika bir ev sahibi.
+avlanmak|Geyik avlamaya çıktılar.|Dağlarda avlanmayı sever.
+kasırga|Kasırga kıyıya ciddi hasar verdi.|Kasırga vurmadan önce bölgeyi boşaltmışlar.
+Acele et.|Otobüsü yakalamak istiyorsan acele etmelisin.|O her zaman sabahları acele eder.
+kimlik|Kimliğin deneyimlerinle şekilleniyor.|Kültürel kimliğiyle mücadele etti.
+görmezden gel|Sorunu görmezden gelmek kolay.|Uyarı işaretlerini görmezden gelmeyi seçti.
+yasadışı|Burada park etmek yasadışı.|Onlar yasadışı mal kaçakçılığı yaparken yakalandılar.
+hayali|Onun hayali bir arkadaşı var.|Hikayelerinde hayali bir dünya yarattılar.
+hemen|Derhal harekete geçmeliyiz.|Durum acil ilgi gerektiriyor.
+göçmen|Şehrin büyük bir göçmen nüfusu var.|Birçok göçmen daha iyi fırsatlar arayarak geliyor.
+etkisi|Yeni politikanın etkisi hala bilinmiyor.|Projenin çevresel etkisi değerlendirildi.
+İthalat|Ülke petrol ithalasına bağlıdır.|Yurtdışından mal ithal etmeye karar verdiler.
+önemi|Eğitimin önemi abartılamaz.|O, sıkı çalışmanın önemini anlıyor.
+izlenim|Görüşme sırasında güçlü bir izlenim bıraktı.|Şehirle ilgili ilk izlenimi olumluydu.
+etkileyici|Performans gerçekten etkileyiciydi.|Etkileyici bir özgeçmişi var.
+iyileştirme|Notlarında önemli bir gelişme oldu.|Şirket iyileştirme yolları arıyor.
+İnanılmaz.|O inanılmaz yetenekli.|Yukarıdan manzara inanılmaz güzel.
+Gerçekten.|Bu gerçekten olağanüstü bir başarıydı.|O, gerçekten bu iş için en iyi aday.
+belirtin|Sonuçlar daha fazla araştırmaya ihtiyaç olduğunu gösteriyor.|Lütfen formda tercihlerinizi belirtin.
+dolaylı|Onun dolaylı yorumları yorumlanması zordu.|Trafikten kaçınmak için dolaylı bir yol tuttu.
+kapalı|Ev içi bitkiler havanın kalitesini artırabilir.|Partiyi içeride yapmaya karar verdik.
+İçeride|Dışarıda oynamak için çok soğuk, içeride kalalım.|Çocuklar bugün içeride oynuyorlar.
+etkisi|Onun konuşması dinleyiciler üzerinde derin bir etki yarattı.|Sosyal medya kamuoyunu etkileyebilir.
+bileşen|Bu tarifin ana malzemesi tavuk.|İlaçların içerik listesinde alerjenleri kontrol ettiğinizden emin olun.
+yaralanmak|Oyun sırasında kimseyi incitmek istemedi.|O bir araba kazasında yaralandı.
+yaralı|Yaralananlar hastaneye götürüldü.|Hâlâ yaralarından iyileşiyor.
+Masum|Masum adam hapishaneden serbest bırakıldı.|Yüzünde masum bir ifade var.
+zekâ|Yapay zeka hızla büyüyen bir alandır.|Yüksek düzeyde duygusal zekası var.
+niyet ediyorum|Akşam yemeğinden önce ödevimi bitirmek niyetindeyim.|Zarar vermek istemediler.
+niyet|Benim niyetim başarılı olmanıza yardım etmek.|İyi niyetle hareket etti.
+yatırım yap.|Yeni teknolojiye yatırım yapmayı planlıyorlar.|Eğitimine çok zaman harcadı.
+araştır|Polis suçu araştıracak.|Sorunun nedenini araştırmamız gerekiyor.
+İlişkili|O, başlangıçtan itibaren projeye dahil oldu.|Karar verme sürecine dahil olan çok insan var.
+Demir|Demir vücut için gerekli bir mineraldir.|Kapı demirden yapılmıştır.
+konu|Asıl sorun finansman eksikliği.|Bu sorunu en kısa sürede çözmeliyiz.
+dergi|Bilimsel bir dergi için yazıyor.|Dergi her ay yeni araştırmalar yayınlıyor.
+yargıç|Gerçekleri bilmeden birini yargılamak adil değil.|Yargıç yargıyı yarın açıklayacak.
+hevesli|O, sanata büyük bir ilgi duyuyor.|O, insanların davranışlarını dikkatle gözlemler.
+Anahtar|Lütfen bana anahtarı verebilir misin?|Başarının anahtarı sıkı çalışmaktır.
+klavye|Belgeyi klavyesini kullanarak yazdı.|Klavye düzgün çalışmıyor.
+tekme|Topu kaleye tekmelemeye çalıştı.|O, ona oyunculu bir şekilde bacağına tekme attı.
+Öldürmek|Masum bir adamın öldürülmesi öfkeye yol açtı.|Karısını öldürmekle suçlandı.
+nazik (bakımlı)|O her zaman hayvanlara karşı naziktir.|Bana yardım etmen çok nazik.
+Öpücük|Yıldızların altında öpüştüler.|Odanın karşısından ona öpücük fırlattı.
+Kapıyı çal.|Lütfen girmeden önce çal.|Kapının çalındığını duydum.
+Etiket|Tüm kutularınızı etiketlediğinizden emin olun.|Şişedeki etiketin okunması zor.
+laboratuvar|Laboratuvar en son teknolojiyle donatılmıştır.|Kimya laboratuvarında çalışıyor.
+eksikliği|Bu davada kanıt eksikliği var.|Finansman eksikliği büyük bir sorun.
+En son|Son haberler pek de cesaret verici değil.|O her zaman en son modayı giyer.
+yatmak|Lütfen kitabı masaya koy.|Çimlerin üzerinde uzanıp bulutları izlemeyi sever.
+katman|Pastanın üç kat çikolata var.|Rafta bir toz tabakası var.
+kurşun|O, projede takımı yönetecek.|Tartışmaya önderlik etmek için seçildi.
+önde gelen|O, kendi alanında önde gelen bir uzmandır.|Ölümün ana nedeni kalp hastalığıdır.
+yaprak|Yaprak ağaçtan düştü.|Sonbaharda yapraklar renk değiştiriyor.
+deri|O, yeni bir deri ceket aldı.|Kanepe yüksek kaliteli deri yapılmıştır.
+yasal|Yasal danışmanlık istiyorlar.|Hukuk sistemi karmaşıktır.
+eğlence|Boş zamanlarında okumayı sever.|Boş zaman faaliyetleri zihinsel sağlık için önemlidir.
+uzunluk|Masanın uzunluğu altı fit.|Odanın uzunluğunu ölçmemiz gerek.
+seviye|O, İspanyolca'da bir başlangıç seviyesinde.|Yağmur nedeniyle su seviyesi yükseliyor.
+Yalan söyle.|Arkadaşlarına yalan söylemek doğru değil.|Nerede olduğu hakkında yalan söyleyerek yakalandı.
+sınır|Ne kadar ödünç alabileceğinin bir sınırı vardır.|Harcamalarımıza bir sınır koymalıyız.
+dudak|O, dudaklarına ruj sürdü.|Onu dudaklarından öptü.
+sıvı|Su oda sıcaklığında sıvıdır.|Sıvı bütün masaya döküldü.
+edebiyat|Klasik edebiyat okumayı sever.|Ders modern edebiyatı kapsar.
+Yaşamak|Konser canlı olarak yayınlanacak.|Onlar büyük bir şehirde yaşamak istiyorlar.
+yaşamak|Bu şehirde yaşam maliyeti yüksektir.|O, yaşam koşullarını iyileştirmeye odaklanmıştır.
+Yerel|Yerel pazar her Pazar açık.|Yerel ürünleri satın almayı tercih ediyor.
+Bulun|Anahtarlarımı bulmama yardım eder misin?|Harita restoranın yerini bulmana yardımcı olacak.
+yerleşmiş|Otel plajın yakınında yer almaktadır.|Ofis en üst katta yer alır.
+yerleşimi|Şu anki konumunuz nedir?|Olay yeri değişti.
+yalnız|Yeni şehirde kendini yalnız hissetti.|Bazen yalnız hissetmek normaldir.
+kayıp|Evcil hayvanını kaybetmesi onu çok sarstı.|O hala babasının kaybı için yas tutuyor.
+lüks|Lüks bir yaşam sürüyorlar.|Otel lüks konaklama imkanı sunuyor.
+deli|Geç kaldığı için arkadaşına kızmıştı.|Yeni bir proje için çılgın bir fikri var.
+Büyü|Sihirbaz bir sihirli numara yaptı.|Aşkın büyüsüne inanıyor.
+Çoğunlukla|Kitap esas olarak tarih hakkında.|O, esas olarak bilimle ilgileniyor.
+alışveriş merkezi|Alışveriş yapmak için alışveriş merkezine gittiler.|Alışveriş merkezinde çeşitli mağazalar var.
+yönetim|Büyük bir şirkette yönetim bölümünde çalışıyor.|Etkili yönetim başarının anahtarıdır.
+piyasa|Pazar her cumartesi açıktır.|O, pazarda taze sebze satın aldı.
+pazarlama|Üniversitede pazarlama okudu.|Pazarlama kampanyası başarılı oldu.
+evlilik|Bir düğün töreni planlıyorlar.|Evlilik bağlılık ve çaba gerektirir.
+Bu arada...|Bu arada, çocuklar dışarıda oynuyordu.|O, çalışıyordu; bu arada, arkadaşları parti yapıyorlardı.
+tedbir|İlerlemenizi ölçmek önemlidir.|Mobilya almadan önce odayı ölçmemiz gerek.
+orta|Resim orta stilde yapılmıştır.|Detaylara izin veren bir ortamda çalışmayı tercih ediyor.
+zihinsel|Zihinsel sağlık, fiziksel sağlık kadar önemlidir.|Zihinsel sağlığını iyileştirmek için adımlar atıyor.
+bahsetmek|Lütfen herhangi bir alerjiniz olduğunu belirtin.|Geç kalacağımı söylemeyi unuttum.
+karışıklık|Partiden sonra oda çok dağınıktı.|Masasını düzenli ve dağınık tutmayı sever.
+hafif|Hava baharda yumuşak olur.|Yemeğinde hafif lezzetleri tercih eder.
+Maden (delik)|Madende altın buldular.|Güvenlik endişeleri nedeniyle maden kapatıldı.
+karışım|Lütfen malzemeleri iyice karıştırın.|Resimlerinde farklı renkleri karıştırmayı sever.
+karışım|Kek hamuru un ve yumurta karışımıdır.|Müziğinde eşsiz bir ses karışımı yarattı.
+ruh hali|Bütün gün mutlu bir ruh halindeydi.|Müzik, partinin ruh halini değiştirdi.
+Kımıldayın.|Lütfen sandalyeyi masaya yaklaştırın.|Yeni bir şehre taşınmaya karar verdiler.
+çamur|Çocuklar yağmurdan sonra çamurda oynadılar.|Çamurda kaydı ve düştü.
+Cinayet|Dedektif cinayet davasını araştırdı.|Cinayetle suçlandı ama masum olduğunu iddia etti.
+kas|Ağırlık kaldırmaktan kasları gerildi.|Düzenli egzersiz kas yapımına yardımcı olur.
+müzikal|Müzikal büyük bir başarıydı.|Onun müzikal kompozisyon için bir yeteneği var.
+gizemli|Kitap bir gizemli roman.|Gizemi birlikte çözmeye çalıştılar.
+çivi|O, duvara bir çivi sapladı.|Tırnak gevşedi ve düştü.
+anlatım|Hikaye ilgi çekici ve iyi yazılmıştı.|Diğer biçimlere göre anlatım şiirini tercih eder.
+ulus|Ulus bağımsızlık gününü kutladı.|O, ülkesinin tarihiyle gurur duyuyor.
+Yerli|Yerli halkın zengin bir kültürel mirası vardır.|O, ana dilini akıcı bir şekilde konuşur.
+Doğal olarak.|Doğal olarak, yolculuk için heyecanlıydı.|Çiçekler bu bölgede doğal olarak büyür.
+mutlaka|Bu mutlaka başarılı olacağın anlamına gelmez.|Kurallara uymak zorunda değilsin.
+İhtiyaç|Bu soruna bir çözüm bulmalıyız.|Arkadaşlığa ihtiyacı var.
+iğne|Gömleği düzeltmek için iğne ve ip kullandı.|İğne kumaş için çok kalındı.
+komşuluk|Sessiz bir mahallede yaşıyorlar.|Mahallede birçok park ve okul vardır.
+Hiçbiri|İkisi de ideal görünmüyor.|O ne kahveyi ne de çayı sever.
+net|Ağ birkaç balık yakaladı.|İnternet sektöründe çalışıyor.
+Sonraki|Bir sonraki tren saat 5'te gelir.|Terfi için sıradaki o.
+Ne de|O ne elmaları ne de portakalları sever.|O ne bir doktor ne de bir avukat.
+normal|Bir sınavdan önce gergin olmak normaldir.|Kan basıncı normal.
+kuzey|Kuzey bölgeler kışın daha soğuktur.|O kuzeydeki bir şehirden.
+not:|Lütfen önemli noktalara dikkat edin.|Masanda bir not bıraktım.
+nükleer|Ülke nükleer enerji geliştirmektedir.|Nükleer enerjinin avantajları ve dezavantajları vardır.
+Belli.|Kızgın olduğu açıktı.|Sorunu anladıktan sonra çözüm çok açık.
+Belli ki.|Belli ki talimatları anlamamış.|O açıkça müzikte yetenekli.
+Olay|Bu kutlamak için özel bir durum.|Bu vesileyle, başarılarımızı düşünmeliyiz.
+meydana gelir.|Kaza gecenin geç saatlerinde meydana geldi.|Yeni politikayı uyguladığımızda değişiklikler olabilir.
+tuhaf|Bu sorunu çözmenin garip bir yolu.|Tuhaf bir espri anlayışı var.
+Resmi|Resmi rapor yarın yayınlanacak.|O, şirketin resmi temsilcisidir.
+Eski moda.|Eski moda kıyafetleri tercih eder.|Onun fikirleri biraz eski kafalı görünüyor.
+Bir kere.|Bir zamanlar, cesur bir şövalye vardı.|Onunla sadece bir kez tanıştım.
+operasyon|Ameliyat başarılı oldu.|Askeri bir operasyon planlıyorlar.
+organize edilmiş|Etkinlik iyi organize edilmişti.|O, işinde çok düzenlidir.
+organizatör|Etkinliğin organizatörü harika bir iş yaptı.|O profesyonel bir etkinlik organizatörü.
+Orijinal|Orijinal tablo müzede.|Proje için bazı orijinal fikirleri var.
+Başlangıç|Başlangıçta, plan Haziran'da başlamaktı.|O, aslen İspanya'dan.
+Olmalı.|Bir doktora görünmelisin.|Muhtaç olanlara yardım etmeliyiz.
+Bizimki.|Bu kitap bizim.|Bizimki küçük ama çok yakın bir aile.
+Dışarıda|Yürüyüş gibi açık hava etkinliklerinden hoşlanıyoruz.|Açık hava konseri büyük bir başarıydı.
+Dışarıda|Dışarıda vakit geçirmeyi seviyorum.|Çocuklar dışarıda oynuyorlar.
+paketleme|Yolculuk için eşyalarımı toplamalıyım.|Bir paket sakız aldı.
+paket|Posta ile bir paket aldım.|Paket zamanında teslim edildi.
+Acı verici|Yara çok acı vericiydi.|Bu acı verici bir karardı.
+solgun|Hastalıktan sonra solgun görünüyordu.|Gökyüzü güneş battıkça solgunlaştı.
+pan|Yumurtaları pişirmek için bir tava lazım.|Tava dokunmak için çok sıcak.
+Katılmak|Yarışmaya katılmak istiyorum.|Herkes katılmaya teşvik ediliyor.
+Özellikle|Matematikte özellikle iyidir.|Kitabı özellikle ilginç buldum.
+geçmek|Sürüş sınavını geçmem gerek.|Topu takım arkadaşına geçirdi.
+tutku|Resim yapma konusunda bir tutkusu var.|Müziğe olan tutkusu açıkça ortada.
+yolculuk|Biz dar yoldan yürüdük.|Yol eski kaleye götürüyor.
+Ödeme|Ödeme gelecek hafta yapılacak.|İşimin ücretini aldım.
+huzurlu|Bahçe dinlenmek için huzurlu bir yerdir.|Huzurlu bir tavır sergiliyor.
+yüzdelik|Nüfusun ne kadarı etkileniyor?|Sınavı geçen öğrencilerin yüzdesi arttı.
+Mükemmel.|Mükemmel şarkı söylüyor.|Her şey plana göre mükemmel bir şekilde gitti.
+performans|Performans çok iyiydi.|Performansı için övgü aldı.
+Kişisel olarak|Ben şahsen onun masumiyetine inanıyorum.|Mesajı bizzat o iletti.
+ikna etmek|Kalması için onu ikna etmeye çalıştım.|Onları fikirlerini değiştirmeleri için ikna edebildi.
+fotoğrafçı|Fotoğrafçı anı mükemmel bir şekilde yakaladı.|Bağımsız bir fotoğrafçı olarak çalışıyor.
+fotoğrafçılık|Fotoğrafçılığa tutkusu var.|Üniversitede fotoğrafçılık okudu.
+çakmak|Bu kağıdı bağlamak için bir iğneye ihtiyacım var.|Ceketinde dekoratif bir iğne takıyordu.
+boru|Tesisatçı sızan boruyu tamir etti.|Borudan duman çıkıyordu.
+yer|Burası ziyaret edilecek güzel bir yer.|Orası turistlerle doluydu.
+planlama|Başarı için planlama çok önemlidir.|O, etkinlik planlamasından sorumludur.
+hoş|Hava bugün hoş.|Hoş bir sohbet yaptık.
+zevk|Tanıştığımıza memnun oldum.|İşinden zevk alıyor.
+bolca|Herkes için bol miktarda yiyecek var.|Projeyi bitirmek için bolca zamanı var.
+sahne|Filmin hikayesi ilgi çekiciydi.|Kitaptaki hikaye dönüşlerinden hoşlandı.
+artı|İki artı iki dört eder.|İş iyi bir maaş ve avantajlar sunuyor.
+şiir|O güzel bir şiir yazdı.|Şiir aşkın özünü yansıtıyor.
+şair|O ünlü bir şairdir.|Şair eserinde derin duyguları ifade etti.
+şiir|Şiir okumayı sever.|Çağın şiiri onun değerlerini yansıtır.
+nokta|Tartışma sırasında geçerli bir nokta ortaya koydu.|Bu egzersizin amacı becerilerinizi geliştirmektir.
+zehir|Zehir öldürücüydü.|Rakibini zehirlemekle suçlandı.
+zehirli|Zehirli bitki ulaşılmaz bir yerde tutulmalıdır.|Bazı mantarlar yenirse zehirlidir.
+politika|Hükümet yeni bir politika ilan etti.|Politika kirliliği azaltmayı amaçlamaktadır.
+politik|Siyasi aktivizmle uğraşıyor.|Siyasi manzara hızla değişiyor.
+siyasetçi|O, tanınmış bir politikacıdır.|Siyasetçi kalabalığa hitap etti.
+politika|Politika çok bölücü olabilir.|O, üniversitede siyaset okuyor.
+liman|Gemi limana demirledi.|Liman kargo trafiğiyle meşgul.
+portresi|O, güzel bir portre çizdi.|Portresi onun görüntüsünü mükemmel bir şekilde yansıtıyor.
+Belki.|Muhtemelen yarın yağmur yağacak.|O muhtemelen iş için en iyi aday.
+Çömlek|Çömlek kilden yapılmıştır.|O, çorbayı büyük bir tencerede pişirdi.
+dökmek|Lütfen sütü bardağa dök.|Kahvesini yavaşça doldurmayı sever.
+yoksulluk|Yoksulluk ciddi bir sorun.|Örgütün amacı yoksulluğu azaltmaktır.
+toz|Toz pişirme için kullanılır.|O, tozu pastanın üzerine serpti.
+güçlü|Motor çok güçlü.|Güçlü bir konuşma yaptı.
+pratik|Bu pratik bir çözüm.|Sorunlara pratik bir yaklaşımı var.
+dua et.|Her Cuma dua etmek için toplanırlar.|Ailesinin güvenliği için dua etti.
+dua|Yemekten önce dua etti.|Dua bir teselli kaynağı olabilir.
+tahmin|Hava tahminleri umut verici değil.|Sonuç hakkında doğru bir tahmin yaptı.
+Hazırlanmış|Yemek iyi hazırlanmıştı.|O, sınava hazırlıklı olduğunu hissetti.
+sunum|Sunum bilgilendiriciydi.|İklim değişikliği hakkında bir sunum yaptı.
+basın|Basın olayı kapsamlı bir şekilde ele aldı.|Basın görevlisi olarak çalışıyor.
+basınç|Basınç artıyor.|İş yerinde çok fazla baskı altında.
+taklit etmek|Süper kahraman gibi davranmayı severler.|Beni görmemiş gibi davranma.
+Önceki|Önceki sahibi birçok iyileştirme yaptı.|Önceki bölümde...
+Önceden|Daha önce Londra'da yaşamıştım.|Daha önce başka bir şirkette çalışmıştı.
+rahip|Papaz Pazar günü bir vaaz verdi.|Rahip olmak istiyor.
+birincil|Eğitim birincil kaygı.|Temel amaç okur yazarlık seviyesini arttırmaktır.
+prens|Prens tahtı miras alacak.|Baloda prensle dans etti.
+prenses|Prenses güzel bir elbise giydi.|Her çocuk prenses olmayı hayal eder.
+baskı|Baskı süreci karmaşık.|Basım sektöründe çalışıyor.
+mahkum|Mahkum erken serbest bırakıldı.|O bir siyasi mahkum.
+özel|Bugün özel bir toplantısı var.|Hayatını özel tutmayı tercih ediyor.
+üreticisi|Yapımcı yeni bir film üzerinde çalışıyor.|Tanınmış bir müzik yapımcısıdır.
+üretim|Mal üretimi arttı.|Bu fabrika araba üretimi konusunda uzmanlaşmıştır.
+mesleği|Öğretmenlik asil bir meslektir.|O, tıp alanında bir meslek seçti.
+kâr|Şirket geçen yıl büyük bir kar elde etti.|Kâr marjlarını arttırmayı amaçlıyorlar.
+programı|Program çeşitli faaliyetleri içerir.|Bir eğitim programına kayıtlı.
+teşvik etmek|Kampanyanın amacı sağlıklı beslenmeyi teşvik etmek.|Yeni ürünlerini tanıtmak istiyorlar.
+uygun|Uygun kıyafetler giymek önemlidir.|Doğru prosedürleri takip etmedi.
+Doğru.|Lütfen aletleri düzgün kullanın.|Görev düzgün bir şekilde tamamlanmadı.
+mülkiyet|Mülk satılık.|Ticari mülklere yatırım yaptılar.
+protesto|Protesto barışçıldı.|Kanuna karşı bir protesto düzenlediler.
+gururlu|Başarılarından gurur duyuyordu.|Gururlu bir tavırla yürüyordu.
+ispatlamak|Kimliğinizi kanıtlamanız gerekiyor.|Kanıtlar onun masumiyetini kanıtlayacak.
+Çek|Lütfen kapıyı açmak için çek.|Ağır kutuyu çekmeye çalıştı.
+cezalandırmak|Suçluları cezalandırmaya karar verdiler.|Geç kaldığı için cezalandırıldı.
+Ceza|Ceza çok ağırdı.|Yaptıkları için cezalandırıldı.
+itmek|Lütfen başlatmak için düğmeye basın.|Arabayı çalıştırmak için itmek zorunda kaldı.
+yeterlilik|Gerekli niteliklere sahip.|Onun nitelikleri onu güçlü bir aday yapar.
+kalifiye|O, nitelikli bir öğretmendir.|Yeterli adaylar arıyorlar.
+Hak kazanmak|Bu pozisyon için yeterlilik kazanman gerekiyor.|Son turda yer alamadı.
+Kuyruk|Bilet tezgahında uzun bir kuyruk vardı.|Bir saatten fazla sırada beklediler.
+Bırak|O, işini bırakmaya karar verdi.|Sigarayı bırakmak istiyor.
+İsimlendirme|Kitap ünlü bir alıntı ile başlıyor.|Shakespeare'den bir alıntı ekledi.
+alıntı|Lütfen bilgilerinizin kaynağını belirtin.|O, ünlü yazarlardan alıntı yapmayı sever.
+ırk (insanlar)|Yarışı yerel bir atlet kazandı.|Farklı ırkların kendine özgü kültürleri vardır.
+Yarış|Yarış popüler bir spor.|Hafta sonları araba yarışlarından hoşlanır.
+aralığı|Sıcaklık aralığı 20 ila 30 derecedir.|Çok çeşitli ürünler sunuyorlar.
+nadir|Böyle güzel bir gün batımı görmek nadirdir.|Onun nadir görülen bir müzik yeteneği var.
+nadiren|Akşamları nadiren dışarı çıkar.|Kamerasız nadiren görülür.
+tepki|Onun tepkisi beklenmedik oldu.|Habere sert bir tepki verdi.
+gerçeklik|Durumun gerçekliği karmaşıktır.|Zor bir gerçekle karşı karşıya kalıyorlar.
+alım|Lütfen makbuzunuzu saklayın.|Alışverişim için makbuza ihtiyacım var.
+tavsiye|Tavsiyeni takdir ediyorum.|O, proje için bir öneri yaptı.
+referans|İşiniz için referans verebilir misiniz?|Raporunda birkaç referansa değindi.
+yansıtmak|Ayna senin imajını yansıtır.|Seçimlerini düşünmek için biraz zaman ayırdı.
+düzenli olarak|Fit kalmak için düzenli olarak egzersiz yapıyor.|Toplantılar düzenli olarak her pazartesi yapılır.
+reddetmek|Onlar teklifi reddetmeye karar verdiler.|Onun davetini reddetmesi onu incitti.
+anlatmak|Teorinin uygulamaya bağlanması önemlidir.|Kitaptaki karakterlerle kolayca bağdaşabilir.
+ilişkili|Bu iki konu yakından ilişkilidir.|Bu konuda çok tecrübesi var.
+ilişki|Beslenme ve sağlık arasında güçlü bir ilişki vardır.|Dil ve kültürün ilişkisini inceliyorlar.
+göreceli|O benim uzak bir akrabam.|Bu kavram, duruma görecelidir.
+Rahatlamış|Masajdan sonra kendini rahat hissetti.|Ortam sakin ve rahattı.
+rahatlatıcı|Müzik dinlemek rahatlatıcıdır.|Spa'da rahat bir gün geçirmişler.
+serbest bırakma|Kuş kafesinden serbest bırakıldı.|Gelecek ay yeni ürünü piyasaya sürmeyi planlıyorlar.
+Güvenilir|O güvenilir bir arkadaş.|Güvenilir bir bilgi kaynağına ihtiyacımız var.
+din|O, dinine sadakatle bağlıdır.|Din onların yaşamlarında önemli bir rol oynar.
+dini|O çok dindar ve her Pazar kiliseye gider.|Dini inançlar çok farklılık gösterebilir.
+kalsın.|Arkadaş kalmaya karar verdiler.|Lütfen gösteri bitene kadar yerinizde kalın.
+hatırlat|Lütfen onu aramamı hatırlat.|Kendime bir ara vermem gerektiğini hatırlatmalıyım.
+uzaktan|Evinden uzaktan çalışıyor.|Uzaktan kumanda masanın üzerinde.
+kiralama|Yolculuk için bir araba kiralamaya karar verdiler.|Kirayı ayın başında ödemelisin.
+tamir|Bisikletimi tamir etmem gerekiyor.|Tamir beklenenden daha uzun sürdü.
+Tekrarla.|Tekrarlar mısın lütfen?|Her eşya için aynı işlemleri tekrarlamam gerekiyor.
+Tekrarlanan|Tekrarlanan girişimler başarısız oldu.|Tekrarlanan bir davranış kalıbı var.
+Temsil et|Takımı temsil etmek için seçildi.|Resim sanatçının vizyonunu temsil ediyor.
+İstek|Bir görüşme talep etmek istiyorum.|İdare talebi onaylandı.
+İhtiyaç|Bu iş çok deneyim gerektirir.|Ek kaynaklara ihtiyacın olacak.
+rezervasyon|Restoranda rezervasyon yaptım.|Rezervasyon e-posta yoluyla onaylandı.
+Kaynak|Kütüphane öğrenciler için değerli bir kaynaktır.|Bu projeye daha fazla kaynak ayırmamız gerekiyor.
+saygı|Başkalarına saygı göstermek önemlidir.|Meslektaşlarının saygısını kazanmıştır.
+sorumluluk|O, sorumluluklarını ciddiye alır.|Çevreyi korumak bizim sorumluluğumuzdur.
+sorumlu|O sorumlu bir yetişkindir.|Kaynaklarımızla sorumlu olmalıyız.
+Sonuç|Sonuç beklenenden daha iyiydi.|Sonuçları dikkatlice analiz etmeliyiz.
+Emekli ol.|Gelecek yıl emekli olmayı planlıyor.|Birçok insan 60'lı yaşlarında emekli olmayı tercih eder.
+emekli|O emekli bir öğretmen.|Emekli bireyler genellikle kendi toplumlarında gönüllü olarak çalışırlar.
+gözden geçirme|Göndermeden önce denememi gözden geçirmem gerekiyor.|Öğretmen ders planını gözden geçirecek.
+yüzük|O, hediye olarak güzel bir yüzük aldı.|Yüzük altından yapılmıştır.
+yükselmek|Güneş sabah 6'da doğacak.|Fiyatların gelecek yıl yükselmesi bekleniyor.
+risk|Yarın yağmur riski var.|Riskleri değerlendirmeliyiz.
+robot|Robot birçok görev yapabilir.|Robotlar endüstrilerde daha yaygın hale geliyor.
+Rulo|Lütfen topu bana doğru yuvarla.|Hamurun açılması gerekiyor.
+romantik|Mum ışığında romantik bir yemek yediler.|Filmin romantik bir hikâyesi var.
+İp|Tepeye ulaşmak için ipten tırmandı.|İp güçlü bir malzemeden yapılmıştır.
+kaba|Yüzey kaba ve pürüzlü.|Ne bekleyeceği konusunda kaba bir fikri var.
+satır|Lütfen ön sırada oturun.|Kitaplar düzgün bir sıraya yerleştirilmiştir.
+kraliyet|Kraliyet ailesi bu etkinliğe katıldı.|Kraliyet gibi davranıyor.
+ragbi|Rugby birçok ülkede popüler bir spordur.|Hafta sonları ragbi oynuyor.
+kural|Oyunda takip edilmesi gereken kurallar var.|Kuralı çiğnedi ve cezalandırıldı.
+Güvenlik|Güvenlik bizim en büyük önceliğimiz.|Güvenlik önlemleri etkiliydi.
+yelken|Dünya çevresinde yelken açmayı planlıyorlar.|Yelken rüzgarı mükemmel yakaladı.
+denizci|Denizci fırtınada gemiyi yönlendirdi.|Birçok denizci balıkçı tekneleriyle çalışır.
+örnek|Çalışmanızdan bir örnek verebilir misiniz?|Öğretmen pratik için bir örnek soru verdi.
+kum|Çocuklar sahilde kumda oynadılar.|Kum, minik kaya parçacıklarından oluşur.
+tarama|Kayıtlarım için bu belgeleri taramalıyım.|Tarayıcı birden fazla sayfayı hızlı bir şekilde tarayabilir.
+bilimsel|Bilimsel yöntem araştırmalarda önemlidir.|Bulguları üzerine bilimsel bir makale yayınladı.
+senaryo|Oyunun senaryosu iyi yazılmıştı.|O, bir film için yeni bir senaryo üzerinde çalışıyor.
+heykel|Heykel ünlü bir sanatçı tarafından yaratıldı.|Sanat okulunda heykelcilik okudu.
+ikincil|Ortaöğretim kariyer gelişimi için önemlidir.|İlacın ikincil etkileri hala bilinmiyor.
+Güvenlik|Binayı korumak için güvenlik önlemleri alındı.|Güvenlik görevlisi girişte tüm ziyaretçileri kontrol etti.
+tohum|Çiftçi tohumları baharda ekti.|Tohumların büyümesi için suya ve güneş ışığına ihtiyacı vardır.
+akılcı|Gelecek için para biriktirmek akıllıca bir davranıştır.|Evde kalmak için akıllıca bir karar verdi.
+ayrı|Lütfen geri dönüştürülebilir malzemeleri çöpten ayırın.|Boşandıktan sonra mali durumlarını ayırmaya karar verdiler.
+Ciddiyim.|O meseleyi ciddiye aldı ve daha fazla araştırma yaptı.|Önümüzdeki zorluklar hakkında ciddi konuştu.
+hizmetçi|Hizmetçi konuklar için yemek hazırladı.|Büyük bir evde hizmetçi olarak çalışıyordu.
+set (put)|Lütfen kitabı masaya koy.|Alarmı sabah 7'ye ayarladı.
+set (grup)|Bulaşık seti güzel bir şekilde düzenlenmişti.|Mahallesinde kurulmuş bir kitap kulübüne katıldı.
+ayarlama|Hikâyenin konusu küçük bir köyde geçiyor.|Ayarları uygulamada değiştirebilirsiniz.
+cinsiyet|Cinsel eğitim gençler için önemlidir.|Kitap, cinsel ilişkinin biyolojik yönlerini ele alıyor.
+cinsel|Cinsel yönelim kimliğin kişisel bir yönüdür.|Kampanya cinsel sağlık farkındalığını teşvik ediyor.
+Salla|Lütfen kullanmadan önce şişeyi sallayın.|Onun elini nazikçe salladı.
+pay|Oyuncaklarını başkalarıyla paylaşmak güzel.|Sorumlulukları eşit olarak paylaşmaya karar verdiler.
+keskin|O keskin bıçakla dikkatli ol.|Keskin dönüş onu hazırlıksız yakaladı.
+raf|Raf kitaplarla dolu.|Vazoyu rafın üzerine koydu.
+kabuk|Kaplumbağa kabuğunun içine saklandı.|Yumurtanın kabuğu kırılgan.
+Değişim|Lütfen dikkatinizi asıl konuya verin.|Şirket stratejisini değiştirmeyi planlıyor.
+parlaklık|Yıldızlar gece gökyüzünde parlak parlıyor.|Gümüş takımları parlatmak için bir kumaş kullandı.
+parlak|Arabanın parlak yeni bir boyama tabakası var.|Partide parlak ayakkabılar giyiyordu.
+Ateş et.|Avcı geyiği vurmak zorunda kaldı.|Sahneyi yarın çekecekler.
+utangaç|Halka açık konuşmak için çok utangaç.|İltifat edildiğinde utangaç bir gülümseme yaptı.
+bakış|Dağların manzarası nefes kesiciydi.|Gözlüğü olmadan mükemmel bir görüşe sahiptir.
+Sinyal|Trafik sinyali kırmızıya döndü.|İletişim kurmak için el işaretleri kullandı.
+sessiz|Sessiz oda gerginlikle doluydu.|O, toplantı sırasında sessiz kaldı.
+Aptalca.|Kontrol edemeyeceğin şeyler için endişelenmek aptallık.|Onu güldürmek için aptal bir yüz yaptı.
+Benzerlik|İki resim arasında bir benzerlik var.|Hikayelerindeki benzerlik çarpıcı.
+Benzer şekilde.|Aynı şekilde dağlarda yürüyüş yapmaktan hoşlanır.|İki teklif de benzer şekilde yapılandırılmıştır.
+Sadece...|Çözüm basitçe yardım istemek.|O, kavramı basit ve net bir şekilde açıkladı.
+O zamandan beri|2010'dan beri burada yaşıyorum.|Kazadan sonra daha dikkatli oldu.
+lavabo|Titanic 1912'de battı.|Bulaşıkların lavaboda ıslanması lazım.
+dilimleme|Lütfen servis etmeden önce ekmeği dilimleyin.|O, bir dilim pasta aldı.
+Birazcık.|Sıcaklık biraz yükseldi.|O, yorumdan biraz rahatsız oldu.
+yavaş|Araba çok yavaş gidiyor.|Yavaş ve net bir sesle konuştu.
+akıllı|O çok akıllı ve akıllı.|Erken yatırım yaparak akıllıca bir karar verdi.
+pürüzsüz|Suyun yüzeyi cam gibi pürüzsüzdü.|Onun yumuşak bir şarkı sesi var.
+yazılım|Yazılımın düzenli olarak güncellenmesi gerekir.|Bir yazılım geliştiricisi olarak çalışıyor.
+Toprak|Bu bölgedeki toprak çok verimlidir.|Toprağı kirleticiler için test ettiler.
+katı|Su donunca katı olur.|Masa katı ahşaptan yapılmıştır.
+sıralama|Lütfen dosyaları tarihe göre sıralayın.|Kitaplarını türüne göre sıralamayı sever.
+Güney|Güney bölgesi sıcak iklimi ile bilinir.|Onlar ülkenin güney kısmına gittiler.
+Özellikle|Raporunda bu konuya özel olarak değindi.|Özellikle tarih hakkında bir kitap arıyorum.
+harcama|Şirketin harcamaları bu yıl arttı.|Harcama alışkanlıklarına karşı dikkatlidir.
+Baharatlı.|Bu yemek benim zevkim için çok baharatlı.|Farklı kültürlerden baharatlı yemekleri sever.
+İçki|Takımın ruhu zaferden sonra yüksekti.|Güçlü bir savaş ruhu var.
+konuşulan|İngilizce, dünyada en çok konuşulan dildir.|O, birkaç konuşulan dili akıcı bir şekilde konuşur.
+noktası|Bu iki resim arasındaki farkı görebiliyor musun?|Oturup dinlenmek için güzel bir yer buldu.
+yayılma|Haber sosyal medyada hızla yayıldı.|Ekmeğine tereyağı sürmeyi sever.
+yay|Çiçekler baharda açar.|Bahar yaklaştıkça hava sıcaklaşıyor.
+stadyum|Stadyum tezahürat eden taraftarlarla doluydu.|Önümüzdeki oyunlar için yeni bir stadyum inşa ettiler.
+personel|Otel personeli çok yardımcı oldu.|Öğretim kadrosunun bir üyesidir.
+standart|Ürün uluslararası kalite standartlarına uyuyor.|Yaşam standardını yükseltmek için çalışıyorlar.
+eyalet|Ekonominin durumu büyük bir endişe kaynağı.|Haberlerden sonra şok halindedir.
+İstatistik|İstatistik, satışlarda önemli bir artış gösteriyor.|Verileri analiz etti ve kilit istatistikleri sundu.
+heykel|Özgürlük Heykeli özgürlüğün sembolüdür.|Onlar parkta ünlü heykeli ziyaret ettiler.
+çubuk (bağlantı)|Lütfen kutuya etiketi yapıştırın.|Parçaları birbirine yapıştırmak için yapıştırıcı kullandı.
+Çubuk (ahşap parçası)|Yerden bir sopayı aldı.|Köpek çubuğu çiğnedi.
+Hâlâ.|O hala otobüsü bekliyor.|Su sakin ve sakin.
+mağaza|Marketten alışverişe gitmem gerek.|Mağaza sabah 9'dan akşam 9'a kadar açıktır.
+yabancı|Kendini yeni bir şehirde yabancı gibi hissetti.|İnternette yabancılarla konuşma.
+Güçlü|Ağır yükleri kaldırma gücü var.|Zihinsel güç, fiziksel güç kadar önemlidir.
+iplik|Paketi bir iple bağladı.|Performans sırasında gitarın telleri kırıldı.
+Çok güçlü.|O, eğitimin önemine güçlü bir şekilde inanır.|O, görüşünü tartışmada güçlü bir şekilde dile getirdi.
+stüdyo|Sanatçı küçük bir stüdyoda çalışır.|Fotoğraf çekimi için bir stüdyo kiraladılar.
+Bir şeyler.|Yolculuk için eşyalarımı toplamalıyım.|Koleksiyonunda bir sürü ilginç eşyası var.
+madde|Su, yaşam için gerekli olan bir maddedir.|Bilim adamı kimyasal maddeyi laboratuvarda inceledi.
+Başarıyla.|O, projeyi başarıyla tamamladı.|Birlikte çalıştılar ve hedeflerine başarıyla ulaştılar.
+aniden|Sıcaklıkta ani bir değişiklik oldu.|Aniden gelen gürültü herkesi şaşırttı.
+acı çekmek|Uzun bir iyileşme sürecinden geçmek zorunda kaldı.|Birçok insan kaygı ve depresyondan muzdarip.
+takım elbise|İş görüşmesine takım elbise giydi.|Avukat resmi bir takım elbise giydi.
+Uygun|Bu elbise bu durum için uygundur.|Etkinlik için uygun bir yer bulmaları gerekiyor.
+özetle|Ana noktaları özetleyebilir misin?|O, makaleyi birkaç cümlede özetledi.
+özet|Özet raporun hızlı bir genel bakışını sunar.|Lütfen toplantıdan önce özetini okuyun.
+tedarik|Şirket, yüksek kaliteli ürünler tedarik etmeyi amaçlamaktadır.|Sürekli taze ürünleri var.
+destekçi|O, çevre nedenlerinin güçlü bir destekçisidir.|Kampanyanın birçok hevesli destekçisi var.
+Kesinlikle.|Bu konuda ciddi olamazsın.|O kesinlikle yarışı kazanacak.
+Yüzey|Su yüzeyi sakindi.|O, masanın yüzeyini çizdi.
+Hayatta kalmak|Pek çok tür sert ortamlarda hayatta kalmak için mücadele ediyor.|O, kazadan kurtulmayı başardı.
+yüzmek|Okyanusta yüzmeyi seviyorum.|O, genç yaşta yüzmeyi öğrendi.
+düğme|Işıkları kapatabilir misin lütfen?|Kariyer değiştirmeye karar verdi.
+belirti|Öksürük, soğuk algınlığının yaygın bir belirtisidir.|Doktoruna birkaç belirti bildirdi.
+kuyruğu|Köpek kuyruğunu mutlu bir şekilde salladı.|Trenin arka lambaları yanıp sönüyordu.
+yetenek|Onun doğal bir müzik yeteneği var.|Onun yeteneği genç yaşta tanındı.
+yetenekli|O yetenekli bir sanatçıdır.|Takım yetenekli bireylerden oluşuyor.
+Teyp|Bu hediyeyi sarmak için bant lazım.|Teyp kolayca çıkmış.
+vergi|Hükümet lüks ürünlere yeni bir vergi getirdi.|Vergi yükümlülüğünü azaltmaya çalışıyor.
+teknik|Mühendislikte güçlü bir teknik geçmişi var.|Teknik ayrıntılar raporda belirtilmiştir.
+teknik|Sorunu çözmek için yeni bir teknik kullandı.|Sanatçı eşsiz resim tekniği ile tanınır.
+eğilimli|İnsanlar sabahları daha verimli olma eğilimindedir.|Bir şeyleri fazla düşünme eğilimindedir.
+Çadır|Kamp gezisi için bir çadır kurduk.|Çadır altı kişiye yetecek kadar genişti.
+Bu...|Bu fikir hoşuma gitmedi.|Harika bir filmdi!
+Onların.|Bu kitap onların.|Anahtarlar masada.
+Konu|Partinin teması tropik.|O, aşk teması üzerine bir makale yazdı.
+teorisi|İklim değişikliği hakkında yeni bir teori önerdi.|Bu teori bilim adamları tarafından yaygın olarak kabul edildi.
+Bu yüzden|Yağmur yağıyordu; bu nedenle maç iptal edildi.|O sıkı çalıştı; bu nedenle, sınavı geçti.
+Bu...|Bu benim en sevdiğim kitap.|Bunun olduğuna inanamıyorum.
+Gerçi|Yağmur yağsa da, yürüyüşe çıktık.|Tecrübesiz olmasına rağmen çok yetenekli.
+boğaz|Boğazı ağrıyor.|O, konuşmadan önce boğazını temizledi.
+Her yerde.|Müze yıl boyunca açıktır.|Geçen yaz Avrupa'yı dolaştı.
+sıkı.|Elbise bana çok dar geliyor.|Bu hafta yoğun bir programı var.
+Ta ki ...|Sen gelene kadar bekleyeceğim.|O gece yarısına kadar çalıştı.
+teneke|Yiyecekler bir teneke kutuda saklanıyor.|Bir kutu fasulye açtı.
+minik|Kedi yavrusu küçük ve sevimli.|Yanağında küçük bir yara izi var.
+ucu|Sınav için bana bahşiş verebilir misin?|Garson için cömert bir bahşiş bıraktı.
+ayak parmağı|Ayak parmağımı masaya çarptım.|O, ayak tırnaklarını kırmızıya boyadı.
+dil|Bana dilini çıkardı.|Dilinde piercing var.
+Toplam|Toplam maliyeti 100 dolar.|Toplamda üç ödül kazandı.
+Tamamen.|Sana tamamen katılıyorum.|Film tamamen sıkıcıydı.
+dokunmak|Lütfen resimlere dokunmayın.|Nazik bir dokunuşu var.
+tur|Şehir turuna gittik.|Tur iki saat sürer.
+Ticaret|Uluslararası ticaret ekonomik büyüme için gereklidir.|Ticaret sektöründe çalışıyor.
+Çeviri|Bu belgeyi İngilizceye çevirebilir misin?|O, metinleri çevirmeyi öğreniyor.
+çeviri|Kitabın çevirisi geçen yıl yayımlandı.|O, edebi çeviri konusunda uzmanlaşmıştır.
+nakliye|Malları taşımak için kamyon kullanıyorlar.|Ulaşım sistemi çok verimli.
+tedavi etmek|Doktor yaralanmanı tedavi edecek.|Kendine bir spa günü hediye etmeyi seviyor.
+tedavi|Hastalığın tedavisi pahalıdır.|Durumu için tedavi görüyor.
+Trend|Uzaktan çalışmaya yönelik artan bir eğilim var.|Moda eğilimleri hızla değişir.
+hile|O bir sihirli numara yaptı.|Bu sadece bir ışık hilesi.
+Gerçek.|Gerçeği kabul etmek çoğu zaman zordur.|Sonunda bana gerçeği söyledi.
+tüp|Diş macunu tüpte.|Yeraltı tüpüyle seyahat etti.
+türü|Ne tür müzikten hoşlanıyorsun?|O, macera seven bir tür insandır.
+Tipik olarak|Hava genellikle ilkbaharda yumuşak olur.|O genellikle erken yatar.
+lastik|Patlamış lastiği değiştirmem gerek.|Arabanın bagajında yedek lastik var.
+çirkin|Çirkin gerçekle yüzleşmek zor.|Kolunda çirkin bir yara izi var.
+yapamıyorum|O, toplantıya katılamadı.|Olayla baş edemeyeceğini hissetti.
+rahatsız edici.|Sandalye oturmak için rahatsız.|Sıkı elbise içinde kendini rahatsız hissediyordu.
+iç çamaşırı|Yeni iç çamaşırı aldı.|Pamuk iç çamaşırı tercih eder.
+işsizler|Altı aydır işsiz.|İşsiz nüfus artıyor.
+işsizlik|İşsizlik şehirdeki önemli bir sorundur.|Hükümet işsizliği azaltmak için çalışıyor.
+haksız|Hata için onu suçlamak haksızlık.|Karar birçokları tarafından haksızlık olarak görülmüştü.
+Birlik|İşçiler haklarını korumak için bir sendika kurdular.|Sendika daha iyi ücretler için pazarlık yapıyor.
+Tabii ki|Sıkı çalışmazsan başarılı olmayacaksın.|Yağmur yağmadığı sürece gideceğim.
+Farklı|Ablasından farklı olarak, o çok dışa dönüktür.|Bu kumaş daha önce gördüğüm hiçbir şeye benzemiyor.
+muhtemel değil.|Nisan ayında kar yağması pek olası değil.|Teklifi kabul etmesi pek olası değil.
+Gereksiz|Yeni kıyafetler almak gereksiz.|Rapor gereksiz sayıldı.
+hoş olmayan|Koku hoş değildi.|Otelde hoş olmayan bir deneyim yaşadı.
+güncelleme|Yazılımımı güncellemem gerek.|Güncelleme performansı artıracak.
+Üzerinde|Bir zamanlar bir prenses vardı.|Karar dikkatli bir şekilde düşünülmüştür.
+üzgün|Haber yüzünden üzgündü.|Üzülme; bu senin hatan değil.
+Kullanılmış|Kitap kullanılmış, ama iyi durumda.|O, kullanılmış bir araba satın aldı.
+değerli|Zaman değerli bir kaynaktır.|Bana bazı değerli tavsiyeler verdi.
+değeri|Bu tablonun değeri nedir?|O, sıkı çalışmanın değerini bilir.
+çeşitli|Seçim için çeşitli seçenekler var.|O, çeşitli ülkelerde yaşamıştır.
+versiyon|Yazılımın hangi sürümünü kullanıyorsun?|Son sürüm yeni özellikler içeriyor.
+Kurban|Kurban bilinçsiz olarak bulundu.|Felaketin kurbanlarından birçoğunun yardıma ihtiyacı var.
+bakış|Yukarıdaki manzara inanılmaz.|O, konuyla ilgili farklı bir görüşe sahiptir.
+izleyici|Film büyük bir izleyici kitlesi çekti.|Bir izleyici olarak, kendi fikrini söyleme hakkına sahipsin.
+şiddetli|Filmde şiddet sahneleri var.|Şiddetli bir tavrı var.
+gönüllü|Yerel barınakta gönüllü olmaya karar verdi.|Bu etkinlik için gönüllülere ihtiyaç var.
+oylama|Seçimlerde oy vermek önemlidir.|İlk kez oy kullanmayı planlıyor.
+sıcak|Çorba sıcak ve rahatlatıcı.|Ona sıcak bir gülümseme yaptı.
+Uyar|Tehlikeler hakkında seni uyarmak istiyorum.|Oraya gitmemesi için uyarılmıştı.
+uyarı|Uyarı fırtınadan sonra verildi.|Uyarı işaretlerini görmezden geldi.
+Atık|Zamanını önemsiz görevlere harcama.|Atıklar düzgün bir şekilde atıldı.
+su|Su yaşam için gereklidir.|Kadın bardağa su döktü.
+dalga|Dalga kıyıya çarptı.|O, arkadaşlarına el salladı.
+silah|Asker çeşitli silahları kullanmak için eğitilmişti.|Silah suç mahallinde bulundu.
+Ağırlık|Bunun avantaj ve dezavantajlarını tartmak önemlidir.|Her sabah kendini tartıyor.
+Batı|Batı ülkelerinin farklı kültürleri vardır.|Film bir batı kasabasında geçiyor.
+Ne olursa olsun.|Seni mutlu eden neyse onu yap.|Ne olursa olsun seni destekleyecek.
+Ne zaman|Ne zaman yardıma ihtiyacın olursa beni arayabilirsin.|Bana ne zaman ihtiyacın olursa orada olacağım.
+ya da|Gidip kalıp kalmayacağımı bilmiyorum.|Yağmur yağacak mı diye sordu.
+Oysa|Çalışırken müzik dinlemeyi severim.|Otobüsü beklerken bir kitap okudu.
+Bütün|Bütün aile yeniden bir araya gelmek için toplandı.|Bütün pizzayı tek başına yedi.
+olacak.|Yarın seni ararım.|Ödevini daha sonra bitirecek.
+Kazanmak|Ben yarışmayı kazanmayı umuyorum.|Onlar oyunu büyük bir farkla kazandılar.
+kanat|Kuş kanatlarını açtı ve uçtu.|Uçağın kanadı hasar görmüştü.
+İçinde|Cevap metnin içinde yatar.|Kendinde huzur buldu.
+Merak|Sonrasında ne olacağını merak ediyorum.|Onun geleceğini merak ediyordu.
+yün|Bu kazak yumuşak yünden yapılmıştır.|O örmek için bir yün topu aldı.
+Dünya çapında|Kampanya dünya çapında başarılı oldu.|Dünya çapında arkadaşları var.
+Endişelenmek|Küçük şeyler için endişelenme.|Geleceği için endişeleniyor.
+Daha kötü.|Durum gittikçe kötüleşiyor.|Haberi duyduktan sonra kendini daha kötü hissetti.
+en kötüsü|Bu hayatımın en kötü günü.|Oyunda en kötü şansı oydu.
+değeri|Bu tablo çok para eder.|Çabalamaya değmez.
+yazılı|Kurallar el kitabında yazılı.|Yazılı bir anlaşması var.
+Yanlış|Sanırım yanlış numarayı aradınız.|Yalan söylemek yanlış.
+bahçe|Çocuklar bahçede oynuyorlar.|Bahçesinde güzel bir bahçesi var.
+Genç|Genç kız piyano çalmayı öğreniyor.|O hala genç ve parlak bir geleceği var.
+gençlik|Gençlik, keşif ve gelişme zamanıdır.|Program gençlerin gelişimi için tasarlanmıştır.
