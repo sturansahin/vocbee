@@ -2,17 +2,13 @@ export type RootStackParamList = {
   Onboarding: undefined;
   Login: undefined;
   SignUp: undefined;
-  NativeLanguage: undefined;
+  NativeLanguage: { detectedLevel?: string } | undefined;
   TargetLanguage: undefined;
   LevelSelection: undefined;
+  LevelTest: undefined;
   MainTabs: undefined;
-  ExampleSentences: { word: string; translation: string; definition: string };
-};
-
-export type MainTabParamList = {
-  Home: undefined;
-  Flashcards: undefined;
   Settings: undefined;
+  ExampleSentences: { word: string; translation: string; definition: string };
 };
 
 export interface Language {
@@ -29,3 +25,4 @@ export interface Level {
   description: string;
   color: string;
 }
+

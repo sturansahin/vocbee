@@ -70,8 +70,82 @@ export const LEVELS = [
   {
     id: 'advanced',
     title: 'Advanced',
-    range: 'C1-C2',
+    range: 'C1',
     description: 'I express myself fluently and understand complex texts.',
     color: 'text-purple-400'
   },
+];
+
+// Level Test Questions
+// Scoring: 1-3 correct = Beginner, 4-5 correct = Intermediate, 6 correct = Advanced
+export const LEVEL_TEST_QUESTIONS = [
+  // BEGINNER Level (A1-A2) - 2 questions
+  {
+    id: 1,
+    word: 'happy',
+    level: 'A1',
+    translations: {
+      tr: {
+        correct: 'Mutlu',
+        options: ['Üzgün', 'Kızgın', 'Yorgun']
+      }
+    }
+  },
+  {
+    id: 2,
+    word: 'travel',
+    level: 'A2',
+    translations: {
+      tr: {
+        correct: 'Seyahat etmek',
+        options: ['Çalışmak', 'Uyumak', 'Yemek']
+      }
+    }
+  },
+  // INTERMEDIATE Level (B1-B2) - 2 questions
+  {
+    id: 3,
+    word: 'achieve',
+    level: 'B1',
+    translations: {
+      tr: {
+        correct: 'Başarmak',
+        options: ['Denemek', 'Başlamak', 'Vazgeçmek']
+      }
+    }
+  },
+  {
+    id: 4,
+    word: 'substantial',
+    level: 'B2',
+    translations: {
+      tr: {
+        correct: 'Önemli, hatırı sayılır',
+        options: ['Küçük', 'Geçici', 'Basit']
+      }
+    }
+  },
+  // ADVANCED Level (C1) - 2 questions
+  {
+    id: 5,
+    word: 'ubiquitous',
+    level: 'C1',
+    translations: {
+      tr: {
+        correct: 'Her yerde bulunan',
+        options: ['Nadiren görülen', 'Geçici olan', 'Özel olan']
+      }
+    }
+  },
+  {
+    id: 6,
+    word: 'meticulous',
+    level: 'C1',
+    translations: {
+      tr: {
+        correct: 'Titiz, ayrıntılara önem veren',
+        options: ['Dikkatsiz', 'Acele eden', 'Belirsiz']
+      }
+    }
+  }
 ];

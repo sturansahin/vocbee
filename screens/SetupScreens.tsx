@@ -11,7 +11,7 @@ import {
   Platform,
   Image
 } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { RootStackParamList } from '../types';
@@ -22,12 +22,14 @@ import { useTheme } from '../context/ThemeContext';
 import { FONT_FAMILY } from '../utils/typography';
 
 type SetupNavProp = StackNavigationProp<RootStackParamList>;
+type SetupRouteProp = RouteProp<RootStackParamList, 'NativeLanguage'>;
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
 // Unified Setup Screen with Steps
 export const SetupScreen = () => {
   const navigation = useNavigation<SetupNavProp>();
+  const route = useRoute<SetupRouteProp>();
   const { colors, isDarkMode } = useTheme();
   const [currentStep, setCurrentStep] = useState(1);
   const [nativeLanguage, setNativeLanguage] = useState('english');
@@ -40,6 +42,14 @@ export const SetupScreen = () => {
   const fadeAnim = useRef(new Animated.Value(1)).current;
 
   const totalSteps = 3;
+
+  // Handle detected level from quiz
+  useEffect(() => {
+    if (route.params?.detectedLevel) {
+      setLevel(route.params.detectedLevel);
+      setCurrentStep(3); // Navigate to level selection step
+    }
+  }, [route.params?.detectedLevel]);
 
   // Animate progress bar when step changes
   useEffect(() => {
@@ -221,9 +231,12 @@ export const SetupScreen = () => {
         ))}
       </View>
 
-      <TouchableOpacity style={styles.testLink}>
+      <TouchableOpacity
+        style={styles.testLink}
+        onPress={() => navigation.navigate('LevelTest')}
+      >
         <MaterialIcons name="quiz" size={20} color={colors.textSecondary} />
-        <Text style={[styles.testLinkText, { color: colors.textSecondary }]}>Don't know your level? Take a 5-min test</Text>
+        <Text style={[styles.testLinkText, { color: colors.textSecondary }]}>Don't know your level? Take a min test</Text>
       </TouchableOpacity>
     </ScrollView>
   );

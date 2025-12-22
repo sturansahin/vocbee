@@ -1,9 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, Image, StyleSheet, Modal, Animated } from 'react-native';
-import { Header } from '../components/UIComponents';
-import { MaterialIcons } from '@expo/vector-icons';
+import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { COLORS, LANGUAGES } from '../constants';
+import Feather from '@expo/vector-icons/Feather';
 import { FONT_FAMILY } from '../utils/typography';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 const HOURS = Array.from({ length: 24 }, (_, i) => `${i.toString().padStart(2, '0')}:00`);
 const FREQUENCIES = ['Every 30 minutes', 'Every hour', 'Every 2 hours', 'Every 4 hours', 'Once a day'];
@@ -35,12 +36,16 @@ const SwitchToggle = ({ value, onToggle }: SwitchToggleProps) => {
 
    const backgroundColor = bgColor.interpolate({
       inputRange: [0, 1],
-      outputRange: ['#3a3a3a', COLORS.primary],
+      outputRange: ['#ffffff', COLORS.primary],
    });
 
    return (
       <TouchableOpacity onPress={onToggle} activeOpacity={0.8}>
-         <Animated.View style={[styles.switchTrack, { backgroundColor }]}>
+         <Animated.View style={[
+            styles.switchTrack,
+            { backgroundColor },
+            !value && { borderWidth: 1, borderColor: '#d0d0d0' }
+         ]}>
             <Animated.View
                style={[
                   styles.switchThumb,
@@ -153,9 +158,9 @@ export default function SettingsScreen() {
                <View style={styles.settingItem}>
                   <View style={styles.settingLeft}>
                      <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
-                        <MaterialIcons name="dark-mode" size={20} color={colors.primary} />
+                        <MaterialCommunityIcons name="theme-light-dark" size={24} color={colors.primary} />
                      </View>
-                     <Text style={[styles.settingTitle, dynamicStyles.text]}>Dark Mode</Text>
+                     <Text style={[styles.settingTitle, dynamicStyles.text]}>Theme</Text>
                   </View>
                   <DarkModeSwitch
                      value={isDarkMode}
@@ -168,7 +173,7 @@ export default function SettingsScreen() {
                >
                   <View style={styles.settingLeft}>
                      <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
-                        <MaterialIcons name="language" size={20} color={colors.primary} />
+                        <Ionicons name="language" size={24} color={colors.primary} />
                      </View>
                      <View>
                         <Text style={[styles.settingTitle, dynamicStyles.text]}>Language</Text>
@@ -194,7 +199,7 @@ export default function SettingsScreen() {
                <View style={styles.settingItem}>
                   <View style={styles.settingLeft}>
                      <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
-                        <MaterialIcons name="notifications" size={20} color={colors.primary} />
+                        <MaterialCommunityIcons name="bell-outline" size={24} color={colors.primary} />
                      </View>
                      <Text style={[styles.settingTitle, dynamicStyles.text]}>Enable Reminders</Text>
                   </View>
@@ -246,7 +251,7 @@ export default function SettingsScreen() {
                      >
                         <View style={styles.settingLeft}>
                            <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
-                              <MaterialIcons name="repeat" size={20} color={colors.primary} />
+                              <Feather name="repeat" size={18} color={colors.primary} />
                            </View>
                            <View>
                               <Text style={[styles.settingTitle, dynamicStyles.text]}>Frequency</Text>
@@ -265,7 +270,7 @@ export default function SettingsScreen() {
                <TouchableOpacity style={styles.settingItem}>
                   <View style={styles.settingLeft}>
                      <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
-                        <MaterialIcons name="help" size={20} color={colors.primary} />
+                        <MaterialCommunityIcons name="help" size={20} color={colors.primary} />
                      </View>
                      <Text style={[styles.settingTitle, dynamicStyles.text]}>Help & FAQ</Text>
                   </View>
@@ -274,7 +279,7 @@ export default function SettingsScreen() {
                <TouchableOpacity style={[styles.settingItem, { borderBottomWidth: 0 }]}>
                   <View style={styles.settingLeft}>
                      <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
-                        <MaterialIcons name="policy" size={20} color={colors.primary} />
+                        <MaterialCommunityIcons name="security" size={24} color={colors.primary} />
                      </View>
                      <Text style={[styles.settingTitle, dynamicStyles.text]}>Privacy Policy</Text>
                   </View>
@@ -290,7 +295,7 @@ export default function SettingsScreen() {
                <Text style={[styles.logoutButtonText, { color: colors.error }]}>Log Out</Text>
             </TouchableOpacity>
 
-            <Text style={[styles.versionText, dynamicStyles.textSecondary, { marginTop: 8, marginBottom: 24 }]}>VocBee v1.0.0</Text>
+            <Text style={[styles.versionText, dynamicStyles.textSecondary, { marginTop: 24, marginBottom: -24 }]}>VocBee v1.0.0</Text>
          </ScrollView>
 
          {/* Time Picker Modal */}
@@ -411,7 +416,12 @@ export default function SettingsScreen() {
                                  styles.pickerItemText,
                                  { color: colors.text },
                                  selectedLanguage === lang.id && { color: colors.primary }
-                              ]}>{lang.name} ({lang.nativeName})</Text>
+                              ]}>{lang.name}</Text>
+                              <Text style={[
+                                 styles.pickerItemNativeName,
+                                 { color: colors.textSecondary },
+                                 selectedLanguage === lang.id && { color: colors.primary }
+                              ]}> ({lang.nativeName})</Text>
                            </View>
                         </TouchableOpacity>
                      ))}
@@ -553,6 +563,7 @@ const styles = StyleSheet.create({
       backgroundColor: 'rgba(0,0,0,0.7)',
       justifyContent: 'center',
       alignItems: 'center',
+      paddingTop: 0,
    },
    modalContent: {
       width: '80%',
@@ -564,6 +575,7 @@ const styles = StyleSheet.create({
       borderColor: 'rgba(255,255,255,0.1)',
    },
    modalTitle: {
+      fontFamily: FONT_FAMILY,
       color: '#fff',
       fontSize: 18,
       marginBottom: 16,
@@ -581,6 +593,7 @@ const styles = StyleSheet.create({
       backgroundColor: 'rgba(56, 224, 123, 0.15)',
    },
    pickerItemText: {
+      fontFamily: FONT_FAMILY,
       color: '#fff',
       fontSize: 16,
       textAlign: 'center',
@@ -603,7 +616,7 @@ const styles = StyleSheet.create({
       backgroundColor: '#fff',
       alignItems: 'center',
       justifyContent: 'center',
-      shadowColor: '#000',
+      shadowColor: '#000000ff',
       shadowOffset: { width: 0, height: 2 },
       shadowOpacity: 0.2,
       shadowRadius: 2,
@@ -623,5 +636,9 @@ const styles = StyleSheet.create({
       fontFamily: FONT_FAMILY,
       fontSize: 16,
       fontWeight: '600',
+   },
+   pickerItemNativeName: {
+      fontSize: 14,
+      fontWeight: 'bold',
    },
 });

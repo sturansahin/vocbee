@@ -5,6 +5,7 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../types';
 import { Button, Input, Header } from '../components/UIComponents';
 import { MaterialIcons, AntDesign } from '@expo/vector-icons';
+import { SwarmLogo } from '../components/SwarmLogo';
 import { COLORS } from '../constants';
 import { useTheme } from '../context/ThemeContext';
 import { FONT_FAMILY } from '../utils/typography';
@@ -21,9 +22,7 @@ export const LoginScreen = () => {
 
         {/* Logo Section */}
         <View style={styles.logoSection}>
-          <View style={[styles.logoCircle, { backgroundColor: colors.surface, borderColor: colors.border }]}>
-            <MaterialIcons name="school" size={40} color={colors.primary} />
-          </View>
+          <SwarmLogo size={100} color={colors.primary} />
           <Text style={[styles.appTitle, { color: colors.text }]}>VocBee</Text>
           <Text style={[styles.appSubtitle, { color: colors.textSecondary }]}>Master new words effortlessly.</Text>
         </View>
@@ -69,7 +68,7 @@ export const LoginScreen = () => {
         {/* Social Buttons */}
         <View style={styles.socialRow}>
           <TouchableOpacity style={[styles.socialButton, { backgroundColor: colors.surface, borderColor: colors.border }]}>
-            <AntDesign name="google" size={16} color="#000000ff" />
+            <AntDesign name="google" size={16} color={colors.text} />
             <Text style={[styles.socialButtonText, { color: colors.text }]}>Google</Text>
           </TouchableOpacity>
         </View>
@@ -151,6 +150,7 @@ export const SignUpScreen = () => {
 
         <View style={styles.socialRow}>
           <TouchableOpacity style={[styles.socialButton, { backgroundColor: colors.surface, borderColor: colors.border }]}>
+            <AntDesign name="google" size={16} color={colors.text} />
             <Text style={[styles.socialButtonText, { color: colors.text }]}>Google</Text>
           </TouchableOpacity>
         </View>
@@ -194,6 +194,7 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 36,
     marginBottom: 8,
+    marginTop: 8,
   },
   appSubtitle: {
     fontFamily: FONT_FAMILY,
@@ -208,6 +209,7 @@ const styles = StyleSheet.create({
     fontFamily: FONT_FAMILY,
     color: COLORS.textSecondary,
     fontWeight: '500',
+    fontSize: 13,
   },
   divider: {
     flexDirection: 'row',
@@ -258,7 +260,6 @@ const styles = StyleSheet.create({
   signupLink: {
     fontFamily: FONT_FAMILY,
     color: COLORS.primary,
-    fontWeight: 'bold',
   },
   titleSection: {
     marginBottom: 32,
