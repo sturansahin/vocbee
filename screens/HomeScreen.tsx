@@ -9,6 +9,7 @@ import {
     PanResponder,
     Image
 } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../types';
@@ -17,6 +18,7 @@ import Feather from '@expo/vector-icons/Feather';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '../context/ThemeContext';
 import { FONT_FAMILY } from '../utils/typography';
+import { SwarmLogo } from '../components/SwarmLogo';
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;
@@ -127,11 +129,22 @@ export default function HomeScreen() {
     };
 
     return (
-        <View style={[styles.container, { backgroundColor: colors.background, paddingTop: insets.top }]}>
+        <LinearGradient
+            colors={isDarkMode ? ['#FFD700', '#1a1a1a', '#000000'] : ['#FFA500', '#f5f9f7', '#ffffff']}
+            locations={[0, 0.2, 1]}
+            style={[styles.container, { paddingTop: insets.top }]}
+            start={{ x: 0.7, y: 0 }}
+            end={{ x: 0.7, y: 2 }}
+        >
             {/* Header */}
             <View style={styles.header}>
                 <View style={styles.headerSpacer} />
-                <Text style={[styles.headerTitle, { color: colors.primary }]}>VOCBEE</Text>
+                <View style={styles.headerTitleContainer}>
+                    <View style={styles.logoContainer}>
+                        <SwarmLogo size={26} color={colors.text} />
+                    </View>
+                    <Text style={[styles.headerTitle, { color: colors.text }]}>VOCBEE</Text>
+                </View>
                 <TouchableOpacity
                     style={styles.settingsButton}
                     onPress={() => navigation.navigate('Settings')}
@@ -156,7 +169,7 @@ export default function HomeScreen() {
                 <View>
                     <View style={styles.goalHeader}>
                         <Text style={[styles.goalLabel, { color: colors.text }]}>Daily Goal</Text>
-                        <Text style={[styles.goalValue, { color: colors.primary }]}>15/20 words</Text>
+                        <Text style={[styles.goalValue, { color: colors.text }]}>15/20 words</Text>
                     </View>
                     <View style={[styles.progressBg, { backgroundColor: colors.surface }]}>
                         <View style={[styles.progressFill, { backgroundColor: colors.primary }]} />
@@ -202,7 +215,7 @@ export default function HomeScreen() {
                             style={[
                                 styles.swipeOverlay,
                                 {
-                                    backgroundColor: '#fca8a8ff',
+                                    backgroundColor: '#f4b1b1ff',
                                     borderColor: '#fca8a8ff',
                                     opacity: position.x.interpolate({
                                         inputRange: [-SWIPE_THRESHOLD, 0],
@@ -222,8 +235,8 @@ export default function HomeScreen() {
                             style={[
                                 styles.swipeOverlay,
                                 {
-                                    backgroundColor: '#98f5c7ff',
-                                    borderColor: '#98f5c7ff',
+                                    backgroundColor: '#d5ffdfff',
+                                    borderColor: '#d5ffdfff',
                                     opacity: position.x.interpolate({
                                         inputRange: [0, SWIPE_THRESHOLD],
                                         outputRange: [0, 1],
@@ -287,7 +300,7 @@ export default function HomeScreen() {
                     <Image source={require('../components/arrow.png')} style={[styles.actionIcon, styles.arrowIcon]} />
                 </TouchableOpacity>
             </View>
-        </View>
+        </LinearGradient>
     );
 }
 
@@ -309,6 +322,20 @@ const styles = StyleSheet.create({
         fontSize: 22,
         fontWeight: 'bold',
         letterSpacing: 6,
+    },
+    headerTitleContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 8,
+        flex: 1,
+        justifyContent: 'center',
+    },
+    logoContainer: {
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.3,
+        shadowRadius: 4,
+        elevation: 5,
     },
     settingsButton: {
         padding: 4,
@@ -359,7 +386,6 @@ const styles = StyleSheet.create({
     goalValue: {
         fontFamily: FONT_FAMILY,
         fontSize: 12,
-        fontWeight: 'bold',
     },
     progressBg: {
         height: 8,
@@ -455,8 +481,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        gap: 50,
-        paddingBottom: 60,
+        gap: 100,
+        paddingBottom: 100,
         paddingTop: 10,
     },
     actionButton: {
@@ -477,7 +503,7 @@ const styles = StyleSheet.create({
     },
     learnedActionButton: {
         borderWidth: 1,
-        borderColor: '#75e8a3',
+        borderColor: '#35de5dff',
     },
     actionIcon: {
         width: 70,
@@ -488,7 +514,7 @@ const styles = StyleSheet.create({
         tintColor: '#ea8484',
     },
     arrowIcon: {
-        tintColor: '#75e8a3',
+        tintColor: '#35de5dff',
     },
     learnedButton: {
         flex: 1,
@@ -539,7 +565,7 @@ const styles = StyleSheet.create({
     },
     learnedText: {
         fontFamily: FONT_FAMILY,
-        color: '#75e8a3ff',
+        color: '#35de5dff',
         fontSize: 20,
         letterSpacing: 4,
     },

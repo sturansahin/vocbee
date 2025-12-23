@@ -15,6 +15,7 @@ type AuthNavProp = StackNavigationProp<RootStackParamList>;
 export const LoginScreen = () => {
   const navigation = useNavigation<AuthNavProp>();
   const { colors, isDarkMode } = useTheme();
+  const [showPassword, setShowPassword] = React.useState(false);
 
   return (
     <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
@@ -41,8 +42,9 @@ export const LoginScreen = () => {
         <Input
           label="Password"
           placeholder="Password"
-          secureTextEntry
-          rightIcon="visibility-off"
+          secureTextEntry={!showPassword}
+          rightIcon={showPassword ? "visibility" : "visibility-off"}
+          onRightIconPress={() => setShowPassword(!showPassword)}
           backgroundColor={colors.surface}
           borderColor={colors.border}
           labelColor={colors.textSecondary}
@@ -88,6 +90,8 @@ export const LoginScreen = () => {
 export const SignUpScreen = () => {
   const navigation = useNavigation<AuthNavProp>();
   const { colors, isDarkMode } = useTheme();
+  const [showPassword, setShowPassword] = React.useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = React.useState(false);
 
   return (
     <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
@@ -119,8 +123,9 @@ export const SignUpScreen = () => {
         <Input
           label="Password"
           placeholder="Create password"
-          secureTextEntry
-          rightIcon="visibility-off"
+          secureTextEntry={!showPassword}
+          rightIcon={showPassword ? "visibility" : "visibility-off"}
+          onRightIconPress={() => setShowPassword(!showPassword)}
           backgroundColor={colors.surface}
           borderColor={colors.border}
           labelColor={colors.textSecondary}
@@ -130,8 +135,9 @@ export const SignUpScreen = () => {
         <Input
           label="Confirm Password"
           placeholder="Confirm password"
-          secureTextEntry
-          rightIcon="visibility-off"
+          secureTextEntry={!showConfirmPassword}
+          rightIcon={showConfirmPassword ? "visibility" : "visibility-off"}
+          onRightIconPress={() => setShowConfirmPassword(!showConfirmPassword)}
           backgroundColor={colors.surface}
           borderColor={colors.border}
           labelColor={colors.textSecondary}

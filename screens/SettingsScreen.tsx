@@ -1,7 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, Image, StyleSheet, Modal, Animated } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { COLORS, LANGUAGES } from '../constants';
+import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import Feather from '@expo/vector-icons/Feather';
 import { FONT_FAMILY } from '../utils/typography';
 import Ionicons from '@expo/vector-icons/Ionicons';
@@ -110,6 +112,7 @@ const DarkModeSwitch = ({ value, onToggle }: SwitchToggleProps) => {
 import { useTheme } from '../context/ThemeContext';
 
 export default function SettingsScreen() {
+   const navigation = useNavigation();
    const { isDarkMode, toggleTheme, colors } = useTheme();
    const [reminderEnabled, setReminderEnabled] = useState(true);
    const [startTime, setStartTime] = useState('09:00');
@@ -132,6 +135,18 @@ export default function SettingsScreen() {
 
    return (
       <SafeAreaView style={[styles.container, dynamicStyles.container]}>
+         {/* Header with Back Button */}
+         <View style={styles.header}>
+            <TouchableOpacity
+               onPress={() => navigation.goBack()}
+               style={styles.backButton}
+            >
+               <FontAwesome5 name="arrow-left" size={24} color={colors.text} />
+            </TouchableOpacity>
+            <Text style={[styles.headerTitle, { color: colors.text }]}>Settings</Text>
+            <View style={styles.headerSpacer} />
+         </View>
+
          <ScrollView style={styles.scrollView} contentContainerStyle={styles.scrollContent}>
             {/* Profile */}
             <View style={[styles.profileSection, { paddingTop: 24 }]}>
@@ -295,7 +310,7 @@ export default function SettingsScreen() {
                <Text style={[styles.logoutButtonText, { color: colors.error }]}>Log Out</Text>
             </TouchableOpacity>
 
-            <Text style={[styles.versionText, dynamicStyles.textSecondary, { marginTop: 24, marginBottom: -24 }]}>VocBee v1.0.0</Text>
+            <Text style={[styles.versionText, dynamicStyles.textSecondary, { marginTop: 12, marginBottom: 0 }]}>VocBee v1.0.0</Text>
          </ScrollView>
 
          {/* Time Picker Modal */}
@@ -437,6 +452,30 @@ const styles = StyleSheet.create({
    container: {
       flex: 1,
       backgroundColor: COLORS.background,
+   },
+   header: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      paddingHorizontal: 16,
+      paddingTop: 50,
+      paddingBottom: 0,
+      gap: 12,
+   },
+   backButton: {
+      width: 44,
+      height: 44,
+      borderRadius: 22,
+      alignItems: 'center',
+      justifyContent: 'center',
+   },
+   headerTitle: {
+      fontFamily: FONT_FAMILY,
+      fontSize: 20,
+      flex: 1,
+      textAlign: 'center',
+   },
+   headerSpacer: {
+      width: 44,
    },
    scrollView: {
       flex: 1,
@@ -590,7 +629,7 @@ const styles = StyleSheet.create({
       borderRadius: 8,
    },
    pickerItemSelected: {
-      backgroundColor: 'rgba(56, 224, 123, 0.15)',
+      backgroundColor: 'rgba(255, 204, 0, 0.15)',
    },
    pickerItemText: {
       fontFamily: FONT_FAMILY,

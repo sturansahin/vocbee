@@ -17,6 +17,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { RootStackParamList } from '../types';
 import { Button } from '../components/UIComponents';
 import { MaterialIcons } from '@expo/vector-icons';
+import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import { LANGUAGES, LEVELS, COLORS } from '../constants';
 import { useTheme } from '../context/ThemeContext';
 import { FONT_FAMILY } from '../utils/typography';
@@ -248,8 +249,8 @@ export const SetupScreen = () => {
     <View style={[styles.container, { backgroundColor: colors.background, paddingTop: insets.top }]}>
       {/* Header with animated progress */}
       <View style={styles.headerContainer}>
-        <TouchableOpacity onPress={handleBack} style={[styles.backButton, { backgroundColor: colors.surface }]}>
-          <MaterialIcons name="arrow-back" size={24} color={colors.text} />
+        <TouchableOpacity onPress={handleBack} style={styles.backButton}>
+          <FontAwesome5 name="arrow-left" size={24} color={colors.text} />
         </TouchableOpacity>
 
         <View style={styles.progressWrapper}>
@@ -303,7 +304,6 @@ const styles = StyleSheet.create({
     width: 44,
     height: 44,
     borderRadius: 22,
-    backgroundColor: COLORS.surface,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -377,7 +377,7 @@ const styles = StyleSheet.create({
   },
   languageItemSelected: {
     borderColor: COLORS.primary,
-    backgroundColor: 'rgba(56, 224, 123, 0.1)',
+    backgroundColor: 'rgba(255, 215, 0, 0.1)',
   },
   flag: {
     fontSize: 28,
@@ -422,7 +422,7 @@ const styles = StyleSheet.create({
   },
   levelItemSelected: {
     borderColor: COLORS.primary,
-    backgroundColor: 'rgba(56, 224, 123, 0.1)',
+    backgroundColor: 'rgba(255, 215, 0, 0.1)',
   },
   levelRow: {
     flexDirection: 'row',
@@ -467,7 +467,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 4,
     borderRadius: 12,
-    backgroundColor: 'rgba(56, 224, 123, 0.2)',
+    backgroundColor: 'rgba(255, 215, 0, 0.2)',
   },
   levelRange: {
     fontFamily: FONT_FAMILY,

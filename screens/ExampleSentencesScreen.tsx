@@ -4,6 +4,7 @@ import { useNavigation } from '@react-navigation/native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '../context/ThemeContext';
+import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import { FONT_FAMILY } from '../utils/typography';
 
 export default function ExampleSentencesScreen() {
@@ -93,7 +94,7 @@ export default function ExampleSentencesScreen() {
                 onPress={() => navigation.goBack()}
                 style={[styles.backButton, { top: insets.top + 8 }]}
             >
-                <MaterialIcons name="arrow-back" size={24} color={isDarkMode ? "white" : colors.text} />
+                <FontAwesome5 name="arrow-left" size={24} color={colors.text} />
             </TouchableOpacity>
         </View>
     );
@@ -191,15 +192,15 @@ const styles = StyleSheet.create({
         paddingHorizontal: 16,
         paddingVertical: 6,
         borderRadius: 16,
-        backgroundColor: 'rgba(56, 224, 123, 0.1)',
+        backgroundColor: 'rgba(255, 215, 0, 0.1)',
         borderWidth: 1,
-        borderColor: 'rgba(56, 224, 123, 0.2)',
+        borderColor: 'rgba(255, 215, 0, 0.2)',
     },
     badgeTextGreen: {
         fontSize: 10,
         fontWeight: 'bold',
         textTransform: 'uppercase',
-        color: '#38e07b',
+        color: '#FFD700',
     },
     divider: {
         width: '85%',
@@ -272,7 +273,7 @@ const styles = StyleSheet.create({
         width: 96,
         height: 96,
         borderRadius: 48,
-        backgroundColor: 'rgba(56, 224, 123, 0.1)',
+        backgroundColor: 'rgba(255, 215, 0, 0.1)',
     },
     aiHeader: {
         flexDirection: 'row',
@@ -292,7 +293,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     aiSubtitle: {
-        color: 'rgba(56, 224, 123, 0.8)',
+        color: 'rgba(255, 215, 0, 0.8)',
         fontSize: 12,
     },
     aiInput: {
@@ -312,7 +313,7 @@ const styles = StyleSheet.create({
         fontSize: 14,
     },
     aiSendButton: {
-        backgroundColor: 'rgba(56, 224, 123, 0.2)',
+        backgroundColor: 'rgba(255, 215, 0, 0.2)',
         borderRadius: 12,
         padding: 4,
     },

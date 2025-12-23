@@ -1,6 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, Text, View, TextInput, TextInputProps, StyleSheet } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
+import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import { COLORS } from '../constants';
 import { FONT_FAMILY } from '../utils/typography';
 
@@ -129,7 +130,7 @@ export const Header: React.FC<HeaderProps> = ({
           onPress={onBack}
           style={styles.backButton}
         >
-          <MaterialIcons name="arrow-back" size={24} color={textColor} />
+          <FontAwesome5 name="arrow-left" size={24} color={textColor} />
         </TouchableOpacity>
       ) : (
         <View style={styles.placeholder} />
@@ -226,14 +227,16 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.background,
   },
   backButton: {
-    width: 40,
-    height: 40,
+    width: 20,
+    height: 20,
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop: 30,
+    marginLeft: 10,
   },
   placeholder: {
-    width: 40,
+    width: 30,
   },
   headerCenter: {
     alignItems: 'center',

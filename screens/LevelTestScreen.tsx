@@ -11,6 +11,7 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { RootStackParamList } from '../types';
 import { MaterialIcons } from '@expo/vector-icons';
+import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import { useTheme } from '../context/ThemeContext';
 import { FONT_FAMILY } from '../utils/typography';
 import { LEVEL_TEST_QUESTIONS } from '../constants';
@@ -118,7 +119,7 @@ export default function LevelTestScreen() {
                     onPress={() => navigation.goBack()}
                     style={styles.backButton}
                 >
-                    <MaterialIcons name="arrow-back" size={24} color={colors.text} />
+                    <FontAwesome5 name="arrow-left" size={24} color={colors.text} />
                 </TouchableOpacity>
 
                 <View style={styles.progressWrapper}>

@@ -1,20 +1,20 @@
-// Dark Theme Colors
+// Dark Theme Colors - Pure Black Theme
 export const DARK_COLORS = {
-  primary: '#38e07b',
-  primaryDark: '#2cb863',
-  background: '#122017',
-  surface: '#1a2c22',
-  surfaceLight: '#23362b',
+  primary: '#FFD700',          // Gold/Yellow
+  primaryDark: '#FFA500',      // Dark orange/gold
+  background: '#000000',        // Pure black
+  surface: '#1a1a1a',          // Dark gray
+  surfaceLight: '#2a2a2a',     // Slightly lighter gray
   text: '#ffffff',
-  textSecondary: '#96c5a9',
-  border: '#366348',
+  textSecondary: '#b8b8b8',    // Gray text
+  border: '#333333',           // Dark border
   error: '#ff6b6b',
 };
 
 // Light Theme Colors - Soft mint/cream tones
 export const LIGHT_COLORS = {
-  primary: '#2cb863',
-  primaryDark: '#249a52',
+  primary: '#FFA500',          // Orange/Gold
+  primaryDark: '#FF8C00',      // Dark orange
   background: '#f5f9f7',
   surface: '#ffffff',
   surfaceLight: '#e8f5ec',
