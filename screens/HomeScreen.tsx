@@ -7,7 +7,6 @@ import {
     Dimensions,
     Animated,
     PanResponder,
-    Image,
     ActivityIndicator
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -40,6 +39,7 @@ import {
     getLearnedCount,
     getTotalWords
 } from '../services/progressService';
+import { addToFavorites } from '../services/favoritesService';
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;
@@ -182,28 +182,35 @@ export default function HomeScreen() {
             duration: 300,
             useNativeDriver: false,
         }).start(async () => {
-            position.setValue({ x: 0, y: 0 });
+            const swipedWord = currentWord;
+            const wasLastWord = currentWordIndex >= words.length - 1;
 
-            // If swiped right, mark as learned
-            if (direction === 'right' && currentWord) {
-                await markWordAsLearned(currentLevel, currentWord.id);
+            // Advance UI immediately to avoid showing the previous word
+            if (!wasLastWord) {
+                setCurrentWordIndex(prev => prev + 1);
+            }
+
+            // Reset card position on the next frame so the new word renders first
+            requestAnimationFrame(() => {
+                position.setValue({ x: 0, y: 0 });
+            });
+
+            // Side effects (storage/progress) can run after UI has advanced
+            if (direction === 'right' && swipedWord) {
+                await markWordAsLearned(currentLevel, swipedWord.id);
                 setLearnedCount(prev => prev + 1);
 
-                // Check if level is complete
                 const newLevel = await checkAndAdvanceLevel();
                 if (newLevel !== currentLevel) {
                     console.log(`Advanced to level ${newLevel}`);
                     setCurrentLevel(newLevel);
-                    await loadData(true); // Force reload for new level
+                    await loadData(true);
                     return;
                 }
             }
 
-            // Move to next word
-            if (currentWordIndex < words.length - 1) {
-                setCurrentWordIndex(prev => prev + 1);
-            } else {
-                // All words done, reload to get any remaining
+            // If we were at the end, reload the deck
+            if (wasLastWord) {
                 await loadData(true);
             }
         });
@@ -249,6 +256,14 @@ export default function HomeScreen() {
         swipeCard('right');
     };
 
+    const handleAddToFavorites = async () => {
+        if (currentWord) {
+            await addToFavorites(currentWord);
+            // Optional: Show feedback to user
+            console.log('Added to favorites:', currentWord.word);
+        }
+    };
+
     // Render background card
     const renderBackgroundCard = () => {
         if (!nextWord || words.length <= 1) return null;
@@ -277,7 +292,10 @@ export default function HomeScreen() {
                 ]}>
                     <View style={styles.cardCenter}>
                         <Text style={[styles.wordTitle, { color: colors.text }]}>{nextWord.word}</Text>
-                        <Text style={[styles.wordType, { color: colors.textSecondary }]}>{nextWord.translation}</Text>
+                        <View style={styles.translationRow}>
+                            <MaterialIcons name="translate" size={24} color={colors.primary} />
+                            <Text style={[styles.wordType, { color: colors.primary }]}>{nextWord.translation}</Text>
+                        </View>
                     </View>
                 </View>
             </View>
@@ -321,12 +339,20 @@ export default function HomeScreen() {
                         </View>
                         <Text style={[styles.headerTitle, { color: colors.text }]}>VOCBEE</Text>
                     </View>
-                    <TouchableOpacity
-                        style={styles.settingsButton}
-                        onPress={() => navigation.navigate('Settings')}
-                    >
-                        <Feather name="settings" size={24} color={colors.text} />
-                    </TouchableOpacity>
+                    <View style={styles.headerButtons}>
+                        <TouchableOpacity
+                            style={styles.headerButton}
+                            onPress={() => navigation.navigate('Favorites')}
+                        >
+                            <Feather name="star" size={24} color={colors.text} />
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={styles.headerButton}
+                            onPress={() => navigation.navigate('Settings')}
+                        >
+                            <Feather name="settings" size={24} color={colors.text} />
+                        </TouchableOpacity>
+                    </View>
                 </View>
 
                 <View style={styles.emptyContainer}>
@@ -364,12 +390,20 @@ export default function HomeScreen() {
                     </View>
                     <Text style={[styles.headerTitle, { color: colors.text }]}>VOCBEE</Text>
                 </View>
-                <TouchableOpacity
-                    style={styles.settingsButton}
-                    onPress={() => navigation.navigate('Settings')}
-                >
-                    <Feather name="settings" size={24} color={colors.text} />
-                </TouchableOpacity>
+                <View style={styles.headerButtons}>
+                    <TouchableOpacity
+                        style={styles.headerButton}
+                        onPress={() => navigation.navigate('Favorites')}
+                    >
+                        <Feather name="star" size={24} color={colors.text} />
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={styles.headerButton}
+                        onPress={() => navigation.navigate('Settings')}
+                    >
+                        <Feather name="settings" size={24} color={colors.text} />
+                    </TouchableOpacity>
+                </View>
             </View>
 
             {/* Stats Section */}
@@ -411,6 +445,7 @@ export default function HomeScreen() {
                 {/* Top Card - Swipeable */}
                 {currentWord && (
                     <Animated.View
+                        key={currentWord.id}
                         style={[
                             styles.cardContainer,
                             {
@@ -512,13 +547,13 @@ export default function HomeScreen() {
                     activeOpacity={0.6}
                 >
                     <View style={styles.iconShadow}>
-                        <RetryIcon size={80} />
+                        <RetryIcon size={70} />
                     </View>
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                    style={styles.actionButton}
-                    onPress={() => { }}
+                    style={[styles.actionButton, { marginTop: -30 }]}
+                    onPress={handleAddToFavorites}
                     activeOpacity={0.6}
                 >
                     <View style={styles.iconShadow}>
@@ -573,7 +608,12 @@ const styles = StyleSheet.create({
         shadowRadius: 4,
         elevation: 5,
     },
-    settingsButton: {
+    headerButtons: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 12,
+    },
+    headerButton: {
         padding: 4,
     },
     statsBlurContainer: {
@@ -655,9 +695,8 @@ const styles = StyleSheet.create({
     },
     wordType: {
         fontFamily: FONT_FAMILY,
-        fontSize: 18,
-        fontStyle: 'italic',
-        marginBottom: 24,
+        fontSize: 20,
+
     },
     translationRow: {
         flexDirection: 'row',
@@ -699,7 +738,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        gap: 50,
+        gap: 20,
         paddingBottom: 100,
         paddingTop: 10,
     },

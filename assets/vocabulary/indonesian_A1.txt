@@ -1,0 +1,5398 @@
+{
+  "words": [
+    {
+      "id": 1,
+      "word": "a/an",
+      "sentence1": "Aku punya kucing.",
+      "sentence2": "Dia seorang insinyur."
+    },
+    {
+      "id": 2,
+      "word": "sekitar",
+      "sentence1": "Buku ini tentang sejarah.",
+      "sentence2": "Apa pendapatmu tentang itu?"
+    },
+    {
+      "id": 3,
+      "word": "di atas",
+      "sentence1": "Gambarnya ada di atas sofa.",
+      "sentence2": "Pesawat itu terbang di atas awan."
+    },
+    {
+      "id": 4,
+      "word": "melintasi",
+      "sentence1": "Banknya ada di seberang jalan.",
+      "sentence2": "Dia berjalan melintasi jembatan."
+    },
+    {
+      "id": 5,
+      "word": "tindakan",
+      "sentence1": "Bertindaklah sekarang.",
+      "sentence2": "Aku suka film aksi."
+    },
+    {
+      "id": 6,
+      "word": "kegiatan",
+      "sentence1": "Berenang adalah kegiatan favorit saya.",
+      "sentence2": "Aktivitas apa yang kau sukai?"
+    },
+    {
+      "id": 7,
+      "word": "aktor",
+      "sentence1": "Dia adalah aktor terkenal.",
+      "sentence2": "Aktor itu memainkan perannya dengan baik."
+    },
+    {
+      "id": 8,
+      "word": "aktris",
+      "sentence1": "Dia adalah seorang aktris berbakat.",
+      "sentence2": "Aktris itu memenangkan penghargaan."
+    },
+    {
+      "id": 9,
+      "word": "tambahkan",
+      "sentence1": "Tambahkan garam ke sup.",
+      "sentence2": "Bisakah kau tambahkan nomorku?"
+    },
+    {
+      "id": 10,
+      "word": "alamat",
+      "sentence1": "Apa alamatmu?",
+      "sentence2": "Tulis alamatmu di sini."
+    },
+    {
+      "id": 11,
+      "word": "dewasa",
+      "sentence1": "Film ini hanya untuk orang dewasa.",
+      "sentence2": "Aku sudah dewasa sekarang."
+    },
+    {
+      "id": 12,
+      "word": "saran",
+      "sentence1": "Bisakah kau memberi saya saran?",
+      "sentence2": "Nasehatnya sangat membantu."
+    },
+    {
+      "id": 13,
+      "word": "takut",
+      "sentence1": "Aku takut laba-laba.",
+      "sentence2": "Jangan takut."
+    },
+    {
+      "id": 14,
+      "word": "setelah",
+      "sentence1": "Mari kita bertemu setelah bekerja.",
+      "sentence2": "Setelah makan malam, kami menonton TV."
+    },
+    {
+      "id": 15,
+      "word": "sore hari",
+      "sentence1": "Selamat siang!",
+      "sentence2": "Aku tidur sore."
+    },
+    {
+      "id": 16,
+      "word": "lagi",
+      "sentence1": "Katakan lagi, kumohon.",
+      "sentence2": "Aku ingin melihatmu lagi."
+    },
+    {
+      "id": 17,
+      "word": "usia",
+      "sentence1": "Berapa usiamu?",
+      "sentence2": "Dia berusia 25 tahun."
+    },
+    {
+      "id": 18,
+      "word": "sebelumnya",
+      "sentence1": "Aku bertemu dengannya dua tahun yang lalu.",
+      "sentence2": "Dia pergi satu jam yang lalu."
+    },
+    {
+      "id": 19,
+      "word": "setuju",
+      "sentence1": "Aku setuju denganmu.",
+      "sentence2": "Apa kau setuju dengan rencana ini?"
+    },
+    {
+      "id": 20,
+      "word": "udara",
+      "sentence1": "Udara di sini segar.",
+      "sentence2": "Aku butuh udara segar."
+    },
+    {
+      "id": 21,
+      "word": "bandara",
+      "sentence1": "Aku akan menjemputmu di bandara.",
+      "sentence2": "Bandara ini sangat sibuk."
+    },
+    {
+      "id": 22,
+      "word": "semua",
+      "sentence1": "Semua siswa lulus ujian.",
+      "sentence2": "Aku makan semua kue."
+    },
+    {
+      "id": 23,
+      "word": "juga",
+      "sentence1": "Aku juga suka pizza.",
+      "sentence2": "Dia juga akan datang ke pesta."
+    },
+    {
+      "id": 24,
+      "word": "selalu",
+      "sentence1": "Aku selalu bangun pagi.",
+      "sentence2": "Dia selalu bahagia."
+    },
+    {
+      "id": 25,
+      "word": "luar biasa",
+      "sentence1": "Pemandangan dari atas sangat menakjubkan.",
+      "sentence2": "Kau melakukan pekerjaan yang luar biasa!"
+    },
+    {
+      "id": 26,
+      "word": "dan",
+      "sentence1": "Aku suka teh dan kopi.",
+      "sentence2": "Dia sedang belajar dan bekerja."
+    },
+    {
+      "id": 27,
+      "word": "marah",
+      "sentence1": "Dia marah pada temannya.",
+      "sentence2": "Jangan marah, kumohon."
+    },
+    {
+      "id": 28,
+      "word": "hewan",
+      "sentence1": "Gajah adalah hewan besar.",
+      "sentence2": "Aku punya hewan peliharaan."
+    },
+    {
+      "id": 29,
+      "word": "lainnya",
+      "sentence1": "Bolehkah aku mendapatkan sepotong kue lagi?",
+      "sentence2": "Dia ingin kesempatan lain."
+    },
+    {
+      "id": 30,
+      "word": "jawaban",
+      "sentence1": "Apa jawabanmu?",
+      "sentence2": "Aku tidak tahu jawabannya."
+    },
+    {
+      "id": 31,
+      "word": "apapun",
+      "sentence1": "Apa kau punya pertanyaan?",
+      "sentence2": "Aku tak punya uang."
+    },
+    {
+      "id": 32,
+      "word": "siapa saja",
+      "sentence1": "Apa ada orang di sana?",
+      "sentence2": "Aku tak kenal siapapun di sini."
+    },
+    {
+      "id": 33,
+      "word": "apapun",
+      "sentence1": "Kau butuh sesuatu?",
+      "sentence2": "Aku tak bisa menemukan apapun."
+    },
+    {
+      "id": 34,
+      "word": "apartemen",
+      "sentence1": "Aku tinggal di apartemen kecil.",
+      "sentence2": "Apartemen ini sangat bagus."
+    },
+    {
+      "id": 35,
+      "word": "apel",
+      "sentence1": "Aku suka makan apel setiap hari.",
+      "sentence2": "Dia membuat kue apel."
+    },
+    {
+      "id": 36,
+      "word": "april",
+      "sentence1": "April adalah bulan keempat.",
+      "sentence2": "Ulang tahunku di bulan April."
+    },
+    {
+      "id": 37,
+      "word": "luas lahan",
+      "sentence1": "Ini adalah area yang luas.",
+      "sentence2": "Taman berada di daerah ini."
+    },
+    {
+      "id": 38,
+      "word": "lengan",
+      "sentence1": "Dia patah lengannya.",
+      "sentence2": "Dia memiliki tato di lengannya."
+    },
+    {
+      "id": 39,
+      "word": "sekitar",
+      "sentence1": "Kucing itu duduk di sekitar meja.",
+      "sentence2": "Mari berjalan-jalan di sekitar taman."
+    },
+    {
+      "id": 40,
+      "word": "tiba",
+      "sentence1": "Kita akan tiba jam 5 sore.",
+      "sentence2": "Tolong datang tepat waktu."
+    },
+    {
+      "id": 41,
+      "word": "seni",
+      "sentence1": "Aku suka seni modern.",
+      "sentence2": "Dia belajar sejarah seni."
+    },
+    {
+      "id": 42,
+      "word": "artikel",
+      "sentence1": "Aku membaca artikel yang menarik.",
+      "sentence2": "Artikel itu ditulis dengan baik."
+    },
+    {
+      "id": 43,
+      "word": "seniman",
+      "sentence1": "Dia adalah seorang seniman terkenal.",
+      "sentence2": "Sang seniman melukis sebuah gambar yang indah."
+    },
+    {
+      "id": 44,
+      "word": "sebagai",
+      "sentence1": "Dia bekerja sebagai guru.",
+      "sentence2": "Dia dikenal sebagai pemimpin yang hebat."
+    },
+    {
+      "id": 45,
+      "word": "tanyalah",
+      "sentence1": "Boleh aku bertanya sesuatu?",
+      "sentence2": "Dia meminta bantuan."
+    },
+    {
+      "id": 46,
+      "word": "pada",
+      "sentence1": "Aku akan menemuimu di taman.",
+      "sentence2": "Buku itu ada di perpustakaan."
+    },
+    {
+      "id": 47,
+      "word": "agustus",
+      "sentence1": "Agustus adalah bulan ke-8.",
+      "sentence2": "Liburanku di bulan Agustus."
+    },
+    {
+      "id": 48,
+      "word": "bibi",
+      "sentence1": "Bibi saya tinggal di kota lain.",
+      "sentence2": "Aku mengunjungi bibiku akhir pekan lalu."
+    },
+    {
+      "id": 49,
+      "word": "musim gugur",
+      "sentence1": "Musim gugur adalah musim favoritku.",
+      "sentence2": "Daunnya jatuh di musim gugur."
+    },
+    {
+      "id": 50,
+      "word": "pergi",
+      "sentence1": "Toko itu jauh.",
+      "sentence2": "Dia sedang berlibur."
+    },
+    {
+      "id": 51,
+      "word": "sayang",
+      "sentence1": "Bayi sedang tidur.",
+      "sentence2": "Aku punya adik perempuan."
+    },
+    {
+      "id": 52,
+      "word": "kembali",
+      "sentence1": "Buku itu ada di rak belakang.",
+      "sentence2": "Dia menyakiti punggungnya saat mengangkat."
+    },
+    {
+      "id": 53,
+      "word": "buruk",
+      "sentence1": "Makanan ini tidak enak.",
+      "sentence2": "Dia mengalami hari yang buruk."
+    },
+    {
+      "id": 54,
+      "word": "tas",
+      "sentence1": "Aku butuh tas baru.",
+      "sentence2": "Dia mengemas tasnya untuk perjalanan."
+    },
+    {
+      "id": 55,
+      "word": "bola",
+      "sentence1": "Bola itu bulat.",
+      "sentence2": "Aku menendang bola."
+    },
+    {
+      "id": 56,
+      "word": "pisang",
+      "sentence1": "Aku suka makan pisang.",
+      "sentence2": "Dia membuat smoothie pisang."
+    },
+    {
+      "id": 57,
+      "word": "band",
+      "sentence1": "Band sedang memainkan musik.",
+      "sentence2": "Aku suka band ini."
+    },
+    {
+      "id": 58,
+      "word": "bank (uang)",
+      "sentence1": "Aku harus pergi ke bank.",
+      "sentence2": "Dia bekerja di bank."
+    },
+    {
+      "id": 59,
+      "word": "mandi",
+      "sentence1": "Aku mandi setiap malam.",
+      "sentence2": "Mandi itu santai."
+    },
+    {
+      "id": 60,
+      "word": "kamar mandi",
+      "sentence1": "Kamar mandi bersih.",
+      "sentence2": "Aku harus ke kamar mandi."
+    },
+    {
+      "id": 61,
+      "word": "menjadi",
+      "sentence1": "Aku ingin menjadi dokter.",
+      "sentence2": "Dia akan senang."
+    },
+    {
+      "id": 62,
+      "word": "pantai",
+      "sentence1": "Pantai ini ramai.",
+      "sentence2": "Aku suka pantai."
+    },
+    {
+      "id": 63,
+      "word": "indah",
+      "sentence1": "Matahari terbenam indah.",
+      "sentence2": "Dia adalah orang yang cantik."
+    },
+    {
+      "id": 64,
+      "word": "karena",
+      "sentence1": "Aku senang karena hari cerah.",
+      "sentence2": "Dia pergi karena dia lelah."
+    },
+    {
+      "id": 65,
+      "word": "menjadi",
+      "sentence1": "Aku ingin menjadi dokter.",
+      "sentence2": "Dia akan menjadi pemimpin yang hebat."
+    },
+    {
+      "id": 66,
+      "word": "tempat tidur",
+      "sentence1": "Aku tidur di tempat tidurku.",
+      "sentence2": "Tempat tidurnya nyaman."
+    },
+    {
+      "id": 67,
+      "word": "kamar tidur",
+      "sentence1": "Kamar tidurku kecil.",
+      "sentence2": "Aku suka kamar tidurku."
+    },
+    {
+      "id": 68,
+      "word": "bir",
+      "sentence1": "Aku suka minum bir.",
+      "sentence2": "Dia memesan bir."
+    },
+    {
+      "id": 69,
+      "word": "sebelumnya",
+      "sentence1": "Aku mencuci tanganku sebelum makan.",
+      "sentence2": "Dia tiba sebelum aku."
+    },
+    {
+      "id": 70,
+      "word": "mulai",
+      "sentence1": "Aku akan mulai PR-ku.",
+      "sentence2": "Dia mulai bernyanyi."
+    },
+    {
+      "id": 71,
+      "word": "awal",
+      "sentence1": "Awal filmnya menarik.",
+      "sentence2": "Aku melewatkan awal pertunjukan."
+    },
+    {
+      "id": 72,
+      "word": "di belakang",
+      "sentence1": "Kucing itu bersembunyi di belakang sofa.",
+      "sentence2": "Dia berdiri di belakangnya."
+    },
+    {
+      "id": 73,
+      "word": "percaya",
+      "sentence1": "Aku percaya padamu.",
+      "sentence2": "Apakah Anda percaya pada hantu?"
+    },
+    {
+      "id": 74,
+      "word": "di bawah",
+      "sentence1": "Suhu di bawah titik beku.",
+      "sentence2": "Ruang bawah tanah berada di bawah permukaan tanah."
+    },
+    {
+      "id": 75,
+      "word": "terbaik",
+      "sentence1": "Ini adalah buku terbaik yang pernah saya baca.",
+      "sentence2": "Dia adalah siswa terbaik di kelas."
+    },
+    {
+      "id": 76,
+      "word": "lebih baik",
+      "sentence1": "Aku merasa lebih baik hari ini.",
+      "sentence2": "Film ini lebih baik dari yang terakhir."
+    },
+    {
+      "id": 77,
+      "word": "antara",
+      "sentence1": "Taman itu ada di antara sekolah dan perpustakaan.",
+      "sentence2": "Aku duduk di antara teman-temanku di kelas."
+    },
+    {
+      "id": 78,
+      "word": "sepeda",
+      "sentence1": "Aku bersepeda ke sekolah.",
+      "sentence2": "Dia membeli sepeda baru."
+    },
+    {
+      "id": 79,
+      "word": "besar",
+      "sentence1": "Ini rumah besar.",
+      "sentence2": "Dia punya anjing besar."
+    },
+    {
+      "id": 80,
+      "word": "sepeda",
+      "sentence1": "Aku harus memperbaiki sepeda motorku.",
+      "sentence2": "Dia naik sepeda setiap hari."
+    },
+    {
+      "id": 81,
+      "word": "tagihan",
+      "sentence1": "Aku menerima tagihannya kemarin.",
+      "sentence2": "Tolong bayar tagihannya."
+    },
+    {
+      "id": 82,
+      "word": "burung",
+      "sentence1": "Burung itu bernyanyi.",
+      "sentence2": "Aku melihat burung berwarna-warni."
+    },
+    {
+      "id": 83,
+      "word": "ulang tahun",
+      "sentence1": "Ulang tahunku di bulan Juli.",
+      "sentence2": "Dia mengadakan pesta ulang tahun."
+    },
+    {
+      "id": 84,
+      "word": "hitam",
+      "sentence1": "Aku punya kucing hitam.",
+      "sentence2": "Gaun itu hitam."
+    },
+    {
+      "id": 85,
+      "word": "blog",
+      "sentence1": "Aku membaca blog tentang perjalanan.",
+      "sentence2": "Dia menulis blog populer."
+    },
+    {
+      "id": 86,
+      "word": "rambut pirang",
+      "sentence1": "Dia memiliki rambut pirang panjang.",
+      "sentence2": "Dia lebih suka wanita pirang."
+    },
+    {
+      "id": 87,
+      "word": "biru",
+      "sentence1": "Langitnya biru.",
+      "sentence2": "Aku suka bunga biru."
+    },
+    {
+      "id": 88,
+      "word": "perahu",
+      "sentence1": "Kapal itu di atas air.",
+      "sentence2": "Kami pergi naik perahu."
+    },
+    {
+      "id": 89,
+      "word": "tubuh",
+      "sentence1": "Tubuh manusia sangat kompleks.",
+      "sentence2": "Dia berolahraga untuk tetap bugar."
+    },
+    {
+      "id": 90,
+      "word": "buku",
+      "sentence1": "Aku sedang membaca buku.",
+      "sentence2": "Dia memiliki banyak buku."
+    },
+    {
+      "id": 91,
+      "word": "boot",
+      "sentence1": "Aku membeli sepatu bot baru.",
+      "sentence2": "Sepatu ini nyaman."
+    },
+    {
+      "id": 92,
+      "word": "bosan",
+      "sentence1": "Aku bosan di rumah.",
+      "sentence2": "Dia merasa bosan di kelas."
+    },
+    {
+      "id": 93,
+      "word": "membosankan",
+      "sentence1": "Film ini membosankan.",
+      "sentence2": "Saya menemukan matematika membosankan."
+    },
+    {
+      "id": 94,
+      "word": "lahir",
+      "sentence1": "Aku lahir pada tahun 2000.",
+      "sentence2": "Dia lahir di sebuah kota kecil."
+    },
+    {
+      "id": 95,
+      "word": "keduanya",
+      "sentence1": "Kedua pilihan itu bagus.",
+      "sentence2": "Aku suka kedua film."
+    },
+    {
+      "id": 96,
+      "word": "botol",
+      "sentence1": "Aku butuh sebotol air.",
+      "sentence2": "Dia membeli botol kaca."
+    },
+    {
+      "id": 97,
+      "word": "kotak",
+      "sentence1": "Mainan ada di dalam kotak.",
+      "sentence2": "Aku butuh kotak untuk buku-buku saya."
+    },
+    {
+      "id": 98,
+      "word": "anak laki-laki",
+      "sentence1": "Anak itu sedang bermain di luar.",
+      "sentence2": "Aku melihat seorang anak dengan layang-layang."
+    },
+    {
+      "id": 99,
+      "word": "pacar",
+      "sentence1": "Pacarku sangat baik.",
+      "sentence2": "Dia memperkenalkanku pada pacarnya."
+    },
+    {
+      "id": 100,
+      "word": "roti",
+      "sentence1": "Aku butuh roti.",
+      "sentence2": "Dia memanggang roti segar."
+    },
+    {
+      "id": 101,
+      "word": "istirahat",
+      "sentence1": "Mari kita istirahat.",
+      "sentence2": "Aku harus menghentikan kebiasaan ini."
+    },
+    {
+      "id": 102,
+      "word": "sarapan",
+      "sentence1": "Aku makan sereal untuk sarapan.",
+      "sentence2": "Sarapan adalah makanan yang paling penting."
+    },
+    {
+      "id": 103,
+      "word": "bawalah",
+      "sentence1": "Bisa kau bawakan aku segelas air?",
+      "sentence2": "Aku akan membawa dokumen besok."
+    },
+    {
+      "id": 104,
+      "word": "saudara",
+      "sentence1": "Saudaraku sedang belajar di luar negeri.",
+      "sentence2": "Dia punya adik."
+    },
+    {
+      "id": 105,
+      "word": "coklat",
+      "sentence1": "Anjing coklat itu ramah.",
+      "sentence2": "Aku suka coklat coklat."
+    },
+    {
+      "id": 106,
+      "word": "membangun",
+      "sentence1": "Mereka akan membangun rumah baru.",
+      "sentence2": "Dia ingin membangun karir."
+    },
+    {
+      "id": 107,
+      "word": "bangunan",
+      "sentence1": "Bangunan itu sangat tinggi.",
+      "sentence2": "Mereka bekerja di gedung itu."
+    },
+    {
+      "id": 108,
+      "word": "bus",
+      "sentence1": "Aku naik bus ke sekolah.",
+      "sentence2": "Bus terlambat hari ini."
+    },
+    {
+      "id": 109,
+      "word": "bisnis",
+      "sentence1": "Dia menjalankan bisnisnya sendiri.",
+      "sentence2": "Bisnis sedang booming tahun ini."
+    },
+    {
+      "id": 110,
+      "word": "sibuk",
+      "sentence1": "Aku sibuk sekarang.",
+      "sentence2": "Dia punya jadwal yang sibuk."
+    },
+    {
+      "id": 111,
+      "word": "tapi",
+      "sentence1": "Aku suka teh, tapi aku lebih suka kopi.",
+      "sentence2": "Dia tinggi, tapi saudaranya pendek."
+    },
+    {
+      "id": 112,
+      "word": "mentega",
+      "sentence1": "Aku butuh mentega untuk resepnya.",
+      "sentence2": "Dia suka mentega di atas roti."
+    },
+    {
+      "id": 113,
+      "word": "membeli",
+      "sentence1": "Aku ingin membeli ponsel baru.",
+      "sentence2": "Dia membeli gaun kemarin."
+    },
+    {
+      "id": 114,
+      "word": "oleh",
+      "sentence1": "Buku itu ditulis oleh seorang penulis terkenal.",
+      "sentence2": "Aku lebih suka bepergian dengan kereta api."
+    },
+    {
+      "id": 115,
+      "word": "selamat tinggal",
+      "sentence1": "Aku mengucapkan selamat tinggal pada teman-temanku.",
+      "sentence2": "Dia melambaikan tangan di bandara."
+    },
+    {
+      "id": 116,
+      "word": "kafe",
+      "sentence1": "Mari kita bertemu di kafe.",
+      "sentence2": "Dia bekerja di sebuah kafe kecil."
+    },
+    {
+      "id": 117,
+      "word": "kue",
+      "sentence1": "Aku memanggang kue coklat.",
+      "sentence2": "Dia suka kue stroberi."
+    },
+    {
+      "id": 118,
+      "word": "panggil",
+      "sentence1": "Aku akan meneleponmu nanti.",
+      "sentence2": "Dia menerima telepon dari ibunya."
+    },
+    {
+      "id": 119,
+      "word": "kamera",
+      "sentence1": "Aku membeli kamera baru.",
+      "sentence2": "Dia mengambil foto dengan kameranya."
+    },
+    {
+      "id": 120,
+      "word": "bisa",
+      "sentence1": "Aku bisa berenang dengan baik.",
+      "sentence2": "Dia bisa berbicara tiga bahasa."
+    },
+    {
+      "id": 121,
+      "word": "tidak bisa",
+      "sentence1": "Aku tak bisa menemukan kunciku.",
+      "sentence2": "Dia tidak bisa datang ke pesta."
+    },
+    {
+      "id": 122,
+      "word": "modal",
+      "sentence1": "Ankara adalah ibu kota Turki.",
+      "sentence2": "Ibu kota sangat sibuk."
+    },
+    {
+      "id": 123,
+      "word": "mobil",
+      "sentence1": "Aku mengendarai mobil merah.",
+      "sentence2": "Dia ingin membeli mobil baru."
+    },
+    {
+      "id": 124,
+      "word": "kartu",
+      "sentence1": "Aku butuh kartu kredit baru.",
+      "sentence2": "Dia mengirimku kartu ulang tahun."
+    },
+    {
+      "id": 125,
+      "word": "karir",
+      "sentence1": "Dia membangun karir yang sukses.",
+      "sentence2": "Dia mengubah karirnya."
+    },
+    {
+      "id": 126,
+      "word": "wortel",
+      "sentence1": "Aku suka makan wortel mentah.",
+      "sentence2": "Dia membuat kue wortel."
+    },
+    {
+      "id": 127,
+      "word": "membawa",
+      "sentence1": "Bisakah kau membawa tas ini?",
+      "sentence2": "Dia membawa laptopnya kemana-mana."
+    },
+    {
+      "id": 128,
+      "word": "kucing",
+      "sentence1": "Kucing saya sangat suka bermain.",
+      "sentence2": "Dia mengadopsi seekor kucing liar."
+    },
+    {
+      "id": 129,
+      "word": "CD",
+      "sentence1": "Aku mendengarkan CD di mobil.",
+      "sentence2": "Dia membeli CD baru kemarin."
+    },
+    {
+      "id": 130,
+      "word": "satu sen",
+      "sentence1": "Harganya 100 sen.",
+      "sentence2": "Aku menemukan sen di jalan."
+    },
+    {
+      "id": 131,
+      "word": "pusat",
+      "sentence1": "Pusat kota sangat sibuk.",
+      "sentence2": "Ada sebuah taman di pusat kota."
+    },
+    {
+      "id": 132,
+      "word": "abad",
+      "sentence1": "Abad ke-21 dimulai pada tahun 2001.",
+      "sentence2": "Banyak perubahan terjadi pada abad ke-20."
+    },
+    {
+      "id": 133,
+      "word": "kursi",
+      "sentence1": "Silakan duduk di kursi.",
+      "sentence2": "Dia membeli kursi baru untuk kantornya."
+    },
+    {
+      "id": 134,
+      "word": "perubahan",
+      "sentence1": "Aku ingin mengubah gaya rambutku.",
+      "sentence2": "Dia berubah pikiran tentang perjalanan."
+    },
+    {
+      "id": 135,
+      "word": "grafik",
+      "sentence1": "Grafik menunjukkan data penjualan.",
+      "sentence2": "Dia membuat grafik untuk presentasinya."
+    },
+    {
+      "id": 136,
+      "word": "murah",
+      "sentence1": "Kaos ini sangat murah.",
+      "sentence2": "Aku menemukan hotel murah untuk liburanku."
+    },
+    {
+      "id": 137,
+      "word": "periksa",
+      "sentence1": "Silakan periksa email Anda.",
+      "sentence2": "Aku harus memeriksa cuaca."
+    },
+    {
+      "id": 138,
+      "word": "keju",
+      "sentence1": "Aku suka makan keju dengan roti.",
+      "sentence2": "Dia membeli beberapa keju dari pasar."
+    },
+    {
+      "id": 139,
+      "word": "ayam",
+      "sentence1": "Aku ingin ayam untuk makan malam.",
+      "sentence2": "Dia sedang memasak ayam di dapur."
+    },
+    {
+      "id": 140,
+      "word": "anak",
+      "sentence1": "Anak itu sedang bermain di taman.",
+      "sentence2": "Dia memiliki satu anak dan dua hewan peliharaan."
+    },
+    {
+      "id": 141,
+      "word": "cokelat",
+      "sentence1": "Aku suka es krim coklat.",
+      "sentence2": "Dia memberi saya sekotak cokelat."
+    },
+    {
+      "id": 142,
+      "word": "pilihlah",
+      "sentence1": "Aku harus memilih gaun untuk pesta.",
+      "sentence2": "Dia memilih yang biru."
+    },
+    {
+      "id": 143,
+      "word": "bioskop",
+      "sentence1": "Mari kita pergi ke bioskop malam ini.",
+      "sentence2": "Dia bekerja di bioskop lokal."
+    },
+    {
+      "id": 144,
+      "word": "kota",
+      "sentence1": "Kota ini sangat besar.",
+      "sentence2": "Dia tinggal di pusat kota."
+    },
+    {
+      "id": 145,
+      "word": "kelas",
+      "sentence1": "Aku di kelas lima.",
+      "sentence2": "Dia mengajar kelas matematika."
+    },
+    {
+      "id": 146,
+      "word": "ruang kelas",
+      "sentence1": "Ruang kelasnya terang dan bersih.",
+      "sentence2": "Dia mendekorasi ruang kelas untuk tahun baru."
+    },
+    {
+      "id": 147,
+      "word": "bersih",
+      "sentence1": "Tolong jaga kamarmu bersih.",
+      "sentence2": "Dia membersihkan rumah kemarin."
+    },
+    {
+      "id": 148,
+      "word": "mendaki",
+      "sentence1": "Aku suka mendaki gunung.",
+      "sentence2": "Dia memanjat pohon untuk mendapatkan pemandangan yang lebih baik."
+    },
+    {
+      "id": 149,
+      "word": "jam",
+      "sentence1": "Jam berapa sekarang?",
+      "sentence2": "Dia melihat jam untuk memeriksa waktunya."
+    },
+    {
+      "id": 150,
+      "word": "dekat",
+      "sentence1": "Tolong tutup pintunya.",
+      "sentence2": "Dia menutup jendela karena dingin."
+    },
+    {
+      "id": 151,
+      "word": "pakaian",
+      "sentence1": "Aku perlu membeli pakaian baru.",
+      "sentence2": "Dia menyumbangkan pakaian lamanya untuk amal."
+    },
+    {
+      "id": 152,
+      "word": "klub",
+      "sentence1": "Dia adalah anggota klub catur.",
+      "sentence2": "Dia pergi ke klub setiap Jumat malam."
+    },
+    {
+      "id": 153,
+      "word": "mantel",
+      "sentence1": "Aku memakai mantel di musim dingin.",
+      "sentence2": "Dia membeli mantel baru untuk cuaca dingin."
+    },
+    {
+      "id": 154,
+      "word": "kopi",
+      "sentence1": "Aku suka minum kopi di pagi hari.",
+      "sentence2": "Dia memesan secangkir kopi di kafe."
+    },
+    {
+      "id": 155,
+      "word": "dingin",
+      "sentence1": "Ini sangat dingin di luar.",
+      "sentence2": "Dia memakai jaket karena dingin."
+    },
+    {
+      "id": 156,
+      "word": "perguruan tinggi",
+      "sentence1": "Dia belajar di sebuah perguruan tinggi di London.",
+      "sentence2": "Dia ingin kuliah setelah SMA."
+    },
+    {
+      "id": 157,
+      "word": "warna",
+      "sentence1": "Apa warna favoritmu?",
+      "sentence2": "Dia mengecat dindingnya dengan warna biru muda."
+    },
+    {
+      "id": 158,
+      "word": "datanglah",
+      "sentence1": "Silakan datang ke pesta saya.",
+      "sentence2": "Dia akan datang ke pertemuan besok."
+    },
+    {
+      "id": 159,
+      "word": "umum",
+      "sentence1": "Bahasa Inggris adalah bahasa umum.",
+      "sentence2": "Dia memiliki minat yang sama dalam musik."
+    },
+    {
+      "id": 160,
+      "word": "perusahaan",
+      "sentence1": "Dia bekerja untuk sebuah perusahaan besar.",
+      "sentence2": "Dia memulai perusahaannya sendiri tahun lalu."
+    },
+    {
+      "id": 161,
+      "word": "bandingkan",
+      "sentence1": "Mari kita bandingkan jawaban kita.",
+      "sentence2": "Dia membandingkan dua produk sebelum membeli."
+    },
+    {
+      "id": 162,
+      "word": "lengkap",
+      "sentence1": "Silakan isi formulirnya.",
+      "sentence2": "Dia menyelesaikan proyek tepat waktu."
+    },
+    {
+      "id": 163,
+      "word": "komputer",
+      "sentence1": "Aku menggunakan komputer untuk bekerja.",
+      "sentence2": "Dia membeli komputer baru minggu lalu."
+    },
+    {
+      "id": 164,
+      "word": "konser",
+      "sentence1": "Aku akan pergi ke konser malam ini.",
+      "sentence2": "Dia suka mendengarkan rekaman konser langsung."
+    },
+    {
+      "id": 165,
+      "word": "percakapan",
+      "sentence1": "Kami memiliki percakapan yang hebat.",
+      "sentence2": "Dia senang mengobrol dengan teman-temannya."
+    },
+    {
+      "id": 166,
+      "word": "memasak",
+      "sentence1": "Aku suka memasak makanan Italia.",
+      "sentence2": "Dia memasak makanan lezat untuk keluarganya."
+    },
+    {
+      "id": 167,
+      "word": "memasak",
+      "sentence1": "Memasak adalah hobi favoritku.",
+      "sentence2": "Dia mengambil kelas memasak untuk meningkatkan kemampuannya."
+    },
+    {
+      "id": 168,
+      "word": "keren",
+      "sentence1": "Jaket itu sangat keren.",
+      "sentence2": "Dia punya koleksi keren rekaman vintage."
+    },
+    {
+      "id": 169,
+      "word": "benar",
+      "sentence1": "Tolong perbaiki kesalahanmu.",
+      "sentence2": "Dia selalu mencoba untuk memperbaiki kesalahan tata bahasanya."
+    },
+    {
+      "id": 170,
+      "word": "biaya",
+      "sentence1": "Berapa harga buku ini?",
+      "sentence2": "Dia terkejut dengan tingginya biaya hidup di kota."
+    },
+    {
+      "id": 171,
+      "word": "bisa",
+      "sentence1": "Aku bisa membantumu.",
+      "sentence2": "Dia bilang dia bisa datang ke pesta jika dia selesai bekerja lebih awal."
+    },
+    {
+      "id": 172,
+      "word": "negara",
+      "sentence1": "Aku tinggal di negara kecil.",
+      "sentence2": "Dia ingin bepergian ke berbagai negara."
+    },
+    {
+      "id": 173,
+      "word": "jalur",
+      "sentence1": "Aku mengambil kursus biologi.",
+      "sentence2": "Dia mendaftar untuk kursus memasak."
+    },
+    {
+      "id": 174,
+      "word": "sepupu",
+      "sentence1": "Sepupuku berkunjung akhir pekan ini.",
+      "sentence2": "Dia punya sepupu yang tinggal di luar negeri."
+    },
+    {
+      "id": 175,
+      "word": "sapi",
+      "sentence1": "Sapi sedang menggembala di padang.",
+      "sentence2": "Dia tumbuh di sebuah peternakan dengan sapi dan ayam."
+    },
+    {
+      "id": 176,
+      "word": "krim",
+      "sentence1": "Aku suka krim di kopi saya.",
+      "sentence2": "Dia menambahkan krim ke sup untuk menambah rasa."
+    },
+    {
+      "id": 177,
+      "word": "membuat",
+      "sentence1": "Aku ingin membuat proyek baru.",
+      "sentence2": "Dia menciptakan lukisan yang indah."
+    },
+    {
+      "id": 178,
+      "word": "budaya",
+      "sentence1": "Saya tertarik untuk belajar tentang budaya yang berbeda.",
+      "sentence2": "Dia senang menjelajahi budaya lokal ketika dia bepergian."
+    },
+    {
+      "id": 179,
+      "word": "cangkir",
+      "sentence1": "Aku minum teh dari cangkir.",
+      "sentence2": "Dia membeli satu set cangkir yang indah."
+    },
+    {
+      "id": 180,
+      "word": "pelanggan",
+      "sentence1": "Pelanggan selalu benar.",
+      "sentence2": "Dia adalah pelanggan setia di toko itu."
+    },
+    {
+      "id": 181,
+      "word": "dipotong",
+      "sentence1": "Tolong potong kertas di sepanjang garis.",
+      "sentence2": "Dia memotong kue menjadi potongan yang sama."
+    },
+    {
+      "id": 182,
+      "word": "ayah",
+      "sentence1": "Ayahku seorang koki yang hebat.",
+      "sentence2": "Dia suka menghabiskan waktu dengan ayahnya."
+    },
+    {
+      "id": 183,
+      "word": "menari",
+      "sentence1": "Aku suka menari di pesta.",
+      "sentence2": "Dia mengambil pelajaran tari selama setahun."
+    },
+    {
+      "id": 184,
+      "word": "penari",
+      "sentence1": "Penari itu tampil indah.",
+      "sentence2": "Dia ingin menjadi penari profesional."
+    },
+    {
+      "id": 185,
+      "word": "menari",
+      "sentence1": "Menari adalah cara yang menyenangkan untuk berolahraga.",
+      "sentence2": "Dia suka menari dengan lagu favoritnya."
+    },
+    {
+      "id": 186,
+      "word": "berbahaya",
+      "sentence1": "Hewan itu berbahaya.",
+      "sentence2": "Dia menyadari situasinya berbahaya."
+    },
+    {
+      "id": 187,
+      "word": "gelap",
+      "sentence1": "Ini gelap di luar.",
+      "sentence2": "Dia lebih suka cokelat hitam daripada cokelat susu."
+    },
+    {
+      "id": 188,
+      "word": "tanggal",
+      "sentence1": "Tanggal berapa hari ini?",
+      "sentence2": "Dia menulis tanggal di atas kertas."
+    },
+    {
+      "id": 189,
+      "word": "putri",
+      "sentence1": "Putriku sangat berbakat.",
+      "sentence2": "Dia bangga dengan pencapaian putrinya."
+    },
+    {
+      "id": 190,
+      "word": "hari",
+      "sentence1": "Hari ini adalah hari yang indah.",
+      "sentence2": "Dia berencana untuk bersantai sepanjang hari."
+    },
+    {
+      "id": 191,
+      "word": "sayang",
+      "sentence1": "Temanku akan berkunjung.",
+      "sentence2": "Dia menulis surat kepada ibunya yang tercinta."
+    },
+    {
+      "id": 192,
+      "word": "desember",
+      "sentence1": "Desember adalah bulan terakhir tahun ini.",
+      "sentence2": "Dia suka dekorasi liburan di bulan Desember."
+    },
+    {
+      "id": 193,
+      "word": "putuskan",
+      "sentence1": "Aku harus memutuskan apa yang harus dipakai.",
+      "sentence2": "Dia memutuskan untuk beristirahat dari pekerjaan."
+    },
+    {
+      "id": 194,
+      "word": "lezat",
+      "sentence1": "Kue ini lezat.",
+      "sentence2": "Dia senang memasak makanan lezat untuk keluarganya."
+    },
+    {
+      "id": 195,
+      "word": "jelaskan",
+      "sentence1": "Bisakah kau menggambarkan gambarnya?",
+      "sentence2": "Dia menggambarkan liburan impiannya secara rinci."
+    },
+    {
+      "id": 196,
+      "word": "deskripsi",
+      "sentence1": "Deskripsi buku itu menarik.",
+      "sentence2": "Dia menulis deskripsi rinci tentang peristiwa itu."
+    },
+    {
+      "id": 197,
+      "word": "desain",
+      "sentence1": "Desain bangunan modern.",
+      "sentence2": "Dia belajar desain grafis di perguruan tinggi."
+    },
+    {
+      "id": 198,
+      "word": "meja",
+      "sentence1": "Meja saya penuh dengan kertas.",
+      "sentence2": "Dia menjaga mejanya tetap terorganisir dan rapi."
+    },
+    {
+      "id": 199,
+      "word": "detail",
+      "sentence1": "Tolong berikan rincian lebih lanjut tentang proyek.",
+      "sentence2": "Dia memperhatikan detail kecil di lukisan itu."
+    },
+    {
+      "id": 200,
+      "word": "dialog",
+      "sentence1": "Dialog dalam film itu realistis.",
+      "sentence2": "Dia menulis dialog antara dua karakter."
+    },
+    {
+      "id": 201,
+      "word": "kamus",
+      "sentence1": "Aku butuh kamus untuk mencari kata itu.",
+      "sentence2": "Dia membeli kamus bahasa Inggris-Turki baru."
+    },
+    {
+      "id": 202,
+      "word": "matilah",
+      "sentence1": "Aku tidak ingin mati muda.",
+      "sentence2": "Dia takut dia akan mati sendirian."
+    },
+    {
+      "id": 203,
+      "word": "diet",
+      "sentence1": "Aku sedang diet sehat.",
+      "sentence2": "Dia mengikuti diet ketat untuk tetap bugar."
+    },
+    {
+      "id": 204,
+      "word": "perbedaan",
+      "sentence1": "Apa perbedaan antara kedua gambar ini?",
+      "sentence2": "Dia tidak bisa melihat perbedaannya pada awalnya."
+    },
+    {
+      "id": 205,
+      "word": "berbeda",
+      "sentence1": "Buku ini berbeda dari yang lain.",
+      "sentence2": "Dia memiliki perspektif yang berbeda tentang masalah ini."
+    },
+    {
+      "id": 206,
+      "word": "sulit",
+      "sentence1": "Latihan ini sulit.",
+      "sentence2": "Dia menemukan masalah matematika yang sulit untuk dipecahkan."
+    },
+    {
+      "id": 207,
+      "word": "makan malam",
+      "sentence1": "Kita makan malam jam 7 malam.",
+      "sentence2": "Dia menyiapkan makan malam yang lezat untuk keluarganya."
+    },
+    {
+      "id": 208,
+      "word": "kotor",
+      "sentence1": "Tanganku kotor karena berkebun.",
+      "sentence2": "Dia tidak suka memakai pakaian kotor."
+    },
+    {
+      "id": 209,
+      "word": "membahas",
+      "sentence1": "Mari kita bahas detail proyek.",
+      "sentence2": "Dia ingin mendiskusikan idenya dengan tim."
+    },
+    {
+      "id": 210,
+      "word": "hidangan",
+      "sentence1": "Hidangan ini adalah favorit saya.",
+      "sentence2": "Dia menyajikan makanan di piring yang indah."
+    },
+    {
+      "id": 211,
+      "word": "lakukan",
+      "sentence1": "Apa yang ingin kau lakukan hari ini?",
+      "sentence2": "Dia suka melakukan yoga di pagi hari."
+    },
+    {
+      "id": 212,
+      "word": "dokter",
+      "sentence1": "Dokter akan menemuimu sekarang.",
+      "sentence2": "Dia ingin menjadi dokter di masa depan."
+    },
+    {
+      "id": 213,
+      "word": "anjing",
+      "sentence1": "Anjingku suka bermain-main.",
+      "sentence2": "Dia mengadopsi anjing liar dari tempat penampungan."
+    },
+    {
+      "id": 214,
+      "word": "dolar",
+      "sentence1": "Harganya dua puluh dolar.",
+      "sentence2": "Dia menabung cukup uang untuk membeli telepon baru."
+    },
+    {
+      "id": 215,
+      "word": "pintu",
+      "sentence1": "Tolong tutup pintunya.",
+      "sentence2": "Dia mengetuk pintu dan menunggu jawaban."
+    },
+    {
+      "id": 216,
+      "word": "turun",
+      "sentence1": "Kucing itu melompat dari rak.",
+      "sentence2": "Dia menulis instruksi di atas kertas."
+    },
+    {
+      "id": 217,
+      "word": "di bawah",
+      "sentence1": "Kamar cucian ada di lantai bawah.",
+      "sentence2": "Dia turun untuk mengambil makanan ringan."
+    },
+    {
+      "id": 218,
+      "word": "menarik",
+      "sentence1": "Aku suka menggambar di waktu luangku.",
+      "sentence2": "Dia menggambar pemandangan yang indah."
+    },
+    {
+      "id": 219,
+      "word": "pakaian",
+      "sentence1": "Dia mengenakan gaun merah ke pesta.",
+      "sentence2": "Gaun itu dijual di toko."
+    },
+    {
+      "id": 220,
+      "word": "minum",
+      "sentence1": "Aku suka minum kopi di pagi hari.",
+      "sentence2": "Dia menawarkan saya minum air."
+    },
+    {
+      "id": 221,
+      "word": "mengemudi",
+      "sentence1": "Aku belajar mengemudi saat berumur 18 tahun.",
+      "sentence2": "Dia suka berkendara dalam perjalanan panjang."
+    },
+    {
+      "id": 222,
+      "word": "pengemudi",
+      "sentence1": "Sopirnya membawa kami ke bandara.",
+      "sentence2": "Dia adalah seorang sopir bus profesional."
+    },
+    {
+      "id": 223,
+      "word": "selama",
+      "sentence1": "Aku suka mendengarkan musik saat bepergian.",
+      "sentence2": "Dia tertidur selama film."
+    },
+    {
+      "id": 224,
+      "word": "DVD",
+      "sentence1": "Aku membeli DVD baru dari film favoritku.",
+      "sentence2": "Dia lebih suka menonton film di DVD."
+    },
+    {
+      "id": 225,
+      "word": "masing-masing",
+      "sentence1": "Setiap siswa harus menyerahkan tugas mereka.",
+      "sentence2": "Dia memberi setiap anak hadiah."
+    },
+    {
+      "id": 226,
+      "word": "telinga",
+      "sentence1": "Telinga saya sakit karena musik yang keras.",
+      "sentence2": "Dia memiliki anting yang indah di telinganya."
+    },
+    {
+      "id": 227,
+      "word": "awal",
+      "sentence1": "Aku suka bangun pagi-pagi.",
+      "sentence2": "Dia tiba lebih awal untuk mempersiapkan pertemuan."
+    },
+    {
+      "id": 228,
+      "word": "timur",
+      "sentence1": "Matahari terbit di timur.",
+      "sentence2": "Dia melakukan perjalanan ke timur untuk menjelajahi kota-kota baru."
+    },
+    {
+      "id": 229,
+      "word": "mudah",
+      "sentence1": "Latihan ini mudah bagiku.",
+      "sentence2": "Dia menemukan cara mudah untuk menyelesaikan masalah itu."
+    },
+    {
+      "id": 230,
+      "word": "makan",
+      "sentence1": "Aku suka makan makanan sehat.",
+      "sentence2": "Dia menyiapkan makanan lezat untuk kami makan."
+    },
+    {
+      "id": 231,
+      "word": "telur",
+      "sentence1": "Aku makan telur untuk sarapan.",
+      "sentence2": "Dia suka makan telur rebusannya."
+    },
+    {
+      "id": 232,
+      "word": "delapan",
+      "sentence1": "Ada delapan buah apel di keranjang.",
+      "sentence2": "Dia berusia delapan tahun."
+    },
+    {
+      "id": 233,
+      "word": "delapan belas",
+      "sentence1": "Aku akan berusia delapan belas tahun bulan depan.",
+      "sentence2": "Dia sudah berusia delapan belas tahun dan bisa memilih."
+    },
+    {
+      "id": 234,
+      "word": "delapan puluh",
+      "sentence1": "Buku itu berharga delapan puluh dolar.",
+      "sentence2": "Dia berusia delapan puluh tahun dan masih sangat aktif."
+    },
+    {
+      "id": 235,
+      "word": "gajah",
+      "sentence1": "Gajah adalah hewan darat terbesar.",
+      "sentence2": "Dia melihat seekor gajah bayi di kebun binatang."
+    },
+    {
+      "id": 236,
+      "word": "sebelas",
+      "sentence1": "Ada sebelas pemain di tim sepak bola.",
+      "sentence2": "Dia akan berusia sebelas minggu depan."
+    },
+    {
+      "id": 237,
+      "word": "lainnya",
+      "sentence1": "Ada yang lain yang kau butuhkan?",
+      "sentence2": "Dia tidak menyukai gaun itu, jadi dia memilih sesuatu yang lain."
+    },
+    {
+      "id": 238,
+      "word": "email",
+      "sentence1": "Aku mengirimmu email dengan rincian.",
+      "sentence2": "Dia memeriksa emailnya setiap pagi."
+    },
+    {
+      "id": 239,
+      "word": "akhir",
+      "sentence1": "Film itu memiliki akhir yang mengejutkan.",
+      "sentence2": "Dia sedih melihat akhir acara."
+    },
+    {
+      "id": 240,
+      "word": "nikmatilah",
+      "sentence1": "Saya suka membaca buku di waktu luang saya.",
+      "sentence2": "Dia suka berjalan-jalan di taman."
+    },
+    {
+      "id": 241,
+      "word": "cukup",
+      "sentence1": "Apakah kita memiliki cukup makanan untuk semua orang?",
+      "sentence2": "Dia tidak punya cukup uang untuk membeli gaun itu."
+    },
+    {
+      "id": 242,
+      "word": "euro",
+      "sentence1": "Harganya lima puluh euro.",
+      "sentence2": "Dia menukar dolar dengan euro di bank."
+    },
+    {
+      "id": 243,
+      "word": "bahkan",
+      "sentence1": "Tesnya lebih mudah dari yang saya harapkan.",
+      "sentence2": "Dia bahkan tidak mengucapkan selamat tinggal."
+    },
+    {
+      "id": 244,
+      "word": "malam hari",
+      "sentence1": "Aku suka bersantai di malam hari setelah bekerja.",
+      "sentence2": "Dia punya pertemuan yang dijadwalkan untuk malam ini."
+    },
+    {
+      "id": 245,
+      "word": "peristiwa",
+      "sentence1": "Acara tahunan akan berlangsung bulan depan.",
+      "sentence2": "Dia adalah penyelenggara acara tahun ini."
+    },
+    {
+      "id": 246,
+      "word": "pernah",
+      "sentence1": "Apa kau pernah ke Paris?",
+      "sentence2": "Dia tidak pernah pernah mencoba sushi."
+    },
+    {
+      "id": 247,
+      "word": "setiap",
+      "sentence1": "Setiap siswa harus menyerahkan tugas mereka.",
+      "sentence2": "Dia belajar setiap malam sebelum ujian."
+    },
+    {
+      "id": 248,
+      "word": "semuanya",
+      "sentence1": "Semua orang diundang ke pesta.",
+      "sentence2": "Dia tahu semua orang di lingkungan ini."
+    },
+    {
+      "id": 249,
+      "word": "semua orang",
+      "sentence1": "Setiap orang harus istirahat kadang-kadang.",
+      "sentence2": "Dia percaya semua orang berhak mendapatkan kesempatan kedua."
+    },
+    {
+      "id": 250,
+      "word": "semuanya",
+      "sentence1": "Semuanya akan baik-baik saja pada akhirnya.",
+      "sentence2": "Dia mengemas semua yang dia butuhkan untuk perjalanan."
+    },
+    {
+      "id": 251,
+      "word": "ujian",
+      "sentence1": "Aku punya ujian besok.",
+      "sentence2": "Dia belajar keras untuk ujian."
+    },
+    {
+      "id": 252,
+      "word": "contoh",
+      "sentence1": "Bisakah kau memberi contoh?",
+      "sentence2": "Dia adalah contoh orang yang sukses."
+    },
+    {
+      "id": 253,
+      "word": "bersemangat",
+      "sentence1": "Aku sangat senang dengan konsernya.",
+      "sentence2": "Dia senang bertemu penulis favoritnya."
+    },
+    {
+      "id": 254,
+      "word": "menarik",
+      "sentence1": "Film itu benar-benar menarik.",
+      "sentence2": "Dia punya pekerjaan yang menarik yang dia sukai."
+    },
+    {
+      "id": 255,
+      "word": "latihan",
+      "sentence1": "Aku mencoba berolahraga setiap hari.",
+      "sentence2": "Dia menikmati yoga sebagai bentuk latihan."
+    },
+    {
+      "id": 256,
+      "word": "mahal",
+      "sentence1": "Gaun itu terlalu mahal untukku.",
+      "sentence2": "Dia membeli jam tangan mahal sebagai hadiah."
+    },
+    {
+      "id": 257,
+      "word": "jelaskan",
+      "sentence1": "Bisakah kau jelaskan aturannya padaku?",
+      "sentence2": "Dia meluangkan waktu untuk menjelaskan pandangannya."
+    },
+    {
+      "id": 258,
+      "word": "tambahan",
+      "sentence1": "Aku butuh waktu tambahan untuk menyelesaikan ini.",
+      "sentence2": "Dia membawa makanan tambahan untuk perjalanan."
+    },
+    {
+      "id": 259,
+      "word": "mata",
+      "sentence1": "Dia memiliki mata biru yang indah.",
+      "sentence2": "Aku harus memeriksa mataku."
+    },
+    {
+      "id": 260,
+      "word": "wajah",
+      "sentence1": "Dia memiliki wajah yang baik.",
+      "sentence2": "Dia tidak bisa menyembunyikan ekspresi wajahnya."
+    },
+    {
+      "id": 261,
+      "word": "fakta",
+      "sentence1": "Ini adalah fakta bahwa Bumi mengorbit Matahari.",
+      "sentence2": "Dia tahu banyak fakta menarik."
+    },
+    {
+      "id": 262,
+      "word": "jatuh",
+      "sentence1": "Hati-hati jangan jatuh.",
+      "sentence2": "Daun jatuh dari pohon di musim gugur."
+    },
+    {
+      "id": 263,
+      "word": "palsu",
+      "sentence1": "Pernyataan itu salah.",
+      "sentence2": "Dia menyadari keyakinannya itu salah."
+    },
+    {
+      "id": 264,
+      "word": "keluarga",
+      "sentence1": "Keluarga saya sangat penting bagi saya.",
+      "sentence2": "Dia berasal dari keluarga besar."
+    },
+    {
+      "id": 265,
+      "word": "terkenal",
+      "sentence1": "Dia adalah aktor terkenal.",
+      "sentence2": "Dia ingin menjadi terkenal suatu hari nanti."
+    },
+    {
+      "id": 266,
+      "word": "luar biasa",
+      "sentence1": "Pemandangan dari atas sangat fantastis.",
+      "sentence2": "Dia melakukan pekerjaan yang fantastis pada proyek ini."
+    },
+    {
+      "id": 267,
+      "word": "jauh",
+      "sentence1": "Toko itu jauh dari rumahku.",
+      "sentence2": "Dia tinggal jauh di kota lain."
+    },
+    {
+      "id": 268,
+      "word": "pertanian",
+      "sentence1": "Mereka punya peternakan di pedesaan.",
+      "sentence2": "Dia suka mengunjungi peternakan di musim panas."
+    },
+    {
+      "id": 269,
+      "word": "petani",
+      "sentence1": "Petani bekerja keras di ladang.",
+      "sentence2": "Dia ingin menikahi seorang petani."
+    },
+    {
+      "id": 270,
+      "word": "cepat",
+      "sentence1": "Dia adalah pelari yang cepat.",
+      "sentence2": "Dia mengendarai mobil cepat."
+    },
+    {
+      "id": 271,
+      "word": "lemak",
+      "sentence1": "Kucing itu gemuk dan malas.",
+      "sentence2": "Dia sedang diet untuk menurunkan lemak."
+    },
+    {
+      "id": 272,
+      "word": "ayah",
+      "sentence1": "Ayahku seorang dokter.",
+      "sentence2": "Dia sangat mencintai ayahnya."
+    },
+    {
+      "id": 273,
+      "word": "favorit",
+      "sentence1": "Warna favoritku adalah biru.",
+      "sentence2": "Dia punya buku favorit yang sering dia baca."
+    },
+    {
+      "id": 274,
+      "word": "februari",
+      "sentence1": "Februari adalah bulan kedua dalam setahun.",
+      "sentence2": "Hari Valentine adalah di bulan Februari."
+    },
+    {
+      "id": 275,
+      "word": "rasakan",
+      "sentence1": "Aku merasa bahagia hari ini.",
+      "sentence2": "Dia tidak merasa baik kemarin."
+    },
+    {
+      "id": 276,
+      "word": "perasaan",
+      "sentence1": "Aku punya perasaan bahwa ada sesuatu yang salah.",
+      "sentence2": "Ia mengungkapkan perasaannya dalam sebuah surat."
+    },
+    {
+      "id": 277,
+      "word": "perayaan",
+      "sentence1": "Festival musiknya luar biasa.",
+      "sentence2": "Dia menantikan festival tahunan itu."
+    },
+    {
+      "id": 278,
+      "word": "sedikit",
+      "sentence1": "Aku punya beberapa teman di kota ini.",
+      "sentence2": "Dia mengambil beberapa foto selama perjalanannya."
+    },
+    {
+      "id": 279,
+      "word": "lima belas",
+      "sentence1": "Ada lima belas siswa di kelas saya.",
+      "sentence2": "Dia akan berusia lima belas tahun bulan depan."
+    },
+    {
+      "id": 280,
+      "word": "kelima",
+      "sentence1": "Dia finis di tempat kelima.",
+      "sentence2": "Buku kelima dari seri ini adalah favoritku."
+    },
+    {
+      "id": 281,
+      "word": "lima puluh",
+      "sentence1": "Ada lima puluh negara bagian di Amerika Serikat.",
+      "sentence2": "Dia berusia lima puluh tahun."
+    },
+    {
+      "id": 282,
+      "word": "isi",
+      "sentence1": "Silakan isi formulir ini.",
+      "sentence2": "Dia perlu mengisi bensin mobilnya."
+    },
+    {
+      "id": 283,
+      "word": "film",
+      "sentence1": "Aku menonton film hebat tadi malam.",
+      "sentence2": "Dia ingin membuat film suatu hari nanti."
+    },
+    {
+      "id": 284,
+      "word": "akhir",
+      "sentence1": "Ujian akhir minggu depan.",
+      "sentence2": "Dia belajar keras untuk ujian akhir."
+    },
+    {
+      "id": 285,
+      "word": "menemukan",
+      "sentence1": "Aku tak bisa menemukan kunciku.",
+      "sentence2": "Dia membantu saya menemukan jalan saya."
+    },
+    {
+      "id": 286,
+      "word": "baiklah",
+      "sentence1": "Aku merasa baik-baik saja, terima kasih.",
+      "sentence2": "Dia memiliki koleksi perangko yang bagus."
+    },
+    {
+      "id": 287,
+      "word": "selesai",
+      "sentence1": "Tolong selesaikan PR-mu.",
+      "sentence2": "Dia akan menyelesaikan proyeknya besok."
+    },
+    {
+      "id": 288,
+      "word": "api",
+      "sentence1": "Api sangat panas.",
+      "sentence2": "Dia takut api."
+    },
+    {
+      "id": 289,
+      "word": "pertama",
+      "sentence1": "Dia adalah orang pertama yang tiba.",
+      "sentence2": "Bab pertama dari buku ini menarik."
+    },
+    {
+      "id": 290,
+      "word": "ikan",
+      "sentence1": "Aku menangkap ikan besar.",
+      "sentence2": "Dia suka makan ikan untuk makan malam."
+    },
+    {
+      "id": 291,
+      "word": "lima",
+      "sentence1": "Aku punya lima apel.",
+      "sentence2": "Dia berusia lima tahun."
+    },
+    {
+      "id": 292,
+      "word": "datar",
+      "sentence1": "Jalan itu datar dan lurus.",
+      "sentence2": "Dia tinggal di sebuah apartemen di kota."
+    },
+    {
+      "id": 293,
+      "word": "penerbangan",
+      "sentence1": "Penerbanganku berangkat jam 6 sore.",
+      "sentence2": "Dia sedang dalam penerbangan ke Paris."
+    },
+    {
+      "id": 294,
+      "word": "lantai",
+      "sentence1": "Buku itu ada di lantai.",
+      "sentence2": "Dia membersihkan lantai kemarin."
+    },
+    {
+      "id": 295,
+      "word": "bunga",
+      "sentence1": "Aku membeli bunga yang indah.",
+      "sentence2": "Dia suka menanam bunga di kebunnya."
+    },
+    {
+      "id": 296,
+      "word": "terbang",
+      "sentence1": "Aku ingin terbang ke New York.",
+      "sentence2": "Dia bisa menerbangkan layang-layang dengan sangat baik."
+    },
+    {
+      "id": 297,
+      "word": "mengikuti",
+      "sentence1": "Silakan ikuti saya ke stasiun.",
+      "sentence2": "Dia memutuskan untuk mengikuti mimpinya."
+    },
+    {
+      "id": 298,
+      "word": "makanan",
+      "sentence1": "Aku suka makanan Italia.",
+      "sentence2": "Dia menyiapkan makanan lezat untuk makan malam."
+    },
+    {
+      "id": 299,
+      "word": "kaki",
+      "sentence1": "Kaki saya sakit.",
+      "sentence2": "Dia menginjak kakiku secara tidak sengaja."
+    },
+    {
+      "id": 300,
+      "word": "sepak bola",
+      "sentence1": "Aku bermain sepak bola di akhir pekan.",
+      "sentence2": "Dia adalah penggemar berat sepak bola."
+    },
+    {
+      "id": 301,
+      "word": "untuk",
+      "sentence1": "Hadiah ini untukmu.",
+      "sentence2": "Dia bekerja keras untuk keluarganya."
+    },
+    {
+      "id": 302,
+      "word": "lupakan",
+      "sentence1": "Jangan lupa meneleponku.",
+      "sentence2": "Dia selalu lupa di mana dia meletakkan kuncinya."
+    },
+    {
+      "id": 303,
+      "word": "bentuk",
+      "sentence1": "Silakan isi formulir ini.",
+      "sentence2": "Dia mengirimkan formulir secara online."
+    },
+    {
+      "id": 304,
+      "word": "empat puluh",
+      "sentence1": "Ada empat puluh siswa di sekolah.",
+      "sentence2": "Dia berusia empat puluh tahun."
+    },
+    {
+      "id": 305,
+      "word": "empat",
+      "sentence1": "Aku punya empat saudara.",
+      "sentence2": "Empat musim itu indah."
+    },
+    {
+      "id": 306,
+      "word": "empat belas",
+      "sentence1": "Dia berusia empat belas tahun.",
+      "sentence2": "Empat belas adalah nomor favoritku."
+    },
+    {
+      "id": 307,
+      "word": "keempat",
+      "sentence1": "Dia finis di tempat keempat.",
+      "sentence2": "4 Juli adalah Hari Kemerdekaan."
+    },
+    {
+      "id": 308,
+      "word": "bebas",
+      "sentence1": "Museum ini gratis pada hari Minggu.",
+      "sentence2": "Dia punya sore yang bebas."
+    },
+    {
+      "id": 309,
+      "word": "jumat",
+      "sentence1": "Jumat adalah hari favoritku.",
+      "sentence2": "Dia punya pertemuan pada hari Jumat."
+    },
+    {
+      "id": 310,
+      "word": "teman",
+      "sentence1": "Teman baikku akan datang.",
+      "sentence2": "Dia adalah teman setia."
+    },
+    {
+      "id": 311,
+      "word": "ramah",
+      "sentence1": "Anjing itu sangat ramah.",
+      "sentence2": "Dia memberiku senyuman ramah."
+    },
+    {
+      "id": 312,
+      "word": "dari",
+      "sentence1": "Aku dari Turki.",
+      "sentence2": "Dia menerima surat dari temannya."
+    },
+    {
+      "id": 313,
+      "word": "depan",
+      "sentence1": "Mobilnya diparkir di depan rumah.",
+      "sentence2": "Dia berdiri di garis depan."
+    },
+    {
+      "id": 314,
+      "word": "buah",
+      "sentence1": "Aku suka makan buah untuk sarapan.",
+      "sentence2": "Dia membeli beberapa buah segar di pasar."
+    },
+    {
+      "id": 315,
+      "word": "penuh",
+      "sentence1": "Gelas itu penuh air.",
+      "sentence2": "Dia punya jadwal penuh hari ini."
+    },
+    {
+      "id": 316,
+      "word": "menyenangkan",
+      "sentence1": "Kami bersenang-senang di pesta itu.",
+      "sentence2": "Dia menikmati kegiatan menyenangkan di luar ruangan."
+    },
+    {
+      "id": 317,
+      "word": "lucu",
+      "sentence1": "Film itu sangat lucu.",
+      "sentence2": "Dia memiliki selera humor yang lucu."
+    },
+    {
+      "id": 318,
+      "word": "masa depan",
+      "sentence1": "Aku senang dengan masa depan.",
+      "sentence2": "Dia punya rencana besar untuk masa depannya."
+    },
+    {
+      "id": 319,
+      "word": "permainan",
+      "sentence1": "Aku suka bermain video game.",
+      "sentence2": "Dia memenangkan pertandingan tadi malam."
+    },
+    {
+      "id": 320,
+      "word": "kebun",
+      "sentence1": "Dia memiliki taman yang indah di halaman belakang rumahnya.",
+      "sentence2": "Dia suka menanam bunga di kebunnya."
+    },
+    {
+      "id": 321,
+      "word": "geografi",
+      "sentence1": "Aku belajar geografi di sekolah.",
+      "sentence2": "Dia tertarik pada geografi dunia."
+    },
+    {
+      "id": 322,
+      "word": "dapatkan",
+      "sentence1": "Aku perlu membelikan beberapa barang.",
+      "sentence2": "Dia akan segera mendapatkan pekerjaan baru."
+    },
+    {
+      "id": 323,
+      "word": "gadis",
+      "sentence1": "Gadis itu sedang membaca buku.",
+      "sentence2": "Dia adalah gadis yang cerdas."
+    },
+    {
+      "id": 324,
+      "word": "pacar",
+      "sentence1": "Pacarku akan datang.",
+      "sentence2": "Dia adalah pacar yang mendukung."
+    },
+    {
+      "id": 325,
+      "word": "berikan",
+      "sentence1": "Aku ingin memberimu hadiah.",
+      "sentence2": "Dia memberi saya buku untuk ulang tahun saya."
+    },
+    {
+      "id": 326,
+      "word": "kaca",
+      "sentence1": "Hati-hati dengan gelas itu.",
+      "sentence2": "Dia minum air dari gelas."
+    },
+    {
+      "id": 327,
+      "word": "pergilah",
+      "sentence1": "Aku harus pergi ke toko.",
+      "sentence2": "Dia akan pergi ke pesta nanti."
+    },
+    {
+      "id": 328,
+      "word": "bagus",
+      "sentence1": "Ini ide yang bagus.",
+      "sentence2": "Dia adalah seorang siswa yang baik."
+    },
+    {
+      "id": 329,
+      "word": "selamat tinggal",
+      "sentence1": "Aku mengucapkan selamat tinggal pada temanku.",
+      "sentence2": "Dia melambaikan tangan saat dia pergi."
+    },
+    {
+      "id": 330,
+      "word": "kakek",
+      "sentence1": "Kakek saya sangat bijaksana.",
+      "sentence2": "Dia menceritakan cerita hebat tentang masa lalu."
+    },
+    {
+      "id": 331,
+      "word": "nenek",
+      "sentence1": "Nenek saya membuat kue terbaik.",
+      "sentence2": "Dia suka menceritakan cerita dari masa kecilnya."
+    },
+    {
+      "id": 332,
+      "word": "kakek",
+      "sentence1": "Kakek dan nenek sering memanjakan cucu mereka.",
+      "sentence2": "Mereka memiliki ikatan khusus dengan cucu-cucunya."
+    },
+    {
+      "id": 333,
+      "word": "bagus sekali",
+      "sentence1": "Kau melakukan pekerjaan yang hebat pada proyek ini.",
+      "sentence2": "Dia punya ide bagus untuk masa depan."
+    },
+    {
+      "id": 334,
+      "word": "hijau",
+      "sentence1": "Rumput hijau.",
+      "sentence2": "Dia mengenakan gaun hijau."
+    },
+    {
+      "id": 335,
+      "word": "abu-abu",
+      "sentence1": "Langit hari ini abu-abu.",
+      "sentence2": "Dia punya kucing abu-abu."
+    },
+    {
+      "id": 336,
+      "word": "kelompok",
+      "sentence1": "Kami membentuk kelompok belajar.",
+      "sentence2": "Dia adalah pemimpin kelompok."
+    },
+    {
+      "id": 337,
+      "word": "tumbuh",
+      "sentence1": "Tanaman membutuhkan air untuk tumbuh.",
+      "sentence2": "Dia melihat anak-anaknya tumbuh."
+    },
+    {
+      "id": 338,
+      "word": "tebaklah",
+      "sentence1": "Dapatkah Anda menebak jawabannya?",
+      "sentence2": "Dia menebak dengan baik."
+    },
+    {
+      "id": 339,
+      "word": "gitar",
+      "sentence1": "Aku suka bermain gitar.",
+      "sentence2": "Dia sedang belajar bermain gitar."
+    },
+    {
+      "id": 340,
+      "word": "olahraga",
+      "sentence1": "Aku pergi ke gym setiap pagi.",
+      "sentence2": "Dia bekerja di gym."
+    },
+    {
+      "id": 341,
+      "word": "rambut",
+      "sentence1": "Dia memiliki rambut panjang.",
+      "sentence2": "Aku harus memotong rambutku."
+    },
+    {
+      "id": 342,
+      "word": "setengah",
+      "sentence1": "Aku makan setengah pizza.",
+      "sentence2": "Dia sudah setengah membaca bukunya."
+    },
+    {
+      "id": 343,
+      "word": "tangan",
+      "sentence1": "Dia melambaikan tangannya.",
+      "sentence2": "Dia memegang tangannya erat."
+    },
+    {
+      "id": 344,
+      "word": "terjadi",
+      "sentence1": "Apa yang akan terjadi selanjutnya?",
+      "sentence2": "Aku tidak menyangka itu akan terjadi."
+    },
+    {
+      "id": 345,
+      "word": "bahagia",
+      "sentence1": "Dia adalah orang yang bahagia.",
+      "sentence2": "Aku merasa bahagia hari ini."
+    },
+    {
+      "id": 346,
+      "word": "berat",
+      "sentence1": "Latihan ini sulit.",
+      "sentence2": "Dia bekerja keras setiap hari."
+    },
+    {
+      "id": 347,
+      "word": "topi",
+      "sentence1": "Dia memakai topi di pesta.",
+      "sentence2": "Dia membeli topi baru."
+    },
+    {
+      "id": 348,
+      "word": "benci",
+      "sentence1": "Aku benci antri.",
+      "sentence2": "Dia benci mengerjakan PR."
+    },
+    {
+      "id": 349,
+      "word": "memiliki",
+      "sentence1": "Aku punya anjing.",
+      "sentence2": "Dia punya kucing."
+    },
+    {
+      "id": 350,
+      "word": "harus",
+      "sentence1": "Aku harus belajar untuk ujian.",
+      "sentence2": "Dia harus pergi bekerja."
+    },
+    {
+      "id": 351,
+      "word": "dia",
+      "sentence1": "Dia adalah saudaraku.",
+      "sentence2": "Aku melihatnya kemarin."
+    },
+    {
+      "id": 352,
+      "word": "kepala",
+      "sentence1": "Dia mengangguk.",
+      "sentence2": "Dia sakit kepala."
+    },
+    {
+      "id": 353,
+      "word": "kesehatan",
+      "sentence1": "Kesehatan sangat penting.",
+      "sentence2": "Dia khawatir tentang kesehatannya."
+    },
+    {
+      "id": 354,
+      "word": "sehat",
+      "sentence1": "Makan buah-buahan dan sayuran adalah bagian dari diet sehat.",
+      "sentence2": "Dia terlihat sehat dan bugar."
+    },
+    {
+      "id": 355,
+      "word": "dengar",
+      "sentence1": "Aku bisa mendengar musiknya.",
+      "sentence2": "Dia mendengar suara aneh."
+    },
+    {
+      "id": 356,
+      "word": "halo, ada apa",
+      "sentence1": "Halo, apa kabar?",
+      "sentence2": "Dia melambai dan menyapa."
+    },
+    {
+      "id": 357,
+      "word": "bantuan",
+      "sentence1": "Bisakah kau membantuku dengan ini?",
+      "sentence2": "Dia selalu membantu temannya."
+    },
+    {
+      "id": 358,
+      "word": "dia",
+      "sentence1": "Ini adalah bukunya.",
+      "sentence2": "Aku melihatnya di taman."
+    },
+    {
+      "id": 359,
+      "word": "di sini",
+      "sentence1": "Silakan kemari.",
+      "sentence2": "Dia tidak di sini sekarang."
+    },
+    {
+      "id": 360,
+      "word": "hei, ada apa",
+      "sentence1": "Hei, ada apa?",
+      "sentence2": "Dia bilang halo dan tersenyum."
+    },
+    {
+      "id": 361,
+      "word": "hai, ada apa",
+      "sentence1": "Hai, senang bertemu denganmu!",
+      "sentence2": "Dia melambai dan mengatakan halo."
+    },
+    {
+      "id": 362,
+      "word": "tinggi",
+      "sentence1": "Bangunan itu sangat tinggi.",
+      "sentence2": "Dia meraih rak yang tinggi."
+    },
+    {
+      "id": 363,
+      "word": "dia",
+      "sentence1": "Aku melihatnya di taman.",
+      "sentence2": "Dia memberinya hadiah."
+    },
+    {
+      "id": 364,
+      "word": "nya",
+      "sentence1": "Ini mobilnya.",
+      "sentence2": "Aku bertemu adiknya."
+    },
+    {
+      "id": 365,
+      "word": "sejarah",
+      "sentence1": "Sejarah sangat menarik.",
+      "sentence2": "Dia suka belajar sejarah."
+    },
+    {
+      "id": 366,
+      "word": "hobi",
+      "sentence1": "Hobi saya adalah melukis.",
+      "sentence2": "Dia punya banyak hobi."
+    },
+    {
+      "id": 367,
+      "word": "liburan",
+      "sentence1": "Kita akan pergi berlibur.",
+      "sentence2": "Dia suka liburan musim panas."
+    },
+    {
+      "id": 368,
+      "word": "rumah",
+      "sentence1": "Selamat datang di rumah!",
+      "sentence2": "Dia sedang membersihkan rumahnya."
+    },
+    {
+      "id": 369,
+      "word": "tugas rumah",
+      "sentence1": "Aku punya banyak pekerjaan rumah.",
+      "sentence2": "Dia membantu kakaknya mengerjakan PR."
+    },
+    {
+      "id": 370,
+      "word": "harapan",
+      "sentence1": "Kuharap kau cepat sembuh.",
+      "sentence2": "Dia punya harapan untuk masa depan."
+    },
+    {
+      "id": 371,
+      "word": "kuda",
+      "sentence1": "Kuda itu berlari cepat.",
+      "sentence2": "Dia suka menunggang kuda."
+    },
+    {
+      "id": 372,
+      "word": "rumah sakit",
+      "sentence1": "Dia di rumah sakit.",
+      "sentence2": "Dia bekerja di rumah sakit."
+    },
+    {
+      "id": 373,
+      "word": "hotel",
+      "sentence1": "Kami menginap di hotel yang bagus.",
+      "sentence2": "Dia memesan hotel untuk liburan."
+    },
+    {
+      "id": 374,
+      "word": "jam",
+      "sentence1": "Butuh satu jam untuk sampai ke sana.",
+      "sentence2": "Dia akan kembali dalam satu jam."
+    },
+    {
+      "id": 375,
+      "word": "panas",
+      "sentence1": "Kopi ini panas.",
+      "sentence2": "Dia suka cuaca panas."
+    },
+    {
+      "id": 376,
+      "word": "rumah",
+      "sentence1": "Ini rumahku.",
+      "sentence2": "Dia ingin membeli rumah."
+    },
+    {
+      "id": 377,
+      "word": "bagaimana",
+      "sentence1": "Apa kabar?",
+      "sentence2": "Dia bertanya bagaimana melakukannya."
+    },
+    {
+      "id": 378,
+      "word": "namun demikian",
+      "sentence1": "Saat itu hujan; namun, kami pergi keluar.",
+      "sentence2": "Dia sangat sibuk; namun, dia akan membantu Anda."
+    },
+    {
+      "id": 379,
+      "word": "seratus",
+      "sentence1": "Ada seratus siswa di sekolah.",
+      "sentence2": "Dia punya seratus dolar."
+    },
+    {
+      "id": 380,
+      "word": "lapar",
+      "sentence1": "Aku lapar.",
+      "sentence2": "Dia selalu merasa lapar setelah berolahraga."
+    },
+    {
+      "id": 381,
+      "word": "suami",
+      "sentence1": "Suamiku seorang dokter.",
+      "sentence2": "Dia sangat mencintai suaminya."
+    },
+    {
+      "id": 382,
+      "word": "es",
+      "sentence1": "Esnya mencair.",
+      "sentence2": "Dia menaruh es dalam minuman."
+    },
+    {
+      "id": 383,
+      "word": "es krim",
+      "sentence1": "Aku suka es krim.",
+      "sentence2": "Dia membeli es krim untuk anak-anak."
+    },
+    {
+      "id": 384,
+      "word": "ide",
+      "sentence1": "Itu ide yang bagus!",
+      "sentence2": "Dia punya ide yang menarik untuk proyek ini."
+    },
+    {
+      "id": 385,
+      "word": "jika",
+      "sentence1": "Jika hujan, kita akan tinggal di dalam.",
+      "sentence2": "Dia bertanya apakah aku ingin bergabung."
+    },
+    {
+      "id": 386,
+      "word": "bayangkan",
+      "sentence1": "Aku bisa membayangkan dunia yang lebih baik.",
+      "sentence2": "Dia suka membayangkan berbagai skenario."
+    },
+    {
+      "id": 387,
+      "word": "penting",
+      "sentence1": "Ini adalah keputusan penting.",
+      "sentence2": "Dia tahu bagaimana memprioritaskan tugas-tugas penting."
+    },
+    {
+      "id": 388,
+      "word": "memperbaiki",
+      "sentence1": "Saya ingin meningkatkan kemampuan bahasa Inggris saya.",
+      "sentence2": "Dia bekerja keras untuk meningkatkan nilainya."
+    },
+    {
+      "id": 389,
+      "word": "dalam",
+      "sentence1": "Buku itu ada di tas.",
+      "sentence2": "Dia tinggal di kota kecil."
+    },
+    {
+      "id": 390,
+      "word": "termasuk",
+      "sentence1": "Silakan masukkan nama Anda dalam daftar.",
+      "sentence2": "Dia ingin memasukkan semua orang dalam diskusi."
+    },
+    {
+      "id": 391,
+      "word": "informasi",
+      "sentence1": "Bisakah Anda memberikan informasi lebih lanjut?",
+      "sentence2": "Ia merasa informasi itu bermanfaat."
+    },
+    {
+      "id": 392,
+      "word": "bunga",
+      "sentence1": "Aku sangat tertarik pada seni.",
+      "sentence2": "Dia berbagi minat saya dalam musik."
+    },
+    {
+      "id": 393,
+      "word": "tertarik",
+      "sentence1": "Aku tertarik belajar bahasa Spanyol.",
+      "sentence2": "Dia tertarik dengan perjalanan."
+    },
+    {
+      "id": 394,
+      "word": "menarik",
+      "sentence1": "Buku ini sangat menarik.",
+      "sentence2": "Dia punya beberapa ide yang menarik."
+    },
+    {
+      "id": 395,
+      "word": "internet",
+      "sentence1": "Aku menemukannya di internet.",
+      "sentence2": "Dia menghabiskan banyak waktu di internet."
+    },
+    {
+      "id": 396,
+      "word": "wawancara",
+      "sentence1": "Aku punya wawancara kerja besok.",
+      "sentence2": "Dia bersiap untuk wawancara."
+    },
+    {
+      "id": 397,
+      "word": "ke dalam",
+      "sentence1": "Dia masuk ke ruangan.",
+      "sentence2": "Dia menyelam ke kolam renang."
+    },
+    {
+      "id": 398,
+      "word": "memperkenalkan",
+      "sentence1": "Izinkan aku memperkenalkanmu pada temanku.",
+      "sentence2": "Dia akan memperkenalkan pembicara."
+    },
+    {
+      "id": 399,
+      "word": "pulau",
+      "sentence1": "Bali adalah pulau yang indah.",
+      "sentence2": "Dia bermimpi mengunjungi sebuah pulau tropis."
+    },
+    {
+      "id": 400,
+      "word": "itu",
+      "sentence1": "Aku menemukannya di atas meja.",
+      "sentence2": "Dia bilang itu bukunya."
+    },
+    {
+      "id": 401,
+      "word": "yang",
+      "sentence1": "Anjing itu menggoyangkan ekornya.",
+      "sentence2": "Dia bangga dengan prestasinya."
+    },
+    {
+      "id": 402,
+      "word": "jaket",
+      "sentence1": "Aku membeli jaket baru.",
+      "sentence2": "Dia memakai jaket kulit."
+    },
+    {
+      "id": 403,
+      "word": "januari",
+      "sentence1": "Januari adalah bulan pertama.",
+      "sentence2": "Dia lahir pada bulan Januari."
+    },
+    {
+      "id": 404,
+      "word": "celana jeans",
+      "sentence1": "Aku harus membeli celana jeans baru.",
+      "sentence2": "Dia lebih suka memakai celana jeans."
+    },
+    {
+      "id": 405,
+      "word": "pekerjaan",
+      "sentence1": "Aku punya pekerjaan baru.",
+      "sentence2": "Dia mencintai pekerjaannya."
+    },
+    {
+      "id": 406,
+      "word": "bergabung",
+      "sentence1": "Aku ingin bergabung dengan klub.",
+      "sentence2": "Dia memutuskan untuk bergabung dengan kami."
+    },
+    {
+      "id": 407,
+      "word": "perjalanan",
+      "sentence1": "Perjalanan itu panjang dan melelahkan.",
+      "sentence2": "Dia menikmati perjalanan."
+    },
+    {
+      "id": 408,
+      "word": "jus",
+      "sentence1": "Aku mau jus jeruk.",
+      "sentence2": "Dia minum jus setiap pagi."
+    },
+    {
+      "id": 409,
+      "word": "juli",
+      "sentence1": "Juli adalah bulan ketujuh.",
+      "sentence2": "Dia suka pergi berlibur di bulan Juli."
+    },
+    {
+      "id": 410,
+      "word": "juni",
+      "sentence1": "Juni adalah bulan keenam.",
+      "sentence2": "Dia lulus pada bulan Juni."
+    },
+    {
+      "id": 411,
+      "word": "hanya",
+      "sentence1": "Aku hanya ingin membantu.",
+      "sentence2": "Dia hanya teman."
+    },
+    {
+      "id": 412,
+      "word": "k",
+      "sentence1": "K adalah huruf ke-11 dari alfabet.",
+      "sentence2": "Dia suka huruf K."
+    },
+    {
+      "id": 413,
+      "word": "tetap",
+      "sentence1": "Tolong tutup pintunya.",
+      "sentence2": "Dia ingin kamarnya tetap bersih."
+    },
+    {
+      "id": 414,
+      "word": "kunci",
+      "sentence1": "Aku kehilangan kunci rumahku.",
+      "sentence2": "Dia menemukan kuncinya di bawah tikar."
+    },
+    {
+      "id": 415,
+      "word": "kilometer",
+      "sentence1": "Toko itu lima kilometer jauhnya.",
+      "sentence2": "Dia berlari sepuluh kilometer kemarin."
+    },
+    {
+      "id": 416,
+      "word": "jenis (tipe)",
+      "sentence1": "Apa jenis musik yang kau suka?",
+      "sentence2": "Dia adalah orang yang baik."
+    },
+    {
+      "id": 417,
+      "word": "dapur",
+      "sentence1": "Dapurnya sangat luas.",
+      "sentence2": "Dia suka memasak di dapurnya."
+    },
+    {
+      "id": 418,
+      "word": "tahu",
+      "sentence1": "Aku tahu jawabannya.",
+      "sentence2": "Dia tidak tahu namanya."
+    },
+    {
+      "id": 419,
+      "word": "tanah",
+      "sentence1": "Tanahnya sangat subur.",
+      "sentence2": "Dia membeli sepotong tanah."
+    },
+    {
+      "id": 420,
+      "word": "bahasa",
+      "sentence1": "Bahasa Inggris adalah bahasa global.",
+      "sentence2": "Dia berbicara tiga bahasa."
+    },
+    {
+      "id": 421,
+      "word": "besar",
+      "sentence1": "Mereka tinggal di sebuah rumah besar.",
+      "sentence2": "Dia memiliki koleksi perangko yang besar."
+    },
+    {
+      "id": 422,
+      "word": "terakhir (akhir)",
+      "sentence1": "Ini adalah kesempatan terakhir.",
+      "sentence2": "Dia orang terakhir yang pergi."
+    },
+    {
+      "id": 423,
+      "word": "terlambat",
+      "sentence1": "Aku terlambat untuk pertemuan.",
+      "sentence2": "Dia datang terlambat ke pesta."
+    },
+    {
+      "id": 424,
+      "word": "nanti saja",
+      "sentence1": "Kita bisa membicarakannya nanti.",
+      "sentence2": "Dia menelepon saya kemudian hari."
+    },
+    {
+      "id": 425,
+      "word": "tertawa",
+      "sentence1": "Aku suka membuatmu tertawa.",
+      "sentence2": "Dia tidak bisa menahan tawa."
+    },
+    {
+      "id": 426,
+      "word": "belajar",
+      "sentence1": "Aku ingin belajar bahasa baru.",
+      "sentence2": "Dia cepat belajar."
+    },
+    {
+      "id": 427,
+      "word": "pergi",
+      "sentence1": "Aku harus pergi lebih awal.",
+      "sentence2": "Dia meninggalkan pesta tanpa mengucapkan selamat tinggal."
+    },
+    {
+      "id": 428,
+      "word": "kiri",
+      "sentence1": "Belok kiri di lampu lalu lintas.",
+      "sentence2": "Dia kidal."
+    },
+    {
+      "id": 429,
+      "word": "kaki",
+      "sentence1": "Kakiku sakit.",
+      "sentence2": "Dia menyilangkan kakinya."
+    },
+    {
+      "id": 430,
+      "word": "pelajaran",
+      "sentence1": "Aku punya pelajaran matematika hari ini.",
+      "sentence2": "Dia menikmati pelajaran itu."
+    },
+    {
+      "id": 431,
+      "word": "biarkan",
+      "sentence1": "Biarkan aku membantumu",
+      "sentence2": "Dia meminjamkannya bukunya."
+    },
+    {
+      "id": 432,
+      "word": "surat",
+      "sentence1": "Aku menerima surat dari temanku.",
+      "sentence2": "Dia menulis surat kepada neneknya."
+    },
+    {
+      "id": 433,
+      "word": "perpustakaan",
+      "sentence1": "Perpustakaan buka sampai jam 8 malam.",
+      "sentence2": "Dia meminjam buku dari perpustakaan."
+    },
+    {
+      "id": 434,
+      "word": "berbohong",
+      "sentence1": "Jangan berbohong padaku.",
+      "sentence2": "Dia berbohong tentang usianya."
+    },
+    {
+      "id": 435,
+      "word": "kehidupan",
+      "sentence1": "Hidup itu indah.",
+      "sentence2": "Dia ingin menjelajahi dunia dalam hidupnya."
+    },
+    {
+      "id": 436,
+      "word": "cahaya (dari matahari/lampu)",
+      "sentence1": "Cahayanya terlalu terang.",
+      "sentence2": "Dia mematikan lampu sebelum tidur."
+    },
+    {
+      "id": 437,
+      "word": "seperti (semacam)",
+      "sentence1": "Gaun ini seperti yang kulihat kemarin.",
+      "sentence2": "Dia memiliki sekelompok teman yang berpikiran sama."
+    },
+    {
+      "id": 438,
+      "word": "seperti (menemukan sb/sth menyenangkan)",
+      "sentence1": "Aku suka lagu ini.",
+      "sentence2": "Dia suka membaca sebelum tidur."
+    },
+    {
+      "id": 439,
+      "word": "garis",
+      "sentence1": "Garis lurus.",
+      "sentence2": "Dia mengantri untuk tiket."
+    },
+    {
+      "id": 440,
+      "word": "singa",
+      "sentence1": "Singa adalah raja hutan.",
+      "sentence2": "Dia melihat seekor singa di kebun binatang."
+    },
+    {
+      "id": 441,
+      "word": "daftar",
+      "sentence1": "Aku membuat daftar belanja.",
+      "sentence2": "Dia mencentang barang-barang di daftarnya."
+    },
+    {
+      "id": 442,
+      "word": "dengarkan",
+      "sentence1": "Aku suka mendengarkan musik.",
+      "sentence2": "Dia mendengarkan instruksi dengan cermat."
+    },
+    {
+      "id": 443,
+      "word": "sedikit",
+      "sentence1": "Kotak ini terlalu kecil.",
+      "sentence2": "Dia punya anjing kecil."
+    },
+    {
+      "id": 444,
+      "word": "hidup",
+      "sentence1": "Aku tinggal di kota kecil.",
+      "sentence2": "Dia ingin tinggal di kota."
+    },
+    {
+      "id": 445,
+      "word": "lokal",
+      "sentence1": "Aku suka makanan lokal.",
+      "sentence2": "Dia mendukung bisnis lokal."
+    },
+    {
+      "id": 446,
+      "word": "panjang",
+      "sentence1": "Ini adalah buku yang panjang.",
+      "sentence2": "Dia punya hari yang panjang di tempat kerja."
+    },
+    {
+      "id": 447,
+      "word": "lihatlah",
+      "sentence1": "Lihatlah langit!",
+      "sentence2": "Dia melihat keluar jendela."
+    },
+    {
+      "id": 448,
+      "word": "kehilangan",
+      "sentence1": "Aku tak mau kehilangan kunciku.",
+      "sentence2": "Dia kehilangan ponselnya di mal."
+    },
+    {
+      "id": 449,
+      "word": "banyak",
+      "sentence1": "Ada banyak orang di sini.",
+      "sentence2": "Dia punya banyak teman."
+    },
+    {
+      "id": 450,
+      "word": "cinta",
+      "sentence1": "Cinta adalah semua yang Anda butuhkan.",
+      "sentence2": "Dia menemukan cinta di tempat yang tak terduga."
+    },
+    {
+      "id": 451,
+      "word": "makan siang",
+      "sentence1": "Aku biasanya makan siang siang.",
+      "sentence2": "Dia membawa makan siang untuk piknik."
+    },
+    {
+      "id": 452,
+      "word": "mesin",
+      "sentence1": "Mesin rusak.",
+      "sentence2": "Dia mengoperasikan mesin dengan terampil."
+    },
+    {
+      "id": 453,
+      "word": "majalah",
+      "sentence1": "Aku membaca sebuah artikel menarik di majalah itu.",
+      "sentence2": "Dia berlangganan beberapa majalah."
+    },
+    {
+      "id": 454,
+      "word": "utama",
+      "sentence1": "Pintu masuk utama di sudut.",
+      "sentence2": "Dia adalah karakter utama dalam cerita ini."
+    },
+    {
+      "id": 455,
+      "word": "membuat",
+      "sentence1": "Aku ingin membuat kue.",
+      "sentence2": "Dia membuat tembikar yang indah."
+    },
+    {
+      "id": 456,
+      "word": "pria",
+      "sentence1": "Pria itu sedang membaca buku.",
+      "sentence2": "Dia melihat seorang pria dalam setelan."
+    },
+    {
+      "id": 457,
+      "word": "banyak",
+      "sentence1": "Ada banyak buku di rak.",
+      "sentence2": "Dia tidak punya banyak teman."
+    },
+    {
+      "id": 458,
+      "word": "peta",
+      "sentence1": "Aku butuh peta untuk menemukan lokasi.",
+      "sentence2": "Dia mempelajari peta dengan hati-hati."
+    },
+    {
+      "id": 459,
+      "word": "maret",
+      "sentence1": "Maret adalah bulan ketiga dalam setahun.",
+      "sentence2": "Dia lahir pada bulan Maret."
+    },
+    {
+      "id": 460,
+      "word": "pasar",
+      "sentence1": "Aku membeli sayuran di pasar.",
+      "sentence2": "Dia suka berbelanja di pasar setempat."
+    },
+    {
+      "id": 461,
+      "word": "menikah",
+      "sentence1": "Mereka adalah pasangan suami istri.",
+      "sentence2": "Dia menikah dengan seorang dokter."
+    },
+    {
+      "id": 462,
+      "word": "pertandingan (persaingan)",
+      "sentence1": "Pertandingan akan diadakan besok.",
+      "sentence2": "Dia memenangkan pertandingan minggu lalu."
+    },
+    {
+      "id": 463,
+      "word": "mei",
+      "sentence1": "Mei adalah bulan yang indah.",
+      "sentence2": "Dia suka bunga di bulan Mei."
+    },
+    {
+      "id": 464,
+      "word": "mungkin",
+      "sentence1": "Mungkin kita bisa pergi ke taman.",
+      "sentence2": "Dia bilang mungkin dia akan bergabung dengan kita."
+    },
+    {
+      "id": 465,
+      "word": "aku",
+      "sentence1": "Bisakah kau membantuku?",
+      "sentence2": "Dia meneleponku kemarin."
+    },
+    {
+      "id": 466,
+      "word": "tepung",
+      "sentence1": "Sarapan adalah makanan favoritku.",
+      "sentence2": "Dia menyiapkan makanan sehat setiap hari."
+    },
+    {
+      "id": 467,
+      "word": "rata-rata",
+      "sentence1": "Apa arti kata ini?",
+      "sentence2": "Dia tidak bermaksud menyakitimu."
+    },
+    {
+      "id": 468,
+      "word": "arti",
+      "sentence1": "Arti hidup adalah pertanyaan filosofis.",
+      "sentence2": "Dia mencari makna puisi itu."
+    },
+    {
+      "id": 469,
+      "word": "daging",
+      "sentence1": "Aku tidak makan daging.",
+      "sentence2": "Dia memasak hidangan daging yang lezat."
+    },
+    {
+      "id": 470,
+      "word": "bertemu",
+      "sentence1": "Mari kita bertemu di kafe.",
+      "sentence2": "Dia akan bertemu teman-temannya nanti."
+    },
+    {
+      "id": 471,
+      "word": "pertemuan",
+      "sentence1": "Pertemuan dijadwalkan pukul 10 pagi.",
+      "sentence2": "Dia menghadiri pertemuan kemarin."
+    },
+    {
+      "id": 472,
+      "word": "anggota",
+      "sentence1": "Dia adalah anggota klub.",
+      "sentence2": "Dia mengundang anggota baru ke grup."
+    },
+    {
+      "id": 473,
+      "word": "menu",
+      "sentence1": "Bisa kulihat menu, tolong?",
+      "sentence2": "Dia memesan dari menu vegetarian."
+    },
+    {
+      "id": 474,
+      "word": "pesan",
+      "sentence1": "Aku menerima pesan darinya.",
+      "sentence2": "Dia meninggalkan pesan di ponselku."
+    },
+    {
+      "id": 475,
+      "word": "meter",
+      "sentence1": "Meja itu panjangnya dua meter.",
+      "sentence2": "Dia berlari 100 meter di bawah 12 detik."
+    },
+    {
+      "id": 476,
+      "word": "tengah malam",
+      "sentence1": "Pesta akan berakhir pada tengah malam.",
+      "sentence2": "Dia selalu tidur sebelum tengah malam."
+    },
+    {
+      "id": 477,
+      "word": "mil",
+      "sentence1": "Toko itu lima mil jauhnya.",
+      "sentence2": "Dia berjalan satu mil setiap pagi."
+    },
+    {
+      "id": 478,
+      "word": "susu",
+      "sentence1": "Aku minum susu setiap hari.",
+      "sentence2": "Dia lebih suka susu almond."
+    },
+    {
+      "id": 479,
+      "word": "juta",
+      "sentence1": "Ada sejuta bintang di langit.",
+      "sentence2": "Dia memenangkan satu juta dolar di lotere."
+    },
+    {
+      "id": 480,
+      "word": "menit",
+      "sentence1": "Aku butuh waktu untuk berpikir.",
+      "sentence2": "Dia datang terlambat."
+    },
+    {
+      "id": 481,
+      "word": "nona",
+      "sentence1": "Aku rindu keluargaku.",
+      "sentence2": "Dia ketinggalan bus pagi ini."
+    },
+    {
+      "id": 482,
+      "word": "kesalahan",
+      "sentence1": "Aku membuat kesalahan pada tes.",
+      "sentence2": "Dia belajar dari kesalahannya."
+    },
+    {
+      "id": 483,
+      "word": "model",
+      "sentence1": "Mobilnya model baru.",
+      "sentence2": "Dia lebih suka model terbaru."
+    },
+    {
+      "id": 484,
+      "word": "modern",
+      "sentence1": "Ini adalah bangunan modern.",
+      "sentence2": "Dia suka seni modern."
+    },
+    {
+      "id": 485,
+      "word": "sebentar",
+      "sentence1": "Tunggu sebentar, tolong.",
+      "sentence2": "Dia menangkap momen itu dalam foto."
+    },
+    {
+      "id": 486,
+      "word": "senin",
+      "sentence1": "Senin adalah hari pertama dalam seminggu.",
+      "sentence2": "Dia punya pertemuan pada hari Senin."
+    },
+    {
+      "id": 487,
+      "word": "uang",
+      "sentence1": "Aku butuh uang lagi.",
+      "sentence2": "Dia menyimpan uang untuk liburan."
+    },
+    {
+      "id": 488,
+      "word": "bulan",
+      "sentence1": "Februari adalah bulan terpendek.",
+      "sentence2": "Dia lahir di bulan Mei."
+    },
+    {
+      "id": 489,
+      "word": "lebih banyak",
+      "sentence1": "Aku butuh waktu lagi.",
+      "sentence2": "Dia ingin belajar lebih banyak tentang topik ini."
+    },
+    {
+      "id": 490,
+      "word": "pagi hari",
+      "sentence1": "Aku bangun pagi-pagi.",
+      "sentence2": "Dia suka berlari di pagi hari."
+    },
+    {
+      "id": 491,
+      "word": "kebanyakan",
+      "sentence1": "Ini adalah buku yang paling menarik yang pernah saya baca.",
+      "sentence2": "Dia adalah artis paling berbakat dalam kelompok."
+    },
+    {
+      "id": 492,
+      "word": "ibu",
+      "sentence1": "Ibuku seorang guru.",
+      "sentence2": "Dia merawat ibunya."
+    },
+    {
+      "id": 493,
+      "word": "gunung",
+      "sentence1": "Gunung itu ditutupi salju.",
+      "sentence2": "Dia mendaki gunung musim panas lalu."
+    },
+    {
+      "id": 494,
+      "word": "tikus",
+      "sentence1": "Tikus itu berlari di lantai.",
+      "sentence2": "Dia punya tikus peliharaan."
+    },
+    {
+      "id": 495,
+      "word": "mulut",
+      "sentence1": "Buka mulutmu lebar.",
+      "sentence2": "Dia memiliki senyum yang indah di mulutnya."
+    },
+    {
+      "id": 496,
+      "word": "bergerak",
+      "sentence1": "Tolong pindahkan kursi Anda.",
+      "sentence2": "Dia ingin pindah ke rumah baru."
+    },
+    {
+      "id": 497,
+      "word": "film",
+      "sentence1": "Aku menonton film hebat tadi malam.",
+      "sentence2": "Dia suka menonton film romantis."
+    },
+    {
+      "id": 498,
+      "word": "banyak",
+      "sentence1": "Aku tak punya banyak waktu.",
+      "sentence2": "Dia tidak makan banyak."
+    },
+    {
+      "id": 499,
+      "word": "ibu",
+      "sentence1": "Ibuku adalah sahabatku.",
+      "sentence2": "Dia adalah ibu yang hebat."
+    },
+    {
+      "id": 500,
+      "word": "museum",
+      "sentence1": "Aku mengunjungi museum seni.",
+      "sentence2": "Dia suka pergi ke museum."
+    },
+    {
+      "id": 501,
+      "word": "musik",
+      "sentence1": "Aku mendengarkan musik setiap hari.",
+      "sentence2": "Dia memainkan musik di malam hari."
+    },
+    {
+      "id": 502,
+      "word": "harus",
+      "sentence1": "Kau harus menyelesaikan PR-mu.",
+      "sentence2": "Dia harus bekerja jam 9 pagi."
+    },
+    {
+      "id": 503,
+      "word": "aku",
+      "sentence1": "Ini buku saya.",
+      "sentence2": "Dia adalah teman baikku."
+    },
+    {
+      "id": 504,
+      "word": "nama",
+      "sentence1": "Siapa namamu?",
+      "sentence2": "Dia menulis namanya di atas kertas."
+    },
+    {
+      "id": 505,
+      "word": "alami",
+      "sentence1": "Ini adalah produk alami.",
+      "sentence2": "Dia lebih suka bahan alami."
+    },
+    {
+      "id": 506,
+      "word": "dekat",
+      "sentence1": "Toko itu dekat rumahku.",
+      "sentence2": "Dia tinggal di dekat taman."
+    },
+    {
+      "id": 507,
+      "word": "kebutuhan",
+      "sentence1": "Aku butuh segelas air.",
+      "sentence2": "Dia butuh bantuan dengan PR-nya."
+    },
+    {
+      "id": 508,
+      "word": "negatif",
+      "sentence1": "Ini adalah respon negatif.",
+      "sentence2": "Dia punya sikap negatif."
+    },
+    {
+      "id": 509,
+      "word": "tetangga",
+      "sentence1": "Tetangga saya sangat ramah.",
+      "sentence2": "Dia sering mengobrol dengan tetangganya."
+    },
+    {
+      "id": 510,
+      "word": "tidak pernah",
+      "sentence1": "Aku tidak pernah sarapan.",
+      "sentence2": "Dia tidak pernah ke Paris."
+    },
+    {
+      "id": 511,
+      "word": "baru",
+      "sentence1": "Aku membeli mobil baru.",
+      "sentence2": "Dia memakai gaun baru."
+    },
+    {
+      "id": 512,
+      "word": "berita",
+      "sentence1": "Aku membaca berita setiap pagi.",
+      "sentence2": "Dia suka menonton berita."
+    },
+    {
+      "id": 513,
+      "word": "surat kabar",
+      "sentence1": "Saya berlangganan surat kabar harian.",
+      "sentence2": "Dia membaca koran saat sarapan."
+    },
+    {
+      "id": 514,
+      "word": "berikutnya",
+      "sentence1": "Apa kereta berikutnya?",
+      "sentence2": "Dia duduk di kamar sebelah."
+    },
+    {
+      "id": 515,
+      "word": "sebelah",
+      "sentence1": "Bank di sebelah kantor pos.",
+      "sentence2": "Dia tinggal di sebelah sahabatnya."
+    },
+    {
+      "id": 516,
+      "word": "bagus",
+      "sentence1": "Ini tempat yang bagus untuk bersantai.",
+      "sentence2": "Dia memiliki senyum yang bagus."
+    },
+    {
+      "id": 517,
+      "word": "malam hari",
+      "sentence1": "Aku suka melihat bintang-bintang di malam hari.",
+      "sentence2": "Dia bekerja shift malam."
+    },
+    {
+      "id": 518,
+      "word": "sembilan",
+      "sentence1": "Aku punya sembilan apel.",
+      "sentence2": "Dia lahir pada tanggal 9 Mei."
+    },
+    {
+      "id": 519,
+      "word": "sembilan belas",
+      "sentence1": "Dia berusia sembilan belas tahun.",
+      "sentence2": "19 adalah nomor favoritku."
+    },
+    {
+      "id": 520,
+      "word": "sembilan puluh",
+      "sentence1": "Aku punya 90 dolar.",
+      "sentence2": "Dia lahir pada tahun 1990."
+    },
+    {
+      "id": 521,
+      "word": "tidak",
+      "sentence1": "Tidak, aku tidak mau pergi.",
+      "sentence2": "Dia menolak tawaran itu."
+    },
+    {
+      "id": 522,
+      "word": "tidak ada",
+      "sentence1": "Tidak ada yang tahu jawabannya.",
+      "sentence2": "Dia merasa seperti tidak ada yang memahaminya."
+    },
+    {
+      "id": 523,
+      "word": "tidak ada",
+      "sentence1": "Tidak ada yang sempurna.",
+      "sentence2": "Dia bilang tidak ada yang menelponnya."
+    },
+    {
+      "id": 524,
+      "word": "utara",
+      "sentence1": "Kutub Utara sangat dingin.",
+      "sentence2": "Dia tinggal di utara kota."
+    },
+    {
+      "id": 525,
+      "word": "hidung",
+      "sentence1": "Dia punya hidung besar.",
+      "sentence2": "Dia mencubit hidungnya saat mencium baunya."
+    },
+    {
+      "id": 526,
+      "word": "tidak",
+      "sentence1": "Itu bukan buku saya.",
+      "sentence2": "Dia tidak senang dengan hasilnya."
+    },
+    {
+      "id": 527,
+      "word": "catatan",
+      "sentence1": "Tolong catat ini.",
+      "sentence2": "Dia meninggalkan catatan di atas meja."
+    },
+    {
+      "id": 528,
+      "word": "tidak ada",
+      "sentence1": "Tidak ada yang perlu dikhawatirkan.",
+      "sentence2": "Dia tidak mengatakan apa-apa selama pertemuan."
+    },
+    {
+      "id": 529,
+      "word": "november",
+      "sentence1": "Ulang tahunku pada bulan November.",
+      "sentence2": "Dia suka musim gugur di bulan November."
+    },
+    {
+      "id": 530,
+      "word": "sekarang",
+      "sentence1": "Aku akan melakukannya sekarang.",
+      "sentence2": "Dia di sini sekarang."
+    },
+    {
+      "id": 531,
+      "word": "nomor",
+      "sentence1": "Apa nomor teleponmu?",
+      "sentence2": "Dia punya nomor keberuntungan."
+    },
+    {
+      "id": 532,
+      "word": "perawat",
+      "sentence1": "Perawat akan membantumu.",
+      "sentence2": "Dia ingin menjadi perawat."
+    },
+    {
+      "id": 533,
+      "word": "objek",
+      "sentence1": "Benda ini berat.",
+      "sentence2": "Dia menemukan benda yang menarik."
+    },
+    {
+      "id": 534,
+      "word": "jam",
+      "sentence1": "Pertemuan itu pukul tiga.",
+      "sentence2": "Dia selalu bangun jam tujuh."
+    },
+    {
+      "id": 535,
+      "word": "oktober",
+      "sentence1": "Ulang tahunku di bulan Oktober.",
+      "sentence2": "Dia suka warna Oktober."
+    },
+    {
+      "id": 536,
+      "word": "dari",
+      "sentence1": "Sampul buku itu biru.",
+      "sentence2": "Dia adalah teman saya."
+    },
+    {
+      "id": 537,
+      "word": "matikan",
+      "sentence1": "Lampu mati.",
+      "sentence2": "Dia mengambil hari libur."
+    },
+    {
+      "id": 538,
+      "word": "kantor",
+      "sentence1": "Aku bekerja di kantor.",
+      "sentence2": "Dia memiliki kantor yang besar."
+    },
+    {
+      "id": 539,
+      "word": "seringkali",
+      "sentence1": "Aku sering pergi ke gym.",
+      "sentence2": "Dia sering membaca sebelum tidur."
+    },
+    {
+      "id": 540,
+      "word": "oh, ya",
+      "sentence1": "Oh, aku tidak melihatmu di sana.",
+      "sentence2": "Oh, itu menarik!"
+    },
+    {
+      "id": 541,
+      "word": "baiklah",
+      "sentence1": "Tidak, tidak apa-apa.",
+      "sentence2": "Dia bilang tidak apa-apa untuk pergi lebih awal."
+    },
+    {
+      "id": 542,
+      "word": "tua",
+      "sentence1": "Kakek saya sudah sangat tua.",
+      "sentence2": "Dia punya mobil tua."
+    },
+    {
+      "id": 543,
+      "word": "pada",
+      "sentence1": "Buku itu ada di atas meja.",
+      "sentence2": "Dia di telepon."
+    },
+    {
+      "id": 544,
+      "word": "sekali",
+      "sentence1": "Aku pernah ke sana sekali.",
+      "sentence2": "Dia pernah mengatakannya sebelumnya."
+    },
+    {
+      "id": 545,
+      "word": "satu",
+      "sentence1": "Aku punya satu saudara perempuan.",
+      "sentence2": "Dia adalah salah satu yang saya ceritakan."
+    },
+    {
+      "id": 546,
+      "word": "bawang",
+      "sentence1": "Aku butuh bawang untuk resepnya.",
+      "sentence2": "Dia tidak suka bawang dalam saladnya."
+    },
+    {
+      "id": 547,
+      "word": "online",
+      "sentence1": "Aku menemukannya di internet.",
+      "sentence2": "Dia lebih suka belanja online."
+    },
+    {
+      "id": 548,
+      "word": "hanya",
+      "sentence1": "Aku hanya punya lima dolar.",
+      "sentence2": "Dia satu-satunya yang bisa membantu."
+    },
+    {
+      "id": 549,
+      "word": "terbuka",
+      "sentence1": "Tolong buka jendela.",
+      "sentence2": "Dia suka membuka pintu."
+    },
+    {
+      "id": 550,
+      "word": "pendapat",
+      "sentence1": "Apa pendapatmu tentang masalah ini?",
+      "sentence2": "Dia memiliki pendapat yang kuat tentang politik."
+    },
+    {
+      "id": 551,
+      "word": "berlawanan",
+      "sentence1": "Kebalikan dari cinta adalah kebencian.",
+      "sentence2": "Dia tinggal di seberang jalan."
+    },
+    {
+      "id": 552,
+      "word": "atau",
+      "sentence1": "Apakah Anda ingin teh atau kopi?",
+      "sentence2": "Dia bisa bernyanyi atau menari."
+    },
+    {
+      "id": 553,
+      "word": "jeruk",
+      "sentence1": "Aku suka jus jeruk.",
+      "sentence2": "Dia mengenakan gaun oranye."
+    },
+    {
+      "id": 554,
+      "word": "perintah",
+      "sentence1": "Aku ingin memesan.",
+      "sentence2": "Dia membatalkan pesanan."
+    },
+    {
+      "id": 555,
+      "word": "lainnya",
+      "sentence1": "Aku punya ide lain.",
+      "sentence2": "Dia adalah setengahku yang lain."
+    },
+    {
+      "id": 556,
+      "word": "kami",
+      "sentence1": "Ini rumah kita.",
+      "sentence2": "Dia adalah anggota tim kami."
+    },
+    {
+      "id": 557,
+      "word": "keluar",
+      "sentence1": "Mari kita jalan-jalan.",
+      "sentence2": "Dia keluar dari kantor hari ini."
+    },
+    {
+      "id": 558,
+      "word": "luar",
+      "sentence1": "Anak-anak sedang bermain di luar.",
+      "sentence2": "Dia lebih suka bekerja di luar."
+    },
+    {
+      "id": 559,
+      "word": "lebih",
+      "sentence1": "Gambar itu tergantung di atas sofa.",
+      "sentence2": "Dia melihat dokumen-dokumen."
+    },
+    {
+      "id": 560,
+      "word": "sendiri",
+      "sentence1": "Aku punya mobil sendiri.",
+      "sentence2": "Dia bangga dengan pekerjaannya sendiri."
+    },
+    {
+      "id": 561,
+      "word": "halaman",
+      "sentence1": "Buka halaman 10.",
+      "sentence2": "Dia menandai halaman itu."
+    },
+    {
+      "id": 562,
+      "word": "cat",
+      "sentence1": "Aku harus membeli cat.",
+      "sentence2": "Dia suka melukis pemandangan."
+    },
+    {
+      "id": 563,
+      "word": "melukis",
+      "sentence1": "Aku suka melukis di waktu luangku.",
+      "sentence2": "Dia memiliki lukisan yang indah di ruang tamu."
+    },
+    {
+      "id": 564,
+      "word": "sepasang",
+      "sentence1": "Aku membeli sepasang sepatu baru.",
+      "sentence2": "Dia memiliki sepasang anting yang cocok."
+    },
+    {
+      "id": 565,
+      "word": "kertas",
+      "sentence1": "Aku butuh selembar kertas.",
+      "sentence2": "Dia menulis catatan di atas kertas."
+    },
+    {
+      "id": 566,
+      "word": "paragraf",
+      "sentence1": "Tolong baca paragraf pertama.",
+      "sentence2": "Dia menulis paragraf tentang liburan."
+    },
+    {
+      "id": 567,
+      "word": "orang tua",
+      "sentence1": "Orang tuaku tinggal di kota lain.",
+      "sentence2": "Dia adalah orang tua tunggal."
+    },
+    {
+      "id": 568,
+      "word": "taman",
+      "sentence1": "Mari kita jalan-jalan di taman.",
+      "sentence2": "Dia suka piknik di taman."
+    },
+    {
+      "id": 569,
+      "word": "bagian",
+      "sentence1": "Aku butuh bagian untuk mobilku.",
+      "sentence2": "Dia sedang mengerjakan bagian baru untuk proyek ini."
+    },
+    {
+      "id": 570,
+      "word": "mitra",
+      "sentence1": "Dia adalah mitra bisnisku.",
+      "sentence2": "Dia sedang mencari mitra untuk berkolaborasi."
+    },
+    {
+      "id": 571,
+      "word": "pesta",
+      "sentence1": "Kami mengadakan pesta pada hari Sabtu.",
+      "sentence2": "Dia suka mengadakan pesta kejutan."
+    },
+    {
+      "id": 572,
+      "word": "paspor",
+      "sentence1": "Aku perlu memperbarui pasporku.",
+      "sentence2": "Dia kehilangan paspornya saat bepergian."
+    },
+    {
+      "id": 573,
+      "word": "masa lalu",
+      "sentence1": "Mari kita tidak berlama-lama di masa lalu.",
+      "sentence2": "Dia belajar dari kesalahan masa lalunya."
+    },
+    {
+      "id": 574,
+      "word": "membayar",
+      "sentence1": "Aku harus membayar tagihan.",
+      "sentence2": "Dia selalu membayar utangnya tepat waktu."
+    },
+    {
+      "id": 575,
+      "word": "pena",
+      "sentence1": "Boleh pinjam pena?",
+      "sentence2": "Dia menulis dengan pena biru."
+    },
+    {
+      "id": 576,
+      "word": "pensil",
+      "sentence1": "Aku lebih suka menggunakan pensil.",
+      "sentence2": "Dia menggambar sketsa dengan pensil."
+    },
+    {
+      "id": 577,
+      "word": "orang-orang",
+      "sentence1": "Ada banyak orang di acara itu.",
+      "sentence2": "Dia senang bertemu orang baru."
+    },
+    {
+      "id": 578,
+      "word": "merica",
+      "sentence1": "Aku suka menambahkan lada ke makananku.",
+      "sentence2": "Dia membeli lada merah di pasar."
+    },
+    {
+      "id": 579,
+      "word": "sempurna",
+      "sentence1": "Ini adalah solusi yang sempurna.",
+      "sentence2": "Dia mendapat nilai sempurna dalam tes."
+    },
+    {
+      "id": 580,
+      "word": "periode",
+      "sentence1": "Ini adalah periode yang sulit bagi saya.",
+      "sentence2": "Dia belajar selama periode ujian."
+    },
+    {
+      "id": 581,
+      "word": "orang",
+      "sentence1": "Dia adalah orang yang baik.",
+      "sentence2": "Dia adalah orang pertama yang tiba."
+    },
+    {
+      "id": 582,
+      "word": "pribadi",
+      "sentence1": "Ini masalah pribadi.",
+      "sentence2": "Ia menceritakan pengalamannya."
+    },
+    {
+      "id": 583,
+      "word": "telepon",
+      "sentence1": "Aku perlu mengisi daya ponselku.",
+      "sentence2": "Dia menjawab telepon dengan cepat."
+    },
+    {
+      "id": 584,
+      "word": "foto",
+      "sentence1": "Aku mengambil foto matahari terbenam.",
+      "sentence2": "Dia punya koleksi foto-foto lama."
+    },
+    {
+      "id": 585,
+      "word": "foto",
+      "sentence1": "Foto ini diambil tahun lalu.",
+      "sentence2": "Dia suka menampilkan fotonya."
+    },
+    {
+      "id": 586,
+      "word": "kalimat",
+      "sentence1": "Bisakah kau jelaskan kalimat itu?",
+      "sentence2": "Dia menggunakan ungkapan umum dalam pidatonya."
+    },
+    {
+      "id": 587,
+      "word": "piano",
+      "sentence1": "Aku ingin belajar bermain piano.",
+      "sentence2": "Dia bermain piano dengan indah."
+    },
+    {
+      "id": 588,
+      "word": "gambar",
+      "sentence1": "Bisakah kau tunjukkan fotonya?",
+      "sentence2": "Dia melukis gambar yang indah."
+    },
+    {
+      "id": 589,
+      "word": "potongan",
+      "sentence1": "Aku butuh selembar kertas.",
+      "sentence2": "Dia memberiku saran."
+    },
+    {
+      "id": 590,
+      "word": "babi",
+      "sentence1": "Babi itu ada di kandang.",
+      "sentence2": "Dia membesarkan babi di peternakannya."
+    },
+    {
+      "id": 591,
+      "word": "merah jambu",
+      "sentence1": "Warna favoritku adalah pink.",
+      "sentence2": "Dia mengenakan gaun merah muda ke pesta."
+    },
+    {
+      "id": 592,
+      "word": "tempat",
+      "sentence1": "Ini tempat yang bagus untuk bersantai.",
+      "sentence2": "Dia menemukan tempat yang tenang untuk membaca."
+    },
+    {
+      "id": 593,
+      "word": "rencana",
+      "sentence1": "Aku punya rencana untuk akhir pekan.",
+      "sentence2": "Dia membuat rencana rinci untuk proyek itu."
+    },
+    {
+      "id": 594,
+      "word": "pesawat",
+      "sentence1": "Pesawat itu terbang tinggi.",
+      "sentence2": "Dia di pesawat ke New York."
+    },
+    {
+      "id": 595,
+      "word": "tanaman",
+      "sentence1": "Aku punya tanaman di kamarku.",
+      "sentence2": "Dia menyiram tanaman setiap hari."
+    },
+    {
+      "id": 596,
+      "word": "bermain",
+      "sentence1": "Anak-anak suka bermain di luar.",
+      "sentence2": "Dia bermain sepak bola di akhir pekan."
+    },
+    {
+      "id": 597,
+      "word": "pemain",
+      "sentence1": "Dia adalah pemain berbakat.",
+      "sentence2": "Dia adalah pemain terbaik di tim."
+    },
+    {
+      "id": 598,
+      "word": "tolonglah",
+      "sentence1": "Bisakah kau membantuku, tolong?",
+      "sentence2": "Dia bilang ya, silakan."
+    },
+    {
+      "id": 599,
+      "word": "titik",
+      "sentence1": "Bisakah kau melihat titik itu di peta?",
+      "sentence2": "Dia membuat poin penting dalam diskusi."
+    },
+    {
+      "id": 600,
+      "word": "polisi",
+      "sentence1": "Polisi sedang menyelidiki kasus ini.",
+      "sentence2": "Dia ingin menjadi petugas polisi."
+    },
+    {
+      "id": 601,
+      "word": "polisi",
+      "sentence1": "Polisi itu membantu anak yang tersesat.",
+      "sentence2": "Dia berterima kasih kepada polisi itu atas bantuannya."
+    },
+    {
+      "id": 602,
+      "word": "kolam renang",
+      "sentence1": "Kolam renang terbuka selama musim panas.",
+      "sentence2": "Dia suka berenang di kolam renang."
+    },
+    {
+      "id": 603,
+      "word": "miskin",
+      "sentence1": "Keluarga miskin membutuhkan bantuan.",
+      "sentence2": "Dia menyumbangkan pakaian untuk orang miskin."
+    },
+    {
+      "id": 604,
+      "word": "populer",
+      "sentence1": "Lagu ini sangat populer.",
+      "sentence2": "Dia adalah tokoh populer di masyarakat."
+    },
+    {
+      "id": 605,
+      "word": "positif",
+      "sentence1": "Dia punya sikap positif.",
+      "sentence2": "Umpan baliknya sangat positif."
+    },
+    {
+      "id": 606,
+      "word": "mungkin",
+      "sentence1": "Bisakah kita bertemu besok?",
+      "sentence2": "Dia membuat kami bisa selesai tepat waktu."
+    },
+    {
+      "id": 607,
+      "word": "pos",
+      "sentence1": "Aku harus mengirim surat ini melalui pos.",
+      "sentence2": "Dia bekerja di kantor pos."
+    },
+    {
+      "id": 608,
+      "word": "kentang",
+      "sentence1": "Aku ingin makan kentang panggang.",
+      "sentence2": "Dia menanam kentang di kebunnya."
+    },
+    {
+      "id": 609,
+      "word": "pon",
+      "sentence1": "Pound adalah satuan berat.",
+      "sentence2": "Dia mengangkat satu pon kentang."
+    },
+    {
+      "id": 610,
+      "word": "praktek",
+      "sentence1": "Latihan membuat sempurna.",
+      "sentence2": "Dia perlu lebih banyak latihan untuk membaik."
+    },
+    {
+      "id": 611,
+      "word": "latihan",
+      "sentence1": "Aku perlu berlatih bahasa Inggrisku.",
+      "sentence2": "Dia berlatih piano setiap hari."
+    },
+    {
+      "id": 612,
+      "word": "lebih suka",
+      "sentence1": "Aku lebih suka teh daripada kopi.",
+      "sentence2": "Dia lebih suka membaca buku di malam hari."
+    },
+    {
+      "id": 613,
+      "word": "persiapkan",
+      "sentence1": "Aku harus mempersiapkan ujian.",
+      "sentence2": "Dia menyiapkan makanan lezat untuk makan malam."
+    },
+    {
+      "id": 614,
+      "word": "hadir",
+      "sentence1": "Aku ingin mempresentasikan proyekku.",
+      "sentence2": "Dia mempresentasikan temuannya di konferensi."
+    },
+    {
+      "id": 615,
+      "word": "cantik",
+      "sentence1": "Dia memiliki senyum yang cantik.",
+      "sentence2": "Kebunnya cantik di musim semi."
+    },
+    {
+      "id": 616,
+      "word": "harga",
+      "sentence1": "Berapa harga buku ini?",
+      "sentence2": "Dia mendapat harga bagus untuk mobil barunya."
+    },
+    {
+      "id": 617,
+      "word": "mungkin",
+      "sentence1": "Mungkin besok akan hujan.",
+      "sentence2": "Dia mungkin di rumah sekarang."
+    },
+    {
+      "id": 618,
+      "word": "masalah",
+      "sentence1": "Kita harus menyelesaikan masalah ini.",
+      "sentence2": "Dia punya masalah dengan komputernya."
+    },
+    {
+      "id": 619,
+      "word": "produk",
+      "sentence1": "Produk ini sangat populer.",
+      "sentence2": "Dia membeli produk baru dari toko."
+    },
+    {
+      "id": 620,
+      "word": "program",
+      "sentence1": "Aku sedang menonton program baru di TV.",
+      "sentence2": "Dia bertanggung jawab atas program pelatihan."
+    },
+    {
+      "id": 621,
+      "word": "proyek",
+      "sentence1": "Aku sedang mengerjakan proyek sekolah.",
+      "sentence2": "Dia mempresentasikan proyeknya kepada kelas."
+    },
+    {
+      "id": 622,
+      "word": "ungu",
+      "sentence1": "Warna favoritku adalah ungu.",
+      "sentence2": "Dia mengenakan gaun ungu yang indah."
+    },
+    {
+      "id": 623,
+      "word": "put put",
+      "sentence1": "Tolong letakkan buku itu di rak.",
+      "sentence2": "Dia menaruh ponselnya di tasnya."
+    },
+    {
+      "id": 624,
+      "word": "kuartal",
+      "sentence1": "Seperempat kue tersisa.",
+      "sentence2": "Dia membayar seperempat untuk tiket bus."
+    },
+    {
+      "id": 625,
+      "word": "pertanyaan",
+      "sentence1": "Boleh aku bertanya sesuatu?",
+      "sentence2": "Dia punya pertanyaan tentang pekerjaan rumah."
+    },
+    {
+      "id": 626,
+      "word": "cepat",
+      "sentence1": "Dia cepat belajar.",
+      "sentence2": "Dia memberikan jawaban cepat atas pertanyaan itu."
+    },
+    {
+      "id": 627,
+      "word": "cepat",
+      "sentence1": "Tolong selesaikan pekerjaan rumahmu dengan cepat.",
+      "sentence2": "Dia segera menyadari kesalahannya."
+    },
+    {
+      "id": 628,
+      "word": "tenang",
+      "sentence1": "Tolong diam di perpustakaan.",
+      "sentence2": "Dia menikmati ketenangan pedesaan."
+    },
+    {
+      "id": 629,
+      "word": "cukup",
+      "sentence1": "Ini cukup dingin di luar.",
+      "sentence2": "Dia cukup pandai matematika."
+    },
+    {
+      "id": 630,
+      "word": "radio",
+      "sentence1": "Aku mendengarkan radio setiap pagi.",
+      "sentence2": "Dia bekerja untuk sebuah stasiun radio."
+    },
+    {
+      "id": 631,
+      "word": "hujan",
+      "sentence1": "Aku suka mendengarkan suara hujan.",
+      "sentence2": "Dia terjebak dalam hujan tanpa payung."
+    },
+    {
+      "id": 632,
+      "word": "membaca",
+      "sentence1": "Aku suka membaca sebelum tidur.",
+      "sentence2": "Dia membaca sebuah buku setiap minggu."
+    },
+    {
+      "id": 633,
+      "word": "pembaca",
+      "sentence1": "Pembaca selalu terlibat dalam cerita.",
+      "sentence2": "Dia adalah pembaca yang rakus."
+    },
+    {
+      "id": 634,
+      "word": "membaca",
+      "sentence1": "Membaca adalah cara yang bagus untuk bersantai.",
+      "sentence2": "Dia suka membaca novel misteri."
+    },
+    {
+      "id": 635,
+      "word": "siap",
+      "sentence1": "Apakah Anda siap untuk pergi?",
+      "sentence2": "Dia siap untuk ujian."
+    },
+    {
+      "id": 636,
+      "word": "nyata",
+      "sentence1": "Ini berlian asli.",
+      "sentence2": "Dia ingin melihat perubahan nyata di dunia."
+    },
+    {
+      "id": 637,
+      "word": "benar-benar",
+      "sentence1": "Aku sangat suka lagu ini.",
+      "sentence2": "Dia benar-benar pandai dalam pekerjaannya."
+    },
+    {
+      "id": 638,
+      "word": "alasan",
+      "sentence1": "Apa tujuan kunjunganmu?",
+      "sentence2": "Dia punya alasan yang bagus untuk terlambat."
+    },
+    {
+      "id": 639,
+      "word": "merah",
+      "sentence1": "Warna favoritku adalah merah.",
+      "sentence2": "Dia mengenakan gaun merah ke pesta."
+    },
+    {
+      "id": 640,
+      "word": "tenanglah",
+      "sentence1": "Aku suka bersantai di kolam renang.",
+      "sentence2": "Dia mandi untuk santai."
+    },
+    {
+      "id": 641,
+      "word": "ingatlah",
+      "sentence1": "Tolong ingat untuk mematikan lampu.",
+      "sentence2": "Dia tidak ingat di mana dia meletakkan kuncinya."
+    },
+    {
+      "id": 642,
+      "word": "ulangi",
+      "sentence1": "Bisa kau ulangi itu, tolong?",
+      "sentence2": "Dia harus mengulangi latihan beberapa kali."
+    },
+    {
+      "id": 643,
+      "word": "laporan",
+      "sentence1": "Aku harus menulis laporan untuk bekerja.",
+      "sentence2": "Dia menyerahkan laporannya tepat waktu."
+    },
+    {
+      "id": 644,
+      "word": "restoran",
+      "sentence1": "Mari kita pergi ke restoran untuk makan malam.",
+      "sentence2": "Dia bekerja di restoran mewah."
+    },
+    {
+      "id": 645,
+      "word": "hasilnya",
+      "sentence1": "Apa hasil percobaan itu?",
+      "sentence2": "Dia senang dengan hasilnya."
+    },
+    {
+      "id": 646,
+      "word": "kembali",
+      "sentence1": "Aku akan mengembalikan bukunya besok.",
+      "sentence2": "Dia kembali ke rumah setelah perjalanan."
+    },
+    {
+      "id": 647,
+      "word": "beras",
+      "sentence1": "Saya suka makan nasi dengan makanan saya.",
+      "sentence2": "Dia memasak nasi untuk makan malam."
+    },
+    {
+      "id": 648,
+      "word": "kaya",
+      "sentence1": "Dia orang kaya.",
+      "sentence2": "Dia ingin menikah dengan suami kaya."
+    },
+    {
+      "id": 649,
+      "word": "mengendarai",
+      "sentence1": "Aku suka bersepeda di taman.",
+      "sentence2": "Dia menunggang kuda untuk pertama kalinya."
+    },
+    {
+      "id": 650,
+      "word": "benar",
+      "sentence1": "Belok kanan di lampu lalu lintas.",
+      "sentence2": "Dia duduk di sebelah kananku."
+    },
+    {
+      "id": 651,
+      "word": "sungai",
+      "sentence1": "Sungai mengalir melalui lembah.",
+      "sentence2": "Dia suka memancing di sungai."
+    },
+    {
+      "id": 652,
+      "word": "jalan",
+      "sentence1": "Jalan ditutup karena konstruksi.",
+      "sentence2": "Dia tinggal di jalan yang tenang."
+    },
+    {
+      "id": 653,
+      "word": "ruang",
+      "sentence1": "Ini kamar tidurku.",
+      "sentence2": "Dia membersihkan kamarnya kemarin."
+    },
+    {
+      "id": 654,
+      "word": "rutinitas",
+      "sentence1": "Aku punya rutinitas pagi.",
+      "sentence2": "Dia mengikuti rutinitas latihan yang ketat."
+    },
+    {
+      "id": 655,
+      "word": "aturan",
+      "sentence1": "Anda harus mengikuti aturan.",
+      "sentence2": "Dia melanggar aturan dan mendapat masalah."
+    },
+    {
+      "id": 656,
+      "word": "lari",
+      "sentence1": "Aku suka berlari di pagi hari.",
+      "sentence2": "Dia berlari lima mil setiap hari."
+    },
+    {
+      "id": 657,
+      "word": "sedih",
+      "sentence1": "Dia terlihat sedih hari ini.",
+      "sentence2": "Aku merasa sedih tentang situasi ini."
+    },
+    {
+      "id": 658,
+      "word": "salad",
+      "sentence1": "Aku ingin salad untuk makan siang.",
+      "sentence2": "Dia membuat salad yang lezat."
+    },
+    {
+      "id": 659,
+      "word": "garam",
+      "sentence1": "Tolong serahkan garamnya.",
+      "sentence2": "Dia menambahkan garam ke sup."
+    },
+    {
+      "id": 660,
+      "word": "sama",
+      "sentence1": "Kita punya masalah yang sama.",
+      "sentence2": "Dia memakai gaun yang sama denganku."
+    },
+    {
+      "id": 661,
+      "word": "sandwich",
+      "sentence1": "Aku ingin sandwich untuk makan siang.",
+      "sentence2": "Dia membuat sandwich kalkun."
+    },
+    {
+      "id": 662,
+      "word": "sabtu",
+      "sentence1": "Sabtu adalah hari favoritku.",
+      "sentence2": "Dia mengadakan pesta pada hari Sabtu."
+    },
+    {
+      "id": 663,
+      "word": "katakan",
+      "sentence1": "Apa yang kau katakan?",
+      "sentence2": "Dia tidak mengatakan apa-apa."
+    },
+    {
+      "id": 664,
+      "word": "sekolah",
+      "sentence1": "Aku pergi ke sekolah setiap hari.",
+      "sentence2": "Dia adalah seorang siswa di sekolah."
+    },
+    {
+      "id": 665,
+      "word": "ilmu pengetahuan",
+      "sentence1": "Sains sangat menarik.",
+      "sentence2": "Dia ingin belajar ilmu."
+    },
+    {
+      "id": 666,
+      "word": "ilmuwan",
+      "sentence1": "Dia adalah seorang ilmuwan.",
+      "sentence2": "Dia ingin menjadi seorang ilmuwan."
+    },
+    {
+      "id": 667,
+      "word": "laut",
+      "sentence1": "Laut tenang hari ini.",
+      "sentence2": "Dia suka berenang di laut."
+    },
+    {
+      "id": 668,
+      "word": "kedua",
+      "sentence1": "Ini adalah percobaan kedua.",
+      "sentence2": "Dia finis di tempat kedua."
+    },
+    {
+      "id": 669,
+      "word": "bagian",
+      "sentence1": "Ini adalah bagian yang sulit.",
+      "sentence2": "Dia membaca bagian itu dengan hati-hati."
+    },
+    {
+      "id": 670,
+      "word": "lihat",
+      "sentence1": "Aku melihat seekor burung di pohon.",
+      "sentence2": "Dia bisa melihat pegunungan dari jendela rumahnya."
+    },
+    {
+      "id": 671,
+      "word": "menjual",
+      "sentence1": "Saya ingin menjual mobil lama saya.",
+      "sentence2": "Dia menjual perhiasan buatan tangan secara online."
+    },
+    {
+      "id": 672,
+      "word": "kirim",
+      "sentence1": "Tolong kirimkan aku detailnya.",
+      "sentence2": "Dia mengirim surat kepada temannya."
+    },
+    {
+      "id": 673,
+      "word": "kalimat",
+      "sentence1": "Bisakah kau menulis kalimat?",
+      "sentence2": "Dia berbicara dalam kalimat lengkap."
+    },
+    {
+      "id": 674,
+      "word": "september",
+      "sentence1": "September adalah bulan ke-9.",
+      "sentence2": "Dia lahir pada bulan September."
+    },
+    {
+      "id": 675,
+      "word": "tujuh",
+      "sentence1": "Aku punya tujuh buah apel.",
+      "sentence2": "Dia berusia tujuh tahun."
+    },
+    {
+      "id": 676,
+      "word": "tujuh belas",
+      "sentence1": "Tujuh belas adalah nomor favoritku.",
+      "sentence2": "Dia berusia tujuh belas minggu lalu."
+    },
+    {
+      "id": 677,
+      "word": "tujuh puluh",
+      "sentence1": "Tujuh puluh adalah angka yang besar.",
+      "sentence2": "Dia berusia tujuh puluh tahun."
+    },
+    {
+      "id": 678,
+      "word": "saham",
+      "sentence1": "Bisakah kau berbagi mainanmu?",
+      "sentence2": "Dia suka berbagi makanannya."
+    },
+    {
+      "id": 679,
+      "word": "dia",
+      "sentence1": "Dia adalah teman baikku.",
+      "sentence2": "Aku melihatnya kemarin."
+    },
+    {
+      "id": 680,
+      "word": "domba",
+      "sentence1": "Domba-domba berada di padang.",
+      "sentence2": "Dia punya domba peliharaan."
+    },
+    {
+      "id": 681,
+      "word": "kaos",
+      "sentence1": "Aku butuh baju baru.",
+      "sentence2": "Dia membeli kemeja biru."
+    },
+    {
+      "id": 682,
+      "word": "sepatu",
+      "sentence1": "Aku membeli sepasang sepatu baru.",
+      "sentence2": "Dia suka sepatu merahnya."
+    },
+    {
+      "id": 683,
+      "word": "toko",
+      "sentence1": "Aku harus pergi ke toko.",
+      "sentence2": "Dia bekerja di toko pakaian."
+    },
+    {
+      "id": 684,
+      "word": "belanja",
+      "sentence1": "Aku suka berbelanja di akhir pekan.",
+      "sentence2": "Dia pergi berbelanja."
+    },
+    {
+      "id": 685,
+      "word": "pendek",
+      "sentence1": "Ini adalah cerita pendek.",
+      "sentence2": "Dia memakai gaun pendek."
+    },
+    {
+      "id": 686,
+      "word": "harus",
+      "sentence1": "Kau harus ke dokter.",
+      "sentence2": "Dia harus meminta maaf."
+    },
+    {
+      "id": 687,
+      "word": "tunjukkan",
+      "sentence1": "Bisakah kau tunjukkan jalan?",
+      "sentence2": "Dia menunjukkan gaun barunya padaku."
+    },
+    {
+      "id": 688,
+      "word": "mandi",
+      "sentence1": "Aku suka mandi di pagi hari.",
+      "sentence2": "Dia mandi panjang."
+    },
+    {
+      "id": 689,
+      "word": "sakit",
+      "sentence1": "Aku merasa sakit hari ini.",
+      "sentence2": "Dia sakit minggu lalu."
+    },
+    {
+      "id": 690,
+      "word": "serupa",
+      "sentence1": "Kedua gambar ini mirip.",
+      "sentence2": "Dia memiliki gaun yang sama."
+    },
+    {
+      "id": 691,
+      "word": "bernyanyi",
+      "sentence1": "Aku suka bernyanyi di kamar mandi.",
+      "sentence2": "Dia bernyanyi indah."
+    },
+    {
+      "id": 692,
+      "word": "penyanyi",
+      "sentence1": "Adikku adalah seorang penyanyi.",
+      "sentence2": "Dia ingin menjadi penyanyi terkenal."
+    },
+    {
+      "id": 693,
+      "word": "adik",
+      "sentence1": "Aku punya satu saudara perempuan.",
+      "sentence2": "Dia adalah adikku."
+    },
+    {
+      "id": 694,
+      "word": "duduk",
+      "sentence1": "Silakan duduk.",
+      "sentence2": "Dia suka duduk di dekat jendela."
+    },
+    {
+      "id": 695,
+      "word": "situasi",
+      "sentence1": "Ini situasi yang sulit.",
+      "sentence2": "Dia menangani situasi dengan baik."
+    },
+    {
+      "id": 696,
+      "word": "enam",
+      "sentence1": "Aku punya enam buku.",
+      "sentence2": "Umurnya enam tahun."
+    },
+    {
+      "id": 697,
+      "word": "enam belas",
+      "sentence1": "Enam belas adalah nomor favoritku.",
+      "sentence2": "Dia berusia enam belas bulan lalu."
+    },
+    {
+      "id": 698,
+      "word": "enam puluh",
+      "sentence1": "Enam puluh adalah angka yang besar.",
+      "sentence2": "Dia berusia enam puluh tahun."
+    },
+    {
+      "id": 699,
+      "word": "keterampilan",
+      "sentence1": "Dia memiliki keterampilan khusus.",
+      "sentence2": "Dia sedang belajar keterampilan baru."
+    },
+    {
+      "id": 700,
+      "word": "rok",
+      "sentence1": "Aku suka rokmu.",
+      "sentence2": "Dia memakai rok panjang."
+    },
+    {
+      "id": 701,
+      "word": "tidur",
+      "sentence1": "Aku butuh tidur lagi.",
+      "sentence2": "Dia tidur delapan jam setiap malam."
+    },
+    {
+      "id": 702,
+      "word": "perlahan",
+      "sentence1": "Silahkan berkendara perlahan.",
+      "sentence2": "Dia membaca dengan lambat."
+    },
+    {
+      "id": 703,
+      "word": "kecil",
+      "sentence1": "Ini kotak kecil.",
+      "sentence2": "Dia punya anjing kecil."
+    },
+    {
+      "id": 704,
+      "word": "ular",
+      "sentence1": "Aku melihat seekor ular di kebun.",
+      "sentence2": "Dia takut ular."
+    },
+    {
+      "id": 705,
+      "word": "salju",
+      "sentence1": "Saljunya turun.",
+      "sentence2": "Dia suka bermain di salju."
+    },
+    {
+      "id": 706,
+      "word": "jadi",
+      "sentence1": "Aku lelah, jadi aku tidur lebih awal.",
+      "sentence2": "Dia bahagia, jadi dia tersenyum."
+    },
+    {
+      "id": 707,
+      "word": "beberapa",
+      "sentence1": "Aku punya beberapa ide.",
+      "sentence2": "Dia membeli beberapa apel."
+    },
+    {
+      "id": 708,
+      "word": "seseorang",
+      "sentence1": "Ada seseorang di pintu.",
+      "sentence2": "Dia tahu seseorang yang terkenal."
+    },
+    {
+      "id": 709,
+      "word": "seseorang",
+      "sentence1": "Seseorang meninggalkan tas mereka.",
+      "sentence2": "Dia mencari seseorang untuk membantu."
+    },
+    {
+      "id": 710,
+      "word": "sesuatu",
+      "sentence1": "Aku butuh sesuatu untuk dimakan.",
+      "sentence2": "Dia menyembunyikan sesuatu."
+    },
+    {
+      "id": 711,
+      "word": "kadang-kadang",
+      "sentence1": "Aku kadang-kadang pergi berjalan-jalan.",
+      "sentence2": "Dia mengunjungi kakek dan neneknya kadang-kadang."
+    },
+    {
+      "id": 712,
+      "word": "anak laki-laki",
+      "sentence1": "Anakku sedang bermain di luar.",
+      "sentence2": "Dia memiliki seorang putra dan seorang putri."
+    },
+    {
+      "id": 713,
+      "word": "lagu",
+      "sentence1": "Aku suka lagu ini.",
+      "sentence2": "Dia menyanyikan lagu yang indah."
+    },
+    {
+      "id": 714,
+      "word": "segera",
+      "sentence1": "Aku akan segera meneleponmu.",
+      "sentence2": "Dia akan segera tiba."
+    },
+    {
+      "id": 715,
+      "word": "maafkan aku",
+      "sentence1": "Aku minta maaf atas kesalahan itu.",
+      "sentence2": "Dia sedih mendengar kabar itu."
+    },
+    {
+      "id": 716,
+      "word": "suara",
+      "sentence1": "Suara apa itu?",
+      "sentence2": "Dia memiliki suara nyanyian yang indah."
+    },
+    {
+      "id": 717,
+      "word": "sup",
+      "sentence1": "Aku membuat sup.",
+      "sentence2": "Dia suka sup tomat."
+    },
+    {
+      "id": 718,
+      "word": "selatan",
+      "sentence1": "Kami tinggal di selatan.",
+      "sentence2": "Dia melakukan perjalanan ke selatan untuk musim dingin."
+    },
+    {
+      "id": 719,
+      "word": "ruang",
+      "sentence1": "Ada banyak ruang di sini.",
+      "sentence2": "Dia ingin menjelajahi luar angkasa."
+    },
+    {
+      "id": 720,
+      "word": "bicaralah",
+      "sentence1": "Aku bisa berbahasa Inggris.",
+      "sentence2": "Dia berbicara tiga bahasa."
+    },
+    {
+      "id": 721,
+      "word": "khusus",
+      "sentence1": "Ini adalah hari yang istimewa.",
+      "sentence2": "Dia menerima hadiah khusus."
+    },
+    {
+      "id": 722,
+      "word": "mantra",
+      "sentence1": "Bisakah kau mengeja namamu?",
+      "sentence2": "Dia mengeja kata itu dengan benar."
+    },
+    {
+      "id": 723,
+      "word": "ejaan",
+      "sentence1": "Ejaan sangat penting dalam menulis.",
+      "sentence2": "Dia memenangkan kontes ejaan."
+    },
+    {
+      "id": 724,
+      "word": "menghabiskan",
+      "sentence1": "Aku suka menghabiskan waktu dengan teman-teman.",
+      "sentence2": "Dia menghabiskan semua uangnya."
+    },
+    {
+      "id": 725,
+      "word": "olahraga",
+      "sentence1": "Sepak bola adalah olahraga favorit saya.",
+      "sentence2": "Dia bermain banyak olahraga."
+    },
+    {
+      "id": 726,
+      "word": "musim semi",
+      "sentence1": "Musim semi adalah musim favoritku.",
+      "sentence2": "Bunga mekar di musim semi."
+    },
+    {
+      "id": 727,
+      "word": "berdiri",
+      "sentence1": "Tolong berdiri.",
+      "sentence2": "Dia berdiri di dekat jendela."
+    },
+    {
+      "id": 728,
+      "word": "bintang",
+      "sentence1": "Bintang itu bersinar terang.",
+      "sentence2": "Dia ingin menjadi bintang."
+    },
+    {
+      "id": 729,
+      "word": "mulai",
+      "sentence1": "Aku akan mulai mengerjakan PR-ku.",
+      "sentence2": "Dia memulai proyek baru."
+    },
+    {
+      "id": 730,
+      "word": "pernyataan",
+      "sentence1": "Sesungguhnya ini adalah pernyataan yang jelas.",
+      "sentence2": "Dia membuat pernyataan tentang masalah ini."
+    },
+    {
+      "id": 731,
+      "word": "stasiun",
+      "sentence1": "Kereta tiba di stasiun.",
+      "sentence2": "Dia menunggu di stasiun."
+    },
+    {
+      "id": 732,
+      "word": "tinggallah",
+      "sentence1": "Aku akan tinggal di sini.",
+      "sentence2": "Dia menginap di hotel."
+    },
+    {
+      "id": 733,
+      "word": "masih",
+      "sentence1": "Aku masih menunggu.",
+      "sentence2": "Dia masih bekerja di atasnya."
+    },
+    {
+      "id": 734,
+      "word": "berhentilah",
+      "sentence1": "Tolong berhenti bicara.",
+      "sentence2": "Dia menghentikan mobil."
+    },
+    {
+      "id": 735,
+      "word": "cerita",
+      "sentence1": "Aku suka cerita ini.",
+      "sentence2": "Dia menceritakan sebuah cerita lucu."
+    },
+    {
+      "id": 736,
+      "word": "jalan",
+      "sentence1": "Toko itu di jalan.",
+      "sentence2": "Dia tinggal di jalan yang tenang."
+    },
+    {
+      "id": 737,
+      "word": "kuat",
+      "sentence1": "Dia adalah orang yang kuat.",
+      "sentence2": "Dia punya pendapat yang kuat."
+    },
+    {
+      "id": 738,
+      "word": "siswa",
+      "sentence1": "Siswa sedang belajar.",
+      "sentence2": "Dia adalah seorang siswa yang baik."
+    },
+    {
+      "id": 739,
+      "word": "studi",
+      "sentence1": "Aku harus belajar untuk ujian.",
+      "sentence2": "Dia belajar setiap malam."
+    },
+    {
+      "id": 740,
+      "word": "gaya",
+      "sentence1": "Aku suka gaya Anda.",
+      "sentence2": "Dia memiliki gaya yang unik."
+    },
+    {
+      "id": 741,
+      "word": "subjek",
+      "sentence1": "Apa topik pelajaran?",
+      "sentence2": "Dia tertarik pada subjek itu."
+    },
+    {
+      "id": 742,
+      "word": "sukses",
+      "sentence1": "Sukses membutuhkan kerja keras.",
+      "sentence2": "Dia mencapai kesuksesan besar."
+    },
+    {
+      "id": 743,
+      "word": "gula",
+      "sentence1": "Aku minum kopi dengan gula.",
+      "sentence2": "Dia suka gula di tehnya."
+    },
+    {
+      "id": 744,
+      "word": "musim panas",
+      "sentence1": "Musim panas panas di wilayah ini.",
+      "sentence2": "Dia suka liburan musim panas."
+    },
+    {
+      "id": 745,
+      "word": "matahari",
+      "sentence1": "Matahari bersinar terang.",
+      "sentence2": "Dia duduk di matahari."
+    },
+    {
+      "id": 746,
+      "word": "minggu",
+      "sentence1": "Hari Minggu adalah hari istirahat.",
+      "sentence2": "Dia pergi ke gereja pada hari Minggu."
+    },
+    {
+      "id": 747,
+      "word": "supermarket",
+      "sentence1": "Aku harus pergi ke supermarket.",
+      "sentence2": "Dia membeli bahan makanan di supermarket."
+    },
+    {
+      "id": 748,
+      "word": "tentu",
+      "sentence1": "Apa kau yakin tentang itu?",
+      "sentence2": "Dia yakin akan keputusannya."
+    },
+    {
+      "id": 749,
+      "word": "sweater",
+      "sentence1": "Aku membeli sweater baru.",
+      "sentence2": "Dia memakai sweater hangat."
+    },
+    {
+      "id": 750,
+      "word": "berenang",
+      "sentence1": "Aku suka berenang di kolam.",
+      "sentence2": "Dia berenang setiap pagi."
+    },
+    {
+      "id": 751,
+      "word": "berenang",
+      "sentence1": "Berenang adalah latihan yang baik.",
+      "sentence2": "Dia suka berenang di laut."
+    },
+    {
+      "id": 752,
+      "word": "tabel",
+      "sentence1": "Meja itu terbuat dari kayu.",
+      "sentence2": "Dia menyiapkan meja untuk makan malam."
+    },
+    {
+      "id": 753,
+      "word": "mengambil",
+      "sentence1": "Aku akan naik bus.",
+      "sentence2": "Dia mengambil gambar matahari terbenam."
+    },
+    {
+      "id": 754,
+      "word": "bicara",
+      "sentence1": "Kita harus bicara.",
+      "sentence2": "Dia berbicara tentang rencananya."
+    },
+    {
+      "id": 755,
+      "word": "tinggi",
+      "sentence1": "Dia tinggi dan atletis.",
+      "sentence2": "Dia lebih suka bangunan tinggi."
+    },
+    {
+      "id": 756,
+      "word": "taksi",
+      "sentence1": "Aku butuh taksi ke bandara.",
+      "sentence2": "Dia naik taksi pulang."
+    },
+    {
+      "id": 757,
+      "word": "teh",
+      "sentence1": "Aku suka minum teh.",
+      "sentence2": "Dia lebih suka teh hijau."
+    },
+    {
+      "id": 758,
+      "word": "mengajarkan",
+      "sentence1": "Aku ingin mengajar bahasa Inggris.",
+      "sentence2": "Dia mengajar matematika di sekolah."
+    },
+    {
+      "id": 759,
+      "word": "guru",
+      "sentence1": "Guru sangat membantu.",
+      "sentence2": "Dia adalah guru favoritku."
+    },
+    {
+      "id": 760,
+      "word": "tim",
+      "sentence1": "Tim kami memenangkan pertandingan.",
+      "sentence2": "Dia adalah anggota tim yang berharga."
+    },
+    {
+      "id": 761,
+      "word": "remaja",
+      "sentence1": "Remaja menghadapi banyak tantangan.",
+      "sentence2": "Dia adalah seorang remaja yang khas."
+    },
+    {
+      "id": 762,
+      "word": "telepon",
+      "sentence1": "Aku harus menelponmu.",
+      "sentence2": "Dia menjawab telepon."
+    },
+    {
+      "id": 763,
+      "word": "televisi",
+      "sentence1": "Televisi ada di atas meja.",
+      "sentence2": "Dia menonton televisi setiap malam."
+    },
+    {
+      "id": 764,
+      "word": "katakan",
+      "sentence1": "Tolong katakan namamu.",
+      "sentence2": "Dia memberitahuku sebuah rahasia."
+    },
+    {
+      "id": 765,
+      "word": "sepuluh",
+      "sentence1": "Aku punya sepuluh apel.",
+      "sentence2": "Dia berusia sepuluh tahun."
+    },
+    {
+      "id": 766,
+      "word": "tenis",
+      "sentence1": "Aku suka bermain tenis.",
+      "sentence2": "Dia bermain tenis di akhir pekan."
+    },
+    {
+      "id": 767,
+      "word": "mengerikan",
+      "sentence1": "Film itu mengerikan.",
+      "sentence2": "Dia mengalami pengalaman buruk."
+    },
+    {
+      "id": 768,
+      "word": "uji coba",
+      "sentence1": "Aku punya ujian besok.",
+      "sentence2": "Dia lulus ujian."
+    },
+    {
+      "id": 769,
+      "word": "teks",
+      "sentence1": "Silakan baca teksnya.",
+      "sentence2": "Dia menulis pesan teks."
+    },
+    {
+      "id": 770,
+      "word": "lebih dari",
+      "sentence1": "Dia lebih tinggi dari saudaranya.",
+      "sentence2": "Buku ini lebih baik dari buku itu."
+    },
+    {
+      "id": 771,
+      "word": "terima kasih",
+      "sentence1": "Aku ingin berterima kasih padamu.",
+      "sentence2": "Dia berterima kasih atas bantuanku."
+    },
+    {
+      "id": 772,
+      "word": "terima kasih",
+      "sentence1": "Terima kasih atas bantuannya.",
+      "sentence2": "Dia mengucapkan terima kasih dan pergi."
+    },
+    {
+      "id": 773,
+      "word": "itu",
+      "sentence1": "Itu buku saya.",
+      "sentence2": "Dia bilang dia akan datang."
+    },
+    {
+      "id": 774,
+      "word": "yang",
+      "sentence1": "Kucing itu ada di atap.",
+      "sentence2": "Dia suka gaun biru."
+    },
+    {
+      "id": 775,
+      "word": "teater",
+      "sentence1": "Kita akan pergi ke teater.",
+      "sentence2": "Dia suka menonton drama di teater."
+    },
+    {
+      "id": 776,
+      "word": "mereka",
+      "sentence1": "Ini adalah rumah mereka.",
+      "sentence2": "Dia mengambil foto mereka."
+    },
+    {
+      "id": 777,
+      "word": "mereka",
+      "sentence1": "Aku melihat mereka di taman.",
+      "sentence2": "Dia mengundang mereka ke pesta."
+    },
+    {
+      "id": 778,
+      "word": "kalau begitu",
+      "sentence1": "Kita bisa pergi kemudian.",
+      "sentence2": "Dia lelah saat itu."
+    },
+    {
+      "id": 779,
+      "word": "di sana",
+      "sentence1": "Buku itu ada di sana.",
+      "sentence2": "Dia tinggal di sana."
+    },
+    {
+      "id": 780,
+      "word": "mereka",
+      "sentence1": "Mereka adalah teman-temanku.",
+      "sentence2": "Dia bilang mereka akan datang."
+    },
+    {
+      "id": 781,
+      "word": "hal",
+      "sentence1": "Apa itu?",
+      "sentence2": "Dia kehilangan hal kesukaannya."
+    },
+    {
+      "id": 782,
+      "word": "berpikir",
+      "sentence1": "Aku harus memikirkannya.",
+      "sentence2": "Dia sangat menghargaimu."
+    },
+    {
+      "id": 783,
+      "word": "ketiga",
+      "sentence1": "Ini adalah percobaan ketiga saya.",
+      "sentence2": "Dia finis di tempat ketiga."
+    },
+    {
+      "id": 784,
+      "word": "haus",
+      "sentence1": "Aku haus.",
+      "sentence2": "Dia selalu merasa haus setelah berolahraga."
+    },
+    {
+      "id": 785,
+      "word": "tiga belas",
+      "sentence1": "Saya memiliki tiga belas apel.",
+      "sentence2": "Dia berusia tiga belas tahun."
+    },
+    {
+      "id": 786,
+      "word": "tiga puluh",
+      "sentence1": "Ada tiga puluh siswa di kelas.",
+      "sentence2": "Dia akan berusia tiga puluh tahun depan."
+    },
+    {
+      "id": 787,
+      "word": "ini",
+      "sentence1": "Ini buku saya.",
+      "sentence2": "Dia bilang ini adalah favoritnya."
+    },
+    {
+      "id": 788,
+      "word": "seribu",
+      "sentence1": "Aku punya ribuan ide.",
+      "sentence2": "Dia memenangkan seribu dolar."
+    },
+    {
+      "id": 789,
+      "word": "tiga",
+      "sentence1": "Aku punya tiga saudara.",
+      "sentence2": "Dia berusia tiga tahun."
+    },
+    {
+      "id": 790,
+      "word": "melalui",
+      "sentence1": "Kami berjalan melalui taman.",
+      "sentence2": "Dia melihat melalui jendela."
+    },
+    {
+      "id": 791,
+      "word": "kamis",
+      "sentence1": "Kamis adalah hari favoritku.",
+      "sentence2": "Dia punya pertemuan pada hari Kamis."
+    },
+    {
+      "id": 792,
+      "word": "tiket",
+      "sentence1": "Aku harus membeli tiket.",
+      "sentence2": "Dia menunjukkan tiketnya di pintu masuk."
+    },
+    {
+      "id": 793,
+      "word": "waktu",
+      "sentence1": "Jam berapa sekarang?",
+      "sentence2": "Dia menghabiskan banyak waktu membaca."
+    },
+    {
+      "id": 794,
+      "word": "lelah",
+      "sentence1": "Aku lelah.",
+      "sentence2": "Dia merasa lelah setelah perjalanan panjang."
+    },
+    {
+      "id": 795,
+      "word": "judul",
+      "sentence1": "Apa judul bukunya?",
+      "sentence2": "Dia memberikan judul yang menarik untuk ceritanya."
+    },
+    {
+      "id": 796,
+      "word": "untuk",
+      "sentence1": "Aku akan pergi ke toko.",
+      "sentence2": "Dia memberikan buku itu kepada temannya."
+    },
+    {
+      "id": 797,
+      "word": "hari ini",
+      "sentence1": "Hari ini adalah hari yang indah.",
+      "sentence2": "Dia akan mengunjungi neneknya hari ini."
+    },
+    {
+      "id": 798,
+      "word": "bersama-sama",
+      "sentence1": "Kita akan bekerja sama.",
+      "sentence2": "Dia suka bermain game bersama teman-temannya."
+    },
+    {
+      "id": 799,
+      "word": "toilet",
+      "sentence1": "Di mana toiletnya?",
+      "sentence2": "Dia pergi ke toilet sebelum film."
+    },
+    {
+      "id": 800,
+      "word": "tomat",
+      "sentence1": "Aku butuh tomat untuk salad.",
+      "sentence2": "Dia membeli tomat dari pasar."
+    },
+    {
+      "id": 801,
+      "word": "besok",
+      "sentence1": "Aku akan meneleponmu besok.",
+      "sentence2": "Dia punya pertemuan besok."
+    },
+    {
+      "id": 802,
+      "word": "malam ini",
+      "sentence1": "Aku punya rencana untuk malam ini.",
+      "sentence2": "Dia tinggal di rumah malam ini."
+    },
+    {
+      "id": 803,
+      "word": "juga",
+      "sentence1": "Aku ingin pergi juga.",
+      "sentence2": "Dia datang juga."
+    },
+    {
+      "id": 804,
+      "word": "gigi",
+      "sentence1": "Gigi saya sakit.",
+      "sentence2": "Dia memiliki rongga di giginya."
+    },
+    {
+      "id": 805,
+      "word": "topik",
+      "sentence1": "Apa topik diskusi?",
+      "sentence2": "Dia memperkenalkan topik baru."
+    },
+    {
+      "id": 806,
+      "word": "wisatawan",
+      "sentence1": "Turis itu mengambil banyak foto.",
+      "sentence2": "Dia adalah seorang turis di kota."
+    },
+    {
+      "id": 807,
+      "word": "kota",
+      "sentence1": "Aku tinggal di kota kecil.",
+      "sentence2": "Dia tumbuh di kota ini."
+    },
+    {
+      "id": 808,
+      "word": "lalu lintas",
+      "sentence1": "Lalu lintas padat hari ini.",
+      "sentence2": "Dia terjebak dalam kemacetan."
+    },
+    {
+      "id": 809,
+      "word": "kereta api",
+      "sentence1": "Aku akan naik kereta ke tempat kerja.",
+      "sentence2": "Dia ketinggalan kereta."
+    },
+    {
+      "id": 810,
+      "word": "perjalanan",
+      "sentence1": "Aku suka bepergian.",
+      "sentence2": "Dia sedang merencanakan rencana perjalanan."
+    },
+    {
+      "id": 811,
+      "word": "pohon",
+      "sentence1": "Pohon itu sangat tinggi.",
+      "sentence2": "Dia memanjat pohon."
+    },
+    {
+      "id": 812,
+      "word": "perjalanan",
+      "sentence1": "Aku akan melakukan perjalanan.",
+      "sentence2": "Dia menikmati perjalanan."
+    },
+    {
+      "id": 813,
+      "word": "celana",
+      "sentence1": "Aku membeli celana baru.",
+      "sentence2": "Dia memakai celana biru."
+    },
+    {
+      "id": 814,
+      "word": "benar",
+      "sentence1": "Pernyataan itu benar.",
+      "sentence2": "Dia selalu mengatakan yang sebenarnya."
+    },
+    {
+      "id": 815,
+      "word": "cobalah",
+      "sentence1": "Aku akan mencoba yang terbaik.",
+      "sentence2": "Dia mencoba memecahkan masalah."
+    },
+    {
+      "id": 816,
+      "word": "t-shirt",
+      "sentence1": "Aku butuh kaos baru.",
+      "sentence2": "Dia membeli kaos dari toko."
+    },
+    {
+      "id": 817,
+      "word": "selasa",
+      "sentence1": "Selasa adalah hari favoritku.",
+      "sentence2": "Dia punya pertemuan pada hari Selasa."
+    },
+    {
+      "id": 818,
+      "word": "memutar",
+      "sentence1": "Tolong matikan lampu.",
+      "sentence2": "Dia membalik halaman."
+    },
+    {
+      "id": 819,
+      "word": "TV",
+      "sentence1": "Aku menonton TV di malam hari.",
+      "sentence2": "Dia menyalakan TV."
+    },
+    {
+      "id": 820,
+      "word": "dua belas",
+      "sentence1": "Ada dua belas bulan dalam setahun.",
+      "sentence2": "Dia berusia dua belas tahun."
+    },
+    {
+      "id": 821,
+      "word": "dua puluh",
+      "sentence1": "Aku punya dua puluh dolar.",
+      "sentence2": "Dia berusia dua puluh tahun."
+    },
+    {
+      "id": 822,
+      "word": "dua kali",
+      "sentence1": "Aku sudah menonton film itu dua kali.",
+      "sentence2": "Dia mengunjungi orang tuanya dua kali sebulan."
+    },
+    {
+      "id": 823,
+      "word": "dua",
+      "sentence1": "Aku punya dua kucing.",
+      "sentence2": "Dia ingin dua tiket."
+    },
+    {
+      "id": 824,
+      "word": "jenis",
+      "sentence1": "Apa jenis musik yang Anda suka?",
+      "sentence2": "Dia lebih suka jenis buku yang berbeda."
+    },
+    {
+      "id": 825,
+      "word": "payung",
+      "sentence1": "Jangan lupa payungmu.",
+      "sentence2": "Dia membeli payung baru."
+    },
+    {
+      "id": 826,
+      "word": "paman",
+      "sentence1": "Pamanku tinggal di New York.",
+      "sentence2": "Dia mengunjungi pamannya musim panas lalu."
+    },
+    {
+      "id": 827,
+      "word": "di bawah",
+      "sentence1": "Kucingnya ada di bawah meja.",
+      "sentence2": "Dia menemukan kuncinya di bawah sofa."
+    },
+    {
+      "id": 828,
+      "word": "mengerti",
+      "sentence1": "Aku tidak mengerti pertanyaannya.",
+      "sentence2": "Dia mengerti masalahnya."
+    },
+    {
+      "id": 829,
+      "word": "universitas",
+      "sentence1": "Dia belajar di universitas.",
+      "sentence2": "Dia lulus dari universitas."
+    },
+    {
+      "id": 830,
+      "word": "sampai",
+      "sentence1": "Aku akan menunggu sampai kau tiba.",
+      "sentence2": "Dia tinggal sampai akhir acara."
+    },
+    {
+      "id": 831,
+      "word": "naik",
+      "sentence1": "Kucing itu memanjat pohon.",
+      "sentence2": "Dia menatap ke langit."
+    },
+    {
+      "id": 832,
+      "word": "di atas",
+      "sentence1": "Kamar tidur di lantai atas.",
+      "sentence2": "Dia pergi ke atas untuk belajar."
+    },
+    {
+      "id": 833,
+      "word": "kami",
+      "sentence1": "Bisakah kau membantu kami?",
+      "sentence2": "Dia mengundang kita ke pestanya."
+    },
+    {
+      "id": 834,
+      "word": "penggunaan",
+      "sentence1": "Aku harus menggunakan komputer.",
+      "sentence2": "Dia menggunakan banyak aplikasi di ponselnya."
+    },
+    {
+      "id": 835,
+      "word": "berguna",
+      "sentence1": "Buku ini sangat berguna.",
+      "sentence2": "Dia menemukan informasi yang berguna."
+    },
+    {
+      "id": 836,
+      "word": "biasanya",
+      "sentence1": "Aku biasanya bangun pagi.",
+      "sentence2": "Dia biasanya berjalan-jalan di malam hari."
+    },
+    {
+      "id": 837,
+      "word": "liburan",
+      "sentence1": "Aku akan pergi berlibur minggu depan.",
+      "sentence2": "Dia suka bepergian selama liburan."
+    },
+    {
+      "id": 838,
+      "word": "sayuran",
+      "sentence1": "Aku makan banyak sayuran.",
+      "sentence2": "Dia lebih suka buah daripada sayuran."
+    },
+    {
+      "id": 839,
+      "word": "sangat",
+      "sentence1": "Ini adalah buku yang sangat menarik.",
+      "sentence2": "Dia sangat berbakat."
+    },
+    {
+      "id": 840,
+      "word": "video",
+      "sentence1": "Aku menonton video lucu online.",
+      "sentence2": "Dia suka membuat video."
+    },
+    {
+      "id": 841,
+      "word": "desa",
+      "sentence1": "Dia tumbuh di sebuah desa kecil.",
+      "sentence2": "Dia mengunjungi kakek dan neneknya di desa."
+    },
+    {
+      "id": 842,
+      "word": "kunjungan",
+      "sentence1": "Aku akan mengunjungi temanku besok.",
+      "sentence2": "Dia mengunjungi museum minggu lalu."
+    },
+    {
+      "id": 843,
+      "word": "pengunjung",
+      "sentence1": "Pengunjung itu mengajukan banyak pertanyaan.",
+      "sentence2": "Dia adalah pengunjung yang sering ke museum."
+    },
+    {
+      "id": 844,
+      "word": "tunggu",
+      "sentence1": "Aku akan menunggumu.",
+      "sentence2": "Dia menunggu selama satu jam."
+    },
+    {
+      "id": 845,
+      "word": "pelayan",
+      "sentence1": "Pelayan mengambil pesanan kami.",
+      "sentence2": "Dia dulu bekerja sebagai pelayan."
+    },
+    {
+      "id": 846,
+      "word": "bangun",
+      "sentence1": "Aku bangun jam 7 pagi.",
+      "sentence2": "Dia bangun terlambat hari ini."
+    },
+    {
+      "id": 847,
+      "word": "berjalan",
+      "sentence1": "Aku suka berjalan di taman.",
+      "sentence2": "Dia berjalan anjingnya setiap pagi."
+    },
+    {
+      "id": 848,
+      "word": "dinding",
+      "sentence1": "Gambarnya ada di dinding.",
+      "sentence2": "Dia mengecat dindingnya biru."
+    },
+    {
+      "id": 849,
+      "word": "ingin",
+      "sentence1": "Aku ingin belajar bahasa Inggris.",
+      "sentence2": "Dia ingin telepon baru."
+    },
+    {
+      "id": 850,
+      "word": "hangat",
+      "sentence1": "Supnya hangat.",
+      "sentence2": "Dia suka cuaca hangat."
+    },
+    {
+      "id": 851,
+      "word": "mencuci",
+      "sentence1": "Aku harus mencuci tanganku.",
+      "sentence2": "Dia mencuci mobilnya setiap minggu."
+    },
+    {
+      "id": 852,
+      "word": "perhatikan",
+      "sentence1": "Aku suka menonton film.",
+      "sentence2": "Dia menonton sebuah film dokumenter tadi malam."
+    },
+    {
+      "id": 853,
+      "word": "air",
+      "sentence1": "Aku minum banyak air.",
+      "sentence2": "Dia menyiram tanaman."
+    },
+    {
+      "id": 854,
+      "word": "jalan",
+      "sentence1": "Ini adalah cara terbaik untuk belajar.",
+      "sentence2": "Dia menemukan cara baru untuk memecahkan masalah."
+    },
+    {
+      "id": 855,
+      "word": "kami",
+      "sentence1": "Kita akan pergi ke taman.",
+      "sentence2": "Mereka mengundang kita ke pernikahan mereka."
+    },
+    {
+      "id": 856,
+      "word": "pemakaian",
+      "sentence1": "Aku suka memakai pakaian yang nyaman.",
+      "sentence2": "Dia mengenakan gaun yang indah untuk pesta."
+    },
+    {
+      "id": 857,
+      "word": "cuaca",
+      "sentence1": "Cuaca hari ini bagus.",
+      "sentence2": "Dia memeriksa cuaca."
+    },
+    {
+      "id": 858,
+      "word": "situs web",
+      "sentence1": "Aku menemukan sebuah situs yang berguna.",
+      "sentence2": "Dia membuat situs web untuk bisnisnya."
+    },
+    {
+      "id": 859,
+      "word": "rabu",
+      "sentence1": "Rabu adalah hari favoritku.",
+      "sentence2": "Dia punya pertemuan pada hari Rabu."
+    },
+    {
+      "id": 860,
+      "word": "minggu",
+      "sentence1": "Aku bekerja lima hari seminggu.",
+      "sentence2": "Dia akan berlibur minggu depan."
+    },
+    {
+      "id": 861,
+      "word": "akhir pekan",
+      "sentence1": "Aku suka bersantai di akhir pekan.",
+      "sentence2": "Dia punya rencana untuk akhir pekan."
+    },
+    {
+      "id": 862,
+      "word": "selamat datang",
+      "sentence1": "Selamat datang di rumah kami!",
+      "sentence2": "Dia mengatakan selamat datang kepada para tamu."
+    },
+    {
+      "id": 863,
+      "word": "baiklah",
+      "sentence1": "Kuharap kau baik-baik saja.",
+      "sentence2": "Dia merasa baik hari ini."
+    },
+    {
+      "id": 864,
+      "word": "barat",
+      "sentence1": "Matahari terbenam di barat.",
+      "sentence2": "Dia melakukan perjalanan ke pantai barat."
+    },
+    {
+      "id": 865,
+      "word": "apa",
+      "sentence1": "Siapa namamu?",
+      "sentence2": "Dia bertanya jam berapa."
+    },
+    {
+      "id": 866,
+      "word": "saat",
+      "sentence1": "Kapan ulang tahunmu?",
+      "sentence2": "Dia tidak mengatakan kapan dia akan tiba."
+    },
+    {
+      "id": 867,
+      "word": "di mana",
+      "sentence1": "Dimana kau tinggal?",
+      "sentence2": "Dia bertanya di mana stasiun terdekat."
+    },
+    {
+      "id": 868,
+      "word": "yang",
+      "sentence1": "Buku mana yang kau inginkan?",
+      "sentence2": "Dia tidak mengatakan gaun mana yang dia suka."
+    },
+    {
+      "id": 869,
+      "word": "putih",
+      "sentence1": "Kucing putih sedang tidur.",
+      "sentence2": "Dia membeli gaun putih."
+    },
+    {
+      "id": 870,
+      "word": "siapa",
+      "sentence1": "Siapa sahabatmu?",
+      "sentence2": "Dia tidak mengatakan dengan siapa dia berada."
+    },
+    {
+      "id": 871,
+      "word": "mengapa",
+      "sentence1": "Kenapa kau sedih?",
+      "sentence2": "Dia bertanya mengapa aku terlambat."
+    },
+    {
+      "id": 872,
+      "word": "istri",
+      "sentence1": "Istriku seorang dokter.",
+      "sentence2": "Dia adalah istrinya."
+    },
+    {
+      "id": 873,
+      "word": "akan",
+      "sentence1": "Aku akan meneleponmu besok.",
+      "sentence2": "Dia bilang dia akan membantu kita."
+    },
+    {
+      "id": 874,
+      "word": "menang",
+      "sentence1": "Saya berharap untuk memenangkan permainan.",
+      "sentence2": "Dia memenangkan hadiah dalam kompetisi."
+    },
+    {
+      "id": 875,
+      "word": "jendela",
+      "sentence1": "Jendela terbuka.",
+      "sentence2": "Dia melihat keluar jendela."
+    },
+    {
+      "id": 876,
+      "word": "anggur",
+      "sentence1": "Aku suka minum anggur merah.",
+      "sentence2": "Dia menyajikan anggur dengan makan malam."
+    },
+    {
+      "id": 877,
+      "word": "musim dingin",
+      "sentence1": "Musim dingin adalah musim favoritku.",
+      "sentence2": "Dia suka bermain ski di musim dingin."
+    },
+    {
+      "id": 878,
+      "word": "dengan",
+      "sentence1": "Aku pergi ke toko dengan temanku.",
+      "sentence2": "Dia sedang belajar dengan teman-temannya."
+    },
+    {
+      "id": 879,
+      "word": "tanpa",
+      "sentence1": "Aku tak bisa hidup tanpamu.",
+      "sentence2": "Dia menyelesaikan proyek itu tanpa bantuan."
+    },
+    {
+      "id": 880,
+      "word": "wanita",
+      "sentence1": "Wanita itu sedang membaca buku.",
+      "sentence2": "Dia adalah wanita yang kuat."
+    },
+    {
+      "id": 881,
+      "word": "luar biasa",
+      "sentence1": "Kau melakukan pekerjaan yang luar biasa!",
+      "sentence2": "Dia memiliki senyum yang indah."
+    },
+    {
+      "id": 882,
+      "word": "kata",
+      "sentence1": "Bisakah kau mengeja kata itu?",
+      "sentence2": "Dia mencari kata itu di kamus."
+    },
+    {
+      "id": 883,
+      "word": "pekerjaan",
+      "sentence1": "Aku harus bekerja malam ini.",
+      "sentence2": "Dia sedang mencari pekerjaan baru."
+    },
+    {
+      "id": 884,
+      "word": "pekerja",
+      "sentence1": "Pekerja sedang memperbaiki jalan.",
+      "sentence2": "Dia pekerja keras."
+    },
+    {
+      "id": 885,
+      "word": "dunia",
+      "sentence1": "Dunia adalah tempat yang indah.",
+      "sentence2": "Dia ingin berkeliling dunia."
+    },
+    {
+      "id": 886,
+      "word": "akan",
+      "sentence1": "Aku ingin kopi.",
+      "sentence2": "Dia bilang dia akan datang ke pesta."
+    },
+    {
+      "id": 887,
+      "word": "menulis",
+      "sentence1": "Aku suka menulis cerita.",
+      "sentence2": "Dia sedang menulis surat."
+    },
+    {
+      "id": 888,
+      "word": "penulis",
+      "sentence1": "Dia adalah seorang penulis terkenal.",
+      "sentence2": "Dia ingin menjadi seorang penulis."
+    },
+    {
+      "id": 889,
+      "word": "penulisan",
+      "sentence1": "Menulis adalah hobi saya.",
+      "sentence2": "Dia suka menulis di waktu luangnya."
+    },
+    {
+      "id": 890,
+      "word": "salah",
+      "sentence1": "Itu jawaban yang salah.",
+      "sentence2": "Dia menyadari dia salah."
+    },
+    {
+      "id": 891,
+      "word": "ya, tentu saja",
+      "sentence1": "Ya, aku setuju denganmu.",
+      "sentence2": "Dia mengatakan ya untuk proposal."
+    },
+    {
+      "id": 892,
+      "word": "tahun",
+      "sentence1": "Tahun ini telah menantang.",
+      "sentence2": "Dia lulus tahun lalu."
+    },
+    {
+      "id": 893,
+      "word": "kuning",
+      "sentence1": "Bunga kuning itu indah.",
+      "sentence2": "Dia mengenakan gaun kuning."
+    },
+    {
+      "id": 894,
+      "word": "ya, tentu saja",
+      "sentence1": "Ya, aku mengerti.",
+      "sentence2": "Dia mengatakan ya untuk undangan."
+    },
+    {
+      "id": 895,
+      "word": "kemarin",
+      "sentence1": "Aku melihatnya kemarin.",
+      "sentence2": "Dia meneleponku kemarin."
+    },
+    {
+      "id": 896,
+      "word": "kau",
+      "sentence1": "Kau adalah sahabatku.",
+      "sentence2": "Dia bilang kau akan datang."
+    },
+    {
+      "id": 897,
+      "word": "muda",
+      "sentence1": "Anak muda itu sedang bermain.",
+      "sentence2": "Dia muda dan berbakat."
+    },
+    {
+      "id": 898,
+      "word": "anda",
+      "sentence1": "Buku Anda ada di atas meja.",
+      "sentence2": "Dia bilang ide Anda menarik."
+    },
+    {
+      "id": 899,
+      "word": "dirimu sendiri",
+      "sentence1": "Jaga dirimu.",
+      "sentence2": "Dia melakukannya sendiri."
+    }
+  ]
+}

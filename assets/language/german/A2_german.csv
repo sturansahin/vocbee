@@ -18,11 +18,11 @@ Werbung|Sie arbeitet in der Werbung und liebt ihren Job.|Werbung spielt in der W
 beeinflussen|Das Wetter kann deine Stimmung beeinflussen.|Seine Worte berührten sie tief.
 nach|Wir können uns nach dem Unterricht treffen.|Nach dem Regen kam die Sonne auf.
 gegen|Sie ist gegen die Idee, an Wochenenden zu arbeiten.|Sie kämpften gegen Ungerechtigkeit.
-Das ist ...|Ah, ich verstehe, was du meinst.|Ah, das ist interessant!
+Das ist|Ah, ich verstehe, was du meinst.|Ah, das ist interessant!
 Fluggesellschaft|Ich habe einen Flug mit einer Billigfluggesellschaft gebucht.|Die Fluggesellschaft bietet tolle Angebote für internationale Flüge an.
 lebend|Die Blumen sind noch am Leben und blühen.|Er fühlte sich lebendiger denn je.
 alle|Alle Schüler müssen ihre Aufgaben einreichen.|Sie hat alle Kekse gegessen.
-- In Ordnung .|- Ist alles in Ordnung?|Es ist in Ordnung, um Hilfe zu bitten.
+- In Ordnung|- Ist alles in Ordnung?|Es ist in Ordnung, um Hilfe zu bitten.
 Zulassen|Sie erlauben kein Rauchen im Gebäude.|Sie erlaubte ihrem Sohn, bis spät aufzubleiben.
 fast|Ich hätte fast vergessen, dass du Geburtstag hast!|Es ist fast Zeit zu gehen.
 allein|Sie arbeitet lieber allein.|Er fühlte sich allein in der Menge.
@@ -37,7 +37,7 @@ Knöchel|Sie hat sich beim Laufen den Knöchel verdreht.|Knöchelverletzungen k�
 alle|Haben Sie noch Fragen?|Ich habe kein Geld mehr.
 Wer auch immer|Ist jemand zu Hause?|Ich glaube nicht, dass uns jemand gesehen hat.
 nicht mehr|Ich kann nicht mehr essen, ich bin satt.|Haben Sie noch Fragen?
-Wie auch immer.|Der Film hat mir nicht gefallen, aber ich bin trotzdem hingegangen.|Wie auch immer, lasst uns zum nächsten Thema übergehen.
+Wie auch immer|Der Film hat mir nicht gefallen, aber ich bin trotzdem hingegangen.|Wie auch immer, lasst uns zum nächsten Thema übergehen.
 überall|Ich kann meine Schlüssel nirgends finden.|Warst du in letzter Zeit irgendwo interessant?
 Anwendung|Ich habe eine neue App auf mein Handy heruntergeladen.|Die App hilft Ihnen, Ihre Ausgaben zu verfolgen.
 erscheinen|Sie schien nicht glücklich zu sein.|Die Sterne erscheinen nachts.
@@ -64,7 +64,7 @@ verfügbar|Das Buch ist in mehreren Sprachen erhältlich.|Ist dieser Platz frei?
 Durchschnitt|Die Durchschnittstemperatur im Juli ist hoch.|Er hat eine durchschnittliche Punktzahl in der Klasse.
 Vermeiden|Du solltest vermeiden, zu viel Zucker zu essen.|Er versuchte, der Frage auszuweichen.
 Auszeichnung|Sie erhielt eine Auszeichnung für ihre Leistung.|Die Preisverleihung findet nächste Woche statt.
-Schrecklich .|Das Wetter ist heute schrecklich.|Ich hatte einen schrecklichen Tag bei der Arbeit.
+Schrecklich|Das Wetter ist heute schrecklich.|Ich hatte einen schrecklichen Tag bei der Arbeit.
 Rücken|Sie saß ganz hinten in der Klasse.|Er verletzte sich beim Gewichtheben.
 Hintergrund|Der Hintergrund des Fotos ist wunderschön.|Sie hat einen Hintergrund in der Kunstgeschichte.
 sehr schlecht|Er wurde bei dem Unfall schwer verletzt.|Sie singt schlecht, aber sie genießt es.
@@ -115,7 +115,7 @@ Lager|Wir sind letztes Wochenende in die Berge gezogen.|Camping ist eine großar
 Camping|Camping im Wald ist friedlich.|Sie lieben es, im Sommer zu campen.
 kann|Ich kann sehr gut schwimmen.|Kannst du mir bei dieser Aufgabe helfen?
 Pflege|Pflanzen zu pflegen ist entspannend.|Sie kümmert sich sehr um ihre Familie.
-Vorsicht!|Sei vorsichtig, wenn du die Straße überquerst.|Sie ist sehr vorsichtig mit ihren Worten.
+Vorsicht|Sei vorsichtig, wenn du die Straße überquerst.|Sie ist sehr vorsichtig mit ihren Worten.
 vorsichtig|Vorsichtig legte er die Vase auf den Tisch.|Sie hörte sich die Anweisungen genau an.
 Teppich|Der Teppich im Wohnzimmer ist neu.|Sie staubte den Teppich gründlich ab.
 Zeichentrickfilm|Mein Lieblings-Cartoon ist im Fernsehen.|Die Kinder sahen sich einen lustigen Cartoon an.
@@ -200,11 +200,11 @@ Dunkel|Es ist dunkel draußen.|Der Raum war dunkel und ruhig.
 Daten|Die Daten zeigen eine deutliche Tendenz.|Wir müssen die Daten sorgfältig analysieren.
 tot ist|Der Baum ist tot.|Er fand einen toten Vogel im Garten.
 Abmachung|Wir haben nach langen Verhandlungen eine Einigung erzielt.|Es ist ein gutes Geschäft für beide Parteien.
-Schatz.|Sie schrieb einen Brief an ihren lieben Freund.|Er ist mir lieb.
+Schatz|Sie schrieb einen Brief an ihren lieben Freund.|Er ist mir lieb.
 Todesfall|Die Nachrichten berichteten von einem plötzlichen Tod.|Sie trauerte um den Tod ihres Haustieres.
 Entscheidung|Es ist Zeit, eine Entscheidung zu treffen.|Sie stand vor einer schwierigen Entscheidung.
 tief|Das Wasser ist tief hier.|Er atmete tief durch, bevor er sprach.
-Auf jeden Fall .|Ich werde auf jeden Fall da sein.|Sie ist definitiv die beste Kandidatin.
+Auf jeden Fall|Ich werde auf jeden Fall da sein.|Sie ist definitiv die beste Kandidatin.
 Grade|Er hat einen Master-Abschluss in Biologie.|Die Temperatur erreichte heute einen hohen Grad.
 Zahnarzt|Ich habe einen Termin beim Zahnarzt.|Sie arbeitet als Zahnärztin in einer Privatklinik.
 Abteilung|Er arbeitet in der Marketingabteilung.|Die Abteilung ist für den Kundenservice zuständig.
@@ -233,7 +233,7 @@ geschieden|Sie ist geschieden und lebt allein.|Viele geschiedene Menschen finden
 Dokument|Bitte unterschreiben Sie das Dokument.|Das Dokument enthält wichtige Informationen.
 doppelt|Ich hätte gerne einen doppelten Espresso, bitte.|Der Preis ist doppelt so hoch wie letztes Jahr.
 Herunterladen|Sie können die Datei von der Website herunterladen.|Ich muss ein paar Software-Updates herunterladen.
-Nach unten.|Die Waschküche ist unten.|Sie ging runter, um einen Snack zu holen.
+Nach unten|Die Waschküche ist unten.|Sie ging runter, um einen Snack zu holen.
 Theaterstück|Das Stück war ein bewegendes Drama.|Sie liebt es, Dramaserien im Fernsehen zu sehen.
 Zeichnung|Sie zeigte mir ihre Zeichnung der Landschaft.|Zeichnen ist eine großartige Möglichkeit, Kreativität auszudrücken.
 Träumen|Ich hatte letzte Nacht einen seltsamen Traum.|Sie hofft, ihren Traum Wirklichkeit werden zu lassen.
@@ -271,7 +271,7 @@ täglich|Bewegung sollte Teil deiner täglichen Routine sein.|Sie trägt alltäg
 überall|Ich suche überall nach meinen Schlüsseln.|Sie fühlt sich überall zu Hause.
 Beweismittel|Die Beweise waren nicht stark genug, um ihn zu verurteilen.|Es gibt keine Beweise für diese Behauptung.
 exakt|Können Sie mir die genauen Maße geben?|Die genaue Lage ist auf der Karte markiert.
-Genau .|Ich weiß nicht genau, was passiert ist.|Sie kam genau pünktlich an.
+Genau|Ich weiß nicht genau, was passiert ist.|Sie kam genau pünktlich an.
 ausgezeichnet|Das Essen im Restaurant war ausgezeichnet.|Sie hat ausgezeichnete Kommunikationsfähigkeiten.
 ausgenommen|Alle waren eingeladen, außer Johannes.|Ich mag alle Früchte außer Bananen.
 existieren|Gibt es Außerirdische?|Im Regenwald gibt es viele Arten.
@@ -323,7 +323,7 @@ ausländische|Er studiert Fremdsprachen.|Der ausländische Austauschstudent komm
 Wälder|Der Wald ist die Heimat vieler Tiere.|Wir machten einen Spaziergang im Wald.
 Gabel|Kannst du mir bitte die Gabel reichen?|Sie aß ihren Salat mit einer Gabel.
 formell|Die Einladung ist für eine formelle Veranstaltung.|Er trug einen formellen Anzug zur Hochzeit.
-Zum Glück .|Zum Glück kamen wir rechtzeitig an.|Zum Glück hat sie ihre verlorene Brieftasche gefunden.
+Zum Glück|Zum Glück kamen wir rechtzeitig an.|Zum Glück hat sie ihre verlorene Brieftasche gefunden.
 vorwärts|Bitte treten Sie vor, um zu sprechen.|Sie beugte sich vor, um besser zuzuhören.
 frei|Der Eintritt zum Museum ist sonntags kostenlos.|Sie ist ein freier Geist, der gerne reist.
 frisch|Ich liebe den Geruch von frischem Brot.|Sie pflückte frische Blumen aus dem Garten.
@@ -340,10 +340,10 @@ Tor|Das Tor ist nachts verschlossen.|Bitte schließen Sie das Tor hinter sich.
 allgemein|Die allgemeine Meinung ist für den Plan.|Er hat ein allgemeines Verständnis des Themas.
 Geschenk|Sie erhielt ein schönes Geschenk zu ihrem Geburtstag.|Es ist immer schön, ein nachdenkliches Geschenk zu machen.
 Ziel|Mein Ziel ist es, eine neue Sprache zu lernen.|Nach Jahren harter Arbeit erreichte sie ihr Ziel.
-Gott !|Viele Menschen glauben an einen höheren Gott.|Der Gott des Meeres wird oft als mächtig dargestellt.
+Gott|Viele Menschen glauben an einen höheren Gott.|Der Gott des Meeres wird oft als mächtig dargestellt.
 Gold|Gold ist ein Edelmetall.|Sie trug eine goldene Halskette.
 Golf|Er spielt gerne am Wochenende Golf.|Golf ist ein weltweit beliebter Sport.
-gut .|Sie ist eine gute Schülerin.|Es ist immer gut, anderen zu helfen.
+gut|Sie ist eine gute Schülerin.|Es ist immer gut, anderen zu helfen.
 Regierung|Die Regierung setzt neue Richtlinien um.|Die Bürger haben das Recht, für ihre Regierung zu stimmen.
 Grün|Die Kinder spielen auf dem Rasen.|Das Gras muss gemäht werden.
 Begrüßen|Es ist höflich, jemanden zu begrüßen, wenn man ihn sieht.|Sie begrüßte ihre Gäste an der Tür.
@@ -390,7 +390,7 @@ unmöglich|Es ist unmöglich, alles zu wissen.|Sie machte das Unmögliche mögli
 eingeschlossen|Der Preis beinhaltet alle Steuern.|Sie fühlte sich als Teil der Gruppe.
 einschließlich|Mit allen Ausgaben war die Reise teuer.|Sie genießt Aktivitäten wie Wandern und Schwimmen.
 Zunahme|Wir müssen unsere Anstrengungen verstärken.|Die Bevölkerung nimmt weiter zu.
-Unglaublich .|Die Aussicht von oben ist unglaublich.|Sie hat ein unglaubliches Talent für Musik.
+Unglaublich|Die Aussicht von oben ist unglaublich.|Sie hat ein unglaubliches Talent für Musik.
 unabhängig|Sie ist eine unabhängige Frau.|Das Land wurde 1923 unabhängig.
 Einzelperson|Jeder Mensch hat einzigartige Eigenschaften.|Das Programm ist auf die Bedürfnisse des Einzelnen zugeschnitten.
 Industrie|Die Automobilindustrie wächst rasant.|Sie arbeitet in der Modeindustrie.
@@ -455,12 +455,12 @@ Verbindung|Können Sie mir den Link schicken?|Es besteht ein Zusammenhang zwisch
 Zuhörer|Er ist ein guter Zuhörer.|Das Publikum war aufmerksam und engagiert.
 wenig|Sie hat einen kleinen Hund.|Ich brauche etwas mehr Zeit.
 Schloss|Vergiss nicht, die Tür abzuschließen.|Ich muss ein neues Schloss kaufen.
-Sieh mal.|Sie hat einen einzigartigen Look.|Sehen Sie sich dieses Bild an.
+Sieh mal|Sie hat einen einzigartigen Look.|Sehen Sie sich dieses Bild an.
 Lkw|Der Lastwagen liefert Waren aus.|Ich sah einen Lastwagen auf der Straße.
 Verloren|Ich glaube, ich habe meine Schlüssel verloren.|Der verlorene Hund wurde gefunden.
 lauter|Die Musik ist zu laut.|Er sprach mit lauter Stimme.
 laut|Sie sprach laut, um gehört zu werden.|Die Menge jubelte laut.
-Sehr schön .|Der Garten ist voller schöner Blumen.|Sie hat ein schönes Lächeln.
+Sehr schön|Der Garten ist voller schöner Blumen.|Sie hat ein schönes Lächeln.
 niedrig|Der Tisch ist zu niedrig für mich.|Er sprach mit leiser Stimme.
 Glück|Viel Glück bei der Prüfung!|Sie hatte in letzter Zeit Pech.
 Glücklich|Ich fühle mich heute glücklich.|Sie ist ein Glückspilz.
@@ -498,7 +498,7 @@ Motorrad|Er fährt mit dem Motorrad zur Arbeit.|Motorräder können sehr schnell
 Bewegung|Die Bewegung des Autos war reibungslos.|Es ist viel Bewegung in der Menge.
 Musikalisch|Sie hat ein musikalisches Talent.|Das Musical war ein großer Erfolg.
 Musiker|Er ist ein talentierter Musiker.|Viele Musiker haben Schwierigkeiten, ihren Lebensunterhalt zu verdienen.
-Ich selbst.|Ich habe es selbst gemacht.|Ich muss mich daran erinnern, konzentriert zu bleiben.
+Ich selbst|Ich habe es selbst gemacht.|Ich muss mich daran erinnern, konzentriert zu bleiben.
 Schmal|Die Straße ist zu schmal für Autos.|Sie hat eine enge Sicht auf die Welt.
 nationaler|Die Nationalhymne wurde gespielt.|Nationalfeiertage sind für die Kultur wichtig.
 Natur|Die Natur ist im Frühling wunderschön.|Wir sollten die Natur schützen.
@@ -553,7 +553,7 @@ Geldstück|Ein Penny gespart ist ein Penny verdient.|Er fand einen Penny auf der
 pro|Der Preis beträgt 10 Dollar pro Artikel.|Wir müssen fünf Dollar pro Person zahlen.
 Prozent|Der Zinssatz beträgt 5%.|Nur ein kleiner Prozentsatz der Bevölkerung ist betroffen.
 ausführen|Die Band wird auf dem Festival auftreten.|Sie will auf der Bühne auftreten.
-Vielleicht .|Vielleicht sollten wir einen anderen Ansatz ausprobieren.|Ich werde vielleicht später zur Party gehen.
+Vielleicht|Vielleicht sollten wir einen anderen Ansatz ausprobieren.|Ich werde vielleicht später zur Party gehen.
 Erlaubnis|Sie brauchen Erlaubnis, um das Gebäude zu betreten.|Ich habe die Erlaubnis, das Auto zu benutzen.
 Persönlichkeit|Sie hat eine lebendige Persönlichkeit.|Persönlichkeitstests können aufschlussreich sein.
 Haustier|Ich habe eine Katze als Haustier.|Haustiere brauchen viel Pflege.
@@ -568,7 +568,7 @@ Pflanze|Die Pflanze braucht Wasser und Sonnenlicht.|Es gibt viele verschiedene P
 aus Kunststoff|Diese Flasche ist aus Plastik.|Plastikverschmutzung ist ein großes Umweltproblem.
 Platte|Bitte legen Sie Ihren Teller in die Spüle.|Die Platte ist aus Keramik.
 Plattform|Der Zug wird auf Bahnsteig 2 ankommen.|Sie stand auf dem Bahnsteig und wartete auf den Zug.
-Bitte .|Bitte schließen Sie die Tür.|Kannst du mir bitte helfen?
+Bitte|Bitte schließen Sie die Tür.|Kannst du mir bitte helfen?
 zufrieden|Ich bin mit den Ergebnissen zufrieden.|Sie freute sich, ihn kennenzulernen.
 Tasche|Ich fand ein paar Münzen in meiner Tasche.|Er hat ein Loch in der Tasche.
 Höflich|"Es ist höflich, ""Danke"" zu sagen."|Sie ist immer höflich zu ihren Gästen.
@@ -661,7 +661,7 @@ unhöflich|Es war unhöflich von ihm, mich zu unterbrechen.|Sie war unhöflich z
 Laufen|Ich laufe gern morgens.|Sie läuft jeden Tag acht Kilometer.
 Läufer|Der Läufer beendete das Rennen in Rekordzeit.|Er ist ein professioneller Marathonläufer.
 Laufen|Laufen ist eine großartige Möglichkeit, fit zu bleiben.|Sie läuft gerne im Park.
-Leider .|Sie verabschiedete sich traurig von ihren Freunden.|Er sah sie traurig an.
+Leider|Sie verabschiedete sich traurig von ihren Freunden.|Er sah sie traurig an.
 sicher|Das Gebäude ist vor Erdbeben geschützt.|Stellen Sie sicher, dass der Bereich vor dem Spielen sicher ist.
 Segeln|Sie beschlossen, um die Welt zu segeln.|Sie liebt es, am Wochenende zu segeln.
 Segeln|Segeln ist eine beliebte Aktivität im Sommer.|Er hat letztes Jahr einen Segelkurs gemacht.
@@ -669,7 +669,7 @@ Vergütung|Ihr Gehalt ist höher als der Branchendurchschnitt.|Er verhandelt sei
 Verkauf|Der Laden hat dieses Wochenende einen großen Ausverkauf.|Ich habe dieses Kleid im Ausverkauf gekauft.
 Saucen|Ich lege gerne Tomatensauce auf meine Nudeln.|Das Rezept verlangt eine würzige Soße.
 Aufbewahren|Wir müssen die Umwelt retten.|Sie hat ihr Geld für ein neues Auto gespart.
-Angst haben.|Er hatte während des Horrorfilms Angst.|Sie hatte Angst, nachts allein zu gehen.
+Angst haben|Er hatte während des Horrorfilms Angst.|Sie hatte Angst, nachts allein zu gehen.
 Schrecklich|Das Spukhaus war wirklich beängstigend.|Ich mag keine Horrorfilme.
 Schauplatz|Die letzte Szene des Films war emotional.|Sie haben die Szene im Park gefilmt.
 Zeitplan|Der Zeitplan der Konferenz ist online verfügbar.|Sie hat diese Woche einen vollen Terminkalender.
@@ -705,7 +705,7 @@ Einfach|Das ist eine einfache Aufgabe.|Sie erklärte das Konzept in einfachen Wo
 seitdem|Ich wohne hier seit 2010.|Da du gefragt hast, werde ich dir helfen.
 Singen|Sie singt gerne unter der Dusche.|Singen ist eine großartige Art, Gefühle auszudrücken.
 Einzel|Er ist alleinerziehend.|Ich hätte gerne eine Einzelkarte, bitte.
-Sir , bitte .|Entschuldigen Sie, Sir, kann ich Ihnen helfen?|"Der Lehrer nannte ihn ""Sir""."
+Sir , bitte|Entschuldigen Sie, Sir, kann ich Ihnen helfen?|"Der Lehrer nannte ihn ""Sir""."
 Standort|Die Baustelle ist heute voll.|Diese Website ist eine großartige Ressource zum Lernen.
 Größe|Welche Größe trägst du?|Das Hemd gibt es in verschiedenen Größen.
 Skifahren|Ich liebe es, im Winter Ski zu fahren.|Skifahren ist ein beliebter Wintersport.
@@ -756,7 +756,7 @@ seltsam|Es ist seltsam, im April Schnee zu sehen.|Er hatte ein seltsames Gefühl
 Strategie|Die Strategie des Unternehmens besteht darin, sich auf Innovation zu konzentrieren.|Wir brauchen eine klare Strategie, um erfolgreich zu sein.
 Spannung|Sie erlebt viel Stress bei der Arbeit.|Es ist wichtig, Stress effektiv zu bewältigen.
 Struktur|Die Struktur des Gebäudes ist sehr modern.|Wir müssen die Struktur unseres Teams verbessern.
-Das ist dumm .|Es war dumm von mir, das Treffen zu vergessen.|Seien Sie nicht dumm; denken Sie, bevor Sie handeln.
+Das ist dumm|Es war dumm von mir, das Treffen zu vergessen.|Seien Sie nicht dumm; denken Sie, bevor Sie handeln.
 Erfolg haben|Sie arbeitete hart, um in ihrer Karriere Erfolg zu haben.|Wenn du Erfolg haben willst, musst du beharrlich sein.
 erfolgreich|Er ist ein erfolgreicher Geschäftsmann.|Ihr Projekt war sehr erfolgreich.
 wie|Ein solches Verhalten ist nicht akzeptabel.|Ich habe noch nie einen so schönen Sonnenuntergang gesehen.
@@ -766,7 +766,7 @@ Vorschlag|Das ist ein toller Vorschlag!|Ich habe einen Vorschlag, um den Prozeß
 Kleidung|Er trug einen Anzug zum Vorstellungsgespräch.|Für diese Veranstaltung ist ein Anzug erforderlich.
 Unterstützung|Ich brauche Ihre Unterstützung für dieses Projekt.|Sie unterstützen Studenten finanziell.
 Ich nehme an|Ich nehme an, Sie haben Recht.|Was glaubst du, wird als nächstes passieren?
-Sicher .|Bist du dir sicher?|Ich weiß nicht, ob ich helfen kann.
+Sicher|Bist du dir sicher?|Ich weiß nicht, ob ich helfen kann.
 Überraschung|Es war eine Überraschungsparty für ihren Geburtstag.|Sie liebt Überraschungen und unerwartete Gaben.
 überrascht|Ich war von den Nachrichten überrascht.|Sie sah überrascht aus, als ich es ihr sagte.
 überraschend|Die Ergebnisse waren überraschend.|Es ist überraschend, wie schnell sich die Dinge ändern können.
@@ -819,13 +819,13 @@ Zwilling|Sie sind Zwillingsbrüder.|Die Zwillinge haben ähnliche Interessen.
 typisch|Es ist ein typischer Tag im Büro.|Das Wetter ist typisch für diese Jahreszeit.
 unterirdisch|Die U-Bahn-Station ist überfüllt.|Sie fanden einen unterirdischen Tunnel.
 Verständnis|Sie hat ein gutes Verständnis für das Thema.|Sein Verständnis der Frage ist beeindruckend.
-Leider nicht .|Leider können wir das Treffen nicht besuchen.|Leider wurde die Veranstaltung abgesagt.
+Leider nicht|Leider können wir das Treffen nicht besuchen.|Leider wurde die Veranstaltung abgesagt.
 unglücklich|Sie war mit ihrem Job unzufrieden.|Der unzufriedene Kunde beschwerte sich über den Service.
 Uniform|Die Schüler tragen zur Schule eine Uniform.|Der Polizist war in voller Uniform.
 Einheit|Das ist eine Maßeinheit.|Jede Einheit hat ihre eigenen Spezifikationen.
 Vereinigte|Die Vereinigten Staaten sind ein Land in Nordamerika.|Die beiden Kompanien bildeten eine einheitliche Front.
 ungewöhnlich|Es ist ungewöhnlich, im April Schnee zu sehen.|Sie hat ein ungewöhnliches Talent für Musik.
-Nach oben .|Das Badezimmer ist oben.|Sie wohnt oben.
+Nach oben|Das Badezimmer ist oben.|Sie wohnt oben.
 Verwendung|Ich benutze mein Telefon, um das Wetter zu überprüfen.|Bitte füllen Sie das Formular mit einem Stift aus.
 früher|Früher habe ich jedes Wochenende Fußball gespielt.|Sie ist an das kalte Wetter gewöhnt.
 üblich|Es ist üblich, dass er zu spät kommt.|Die übliche Vorgehensweise besteht darin, die Dokumente zu überprüfen.
@@ -836,7 +836,7 @@ Fahrzeug|Autos sind die häufigste Art von Fahrzeug.|Das Unternehmen verkauft El
 Aussicht|Die Aussicht von oben ist atemberaubend.|Sie haben einen schönen Blick auf den See.
 Virus|Das Virus verbreitet sich leicht von Mensch zu Mensch.|Impfstoffe können helfen, Virusinfektionen vorzubeugen.
 Stimme|Sie hat eine wunderschöne Singstimme.|Seine Stimme war wegen des Lärms kaum hörbar.
-Warten Sie.|Ich warte am Bahnhof auf dich.|Warten Sie bitte einen Moment.
+Warten Sie|Ich warte am Bahnhof auf dich.|Warten Sie bitte einen Moment.
 Krieg|Der Krieg dauerte mehrere Jahre.|Während des Krieges gingen viele Menschenleben verloren.
 waschen|Ich muss mir vor dem Essen die Hände waschen.|Waschen Sie bitte nach dem Essen das Geschirr.
 Waschen|Es ist wichtig, sich regelmäßig die Hände zu waschen.|Die Waschmaschine ist kaputt.
@@ -863,6 +863,6 @@ besorgt|Sie machte sich Sorgen um die Prüfungsergebnisse.|Er fühlt sich in let
 Sorgen|Mach dir keine Sorgen um die kleinen Details.|Sie hat viele Sorgen im Kopf.
 Schlimmer|Die Situation wird immer schlimmer.|Das ist der schlimmste Tag meines Lebens.
 Schlimmste|Er hatte das schlimmste Glück der Welt.|Das ist der schlechteste Film, den ich je gesehen habe.
-Wow, das ist toll.|Wow, das ist eine tolle Aussicht!|"""Sie sagte 'Wow', als sie die Überraschungsparty sah""."
+Wow, das ist toll|Wow, das ist eine tolle Aussicht!|"""Sie sagte 'Wow', als sie die Überraschungsparty sah""."
 noch nicht|Ich habe meine Hausaufgaben noch nicht fertig.|Sie ist noch nicht da.
 Ihre|Gehört dieses Buch dir?|Ich habe einen Stift gefunden, der Ihnen gehört.

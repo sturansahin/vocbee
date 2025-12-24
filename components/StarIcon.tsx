@@ -1,5 +1,5 @@
 import React from 'react';
-import Svg, { Defs, LinearGradient, Stop, Polygon } from 'react-native-svg';
+import Svg, { Defs, LinearGradient, Stop, Path } from 'react-native-svg';
 
 interface StarIconProps {
     size?: number;
@@ -14,8 +14,8 @@ export const StarIcon: React.FC<StarIconProps> = ({ size = 32 }) => (
                 <Stop offset="100%" stopColor="#FF6A00" />
             </LinearGradient>
         </Defs>
-        <Polygon
-            points="256,88 298.32,197.75 415.78,204.09 324.48,278.25 354.75,391.91 256,328 157.25,391.91 187.52,278.25 96.22,204.09 213.68,197.75"
+        <Path
+            d="M 262.48,104.79 L 291.84,180.96 Q 298.32,197.75 316.29,198.72 L 397.81,203.12 Q 415.78,204.09 401.81,215.44 L 338.45,266.90 Q 324.48,278.25 329.11,295.64 L 350.12,374.52 Q 354.75,391.91 339.64,382.13 L 271.11,337.78 Q 256.00,328.00 240.89,337.78 L 172.36,382.13 Q 157.25,391.91 161.88,374.52 L 182.89,295.64 Q 187.52,278.25 173.55,266.90 L 110.19,215.44 Q 96.22,204.09 114.19,203.12 L 195.71,198.72 Q 213.68,197.75 220.16,180.96 L 249.52,104.79 Q 256.00,88.00 262.48,104.79 Z"
             fill="url(#starGrad)"
         />
     </Svg>

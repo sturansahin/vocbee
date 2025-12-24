@@ -1,0 +1,5398 @@
+{
+  "words": [
+    {
+      "id": 1,
+      "word": "a/un",
+      "sentence1": "J'ai une chatte.",
+      "sentence2": "Elle est ingénieure."
+    },
+    {
+      "id": 2,
+      "word": "à peu près",
+      "sentence1": "Ce livre parle d'histoire.",
+      "sentence2": "Tu en penses quoi ?"
+    },
+    {
+      "id": 3,
+      "word": "plus haut",
+      "sentence1": "La photo est au-dessus du canapé.",
+      "sentence2": "L'avion vole au-dessus des nuages."
+    },
+    {
+      "id": 4,
+      "word": "à travers",
+      "sentence1": "La banque est en face.",
+      "sentence2": "Elle a traversé le pont à pied."
+    },
+    {
+      "id": 5,
+      "word": "action",
+      "sentence1": "Agissez maintenant.",
+      "sentence2": "J'aime les films d'action."
+    },
+    {
+      "id": 6,
+      "word": "activité",
+      "sentence1": "La natation est mon activité favorite.",
+      "sentence2": "Quelle activité préférez-vous ?"
+    },
+    {
+      "id": 7,
+      "word": "acteur",
+      "sentence1": "C'est un acteur célèbre.",
+      "sentence2": "L'acteur a bien joué son rôle."
+    },
+    {
+      "id": 8,
+      "word": "actrice",
+      "sentence1": "C'est une actrice talentueuse.",
+      "sentence2": "L'actrice a remporté un prix."
+    },
+    {
+      "id": 9,
+      "word": "ajouter",
+      "sentence1": "Ajoutez du sel à la soupe.",
+      "sentence2": "Tu peux ajouter mon numéro ?"
+    },
+    {
+      "id": 10,
+      "word": "adresse",
+      "sentence1": "Quelle est votre adresse ?",
+      "sentence2": "Écrivez votre adresse ici."
+    },
+    {
+      "id": 11,
+      "word": "adulte",
+      "sentence1": "Ce film est réservé aux adultes.",
+      "sentence2": "Je suis adulte maintenant."
+    },
+    {
+      "id": 12,
+      "word": "conseils",
+      "sentence1": "Tu peux me donner un conseil ?",
+      "sentence2": "Son conseil m'a été utile."
+    },
+    {
+      "id": 13,
+      "word": "peur",
+      "sentence1": "J'ai peur des araignées.",
+      "sentence2": "N'ayez pas peur."
+    },
+    {
+      "id": 14,
+      "word": "après",
+      "sentence1": "On se voit après le travail.",
+      "sentence2": "Après le dîner, nous avons regardé la télévision."
+    },
+    {
+      "id": 15,
+      "word": "après-midi",
+      "sentence1": "Bonjour à vous !",
+      "sentence2": "Je dors l'après-midi."
+    },
+    {
+      "id": 16,
+      "word": "encore une fois",
+      "sentence1": "Répète, s'il te plaît.",
+      "sentence2": "Je veux te revoir."
+    },
+    {
+      "id": 17,
+      "word": "âge",
+      "sentence1": "Quel est votre âge ?",
+      "sentence2": "Elle a 25 ans."
+    },
+    {
+      "id": 18,
+      "word": "il y a longtemps",
+      "sentence1": "Je l'ai rencontré il y a deux ans.",
+      "sentence2": "Elle est partie il y a une heure."
+    },
+    {
+      "id": 19,
+      "word": "je suis d'accord",
+      "sentence1": "Je suis d'accord avec toi.",
+      "sentence2": "Êtes-vous d'accord avec ce plan ?"
+    },
+    {
+      "id": 20,
+      "word": "le vent",
+      "sentence1": "L'air est frais ici.",
+      "sentence2": "J'ai besoin de prendre l'air."
+    },
+    {
+      "id": 21,
+      "word": "aéroport",
+      "sentence1": "Je viendrai te chercher à l'aéroport.",
+      "sentence2": "L'aéroport est très fréquenté."
+    },
+    {
+      "id": 22,
+      "word": "tout le monde",
+      "sentence1": "Tous les élèves ont réussi l'examen.",
+      "sentence2": "J'ai mangé tous les biscuits."
+    },
+    {
+      "id": 23,
+      "word": "aussi",
+      "sentence1": "J'aime aussi la pizza.",
+      "sentence2": "Elle vient aussi à la fête."
+    },
+    {
+      "id": 24,
+      "word": "toujours",
+      "sentence1": "Je me réveille toujours tôt.",
+      "sentence2": "Elle est toujours heureuse."
+    },
+    {
+      "id": 25,
+      "word": "c' est étonnant",
+      "sentence1": "La vue du sommet est incroyable.",
+      "sentence2": "Vous avez fait un travail incroyable !"
+    },
+    {
+      "id": 26,
+      "word": "et",
+      "sentence1": "J'aime le thé et le café.",
+      "sentence2": "Elle étudie et travaille."
+    },
+    {
+      "id": 27,
+      "word": "en colère",
+      "sentence1": "Il est en colère contre son ami.",
+      "sentence2": "Ne sois pas en colère, s'il te plaît."
+    },
+    {
+      "id": 28,
+      "word": "de l'animal",
+      "sentence1": "L'éléphant est un grand animal.",
+      "sentence2": "J'ai un animal de compagnie."
+    },
+    {
+      "id": 29,
+      "word": "une autre",
+      "sentence1": "Je peux avoir un autre morceau de gâteau ?",
+      "sentence2": "Elle veut une autre chance."
+    },
+    {
+      "id": 30,
+      "word": "réponse",
+      "sentence1": "Quelle est votre réponse ?",
+      "sentence2": "Je ne connais pas la réponse."
+    },
+    {
+      "id": 31,
+      "word": "n' importe",
+      "sentence1": "Vous avez des questions ?",
+      "sentence2": "Je n'ai plus d'argent."
+    },
+    {
+      "id": 32,
+      "word": "n' importe qui",
+      "sentence1": "Il y a quelqu'un ?",
+      "sentence2": "Je ne connais personne ici."
+    },
+    {
+      "id": 33,
+      "word": "n' importe quoi",
+      "sentence1": "Vous avez besoin de quelque chose ?",
+      "sentence2": "Je n'arrive à rien trouver."
+    },
+    {
+      "id": 34,
+      "word": "appartement",
+      "sentence1": "Je vis dans un petit appartement.",
+      "sentence2": "L'appartement est très joli."
+    },
+    {
+      "id": 35,
+      "word": "pomme",
+      "sentence1": "J'aime manger une pomme chaque jour.",
+      "sentence2": "Elle a fait une tarte aux pommes."
+    },
+    {
+      "id": 36,
+      "word": "le mois d'avril",
+      "sentence1": "Avril est le quatrième mois.",
+      "sentence2": "Mon anniversaire est en avril."
+    },
+    {
+      "id": 37,
+      "word": "secteur",
+      "sentence1": "C'est une grande région.",
+      "sentence2": "Le parc est dans cette zone."
+    },
+    {
+      "id": 38,
+      "word": "le bras",
+      "sentence1": "Il s'est cassé le bras.",
+      "sentence2": "Elle a un tatouage sur le bras."
+    },
+    {
+      "id": 39,
+      "word": "autour",
+      "sentence1": "Le chat est assis autour de la table.",
+      "sentence2": "Allons faire un tour dans le parc."
+    },
+    {
+      "id": 40,
+      "word": "ils arrivent",
+      "sentence1": "Nous arriverons à 17h.",
+      "sentence2": "S'il vous plaît, soyez à l'heure."
+    },
+    {
+      "id": 41,
+      "word": "le travail",
+      "sentence1": "J'aime beaucoup l'art moderne.",
+      "sentence2": "Elle étudie l'histoire de l'art."
+    },
+    {
+      "id": 42,
+      "word": "article",
+      "sentence1": "J'ai lu un article intéressant.",
+      "sentence2": "L'article était bien écrit."
+    },
+    {
+      "id": 43,
+      "word": "artiste",
+      "sentence1": "C'est un artiste célèbre.",
+      "sentence2": "L'artiste a peint un très beau tableau."
+    },
+    {
+      "id": 44,
+      "word": "comme",
+      "sentence1": "Elle travaille comme enseignante.",
+      "sentence2": "Il est connu comme un grand chef."
+    },
+    {
+      "id": 45,
+      "word": "demandez à",
+      "sentence1": "Je peux te poser une question ?",
+      "sentence2": "Elle a demandé de l'aide."
+    },
+    {
+      "id": 46,
+      "word": "à",
+      "sentence1": "Je te retrouve au parc.",
+      "sentence2": "Le livre est à la bibliothèque."
+    },
+    {
+      "id": 47,
+      "word": "le mois d'août",
+      "sentence1": "Août est le huitième mois.",
+      "sentence2": "Mes vacances sont en août."
+    },
+    {
+      "id": 48,
+      "word": "- Je sais",
+      "sentence1": "Ma tante vit dans une autre ville.",
+      "sentence2": "J'ai rendu visite à ma tante le week-end dernier."
+    },
+    {
+      "id": 49,
+      "word": "été",
+      "sentence1": "L'automne est ma saison favorite.",
+      "sentence2": "Les feuilles tombent en automne."
+    },
+    {
+      "id": 50,
+      "word": "à l'écart",
+      "sentence1": "Le magasin est loin.",
+      "sentence2": "Il est parti en vacances."
+    },
+    {
+      "id": 51,
+      "word": "bébé",
+      "sentence1": "Le bébé dort.",
+      "sentence2": "J'ai une petite sœur."
+    },
+    {
+      "id": 52,
+      "word": "le dos",
+      "sentence1": "Le livre est sur l'étagère arrière.",
+      "sentence2": "Il s'est blessé au dos en soulevant."
+    },
+    {
+      "id": 53,
+      "word": "mauvais",
+      "sentence1": "Cette nourriture a mauvais goût.",
+      "sentence2": "Il a eu une mauvaise journée."
+    },
+    {
+      "id": 54,
+      "word": "sac à main",
+      "sentence1": "Il me faut un nouveau sac.",
+      "sentence2": "Elle a fait ses valises pour le voyage."
+    },
+    {
+      "id": 55,
+      "word": "le ballon",
+      "sentence1": "La balle est ronde.",
+      "sentence2": "J'ai frappé la balle."
+    },
+    {
+      "id": 56,
+      "word": "banane",
+      "sentence1": "J'aime manger une banane.",
+      "sentence2": "Elle a fait un smoothie à la banane."
+    },
+    {
+      "id": 57,
+      "word": "groupe",
+      "sentence1": "Le groupe joue de la musique.",
+      "sentence2": "J'adore ce groupe."
+    },
+    {
+      "id": 58,
+      "word": "banque (argent)",
+      "sentence1": "Je dois aller à la banque.",
+      "sentence2": "Elle travaille à la banque."
+    },
+    {
+      "id": 59,
+      "word": "le bain",
+      "sentence1": "Je prends un bain chaque soir.",
+      "sentence2": "Le bain est relaxant."
+    },
+    {
+      "id": 60,
+      "word": "salle de bains",
+      "sentence1": "La salle de bain est propre.",
+      "sentence2": "Je dois aller aux toilettes."
+    },
+    {
+      "id": 61,
+      "word": "être",
+      "sentence1": "Je veux être médecin.",
+      "sentence2": "Elle sera heureuse."
+    },
+    {
+      "id": 62,
+      "word": "plage",
+      "sentence1": "La plage est bondée.",
+      "sentence2": "J'aime la plage."
+    },
+    {
+      "id": 63,
+      "word": "elle est belle",
+      "sentence1": "Le coucher de soleil est magnifique.",
+      "sentence2": "C'est une personne magnifique."
+    },
+    {
+      "id": 64,
+      "word": "parce que",
+      "sentence1": "Je suis heureux parce qu'il fait beau.",
+      "sentence2": "Elle est partie parce qu'elle était fatiguée."
+    },
+    {
+      "id": 65,
+      "word": "devenir",
+      "sentence1": "Je veux devenir médecin.",
+      "sentence2": "Elle deviendra une grande dirigeante."
+    },
+    {
+      "id": 66,
+      "word": "le lit",
+      "sentence1": "Je dors dans mon lit.",
+      "sentence2": "Le lit est confortable."
+    },
+    {
+      "id": 67,
+      "word": "chambre à coucher",
+      "sentence1": "Ma chambre est petite.",
+      "sentence2": "J'aime ma chambre à coucher."
+    },
+    {
+      "id": 68,
+      "word": "bière",
+      "sentence1": "J'aime bien la bière.",
+      "sentence2": "Il a commandé une bière."
+    },
+    {
+      "id": 69,
+      "word": "avant",
+      "sentence1": "Je me lave les mains avant de manger.",
+      "sentence2": "Elle est arrivée avant moi."
+    },
+    {
+      "id": 70,
+      "word": "débuter",
+      "sentence1": "Je vais commencer mes devoirs.",
+      "sentence2": "Elle commença à chanter."
+    },
+    {
+      "id": 71,
+      "word": "début",
+      "sentence1": "Le début du film était passionnant.",
+      "sentence2": "J'ai raté le début du spectacle."
+    },
+    {
+      "id": 72,
+      "word": "derrière",
+      "sentence1": "Le chat se cache derrière le canapé.",
+      "sentence2": "Il était derrière elle."
+    },
+    {
+      "id": 73,
+      "word": "je crois",
+      "sentence1": "Je crois en vous.",
+      "sentence2": "Vous croyez aux fantômes ?"
+    },
+    {
+      "id": 74,
+      "word": "plus bas",
+      "sentence1": "La température est en dessous de zéro.",
+      "sentence2": "Le sous-sol est en dessous du niveau du sol."
+    },
+    {
+      "id": 75,
+      "word": "le meilleur",
+      "sentence1": "C'est le meilleur livre que j'ai jamais lu.",
+      "sentence2": "Elle est la meilleure élève de la classe."
+    },
+    {
+      "id": 76,
+      "word": "c' est mieux",
+      "sentence1": "Je me sens mieux aujourd'hui.",
+      "sentence2": "Ce film est meilleur que le dernier."
+    },
+    {
+      "id": 77,
+      "word": "entre le",
+      "sentence1": "Le parc est entre l'école et la bibliothèque.",
+      "sentence2": "Je m'assois entre mes amis en classe."
+    },
+    {
+      "id": 78,
+      "word": "vélo",
+      "sentence1": "Je vais à l'école à vélo.",
+      "sentence2": "Elle a acheté un nouveau vélo."
+    },
+    {
+      "id": 79,
+      "word": "une grande",
+      "sentence1": "C'est une grande maison.",
+      "sentence2": "Il a un gros chien."
+    },
+    {
+      "id": 80,
+      "word": "vélo",
+      "sentence1": "Je dois réparer mon vélo.",
+      "sentence2": "Elle fait du vélo tous les jours."
+    },
+    {
+      "id": 81,
+      "word": "compte",
+      "sentence1": "J'ai reçu la facture hier.",
+      "sentence2": "S'il vous plaît, payez la facture."
+    },
+    {
+      "id": 82,
+      "word": "oiseau",
+      "sentence1": "L'oiseau chante.",
+      "sentence2": "Je vis un oiseau coloré."
+    },
+    {
+      "id": 83,
+      "word": "anniversaire",
+      "sentence1": "Mon anniversaire est en juillet.",
+      "sentence2": "Elle a fait une fête d'anniversaire."
+    },
+    {
+      "id": 84,
+      "word": "noir",
+      "sentence1": "J'ai un chat noir.",
+      "sentence2": "La robe est noire."
+    },
+    {
+      "id": 85,
+      "word": "le blog",
+      "sentence1": "Je lis un blog sur les voyages.",
+      "sentence2": "Elle écrit un blog populaire."
+    },
+    {
+      "id": 86,
+      "word": "une blonde",
+      "sentence1": "Elle a de longs cheveux blonds.",
+      "sentence2": "Il préfère les blondes."
+    },
+    {
+      "id": 87,
+      "word": "bleue",
+      "sentence1": "Le ciel est bleu.",
+      "sentence2": "J'aime les fleurs bleues."
+    },
+    {
+      "id": 88,
+      "word": "navire",
+      "sentence1": "Le bateau est sur l'eau.",
+      "sentence2": "On est allés faire un tour en bateau."
+    },
+    {
+      "id": 89,
+      "word": "corps",
+      "sentence1": "Le corps humain est complexe.",
+      "sentence2": "Elle s'entraîne pour rester en forme."
+    },
+    {
+      "id": 90,
+      "word": "livre",
+      "sentence1": "Je lis un livre.",
+      "sentence2": "Elle a beaucoup de livres."
+    },
+    {
+      "id": 91,
+      "word": "démarrage",
+      "sentence1": "J'ai acheté de nouvelles bottes.",
+      "sentence2": "Ces bottes sont confortables."
+    },
+    {
+      "id": 92,
+      "word": "ennuyé",
+      "sentence1": "Je m'ennuie à la maison.",
+      "sentence2": "Elle s'ennuie en classe."
+    },
+    {
+      "id": 93,
+      "word": "ennuyeux",
+      "sentence1": "Ce film est ennuyeux.",
+      "sentence2": "Je trouve les mathématiques ennuyeuses."
+    },
+    {
+      "id": 94,
+      "word": "né",
+      "sentence1": "Je suis née en 2000.",
+      "sentence2": "Elle est née dans une petite ville."
+    },
+    {
+      "id": 95,
+      "word": "les deux",
+      "sentence1": "Les deux options sont bonnes.",
+      "sentence2": "J'aime les deux films."
+    },
+    {
+      "id": 96,
+      "word": "bouteille",
+      "sentence1": "Il me faut une bouteille d'eau.",
+      "sentence2": "Elle a acheté une bouteille de verre."
+    },
+    {
+      "id": 97,
+      "word": "boîte à",
+      "sentence1": "Les jouets sont dans la boîte.",
+      "sentence2": "Il me faut une boîte pour mes livres."
+    },
+    {
+      "id": 98,
+      "word": "le garçon",
+      "sentence1": "Le garçon joue dehors.",
+      "sentence2": "J'ai vu un garçon avec un cerf-volant."
+    },
+    {
+      "id": 99,
+      "word": "le petit ami",
+      "sentence1": "Mon petit ami est très gentil.",
+      "sentence2": "Elle m'a présenté à son petit ami."
+    },
+    {
+      "id": 100,
+      "word": "le pain",
+      "sentence1": "Il me faut un pain.",
+      "sentence2": "Elle a fait du pain frais."
+    },
+    {
+      "id": 101,
+      "word": "coupure",
+      "sentence1": "Faisons une pause.",
+      "sentence2": "Je dois briser cette habitude."
+    },
+    {
+      "id": 102,
+      "word": "petit déjeuner",
+      "sentence1": "J'ai mangé des céréales au petit déjeuner.",
+      "sentence2": "Le petit déjeuner est le repas le plus important."
+    },
+    {
+      "id": 103,
+      "word": "apporter",
+      "sentence1": "Tu peux m'apporter un verre d'eau ?",
+      "sentence2": "Je vous apporterai les documents demain."
+    },
+    {
+      "id": 104,
+      "word": "mon frère",
+      "sentence1": "Mon frère étudie à l'étranger.",
+      "sentence2": "Il a un petit frère."
+    },
+    {
+      "id": 105,
+      "word": "brun",
+      "sentence1": "Le chien brun est sympathique.",
+      "sentence2": "J'aime le chocolat brun."
+    },
+    {
+      "id": 106,
+      "word": "bâtir",
+      "sentence1": "Ils vont construire une nouvelle maison.",
+      "sentence2": "Il veut faire carrière."
+    },
+    {
+      "id": 107,
+      "word": "bâtiment",
+      "sentence1": "Le bâtiment est très haut.",
+      "sentence2": "Ils travaillent dans ce bâtiment."
+    },
+    {
+      "id": 108,
+      "word": "voiture",
+      "sentence1": "Je prends le bus pour aller à l'école.",
+      "sentence2": "Le bus est en retard."
+    },
+    {
+      "id": 109,
+      "word": "entreprise",
+      "sentence1": "Elle a sa propre affaire.",
+      "sentence2": "Les affaires sont en plein essor cette année."
+    },
+    {
+      "id": 110,
+      "word": "occupé",
+      "sentence1": "Je suis occupé.",
+      "sentence2": "Elle a un horaire chargé."
+    },
+    {
+      "id": 111,
+      "word": "mais",
+      "sentence1": "J'aime le thé, mais je préfère le café.",
+      "sentence2": "Il est grand, mais son frère est petit."
+    },
+    {
+      "id": 112,
+      "word": "le beurre",
+      "sentence1": "Il me faut du beurre pour la recette.",
+      "sentence2": "Elle aime le beurre sur son pain."
+    },
+    {
+      "id": 113,
+      "word": "acheter",
+      "sentence1": "Je veux acheter un nouveau téléphone.",
+      "sentence2": "Elle a acheté une robe hier."
+    },
+    {
+      "id": 114,
+      "word": "par",
+      "sentence1": "Le livre a été écrit par un auteur célèbre.",
+      "sentence2": "Je préfère voyager en train."
+    },
+    {
+      "id": 115,
+      "word": "au revoir",
+      "sentence1": "J'ai dit au revoir à mes amis.",
+      "sentence2": "Elle m'a fait un signe d'adieu à l'aéroport."
+    },
+    {
+      "id": 116,
+      "word": "café",
+      "sentence1": "On se retrouve au café.",
+      "sentence2": "Elle travaille dans un petit café."
+    },
+    {
+      "id": 117,
+      "word": "gâteau",
+      "sentence1": "J'ai fait un gâteau au chocolat.",
+      "sentence2": "Elle adore le gâteau aux fraises."
+    },
+    {
+      "id": 118,
+      "word": "appel",
+      "sentence1": "Je t'appellerai plus tard.",
+      "sentence2": "Elle a reçu un appel de sa mère."
+    },
+    {
+      "id": 119,
+      "word": "appareil photo",
+      "sentence1": "J'ai acheté un nouvel appareil photo.",
+      "sentence2": "Elle prend des photos avec son appareil photo."
+    },
+    {
+      "id": 120,
+      "word": "peut",
+      "sentence1": "Je sais bien nager.",
+      "sentence2": "Elle parle trois langues."
+    },
+    {
+      "id": 121,
+      "word": "ne peut pas",
+      "sentence1": "Je ne trouve pas mes clés.",
+      "sentence2": "Il ne peut pas venir à la fête."
+    },
+    {
+      "id": 122,
+      "word": "le capital",
+      "sentence1": "Ankara est la capitale de la Turquie.",
+      "sentence2": "La capitale est très animée."
+    },
+    {
+      "id": 123,
+      "word": "voiture",
+      "sentence1": "Je conduis une voiture rouge.",
+      "sentence2": "Elle veut acheter une nouvelle voiture."
+    },
+    {
+      "id": 124,
+      "word": "carte",
+      "sentence1": "Il me faut une nouvelle carte.",
+      "sentence2": "Elle m'a envoyé une carte."
+    },
+    {
+      "id": 125,
+      "word": "carrière",
+      "sentence1": "Il est en train de bâtir une carrière réussie.",
+      "sentence2": "Elle a changé de carrière."
+    },
+    {
+      "id": 126,
+      "word": "carottes",
+      "sentence1": "J'aime manger des carottes crues.",
+      "sentence2": "Elle a fait un gâteau aux carottes."
+    },
+    {
+      "id": 127,
+      "word": "à porter",
+      "sentence1": "Tu peux porter ce sac ?",
+      "sentence2": "Il porte son ordinateur portable partout."
+    },
+    {
+      "id": 128,
+      "word": "le chat",
+      "sentence1": "Mon chat est très enjoué.",
+      "sentence2": "Elle a adopté un chat errant."
+    },
+    {
+      "id": 129,
+      "word": "le CD",
+      "sentence1": "J'ai écouté un CD dans la voiture.",
+      "sentence2": "Elle a acheté un nouveau CD hier."
+    },
+    {
+      "id": 130,
+      "word": "cent",
+      "sentence1": "Le prix est de cent cents.",
+      "sentence2": "J'ai trouvé un centime dans la rue."
+    },
+    {
+      "id": 131,
+      "word": "le centre",
+      "sentence1": "Le centre-ville est très fréquenté.",
+      "sentence2": "Il y a un parc au centre de la ville."
+    },
+    {
+      "id": 132,
+      "word": "siècles",
+      "sentence1": "Le XXIe siècle a commencé en 2001.",
+      "sentence2": "Beaucoup de changements se sont produits au XXe siècle."
+    },
+    {
+      "id": 133,
+      "word": "siège",
+      "sentence1": "Veuillez vous asseoir sur la chaise.",
+      "sentence2": "Elle a acheté une nouvelle chaise pour son bureau."
+    },
+    {
+      "id": 134,
+      "word": "modification",
+      "sentence1": "Je veux changer ma coiffure.",
+      "sentence2": "Elle a changé d'avis sur le voyage."
+    },
+    {
+      "id": 135,
+      "word": "graphique",
+      "sentence1": "Le graphique montre les données de ventes.",
+      "sentence2": "Elle a créé un tableau pour sa présentation."
+    },
+    {
+      "id": 136,
+      "word": "pas cher",
+      "sentence1": "Cette chemise est très bon marché.",
+      "sentence2": "J'ai trouvé un hôtel pas cher pour mes vacances."
+    },
+    {
+      "id": 137,
+      "word": "vérifier",
+      "sentence1": "S'il vous plaît, vérifiez votre courriel.",
+      "sentence2": "Je dois vérifier la météo."
+    },
+    {
+      "id": 138,
+      "word": "fromage",
+      "sentence1": "J'aime manger du fromage avec du pain.",
+      "sentence2": "Elle a acheté du fromage au marché."
+    },
+    {
+      "id": 139,
+      "word": "poulet",
+      "sentence1": "Je veux du poulet pour le dîner.",
+      "sentence2": "Elle cuisine du poulet dans la cuisine."
+    },
+    {
+      "id": 140,
+      "word": "enfant",
+      "sentence1": "L'enfant joue dans le parc.",
+      "sentence2": "Elle a un enfant et deux animaux."
+    },
+    {
+      "id": 141,
+      "word": "chocolat",
+      "sentence1": "J'adore les glaces au chocolat.",
+      "sentence2": "Elle m'a donné une boîte de chocolats."
+    },
+    {
+      "id": 142,
+      "word": "choisir",
+      "sentence1": "Je dois choisir une robe pour la fête.",
+      "sentence2": "Elle a choisi le bleu."
+    },
+    {
+      "id": 143,
+      "word": "cinéma",
+      "sentence1": "Allons au cinéma ce soir.",
+      "sentence2": "Elle travaille au cinéma local."
+    },
+    {
+      "id": 144,
+      "word": "ville",
+      "sentence1": "La ville est très grande.",
+      "sentence2": "Elle habite dans le centre-ville."
+    },
+    {
+      "id": 145,
+      "word": "catégorie",
+      "sentence1": "Je suis en cinquième année.",
+      "sentence2": "Elle donne des cours de maths."
+    },
+    {
+      "id": 146,
+      "word": "salle de classe",
+      "sentence1": "La salle de classe est claire et propre.",
+      "sentence2": "Elle a décoré la classe pour la nouvelle année."
+    },
+    {
+      "id": 147,
+      "word": "propre",
+      "sentence1": "Veuillez garder votre chambre propre.",
+      "sentence2": "Elle a nettoyé la maison hier."
+    },
+    {
+      "id": 148,
+      "word": "grimpeur",
+      "sentence1": "J'aime grimper dans les montagnes.",
+      "sentence2": "Elle a grimpé à l'arbre pour avoir une meilleure vue."
+    },
+    {
+      "id": 149,
+      "word": "le temps",
+      "sentence1": "Quelle heure est-il sur l'horloge ?",
+      "sentence2": "Elle regarda l'horloge pour vérifier l'heure."
+    },
+    {
+      "id": 150,
+      "word": "à proximité",
+      "sentence1": "Fermez la porte s'il vous plaît.",
+      "sentence2": "Elle ferma la fenêtre parce qu'il faisait froid."
+    },
+    {
+      "id": 151,
+      "word": "vêtements",
+      "sentence1": "Je dois acheter de nouveaux vêtements.",
+      "sentence2": "Elle a donné ses vieux vêtements à des œuvres de charité."
+    },
+    {
+      "id": 152,
+      "word": "club",
+      "sentence1": "Il est membre du club d'échecs.",
+      "sentence2": "Elle va au club chaque vendredi soir."
+    },
+    {
+      "id": 153,
+      "word": "couleur",
+      "sentence1": "Je porte un manteau en hiver.",
+      "sentence2": "Elle a acheté un nouveau manteau pour le temps froid."
+    },
+    {
+      "id": 154,
+      "word": "le café",
+      "sentence1": "J'aime boire du café le matin.",
+      "sentence2": "Elle a commandé une tasse de café au café."
+    },
+    {
+      "id": 155,
+      "word": "froid",
+      "sentence1": "Il fait très froid dehors.",
+      "sentence2": "Elle portait une veste car il faisait froid."
+    },
+    {
+      "id": 156,
+      "word": "collège",
+      "sentence1": "Il étudie dans une université de Londres.",
+      "sentence2": "Elle veut aller à la fac après le lycée."
+    },
+    {
+      "id": 157,
+      "word": "couleur",
+      "sentence1": "Quelle est ta couleur préférée ?",
+      "sentence2": "Elle a peint les murs d'une couleur bleu clair."
+    },
+    {
+      "id": 158,
+      "word": "viens avec moi",
+      "sentence1": "S'il vous plaît, venez à ma fête.",
+      "sentence2": "Elle viendra à la réunion demain."
+    },
+    {
+      "id": 159,
+      "word": "communs",
+      "sentence1": "L'anglais est une langue commune.",
+      "sentence2": "Elle a un intérêt commun pour la musique."
+    },
+    {
+      "id": 160,
+      "word": "société",
+      "sentence1": "Il travaille pour une grande entreprise.",
+      "sentence2": "Elle a fondé sa propre entreprise l'année dernière."
+    },
+    {
+      "id": 161,
+      "word": "comparer",
+      "sentence1": "Comparons nos réponses.",
+      "sentence2": "Elle a comparé les deux produits avant d'acheter."
+    },
+    {
+      "id": 162,
+      "word": "complète",
+      "sentence1": "Veuillez remplir le formulaire.",
+      "sentence2": "Elle a terminé le projet à temps."
+    },
+    {
+      "id": 163,
+      "word": "ordinateur",
+      "sentence1": "J'utilise un ordinateur pour le travail.",
+      "sentence2": "Elle a acheté un nouvel ordinateur la semaine dernière."
+    },
+    {
+      "id": 164,
+      "word": "concert",
+      "sentence1": "Je vais à un concert ce soir.",
+      "sentence2": "Elle aime écouter des enregistrements de concerts en direct."
+    },
+    {
+      "id": 165,
+      "word": "débat",
+      "sentence1": "On a eu une bonne conversation.",
+      "sentence2": "Elle aime avoir des conversations profondes avec ses amis."
+    },
+    {
+      "id": 166,
+      "word": "cuisinier",
+      "sentence1": "J'aime cuisiner de la nourriture italienne.",
+      "sentence2": "Elle a préparé un délicieux repas pour sa famille."
+    },
+    {
+      "id": 167,
+      "word": "cuisine",
+      "sentence1": "La cuisine est mon passe-temps préféré.",
+      "sentence2": "Elle a suivi un cours de cuisine pour améliorer ses compétences."
+    },
+    {
+      "id": 168,
+      "word": "je suis cool",
+      "sentence1": "Cette veste est vraiment cool.",
+      "sentence2": "Elle a une super collection de disques vintage."
+    },
+    {
+      "id": 169,
+      "word": "correcte",
+      "sentence1": "S'il vous plaît, corrigez vos erreurs.",
+      "sentence2": "Elle essaie toujours de corriger ses erreurs de grammaire."
+    },
+    {
+      "id": 170,
+      "word": "coût",
+      "sentence1": "Quel est le prix de ce livre ?",
+      "sentence2": "Elle a été surprise par le coût élevé de la vie en ville."
+    },
+    {
+      "id": 171,
+      "word": "pourrait",
+      "sentence1": "Je peux t'aider.",
+      "sentence2": "Elle a dit qu'elle pouvait venir à la fête si elle finissait son travail plus tôt."
+    },
+    {
+      "id": 172,
+      "word": "pays",
+      "sentence1": "Je vis dans un petit pays.",
+      "sentence2": "Elle veut voyager dans différents pays."
+    },
+    {
+      "id": 173,
+      "word": "parcours",
+      "sentence1": "Je suis en cours de biologie.",
+      "sentence2": "Elle s'est inscrite à un cours de cuisine."
+    },
+    {
+      "id": 174,
+      "word": "cousine",
+      "sentence1": "Ma cousine vient me voir ce week-end.",
+      "sentence2": "Elle a un cousin qui vit à l'étranger."
+    },
+    {
+      "id": 175,
+      "word": "vache",
+      "sentence1": "La vache est en train de paître dans le champ.",
+      "sentence2": "Elle a grandi dans une ferme avec des vaches et des poulets."
+    },
+    {
+      "id": 176,
+      "word": "crème",
+      "sentence1": "J'aime la crème dans mon café.",
+      "sentence2": "Elle ajouta de la crème à la soupe pour lui donner plus de saveur."
+    },
+    {
+      "id": 177,
+      "word": "créer",
+      "sentence1": "Je veux créer un nouveau projet.",
+      "sentence2": "Elle a créé un beau tableau."
+    },
+    {
+      "id": 178,
+      "word": "culture",
+      "sentence1": "Je m'intéresse à l'apprentissage des différentes cultures.",
+      "sentence2": "Elle aime explorer la culture locale quand elle voyage."
+    },
+    {
+      "id": 179,
+      "word": "coupe",
+      "sentence1": "Je bois du thé dans une tasse.",
+      "sentence2": "Elle a acheté un ensemble de magnifiques tasses."
+    },
+    {
+      "id": 180,
+      "word": "le client",
+      "sentence1": "Le client a toujours raison.",
+      "sentence2": "Elle est une cliente fidèle de ce magasin."
+    },
+    {
+      "id": 181,
+      "word": "coupé",
+      "sentence1": "Veuillez couper le papier le long de la ligne.",
+      "sentence2": "Elle coupa le gâteau en morceaux égaux."
+    },
+    {
+      "id": 182,
+      "word": "le père",
+      "sentence1": "Mon père cuisine très bien.",
+      "sentence2": "Elle aime passer du temps avec son père."
+    },
+    {
+      "id": 183,
+      "word": "danseur",
+      "sentence1": "J'adore danser à des soirées.",
+      "sentence2": "Elle a pris des cours de danse pendant un an."
+    },
+    {
+      "id": 184,
+      "word": "danseuse",
+      "sentence1": "La danseuse s'est débrouillée magnifiquement.",
+      "sentence2": "Elle veut devenir danseuse professionnelle."
+    },
+    {
+      "id": 185,
+      "word": "je danse",
+      "sentence1": "La danse est une façon amusante de faire de l'exercice.",
+      "sentence2": "Elle aime danser sur ses chansons préférées."
+    },
+    {
+      "id": 186,
+      "word": "dangereux",
+      "sentence1": "Cet animal est dangereux.",
+      "sentence2": "Elle a réalisé que la situation était dangereuse."
+    },
+    {
+      "id": 187,
+      "word": "noir",
+      "sentence1": "Il fait sombre dehors.",
+      "sentence2": "Elle préfère le chocolat noir au chocolat au lait."
+    },
+    {
+      "id": 188,
+      "word": "date de",
+      "sentence1": "Quelle est la date d'aujourd'hui ?",
+      "sentence2": "Elle a écrit la date sur le papier."
+    },
+    {
+      "id": 189,
+      "word": "fille",
+      "sentence1": "Ma fille est très talentueuse.",
+      "sentence2": "Elle est fière des réalisations de sa fille."
+    },
+    {
+      "id": 190,
+      "word": "journée",
+      "sentence1": "Aujourd'hui est une belle journée.",
+      "sentence2": "Elle prévoit de se détendre toute la journée."
+    },
+    {
+      "id": 191,
+      "word": "je vous en prie",
+      "sentence1": "Mon cher ami vient nous rendre visite.",
+      "sentence2": "Elle écrivit une lettre à sa chère mère."
+    },
+    {
+      "id": 192,
+      "word": "décembre",
+      "sentence1": "Décembre est le dernier mois de l'année.",
+      "sentence2": "Elle adore les décorations de Noël en décembre."
+    },
+    {
+      "id": 193,
+      "word": "décider",
+      "sentence1": "Je dois décider quoi porter.",
+      "sentence2": "Elle a décidé de faire une pause au travail."
+    },
+    {
+      "id": 194,
+      "word": "délicieuse",
+      "sentence1": "Ce gâteau est délicieux.",
+      "sentence2": "Elle aime cuisiner de délicieux repas pour sa famille."
+    },
+    {
+      "id": 195,
+      "word": "décrire",
+      "sentence1": "Pouvez-vous décrire l'image ?",
+      "sentence2": "Elle a décrit ses vacances de rêve en détail."
+    },
+    {
+      "id": 196,
+      "word": "définition",
+      "sentence1": "La description du livre était intrigante.",
+      "sentence2": "Elle a écrit une description détaillée de l'événement."
+    },
+    {
+      "id": 197,
+      "word": "conception",
+      "sentence1": "La conception du bâtiment est moderne.",
+      "sentence2": "Elle a étudié le graphisme à la fac."
+    },
+    {
+      "id": 198,
+      "word": "le bureau",
+      "sentence1": "Mon bureau est encombré de papiers.",
+      "sentence2": "Elle garde son bureau bien rangé et bien rangé."
+    },
+    {
+      "id": 199,
+      "word": "détail",
+      "sentence1": "Veuillez fournir plus de détails sur le projet.",
+      "sentence2": "Elle remarqua un petit détail dans le tableau."
+    },
+    {
+      "id": 200,
+      "word": "le dialogue",
+      "sentence1": "Le dialogue du film était réaliste.",
+      "sentence2": "Elle a écrit un dialogue entre deux personnages."
+    },
+    {
+      "id": 201,
+      "word": "le dictionnaire",
+      "sentence1": "J'ai besoin d'un dictionnaire pour trouver le mot.",
+      "sentence2": "Elle a acheté un nouveau dictionnaire anglais-turc."
+    },
+    {
+      "id": 202,
+      "word": "décès",
+      "sentence1": "Je ne veux pas mourir jeune.",
+      "sentence2": "Elle avait peur de mourir seule."
+    },
+    {
+      "id": 203,
+      "word": "diète",
+      "sentence1": "Je suis sur un régime sain.",
+      "sentence2": "Elle suit un régime strict pour rester en forme."
+    },
+    {
+      "id": 204,
+      "word": "différence",
+      "sentence1": "Quelle est la différence entre ces deux images ?",
+      "sentence2": "Elle n'a pas vu la différence au début."
+    },
+    {
+      "id": 205,
+      "word": "différent",
+      "sentence1": "Ce livre est différent des autres.",
+      "sentence2": "Elle a un point de vue différent sur la question."
+    },
+    {
+      "id": 206,
+      "word": "délicat",
+      "sentence1": "Cet exercice est difficile.",
+      "sentence2": "Elle trouva le problème de mathématiques difficile à résoudre."
+    },
+    {
+      "id": 207,
+      "word": "dîner",
+      "sentence1": "Nous dînerons à 19h.",
+      "sentence2": "Elle a préparé un délicieux dîner pour sa famille."
+    },
+    {
+      "id": 208,
+      "word": "dégueulasse",
+      "sentence1": "Mes mains sont sales de jardinage.",
+      "sentence2": "Elle n'aime pas porter des vêtements sales."
+    },
+    {
+      "id": 209,
+      "word": "discuter",
+      "sentence1": "Parlons des détails du projet.",
+      "sentence2": "Elle veut discuter de ses idées avec l'équipe."
+    },
+    {
+      "id": 210,
+      "word": "cuisine",
+      "sentence1": "C'est mon plat préféré.",
+      "sentence2": "Elle a servi la nourriture sur un plat magnifique."
+    },
+    {
+      "id": 211,
+      "word": "faire",
+      "sentence1": "Tu veux faire quoi aujourd'hui ?",
+      "sentence2": "Elle adore faire du yoga le matin."
+    },
+    {
+      "id": 212,
+      "word": "médecin",
+      "sentence1": "Le docteur va vous recevoir.",
+      "sentence2": "Elle veut devenir médecin dans le futur."
+    },
+    {
+      "id": 213,
+      "word": "le chien",
+      "sentence1": "Mon chien aime jouer à chercher.",
+      "sentence2": "Elle a adopté un chien errant du refuge."
+    },
+    {
+      "id": 214,
+      "word": "dollars américains",
+      "sentence1": "Le prix est de vingt dollars.",
+      "sentence2": "Elle a économisé assez d'argent pour acheter un nouveau téléphone."
+    },
+    {
+      "id": 215,
+      "word": "porte",
+      "sentence1": "Fermez la porte derrière vous.",
+      "sentence2": "Elle frappa à la porte et attendit une réponse."
+    },
+    {
+      "id": 216,
+      "word": "vers le bas",
+      "sentence1": "Le chat a sauté de l'étagère.",
+      "sentence2": "Elle a écrit les instructions sur du papier."
+    },
+    {
+      "id": 217,
+      "word": "en bas",
+      "sentence1": "La buanderie est en bas.",
+      "sentence2": "Elle est descendue prendre un en-cas."
+    },
+    {
+      "id": 218,
+      "word": "tirage",
+      "sentence1": "J'aime dessiner dans mon temps libre.",
+      "sentence2": "Elle a dessiné un beau paysage."
+    },
+    {
+      "id": 219,
+      "word": "robe de soirée",
+      "sentence1": "Elle portait une robe rouge à la fête.",
+      "sentence2": "La robe était en vente au magasin."
+    },
+    {
+      "id": 220,
+      "word": "boisson",
+      "sentence1": "J'aime boire du café le matin.",
+      "sentence2": "Elle m'a offert un verre d'eau."
+    },
+    {
+      "id": 221,
+      "word": "conduite",
+      "sentence1": "J'ai appris à conduire à 18 ans.",
+      "sentence2": "Elle aime faire de longs trajets en voiture."
+    },
+    {
+      "id": 222,
+      "word": "conducteur",
+      "sentence1": "Le chauffeur nous a conduits à l'aéroport.",
+      "sentence2": "Elle est chauffeur de bus professionnel."
+    },
+    {
+      "id": 223,
+      "word": "pendant",
+      "sentence1": "J'aime écouter de la musique pendant mes déplacements.",
+      "sentence2": "Elle s'est endormie pendant le film."
+    },
+    {
+      "id": 224,
+      "word": "le DVD",
+      "sentence1": "J'ai acheté un nouveau DVD de mon film préféré.",
+      "sentence2": "Elle préfère regarder des films en DVD."
+    },
+    {
+      "id": 225,
+      "word": "chaque",
+      "sentence1": "Chaque élève doit soumettre son devoir.",
+      "sentence2": "Elle a donné à chaque enfant un cadeau."
+    },
+    {
+      "id": 226,
+      "word": "oreille",
+      "sentence1": "J'ai mal aux oreilles à cause de la musique forte.",
+      "sentence2": "Elle a une belle boucle d'oreille dans l'oreille."
+    },
+    {
+      "id": 227,
+      "word": "au début",
+      "sentence1": "J'aime me lever tôt le matin.",
+      "sentence2": "Elle est arrivée tôt pour se préparer pour la réunion."
+    },
+    {
+      "id": 228,
+      "word": "est",
+      "sentence1": "Le soleil se lève à l'est.",
+      "sentence2": "Elle a voyagé vers l'est pour explorer de nouvelles villes."
+    },
+    {
+      "id": 229,
+      "word": "c' est facile",
+      "sentence1": "Cet exercice est facile pour moi.",
+      "sentence2": "Elle a trouvé un moyen facile de résoudre le problème."
+    },
+    {
+      "id": 230,
+      "word": "manger",
+      "sentence1": "J'aime manger des aliments sains.",
+      "sentence2": "Elle nous a préparé un délicieux repas."
+    },
+    {
+      "id": 231,
+      "word": "œuf",
+      "sentence1": "J'ai mangé un œuf au petit déjeuner.",
+      "sentence2": "Elle aime manger ses œufs brouillés."
+    },
+    {
+      "id": 232,
+      "word": "huit",
+      "sentence1": "Il y a huit pommes dans le panier.",
+      "sentence2": "Elle a huit ans."
+    },
+    {
+      "id": 233,
+      "word": "dix-huit",
+      "sentence1": "Je vais avoir dix-huit ans le mois prochain.",
+      "sentence2": "Elle a déjà dix-huit ans et peut voter."
+    },
+    {
+      "id": 234,
+      "word": "quatre-vingts",
+      "sentence1": "Le livre coûte quatre-vingts dollars.",
+      "sentence2": "Elle a quatre-vingts ans et est toujours très active."
+    },
+    {
+      "id": 235,
+      "word": "éléphant",
+      "sentence1": "L'éléphant est le plus grand animal terrestre.",
+      "sentence2": "Elle a vu un bébé éléphant au zoo."
+    },
+    {
+      "id": 236,
+      "word": "une fois",
+      "sentence1": "Il y a onze joueurs dans une équipe de football.",
+      "sentence2": "Elle aura onze ans la semaine prochaine."
+    },
+    {
+      "id": 237,
+      "word": "autre",
+      "sentence1": "Vous avez besoin d'autre chose ?",
+      "sentence2": "Elle n'a pas aimé la robe, alors elle a choisi autre chose."
+    },
+    {
+      "id": 238,
+      "word": "adresse électronique",
+      "sentence1": "Je t'ai envoyé un email avec les détails.",
+      "sentence2": "Elle vérifie son courriel chaque matin."
+    },
+    {
+      "id": 239,
+      "word": "fin du",
+      "sentence1": "Le film a eu une fin surprenante.",
+      "sentence2": "Elle était triste de voir la fin du spectacle."
+    },
+    {
+      "id": 240,
+      "word": "je vous en prie",
+      "sentence1": "J'aime lire des livres pendant mon temps libre.",
+      "sentence2": "Elle aime aller se promener dans le parc."
+    },
+    {
+      "id": 241,
+      "word": "ça suffit",
+      "sentence1": "A-t-on assez à manger pour tout le monde ?",
+      "sentence2": "Elle n'avait pas assez d'argent pour acheter la robe."
+    },
+    {
+      "id": 242,
+      "word": "états-Unis",
+      "sentence1": "Le prix est de cinquante euros.",
+      "sentence2": "Elle a échangé des dollars contre des euros à la banque."
+    },
+    {
+      "id": 243,
+      "word": "même",
+      "sentence1": "Le test a été encore plus facile que je ne l'attendais.",
+      "sentence2": "Elle n'a même pas dit au revoir."
+    },
+    {
+      "id": 244,
+      "word": "le soir",
+      "sentence1": "J'aime me détendre le soir après le travail.",
+      "sentence2": "Elle a un rendez-vous ce soir."
+    },
+    {
+      "id": 245,
+      "word": "événement",
+      "sentence1": "L'événement annuel aura lieu le mois prochain.",
+      "sentence2": "Elle organise l'événement cette année."
+    },
+    {
+      "id": 246,
+      "word": "je n'ai jamais",
+      "sentence1": "Avez-vous déjà été à Paris ?",
+      "sentence2": "Elle n'a jamais goûté au sushi."
+    },
+    {
+      "id": 247,
+      "word": "chaque",
+      "sentence1": "Chaque élève doit soumettre son devoir.",
+      "sentence2": "Elle étudie tous les soirs avant l'examen."
+    },
+    {
+      "id": 248,
+      "word": "tout le monde",
+      "sentence1": "Tout le monde est invité à la fête.",
+      "sentence2": "Elle connaît tout le monde dans le quartier."
+    },
+    {
+      "id": 249,
+      "word": "tout le monde",
+      "sentence1": "Tout le monde devrait faire une pause parfois.",
+      "sentence2": "Elle croit que tout le monde mérite une seconde chance."
+    },
+    {
+      "id": 250,
+      "word": "tout",
+      "sentence1": "Tout ira bien à la fin.",
+      "sentence2": "Elle a emballé tout ce dont elle avait besoin pour le voyage."
+    },
+    {
+      "id": 251,
+      "word": "examen de compétence",
+      "sentence1": "J'ai un examen demain.",
+      "sentence2": "Elle a beaucoup étudié pour l'examen."
+    },
+    {
+      "id": 252,
+      "word": "exemple",
+      "sentence1": "Tu peux me donner un exemple ?",
+      "sentence2": "Elle est un grand exemple de personne qui a réussi."
+    },
+    {
+      "id": 253,
+      "word": "excité",
+      "sentence1": "Je suis excitée pour le concert.",
+      "sentence2": "Elle était ravie de rencontrer son auteur préféré."
+    },
+    {
+      "id": 254,
+      "word": "émouvant",
+      "sentence1": "Le film était vraiment excitant.",
+      "sentence2": "Elle a un travail passionnant qu'elle aime."
+    },
+    {
+      "id": 255,
+      "word": "exercice physique",
+      "sentence1": "J'essaie de faire de l'exercice tous les jours.",
+      "sentence2": "Elle aime le yoga comme forme d'exercice."
+    },
+    {
+      "id": 256,
+      "word": "coûteux",
+      "sentence1": "Cette robe est trop chère pour moi.",
+      "sentence2": "Elle a acheté une montre chère en cadeau."
+    },
+    {
+      "id": 257,
+      "word": "expliquer",
+      "sentence1": "Pouvez-vous m'expliquer les règles ?",
+      "sentence2": "Elle a pris le temps d'expliquer son point de vue."
+    },
+    {
+      "id": 258,
+      "word": "de plus",
+      "sentence1": "J'ai besoin de plus de temps pour finir ça.",
+      "sentence2": "Elle a apporté des collations pour le voyage."
+    },
+    {
+      "id": 259,
+      "word": "le regard",
+      "sentence1": "Elle a de beaux yeux bleus.",
+      "sentence2": "Je dois aller voir mes yeux."
+    },
+    {
+      "id": 260,
+      "word": "le visage",
+      "sentence1": "Il a un visage bienveillant.",
+      "sentence2": "Elle ne pouvait pas cacher son regard."
+    },
+    {
+      "id": 261,
+      "word": "fait",
+      "sentence1": "C'est un fait que la Terre tourne autour du Soleil.",
+      "sentence2": "Elle connaît beaucoup de faits intéressants."
+    },
+    {
+      "id": 262,
+      "word": "été",
+      "sentence1": "Attention à ne pas tomber.",
+      "sentence2": "Les feuilles tombent des arbres en automne."
+    },
+    {
+      "id": 263,
+      "word": "fausse",
+      "sentence1": "Cette affirmation est fausse.",
+      "sentence2": "Elle s'est rendu compte que sa croyance était fausse."
+    },
+    {
+      "id": 264,
+      "word": "famille",
+      "sentence1": "Ma famille est très importante pour moi.",
+      "sentence2": "Elle vient d'une famille nombreuse."
+    },
+    {
+      "id": 265,
+      "word": "célèbre",
+      "sentence1": "C'est un acteur célèbre.",
+      "sentence2": "Elle veut être célèbre un jour."
+    },
+    {
+      "id": 266,
+      "word": "c' est fantastique",
+      "sentence1": "La vue du sommet est fantastique.",
+      "sentence2": "Elle a fait un travail fantastique sur le projet."
+    },
+    {
+      "id": 267,
+      "word": "à l'extérieur",
+      "sentence1": "Le magasin est loin de chez moi.",
+      "sentence2": "Elle habite loin, dans une autre ville."
+    },
+    {
+      "id": 268,
+      "word": "élevage",
+      "sentence1": "Ils ont une ferme à la campagne.",
+      "sentence2": "Elle adore visiter la ferme en été."
+    },
+    {
+      "id": 269,
+      "word": "le fermier",
+      "sentence1": "Le fermier travaille dur dans les champs.",
+      "sentence2": "Elle veut épouser un fermier."
+    },
+    {
+      "id": 270,
+      "word": "rapidement",
+      "sentence1": "Il est un coureur rapide.",
+      "sentence2": "Elle conduit une voiture rapide."
+    },
+    {
+      "id": 271,
+      "word": "de la graisse",
+      "sentence1": "Le chat est gros et paresseux.",
+      "sentence2": "Elle est au régime pour perdre du poids."
+    },
+    {
+      "id": 272,
+      "word": "père",
+      "sentence1": "Mon père est médecin.",
+      "sentence2": "Elle aime beaucoup son père."
+    },
+    {
+      "id": 273,
+      "word": "préférée",
+      "sentence1": "Ma couleur favorite est le bleu.",
+      "sentence2": "Elle a un livre préféré qu'elle lit souvent."
+    },
+    {
+      "id": 274,
+      "word": "février",
+      "sentence1": "Février est le deuxième mois de l'année.",
+      "sentence2": "La Saint-Valentin est en février."
+    },
+    {
+      "id": 275,
+      "word": "je le sens",
+      "sentence1": "Je me sens heureuse aujourd'hui.",
+      "sentence2": "Elle ne se sentait pas bien hier."
+    },
+    {
+      "id": 276,
+      "word": "émotion",
+      "sentence1": "J'ai le sentiment que quelque chose ne va pas.",
+      "sentence2": "Elle a exprimé ses sentiments dans une lettre."
+    },
+    {
+      "id": 277,
+      "word": "le festival",
+      "sentence1": "Le festival de musique était incroyable.",
+      "sentence2": "Elle attend avec impatience le festival annuel."
+    },
+    {
+      "id": 278,
+      "word": "peu nombreux",
+      "sentence1": "J'ai quelques amis dans cette ville.",
+      "sentence2": "Elle a pris quelques photos pendant son voyage."
+    },
+    {
+      "id": 279,
+      "word": "dix ans",
+      "sentence1": "Il y a quinze élèves dans ma classe.",
+      "sentence2": "Elle aura quinze ans le mois prochain."
+    },
+    {
+      "id": 280,
+      "word": "cinquième",
+      "sentence1": "Il a terminé à la cinquième place.",
+      "sentence2": "Le cinquième livre de la série est mon préféré."
+    },
+    {
+      "id": 281,
+      "word": "cinquante",
+      "sentence1": "Il y a cinquante États aux États-Unis.",
+      "sentence2": "Elle a cinquante ans."
+    },
+    {
+      "id": 282,
+      "word": "remplir",
+      "sentence1": "Veuillez remplir ce formulaire.",
+      "sentence2": "Elle doit faire le plein."
+    },
+    {
+      "id": 283,
+      "word": "le film",
+      "sentence1": "J'ai regardé un super film hier soir.",
+      "sentence2": "Elle veut faire un film un jour."
+    },
+    {
+      "id": 284,
+      "word": "définitif",
+      "sentence1": "L'examen final est la semaine prochaine.",
+      "sentence2": "Elle a beaucoup étudié pour la finale."
+    },
+    {
+      "id": 285,
+      "word": "trouver",
+      "sentence1": "Je ne trouve pas mes clés.",
+      "sentence2": "Elle m'a aidé à trouver mon chemin."
+    },
+    {
+      "id": 286,
+      "word": "très bien",
+      "sentence1": "Je me sens bien, merci.",
+      "sentence2": "Elle a une belle collection de timbres."
+    },
+    {
+      "id": 287,
+      "word": "finition",
+      "sentence1": "S'il vous plaît, faites vos devoirs.",
+      "sentence2": "Elle terminera le projet demain."
+    },
+    {
+      "id": 288,
+      "word": "le feu",
+      "sentence1": "Le feu est très chaud.",
+      "sentence2": "Elle avait peur du feu."
+    },
+    {
+      "id": 289,
+      "word": "le premier",
+      "sentence1": "Elle est arrivée la première.",
+      "sentence2": "Le premier chapitre du livre est intéressant."
+    },
+    {
+      "id": 290,
+      "word": "poisson",
+      "sentence1": "J'ai attrapé un gros poisson.",
+      "sentence2": "Elle aime manger du poisson au dîner."
+    },
+    {
+      "id": 291,
+      "word": "cinq",
+      "sentence1": "J'ai cinq pommes.",
+      "sentence2": "Elle a cinq ans."
+    },
+    {
+      "id": 292,
+      "word": "à plat",
+      "sentence1": "La route est plate et droite.",
+      "sentence2": "Elle vit dans un appartement en ville."
+    },
+    {
+      "id": 293,
+      "word": "le vol",
+      "sentence1": "Mon vol part à 18h.",
+      "sentence2": "Elle est sur un vol pour Paris."
+    },
+    {
+      "id": 294,
+      "word": "étage",
+      "sentence1": "Le livre est par terre.",
+      "sentence2": "Elle a nettoyé le sol hier."
+    },
+    {
+      "id": 295,
+      "word": "une fleur",
+      "sentence1": "J'ai acheté une belle fleur.",
+      "sentence2": "Elle aime planter des fleurs dans son jardin."
+    },
+    {
+      "id": 296,
+      "word": "mouche",
+      "sentence1": "Je veux aller à New York.",
+      "sentence2": "Elle sait très bien faire voler un cerf-volant."
+    },
+    {
+      "id": 297,
+      "word": "suivent",
+      "sentence1": "S'il vous plaît, suivez-moi à la gare.",
+      "sentence2": "Elle a décidé de suivre ses rêves."
+    },
+    {
+      "id": 298,
+      "word": "produits alimentaires",
+      "sentence1": "J'adore la cuisine italienne.",
+      "sentence2": "Elle a préparé un délicieux repas pour le dîner."
+    },
+    {
+      "id": 299,
+      "word": "le pied",
+      "sentence1": "Mon pied me fait mal.",
+      "sentence2": "Elle a marché sur mon pied par accident."
+    },
+    {
+      "id": 300,
+      "word": "le football",
+      "sentence1": "Je joue au football le week-end.",
+      "sentence2": "Elle est une grande fan de football."
+    },
+    {
+      "id": 301,
+      "word": "pour",
+      "sentence1": "Ce cadeau est pour toi.",
+      "sentence2": "Elle travaille dur pour sa famille."
+    },
+    {
+      "id": 302,
+      "word": "je l' ai oublié",
+      "sentence1": "N'oubliez pas de m'appeler.",
+      "sentence2": "Elle oublie toujours où elle met ses clés."
+    },
+    {
+      "id": 303,
+      "word": "forme",
+      "sentence1": "Veuillez remplir ce formulaire.",
+      "sentence2": "Elle a soumis le formulaire en ligne."
+    },
+    {
+      "id": 304,
+      "word": "quarante ans",
+      "sentence1": "Il y a quarante élèves dans l'école.",
+      "sentence2": "Elle a quarante ans."
+    },
+    {
+      "id": 305,
+      "word": "quatre",
+      "sentence1": "J'ai quatre frères.",
+      "sentence2": "Les quatre saisons sont belles."
+    },
+    {
+      "id": 306,
+      "word": "quatorze ans",
+      "sentence1": "Elle a quatorze ans.",
+      "sentence2": "14 est mon chiffre préféré."
+    },
+    {
+      "id": 307,
+      "word": "quatrième",
+      "sentence1": "Il a terminé quatrième.",
+      "sentence2": "Le 4 juillet est le jour de l'indépendance."
+    },
+    {
+      "id": 308,
+      "word": "dégagé",
+      "sentence1": "Le musée est gratuit le dimanche.",
+      "sentence2": "Elle a l'après-midi libre."
+    },
+    {
+      "id": 309,
+      "word": "vendredi",
+      "sentence1": "Le vendredi est mon jour préféré.",
+      "sentence2": "Elle a une réunion vendredi."
+    },
+    {
+      "id": 310,
+      "word": "ami à moi",
+      "sentence1": "Ma meilleure amie vient.",
+      "sentence2": "C'est une amie loyale."
+    },
+    {
+      "id": 311,
+      "word": "amicalement",
+      "sentence1": "Le chien est très amical.",
+      "sentence2": "Elle m'a donné un sourire amical."
+    },
+    {
+      "id": 312,
+      "word": "à partir",
+      "sentence1": "Je suis de Turquie.",
+      "sentence2": "Elle a reçu une lettre de son amie."
+    },
+    {
+      "id": 313,
+      "word": "avant",
+      "sentence1": "La voiture est garée devant la maison.",
+      "sentence2": "Elle se tenait en première ligne."
+    },
+    {
+      "id": 314,
+      "word": "fruits et légumes",
+      "sentence1": "J'aime manger des fruits au petit déjeuner.",
+      "sentence2": "Elle a acheté des fruits frais au marché."
+    },
+    {
+      "id": 315,
+      "word": "pleine",
+      "sentence1": "Le verre est plein d'eau.",
+      "sentence2": "Elle a un emploi du temps chargé aujourd'hui."
+    },
+    {
+      "id": 316,
+      "word": "je me suis amusé",
+      "sentence1": "Nous nous sommes bien amusés à la fête.",
+      "sentence2": "Elle aime les activités de plein air."
+    },
+    {
+      "id": 317,
+      "word": "c' est drôle",
+      "sentence1": "Ce film était vraiment drôle.",
+      "sentence2": "Elle a un drôle d'humour."
+    },
+    {
+      "id": 318,
+      "word": "à venir",
+      "sentence1": "Je suis enthousiasmé par l'avenir.",
+      "sentence2": "Elle a de grands projets pour son avenir."
+    },
+    {
+      "id": 319,
+      "word": "jeu",
+      "sentence1": "J'adore jouer aux jeux vidéo.",
+      "sentence2": "Elle a gagné la partie hier soir."
+    },
+    {
+      "id": 320,
+      "word": "le jardin",
+      "sentence1": "Elle a un beau jardin dans son arrière-cour.",
+      "sentence2": "Elle aime planter des fleurs dans son jardin."
+    },
+    {
+      "id": 321,
+      "word": "région",
+      "sentence1": "J'ai étudié la géographie à l'école.",
+      "sentence2": "Elle s'intéresse à la géographie du monde."
+    },
+    {
+      "id": 322,
+      "word": "je vous en prie",
+      "sentence1": "Je dois faire des courses.",
+      "sentence2": "Elle trouvera bientôt un nouvel emploi."
+    },
+    {
+      "id": 323,
+      "word": "une fille",
+      "sentence1": "La fille lit un livre.",
+      "sentence2": "C'est une fille intelligente."
+    },
+    {
+      "id": 324,
+      "word": "petite amie",
+      "sentence1": "Ma copine vient me voir.",
+      "sentence2": "C'est une copine qui me soutient."
+    },
+    {
+      "id": 325,
+      "word": "donner",
+      "sentence1": "Je veux te faire un cadeau.",
+      "sentence2": "Elle m'a donné un livre pour mon anniversaire."
+    },
+    {
+      "id": 326,
+      "word": "de verre",
+      "sentence1": "Fais attention avec ce verre.",
+      "sentence2": "Elle a bu de l'eau dans un verre."
+    },
+    {
+      "id": 327,
+      "word": "je vous en prie",
+      "sentence1": "Je dois aller au magasin.",
+      "sentence2": "Elle ira à la fête plus tard."
+    },
+    {
+      "id": 328,
+      "word": "ça va",
+      "sentence1": "C'est une bonne idée.",
+      "sentence2": "Elle est une bonne élève."
+    },
+    {
+      "id": 329,
+      "word": "au revoir",
+      "sentence1": "J'ai dit au revoir à mon ami.",
+      "sentence2": "Elle m'a fait un signe de la main en partant."
+    },
+    {
+      "id": 330,
+      "word": "grand-père",
+      "sentence1": "Mon grand-père est très sage.",
+      "sentence2": "Il raconte de belles histoires sur le passé."
+    },
+    {
+      "id": 331,
+      "word": "grand-mère",
+      "sentence1": "Ma grand-mère fait les meilleurs cookies.",
+      "sentence2": "Elle aime raconter des histoires de son enfance."
+    },
+    {
+      "id": 332,
+      "word": "grand-père",
+      "sentence1": "Les grands-parents gâchent souvent leurs petits-enfants.",
+      "sentence2": "Ils ont un lien particulier avec leurs petits-enfants."
+    },
+    {
+      "id": 333,
+      "word": "très bien",
+      "sentence1": "Tu as fait du bon travail sur ce projet.",
+      "sentence2": "Elle a de grandes idées pour le futur."
+    },
+    {
+      "id": 334,
+      "word": "vert",
+      "sentence1": "L'herbe est verte.",
+      "sentence2": "Elle portait une robe verte."
+    },
+    {
+      "id": 335,
+      "word": "de couleur",
+      "sentence1": "Le ciel est gris aujourd'hui.",
+      "sentence2": "Elle a un chat gris."
+    },
+    {
+      "id": 336,
+      "word": "groupe",
+      "sentence1": "Nous avons formé un groupe d'étude.",
+      "sentence2": "C'est la chef du groupe."
+    },
+    {
+      "id": 337,
+      "word": "grandir",
+      "sentence1": "Les plantes ont besoin d'eau pour grandir.",
+      "sentence2": "Elle a vu ses enfants grandir."
+    },
+    {
+      "id": 338,
+      "word": "je suppose",
+      "sentence1": "Pouvez-vous deviner la réponse ?",
+      "sentence2": "Elle a fait une bonne supposition."
+    },
+    {
+      "id": 339,
+      "word": "guitare",
+      "sentence1": "J'adore jouer de la guitare.",
+      "sentence2": "Elle apprend à jouer de la guitare."
+    },
+    {
+      "id": 340,
+      "word": "salle de sport",
+      "sentence1": "Je vais au gymnase tous les matins.",
+      "sentence2": "Elle s'entraîne au gymnase."
+    },
+    {
+      "id": 341,
+      "word": "cheveux",
+      "sentence1": "Elle a les cheveux longs.",
+      "sentence2": "Je dois me couper les cheveux."
+    },
+    {
+      "id": 342,
+      "word": "moitié",
+      "sentence1": "J'ai mangé la moitié de la pizza.",
+      "sentence2": "Elle est à la moitié du livre."
+    },
+    {
+      "id": 343,
+      "word": "le bras",
+      "sentence1": "Il a agité sa main.",
+      "sentence2": "Elle tenait sa main fermement."
+    },
+    {
+      "id": 344,
+      "word": "se produisent",
+      "sentence1": "Qu'est-ce qui va arriver ensuite ?",
+      "sentence2": "Je ne m'attendais pas à ça."
+    },
+    {
+      "id": 345,
+      "word": "je suis heureux",
+      "sentence1": "C'est une personne heureuse.",
+      "sentence2": "Je me sens heureuse aujourd'hui."
+    },
+    {
+      "id": 346,
+      "word": "très dur",
+      "sentence1": "Cet exercice est difficile.",
+      "sentence2": "Elle travaille dur tous les jours."
+    },
+    {
+      "id": 347,
+      "word": "le chapeau",
+      "sentence1": "Il portait un chapeau à la fête.",
+      "sentence2": "Elle a acheté un nouveau chapeau."
+    },
+    {
+      "id": 348,
+      "word": "détesté",
+      "sentence1": "Je déteste faire la queue.",
+      "sentence2": "Elle déteste faire ses devoirs."
+    },
+    {
+      "id": 349,
+      "word": "ont",
+      "sentence1": "J'ai une chienne.",
+      "sentence2": "Elle a un chat."
+    },
+    {
+      "id": 350,
+      "word": "il faut",
+      "sentence1": "Je dois étudier pour le test.",
+      "sentence2": "Elle doit aller travailler."
+    },
+    {
+      "id": 351,
+      "word": "il est",
+      "sentence1": "C'est mon frère.",
+      "sentence2": "Je l'ai vu hier."
+    },
+    {
+      "id": 352,
+      "word": "tête",
+      "sentence1": "Elle a hoché la tête.",
+      "sentence2": "Il a mal à la tête."
+    },
+    {
+      "id": 353,
+      "word": "santé",
+      "sentence1": "La santé est très importante.",
+      "sentence2": "Elle s'inquiète pour sa santé."
+    },
+    {
+      "id": 354,
+      "word": "santé",
+      "sentence1": "Manger des fruits et des légumes fait partie d'une alimentation saine.",
+      "sentence2": "Elle a l'air en bonne santé et en forme."
+    },
+    {
+      "id": 355,
+      "word": "écoute",
+      "sentence1": "Je peux entendre la musique.",
+      "sentence2": "Elle a entendu un bruit étrange."
+    },
+    {
+      "id": 356,
+      "word": "je vous salue",
+      "sentence1": "Bonjour, comment allez vous ?",
+      "sentence2": "Elle m'a salué."
+    },
+    {
+      "id": 357,
+      "word": "je vous en prie",
+      "sentence1": "Tu peux m'aider ?",
+      "sentence2": "Elle aide toujours ses amis."
+    },
+    {
+      "id": 358,
+      "word": "elle",
+      "sentence1": "C'est son livre.",
+      "sentence2": "Je l'ai vue au parc."
+    },
+    {
+      "id": 359,
+      "word": "je suis là",
+      "sentence1": "Venez ici, s'il vous plaît.",
+      "sentence2": "Elle n'est pas là."
+    },
+    {
+      "id": 360,
+      "word": "ça va",
+      "sentence1": "Ça va ?",
+      "sentence2": "Elle a dit bonjour et a souri."
+    },
+    {
+      "id": 361,
+      "word": "je vous salue",
+      "sentence1": "Salut, ravie de vous rencontrer !",
+      "sentence2": "Elle m'a salué."
+    },
+    {
+      "id": 362,
+      "word": "haute",
+      "sentence1": "Le bâtiment est très haut.",
+      "sentence2": "Elle tendit la main vers l'étagère haute."
+    },
+    {
+      "id": 363,
+      "word": "je l' ai",
+      "sentence1": "Je l'ai vu au parc.",
+      "sentence2": "Elle lui a fait un cadeau."
+    },
+    {
+      "id": 364,
+      "word": "le sien",
+      "sentence1": "C'est sa voiture.",
+      "sentence2": "J'ai rencontré sa sœur."
+    },
+    {
+      "id": 365,
+      "word": "le passé",
+      "sentence1": "L'histoire est fascinante.",
+      "sentence2": "Elle aime étudier l'histoire."
+    },
+    {
+      "id": 366,
+      "word": "passe-temps",
+      "sentence1": "Mon hobby est la peinture.",
+      "sentence2": "Elle a beaucoup de passe-temps."
+    },
+    {
+      "id": 367,
+      "word": "vacances",
+      "sentence1": "Nous partons en vacances.",
+      "sentence2": "Elle adore les vacances d'été."
+    },
+    {
+      "id": 368,
+      "word": "à la maison",
+      "sentence1": "Bienvenue à la maison !",
+      "sentence2": "Elle nettoie sa maison."
+    },
+    {
+      "id": 369,
+      "word": "devoirs",
+      "sentence1": "J'ai beaucoup de devoirs.",
+      "sentence2": "Elle aide son frère à faire ses devoirs."
+    },
+    {
+      "id": 370,
+      "word": "le désir",
+      "sentence1": "J'espère que vous vous sentirez mieux bientôt.",
+      "sentence2": "Elle a de l'espoir pour le futur."
+    },
+    {
+      "id": 371,
+      "word": "le cheval",
+      "sentence1": "Le cheval court vite.",
+      "sentence2": "Elle adore monter son cheval."
+    },
+    {
+      "id": 372,
+      "word": "hôpital",
+      "sentence1": "Il est à l'hôpital.",
+      "sentence2": "Elle travaille à l'hôpital."
+    },
+    {
+      "id": 373,
+      "word": "hôtel",
+      "sentence1": "Nous avons séjourné dans un bel hôtel.",
+      "sentence2": "Elle a réservé un hôtel pour ses vacances."
+    },
+    {
+      "id": 374,
+      "word": "heure",
+      "sentence1": "Il faut une heure pour y arriver.",
+      "sentence2": "Elle sera de retour dans une heure."
+    },
+    {
+      "id": 375,
+      "word": "à chaud",
+      "sentence1": "Le café est chaud.",
+      "sentence2": "Elle aime le temps chaud."
+    },
+    {
+      "id": 376,
+      "word": "maison",
+      "sentence1": "C'est chez moi.",
+      "sentence2": "Elle veut acheter une maison."
+    },
+    {
+      "id": 377,
+      "word": "comment",
+      "sentence1": "Ça va ?",
+      "sentence2": "Elle a demandé comment faire."
+    },
+    {
+      "id": 378,
+      "word": "cependant",
+      "sentence1": "Il pleuvait; cependant, nous sommes sortis.",
+      "sentence2": "Elle est très occupée; cependant, elle vous aidera."
+    },
+    {
+      "id": 379,
+      "word": "cent",
+      "sentence1": "Il y a une centaine d'élèves dans l'école.",
+      "sentence2": "Elle a cent dollars."
+    },
+    {
+      "id": 380,
+      "word": "affamé",
+      "sentence1": "Je suis affamé.",
+      "sentence2": "Elle a toujours faim après l'exercice."
+    },
+    {
+      "id": 381,
+      "word": "marié",
+      "sentence1": "Mon mari est médecin.",
+      "sentence2": "Elle aime beaucoup son mari."
+    },
+    {
+      "id": 382,
+      "word": "glace",
+      "sentence1": "La glace est en train de fondre.",
+      "sentence2": "Elle a mis de la glace dans sa boisson."
+    },
+    {
+      "id": 383,
+      "word": "crème glacée",
+      "sentence1": "J'adore les glaces.",
+      "sentence2": "Elle a acheté des glaces pour les enfants."
+    },
+    {
+      "id": 384,
+      "word": "idée",
+      "sentence1": "C'est une super idée !",
+      "sentence2": "Elle a une idée intéressante pour le projet."
+    },
+    {
+      "id": 385,
+      "word": "si le",
+      "sentence1": "S'il pleut, nous resterons à l'intérieur.",
+      "sentence2": "Elle m'a demandé si je voulais me joindre à elle."
+    },
+    {
+      "id": 386,
+      "word": "vous imaginez",
+      "sentence1": "Je peux imaginer un monde meilleur.",
+      "sentence2": "Elle aime imaginer différents scénarios."
+    },
+    {
+      "id": 387,
+      "word": "est important",
+      "sentence1": "C'est une décision importante.",
+      "sentence2": "Elle sait donner la priorité aux tâches importantes."
+    },
+    {
+      "id": 388,
+      "word": "améliorer",
+      "sentence1": "Je veux améliorer mon anglais.",
+      "sentence2": "Elle travaille dur pour améliorer ses notes."
+    },
+    {
+      "id": 389,
+      "word": "dans",
+      "sentence1": "Le livre est dans le sac.",
+      "sentence2": "Elle vit dans une petite ville."
+    },
+    {
+      "id": 390,
+      "word": "comprennent",
+      "sentence1": "Veuillez inclure votre nom sur la liste.",
+      "sentence2": "Elle veut inclure tout le monde dans la discussion."
+    },
+    {
+      "id": 391,
+      "word": "renseignements",
+      "sentence1": "Pouvez-vous fournir plus d'informations ?",
+      "sentence2": "Elle a trouvé l'information utile."
+    },
+    {
+      "id": 392,
+      "word": "intérêts",
+      "sentence1": "Je m'intéresse beaucoup à l'art.",
+      "sentence2": "Elle partage mon intérêt pour la musique."
+    },
+    {
+      "id": 393,
+      "word": "intéressé",
+      "sentence1": "Je suis intéressé à apprendre l'espagnol.",
+      "sentence2": "Elle s'intéresse aux voyages."
+    },
+    {
+      "id": 394,
+      "word": "intéressant",
+      "sentence1": "Ce livre est très intéressant.",
+      "sentence2": "Elle a des idées intéressantes."
+    },
+    {
+      "id": 395,
+      "word": "réseau Internet",
+      "sentence1": "Je l'ai trouvé sur internet.",
+      "sentence2": "Elle passe beaucoup de temps sur Internet."
+    },
+    {
+      "id": 396,
+      "word": "entrevue",
+      "sentence1": "J'ai une entrevue d'emploi demain.",
+      "sentence2": "Elle s'est préparée pour l'entretien."
+    },
+    {
+      "id": 397,
+      "word": "dans",
+      "sentence1": "Il est entré dans la pièce.",
+      "sentence2": "Elle plongea dans la piscine."
+    },
+    {
+      "id": 398,
+      "word": "présentation",
+      "sentence1": "Laissez-moi vous présenter mon ami.",
+      "sentence2": "Elle présentera l'orateur."
+    },
+    {
+      "id": 399,
+      "word": "île",
+      "sentence1": "Bali est une île magnifique.",
+      "sentence2": "Elle rêve de visiter une île tropicale."
+    },
+    {
+      "id": 400,
+      "word": "le",
+      "sentence1": "Je l'ai trouvé sur la table.",
+      "sentence2": "Elle a dit que c'était son livre."
+    },
+    {
+      "id": 401,
+      "word": "de ses",
+      "sentence1": "Le chien secoua la queue.",
+      "sentence2": "Elle est fière de ses réalisations."
+    },
+    {
+      "id": 402,
+      "word": "chemisier",
+      "sentence1": "J'ai acheté une nouvelle veste.",
+      "sentence2": "Elle portait une veste en cuir."
+    },
+    {
+      "id": 403,
+      "word": "janvier",
+      "sentence1": "Janvier est le premier mois.",
+      "sentence2": "Elle est née en janvier."
+    },
+    {
+      "id": 404,
+      "word": "jeans",
+      "sentence1": "Je dois acheter un nouveau jean.",
+      "sentence2": "Elle préfère porter des jeans."
+    },
+    {
+      "id": 405,
+      "word": "le travail",
+      "sentence1": "J'ai un nouveau travail.",
+      "sentence2": "Elle aime son travail."
+    },
+    {
+      "id": 406,
+      "word": "rejoindre",
+      "sentence1": "Je veux rejoindre le club.",
+      "sentence2": "Elle a décidé de nous rejoindre."
+    },
+    {
+      "id": 407,
+      "word": "le voyage",
+      "sentence1": "Le voyage était long et fatigant.",
+      "sentence2": "Elle a apprécié le voyage."
+    },
+    {
+      "id": 408,
+      "word": "jus de pomme",
+      "sentence1": "Je voudrais du jus d'orange.",
+      "sentence2": "Elle boit du jus chaque matin."
+    },
+    {
+      "id": 409,
+      "word": "juillet",
+      "sentence1": "Juillet est le septième mois.",
+      "sentence2": "Elle aime partir en vacances en juillet."
+    },
+    {
+      "id": 410,
+      "word": "juin",
+      "sentence1": "Juin est le sixième mois.",
+      "sentence2": "Elle a obtenu son diplôme en juin."
+    },
+    {
+      "id": 411,
+      "word": "c' est juste",
+      "sentence1": "Je veux juste aider.",
+      "sentence2": "C'est juste une amie."
+    },
+    {
+      "id": 412,
+      "word": "le K",
+      "sentence1": "K est la onzième lettre de l'alphabet.",
+      "sentence2": "Elle aime la lettre K."
+    },
+    {
+      "id": 413,
+      "word": "le garder",
+      "sentence1": "Gardez la porte fermée.",
+      "sentence2": "Elle veut garder sa chambre propre."
+    },
+    {
+      "id": 414,
+      "word": "clé",
+      "sentence1": "J'ai perdu la clé de ma maison.",
+      "sentence2": "Elle a trouvé la clé sous le tapis."
+    },
+    {
+      "id": 415,
+      "word": "kilomètres",
+      "sentence1": "Le magasin est à cinq kilomètres.",
+      "sentence2": "Elle a couru dix kilomètres hier."
+    },
+    {
+      "id": 416,
+      "word": "type (type)",
+      "sentence1": "Quel genre de musique aimez-vous ?",
+      "sentence2": "C'est une personne gentille."
+    },
+    {
+      "id": 417,
+      "word": "cuisine",
+      "sentence1": "La cuisine est très spacieuse.",
+      "sentence2": "Elle adore cuisiner dans sa cuisine."
+    },
+    {
+      "id": 418,
+      "word": "je le sais",
+      "sentence1": "Je connais la réponse.",
+      "sentence2": "Elle ne connaît pas son nom."
+    },
+    {
+      "id": 419,
+      "word": "terre et",
+      "sentence1": "La terre est très fertile.",
+      "sentence2": "Elle a acheté un terrain."
+    },
+    {
+      "id": 420,
+      "word": "langue du pays",
+      "sentence1": "L'anglais est une langue mondiale.",
+      "sentence2": "Elle parle trois langues."
+    },
+    {
+      "id": 421,
+      "word": "large",
+      "sentence1": "Ils vivent dans une grande maison.",
+      "sentence2": "Elle a une grande collection de timbres."
+    },
+    {
+      "id": 422,
+      "word": "dernier (dernier)",
+      "sentence1": "C'est la dernière chance.",
+      "sentence2": "Elle a été la dernière à partir."
+    },
+    {
+      "id": 423,
+      "word": "retardé",
+      "sentence1": "Je suis en retard pour la réunion.",
+      "sentence2": "Elle est arrivée en retard à la fête."
+    },
+    {
+      "id": 424,
+      "word": "plus tard",
+      "sentence1": "On en discutera plus tard.",
+      "sentence2": "Elle m'a appelé plus tard dans la journée."
+    },
+    {
+      "id": 425,
+      "word": "le rire",
+      "sentence1": "J'adore vous faire rire.",
+      "sentence2": "Elle ne put s'empêcher de rire."
+    },
+    {
+      "id": 426,
+      "word": "apprendre",
+      "sentence1": "Je veux apprendre une nouvelle langue.",
+      "sentence2": "Elle apprend vite."
+    },
+    {
+      "id": 427,
+      "word": "démissionner",
+      "sentence1": "Je dois partir plus tôt.",
+      "sentence2": "Elle a quitté la fête sans dire au revoir."
+    },
+    {
+      "id": 428,
+      "word": "à gauche",
+      "sentence1": "Tournez à gauche au feu de circulation.",
+      "sentence2": "Elle est gaucher."
+    },
+    {
+      "id": 429,
+      "word": "coude",
+      "sentence1": "Ma jambe me fait mal.",
+      "sentence2": "Elle a croisé les jambes."
+    },
+    {
+      "id": 430,
+      "word": "leçon",
+      "sentence1": "J'ai une leçon de maths aujourd'hui.",
+      "sentence2": "Elle aimait cette leçon."
+    },
+    {
+      "id": 431,
+      "word": "laisse",
+      "sentence1": "Je vais vous aider.",
+      "sentence2": "Elle lui a prêté son livre."
+    },
+    {
+      "id": 432,
+      "word": "lettre",
+      "sentence1": "J'ai reçu une lettre de mon ami.",
+      "sentence2": "Elle écrivit une lettre à sa grand-mère."
+    },
+    {
+      "id": 433,
+      "word": "bibliothèque",
+      "sentence1": "La bibliothèque est ouverte jusqu'à 20 heures.",
+      "sentence2": "Elle emprunta un livre à la bibliothèque."
+    },
+    {
+      "id": 434,
+      "word": "le mensonge",
+      "sentence1": "Ne me mentez pas !",
+      "sentence2": "Elle a menti sur son âge."
+    },
+    {
+      "id": 435,
+      "word": "vie et mort",
+      "sentence1": "La vie est belle.",
+      "sentence2": "Elle veut voyager dans le monde."
+    },
+    {
+      "id": 436,
+      "word": "lumière (du soleil ou d'une lampe)",
+      "sentence1": "La lumière est trop forte.",
+      "sentence2": "Elle a éteint la lumière avant de dormir."
+    },
+    {
+      "id": 437,
+      "word": "comme (semblable)",
+      "sentence1": "Cette robe est comme celle que j'ai vue hier.",
+      "sentence2": "Elle a un groupe d'amis qui pensent comme elle."
+    },
+    {
+      "id": 438,
+      "word": "comme (trouver sb/sth agréable)",
+      "sentence1": "J'aime bien cette chanson.",
+      "sentence2": "Elle aime lire avant de se coucher."
+    },
+    {
+      "id": 439,
+      "word": "ligne",
+      "sentence1": "Dessine une ligne droite.",
+      "sentence2": "Elle faisait la queue pour les billets."
+    },
+    {
+      "id": 440,
+      "word": "le lion",
+      "sentence1": "Le lion est le roi de la jungle.",
+      "sentence2": "Elle a vu un lion au zoo."
+    },
+    {
+      "id": 441,
+      "word": "liste",
+      "sentence1": "J'ai fait une liste de courses.",
+      "sentence2": "Elle a coché des points sur sa liste."
+    },
+    {
+      "id": 442,
+      "word": "écoute",
+      "sentence1": "J'aime écouter de la musique.",
+      "sentence2": "Elle a écouté attentivement les instructions."
+    },
+    {
+      "id": 443,
+      "word": "un peu",
+      "sentence1": "Cette boîte est trop petite.",
+      "sentence2": "Elle a un petit chien."
+    },
+    {
+      "id": 444,
+      "word": "à vivre",
+      "sentence1": "Je vis dans une petite ville.",
+      "sentence2": "Elle veut vivre en ville."
+    },
+    {
+      "id": 445,
+      "word": "localement",
+      "sentence1": "J'adore la nourriture locale.",
+      "sentence2": "Elle soutient les entreprises locales."
+    },
+    {
+      "id": 446,
+      "word": "longueur",
+      "sentence1": "C'est un livre long.",
+      "sentence2": "Elle a eu une longue journée de travail."
+    },
+    {
+      "id": 447,
+      "word": "regardez",
+      "sentence1": "Regarde le ciel !",
+      "sentence2": "Elle regarda par la fenêtre."
+    },
+    {
+      "id": 448,
+      "word": "perdre",
+      "sentence1": "Je ne veux pas perdre mes clés.",
+      "sentence2": "Elle a perdu son téléphone au centre commercial."
+    },
+    {
+      "id": 449,
+      "word": "lots",
+      "sentence1": "Il y a beaucoup de monde ici.",
+      "sentence2": "Elle a beaucoup d'amis."
+    },
+    {
+      "id": 450,
+      "word": "je t'aime",
+      "sentence1": "L'amour est tout ce dont vous avez besoin.",
+      "sentence2": "Elle a trouvé l'amour dans un endroit inattendu."
+    },
+    {
+      "id": 451,
+      "word": "déjeuner",
+      "sentence1": "Je déjeune habituellement à midi.",
+      "sentence2": "Elle a préparé un déjeuner pour le pique-nique."
+    },
+    {
+      "id": 452,
+      "word": "appareil",
+      "sentence1": "La machine est cassée.",
+      "sentence2": "Elle manipule la machine avec compétence."
+    },
+    {
+      "id": 453,
+      "word": "le magazine",
+      "sentence1": "J'ai lu un article intéressant dans le magazine.",
+      "sentence2": "Elle s'abonne à plusieurs magazines."
+    },
+    {
+      "id": 454,
+      "word": "principale",
+      "sentence1": "L'entrée principale est au coin de la rue.",
+      "sentence2": "Elle est le personnage principal de l'histoire."
+    },
+    {
+      "id": 455,
+      "word": "faire",
+      "sentence1": "Je veux faire un gâteau.",
+      "sentence2": "Elle fait de belles poteries."
+    },
+    {
+      "id": 456,
+      "word": "homme",
+      "sentence1": "L'homme lit un livre.",
+      "sentence2": "Elle a vu un homme en costume."
+    },
+    {
+      "id": 457,
+      "word": "beaucoup",
+      "sentence1": "Il y a beaucoup de livres sur l'étagère.",
+      "sentence2": "Elle n'a pas beaucoup d'amis."
+    },
+    {
+      "id": 458,
+      "word": "carte",
+      "sentence1": "J'ai besoin d'une carte pour trouver l'endroit.",
+      "sentence2": "Elle a étudié la carte avec soin."
+    },
+    {
+      "id": 459,
+      "word": "le mois de mars",
+      "sentence1": "Mars est le troisième mois de l'année.",
+      "sentence2": "Elle est née en mars."
+    },
+    {
+      "id": 460,
+      "word": "le marché",
+      "sentence1": "J'ai acheté des légumes au marché.",
+      "sentence2": "Elle aime faire ses courses au marché local."
+    },
+    {
+      "id": 461,
+      "word": "marié",
+      "sentence1": "Ils sont un couple marié.",
+      "sentence2": "Elle est mariée à un médecin."
+    },
+    {
+      "id": 462,
+      "word": "match (concours)",
+      "sentence1": "Le match aura lieu demain.",
+      "sentence2": "Elle a gagné le match la semaine dernière."
+    },
+    {
+      "id": 463,
+      "word": "le mois de mai",
+      "sentence1": "Mai est un beau mois.",
+      "sentence2": "Elle adore les fleurs en mai."
+    },
+    {
+      "id": 464,
+      "word": "peut-être",
+      "sentence1": "Peut-être qu'on pourrait aller au parc.",
+      "sentence2": "Elle a dit qu'elle nous rejoindrait peut-être."
+    },
+    {
+      "id": 465,
+      "word": "pour moi",
+      "sentence1": "Tu peux m'aider ?",
+      "sentence2": "Elle m'a appelé hier."
+    },
+    {
+      "id": 466,
+      "word": "pâte à farine",
+      "sentence1": "Le petit déjeuner est mon repas préféré.",
+      "sentence2": "Elle prépare un repas sain tous les jours."
+    },
+    {
+      "id": 467,
+      "word": "moyenne",
+      "sentence1": "Que signifie ce mot ?",
+      "sentence2": "Elle ne voulait pas te faire de mal."
+    },
+    {
+      "id": 468,
+      "word": "signification",
+      "sentence1": "Le sens de la vie est une question philosophique.",
+      "sentence2": "Elle chercha le sens du poème."
+    },
+    {
+      "id": 469,
+      "word": "de la viande",
+      "sentence1": "Je ne mange pas de viande.",
+      "sentence2": "Elle a cuisiné un délicieux plat de viande."
+    },
+    {
+      "id": 470,
+      "word": "se rencontrer",
+      "sentence1": "On se retrouve au café.",
+      "sentence2": "Elle rencontrera ses amis plus tard."
+    },
+    {
+      "id": 471,
+      "word": "réunion",
+      "sentence1": "La réunion est prévue pour 10 h.",
+      "sentence2": "Elle a assisté à la réunion hier."
+    },
+    {
+      "id": 472,
+      "word": "membre",
+      "sentence1": "Il est membre du club.",
+      "sentence2": "Elle a invité un nouveau membre au groupe."
+    },
+    {
+      "id": 473,
+      "word": "le menu",
+      "sentence1": "Je peux voir le menu, s'il vous plaît ?",
+      "sentence2": "Elle a commandé du menu végétarien."
+    },
+    {
+      "id": 474,
+      "word": "le message",
+      "sentence1": "J'ai reçu un message d'elle.",
+      "sentence2": "Elle a laissé un message sur mon téléphone."
+    },
+    {
+      "id": 475,
+      "word": "mètre",
+      "sentence1": "La table fait deux mètres de long.",
+      "sentence2": "Elle a couru 100 mètres en moins de 12 secondes."
+    },
+    {
+      "id": 476,
+      "word": "à minuit",
+      "sentence1": "La fête prendra fin à minuit.",
+      "sentence2": "Elle se couche toujours avant minuit."
+    },
+    {
+      "id": 477,
+      "word": "kilomètres",
+      "sentence1": "Le magasin est à 8 km.",
+      "sentence2": "Elle marchait un kilomètre chaque matin."
+    },
+    {
+      "id": 478,
+      "word": "lait",
+      "sentence1": "Je bois du lait tous les jours.",
+      "sentence2": "Elle préfère le lait d'amande."
+    },
+    {
+      "id": 479,
+      "word": "en millions",
+      "sentence1": "Il y a un million d'étoiles dans le ciel.",
+      "sentence2": "Elle a gagné un million de dollars à la loterie."
+    },
+    {
+      "id": 480,
+      "word": "minute",
+      "sentence1": "J'ai besoin d'une minute pour penser.",
+      "sentence2": "Elle est arrivée une minute en retard."
+    },
+    {
+      "id": 481,
+      "word": "je suis désolée",
+      "sentence1": "Ma famille me manque.",
+      "sentence2": "Elle a raté le bus ce matin."
+    },
+    {
+      "id": 482,
+      "word": "erreur",
+      "sentence1": "J'ai fait une erreur dans le test.",
+      "sentence2": "Elle a appris de ses erreurs."
+    },
+    {
+      "id": 483,
+      "word": "modèle",
+      "sentence1": "La voiture est un nouveau modèle.",
+      "sentence2": "Elle préfère le dernier modèle."
+    },
+    {
+      "id": 484,
+      "word": "le moderne",
+      "sentence1": "C'est un bâtiment moderne.",
+      "sentence2": "Elle aime l'art moderne."
+    },
+    {
+      "id": 485,
+      "word": "un instant",
+      "sentence1": "Un instant, s'il vous plaît.",
+      "sentence2": "Elle a capturé le moment sur une photo."
+    },
+    {
+      "id": 486,
+      "word": "lundi",
+      "sentence1": "Le lundi est le premier jour de la semaine.",
+      "sentence2": "Elle a une réunion lundi."
+    },
+    {
+      "id": 487,
+      "word": "argent",
+      "sentence1": "Il me faut plus d'argent.",
+      "sentence2": "Elle a économisé pour des vacances."
+    },
+    {
+      "id": 488,
+      "word": "mois",
+      "sentence1": "Février est le mois le plus court.",
+      "sentence2": "Elle est née au mois de mai."
+    },
+    {
+      "id": 489,
+      "word": "plus",
+      "sentence1": "Il me faut plus de temps.",
+      "sentence2": "Elle veut en savoir plus sur le sujet."
+    },
+    {
+      "id": 490,
+      "word": "le matin",
+      "sentence1": "Je me réveille tôt le matin.",
+      "sentence2": "Elle aime aller courir le matin."
+    },
+    {
+      "id": 491,
+      "word": "le plus souvent",
+      "sentence1": "C'est le livre le plus intéressant que j'ai lu.",
+      "sentence2": "C'est l'artiste la plus talentueuse du groupe."
+    },
+    {
+      "id": 492,
+      "word": "mère",
+      "sentence1": "Ma mère est enseignante.",
+      "sentence2": "Elle s'occupe de sa mère."
+    },
+    {
+      "id": 493,
+      "word": "montagne",
+      "sentence1": "La montagne est couverte de neige.",
+      "sentence2": "Elle a escaladé la montagne l'été dernier."
+    },
+    {
+      "id": 494,
+      "word": "souris",
+      "sentence1": "La souris a couru sur le sol.",
+      "sentence2": "Elle a une souris."
+    },
+    {
+      "id": 495,
+      "word": "la bouche",
+      "sentence1": "Ouvrez la bouche à grande échelle.",
+      "sentence2": "Elle a un beau sourire sur la bouche."
+    },
+    {
+      "id": 496,
+      "word": "déménage",
+      "sentence1": "S'il vous plaît, déplacez votre chaise.",
+      "sentence2": "Elle veut emménager dans une nouvelle maison."
+    },
+    {
+      "id": 497,
+      "word": "le film",
+      "sentence1": "J'ai regardé un super film hier soir.",
+      "sentence2": "Elle aime regarder des films romantiques."
+    },
+    {
+      "id": 498,
+      "word": "beaucoup",
+      "sentence1": "Je n'ai pas beaucoup de temps.",
+      "sentence2": "Elle ne mange pas beaucoup."
+    },
+    {
+      "id": 499,
+      "word": "je vous en prie",
+      "sentence1": "Ma mère est ma meilleure amie.",
+      "sentence2": "C'est une mère géniale."
+    },
+    {
+      "id": 500,
+      "word": "musée",
+      "sentence1": "J'ai visité le musée d'art.",
+      "sentence2": "Elle adore aller dans les musées."
+    },
+    {
+      "id": 501,
+      "word": "musique",
+      "sentence1": "J'écoute de la musique tous les jours.",
+      "sentence2": "Elle joue de la musique le soir."
+    },
+    {
+      "id": 502,
+      "word": "de l'eau",
+      "sentence1": "Tu dois finir tes devoirs.",
+      "sentence2": "Elle doit être au travail à 9 h."
+    },
+    {
+      "id": 503,
+      "word": "ça va",
+      "sentence1": "Ceci est mon livre.",
+      "sentence2": "Elle est ma meilleure amie."
+    },
+    {
+      "id": 504,
+      "word": "nom",
+      "sentence1": "Quel est votre nom ?",
+      "sentence2": "Elle a écrit son nom sur le papier."
+    },
+    {
+      "id": 505,
+      "word": "naturelle",
+      "sentence1": "C'est un produit naturel.",
+      "sentence2": "Elle préfère les ingrédients naturels."
+    },
+    {
+      "id": 506,
+      "word": "près",
+      "sentence1": "Le magasin est près de chez moi.",
+      "sentence2": "Elle habite près du parc."
+    },
+    {
+      "id": 507,
+      "word": "nécessité",
+      "sentence1": "Il me faut un verre d'eau.",
+      "sentence2": "Elle a besoin d'aide pour ses devoirs."
+    },
+    {
+      "id": 508,
+      "word": "négatif",
+      "sentence1": "C'est une réponse négative.",
+      "sentence2": "Elle est négative."
+    },
+    {
+      "id": 509,
+      "word": "voisin",
+      "sentence1": "Mon voisin est très amical.",
+      "sentence2": "Elle discute souvent avec sa voisine."
+    },
+    {
+      "id": 510,
+      "word": "jamais",
+      "sentence1": "Je ne prends jamais de petit déjeuner.",
+      "sentence2": "Elle n'a jamais été à Paris."
+    },
+    {
+      "id": 511,
+      "word": "nouveau",
+      "sentence1": "J'ai acheté une nouvelle voiture.",
+      "sentence2": "Elle porte une nouvelle robe."
+    },
+    {
+      "id": 512,
+      "word": "les nouvelles",
+      "sentence1": "Je lis le journal tous les matins.",
+      "sentence2": "Elle aime regarder les infos."
+    },
+    {
+      "id": 513,
+      "word": "journaux",
+      "sentence1": "Je m'abonne à un quotidien.",
+      "sentence2": "Elle lit le journal au petit déjeuner."
+    },
+    {
+      "id": 514,
+      "word": "suivante",
+      "sentence1": "Quel est le prochain train ?",
+      "sentence2": "Elle est assise dans la pièce d'à côté."
+    },
+    {
+      "id": 515,
+      "word": "à côté de",
+      "sentence1": "La banque est à côté de la poste.",
+      "sentence2": "Elle vit à côté de sa meilleure amie."
+    },
+    {
+      "id": 516,
+      "word": "ça va",
+      "sentence1": "C'est un bon endroit pour se détendre.",
+      "sentence2": "Elle a un beau sourire."
+    },
+    {
+      "id": 517,
+      "word": "nuit",
+      "sentence1": "J'aime regarder les étoiles la nuit.",
+      "sentence2": "Elle travaille de nuit."
+    },
+    {
+      "id": 518,
+      "word": "neuf ans",
+      "sentence1": "Je possède neuf pommes.",
+      "sentence2": "Elle est née le 9 mai."
+    },
+    {
+      "id": 519,
+      "word": "dix-neuf",
+      "sentence1": "Elle a dix-neuf ans.",
+      "sentence2": "Dix-neuf est mon chiffre préféré."
+    },
+    {
+      "id": 520,
+      "word": "quatre-vingt dix",
+      "sentence1": "J'ai quatre-vingt dix dollars.",
+      "sentence2": "Elle est née en 1990."
+    },
+    {
+      "id": 521,
+      "word": "je ne sais pas",
+      "sentence1": "Je ne veux pas y aller.",
+      "sentence2": "Elle a refusé l'offre."
+    },
+    {
+      "id": 522,
+      "word": "personne",
+      "sentence1": "Personne ne connaît la réponse.",
+      "sentence2": "Elle avait l'impression que personne ne la comprenait."
+    },
+    {
+      "id": 523,
+      "word": "personne",
+      "sentence1": "Personne n'est parfait.",
+      "sentence2": "Elle a dit que personne ne l'avait appelée."
+    },
+    {
+      "id": 524,
+      "word": "le nord",
+      "sentence1": "Le pôle Nord est très froid.",
+      "sentence2": "Elle habite au nord de la ville."
+    },
+    {
+      "id": 525,
+      "word": "le nez",
+      "sentence1": "Il a un gros nez.",
+      "sentence2": "Elle se pinça le nez à l'odeur."
+    },
+    {
+      "id": 526,
+      "word": "pas",
+      "sentence1": "Ce n'est pas mon livre.",
+      "sentence2": "Elle n'est pas satisfaite des résultats."
+    },
+    {
+      "id": 527,
+      "word": "note",
+      "sentence1": "Veuillez prendre note de ceci.",
+      "sentence2": "Elle a laissé un mot sur la table."
+    },
+    {
+      "id": 528,
+      "word": "rien du tout",
+      "sentence1": "Il n'y a rien à craindre.",
+      "sentence2": "Elle n'a rien dit pendant la réunion."
+    },
+    {
+      "id": 529,
+      "word": "novembre",
+      "sentence1": "Mon anniversaire est en novembre.",
+      "sentence2": "Elle adore l'automne en novembre."
+    },
+    {
+      "id": 530,
+      "word": "à présent",
+      "sentence1": "Je vais le faire maintenant.",
+      "sentence2": "Elle est ici maintenant."
+    },
+    {
+      "id": 531,
+      "word": "numéro",
+      "sentence1": "Quel est votre numéro de téléphone ?",
+      "sentence2": "Elle a un numéro porte-bonheur."
+    },
+    {
+      "id": 532,
+      "word": "infirmière",
+      "sentence1": "L'infirmière vous aidera.",
+      "sentence2": "Elle veut être infirmière."
+    },
+    {
+      "id": 533,
+      "word": "objet",
+      "sentence1": "Cet objet est lourd.",
+      "sentence2": "Elle a trouvé un objet intéressant."
+    },
+    {
+      "id": 534,
+      "word": "à une heure",
+      "sentence1": "La réunion est à trois heures.",
+      "sentence2": "Elle se réveille toujours à sept heures."
+    },
+    {
+      "id": 535,
+      "word": "octobre",
+      "sentence1": "Mon anniversaire est en octobre.",
+      "sentence2": "Elle adore les couleurs d'octobre."
+    },
+    {
+      "id": 536,
+      "word": "de",
+      "sentence1": "La couverture du livre est bleue.",
+      "sentence2": "C'est une amie à moi."
+    },
+    {
+      "id": 537,
+      "word": "éteinte",
+      "sentence1": "Les lumières sont éteintes.",
+      "sentence2": "Elle a pris sa journée."
+    },
+    {
+      "id": 538,
+      "word": "siège",
+      "sentence1": "Je travaille dans un bureau.",
+      "sentence2": "Elle a un grand bureau."
+    },
+    {
+      "id": 539,
+      "word": "fréquemment",
+      "sentence1": "Je vais souvent au gymnase.",
+      "sentence2": "Elle lit souvent avant de se coucher."
+    },
+    {
+      "id": 540,
+      "word": "je suis désolé",
+      "sentence1": "Je ne t'avais pas vu.",
+      "sentence2": "Oh, c'est intéressant !"
+    },
+    {
+      "id": 541,
+      "word": "ça va",
+      "sentence1": "- Cette place est prise ?",
+      "sentence2": "Elle a dit qu'on pouvait partir plus tôt."
+    },
+    {
+      "id": 542,
+      "word": "vieillesse",
+      "sentence1": "Mon grand-père est très vieux.",
+      "sentence2": "Elle a une vieille voiture."
+    },
+    {
+      "id": 543,
+      "word": "le",
+      "sentence1": "Le livre est sur la table.",
+      "sentence2": "Elle est au téléphone."
+    },
+    {
+      "id": 544,
+      "word": "une fois",
+      "sentence1": "J'y suis déjà allé une fois.",
+      "sentence2": "Elle l'a déjà dit une fois."
+    },
+    {
+      "id": 545,
+      "word": "une",
+      "sentence1": "J'ai une sœur.",
+      "sentence2": "C'est celle dont je vous ai parlé."
+    },
+    {
+      "id": 546,
+      "word": "poivre",
+      "sentence1": "Il me faut un oignon pour la recette.",
+      "sentence2": "Elle n'aime pas les oignons dans sa salade."
+    },
+    {
+      "id": 547,
+      "word": "en ligne",
+      "sentence1": "Je l'ai trouvé en ligne.",
+      "sentence2": "Elle préfère faire ses achats en ligne."
+    },
+    {
+      "id": 548,
+      "word": "seulement",
+      "sentence1": "Je n'ai que cinq dollars.",
+      "sentence2": "Elle est la seule à pouvoir t'aider."
+    },
+    {
+      "id": 549,
+      "word": "ouvert",
+      "sentence1": "S'il vous plaît, ouvrez la fenêtre.",
+      "sentence2": "Elle aime laisser la porte ouverte."
+    },
+    {
+      "id": 550,
+      "word": "avis de groupe",
+      "sentence1": "Quelle est votre opinion sur cette question ?",
+      "sentence2": "Elle a une forte opinion sur la politique."
+    },
+    {
+      "id": 551,
+      "word": "opposé",
+      "sentence1": "Le contraire de l'amour est la haine.",
+      "sentence2": "Elle habite de l'autre côté de la rue."
+    },
+    {
+      "id": 552,
+      "word": "ou",
+      "sentence1": "Vous voulez du thé ou du café ?",
+      "sentence2": "Elle chante ou danse."
+    },
+    {
+      "id": 553,
+      "word": "de couleur orange",
+      "sentence1": "J'aime le jus d'orange.",
+      "sentence2": "Elle portait une robe orange."
+    },
+    {
+      "id": 554,
+      "word": "ordre",
+      "sentence1": "Je voudrais passer une commande.",
+      "sentence2": "Elle a annulé sa commande."
+    },
+    {
+      "id": 555,
+      "word": "autres",
+      "sentence1": "J'ai une autre idée.",
+      "sentence2": "Elle est mon autre moitié."
+    },
+    {
+      "id": 556,
+      "word": "notre",
+      "sentence1": "C'est notre maison.",
+      "sentence2": "Elle fait partie de notre équipe."
+    },
+    {
+      "id": 557,
+      "word": "à l'extérieur",
+      "sentence1": "Allons faire un tour.",
+      "sentence2": "Elle n'est pas au bureau aujourd'hui."
+    },
+    {
+      "id": 558,
+      "word": "à l'extérieur",
+      "sentence1": "Les enfants jouent dehors.",
+      "sentence2": "Elle préfère travailler dehors."
+    },
+    {
+      "id": 559,
+      "word": "à plus",
+      "sentence1": "Le tableau est accroché sur le canapé.",
+      "sentence2": "Elle a regardé les documents."
+    },
+    {
+      "id": 560,
+      "word": "propre",
+      "sentence1": "J'ai ma propre voiture.",
+      "sentence2": "Elle est fière de son travail."
+    },
+    {
+      "id": 561,
+      "word": "page",
+      "sentence1": "Tournez à la page 10.",
+      "sentence2": "Elle a marqué la page."
+    },
+    {
+      "id": 562,
+      "word": "peinture",
+      "sentence1": "Je dois acheter de la peinture.",
+      "sentence2": "Elle aime peindre des paysages."
+    },
+    {
+      "id": 563,
+      "word": "peinture",
+      "sentence1": "J'aime peindre dans mon temps libre.",
+      "sentence2": "Elle a un beau tableau dans son salon."
+    },
+    {
+      "id": 564,
+      "word": "paire",
+      "sentence1": "J'ai acheté une nouvelle paire de chaussures.",
+      "sentence2": "Elle a une paire de boucles d'oreilles assorties."
+    },
+    {
+      "id": 565,
+      "word": "de papier",
+      "sentence1": "Il me faut une feuille.",
+      "sentence2": "Elle a écrit ses notes sur du papier."
+    },
+    {
+      "id": 566,
+      "word": "le paragraphe",
+      "sentence1": "Veuillez lire le premier paragraphe.",
+      "sentence2": "Elle a écrit un paragraphe sur ses vacances."
+    },
+    {
+      "id": 567,
+      "word": "père",
+      "sentence1": "Mes parents vivent dans une autre ville.",
+      "sentence2": "Elle est mère célibataire."
+    },
+    {
+      "id": 568,
+      "word": "le parc",
+      "sentence1": "Allons faire une promenade dans le parc.",
+      "sentence2": "Elle aime les pique-niques dans le parc."
+    },
+    {
+      "id": 569,
+      "word": "une partie",
+      "sentence1": "Il me faut une pièce pour ma voiture.",
+      "sentence2": "Elle travaille sur un nouveau rôle pour le projet."
+    },
+    {
+      "id": 570,
+      "word": "associé",
+      "sentence1": "Il est mon associé.",
+      "sentence2": "Elle cherche un partenaire pour collaborer."
+    },
+    {
+      "id": 571,
+      "word": "groupe",
+      "sentence1": "On fait une fête samedi.",
+      "sentence2": "Elle adore organiser des fêtes surprises."
+    },
+    {
+      "id": 572,
+      "word": "le passeport",
+      "sentence1": "Je dois renouveler mon passeport.",
+      "sentence2": "Elle a perdu son passeport en voyageant."
+    },
+    {
+      "id": 573,
+      "word": "passé",
+      "sentence1": "Ne nous attardons pas sur le passé.",
+      "sentence2": "Elle a appris de ses erreurs passées."
+    },
+    {
+      "id": 574,
+      "word": "le salaire",
+      "sentence1": "Je dois payer les factures.",
+      "sentence2": "Elle paie toujours ses dettes à temps."
+    },
+    {
+      "id": 575,
+      "word": "le stylo",
+      "sentence1": "Je peux emprunter votre stylo ?",
+      "sentence2": "Elle écrit avec un stylo bleu."
+    },
+    {
+      "id": 576,
+      "word": "un crayon",
+      "sentence1": "Je préfère utiliser un crayon.",
+      "sentence2": "Elle a dessiné un croquis avec un crayon."
+    },
+    {
+      "id": 577,
+      "word": "le peuple",
+      "sentence1": "Il y avait beaucoup de gens à l'événement.",
+      "sentence2": "Elle aime rencontrer de nouvelles personnes."
+    },
+    {
+      "id": 578,
+      "word": "poivre",
+      "sentence1": "J'aime ajouter du poivre à ma nourriture.",
+      "sentence2": "Elle a acheté un poivre rouge au marché."
+    },
+    {
+      "id": 579,
+      "word": "parfait",
+      "sentence1": "C'est la solution parfaite.",
+      "sentence2": "Elle a un score parfait au test."
+    },
+    {
+      "id": 580,
+      "word": "période",
+      "sentence1": "Je traverse une période difficile.",
+      "sentence2": "Elle a étudié pendant la période des examens."
+    },
+    {
+      "id": 581,
+      "word": "personne",
+      "sentence1": "C'est une personne gentille.",
+      "sentence2": "Elle est la première personne à arriver."
+    },
+    {
+      "id": 582,
+      "word": "personnelle",
+      "sentence1": "C'est une affaire personnelle.",
+      "sentence2": "Elle a partagé ses expériences personnelles."
+    },
+    {
+      "id": 583,
+      "word": "téléphone",
+      "sentence1": "Je dois recharger mon téléphone.",
+      "sentence2": "Elle a répondu au téléphone rapidement."
+    },
+    {
+      "id": 584,
+      "word": "photo de famille",
+      "sentence1": "J'ai pris une photo du coucher de soleil.",
+      "sentence2": "Elle a une collection de vieilles photos."
+    },
+    {
+      "id": 585,
+      "word": "photo de famille",
+      "sentence1": "Cette photo a été prise l'année dernière.",
+      "sentence2": "Elle aime exposer ses photos."
+    },
+    {
+      "id": 586,
+      "word": "phrase",
+      "sentence1": "Pouvez-vous expliquer cette phrase ?",
+      "sentence2": "Elle a utilisé une phrase courante dans son discours."
+    },
+    {
+      "id": 587,
+      "word": "le piano",
+      "sentence1": "Je veux apprendre le piano.",
+      "sentence2": "Elle joue du piano magnifiquement."
+    },
+    {
+      "id": 588,
+      "word": "une image",
+      "sentence1": "Pouvez-vous me montrer la photo ?",
+      "sentence2": "Elle a peint un beau tableau."
+    },
+    {
+      "id": 589,
+      "word": "pièce",
+      "sentence1": "Il me faut un morceau de papier.",
+      "sentence2": "Elle m'a donné un conseil."
+    },
+    {
+      "id": 590,
+      "word": "de porc",
+      "sentence1": "Le cochon est dans l'enclos.",
+      "sentence2": "Elle a élevé un cochon dans sa ferme."
+    },
+    {
+      "id": 591,
+      "word": "rose",
+      "sentence1": "Ma couleur préférée est le rose.",
+      "sentence2": "Elle portait une robe rose à la fête."
+    },
+    {
+      "id": 592,
+      "word": "lieu",
+      "sentence1": "C'est un bon endroit pour se détendre.",
+      "sentence2": "Elle a trouvé un endroit tranquille pour lire."
+    },
+    {
+      "id": 593,
+      "word": "projet",
+      "sentence1": "J'ai un plan pour le week-end.",
+      "sentence2": "Elle fit un plan détaillé pour le projet."
+    },
+    {
+      "id": 594,
+      "word": "plané",
+      "sentence1": "L'avion vole haut.",
+      "sentence2": "Elle est dans un avion pour New York."
+    },
+    {
+      "id": 595,
+      "word": "végétaux",
+      "sentence1": "J'ai une plante dans ma chambre.",
+      "sentence2": "Elle arrose la plante tous les jours."
+    },
+    {
+      "id": 596,
+      "word": "jeu",
+      "sentence1": "Les enfants adorent jouer dehors.",
+      "sentence2": "Elle joue au football le week-end."
+    },
+    {
+      "id": 597,
+      "word": "joueur",
+      "sentence1": "C'est un joueur talentueux.",
+      "sentence2": "C'est la meilleure joueuse de l'équipe."
+    },
+    {
+      "id": 598,
+      "word": "je vous en prie",
+      "sentence1": "Tu peux m'aider, s'il te plait ?",
+      "sentence2": "Elle a dit oui, s'il te plaît."
+    },
+    {
+      "id": 599,
+      "word": "le point",
+      "sentence1": "Tu vois ce point sur la carte ?",
+      "sentence2": "Elle a fait une remarque importante dans la discussion."
+    },
+    {
+      "id": 600,
+      "word": "police",
+      "sentence1": "La police enquête sur cette affaire.",
+      "sentence2": "Elle veut devenir policière."
+    },
+    {
+      "id": 601,
+      "word": "officier de police",
+      "sentence1": "Le policier a aidé l'enfant perdu.",
+      "sentence2": "Elle remercia le policier de son aide."
+    },
+    {
+      "id": 602,
+      "word": "piscine",
+      "sentence1": "La piscine est ouverte en été.",
+      "sentence2": "Elle aime nager dans la piscine."
+    },
+    {
+      "id": 603,
+      "word": "pauvres",
+      "sentence1": "La pauvre famille a besoin d'aide.",
+      "sentence2": "Elle donnait des vêtements aux pauvres."
+    },
+    {
+      "id": 604,
+      "word": "populaire",
+      "sentence1": "Cette chanson est très populaire.",
+      "sentence2": "Elle est une figure populaire dans la communauté."
+    },
+    {
+      "id": 605,
+      "word": "positifs",
+      "sentence1": "Elle a une attitude positive.",
+      "sentence2": "Les retours ont été très positifs."
+    },
+    {
+      "id": 606,
+      "word": "peut être",
+      "sentence1": "On peut se voir demain ?",
+      "sentence2": "Elle a permis de terminer à l'heure."
+    },
+    {
+      "id": 607,
+      "word": "poste de commandement",
+      "sentence1": "Je dois envoyer cette lettre par la poste.",
+      "sentence2": "Elle travaille à la poste."
+    },
+    {
+      "id": 608,
+      "word": "pomme de terre",
+      "sentence1": "Je veux manger une pomme de terre au four.",
+      "sentence2": "Elle planta des pommes de terre dans son jardin."
+    },
+    {
+      "id": 609,
+      "word": "une livre",
+      "sentence1": "La livre est une unité de poids.",
+      "sentence2": "Elle a soulevé une livre de pommes de terre."
+    },
+    {
+      "id": 610,
+      "word": "pratique",
+      "sentence1": "La pratique rend parfait.",
+      "sentence2": "Elle a besoin de plus de pratique pour s'améliorer."
+    },
+    {
+      "id": 611,
+      "word": "pratique",
+      "sentence1": "Je dois pratiquer mon anglais.",
+      "sentence2": "Elle pratique le piano tous les jours."
+    },
+    {
+      "id": 612,
+      "word": "préférer",
+      "sentence1": "Je préfère le thé au café.",
+      "sentence2": "Elle préfère lire des livres le soir."
+    },
+    {
+      "id": 613,
+      "word": "préparer",
+      "sentence1": "Je dois me préparer pour l'examen.",
+      "sentence2": "Elle a préparé un délicieux repas pour le dîner."
+    },
+    {
+      "id": 614,
+      "word": "présent",
+      "sentence1": "Je voudrais vous présenter mon projet.",
+      "sentence2": "Elle a présenté ses découvertes à la conférence."
+    },
+    {
+      "id": 615,
+      "word": "elle est jolie",
+      "sentence1": "Elle a un joli sourire.",
+      "sentence2": "Le jardin est joli au printemps."
+    },
+    {
+      "id": 616,
+      "word": "le prix",
+      "sentence1": "Quel est le prix de ce livre ?",
+      "sentence2": "Elle a eu un bon prix pour sa nouvelle voiture."
+    },
+    {
+      "id": 617,
+      "word": "il est probable",
+      "sentence1": "Il va probablement pleuvoir demain.",
+      "sentence2": "Elle est probablement à la maison en ce moment."
+    },
+    {
+      "id": 618,
+      "word": "problème",
+      "sentence1": "Nous devons résoudre ce problème.",
+      "sentence2": "Elle avait un problème avec son ordinateur."
+    },
+    {
+      "id": 619,
+      "word": "produit",
+      "sentence1": "Ce produit est très populaire.",
+      "sentence2": "Elle a acheté un nouveau produit au magasin."
+    },
+    {
+      "id": 620,
+      "word": "le programme",
+      "sentence1": "Je regarde un nouveau programme à la télévision.",
+      "sentence2": "Elle est responsable du programme de formation."
+    },
+    {
+      "id": 621,
+      "word": "projet",
+      "sentence1": "Je travaille sur un projet scolaire.",
+      "sentence2": "Elle a présenté son projet à la classe."
+    },
+    {
+      "id": 622,
+      "word": "rouge à lèvres",
+      "sentence1": "Ma couleur préférée est le violet.",
+      "sentence2": "Elle portait une magnifique robe violette."
+    },
+    {
+      "id": 623,
+      "word": "mise en place",
+      "sentence1": "Mettez le livre sur l'étagère, s'il vous plaît.",
+      "sentence2": "Elle a mis son téléphone dans son sac."
+    },
+    {
+      "id": 624,
+      "word": "troisième trimestre",
+      "sentence1": "Il reste un quart du gâteau.",
+      "sentence2": "Elle a payé un quart pour le billet de bus."
+    },
+    {
+      "id": 625,
+      "word": "question posée",
+      "sentence1": "Je peux te poser une question ?",
+      "sentence2": "Elle a une question sur les devoirs."
+    },
+    {
+      "id": 626,
+      "word": "très vite",
+      "sentence1": "Il apprend vite.",
+      "sentence2": "Elle a donné une réponse rapide à la question."
+    },
+    {
+      "id": 627,
+      "word": "rapidement",
+      "sentence1": "Veuillez finir vos devoirs rapidement.",
+      "sentence2": "Elle a vite compris son erreur."
+    },
+    {
+      "id": 628,
+      "word": "le silence",
+      "sentence1": "S'il vous plaît, faites silence dans la bibliothèque.",
+      "sentence2": "Elle apprécie le calme de la campagne."
+    },
+    {
+      "id": 629,
+      "word": "assez",
+      "sentence1": "Il fait assez froid dehors.",
+      "sentence2": "Elle est plutôt bonne en mathématiques."
+    },
+    {
+      "id": 630,
+      "word": "émetteur",
+      "sentence1": "J'écoute la radio chaque matin.",
+      "sentence2": "Elle travaille pour une station de radio."
+    },
+    {
+      "id": 631,
+      "word": "pluie",
+      "sentence1": "J'adore écouter le bruit de la pluie.",
+      "sentence2": "Elle a été prise dans la pluie sans parapluie."
+    },
+    {
+      "id": 632,
+      "word": "à lire",
+      "sentence1": "J'aime lire avant de me coucher.",
+      "sentence2": "Elle lit un livre chaque semaine."
+    },
+    {
+      "id": 633,
+      "word": "lecteur",
+      "sentence1": "Le lecteur est toujours impliqué dans l'histoire.",
+      "sentence2": "Elle est une lectrice vorace."
+    },
+    {
+      "id": 634,
+      "word": "lecteur",
+      "sentence1": "La lecture est un excellent moyen de se détendre.",
+      "sentence2": "Elle aime lire des romans policiers."
+    },
+    {
+      "id": 635,
+      "word": "je suis prêt",
+      "sentence1": "Tu es prête à partir ?",
+      "sentence2": "Elle est prête pour le test."
+    },
+    {
+      "id": 636,
+      "word": "réelle",
+      "sentence1": "C'est un vrai diamant.",
+      "sentence2": "Elle veut voir un vrai changement dans le monde."
+    },
+    {
+      "id": 637,
+      "word": "c' est vrai",
+      "sentence1": "J'aime vraiment cette chanson.",
+      "sentence2": "Elle est vraiment bonne dans son travail."
+    },
+    {
+      "id": 638,
+      "word": "le motif",
+      "sentence1": "Quelle est la raison de votre visite ?",
+      "sentence2": "Elle a une bonne raison d'être en retard."
+    },
+    {
+      "id": 639,
+      "word": "rouge",
+      "sentence1": "Ma couleur préférée est le rouge.",
+      "sentence2": "Elle portait une robe rouge à la fête."
+    },
+    {
+      "id": 640,
+      "word": "rassurez-vous un peu",
+      "sentence1": "J'aime me détendre au bord de la piscine.",
+      "sentence2": "Elle prend un bain pour se détendre."
+    },
+    {
+      "id": 641,
+      "word": "n'oubliez pas",
+      "sentence1": "N'oubliez pas d'éteindre les lumières.",
+      "sentence2": "Elle ne se souvient pas où elle a mis ses clés."
+    },
+    {
+      "id": 642,
+      "word": "répétez",
+      "sentence1": "Pouvez-vous répéter, s'il vous plaît ?",
+      "sentence2": "Elle a dû répéter l'exercice plusieurs fois."
+    },
+    {
+      "id": 643,
+      "word": "le rapport",
+      "sentence1": "Je dois faire un rapport pour le travail.",
+      "sentence2": "Elle a remis son rapport à temps."
+    },
+    {
+      "id": 644,
+      "word": "salle à manger",
+      "sentence1": "Allons au restaurant pour dîner.",
+      "sentence2": "Elle travaille dans un restaurant chic."
+    },
+    {
+      "id": 645,
+      "word": "résultat",
+      "sentence1": "Quel a été le résultat de l'expérience ?",
+      "sentence2": "Elle était satisfaite du résultat."
+    },
+    {
+      "id": 646,
+      "word": "retour",
+      "sentence1": "Je rendrai le livre demain.",
+      "sentence2": "Elle est rentrée à la maison après le voyage."
+    },
+    {
+      "id": 647,
+      "word": "le riz",
+      "sentence1": "J'aime manger du riz avec mes repas.",
+      "sentence2": "Elle a fait du riz pour le dîner."
+    },
+    {
+      "id": 648,
+      "word": "riche",
+      "sentence1": "C'est un homme riche.",
+      "sentence2": "Elle veut épouser un mari riche."
+    },
+    {
+      "id": 649,
+      "word": "le vélo",
+      "sentence1": "J'aime faire du vélo dans le parc.",
+      "sentence2": "Elle montait un cheval pour la première fois."
+    },
+    {
+      "id": 650,
+      "word": "à droite",
+      "sentence1": "Tournez à droite au feu de circulation.",
+      "sentence2": "Elle est assise à ma droite."
+    },
+    {
+      "id": 651,
+      "word": "rivière",
+      "sentence1": "La rivière coule à travers la vallée.",
+      "sentence2": "Elle aime pêcher dans la rivière."
+    },
+    {
+      "id": 652,
+      "word": "route",
+      "sentence1": "La route est fermée pour des travaux.",
+      "sentence2": "Elle habite sur une route calme."
+    },
+    {
+      "id": 653,
+      "word": "salle",
+      "sentence1": "Ceci est ma chambre.",
+      "sentence2": "Elle a nettoyé sa chambre hier."
+    },
+    {
+      "id": 654,
+      "word": "routine",
+      "sentence1": "J'ai une routine matinale.",
+      "sentence2": "Elle suit un programme d'exercice strict."
+    },
+    {
+      "id": 655,
+      "word": "règle",
+      "sentence1": "Vous devez suivre les règles.",
+      "sentence2": "Elle a enfreint la règle et elle a eu des ennuis."
+    },
+    {
+      "id": 656,
+      "word": "courir",
+      "sentence1": "J'aime courir le matin.",
+      "sentence2": "Elle court 8 km tous les jours."
+    },
+    {
+      "id": 657,
+      "word": "je suis triste",
+      "sentence1": "Elle a l'air triste aujourd'hui.",
+      "sentence2": "Je suis triste de cette situation."
+    },
+    {
+      "id": 658,
+      "word": "salade",
+      "sentence1": "Je veux une salade pour le déjeuner.",
+      "sentence2": "Elle a fait une salade délicieuse."
+    },
+    {
+      "id": 659,
+      "word": "le sel",
+      "sentence1": "Passez-moi le sel, s'il vous plaît.",
+      "sentence2": "Elle ajouta du sel à la soupe."
+    },
+    {
+      "id": 660,
+      "word": "même",
+      "sentence1": "Nous avons le même problème.",
+      "sentence2": "Elle portait la même robe que moi."
+    },
+    {
+      "id": 661,
+      "word": "un sandwich",
+      "sentence1": "Je voudrais un sandwich pour le déjeuner.",
+      "sentence2": "Elle a fait un sandwich à la dinde."
+    },
+    {
+      "id": 662,
+      "word": "le samedi",
+      "sentence1": "Le samedi est mon jour préféré.",
+      "sentence2": "Elle a une fête samedi."
+    },
+    {
+      "id": 663,
+      "word": "je vous en prie",
+      "sentence1": "Tu as dit quoi ?",
+      "sentence2": "Elle n'a rien dit."
+    },
+    {
+      "id": 664,
+      "word": "école",
+      "sentence1": "Je vais à l'école tous les jours.",
+      "sentence2": "Elle est étudiante à l'école."
+    },
+    {
+      "id": 665,
+      "word": "science",
+      "sentence1": "La science est fascinante.",
+      "sentence2": "Elle veut étudier les sciences."
+    },
+    {
+      "id": 666,
+      "word": "scientifique",
+      "sentence1": "Il est un scientifique.",
+      "sentence2": "Elle veut être scientifique."
+    },
+    {
+      "id": 667,
+      "word": "mer",
+      "sentence1": "La mer est calme aujourd'hui.",
+      "sentence2": "Elle adore nager dans la mer."
+    },
+    {
+      "id": 668,
+      "word": "deuxième",
+      "sentence1": "C'est ma deuxième tentative.",
+      "sentence2": "Elle a terminé deuxième."
+    },
+    {
+      "id": 669,
+      "word": "secteur",
+      "sentence1": "C'est une section difficile.",
+      "sentence2": "Elle a lu la section attentivement."
+    },
+    {
+      "id": 670,
+      "word": "voir",
+      "sentence1": "Je vois un oiseau dans l'arbre.",
+      "sentence2": "Elle peut voir les montagnes depuis sa fenêtre."
+    },
+    {
+      "id": 671,
+      "word": "à vendre",
+      "sentence1": "Je veux vendre ma vieille voiture.",
+      "sentence2": "Elle vend des bijoux faits à la main en ligne."
+    },
+    {
+      "id": 672,
+      "word": "envoyer",
+      "sentence1": "S'il vous plaît, envoyez-moi les détails.",
+      "sentence2": "Elle a envoyé une lettre à son amie."
+    },
+    {
+      "id": 673,
+      "word": "phrase",
+      "sentence1": "Pouvez-vous écrire une phrase ?",
+      "sentence2": "Elle parlait en phrases complètes."
+    },
+    {
+      "id": 674,
+      "word": "septembre",
+      "sentence1": "Septembre est le neuvième mois.",
+      "sentence2": "Elle est née en septembre."
+    },
+    {
+      "id": 675,
+      "word": "sept",
+      "sentence1": "J'ai sept pommes.",
+      "sentence2": "Elle a sept ans."
+    },
+    {
+      "id": 676,
+      "word": "dix-sept",
+      "sentence1": "Dix-sept est mon chiffre préféré.",
+      "sentence2": "Elle a eu dix-sept ans la semaine dernière."
+    },
+    {
+      "id": 677,
+      "word": "soixante dix",
+      "sentence1": "Soixante-dix est un grand nombre.",
+      "sentence2": "Elle a soixante-dix ans."
+    },
+    {
+      "id": 678,
+      "word": "partage",
+      "sentence1": "Tu peux partager tes jouets ?",
+      "sentence2": "Elle aime partager sa nourriture."
+    },
+    {
+      "id": 679,
+      "word": "elle",
+      "sentence1": "Elle est ma meilleure amie.",
+      "sentence2": "Je l'ai vue hier."
+    },
+    {
+      "id": 680,
+      "word": "moutons et chèvres",
+      "sentence1": "Les moutons sont dans le champ.",
+      "sentence2": "Elle a un mouton."
+    },
+    {
+      "id": 681,
+      "word": "chemise",
+      "sentence1": "Il me faut une nouvelle chemise.",
+      "sentence2": "Elle a acheté une chemise bleue."
+    },
+    {
+      "id": 682,
+      "word": "chaussure",
+      "sentence1": "J'ai acheté une nouvelle paire de chaussures.",
+      "sentence2": "Elle adore ses chaussures rouges."
+    },
+    {
+      "id": 683,
+      "word": "boutique",
+      "sentence1": "Je dois aller au magasin.",
+      "sentence2": "Elle travaille dans un magasin de vêtements."
+    },
+    {
+      "id": 684,
+      "word": "le shopping",
+      "sentence1": "J'aime faire du shopping le week-end.",
+      "sentence2": "Elle est allée faire ses courses."
+    },
+    {
+      "id": 685,
+      "word": "courte",
+      "sentence1": "C'est une histoire courte.",
+      "sentence2": "Elle portait une robe courte."
+    },
+    {
+      "id": 686,
+      "word": "devrait",
+      "sentence1": "Tu devrais voir un médecin.",
+      "sentence2": "Elle devrait s'excuser."
+    },
+    {
+      "id": 687,
+      "word": "montrer",
+      "sentence1": "Tu peux me montrer le chemin ?",
+      "sentence2": "Elle m'a montré sa nouvelle robe."
+    },
+    {
+      "id": 688,
+      "word": "douche",
+      "sentence1": "J'aime prendre une douche le matin.",
+      "sentence2": "Elle a pris une longue douche."
+    },
+    {
+      "id": 689,
+      "word": "malade",
+      "sentence1": "Je me sens malade aujourd'hui.",
+      "sentence2": "Elle était malade la semaine dernière."
+    },
+    {
+      "id": 690,
+      "word": "similaire",
+      "sentence1": "Ces deux images sont similaires.",
+      "sentence2": "Elle a une robe similaire."
+    },
+    {
+      "id": 691,
+      "word": "le chant",
+      "sentence1": "J'adore chanter sous la douche.",
+      "sentence2": "Elle chante magnifiquement."
+    },
+    {
+      "id": 692,
+      "word": "chanteur",
+      "sentence1": "Ma sœur est chanteuse.",
+      "sentence2": "Elle veut être une chanteuse célèbre."
+    },
+    {
+      "id": 693,
+      "word": "sœur",
+      "sentence1": "J'ai une sœur.",
+      "sentence2": "C'est ma petite sœur."
+    },
+    {
+      "id": 694,
+      "word": "siège",
+      "sentence1": "Je vous en prie, asseyez-vous.",
+      "sentence2": "Elle aime s'asseoir près de la fenêtre."
+    },
+    {
+      "id": 695,
+      "word": "situation actuelle",
+      "sentence1": "C'est une situation difficile.",
+      "sentence2": "Elle a bien géré la situation."
+    },
+    {
+      "id": 696,
+      "word": "cinq",
+      "sentence1": "J'ai six livres.",
+      "sentence2": "Elle a six ans."
+    },
+    {
+      "id": 697,
+      "word": "dix-huit",
+      "sentence1": "Seize est mon nombre préféré.",
+      "sentence2": "Elle a eu seize ans le mois dernier."
+    },
+    {
+      "id": 698,
+      "word": "soixante",
+      "sentence1": "60 est un grand nombre.",
+      "sentence2": "Elle a soixante ans."
+    },
+    {
+      "id": 699,
+      "word": "compétence",
+      "sentence1": "Il a une compétence spéciale.",
+      "sentence2": "Elle apprend une nouvelle compétence."
+    },
+    {
+      "id": 700,
+      "word": "tailleur",
+      "sentence1": "J'aime bien ta jupe.",
+      "sentence2": "Elle portait une longue jupe."
+    },
+    {
+      "id": 701,
+      "word": "sommeil",
+      "sentence1": "Il me faut plus de sommeil.",
+      "sentence2": "Elle dort huit heures par nuit."
+    },
+    {
+      "id": 702,
+      "word": "lentement",
+      "sentence1": "Veuillez conduire lentement.",
+      "sentence2": "Elle lit lentement."
+    },
+    {
+      "id": 703,
+      "word": "petit",
+      "sentence1": "C'est une petite boîte.",
+      "sentence2": "Elle a un petit chien."
+    },
+    {
+      "id": 704,
+      "word": "serpent",
+      "sentence1": "Je vis un serpent dans le jardin.",
+      "sentence2": "Elle a peur des serpents."
+    },
+    {
+      "id": 705,
+      "word": "neige",
+      "sentence1": "La neige est tombée.",
+      "sentence2": "Elle aime jouer dans la neige."
+    },
+    {
+      "id": 706,
+      "word": "alors",
+      "sentence1": "J'étais fatigué, alors je me suis couché tôt.",
+      "sentence2": "Elle était heureuse, alors elle a souri."
+    },
+    {
+      "id": 707,
+      "word": "un peu",
+      "sentence1": "J'ai des idées.",
+      "sentence2": "Elle a acheté des pommes."
+    },
+    {
+      "id": 708,
+      "word": "quelqu'un",
+      "sentence1": "Il y a quelqu'un à la porte.",
+      "sentence2": "Elle connaît quelqu'un de célèbre."
+    },
+    {
+      "id": 709,
+      "word": "quelqu'un",
+      "sentence1": "Quelqu'un a oublié son sac.",
+      "sentence2": "Elle cherche quelqu'un pour l'aider."
+    },
+    {
+      "id": 710,
+      "word": "quelque chose",
+      "sentence1": "Je veux manger quelque chose.",
+      "sentence2": "Elle cache quelque chose."
+    },
+    {
+      "id": 711,
+      "word": "parfois",
+      "sentence1": "Je me promène parfois.",
+      "sentence2": "Elle rend visite à ses grands-parents parfois."
+    },
+    {
+      "id": 712,
+      "word": "fils",
+      "sentence1": "Mon fils joue dehors.",
+      "sentence2": "Elle a un fils et une fille."
+    },
+    {
+      "id": 713,
+      "word": "une chanson",
+      "sentence1": "J'adore cette chanson.",
+      "sentence2": "Elle a chanté une belle chanson."
+    },
+    {
+      "id": 714,
+      "word": "bientôt",
+      "sentence1": "Je vous appellerai bientôt.",
+      "sentence2": "Elle arrivera bientôt."
+    },
+    {
+      "id": 715,
+      "word": "je suis désolée",
+      "sentence1": "Je suis désolé pour l'erreur.",
+      "sentence2": "Elle était désolée d'entendre la nouvelle."
+    },
+    {
+      "id": 716,
+      "word": "le son",
+      "sentence1": "C'était quoi, ce bruit ?",
+      "sentence2": "Elle a un beau son de chant."
+    },
+    {
+      "id": 717,
+      "word": "soupe",
+      "sentence1": "J'ai fait de la soupe.",
+      "sentence2": "Elle aime la soupe aux tomates."
+    },
+    {
+      "id": 718,
+      "word": "au sud",
+      "sentence1": "Nous vivons dans le sud.",
+      "sentence2": "Elle a voyagé vers le sud pour l'hiver."
+    },
+    {
+      "id": 719,
+      "word": "espace",
+      "sentence1": "Il y a beaucoup de place ici.",
+      "sentence2": "Elle veut explorer l'espace."
+    },
+    {
+      "id": 720,
+      "word": "parlez",
+      "sentence1": "Je peux parler anglais.",
+      "sentence2": "Elle parle trois langues."
+    },
+    {
+      "id": 721,
+      "word": "spéciale",
+      "sentence1": "C'est une journée spéciale.",
+      "sentence2": "Elle a reçu un cadeau spécial."
+    },
+    {
+      "id": 722,
+      "word": "le sort",
+      "sentence1": "Pouvez-vous épeler votre nom ?",
+      "sentence2": "Elle a épellé le mot correctement."
+    },
+    {
+      "id": 723,
+      "word": "orthographe",
+      "sentence1": "L'orthographe est importante dans l'écriture.",
+      "sentence2": "Elle a gagné un concours d'orthographe."
+    },
+    {
+      "id": 724,
+      "word": "dépense",
+      "sentence1": "J'aime passer du temps avec des amis.",
+      "sentence2": "Elle a dépensé tout son argent."
+    },
+    {
+      "id": 725,
+      "word": "le sport",
+      "sentence1": "Le football est mon sport préféré.",
+      "sentence2": "Elle pratique beaucoup de sports."
+    },
+    {
+      "id": 726,
+      "word": "ressort",
+      "sentence1": "Le printemps est ma saison favorite.",
+      "sentence2": "Les fleurs fleurissent au printemps."
+    },
+    {
+      "id": 727,
+      "word": "démarche",
+      "sentence1": "Je vous en prie, levez-vous.",
+      "sentence2": "Elle se tenait près de la fenêtre."
+    },
+    {
+      "id": 728,
+      "word": "étoile",
+      "sentence1": "L'étoile brille avec éclat.",
+      "sentence2": "Elle veut être une star."
+    },
+    {
+      "id": 729,
+      "word": "démarrage",
+      "sentence1": "Je vais commencer mes devoirs.",
+      "sentence2": "Elle a commencé un nouveau projet."
+    },
+    {
+      "id": 730,
+      "word": "déclaration",
+      "sentence1": "Ceci est une déclaration claire.",
+      "sentence2": "Elle a fait une déclaration à ce sujet."
+    },
+    {
+      "id": 731,
+      "word": "poste de police",
+      "sentence1": "Le train arrive à la gare.",
+      "sentence2": "Elle m'a attendu à la gare."
+    },
+    {
+      "id": 732,
+      "word": "restez",
+      "sentence1": "Je resterai ici.",
+      "sentence2": "Elle est restée à l'hôtel."
+    },
+    {
+      "id": 733,
+      "word": "encore",
+      "sentence1": "J'attends toujours.",
+      "sentence2": "Elle travaille encore dessus."
+    },
+    {
+      "id": 734,
+      "word": "arrêtez",
+      "sentence1": "S'il vous plaît, arrêtez de parler.",
+      "sentence2": "Elle a arrêté la voiture."
+    },
+    {
+      "id": 735,
+      "word": "le récit",
+      "sentence1": "J'aime cette histoire.",
+      "sentence2": "Elle a raconté une histoire drôle."
+    },
+    {
+      "id": 736,
+      "word": "rue à",
+      "sentence1": "Le magasin est dans la rue.",
+      "sentence2": "Elle habite dans une rue calme."
+    },
+    {
+      "id": 737,
+      "word": "fort",
+      "sentence1": "C'est une personne forte.",
+      "sentence2": "Elle a une forte opinion."
+    },
+    {
+      "id": 738,
+      "word": "élève",
+      "sentence1": "L'étudiant est en train d'étudier.",
+      "sentence2": "Elle est une bonne élève."
+    },
+    {
+      "id": 739,
+      "word": "étude",
+      "sentence1": "Je dois étudier pour le test.",
+      "sentence2": "Elle étudie chaque soir."
+    },
+    {
+      "id": 740,
+      "word": "le style",
+      "sentence1": "J'aime votre style.",
+      "sentence2": "Elle a un style unique."
+    },
+    {
+      "id": 741,
+      "word": "le sujet",
+      "sentence1": "Quel est le sujet de la leçon ?",
+      "sentence2": "Elle s'intéresse au sujet."
+    },
+    {
+      "id": 742,
+      "word": "succès",
+      "sentence1": "La réussite exige un travail acharné.",
+      "sentence2": "Elle a obtenu un grand succès."
+    },
+    {
+      "id": 743,
+      "word": "sucre",
+      "sentence1": "Je prends mon café avec du sucre.",
+      "sentence2": "Elle aime le sucre dans son thé."
+    },
+    {
+      "id": 744,
+      "word": "été",
+      "sentence1": "L'été est chaud dans cette région.",
+      "sentence2": "Elle adore les vacances d'été."
+    },
+    {
+      "id": 745,
+      "word": "le soleil",
+      "sentence1": "Le soleil brille avec éclat.",
+      "sentence2": "Elle était assise au soleil."
+    },
+    {
+      "id": 746,
+      "word": "dimanche",
+      "sentence1": "Le dimanche est un jour de repos.",
+      "sentence2": "Elle va à l'église le dimanche."
+    },
+    {
+      "id": 747,
+      "word": "le supermarché",
+      "sentence1": "Je dois aller au supermarché.",
+      "sentence2": "Elle a fait ses courses au supermarché."
+    },
+    {
+      "id": 748,
+      "word": "bien sûr",
+      "sentence1": "Tu es sûre de ça ?",
+      "sentence2": "Elle est sûre de sa décision."
+    },
+    {
+      "id": 749,
+      "word": "t-shirt à rayures",
+      "sentence1": "J'ai acheté un nouveau pull.",
+      "sentence2": "Elle portait un pull chaud."
+    },
+    {
+      "id": 750,
+      "word": "nageur",
+      "sentence1": "J'aime nager dans la piscine.",
+      "sentence2": "Elle nage chaque matin."
+    },
+    {
+      "id": 751,
+      "word": "natation",
+      "sentence1": "La natation est un bon exercice.",
+      "sentence2": "Elle aime nager dans l'océan."
+    },
+    {
+      "id": 752,
+      "word": "le tableau",
+      "sentence1": "La table est en bois.",
+      "sentence2": "Elle a mis la table pour le dîner."
+    },
+    {
+      "id": 753,
+      "word": "prendre",
+      "sentence1": "Je prendrai le bus.",
+      "sentence2": "Elle a pris une photo du coucher de soleil."
+    },
+    {
+      "id": 754,
+      "word": "parler",
+      "sentence1": "Il faut qu'on parle.",
+      "sentence2": "Elle a parlé de ses projets."
+    },
+    {
+      "id": 755,
+      "word": "taille élevée",
+      "sentence1": "Il est grand et athlétique.",
+      "sentence2": "Elle préfère les immeubles hauts."
+    },
+    {
+      "id": 756,
+      "word": "le taxi",
+      "sentence1": "Il me faut un taxi pour l'aéroport.",
+      "sentence2": "Elle a pris un taxi pour rentrer chez elle."
+    },
+    {
+      "id": 757,
+      "word": "thé",
+      "sentence1": "J'aime bien le thé.",
+      "sentence2": "Elle préfère le thé vert."
+    },
+    {
+      "id": 758,
+      "word": "enseigner",
+      "sentence1": "Je veux enseigner l'anglais.",
+      "sentence2": "Elle enseigne les maths à l'école."
+    },
+    {
+      "id": 759,
+      "word": "professeur",
+      "sentence1": "Le professeur est très utile.",
+      "sentence2": "C'est mon professeur préféré."
+    },
+    {
+      "id": 760,
+      "word": "équipe",
+      "sentence1": "Notre équipe a gagné le match.",
+      "sentence2": "Elle est un membre précieux de l'équipe."
+    },
+    {
+      "id": 761,
+      "word": "adolescent",
+      "sentence1": "Les adolescents sont confrontés à de nombreuses difficultés.",
+      "sentence2": "C'est une adolescente typique."
+    },
+    {
+      "id": 762,
+      "word": "téléphone",
+      "sentence1": "Je dois vous appeler au téléphone.",
+      "sentence2": "Elle a répondu au téléphone."
+    },
+    {
+      "id": 763,
+      "word": "télévision",
+      "sentence1": "La télévision est sur la table.",
+      "sentence2": "Elle regarde la télévision chaque soir."
+    },
+    {
+      "id": 764,
+      "word": "le dire",
+      "sentence1": "Dites-moi votre nom.",
+      "sentence2": "Elle m'a confié un secret."
+    },
+    {
+      "id": 765,
+      "word": "dix",
+      "sentence1": "J'ai dix pommes.",
+      "sentence2": "Elle a dix ans."
+    },
+    {
+      "id": 766,
+      "word": "le tennis",
+      "sentence1": "J'aime jouer au tennis.",
+      "sentence2": "Elle joue au tennis le week-end."
+    },
+    {
+      "id": 767,
+      "word": "c' est affreux",
+      "sentence1": "Le film était horrible.",
+      "sentence2": "Elle a vécu une expérience terrible."
+    },
+    {
+      "id": 768,
+      "word": "épreuve",
+      "sentence1": "J'ai un examen demain.",
+      "sentence2": "Elle a réussi le test."
+    },
+    {
+      "id": 769,
+      "word": "le texte",
+      "sentence1": "Veuillez lire le texte.",
+      "sentence2": "Elle a écrit un SMS."
+    },
+    {
+      "id": 770,
+      "word": "plus que",
+      "sentence1": "Elle est plus grande que son frère.",
+      "sentence2": "Ce livre est meilleur que celui-là."
+    },
+    {
+      "id": 771,
+      "word": "merci",
+      "sentence1": "Je veux vous remercier.",
+      "sentence2": "Elle m'a remercié pour mon aide."
+    },
+    {
+      "id": 772,
+      "word": "merci",
+      "sentence1": "Merci pour votre aide.",
+      "sentence2": "Elle a dit merci et est partie."
+    },
+    {
+      "id": 773,
+      "word": "ça",
+      "sentence1": "C'est mon livre.",
+      "sentence2": "Elle a dit qu'elle viendrait."
+    },
+    {
+      "id": 774,
+      "word": "le",
+      "sentence1": "Le chat est sur le toit.",
+      "sentence2": "Elle aime la robe bleue."
+    },
+    {
+      "id": 775,
+      "word": "théâtre",
+      "sentence1": "Nous allons au théâtre.",
+      "sentence2": "Elle aime regarder des pièces de théâtre."
+    },
+    {
+      "id": 776,
+      "word": "leur",
+      "sentence1": "C'est leur maison.",
+      "sentence2": "Elle a pris leurs photos."
+    },
+    {
+      "id": 777,
+      "word": "les autres",
+      "sentence1": "Je les ai vus au parc.",
+      "sentence2": "Elle les a invités à la fête."
+    },
+    {
+      "id": 778,
+      "word": "alors",
+      "sentence1": "On peut y aller.",
+      "sentence2": "Elle était fatiguée."
+    },
+    {
+      "id": 779,
+      "word": "il y a",
+      "sentence1": "Le livre est là-bas.",
+      "sentence2": "Elle habite là-bas."
+    },
+    {
+      "id": 780,
+      "word": "ils",
+      "sentence1": "Ce sont mes amis.",
+      "sentence2": "Elle a dit qu'ils viendraient."
+    },
+    {
+      "id": 781,
+      "word": "quelque chose",
+      "sentence1": "C'est quoi cette chose ?",
+      "sentence2": "Elle a perdu sa chose préférée."
+    },
+    {
+      "id": 782,
+      "word": "je pense",
+      "sentence1": "Je dois y réfléchir.",
+      "sentence2": "Elle a une haute opinion de vous."
+    },
+    {
+      "id": 783,
+      "word": "troisième",
+      "sentence1": "C'est ma troisième tentative.",
+      "sentence2": "Elle a terminé en troisième place."
+    },
+    {
+      "id": 784,
+      "word": "je suis assoiffé",
+      "sentence1": "Je suis assoiffé.",
+      "sentence2": "Elle a toujours soif après l'exercice."
+    },
+    {
+      "id": 785,
+      "word": "trente et un",
+      "sentence1": "J'ai treize pommes.",
+      "sentence2": "Elle a treize ans."
+    },
+    {
+      "id": 786,
+      "word": "trente ans",
+      "sentence1": "Il y a trente étudiants dans la classe.",
+      "sentence2": "Elle aura trente ans l'année prochaine."
+    },
+    {
+      "id": 787,
+      "word": "ça",
+      "sentence1": "Ceci est mon livre.",
+      "sentence2": "Elle a dit que c'était son préféré."
+    },
+    {
+      "id": 788,
+      "word": "milliers",
+      "sentence1": "J'ai des milliers d'idées.",
+      "sentence2": "Elle a gagné mille dollars."
+    },
+    {
+      "id": 789,
+      "word": "trois",
+      "sentence1": "J'ai trois frères.",
+      "sentence2": "Elle a trois ans."
+    },
+    {
+      "id": 790,
+      "word": "à travers",
+      "sentence1": "Nous avons marché dans le parc.",
+      "sentence2": "Elle regarda par la fenêtre."
+    },
+    {
+      "id": 791,
+      "word": "jeudi",
+      "sentence1": "Le jeudi est mon jour préféré.",
+      "sentence2": "Elle a une réunion jeudi."
+    },
+    {
+      "id": 792,
+      "word": "le billet",
+      "sentence1": "Je dois acheter un billet.",
+      "sentence2": "Elle a montré son billet à l'entrée."
+    },
+    {
+      "id": 793,
+      "word": "le temps",
+      "sentence1": "- Quelle heure est-il ?",
+      "sentence2": "Elle passe beaucoup de temps à lire."
+    },
+    {
+      "id": 794,
+      "word": "fatigué",
+      "sentence1": "Je suis fatiguée.",
+      "sentence2": "Elle se sentait fatiguée après le long voyage."
+    },
+    {
+      "id": 795,
+      "word": "titre",
+      "sentence1": "Quel est le titre du livre ?",
+      "sentence2": "Elle a donné à son histoire un titre accrocheur."
+    },
+    {
+      "id": 796,
+      "word": "à",
+      "sentence1": "Je vais au magasin.",
+      "sentence2": "Elle a donné le livre à son amie."
+    },
+    {
+      "id": 797,
+      "word": "aujourd'hui",
+      "sentence1": "Aujourd'hui est une belle journée.",
+      "sentence2": "Elle visitera sa grand-mère aujourd'hui."
+    },
+    {
+      "id": 798,
+      "word": "ensemble",
+      "sentence1": "Nous allons travailler ensemble.",
+      "sentence2": "Elle aime jouer à des jeux avec ses amis."
+    },
+    {
+      "id": 799,
+      "word": "toilettes",
+      "sentence1": "Où sont les toilettes ?",
+      "sentence2": "Elle est allée aux toilettes avant le film."
+    },
+    {
+      "id": 800,
+      "word": "tomate",
+      "sentence1": "Il me faut une tomate pour la salade.",
+      "sentence2": "Elle a acheté une tomate au marché."
+    },
+    {
+      "id": 801,
+      "word": "je reviens demain",
+      "sentence1": "Je vous appellerai demain.",
+      "sentence2": "Elle a une réunion demain."
+    },
+    {
+      "id": 802,
+      "word": "ce soir",
+      "sentence1": "J'ai des projets pour ce soir.",
+      "sentence2": "Elle reste à la maison ce soir."
+    },
+    {
+      "id": 803,
+      "word": "- Je sais",
+      "sentence1": "Je veux y aller aussi.",
+      "sentence2": "Elle vient aussi."
+    },
+    {
+      "id": 804,
+      "word": "une dent",
+      "sentence1": "Ma dent me fait mal.",
+      "sentence2": "Elle a une carie dans sa dent."
+    },
+    {
+      "id": 805,
+      "word": "thème",
+      "sentence1": "Quel est le sujet de la discussion ?",
+      "sentence2": "Elle a introduit un nouveau sujet."
+    },
+    {
+      "id": 806,
+      "word": "touriste",
+      "sentence1": "Le touriste a pris beaucoup de photos.",
+      "sentence2": "Elle est une touriste en ville."
+    },
+    {
+      "id": 807,
+      "word": "ville",
+      "sentence1": "Je vis dans une petite ville.",
+      "sentence2": "Elle a grandi ici."
+    },
+    {
+      "id": 808,
+      "word": "le trafic",
+      "sentence1": "Il y a beaucoup de circulation aujourd'hui.",
+      "sentence2": "Elle est coincée dans la circulation."
+    },
+    {
+      "id": 809,
+      "word": "le train",
+      "sentence1": "Je prendrai le train pour aller au travail.",
+      "sentence2": "Elle a raté son train."
+    },
+    {
+      "id": 810,
+      "word": "le voyage",
+      "sentence1": "J'aime beaucoup voyager.",
+      "sentence2": "Elle planifie un itinéraire de voyage."
+    },
+    {
+      "id": 811,
+      "word": "arbre",
+      "sentence1": "L'arbre est très haut.",
+      "sentence2": "Elle a grimpé à l'arbre."
+    },
+    {
+      "id": 812,
+      "word": "le voyage",
+      "sentence1": "Je vais faire un voyage.",
+      "sentence2": "Elle a apprécié le voyage."
+    },
+    {
+      "id": 813,
+      "word": "les pantalons",
+      "sentence1": "J'ai acheté un nouveau pantalon.",
+      "sentence2": "Elle porte un pantalon bleu."
+    },
+    {
+      "id": 814,
+      "word": "vrai",
+      "sentence1": "Cette déclaration est vraie.",
+      "sentence2": "Elle dit toujours la vérité."
+    },
+    {
+      "id": 815,
+      "word": "je vais essayer",
+      "sentence1": "Je ferai de mon mieux.",
+      "sentence2": "Elle a essayé de résoudre le problème."
+    },
+    {
+      "id": 816,
+      "word": "t-shirt à rayures",
+      "sentence1": "Il me faut un nouveau T-shirt.",
+      "sentence2": "Elle a acheté un T-shirt au magasin."
+    },
+    {
+      "id": 817,
+      "word": "le mardi",
+      "sentence1": "Le mardi est mon jour préféré.",
+      "sentence2": "Elle a une réunion mardi."
+    },
+    {
+      "id": 818,
+      "word": "tourner",
+      "sentence1": "Éteignez les lumières, s'il vous plaît.",
+      "sentence2": "Elle a tourné la page."
+    },
+    {
+      "id": 819,
+      "word": "télévision",
+      "sentence1": "Je regarde la télévision le soir.",
+      "sentence2": "Elle a allumé la télé."
+    },
+    {
+      "id": 820,
+      "word": "une douzaine",
+      "sentence1": "Il y a douze mois dans une année.",
+      "sentence2": "Elle a douze ans."
+    },
+    {
+      "id": 821,
+      "word": "vingt",
+      "sentence1": "J'ai une vingtaine de dollars.",
+      "sentence2": "Elle a vingt ans."
+    },
+    {
+      "id": 822,
+      "word": "deux fois",
+      "sentence1": "J'ai vu ce film deux fois.",
+      "sentence2": "Elle visite ses parents deux fois par mois."
+    },
+    {
+      "id": 823,
+      "word": "deux",
+      "sentence1": "J'ai deux chats.",
+      "sentence2": "Elle veut deux billets."
+    },
+    {
+      "id": 824,
+      "word": "type",
+      "sentence1": "Quel genre de musique aimez-vous ?",
+      "sentence2": "Elle préfère un autre type de livre."
+    },
+    {
+      "id": 825,
+      "word": "le parapluie",
+      "sentence1": "N'oubliez pas votre parapluie.",
+      "sentence2": "Elle a acheté un nouveau parapluie."
+    },
+    {
+      "id": 826,
+      "word": "oncle",
+      "sentence1": "Mon oncle vit à New York.",
+      "sentence2": "Elle a rendu visite à son oncle l'été dernier."
+    },
+    {
+      "id": 827,
+      "word": "sous",
+      "sentence1": "Le chat est sous la table.",
+      "sentence2": "Elle a trouvé ses clés sous le canapé."
+    },
+    {
+      "id": 828,
+      "word": "je comprends",
+      "sentence1": "Je ne comprends pas la question.",
+      "sentence2": "Elle comprend le problème."
+    },
+    {
+      "id": 829,
+      "word": "école",
+      "sentence1": "Elle étudie à l'université.",
+      "sentence2": "Il est diplômé de l'université."
+    },
+    {
+      "id": 830,
+      "word": "jusqu' à",
+      "sentence1": "J'attendrai que vous arriviez.",
+      "sentence2": "Elle est restée jusqu'à la fin du spectacle."
+    },
+    {
+      "id": 831,
+      "word": "à hauteur",
+      "sentence1": "Le chat est monté dans l'arbre.",
+      "sentence2": "Elle leva les yeux vers le ciel."
+    },
+    {
+      "id": 832,
+      "word": "à l' étage",
+      "sentence1": "La chambre est à l'étage.",
+      "sentence2": "Elle est montée étudier."
+    },
+    {
+      "id": 833,
+      "word": "nous",
+      "sentence1": "Vous pouvez nous aider ?",
+      "sentence2": "Elle nous a invités à sa fête."
+    },
+    {
+      "id": 834,
+      "word": "utilisation",
+      "sentence1": "Je dois utiliser l'ordinateur.",
+      "sentence2": "Elle utilise beaucoup d'applications sur son téléphone."
+    },
+    {
+      "id": 835,
+      "word": "utiles",
+      "sentence1": "Ce livre est très utile.",
+      "sentence2": "Elle a trouvé l'information utile."
+    },
+    {
+      "id": 836,
+      "word": "habituellement",
+      "sentence1": "Je me réveille généralement tôt.",
+      "sentence2": "Elle se promène généralement le soir."
+    },
+    {
+      "id": 837,
+      "word": "congés",
+      "sentence1": "Je pars en vacances la semaine prochaine.",
+      "sentence2": "Elle aime voyager pendant ses vacances."
+    },
+    {
+      "id": 838,
+      "word": "végétaux",
+      "sentence1": "Je mange beaucoup de légumes.",
+      "sentence2": "Elle préfère les fruits aux légumes."
+    },
+    {
+      "id": 839,
+      "word": "très",
+      "sentence1": "C'est un livre très intéressant.",
+      "sentence2": "Elle a beaucoup de talent."
+    },
+    {
+      "id": 840,
+      "word": "vidéo",
+      "sentence1": "J'ai regardé une vidéo drôle en ligne.",
+      "sentence2": "Elle aime faire des vidéos."
+    },
+    {
+      "id": 841,
+      "word": "village",
+      "sentence1": "Il a grandi dans un petit village.",
+      "sentence2": "Elle a rendu visite à ses grands-parents dans le village."
+    },
+    {
+      "id": 842,
+      "word": "visite",
+      "sentence1": "Je rendrai visite à mon ami demain.",
+      "sentence2": "Elle a visité le musée la semaine dernière."
+    },
+    {
+      "id": 843,
+      "word": "visiteur",
+      "sentence1": "Le visiteur a posé beaucoup de questions.",
+      "sentence2": "Elle est une visiteuse fréquente du musée."
+    },
+    {
+      "id": 844,
+      "word": "attends un peu",
+      "sentence1": "Je t'attendrai.",
+      "sentence2": "Elle a attendu une heure."
+    },
+    {
+      "id": 845,
+      "word": "le serveur",
+      "sentence1": "Le serveur a pris notre commande.",
+      "sentence2": "Elle travaillait comme serveuse."
+    },
+    {
+      "id": 846,
+      "word": "réveil",
+      "sentence1": "Je me réveille à 7h du matin.",
+      "sentence2": "Elle s'est réveillée tard."
+    },
+    {
+      "id": 847,
+      "word": "à pied",
+      "sentence1": "J'aime me promener dans le parc.",
+      "sentence2": "Elle promène son chien chaque matin."
+    },
+    {
+      "id": 848,
+      "word": "le mur",
+      "sentence1": "Le tableau est sur le mur.",
+      "sentence2": "Elle a peint le mur en bleu."
+    },
+    {
+      "id": 849,
+      "word": "vouloir",
+      "sentence1": "Je veux apprendre l'anglais.",
+      "sentence2": "Elle veut un nouveau téléphone."
+    },
+    {
+      "id": 850,
+      "word": "au chaud",
+      "sentence1": "La soupe est chaude.",
+      "sentence2": "Elle aime le temps chaud."
+    },
+    {
+      "id": 851,
+      "word": "lavage",
+      "sentence1": "Je dois me laver les mains.",
+      "sentence2": "Elle lave sa voiture chaque semaine."
+    },
+    {
+      "id": 852,
+      "word": "à regarder",
+      "sentence1": "J'aime regarder des films.",
+      "sentence2": "Elle a regardé un documentaire hier soir."
+    },
+    {
+      "id": 853,
+      "word": "eau",
+      "sentence1": "Je bois beaucoup d'eau",
+      "sentence2": "Elle a arrosé les plantes."
+    },
+    {
+      "id": 854,
+      "word": "le chemin",
+      "sentence1": "C'est la meilleure façon d'apprendre.",
+      "sentence2": "Elle a trouvé une nouvelle façon de résoudre le problème."
+    },
+    {
+      "id": 855,
+      "word": "nous",
+      "sentence1": "Nous allons au parc.",
+      "sentence2": "Ils nous ont invités à leur mariage."
+    },
+    {
+      "id": 856,
+      "word": "usure",
+      "sentence1": "J'aime porter des vêtements confortables.",
+      "sentence2": "Elle portait une belle robe à la fête."
+    },
+    {
+      "id": 857,
+      "word": "météo",
+      "sentence1": "Le temps est beau aujourd'hui.",
+      "sentence2": "Elle a vérifié la météo."
+    },
+    {
+      "id": 858,
+      "word": "le site web",
+      "sentence1": "J'ai trouvé un site utile.",
+      "sentence2": "Elle a créé un site web pour son entreprise."
+    },
+    {
+      "id": 859,
+      "word": "le mercredi",
+      "sentence1": "Le mercredi est mon jour préféré.",
+      "sentence2": "Elle a une réunion mercredi."
+    },
+    {
+      "id": 860,
+      "word": "une semaine",
+      "sentence1": "Je travaille cinq jours par semaine.",
+      "sentence2": "Elle part en vacances la semaine prochaine."
+    },
+    {
+      "id": 861,
+      "word": "le week-end",
+      "sentence1": "J'aime me détendre le week-end.",
+      "sentence2": "Elle a des projets pour le week-end."
+    },
+    {
+      "id": 862,
+      "word": "bienvenue à vous",
+      "sentence1": "Bienvenue chez nous !",
+      "sentence2": "Elle a dit bonjour aux invités."
+    },
+    {
+      "id": 863,
+      "word": "bien sûr",
+      "sentence1": "J'espère que vous allez bien.",
+      "sentence2": "Elle se sent bien aujourd'hui."
+    },
+    {
+      "id": 864,
+      "word": "est",
+      "sentence1": "Le soleil se couche à l'ouest.",
+      "sentence2": "Elle a voyagé sur la côte ouest."
+    },
+    {
+      "id": 865,
+      "word": "je sais pas",
+      "sentence1": "Quel est votre nom ?",
+      "sentence2": "Elle a demandé l'heure."
+    },
+    {
+      "id": 866,
+      "word": "lorsque",
+      "sentence1": "C'est quand ton anniversaire ?",
+      "sentence2": "Elle n'a pas dit quand elle arriverait."
+    },
+    {
+      "id": 867,
+      "word": "où",
+      "sentence1": "Où est-ce que vous habitez ?",
+      "sentence2": "Elle demanda où était la gare la plus proche."
+    },
+    {
+      "id": 868,
+      "word": "qui",
+      "sentence1": "Quel livre voulez-vous ?",
+      "sentence2": "Elle n'a pas dit quelle robe elle aimait."
+    },
+    {
+      "id": 869,
+      "word": "blanc",
+      "sentence1": "Le chat blanc est endormi.",
+      "sentence2": "Elle a acheté une robe blanche."
+    },
+    {
+      "id": 870,
+      "word": "qui est",
+      "sentence1": "Qui est ton meilleur ami ?",
+      "sentence2": "Elle n'a pas dit avec qui."
+    },
+    {
+      "id": 871,
+      "word": "pourquoi",
+      "sentence1": "Pourquoi êtes-vous triste ?",
+      "sentence2": "Elle a demandé pourquoi j'étais en retard."
+    },
+    {
+      "id": 872,
+      "word": "épouse",
+      "sentence1": "Ma femme est médecin.",
+      "sentence2": "Elle est sa femme."
+    },
+    {
+      "id": 873,
+      "word": "le désir",
+      "sentence1": "Je vous appellerai demain.",
+      "sentence2": "Elle a dit qu'elle nous aiderait."
+    },
+    {
+      "id": 874,
+      "word": "remporter",
+      "sentence1": "J'espère gagner le match.",
+      "sentence2": "Elle a gagné un prix dans la compétition."
+    },
+    {
+      "id": 875,
+      "word": "fenêtre",
+      "sentence1": "La fenêtre est ouverte.",
+      "sentence2": "Elle regarda par la fenêtre."
+    },
+    {
+      "id": 876,
+      "word": "le vin",
+      "sentence1": "J'aime bien le vin rouge.",
+      "sentence2": "Elle a servi du vin avec le dîner."
+    },
+    {
+      "id": 877,
+      "word": "hiver",
+      "sentence1": "L'hiver est ma saison favorite.",
+      "sentence2": "Elle aime skier en hiver."
+    },
+    {
+      "id": 878,
+      "word": "avec",
+      "sentence1": "Je suis allé au magasin avec mon ami.",
+      "sentence2": "Elle étudie avec ses camarades de classe."
+    },
+    {
+      "id": 879,
+      "word": "avec",
+      "sentence1": "Je ne peux pas vivre sans toi.",
+      "sentence2": "Elle a terminé le projet sans aide."
+    },
+    {
+      "id": 880,
+      "word": "femme",
+      "sentence1": "La femme lit un livre.",
+      "sentence2": "C'est une femme forte."
+    },
+    {
+      "id": 881,
+      "word": "c' est merveilleux",
+      "sentence1": "Vous avez fait du bon boulot !",
+      "sentence2": "Elle a un sourire merveilleux."
+    },
+    {
+      "id": 882,
+      "word": "le mot",
+      "sentence1": "Pouvez-vous épeler ce mot ?",
+      "sentence2": "Elle a cherché le mot dans le dictionnaire."
+    },
+    {
+      "id": 883,
+      "word": "le travail",
+      "sentence1": "Je dois travailler tard ce soir.",
+      "sentence2": "Elle cherche un nouvel emploi."
+    },
+    {
+      "id": 884,
+      "word": "ouvrier",
+      "sentence1": "L'ouvrier est en train de réparer la route.",
+      "sentence2": "Elle travaille dur."
+    },
+    {
+      "id": 885,
+      "word": "le monde",
+      "sentence1": "Le monde est un endroit merveilleux.",
+      "sentence2": "Elle veut parcourir le monde."
+    },
+    {
+      "id": 886,
+      "word": "serait",
+      "sentence1": "Je voudrais du café.",
+      "sentence2": "Elle a dit qu'elle viendrait à la fête."
+    },
+    {
+      "id": 887,
+      "word": "écrire",
+      "sentence1": "J'aime écrire des histoires.",
+      "sentence2": "Elle écrit une lettre."
+    },
+    {
+      "id": 888,
+      "word": "écrivain",
+      "sentence1": "C'est un écrivain célèbre.",
+      "sentence2": "Elle veut être écrivain."
+    },
+    {
+      "id": 889,
+      "word": "écriture",
+      "sentence1": "Écrire est mon passe-temps.",
+      "sentence2": "Elle aime écrire dans son temps libre."
+    },
+    {
+      "id": 890,
+      "word": "c' est faux",
+      "sentence1": "C'est la mauvaise réponse.",
+      "sentence2": "Elle s'est rendu compte qu'elle avait tort."
+    },
+    {
+      "id": 891,
+      "word": "je sais",
+      "sentence1": "Oui, je suis d'accord avec toi.",
+      "sentence2": "Elle a dit oui à la demande."
+    },
+    {
+      "id": 892,
+      "word": "année",
+      "sentence1": "Cette année a été difficile.",
+      "sentence2": "Elle a obtenu son diplôme l'année dernière."
+    },
+    {
+      "id": 893,
+      "word": "jaune",
+      "sentence1": "La fleur jaune est belle.",
+      "sentence2": "Elle portait une robe jaune."
+    },
+    {
+      "id": 894,
+      "word": "oui, très bien",
+      "sentence1": "Je comprends.",
+      "sentence2": "Elle a dit oui à l'invitation."
+    },
+    {
+      "id": 895,
+      "word": "hier , c' était",
+      "sentence1": "Je l'ai vue hier.",
+      "sentence2": "Elle m'a appelé hier."
+    },
+    {
+      "id": 896,
+      "word": "vous",
+      "sentence1": "Tu es mon meilleur ami.",
+      "sentence2": "Elle m'a dit que tu venais."
+    },
+    {
+      "id": 897,
+      "word": "jeune",
+      "sentence1": "Le jeune garçon joue.",
+      "sentence2": "Elle est jeune et talentueuse."
+    },
+    {
+      "id": 898,
+      "word": "votre",
+      "sentence1": "Votre livre est sur la table.",
+      "sentence2": "Elle a dit que ton idée était intéressante."
+    },
+    {
+      "id": 899,
+      "word": "vous-même",
+      "sentence1": "Prends soin de toi.",
+      "sentence2": "Elle l'a fait toute seule."
+    }
+  ]
+}

@@ -1,17 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
 
     <defs>
       <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#FFD36A"/>
-        <stop offset="55%" stop-color="#FF9B2F"/>
-        <stop offset="100%" stop-color="#FF6A00"/>
+        <stop offset="0%" stop-color="#FFD36A" />
+        <stop offset="55%" stop-color="#FF9B2F" />
+        <stop offset="100%" stop-color="#FF6A00" />
       </linearGradient>
     </defs>
     
 
     <g fill="url(#g)">
-      <polygon points="73.00,136.00 73.00,376.00 243.00,256.00"/>
-      <polygon points="243.00,136.00 243.00,376.00 413.00,256.00"/>
-    </g>
+      <path d="M 73.00,158.00 L 73.00,354.00 Q 73.00,376.00 90.97,363.31 L 225.03,268.69 Q 243.00,256.00 225.03,243.31 L 90.97,148.69 Q 73.00,136.00 73.00,158.00 Z" /><path d="M 243.00,158.00 L 243.00,354.00 Q 243.00,376.00 260.97,363.31 L 395.03,268.69 Q 413.00,256.00 395.03,243.31 L 260.97,148.69 Q 243.00,136.00 243.00,158.00 Z" /></g>
     
 </svg>

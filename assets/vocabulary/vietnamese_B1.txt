@@ -1,0 +1,4834 @@
+{
+  "words": [
+    {
+      "id": 1,
+      "word": "hoàn toàn",
+      "sentence1": "Tôi hoàn toàn yêu cuốn sách này.",
+      "sentence2": "Cô ấy hoàn toàn chắc chắn về quyết định của mình."
+    },
+    {
+      "id": 2,
+      "word": "học thuật",
+      "sentence1": "Anh ta có nền tảng học thuật về vật lý.",
+      "sentence2": "Năm học bắt đầu vào tháng 9."
+    },
+    {
+      "id": 3,
+      "word": "truy cập",
+      "sentence1": "Bạn cần mật khẩu để truy cập vào hệ thống.",
+      "sentence2": "Việc tiếp cận thông tin là rất quan trọng."
+    },
+    {
+      "id": 4,
+      "word": "chỗ ở",
+      "sentence1": "Chúng ta cần phải tìm chỗ ở cho đêm nay.",
+      "sentence2": "Khách sạn cung cấp chỗ ở tuyệt vời."
+    },
+    {
+      "id": 5,
+      "word": "tài khoản",
+      "sentence1": "Tuần trước tôi đã mở một tài khoản ngân hàng.",
+      "sentence2": "Vui lòng kiểm tra số dư tài khoản của bạn."
+    },
+    {
+      "id": 6,
+      "word": "thành tựu",
+      "sentence1": "Thành tựu lớn nhất của cô là giành chức vô địch.",
+      "sentence2": "Anh ấy tự hào về thành tích học tập của mình."
+    },
+    {
+      "id": 7,
+      "word": "hành động",
+      "sentence1": "Anh cần phải hành động nhanh trong tình huống này.",
+      "sentence2": "Cô ấy quyết định hành động theo bản năng của mình."
+    },
+    {
+      "id": 8,
+      "word": "thêm vào",
+      "sentence1": "Xin hãy thêm tên của bạn vào danh sách.",
+      "sentence2": "Đừng quên chỉnh sửa lại."
+    },
+    {
+      "id": 9,
+      "word": "thêm",
+      "sentence1": "Việc bổ sung các tính năng mới đã cải thiện phần mềm.",
+      "sentence2": "Ngoài tiền lương của mình, anh ta còn nhận được tiền thưởng."
+    },
+    {
+      "id": 10,
+      "word": "khâm phục",
+      "sentence1": "Tôi ngưỡng mộ sự cống hiến của cô ấy cho công việc của cô ấy.",
+      "sentence2": "Nhiều người ngưỡng mộ tài năng nghệ thuật của anh ta."
+    },
+    {
+      "id": 11,
+      "word": "thừa nhận",
+      "sentence1": "Cô ấy thừa nhận sai lầm và xin lỗi.",
+      "sentence2": "Anh ta không muốn thừa nhận rằng anh ta đã sai."
+    },
+    {
+      "id": 12,
+      "word": "cao cấp",
+      "sentence1": "Cô ấy đã học một khóa học nâng cao về toán học.",
+      "sentence2": "Công nghệ tiên tiến và hiệu quả."
+    },
+    {
+      "id": 13,
+      "word": "cố vấn",
+      "sentence1": "Tôi khuyên anh nên chấp nhận lời mời làm việc.",
+      "sentence2": "Cô ấy được khuyên nên đi khám bác sĩ."
+    },
+    {
+      "id": 14,
+      "word": "đủ khả năng",
+      "sentence1": "Tôi không đủ tiền mua một chiếc xe mới.",
+      "sentence2": "Họ có thể có một lối sống xa hoa."
+    },
+    {
+      "id": 15,
+      "word": "tuổi",
+      "sentence1": "Mày bao nhiêu tuổi?",
+      "sentence2": "Cô ấy ở độ tuổi đi học."
+    },
+    {
+      "id": 16,
+      "word": "già",
+      "sentence1": "Người đàn ông già ngồi trên băng ghế.",
+      "sentence2": "Phô mai già có hương vị mạnh hơn."
+    },
+    {
+      "id": 17,
+      "word": "đại lý",
+      "sentence1": "Anh ta làm việc như một điệp viên bí mật.",
+      "sentence2": "Người đại lý du lịch đã giúp chúng tôi lên kế hoạch cho chuyến đi."
+    },
+    {
+      "id": 18,
+      "word": "thỏa thuận",
+      "sentence1": "Họ đã đạt được một thỏa thuận sau những cuộc đàm phán dài.",
+      "sentence2": "Thỏa thuận đã được ký bởi cả hai bên."
+    },
+    {
+      "id": 19,
+      "word": "tiếp tục đi",
+      "sentence1": "Con đường phía trước bị đóng cửa vì xây dựng.",
+      "sentence2": "Chúng ta cần lên kế hoạch trước cho dự án."
+    },
+    {
+      "id": 20,
+      "word": "nhắm",
+      "sentence1": "Mục tiêu của tôi là cải thiện kỹ năng tiếng Anh của mình.",
+      "sentence2": "Cô ấy có một mục tiêu rõ ràng cho sự nghiệp của mình."
+    },
+    {
+      "id": 21,
+      "word": "báo động",
+      "sentence1": "Tôi đặt chuông báo thức vào 7 giờ sáng.",
+      "sentence2": "Chuông báo động hỏa hoạn bật bất ngờ."
+    },
+    {
+      "id": 22,
+      "word": "album",
+      "sentence1": "Tôi vừa mua album mới của ban nhạc yêu thích của tôi.",
+      "sentence2": "Album ảnh chứa những kỷ niệm từ chuyến đi của chúng tôi."
+    },
+    {
+      "id": 23,
+      "word": "rượu",
+      "sentence1": "Anh ấy không uống rượu.",
+      "sentence2": "Rượu có thể gây hại với số lượng lớn."
+    },
+    {
+      "id": 24,
+      "word": "rượu",
+      "sentence1": "Anh ấy là một người nghiện rượu đang hồi phục.",
+      "sentence2": "Rượu không được phép ở đây."
+    },
+    {
+      "id": 25,
+      "word": "thay thế",
+      "sentence1": "Chúng ta cần tìm một giải pháp thay thế.",
+      "sentence2": "Có rất nhiều nguồn năng lượng thay thế."
+    },
+    {
+      "id": 26,
+      "word": "ngạc nhiên",
+      "sentence1": "Tôi đã rất ngạc nhiên trước màn trình diễn.",
+      "sentence2": "Cô ấy ngạc nhiên trước vẻ đẹp của cảnh quan."
+    },
+    {
+      "id": 27,
+      "word": "tham vọng",
+      "sentence1": "Tham vọng của cô là trở thành một doanh nhân thành công.",
+      "sentence2": "Anh ấy có tham vọng mạnh mẽ để thành công."
+    },
+    {
+      "id": 28,
+      "word": "tham vọng",
+      "sentence1": "Cô ấy là một phụ nữ trẻ đầy tham vọng.",
+      "sentence2": "Kế hoạch đầy tham vọng của anh ấy gây ấn tượng với mọi người."
+    },
+    {
+      "id": 29,
+      "word": "phân tích",
+      "sentence1": "Chúng ta cần phân tích dữ liệu cẩn thận.",
+      "sentence2": "Báo cáo sẽ phân tích tác động của chính sách."
+    },
+    {
+      "id": 30,
+      "word": "phân tích",
+      "sentence1": "Phân tích cho thấy những xu hướng quan trọng.",
+      "sentence2": "Một phân tích kỹ lưỡng là điều cần thiết cho việc ra quyết định."
+    },
+    {
+      "id": 31,
+      "word": "thông báo",
+      "sentence1": "Họ sẽ công bố kết quả vào ngày mai.",
+      "sentence2": "Cô ấy đã thông báo đính hôn với gia đình."
+    },
+    {
+      "id": 32,
+      "word": "thông báo",
+      "sentence1": "Thông báo được đưa ra trong cuộc họp.",
+      "sentence2": "Chúng tôi đã nhận được thông báo về chính sách mới."
+    },
+    {
+      "id": 33,
+      "word": "làm phiền",
+      "sentence1": "Sự phàn nàn liên tục của anh ta làm tôi bực bội.",
+      "sentence2": "Đừng làm phiền em trai anh."
+    },
+    {
+      "id": 34,
+      "word": "cơn phiền",
+      "sentence1": "Cô ấy bị làm phiền bởi tiếng ồn lớn.",
+      "sentence2": "Anh ấy cảm thấy bực bội vì sự chậm trễ."
+    },
+    {
+      "id": 35,
+      "word": "khó chịu",
+      "sentence1": "Tiếng ồn của ruồi rất khó chịu.",
+      "sentence2": "Thật khó chịu khi người ta ngắt lời."
+    },
+    {
+      "id": 36,
+      "word": "riêng biệt",
+      "sentence1": "Hai tòa nhà tách biệt với nhau.",
+      "sentence2": "Họ đã trở nên xa nhau trong những năm qua."
+    },
+    {
+      "id": 37,
+      "word": "xin lỗi",
+      "sentence1": "Tôi phải xin lỗi vì sai lầm của mình.",
+      "sentence2": "Cô ấy xin lỗi vì đã đến trễ."
+    },
+    {
+      "id": 38,
+      "word": "ứng dụng",
+      "sentence1": "Tôi đã nộp đơn xin việc.",
+      "sentence2": "Quá trình nộp đơn khá đơn giản."
+    },
+    {
+      "id": 39,
+      "word": "bổ nhiệm",
+      "sentence1": "Tôi có hẹn gặp bác sĩ lúc 3 giờ chiều.",
+      "sentence2": "Cô ấy đã bỏ lỡ cuộc hẹn và phải sắp xếp lại."
+    },
+    {
+      "id": 40,
+      "word": "cảm ơn",
+      "sentence1": "Tôi thực sự đánh giá cao sự giúp đỡ của anh.",
+      "sentence2": "Cô ấy đánh giá cao vẻ đẹp của thiên nhiên."
+    },
+    {
+      "id": 41,
+      "word": "khoảng",
+      "sentence1": "Cuộc họp sẽ kéo dài khoảng hai giờ.",
+      "sentence2": "Có khoảng 100 người tham dự sự kiện."
+    },
+    {
+      "id": 42,
+      "word": "bị bắt giữ",
+      "sentence1": "Cảnh sát đã bắt giữ nghi phạm tối qua.",
+      "sentence2": "Anh ta bị bắt vì lái xe khi say rượu."
+    },
+    {
+      "id": 43,
+      "word": "đến nơi",
+      "sentence1": "Việc tàu đến bị trễ.",
+      "sentence2": "Chúng tôi rất vui mừng về sự đến của khách của chúng tôi."
+    },
+    {
+      "id": 44,
+      "word": "nhiệm vụ",
+      "sentence1": "Ngày mai tôi phải làm bài toán.",
+      "sentence2": "Giáo viên cho chúng tôi một bài tập khó khăn."
+    },
+    {
+      "id": 45,
+      "word": "giúp đỡ",
+      "sentence1": "Anh có thể giúp tôi với nhiệm vụ này không?",
+      "sentence2": "Cô ấy được thuê để trợ lý người quản lý."
+    },
+    {
+      "id": 46,
+      "word": "khí quyển",
+      "sentence1": "Không khí trong phòng rất căng thẳng.",
+      "sentence2": "Chúng ta cần tạo ra một bầu không khí tích cực cho việc học tập."
+    },
+    {
+      "id": 47,
+      "word": "gắn vào",
+      "sentence1": "Vui lòng đính kèm tập tin vào email của bạn.",
+      "sentence2": "Tôi quên đính kèm tài liệu."
+    },
+    {
+      "id": 48,
+      "word": "thái độ",
+      "sentence1": "Thái độ của cô ấy đối với dự án là tích cực.",
+      "sentence2": "Quan trọng là phải có thái độ tốt trong công việc."
+    },
+    {
+      "id": 49,
+      "word": "thu hút",
+      "sentence1": "Quảng cáo được thiết kế để thu hút khách hàng.",
+      "sentence2": "Hoa thu hút ong và các loài thụ phấn khác."
+    },
+    {
+      "id": 50,
+      "word": "thu hút",
+      "sentence1": "Có một sự thu hút mạnh mẽ giữa hai nhân vật.",
+      "sentence2": "Công viên giải trí là một điểm thu hút phổ biến cho các gia đình."
+    },
+    {
+      "id": 51,
+      "word": "thẩm quyền",
+      "sentence1": "Anh ta là một chuyên gia về lịch sử cổ đại.",
+      "sentence2": "Bạn cần phải tôn trọng thẩm quyền của giáo viên."
+    },
+    {
+      "id": 52,
+      "word": "trung bình",
+      "sentence1": "Nhiệt độ trung bình trong tháng Bảy là 30 độ.",
+      "sentence2": "Cô ấy có điểm trung bình trong toán học."
+    },
+    {
+      "id": 53,
+      "word": "giải thưởng",
+      "sentence1": "Cô ấy đã nhận được một giải thưởng cho màn trình diễn xuất sắc của mình.",
+      "sentence2": "Giải Nobel là một giải thưởng uy tín."
+    },
+    {
+      "id": 54,
+      "word": "nhận thức",
+      "sentence1": "Anh có biết về những thay đổi trong lịch trình không?",
+      "sentence2": "Anh ta không nhận thức được những rủi ro tiềm năng."
+    },
+    {
+      "id": 55,
+      "word": "ngược lại",
+      "sentence1": "Xe lăn ngược xuống đồi.",
+      "sentence2": "Cô ấy lùi lại vài bước."
+    },
+    {
+      "id": 56,
+      "word": "nướng",
+      "sentence1": "Tôi thích nướng bánh vào cuối tuần.",
+      "sentence2": "Cô ấy nướng một chiếc bánh ngon cho bữa tiệc."
+    },
+    {
+      "id": 57,
+      "word": "cân bằng",
+      "sentence1": "Cần duy trì sự cân bằng giữa công việc và cuộc sống.",
+      "sentence2": "Cô ấy có một sự cân bằng tốt về trách nhiệm."
+    },
+    {
+      "id": 58,
+      "word": "cấm",
+      "sentence1": "Trường học quyết định cấm điện thoại di động trong lớp.",
+      "sentence2": "Anh ta bị cấm vào câu lạc bộ vì hành vi không phù hợp."
+    },
+    {
+      "id": 59,
+      "word": "bờ (sông)",
+      "sentence1": "Chúng tôi đi dã ngoại bên bờ sông.",
+      "sentence2": "Những đứa trẻ chơi bên bờ sông."
+    },
+    {
+      "id": 60,
+      "word": "cơ sở",
+      "sentence1": "Nền của bức tượng được làm bằng đá cẩm thạch.",
+      "sentence2": "Chúng ta cần tìm một nền tảng vững chắc cho dự án của chúng ta."
+    },
+    {
+      "id": 61,
+      "word": "cơ bản",
+      "sentence1": "Khóa học này bao gồm các nguyên tắc cơ bản của kinh tế học.",
+      "sentence2": "Có một sự hiểu biết cơ bản về toán học là rất quan trọng."
+    },
+    {
+      "id": 62,
+      "word": "cơ sở",
+      "sentence1": "Căn cứ của lập luận của anh ta là sai.",
+      "sentence2": "Chúng ta cần thiết lập một nền tảng vững chắc cho nghiên cứu của chúng ta."
+    },
+    {
+      "id": 63,
+      "word": "pin",
+      "sentence1": "Tôi cần thay pin trong điều khiển từ xa.",
+      "sentence2": "Tuổi thọ pin trên điện thoại của tôi đang ngày càng ngắn."
+    },
+    {
+      "id": 64,
+      "word": "chiến đấu",
+      "sentence1": "Trận chiến kéo dài vài ngày.",
+      "sentence2": "Họ đã chiến đấu dũng cảm trong trận chiến."
+    },
+    {
+      "id": 65,
+      "word": "vẻ đẹp",
+      "sentence1": "Vẻ đẹp của hoàng hôn làm tôi thở dài.",
+      "sentence2": "Cô ấy nổi tiếng với vẻ đẹp tự nhiên của mình."
+    },
+    {
+      "id": 66,
+      "word": "ong",
+      "sentence1": "Ong là một thụ phấn quan trọng.",
+      "sentence2": "Nuôi ong là một sở thích thú vị."
+    },
+    {
+      "id": 67,
+      "word": "niềm tin",
+      "sentence1": "Niềm tin của cô ấy vào công lý là không lay chuyển.",
+      "sentence2": "Nhiều người tin rằng giáo dục là quan trọng."
+    },
+    {
+      "id": 68,
+      "word": "chuông",
+      "sentence1": "Chuông trường chuông lúc 8 giờ sáng.",
+      "sentence2": "Cô ấy có một cái chuông đẹp trong vườn."
+    },
+    {
+      "id": 69,
+      "word": "cong",
+      "sentence1": "Cẩn thận đừng cong giấy.",
+      "sentence2": "Anh ta phải cúi xuống để buộc dây giày."
+    },
+    {
+      "id": 70,
+      "word": "lợi ích",
+      "sentence1": "Chính sách mới sẽ có lợi cho nhiều người.",
+      "sentence2": "Cô ấy tận hưởng những lợi ích của lối sống lành mạnh."
+    },
+    {
+      "id": 71,
+      "word": "tốt hơn",
+      "sentence1": "Tôi cảm thấy tốt hơn sau một đêm ngủ ngon.",
+      "sentence2": "Giải pháp này tốt hơn giải pháp trước."
+    },
+    {
+      "id": 72,
+      "word": "cắn",
+      "sentence1": "Cẩn thận đừng cắn lưỡi.",
+      "sentence2": "Con chó thích cắn đồ chơi của nó."
+    },
+    {
+      "id": 73,
+      "word": "khối",
+      "sentence1": "Họ cố chặn đường bằng một chiếc xe.",
+      "sentence2": "Luật mới sẽ ngăn chặn các hoạt động không công bằng."
+    },
+    {
+      "id": 74,
+      "word": "ván",
+      "sentence1": "Giáo viên đã viết bài học trên bảng.",
+      "sentence2": "Chúng ta cần một tấm ván lớn hơn cho dự án này."
+    },
+    {
+      "id": 75,
+      "word": "bom",
+      "sentence1": "Quả bom nổ ở trung tâm thành phố.",
+      "sentence2": "Họ tìm thấy một quả bom trong tòa nhà bị bỏ hoang."
+    },
+    {
+      "id": 76,
+      "word": "biên giới",
+      "sentence1": "Sông tạo thành một biên giới tự nhiên giữa hai quốc gia.",
+      "sentence2": "Họ vượt qua biên giới mà không có vấn đề gì."
+    },
+    {
+      "id": 77,
+      "word": "làm phiền",
+      "sentence1": "Đừng làm phiền tôi khi tôi đang làm việc.",
+      "sentence2": "Nó làm phiền tôi khi mọi người đến trễ."
+    },
+    {
+      "id": 78,
+      "word": "nhánh",
+      "sentence1": "Cây có một nhánh mạnh mẽ.",
+      "sentence2": "Cô ấy ngồi trên cành cây và đọc một cuốn sách."
+    },
+    {
+      "id": 79,
+      "word": "thương hiệu",
+      "sentence1": "Nike là một thương hiệu thể thao nổi tiếng.",
+      "sentence2": "Tôi thích loại cà phê này hơn."
+    },
+    {
+      "id": 80,
+      "word": "dũng cảm",
+      "sentence1": "Người lính dũng cảm đã cứu đứa trẻ.",
+      "sentence2": "Cần phải là một người dũng cảm để đứng lên vì điều đúng đắn."
+    },
+    {
+      "id": 81,
+      "word": "hơi thở",
+      "sentence1": "Hít thở sâu và thư giãn.",
+      "sentence2": "Hơi thở của hắn có mùi tỏi."
+    },
+    {
+      "id": 82,
+      "word": "thở",
+      "sentence1": "Hãy nhớ hít thở sâu.",
+      "sentence2": "Cô ấy quên thở khi bơi."
+    },
+    {
+      "id": 83,
+      "word": "thở",
+      "sentence1": "Tập thở có thể làm giảm căng thẳng.",
+      "sentence2": "Anh ta có vấn đề về hô hấp."
+    },
+    {
+      "id": 84,
+      "word": "cô dâu",
+      "sentence1": "Cô dâu trông rất đẹp vào ngày cưới.",
+      "sentence2": "Cô ấy là bạn của cô dâu."
+    },
+    {
+      "id": 85,
+      "word": "bong bóng",
+      "sentence1": "Những đứa trẻ thổi bong bóng trong công viên.",
+      "sentence2": "Một bong bóng nổ ra trong không khí."
+    },
+    {
+      "id": 86,
+      "word": "chôn",
+      "sentence1": "Họ đã quyết định chôn vùi chiếc viên nang thời gian.",
+      "sentence2": "Hắn muốn chôn vùi quá khứ."
+    },
+    {
+      "id": 87,
+      "word": "bởi",
+      "sentence1": "Cuốn sách được viết bởi một tác giả nổi tiếng.",
+      "sentence2": "Cô ấy đi bằng tàu hỏa."
+    },
+    {
+      "id": 88,
+      "word": "bình tĩnh",
+      "sentence1": "Xin hãy giữ bình tĩnh trong trường hợp khẩn cấp.",
+      "sentence2": "Cô ấy nói bằng giọng bình tĩnh."
+    },
+    {
+      "id": 89,
+      "word": "chiến dịch",
+      "sentence1": "Chiến dịch đã thành công.",
+      "sentence2": "Họ đã khởi động một chiến dịch quảng cáo mới."
+    },
+    {
+      "id": 90,
+      "word": "trường đại học",
+      "sentence1": "Khuôn viên đại học rất đẹp.",
+      "sentence2": "Có rất nhiều cây trên khuôn viên trường."
+    },
+    {
+      "id": 91,
+      "word": "ứng cử viên",
+      "sentence1": "Cô ấy là ứng cử viên cho vị trí đó.",
+      "sentence2": "Các ứng viên sẽ được phỏng vấn vào ngày mai."
+    },
+    {
+      "id": 92,
+      "word": "nắp",
+      "sentence1": "Anh ta đội mũ bóng chày.",
+      "sentence2": "Cái mũ bảo vệ mắt bạn khỏi ánh nắng mặt trời."
+    },
+    {
+      "id": 93,
+      "word": "đại úy",
+      "sentence1": "Thuyền trưởng của đội rất có kinh nghiệm.",
+      "sentence2": "Cô ấy được bổ nhiệm làm đội trưởng năm ngoái."
+    },
+    {
+      "id": 94,
+      "word": "không cẩn thận",
+      "sentence1": "Những sai lầm bất cẩn của anh ta khiến công ty mất tiền.",
+      "sentence2": "Hãy cẩn thận hơn; đừng quá bất cẩn."
+    },
+    {
+      "id": 95,
+      "word": "thể loại",
+      "sentence1": "Cuốn sách này thuộc thể loại tiểu thuyết.",
+      "sentence2": "Có rất nhiều loại âm nhạc."
+    },
+    {
+      "id": 96,
+      "word": "trần nhà",
+      "sentence1": "Trần nhà được sơn trắng.",
+      "sentence2": "Cái đèn chùm treo trên trần nhà."
+    },
+    {
+      "id": 97,
+      "word": "lễ hội",
+      "sentence1": "Chúng tôi đã tổ chức một bữa tiệc lớn cho sinh nhật cô ấy.",
+      "sentence2": "Lễ kỷ niệm kéo dài cả đêm."
+    },
+    {
+      "id": 98,
+      "word": "trung tâm",
+      "sentence1": "Central Park là một nơi tuyệt vời để thư giãn.",
+      "sentence2": "Vấn đề chính vẫn chưa được giải quyết."
+    },
+    {
+      "id": 99,
+      "word": "trung tâm",
+      "sentence1": "Trung tâm mua sắm rất bận rộn vào cuối tuần.",
+      "sentence2": "Cô ấy sống ở trung tâm thành phố."
+    },
+    {
+      "id": 100,
+      "word": "nghi lễ",
+      "sentence1": "Lễ tốt nghiệp sẽ được tổ chức vào tháng Sáu.",
+      "sentence2": "Họ có một buổi lễ cưới truyền thống."
+    },
+    {
+      "id": 101,
+      "word": "dây chuyền",
+      "sentence1": "Xe đạp bị khóa bằng một cái xích.",
+      "sentence2": "Anh ta đeo một cái dây chuyền quanh cổ."
+    },
+    {
+      "id": 102,
+      "word": "thách thức",
+      "sentence1": "Việc leo lên núi là một thách thức lớn.",
+      "sentence2": "Cô ấy thích thử thách."
+    },
+    {
+      "id": 103,
+      "word": "vô địch",
+      "sentence1": "Anh ấy là nhà vô địch của giải đấu.",
+      "sentence2": "Cô trở thành nhà vô địch sau khi giành chiến thắng trong trận đấu cuối cùng."
+    },
+    {
+      "id": 104,
+      "word": "kênh",
+      "sentence1": "Tôi xem các chương trình yêu thích của mình trên kênh này.",
+      "sentence2": "Kênh phát sóng tin tức 24/7."
+    },
+    {
+      "id": 105,
+      "word": "chương",
+      "sentence1": "Đây là chương đầu của cuốn sách.",
+      "sentence2": "Mỗi chương có một bản tóm tắt ở cuối."
+    },
+    {
+      "id": 106,
+      "word": "phí",
+      "sentence1": "Ở đây có phí đỗ xe.",
+      "sentence2": "Họ sẽ tính phí cho các dịch vụ bổ sung."
+    },
+    {
+      "id": 107,
+      "word": "rẻ tiền",
+      "sentence1": "Áo này rất rẻ.",
+      "sentence2": "Tôi đã tìm được một khách sạn giá rẻ cho kỳ nghỉ của tôi."
+    },
+    {
+      "id": 108,
+      "word": "gian lận",
+      "sentence1": "Đừng gian lận trong kỳ thi.",
+      "sentence2": "Anh ta bị bắt khi gian lận."
+    },
+    {
+      "id": 109,
+      "word": "vui vẻ",
+      "sentence1": "Cô ấy có tính cách vui vẻ.",
+      "sentence2": "Âm nhạc vui vẻ làm tôi vui vẻ hơn."
+    },
+    {
+      "id": 110,
+      "word": "hóa chất",
+      "sentence1": "Nước là một hợp chất hóa học.",
+      "sentence2": "Phản ứng hóa học tạo ra nhiệt."
+    },
+    {
+      "id": 111,
+      "word": "ngực",
+      "sentence1": "Anh ta có một hình xăm trên ngực.",
+      "sentence2": "Hộp kho báu đầy vàng."
+    },
+    {
+      "id": 112,
+      "word": "tuổi thơ",
+      "sentence1": "Tôi có một tuổi thơ hạnh phúc.",
+      "sentence2": "Những kỷ niệm thời thơ ấu rất quý giá."
+    },
+    {
+      "id": 113,
+      "word": "yêu cầu",
+      "sentence1": "Cô ấy đã tuyên bố về sản phẩm.",
+      "sentence2": "Lời tuyên bố của ông được chứng minh bằng bằng chứng."
+    },
+    {
+      "id": 114,
+      "word": "điều khoản",
+      "sentence1": "Đây là một điều khoản pháp lý.",
+      "sentence2": "Hợp đồng có điều khoản bảo mật."
+    },
+    {
+      "id": 115,
+      "word": "rõ ràng",
+      "sentence1": "Chỉ thị rất rõ ràng.",
+      "sentence2": "Cô ấy có những mục tiêu rõ ràng cho tương lai."
+    },
+    {
+      "id": 116,
+      "word": "click",
+      "sentence1": "Vui lòng click vào liên kết.",
+      "sentence2": "Tôi nghe thấy một tiếng nhấp nháy."
+    },
+    {
+      "id": 117,
+      "word": "khách hàng",
+      "sentence1": "Khách hàng luôn đúng.",
+      "sentence2": "Chúng tôi cần gặp khách hàng."
+    },
+    {
+      "id": 118,
+      "word": "leo lên",
+      "sentence1": "Họ có kế hoạch leo lên núi.",
+      "sentence2": "Cô ấy thích trèo cây."
+    },
+    {
+      "id": 119,
+      "word": "khép lại",
+      "sentence1": "Xin hãy đóng cửa lại.",
+      "sentence2": "Cửa hàng gần nhà tôi."
+    },
+    {
+      "id": 120,
+      "word": "vải",
+      "sentence1": "Chiếc vải này được làm từ bông.",
+      "sentence2": "Tôi cần một miếng vải cho dự án."
+    },
+    {
+      "id": 121,
+      "word": "vấn đề",
+      "sentence1": "Tôi có một manh mối về bí ẩn.",
+      "sentence2": "Thám tử đã tìm thấy một manh mối quan trọng."
+    },
+    {
+      "id": 122,
+      "word": "xe buýt",
+      "sentence1": "Anh ấy là huấn luyện viên bóng đá.",
+      "sentence2": "Huấn luyện viên đã cho chúng tôi những lời khuyên quý giá."
+    },
+    {
+      "id": 123,
+      "word": "than",
+      "sentence1": "Xe lửa chạy bằng than.",
+      "sentence2": "Họ phát hiện ra một mỏ than."
+    },
+    {
+      "id": 124,
+      "word": "đồng xu",
+      "sentence1": "Tôi tìm thấy một đồng xu trên đường phố.",
+      "sentence2": "Anh ta sưu tầm những đồng tiền hiếm."
+    },
+    {
+      "id": 125,
+      "word": "thu thập",
+      "sentence1": "Cô ấy có một bộ sưu tập tem.",
+      "sentence2": "Bảo tàng có một bộ sưu tập nghệ thuật mới."
+    },
+    {
+      "id": 126,
+      "word": "màu",
+      "sentence1": "Tôi thích bút chì màu.",
+      "sentence2": "Các bức tường được sơn màu rực rỡ."
+    },
+    {
+      "id": 127,
+      "word": "kết hợp",
+      "sentence1": "Chúng ta hãy kết hợp những nỗ lực của mình.",
+      "sentence2": "Công thức kết hợp hương vị ngọt và chua."
+    },
+    {
+      "id": 128,
+      "word": "bình luận",
+      "sentence1": "Tôi có thể để lại lời bình luận không?",
+      "sentence2": "Câu nhận xét của anh ấy rất sâu sắc."
+    },
+    {
+      "id": 129,
+      "word": "thương mại",
+      "sentence1": "Đây là một sản phẩm thương mại.",
+      "sentence2": "Quảng cáo rất thú vị."
+    },
+    {
+      "id": 130,
+      "word": "cam kết",
+      "sentence1": "Tôi cam kết sẽ hoàn thành dự án.",
+      "sentence2": "Cô ấy đã dấn thân vào mục đích của mình."
+    },
+    {
+      "id": 131,
+      "word": "giao tiếp",
+      "sentence1": "Giao tiếp tốt là chìa khóa.",
+      "sentence2": "Chúng ta cần cải thiện giao tiếp."
+    },
+    {
+      "id": 132,
+      "word": "so sánh",
+      "sentence1": "Đây là so sánh giá cả.",
+      "sentence2": "So với năm ngoái, doanh số đã tăng."
+    },
+    {
+      "id": 133,
+      "word": "đối thủ cạnh tranh",
+      "sentence1": "Đối thủ chính của chúng ta rất mạnh.",
+      "sentence2": "Chúng ta cần phân tích đối thủ cạnh tranh."
+    },
+    {
+      "id": 134,
+      "word": "cạnh tranh",
+      "sentence1": "Đây là một thị trường cạnh tranh.",
+      "sentence2": "Cô ấy rất cạnh tranh trong thể thao."
+    },
+    {
+      "id": 135,
+      "word": "khiếu nại",
+      "sentence1": "Tôi có một khiếu nại về dịch vụ.",
+      "sentence2": "Khiếu nại đã được giải quyết nhanh chóng."
+    },
+    {
+      "id": 136,
+      "word": "phức tạp",
+      "sentence1": "Đây là một vấn đề phức tạp.",
+      "sentence2": "Các hướng dẫn quá phức tạp."
+    },
+    {
+      "id": 137,
+      "word": "tập trung",
+      "sentence1": "Tôi cần tập trung vào công việc của mình.",
+      "sentence2": "Cô ấy thấy khó tập trung."
+    },
+    {
+      "id": 138,
+      "word": "kết luận",
+      "sentence1": "Chúng ta có thể kết thúc cuộc họp bây giờ.",
+      "sentence2": "Bà kết thúc bài phát biểu của mình bằng một câu trích dẫn."
+    },
+    {
+      "id": 139,
+      "word": "kết luận",
+      "sentence1": "Bạn kết luận gì?",
+      "sentence2": "Kết luận dựa trên bằng chứng."
+    },
+    {
+      "id": 140,
+      "word": "tự tin",
+      "sentence1": "Cô ấy tự tin vào khả năng của mình.",
+      "sentence2": "Anh ấy nói một cách tự tin."
+    },
+    {
+      "id": 141,
+      "word": "xác nhận",
+      "sentence1": "Anh có thể xác nhận cuộc hẹn không?",
+      "sentence2": "Tôi đã nhận được email xác nhận."
+    },
+    {
+      "id": 142,
+      "word": "nhầm lẫn",
+      "sentence1": "Câu hỏi này có thể gây nhầm lẫn cho một số người.",
+      "sentence2": "Đừng nhầm lẫn vấn đề."
+    },
+    {
+      "id": 143,
+      "word": "nhầm lẫn",
+      "sentence1": "Cô ấy đã bị nhầm lẫn bởi các hướng dẫn.",
+      "sentence2": "Anh ấy trông có vẻ bối rối trong cuộc họp."
+    },
+    {
+      "id": 144,
+      "word": "kết nối",
+      "sentence1": "Có một mối liên hệ mạnh mẽ giữa họ.",
+      "sentence2": "Kết nối internet chậm."
+    },
+    {
+      "id": 145,
+      "word": "hậu quả",
+      "sentence1": "Mọi hành động đều có hậu quả.",
+      "sentence2": "Hậu quả của quyết định này rất nghiêm trọng."
+    },
+    {
+      "id": 146,
+      "word": "bao gồm",
+      "sentence1": "Đội gồm năm thành viên.",
+      "sentence2": "Ủy ban bao gồm các chuyên gia trong lĩnh vực này."
+    },
+    {
+      "id": 147,
+      "word": "tiêu thụ",
+      "sentence1": "Chúng ta cần tiêu thụ ít năng lượng hơn.",
+      "sentence2": "Ngọn lửa thiêu rụi toàn bộ tòa nhà."
+    },
+    {
+      "id": 148,
+      "word": "người tiêu dùng",
+      "sentence1": "Người tiêu dùng luôn luôn đúng.",
+      "sentence2": "Chúng ta cần hiểu hành vi của người tiêu dùng."
+    },
+    {
+      "id": 149,
+      "word": "liên lạc",
+      "sentence1": "Xin hãy giữ liên lạc với tôi.",
+      "sentence2": "Tôi mất liên lạc với những người bạn cũ của mình."
+    },
+    {
+      "id": 150,
+      "word": "thùng chứa",
+      "sentence1": "Container vận chuyển đã đầy.",
+      "sentence2": "Chúng ta cần thêm thùng chứa để lưu trữ."
+    },
+    {
+      "id": 151,
+      "word": "nội dung",
+      "sentence1": "Nội dung của cuốn sách rất thú vị.",
+      "sentence2": "Vui lòng xem xét nội dung một cách cẩn thận."
+    },
+    {
+      "id": 152,
+      "word": "liên tục",
+      "sentence1": "Tiếng ồn liên tục gây phiền toái.",
+      "sentence2": "Cô ấy có sự hỗ trợ liên tục từ gia đình mình."
+    },
+    {
+      "id": 153,
+      "word": "tương phản",
+      "sentence1": "Có sự tương phản giữa hai bức tranh.",
+      "sentence2": "Trái ngược với năm ngoái, doanh số đã tăng."
+    },
+    {
+      "id": 154,
+      "word": "thuận tiện",
+      "sentence1": "Vị trí này rất thuận tiện.",
+      "sentence2": "Có thời gian thuận tiện cho anh không?"
+    },
+    {
+      "id": 155,
+      "word": "thuyết phục",
+      "sentence1": "Tôi cần thuyết phục anh ta giúp chúng ta.",
+      "sentence2": "Cô ấy thuyết phục tôi thử nhà hàng mới."
+    },
+    {
+      "id": 156,
+      "word": "tốt",
+      "sentence1": "Cái áo khoác đó thật sự rất tuyệt.",
+      "sentence2": "Cô ấy có phong cách tuyệt vời."
+    },
+    {
+      "id": 157,
+      "word": "trang phục",
+      "sentence1": "Anh ta mặc trang phục siêu anh hùng.",
+      "sentence2": "Buổi tiệc trang phục rất vui."
+    },
+    {
+      "id": 158,
+      "word": "nhà nghỉ",
+      "sentence1": "Họ có một ngôi nhà nhỏ trên núi.",
+      "sentence2": "Ngôi nhà rất ấm cúng."
+    },
+    {
+      "id": 159,
+      "word": "bông",
+      "sentence1": "Áo này được làm bằng bông.",
+      "sentence2": "Bông là một vật liệu mềm."
+    },
+    {
+      "id": 160,
+      "word": "đếm",
+      "sentence1": "Anh đếm đến 10 được không?",
+      "sentence2": "Tôi có thể đếm tiền."
+    },
+    {
+      "id": 161,
+      "word": "nông thôn",
+      "sentence1": "Họ sống ở nông thôn.",
+      "sentence2": "Khu nông thôn đẹp vào mùa xuân."
+    },
+    {
+      "id": 162,
+      "word": "tòa án",
+      "sentence1": "Tòa đang họp.",
+      "sentence2": "Anh ta đã bị đưa ra tòa vì tội ác."
+    },
+    {
+      "id": 163,
+      "word": "bọc",
+      "sentence1": "Xin hãy che bàn bằng một miếng vải.",
+      "sentence2": "Tuyết bao phủ mặt đất."
+    },
+    {
+      "id": 164,
+      "word": "được bao phủ",
+      "sentence1": "Cuốn sách bị bụi bặm.",
+      "sentence2": "Xe bị phủ tuyết."
+    },
+    {
+      "id": 165,
+      "word": "kem",
+      "sentence1": "Tôi thích cho kem vào cà phê.",
+      "sentence2": "Cô ấy bôi kem lên da."
+    },
+    {
+      "id": 166,
+      "word": "tội phạm",
+      "sentence1": "Tội phạm đã bị cảnh sát bắt.",
+      "sentence2": "Anh ta có tiền án."
+    },
+    {
+      "id": 167,
+      "word": "tàn nhẫn",
+      "sentence1": "Thật tàn nhẫn khi đối xử với anh ta như vậy.",
+      "sentence2": "Sự trừng phạt tàn nhẫn làm mọi người sốc."
+    },
+    {
+      "id": 168,
+      "word": "văn hóa",
+      "sentence1": "Sự khác biệt về văn hóa có thể là một thách thức.",
+      "sentence2": "Cô ấy đang học nhân chủng học văn hóa."
+    },
+    {
+      "id": 169,
+      "word": "tiền tệ",
+      "sentence1": "Tiền tệ của Nhật Bản là đồng yên.",
+      "sentence2": "Tôi cần đổi tiền."
+    },
+    {
+      "id": 170,
+      "word": "hiện tại",
+      "sentence1": "Tình hình hiện tại rất khó khăn.",
+      "sentence2": "Công việc hiện tại của anh là gì?"
+    },
+    {
+      "id": 171,
+      "word": "hiện tại",
+      "sentence1": "Tôi hiện đang làm một dự án.",
+      "sentence2": "Cô ấy hiện đang học ở nước ngoài."
+    },
+    {
+      "id": 172,
+      "word": "rèm cửa",
+      "sentence1": "Bức màn là màu xanh.",
+      "sentence2": "Xin hãy đóng rèm lại."
+    },
+    {
+      "id": 173,
+      "word": "phong tục",
+      "sentence1": "Đây là thiết kế tùy chỉnh.",
+      "sentence2": "Họ cung cấp các giải pháp tùy chỉnh."
+    },
+    {
+      "id": 174,
+      "word": "cắt",
+      "sentence1": "Làm ơn cắt tờ giấy đi.",
+      "sentence2": "Anh ta cắt bánh thành nhiều miếng."
+    },
+    {
+      "id": 175,
+      "word": "hàng ngày",
+      "sentence1": "Tôi đọc tin tức hàng ngày.",
+      "sentence2": "Cô ấy có một thói quen hàng ngày."
+    },
+    {
+      "id": 176,
+      "word": "thiệt hại",
+      "sentence1": "Cơn bão đã gây thiệt hại cho mái nhà.",
+      "sentence2": "Chúng ta cần đánh giá thiệt hại."
+    },
+    {
+      "id": 177,
+      "word": "thỏa thuận",
+      "sentence1": "Họ đã thỏa thuận hợp tác.",
+      "sentence2": "Thỏa thuận này có lợi cho cả hai bên."
+    },
+    {
+      "id": 178,
+      "word": "thập kỷ",
+      "sentence1": "Một thập kỷ là 10 năm.",
+      "sentence2": "Trong thập kỷ qua đã có những thay đổi đáng kể."
+    },
+    {
+      "id": 179,
+      "word": "trang trí",
+      "sentence1": "Chúng ta sẽ trang trí phòng cho bữa tiệc.",
+      "sentence2": "Cô ấy thích trang trí nhà."
+    },
+    {
+      "id": 180,
+      "word": "sâu",
+      "sentence1": "Hồ rất sâu.",
+      "sentence2": "Anh ta hít thở sâu trước khi lặn."
+    },
+    {
+      "id": 181,
+      "word": "định nghĩa",
+      "sentence1": "Anh có thể định nghĩa từ này được không?",
+      "sentence2": "Thật khó để định nghĩa hạnh phúc."
+    },
+    {
+      "id": 182,
+      "word": "rõ ràng",
+      "sentence1": "Có một câu trả lời chắc chắn cho câu hỏi này.",
+      "sentence2": "Chúng ta cần một kế hoạch rõ ràng."
+    },
+    {
+      "id": 183,
+      "word": "định nghĩa",
+      "sentence1": "Định nghĩa của từ này là gì?",
+      "sentence2": "Định nghĩa không rõ ràng."
+    },
+    {
+      "id": 184,
+      "word": "giao hàng",
+      "sentence1": "Tôi sẽ giao gói hàng vào ngày mai.",
+      "sentence2": "Họ đề nghị giao thức ăn."
+    },
+    {
+      "id": 185,
+      "word": "khởi hành",
+      "sentence1": "Thời gian khởi hành là 10 giờ sáng.",
+      "sentence2": "Chúng tôi rất buồn vì sự ra đi của cô ấy."
+    },
+    {
+      "id": 186,
+      "word": "mặc dù",
+      "sentence1": "Mặc dù trời mưa, chúng tôi đi bộ đường dài.",
+      "sentence2": "Bà đã thành công bất chấp những khó khăn."
+    },
+    {
+      "id": 187,
+      "word": "đích đến",
+      "sentence1": "Paris là một điểm đến du lịch nổi tiếng.",
+      "sentence2": "Điểm đến du lịch mơ ước của bạn là gì?"
+    },
+    {
+      "id": 188,
+      "word": "xác định",
+      "sentence1": "Chúng ta cần xác định nguyên nhân của vấn đề.",
+      "sentence2": "Xét nghiệm sẽ giúp xác định mức độ của bạn."
+    },
+    {
+      "id": 189,
+      "word": "xác định",
+      "sentence1": "Cô ấy quyết tâm thành công.",
+      "sentence2": "Dù gặp khó khăn, ông vẫn kiên định."
+    },
+    {
+      "id": 190,
+      "word": "phát triển",
+      "sentence1": "Sự phát triển của công nghệ rất nhanh.",
+      "sentence2": "Chúng tôi tập trung vào sự phát triển cá nhân."
+    },
+    {
+      "id": 191,
+      "word": "sơ đồ",
+      "sentence1": "Vui lòng tham khảo sơ đồ để làm rõ.",
+      "sentence2": "Biểu đồ minh họa quá trình này."
+    },
+    {
+      "id": 192,
+      "word": "kim cương",
+      "sentence1": "Viên kim cương rất có giá trị.",
+      "sentence2": "Cô ấy nhận được một chiếc nhẫn kim cương."
+    },
+    {
+      "id": 193,
+      "word": "khó khăn",
+      "sentence1": "Anh ấy phải đối mặt với nhiều khó khăn.",
+      "sentence2": "Khó khăn của nhiệm vụ là bất ngờ."
+    },
+    {
+      "id": 194,
+      "word": "trực tiếp",
+      "sentence1": "Xin hãy trả lời thẳng thắn.",
+      "sentence2": "Con đường là một tuyến đường trực tiếp đến thành phố."
+    },
+    {
+      "id": 195,
+      "word": "trực tiếp",
+      "sentence1": "Tôi đã nói chuyện trực tiếp với ông ấy.",
+      "sentence2": "Thông tin được gửi trực tiếp đến cô ấy."
+    },
+    {
+      "id": 196,
+      "word": "đất",
+      "sentence1": "Bẩn thỉu trên giày của anh rất đáng chú ý.",
+      "sentence2": "Xin hãy lau sạch bụi bẩn trên sàn nhà."
+    },
+    {
+      "id": 197,
+      "word": "bất lợi",
+      "sentence1": "Nhược điểm chính là chi phí.",
+      "sentence2": "Cách tiếp cận này có những ưu điểm và nhược điểm."
+    },
+    {
+      "id": 198,
+      "word": "thất vọng",
+      "sentence1": "Cô ấy thất vọng với kết quả.",
+      "sentence2": "Tôi cảm thấy thất vọng sau khi xem phim."
+    },
+    {
+      "id": 199,
+      "word": "đáng thất vọng",
+      "sentence1": "Hiệu suất rất đáng thất vọng.",
+      "sentence2": "Thật đáng thất vọng khi thấy không có tiến bộ."
+    },
+    {
+      "id": 200,
+      "word": "giảm giá",
+      "sentence1": "Họ đã giảm giá sản phẩm.",
+      "sentence2": "Tôi thích mua sắm trong mùa giảm giá."
+    },
+    {
+      "id": 201,
+      "word": "không thích",
+      "sentence1": "Tôi không thích tiếng ồn lớn.",
+      "sentence2": "Cô ấy không thích thức ăn cay."
+    },
+    {
+      "id": 202,
+      "word": "phân chia",
+      "sentence1": "Chúng ta cần phân chia nhiệm vụ giữa các thành viên trong nhóm.",
+      "sentence2": "Bánh được chia thành hai phần bằng nhau."
+    },
+    {
+      "id": 203,
+      "word": "phim tài liệu",
+      "sentence1": "Tôi đã xem một bộ phim tài liệu hấp dẫn.",
+      "sentence2": "Bộ phim tài liệu khám phá sự thay đổi khí hậu."
+    },
+    {
+      "id": 204,
+      "word": "hiến tặng",
+      "sentence1": "Tôi muốn quyên góp cho tổ chức từ thiện.",
+      "sentence2": "Họ khuyến khích mọi người hiến máu."
+    },
+    {
+      "id": 205,
+      "word": "gấp đôi",
+      "sentence1": "Tôi có thể có một ly cà phê espresso đôi được không?",
+      "sentence2": "Giá đã tăng gấp đôi trong năm qua."
+    },
+    {
+      "id": 206,
+      "word": "nghi ngờ",
+      "sentence1": "Tôi nghi ngờ về sự trung thực của anh ta.",
+      "sentence2": "Không có nghi ngờ gì về việc cô ấy có tài."
+    },
+    {
+      "id": 207,
+      "word": "mặc quần áo",
+      "sentence1": "Cô ấy mặc một chiếc váy đẹp.",
+      "sentence2": "Anh ấy ăn mặc đẹp cho dịp này."
+    },
+    {
+      "id": 208,
+      "word": "thả",
+      "sentence1": "Cẩn thận đừng để ly rơi.",
+      "sentence2": "Nhiệt độ sẽ giảm qua đêm."
+    },
+    {
+      "id": 209,
+      "word": "trống",
+      "sentence1": "Anh ấy chơi trống trong ban nhạc.",
+      "sentence2": "Âm thanh của trống rất to."
+    },
+    {
+      "id": 210,
+      "word": "say rượu",
+      "sentence1": "Anh ta say rượu sau bữa tiệc.",
+      "sentence2": "Đừng uống rượu và lái xe khi say rượu."
+    },
+    {
+      "id": 211,
+      "word": "phải trả",
+      "sentence1": "Mức thanh toán sẽ đến vào tuần tới.",
+      "sentence2": "Cô ấy sẽ sinh con vào tháng 5."
+    },
+    {
+      "id": 212,
+      "word": "bụi",
+      "sentence1": "Bụi trên kệ rất dày.",
+      "sentence2": "Xin hãy lau bụi khỏi bàn."
+    },
+    {
+      "id": 213,
+      "word": "nghĩa vụ",
+      "sentence1": "Đó là nhiệm vụ của bạn để giúp đỡ người khác.",
+      "sentence2": "Cô ấy coi trọng nhiệm vụ của mình."
+    },
+    {
+      "id": 214,
+      "word": "động đất",
+      "sentence1": "Trận động đất gây ra thiệt hại đáng kể.",
+      "sentence2": "Chúng tôi cảm nhận được trận động đất từ cách xa hàng dặm."
+    },
+    {
+      "id": 215,
+      "word": "phương Đông",
+      "sentence1": "Phần phía đông của đất nước là miền núi.",
+      "sentence2": "Họ đã đi đến bờ biển phía đông."
+    },
+    {
+      "id": 216,
+      "word": "kinh tế",
+      "sentence1": "Tình hình kinh tế đang cải thiện.",
+      "sentence2": "Họ thảo luận về các chính sách kinh tế."
+    },
+    {
+      "id": 217,
+      "word": "kinh tế",
+      "sentence1": "Nền kinh tế đang tăng trưởng đều đặn.",
+      "sentence2": "Một nền kinh tế mạnh sẽ có lợi cho tất cả mọi người."
+    },
+    {
+      "id": 218,
+      "word": "rìa",
+      "sentence1": "Cẩn thận gần bờ vách đá.",
+      "sentence2": "Con dao có lưỡi sắc."
+    },
+    {
+      "id": 219,
+      "word": "biên tập viên",
+      "sentence1": "Người biên tập đã xem xét lại bài báo trước khi xuất bản.",
+      "sentence2": "Cô ấy làm biên tập viên tạp chí."
+    },
+    {
+      "id": 220,
+      "word": "giáo dục",
+      "sentence1": "Các trường học nhằm mục đích giáo dục học sinh hiệu quả.",
+      "sentence2": "Điều quan trọng là giáo dục công chúng về các vấn đề sức khỏe."
+    },
+    {
+      "id": 221,
+      "word": "có học thức",
+      "sentence1": "Cô ấy là một người phụ nữ có học thức với bằng cấp.",
+      "sentence2": "Những người có học vấn thường có triển vọng việc làm tốt hơn."
+    },
+    {
+      "id": 222,
+      "word": "giáo dục",
+      "sentence1": "Bộ phim tài liệu vừa giải trí vừa giáo dục.",
+      "sentence2": "Các chương trình giáo dục rất cần thiết cho sự phát triển của trẻ em."
+    },
+    {
+      "id": 223,
+      "word": "hiệu quả",
+      "sentence1": "Chiến lược tiếp thị mới đã chứng tỏ hiệu quả.",
+      "sentence2": "Giao tiếp hiệu quả là chìa khóa cho một mối quan hệ thành công."
+    },
+    {
+      "id": 224,
+      "word": "hiệu quả",
+      "sentence1": "Cô ấy quản lý thời gian của mình một cách hiệu quả để đáp ứng thời hạn.",
+      "sentence2": "Nhóm đã làm việc cùng nhau một cách hiệu quả để giải quyết vấn đề."
+    },
+    {
+      "id": 225,
+      "word": "nỗ lực",
+      "sentence1": "Phải mất rất nhiều nỗ lực để hoàn thành dự án.",
+      "sentence2": "Nỗ lực của bà để cải thiện kỹ năng của mình đã được đền đáp."
+    },
+    {
+      "id": 226,
+      "word": "bầu cử",
+      "sentence1": "Cuộc bầu cử sẽ được tổ chức vào tháng tới.",
+      "sentence2": "Lượng cử tri tham gia bầu cử cao trong cuộc bầu cử cuối cùng."
+    },
+    {
+      "id": 227,
+      "word": "yếu tố",
+      "sentence1": "Nước là một yếu tố quan trọng cho tất cả các sinh vật sống.",
+      "sentence2": "Yếu tố chính của kế hoạch là làm việc theo nhóm."
+    },
+    {
+      "id": 228,
+      "word": "xấu hổ",
+      "sentence1": "Cô cảm thấy xấu hổ sau khi quên tên anh ta.",
+      "sentence2": "Anh ta xấu hổ vì sai lầm."
+    },
+    {
+      "id": 229,
+      "word": "xấu hổ",
+      "sentence1": "Đó là một khoảnh khắc xấu hổ cho tất cả những người liên quan.",
+      "sentence2": "Tình huống xấu hổ đã nhanh chóng bị lãng quên."
+    },
+    {
+      "id": 230,
+      "word": "khẩn cấp",
+      "sentence1": "Gọi 911 trong trường hợp khẩn cấp.",
+      "sentence2": "Các dịch vụ khẩn cấp đã đến nhanh chóng."
+    },
+    {
+      "id": 231,
+      "word": "cảm xúc",
+      "sentence1": "Cô ấy thể hiện cảm xúc của mình thông qua nghệ thuật.",
+      "sentence2": "Hiểu được cảm xúc của mình là rất quan trọng."
+    },
+    {
+      "id": 232,
+      "word": "việc làm",
+      "sentence1": "Tỷ lệ việc làm đã tăng trong năm nay.",
+      "sentence2": "Cô ấy đang tìm việc làm trong lĩnh vực của mình."
+    },
+    {
+      "id": 233,
+      "word": "rỗng",
+      "sentence1": "Phòng trống rỗng và yên tĩnh.",
+      "sentence2": "Anh ấy cảm thấy trống rỗng trong lòng sau khi mất."
+    },
+    {
+      "id": 234,
+      "word": "khuyến khích",
+      "sentence1": "Các giáo viên khuyến khích học sinh đặt câu hỏi.",
+      "sentence2": "Cha mẹ nên khuyến khích con đọc."
+    },
+    {
+      "id": 235,
+      "word": "kẻ thù",
+      "sentence1": "Họ từng là bạn, nhưng giờ họ là kẻ thù.",
+      "sentence2": "Quân địch đã bị đánh bại trong trận chiến."
+    },
+    {
+      "id": 236,
+      "word": "đính hôn",
+      "sentence1": "Họ đã đính hôn và sẽ kết hôn vào năm tới.",
+      "sentence2": "Cô ấy đang nói chuyện với bạn mình."
+    },
+    {
+      "id": 237,
+      "word": "kỹ thuật",
+      "sentence1": "Anh ta học kỹ thuật tại trường đại học.",
+      "sentence2": "Kỹ thuật là một lĩnh vực đầy thách thức."
+    },
+    {
+      "id": 238,
+      "word": "giải trí",
+      "sentence1": "Công việc của chú hề là giải trí cho trẻ em.",
+      "sentence2": "Chúng ta cần phải tìm cách để giải trí cho khách của mình."
+    },
+    {
+      "id": 239,
+      "word": "giải trí",
+      "sentence1": "Thành phố cung cấp một loạt các lựa chọn giải trí.",
+      "sentence2": "Cô ấy làm việc trong ngành công nghiệp giải trí."
+    },
+    {
+      "id": 240,
+      "word": "lối vào",
+      "sentence1": "Lối vào bảo tàng ở bên trái.",
+      "sentence2": "Anh ấy đã có một sự xuất hiện lớn tại bữa tiệc."
+    },
+    {
+      "id": 241,
+      "word": "mục nhập",
+      "sentence1": "Việc tham dự sự kiện là miễn phí.",
+      "sentence2": "Xin hãy giữ an toàn tấm vé vào cửa."
+    },
+    {
+      "id": 242,
+      "word": "môi trường",
+      "sentence1": "Các vấn đề môi trường đang trở nên quan trọng hơn.",
+      "sentence2": "Tổ chức này tập trung vào bảo vệ môi trường."
+    },
+    {
+      "id": 243,
+      "word": "giai đoạn",
+      "sentence1": "Tập cuối cùng của loạt phim rất thú vị.",
+      "sentence2": "Mỗi tập phim khám phá một chủ đề khác nhau."
+    },
+    {
+      "id": 244,
+      "word": "bằng nhau",
+      "sentence1": "Tất cả mọi người nên được đối xử bình đẳng.",
+      "sentence2": "Luật pháp đảm bảo quyền bình đẳng cho tất cả công dân."
+    },
+    {
+      "id": 245,
+      "word": "tương tự",
+      "sentence1": "Giải thưởng sẽ được trao bình đẳng cho tất cả những người chiến thắng.",
+      "sentence2": "Họ nên được đối xử bình đẳng, bất kể nguồn gốc của họ."
+    },
+    {
+      "id": 246,
+      "word": "thoát",
+      "sentence1": "Cách duy nhất để thoát khỏi thực tại là thông qua trí tưởng tượng.",
+      "sentence2": "Anh ta đã lên kế hoạch trốn thoát một cách cẩn thận."
+    },
+    {
+      "id": 247,
+      "word": "thiết yếu",
+      "sentence1": "Nước rất cần thiết cho sự sống.",
+      "sentence2": "Điều cần thiết là làm theo hướng dẫn."
+    },
+    {
+      "id": 248,
+      "word": "cuối cùng",
+      "sentence1": "Cuối cùng, họ đã tìm ra giải pháp cho vấn đề.",
+      "sentence2": "Cuối cùng, bà quyết định chấp nhận lời đề nghị."
+    },
+    {
+      "id": 249,
+      "word": "kiểm tra",
+      "sentence1": "Bác sĩ sẽ kiểm tra anh ngay.",
+      "sentence2": "Điều quan trọng là phải kiểm tra tất cả các bằng chứng."
+    },
+    {
+      "id": 250,
+      "word": "ngoại trừ",
+      "sentence1": "Mọi người được mời trừ John.",
+      "sentence2": "Tôi thích tất cả các loại trái cây ngoại trừ chuối."
+    },
+    {
+      "id": 251,
+      "word": "trao đổi",
+      "sentence1": "Họ trao đổi quà tại bữa tiệc.",
+      "sentence2": "Việc trao đổi ý tưởng rất quan trọng cho sự tiến bộ."
+    },
+    {
+      "id": 252,
+      "word": "phấn khích",
+      "sentence1": "Sự phấn khích trong không khí là rõ ràng.",
+      "sentence2": "Cô ấy không thể che giấu sự phấn khích của mình về chuyến đi."
+    },
+    {
+      "id": 253,
+      "word": "triển lãm",
+      "sentence1": "Triển lãm nghệ thuật thu hút nhiều du khách.",
+      "sentence2": "Cô ấy đang chuẩn bị cho cuộc triển lãm cá nhân đầu tiên của mình."
+    },
+    {
+      "id": 254,
+      "word": "mở rộng",
+      "sentence1": "Công ty có kế hoạch mở rộng hoạt động ở nước ngoài.",
+      "sentence2": "Chúng tôi cần mở rộng dòng sản phẩm của mình."
+    },
+    {
+      "id": 255,
+      "word": "dự kiến",
+      "sentence1": "Kết quả tốt hơn mong đợi.",
+      "sentence2": "Cô ấy là người chiến thắng dự kiến của cuộc thi."
+    },
+    {
+      "id": 256,
+      "word": "thám hiểm",
+      "sentence1": "Chuyến thám hiểm đến Nam Cực đã thành công.",
+      "sentence2": "Họ chuẩn bị cho cuộc thám hiểm trong nhiều tháng."
+    },
+    {
+      "id": 257,
+      "word": "kinh nghiệm",
+      "sentence1": "Cô ấy có rất nhiều kinh nghiệm trong tiếp thị.",
+      "sentence2": "Du lịch nước ngoài là một kinh nghiệm quý giá đối với anh."
+    },
+    {
+      "id": 258,
+      "word": "kinh nghiệm",
+      "sentence1": "Anh ấy là một giáo viên có kinh nghiệm.",
+      "sentence2": "Đội cần những cầu thủ có kinh nghiệm."
+    },
+    {
+      "id": 259,
+      "word": "thí nghiệm",
+      "sentence1": "Các nhà khoa học đã tiến hành một thí nghiệm.",
+      "sentence2": "Thí nghiệm đã cho kết quả thú vị."
+    },
+    {
+      "id": 260,
+      "word": "nổ tung",
+      "sentence1": "Các pháo hoa sẽ nổ vào nửa đêm.",
+      "sentence2": "Quả bóng có thể nổ nếu bạn thổi nó quá."
+    },
+    {
+      "id": 261,
+      "word": "khám phá",
+      "sentence1": "Họ có kế hoạch khám phá hang động.",
+      "sentence2": "Cô ấy thích khám phá những nơi mới."
+    },
+    {
+      "id": 262,
+      "word": "nổ",
+      "sentence1": "Tiếng nổ được nghe từ rất xa.",
+      "sentence2": "Họ đã điều tra nguyên nhân của vụ nổ."
+    },
+    {
+      "id": 263,
+      "word": "xuất khẩu",
+      "sentence1": "Đất nước này xuất khẩu dầu cho các quốc gia khác.",
+      "sentence2": "Họ cần tìm thị trường mới để xuất khẩu sản phẩm của họ."
+    },
+    {
+      "id": 264,
+      "word": "thêm",
+      "sentence1": "Bạn sẽ cần thêm thời gian để hoàn thành dự án.",
+      "sentence2": "Cô ấy mang thêm đồ ăn nhẹ cho chuyến đi."
+    },
+    {
+      "id": 265,
+      "word": "mặt",
+      "sentence1": "Anh ta quay mặt về phía đám đông.",
+      "sentence2": "Cô ấy không thể đối mặt với anh ta sau những gì đã xảy ra."
+    },
+    {
+      "id": 266,
+      "word": "khá",
+      "sentence1": "Bài kiểm tra khá dễ dàng.",
+      "sentence2": "Cô ấy khá chắc chắn về quyết định của mình."
+    },
+    {
+      "id": 267,
+      "word": "quen thuộc",
+      "sentence1": "Nơi này có vẻ quen thuộc.",
+      "sentence2": "Tôi không quen thuộc với khái niệm đó."
+    },
+    {
+      "id": 268,
+      "word": "ưa thích",
+      "sentence1": "Cô ấy mặc một chiếc váy sang trọng đến bữa tiệc.",
+      "sentence2": "Họ ở một khách sạn sang trọng."
+    },
+    {
+      "id": 269,
+      "word": "xa",
+      "sentence1": "Cửa hàng ở xa đây.",
+      "sentence2": "Cô ấy sống ở xa vùng quê."
+    },
+    {
+      "id": 270,
+      "word": "hấp dẫn",
+      "sentence1": "Bộ phim tài liệu thật hấp dẫn.",
+      "sentence2": "Cô ấy có một câu chuyện hấp dẫn để kể."
+    },
+    {
+      "id": 271,
+      "word": "thời trang",
+      "sentence1": "Anh ấy luôn mặc quần áo thời trang.",
+      "sentence2": "Màu sắc mùa này rất thời trang."
+    },
+    {
+      "id": 272,
+      "word": "cắt chặt",
+      "sentence1": "Xin hãy thắt dây an toàn.",
+      "sentence2": "Cô ấy dùng một cái kẹp để buộc các tờ giấy lại với nhau."
+    },
+    {
+      "id": 273,
+      "word": "ưa thích",
+      "sentence1": "Anh có thể giúp tôi một việc không?",
+      "sentence2": "Bà ấy ủng hộ chính sách mới."
+    },
+    {
+      "id": 274,
+      "word": "sợ hãi",
+      "sentence1": "Anh ta sợ độ cao.",
+      "sentence2": "Nỗi sợ thất bại có thể làm tê liệt."
+    },
+    {
+      "id": 275,
+      "word": "đặc điểm",
+      "sentence1": "Điện thoại mới có một số tính năng thú vị.",
+      "sentence2": "Một trong những tính năng chính là máy ảnh của nó."
+    },
+    {
+      "id": 276,
+      "word": "hàng rào",
+      "sentence1": "Họ xây một hàng rào quanh khu vườn.",
+      "sentence2": "Rào chắn cần được sơn."
+    },
+    {
+      "id": 277,
+      "word": "đánh nhau",
+      "sentence1": "Cuộc chiến ở khu vực này đã gia tăng.",
+      "sentence2": "Họ đã chiến đấu vì quyền lợi của họ."
+    },
+    {
+      "id": 278,
+      "word": "hồ sơ",
+      "sentence1": "Xin lưu tập tin trước khi đóng cửa.",
+      "sentence2": "Tôi cần sắp xếp hồ sơ của mình."
+    },
+    {
+      "id": 279,
+      "word": "tài chính",
+      "sentence1": "Công ty đang ở trong một vị trí tài chính mạnh mẽ.",
+      "sentence2": "Họ cung cấp hỗ trợ tài chính cho sinh viên."
+    },
+    {
+      "id": 280,
+      "word": "lửa",
+      "sentence1": "Ngọn lửa lan nhanh qua rừng.",
+      "sentence2": "Lính cứu hỏa đã làm việc để kiểm soát đám cháy."
+    },
+    {
+      "id": 281,
+      "word": "thể lực",
+      "sentence1": "Cô ấy tập trung vào mục tiêu thể dục của mình.",
+      "sentence2": "Tập thể dục thường xuyên rất quan trọng cho thể lực."
+    },
+    {
+      "id": 282,
+      "word": "cố định",
+      "sentence1": "Giá cố định không thể thương lượng.",
+      "sentence2": "Anh ấy có một lịch trình cố định mỗi tuần."
+    },
+    {
+      "id": 283,
+      "word": "lá cờ",
+      "sentence1": "Lá cờ đang bay trong gió.",
+      "sentence2": "Họ giơ cờ để ăn mừng."
+    },
+    {
+      "id": 284,
+      "word": "lũ lụt",
+      "sentence1": "Lũ lụt đã gây ra thiệt hại đáng kể.",
+      "sentence2": "Họ đang làm việc để ngăn chặn lũ lụt trong tương lai."
+    },
+    {
+      "id": 285,
+      "word": "bột mì",
+      "sentence1": "Cô ấy cần bột để làm bánh mì.",
+      "sentence2": "Công thức yêu cầu hai cốc bột."
+    },
+    {
+      "id": 286,
+      "word": "dòng chảy",
+      "sentence1": "Dòng chảy của sông rất mạnh.",
+      "sentence2": "Chúng ta cần cải thiện luồng thông tin."
+    },
+    {
+      "id": 287,
+      "word": "gấp",
+      "sentence1": "Vui lòng gấp tờ giấy làm đôi.",
+      "sentence2": "Cô ấy biết làm thế nào để gấp một chiếc khăn được trang bị."
+    },
+    {
+      "id": 288,
+      "word": "dân gian",
+      "sentence1": "Âm nhạc dân gian rất phổ biến ở khu vực này.",
+      "sentence2": "Lễ hội kỷ niệm truyền thống dân gian."
+    },
+    {
+      "id": 289,
+      "word": "theo sau",
+      "sentence1": "Ngày hôm sau trời rất nắng.",
+      "sentence2": "Cô ấy đã tạo ra một số người hâm mộ trung thành."
+    },
+    {
+      "id": 290,
+      "word": "lực",
+      "sentence1": "Sức mạnh của vụ nổ rất lớn.",
+      "sentence2": "Họ dùng tất cả sức mạnh của mình để đẩy chiếc xe."
+    },
+    {
+      "id": 291,
+      "word": "mãi mãi",
+      "sentence1": "Em sẽ yêu anh mãi mãi.",
+      "sentence2": "Khoảnh khắc này sẽ khắc sâu trong trí nhớ của tôi mãi mãi."
+    },
+    {
+      "id": 292,
+      "word": "khung",
+      "sentence1": "Cô ấy mua một khung mới cho bức tranh.",
+      "sentence2": "Khung được làm bằng gỗ rắn."
+    },
+    {
+      "id": 293,
+      "word": "ngưng",
+      "sentence1": "Nước sẽ đóng băng nếu nhiệt độ giảm xuống.",
+      "sentence2": "Tôi quên đóng băng những món ăn còn lại."
+    },
+    {
+      "id": 294,
+      "word": "thường xuyên",
+      "sentence1": "Cô ấy đi du lịch thường xuyên vì công việc.",
+      "sentence2": "Xe buýt chạy thường xuyên trong ngày."
+    },
+    {
+      "id": 295,
+      "word": "tình bạn",
+      "sentence1": "Tình bạn của họ kéo dài nhiều năm.",
+      "sentence2": "Cô ấy coi trọng tình bạn của mình với anh ta."
+    },
+    {
+      "id": 296,
+      "word": "sợ hãi",
+      "sentence1": "Tiếng ồn lớn có thể làm trẻ em sợ.",
+      "sentence2": "Anh ấy không có ý làm cô sợ."
+    },
+    {
+      "id": 297,
+      "word": "sợ hãi",
+      "sentence1": "Cô ấy sợ hãi bởi tiếng ồn đột ngột.",
+      "sentence2": "Con mèo sợ hãi trốn dưới giường."
+    },
+    {
+      "id": 298,
+      "word": "đáng sợ",
+      "sentence1": "Phim rất đáng sợ đến nỗi tôi không thể ngủ được.",
+      "sentence2": "Hắn có khả năng tiên đoán tương lai đáng sợ."
+    },
+    {
+      "id": 299,
+      "word": "đông lạnh",
+      "sentence1": "Hồ bị đóng băng vào mùa đông.",
+      "sentence2": "Cô ấy tìm thấy một chiếc pizza đông lạnh trong tủ đông lạnh."
+    },
+    {
+      "id": 300,
+      "word": "bánh chiên",
+      "sentence1": "Tôi thích chiên rau trong dầu ô liu.",
+      "sentence2": "Con nên chiên khoai tây cho đến khi chúng có màu nâu vàng."
+    },
+    {
+      "id": 301,
+      "word": "nhiên liệu",
+      "sentence1": "Chiếc xe chạy bằng nhiên liệu diesel.",
+      "sentence2": "Chúng ta cần tìm một nguồn nhiên liệu cho máy phát điện."
+    },
+    {
+      "id": 302,
+      "word": "chức năng",
+      "sentence1": "Chức năng chính của tim là bơm máu.",
+      "sentence2": "Nút này có một chức năng cụ thể trong phần mềm."
+    },
+    {
+      "id": 303,
+      "word": "lông",
+      "sentence1": "Áo khoác được làm từ lông thật.",
+      "sentence2": "Một số động vật có lông dày để giữ ấm."
+    },
+    {
+      "id": 304,
+      "word": "tiếp tục",
+      "sentence1": "Chúng ta cần điều tra vấn đề này thêm.",
+      "sentence2": "Bạn có thể cung cấp thêm chi tiết về dự án không?"
+    },
+    {
+      "id": 305,
+      "word": "nhà để xe",
+      "sentence1": "Anh ta đậu xe ở gara.",
+      "sentence2": "Nhà để xe đầy những dụng cụ cũ."
+    },
+    {
+      "id": 306,
+      "word": "tập hợp",
+      "sentence1": "Hãy thu thập tất cả các tài liệu chúng ta cần.",
+      "sentence2": "Cô ấy thích thu thập hoa vào mùa xuân."
+    },
+    {
+      "id": 307,
+      "word": "nói chung",
+      "sentence1": "Tôi thường thức dậy sớm.",
+      "sentence2": "Thời tiết thường ôn hòa vào mùa thu."
+    },
+    {
+      "id": 308,
+      "word": "thế hệ",
+      "sentence1": "Thế hệ này hiểu biết nhiều về công nghệ hơn.",
+      "sentence2": "Mỗi thế hệ đều có những thách thức riêng."
+    },
+    {
+      "id": 309,
+      "word": "hào phóng",
+      "sentence1": "Cô ấy rất hào phóng với thời gian của mình.",
+      "sentence2": "Sự quyên góp hào phóng của anh ấy đã giúp đỡ nhiều người."
+    },
+    {
+      "id": 310,
+      "word": "dịu dàng",
+      "sentence1": "Anh ấy có cách cư xử tử tế.",
+      "sentence2": "Gió nhẹ nhàng tươi mát."
+    },
+    {
+      "id": 311,
+      "word": "quý ông",
+      "sentence1": "Anh ấy là một quý ông thực sự.",
+      "sentence2": "Người đàn ông mở cửa cho cô ấy."
+    },
+    {
+      "id": 312,
+      "word": "ma",
+      "sentence1": "Con ma xuất hiện lúc nửa đêm.",
+      "sentence2": "Cô ấy tin vào ma và linh hồn."
+    },
+    {
+      "id": 313,
+      "word": "khổng lồ",
+      "sentence1": "Cây khổng lồ cao ngự trên rừng.",
+      "sentence2": "Anh ta có một bộ sưu tập tem khổng lồ."
+    },
+    {
+      "id": 314,
+      "word": "rất vui",
+      "sentence1": "Rất vui được gặp lại anh.",
+      "sentence2": "Cô ấy rất vui khi nghe tin tốt."
+    },
+    {
+      "id": 315,
+      "word": "toàn cầu",
+      "sentence1": "Biến đổi khí hậu là một vấn đề toàn cầu.",
+      "sentence2": "Chúng ta cần một giải pháp toàn cầu cho vấn đề này."
+    },
+    {
+      "id": 316,
+      "word": "găng tay",
+      "sentence1": "Anh ấy đeo găng tay trước khi ra ngoài.",
+      "sentence2": "Những chiếc găng tay này được làm từ len ấm."
+    },
+    {
+      "id": 317,
+      "word": "đi đi",
+      "sentence1": "Tôi cần đi mua sắm.",
+      "sentence2": "Đi dạo nào."
+    },
+    {
+      "id": 318,
+      "word": "hàng hóa",
+      "sentence1": "Cửa hàng bán nhiều loại hàng hóa.",
+      "sentence2": "Chúng ta cần vận chuyển hàng hóa này đến nhà kho."
+    },
+    {
+      "id": 319,
+      "word": "hạng",
+      "sentence1": "Cô ấy nhận được điểm cao trong kỳ thi.",
+      "sentence2": "Giáo viên sẽ đánh giá bài trong cuối tuần này."
+    },
+    {
+      "id": 320,
+      "word": "tốt nghiệp",
+      "sentence1": "Tôi sẽ tốt nghiệp đại học vào năm tới.",
+      "sentence2": "Cô ấy tự hào khi tốt nghiệp với danh hiệu xuất sắc."
+    },
+    {
+      "id": 321,
+      "word": "hạt",
+      "sentence1": "Lúa mì là một loại ngũ cốc phổ biến được sử dụng cho bánh mì.",
+      "sentence2": "Nông dân đã trồng một loại ngũ cốc mới trong mùa này."
+    },
+    {
+      "id": 322,
+      "word": "biết ơn",
+      "sentence1": "Tôi rất biết ơn sự giúp đỡ của anh.",
+      "sentence2": "Cô cảm thấy biết ơn về sự hỗ trợ của bạn bè."
+    },
+    {
+      "id": 323,
+      "word": "tăng trưởng",
+      "sentence1": "Nhà máy cho thấy sự tăng trưởng đáng kể vào mùa xuân này.",
+      "sentence2": "Tăng trưởng kinh tế là điều cần thiết cho sự phát triển."
+    },
+    {
+      "id": 324,
+      "word": "bảo vệ",
+      "sentence1": "Người bảo vệ đang canh chừng lối vào.",
+      "sentence2": "Chúng ta cần bảo vệ sự riêng tư của mình trên mạng."
+    },
+    {
+      "id": 325,
+      "word": "tội lỗi",
+      "sentence1": "Anh ta cảm thấy tội lỗi vì không giúp đỡ.",
+      "sentence2": "Phán quyết có tội đã được công bố."
+    },
+    {
+      "id": 326,
+      "word": "tay",
+      "sentence1": "Cô ấy giơ tay lên để hỏi một câu hỏi.",
+      "sentence2": "Anh ấy bắt tay mọi người."
+    },
+    {
+      "id": 327,
+      "word": "gắn bó",
+      "sentence1": "Họ quyết định treo bức tranh lên tường.",
+      "sentence2": "Đừng quên treo áo khoác lên."
+    },
+    {
+      "id": 328,
+      "word": "hạnh phúc",
+      "sentence1": "Hạnh phúc là chìa khóa để có một cuộc sống thỏa mãn.",
+      "sentence2": "Cô ấy tỏa ra hạnh phúc bất cứ nơi nào cô ấy đi."
+    },
+    {
+      "id": 329,
+      "word": "không chắc",
+      "sentence1": "Tôi không nghe thấy gì cả.",
+      "sentence2": "Cô ấy hầu như không bao giờ ra ngoài."
+    },
+    {
+      "id": 330,
+      "word": "ghét",
+      "sentence1": "Tôi ghét phải xếp hàng.",
+      "sentence2": "Anh ta ghét sự bất công."
+    },
+    {
+      "id": 331,
+      "word": "đầu",
+      "sentence1": "Cô ấy gật đầu đồng ý.",
+      "sentence2": "Anh ta ngẩng cao đầu."
+    },
+    {
+      "id": 332,
+      "word": "tiêu đề",
+      "sentence1": "Cái tiêu đề thu hút sự chú ý của tôi.",
+      "sentence2": "Cô ấy viết tiêu đề cho một tờ báo."
+    },
+    {
+      "id": 333,
+      "word": "sưởi ấm",
+      "sentence1": "Hệ thống sưởi không hoạt động.",
+      "sentence2": "Chúng ta cần sửa chữa hệ thống sưởi trước mùa đông."
+    },
+    {
+      "id": 334,
+      "word": "rất nhiều",
+      "sentence1": "Trời mưa to cả đêm.",
+      "sentence2": "Cô ấy thở nặng sau khi tập luyện."
+    },
+    {
+      "id": 335,
+      "word": "trực thăng",
+      "sentence1": "Chiếc trực thăng bay qua thành phố.",
+      "sentence2": "Chúng tôi đi thăm đảo bằng trực thăng."
+    },
+    {
+      "id": 336,
+      "word": "làm nổi bật",
+      "sentence1": "Vui lòng nhấn mạnh các điểm quan trọng.",
+      "sentence2": "Giáo viên sử dụng một con dấu để làm nổi bật văn bản."
+    },
+    {
+      "id": 337,
+      "word": "rất cao",
+      "sentence1": "Cô ấy có kỹ năng cao trong nghề của mình.",
+      "sentence2": "Bộ phim được các nhà phê bình đánh giá cao."
+    },
+    {
+      "id": 338,
+      "word": "thuê",
+      "sentence1": "Chúng ta cần thuê thêm nhân viên.",
+      "sentence2": "Cô ấy được thuê làm quản lý dự án."
+    },
+    {
+      "id": 339,
+      "word": "lịch sử",
+      "sentence1": "Việc ký kết hiệp ước là một sự kiện lịch sử.",
+      "sentence2": "Cô ấy đến thăm nhiều địa điểm lịch sử trong thành phố."
+    },
+    {
+      "id": 340,
+      "word": "lịch sử",
+      "sentence1": "Bảo tàng có một bộ sưu tập các hiện vật lịch sử.",
+      "sentence2": "Họ nghiên cứu bối cảnh lịch sử của cuốn tiểu thuyết."
+    },
+    {
+      "id": 341,
+      "word": "trung thực",
+      "sentence1": "Điều quan trọng là phải trung thực trong các mối quan hệ của bạn.",
+      "sentence2": "Cô ấy trả lời một cách trung thực câu hỏi."
+    },
+    {
+      "id": 342,
+      "word": "khủng khiếp",
+      "sentence1": "Bộ phim quá khủng khiếp đến nỗi tôi không thể xem nó.",
+      "sentence2": "Anh ấy đã có một trải nghiệm khủng khiếp trong chuyến đi."
+    },
+    {
+      "id": 343,
+      "word": "kinh dị",
+      "sentence1": "Bộ phim kinh dị khiến tôi không thể ngồi yên.",
+      "sentence2": "Cô ấy thích đọc những câu chuyện kinh dị."
+    },
+    {
+      "id": 344,
+      "word": "người chủ",
+      "sentence1": "Họ sẽ tổ chức sự kiện tại nhà của họ.",
+      "sentence2": "Cô ấy là một chủ nhà tuyệt vời cho các bữa tiệc tối."
+    },
+    {
+      "id": 345,
+      "word": "săn bắn",
+      "sentence1": "Họ đi săn hươu.",
+      "sentence2": "Anh ấy thích đi săn trên núi."
+    },
+    {
+      "id": 346,
+      "word": "bão",
+      "sentence1": "Cơn bão đã gây thiệt hại nghiêm trọng cho bờ biển.",
+      "sentence2": "Họ đã sơ tán khu vực trước khi cơn bão tấn công."
+    },
+    {
+      "id": 347,
+      "word": "nhanh lên",
+      "sentence1": "Nếu muốn bắt xe buýt, anh phải nhanh lên.",
+      "sentence2": "Bà ấy luôn vội vàng vào buổi sáng."
+    },
+    {
+      "id": 348,
+      "word": "danh tính",
+      "sentence1": "Danh tính của bạn được định hình bởi những kinh nghiệm của bạn.",
+      "sentence2": "Cô ấy đấu tranh với bản sắc văn hóa của mình."
+    },
+    {
+      "id": 349,
+      "word": "bỏ qua",
+      "sentence1": "Thật dễ dàng để bỏ qua vấn đề.",
+      "sentence2": "Nó đã chọn cách phớt lờ những dấu hiệu cảnh báo."
+    },
+    {
+      "id": 350,
+      "word": "bất hợp pháp",
+      "sentence1": "Đỗ xe ở đây là bất hợp pháp.",
+      "sentence2": "Họ bị bắt khi đang buôn lậu hàng hóa bất hợp pháp."
+    },
+    {
+      "id": 351,
+      "word": "tưởng tượng",
+      "sentence1": "Cô ấy có một người bạn tưởng tượng.",
+      "sentence2": "Họ tạo ra một thế giới tưởng tượng trong câu chuyện của họ."
+    },
+    {
+      "id": 352,
+      "word": "ngay lập tức",
+      "sentence1": "Chúng ta cần hành động ngay lập tức.",
+      "sentence2": "Tình hình đòi hỏi sự chú ý ngay lập tức."
+    },
+    {
+      "id": 353,
+      "word": "người nhập cư",
+      "sentence1": "Thành phố có một dân số nhập cư lớn.",
+      "sentence2": "Nhiều người nhập cư đến để tìm kiếm những cơ hội tốt hơn."
+    },
+    {
+      "id": 354,
+      "word": "ảnh hưởng",
+      "sentence1": "Tác động của chính sách mới vẫn chưa được biết.",
+      "sentence2": "Tác động môi trường của dự án đã được đánh giá."
+    },
+    {
+      "id": 355,
+      "word": "nhập khẩu",
+      "sentence1": "Đất nước này phụ thuộc vào việc nhập khẩu dầu.",
+      "sentence2": "Họ quyết định nhập hàng từ nước ngoài."
+    },
+    {
+      "id": 356,
+      "word": "tầm quan trọng",
+      "sentence1": "Tầm quan trọng của giáo dục không thể được đánh giá quá cao.",
+      "sentence2": "Cô ấy hiểu tầm quan trọng của việc làm chăm chỉ."
+    },
+    {
+      "id": 357,
+      "word": "ấn tượng",
+      "sentence1": "Anh ta gây ấn tượng mạnh mẽ trong cuộc phỏng vấn.",
+      "sentence2": "Ấn tượng đầu tiên của cô về thành phố là tích cực."
+    },
+    {
+      "id": 358,
+      "word": "ấn tượng",
+      "sentence1": "Sự trình diễn thực sự ấn tượng.",
+      "sentence2": "Cô ấy có một hồ sơ ấn tượng."
+    },
+    {
+      "id": 359,
+      "word": "cải thiện",
+      "sentence1": "Có một sự cải thiện đáng kể trong điểm số của anh ta.",
+      "sentence2": "Công ty đang tìm cách cải thiện."
+    },
+    {
+      "id": 360,
+      "word": "không thể tin được",
+      "sentence1": "Cô ấy vô cùng tài năng.",
+      "sentence2": "Cảnh quan từ trên cao rất đẹp."
+    },
+    {
+      "id": 361,
+      "word": "đúng vậy",
+      "sentence1": "Đó thực sự là một thành tựu đáng chú ý.",
+      "sentence2": "Cô ấy thực sự là ứng cử viên tốt nhất cho công việc này."
+    },
+    {
+      "id": 362,
+      "word": "cho biết",
+      "sentence1": "Kết quả cho thấy cần nghiên cứu thêm.",
+      "sentence2": "Vui lòng cho biết sở thích của bạn trên biểu mẫu."
+    },
+    {
+      "id": 363,
+      "word": "gián tiếp",
+      "sentence1": "Những bình luận gián tiếp của ông rất khó giải thích.",
+      "sentence2": "Cô ấy đi đường gián tiếp để tránh giao thông."
+    },
+    {
+      "id": 364,
+      "word": "trong nhà",
+      "sentence1": "Cây trong nhà có thể cải thiện chất lượng không khí.",
+      "sentence2": "Chúng tôi quyết định tổ chức bữa tiệc trong nhà."
+    },
+    {
+      "id": 365,
+      "word": "trong nhà",
+      "sentence1": "Trời quá lạnh để chơi ngoài trời, hãy ở trong nhà.",
+      "sentence2": "Hôm nay bọn trẻ đang chơi trong nhà."
+    },
+    {
+      "id": 366,
+      "word": "ảnh hưởng",
+      "sentence1": "Bài diễn văn của bà có ảnh hưởng sâu sắc đến khán giả.",
+      "sentence2": "Truyền thông xã hội có thể ảnh hưởng đến ý kiến công chúng."
+    },
+    {
+      "id": 367,
+      "word": "thành phần",
+      "sentence1": "Thành phần chính trong công thức này là gà.",
+      "sentence2": "Hãy chắc chắn kiểm tra danh sách thành phần cho các chất gây dị ứng."
+    },
+    {
+      "id": 368,
+      "word": "làm tổn thương",
+      "sentence1": "Anh ta không có ý làm tổn thương bất cứ ai trong trận đấu.",
+      "sentence2": "Cô ấy bị thương trong một tai nạn xe hơi."
+    },
+    {
+      "id": 369,
+      "word": "bị thương",
+      "sentence1": "Những người bị thương đã được đưa đến bệnh viện.",
+      "sentence2": "Anh ấy vẫn đang hồi phục sau những vết thương."
+    },
+    {
+      "id": 370,
+      "word": "vô tội",
+      "sentence1": "Người đàn ông vô tội này được thả ra khỏi tù.",
+      "sentence2": "Cô ấy có vẻ ngây thơ trên mặt."
+    },
+    {
+      "id": 371,
+      "word": "thông minh",
+      "sentence1": "Trí thông minh nhân tạo là một lĩnh vực phát triển nhanh chóng.",
+      "sentence2": "Cô ấy có trí thông minh cảm xúc cao."
+    },
+    {
+      "id": 372,
+      "word": "ý định",
+      "sentence1": "Tôi có ý định làm xong bài tập về nhà trước bữa tối.",
+      "sentence2": "Họ không có ý gây hại gì."
+    },
+    {
+      "id": 373,
+      "word": "ý định",
+      "sentence1": "Ý tôi là giúp anh thành công.",
+      "sentence2": "Cô ấy hành động với ý định tốt."
+    },
+    {
+      "id": 374,
+      "word": "đầu tư",
+      "sentence1": "Họ có kế hoạch đầu tư vào công nghệ mới.",
+      "sentence2": "Cô ấy đã dành rất nhiều thời gian cho việc học hành."
+    },
+    {
+      "id": 375,
+      "word": "điều tra",
+      "sentence1": "Cảnh sát sẽ điều tra vụ án.",
+      "sentence2": "Chúng ta cần điều tra nguyên nhân của vấn đề."
+    },
+    {
+      "id": 376,
+      "word": "tham gia",
+      "sentence1": "Anh ta đã tham gia vào dự án từ đầu.",
+      "sentence2": "Có rất nhiều người tham gia vào quá trình ra quyết định."
+    },
+    {
+      "id": 377,
+      "word": "sắt",
+      "sentence1": "Sắt là một khoáng chất thiết yếu cho cơ thể.",
+      "sentence2": "Cổng được làm bằng sắt."
+    },
+    {
+      "id": 378,
+      "word": "vấn đề",
+      "sentence1": "Vấn đề chính là thiếu tài trợ.",
+      "sentence2": "Chúng ta cần giải quyết vấn đề này càng sớm càng tốt."
+    },
+    {
+      "id": 379,
+      "word": "tạp chí",
+      "sentence1": "Cô ấy viết cho một tạp chí khoa học.",
+      "sentence2": "Tạp chí này xuất bản các nghiên cứu mới mỗi tháng."
+    },
+    {
+      "id": 380,
+      "word": "thẩm phán",
+      "sentence1": "Không công bằng khi phán xét ai đó mà không biết sự thật.",
+      "sentence2": "Ngày mai thẩm phán sẽ công bố phán quyết."
+    },
+    {
+      "id": 381,
+      "word": "khát khao",
+      "sentence1": "Cô ấy rất quan tâm đến nghệ thuật.",
+      "sentence2": "Ngài là người quan sát kỹ lưỡng hành vi của con người."
+    },
+    {
+      "id": 382,
+      "word": "chìa khóa",
+      "sentence1": "Xin anh đưa chìa khóa cho tôi được không?",
+      "sentence2": "Chìa khóa để thành công là làm việc chăm chỉ."
+    },
+    {
+      "id": 383,
+      "word": "bàn phím",
+      "sentence1": "Cô ấy gõ tài liệu bằng bàn phím của mình.",
+      "sentence2": "Bàn phím không hoạt động đúng."
+    },
+    {
+      "id": 384,
+      "word": "đá",
+      "sentence1": "Anh ta cố đá bóng vào cửa.",
+      "sentence2": "Cô ấy đã cho anh ta một cú đá vui tươi trên chân."
+    },
+    {
+      "id": 385,
+      "word": "giết người",
+      "sentence1": "Việc giết người vô tội đã gây ra sự phẫn nộ.",
+      "sentence2": "Anh ta bị buộc tội giết vợ mình."
+    },
+    {
+      "id": 386,
+      "word": "tốt bụng (quan tâm)",
+      "sentence1": "Cô ấy luôn tử tế với động vật.",
+      "sentence2": "Thật tốt khi anh giúp tôi."
+    },
+    {
+      "id": 387,
+      "word": "hôn",
+      "sentence1": "Họ chia sẻ một nụ hôn dưới những vì sao.",
+      "sentence2": "Cô ấy thổi một nụ hôn từ phía bên kia phòng."
+    },
+    {
+      "id": 388,
+      "word": "gõ cửa",
+      "sentence1": "Xin hãy gõ cửa trước khi vào.",
+      "sentence2": "Tôi nghe tiếng gõ cửa."
+    },
+    {
+      "id": 389,
+      "word": "nhãn hiệu",
+      "sentence1": "Hãy nhớ dán nhãn tất cả các hộp của bạn.",
+      "sentence2": "Nhãn trên chai khó đọc."
+    },
+    {
+      "id": 390,
+      "word": "phòng thí nghiệm",
+      "sentence1": "Phòng thí nghiệm được trang bị công nghệ mới nhất.",
+      "sentence2": "Cô ấy làm việc trong một phòng thí nghiệm hóa học."
+    },
+    {
+      "id": 391,
+      "word": "thiếu",
+      "sentence1": "Vụ án này thiếu bằng chứng.",
+      "sentence2": "Sự thiếu hụt tài chính là một vấn đề lớn."
+    },
+    {
+      "id": 392,
+      "word": "mới nhất",
+      "sentence1": "Tin tức mới nhất không mấy khích lệ.",
+      "sentence2": "Cô ấy luôn mặc những trang phục thời trang mới nhất."
+    },
+    {
+      "id": 393,
+      "word": "đặt",
+      "sentence1": "Xin hãy đặt cuốn sách lên bàn.",
+      "sentence2": "Anh ấy thích nằm trên cỏ và nhìn những đám mây."
+    },
+    {
+      "id": 394,
+      "word": "lớp",
+      "sentence1": "Bánh có ba lớp sô cô la.",
+      "sentence2": "Có một lớp bụi trên kệ."
+    },
+    {
+      "id": 395,
+      "word": "chì",
+      "sentence1": "Cô ấy sẽ dẫn dắt nhóm trong dự án.",
+      "sentence2": "Anh ấy được chọn để dẫn dắt cuộc thảo luận."
+    },
+    {
+      "id": 396,
+      "word": "dẫn đầu",
+      "sentence1": "Cô ấy là một chuyên gia hàng đầu trong lĩnh vực của mình.",
+      "sentence2": "Nguyên nhân hàng đầu gây tử vong là bệnh tim."
+    },
+    {
+      "id": 397,
+      "word": "lá",
+      "sentence1": "Lá rơi từ cây.",
+      "sentence2": "Lá cây đang thay đổi màu sắc vào mùa thu."
+    },
+    {
+      "id": 398,
+      "word": "da",
+      "sentence1": "Anh ta mua một chiếc áo khoác da mới.",
+      "sentence2": "Ghế sofa được làm bằng da chất lượng cao."
+    },
+    {
+      "id": 399,
+      "word": "pháp lý",
+      "sentence1": "Họ đang tìm kiếm tư vấn pháp lý.",
+      "sentence2": "Hệ thống pháp lý rất phức tạp."
+    },
+    {
+      "id": 400,
+      "word": "giải trí",
+      "sentence1": "Cô ấy thích đọc sách trong thời gian rảnh rỗi.",
+      "sentence2": "Các hoạt động giải trí rất quan trọng đối với sức khỏe tâm thần."
+    },
+    {
+      "id": 401,
+      "word": "chiều dài",
+      "sentence1": "Chiều dài của cái bàn là sáu feet.",
+      "sentence2": "Chúng ta cần đo chiều dài của căn phòng."
+    },
+    {
+      "id": 402,
+      "word": "cấp độ",
+      "sentence1": "Cô ấy đang ở mức độ bắt đầu trong tiếng Tây Ban Nha.",
+      "sentence2": "Mực nước đang tăng lên do mưa."
+    },
+    {
+      "id": 403,
+      "word": "nói dối (nói dối)",
+      "sentence1": "Nói dối bạn bè là không đúng.",
+      "sentence2": "Anh ta bị bắt khi nói dối về nơi ở của mình."
+    },
+    {
+      "id": 404,
+      "word": "giới hạn",
+      "sentence1": "Có giới hạn về số tiền bạn có thể vay.",
+      "sentence2": "Chúng ta cần đặt ra giới hạn chi tiêu."
+    },
+    {
+      "id": 405,
+      "word": "môi",
+      "sentence1": "Cô ấy dùng son môi lên môi.",
+      "sentence2": "Anh ấy hôn cô ấy trên môi."
+    },
+    {
+      "id": 406,
+      "word": "chất lỏng",
+      "sentence1": "Nước là chất lỏng ở nhiệt độ phòng.",
+      "sentence2": "Chất lỏng đổ khắp bàn."
+    },
+    {
+      "id": 407,
+      "word": "văn học",
+      "sentence1": "Cô ấy thích đọc văn học cổ điển.",
+      "sentence2": "Khóa học bao gồm văn học hiện đại."
+    },
+    {
+      "id": 408,
+      "word": "sống",
+      "sentence1": "Buổi hòa nhạc sẽ được phát trực tiếp.",
+      "sentence2": "Họ muốn sống ở một thành phố lớn."
+    },
+    {
+      "id": 409,
+      "word": "sống",
+      "sentence1": "Chi phí sinh hoạt ở thành phố này rất cao.",
+      "sentence2": "Cô ấy tập trung vào việc cải thiện điều kiện sống của mình."
+    },
+    {
+      "id": 410,
+      "word": "địa phương",
+      "sentence1": "Chợ địa phương mở cửa mỗi Chủ nhật.",
+      "sentence2": "Cô ấy thích mua sản phẩm địa phương."
+    },
+    {
+      "id": 411,
+      "word": "tìm kiếm",
+      "sentence1": "Anh giúp tôi tìm chìa khóa được không?",
+      "sentence2": "Bản đồ sẽ giúp bạn định vị nhà hàng."
+    },
+    {
+      "id": 412,
+      "word": "nằm ở",
+      "sentence1": "Khách sạn nằm gần bãi biển.",
+      "sentence2": "Văn phòng nằm ở tầng trên cùng."
+    },
+    {
+      "id": 413,
+      "word": "địa điểm",
+      "sentence1": "Vị trí hiện tại của anh là gì?",
+      "sentence2": "Vị trí của sự kiện đã thay đổi."
+    },
+    {
+      "id": 414,
+      "word": "cô đơn",
+      "sentence1": "Cô cảm thấy cô đơn trong thành phố mới.",
+      "sentence2": "Thỉnh thoảng cảm thấy cô đơn là bình thường."
+    },
+    {
+      "id": 415,
+      "word": "mất mát",
+      "sentence1": "Việc mất thú cưng của bà thật đau đớn.",
+      "sentence2": "Anh ấy vẫn còn đau buồn vì mất cha mình."
+    },
+    {
+      "id": 416,
+      "word": "sang trọng",
+      "sentence1": "Họ sống một cuộc sống xa hoa.",
+      "sentence2": "Khách sạn cung cấp chỗ ở sang trọng."
+    },
+    {
+      "id": 417,
+      "word": "điên",
+      "sentence1": "Anh ấy giận bạn mình vì đã đến trễ.",
+      "sentence2": "Cô ấy có một ý tưởng điên rồ cho một dự án mới."
+    },
+    {
+      "id": 418,
+      "word": "ma thuật",
+      "sentence1": "Nhà ảo thuật đã thực hiện một trò ảo thuật.",
+      "sentence2": "Cô ấy tin vào ma thuật của tình yêu."
+    },
+    {
+      "id": 419,
+      "word": "chủ yếu",
+      "sentence1": "Cuốn sách chủ yếu là về lịch sử.",
+      "sentence2": "Bà chủ yếu quan tâm đến khoa học."
+    },
+    {
+      "id": 420,
+      "word": "trung tâm thương mại",
+      "sentence1": "Họ đi mua sắm ở trung tâm thương mại.",
+      "sentence2": "Trung tâm mua sắm có nhiều cửa hàng khác nhau."
+    },
+    {
+      "id": 421,
+      "word": "quản lý",
+      "sentence1": "Cô ấy làm quản lý tại một công ty lớn.",
+      "sentence2": "Quản lý hiệu quả là chìa khóa để thành công."
+    },
+    {
+      "id": 422,
+      "word": "thị trường",
+      "sentence1": "Chợ mở cửa mỗi thứ bảy.",
+      "sentence2": "Cô ấy mua rau tươi ở chợ."
+    },
+    {
+      "id": 423,
+      "word": "tiếp thị",
+      "sentence1": "Anh ta học tiếp thị ở trường đại học.",
+      "sentence2": "Chiến dịch tiếp thị đã thành công."
+    },
+    {
+      "id": 424,
+      "word": "hôn nhân",
+      "sentence1": "Họ đang lên kế hoạch cho một buổi lễ cưới.",
+      "sentence2": "Hôn nhân đòi hỏi sự cam kết và nỗ lực."
+    },
+    {
+      "id": 425,
+      "word": "trong khi đó",
+      "sentence1": "Trong khi đó, những đứa trẻ chơi bên ngoài.",
+      "sentence2": "Cô đang học; trong khi đó, bạn bè cô đang tiệc tùng."
+    },
+    {
+      "id": 426,
+      "word": "biện pháp",
+      "sentence1": "Điều quan trọng là đo lường sự tiến bộ của bạn.",
+      "sentence2": "Chúng ta cần đo căn phòng trước khi mua đồ nội thất."
+    },
+    {
+      "id": 427,
+      "word": "trung bình",
+      "sentence1": "Bức tranh được vẽ theo phong cách trung bình.",
+      "sentence2": "Cô ấy thích làm việc trong một phương tiện cho phép chi tiết."
+    },
+    {
+      "id": 428,
+      "word": "tinh thần",
+      "sentence1": "Sức khỏe tinh thần cũng quan trọng như sức khỏe thể chất.",
+      "sentence2": "Anh ấy đang thực hiện các bước để cải thiện sức khỏe tinh thần của mình."
+    },
+    {
+      "id": 429,
+      "word": "đề cập",
+      "sentence1": "Vui lòng đề cập đến bất kỳ dị ứng nào bạn có.",
+      "sentence2": "Tôi quên nói rằng tôi sẽ đến trễ."
+    },
+    {
+      "id": 430,
+      "word": "lộn xộn",
+      "sentence1": "Phòng đã rất lộn xộn sau bữa tiệc.",
+      "sentence2": "Cô ấy thích giữ cho bàn của mình gọn gàng và không lộn xộn."
+    },
+    {
+      "id": 431,
+      "word": "nhẹ",
+      "sentence1": "Thời tiết ôn hòa vào mùa xuân.",
+      "sentence2": "Cô ấy thích hương vị nhẹ trong thức ăn của mình."
+    },
+    {
+      "id": 432,
+      "word": "mỏ (lỗ)",
+      "sentence1": "Họ tìm thấy vàng trong mỏ.",
+      "sentence2": "Mỏ đã bị đóng cửa do lo ngại về an toàn."
+    },
+    {
+      "id": 433,
+      "word": "hỗn hợp",
+      "sentence1": "Vui lòng trộn các thành phần kỹ lưỡng.",
+      "sentence2": "Cô ấy thích pha trộn các màu khác nhau trong bức tranh của mình."
+    },
+    {
+      "id": 434,
+      "word": "hỗn hợp",
+      "sentence1": "Bột bánh là hỗn hợp của bột mì và trứng.",
+      "sentence2": "Ông đã tạo ra một sự pha trộn âm thanh độc đáo trong âm nhạc của mình."
+    },
+    {
+      "id": 435,
+      "word": "tâm trạng",
+      "sentence1": "Cô ấy có tâm trạng vui vẻ cả ngày.",
+      "sentence2": "Âm nhạc đã thay đổi tâm trạng của bữa tiệc."
+    },
+    {
+      "id": 436,
+      "word": "di chuyển",
+      "sentence1": "Xin hãy di chuyển chiếc ghế gần bàn hơn.",
+      "sentence2": "Họ quyết định chuyển đến một thành phố mới."
+    },
+    {
+      "id": 437,
+      "word": "bùn",
+      "sentence1": "Những đứa trẻ chơi trong bùn sau khi mưa.",
+      "sentence2": "Cô ấy trượt trong bùn và ngã."
+    },
+    {
+      "id": 438,
+      "word": "giết người",
+      "sentence1": "Thám tử điều tra vụ án mạng.",
+      "sentence2": "Anh ta bị buộc tội giết người nhưng tuyên bố anh ta vô tội."
+    },
+    {
+      "id": 439,
+      "word": "cơ bắp",
+      "sentence1": "Anh ta bị căng cơ vì nâng tạ.",
+      "sentence2": "Tập thể dục thường xuyên giúp xây dựng cơ bắp."
+    },
+    {
+      "id": 440,
+      "word": "âm nhạc",
+      "sentence1": "Vở nhạc kịch đã thành công rất lớn.",
+      "sentence2": "Cô ấy có tài năng sáng tác âm nhạc."
+    },
+    {
+      "id": 441,
+      "word": "bí ẩn",
+      "sentence1": "Cuốn sách là một cuốn tiểu thuyết bí ẩn.",
+      "sentence2": "Họ đã cố gắng giải quyết bí ẩn cùng nhau."
+    },
+    {
+      "id": 442,
+      "word": "móng tay",
+      "sentence1": "Anh ta đâm một cái đinh vào tường.",
+      "sentence2": "Cái móng bị rách và rơi xuống."
+    },
+    {
+      "id": 443,
+      "word": "câu chuyện",
+      "sentence1": "Câu chuyện rất hấp dẫn và được viết rất hay.",
+      "sentence2": "Cô thích thơ kể chuyện hơn các hình thức khác."
+    },
+    {
+      "id": 444,
+      "word": "quốc gia",
+      "sentence1": "Quốc gia đã tổ chức lễ kỷ niệm ngày độc lập của mình.",
+      "sentence2": "Cô ấy tự hào về lịch sử của đất nước mình."
+    },
+    {
+      "id": 445,
+      "word": "địa phương",
+      "sentence1": "Người bản địa có một di sản văn hóa phong phú.",
+      "sentence2": "Anh ấy nói tiếng mẹ đẻ của mình trôi chảy."
+    },
+    {
+      "id": 446,
+      "word": "tự nhiên",
+      "sentence1": "Đương nhiên, bà rất hào hứng về chuyến đi.",
+      "sentence2": "Những bông hoa phát triển tự nhiên ở khu vực này."
+    },
+    {
+      "id": 447,
+      "word": "nhất thiết",
+      "sentence1": "Điều này không có nghĩa là bạn sẽ thành công.",
+      "sentence2": "Bạn không nhất thiết phải tuân theo các quy tắc."
+    },
+    {
+      "id": 448,
+      "word": "cần",
+      "sentence1": "Chúng ta cần phải tìm ra một giải pháp cho vấn đề này.",
+      "sentence2": "Cô ấy cần có bạn."
+    },
+    {
+      "id": 449,
+      "word": "kim",
+      "sentence1": "Anh ta dùng kim và sợi chỉ để sửa áo.",
+      "sentence2": "Mũi quá dày với vải."
+    },
+    {
+      "id": 450,
+      "word": "khu phố",
+      "sentence1": "Họ sống ở một khu phố yên tĩnh.",
+      "sentence2": "Khu phố có nhiều công viên và trường học."
+    },
+    {
+      "id": 451,
+      "word": "không có",
+      "sentence1": "Cả hai lựa chọn đều không lý tưởng.",
+      "sentence2": "Cô ấy không thích cà phê hay trà."
+    },
+    {
+      "id": 452,
+      "word": "ròng",
+      "sentence1": "Mạng bắt được nhiều con cá.",
+      "sentence2": "Anh ta làm việc trong ngành công nghiệp mạng."
+    },
+    {
+      "id": 453,
+      "word": "tiếp theo",
+      "sentence1": "Xe lửa tiếp theo đến lúc 5 giờ chiều.",
+      "sentence2": "Cô ấy là người tiếp theo được thăng chức."
+    },
+    {
+      "id": 454,
+      "word": "cũng không",
+      "sentence1": "Anh ấy không thích cả táo lẫn cam.",
+      "sentence2": "Cô ấy không phải là bác sĩ hay luật sư."
+    },
+    {
+      "id": 455,
+      "word": "bình thường",
+      "sentence1": "Cảm thấy lo lắng trước một bài kiểm tra là bình thường.",
+      "sentence2": "Huyết áp bình thường."
+    },
+    {
+      "id": 456,
+      "word": "miền bắc",
+      "sentence1": "Các vùng phía bắc lạnh hơn vào mùa đông.",
+      "sentence2": "Cô ấy đến từ một thành phố phía bắc."
+    },
+    {
+      "id": 457,
+      "word": "ghi chú",
+      "sentence1": "Xin lưu ý những điểm quan trọng.",
+      "sentence2": "Tôi để lại một lá thư trên bàn của anh."
+    },
+    {
+      "id": 458,
+      "word": "hạt nhân",
+      "sentence1": "Đất nước này đang phát triển năng lượng hạt nhân.",
+      "sentence2": "Năng lượng hạt nhân có những lợi thế và bất lợi của nó."
+    },
+    {
+      "id": 459,
+      "word": "rõ ràng",
+      "sentence1": "Rõ ràng là cô ấy rất buồn.",
+      "sentence2": "Giải pháp là rõ ràng một khi bạn hiểu vấn đề."
+    },
+    {
+      "id": 460,
+      "word": "rõ ràng",
+      "sentence1": "Rõ ràng, anh ta không hiểu những hướng dẫn.",
+      "sentence2": "Rõ ràng cô ấy có tài âm nhạc."
+    },
+    {
+      "id": 461,
+      "word": "dịp",
+      "sentence1": "Đây là dịp đặc biệt để ăn mừng.",
+      "sentence2": "Trong dịp này, chúng ta nên suy ngẫm về những thành tựu của mình."
+    },
+    {
+      "id": 462,
+      "word": "xảy ra",
+      "sentence1": "Tai nạn xảy ra vào đêm khuya.",
+      "sentence2": "Những thay đổi có thể xảy ra nếu chúng ta thực hiện chính sách mới."
+    },
+    {
+      "id": 463,
+      "word": "lẻ",
+      "sentence1": "Đó là một cách giải quyết vấn đề kỳ lạ.",
+      "sentence2": "Cô ấy có một cảm giác hài hước kỳ lạ."
+    },
+    {
+      "id": 464,
+      "word": "chính thức",
+      "sentence1": "Báo cáo chính thức sẽ được công bố vào ngày mai.",
+      "sentence2": "Anh ta là đại diện chính thức của công ty."
+    },
+    {
+      "id": 465,
+      "word": "cổ xưa",
+      "sentence1": "Cô ấy thích quần áo cũ.",
+      "sentence2": "Ý tưởng của anh ta có vẻ hơi lỗi thời."
+    },
+    {
+      "id": 466,
+      "word": "một lần",
+      "sentence1": "Ngày xửa ngày xưa, có một hiệp sĩ dũng cảm.",
+      "sentence2": "Tôi chỉ gặp cô ấy một lần."
+    },
+    {
+      "id": 467,
+      "word": "hoạt động",
+      "sentence1": "Cuộc phẫu thuật đã thành công.",
+      "sentence2": "Họ đang lên kế hoạch cho một chiến dịch quân sự."
+    },
+    {
+      "id": 468,
+      "word": "tổ chức",
+      "sentence1": "Sự kiện được tổ chức tốt.",
+      "sentence2": "Cô ấy rất có tổ chức trong công việc của mình."
+    },
+    {
+      "id": 469,
+      "word": "người tổ chức",
+      "sentence1": "Người tổ chức sự kiện đã làm một công việc tuyệt vời.",
+      "sentence2": "Cô ấy là một nhà tổ chức sự kiện chuyên nghiệp."
+    },
+    {
+      "id": 470,
+      "word": "nguyên bản",
+      "sentence1": "Bức tranh gốc đang ở trong bảo tàng.",
+      "sentence2": "Cô ấy có một số ý tưởng độc đáo cho dự án."
+    },
+    {
+      "id": 471,
+      "word": "ban đầu",
+      "sentence1": "Ban đầu, kế hoạch là bắt đầu vào tháng Sáu.",
+      "sentence2": "Cô ấy có nguồn gốc từ Tây Ban Nha."
+    },
+    {
+      "id": 472,
+      "word": "nên",
+      "sentence1": "Anh nên đi khám bác sĩ.",
+      "sentence2": "Chúng ta nên giúp đỡ những người cần."
+    },
+    {
+      "id": 473,
+      "word": "của chúng ta",
+      "sentence1": "Cuốn sách này là của chúng ta.",
+      "sentence2": "Gia đình chúng tôi nhỏ nhưng thân thiết."
+    },
+    {
+      "id": 474,
+      "word": "ngoài trời",
+      "sentence1": "Chúng tôi thích các hoạt động ngoài trời như đi bộ đường dài.",
+      "sentence2": "Buổi hòa nhạc ngoài trời là một thành công lớn."
+    },
+    {
+      "id": 475,
+      "word": "ngoài trời",
+      "sentence1": "Tôi thích dành thời gian ở ngoài trời.",
+      "sentence2": "Trẻ em đang chơi ngoài trời."
+    },
+    {
+      "id": 476,
+      "word": "bao bì",
+      "sentence1": "Tôi cần đóng gói hành lý cho chuyến đi.",
+      "sentence2": "Cô ấy mua một gói kẹo cao su."
+    },
+    {
+      "id": 477,
+      "word": "bao bì",
+      "sentence1": "Tôi nhận được một gói thư.",
+      "sentence2": "Bưu kiện được giao đúng giờ."
+    },
+    {
+      "id": 478,
+      "word": "đau đớn",
+      "sentence1": "Vết thương rất đau.",
+      "sentence2": "Đó là một quyết định đau đớn."
+    },
+    {
+      "id": 479,
+      "word": "nhợt nhạt",
+      "sentence1": "Cô ấy trông nhợt nhạt sau khi bị bệnh.",
+      "sentence2": "Bầu trời trở nên nhợt nhạt khi mặt trời lặn."
+    },
+    {
+      "id": 480,
+      "word": "nồi",
+      "sentence1": "Tôi cần một cái chảo để nướng trứng.",
+      "sentence2": "Cái chảo quá nóng để chạm vào."
+    },
+    {
+      "id": 481,
+      "word": "tham gia",
+      "sentence1": "Tôi muốn tham gia cuộc thi.",
+      "sentence2": "Mọi người được khuyến khích tham gia."
+    },
+    {
+      "id": 482,
+      "word": "đặc biệt",
+      "sentence1": "Cô ấy đặc biệt giỏi toán.",
+      "sentence2": "Tôi thấy cuốn sách đặc biệt thú vị."
+    },
+    {
+      "id": 483,
+      "word": "đi qua",
+      "sentence1": "Tôi cần phải vượt qua bài kiểm tra lái xe.",
+      "sentence2": "Anh ấy chuyền bóng cho đồng đội của mình."
+    },
+    {
+      "id": 484,
+      "word": "đam mê",
+      "sentence1": "Cô ấy có niềm đam mê vẽ tranh.",
+      "sentence2": "Niềm đam mê âm nhạc của anh ta là rõ ràng."
+    },
+    {
+      "id": 485,
+      "word": "con đường",
+      "sentence1": "Chúng tôi đi dọc theo con đường hẹp.",
+      "sentence2": "Con đường dẫn đến lâu đài cũ."
+    },
+    {
+      "id": 486,
+      "word": "thanh toán",
+      "sentence1": "Mức thanh toán sẽ đến vào tuần tới.",
+      "sentence2": "Tôi đã nhận được tiền lương cho công việc của mình."
+    },
+    {
+      "id": 487,
+      "word": "hòa bình",
+      "sentence1": "Khu vườn là một nơi yên bình để thư giãn.",
+      "sentence2": "Cô ấy có một thái độ hòa bình."
+    },
+    {
+      "id": 488,
+      "word": "%",
+      "sentence1": "Bao nhiêu phần trăm dân số bị ảnh hưởng?",
+      "sentence2": "Tỷ lệ sinh viên vượt qua kỳ thi đã tăng lên."
+    },
+    {
+      "id": 489,
+      "word": "hoàn hảo",
+      "sentence1": "Cô ấy hát rất hay.",
+      "sentence2": "Mọi thứ đều diễn ra hoàn hảo theo kế hoạch."
+    },
+    {
+      "id": 490,
+      "word": "hiệu suất",
+      "sentence1": "Sự trình diễn rất xuất sắc.",
+      "sentence2": "Cô đã nhận được lời khen ngợi cho màn trình diễn của mình."
+    },
+    {
+      "id": 491,
+      "word": "cá nhân",
+      "sentence1": "Cá nhân tôi tin vào sự vô tội của anh ta.",
+      "sentence2": "Cô ấy đã đích thân chuyển giao thông điệp."
+    },
+    {
+      "id": 492,
+      "word": "thuyết phục",
+      "sentence1": "Tôi đã cố thuyết phục anh ta ở lại.",
+      "sentence2": "Cô ấy có thể thuyết phục họ thay đổi suy nghĩ của họ."
+    },
+    {
+      "id": 493,
+      "word": "nhiếp ảnh gia",
+      "sentence1": "Nhiếp ảnh gia đã chụp được khoảnh khắc hoàn hảo.",
+      "sentence2": "Cô ấy làm nhiếp ảnh gia tự do."
+    },
+    {
+      "id": 494,
+      "word": "nhiếp ảnh",
+      "sentence1": "Anh ấy có niềm đam mê nhiếp ảnh.",
+      "sentence2": "Cô ấy học nhiếp ảnh ở trường đại học."
+    },
+    {
+      "id": 495,
+      "word": "ghim",
+      "sentence1": "Tôi cần một cái ghim để gắn tờ giấy này.",
+      "sentence2": "Cô ấy đeo một cái ghim trang trí trên áo khoác của mình."
+    },
+    {
+      "id": 496,
+      "word": "ống",
+      "sentence1": "Thợ sửa ống sửa ống bị rò rỉ.",
+      "sentence2": "Khói bốc lên từ đường ống."
+    },
+    {
+      "id": 497,
+      "word": "nơi",
+      "sentence1": "Đây là một nơi đẹp để ghé thăm.",
+      "sentence2": "Nơi đó đầy khách du lịch."
+    },
+    {
+      "id": 498,
+      "word": "lập kế hoạch",
+      "sentence1": "Lập kế hoạch là điều cần thiết để thành công.",
+      "sentence2": "Cô ấy chịu trách nhiệm về việc lên kế hoạch cho sự kiện."
+    },
+    {
+      "id": 499,
+      "word": "dễ chịu",
+      "sentence1": "Hôm nay thời tiết đẹp.",
+      "sentence2": "Chúng tôi đã có một cuộc trò chuyện thú vị."
+    },
+    {
+      "id": 500,
+      "word": "hạnh phúc",
+      "sentence1": "Rất vui được gặp anh.",
+      "sentence2": "Cô ấy thích công việc của mình."
+    },
+    {
+      "id": 501,
+      "word": "rất nhiều",
+      "sentence1": "Có nhiều thức ăn cho mọi người.",
+      "sentence2": "Cô ấy có nhiều thời gian để hoàn thành dự án."
+    },
+    {
+      "id": 502,
+      "word": "cốt truyện",
+      "sentence1": "Cốt truyện của bộ phim rất hấp dẫn.",
+      "sentence2": "Cô ấy thích những biến cố trong cuốn sách."
+    },
+    {
+      "id": 503,
+      "word": "+",
+      "sentence1": "Hai cộng hai bằng bốn.",
+      "sentence2": "Công việc cung cấp một mức lương tốt cộng với các lợi ích."
+    },
+    {
+      "id": 504,
+      "word": "bài thơ",
+      "sentence1": "Cô ấy đã viết một bài thơ đẹp.",
+      "sentence2": "Bài thơ nắm bắt được bản chất của tình yêu."
+    },
+    {
+      "id": 505,
+      "word": "nhà thơ",
+      "sentence1": "Anh ấy là một nhà thơ nổi tiếng.",
+      "sentence2": "Nhà thơ đã thể hiện những cảm xúc sâu sắc trong tác phẩm của mình."
+    },
+    {
+      "id": 506,
+      "word": "thơ ca",
+      "sentence1": "Cô ấy thích đọc thơ.",
+      "sentence2": "Thơ ca của thời đại phản ánh các giá trị của nó."
+    },
+    {
+      "id": 507,
+      "word": "điểm",
+      "sentence1": "Cô ấy đã đưa ra một điểm hợp lý trong cuộc thảo luận.",
+      "sentence2": "Mục đích của bài tập là để cải thiện kỹ năng của bạn."
+    },
+    {
+      "id": 508,
+      "word": "thuốc độc",
+      "sentence1": "Chất độc rất độc hại.",
+      "sentence2": "Anh ta bị buộc tội đầu độc đối thủ của mình."
+    },
+    {
+      "id": 509,
+      "word": "độc hại",
+      "sentence1": "Cây độc nên được giữ ngoài tầm với.",
+      "sentence2": "Một số loại nấm có độc nếu ăn."
+    },
+    {
+      "id": 510,
+      "word": "chính sách",
+      "sentence1": "Chính phủ đã công bố một chính sách mới.",
+      "sentence2": "Chính sách này nhằm mục đích giảm ô nhiễm."
+    },
+    {
+      "id": 511,
+      "word": "chính trị",
+      "sentence1": "Anh ấy tham gia hoạt động chính trị.",
+      "sentence2": "Khung cảnh chính trị đang thay đổi nhanh chóng."
+    },
+    {
+      "id": 512,
+      "word": "chính trị gia",
+      "sentence1": "Cô ấy là một chính trị gia nổi tiếng.",
+      "sentence2": "Nhà chính trị đã nói chuyện với đám đông."
+    },
+    {
+      "id": 513,
+      "word": "chính trị",
+      "sentence1": "Chính trị có thể gây chia rẽ.",
+      "sentence2": "Anh ấy đang học chính trị tại trường đại học."
+    },
+    {
+      "id": 514,
+      "word": "cảng",
+      "sentence1": "Con tàu đã cập cảng.",
+      "sentence2": "Cảng bận rộn với giao thông hàng hóa."
+    },
+    {
+      "id": 515,
+      "word": "bức chân dung",
+      "sentence1": "Cô ấy vẽ một bức chân dung đẹp.",
+      "sentence2": "Bức chân dung chụp được hình ảnh của anh ta hoàn hảo."
+    },
+    {
+      "id": 516,
+      "word": "có thể",
+      "sentence1": "Ngày mai có thể sẽ mưa.",
+      "sentence2": "Cô ấy có lẽ là ứng cử viên tốt nhất cho công việc."
+    },
+    {
+      "id": 517,
+      "word": "nồi",
+      "sentence1": "Cái nồi được làm từ đất sét.",
+      "sentence2": "Cô ấy nấu súp trong một cái nồi lớn."
+    },
+    {
+      "id": 518,
+      "word": "đổ",
+      "sentence1": "Xin hãy đổ sữa vào ly.",
+      "sentence2": "Anh ấy thích uống cà phê chậm rãi."
+    },
+    {
+      "id": 519,
+      "word": "nghèo khổ",
+      "sentence1": "Nghèo đói là một vấn đề nghiêm trọng.",
+      "sentence2": "Tổ chức này nhằm mục đích giảm nghèo."
+    },
+    {
+      "id": 520,
+      "word": "bột",
+      "sentence1": "Bột được sử dụng để nướng.",
+      "sentence2": "Cô ấy rắc bột lên bánh."
+    },
+    {
+      "id": 521,
+      "word": "mạnh mẽ",
+      "sentence1": "Động cơ rất mạnh.",
+      "sentence2": "Bà ấy có một bài diễn văn mạnh mẽ."
+    },
+    {
+      "id": 522,
+      "word": "thực tế",
+      "sentence1": "Đây là một giải pháp thực tế.",
+      "sentence2": "Anh ấy có cách tiếp cận thực tế với các vấn đề."
+    },
+    {
+      "id": 523,
+      "word": "cầu nguyện",
+      "sentence1": "Họ tụ họp để cầu nguyện mỗi thứ Sáu.",
+      "sentence2": "Bà đã cầu nguyện cho gia đình mình được an toàn."
+    },
+    {
+      "id": 524,
+      "word": "cầu nguyện",
+      "sentence1": "Anh ta cầu nguyện trước khi ăn.",
+      "sentence2": "Cầu nguyện có thể là một nguồn an ủi."
+    },
+    {
+      "id": 525,
+      "word": "dự đoán",
+      "sentence1": "Dự báo thời tiết không hứa hẹn.",
+      "sentence2": "Bà đã dự đoán chính xác về kết quả."
+    },
+    {
+      "id": 526,
+      "word": "chuẩn bị",
+      "sentence1": "Bữa ăn đã được chuẩn bị tốt.",
+      "sentence2": "Cô ấy cảm thấy đã chuẩn bị cho kỳ thi."
+    },
+    {
+      "id": 527,
+      "word": "trình bày",
+      "sentence1": "Bài thuyết trình rất bổ ích.",
+      "sentence2": "Ông ấy đã trình bày về biến đổi khí hậu."
+    },
+    {
+      "id": 528,
+      "word": "cụm",
+      "sentence1": "Báo chí đã đưa tin chi tiết về sự kiện này.",
+      "sentence2": "Cô ấy làm nhân viên báo chí."
+    },
+    {
+      "id": 529,
+      "word": "áp lực",
+      "sentence1": "Áp lực đang gia tăng.",
+      "sentence2": "Cô ấy đang chịu rất nhiều áp lực tại nơi làm việc."
+    },
+    {
+      "id": 530,
+      "word": "giả vờ",
+      "sentence1": "Họ thích giả vờ là siêu anh hùng.",
+      "sentence2": "Đừng giả vờ như anh không thấy tôi."
+    },
+    {
+      "id": 531,
+      "word": "trước đây",
+      "sentence1": "Chủ sở hữu trước đã cải tiến rất nhiều.",
+      "sentence2": "Trong chương trước, chúng ta đã thảo luận..."
+    },
+    {
+      "id": 532,
+      "word": "trước đây",
+      "sentence1": "Trước đây tôi đã sống ở London.",
+      "sentence2": "Trước đây cô ấy đã làm việc tại một công ty khác."
+    },
+    {
+      "id": 533,
+      "word": "linh mục",
+      "sentence1": "Linh mục đã giảng một bài giảng vào Chủ nhật.",
+      "sentence2": "Anh ấy muốn trở thành một linh mục."
+    },
+    {
+      "id": 534,
+      "word": "chính",
+      "sentence1": "Giáo dục là mối quan tâm chính.",
+      "sentence2": "Mục tiêu chính là cải thiện khả năng đọc và viết."
+    },
+    {
+      "id": 535,
+      "word": "hoàng tử",
+      "sentence1": "Hoàng tử sẽ thừa kế ngai vàng.",
+      "sentence2": "Cô ấy đã nhảy với hoàng tử trong buổi khiêu vũ."
+    },
+    {
+      "id": 536,
+      "word": "công chúa",
+      "sentence1": "Công chúa mặc một chiếc váy đẹp.",
+      "sentence2": "Mỗi đứa trẻ đều mơ ước trở thành một công chúa."
+    },
+    {
+      "id": 537,
+      "word": "in ấn",
+      "sentence1": "Quá trình in ấn rất phức tạp.",
+      "sentence2": "Cô ấy làm việc trong ngành in ấn."
+    },
+    {
+      "id": 538,
+      "word": "tù nhân",
+      "sentence1": "Tù nhân đã được thả sớm.",
+      "sentence2": "Hắn là tù nhân chính trị."
+    },
+    {
+      "id": 539,
+      "word": "tư nhân",
+      "sentence1": "Hôm nay cô ấy có một cuộc họp riêng.",
+      "sentence2": "Anh ta thích giữ riêng tư cuộc sống của mình."
+    },
+    {
+      "id": 540,
+      "word": "nhà sản xuất",
+      "sentence1": "Nhà sản xuất đang làm phim mới.",
+      "sentence2": "Cô ấy là một nhà sản xuất âm nhạc nổi tiếng."
+    },
+    {
+      "id": 541,
+      "word": "sản xuất",
+      "sentence1": "Sản xuất hàng hóa đã tăng lên.",
+      "sentence2": "Nhà máy này chuyên sản xuất ô tô."
+    },
+    {
+      "id": 542,
+      "word": "nghề nghiệp",
+      "sentence1": "Dạy học là một nghề cao quý.",
+      "sentence2": "Anh ấy chọn nghề y khoa."
+    },
+    {
+      "id": 543,
+      "word": "lợi nhuận",
+      "sentence1": "Công ty đã có lợi nhuận lớn vào năm ngoái.",
+      "sentence2": "Họ nhằm mục đích tăng lợi nhuận của họ."
+    },
+    {
+      "id": 544,
+      "word": "chương trình",
+      "sentence1": "Chương trình bao gồm nhiều hoạt động khác nhau.",
+      "sentence2": "Cô ấy đang theo học một chương trình đào tạo."
+    },
+    {
+      "id": 545,
+      "word": "thúc đẩy",
+      "sentence1": "Chiến dịch này nhằm mục đích thúc đẩy việc ăn uống lành mạnh.",
+      "sentence2": "Họ muốn quảng bá sản phẩm mới của họ."
+    },
+    {
+      "id": 546,
+      "word": "thích hợp",
+      "sentence1": "Việc mặc quần áo phù hợp là rất quan trọng.",
+      "sentence2": "Anh ta không làm theo thủ tục thích hợp."
+    },
+    {
+      "id": 547,
+      "word": "đúng cách",
+      "sentence1": "Xin hãy xử lý thiết bị đúng cách.",
+      "sentence2": "Nhiệm vụ không được hoàn thành đúng cách."
+    },
+    {
+      "id": 548,
+      "word": "tài sản",
+      "sentence1": "Bất động sản đang được bán.",
+      "sentence2": "Họ đầu tư vào bất động sản thương mại."
+    },
+    {
+      "id": 549,
+      "word": "phản đối",
+      "sentence1": "Cuộc biểu tình là hòa bình.",
+      "sentence2": "Họ tổ chức một cuộc biểu tình chống lại luật."
+    },
+    {
+      "id": 550,
+      "word": "kiêu hãnh",
+      "sentence1": "Cô ấy tự hào về những thành tựu của mình.",
+      "sentence2": "Anh ta bước đi với một thái độ tự hào."
+    },
+    {
+      "id": 551,
+      "word": "chứng minh",
+      "sentence1": "Cô cần chứng minh danh tính của mình.",
+      "sentence2": "Bằng chứng sẽ chứng minh anh ta vô tội."
+    },
+    {
+      "id": 552,
+      "word": "kéo",
+      "sentence1": "Làm ơn kéo cửa ra để mở ra.",
+      "sentence2": "Anh ta cố kéo cái hộp nặng."
+    },
+    {
+      "id": 553,
+      "word": "trừng phạt",
+      "sentence1": "Họ quyết định trừng phạt những kẻ phạm tội.",
+      "sentence2": "Cô ấy bị trừng phạt vì đến trễ."
+    },
+    {
+      "id": 554,
+      "word": "hình phạt",
+      "sentence1": "Hình phạt rất nghiêm trọng.",
+      "sentence2": "Ông ta đã nhận được một hình phạt cho hành động của mình."
+    },
+    {
+      "id": 555,
+      "word": "đẩy",
+      "sentence1": "Vui lòng nhấn nút để khởi động.",
+      "sentence2": "Anh ta phải đẩy xe để khởi động."
+    },
+    {
+      "id": 556,
+      "word": "trình độ",
+      "sentence1": "Cô ấy có đủ tiêu chuẩn.",
+      "sentence2": "Bằng cấp của anh ta làm cho anh ta trở thành một ứng cử viên tốt."
+    },
+    {
+      "id": 557,
+      "word": "đủ điều kiện",
+      "sentence1": "Cô ấy là một giáo viên có trình độ.",
+      "sentence2": "Họ đang tìm kiếm những ứng viên đủ điều kiện."
+    },
+    {
+      "id": 558,
+      "word": "đủ điều kiện",
+      "sentence1": "Anh cần phải đủ điều kiện cho vị trí đó.",
+      "sentence2": "Cô ấy không đủ điều kiện cho vòng chung kết."
+    },
+    {
+      "id": 559,
+      "word": "hàng đợi",
+      "sentence1": "Có một hàng dài ở quầy vé.",
+      "sentence2": "Họ đợi trong hàng hơn một giờ."
+    },
+    {
+      "id": 560,
+      "word": "thôi đi",
+      "sentence1": "Anh ấy quyết định nghỉ việc.",
+      "sentence2": "Cô ấy muốn bỏ hút thuốc."
+    },
+    {
+      "id": 561,
+      "word": "báo giá",
+      "sentence1": "Cuốn sách bắt đầu với một câu nói nổi tiếng.",
+      "sentence2": "Cô ấy đưa vào một trích dẫn từ Shakespeare."
+    },
+    {
+      "id": 562,
+      "word": "trích dẫn",
+      "sentence1": "Xin hãy trích dẫn nguồn thông tin của bạn.",
+      "sentence2": "Anh ấy thích trích dẫn các tác giả nổi tiếng."
+    },
+    {
+      "id": 563,
+      "word": "chủng tộc (người)",
+      "sentence1": "Cuộc đua được giành bởi một vận động viên địa phương.",
+      "sentence2": "Những chủng tộc khác nhau có những nền văn hóa độc đáo."
+    },
+    {
+      "id": 564,
+      "word": "đua xe",
+      "sentence1": "Đua xe là một môn thể thao phổ biến.",
+      "sentence2": "Anh ấy thích đua xe vào cuối tuần."
+    },
+    {
+      "id": 565,
+      "word": "phạm vi",
+      "sentence1": "Nhiệt độ dao động từ 20 đến 30 độ.",
+      "sentence2": "Họ cung cấp một loạt các sản phẩm."
+    },
+    {
+      "id": 566,
+      "word": "hiếm",
+      "sentence1": "Thật hiếm khi thấy một hoàng hôn đẹp như vậy.",
+      "sentence2": "Anh ấy có một tài năng hiếm hoi về âm nhạc."
+    },
+    {
+      "id": 567,
+      "word": "hiếm khi",
+      "sentence1": "Cô ấy hiếm khi ra ngoài vào buổi tối.",
+      "sentence2": "Anh ta hiếm khi được nhìn thấy không có máy ảnh của mình."
+    },
+    {
+      "id": 568,
+      "word": "phản ứng",
+      "sentence1": "Phản ứng của cô ấy là bất ngờ.",
+      "sentence2": "Anh ấy có phản ứng mạnh mẽ với tin tức."
+    },
+    {
+      "id": 569,
+      "word": "thực tế",
+      "sentence1": "Thực tế của tình hình rất phức tạp.",
+      "sentence2": "Họ đang đối mặt với một thực tế khắc nghiệt."
+    },
+    {
+      "id": 570,
+      "word": "biên nhận",
+      "sentence1": "Xin hãy giữ hóa đơn.",
+      "sentence2": "Tôi cần một biên lai cho việc mua hàng của tôi."
+    },
+    {
+      "id": 571,
+      "word": "khuyến nghị",
+      "sentence1": "Tôi đánh giá cao lời đề nghị của anh.",
+      "sentence2": "Cô ấy đã đưa ra một đề xuất cho dự án."
+    },
+    {
+      "id": 572,
+      "word": "tham chiếu",
+      "sentence1": "Anh có thể cung cấp tài liệu tham khảo cho công việc của anh không?",
+      "sentence2": "Ông đã trích dẫn một số tài liệu tham khảo trong báo cáo của mình."
+    },
+    {
+      "id": 573,
+      "word": "nghĩ lại",
+      "sentence1": "Kính sẽ phản chiếu hình ảnh của bạn.",
+      "sentence2": "Cô ấy dành một chút thời gian để suy nghĩ về những lựa chọn của mình."
+    },
+    {
+      "id": 574,
+      "word": "thường xuyên",
+      "sentence1": "Anh ấy tập thể dục thường xuyên để giữ thể lực.",
+      "sentence2": "Các cuộc họp được tổ chức thường xuyên vào mỗi thứ Hai."
+    },
+    {
+      "id": 575,
+      "word": "từ chối",
+      "sentence1": "Họ quyết định từ chối đề xuất.",
+      "sentence2": "Cô cảm thấy đau lòng khi anh từ chối lời mời của cô."
+    },
+    {
+      "id": 576,
+      "word": "liên hệ",
+      "sentence1": "Điều quan trọng là liên hệ giữa lý thuyết và thực tiễn.",
+      "sentence2": "Cô ấy có thể dễ dàng liên quan đến các nhân vật trong cuốn sách."
+    },
+    {
+      "id": 577,
+      "word": "liên quan",
+      "sentence1": "Hai chủ đề có liên quan chặt chẽ.",
+      "sentence2": "Cô ấy có rất nhiều kinh nghiệm liên quan."
+    },
+    {
+      "id": 578,
+      "word": "mối quan hệ",
+      "sentence1": "Có một mối quan hệ chặt chẽ giữa chế độ ăn uống và sức khỏe.",
+      "sentence2": "Họ nghiên cứu mối quan hệ giữa ngôn ngữ và văn hóa."
+    },
+    {
+      "id": 579,
+      "word": "tương đối",
+      "sentence1": "Anh ấy là người họ hàng xa của tôi.",
+      "sentence2": "Khái niệm này tương đối với tình huống."
+    },
+    {
+      "id": 580,
+      "word": "thư giãn",
+      "sentence1": "Cô ấy cảm thấy thư giãn sau khi massage.",
+      "sentence2": "Bầu không khí bình tĩnh và thư giãn."
+    },
+    {
+      "id": 581,
+      "word": "thư giãn",
+      "sentence1": "Nghe nhạc là thư giãn.",
+      "sentence2": "Họ đã có một ngày thư giãn tại spa."
+    },
+    {
+      "id": 582,
+      "word": "phát hành",
+      "sentence1": "Con chim được thả ra khỏi lồng.",
+      "sentence2": "Họ có kế hoạch phát hành sản phẩm mới vào tháng tới."
+    },
+    {
+      "id": 583,
+      "word": "đáng tin cậy",
+      "sentence1": "Cô ấy là một người bạn đáng tin cậy.",
+      "sentence2": "Chúng ta cần một nguồn thông tin đáng tin cậy."
+    },
+    {
+      "id": 584,
+      "word": "tôn giáo",
+      "sentence1": "Anh ấy thực hành tôn giáo của mình một cách tận tụy.",
+      "sentence2": "Tôn giáo đóng một vai trò quan trọng trong cuộc sống của họ."
+    },
+    {
+      "id": 585,
+      "word": "tôn giáo",
+      "sentence1": "Cô ấy rất tôn giáo và đi nhà thờ mỗi Chủ nhật.",
+      "sentence2": "Những tín ngưỡng tôn giáo có thể khác nhau rất nhiều."
+    },
+    {
+      "id": 586,
+      "word": "vẫn còn",
+      "sentence1": "Họ quyết định vẫn là bạn bè.",
+      "sentence2": "Xin hãy ngồi yên cho đến khi chương trình kết thúc."
+    },
+    {
+      "id": 587,
+      "word": "nhớ lại",
+      "sentence1": "Xin hãy nhắc tôi gọi cho cô ấy.",
+      "sentence2": "Tôi cần tự nhắc nhở mình nghỉ ngơi."
+    },
+    {
+      "id": 588,
+      "word": "từ xa",
+      "sentence1": "Anh ta làm việc từ xa từ nhà.",
+      "sentence2": "Chiếc điều khiển từ xa nằm trên bàn."
+    },
+    {
+      "id": 589,
+      "word": "tiền thuê nhà",
+      "sentence1": "Họ quyết định thuê một chiếc xe cho chuyến đi.",
+      "sentence2": "Mức tiền thuê nhà phải trả vào đầu tháng."
+    },
+    {
+      "id": 590,
+      "word": "sửa chữa",
+      "sentence1": "Tôi cần sửa xe đạp.",
+      "sentence2": "Việc sửa chữa mất nhiều thời gian hơn dự kiến."
+    },
+    {
+      "id": 591,
+      "word": "lặp lại",
+      "sentence1": "Anh có thể lặp lại không?",
+      "sentence2": "Tôi cần lặp lại quá trình này cho từng vật phẩm."
+    },
+    {
+      "id": 592,
+      "word": "lặp lại",
+      "sentence1": "Những nỗ lực lặp đi lặp lại đã không thành công.",
+      "sentence2": "Cô ấy có một kiểu hành vi lặp đi lặp lại."
+    },
+    {
+      "id": 593,
+      "word": "đại diện",
+      "sentence1": "Anh ấy được chọn để đại diện cho đội.",
+      "sentence2": "Bức tranh đại diện cho tầm nhìn của nghệ sĩ."
+    },
+    {
+      "id": 594,
+      "word": "yêu cầu",
+      "sentence1": "Tôi muốn yêu cầu một cuộc họp.",
+      "sentence2": "Yêu cầu đã được ban quản lý chấp thuận."
+    },
+    {
+      "id": 595,
+      "word": "yêu cầu",
+      "sentence1": "Công việc này đòi hỏi nhiều kinh nghiệm.",
+      "sentence2": "Bạn sẽ cần thêm nguồn lực."
+    },
+    {
+      "id": 596,
+      "word": "bảo lưu",
+      "sentence1": "Tôi đã đặt chỗ ở nhà hàng.",
+      "sentence2": "Đặt chỗ đã được xác nhận qua email."
+    },
+    {
+      "id": 597,
+      "word": "tài nguyên",
+      "sentence1": "Thư viện là một nguồn tài nguyên quý giá cho sinh viên.",
+      "sentence2": "Chúng ta cần phân bổ nhiều nguồn lực hơn cho dự án này."
+    },
+    {
+      "id": 598,
+      "word": "tôn trọng",
+      "sentence1": "Tôn trọng người khác là rất quan trọng.",
+      "sentence2": "Cô ấy đã giành được sự tôn trọng của các đồng nghiệp."
+    },
+    {
+      "id": 599,
+      "word": "trách nhiệm",
+      "sentence1": "Anh ta coi trọng trách nhiệm của mình.",
+      "sentence2": "Chúng ta có trách nhiệm bảo vệ môi trường."
+    },
+    {
+      "id": 600,
+      "word": "có trách nhiệm",
+      "sentence1": "Cô ấy là một người trưởng thành có trách nhiệm.",
+      "sentence2": "Chúng ta cần phải có trách nhiệm với nguồn lực của mình."
+    },
+    {
+      "id": 601,
+      "word": "kết quả",
+      "sentence1": "Kết quả tốt hơn mong đợi.",
+      "sentence2": "Chúng ta cần phân tích kết quả một cách cẩn thận."
+    },
+    {
+      "id": 602,
+      "word": "nghỉ ngơi",
+      "sentence1": "Anh ấy có kế hoạch nghỉ hưu vào năm tới.",
+      "sentence2": "Nhiều người chọn nghỉ hưu ở tuổi 60."
+    },
+    {
+      "id": 603,
+      "word": "nghỉ hưu",
+      "sentence1": "Cô ấy là một giáo viên đã nghỉ hưu.",
+      "sentence2": "Những người về hưu thường tình nguyện làm việc trong cộng đồng của họ."
+    },
+    {
+      "id": 604,
+      "word": "sửa đổi",
+      "sentence1": "Tôi cần sửa lại bài luận của mình trước khi nộp nó.",
+      "sentence2": "Giáo viên sẽ sửa đổi kế hoạch bài học."
+    },
+    {
+      "id": 605,
+      "word": "nhẫn",
+      "sentence1": "Cô ấy nhận được một chiếc nhẫn đẹp làm quà.",
+      "sentence2": "Chiếc nhẫn được làm bằng vàng."
+    },
+    {
+      "id": 606,
+      "word": "tăng lên",
+      "sentence1": "Mặt trời sẽ mọc lúc 6 giờ sáng.",
+      "sentence2": "Giá dự kiến sẽ tăng vào năm tới."
+    },
+    {
+      "id": 607,
+      "word": "nguy cơ",
+      "sentence1": "Ngày mai có nguy cơ mưa.",
+      "sentence2": "Chúng ta cần phải đánh giá những rủi ro liên quan."
+    },
+    {
+      "id": 608,
+      "word": "robot",
+      "sentence1": "Robot có thể thực hiện nhiều nhiệm vụ.",
+      "sentence2": "Robot đang trở nên phổ biến hơn trong các ngành công nghiệp."
+    },
+    {
+      "id": 609,
+      "word": "cuộn",
+      "sentence1": "Làm ơn lăn bóng cho tôi.",
+      "sentence2": "Tiền cần được lăn ra."
+    },
+    {
+      "id": 610,
+      "word": "lãng mạn",
+      "sentence1": "Họ có một bữa tối lãng mạn dưới ánh nến.",
+      "sentence2": "Bộ phim có một cốt truyện lãng mạn."
+    },
+    {
+      "id": 611,
+      "word": "dây thừng",
+      "sentence1": "Anh ta trèo lên sợi dây thừng để lên đến đỉnh.",
+      "sentence2": "Sợi dây thừng được làm từ vật liệu vững chắc."
+    },
+    {
+      "id": 612,
+      "word": "thô",
+      "sentence1": "Bề mặt là thô và không đồng đều.",
+      "sentence2": "Anh ta có một ý tưởng thô sơ về những gì mong đợi."
+    },
+    {
+      "id": 613,
+      "word": "hàng",
+      "sentence1": "Xin hãy ngồi ở hàng đầu.",
+      "sentence2": "Những cuốn sách được sắp xếp một cách gọn gàng."
+    },
+    {
+      "id": 614,
+      "word": "hoàng gia",
+      "sentence1": "Gia đình hoàng gia đã tham dự sự kiện này.",
+      "sentence2": "Cô ấy có một thái độ hoàng gia."
+    },
+    {
+      "id": 615,
+      "word": "bóng bầu dục",
+      "sentence1": "Bóng bầu dục là một môn thể thao phổ biến ở nhiều quốc gia.",
+      "sentence2": "Anh ấy chơi bóng bầu dục vào cuối tuần."
+    },
+    {
+      "id": 616,
+      "word": "quy tắc",
+      "sentence1": "Có những quy tắc phải tuân theo trong trò chơi.",
+      "sentence2": "Cô ấy đã vi phạm quy tắc và bị phạt."
+    },
+    {
+      "id": 617,
+      "word": "an toàn",
+      "sentence1": "An toàn là ưu tiên hàng đầu của chúng tôi.",
+      "sentence2": "Các biện pháp an toàn đã có hiệu quả."
+    },
+    {
+      "id": 618,
+      "word": "buồm",
+      "sentence1": "Họ có kế hoạch đi thuyền vòng quanh thế giới.",
+      "sentence2": "Chiếc buồm bắt được gió một cách hoàn hảo."
+    },
+    {
+      "id": 619,
+      "word": "thủy thủ",
+      "sentence1": "Người thủy thủ điều khiển con tàu qua cơn bão.",
+      "sentence2": "Nhiều thủy thủ làm việc trên thuyền đánh cá."
+    },
+    {
+      "id": 620,
+      "word": "mẫu",
+      "sentence1": "Anh có thể cung cấp một mẫu công việc của anh không?",
+      "sentence2": "Giáo viên đưa ra một câu hỏi mẫu để thực hành."
+    },
+    {
+      "id": 621,
+      "word": "cát",
+      "sentence1": "Những đứa trẻ chơi trong cát trên bãi biển.",
+      "sentence2": "Cát được tạo thành từ các hạt đá nhỏ."
+    },
+    {
+      "id": 622,
+      "word": "quét",
+      "sentence1": "Tôi cần quét những tài liệu này để tìm hồ sơ của tôi.",
+      "sentence2": "Máy quét có thể nhanh chóng quét nhiều trang."
+    },
+    {
+      "id": 623,
+      "word": "khoa học",
+      "sentence1": "Phương pháp khoa học rất quan trọng trong nghiên cứu.",
+      "sentence2": "Cô ấy đã xuất bản một bài báo khoa học về những phát hiện của mình."
+    },
+    {
+      "id": 624,
+      "word": "kịch bản",
+      "sentence1": "Kịch bản cho vở kịch được viết rất hay.",
+      "sentence2": "Anh ấy đang viết kịch bản mới cho một bộ phim."
+    },
+    {
+      "id": 625,
+      "word": "điêu khắc",
+      "sentence1": "Tác phẩm điêu khắc được tạo ra bởi một nghệ sĩ nổi tiếng.",
+      "sentence2": "Cô ấy học điêu khắc ở trường nghệ thuật."
+    },
+    {
+      "id": 626,
+      "word": "thứ cấp",
+      "sentence1": "Giáo dục trung học rất quan trọng cho sự phát triển nghề nghiệp.",
+      "sentence2": "Các tác dụng phụ của thuốc vẫn chưa được biết."
+    },
+    {
+      "id": 627,
+      "word": "an ninh",
+      "sentence1": "Các biện pháp an ninh đã được đưa ra để bảo vệ tòa nhà.",
+      "sentence2": "Người bảo vệ kiểm tra tất cả du khách ở lối vào."
+    },
+    {
+      "id": 628,
+      "word": "hạt giống",
+      "sentence1": "Người nông dân gieo hạt giống vào mùa xuân.",
+      "sentence2": "Những hạt cần nước và ánh sáng mặt trời để phát triển."
+    },
+    {
+      "id": 629,
+      "word": "khôn ngoan",
+      "sentence1": "Cứ tiết kiệm tiền cho tương lai là điều khôn ngoan.",
+      "sentence2": "Cô ấy đã đưa ra quyết định khôn ngoan để ở nhà."
+    },
+    {
+      "id": 630,
+      "word": "riêng biệt",
+      "sentence1": "Vui lòng tách các vật liệu có thể tái chế khỏi rác.",
+      "sentence2": "Họ quyết định chia tài chính của họ sau khi ly hôn."
+    },
+    {
+      "id": 631,
+      "word": "nghiêm túc",
+      "sentence1": "Anh ta nghiêm túc xem xét vấn đề và điều tra thêm.",
+      "sentence2": "Cô ấy nói rất nghiêm túc về những thách thức phía trước."
+    },
+    {
+      "id": 632,
+      "word": "người hầu",
+      "sentence1": "Người đầy tớ chuẩn bị bữa ăn cho khách.",
+      "sentence2": "Bà làm việc như một người hầu trong một gia đình lớn."
+    },
+    {
+      "id": 633,
+      "word": "đặt (đặt)",
+      "sentence1": "Xin hãy đặt cuốn sách lên bàn.",
+      "sentence2": "Anh ta đặt chuông báo thức vào 7 giờ sáng."
+    },
+    {
+      "id": 634,
+      "word": "tập hợp (nhóm)",
+      "sentence1": "Bộ đĩa được sắp xếp đẹp đẽ.",
+      "sentence2": "Cô ấy tham gia một câu lạc bộ đọc sách được thiết lập trong khu phố của mình."
+    },
+    {
+      "id": 635,
+      "word": "thiết lập",
+      "sentence1": "Câu chuyện diễn ra trong một ngôi làng nhỏ.",
+      "sentence2": "Bạn có thể thay đổi cài đặt trong ứng dụng."
+    },
+    {
+      "id": 636,
+      "word": "tình dục",
+      "sentence1": "Giáo dục tình dục rất quan trọng đối với người trẻ.",
+      "sentence2": "Cuốn sách thảo luận về các khía cạnh sinh học của tình dục."
+    },
+    {
+      "id": 637,
+      "word": "tình dục",
+      "sentence1": "Xu hướng tình dục là một khía cạnh cá nhân của bản sắc.",
+      "sentence2": "Chiến dịch này thúc đẩy nhận thức về sức khỏe tình dục."
+    },
+    {
+      "id": 638,
+      "word": "vẫy",
+      "sentence1": "Vui lòng lắc chai trước khi sử dụng.",
+      "sentence2": "Anh ta giật tay cô nhẹ nhàng."
+    },
+    {
+      "id": 639,
+      "word": "chia sẻ",
+      "sentence1": "Thật tốt khi chia sẻ đồ chơi của bạn với người khác.",
+      "sentence2": "Họ quyết định chia sẻ trách nhiệm một cách bình đẳng."
+    },
+    {
+      "id": 640,
+      "word": "sắc bén",
+      "sentence1": "Cẩn thận với con dao sắc đó.",
+      "sentence2": "Vòng rẽ đột ngột khiến anh ta bất ngờ."
+    },
+    {
+      "id": 641,
+      "word": "kệ",
+      "sentence1": "Kệ sách đầy sách.",
+      "sentence2": "Cô ấy đặt bình trên kệ."
+    },
+    {
+      "id": 642,
+      "word": "vỏ",
+      "sentence1": "Con rùa trốn trong vỏ của nó.",
+      "sentence2": "Vỏ trứng rất mong manh."
+    },
+    {
+      "id": 643,
+      "word": "thay đổi",
+      "sentence1": "Xin hãy tập trung vào vấn đề chính.",
+      "sentence2": "Công ty có kế hoạch thay đổi chiến lược của mình."
+    },
+    {
+      "id": 644,
+      "word": "sáng lên",
+      "sentence1": "Những vì sao sáng rực rỡ trên bầu trời đêm.",
+      "sentence2": "Cô ấy dùng một miếng vải để làm sáng đồ bạc."
+    },
+    {
+      "id": 645,
+      "word": "sáng bóng",
+      "sentence1": "Chiếc xe có một lớp sơn mới sáng bóng.",
+      "sentence2": "Cô ấy mang giày bóng đến bữa tiệc."
+    },
+    {
+      "id": 646,
+      "word": "bắn",
+      "sentence1": "Người thợ săn phải bắn con hươu.",
+      "sentence2": "Họ sẽ quay cảnh này vào ngày mai."
+    },
+    {
+      "id": 647,
+      "word": "nhút nhát",
+      "sentence1": "Cô ấy quá nhút nhát để nói trước công chúng.",
+      "sentence2": "Anh ấy cười nhút nhát khi được khen."
+    },
+    {
+      "id": 648,
+      "word": "tầm nhìn",
+      "sentence1": "Khung cảnh của những ngọn núi thật ngoạn mục.",
+      "sentence2": "Cô ấy có tầm nhìn hoàn hảo mà không cần kính."
+    },
+    {
+      "id": 649,
+      "word": "tín hiệu",
+      "sentence1": "Đèn giao thông chuyển sang màu đỏ.",
+      "sentence2": "Anh ta dùng một dấu hiệu bằng tay để giao tiếp."
+    },
+    {
+      "id": 650,
+      "word": "im lặng",
+      "sentence1": "Phòng im lặng tràn ngập sự căng thẳng.",
+      "sentence2": "Cô ấy im lặng trong cuộc họp."
+    },
+    {
+      "id": 651,
+      "word": "ngớ ngẩn",
+      "sentence1": "Thật ngớ ngẩn khi lo lắng về những thứ không thể kiểm soát được.",
+      "sentence2": "Anh ta làm một khuôn mặt ngớ ngẩn để làm cô ấy cười."
+    },
+    {
+      "id": 652,
+      "word": "tương đồng",
+      "sentence1": "Có một điểm tương đồng giữa hai bức tranh.",
+      "sentence2": "Sự tương đồng trong những câu chuyện của họ thật đáng kinh ngạc."
+    },
+    {
+      "id": 653,
+      "word": "tương tự",
+      "sentence1": "Bà cũng thích đi bộ đường dài trên núi.",
+      "sentence2": "Hai đề xuất có cấu trúc tương tự."
+    },
+    {
+      "id": 654,
+      "word": "đơn giản",
+      "sentence1": "Giải pháp đơn giản là xin giúp đỡ.",
+      "sentence2": "Bà giải thích khái niệm đơn giản và rõ ràng."
+    },
+    {
+      "id": 655,
+      "word": "từ khi",
+      "sentence1": "Tôi sống ở đây từ năm 2010.",
+      "sentence2": "Kể từ vụ tai nạn, anh ấy đã cẩn thận hơn."
+    },
+    {
+      "id": 656,
+      "word": "bồn rửa",
+      "sentence1": "Tàu Titanic chìm năm 1912.",
+      "sentence2": "Các món ăn cần phải ngâm trong bồn rửa."
+    },
+    {
+      "id": 657,
+      "word": "cắt",
+      "sentence1": "Xin hãy cắt bánh mì trước khi phục vụ.",
+      "sentence2": "Cô ấy lấy một lát bánh."
+    },
+    {
+      "id": 658,
+      "word": "một chút",
+      "sentence1": "Nhiệt độ đã tăng nhẹ.",
+      "sentence2": "Cô ấy hơi bực bội vì lời bình luận đó."
+    },
+    {
+      "id": 659,
+      "word": "chậm",
+      "sentence1": "Xe đang đi quá chậm.",
+      "sentence2": "Anh ấy nói với giọng chậm và rõ ràng."
+    },
+    {
+      "id": 660,
+      "word": "thông minh",
+      "sentence1": "Cô ấy rất thông minh và nhanh nhẹn.",
+      "sentence2": "Anh ta đã đưa ra một quyết định thông minh để đầu tư sớm."
+    },
+    {
+      "id": 661,
+      "word": "mượt mà",
+      "sentence1": "Bề mặt nước mịn như thủy tinh.",
+      "sentence2": "Cô ấy có giọng hát êm ái."
+    },
+    {
+      "id": 662,
+      "word": "phần mềm",
+      "sentence1": "Phần mềm cần được cập nhật thường xuyên.",
+      "sentence2": "Anh ta làm việc như một nhà phát triển phần mềm."
+    },
+    {
+      "id": 663,
+      "word": "đất",
+      "sentence1": "Đất ở khu vực này rất màu mỡ.",
+      "sentence2": "Họ kiểm tra đất để tìm các chất gây ô nhiễm."
+    },
+    {
+      "id": 664,
+      "word": "rắn",
+      "sentence1": "Nước là chất rắn khi nó đóng băng.",
+      "sentence2": "Bàn được làm bằng gỗ rắn."
+    },
+    {
+      "id": 665,
+      "word": "phân loại",
+      "sentence1": "Vui lòng sắp xếp các tập tin theo ngày.",
+      "sentence2": "Anh ấy thích sắp xếp sách của mình theo thể loại."
+    },
+    {
+      "id": 666,
+      "word": "nam",
+      "sentence1": "Khu vực phía nam được biết đến với khí hậu ấm áp.",
+      "sentence2": "Họ đi đến phần phía nam của đất nước."
+    },
+    {
+      "id": 667,
+      "word": "cụ thể",
+      "sentence1": "Cô ấy đã đề cập đến vấn đề này một cách cụ thể trong báo cáo của mình.",
+      "sentence2": "Tôi đang tìm một cuốn sách đặc biệt về lịch sử."
+    },
+    {
+      "id": 668,
+      "word": "chi tiêu",
+      "sentence1": "Chi tiêu của công ty đã tăng trong năm nay.",
+      "sentence2": "Anh ta cẩn thận về thói quen chi tiêu của mình."
+    },
+    {
+      "id": 669,
+      "word": "cay",
+      "sentence1": "Món ăn này quá cay đối với khẩu vị của tôi.",
+      "sentence2": "Cô ấy thích đồ ăn cay từ các nền văn hóa khác nhau."
+    },
+    {
+      "id": 670,
+      "word": "rượu",
+      "sentence1": "Tinh thần của đội đã cao sau chiến thắng.",
+      "sentence2": "Cô ấy có tinh thần chiến đấu mạnh mẽ."
+    },
+    {
+      "id": 671,
+      "word": "nói",
+      "sentence1": "Tiếng Anh là ngôn ngữ được sử dụng rộng rãi nhất trên thế giới.",
+      "sentence2": "Anh ấy thông thạo một số ngôn ngữ nói."
+    },
+    {
+      "id": 672,
+      "word": "điểm",
+      "sentence1": "Bạn có thể nhận ra sự khác biệt giữa hai bức ảnh này không?",
+      "sentence2": "Cô ấy đã tìm được một nơi tốt để ngồi và thư giãn."
+    },
+    {
+      "id": 673,
+      "word": "lây lan",
+      "sentence1": "Tin tức lan truyền nhanh chóng qua các phương tiện truyền thông xã hội.",
+      "sentence2": "Cô ấy thích bôi bơ lên bánh mì nướng."
+    },
+    {
+      "id": 674,
+      "word": "mùa xuân",
+      "sentence1": "Hoa nở vào mùa xuân.",
+      "sentence2": "Thời tiết đang ấm lên khi mùa xuân đến gần."
+    },
+    {
+      "id": 675,
+      "word": "sân vận động",
+      "sentence1": "Sân vận động đầy những người hâm mộ cổ vũ.",
+      "sentence2": "Họ đã xây một sân vận động mới cho các trận đấu sắp tới."
+    },
+    {
+      "id": 676,
+      "word": "nhân viên",
+      "sentence1": "Nhân viên khách sạn rất hữu ích.",
+      "sentence2": "Cô ấy là một thành viên của đội ngũ giảng viên."
+    },
+    {
+      "id": 677,
+      "word": "tiêu chuẩn",
+      "sentence1": "Sản phẩm đáp ứng các tiêu chuẩn chất lượng quốc tế.",
+      "sentence2": "Họ đang làm việc để nâng cao mức sống."
+    },
+    {
+      "id": 678,
+      "word": "tiểu bang",
+      "sentence1": "Tình trạng của nền kinh tế là một mối quan tâm lớn.",
+      "sentence2": "Cô ấy đang trong tình trạng sốc sau tin tức."
+    },
+    {
+      "id": 679,
+      "word": "thống kê",
+      "sentence1": "Thống kê cho thấy doanh số bán hàng tăng đáng kể.",
+      "sentence2": "Ông đã phân tích dữ liệu và trình bày các số liệu thống kê chính."
+    },
+    {
+      "id": 680,
+      "word": "tượng",
+      "sentence1": "Tượng Nữ thần Tự do là biểu tượng của tự do.",
+      "sentence2": "Họ đến thăm bức tượng nổi tiếng trong công viên."
+    },
+    {
+      "id": 681,
+      "word": "stick (attach)",
+      "sentence1": "Vui lòng dán nhãn lên hộp.",
+      "sentence2": "Cô ấy dùng keo để dính các mảnh lại với nhau."
+    },
+    {
+      "id": 682,
+      "word": "stick (một miếng gỗ)",
+      "sentence1": "Anh ta nhặt một cây gậy từ mặt đất.",
+      "sentence2": "Con chó đã nhai cây gậy."
+    },
+    {
+      "id": 683,
+      "word": "vẫn còn",
+      "sentence1": "Cô ấy vẫn đang chờ xe buýt.",
+      "sentence2": "Nước vẫn yên tĩnh và bình tĩnh."
+    },
+    {
+      "id": 684,
+      "word": "cửa hàng",
+      "sentence1": "Tôi cần phải đi cửa hàng để mua đồ.",
+      "sentence2": "Cửa hàng mở cửa từ 9 giờ sáng đến 9 giờ tối."
+    },
+    {
+      "id": 685,
+      "word": "người lạ",
+      "sentence1": "Cô cảm thấy như một người lạ trong một thành phố mới.",
+      "sentence2": "Đừng nói chuyện với người lạ trên mạng."
+    },
+    {
+      "id": 686,
+      "word": "sức mạnh",
+      "sentence1": "Anh ta có sức mạnh để nâng những vật nặng.",
+      "sentence2": "Sức mạnh tinh thần cũng quan trọng như sức mạnh thể chất."
+    },
+    {
+      "id": 687,
+      "word": "dây",
+      "sentence1": "Cô ấy buộc gói hàng bằng một sợi dây.",
+      "sentence2": "Dây guitar bị gãy trong buổi biểu diễn."
+    },
+    {
+      "id": 688,
+      "word": "mạnh mẽ",
+      "sentence1": "Anh ấy tin tưởng mạnh mẽ vào tầm quan trọng của giáo dục.",
+      "sentence2": "Bà đã bày tỏ quan điểm của mình một cách mạnh mẽ trong cuộc tranh luận."
+    },
+    {
+      "id": 689,
+      "word": "phòng thu",
+      "sentence1": "Nghệ sĩ làm việc trong một xưởng nhỏ.",
+      "sentence2": "Họ thuê một studio để chụp ảnh."
+    },
+    {
+      "id": 690,
+      "word": "đồ đạc",
+      "sentence1": "Tôi cần đóng gói đồ đạc cho chuyến đi.",
+      "sentence2": "Cô ấy có rất nhiều thứ thú vị trong bộ sưu tập của mình."
+    },
+    {
+      "id": 691,
+      "word": "chất",
+      "sentence1": "Nước là một chất thiết yếu cho sự sống.",
+      "sentence2": "Nhà khoa học đã nghiên cứu chất hóa học trong phòng thí nghiệm."
+    },
+    {
+      "id": 692,
+      "word": "thành công",
+      "sentence1": "Cô đã hoàn thành dự án thành công.",
+      "sentence2": "Họ làm việc cùng nhau và đạt được mục tiêu của họ thành công."
+    },
+    {
+      "id": 693,
+      "word": "đột ngột",
+      "sentence1": "Có một sự thay đổi đột ngột về nhiệt độ.",
+      "sentence2": "Tiếng ồn đột ngột làm mọi người hoảng sợ."
+    },
+    {
+      "id": 694,
+      "word": "đau khổ",
+      "sentence1": "Anh ấy phải trải qua một quá trình hồi phục lâu dài.",
+      "sentence2": "Nhiều người bị lo âu và trầm cảm."
+    },
+    {
+      "id": 695,
+      "word": "áo choàng",
+      "sentence1": "Anh ta mặc bộ đồ vào buổi phỏng vấn xin việc.",
+      "sentence2": "Luật sư mặc bộ đồ chính thức."
+    },
+    {
+      "id": 696,
+      "word": "thích hợp",
+      "sentence1": "Cái váy này phù hợp với dịp này.",
+      "sentence2": "Họ cần tìm một địa điểm thích hợp cho sự kiện này."
+    },
+    {
+      "id": 697,
+      "word": "tóm tắt",
+      "sentence1": "Bạn có thể tóm tắt các điểm chính không?",
+      "sentence2": "Cô ấy tóm tắt bài viết trong vài câu."
+    },
+    {
+      "id": 698,
+      "word": "tóm tắt",
+      "sentence1": "Bản tóm tắt cung cấp một cái nhìn tổng quan nhanh chóng về báo cáo.",
+      "sentence2": "Vui lòng đọc bản tóm tắt trước cuộc họp."
+    },
+    {
+      "id": 699,
+      "word": "cung cấp",
+      "sentence1": "Công ty nhằm cung cấp các sản phẩm chất lượng cao.",
+      "sentence2": "Họ có nguồn cung cấp ổn định các sản phẩm tươi."
+    },
+    {
+      "id": 700,
+      "word": "người ủng hộ",
+      "sentence1": "Cô là một người ủng hộ mạnh mẽ các nguyên nhân môi trường.",
+      "sentence2": "Chiến dịch này có nhiều người ủng hộ nhiệt tình."
+    },
+    {
+      "id": 701,
+      "word": "chắc chắn",
+      "sentence1": "Chắc chắn, anh không thể nghiêm túc về điều đó.",
+      "sentence2": "Cô ấy chắc chắn sẽ thắng cuộc thi."
+    },
+    {
+      "id": 702,
+      "word": "bề mặt",
+      "sentence1": "Bề mặt nước đã bình tĩnh.",
+      "sentence2": "Anh ta gãi mặt bàn."
+    },
+    {
+      "id": 703,
+      "word": "sống sót",
+      "sentence1": "Nhiều loài vật đấu tranh để tồn tại trong môi trường khắc nghiệt.",
+      "sentence2": "Cô ấy đã cố gắng sống sót sau vụ tai nạn."
+    },
+    {
+      "id": 704,
+      "word": "bơi",
+      "sentence1": "Tôi thích bơi trong đại dương.",
+      "sentence2": "Anh ấy học bơi từ khi còn nhỏ."
+    },
+    {
+      "id": 705,
+      "word": "chuyển đổi",
+      "sentence1": "Cô tắt đèn đi được không?",
+      "sentence2": "Anh ta quyết định đổi nghề."
+    },
+    {
+      "id": 706,
+      "word": "triệu chứng",
+      "sentence1": "Ho là một triệu chứng phổ biến của cảm lạnh.",
+      "sentence2": "Cô báo cáo một số triệu chứng cho bác sĩ."
+    },
+    {
+      "id": 707,
+      "word": "đuôi",
+      "sentence1": "Con chó lắc đuôi vui vẻ.",
+      "sentence2": "Đèn đuôi xe lửa đang nhấp nháy."
+    },
+    {
+      "id": 708,
+      "word": "tài năng",
+      "sentence1": "Cô ấy có tài năng thiên bẩm về âm nhạc.",
+      "sentence2": "Tài năng của ông đã được công nhận ở tuổi trẻ."
+    },
+    {
+      "id": 709,
+      "word": "tài năng",
+      "sentence1": "Cô ấy là một nghệ sĩ tài năng.",
+      "sentence2": "Đội gồm những cá nhân tài năng."
+    },
+    {
+      "id": 710,
+      "word": "băng",
+      "sentence1": "Tôi cần băng dán để quấn món quà này.",
+      "sentence2": "Cái băng đã dễ dàng bị tháo ra."
+    },
+    {
+      "id": 711,
+      "word": "thuế",
+      "sentence1": "Chính phủ áp thuế mới đối với hàng xa xỉ.",
+      "sentence2": "Anh ta đang cố gắng giảm trách nhiệm thuế của mình."
+    },
+    {
+      "id": 712,
+      "word": "kỹ thuật",
+      "sentence1": "Cô ấy có một nền tảng kỹ thuật mạnh mẽ trong kỹ thuật.",
+      "sentence2": "Các chi tiết kỹ thuật được nêu trong báo cáo."
+    },
+    {
+      "id": 713,
+      "word": "kỹ thuật",
+      "sentence1": "Anh ta sử dụng một kỹ thuật mới để giải quyết vấn đề.",
+      "sentence2": "Nghệ sĩ được biết đến với kỹ thuật vẽ độc đáo của mình."
+    },
+    {
+      "id": 714,
+      "word": "có xu hướng",
+      "sentence1": "Mọi người có xu hướng năng suất hơn vào buổi sáng.",
+      "sentence2": "Cô ấy có xu hướng suy nghĩ quá nhiều."
+    },
+    {
+      "id": 715,
+      "word": "lều",
+      "sentence1": "Chúng tôi dựng lều cho chuyến cắm trại.",
+      "sentence2": "Lều đủ rộng cho sáu người."
+    },
+    {
+      "id": 716,
+      "word": "cái đó",
+      "sentence1": "Tôi không thích ý tưởng đó.",
+      "sentence2": "Đó là một bộ phim tuyệt vời!"
+    },
+    {
+      "id": 717,
+      "word": "của họ",
+      "sentence1": "Cuốn sách này là của họ.",
+      "sentence2": "Tôi tìm thấy chìa khóa trên bàn."
+    },
+    {
+      "id": 718,
+      "word": "chủ đề",
+      "sentence1": "Chủ đề của bữa tiệc là vùng nhiệt đới.",
+      "sentence2": "Cô ấy đã viết một bài tiểu luận về chủ đề tình yêu."
+    },
+    {
+      "id": 719,
+      "word": "lý thuyết",
+      "sentence1": "Ông đề xuất một lý thuyết mới về biến đổi khí hậu.",
+      "sentence2": "Giả thuyết này được các nhà khoa học chấp nhận rộng rãi."
+    },
+    {
+      "id": 720,
+      "word": "vì thế",
+      "sentence1": "Trời mưa; do đó, trận đấu bị hủy.",
+      "sentence2": "Cô ấy học chăm chỉ; do đó, cô ấy đã vượt qua kỳ thi."
+    },
+    {
+      "id": 721,
+      "word": "cái này",
+      "sentence1": "Đây là cuốn sách yêu thích của tôi.",
+      "sentence2": "Không thể tin được chuyện này đang xảy ra."
+    },
+    {
+      "id": 722,
+      "word": "dù sao",
+      "sentence1": "Mặc dù trời mưa, chúng tôi đi dạo.",
+      "sentence2": "Cô ấy rất tài năng, mặc dù cô ấy thiếu kinh nghiệm."
+    },
+    {
+      "id": 723,
+      "word": "cổ họng",
+      "sentence1": "Anh ấy bị đau họng.",
+      "sentence2": "Cô ấy làm sạch cổ họng trước khi nói."
+    },
+    {
+      "id": 724,
+      "word": "trong suốt",
+      "sentence1": "Bảo tàng mở cửa suốt cả năm.",
+      "sentence2": "Mùa hè năm ngoái, cô ấy đi khắp châu Âu."
+    },
+    {
+      "id": 725,
+      "word": "chặt chẽ",
+      "sentence1": "Chiếc váy quá chật cho tôi.",
+      "sentence2": "Tuần này anh ấy có lịch trình bận rộn."
+    },
+    {
+      "id": 726,
+      "word": "cho đến khi",
+      "sentence1": "Tôi sẽ đợi cho đến khi anh đến.",
+      "sentence2": "Cô ấy làm việc đến nửa đêm."
+    },
+    {
+      "id": 727,
+      "word": "thiếc",
+      "sentence1": "Thức ăn được lưu trữ trong một thùng.",
+      "sentence2": "Anh ta mở một hộp đậu."
+    },
+    {
+      "id": 728,
+      "word": "nhỏ xíu",
+      "sentence1": "Con mèo con rất nhỏ và dễ thương.",
+      "sentence2": "Cô ấy có một vết sẹo nhỏ trên má."
+    },
+    {
+      "id": 729,
+      "word": "mũi",
+      "sentence1": "Anh có thể cho tôi tiền cho bài kiểm tra không?",
+      "sentence2": "Anh ta để lại tiền boa cho người bồi bàn."
+    },
+    {
+      "id": 730,
+      "word": "ngón chân",
+      "sentence1": "Tôi đập ngón chân vào bàn.",
+      "sentence2": "Cô ấy sơn móng chân màu đỏ."
+    },
+    {
+      "id": 731,
+      "word": "lưỡi",
+      "sentence1": "Anh ta chọc lưỡi ra.",
+      "sentence2": "Cô ấy có một vết đâm trên lưỡi."
+    },
+    {
+      "id": 732,
+      "word": "tổng số",
+      "sentence1": "Tổng chi phí là 100 đô la.",
+      "sentence2": "Cô đã giành được tổng cộng ba giải thưởng."
+    },
+    {
+      "id": 733,
+      "word": "hoàn toàn",
+      "sentence1": "Tôi hoàn toàn đồng ý với anh.",
+      "sentence2": "Bộ phim thật sự nhàm chán."
+    },
+    {
+      "id": 734,
+      "word": "chạm vào",
+      "sentence1": "Xin đừng chạm vào những bức tranh.",
+      "sentence2": "Cô ấy có một cái chạm nhẹ nhàng."
+    },
+    {
+      "id": 735,
+      "word": "du lịch",
+      "sentence1": "Chúng tôi đi tham quan thành phố.",
+      "sentence2": "Chuyến tham quan kéo dài hai giờ."
+    },
+    {
+      "id": 736,
+      "word": "thương mại",
+      "sentence1": "Thương mại quốc tế rất cần thiết cho tăng trưởng kinh tế.",
+      "sentence2": "Anh ta làm việc trong ngành thương mại."
+    },
+    {
+      "id": 737,
+      "word": "dịch",
+      "sentence1": "Anh có thể dịch tài liệu này sang tiếng Anh được không?",
+      "sentence2": "Cô ấy đang học dịch văn bản."
+    },
+    {
+      "id": 738,
+      "word": "phiên dịch",
+      "sentence1": "Bản dịch của cuốn sách đã được xuất bản vào năm ngoái.",
+      "sentence2": "Cô ấy chuyên về dịch thuật văn học."
+    },
+    {
+      "id": 739,
+      "word": "vận chuyển",
+      "sentence1": "Họ sử dụng xe tải để vận chuyển hàng hóa.",
+      "sentence2": "Hệ thống vận tải rất hiệu quả."
+    },
+    {
+      "id": 740,
+      "word": "xử lý",
+      "sentence1": "Bác sĩ sẽ điều trị vết thương của anh.",
+      "sentence2": "Cô ấy thích tự thưởng cho mình một ngày nghỉ dưỡng."
+    },
+    {
+      "id": 741,
+      "word": "điều trị",
+      "sentence1": "Việc điều trị căn bệnh này rất tốn kém.",
+      "sentence2": "Cô ấy đang điều trị bệnh."
+    },
+    {
+      "id": 742,
+      "word": "xu hướng",
+      "sentence1": "Có một xu hướng ngày càng tăng đối với công việc từ xa.",
+      "sentence2": "Xu hướng thời trang thay đổi nhanh chóng."
+    },
+    {
+      "id": 743,
+      "word": "mánh khóe",
+      "sentence1": "Anh ta đã thực hiện một trò ảo thuật.",
+      "sentence2": "Đó chỉ là một trò chơi của ánh sáng."
+    },
+    {
+      "id": 744,
+      "word": "sự thật",
+      "sentence1": "Sự thật thường khó chấp nhận.",
+      "sentence2": "Cuối cùng cô ấy nói với tôi sự thật."
+    },
+    {
+      "id": 745,
+      "word": "ống",
+      "sentence1": "Kem đánh răng ở trong ống.",
+      "sentence2": "Anh ta đi bằng đường ống ngầm."
+    },
+    {
+      "id": 746,
+      "word": "loại",
+      "sentence1": "Anh thích loại nhạc nào?",
+      "sentence2": "Cô ấy là loại người thích phiêu lưu."
+    },
+    {
+      "id": 747,
+      "word": "thường xuyên",
+      "sentence1": "Thời tiết thường ôn hòa vào mùa xuân.",
+      "sentence2": "Cô ấy thường đi ngủ sớm."
+    },
+    {
+      "id": 748,
+      "word": "lốp xe",
+      "sentence1": "Tôi cần thay lốp bị hỏng.",
+      "sentence2": "Xe có lốp dự phòng trong thùng xe."
+    },
+    {
+      "id": 749,
+      "word": "xấu xí",
+      "sentence1": "Thật khó để đối mặt với sự thật xấu xí.",
+      "sentence2": "Cô ấy có một vết sẹo xấu xí trên cánh tay."
+    },
+    {
+      "id": 750,
+      "word": "không thể",
+      "sentence1": "Anh ấy không thể tham dự cuộc họp.",
+      "sentence2": "Cô cảm thấy không thể đối phó với tình huống này."
+    },
+    {
+      "id": 751,
+      "word": "không thoải mái",
+      "sentence1": "Ghế không thoải mái để ngồi.",
+      "sentence2": "Cô ấy cảm thấy không thoải mái trong chiếc váy chật chội."
+    },
+    {
+      "id": 752,
+      "word": "đồ lót",
+      "sentence1": "Anh ta mua đồ lót mới.",
+      "sentence2": "Cô ấy thích đồ lót cotton hơn."
+    },
+    {
+      "id": 753,
+      "word": "thất nghiệp",
+      "sentence1": "Anh ta đã thất nghiệp sáu tháng rồi.",
+      "sentence2": "Dân số thất nghiệp đang gia tăng."
+    },
+    {
+      "id": 754,
+      "word": "thất nghiệp",
+      "sentence1": "Thất nghiệp là một vấn đề lớn trong thành phố.",
+      "sentence2": "Chính phủ đang làm việc để giảm thất nghiệp."
+    },
+    {
+      "id": 755,
+      "word": "không công bằng",
+      "sentence1": "Không công bằng khi đổ lỗi cho cô ấy về sai lầm.",
+      "sentence2": "Quyết định này được nhiều người coi là không công bằng."
+    },
+    {
+      "id": 756,
+      "word": "liên minh",
+      "sentence1": "Các công nhân thành lập một công đoàn để bảo vệ quyền của họ.",
+      "sentence2": "Công đoàn đang đàm phán để tăng lương."
+    },
+    {
+      "id": 757,
+      "word": "trừ khi",
+      "sentence1": "Bạn sẽ không thành công trừ khi bạn làm việc chăm chỉ.",
+      "sentence2": "Tôi sẽ đi trừ khi trời mưa."
+    },
+    {
+      "id": 758,
+      "word": "không giống",
+      "sentence1": "Không giống như em gái mình, cô ấy rất cởi mở.",
+      "sentence2": "Vải này không giống bất cứ thứ gì tôi từng thấy trước đây."
+    },
+    {
+      "id": 759,
+      "word": "không chắc chắn",
+      "sentence1": "Không có khả năng tuyết sẽ rơi vào tháng Tư.",
+      "sentence2": "Cô ấy không thể chấp nhận lời đề nghị."
+    },
+    {
+      "id": 760,
+      "word": "không cần thiết",
+      "sentence1": "Không cần phải mua quần áo mới.",
+      "sentence2": "Báo cáo được coi là không cần thiết."
+    },
+    {
+      "id": 761,
+      "word": "khó chịu",
+      "sentence1": "Mùi rất khó chịu.",
+      "sentence2": "Cô ấy có một trải nghiệm khó chịu ở khách sạn."
+    },
+    {
+      "id": 762,
+      "word": "cập nhật",
+      "sentence1": "Tôi cần cập nhật phần mềm của mình.",
+      "sentence2": "Bản cập nhật sẽ cải thiện hiệu suất."
+    },
+    {
+      "id": 763,
+      "word": "trên",
+      "sentence1": "Ngày xửa ngày xưa, có một công chúa.",
+      "sentence2": "Quyết định dựa trên sự cân nhắc cẩn thận."
+    },
+    {
+      "id": 764,
+      "word": "buồn bã",
+      "sentence1": "Cô ấy rất buồn vì tin tức đó.",
+      "sentence2": "Đừng buồn, không phải lỗi của anh."
+    },
+    {
+      "id": 765,
+      "word": "sử dụng",
+      "sentence1": "Cuốn sách đã qua sử dụng, nhưng trong tình trạng tốt.",
+      "sentence2": "Cô ấy đã mua một chiếc xe cũ."
+    },
+    {
+      "id": 766,
+      "word": "có giá trị",
+      "sentence1": "Thời gian là một tài nguyên quý giá.",
+      "sentence2": "Cô ấy cho tôi một số lời khuyên có giá trị."
+    },
+    {
+      "id": 767,
+      "word": "giá trị",
+      "sentence1": "Bức tranh này có giá trị bao nhiêu?",
+      "sentence2": "Ngài biết giá trị của sự chăm chỉ."
+    },
+    {
+      "id": 768,
+      "word": "khác nhau",
+      "sentence1": "Có nhiều lựa chọn khác nhau để chọn.",
+      "sentence2": "Cô ấy đã sống ở nhiều nước."
+    },
+    {
+      "id": 769,
+      "word": "phiên bản",
+      "sentence1": "Bạn đang sử dụng phiên bản nào của phần mềm?",
+      "sentence2": "Phiên bản mới nhất bao gồm các tính năng mới."
+    },
+    {
+      "id": 770,
+      "word": "nạn nhân",
+      "sentence1": "Nạn nhân đã bị mất ý thức.",
+      "sentence2": "Nhiều nạn nhân của thảm họa cần sự giúp đỡ."
+    },
+    {
+      "id": 771,
+      "word": "nhìn",
+      "sentence1": "Khung cảnh từ trên cao thật tuyệt vời.",
+      "sentence2": "Cô ấy có quan điểm khác về vấn đề này."
+    },
+    {
+      "id": 772,
+      "word": "người xem",
+      "sentence1": "Bộ phim thu hút một lượng lớn khán giả.",
+      "sentence2": "Là một người xem, bạn có quyền có ý kiến của mình."
+    },
+    {
+      "id": 773,
+      "word": "bạo lực",
+      "sentence1": "Bộ phim có những cảnh bạo lực.",
+      "sentence2": "Anh ta có tính nóng nảy."
+    },
+    {
+      "id": 774,
+      "word": "tình nguyện viên",
+      "sentence1": "Cô ấy quyết định làm tình nguyện viên tại nơi trú ẩn địa phương.",
+      "sentence2": "Cần có tình nguyện viên cho sự kiện này."
+    },
+    {
+      "id": 775,
+      "word": "bỏ phiếu",
+      "sentence1": "Việc bỏ phiếu trong cuộc bầu cử là rất quan trọng.",
+      "sentence2": "Cô ấy có kế hoạch bỏ phiếu lần đầu tiên."
+    },
+    {
+      "id": 776,
+      "word": "ấm áp",
+      "sentence1": "Súp ấm và an ủi.",
+      "sentence2": "Cô ấy mỉm cười nồng nhiệt với anh ta."
+    },
+    {
+      "id": 777,
+      "word": "cảnh báo",
+      "sentence1": "Tôi muốn cảnh báo anh về những nguy hiểm.",
+      "sentence2": "Anh ta đã được cảnh báo không được đi đến đó."
+    },
+    {
+      "id": 778,
+      "word": "cảnh báo",
+      "sentence1": "Cảnh báo được đưa ra sau cơn bão.",
+      "sentence2": "Cô ấy phớt lờ những dấu hiệu cảnh báo."
+    },
+    {
+      "id": 779,
+      "word": "chất thải",
+      "sentence1": "Đừng lãng phí thời gian của bạn vào những công việc không quan trọng.",
+      "sentence2": "Chất thải đã được xử lý đúng cách."
+    },
+    {
+      "id": 780,
+      "word": "nước",
+      "sentence1": "Nước rất cần thiết cho sự sống.",
+      "sentence2": "Cô ấy đổ nước vào ly."
+    },
+    {
+      "id": 781,
+      "word": "sóng",
+      "sentence1": "Đợt sóng đâm vào bờ.",
+      "sentence2": "Cô ấy vẫy tay chào tạm biệt bạn bè."
+    },
+    {
+      "id": 782,
+      "word": "vũ khí",
+      "sentence1": "Người lính được huấn luyện sử dụng nhiều loại vũ khí.",
+      "sentence2": "Vũ khí được tìm thấy tại hiện trường."
+    },
+    {
+      "id": 783,
+      "word": "cân nặng",
+      "sentence1": "Điều quan trọng là cân nhắc những ưu và nhược điểm.",
+      "sentence2": "Cô ấy tự cân mỗi buổi sáng."
+    },
+    {
+      "id": 784,
+      "word": "tây",
+      "sentence1": "Các nước phương Tây có những nền văn hóa khác nhau.",
+      "sentence2": "Bộ phim lấy bối cảnh ở một thị trấn miền tây."
+    },
+    {
+      "id": 785,
+      "word": "bất cứ điều gì",
+      "sentence1": "Làm bất cứ điều gì làm em hạnh phúc.",
+      "sentence2": "Cô ấy sẽ ủng hộ anh, dù có chuyện gì xảy ra."
+    },
+    {
+      "id": 786,
+      "word": "bất cứ khi nào",
+      "sentence1": "Cô có thể gọi cho tôi bất cứ khi nào cô cần giúp đỡ.",
+      "sentence2": "Tôi sẽ ở đó bất cứ khi nào anh cần tôi."
+    },
+    {
+      "id": 787,
+      "word": "cho dù",
+      "sentence1": "Tôi không biết nên đi hay ở lại.",
+      "sentence2": "Cô ấy hỏi liệu trời có sắp mưa không."
+    },
+    {
+      "id": 788,
+      "word": "trong khi",
+      "sentence1": "Tôi thích nghe nhạc trong khi làm việc.",
+      "sentence2": "Cô ấy đọc một cuốn sách trong khi chờ xe buýt."
+    },
+    {
+      "id": 789,
+      "word": "toàn bộ",
+      "sentence1": "Cả gia đình tụ tập cho buổi hội ngộ.",
+      "sentence2": "Anh ta đã tự ăn hết pizza."
+    },
+    {
+      "id": 790,
+      "word": "sẽ",
+      "sentence1": "Tôi sẽ gọi cho anh vào ngày mai.",
+      "sentence2": "Cô ấy sẽ hoàn thành bài tập về nhà sau."
+    },
+    {
+      "id": 791,
+      "word": "thắng",
+      "sentence1": "Tôi hy vọng sẽ giành chiến thắng trong cuộc thi.",
+      "sentence2": "Họ đã thắng trận đấu với một tỷ lệ lớn."
+    },
+    {
+      "id": 792,
+      "word": "cánh",
+      "sentence1": "Con chim mở cánh và bay đi.",
+      "sentence2": "Cánh máy bay bị hư hỏng."
+    },
+    {
+      "id": 793,
+      "word": "trong",
+      "sentence1": "Câu trả lời nằm trong văn bản.",
+      "sentence2": "Cô ấy đã tìm thấy sự bình yên trong chính mình."
+    },
+    {
+      "id": 794,
+      "word": "kỳ diệu",
+      "sentence1": "Tôi tự hỏi điều gì sẽ xảy ra tiếp theo.",
+      "sentence2": "Cô ấy tự hỏi liệu anh ấy có đến không."
+    },
+    {
+      "id": 795,
+      "word": "len",
+      "sentence1": "Chiếc áo len này được làm bằng len mềm.",
+      "sentence2": "Cô ấy mua một quả bóng len để đan."
+    },
+    {
+      "id": 796,
+      "word": "toàn cầu",
+      "sentence1": "Chiến dịch đã thành công trên toàn thế giới.",
+      "sentence2": "Cô ấy có bạn trên toàn thế giới."
+    },
+    {
+      "id": 797,
+      "word": "lo lắng",
+      "sentence1": "Đừng lo lắng về những điều nhỏ nhặt.",
+      "sentence2": "Cô ấy lo lắng về tương lai của mình."
+    },
+    {
+      "id": 798,
+      "word": "tệ hơn",
+      "sentence1": "Tình hình đang ngày càng tồi tệ.",
+      "sentence2": "Cô ấy cảm thấy tồi tệ hơn sau khi nghe tin tức."
+    },
+    {
+      "id": 799,
+      "word": "tệ nhất",
+      "sentence1": "Hôm nay là ngày tồi tệ nhất.",
+      "sentence2": "Anh ta đã gặp may mắn tồi tệ nhất trong trò chơi."
+    },
+    {
+      "id": 800,
+      "word": "giá trị",
+      "sentence1": "Bức tranh này đáng giá rất nhiều tiền.",
+      "sentence2": "Nó không đáng để cố gắng."
+    },
+    {
+      "id": 801,
+      "word": "viết",
+      "sentence1": "Các quy tắc được viết trong sách hướng dẫn.",
+      "sentence2": "Cô ấy có một thỏa thuận bằng văn bản."
+    },
+    {
+      "id": 802,
+      "word": "sai",
+      "sentence1": "Tôi nghĩ anh nhầm số rồi.",
+      "sentence2": "Nói dối là sai trái."
+    },
+    {
+      "id": 803,
+      "word": "sân",
+      "sentence1": "Những đứa trẻ đang chơi trong sân.",
+      "sentence2": "Cô ấy có một khu vườn xinh đẹp trong sân nhà."
+    },
+    {
+      "id": 804,
+      "word": "trẻ",
+      "sentence1": "Cô gái trẻ đang học chơi piano.",
+      "sentence2": "Anh ấy vẫn còn trẻ và có một tương lai tươi sáng."
+    },
+    {
+      "id": 805,
+      "word": "thanh niên",
+      "sentence1": "Tuổi trẻ là thời gian khám phá và phát triển.",
+      "sentence2": "Chương trình được thiết kế cho sự phát triển của giới trẻ."
+    }
+  ]
+}

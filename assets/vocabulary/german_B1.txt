@@ -1,0 +1,4834 @@
+{
+  "words": [
+    {
+      "id": 1,
+      "word": "absolut",
+      "sentence1": "Ich liebe dieses Buch.",
+      "sentence2": "Sie war sich ihrer Entscheidung absolut sicher."
+    },
+    {
+      "id": 2,
+      "word": "Hochschul",
+      "sentence1": "Er hat einen akademischen Hintergrund in Physik.",
+      "sentence2": "Das akademische Jahr beginnt im September."
+    },
+    {
+      "id": 3,
+      "word": "Zugang",
+      "sentence1": "Sie brauchen ein Passwort, um auf das System zuzugreifen.",
+      "sentence2": "Der Zugang zu Informationen ist von entscheidender Bedeutung."
+    },
+    {
+      "id": 4,
+      "word": "Unterkunft",
+      "sentence1": "Wir müssen eine Unterkunft für die Nacht finden.",
+      "sentence2": "Das Hotel bietet ausgezeichnete Unterkünfte."
+    },
+    {
+      "id": 5,
+      "word": "Konto",
+      "sentence1": "Ich habe letzte Woche ein Bankkonto eröffnet.",
+      "sentence2": "Bitte überprüfen Sie Ihren Kontostand."
+    },
+    {
+      "id": 6,
+      "word": "Leistung",
+      "sentence1": "Ihre größte Leistung war die Meisterschaft.",
+      "sentence2": "Er war stolz auf seine akademischen Leistungen."
+    },
+    {
+      "id": 7,
+      "word": "Handeln",
+      "sentence1": "Du musst in dieser Situation schnell handeln.",
+      "sentence2": "Sie entschied sich, ihren Instinkten zu folgen."
+    },
+    {
+      "id": 8,
+      "word": "hinzufügen",
+      "sentence1": "Bitte fügen Sie Ihren Namen der Liste hinzu.",
+      "sentence2": "Vergiss nicht, die letzten Schliffarbeiten zu machen."
+    },
+    {
+      "id": 9,
+      "word": "Zusammensetzung",
+      "sentence1": "Durch das Hinzufügen neuer Funktionen wurde die Software verbessert.",
+      "sentence2": "Zusätzlich zu seinem Gehalt erhält er Prämien."
+    },
+    {
+      "id": 10,
+      "word": "bewundern",
+      "sentence1": "Ich bewundere ihre Hingabe an ihre Arbeit.",
+      "sentence2": "Viele Menschen bewundern sein künstlerisches Talent."
+    },
+    {
+      "id": 11,
+      "word": "zugeben",
+      "sentence1": "Sie gab ihren Fehler zu und entschuldigte sich.",
+      "sentence2": "Er wollte nicht zugeben, dass er falsch lag."
+    },
+    {
+      "id": 12,
+      "word": "fortgeschritten",
+      "sentence1": "Sie nahm einen fortgeschrittenen Kurs in Mathematik.",
+      "sentence2": "Die Technologie ist fortgeschritten und effizient."
+    },
+    {
+      "id": 13,
+      "word": "Rat geben",
+      "sentence1": "Ich rate Ihnen, das Jobangebot anzunehmen.",
+      "sentence2": "Man riet ihr, einen Arzt aufzusuchen."
+    },
+    {
+      "id": 14,
+      "word": "sich leisten",
+      "sentence1": "Ich kann es mir nicht leisten, ein neues Auto zu kaufen.",
+      "sentence2": "Sie können sich einen luxuriösen Lebensstil leisten."
+    },
+    {
+      "id": 15,
+      "word": "Alter",
+      "sentence1": "Wie alt sind Sie?",
+      "sentence2": "Sie ist im schulpflichtigen Alter."
+    },
+    {
+      "id": 16,
+      "word": "gealtert",
+      "sentence1": "Der alte Mann saß auf der Bank.",
+      "sentence2": "Alterte Käse hat einen stärkeren Geschmack."
+    },
+    {
+      "id": 17,
+      "word": "Vermittler",
+      "sentence1": "Er arbeitet als Geheimagent.",
+      "sentence2": "Das Reisebüro half uns, unsere Reise zu planen."
+    },
+    {
+      "id": 18,
+      "word": "Vereinbarung",
+      "sentence1": "Sie haben nach langen Verhandlungen eine Einigung erzielt.",
+      "sentence2": "Die Vereinbarung wurde von beiden Parteien unterzeichnet."
+    },
+    {
+      "id": 19,
+      "word": "Vorwärts",
+      "sentence1": "Die Straße ist wegen Bauarbeiten gesperrt.",
+      "sentence2": "Wir müssen das Projekt im Voraus planen."
+    },
+    {
+      "id": 20,
+      "word": "Ziel",
+      "sentence1": "Mein Ziel ist es, meine Englischkenntnisse zu verbessern.",
+      "sentence2": "Sie hat ein klares Ziel für ihre Karriere."
+    },
+    {
+      "id": 21,
+      "word": "Alarm",
+      "sentence1": "Ich habe den Wecker auf 7 Uhr eingestellt.",
+      "sentence2": "Der Feueralarm ging unerwartet los."
+    },
+    {
+      "id": 22,
+      "word": "Album",
+      "sentence1": "Ich habe gerade das neue Album meiner Lieblingsband gekauft.",
+      "sentence2": "Das Fotoalbum enthält Erinnerungen an unsere Reise."
+    },
+    {
+      "id": 23,
+      "word": "Alkohol",
+      "sentence1": "Er trinkt keinen Alkohol.",
+      "sentence2": "Alkohol kann in großen Mengen schädlich sein."
+    },
+    {
+      "id": 24,
+      "word": "alkoholische",
+      "sentence1": "Er ist ein Alkoholiker, der sich erholt.",
+      "sentence2": "Alkoholische Getränke sind hier nicht erlaubt."
+    },
+    {
+      "id": 25,
+      "word": "Alternative",
+      "sentence1": "Wir müssen eine alternative Lösung finden.",
+      "sentence2": "Es gibt viele alternative Energiequellen."
+    },
+    {
+      "id": 26,
+      "word": "überrascht",
+      "sentence1": "Ich war erstaunt über die Aufführung.",
+      "sentence2": "Sie war erstaunt über die Schönheit der Landschaft."
+    },
+    {
+      "id": 27,
+      "word": "Ehrgeiz",
+      "sentence1": "Ihr Ehrgeiz ist es, eine erfolgreiche Unternehmerin zu werden.",
+      "sentence2": "Er hat einen starken Ehrgeiz, Erfolg zu haben."
+    },
+    {
+      "id": 28,
+      "word": "ehrgeizig",
+      "sentence1": "Sie ist eine ehrgeizige junge Frau.",
+      "sentence2": "Seine ehrgeizigen Pläne beeindruckten alle."
+    },
+    {
+      "id": 29,
+      "word": "analysieren",
+      "sentence1": "Wir müssen die Daten sorgfältig analysieren.",
+      "sentence2": "Der Bericht wird die Auswirkungen der Politik analysieren."
+    },
+    {
+      "id": 30,
+      "word": "Analyse",
+      "sentence1": "Die Analyse ergab wichtige Trends.",
+      "sentence2": "Eine gründliche Analyse ist für die Entscheidungsfindung unerlässlich."
+    },
+    {
+      "id": 31,
+      "word": "Ankündigung",
+      "sentence1": "Sie werden die Ergebnisse morgen bekannt geben.",
+      "sentence2": "Sie kündigte ihrer Familie ihre Verlobung an."
+    },
+    {
+      "id": 32,
+      "word": "Bekanntmachung",
+      "sentence1": "Die Ankündigung wurde während der Sitzung gemacht.",
+      "sentence2": "Wir haben eine Ankündigung über die neue Politik erhalten."
+    },
+    {
+      "id": 33,
+      "word": "Ärgerlich",
+      "sentence1": "Sein ständiges Beschweren nervt mich.",
+      "sentence2": "Ärgere deinen kleinen Bruder nicht."
+    },
+    {
+      "id": 34,
+      "word": "verärgert",
+      "sentence1": "Sie wurde durch den lauten Lärm verärgert.",
+      "sentence2": "Er war verärgert über die Verzögerung."
+    },
+    {
+      "id": 35,
+      "word": "Ärgerlich",
+      "sentence1": "Das Summen der Fliegen ist nervig.",
+      "sentence2": "Es ist ärgerlich, wenn Leute mich unterbrechen."
+    },
+    {
+      "id": 36,
+      "word": "getrennt",
+      "sentence1": "Die beiden Gebäude sind voneinander getrennt.",
+      "sentence2": "Sie haben sich im Laufe der Jahre getrennt."
+    },
+    {
+      "id": 37,
+      "word": "Entschuldigung",
+      "sentence1": "Ich muss mich für meinen Fehler entschuldigen.",
+      "sentence2": "Sie entschuldigte sich für die Verspätung."
+    },
+    {
+      "id": 38,
+      "word": "Anwendung",
+      "sentence1": "Ich habe meine Bewerbung für den Job eingereicht.",
+      "sentence2": "Der Bewerbungsprozess ist recht einfach."
+    },
+    {
+      "id": 39,
+      "word": "Ernennung",
+      "sentence1": "Ich habe um 15 Uhr einen Arzttermin.",
+      "sentence2": "Sie hat ihren Termin verpasst und musste umstellen."
+    },
+    {
+      "id": 40,
+      "word": "Wertschätzen",
+      "sentence1": "Ich weiß deine Hilfe wirklich zu schätzen.",
+      "sentence2": "Sie schätzt die Schönheit der Natur."
+    },
+    {
+      "id": 41,
+      "word": "ungefähr",
+      "sentence1": "Das Treffen wird ungefähr zwei Stunden dauern.",
+      "sentence2": "Bei der Veranstaltung waren ungefähr 100 Personen anwesend."
+    },
+    {
+      "id": 42,
+      "word": "Verhaftung",
+      "sentence1": "Die Polizei hat den Verdächtigen gestern Abend verhaftet.",
+      "sentence2": "Er wurde wegen Trunkenheit am Steuer verhaftet."
+    },
+    {
+      "id": 43,
+      "word": "Ankunft",
+      "sentence1": "Die Ankunft des Zuges verspätete sich.",
+      "sentence2": "Wir waren aufgeregt über die Ankunft unserer Gäste."
+    },
+    {
+      "id": 44,
+      "word": "Zuweisung",
+      "sentence1": "Ich habe morgen eine Mathe-Aufgabe.",
+      "sentence2": "Der Lehrer gab uns eine anspruchsvolle Aufgabe."
+    },
+    {
+      "id": 45,
+      "word": "Hilfe",
+      "sentence1": "Kannst du mir bei dieser Aufgabe helfen?",
+      "sentence2": "Sie wurde eingestellt, um dem Manager zu helfen."
+    },
+    {
+      "id": 46,
+      "word": "Luftraum",
+      "sentence1": "Die Atmosphäre im Raum war angespannt.",
+      "sentence2": "Wir müssen eine positive Atmosphäre für das Lernen schaffen."
+    },
+    {
+      "id": 47,
+      "word": "Befestigen",
+      "sentence1": "Bitte fügen Sie die Datei Ihrer E-Mail bei.",
+      "sentence2": "Ich habe vergessen, das Dokument beizufügen."
+    },
+    {
+      "id": 48,
+      "word": "Haltung",
+      "sentence1": "Ihre Einstellung zum Projekt war positiv.",
+      "sentence2": "Es ist wichtig, eine gute Einstellung bei der Arbeit zu haben."
+    },
+    {
+      "id": 49,
+      "word": "Anziehen",
+      "sentence1": "Die Werbung soll Kunden anziehen.",
+      "sentence2": "Blumen ziehen Bienen und andere Bestäuber an."
+    },
+    {
+      "id": 50,
+      "word": "Anziehung",
+      "sentence1": "Zwischen den beiden Charakteren herrscht eine starke Anziehung.",
+      "sentence2": "Der Vergnügungspark ist eine beliebte Attraktion für Familien."
+    },
+    {
+      "id": 51,
+      "word": "Befugnis",
+      "sentence1": "Er ist eine Autorität in der antiken Geschichte.",
+      "sentence2": "Du musst die Autorität deiner Lehrer respektieren."
+    },
+    {
+      "id": 52,
+      "word": "Durchschnitt",
+      "sentence1": "Die Durchschnittstemperatur im Juli beträgt 30 Grad.",
+      "sentence2": "Sie hat eine durchschnittliche Punktzahl in Mathematik."
+    },
+    {
+      "id": 53,
+      "word": "Auszeichnung",
+      "sentence1": "Sie erhielt eine Auszeichnung für ihre herausragende Leistung.",
+      "sentence2": "Der Nobelpreis ist eine prestigeträchtige Auszeichnung."
+    },
+    {
+      "id": 54,
+      "word": "Bewusst",
+      "sentence1": "Sind Sie sich der Zeitplanänderungen bewusst?",
+      "sentence2": "Er war sich der möglichen Risiken nicht bewusst."
+    },
+    {
+      "id": 55,
+      "word": "rückwärts",
+      "sentence1": "Das Auto rollte rückwärts den Hügel hinunter.",
+      "sentence2": "Sie machte ein paar Schritte zurück."
+    },
+    {
+      "id": 56,
+      "word": "Backen",
+      "sentence1": "Ich liebe es, am Wochenende Kekse zu backen.",
+      "sentence2": "Sie hat einen köstlichen Kuchen für die Party gebacken."
+    },
+    {
+      "id": 57,
+      "word": "Gleichgewicht",
+      "sentence1": "Es ist wichtig, ein Gleichgewicht zwischen Arbeit und Privatleben zu halten.",
+      "sentence2": "Sie hat ein gutes Gleichgewicht der Verantwortlichkeiten."
+    },
+    {
+      "id": 58,
+      "word": "Verbot",
+      "sentence1": "Die Schule hat beschlossen, Handys im Unterricht zu verbieten.",
+      "sentence2": "Er wurde wegen unangemessenen Verhaltens aus dem Club verbannt."
+    },
+    {
+      "id": 59,
+      "word": "Ufer (Fluss)",
+      "sentence1": "Wir hatten ein Picknick am Ufer des Flusses.",
+      "sentence2": "Die Kinder spielten am Ufer des Flusses."
+    },
+    {
+      "id": 60,
+      "word": "Basis",
+      "sentence1": "Der Fuß der Statue ist aus Marmor.",
+      "sentence2": "Wir müssen eine solide Basis für unser Projekt finden."
+    },
+    {
+      "id": 61,
+      "word": "Grundlegende",
+      "sentence1": "Dieser Kurs behandelt die Grundprinzipien der Ökonomie.",
+      "sentence2": "Es ist wichtig, ein grundlegendes Verständnis von Mathematik zu haben."
+    },
+    {
+      "id": 62,
+      "word": "Basis",
+      "sentence1": "Die Grundlage seines Arguments ist fehlerhaft.",
+      "sentence2": "Wir müssen eine solide Grundlage für unsere Forschung schaffen."
+    },
+    {
+      "id": 63,
+      "word": "Batterie",
+      "sentence1": "Ich muss die Batterie in meiner Fernbedienung austauschen.",
+      "sentence2": "Die Akkulaufzeit meines Telefons wird immer kürzer."
+    },
+    {
+      "id": 64,
+      "word": "Schlacht",
+      "sentence1": "Die Schlacht dauerte mehrere Tage.",
+      "sentence2": "Sie kämpften tapfer in der Schlacht."
+    },
+    {
+      "id": 65,
+      "word": "Schönheit",
+      "sentence1": "Die Schönheit des Sonnenuntergangs nahm mir den Atem.",
+      "sentence2": "Sie ist für ihre natürliche Schönheit bekannt."
+    },
+    {
+      "id": 66,
+      "word": "Biene",
+      "sentence1": "Die Biene ist ein wichtiger Bestäuber.",
+      "sentence2": "Die Imkerei ist ein faszinierendes Hobby."
+    },
+    {
+      "id": 67,
+      "word": "Überzeugung",
+      "sentence1": "Ihr Glaube an Gerechtigkeit ist unerschütterlich.",
+      "sentence2": "Viele Menschen sind der Meinung, daß Bildung wichtig ist."
+    },
+    {
+      "id": 68,
+      "word": "Klingeln",
+      "sentence1": "Die Schulglocke läutet um 8 Uhr morgens.",
+      "sentence2": "Sie hat eine wunderschöne Glocke in ihrem Garten."
+    },
+    {
+      "id": 69,
+      "word": "Beugen",
+      "sentence1": "Pass auf, dass du das Papier nicht biegst.",
+      "sentence2": "Er musste sich beugen, um seine Schuhe zu binden."
+    },
+    {
+      "id": 70,
+      "word": "Leistung",
+      "sentence1": "Die neue Politik wird vielen Menschen zugute kommen.",
+      "sentence2": "Sie genießt die Vorteile eines gesunden Lebensstils."
+    },
+    {
+      "id": 71,
+      "word": "Besser",
+      "sentence1": "Ich fühle mich besser nach einer guten Nachtruhe.",
+      "sentence2": "Diese Lösung ist besser als die vorherige."
+    },
+    {
+      "id": 72,
+      "word": "Biss",
+      "sentence1": "Pass auf, dass du dich nicht in die Zunge beißt.",
+      "sentence2": "Der Hund beißt gerne sein Spielzeug."
+    },
+    {
+      "id": 73,
+      "word": "Block",
+      "sentence1": "Sie versuchten, die Straße mit einem Auto zu sperren.",
+      "sentence2": "Das neue Gesetz wird unlautere Praktiken blockieren."
+    },
+    {
+      "id": 74,
+      "word": "Brett",
+      "sentence1": "Der Lehrer schrieb die Lektion auf die Tafel.",
+      "sentence2": "Wir brauchen ein größeres Brett für dieses Projekt."
+    },
+    {
+      "id": 75,
+      "word": "Bombe",
+      "sentence1": "Die Bombe explodierte im Stadtzentrum.",
+      "sentence2": "Sie fanden eine Bombe in dem verlassenen Gebäude."
+    },
+    {
+      "id": 76,
+      "word": "Grenze",
+      "sentence1": "Der Fluss bildet eine natürliche Grenze zwischen den beiden Ländern.",
+      "sentence2": "Sie haben die Grenze ohne Probleme überquert."
+    },
+    {
+      "id": 77,
+      "word": "Aufregung",
+      "sentence1": "Stören Sie mich nicht, während ich arbeite.",
+      "sentence2": "Es stört mich, wenn Leute zu spät kommen."
+    },
+    {
+      "id": 78,
+      "word": "Zweig",
+      "sentence1": "Der Baum hat einen starken Zweig.",
+      "sentence2": "Sie saß auf dem Zweig und las ein Buch."
+    },
+    {
+      "id": 79,
+      "word": "Marke",
+      "sentence1": "Nike ist eine beliebte Sportmarke.",
+      "sentence2": "Ich bevorzuge diese Kaffeemarke."
+    },
+    {
+      "id": 80,
+      "word": "tapfer",
+      "sentence1": "Der tapfere Soldat rettete das Kind.",
+      "sentence2": "Es braucht einen mutigen Menschen, um für das Richtige einzutreten."
+    },
+    {
+      "id": 81,
+      "word": "Atem",
+      "sentence1": "Atme tief durch und entspann dich.",
+      "sentence2": "Sein Atem roch nach Knoblauch."
+    },
+    {
+      "id": 82,
+      "word": "atmen",
+      "sentence1": "Denk daran, tief durchzuatmen.",
+      "sentence2": "Sie hat beim Schwimmen vergessen zu atmen."
+    },
+    {
+      "id": 83,
+      "word": "Atmung",
+      "sentence1": "Atemübungen können Stress abbauen.",
+      "sentence2": "Er hat Atemprobleme."
+    },
+    {
+      "id": 84,
+      "word": "Braut",
+      "sentence1": "Die Braut sah an ihrem Hochzeitstag wunderschön aus.",
+      "sentence2": "Sie ist eine Freundin der Braut."
+    },
+    {
+      "id": 85,
+      "word": "Blasen",
+      "sentence1": "Die Kinder bliesen im Park Blasen.",
+      "sentence2": "Eine Blase platzte in der Luft."
+    },
+    {
+      "id": 86,
+      "word": "Vergraben",
+      "sentence1": "Sie haben beschlossen, die Zeitkapsel zu begraben.",
+      "sentence2": "Er will seine Vergangenheit begraben."
+    },
+    {
+      "id": 87,
+      "word": "durch",
+      "sentence1": "Das Buch wurde von einem berühmten Autor geschrieben.",
+      "sentence2": "Sie reiste mit dem Zug."
+    },
+    {
+      "id": 88,
+      "word": "Ruhe",
+      "sentence1": "Bitte bleiben Sie ruhig während des Notfalls.",
+      "sentence2": "Sie sprach mit ruhiger Stimme."
+    },
+    {
+      "id": 89,
+      "word": "Kampagne",
+      "sentence1": "Die Kampagne war erfolgreich.",
+      "sentence2": "Sie starteten eine neue Werbekampagne."
+    },
+    {
+      "id": 90,
+      "word": "Hochschule",
+      "sentence1": "Der Universitätscampus ist wunderschön.",
+      "sentence2": "Es gibt viele Bäume auf dem Campus."
+    },
+    {
+      "id": 91,
+      "word": "Bewerber",
+      "sentence1": "Sie ist eine Kandidatin für die Position.",
+      "sentence2": "Die Kandidaten werden morgen befragt."
+    },
+    {
+      "id": 92,
+      "word": "Kappe",
+      "sentence1": "Er trug eine Baseballmütze.",
+      "sentence2": "Die Mütze schützt deine Augen vor der Sonne."
+    },
+    {
+      "id": 93,
+      "word": "Kapitän",
+      "sentence1": "Der Kapitän des Teams ist sehr erfahren.",
+      "sentence2": "Sie wurde letztes Jahr zum Captain ernannt."
+    },
+    {
+      "id": 94,
+      "word": "unvorsichtig",
+      "sentence1": "Seine unvorsichtigen Fehler kosteten die Firma Geld.",
+      "sentence2": "Seien Sie vorsichtiger; seien Sie nicht so achtlos."
+    },
+    {
+      "id": 95,
+      "word": "Kategorie",
+      "sentence1": "Dieses Buch gehört zur Kategorie der Fiktion.",
+      "sentence2": "Es gibt viele Kategorien von Musik."
+    },
+    {
+      "id": 96,
+      "word": "Höchstgrenze",
+      "sentence1": "Die Decke ist weiß gestrichen.",
+      "sentence2": "Der Kronleuchter hängt an der Decke."
+    },
+    {
+      "id": 97,
+      "word": "Feiern",
+      "sentence1": "Wir hatten eine große Feier für ihren Geburtstag.",
+      "sentence2": "Die Feier dauerte die ganze Nacht."
+    },
+    {
+      "id": 98,
+      "word": "Mittelpunkt",
+      "sentence1": "Der Central Park ist ein großartiger Ort zum Entspannen.",
+      "sentence2": "Die zentrale Frage ist immer noch ungelöst."
+    },
+    {
+      "id": 99,
+      "word": "Mitte",
+      "sentence1": "Das Einkaufszentrum ist an den Wochenenden sehr voll.",
+      "sentence2": "Sie wohnt im Stadtzentrum."
+    },
+    {
+      "id": 100,
+      "word": "Zeremonie",
+      "sentence1": "Die Abschlussfeier findet im Juni statt.",
+      "sentence2": "Sie hatten eine traditionelle Trauung."
+    },
+    {
+      "id": 101,
+      "word": "Kette",
+      "sentence1": "Das Fahrrad ist mit einer Kette verschlossen.",
+      "sentence2": "Er trug eine Kette um den Hals."
+    },
+    {
+      "id": 102,
+      "word": "Herausforderung",
+      "sentence1": "Es war eine große Herausforderung, den Berg zu besteigen.",
+      "sentence2": "Sie liebt eine gute Herausforderung."
+    },
+    {
+      "id": 103,
+      "word": "Meister",
+      "sentence1": "Er ist der Champion des Turniers.",
+      "sentence2": "Sie wurde die Meisterin, nachdem sie das Finale gewonnen hatte."
+    },
+    {
+      "id": 104,
+      "word": "Kanal",
+      "sentence1": "Ich sehe mir meine Lieblingssendungen auf diesem Kanal an.",
+      "sentence2": "Der Sender sendet rund um die Uhr Nachrichten."
+    },
+    {
+      "id": 105,
+      "word": "Kapitel",
+      "sentence1": "Das ist das erste Kapitel des Buches.",
+      "sentence2": "Am Ende jedes Kapitels befindet sich eine Zusammenfassung."
+    },
+    {
+      "id": 106,
+      "word": "Gebühr",
+      "sentence1": "Das Parken ist kostenpflichtig.",
+      "sentence2": "Sie berechnen Ihnen für die zusätzlichen Dienstleistungen."
+    },
+    {
+      "id": 107,
+      "word": "günstig",
+      "sentence1": "Dieses Hemd ist sehr billig.",
+      "sentence2": "Ich habe ein billiges Hotel für meinen Urlaub gefunden."
+    },
+    {
+      "id": 108,
+      "word": "Betrügen",
+      "sentence1": "Betrüge nicht bei der Prüfung.",
+      "sentence2": "Er wurde beim Betrügen erwischt."
+    },
+    {
+      "id": 109,
+      "word": "fröhlich",
+      "sentence1": "Sie ist fröhlich.",
+      "sentence2": "Die fröhliche Musik hob mir die Seele auf."
+    },
+    {
+      "id": 110,
+      "word": "chemische",
+      "sentence1": "Wasser ist eine chemische Verbindung.",
+      "sentence2": "Die chemische Reaktion erzeugte Wärme."
+    },
+    {
+      "id": 111,
+      "word": "Brust",
+      "sentence1": "Er hat ein Tattoo auf der Brust.",
+      "sentence2": "Die Schatztruhe war voller Gold."
+    },
+    {
+      "id": 112,
+      "word": "Kindheit",
+      "sentence1": "Ich hatte eine glückliche Kindheit.",
+      "sentence2": "Kindheitserinnerungen sind kostbar."
+    },
+    {
+      "id": 113,
+      "word": "Anspruch",
+      "sentence1": "Sie machte einen Anspruch auf das Produkt.",
+      "sentence2": "Seine Behauptung wurde durch Beweise gestützt."
+    },
+    {
+      "id": 114,
+      "word": "Klausel",
+      "sentence1": "Das ist eine gesetzliche Klausel.",
+      "sentence2": "Der Vertrag enthält eine Vertraulichkeitsklausel."
+    },
+    {
+      "id": 115,
+      "word": "klar",
+      "sentence1": "Die Anweisungen sind klar.",
+      "sentence2": "Sie hat klare Zukunftsziele."
+    },
+    {
+      "id": 116,
+      "word": "Klicken",
+      "sentence1": "Bitte klicken Sie auf den Link.",
+      "sentence2": "Ich hörte ein Klickgeräusch."
+    },
+    {
+      "id": 117,
+      "word": "Kunden",
+      "sentence1": "Der Kunde hat immer recht.",
+      "sentence2": "Wir müssen uns mit dem Kunden treffen."
+    },
+    {
+      "id": 118,
+      "word": "Klettern",
+      "sentence1": "Sie planen, den Berg zu besteigen.",
+      "sentence2": "Sie steigt gerne auf Bäume."
+    },
+    {
+      "id": 119,
+      "word": "Schließen",
+      "sentence1": "Bitte schließen Sie die Tür.",
+      "sentence2": "Der Laden ist in der Nähe meines Hauses."
+    },
+    {
+      "id": 120,
+      "word": "Gewebe",
+      "sentence1": "Dieses Tuch ist aus Baumwolle.",
+      "sentence2": "Ich brauche ein Stück Stoff für das Projekt."
+    },
+    {
+      "id": 121,
+      "word": "Hinweis",
+      "sentence1": "Ich habe einen Hinweis auf das Geheimnis.",
+      "sentence2": "Der Detective hat einen entscheidenden Hinweis gefunden."
+    },
+    {
+      "id": 122,
+      "word": "Fahrer",
+      "sentence1": "Er ist Fußballtrainer.",
+      "sentence2": "Der Trainer gab uns wertvolle Ratschläge."
+    },
+    {
+      "id": 123,
+      "word": "Kohle",
+      "sentence1": "Der Zug fährt mit Kohle.",
+      "sentence2": "Sie entdeckten eine Kohlemine."
+    },
+    {
+      "id": 124,
+      "word": "Münze",
+      "sentence1": "Ich habe eine Münze auf der Straße gefunden.",
+      "sentence2": "Er sammelt seltene Münzen."
+    },
+    {
+      "id": 125,
+      "word": "Sammlung",
+      "sentence1": "Sie hat eine Sammlung von Briefmarken.",
+      "sentence2": "Das Museum hat eine neue Kunstsammlung."
+    },
+    {
+      "id": 126,
+      "word": "Farbig",
+      "sentence1": "Ich mag farbige Bleistifte.",
+      "sentence2": "Die Wände sind in leuchtenden Farben bemalt."
+    },
+    {
+      "id": 127,
+      "word": "kombinieren",
+      "sentence1": "Lassen Sie uns unsere Bemühungen vereinen.",
+      "sentence2": "Das Rezept kombiniert süßen und sauren Geschmack."
+    },
+    {
+      "id": 128,
+      "word": "Kommentar",
+      "sentence1": "Kann ich einen Kommentar hinterlassen?",
+      "sentence2": "Sein Kommentar war sehr aufschlussreich."
+    },
+    {
+      "id": 129,
+      "word": "Handel",
+      "sentence1": "Das ist ein kommerzielles Produkt.",
+      "sentence2": "Der Werbespot war sehr unterhaltsam."
+    },
+    {
+      "id": 130,
+      "word": "verpflichten",
+      "sentence1": "Ich verpflichte mich, das Projekt zu beenden.",
+      "sentence2": "Sie hat sich der Sache verschrieben."
+    },
+    {
+      "id": 131,
+      "word": "Kommunikation",
+      "sentence1": "Gute Kommunikation ist der Schlüssel.",
+      "sentence2": "Wir müssen unsere Kommunikation verbessern."
+    },
+    {
+      "id": 132,
+      "word": "Vergleich",
+      "sentence1": "Dies ist ein Preisvergleich.",
+      "sentence2": "Im Vergleich zum Vorjahr ist der Umsatz gestiegen."
+    },
+    {
+      "id": 133,
+      "word": "Wettbewerber",
+      "sentence1": "Unser Hauptkonkurrent ist sehr stark.",
+      "sentence2": "Wir müssen unsere Konkurrenten analysieren."
+    },
+    {
+      "id": 134,
+      "word": "Wettbewerbsfähig",
+      "sentence1": "Das ist ein wettbewerbsorientierter Markt.",
+      "sentence2": "Sie ist im Sport sehr konkurrenzfähig."
+    },
+    {
+      "id": 135,
+      "word": "Beschwerde",
+      "sentence1": "Ich habe eine Beschwerde über den Service.",
+      "sentence2": "Die Beschwerde wurde schnell gelöst."
+    },
+    {
+      "id": 136,
+      "word": "Komplex",
+      "sentence1": "Das ist ein komplexes Problem.",
+      "sentence2": "Die Anweisungen sind zu kompliziert."
+    },
+    {
+      "id": 137,
+      "word": "Konzentrat",
+      "sentence1": "Ich muss mich auf meine Arbeit konzentrieren.",
+      "sentence2": "Sie hat Schwierigkeiten, sich zu konzentrieren."
+    },
+    {
+      "id": 138,
+      "word": "Schlußfolgerung",
+      "sentence1": "Wir können das Treffen abschließen.",
+      "sentence2": "Sie schloss ihre Rede mit einem Zitat."
+    },
+    {
+      "id": 139,
+      "word": "Schlußfolgerung",
+      "sentence1": "Was ist Ihre Schlussfolgerung?",
+      "sentence2": "Die Schlussfolgerung beruht auf den Beweisen."
+    },
+    {
+      "id": 140,
+      "word": "zuversichtlich",
+      "sentence1": "Sie ist zuversichtlich in ihre Fähigkeiten.",
+      "sentence2": "Er sprach mit Zuversicht."
+    },
+    {
+      "id": 141,
+      "word": "bestätigen",
+      "sentence1": "Können Sie den Termin bestätigen?",
+      "sentence2": "Ich habe eine Bestätigungs-E-Mail erhalten."
+    },
+    {
+      "id": 142,
+      "word": "Verwirren",
+      "sentence1": "Diese Frage kann manche verwirren.",
+      "sentence2": "Verwechseln Sie das nicht."
+    },
+    {
+      "id": 143,
+      "word": "verwirrt",
+      "sentence1": "Sie war verwirrt von den Anweisungen.",
+      "sentence2": "Er sah während des Treffens verwirrt aus."
+    },
+    {
+      "id": 144,
+      "word": "Verbindung",
+      "sentence1": "Zwischen ihnen besteht eine starke Verbindung.",
+      "sentence2": "Die Internetverbindung ist langsam."
+    },
+    {
+      "id": 145,
+      "word": "Folge",
+      "sentence1": "Jede Handlung hat eine Konsequenz.",
+      "sentence2": "Die Folgen der Entscheidung waren schwerwiegend."
+    },
+    {
+      "id": 146,
+      "word": "bestehen",
+      "sentence1": "Das Team besteht aus fünf Mitgliedern.",
+      "sentence2": "Der Ausschuss besteht aus Sachverständigen auf diesem Gebiet."
+    },
+    {
+      "id": 147,
+      "word": "Verzehr",
+      "sentence1": "Wir brauchen weniger Energie.",
+      "sentence2": "Das Feuer verzehrte das gesamte Gebäude."
+    },
+    {
+      "id": 148,
+      "word": "Verbraucher",
+      "sentence1": "Der Verbraucher hat immer recht.",
+      "sentence2": "Wir müssen das Verbraucherverhalten verstehen."
+    },
+    {
+      "id": 149,
+      "word": "Kontakt",
+      "sentence1": "Bitte bleiben Sie in Kontakt mit mir.",
+      "sentence2": "Ich habe den Kontakt zu meinen alten Freunden verloren."
+    },
+    {
+      "id": 150,
+      "word": "Behälter",
+      "sentence1": "Der Container ist voll.",
+      "sentence2": "Wir brauchen mehr Container für die Lagerung."
+    },
+    {
+      "id": 151,
+      "word": "Inhalt",
+      "sentence1": "Der Inhalt des Buches ist interessant.",
+      "sentence2": "Bitte lesen Sie den Inhalt sorgfältig durch."
+    },
+    {
+      "id": 152,
+      "word": "kontinuierlich",
+      "sentence1": "Der ständige Lärm ist ärgerlich.",
+      "sentence2": "Ihre Familie unterstützt sie ständig."
+    },
+    {
+      "id": 153,
+      "word": "Kontrast",
+      "sentence1": "Zwischen den beiden Gemälden besteht ein Kontrast.",
+      "sentence2": "Im Gegensatz zum Vorjahr ist der Umsatz gestiegen."
+    },
+    {
+      "id": 154,
+      "word": "bequem",
+      "sentence1": "Die Lage ist sehr günstig.",
+      "sentence2": "Gibt es einen für Sie günstigen Zeitpunkt?"
+    },
+    {
+      "id": 155,
+      "word": "überzeugen",
+      "sentence1": "Ich muss ihn überzeugen, uns zu helfen.",
+      "sentence2": "Sie überzeugte mich, das neue Restaurant auszuprobieren."
+    },
+    {
+      "id": 156,
+      "word": "Kalt",
+      "sentence1": "Die Jacke ist echt cool.",
+      "sentence2": "Sie hat einen coolen Stil."
+    },
+    {
+      "id": 157,
+      "word": "Kostüm",
+      "sentence1": "Er trug ein Superheldenkostüm.",
+      "sentence2": "Die Kostümparty hat viel Spaß gemacht."
+    },
+    {
+      "id": 158,
+      "word": "Häuser",
+      "sentence1": "Sie haben eine Hütte in den Bergen.",
+      "sentence2": "Die Hütte ist sehr gemütlich."
+    },
+    {
+      "id": 159,
+      "word": "Baumwolle",
+      "sentence1": "Dieses Hemd ist aus Baumwolle.",
+      "sentence2": "Baumwolle ist ein weiches Material."
+    },
+    {
+      "id": 160,
+      "word": "Zählen",
+      "sentence1": "Kannst du bis zehn zählen?",
+      "sentence2": "Ich kann das Geld zählen."
+    },
+    {
+      "id": 161,
+      "word": "Landwirtschaft",
+      "sentence1": "Sie leben auf dem Land.",
+      "sentence2": "Die Landschaft ist im Frühling wunderschön."
+    },
+    {
+      "id": 162,
+      "word": "Gericht",
+      "sentence1": "Das Gericht ist in Sitz.",
+      "sentence2": "Er wurde wegen des Verbrechens vor Gericht gestellt."
+    },
+    {
+      "id": 163,
+      "word": "Abdeckung",
+      "sentence1": "Bitte bedecken Sie den Tisch mit einem Tuch.",
+      "sentence2": "Der Schnee bedeckte den Boden."
+    },
+    {
+      "id": 164,
+      "word": "abgedeckt",
+      "sentence1": "Das Buch ist mit Staub bedeckt.",
+      "sentence2": "Das Auto ist mit Schnee bedeckt."
+    },
+    {
+      "id": 165,
+      "word": "Frischcreme",
+      "sentence1": "Ich lege gerne Sahne in meinen Kaffee.",
+      "sentence2": "Sie hat sich Creme auf die Haut aufgetragen."
+    },
+    {
+      "id": 166,
+      "word": "Strafverfolgung",
+      "sentence1": "Der Verbrecher wurde von der Polizei gefangen.",
+      "sentence2": "Er hat ein Strafregister."
+    },
+    {
+      "id": 167,
+      "word": "Grausamkeit",
+      "sentence1": "Es war grausam, ihn so zu behandeln.",
+      "sentence2": "Die grausame Bestrafung schockierte alle."
+    },
+    {
+      "id": 168,
+      "word": "Kultur",
+      "sentence1": "Kulturelle Unterschiede können eine Herausforderung sein.",
+      "sentence2": "Sie studiert Kulturanthropologie."
+    },
+    {
+      "id": 169,
+      "word": "Währung",
+      "sentence1": "Die Währung Japans ist der Yen.",
+      "sentence2": "Ich muss Geld wechseln."
+    },
+    {
+      "id": 170,
+      "word": "Strom",
+      "sentence1": "Die gegenwärtige Situation ist schwierig.",
+      "sentence2": "Was ist Ihr aktueller Job?"
+    },
+    {
+      "id": 171,
+      "word": "derzeit",
+      "sentence1": "Ich arbeite gerade an einem Projekt.",
+      "sentence2": "Sie studiert derzeit im Ausland."
+    },
+    {
+      "id": 172,
+      "word": "Vorhang",
+      "sentence1": "Der Vorhang ist blau.",
+      "sentence2": "Bitte schließen Sie den Vorhang."
+    },
+    {
+      "id": 173,
+      "word": "Gewohnheit",
+      "sentence1": "Das ist ein kundenspezifisches Design.",
+      "sentence2": "Sie bieten maßgeschneiderte Lösungen."
+    },
+    {
+      "id": 174,
+      "word": "Schnitt",
+      "sentence1": "Bitte schneiden Sie das Papier ab.",
+      "sentence2": "Er schnitt den Kuchen in Stücke."
+    },
+    {
+      "id": 175,
+      "word": "täglich",
+      "sentence1": "Ich lese täglich die Nachrichten.",
+      "sentence2": "Sie hat eine tägliche Routine."
+    },
+    {
+      "id": 176,
+      "word": "Schäden",
+      "sentence1": "Der Sturm verursachte Schäden am Dach.",
+      "sentence2": "Wir müssen den Schaden einschätzen."
+    },
+    {
+      "id": 177,
+      "word": "Abmachung",
+      "sentence1": "Sie haben eine Abmachung getroffen, um zusammenzuarbeiten.",
+      "sentence2": "Der Deal war für beide Parteien vorteilhaft."
+    },
+    {
+      "id": 178,
+      "word": "Jahrzehnt",
+      "sentence1": "Ein Jahrzehnt sind zehn Jahre.",
+      "sentence2": "Im letzten Jahrzehnt gab es bedeutende Veränderungen."
+    },
+    {
+      "id": 179,
+      "word": "Dekorieren",
+      "sentence1": "Wir werden den Raum für die Party dekorieren.",
+      "sentence2": "Sie liebt es, ihr Zuhause zu dekorieren."
+    },
+    {
+      "id": 180,
+      "word": "tief",
+      "sentence1": "Der See ist sehr tief.",
+      "sentence2": "Er atmete tief durch, bevor er tauchte."
+    },
+    {
+      "id": 181,
+      "word": "definieren",
+      "sentence1": "Können Sie das Wort definieren?",
+      "sentence2": "Glück ist schwer zu definieren."
+    },
+    {
+      "id": 182,
+      "word": "unmittelbar",
+      "sentence1": "Es gibt eine eindeutige Antwort auf diese Frage.",
+      "sentence2": "Wir brauchen einen klaren Plan."
+    },
+    {
+      "id": 183,
+      "word": "Definition",
+      "sentence1": "Was ist die Definition dieses Wortes?",
+      "sentence2": "Die Definition ist nicht klar."
+    },
+    {
+      "id": 184,
+      "word": "Lieferung",
+      "sentence1": "Ich werde das Paket morgen abliefern.",
+      "sentence2": "Sie bieten an, Essen zu liefern."
+    },
+    {
+      "id": 185,
+      "word": "Abreise",
+      "sentence1": "Die Abfahrt ist um 10 Uhr.",
+      "sentence2": "Wir sind traurig über ihren Abgang."
+    },
+    {
+      "id": 186,
+      "word": "trotz",
+      "sentence1": "Trotz des Regens gingen wir wandern.",
+      "sentence2": "Trotz der Schwierigkeiten gelang es ihr."
+    },
+    {
+      "id": 187,
+      "word": "Bestimmungsort",
+      "sentence1": "Paris ist ein beliebtes Reiseziel.",
+      "sentence2": "Was ist dein Traumreiseziel?"
+    },
+    {
+      "id": 188,
+      "word": "feststellen",
+      "sentence1": "Wir müssen die Ursache des Problems ermitteln.",
+      "sentence2": "Der Test wird helfen, Ihr Niveau zu bestimmen."
+    },
+    {
+      "id": 189,
+      "word": "festgestellt",
+      "sentence1": "Sie ist entschlossen, erfolgreich zu sein.",
+      "sentence2": "Er blieb trotz der Herausforderungen entschlossen."
+    },
+    {
+      "id": 190,
+      "word": "Entwicklung",
+      "sentence1": "Die Entwicklung der Technologie ist rasant.",
+      "sentence2": "Wir konzentrieren uns auf persönliche Entwicklung."
+    },
+    {
+      "id": 191,
+      "word": "Diagramm",
+      "sentence1": "Bitte beziehen Sie sich auf das Diagramm.",
+      "sentence2": "Das Diagramm veranschaulicht den Vorgang."
+    },
+    {
+      "id": 192,
+      "word": "Diamant",
+      "sentence1": "Der Diamant ist sehr wertvoll.",
+      "sentence2": "Sie erhielt einen Diamantring."
+    },
+    {
+      "id": 193,
+      "word": "Schwierigkeiten",
+      "sentence1": "Er hatte viele Schwierigkeiten.",
+      "sentence2": "Die Schwierigkeit der Aufgabe war unerwartet."
+    },
+    {
+      "id": 194,
+      "word": "unmittelbar",
+      "sentence1": "Bitte geben Sie mir eine direkte Antwort.",
+      "sentence2": "Die Straße führt direkt in die Stadt."
+    },
+    {
+      "id": 195,
+      "word": "direkt",
+      "sentence1": "Ich habe direkt mit ihm gesprochen.",
+      "sentence2": "Die Information wurde direkt an sie geschickt."
+    },
+    {
+      "id": 196,
+      "word": "Schmutz",
+      "sentence1": "Der Schmutz auf deinen Schuhen ist auffällig.",
+      "sentence2": "Bitte räumen Sie den Schmutz vom Boden."
+    },
+    {
+      "id": 197,
+      "word": "Nachteil",
+      "sentence1": "Der Hauptnachteil ist die Kosten.",
+      "sentence2": "Dieser Ansatz hat seine Vor- und Nachteile."
+    },
+    {
+      "id": 198,
+      "word": "enttäuscht",
+      "sentence1": "Sie war von den Ergebnissen enttäuscht.",
+      "sentence2": "Ich fühlte mich nach dem Film enttäuscht."
+    },
+    {
+      "id": 199,
+      "word": "enttäuschend",
+      "sentence1": "Die Leistung war enttäuschend.",
+      "sentence2": "Es ist enttäuschend, keine Fortschritte zu sehen."
+    },
+    {
+      "id": 200,
+      "word": "Ermäßigung",
+      "sentence1": "Sie boten einen Rabatt auf das Produkt an.",
+      "sentence2": "Ich liebe es, während der Weihnachtszeit einzukaufen."
+    },
+    {
+      "id": 201,
+      "word": "Abneigung",
+      "sentence1": "Ich mag keine lauten Geräusche.",
+      "sentence2": "Sie mag kein scharfes Essen."
+    },
+    {
+      "id": 202,
+      "word": "Teilen",
+      "sentence1": "Wir müssen die Aufgaben unter dem Team aufteilen.",
+      "sentence2": "Der Kuchen wurde in gleiche Teile geteilt."
+    },
+    {
+      "id": 203,
+      "word": "Dokumentarfilm",
+      "sentence1": "Ich habe mir eine faszinierende Dokumentation angesehen.",
+      "sentence2": "Der Dokumentarfilm untersucht den Klimawandel."
+    },
+    {
+      "id": 204,
+      "word": "Spenden",
+      "sentence1": "Ich möchte etwas für wohltätige Zwecke spenden.",
+      "sentence2": "Sie ermutigen die Leute, Blut zu spenden."
+    },
+    {
+      "id": 205,
+      "word": "doppelt",
+      "sentence1": "Kann ich einen doppelten Espresso haben?",
+      "sentence2": "Der Preis hat sich im letzten Jahr verdoppelt."
+    },
+    {
+      "id": 206,
+      "word": "Zweifel",
+      "sentence1": "Ich habe einige Zweifel an seiner Ehrlichkeit.",
+      "sentence2": "Es besteht kein Zweifel daran, dass sie begabt ist."
+    },
+    {
+      "id": 207,
+      "word": "gekleidet",
+      "sentence1": "Sie trug ein wunderschönes Kleid.",
+      "sentence2": "Er war für den Anlass gut gekleidet."
+    },
+    {
+      "id": 208,
+      "word": "Abfall",
+      "sentence1": "Pass auf, dass du das Glas nicht fallen lässt.",
+      "sentence2": "Die Temperatur wird über Nacht sinken."
+    },
+    {
+      "id": 209,
+      "word": "Trommel",
+      "sentence1": "Er spielt Trommel in der Band.",
+      "sentence2": "Der Klang der Trommel war laut."
+    },
+    {
+      "id": 210,
+      "word": "Trunkenheit",
+      "sentence1": "Er war betrunken nach der Party.",
+      "sentence2": "Trink nicht und fahre nicht betrunken."
+    },
+    {
+      "id": 211,
+      "word": "fällig",
+      "sentence1": "Die Zahlung ist nächste Woche fällig.",
+      "sentence2": "Sie wird im Mai gebären."
+    },
+    {
+      "id": 212,
+      "word": "Staub",
+      "sentence1": "Der Staub auf dem Regal ist dick.",
+      "sentence2": "Wischen Sie bitte den Staub vom Tisch."
+    },
+    {
+      "id": 213,
+      "word": "Pflicht",
+      "sentence1": "Es ist deine Pflicht, anderen zu helfen.",
+      "sentence2": "Sie nimmt ihre Pflichten ernst."
+    },
+    {
+      "id": 214,
+      "word": "Erdbeben",
+      "sentence1": "Das Erdbeben verursachte erhebliche Schäden.",
+      "sentence2": "Wir spürten das Erdbeben von Meilen entfernt."
+    },
+    {
+      "id": 215,
+      "word": "Ost",
+      "sentence1": "Der östliche Teil des Landes ist gebirgig.",
+      "sentence2": "Sie reisten an die Ostküste."
+    },
+    {
+      "id": 216,
+      "word": "wirtschaftliche",
+      "sentence1": "Die wirtschaftliche Lage verbessert sich.",
+      "sentence2": "Sie diskutierten über Wirtschaftspolitik."
+    },
+    {
+      "id": 217,
+      "word": "Wirtschaft",
+      "sentence1": "Die Wirtschaft wächst stetig.",
+      "sentence2": "Eine starke Wirtschaft kommt allen zugute."
+    },
+    {
+      "id": 218,
+      "word": "Kante",
+      "sentence1": "Sei vorsichtig am Rand der Klippe.",
+      "sentence2": "Das Messer hat eine scharfe Kante."
+    },
+    {
+      "id": 219,
+      "word": "Verleger",
+      "sentence1": "Der Redakteur überprüfte den Artikel vor der Veröffentlichung.",
+      "sentence2": "Sie arbeitet als Redakteurin."
+    },
+    {
+      "id": 220,
+      "word": "Erziehung",
+      "sentence1": "Schulen haben das Ziel, die Schüler wirksam zu erziehen.",
+      "sentence2": "Es ist wichtig, die Öffentlichkeit über Gesundheitsfragen aufzuklären."
+    },
+    {
+      "id": 221,
+      "word": "gebildet",
+      "sentence1": "Sie ist eine gebildete Frau mit einem Abschluss.",
+      "sentence2": "Bildungsträger haben oft bessere Arbeitschancen."
+    },
+    {
+      "id": 222,
+      "word": "Bildung",
+      "sentence1": "Der Dokumentarfilm war sowohl unterhaltsam als auch lehrreich.",
+      "sentence2": "Bildungsprogramme sind für die Entwicklung von Kindern unerlässlich."
+    },
+    {
+      "id": 223,
+      "word": "Wirksam",
+      "sentence1": "Die neue Marketingstrategie erwies sich als wirksam.",
+      "sentence2": "Eine gute Kommunikation ist der Schlüssel zu einer erfolgreichen Beziehung."
+    },
+    {
+      "id": 224,
+      "word": "Wirksam",
+      "sentence1": "Sie verwaltete ihre Zeit effizient, um die Frist einzuhalten.",
+      "sentence2": "Das Team arbeitete effektiv zusammen, um das Problem zu lösen."
+    },
+    {
+      "id": 225,
+      "word": "Anstrengung",
+      "sentence1": "Es hat viel Mühe gekostet, das Projekt fertigzustellen.",
+      "sentence2": "Ihre Bemühungen, ihre Fähigkeiten zu verbessern, waren belohnt."
+    },
+    {
+      "id": 226,
+      "word": "Wahl",
+      "sentence1": "Die Wahl findet nächsten Monat statt.",
+      "sentence2": "Die Wahlbeteiligung war bei der letzten Wahl hoch."
+    },
+    {
+      "id": 227,
+      "word": "Element",
+      "sentence1": "Wasser ist ein lebenswichtiges Element für alle Lebewesen.",
+      "sentence2": "Das Schlüsselelement des Plans ist die Teamarbeit."
+    },
+    {
+      "id": 228,
+      "word": "Verlegenheit",
+      "sentence1": "Sie schämte sich, nachdem sie seinen Namen vergessen hatte.",
+      "sentence2": "Ihm war der Fehler peinlich."
+    },
+    {
+      "id": 229,
+      "word": "peinlich",
+      "sentence1": "Es war ein peinlicher Moment für alle Beteiligten.",
+      "sentence2": "Die peinliche Situation wurde schnell vergessen."
+    },
+    {
+      "id": 230,
+      "word": "Notfall",
+      "sentence1": "Rufen Sie im Notfall die Polizei.",
+      "sentence2": "Die Rettungsdienste kamen schnell an."
+    },
+    {
+      "id": 231,
+      "word": "Gefühl",
+      "sentence1": "Sie drückte ihre Gefühle durch Kunst aus.",
+      "sentence2": "Es ist wichtig, deine Gefühle zu verstehen."
+    },
+    {
+      "id": 232,
+      "word": "Beschäftigung",
+      "sentence1": "Die Beschäftigungsquoten sind in diesem Jahr gestiegen.",
+      "sentence2": "Sie sucht Arbeit in ihrem Fachgebiet."
+    },
+    {
+      "id": 233,
+      "word": "Leer",
+      "sentence1": "Der Raum war leer und ruhig.",
+      "sentence2": "Er fühlte sich nach dem Verlust innerlich leer."
+    },
+    {
+      "id": 234,
+      "word": "ermutigen",
+      "sentence1": "Lehrer ermutigen die Schüler, Fragen zu stellen.",
+      "sentence2": "Eltern sollten ihre Kinder zum Lesen ermutigen."
+    },
+    {
+      "id": 235,
+      "word": "Feind",
+      "sentence1": "Früher waren sie Freunde, aber jetzt sind sie Feinde.",
+      "sentence2": "Die feindlichen Streitkräfte wurden in der Schlacht besiegt."
+    },
+    {
+      "id": 236,
+      "word": "Verlobt",
+      "sentence1": "Sie sind verlobt und heiraten nächstes Jahr.",
+      "sentence2": "Sie war in ein Gespräch mit ihrer Freundin verwickelt."
+    },
+    {
+      "id": 237,
+      "word": "Maschinenbau",
+      "sentence1": "Er studierte Ingenieurwesen an der Universität.",
+      "sentence2": "Maschinenbau ist ein herausforderndes Feld."
+    },
+    {
+      "id": 238,
+      "word": "Vergnügen",
+      "sentence1": "Die Aufgabe des Clowns ist es, die Kinder zu unterhalten.",
+      "sentence2": "Wir müssen einen Weg finden, unsere Gäste zu unterhalten."
+    },
+    {
+      "id": 239,
+      "word": "Unterhaltung",
+      "sentence1": "Die Stadt bietet eine große Auswahl an Unterhaltungsmöglichkeiten.",
+      "sentence2": "Sie arbeitet in der Unterhaltungsindustrie."
+    },
+    {
+      "id": 240,
+      "word": "Eingang",
+      "sentence1": "Der Eingang zum Museum befindet sich links.",
+      "sentence2": "Er machte einen großen Eintritt auf der Party."
+    },
+    {
+      "id": 241,
+      "word": "Eintrag",
+      "sentence1": "Der Eintritt zur Veranstaltung ist frei.",
+      "sentence2": "Bitte bewahren Sie Ihre Eintrittskarte auf."
+    },
+    {
+      "id": 242,
+      "word": "Umwelt",
+      "sentence1": "Umweltfragen werden immer wichtiger.",
+      "sentence2": "Die Organisation konzentriert sich auf den Umweltschutz."
+    },
+    {
+      "id": 243,
+      "word": "Folge",
+      "sentence1": "Die letzte Folge der Serie war aufregend.",
+      "sentence2": "Jede Folge untersucht ein anderes Thema."
+    },
+    {
+      "id": 244,
+      "word": "gleich",
+      "sentence1": "Alle Menschen sollten gleich behandelt werden.",
+      "sentence2": "Das Gesetz garantiert allen Bürgern gleiche Rechte."
+    },
+    {
+      "id": 245,
+      "word": "gleichermaßen",
+      "sentence1": "Der Preis wird allen Gewinnern gleichermaßen verliehen.",
+      "sentence2": "Sie sollten gleich behandelt werden, unabhängig von ihrer Herkunft."
+    },
+    {
+      "id": 246,
+      "word": "Ausweichen",
+      "sentence1": "Die einzige Flucht vor der Realität ist durch die Fantasie.",
+      "sentence2": "Er plante seine Flucht sorgfältig."
+    },
+    {
+      "id": 247,
+      "word": "unerlässlich",
+      "sentence1": "Wasser ist lebenswichtig.",
+      "sentence2": "Es ist wichtig, den Anweisungen zu folgen."
+    },
+    {
+      "id": 248,
+      "word": "Schließlich",
+      "sentence1": "Schließlich fanden sie eine Lösung für das Problem.",
+      "sentence2": "Sie beschloss schließlich, das Angebot anzunehmen."
+    },
+    {
+      "id": 249,
+      "word": "prüfen",
+      "sentence1": "Der Arzt wird Sie jetzt untersuchen.",
+      "sentence2": "Es ist wichtig, alle Beweise zu untersuchen."
+    },
+    {
+      "id": 250,
+      "word": "ausgenommen",
+      "sentence1": "Alle sind eingeladen, außer John.",
+      "sentence2": "Ich mag alle Früchte außer Bananen."
+    },
+    {
+      "id": 251,
+      "word": "Austausch",
+      "sentence1": "Sie tauschten sich auf der Party Geschenke aus.",
+      "sentence2": "Der Austausch von Ideen ist wichtig für den Fortschritt."
+    },
+    {
+      "id": 252,
+      "word": "Aufregung",
+      "sentence1": "Die Aufregung war spürbar.",
+      "sentence2": "Sie konnte ihre Begeisterung über die Reise nicht verbergen."
+    },
+    {
+      "id": 253,
+      "word": "Ausstellung",
+      "sentence1": "Die Kunstausstellung zog viele Besucher an.",
+      "sentence2": "Sie bereitet ihre erste Einzelausstellung vor."
+    },
+    {
+      "id": 254,
+      "word": "Ausdehnen",
+      "sentence1": "Das Unternehmen plant, seine Geschäftstätigkeit in Übersee auszuweiten.",
+      "sentence2": "Wir müssen unsere Produktpalette erweitern."
+    },
+    {
+      "id": 255,
+      "word": "erwartet",
+      "sentence1": "Die Ergebnisse waren besser als erwartet.",
+      "sentence2": "Sie ist die erwartete Gewinnerin des Wettbewerbs."
+    },
+    {
+      "id": 256,
+      "word": "Expedition",
+      "sentence1": "Die Expedition zum Südpol war ein Erfolg.",
+      "sentence2": "Sie bereiteten sich monatelang auf die Expedition vor."
+    },
+    {
+      "id": 257,
+      "word": "Erfahrungen",
+      "sentence1": "Sie hat viel Erfahrung im Marketing.",
+      "sentence2": "Auslandsreisen waren für ihn eine wertvolle Erfahrung."
+    },
+    {
+      "id": 258,
+      "word": "erfahrene",
+      "sentence1": "Er ist ein erfahrener Lehrer.",
+      "sentence2": "Das Team braucht erfahrene Spieler."
+    },
+    {
+      "id": 259,
+      "word": "Versuch",
+      "sentence1": "Die Wissenschaftler führten ein Experiment durch.",
+      "sentence2": "Das Experiment ergab interessante Ergebnisse."
+    },
+    {
+      "id": 260,
+      "word": "explodieren",
+      "sentence1": "Das Feuerwerk wird um Mitternacht explodieren.",
+      "sentence2": "Der Ballon könnte explodieren, wenn du ihn zu hoch aufbläst."
+    },
+    {
+      "id": 261,
+      "word": "Erforschen",
+      "sentence1": "Sie planen, die Höhle zu erkunden.",
+      "sentence2": "Sie liebt es, neue Orte zu erkunden."
+    },
+    {
+      "id": 262,
+      "word": "Explosion",
+      "sentence1": "Die Explosion wurde meilenweit gehört.",
+      "sentence2": "Sie untersuchten die Ursache der Explosion."
+    },
+    {
+      "id": 263,
+      "word": "Ausfuhr",
+      "sentence1": "Das Land exportiert Öl an andere Nationen.",
+      "sentence2": "Sie müssen neue Märkte für den Export ihrer Produkte finden."
+    },
+    {
+      "id": 264,
+      "word": "zusätzlich",
+      "sentence1": "Du wirst mehr Zeit brauchen, um das Projekt zu beenden.",
+      "sentence2": "Sie hat zusätzliche Snacks für die Reise mitgebracht."
+    },
+    {
+      "id": 265,
+      "word": "Gesicht",
+      "sentence1": "Er wandte sich der Menge zu.",
+      "sentence2": "Sie konnte es nicht ertragen, ihm ins Gesicht zu sehen, nach dem, was passiert ist."
+    },
+    {
+      "id": 266,
+      "word": "ziemlich",
+      "sentence1": "Der Test war ziemlich einfach.",
+      "sentence2": "Sie ist sich ihrer Entscheidung ziemlich sicher."
+    },
+    {
+      "id": 267,
+      "word": "vertraut",
+      "sentence1": "Der Ort kommt mir bekannt vor.",
+      "sentence2": "Ich kenne das Konzept nicht."
+    },
+    {
+      "id": 268,
+      "word": "Schönheit",
+      "sentence1": "Sie trug ein schickes Kleid auf der Party.",
+      "sentence2": "Sie übernachteten in einem schicken Hotel."
+    },
+    {
+      "id": 269,
+      "word": "weit",
+      "sentence1": "Der Laden ist weit weg von hier.",
+      "sentence2": "Sie lebt weit weg auf dem Land."
+    },
+    {
+      "id": 270,
+      "word": "faszinierend",
+      "sentence1": "Der Dokumentarfilm war faszinierend.",
+      "sentence2": "Sie hat eine faszinierende Geschichte zu erzählen."
+    },
+    {
+      "id": 271,
+      "word": "Modisch",
+      "sentence1": "Er trägt immer modische Kleidung.",
+      "sentence2": "Die Farben dieser Jahreszeit sind sehr modisch."
+    },
+    {
+      "id": 272,
+      "word": "Schließen",
+      "sentence1": "Bitte schnallen Sie sich an.",
+      "sentence2": "Sie benutzte einen Klemm, um die Papiere zusammenzubinden."
+    },
+    {
+      "id": 273,
+      "word": "Gefallen",
+      "sentence1": "Kannst du mir einen Gefallen tun?",
+      "sentence2": "Sie ist für die neue Politik."
+    },
+    {
+      "id": 274,
+      "word": "Schrecken",
+      "sentence1": "Er hat Höhenangst.",
+      "sentence2": "Die Angst vor dem Scheitern kann lähmend sein."
+    },
+    {
+      "id": 275,
+      "word": "Besonderheit",
+      "sentence1": "Das neue Telefon hat mehrere interessante Eigenschaften.",
+      "sentence2": "Eine der wichtigsten Eigenschaften ist die Kamera."
+    },
+    {
+      "id": 276,
+      "word": "Zaun",
+      "sentence1": "Sie bauten einen Zaun um den Garten.",
+      "sentence2": "Der Zaun muss lackiert werden."
+    },
+    {
+      "id": 277,
+      "word": "Kampf",
+      "sentence1": "Die Kämpfe in der Gegend haben zugenommen.",
+      "sentence2": "Sie kämpften für ihre Rechte."
+    },
+    {
+      "id": 278,
+      "word": "Akten",
+      "sentence1": "Bitte speichern Sie die Datei vor dem Schließen.",
+      "sentence2": "Ich muss meine Akten ordnen."
+    },
+    {
+      "id": 279,
+      "word": "finanzielle",
+      "sentence1": "Das Unternehmen befindet sich in einer starken finanziellen Lage.",
+      "sentence2": "Sie bieten Studenten finanzielle Unterstützung an."
+    },
+    {
+      "id": 280,
+      "word": "Feuer",
+      "sentence1": "Das Feuer verbreitete sich schnell durch den Wald.",
+      "sentence2": "Feuerwehrleute arbeiteten, um das Feuer unter Kontrolle zu bringen."
+    },
+    {
+      "id": 281,
+      "word": "Fitness",
+      "sentence1": "Sie konzentriert sich auf ihre Fitnessziele.",
+      "sentence2": "Regelmäßige Bewegung ist wichtig für die Fitness."
+    },
+    {
+      "id": 282,
+      "word": "festgestellt",
+      "sentence1": "Der Festpreis ist nicht verhandelbar.",
+      "sentence2": "Er hat jede Woche einen festen Zeitplan."
+    },
+    {
+      "id": 283,
+      "word": "Flagge",
+      "sentence1": "Die Flagge wehte im Wind.",
+      "sentence2": "Sie hoben die Flagge, um zu feiern."
+    },
+    {
+      "id": 284,
+      "word": "Überschwemmung",
+      "sentence1": "Die Flut verursachte erhebliche Schäden.",
+      "sentence2": "Sie arbeiten daran, zukünftige Überschwemmungen zu verhindern."
+    },
+    {
+      "id": 285,
+      "word": "Mehl",
+      "sentence1": "Sie braucht Mehl, um das Brot zu backen.",
+      "sentence2": "Das Rezept erfordert zwei Tassen Mehl."
+    },
+    {
+      "id": 286,
+      "word": "Strömung",
+      "sentence1": "Der Fluss fließt stark.",
+      "sentence2": "Wir müssen den Informationsfluss verbessern."
+    },
+    {
+      "id": 287,
+      "word": "Falten",
+      "sentence1": "Bitte falten Sie das Papier in zwei Hälften.",
+      "sentence2": "Sie weiß, wie man ein Bettlaken faltet."
+    },
+    {
+      "id": 288,
+      "word": "Volksmusik",
+      "sentence1": "Volksmusik ist in dieser Region beliebt.",
+      "sentence2": "Das Festival feiert Volkstraditionen."
+    },
+    {
+      "id": 289,
+      "word": "Folgen",
+      "sentence1": "Der folgende Tag war sonnig.",
+      "sentence2": "Sie hatte eine Reihe von treuen Fans."
+    },
+    {
+      "id": 290,
+      "word": "Kraft",
+      "sentence1": "Die Kraft der Explosion war immens.",
+      "sentence2": "Sie haben mit aller Kraft das Auto geschoben."
+    },
+    {
+      "id": 291,
+      "word": "für immer",
+      "sentence1": "Ich werde dich für immer lieben.",
+      "sentence2": "Dieser Moment wird mir für immer in den Sinn kommen."
+    },
+    {
+      "id": 292,
+      "word": "Rahmen",
+      "sentence1": "Sie hat einen neuen Rahmen für das Bild gekauft.",
+      "sentence2": "Der Rahmen war aus massivem Holz."
+    },
+    {
+      "id": 293,
+      "word": "Einfrieren",
+      "sentence1": "Wenn die Temperatur sinkt, wird das Wasser gefrieren.",
+      "sentence2": "Ich habe vergessen, die Reste einzufrieren."
+    },
+    {
+      "id": 294,
+      "word": "häufig",
+      "sentence1": "Sie reist häufig wegen ihrer Arbeit.",
+      "sentence2": "Der Bus fährt tagsüber häufig."
+    },
+    {
+      "id": 295,
+      "word": "Freundschaft",
+      "sentence1": "Ihre Freundschaft dauert seit Jahren.",
+      "sentence2": "Sie schätzt ihre Freundschaft mit ihm."
+    },
+    {
+      "id": 296,
+      "word": "Schrecken",
+      "sentence1": "Der laute Lärm könnte die Kinder erschrecken.",
+      "sentence2": "Er wollte dich nicht erschrecken."
+    },
+    {
+      "id": 297,
+      "word": "Schrecken",
+      "sentence1": "Sie hatte Angst vor dem plötzlichen Lärm.",
+      "sentence2": "Die verängstigte Katze versteckte sich unter dem Bett."
+    },
+    {
+      "id": 298,
+      "word": "Schrecklich",
+      "sentence1": "Der Film war so beängstigend, dass ich nicht schlafen konnte.",
+      "sentence2": "Er hat eine beängstigende Fähigkeit, die Zukunft vorherzusagen."
+    },
+    {
+      "id": 299,
+      "word": "gefroren",
+      "sentence1": "Der See ist im Winter eingefroren.",
+      "sentence2": "Sie fand eine gefrorene Pizza im Gefrierschrank."
+    },
+    {
+      "id": 300,
+      "word": "Frittieren",
+      "sentence1": "Ich mag Gemüse in Olivenöl braten.",
+      "sentence2": "Du solltest die Kartoffeln braten, bis sie goldenbraun sind."
+    },
+    {
+      "id": 301,
+      "word": "Brennstoff",
+      "sentence1": "Das Auto fährt mit Dieselkraftstoff.",
+      "sentence2": "Wir müssen eine Brennstoffquelle für den Generator finden."
+    },
+    {
+      "id": 302,
+      "word": "Funktion",
+      "sentence1": "Die Hauptaufgabe des Herzens ist es, Blut zu pumpen.",
+      "sentence2": "Dieser Knopf hat eine bestimmte Funktion in der Software."
+    },
+    {
+      "id": 303,
+      "word": "Pelz",
+      "sentence1": "Der Mantel ist aus echtem Pelz.",
+      "sentence2": "Manche Tiere haben dickes Fell, um sich warm zu halten."
+    },
+    {
+      "id": 304,
+      "word": "weiter",
+      "sentence1": "Wir müssen diese Angelegenheit weiter untersuchen.",
+      "sentence2": "Können Sie weitere Einzelheiten über das Projekt angeben?"
+    },
+    {
+      "id": 305,
+      "word": "Garage",
+      "sentence1": "Er parkte sein Auto in der Garage.",
+      "sentence2": "Die Garage ist voller alter Werkzeuge."
+    },
+    {
+      "id": 306,
+      "word": "zusammenkommen",
+      "sentence1": "Sammeln wir alle Materialien, die wir brauchen.",
+      "sentence2": "Sie sammelt gerne im Frühling Blumen."
+    },
+    {
+      "id": 307,
+      "word": "allgemein",
+      "sentence1": "Ich wache normalerweise früh auf.",
+      "sentence2": "Im Herbst ist das Wetter im Allgemeinen mild."
+    },
+    {
+      "id": 308,
+      "word": "Erzeugung",
+      "sentence1": "Diese Generation ist technisch versierter.",
+      "sentence2": "Jede Generation hat ihre eigenen Herausforderungen."
+    },
+    {
+      "id": 309,
+      "word": "großzügig",
+      "sentence1": "Sie ist sehr großzügig mit ihrer Zeit.",
+      "sentence2": "Seine großzügige Spende half vielen Menschen."
+    },
+    {
+      "id": 310,
+      "word": "sanftmütig",
+      "sentence1": "Er hat sanfte Manieren.",
+      "sentence2": "Die sanfte Brise war erfrischend."
+    },
+    {
+      "id": 311,
+      "word": "Herr und Herr",
+      "sentence1": "Er ist ein echter Gentleman.",
+      "sentence2": "Der Herr hielt ihr die Tür offen."
+    },
+    {
+      "id": 312,
+      "word": "Geist",
+      "sentence1": "Der Geist erschien um Mitternacht.",
+      "sentence2": "Sie glaubt an Geister und Geister."
+    },
+    {
+      "id": 313,
+      "word": "Riesen",
+      "sentence1": "Der riesige Baum ragte über den Wald.",
+      "sentence2": "Er hat eine riesige Sammlung von Briefmarken."
+    },
+    {
+      "id": 314,
+      "word": "Freut mich",
+      "sentence1": "Ich bin froh, dich wiederzusehen.",
+      "sentence2": "Sie freute sich, die gute Nachricht zu hören."
+    },
+    {
+      "id": 315,
+      "word": "weltweit",
+      "sentence1": "Der Klimawandel ist ein globales Problem.",
+      "sentence2": "Wir brauchen eine globale Lösung für dieses Problem."
+    },
+    {
+      "id": 316,
+      "word": "Handschuh",
+      "sentence1": "Er zog sich die Handschuhe an, bevor er nach draußen ging.",
+      "sentence2": "Diese Handschuhe sind aus warmer Wolle."
+    },
+    {
+      "id": 317,
+      "word": "Gehen Sie",
+      "sentence1": "Ich muss einkaufen.",
+      "sentence2": "Gehen wir spazieren."
+    },
+    {
+      "id": 318,
+      "word": "Waren",
+      "sentence1": "Der Laden verkauft eine Vielzahl von Waren.",
+      "sentence2": "Wir müssen diese Ware ins Lager bringen."
+    },
+    {
+      "id": 319,
+      "word": "Klasse",
+      "sentence1": "Sie erhielt eine hohe Note bei ihrer Prüfung.",
+      "sentence2": "Der Lehrer wird die Arbeiten an diesem Wochenende bewerten."
+    },
+    {
+      "id": 320,
+      "word": "Hochschulabschluss",
+      "sentence1": "Ich werde nächstes Jahr meinen Abschluss an der Universität machen.",
+      "sentence2": "Sie ist stolz darauf, mit Auszeichnung ihren Abschluss zu machen."
+    },
+    {
+      "id": 321,
+      "word": "Getreide",
+      "sentence1": "Weizen ist ein gewöhnliches Getreide, das für Brot verwendet wird.",
+      "sentence2": "Der Bauer hat in dieser Saison eine neue Getreideernte gepflanzt."
+    },
+    {
+      "id": 322,
+      "word": "dankbar",
+      "sentence1": "Ich bin dankbar für Ihre Hilfe.",
+      "sentence2": "Sie war dankbar für die Unterstützung ihrer Freunde."
+    },
+    {
+      "id": 323,
+      "word": "Wachstum",
+      "sentence1": "Die Pflanze weist in diesem Frühling ein bedeutendes Wachstum auf.",
+      "sentence2": "Das Wirtschaftswachstum ist für die Entwicklung unerlässlich."
+    },
+    {
+      "id": 324,
+      "word": "Schütze",
+      "sentence1": "Der Wachmann beobachtet den Eingang.",
+      "sentence2": "Wir müssen unsere Privatsphäre im Internet schützen."
+    },
+    {
+      "id": 325,
+      "word": "schuldig",
+      "sentence1": "Er fühlte sich schuldig, weil er nicht geholfen hatte.",
+      "sentence2": "Das Schuldurteil wurde verkündet."
+    },
+    {
+      "id": 326,
+      "word": "Händchen",
+      "sentence1": "Sie hob ihre Hand, um eine Frage zu stellen.",
+      "sentence2": "Er schüttelte allen die Hand."
+    },
+    {
+      "id": 327,
+      "word": "Hängen",
+      "sentence1": "Sie beschlossen, das Bild an die Wand zu hängen.",
+      "sentence2": "Vergiss nicht, deinen Mantel aufzuhängen."
+    },
+    {
+      "id": 328,
+      "word": "Glück",
+      "sentence1": "Glück ist der Schlüssel zu einem erfüllten Leben.",
+      "sentence2": "Sie strahlt überall Glück aus."
+    },
+    {
+      "id": 329,
+      "word": "kaum",
+      "sentence1": "Ich kann dich kaum hören.",
+      "sentence2": "Sie geht kaum aus."
+    },
+    {
+      "id": 330,
+      "word": "Hass",
+      "sentence1": "Ich hasse es, in der Schlange zu warten.",
+      "sentence2": "Er hasst Ungerechtigkeit."
+    },
+    {
+      "id": 331,
+      "word": "Kopf",
+      "sentence1": "Sie nickte zustimmend mit dem Kopf.",
+      "sentence2": "Er hielt seinen Kopf hoch."
+    },
+    {
+      "id": 332,
+      "word": "Überschrift",
+      "sentence1": "Die Schlagzeile erregte meine Aufmerksamkeit.",
+      "sentence2": "Sie schreibt Schlagzeilen für eine Zeitung."
+    },
+    {
+      "id": 333,
+      "word": "Heizung",
+      "sentence1": "Die Heizung funktioniert nicht.",
+      "sentence2": "Wir müssen die Heizung vor dem Winter reparieren."
+    },
+    {
+      "id": 334,
+      "word": "sehr stark",
+      "sentence1": "Es hat die ganze Nacht stark geregnet.",
+      "sentence2": "Sie atmete nach dem Training schwer."
+    },
+    {
+      "id": 335,
+      "word": "Hubschrauber",
+      "sentence1": "Der Hubschrauber flog über der Stadt.",
+      "sentence2": "Wir machten eine Helikoptertour durch die Insel."
+    },
+    {
+      "id": 336,
+      "word": "hervorheben",
+      "sentence1": "Bitte heben Sie die wichtigen Punkte hervor.",
+      "sentence2": "Der Lehrer benutzte einen Marker, um den Text hervorzuheben."
+    },
+    {
+      "id": 337,
+      "word": "sehr",
+      "sentence1": "Sie ist sehr geschickt in ihrem Beruf.",
+      "sentence2": "Der Film wurde von Kritikern hoch gelobt."
+    },
+    {
+      "id": 338,
+      "word": "Mieten",
+      "sentence1": "Wir müssen mehr Mitarbeiter einstellen.",
+      "sentence2": "Sie wurde als Projektleiterin eingestellt."
+    },
+    {
+      "id": 339,
+      "word": "historische",
+      "sentence1": "Die Unterzeichnung des Vertrags war ein historisches Ereignis.",
+      "sentence2": "Sie besuchte viele historische Stätten in der Stadt."
+    },
+    {
+      "id": 340,
+      "word": "historische",
+      "sentence1": "Das Museum verfügt über eine Sammlung historischer Artefakte.",
+      "sentence2": "Sie untersuchten den historischen Kontext des Romans."
+    },
+    {
+      "id": 341,
+      "word": "ehrlich",
+      "sentence1": "Es ist wichtig, in deinen Beziehungen ehrlich zu sein.",
+      "sentence2": "Sie gab eine ehrliche Antwort auf die Frage."
+    },
+    {
+      "id": 342,
+      "word": "Schrecklich",
+      "sentence1": "Der Film war so schrecklich, dass ich ihn nicht sehen konnte.",
+      "sentence2": "Er hatte eine schreckliche Erfahrung während der Reise."
+    },
+    {
+      "id": 343,
+      "word": "Schrecken",
+      "sentence1": "Der Horrorfilm ließ mich auf den Rand meines Sitzes.",
+      "sentence2": "Sie liest gerne Horrorgeschichten."
+    },
+    {
+      "id": 344,
+      "word": "Gastgeber",
+      "sentence1": "Sie werden die Veranstaltung in ihrem Haus veranstalten.",
+      "sentence2": "Sie ist eine großartige Gastgeberin für Dinnerpartys."
+    },
+    {
+      "id": 345,
+      "word": "Jagd",
+      "sentence1": "Sie sind auf Hirschjagd gegangen.",
+      "sentence2": "Er liebt es, in den Bergen zu jagen."
+    },
+    {
+      "id": 346,
+      "word": "Wirbelsturm",
+      "sentence1": "Der Hurrikan verursachte schwere Schäden an der Küste.",
+      "sentence2": "Sie evakuierten das Gebiet, bevor der Hurrikan hereinbrach."
+    },
+    {
+      "id": 347,
+      "word": "Beeilt euch",
+      "sentence1": "Du musst dich beeilen, wenn du den Bus erwischen willst.",
+      "sentence2": "Sie hat morgens immer Eile."
+    },
+    {
+      "id": 348,
+      "word": "Identität",
+      "sentence1": "Deine Identität wird von deinen Erfahrungen geprägt.",
+      "sentence2": "Sie kämpfte mit ihrer kulturellen Identität."
+    },
+    {
+      "id": 349,
+      "word": "ignorieren",
+      "sentence1": "Es ist leicht, das Problem zu ignorieren.",
+      "sentence2": "Er entschied sich, die Warnzeichen zu ignorieren."
+    },
+    {
+      "id": 350,
+      "word": "unrechtmäßig",
+      "sentence1": "Es ist illegal hier zu parken.",
+      "sentence2": "Sie wurden beim Schmuggel von illegalen Waren erwischt."
+    },
+    {
+      "id": 351,
+      "word": "vorstellbar",
+      "sentence1": "Sie hat einen imaginären Freund.",
+      "sentence2": "Sie schufen eine imaginäre Welt in ihrer Geschichte."
+    },
+    {
+      "id": 352,
+      "word": "unmittelbar",
+      "sentence1": "Wir müssen sofort handeln.",
+      "sentence2": "Die Situation erfordert sofortige Aufmerksamkeit."
+    },
+    {
+      "id": 353,
+      "word": "Einwanderer",
+      "sentence1": "Die Stadt hat eine große Einwandererbevölkerung.",
+      "sentence2": "Viele Einwanderer kommen auf der Suche nach besseren Möglichkeiten."
+    },
+    {
+      "id": 354,
+      "word": "Auswirkungen",
+      "sentence1": "Die Auswirkungen der neuen Politik sind noch unbekannt.",
+      "sentence2": "Die Umweltauswirkungen des Projekts wurden bewertet."
+    },
+    {
+      "id": 355,
+      "word": "Einfuhr",
+      "sentence1": "Das Land ist auf den Import von Öl angewiesen.",
+      "sentence2": "Sie beschlossen, Waren aus dem Ausland zu importieren."
+    },
+    {
+      "id": 356,
+      "word": "Bedeutung",
+      "sentence1": "Die Bedeutung von Bildung kann nicht überschätzt werden.",
+      "sentence2": "Sie versteht, wie wichtig harte Arbeit ist."
+    },
+    {
+      "id": 357,
+      "word": "Eindruck",
+      "sentence1": "Er machte einen starken Eindruck während des Interviews.",
+      "sentence2": "Ihr erster Eindruck von der Stadt war positiv."
+    },
+    {
+      "id": 358,
+      "word": "beeindruckend",
+      "sentence1": "Die Aufführung war wirklich beeindruckend.",
+      "sentence2": "Sie hat einen beeindruckenden Lebenslauf."
+    },
+    {
+      "id": 359,
+      "word": "Verbesserungen",
+      "sentence1": "Seine Noten haben sich deutlich verbessert.",
+      "sentence2": "Das Unternehmen sucht nach Möglichkeiten, Verbesserungen vorzunehmen."
+    },
+    {
+      "id": 360,
+      "word": "unglaublich",
+      "sentence1": "Sie ist unglaublich talentiert.",
+      "sentence2": "Die Aussicht von oben ist unglaublich schön."
+    },
+    {
+      "id": 361,
+      "word": "In der Tat",
+      "sentence1": "Es war in der Tat eine bemerkenswerte Leistung.",
+      "sentence2": "Sie ist in der Tat die beste Kandidatin für den Job."
+    },
+    {
+      "id": 362,
+      "word": "angeben",
+      "sentence1": "Die Ergebnisse weisen auf die Notwendigkeit weiterer Forschungen hin.",
+      "sentence2": "Bitte geben Sie Ihre Präferenzen auf dem Formular an."
+    },
+    {
+      "id": 363,
+      "word": "indirekt",
+      "sentence1": "Seine indirekten Kommentare waren schwer zu interpretieren.",
+      "sentence2": "Sie nahm einen indirekten Weg, um den Verkehr zu vermeiden."
+    },
+    {
+      "id": 364,
+      "word": "Innenräume",
+      "sentence1": "Zimmerpflanzen können die Luftqualität verbessern.",
+      "sentence2": "Wir haben beschlossen, die Party drinnen zu feiern."
+    },
+    {
+      "id": 365,
+      "word": "In Innenräumen",
+      "sentence1": "Es ist zu kalt, um draußen zu spielen. Bleiben wir drinnen.",
+      "sentence2": "Die Kinder spielen heute drinnen."
+    },
+    {
+      "id": 366,
+      "word": "Einfluss",
+      "sentence1": "Ihre Rede hatte einen tiefen Einfluss auf das Publikum.",
+      "sentence2": "Social Media kann die öffentliche Meinung beeinflussen."
+    },
+    {
+      "id": 367,
+      "word": "Zutaten",
+      "sentence1": "Die Hauptzutat in diesem Rezept ist Huhn.",
+      "sentence2": "Achten Sie darauf, die Zutatenliste auf Allergene zu überprüfen."
+    },
+    {
+      "id": 368,
+      "word": "Verletzung",
+      "sentence1": "Er wollte während des Spiels niemanden verletzen.",
+      "sentence2": "Sie wurde bei einem Autounfall verletzt."
+    },
+    {
+      "id": 369,
+      "word": "Verletzte",
+      "sentence1": "Die Verletzten wurden ins Krankenhaus gebracht.",
+      "sentence2": "Er erholt sich noch von seinen Verletzungen."
+    },
+    {
+      "id": 370,
+      "word": "Unschuldig",
+      "sentence1": "Der unschuldige Mann wurde aus dem Gefängnis entlassen.",
+      "sentence2": "Sie hat einen unschuldigen Blick."
+    },
+    {
+      "id": 371,
+      "word": "Geheimdienst",
+      "sentence1": "Künstliche Intelligenz ist ein schnell wachsendes Gebiet.",
+      "sentence2": "Sie hat eine hohe emotionale Intelligenz."
+    },
+    {
+      "id": 372,
+      "word": "beabsichtigen",
+      "sentence1": "Ich beabsichtige, meine Hausaufgaben vor dem Abendessen zu beenden.",
+      "sentence2": "Sie wollten keinen Schaden anrichten."
+    },
+    {
+      "id": 373,
+      "word": "Absicht",
+      "sentence1": "Meine Absicht ist es, Ihnen zu helfen, erfolgreich zu sein.",
+      "sentence2": "Sie handelte mit guten Absichten."
+    },
+    {
+      "id": 374,
+      "word": "investieren",
+      "sentence1": "Sie planen, in neue Technologie zu investieren.",
+      "sentence2": "Sie hat viel Zeit in ihre Ausbildung investiert."
+    },
+    {
+      "id": 375,
+      "word": "untersuchen",
+      "sentence1": "Die Polizei wird das Verbrechen untersuchen.",
+      "sentence2": "Wir müssen die Ursache des Problems untersuchen."
+    },
+    {
+      "id": 376,
+      "word": "Beteiligte",
+      "sentence1": "Er war von Anfang an an dem Projekt beteiligt.",
+      "sentence2": "Es sind viele Menschen am Entscheidungsprozess beteiligt."
+    },
+    {
+      "id": 377,
+      "word": "Eisen",
+      "sentence1": "Eisen ist ein essentielles Mineral für den Körper.",
+      "sentence2": "Das Tor ist aus Eisen."
+    },
+    {
+      "id": 378,
+      "word": "Ausgabe",
+      "sentence1": "Das Hauptproblem ist der Mangel an Finanzmitteln.",
+      "sentence2": "Wir müssen dieses Problem so schnell wie möglich angehen."
+    },
+    {
+      "id": 379,
+      "word": "Zeitschrift",
+      "sentence1": "Sie schreibt für eine wissenschaftliche Zeitschrift.",
+      "sentence2": "Die Zeitschrift veröffentlicht jeden Monat neue Forschungsergebnisse."
+    },
+    {
+      "id": 380,
+      "word": "Richter",
+      "sentence1": "Es ist nicht fair, jemanden zu beurteilen, ohne die Fakten zu kennen.",
+      "sentence2": "Der Richter wird morgen das Urteil verkünden."
+    },
+    {
+      "id": 381,
+      "word": "scharf",
+      "sentence1": "Sie interessiert sich sehr für Kunst.",
+      "sentence2": "Er ist ein scharfsinniger Beobachter des menschlichen Verhaltens."
+    },
+    {
+      "id": 382,
+      "word": "Schlüssel",
+      "sentence1": "Kannst du mir bitte den Schlüssel reichen?",
+      "sentence2": "Der Schlüssel zum Erfolg ist harte Arbeit."
+    },
+    {
+      "id": 383,
+      "word": "Tastatur",
+      "sentence1": "Sie hat das Dokument mit ihrer Tastatur eingegeben.",
+      "sentence2": "Die Tastatur funktioniert nicht richtig."
+    },
+    {
+      "id": 384,
+      "word": "Schuss",
+      "sentence1": "Er versuchte, den Ball ins Tor zu treten.",
+      "sentence2": "Sie gab ihm einen spielerischen Tritt ins Bein."
+    },
+    {
+      "id": 385,
+      "word": "Tötung",
+      "sentence1": "Die Tötung des unschuldigen Mannes löste Empörung aus.",
+      "sentence2": "Er wurde des Mordes an seiner Frau angeklagt."
+    },
+    {
+      "id": 386,
+      "word": "Freundlich (fürsorglich)",
+      "sentence1": "Sie ist immer freundlich zu Tieren.",
+      "sentence2": "Es ist nett von Ihnen, mir zu helfen."
+    },
+    {
+      "id": 387,
+      "word": "Küssen",
+      "sentence1": "Sie teilten sich einen Kuss unter den Sternen.",
+      "sentence2": "Sie hat ihm einen Kuss von der anderen Seite des Raumes geblasen."
+    },
+    {
+      "id": 388,
+      "word": "Klopfen",
+      "sentence1": "Bitte klopfen Sie an, bevor Sie eintreten.",
+      "sentence2": "Ich hörte einen Klopfen an der Tür."
+    },
+    {
+      "id": 389,
+      "word": "Etikett",
+      "sentence1": "Markieren Sie alle Schachteln.",
+      "sentence2": "Das Etikett auf der Flasche ist schwer zu lesen."
+    },
+    {
+      "id": 390,
+      "word": "Labor",
+      "sentence1": "Das Labor ist mit der neuesten Technologie ausgestattet.",
+      "sentence2": "Sie arbeitet in einem Chemielabor."
+    },
+    {
+      "id": 391,
+      "word": "fehlen",
+      "sentence1": "Es fehlen Beweise in diesem Fall.",
+      "sentence2": "Der Mangel an Finanzmitteln ist ein großes Problem."
+    },
+    {
+      "id": 392,
+      "word": "zuletzt",
+      "sentence1": "Die jüngsten Nachrichten sind nicht sehr ermutigend.",
+      "sentence2": "Sie trägt immer die neueste Mode."
+    },
+    {
+      "id": 393,
+      "word": "auflegen",
+      "sentence1": "Bitte lege das Buch auf den Tisch.",
+      "sentence2": "Er liegt gerne auf dem Gras und beobachtet die Wolken."
+    },
+    {
+      "id": 394,
+      "word": "Schicht",
+      "sentence1": "Der Kuchen hat drei Schichten Schokolade.",
+      "sentence2": "Auf dem Regal liegt eine Staubschicht."
+    },
+    {
+      "id": 395,
+      "word": "Blei",
+      "sentence1": "Sie wird das Team im Projekt leiten.",
+      "sentence2": "Er wurde ausgewählt, die Diskussion zu leiten."
+    },
+    {
+      "id": 396,
+      "word": "führende",
+      "sentence1": "Sie ist eine führende Expertin auf ihrem Gebiet.",
+      "sentence2": "Die häufigste Todesursache sind Herzerkrankungen."
+    },
+    {
+      "id": 397,
+      "word": "Blatt",
+      "sentence1": "Das Blatt fiel vom Baum.",
+      "sentence2": "Die Blätter wechseln im Herbst ihre Farbe."
+    },
+    {
+      "id": 398,
+      "word": "Leder",
+      "sentence1": "Er kaufte eine neue Lederjacke.",
+      "sentence2": "Das Sofa ist aus hochwertigem Leder."
+    },
+    {
+      "id": 399,
+      "word": "rechtliche",
+      "sentence1": "Sie suchen Rechtsberatung.",
+      "sentence2": "Das Rechtssystem ist komplex."
+    },
+    {
+      "id": 400,
+      "word": "Freizeit",
+      "sentence1": "Sie liest gerne in ihrer Freizeit.",
+      "sentence2": "Freizeitaktivitäten sind wichtig für die psychische Gesundheit."
+    },
+    {
+      "id": 401,
+      "word": "Länge",
+      "sentence1": "Die Länge des Tisches beträgt zwei Meter.",
+      "sentence2": "Wir müssen die Länge des Raumes messen."
+    },
+    {
+      "id": 402,
+      "word": "Höhe",
+      "sentence1": "Sie hat ein Anfängerniveau in Spanisch.",
+      "sentence2": "Der Wasserstand steigt wegen des Regens."
+    },
+    {
+      "id": 403,
+      "word": "Lügen (Lügen)",
+      "sentence1": "Es ist nicht richtig, seine Freunde zu belügen.",
+      "sentence2": "Er wurde erwischt, als er über seinen Aufenthaltsort gelogen hat."
+    },
+    {
+      "id": 404,
+      "word": "Grenze",
+      "sentence1": "Es gibt eine Grenze für die Höhe des Darlehens.",
+      "sentence2": "Wir müssen uns auf die Ausgaben beschränken."
+    },
+    {
+      "id": 405,
+      "word": "Lippen",
+      "sentence1": "Sie tat sich Lippenstift auf die Lippen.",
+      "sentence2": "Er küsste sie auf die Lippen."
+    },
+    {
+      "id": 406,
+      "word": "Flüssigkeit",
+      "sentence1": "Wasser ist bei Raumtemperatur eine Flüssigkeit.",
+      "sentence2": "Die Flüssigkeit vergossen sich über den ganzen Tisch."
+    },
+    {
+      "id": 407,
+      "word": "Literatur",
+      "sentence1": "Sie liest gerne klassische Literatur.",
+      "sentence2": "Der Kurs umfasst moderne Literatur."
+    },
+    {
+      "id": 408,
+      "word": "leben",
+      "sentence1": "Das Konzert wird live übertragen.",
+      "sentence2": "Sie wollen in einer Großstadt leben."
+    },
+    {
+      "id": 409,
+      "word": "lebend",
+      "sentence1": "Die Lebenshaltungskosten in dieser Stadt sind hoch.",
+      "sentence2": "Sie konzentriert sich auf die Verbesserung ihrer Lebensbedingungen."
+    },
+    {
+      "id": 410,
+      "word": "Einheimische",
+      "sentence1": "Der lokale Markt ist jeden Sonntag geöffnet.",
+      "sentence2": "Sie kauft lieber einheimische Produkte."
+    },
+    {
+      "id": 411,
+      "word": "Ortung",
+      "sentence1": "Kannst du mir helfen, meine Schlüssel zu finden?",
+      "sentence2": "Die Karte wird dir helfen, das Restaurant zu finden."
+    },
+    {
+      "id": 412,
+      "word": "befindet",
+      "sentence1": "Das Hotel liegt in der Nähe des Strandes.",
+      "sentence2": "Das Büro befindet sich im obersten Stockwerk."
+    },
+    {
+      "id": 413,
+      "word": "Standort",
+      "sentence1": "Wo befinden Sie sich?",
+      "sentence2": "Der Ort des Ereignisses hat sich geändert."
+    },
+    {
+      "id": 414,
+      "word": "einsam",
+      "sentence1": "Sie fühlte sich in der neuen Stadt einsam.",
+      "sentence2": "Es ist normal, sich manchmal einsam zu fühlen."
+    },
+    {
+      "id": 415,
+      "word": "Verlust",
+      "sentence1": "Der Verlust ihres Haustieres war verheerend.",
+      "sentence2": "Er trauert immer noch um den Verlust seines Vaters."
+    },
+    {
+      "id": 416,
+      "word": "Luxus",
+      "sentence1": "Sie führen ein luxuriöses Leben.",
+      "sentence2": "Das Hotel bietet luxuriöse Unterkünfte."
+    },
+    {
+      "id": 417,
+      "word": "verrückt",
+      "sentence1": "Er war sauer auf seinen Freund, weil er zu spät kam.",
+      "sentence2": "Sie hat eine verrückte Idee für ein neues Projekt."
+    },
+    {
+      "id": 418,
+      "word": "Magie",
+      "sentence1": "Der Zauberer führte einen Zaubertrick durch.",
+      "sentence2": "Sie glaubt an die Magie der Liebe."
+    },
+    {
+      "id": 419,
+      "word": "vor allem",
+      "sentence1": "Das Buch handelt hauptsächlich von Geschichte.",
+      "sentence2": "Sie interessiert sich hauptsächlich für die Wissenschaft."
+    },
+    {
+      "id": 420,
+      "word": "Kaufhaus",
+      "sentence1": "Sie gingen ins Einkaufszentrum einkaufen.",
+      "sentence2": "Das Einkaufszentrum hat eine Vielzahl von Geschäften."
+    },
+    {
+      "id": 421,
+      "word": "Verwaltung",
+      "sentence1": "Sie arbeitet in der Geschäftsführung einer großen Firma.",
+      "sentence2": "Der Schlüssel zum Erfolg ist ein wirksames Management."
+    },
+    {
+      "id": 422,
+      "word": "Markt",
+      "sentence1": "Der Markt ist jeden Samstag geöffnet.",
+      "sentence2": "Sie kaufte frisches Gemüse auf dem Markt."
+    },
+    {
+      "id": 423,
+      "word": "Vermarktung",
+      "sentence1": "Er hat Marketing studiert.",
+      "sentence2": "Die Marketingkampagne war ein Erfolg."
+    },
+    {
+      "id": 424,
+      "word": "Heirat",
+      "sentence1": "Sie planen eine Hochzeit.",
+      "sentence2": "Die Ehe erfordert Engagement und Anstrengungen."
+    },
+    {
+      "id": 425,
+      "word": "Inzwischen",
+      "sentence1": "In der Zwischenzeit spielten die Kinder draußen.",
+      "sentence2": "Sie studierte, während ihre Freunde auf Partys waren."
+    },
+    {
+      "id": 426,
+      "word": "Maßnahme",
+      "sentence1": "Es ist wichtig, deinen Fortschritt zu messen.",
+      "sentence2": "Wir müssen den Raum messen, bevor wir Möbel kaufen."
+    },
+    {
+      "id": 427,
+      "word": "mittlerer",
+      "sentence1": "Das Gemälde wurde im Medium-Stil gemalt.",
+      "sentence2": "Sie arbeitet lieber in einem Medium, das Details zulässt."
+    },
+    {
+      "id": 428,
+      "word": "geistig",
+      "sentence1": "Die geistige Gesundheit ist genauso wichtig wie die körperliche.",
+      "sentence2": "Er unternimmt Schritte, um sein geistiges Wohlbefinden zu verbessern."
+    },
+    {
+      "id": 429,
+      "word": "Erwähnen",
+      "sentence1": "Bitte erwähnen Sie alle Allergien, die Sie haben.",
+      "sentence2": "Ich vergaß zu erwähnen, dass ich zu spät komme."
+    },
+    {
+      "id": 430,
+      "word": "Unordnung",
+      "sentence1": "Das Zimmer war nach der Party ein Durcheinander.",
+      "sentence2": "Sie hält ihren Schreibtisch gerne ordentlich und frei von Unordnung."
+    },
+    {
+      "id": 431,
+      "word": "leicht",
+      "sentence1": "Das Wetter ist im Frühling mild.",
+      "sentence2": "Sie bevorzugt milde Aromen in ihrem Essen."
+    },
+    {
+      "id": 432,
+      "word": "Mine (Loch)",
+      "sentence1": "Sie fanden Gold in der Mine.",
+      "sentence2": "Die Mine wurde aus Sicherheitsgründen geschlossen."
+    },
+    {
+      "id": 433,
+      "word": "Mischung",
+      "sentence1": "Bitte mischen Sie die Zutaten gründlich.",
+      "sentence2": "Sie mischt gerne verschiedene Farben in ihren Gemälden."
+    },
+    {
+      "id": 434,
+      "word": "Mischung",
+      "sentence1": "Der Kuchenpaste ist eine Mischung aus Mehl und Eiern.",
+      "sentence2": "Er schuf eine einzigartige Mischung von Klängen in seiner Musik."
+    },
+    {
+      "id": 435,
+      "word": "Stimmung",
+      "sentence1": "Sie war den ganzen Tag in einer fröhlichen Stimmung.",
+      "sentence2": "Die Musik veränderte die Stimmung der Party."
+    },
+    {
+      "id": 436,
+      "word": "Bewegung",
+      "sentence1": "Bitte bewegen Sie den Stuhl näher an den Tisch.",
+      "sentence2": "Sie beschlossen, in eine neue Stadt zu ziehen."
+    },
+    {
+      "id": 437,
+      "word": "Schlamm",
+      "sentence1": "Die Kinder spielten nach dem Regen im Schlamm.",
+      "sentence2": "Sie rutschte in den Schlamm und fiel."
+    },
+    {
+      "id": 438,
+      "word": "Ermordung",
+      "sentence1": "Der Detektiv untersuchte den Mordfall.",
+      "sentence2": "Er wurde des Mordes beschuldigt, behauptete aber, er sei unschuldig."
+    },
+    {
+      "id": 439,
+      "word": "Muskeln",
+      "sentence1": "Er hat eine Muskelverspannung durch das Heben von Gewichten.",
+      "sentence2": "Regelmäßige Bewegung hilft beim Muskelaufbau."
+    },
+    {
+      "id": 440,
+      "word": "Musikalisch",
+      "sentence1": "Das Musical war ein Riesenerfolg.",
+      "sentence2": "Sie hat ein Talent für musikalische Komposition."
+    },
+    {
+      "id": 441,
+      "word": "Geheimnis",
+      "sentence1": "Das Buch ist ein Krimi.",
+      "sentence2": "Sie versuchten, das Rätsel gemeinsam zu lösen."
+    },
+    {
+      "id": 442,
+      "word": "Nagel",
+      "sentence1": "Er schlug einen Nagel in die Wand.",
+      "sentence2": "Der Nagel löste sich und fiel."
+    },
+    {
+      "id": 443,
+      "word": "Erzählung",
+      "sentence1": "Die Erzählung war ansprechend und gut geschrieben.",
+      "sentence2": "Sie bevorzugt narrative Poesie gegenüber anderen Formen."
+    },
+    {
+      "id": 444,
+      "word": "Staat",
+      "sentence1": "Die Nation feierte ihren Unabhängigkeitstag.",
+      "sentence2": "Sie ist stolz auf die Geschichte ihrer Nation."
+    },
+    {
+      "id": 445,
+      "word": "Einheimische",
+      "sentence1": "Die Ureinwohner haben ein reiches kulturelles Erbe.",
+      "sentence2": "Er spricht fließend seine Muttersprache."
+    },
+    {
+      "id": 446,
+      "word": "Natürlich",
+      "sentence1": "Natürlich freute sie sich auf die Reise.",
+      "sentence2": "Die Blüten wachsen natürlich in dieser Region."
+    },
+    {
+      "id": 447,
+      "word": "unbedingt",
+      "sentence1": "Das bedeutet nicht unbedingt, dass du Erfolg haben wirst.",
+      "sentence2": "Man muss sich nicht unbedingt an die Regeln halten."
+    },
+    {
+      "id": 448,
+      "word": "Notwendigkeit",
+      "sentence1": "Wir müssen eine Lösung für dieses Problem finden.",
+      "sentence2": "Sie hat ein Bedürfnis nach Gesellschaft."
+    },
+    {
+      "id": 449,
+      "word": "mit Nadel",
+      "sentence1": "Er benutzte eine Nadel und einen Faden, um das Hemd zu befestigen.",
+      "sentence2": "Die Nadel war zu dick für das Gewebe."
+    },
+    {
+      "id": 450,
+      "word": "Nachbarschaft",
+      "sentence1": "Sie leben in einer ruhigen Nachbarschaft.",
+      "sentence2": "In der Nachbarschaft gibt es viele Parks und Schulen."
+    },
+    {
+      "id": 451,
+      "word": "keine",
+      "sentence1": "Keine der beiden Optionen scheint ideal zu sein.",
+      "sentence2": "Sie mag weder Kaffee noch Tee."
+    },
+    {
+      "id": 452,
+      "word": "Netto",
+      "sentence1": "Das Netz fing mehrere Fische.",
+      "sentence2": "Er arbeitet in der Internetbranche."
+    },
+    {
+      "id": 453,
+      "word": "Nächster",
+      "sentence1": "Der nächste Zug kommt um 17 Uhr an.",
+      "sentence2": "Sie ist die nächste in der Reihe für die Beförderung."
+    },
+    {
+      "id": 454,
+      "word": "noch",
+      "sentence1": "Er mag weder Äpfel noch Orangen.",
+      "sentence2": "Sie ist weder Ärztin noch Anwältin."
+    },
+    {
+      "id": 455,
+      "word": "normal",
+      "sentence1": "Es ist normal, vor einem Test nervös zu sein.",
+      "sentence2": "Ihr Blutdruck ist normal."
+    },
+    {
+      "id": 456,
+      "word": "nördlich",
+      "sentence1": "Die nördlichen Regionen sind im Winter kälter.",
+      "sentence2": "Sie kommt aus einer Stadt im Norden."
+    },
+    {
+      "id": 457,
+      "word": "Anmerkung",
+      "sentence1": "Bitte beachten Sie die wichtigen Punkte.",
+      "sentence2": "Ich habe eine Notiz auf deinem Schreibtisch gelassen."
+    },
+    {
+      "id": 458,
+      "word": "Kernenergie",
+      "sentence1": "Das Land entwickelt Kernenergie.",
+      "sentence2": "Die Kernenergie hat ihre Vor- und Nachteile."
+    },
+    {
+      "id": 459,
+      "word": "offensichtlich",
+      "sentence1": "Es war offensichtlich, dass sie verärgert war.",
+      "sentence2": "Die Lösung ist offensichtlich, wenn man das Problem versteht."
+    },
+    {
+      "id": 460,
+      "word": "Natürlich",
+      "sentence1": "Offensichtlich hat er die Anweisungen nicht verstanden.",
+      "sentence2": "Sie ist offensichtlich musikalisch begabt."
+    },
+    {
+      "id": 461,
+      "word": "Gelegenheit",
+      "sentence1": "Das ist ein besonderer Anlass zum Feiern.",
+      "sentence2": "Bei dieser Gelegenheit sollten wir über unsere Errungenschaften nachdenken."
+    },
+    {
+      "id": 462,
+      "word": "auftreten",
+      "sentence1": "Der Unfall ereignete sich spät in der Nacht.",
+      "sentence2": "Wenn wir die neue Politik umsetzen, kann es zu Veränderungen kommen."
+    },
+    {
+      "id": 463,
+      "word": "ungerade",
+      "sentence1": "Das ist eine seltsame Art, das Problem zu lösen.",
+      "sentence2": "Sie hat einen seltsamen Sinn für Humor."
+    },
+    {
+      "id": 464,
+      "word": "Beamter",
+      "sentence1": "Der offizielle Bericht wird morgen veröffentlicht.",
+      "sentence2": "Er ist ein offizieller Vertreter des Unternehmens."
+    },
+    {
+      "id": 465,
+      "word": "altmodisch",
+      "sentence1": "Sie zieht altmodische Kleidung vor.",
+      "sentence2": "Seine Ideen scheinen etwas altmodisch."
+    },
+    {
+      "id": 466,
+      "word": "einmal",
+      "sentence1": "Es war einmal ein tapferer Ritter.",
+      "sentence2": "Ich habe sie nur einmal getroffen."
+    },
+    {
+      "id": 467,
+      "word": "Betrieb",
+      "sentence1": "Die Operation war ein Erfolg.",
+      "sentence2": "Sie planen eine Militäroperation."
+    },
+    {
+      "id": 468,
+      "word": "organisiert",
+      "sentence1": "Die Veranstaltung war gut organisiert.",
+      "sentence2": "Sie ist sehr organisiert in ihrer Arbeit."
+    },
+    {
+      "id": 469,
+      "word": "Veranstalter",
+      "sentence1": "Der Veranstalter der Veranstaltung hat großartige Arbeit geleistet.",
+      "sentence2": "Sie ist eine professionelle Veranstalterin."
+    },
+    {
+      "id": 470,
+      "word": "Original",
+      "sentence1": "Das Original ist im Museum.",
+      "sentence2": "Sie hat einige originelle Ideen für das Projekt."
+    },
+    {
+      "id": 471,
+      "word": "ursprünglich",
+      "sentence1": "Ursprünglich war geplant, im Juni zu beginnen.",
+      "sentence2": "Sie stammt ursprünglich aus Spanien."
+    },
+    {
+      "id": 472,
+      "word": "sollte",
+      "sentence1": "Sie sollten einen Arzt aufsuchen.",
+      "sentence2": "Wir sollten den Bedürftigen helfen."
+    },
+    {
+      "id": 473,
+      "word": "Unsere",
+      "sentence1": "Dieses Buch gehört uns.",
+      "sentence2": "Unsere Familie ist klein, aber eng verbunden."
+    },
+    {
+      "id": 474,
+      "word": "im Freien",
+      "sentence1": "Wir genießen Aktivitäten im Freien wie Wandern.",
+      "sentence2": "Das Konzert im Freien war ein großer Erfolg."
+    },
+    {
+      "id": 475,
+      "word": "im Freien",
+      "sentence1": "Ich liebe es, Zeit im Freien zu verbringen.",
+      "sentence2": "Die Kinder spielen draußen."
+    },
+    {
+      "id": 476,
+      "word": "Verpackung",
+      "sentence1": "Ich muss meine Koffer für die Reise packen.",
+      "sentence2": "Sie hat eine Packung Kaugummi gekauft."
+    },
+    {
+      "id": 477,
+      "word": "Verpackung",
+      "sentence1": "Ich habe ein Paket per Post erhalten.",
+      "sentence2": "Das Paket wurde pünktlich geliefert."
+    },
+    {
+      "id": 478,
+      "word": "Schmerzhaft",
+      "sentence1": "Die Verletzung war schmerzhaft.",
+      "sentence2": "Es war eine schmerzhafte Entscheidung."
+    },
+    {
+      "id": 479,
+      "word": "Bleiche",
+      "sentence1": "Sie sah nach der Krankheit blass aus.",
+      "sentence2": "Der Himmel wurde bleich, als die Sonne unterging."
+    },
+    {
+      "id": 480,
+      "word": "Pfanne",
+      "sentence1": "Ich brauche eine Pfanne, um die Eier zu kochen.",
+      "sentence2": "Die Pfanne ist zu heiß zum Anfassen."
+    },
+    {
+      "id": 481,
+      "word": "Teilnahme",
+      "sentence1": "Ich möchte am Wettbewerb teilnehmen.",
+      "sentence2": "Jeder ist ermutigt, teilzunehmen."
+    },
+    {
+      "id": 482,
+      "word": "besonders",
+      "sentence1": "Sie ist besonders gut in Mathematik.",
+      "sentence2": "Ich fand das Buch besonders interessant."
+    },
+    {
+      "id": 483,
+      "word": "Übergang",
+      "sentence1": "Ich muss meine Fahrprüfung bestehen.",
+      "sentence2": "Er gab den Ball seinem Teamkollegen."
+    },
+    {
+      "id": 484,
+      "word": "Leidenschaft",
+      "sentence1": "Sie hat eine Leidenschaft für Malerei.",
+      "sentence2": "Seine Leidenschaft für Musik ist offensichtlich."
+    },
+    {
+      "id": 485,
+      "word": "Pfad",
+      "sentence1": "Wir gingen den schmalen Pfad entlang.",
+      "sentence2": "Der Pfad führt zum alten Schloss."
+    },
+    {
+      "id": 486,
+      "word": "Zahlung",
+      "sentence1": "Die Zahlung ist nächste Woche fällig.",
+      "sentence2": "Ich erhielt die Bezahlung für meine Arbeit."
+    },
+    {
+      "id": 487,
+      "word": "friedlich",
+      "sentence1": "Der Garten ist ein friedlicher Ort zum Entspannen.",
+      "sentence2": "Sie hat ein friedliches Benehmen."
+    },
+    {
+      "id": 488,
+      "word": "Prozentanteil",
+      "sentence1": "Welcher Prozentsatz der Bevölkerung ist betroffen?",
+      "sentence2": "Der Prozentsatz der Schüler, die die Prüfung bestanden haben, stieg."
+    },
+    {
+      "id": 489,
+      "word": "Das ist perfekt",
+      "sentence1": "Sie singt perfekt.",
+      "sentence2": "Alles lief perfekt nach Plan."
+    },
+    {
+      "id": 490,
+      "word": "Leistung",
+      "sentence1": "Die Aufführung war hervorragend.",
+      "sentence2": "Sie wurde für ihre Darbietung gelobt."
+    },
+    {
+      "id": 491,
+      "word": "persönlich",
+      "sentence1": "Ich persönlich glaube an seine Unschuld.",
+      "sentence2": "Sie hat die Botschaft persönlich überbracht."
+    },
+    {
+      "id": 492,
+      "word": "überzeugen",
+      "sentence1": "Ich habe versucht, ihn davon zu überzeugen, zu bleiben.",
+      "sentence2": "Sie konnte sie davon überzeugen, ihre Meinung zu ändern."
+    },
+    {
+      "id": 493,
+      "word": "Fotograf",
+      "sentence1": "Der Fotograf hat den Moment perfekt festgehalten.",
+      "sentence2": "Sie arbeitet als freie Fotografin."
+    },
+    {
+      "id": 494,
+      "word": "Fotografie",
+      "sentence1": "Er hat eine Leidenschaft für Fotografie.",
+      "sentence2": "Sie hat Fotografie studiert."
+    },
+    {
+      "id": 495,
+      "word": "Spitze",
+      "sentence1": "Ich brauche eine Nadel, um dieses Papier zu befestigen.",
+      "sentence2": "Sie trug eine dekorative Nadel an ihrer Jacke."
+    },
+    {
+      "id": 496,
+      "word": "Rohr",
+      "sentence1": "Der Klempner reparierte das undichte Rohr.",
+      "sentence2": "Aus dem Rohr stieg Rauch auf."
+    },
+    {
+      "id": 497,
+      "word": "Ort",
+      "sentence1": "Das ist ein schöner Ort zum Besuchen.",
+      "sentence2": "Der Ort war überfüllt mit Touristen."
+    },
+    {
+      "id": 498,
+      "word": "Planung",
+      "sentence1": "Planung ist für den Erfolg unerlässlich.",
+      "sentence2": "Sie ist für die Veranstaltungsplanung zuständig."
+    },
+    {
+      "id": 499,
+      "word": "angenehm",
+      "sentence1": "Das Wetter ist heute angenehm.",
+      "sentence2": "Wir hatten ein angenehmes Gespräch."
+    },
+    {
+      "id": 500,
+      "word": "Vergnügen",
+      "sentence1": "Es war mir ein Vergnügen, Sie kennenzulernen.",
+      "sentence2": "Sie genießt ihre Arbeit."
+    },
+    {
+      "id": 501,
+      "word": "viel",
+      "sentence1": "Es gibt genug zu essen für alle.",
+      "sentence2": "Sie hat genügend Zeit, um das Projekt zu beenden."
+    },
+    {
+      "id": 502,
+      "word": "Grundstück",
+      "sentence1": "Die Handlung des Films war faszinierend.",
+      "sentence2": "Ihr gefielen die Wendungen in dem Buch."
+    },
+    {
+      "id": 503,
+      "word": "und",
+      "sentence1": "Zwei plus zwei ist gleich vier.",
+      "sentence2": "Der Job bietet ein gutes Gehalt plus Leistungen."
+    },
+    {
+      "id": 504,
+      "word": "Gedicht",
+      "sentence1": "Sie schrieb ein schönes Gedicht.",
+      "sentence2": "Das Gedicht fängt die Essenz der Liebe ein."
+    },
+    {
+      "id": 505,
+      "word": "Dichter",
+      "sentence1": "Er ist ein berühmter Dichter.",
+      "sentence2": "Der Dichter drückte in seinem Werk tiefe Gefühle aus."
+    },
+    {
+      "id": 506,
+      "word": "Gedichte",
+      "sentence1": "Sie liest gerne Gedichte.",
+      "sentence2": "Die Poesie der Epoche spiegelt ihre Werte wider."
+    },
+    {
+      "id": 507,
+      "word": "Punkt",
+      "sentence1": "Sie brachte während der Diskussion einen vernünftigen Punkt hervor.",
+      "sentence2": "Der Sinn der Übung ist es, deine Fähigkeiten zu verbessern."
+    },
+    {
+      "id": 508,
+      "word": "Gift",
+      "sentence1": "Das Gift war tödlich.",
+      "sentence2": "Ihm wurde vorgeworfen, seinen Rivalen vergiftet zu haben."
+    },
+    {
+      "id": 509,
+      "word": "giftig",
+      "sentence1": "Die giftige Pflanze sollte unzugänglich gehalten werden.",
+      "sentence2": "Manche Pilze sind giftig, wenn sie gegessen werden."
+    },
+    {
+      "id": 510,
+      "word": "Politik",
+      "sentence1": "Die Regierung kündigte eine neue Politik an.",
+      "sentence2": "Die Politik zielt darauf ab, die Umweltverschmutzung zu verringern."
+    },
+    {
+      "id": 511,
+      "word": "politische",
+      "sentence1": "Er engagiert sich in politischer Aktivismus.",
+      "sentence2": "Die politische Landschaft verändert sich rasch."
+    },
+    {
+      "id": 512,
+      "word": "Politiker",
+      "sentence1": "Sie ist eine bekannte Politikerin.",
+      "sentence2": "Der Politiker sprach zur Menge."
+    },
+    {
+      "id": 513,
+      "word": "Politik",
+      "sentence1": "Politik kann sehr spaltend sein.",
+      "sentence2": "Er studiert Politik an der Universität."
+    },
+    {
+      "id": 514,
+      "word": "Hafen",
+      "sentence1": "Das Schiff legte im Hafen an.",
+      "sentence2": "Der Hafen ist mit Frachtverkehr beschäftigt."
+    },
+    {
+      "id": 515,
+      "word": "Porträt",
+      "sentence1": "Sie malte ein wunderschönes Porträt.",
+      "sentence2": "Das Porträt zeigt sein Aussehen perfekt."
+    },
+    {
+      "id": 516,
+      "word": "möglicherweise",
+      "sentence1": "Es wird möglicherweise morgen regnen.",
+      "sentence2": "Sie ist möglicherweise die beste Kandidatin für den Job."
+    },
+    {
+      "id": 517,
+      "word": "Schüssel",
+      "sentence1": "Der Topf ist aus Lehm.",
+      "sentence2": "Sie kochte die Suppe in einem großen Topf."
+    },
+    {
+      "id": 518,
+      "word": "ausgießen",
+      "sentence1": "Gießen Sie bitte die Milch in das Glas.",
+      "sentence2": "Er schüttet seinen Kaffee gerne langsam."
+    },
+    {
+      "id": 519,
+      "word": "Armut",
+      "sentence1": "Armut ist ein ernstes Problem.",
+      "sentence2": "Die Organisation hat das Ziel, Armut zu lindern."
+    },
+    {
+      "id": 520,
+      "word": "Pulver",
+      "sentence1": "Das Pulver wird zum Backen verwendet.",
+      "sentence2": "Sie streute das Pulver auf den Kuchen."
+    },
+    {
+      "id": 521,
+      "word": "mächtig",
+      "sentence1": "Der Motor ist sehr leistungsfähig.",
+      "sentence2": "Sie hielt eine kraftvolle Rede."
+    },
+    {
+      "id": 522,
+      "word": "praktisch",
+      "sentence1": "Das ist eine praktische Lösung.",
+      "sentence2": "Er hat eine praktische Herangehensweise an Probleme."
+    },
+    {
+      "id": 523,
+      "word": "Beten",
+      "sentence1": "Sie versammeln sich jeden Freitag zum Gebet.",
+      "sentence2": "Sie betete für die Sicherheit ihrer Familie."
+    },
+    {
+      "id": 524,
+      "word": "Gebet",
+      "sentence1": "Er betete vor dem Essen.",
+      "sentence2": "Das Gebet kann eine Quelle des Trostes sein."
+    },
+    {
+      "id": 525,
+      "word": "Vorhersage",
+      "sentence1": "Die Wettervorhersage ist nicht vielversprechend.",
+      "sentence2": "Sie sagte das Ergebnis genau voraus."
+    },
+    {
+      "id": 526,
+      "word": "vorbereitet",
+      "sentence1": "Das Essen war gut zubereitet.",
+      "sentence2": "Sie fühlte sich auf die Prüfung vorbereitet."
+    },
+    {
+      "id": 527,
+      "word": "Aufmachung",
+      "sentence1": "Die Präsentation war informativ.",
+      "sentence2": "Er hielt eine Präsentation über den Klimawandel."
+    },
+    {
+      "id": 528,
+      "word": "Druck",
+      "sentence1": "Die Presse berichtete ausführlich über das Ereignis.",
+      "sentence2": "Sie arbeitet als Pressesprecherin."
+    },
+    {
+      "id": 529,
+      "word": "Druck",
+      "sentence1": "Der Druck nimmt zu.",
+      "sentence2": "Sie steht bei der Arbeit unter großem Druck."
+    },
+    {
+      "id": 530,
+      "word": "vorgeben",
+      "sentence1": "Sie spielen gerne Superhelden.",
+      "sentence2": "Tu nicht so, als hättest du mich nicht gesehen."
+    },
+    {
+      "id": 531,
+      "word": "Vorherige",
+      "sentence1": "Der vorherige Besitzer hat viele Verbesserungen vorgenommen.",
+      "sentence2": "Im vorherigen Kapitel haben wir darüber gesprochen..."
+    },
+    {
+      "id": 532,
+      "word": "zuvor",
+      "sentence1": "Ich hatte zuvor in London gelebt.",
+      "sentence2": "Sie hatte zuvor in einer anderen Firma gearbeitet."
+    },
+    {
+      "id": 533,
+      "word": "Priester",
+      "sentence1": "Der Priester hielt am Sonntag eine Predigt.",
+      "sentence2": "Er will Priester werden."
+    },
+    {
+      "id": 534,
+      "word": "Primär",
+      "sentence1": "Bildung ist ein wichtiges Anliegen.",
+      "sentence2": "Das vorrangige Ziel ist die Verbesserung der Alphabetisierung."
+    },
+    {
+      "id": 535,
+      "word": "Fürst",
+      "sentence1": "Der Prinz wird den Thron erben.",
+      "sentence2": "Sie tanzte mit dem Prinzen auf dem Ball."
+    },
+    {
+      "id": 536,
+      "word": "Prinzessin",
+      "sentence1": "Die Prinzessin trug ein wunderschönes Kleid.",
+      "sentence2": "Jedes Kind träumt davon, eine Prinzessin zu sein."
+    },
+    {
+      "id": 537,
+      "word": "Druck",
+      "sentence1": "Der Druckprozess ist komplex.",
+      "sentence2": "Sie arbeitet in der Druckerei."
+    },
+    {
+      "id": 538,
+      "word": "Gefangener",
+      "sentence1": "Der Gefangene wurde vorzeitig entlassen.",
+      "sentence2": "Er ist ein politischer Gefangener."
+    },
+    {
+      "id": 539,
+      "word": "Privat",
+      "sentence1": "Sie hat heute ein privates Meeting.",
+      "sentence2": "Er hält sein Leben lieber für sich."
+    },
+    {
+      "id": 540,
+      "word": "Erzeuger",
+      "sentence1": "Der Produzent arbeitet an einem neuen Film.",
+      "sentence2": "Sie ist eine bekannte Musikproduzentin."
+    },
+    {
+      "id": 541,
+      "word": "Produktion",
+      "sentence1": "Die Produktion von Gütern hat zugenommen.",
+      "sentence2": "Diese Fabrik ist auf die Autoproduktion spezialisiert."
+    },
+    {
+      "id": 542,
+      "word": "Beruf",
+      "sentence1": "Lehren ist ein edler Beruf.",
+      "sentence2": "Er wählte den Beruf der Medizin."
+    },
+    {
+      "id": 543,
+      "word": "Gewinn",
+      "sentence1": "Das Unternehmen hat letztes Jahr einen großen Gewinn gemacht.",
+      "sentence2": "Sie zielen darauf ab, ihre Gewinnspannen zu erhöhen."
+    },
+    {
+      "id": 544,
+      "word": "Programm",
+      "sentence1": "Das Programm umfasst verschiedene Aktivitäten.",
+      "sentence2": "Sie ist in ein Ausbildungsprogramm eingeschrieben."
+    },
+    {
+      "id": 545,
+      "word": "fördern",
+      "sentence1": "Die Kampagne zielt darauf ab, gesunde Ernährung zu fördern.",
+      "sentence2": "Sie wollen ihr neues Produkt bewerben."
+    },
+    {
+      "id": 546,
+      "word": "angemessen",
+      "sentence1": "Es ist wichtig, angemessene Kleidung zu tragen.",
+      "sentence2": "Er hat sich nicht an die richtigen Verfahren gehalten."
+    },
+    {
+      "id": 547,
+      "word": "richtig",
+      "sentence1": "Bitte behandeln Sie die Ausrüstung ordnungsgemäß.",
+      "sentence2": "Die Aufgabe wurde nicht richtig erledigt."
+    },
+    {
+      "id": 548,
+      "word": "Eigentum",
+      "sentence1": "Das Grundstück ist zu verkaufen.",
+      "sentence2": "Sie investierten in Gewerbeimmobilien."
+    },
+    {
+      "id": 549,
+      "word": "Protest",
+      "sentence1": "Der Protest war friedlich.",
+      "sentence2": "Sie organisierten einen Protest gegen das Gesetz."
+    },
+    {
+      "id": 550,
+      "word": "Stolz",
+      "sentence1": "Sie war stolz auf ihre Leistungen.",
+      "sentence2": "Er ging mit stolzer Haltung."
+    },
+    {
+      "id": 551,
+      "word": "beweisen",
+      "sentence1": "Sie müssen Ihre Identität beweisen.",
+      "sentence2": "Die Beweise werden seine Unschuld beweisen."
+    },
+    {
+      "id": 552,
+      "word": "Ziehen",
+      "sentence1": "Bitte ziehen Sie die Tür, um sie zu öffnen.",
+      "sentence2": "Er versuchte, die schwere Kiste zu ziehen."
+    },
+    {
+      "id": 553,
+      "word": "Bestrafen",
+      "sentence1": "Sie beschlossen, die Übeltäter zu bestrafen.",
+      "sentence2": "Sie wurde dafür bestraft, dass sie zu spät kam."
+    },
+    {
+      "id": 554,
+      "word": "Strafe",
+      "sentence1": "Die Bestrafung war streng.",
+      "sentence2": "Er erhielt eine Strafe für seine Taten."
+    },
+    {
+      "id": 555,
+      "word": "Schieben",
+      "sentence1": "Drücken Sie bitte den Knopf, um zu starten.",
+      "sentence2": "Er musste das Auto schieben, damit es anfing."
+    },
+    {
+      "id": 556,
+      "word": "Qualifikation",
+      "sentence1": "Sie hat die notwendigen Qualifikationen.",
+      "sentence2": "Seine Qualifikationen machen ihn zu einem starken Kandidaten."
+    },
+    {
+      "id": 557,
+      "word": "qualifiziert",
+      "sentence1": "Sie ist eine qualifizierte Lehrerin.",
+      "sentence2": "Sie suchen qualifizierte Bewerber."
+    },
+    {
+      "id": 558,
+      "word": "qualifizieren",
+      "sentence1": "Du musst dich für die Stelle qualifizieren.",
+      "sentence2": "Sie qualifizierte sich nicht für die letzte Runde."
+    },
+    {
+      "id": 559,
+      "word": "Warteschlange",
+      "sentence1": "An der Kasse stand eine lange Schlange.",
+      "sentence2": "Sie warteten über eine Stunde in der Schlange."
+    },
+    {
+      "id": 560,
+      "word": "aufhören",
+      "sentence1": "Er beschloss, seinen Job aufzugeben.",
+      "sentence2": "Sie will mit dem Rauchen aufhören."
+    },
+    {
+      "id": 561,
+      "word": "Zitat",
+      "sentence1": "Das Buch beginnt mit einem berühmten Zitat.",
+      "sentence2": "Sie schloss ein Zitat aus Shakespeare ein."
+    },
+    {
+      "id": 562,
+      "word": "Zitat",
+      "sentence1": "Bitte geben Sie die Quelle Ihrer Informationen an.",
+      "sentence2": "Er zitiert gerne berühmte Autoren."
+    },
+    {
+      "id": 563,
+      "word": "Rasse (Menschen)",
+      "sentence1": "Das Rennen wurde von einem einheimischen Athleten gewonnen.",
+      "sentence2": "Verschiedene Rassen haben einzigartige Kulturen."
+    },
+    {
+      "id": 564,
+      "word": "Rennen",
+      "sentence1": "Rennen sind ein beliebter Sport.",
+      "sentence2": "Er genießt Auto-Rennen am Wochenende."
+    },
+    {
+      "id": 565,
+      "word": "Bereich",
+      "sentence1": "Der Temperaturbereich beträgt 20 bis 30 Grad.",
+      "sentence2": "Sie bieten eine breite Produktpalette an."
+    },
+    {
+      "id": 566,
+      "word": "selten",
+      "sentence1": "Es ist selten, einen so schönen Sonnenuntergang zu sehen.",
+      "sentence2": "Er hat ein seltenes Talent für Musik."
+    },
+    {
+      "id": 567,
+      "word": "selten",
+      "sentence1": "Sie geht abends selten aus.",
+      "sentence2": "Man sieht ihn selten ohne seine Kamera."
+    },
+    {
+      "id": 568,
+      "word": "Reaktion",
+      "sentence1": "Ihre Reaktion war unerwartet.",
+      "sentence2": "Er hatte eine starke Reaktion auf die Nachricht."
+    },
+    {
+      "id": 569,
+      "word": "Wirklichkeit",
+      "sentence1": "Die Realität der Situation ist komplex.",
+      "sentence2": "Sie stehen einer harten Realität gegenüber."
+    },
+    {
+      "id": 570,
+      "word": "Empfang",
+      "sentence1": "Bitte behalten Sie Ihre Quittung.",
+      "sentence2": "Ich brauche eine Quittung für meinen Kauf."
+    },
+    {
+      "id": 571,
+      "word": "Empfehlung",
+      "sentence1": "Ich weiß Ihre Empfehlung zu schätzen.",
+      "sentence2": "Sie gab eine Empfehlung für das Projekt ab."
+    },
+    {
+      "id": 572,
+      "word": "Referenz",
+      "sentence1": "Können Sie eine Referenz für Ihre Arbeit geben?",
+      "sentence2": "Er zitierte mehrere Referenzen in seinem Bericht."
+    },
+    {
+      "id": 573,
+      "word": "zu reflektieren",
+      "sentence1": "Der Spiegel spiegelt dein Bild wider.",
+      "sentence2": "Sie nahm sich einen Moment Zeit, um über ihre Entscheidungen nachzudenken."
+    },
+    {
+      "id": 574,
+      "word": "regelmäßig",
+      "sentence1": "Er trainiert regelmäßig, um fit zu bleiben.",
+      "sentence2": "Die Sitzungen finden regelmäßig jeden Montag statt."
+    },
+    {
+      "id": 575,
+      "word": "ablehnen",
+      "sentence1": "Sie beschlossen, den Vorschlag abzulehnen.",
+      "sentence2": "Sie fühlte sich verletzt, als er ihre Einladung ablehnte."
+    },
+    {
+      "id": 576,
+      "word": "sich zu beziehen",
+      "sentence1": "Es ist wichtig, die Theorie mit der Praxis in Verbindung zu bringen.",
+      "sentence2": "Sie kann sich leicht mit den Charakteren des Buches identifizieren."
+    },
+    {
+      "id": 577,
+      "word": "Verwandte",
+      "sentence1": "Die beiden Themen sind eng miteinander verbunden.",
+      "sentence2": "Sie hat viel Erfahrung damit."
+    },
+    {
+      "id": 578,
+      "word": "Beziehung",
+      "sentence1": "Es besteht ein starker Zusammenhang zwischen Ernährung und Gesundheit.",
+      "sentence2": "Sie untersuchen die Beziehung von Sprache und Kultur."
+    },
+    {
+      "id": 579,
+      "word": "Verwandte",
+      "sentence1": "Er ist ein entfernter Verwandter von mir.",
+      "sentence2": "Das Konzept ist relativ zur Situation."
+    },
+    {
+      "id": 580,
+      "word": "entspannt",
+      "sentence1": "Sie fühlte sich nach der Massage entspannt.",
+      "sentence2": "Die Atmosphäre war ruhig und entspannt."
+    },
+    {
+      "id": 581,
+      "word": "entspannend",
+      "sentence1": "Musik zu hören ist entspannend.",
+      "sentence2": "Sie hatten einen entspannenden Tag im Spa."
+    },
+    {
+      "id": 582,
+      "word": "Freisetzung",
+      "sentence1": "Der Vogel wurde aus seinem Käfig befreit.",
+      "sentence2": "Sie planen, das neue Produkt nächsten Monat zu veröffentlichen."
+    },
+    {
+      "id": 583,
+      "word": "zuverlässig",
+      "sentence1": "Sie ist eine zuverlässige Freundin.",
+      "sentence2": "Wir brauchen eine verlässliche Informationsquelle."
+    },
+    {
+      "id": 584,
+      "word": "Religion",
+      "sentence1": "Er praktiziert seine Religion fromm.",
+      "sentence2": "Religion spielt in ihrem Leben eine bedeutende Rolle."
+    },
+    {
+      "id": 585,
+      "word": "religiöse",
+      "sentence1": "Sie ist sehr religiös und geht jeden Sonntag in die Kirche.",
+      "sentence2": "Religiöse Überzeugungen können sehr unterschiedlich sein."
+    },
+    {
+      "id": 586,
+      "word": "bleiben",
+      "sentence1": "Sie beschlossen, Freunde zu bleiben.",
+      "sentence2": "Bitte bleiben Sie sitzen, bis die Show vorbei ist."
+    },
+    {
+      "id": 587,
+      "word": "erinnern",
+      "sentence1": "Bitte erinnern Sie mich daran, sie anzurufen.",
+      "sentence2": "Ich muss mich daran erinnern, eine Pause zu machen."
+    },
+    {
+      "id": 588,
+      "word": "Fernsteher",
+      "sentence1": "Er arbeitet von zu Hause aus.",
+      "sentence2": "Die Fernbedienung liegt auf dem Tisch."
+    },
+    {
+      "id": 589,
+      "word": "Miete",
+      "sentence1": "Sie beschlossen, ein Auto zu mieten.",
+      "sentence2": "Die Miete ist Anfang des Monats fällig."
+    },
+    {
+      "id": 590,
+      "word": "Reparatur",
+      "sentence1": "Ich muss mein Fahrrad reparieren.",
+      "sentence2": "Die Reparatur dauerte länger als erwartet."
+    },
+    {
+      "id": 591,
+      "word": "Wiederholen",
+      "sentence1": "Kannst du das bitte wiederholen?",
+      "sentence2": "Ich muss den Vorgang für jeden Gegenstand wiederholen."
+    },
+    {
+      "id": 592,
+      "word": "wiederholt",
+      "sentence1": "Die wiederholten Versuche waren erfolglos.",
+      "sentence2": "Sie hat ein wiederholtes Verhaltensmuster."
+    },
+    {
+      "id": 593,
+      "word": "repräsentieren",
+      "sentence1": "Er wurde ausgewählt, das Team zu vertreten.",
+      "sentence2": "Das Bild repräsentiert die Vision des Künstlers."
+    },
+    {
+      "id": 594,
+      "word": "Anfrage",
+      "sentence1": "Ich möchte um ein Treffen bitten.",
+      "sentence2": "Der Antrag wurde vom Management genehmigt."
+    },
+    {
+      "id": 595,
+      "word": "erfordern",
+      "sentence1": "Dieser Job erfordert viel Erfahrung.",
+      "sentence2": "Sie werden zusätzliche Ressourcen benötigen."
+    },
+    {
+      "id": 596,
+      "word": "Vorbehalt",
+      "sentence1": "Ich habe im Restaurant reserviert.",
+      "sentence2": "Die Reservierung wurde per E-Mail bestätigt."
+    },
+    {
+      "id": 597,
+      "word": "Ressource",
+      "sentence1": "Die Bibliothek ist eine wertvolle Ressource für Studenten.",
+      "sentence2": "Wir müssen mehr Ressourcen für dieses Projekt bereitstellen."
+    },
+    {
+      "id": 598,
+      "word": "Achtung",
+      "sentence1": "Es ist wichtig, anderen Respekt zu zeigen.",
+      "sentence2": "Sie hat sich den Respekt ihrer Kollegen verdient."
+    },
+    {
+      "id": 599,
+      "word": "Verantwortung",
+      "sentence1": "Er nimmt seine Verantwortung ernst.",
+      "sentence2": "Es ist unsere Verantwortung, die Umwelt zu schützen."
+    },
+    {
+      "id": 600,
+      "word": "verantwortlich",
+      "sentence1": "Sie ist eine verantwortungsvolle Erwachsene.",
+      "sentence2": "Wir müssen verantwortungsvoll mit unseren Ressourcen umgehen."
+    },
+    {
+      "id": 601,
+      "word": "Ergebnis",
+      "sentence1": "Das Ergebnis war besser als erwartet.",
+      "sentence2": "Wir müssen die Ergebnisse sorgfältig analysieren."
+    },
+    {
+      "id": 602,
+      "word": "zurücktreten",
+      "sentence1": "Er plant, nächstes Jahr in Rente zu gehen.",
+      "sentence2": "Viele Menschen entscheiden sich, in ihren 60ern in Rente zu gehen."
+    },
+    {
+      "id": 603,
+      "word": "im Ruhestand",
+      "sentence1": "Sie ist eine pensionierte Lehrerin.",
+      "sentence2": "Rentner sind oft freiwillige Helfer in ihren Gemeinden."
+    },
+    {
+      "id": 604,
+      "word": "Überarbeitung",
+      "sentence1": "Ich muss meinen Aufsatz überarbeiten, bevor ich ihn einreiche.",
+      "sentence2": "Der Lehrer wird den Unterrichtsplan überarbeiten."
+    },
+    {
+      "id": 605,
+      "word": "Ringe",
+      "sentence1": "Sie erhielt einen schönen Ring als Geschenk.",
+      "sentence2": "Der Ring ist aus Gold."
+    },
+    {
+      "id": 606,
+      "word": "Aufsteigen",
+      "sentence1": "Die Sonne geht um 6 Uhr morgens auf.",
+      "sentence2": "Es wird erwartet, dass die Preise im nächsten Jahr steigen werden."
+    },
+    {
+      "id": 607,
+      "word": "Gefahr",
+      "sentence1": "Es besteht die Gefahr, dass es morgen regnet.",
+      "sentence2": "Wir müssen die damit verbundenen Risiken einschätzen."
+    },
+    {
+      "id": 608,
+      "word": "Roboter",
+      "sentence1": "Der Roboter kann viele Aufgaben ausführen.",
+      "sentence2": "Roboter werden in der Industrie immer häufiger."
+    },
+    {
+      "id": 609,
+      "word": "Rollen",
+      "sentence1": "Bitte werfen Sie den Ball zu mir.",
+      "sentence2": "Der Teig muss ausgerollt werden."
+    },
+    {
+      "id": 610,
+      "word": "romantisch",
+      "sentence1": "Sie hatten ein romantisches Abendessen bei Kerzenlicht.",
+      "sentence2": "Der Film hat eine romantische Handlung."
+    },
+    {
+      "id": 611,
+      "word": "Seil",
+      "sentence1": "Er kletterte über das Seil, um den Gipfel zu erreichen.",
+      "sentence2": "Das Seil besteht aus einem starken Material."
+    },
+    {
+      "id": 612,
+      "word": "Rauf",
+      "sentence1": "Die Oberfläche ist rau und uneben.",
+      "sentence2": "Er hat eine grobe Vorstellung davon, was ihn erwartet."
+    },
+    {
+      "id": 613,
+      "word": "Reihe",
+      "sentence1": "Bitte setzen Sie sich in die erste Reihe.",
+      "sentence2": "Die Bücher sind in einer ordentlichen Reihe angeordnet."
+    },
+    {
+      "id": 614,
+      "word": "Königliche",
+      "sentence1": "Die königliche Familie nahm an der Veranstaltung teil.",
+      "sentence2": "Sie hat ein königliches Benehmen."
+    },
+    {
+      "id": 615,
+      "word": "Rugbyspiel",
+      "sentence1": "Rugby ist in vielen Ländern ein beliebter Sport.",
+      "sentence2": "Er spielt am Wochenende Rugby."
+    },
+    {
+      "id": 616,
+      "word": "Regeln",
+      "sentence1": "Es gibt Regeln, die man befolgen muss.",
+      "sentence2": "Sie brach die Regel und wurde bestraft."
+    },
+    {
+      "id": 617,
+      "word": "Sicherheit",
+      "sentence1": "Sicherheit hat oberste Priorität.",
+      "sentence2": "Die Sicherheitsmaßnahmen waren wirksam."
+    },
+    {
+      "id": 618,
+      "word": "Segeln",
+      "sentence1": "Sie planen, um die Welt zu segeln.",
+      "sentence2": "Das Segel hat den Wind perfekt erwischt."
+    },
+    {
+      "id": 619,
+      "word": "Seemann",
+      "sentence1": "Der Seemann navigierte das Schiff durch den Sturm.",
+      "sentence2": "Viele Seeleute arbeiten auf Fischerbooten."
+    },
+    {
+      "id": 620,
+      "word": "Probe",
+      "sentence1": "Können Sie mir ein Beispiel Ihrer Arbeit geben?",
+      "sentence2": "Der Lehrer gab eine Musterfrage zur Übung."
+    },
+    {
+      "id": 621,
+      "word": "Sand",
+      "sentence1": "Die Kinder spielten am Strand im Sand.",
+      "sentence2": "Sand besteht aus winzigen Gesteinspartikeln."
+    },
+    {
+      "id": 622,
+      "word": "Abtastung",
+      "sentence1": "Ich muss diese Dokumente für meine Aufzeichnungen scannen.",
+      "sentence2": "Der Scanner kann schnell mehrere Seiten scannen."
+    },
+    {
+      "id": 623,
+      "word": "wissenschaftliche",
+      "sentence1": "Die wissenschaftliche Methode ist in der Forschung wichtig.",
+      "sentence2": "Sie veröffentlichte eine wissenschaftliche Arbeit über ihre Ergebnisse."
+    },
+    {
+      "id": 624,
+      "word": "Schrift",
+      "sentence1": "Das Drehbuch für das Stück war gut geschrieben.",
+      "sentence2": "Er arbeitet an einem neuen Drehbuch für einen Film."
+    },
+    {
+      "id": 625,
+      "word": "Bildhauerei",
+      "sentence1": "Die Skulptur wurde von einem berühmten Künstler geschaffen.",
+      "sentence2": "Sie studierte Skulptur an der Kunstschule."
+    },
+    {
+      "id": 626,
+      "word": "Sekundär",
+      "sentence1": "Die Sekundarstufe ist für die berufliche Entwicklung wichtig.",
+      "sentence2": "Die Nebenwirkungen des Medikaments sind noch unbekannt."
+    },
+    {
+      "id": 627,
+      "word": "Sicherheit",
+      "sentence1": "Sicherheitsmaßnahmen sind zum Schutz des Gebäudes getroffen.",
+      "sentence2": "Der Wachmann überprüfte alle Besucher am Eingang."
+    },
+    {
+      "id": 628,
+      "word": "Samen",
+      "sentence1": "Der Bauer pflanzte die Samen im Frühling.",
+      "sentence2": "Die Samen brauchen Wasser und Sonnenlicht, um zu wachsen."
+    },
+    {
+      "id": 629,
+      "word": "vernünftig",
+      "sentence1": "Es ist sinnvoll, Geld für die Zukunft zu sparen.",
+      "sentence2": "Sie traf die vernünftige Entscheidung, zu Hause zu bleiben."
+    },
+    {
+      "id": 630,
+      "word": "getrennte",
+      "sentence1": "Bitte trennen Sie die recycelbaren Materialien vom Müll.",
+      "sentence2": "Sie beschlossen, ihre Finanzen nach der Scheidung zu trennen."
+    },
+    {
+      "id": 631,
+      "word": "Im Ernst",
+      "sentence1": "Er nahm die Sache ernst und untersuchte sie weiter.",
+      "sentence2": "Sie sprach ernsthaft über die vor uns liegenden Herausforderungen."
+    },
+    {
+      "id": 632,
+      "word": "Dienstmädchen",
+      "sentence1": "Der Knecht bereitete die Mahlzeit für die Gäste.",
+      "sentence2": "Sie arbeitete als Dienerin in einem großen Haushalt."
+    },
+    {
+      "id": 633,
+      "word": "Satz (Put)",
+      "sentence1": "Bitte lege das Buch auf den Tisch.",
+      "sentence2": "Er hat den Wecker auf 7 Uhr eingestellt."
+    },
+    {
+      "id": 634,
+      "word": "Gruppe (Gruppe)",
+      "sentence1": "Das Geschirr war wunderschön angeordnet.",
+      "sentence2": "Sie trat einem Buchclub in ihrer Nachbarschaft bei."
+    },
+    {
+      "id": 635,
+      "word": "Einstellung",
+      "sentence1": "Die Handlung spielt in einem kleinen Dorf.",
+      "sentence2": "Sie können die Einstellungen in der App ändern."
+    },
+    {
+      "id": 636,
+      "word": "Geschlecht",
+      "sentence1": "Sexualerziehung ist wichtig für junge Menschen.",
+      "sentence2": "Das Buch behandelt die biologischen Aspekte des Geschlechts."
+    },
+    {
+      "id": 637,
+      "word": "sexuelle",
+      "sentence1": "Sexuelle Orientierung ist ein persönlicher Aspekt der Identität.",
+      "sentence2": "Die Kampagne fördert das Bewusstsein für sexuelle Gesundheit."
+    },
+    {
+      "id": 638,
+      "word": "Schütteln",
+      "sentence1": "Bitte schütteln Sie die Flasche vor Gebrauch.",
+      "sentence2": "Er schüttelte ihr sanft die Hand."
+    },
+    {
+      "id": 639,
+      "word": "Anteil",
+      "sentence1": "Es ist schön, sein Spielzeug mit anderen zu teilen.",
+      "sentence2": "Sie beschlossen, die Verantwortung gleichmäßig zu teilen."
+    },
+    {
+      "id": 640,
+      "word": "scharf",
+      "sentence1": "Sei vorsichtig mit dem scharfen Messer.",
+      "sentence2": "Die scharfe Kurve hat ihn überrascht."
+    },
+    {
+      "id": 641,
+      "word": "Regal",
+      "sentence1": "Das Regal ist voller Bücher.",
+      "sentence2": "Sie legte die Vase auf das Regal."
+    },
+    {
+      "id": 642,
+      "word": "Schalen",
+      "sentence1": "Die Schildkröte versteckte sich in ihrer Schale.",
+      "sentence2": "Die Schale des Eies ist zerbrechlich."
+    },
+    {
+      "id": 643,
+      "word": "Schicht",
+      "sentence1": "Bitte konzentrieren Sie sich auf die Hauptsache.",
+      "sentence2": "Das Unternehmen plant, seine Strategie zu ändern."
+    },
+    {
+      "id": 644,
+      "word": "glänzen",
+      "sentence1": "Die Sterne leuchten hell am Nachthimmel.",
+      "sentence2": "Sie benutzte ein Tuch, um das Besteck zu glänzen."
+    },
+    {
+      "id": 645,
+      "word": "glänzend",
+      "sentence1": "Das Auto ist neu lackiert.",
+      "sentence2": "Sie trug glänzende Schuhe auf der Party."
+    },
+    {
+      "id": 646,
+      "word": "Schießen",
+      "sentence1": "Der Jäger musste das Reh erschießen.",
+      "sentence2": "Die Szene wird morgen gedreht."
+    },
+    {
+      "id": 647,
+      "word": "Schüchtern",
+      "sentence1": "Sie ist zu schüchtern, um in der Öffentlichkeit zu sprechen.",
+      "sentence2": "Er gab ein schüchternes Lächeln, wenn man ihm ein Kompliment machte."
+    },
+    {
+      "id": 648,
+      "word": "Blick",
+      "sentence1": "Der Anblick der Berge war atemberaubend.",
+      "sentence2": "Sie hat ein perfektes Sehen ohne Brille."
+    },
+    {
+      "id": 649,
+      "word": "Signal",
+      "sentence1": "Das Ampellicht wurde rot.",
+      "sentence2": "Er benutzte ein Handsignal, um zu kommunizieren."
+    },
+    {
+      "id": 650,
+      "word": "Schweigen",
+      "sentence1": "Der ruhige Raum war voller Spannung.",
+      "sentence2": "Sie schwieg während des Treffens."
+    },
+    {
+      "id": 651,
+      "word": "Schwachsinn",
+      "sentence1": "Es ist dumm, sich Sorgen um Dinge zu machen, die man nicht kontrollieren kann.",
+      "sentence2": "Er machte ein albernes Gesicht, um sie zum Lachen zu bringen."
+    },
+    {
+      "id": 652,
+      "word": "Ähnlichkeit",
+      "sentence1": "Es gibt eine Ähnlichkeit zwischen den beiden Gemälden.",
+      "sentence2": "Die Ähnlichkeit ihrer Geschichten ist bemerkenswert."
+    },
+    {
+      "id": 653,
+      "word": "Ähnlich",
+      "sentence1": "Sie macht auch gerne Bergwanderungen.",
+      "sentence2": "Die beiden Vorschläge sind ähnlich strukturiert."
+    },
+    {
+      "id": 654,
+      "word": "ganz einfach",
+      "sentence1": "Die Lösung ist einfach, um Hilfe zu bitten.",
+      "sentence2": "Sie erklärte das Konzept einfach und klar."
+    },
+    {
+      "id": 655,
+      "word": "seitdem",
+      "sentence1": "Ich wohne hier seit 2010.",
+      "sentence2": "Seit dem Unfall ist er vorsichtiger."
+    },
+    {
+      "id": 656,
+      "word": "Spüle",
+      "sentence1": "Die Titanic sank 1912.",
+      "sentence2": "Das Geschirr muss in der Spüle durchnässt werden."
+    },
+    {
+      "id": 657,
+      "word": "Schnitt",
+      "sentence1": "Bitte schneiden Sie das Brot vor dem Servieren.",
+      "sentence2": "Sie nahm ein Stück Kuchen."
+    },
+    {
+      "id": 658,
+      "word": "leicht",
+      "sentence1": "Die Temperatur ist leicht gestiegen.",
+      "sentence2": "Sie war leicht verärgert über den Kommentar."
+    },
+    {
+      "id": 659,
+      "word": "langsam",
+      "sentence1": "Das Auto fährt zu langsam.",
+      "sentence2": "Er sprach langsam und deutlich."
+    },
+    {
+      "id": 660,
+      "word": "Schlau",
+      "sentence1": "Sie ist sehr klug und schlau.",
+      "sentence2": "Er hat eine kluge Entscheidung getroffen, früh zu investieren."
+    },
+    {
+      "id": 661,
+      "word": "Glatte",
+      "sentence1": "Die Wasseroberfläche war glatt wie Glas.",
+      "sentence2": "Sie hat eine glatte Singstimme."
+    },
+    {
+      "id": 662,
+      "word": "Software",
+      "sentence1": "Die Software muss regelmäßig aktualisiert werden.",
+      "sentence2": "Er arbeitet als Softwareentwickler."
+    },
+    {
+      "id": 663,
+      "word": "Boden",
+      "sentence1": "Der Boden in diesem Gebiet ist sehr fruchtbar.",
+      "sentence2": "Sie untersuchten den Boden auf Verunreinigungen."
+    },
+    {
+      "id": 664,
+      "word": "Festkörper",
+      "sentence1": "Wasser ist fest, wenn es gefriert.",
+      "sentence2": "Der Tisch ist aus massivem Holz."
+    },
+    {
+      "id": 665,
+      "word": "Sortieren",
+      "sentence1": "Bitte sortieren Sie die Akten nach Datum.",
+      "sentence2": "Er sortiert seine Bücher gerne nach Genres."
+    },
+    {
+      "id": 666,
+      "word": "Südliche",
+      "sentence1": "Die südliche Region ist für ihr warmes Klima bekannt.",
+      "sentence2": "Sie reisten in den südlichen Teil des Landes."
+    },
+    {
+      "id": 667,
+      "word": "speziell",
+      "sentence1": "Sie erwähnte das Thema ausdrücklich in ihrem Bericht.",
+      "sentence2": "Ich suche ein Buch speziell über Geschichte."
+    },
+    {
+      "id": 668,
+      "word": "Ausgaben",
+      "sentence1": "Die Ausgaben des Unternehmens sind in diesem Jahr gestiegen.",
+      "sentence2": "Er ist vorsichtig mit seinen Ausgaben."
+    },
+    {
+      "id": 669,
+      "word": "Gewürz",
+      "sentence1": "Dieses Gericht ist zu scharf für meinen Geschmack.",
+      "sentence2": "Sie liebt scharfes Essen aus verschiedenen Kulturen."
+    },
+    {
+      "id": 670,
+      "word": "Alkohol",
+      "sentence1": "Der Geist des Teams war nach dem Sieg hoch.",
+      "sentence2": "Sie hat einen starken Kampfgeist."
+    },
+    {
+      "id": 671,
+      "word": "ausgesprochen",
+      "sentence1": "Englisch ist die am weitesten verbreitete Sprache der Welt.",
+      "sentence2": "Er spricht mehrere Sprachen fließend."
+    },
+    {
+      "id": 672,
+      "word": "Fleck",
+      "sentence1": "Kannst du den Unterschied zwischen diesen beiden Bildern erkennen?",
+      "sentence2": "Sie fand einen schönen Platz zum Sitzen und Entspannen."
+    },
+    {
+      "id": 673,
+      "word": "Ausbreitung",
+      "sentence1": "Die Nachricht verbreitete sich schnell über die sozialen Medien.",
+      "sentence2": "Sie mag es, Butter auf ihren Toast zu streuen."
+    },
+    {
+      "id": 674,
+      "word": "Frühling",
+      "sentence1": "Blumen blühen im Frühling.",
+      "sentence2": "Das Wetter wird wärmer, wenn der Frühling naht."
+    },
+    {
+      "id": 675,
+      "word": "Stadion",
+      "sentence1": "Das Stadion war voller jubelnder Fans.",
+      "sentence2": "Sie bauten ein neues Stadion für die bevorstehenden Spiele."
+    },
+    {
+      "id": 676,
+      "word": "Personal",
+      "sentence1": "Das Hotelpersonal war sehr hilfsbereit.",
+      "sentence2": "Sie ist Mitglied des Lehrkörpers."
+    },
+    {
+      "id": 677,
+      "word": "Standard",
+      "sentence1": "Das Produkt entspricht internationalen Qualitätsstandards.",
+      "sentence2": "Sie arbeiten daran, den Lebensstandard zu verbessern."
+    },
+    {
+      "id": 678,
+      "word": "Staat",
+      "sentence1": "Der wirtschaftliche Zustand ist eine große Sorge.",
+      "sentence2": "Sie ist nach den Nachrichten in einem Schockzustand."
+    },
+    {
+      "id": 679,
+      "word": "statistische",
+      "sentence1": "Die Statistik zeigt einen deutlichen Anstieg der Verkäufe.",
+      "sentence2": "Er analysierte die Daten und präsentierte die wichtigsten Statistiken."
+    },
+    {
+      "id": 680,
+      "word": "Statue",
+      "sentence1": "Die Freiheitsstatue ist ein Symbol der Freiheit.",
+      "sentence2": "Sie besuchten die berühmte Statue im Park."
+    },
+    {
+      "id": 681,
+      "word": "Stäbchen (anbringen)",
+      "sentence1": "Bitte kleben Sie das Etikett auf die Box.",
+      "sentence2": "Sie hat Kleber benutzt, um die Stücke zusammenzukleben."
+    },
+    {
+      "id": 682,
+      "word": "Holzstück",
+      "sentence1": "Er hob einen Stock vom Boden auf.",
+      "sentence2": "Der Hund kaute auf den Stock."
+    },
+    {
+      "id": 683,
+      "word": "noch",
+      "sentence1": "Sie wartet immer noch auf den Bus.",
+      "sentence2": "Das Wasser ist still und ruhig."
+    },
+    {
+      "id": 684,
+      "word": "Verkauf",
+      "sentence1": "Ich muss einkaufen gehen.",
+      "sentence2": "Der Laden ist von 9 Uhr morgens bis 9 Uhr abends geöffnet."
+    },
+    {
+      "id": 685,
+      "word": "Fremdling",
+      "sentence1": "Sie fühlte sich wie eine Fremde in einer neuen Stadt.",
+      "sentence2": "Sprich nicht mit Fremden online."
+    },
+    {
+      "id": 686,
+      "word": "Stärke",
+      "sentence1": "Er hat die Kraft, schwere Lasten zu heben.",
+      "sentence2": "Geistige Stärke ist genauso wichtig wie körperliche."
+    },
+    {
+      "id": 687,
+      "word": "Schnur",
+      "sentence1": "Sie band das Paket mit einer Schnur.",
+      "sentence2": "Die Gitarrensaite brach während der Aufführung."
+    },
+    {
+      "id": 688,
+      "word": "stark",
+      "sentence1": "Er glaubt fest an die Wichtigkeit der Bildung.",
+      "sentence2": "Sie äußerte ihre Meinung während der Debatte mit Nachdruck."
+    },
+    {
+      "id": 689,
+      "word": "Werkstatt",
+      "sentence1": "Der Künstler arbeitet in einem kleinen Atelier.",
+      "sentence2": "Sie haben ein Studio für das Fotoshooting gemietet."
+    },
+    {
+      "id": 690,
+      "word": "Sachen",
+      "sentence1": "Ich muss meine Sachen für die Reise packen.",
+      "sentence2": "Sie hat viele interessante Sachen in ihrer Sammlung."
+    },
+    {
+      "id": 691,
+      "word": "Wirkstoff",
+      "sentence1": "Wasser ist eine Substanz, die für das Leben unerlässlich ist.",
+      "sentence2": "Der Wissenschaftler untersuchte die chemische Substanz im Labor."
+    },
+    {
+      "id": 692,
+      "word": "erfolgreich",
+      "sentence1": "Sie beendete das Projekt erfolgreich.",
+      "sentence2": "Sie arbeiteten zusammen und erreichten ihre Ziele erfolgreich."
+    },
+    {
+      "id": 693,
+      "word": "plötzlich",
+      "sentence1": "Es gab eine plötzliche Temperaturänderung.",
+      "sentence2": "Der plötzliche Lärm erschreckte alle."
+    },
+    {
+      "id": 694,
+      "word": "Leiden",
+      "sentence1": "Er musste einen langen Genesungsprozess durchlaufen.",
+      "sentence2": "Viele Menschen leiden unter Angstzuständen und Depressionen."
+    },
+    {
+      "id": 695,
+      "word": "Kleidung",
+      "sentence1": "Er trug einen Anzug zum Vorstellungsgespräch.",
+      "sentence2": "Der Anwalt trug einen formellen Anzug."
+    },
+    {
+      "id": 696,
+      "word": "geeignet",
+      "sentence1": "Dieses Kleid ist passend für den Anlass.",
+      "sentence2": "Sie müssen einen geeigneten Ort für die Veranstaltung finden."
+    },
+    {
+      "id": 697,
+      "word": "Zusammenfassung",
+      "sentence1": "Können Sie die wichtigsten Punkte zusammenfassen?",
+      "sentence2": "Sie fasste den Artikel in wenigen Sätzen zusammen."
+    },
+    {
+      "id": 698,
+      "word": "Zusammenfassung",
+      "sentence1": "Die Zusammenfassung gibt einen kurzen Überblick über den Bericht.",
+      "sentence2": "Bitte lesen Sie die Zusammenfassung vor der Sitzung durch."
+    },
+    {
+      "id": 699,
+      "word": "Versorgung",
+      "sentence1": "Das Unternehmen hat sich zum Ziel gesetzt, qualitativ hochwertige Produkte zu liefern.",
+      "sentence2": "Sie haben einen stetigen Vorrat an frischen Produkten."
+    },
+    {
+      "id": 700,
+      "word": "Unterstützer",
+      "sentence1": "Sie ist eine starke Befürworterin von Umweltbelangen.",
+      "sentence2": "Die Kampagne hat viele begeisterte Unterstützer."
+    },
+    {
+      "id": 701,
+      "word": "Sicherlich",
+      "sentence1": "Das können Sie doch nicht ernst meinen.",
+      "sentence2": "Sie wird sicher den Wettbewerb gewinnen."
+    },
+    {
+      "id": 702,
+      "word": "Oberfläche",
+      "sentence1": "Die Wasseroberfläche war ruhig.",
+      "sentence2": "Er kratzte die Oberfläche des Tisches."
+    },
+    {
+      "id": 703,
+      "word": "Überleben",
+      "sentence1": "Viele Arten kämpfen um das Überleben in rauen Umgebungen.",
+      "sentence2": "Sie schaffte es, den Unfall zu überleben."
+    },
+    {
+      "id": 704,
+      "word": "Schwimmen",
+      "sentence1": "Ich schwimme gerne im Ozean.",
+      "sentence2": "Er lernte in jungen Jahren schwimmen."
+    },
+    {
+      "id": 705,
+      "word": "Schalter",
+      "sentence1": "Könnten Sie bitte das Licht ausmachen?",
+      "sentence2": "Er hat beschlossen, seine Karriere zu ändern."
+    },
+    {
+      "id": 706,
+      "word": "Symptom",
+      "sentence1": "Husten ist ein häufiges Symptom einer Erkältung.",
+      "sentence2": "Sie berichtete dem Arzt mehrere Symptome."
+    },
+    {
+      "id": 707,
+      "word": "Schwanz",
+      "sentence1": "Der Hund wedelte glücklich mit dem Schwanz.",
+      "sentence2": "Die Hinterlichter des Zuges blinkten."
+    },
+    {
+      "id": 708,
+      "word": "Vermögen",
+      "sentence1": "Sie hat ein natürliches Talent für Musik.",
+      "sentence2": "Sein Talent wurde schon in jungen Jahren erkannt."
+    },
+    {
+      "id": 709,
+      "word": "begabt",
+      "sentence1": "Sie ist eine talentierte Künstlerin.",
+      "sentence2": "Das Team besteht aus talentierten Personen."
+    },
+    {
+      "id": 710,
+      "word": "Binde",
+      "sentence1": "Ich brauche etwas Klebeband, um dieses Geschenk einzuwickeln.",
+      "sentence2": "Das Band ging leicht ab."
+    },
+    {
+      "id": 711,
+      "word": "Steuern",
+      "sentence1": "Die Regierung verhängte eine neue Steuer auf Luxusgüter.",
+      "sentence2": "Er versucht, seine Steuerpflicht zu reduzieren."
+    },
+    {
+      "id": 712,
+      "word": "Technische",
+      "sentence1": "Sie hat einen starken technischen Hintergrund im Ingenieurwesen.",
+      "sentence2": "Die technischen Einzelheiten sind im Bericht beschrieben."
+    },
+    {
+      "id": 713,
+      "word": "Technik",
+      "sentence1": "Er verwendete eine neue Technik, um das Problem zu lösen.",
+      "sentence2": "Die Künstlerin ist für ihre einzigartige Maltechnik bekannt."
+    },
+    {
+      "id": 714,
+      "word": "neigen",
+      "sentence1": "Menschen sind am Morgen eher produktiv.",
+      "sentence2": "Sie neigt dazu, über die Dinge nachzudenken."
+    },
+    {
+      "id": 715,
+      "word": "Zelt",
+      "sentence1": "Wir stellten ein Zelt für den Campingausflug auf.",
+      "sentence2": "Das Zelt war geräumig genug für sechs Personen."
+    },
+    {
+      "id": 716,
+      "word": "das",
+      "sentence1": "Das gefällt mir nicht.",
+      "sentence2": "Das war ein toller Film!"
+    },
+    {
+      "id": 717,
+      "word": "Ihre",
+      "sentence1": "Dieses Buch gehört ihnen.",
+      "sentence2": "Ich habe ihre Schlüssel auf dem Tisch gefunden."
+    },
+    {
+      "id": 718,
+      "word": "Thema",
+      "sentence1": "Das Thema der Party ist tropisch.",
+      "sentence2": "Sie schrieb einen Aufsatz über das Thema Liebe."
+    },
+    {
+      "id": 719,
+      "word": "Theorie",
+      "sentence1": "Er schlug eine neue Theorie über den Klimawandel vor.",
+      "sentence2": "Die Theorie wurde von Wissenschaftlern weitgehend akzeptiert."
+    },
+    {
+      "id": 720,
+      "word": "deswegen",
+      "sentence1": "Es regnete; deshalb wurde das Spiel abgesagt.",
+      "sentence2": "Sie hat hart studiert; deshalb hat sie die Prüfung bestanden."
+    },
+    {
+      "id": 721,
+      "word": "Das ist",
+      "sentence1": "Das ist mein Lieblingsbuch.",
+      "sentence2": "Ich kann nicht glauben, dass das passiert."
+    },
+    {
+      "id": 722,
+      "word": "aber",
+      "sentence1": "Obwohl es regnete, gingen wir spazieren.",
+      "sentence2": "Sie ist sehr talentiert, obwohl ihr die Erfahrung fehlt."
+    },
+    {
+      "id": 723,
+      "word": "Hals",
+      "sentence1": "Er hat Halsschmerzen.",
+      "sentence2": "Sie klärte sich die Kehle, bevor sie sprach."
+    },
+    {
+      "id": 724,
+      "word": "überall",
+      "sentence1": "Das Museum ist das ganze Jahr über geöffnet.",
+      "sentence2": "Letzten Sommer reiste sie durch Europa."
+    },
+    {
+      "id": 725,
+      "word": "fest",
+      "sentence1": "Das Kleid ist mir zu eng.",
+      "sentence2": "Er hat diese Woche einen anstrengenden Zeitplan."
+    },
+    {
+      "id": 726,
+      "word": "bis",
+      "sentence1": "Ich werde warten, bis du ankommst.",
+      "sentence2": "Sie arbeitete bis Mitternacht."
+    },
+    {
+      "id": 727,
+      "word": "Zinn",
+      "sentence1": "Das Essen wird in einer Dose gelagert.",
+      "sentence2": "Er öffnete eine Dose Bohnen."
+    },
+    {
+      "id": 728,
+      "word": "winzig",
+      "sentence1": "Das Kätzchen ist winzig und süß.",
+      "sentence2": "Sie hat eine kleine Narbe auf der Wange."
+    },
+    {
+      "id": 729,
+      "word": "Spitze",
+      "sentence1": "Kannst du mir einen Trinkgeld für die Prüfung geben?",
+      "sentence2": "Er hinterließ dem Kellner ein großzügiges Trinkgeld."
+    },
+    {
+      "id": 730,
+      "word": "Zehen",
+      "sentence1": "Ich habe meinen Zeh auf den Tisch gestoßen.",
+      "sentence2": "Sie hat ihre Zehennägel rot gestrichen."
+    },
+    {
+      "id": 731,
+      "word": "Zunge",
+      "sentence1": "Er hat seine Zunge nach mir ausgestreckt.",
+      "sentence2": "Sie hat ein Piercing auf der Zunge."
+    },
+    {
+      "id": 732,
+      "word": "insgesamt",
+      "sentence1": "Die Gesamtkosten betragen 100 Dollar.",
+      "sentence2": "Sie gewann insgesamt drei Preise."
+    },
+    {
+      "id": 733,
+      "word": "vollständig",
+      "sentence1": "Ich stimme dir vollkommen zu.",
+      "sentence2": "Der Film war total langweilig."
+    },
+    {
+      "id": 734,
+      "word": "Berührung",
+      "sentence1": "Bitte fassen Sie die Gemälde nicht an.",
+      "sentence2": "Sie hat eine sanfte Note."
+    },
+    {
+      "id": 735,
+      "word": "Reise",
+      "sentence1": "Wir machten eine Führung durch die Stadt.",
+      "sentence2": "Die Tour dauert zwei Stunden."
+    },
+    {
+      "id": 736,
+      "word": "Handel",
+      "sentence1": "Der internationale Handel ist für das Wirtschaftswachstum unerlässlich.",
+      "sentence2": "Er arbeitet in der Handelsindustrie."
+    },
+    {
+      "id": 737,
+      "word": "Übersetzen",
+      "sentence1": "Können Sie dieses Dokument ins Englische übersetzen?",
+      "sentence2": "Sie lernt, Texte zu übersetzen."
+    },
+    {
+      "id": 738,
+      "word": "Übersetzung",
+      "sentence1": "Die Übersetzung des Buches wurde letztes Jahr veröffentlicht.",
+      "sentence2": "Sie ist auf literarische Übersetzungen spezialisiert."
+    },
+    {
+      "id": 739,
+      "word": "Verkehr",
+      "sentence1": "Sie benutzen Lastwagen zum Transport von Gütern.",
+      "sentence2": "Das Transportsystem ist sehr effizient."
+    },
+    {
+      "id": 740,
+      "word": "Behandlung",
+      "sentence1": "Der Arzt wird Ihre Verletzung behandeln.",
+      "sentence2": "Sie mag es, sich einen Spa-Tag zu gönnen."
+    },
+    {
+      "id": 741,
+      "word": "Behandlung",
+      "sentence1": "Die Behandlung der Krankheit ist teuer.",
+      "sentence2": "Sie wird wegen ihres Zustands behandelt."
+    },
+    {
+      "id": 742,
+      "word": "Entwicklung",
+      "sentence1": "Es gibt einen wachsenden Trend zur Fernarbeit.",
+      "sentence2": "Die Modetrends ändern sich schnell."
+    },
+    {
+      "id": 743,
+      "word": "Trick",
+      "sentence1": "Er führte einen Zaubertrick durch.",
+      "sentence2": "Es ist nur ein Licht-Trick."
+    },
+    {
+      "id": 744,
+      "word": "Wahrheit",
+      "sentence1": "Die Wahrheit ist oft schwer anzunehmen.",
+      "sentence2": "Sie hat mir endlich die Wahrheit gesagt."
+    },
+    {
+      "id": 745,
+      "word": "Schlauch",
+      "sentence1": "Die Zahnpasta ist in einer Röhre.",
+      "sentence2": "Er reiste mit der U-Bahn."
+    },
+    {
+      "id": 746,
+      "word": "Typ",
+      "sentence1": "Was für Musik magst du?",
+      "sentence2": "Sie ist eine Art Person, die Abenteuer liebt."
+    },
+    {
+      "id": 747,
+      "word": "typischerweise",
+      "sentence1": "Das Wetter ist im Frühling typischerweise mild.",
+      "sentence2": "Sie geht normalerweise früh ins Bett."
+    },
+    {
+      "id": 748,
+      "word": "Reifen",
+      "sentence1": "Ich muss den platten Reifen wechseln.",
+      "sentence2": "Das Auto hat einen Ersatzreifen im Kofferraum."
+    },
+    {
+      "id": 749,
+      "word": "hässlich",
+      "sentence1": "Die hässliche Wahrheit ist schwer zu ertragen.",
+      "sentence2": "Sie hat eine hässliche Narbe am Arm."
+    },
+    {
+      "id": 750,
+      "word": "unfähig",
+      "sentence1": "Er konnte nicht an der Sitzung teilnehmen.",
+      "sentence2": "Sie fühlte sich unfähig, mit der Situation fertig zu werden."
+    },
+    {
+      "id": 751,
+      "word": "Unbequem",
+      "sentence1": "Der Stuhl ist unangenehm zum Sitzen.",
+      "sentence2": "Sie fühlte sich in dem engen Kleid unwohl."
+    },
+    {
+      "id": 752,
+      "word": "Unterwäsche",
+      "sentence1": "Er hat neue Unterwäsche gekauft.",
+      "sentence2": "Sie bevorzugt Baumwollunterwäsche."
+    },
+    {
+      "id": 753,
+      "word": "Arbeitslose",
+      "sentence1": "Er ist seit sechs Monaten arbeitslos.",
+      "sentence2": "Die Zahl der Arbeitslosen nimmt zu."
+    },
+    {
+      "id": 754,
+      "word": "Arbeitslosigkeit",
+      "sentence1": "Die Arbeitslosigkeit ist ein großes Problem in der Stadt.",
+      "sentence2": "Die Regierung arbeitet daran, die Arbeitslosigkeit zu verringern."
+    },
+    {
+      "id": 755,
+      "word": "Unrecht",
+      "sentence1": "Es ist unfair, ihr die Schuld für den Fehler zu geben.",
+      "sentence2": "Die Entscheidung wurde von vielen als ungerecht angesehen."
+    },
+    {
+      "id": 756,
+      "word": "Vereinigung",
+      "sentence1": "Die Arbeiter gründeten eine Gewerkschaft, um ihre Rechte zu schützen.",
+      "sentence2": "Die Gewerkschaft verhandelt über bessere Löhne."
+    },
+    {
+      "id": 757,
+      "word": "ausgenommen",
+      "sentence1": "Du wirst keinen Erfolg haben, wenn du nicht hart arbeitest.",
+      "sentence2": "Ich gehe, es sei denn, es regnet."
+    },
+    {
+      "id": 758,
+      "word": "anders als",
+      "sentence1": "Im Gegensatz zu ihrer Schwester ist sie sehr gesellig.",
+      "sentence2": "Dieses Gewebe ist anders als alles, was ich je gesehen habe."
+    },
+    {
+      "id": 759,
+      "word": "unwahrscheinlich",
+      "sentence1": "Es ist unwahrscheinlich, dass es im April schneit.",
+      "sentence2": "Es ist unwahrscheinlich, dass sie das Angebot annimmt."
+    },
+    {
+      "id": 760,
+      "word": "unnötig",
+      "sentence1": "Es ist unnötig, neue Kleidung zu kaufen.",
+      "sentence2": "Der Bericht wurde als unnötig erachtet."
+    },
+    {
+      "id": 761,
+      "word": "unerfreulich",
+      "sentence1": "Der Geruch war unangenehm.",
+      "sentence2": "Sie hatte ein unangenehmes Erlebnis im Hotel."
+    },
+    {
+      "id": 762,
+      "word": "Aktualisierung",
+      "sentence1": "Ich muss meine Software aktualisieren.",
+      "sentence2": "Das Update wird die Leistung verbessern."
+    },
+    {
+      "id": 763,
+      "word": "auf",
+      "sentence1": "Es war einmal eine Prinzessin.",
+      "sentence2": "Die Entscheidung beruht auf sorgfältiger Überlegung."
+    },
+    {
+      "id": 764,
+      "word": "verärgert",
+      "sentence1": "Sie war wegen der Nachricht verärgert.",
+      "sentence2": "Seien Sie nicht verärgert, es ist nicht Ihre Schuld."
+    },
+    {
+      "id": 765,
+      "word": "verwendet",
+      "sentence1": "Das Buch ist gebraucht, aber in gutem Zustand.",
+      "sentence2": "Sie hat ein Gebrauchtwagen gekauft."
+    },
+    {
+      "id": 766,
+      "word": "wertvoll",
+      "sentence1": "Zeit ist eine wertvolle Ressource.",
+      "sentence2": "Sie gab mir wertvolle Ratschläge."
+    },
+    {
+      "id": 767,
+      "word": "Wert",
+      "sentence1": "Was ist der Wert dieses Gemäldes?",
+      "sentence2": "Er kennt den Wert harter Arbeit."
+    },
+    {
+      "id": 768,
+      "word": "verschiedene",
+      "sentence1": "Es gibt verschiedene Möglichkeiten.",
+      "sentence2": "Sie hat in verschiedenen Ländern gelebt."
+    },
+    {
+      "id": 769,
+      "word": "Ausführung",
+      "sentence1": "Welche Version der Software benutzt du?",
+      "sentence2": "Die neueste Version enthält neue Funktionen."
+    },
+    {
+      "id": 770,
+      "word": "Opfer",
+      "sentence1": "Das Opfer wurde bewusstlos gefunden.",
+      "sentence2": "Viele Opfer der Katastrophe brauchen Hilfe."
+    },
+    {
+      "id": 771,
+      "word": "Aussicht",
+      "sentence1": "Die Aussicht von oben ist unglaublich.",
+      "sentence2": "Sie hat eine andere Sicht auf das Thema."
+    },
+    {
+      "id": 772,
+      "word": "Zuschauer",
+      "sentence1": "Der Film zog viele Zuschauer an.",
+      "sentence2": "Als Zuschauer hast du das Recht auf deine Meinung."
+    },
+    {
+      "id": 773,
+      "word": "Gewalttätig",
+      "sentence1": "Der Film enthält gewalttätige Szenen.",
+      "sentence2": "Er hat ein gewalttätiges Temperament."
+    },
+    {
+      "id": 774,
+      "word": "Freiwilliger",
+      "sentence1": "Sie entschied sich, als Freiwillige im örtlichen Tierheim zu arbeiten.",
+      "sentence2": "Für die Veranstaltung werden Freiwillige benötigt."
+    },
+    {
+      "id": 775,
+      "word": "Abstimmung",
+      "sentence1": "Es ist wichtig, bei den Wahlen abzustimmen.",
+      "sentence2": "Sie will zum ersten Mal wählen."
+    },
+    {
+      "id": 776,
+      "word": "warme",
+      "sentence1": "Die Suppe ist warm und tröstlich.",
+      "sentence2": "Sie gab ihm ein warmes Lächeln."
+    },
+    {
+      "id": 777,
+      "word": "warnen",
+      "sentence1": "Ich möchte Sie vor den Gefahren warnen.",
+      "sentence2": "Er wurde gewarnt, nicht dorthin zu gehen."
+    },
+    {
+      "id": 778,
+      "word": "Warnung",
+      "sentence1": "Die Warnung wurde nach dem Sturm ausgegeben.",
+      "sentence2": "Sie ignorierte die Warnzeichen."
+    },
+    {
+      "id": 779,
+      "word": "Abfälle",
+      "sentence1": "Verschwende deine Zeit nicht mit unwichtigen Aufgaben.",
+      "sentence2": "Der Abfall wurde ordnungsgemäß entsorgt."
+    },
+    {
+      "id": 780,
+      "word": "Wasser",
+      "sentence1": "Wasser ist lebenswichtig.",
+      "sentence2": "Sie schüttete Wasser in das Glas."
+    },
+    {
+      "id": 781,
+      "word": "Welle",
+      "sentence1": "Die Welle stieß gegen das Ufer.",
+      "sentence2": "Sie winkte ihren Freunden zum Abschied zu."
+    },
+    {
+      "id": 782,
+      "word": "Waffe",
+      "sentence1": "Der Soldat wurde darin ausgebildet, verschiedene Waffen zu benutzen.",
+      "sentence2": "Die Waffe wurde am Tatort gefunden."
+    },
+    {
+      "id": 783,
+      "word": "Gewicht",
+      "sentence1": "Es ist wichtig, die Vor- und Nachteile abzuwägen.",
+      "sentence2": "Sie wägt sich jeden Morgen."
+    },
+    {
+      "id": 784,
+      "word": "westliche",
+      "sentence1": "Die westlichen Länder haben unterschiedliche Kulturen.",
+      "sentence2": "Der Film spielt in einer westlichen Stadt."
+    },
+    {
+      "id": 785,
+      "word": "Was auch immer",
+      "sentence1": "Tun Sie, was Sie glücklich macht.",
+      "sentence2": "Sie wird dich unterstützen, was auch immer passiert."
+    },
+    {
+      "id": 786,
+      "word": "immer wenn",
+      "sentence1": "Du kannst mich rufen, wenn du Hilfe brauchst.",
+      "sentence2": "Ich bin immer da, wenn du mich brauchst."
+    },
+    {
+      "id": 787,
+      "word": "ob",
+      "sentence1": "Ich weiß nicht, ob ich gehen oder bleiben soll.",
+      "sentence2": "Sie fragte, ob es regnen würde."
+    },
+    {
+      "id": 788,
+      "word": "während",
+      "sentence1": "Ich höre gerne Musik, während ich arbeite.",
+      "sentence2": "Sie las ein Buch, während sie auf den Bus wartete."
+    },
+    {
+      "id": 789,
+      "word": "Ganzes",
+      "sentence1": "Die ganze Familie versammelte sich zum Wiedersehen.",
+      "sentence2": "Er hat die ganze Pizza alleine gegessen."
+    },
+    {
+      "id": 790,
+      "word": "wird",
+      "sentence1": "Ich rufe dich morgen an.",
+      "sentence2": "Sie wird ihre Hausaufgaben später fertig machen."
+    },
+    {
+      "id": 791,
+      "word": "Gewinnen",
+      "sentence1": "Ich hoffe, den Wettbewerb zu gewinnen.",
+      "sentence2": "Sie gewannen das Spiel mit einem großen Vorsprung."
+    },
+    {
+      "id": 792,
+      "word": "Flügel",
+      "sentence1": "Der Vogel breitete seine Flügel aus und flog fort.",
+      "sentence2": "Der Flügel des Flugzeugs war beschädigt."
+    },
+    {
+      "id": 793,
+      "word": "innerhalb",
+      "sentence1": "Die Antwort liegt im Text.",
+      "sentence2": "Sie fand Frieden in sich."
+    },
+    {
+      "id": 794,
+      "word": "Erstaunen",
+      "sentence1": "Ich frage mich, was als Nächstes passieren wird.",
+      "sentence2": "Sie fragte sich, ob er kommen würde."
+    },
+    {
+      "id": 795,
+      "word": "mit einem Quadratmetergewicht",
+      "sentence1": "Dieser Pullover ist aus weicher Wolle.",
+      "sentence2": "Sie kaufte eine Wollkugel zum Stricken."
+    },
+    {
+      "id": 796,
+      "word": "weltweit",
+      "sentence1": "Die Kampagne war weltweit erfolgreich.",
+      "sentence2": "Sie hat Freunde auf der ganzen Welt."
+    },
+    {
+      "id": 797,
+      "word": "Sorgen",
+      "sentence1": "Mach dir keine Sorgen um die Kleinigkeiten.",
+      "sentence2": "Sie macht sich Sorgen um ihre Zukunft."
+    },
+    {
+      "id": 798,
+      "word": "Schlimmer",
+      "sentence1": "Die Situation wird immer schlimmer.",
+      "sentence2": "Sie fühlte sich nach der Nachricht noch schlimmer."
+    },
+    {
+      "id": 799,
+      "word": "Schlimmste",
+      "sentence1": "Das ist der schlimmste Tag aller Zeiten.",
+      "sentence2": "Er hatte das schlechteste Glück im Spiel."
+    },
+    {
+      "id": 800,
+      "word": "Wert",
+      "sentence1": "Dieses Gemälde ist eine Menge Geld wert.",
+      "sentence2": "Es ist die Mühe nicht wert."
+    },
+    {
+      "id": 801,
+      "word": "geschrieben",
+      "sentence1": "Die Regeln sind im Handbuch geschrieben.",
+      "sentence2": "Sie hat eine schriftliche Vereinbarung."
+    },
+    {
+      "id": 802,
+      "word": "Unrecht",
+      "sentence1": "Ich glaube, Sie haben die falsche Nummer.",
+      "sentence2": "Es ist falsch zu lügen."
+    },
+    {
+      "id": 803,
+      "word": "Hof",
+      "sentence1": "Die Kinder spielen auf dem Hof.",
+      "sentence2": "Sie hat einen schönen Garten in ihrem Garten."
+    },
+    {
+      "id": 804,
+      "word": "jung",
+      "sentence1": "Das junge Mädchen lernt Klavier zu spielen.",
+      "sentence2": "Er ist noch jung und hat eine strahlende Zukunft vor sich."
+    },
+    {
+      "id": 805,
+      "word": "Jugend",
+      "sentence1": "Die Jugend ist eine Zeit der Erforschung und des Wachstums.",
+      "sentence2": "Das Programm richtet sich an die Entwicklung junger Menschen."
+    }
+  ]
+}

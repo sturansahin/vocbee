@@ -1,5 +1,5 @@
 import React from 'react';
-import Svg, { Defs, LinearGradient, Stop, Path, Polygon, G } from 'react-native-svg';
+import Svg, { Defs, LinearGradient, Stop, Path, G } from 'react-native-svg';
 
 interface RetryIconProps {
     size?: number;
@@ -22,7 +22,10 @@ export const RetryIcon: React.FC<RetryIconProps> = ({ size = 32 }) => (
                 strokeLinecap="round"
                 fill="none"
             />
-            <Polygon points="330,86 250,20 250,152" fill="url(#retryGrad)" />
+            <Path
+                d="M 313.03,72.00 L 266.97,34.00 Q 250.00,20.00 250.00,42.00 L 250.00,130.00 Q 250.00,152.00 266.97,138.00 L 313.03,100.00 Q 330.00,86.00 313.03,72.00 Z"
+                fill="url(#retryGrad)"
+            />
         </G>
     </Svg>
 );

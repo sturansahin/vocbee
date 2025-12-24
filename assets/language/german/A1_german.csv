@@ -14,7 +14,7 @@ Beratung|Kannst du mir einen Rat geben?|Sein Rat war hilfreich.
 Angst haben|Ich habe Angst vor Spinnen.|Habt keine Angst.
 nach|Treffen wir uns nach der Arbeit.|Nach dem Abendessen sahen wir fern.
 Nachmittag|Guten Tag! - Ich habe eine Nachricht.|Ich schlafe nachmittags.
-Noch einmal .|Sag es noch mal, bitte.|Ich will dich wiedersehen.
+Noch einmal|Sag es noch mal, bitte.|Ich will dich wiedersehen.
 Alter|Wie alt sind Sie?|Sie ist 25.
 Vor langer Zeit|Ich habe ihn vor zwei Jahren kennengelernt.|Sie ist vor einer Stunde gegangen.
 Einverstanden|Ich stimme dir zu.|Stimmen Sie diesem Plan zu?
@@ -31,7 +31,7 @@ eine andere|Kann ich noch ein Stück Kuchen haben?|Sie will noch eine Chance.
 Antwort|Was ist Ihre Antwort?|Ich kenne die Antwort nicht.
 alle|Haben Sie noch Fragen?|Ich habe kein Geld.
 Jeder|Ist da jemand?|Ich kenne hier niemanden.
-- Was auch immer.|Brauchen Sie etwas?|Ich kann nichts finden.
+- Was auch immer|Brauchen Sie etwas?|Ich kann nichts finden.
 Wohnung|Ich wohne in einer kleinen Wohnung.|Die Wohnung ist sehr schön.
 Apfel|Ich esse gerne jeden Tag einen Apfel.|Sie hat einen Apfelkuchen gemacht.
 April|April ist der vierte Monat.|Mein Geburtstag ist im April.
@@ -49,7 +49,7 @@ August|August ist der achte Monat.|Mein Urlaub ist im August.
 Tante|Meine Tante lebt in einer anderen Stadt.|Ich habe letzte Woche meine Tante besucht.
 Herbst|Der Herbst ist meine Lieblingsjahreszeit.|Die Blätter fallen im Herbst.
 weg|Der Laden ist weit weg.|Er ist im Urlaub.
-Schatz.|Das Baby schläft.|Ich habe eine kleine Schwester.
+Schatz|Das Baby schläft.|Ich habe eine kleine Schwester.
 Rücken|Das Buch ist auf dem hinteren Regal.|Er hat sich beim Heben den Rücken verletzt.
 Schlecht|Dieses Essen schmeckt schlecht.|Er hatte einen schlechten Tag.
 Tasche|Ich brauche eine neue Tasche.|Sie packte ihre Tasche für die Reise.
@@ -61,7 +61,7 @@ Baden|Ich bade jeden Abend.|Das Bad ist entspannend.
 Bad|Das Badezimmer ist sauber.|Ich muss auf die Toilette.
 zu sein|Ich will Ärztin werden.|Sie wird glücklich sein.
 Strand|Der Strand ist überfüllt.|Ich liebe den Strand.
-Schön .|Der Sonnenuntergang ist wunderschön.|Sie ist eine wunderschöne Person.
+Schön|Der Sonnenuntergang ist wunderschön.|Sie ist eine wunderschöne Person.
 weil|Ich bin glücklich, weil es sonnig ist.|Sie ist gegangen, weil sie müde war.
 werden|Ich will Arzt werden.|Sie wird eine große Führerin werden.
 Bett|Ich schlafe in meinem Bett.|Das Bett ist bequem.
@@ -113,7 +113,7 @@ aber|Ich mag Tee, aber ich bevorzuge Kaffee.|Er ist groß, aber sein Bruder ist 
 Butter|Ich brauche Butter für das Rezept.|Sie mag Butter auf ihr Brot.
 Kaufen|Ich möchte ein neues Telefon kaufen.|Sie hat gestern ein Kleid gekauft.
 durch|Das Buch wurde von einem berühmten Autor geschrieben.|Ich reise lieber mit dem Zug.
-Auf Wiedersehen .|Ich sagte meinen Freunden Lebewohl.|Sie winkte mir auf dem Flughafen zu.
+Auf Wiedersehen|Ich sagte meinen Freunden Lebewohl.|Sie winkte mir auf dem Flughafen zu.
 Kaffee|Wir treffen uns im Café.|Sie arbeitet in einem kleinen Café.
 Kuchen|Ich habe einen Schokoladenkuchen gebacken.|Sie liebt Erdbeerkuchen.
 Anrufen|Ich ruf dich später an.|Sie hat einen Anruf von ihrer Mutter erhalten.
@@ -156,7 +156,7 @@ Kaffee|Ich trinke gern morgens Kaffee.|Sie bestellte eine Tasse Kaffee im Café.
 kalt|Draußen ist es sehr kalt.|Sie trug eine Jacke, weil es kalt war.
 Hochschule|Er studiert an einem College in London.|Sie will nach der Highschool aufs College gehen.
 Farbe|Was ist deine Lieblingsfarbe?|Sie hat die Wände hellblau gestrichen.
-Kommen Sie !|Bitte komm zu meiner Party.|Sie wird morgen zum Treffen kommen.
+Kommen Sie|Bitte komm zu meiner Party.|Sie wird morgen zum Treffen kommen.
 üblich|Englisch ist eine allgemeine Sprache.|Sie hat ein gemeinsames Interesse an Musik.
 Unternehmen|Er arbeitet für eine große Firma.|Letztes Jahr gründete sie ihre eigene Firma.
 vergleichen|Vergleichen wir unsere Antworten.|Sie verglich die beiden Produkte, bevor sie kaufte.
@@ -180,7 +180,7 @@ Kultur|Ich bin daran interessiert, über verschiedene Kulturen zu lernen.|Sie ge
 Tasse|Ich trinke Tee aus einer Tasse.|Sie kaufte ein Set wunderschöner Tassen.
 Kunden|Der Kunde hat immer recht.|Sie ist eine treue Kundin in diesem Laden.
 Schnitt|Bitte schneide das Papier entlang der Linie.|Sie schnitt den Kuchen in gleiche Stücke.
-Vater !|Mein Vater ist ein toller Koch.|Sie verbringt gerne Zeit mit ihrem Vater.
+Vater|Mein Vater ist ein toller Koch.|Sie verbringt gerne Zeit mit ihrem Vater.
 Tanzen|Ich liebe es, auf Partys zu tanzen.|Sie hat ein Jahr lang Tanzunterricht genommen.
 Tänzerin|Die Tänzerin war wunderschön.|Sie will professionelle Tänzerin werden.
 Tanzen|Tanzen ist eine unterhaltsame Art, Sport zu treiben.|Sie tanzt gerne zu ihren Lieblingssongs.
@@ -189,7 +189,7 @@ Dunkel|Draußen ist es dunkel.|Sie bevorzugt dunkle Schokolade gegenüber Milchs
 Datum|Welches Datum ist heute?|Sie schrieb das Datum auf das Papier.
 Tochter|Meine Tochter ist sehr talentiert.|Sie ist stolz auf die Leistungen ihrer Tochter.
 Tag|Heute ist ein wunderschöner Tag.|Sie plant, sich den ganzen Tag zu entspannen.
-Schatz.|Mein lieber Freund kommt zu Besuch.|Sie schrieb einen Brief an ihre liebe Mutter.
+Schatz|Mein lieber Freund kommt zu Besuch.|Sie schrieb einen Brief an ihre liebe Mutter.
 Dezember|Dezember ist der letzte Monat des Jahres.|Sie liebt die Weihnachtsdekorationen im Dezember.
 entscheiden|Ich muss entscheiden, was ich anziehen soll.|Sie hat beschlossen, eine Pause von der Arbeit zu machen.
 lecker|Dieser Kuchen ist köstlich.|Sie kocht gern leckere Mahlzeiten für ihre Familie.
@@ -215,7 +215,7 @@ Hunde|Mein Hund liebt es, zu holen zu spielen.|Sie hat einen streunenden Hund au
 Dollar|Der Preis ist zwanzig Dollar.|Sie hatte genug Geld gespart, um ein neues Telefon zu kaufen.
 Tür|Bitte schließen Sie die Tür hinter sich.|Sie klopfte an die Tür und wartete auf eine Antwort.
 nach unten|Die Katze sprang vom Regal herunter.|Sie schrieb die Anweisungen auf Papier.
-Nach unten.|Die Waschküche ist unten.|Sie ging runter, um einen Snack zu holen.
+Nach unten|Die Waschküche ist unten.|Sie ging runter, um einen Snack zu holen.
 Ziehen|Ich zeichne gerne in meiner Freizeit.|Sie zeichnete eine wunderschöne Landschaft.
 Kleidung|Sie trug auf der Party ein rotes Kleid.|Das Kleid war im Verkauf.
 Trinken|Ich trinke gern morgens Kaffee.|Sie bot mir ein Glas Wasser an.
@@ -239,16 +239,16 @@ andere|Brauchen Sie noch etwas?|Sie mochte das Kleid nicht, also wählte sie etw
 E-Mail|Ich habe dir eine E-Mail mit den Details geschickt.|Sie checkt jeden Morgen ihre E-Mail.
 Ende|Der Film hatte ein überraschendes Ende.|Sie war traurig, das Ende der Show zu sehen.
 genießen|Ich lese gerne Bücher in meiner Freizeit.|Sie genießt es, im Park spazieren zu gehen.
-Das reicht.|Haben wir genug zu essen für alle?|Sie hatte nicht genug Geld, um das Kleid zu kaufen.
+Das reicht|Haben wir genug zu essen für alle?|Sie hatte nicht genug Geld, um das Kleid zu kaufen.
 Euro|Der Preis beträgt fünfzig Euro.|Sie tauschte Dollars in der Bank gegen Euro um.
 gleichmäßig|Der Test war sogar einfacher, als ich erwartet hatte.|Sie hat sich nicht mal verabschiedet.
 Abend|Ich mag es, mich nach der Arbeit am Abend zu entspannen.|Sie hat heute Abend ein Treffen geplant.
 Ereignis|Die jährliche Veranstaltung findet nächsten Monat statt.|Sie organisiert dieses Jahr die Veranstaltung.
 jemals|Warst du schon mal in Paris?|Sie hat noch nie Sushi probiert.
 jeder|Jeder Schüler muss seine Aufgabe einreichen.|Sie lernt jeden Abend vor der Prüfung.
-Alle zusammen.|Jeder ist zur Party eingeladen.|Sie kennt alle in der Nachbarschaft.
-Alle zusammen.|Jeder sollte mal eine Pause machen.|Sie glaubt, jeder verdient eine zweite Chance.
-Alles .|Am Ende wird alles gut.|Sie packte alles ein, was sie für die Reise brauchte.
+Alle zusammen|Jeder ist zur Party eingeladen.|Sie kennt alle in der Nachbarschaft.
+Alle zusammen|Jeder sollte mal eine Pause machen.|Sie glaubt, jeder verdient eine zweite Chance.
+Alles|Am Ende wird alles gut.|Sie packte alles ein, was sie für die Reise brauchte.
 Prüfung|Ich habe morgen eine Prüfung.|Sie hat hart für die Prüfung gelernt.
 Beispiel|Können Sie mir ein Beispiel geben?|Sie ist ein großartiges Beispiel für eine erfolgreiche Person.
 aufgeregt|Ich freue mich auf das Konzert.|Sie war begeistert, ihren Lieblingsschriftsteller kennenzulernen.
@@ -264,7 +264,7 @@ Herbst|Pass auf, dass du nicht fällst.|Im Herbst fallen die Blätter von den B�
 falsche|Diese Aussage ist falsch.|Sie erkannte, dass ihr Glaube falsch war.
 Familie|Meine Familie ist mir sehr wichtig.|Sie kommt aus einer großen Familie.
 berühmt|Er ist ein berühmter Schauspieler.|Sie will eines Tages berühmt sein.
-Das ist fantastisch.|Die Aussicht von oben ist fantastisch.|Sie hat fantastische Arbeit an dem Projekt geleistet.
+Das ist fantastisch|Die Aussicht von oben ist fantastisch.|Sie hat fantastische Arbeit an dem Projekt geleistet.
 weit|Der Laden ist weit von meinem Haus entfernt.|Sie wohnt weit weg in einer anderen Stadt.
 Landwirtschaft|Sie haben eine Farm auf dem Land.|Sie liebt es, im Sommer die Farm zu besuchen.
 Landwirt|Der Bauer arbeitet hart auf dem Feld.|Sie will einen Bauern heiraten.
@@ -315,7 +315,7 @@ vorne|Das Auto ist vor dem Haus geparkt.|Sie stand ganz vorn in der Schlange.
 Früchte|Ich esse gerne Früchte zum Frühstück.|Sie hat auf dem Markt frisches Obst gekauft.
 voll|Das Glas ist voller Wasser.|Sie hat heute einen vollen Terminkalender.
 Spaß|Wir hatten viel Spaß auf der Party.|Sie genießt Spaß an Aktivitäten im Freien.
-Es ist witzig .|Der Film war wirklich witzig.|Sie hat einen lustigen Sinn für Humor.
+Es ist witzig|Der Film war wirklich witzig.|Sie hat einen lustigen Sinn für Humor.
 Zukunft|Ich freue mich auf die Zukunft.|Sie hat große Pläne für ihre Zukunft.
 Spiel|Ich spiele gerne Videospiele.|Sie hat gestern Abend das Spiel gewonnen.
 Garten|Sie hat einen schönen Garten im Hinterhof.|Sie pflanzt gerne Blumen in ihrem Garten.
@@ -325,18 +325,18 @@ Mädchen|Das Mädchen liest ein Buch.|Sie ist ein kluges Mädchen.
 Freundin|Meine Freundin kommt vorbei.|Sie ist eine unterstützende Freundin.
 geben|Ich möchte dir ein Geschenk machen.|Sie gab mir ein Buch zum Geburtstag.
 Glas|Sei vorsichtig mit dem Glas.|Sie trank Wasser aus einem Glas.
-Gehen Sie.|Ich muss einkaufen.|Sie wird später zur Party gehen.
-gut .|Das ist eine gute Idee.|Sie ist eine gute Schülerin.
-Auf Wiedersehen .|Ich sagte meinem Freund Lebewohl.|Sie winkte auf Wiedersehen, als sie ging.
+Gehen Sie|Ich muss einkaufen.|Sie wird später zur Party gehen.
+gut|Das ist eine gute Idee.|Sie ist eine gute Schülerin.
+Auf Wiedersehen|Ich sagte meinem Freund Lebewohl.|Sie winkte auf Wiedersehen, als sie ging.
 Großvater|Mein Großvater ist sehr weise.|Er erzählt großartige Geschichten über die Vergangenheit.
 Großmutter|Meine Großmutter macht die besten Kekse.|Sie erzählt gerne Geschichten aus ihrer Kindheit.
 Großeltern|Großeltern verwöhnen oft ihre Enkel.|Sie haben eine besondere Bindung zu ihren Enkeln.
-Sehr gut.|Du hast das Projekt großartig gemacht.|Sie hat großartige Ideen für die Zukunft.
+Sehr gut|Du hast das Projekt großartig gemacht.|Sie hat großartige Ideen für die Zukunft.
 Grün|Das Gras ist grün.|Sie trug ein grünes Kleid.
 Grau|Der Himmel ist heute grau.|Sie hat eine graue Katze.
 Gruppe|Wir gründeten eine Studiengruppe.|Sie ist die Anführerin der Gruppe.
 wachsen|Pflanzen brauchen Wasser, um zu wachsen.|Sie sah zu, wie ihre Kinder wuchsen.
-Ich schätze.|Können Sie die Antwort erraten?|Sie hat gut geraten.
+Ich schätze|Können Sie die Antwort erraten?|Sie hat gut geraten.
 Gitarre|Ich liebe es, Gitarre zu spielen.|Sie lernt Gitarre spielen.
 Sportstätte|Ich gehe jeden Morgen ins Fitnessstudio.|Sie trainiert im Fitnessstudio.
 Haare|Sie hat lange Haare.|Ich muss mir die Haare schneiden.
@@ -354,12 +354,12 @@ Kopf|Sie nickte mit dem Kopf.|Er hat Kopfschmerzen.
 Gesundheit|Gesundheit ist sehr wichtig.|Sie macht sich Sorgen um ihre Gesundheit.
 gesund|Obst und Gemüse zu essen gehört zu einer gesunden Ernährung.|Sie sieht gesund und fit aus.
 hören|Ich kann die Musik hören.|Sie hörte ein seltsames Geräusch.
-Hallo , Leute .|Hallo, wie geht es Ihnen?|Sie winkte und sagte hallo.
-Hilfe!|Kannst du mir dabei helfen?|Sie hilft ihren Freunden immer.
+Hallo , Leute|Hallo, wie geht es Ihnen?|Sie winkte und sagte hallo.
+Hilfe|Kannst du mir dabei helfen?|Sie hilft ihren Freunden immer.
 Sie|Das ist ihr Buch.|Ich habe sie im Park gesehen.
-Hier ist es.|Kommen Sie bitte her.|Sie ist gerade nicht hier.
-Hey, hey, hey.|Hey, wie geht's?|Sie sagte Hallo und lächelte.
-Hallo, Leute.|Hi, schön, Sie kennenzulernen!|Sie winkte und sagte hallo.
+Hier ist es|Kommen Sie bitte her.|Sie ist gerade nicht hier.
+Hey, hey, hey|Hey, wie geht's?|Sie sagte Hallo und lächelte.
+Hallo, Leute|Hi, schön, Sie kennenzulernen!|Sie winkte und sagte hallo.
 hoch|Das Gebäude ist sehr hoch.|Sie griff nach dem oberen Regal.
 ihn|Ich habe ihn im Park gesehen.|Sie gab ihm ein Geschenk.
 seine|Das ist sein Auto.|Ich traf seine Schwester.
@@ -409,14 +409,14 @@ Reise|Die Reise war lang und anstrengend.|Sie hat die Reise genossen.
 Saft|Ich hätte gerne etwas Orangensaft.|Sie trinkt jeden Morgen Saft.
 Juli|Juli ist der siebte Monat.|Sie geht gerne im Juli in Urlaub.
 Juni|Juni ist der sechste Monat.|Sie hat im Juni ihren Abschluss gemacht.
-Nur ...|Ich will nur helfen.|Sie ist nur eine Freundin.
+Nur|Ich will nur helfen.|Sie ist nur eine Freundin.
 K|K ist der elfte Buchstabe des Alphabets.|Sie mag den Buchstaben K.
 behalten|Bitte halten Sie die Tür geschlossen.|Sie will ihr Zimmer sauber halten.
 Schlüssel|Ich habe meinen Hausschlüssel verloren.|Sie fand den Schlüssel unter der Matte.
 Kilometer|Der Laden ist fünf Kilometer entfernt.|Sie lief gestern zehn Kilometer.
 Art (Typ)|Was für Musik magst du?|Sie ist ein freundlicher Mensch.
 Küche|Die Küche ist sehr geräumig.|Sie liebt es, in ihrer Küche zu kochen.
-Ich weiß.|Ich kenne die Antwort.|Sie kennt seinen Namen nicht.
+Ich weiß|Ich kenne die Antwort.|Sie kennt seinen Namen nicht.
 Land|Das Land ist sehr fruchtbar.|Sie hat ein Stück Land gekauft.
 Sprache|Englisch ist eine globale Sprache.|Sie spricht drei Sprachen.
 großer|Sie leben in einem großen Haus.|Sie hat eine große Sammlung von Briefmarken.
@@ -440,12 +440,12 @@ wie (findet sb/sth angenehm)|Ich mag diesen Song.|Sie liest gerne vor dem Schlaf
 Linie|Zeichne eine gerade Linie.|Sie stand in der Schlange für Tickets.
 Löwe|Der Löwe ist der König des Dschungels.|Sie sah einen Löwen im Zoo.
 Liste|Ich habe eine Einkaufsliste gemacht.|Sie markierte die Dinge auf ihrer Liste ab.
-Hör zu.|Ich höre gerne Musik.|Sie hörte sich die Anweisungen genau an.
+Hör zu|Ich höre gerne Musik.|Sie hörte sich die Anweisungen genau an.
 wenig|Diese Kiste ist zu klein.|Sie hat einen kleinen Hund.
 leben|Ich lebe in einer kleinen Stadt.|Sie will in der Stadt leben.
 Einheimische|Ich liebe einheimisches Essen.|Sie unterstützt lokale Unternehmen.
 lange|Das ist ein langes Buch.|Sie hatte einen langen Arbeitstag.
-Sieh mal.|Schau auf den Himmel!|Sie schaute aus dem Fenster.
+Sieh mal|Schau auf den Himmel!|Sie schaute aus dem Fenster.
 Verlieren|Ich will meine Schlüssel nicht verlieren.|Sie hat ihr Handy im Einkaufszentrum verloren.
 Teil|Hier sind viele Leute.|Sie hat viele Freunde.
 Liebe|Liebe ist alles, was du brauchst.|Sie fand die Liebe an einem unerwarteten Ort.
@@ -462,8 +462,8 @@ Markt|Ich habe Gemüse auf dem Markt gekauft.|Sie macht gerne ihre Einkäufe auf
 Verheiratet|Sie sind ein Ehepaar.|Sie ist mit einem Arzt verheiratet.
 Spiel (Wettbewerb)|Das Spiel findet morgen statt.|Sie hat letzte Woche das Spiel gewonnen.
 Mai|Mai ist ein schöner Monat.|Sie liebt die Blumen im Mai.
-Vielleicht .|Vielleicht können wir in den Park gehen.|Sie sagte, vielleicht kommt sie zu uns.
-Ich ...|Kannst du mir helfen?|Sie hat mich gestern angerufen.
+Vielleicht|Vielleicht können wir in den Park gehen.|Sie sagte, vielleicht kommt sie zu uns.
+Ich|Kannst du mir helfen?|Sie hat mich gestern angerufen.
 Mehl|Frühstück ist meine Lieblingsmahlzeit.|Sie bereitet jeden Tag eine gesunde Mahlzeit zu.
 Mittelwert|Was bedeutet dieses Wort?|Sie wollte dich nicht verletzen.
 Bedeutung|Der Sinn des Lebens ist eine philosophische Frage.|Sie suchte nach der Bedeutung des Gedichts.
@@ -483,7 +483,7 @@ Fräulein|Ich vermisse meine Familie.|Sie hat den Bus heute Morgen verpasst.
 Fehler|Ich habe einen Fehler beim Test gemacht.|Sie hat aus ihren Fehlern gelernt.
 Modell|Das Auto ist neu.|Sie bevorzugt das neueste Modell.
 Moderne|Das ist ein modernes Gebäude.|Sie mag moderne Kunst.
-Augenblick.|Warten Sie bitte einen Moment.|Sie hat den Moment auf einem Foto festgehalten.
+Augenblick|Warten Sie bitte einen Moment.|Sie hat den Moment auf einem Foto festgehalten.
 Montag|Montag ist der erste Tag der Woche.|Sie hat ein Meeting am Montag.
 Geld|Ich brauche mehr Geld.|Sie hat Geld für einen Urlaub gespart.
 Monat|Der Februar ist der kürzeste Monat.|Sie wurde im Monat Mai geboren.
@@ -501,7 +501,7 @@ Mutter|Meine Mutter ist meine beste Freundin.|Sie ist eine tolle Mutter.
 Museum|Ich besuchte das Kunstmuseum.|Sie liebt es, in Museen zu gehen.
 Musik|Ich höre jeden Tag Musik.|Sie spielt abends Musik.
 muss|Du musst deine Hausaufgaben fertig machen.|Sie muss um 9 Uhr morgens bei der Arbeit sein.
-Ich ...|Das ist mein Buch.|Sie ist meine beste Freundin.
+Ich|Das ist mein Buch.|Sie ist meine beste Freundin.
 Name|- Wie heißt du?|Sie schrieb ihren Namen auf das Papier.
 natürliche|Das ist ein natürliches Produkt.|Sie bevorzugt natürliche Zutaten.
 nahe|Der Laden ist in der Nähe meines Hauses.|Sie wohnt in der Nähe des Parks.
@@ -514,21 +514,21 @@ Neuigkeiten|Ich lese jeden Morgen die Nachrichten.|Sie schaut gerne die Nachrich
 Zeitungen|Ich abonniere eine Tageszeitung.|Sie liest beim Frühstück die Zeitung.
 Nächster|Was ist der nächste Zug?|Sie sitzt im Nebenzimmer.
 neben|Die Bank ist neben der Post.|Sie wohnt neben ihrer besten Freundin.
-Schön .|Das ist ein schöner Ort zum Entspannen.|Sie hat ein schönes Lächeln.
+Schön|Das ist ein schöner Ort zum Entspannen.|Sie hat ein schönes Lächeln.
 Nacht|Ich schaue gern nachts die Sterne an.|Sie arbeitet Nachtschichten.
 neun|Ich habe neun Äpfel.|Sie wurde am 9. Mai geboren.
 neunzehn|Sie ist 19 Jahre alt.|Neunzehn ist meine Lieblingszahl.
 neunzig|Ich habe neunzig Dollar.|Sie wurde 1990 geboren.
-Nein .|Nein, ich will nicht gehen.|Sie sagte Nein zum Angebot.
-Keiner .|Niemand kennt die Antwort.|Sie hatte das Gefühl, niemand verstehe sie.
+Nein|Nein, ich will nicht gehen.|Sie sagte Nein zum Angebot.
+Keiner|Niemand kennt die Antwort.|Sie hatte das Gefühl, niemand verstehe sie.
 Keiner|Niemand ist perfekt.|Sie sagte, niemand hätte sie angerufen.
 Norden|Der Nordpol ist sehr kalt.|Sie lebt im Norden der Stadt.
 Schnauze|Er hat eine große Nase.|Sie kneifte sich die Nase an dem Geruch.
 nicht|Das ist nicht mein Buch.|Sie ist mit den Ergebnissen nicht zufrieden.
 Anmerkung|Bitte nehmen Sie dies zur Kenntnis.|Sie hat eine Notiz auf dem Tisch gelassen.
-Nichts .|Es gibt keinen Grund zur Sorge.|Sie hat während des Treffens nichts gesagt.
+Nichts|Es gibt keinen Grund zur Sorge.|Sie hat während des Treffens nichts gesagt.
 November|Mein Geburtstag ist im November.|Sie liebt den Herbst im November.
-Jetzt .|Ich werde es jetzt tun.|Sie ist jetzt hier.
+Jetzt|Ich werde es jetzt tun.|Sie ist jetzt hier.
 Zahl|Wie lautet Ihre Telefonnummer?|Sie hat eine Glückszahl.
 Krankenschwester|Die Krankenschwester wird Ihnen helfen.|Sie will Krankenschwester werden.
 Gegenstand|Dieses Objekt ist schwer.|Sie fand einen interessanten Gegenstand.
@@ -538,8 +538,8 @@ von|Das Cover des Buches ist blau.|Sie ist eine Freundin von mir.
 abgeschaltet|Die Lichter sind aus.|Sie hat sich den Tag frei genommen.
 Büro|Ich arbeite in einem Büro.|Sie hat ein großes Büro.
 häufig|Ich gehe oft ins Fitnessstudio.|Sie liest oft vor dem Schlafengehen.
-Oh, das ist...|Oh, ich habe dich nicht gesehen.|Das ist interessant!
-Ok, das ist gut.|Ist dieser Platz besetzt?|Sie sagte, es sei in Ordnung, früh zu gehen.
+Oh, das ist|Oh, ich habe dich nicht gesehen.|Das ist interessant!
+Ok, das ist gut|Ist dieser Platz besetzt?|Sie sagte, es sei in Ordnung, früh zu gehen.
 Alter|Mein Großvater ist sehr alt.|Sie hat ein altes Auto.
 auf|Das Buch liegt auf dem Tisch.|Sie ist am Telefon.
 einmal|Ich war einmal dort.|Sie hat es schon einmal gesagt.
@@ -577,7 +577,7 @@ Schreibgerät|Kann ich mir deinen Stift leihen?|Sie schreibt mit einem blauen St
 Bleistift|Ich ziehe es vor, einen Bleistift zu benutzen.|Sie zeichnete eine Skizze mit Bleistift.
 Menschen|Es waren viele Leute bei der Veranstaltung.|Sie trifft gerne neue Leute.
 Pfeffer|Ich mag es, meinem Essen Pfeffer hinzuzufügen.|Sie hat auf dem Markt einen roten Pfeffer gekauft.
-Perfekt .|Das ist die perfekte Lösung.|Sie hat eine perfekte Punktzahl im Test.
+Perfekt|Das ist die perfekte Lösung.|Sie hat eine perfekte Punktzahl im Test.
 Periode|Das ist eine schwierige Zeit für mich.|Sie hat während der Prüfungszeit studiert.
 Person|Er ist ein freundlicher Mensch.|Sie ist die erste Person, die angekommen ist.
 persönlich|Das ist eine persönliche Angelegenheit.|Sie erzählte mir von ihren persönlichen Erfahrungen.
@@ -596,7 +596,7 @@ Flugzeug|Das Flugzeug fliegt hoch.|Sie ist in einem Flugzeug nach New York.
 Pflanze|Ich habe eine Pflanze in meinem Zimmer.|Sie gießt die Pflanze jeden Tag.
 Spielen|Kinder lieben es, draußen zu spielen.|Sie spielt am Wochenende Fußball.
 Spieler|Er ist ein talentierter Spieler.|Sie ist die beste Spielerin im Team.
-Bitte .|Kannst du mir bitte helfen?|Sie sagte ja, bitte.
+Bitte|Kannst du mir bitte helfen?|Sie sagte ja, bitte.
 Punkt|Kannst du diesen Punkt auf der Karte sehen?|Sie brachte einen wichtigen Punkt in der Diskussion zum Ausdruck.
 Polizei|Die Polizei untersucht den Fall.|Sie will Polizistin werden.
 Polizeibeamter|Der Polizist half dem verlorenen Kind.|Sie dankte dem Polizisten für seine Hilfe.
@@ -613,9 +613,9 @@ Praxis|Übung macht perfekt.|Sie braucht mehr Übung, um sich zu verbessern.
 bevorzugen|Ich bevorzuge Tee vor Kaffee.|Sie liest lieber abends Bücher.
 vorbereiten|Ich muss mich auf die Prüfung vorbereiten.|Sie hat ein köstliches Essen zum Abendessen zubereitet.
 Gegenwärtig|Ich möchte Ihnen mein Projekt vorstellen.|Sie präsentierte ihre Ergebnisse auf der Konferenz.
-Schön .|Sie hat ein hübsches Lächeln.|Der Garten ist schön im Frühling.
+Schön|Sie hat ein hübsches Lächeln.|Der Garten ist schön im Frühling.
 Preis|Wie viel kostet dieses Buch?|Sie hat einen guten Preis für ihr neues Auto bekommen.
-Wahrscheinlich .|Es wird wahrscheinlich morgen regnen.|Sie ist wahrscheinlich gerade zu Hause.
+Wahrscheinlich|Es wird wahrscheinlich morgen regnen.|Sie ist wahrscheinlich gerade zu Hause.
 Problematik|Wir müssen dieses Problem lösen.|Sie hatte ein Problem mit ihrem Computer.
 Erzeugnis|Dieses Produkt ist sehr beliebt.|Sie hat ein neues Produkt aus dem Laden gekauft.
 Programm|Ich sehe mir gerade eine neue Sendung im Fernsehen an.|Sie leitet das Ausbildungsprogramm.
@@ -624,7 +624,7 @@ Violett|Meine Lieblingsfarbe ist Lila.|Sie trug ein wunderschönes lila Kleid.
 ausgesetzt|Bitte lege das Buch auf das Regal.|Sie steckte ihr Handy in ihre Tasche.
 Viertel|Ein Viertel des Kuchens ist übrig.|Sie hat einen Vierteldollar für den Bus bezahlt.
 Frage|Darf ich Sie etwas fragen?|Sie hat eine Frage zu den Hausaufgaben.
-Schnell !|Er lernt schnell.|Sie gab eine schnelle Antwort auf die Frage.
+Schnell|Er lernt schnell.|Sie gab eine schnelle Antwort auf die Frage.
 schnell|Bitte mach deine Hausaufgaben schnell fertig.|Sie erkannte schnell ihren Fehler.
 Ruhe|Bitte seien Sie in der Bibliothek ruhig.|Sie genießt die Ruhe auf dem Land.
 ganz|Es ist ziemlich kalt draußen.|Sie ist ziemlich gut in Mathematik.
@@ -633,13 +633,13 @@ Regen|Ich liebe es, dem Geräusch des Regens zuzuhören.|Sie wurde im Regen ohne
 gelesen|Ich lese gerne vor dem Schlafengehen.|Sie liest jede Woche ein Buch.
 Leser|Der Leser ist immer in die Geschichte eingebunden.|Sie ist eine unersättliche Leserin.
 Lesen|Lesen ist eine großartige Art, sich zu entspannen.|Sie liest gerne Krimi.
-Bereit .|Sind Sie bereit zu gehen?|Sie ist bereit für die Prüfung.
+Bereit|Sind Sie bereit zu gehen?|Sie ist bereit für die Prüfung.
 Echt|Das ist ein echter Diamant.|Sie will echte Veränderungen in der Welt sehen.
-Wirklich ?|Ich mag dieses Lied wirklich.|Sie ist wirklich gut in ihrem Job.
+Wirklich|Ich mag dieses Lied wirklich.|Sie ist wirklich gut in ihrem Job.
 Grund|Was ist der Grund für Ihren Besuch?|Sie hat einen guten Grund, zu spät zu kommen.
 Rot|Meine Lieblingsfarbe ist Rot.|Sie trug auf der Party ein rotes Kleid.
-Entspann dich.|Ich entspann mich gerne am Pool.|Sie nimmt ein Bad, um sich zu entspannen.
-Ich erinnere mich.|Bitte denken Sie daran, das Licht auszuschalten.|Sie erinnert sich nicht, wo sie ihre Schlüssel hingelegt hat.
+Entspann dich|Ich entspann mich gerne am Pool.|Sie nimmt ein Bad, um sich zu entspannen.
+Ich erinnere mich|Bitte denken Sie daran, das Licht auszuschalten.|Sie erinnert sich nicht, wo sie ihre Schlüssel hingelegt hat.
 Wiederholen|Kannst du das bitte wiederholen?|Sie musste die Übung mehrmals wiederholen.
 Bericht|Ich muss einen Bericht für die Arbeit schreiben.|Sie hat ihren Bericht pünktlich eingereicht.
 Gaststätte|Lass uns in ein Restaurant zum Abendessen gehen.|Sie arbeitet in einem schicken Restaurant.
@@ -704,7 +704,7 @@ langsam|Fahren Sie bitte langsam.|Sie liest nur langsam.
 Kleiner|Das ist eine kleine Schachtel.|Sie hat einen kleinen Hund.
 Schlange|Ich sah eine Schlange im Garten.|Sie hat Angst vor Schlangen.
 Schnee|Es schneit.|Sie liebt es, im Schnee zu spielen.
-So ist es.|Ich war müde, also ging ich früh ins Bett.|Sie war glücklich, also lächelte sie.
+So ist es|Ich war müde, also ging ich früh ins Bett.|Sie war glücklich, also lächelte sie.
 einige|Ich habe ein paar Ideen.|Sie hat Äpfel gekauft.
 Jemand|Jemand ist an der Tür.|Sie kennt jemanden, der berühmt ist.
 Jemand|Jemand hat seine Tasche vergessen.|Sie sucht jemanden, der ihr hilft.
@@ -713,7 +713,7 @@ manchmal|Ich gehe manchmal spazieren.|Sie besucht manchmal ihre Großeltern.
 Sohn|Mein Sohn spielt draußen.|Sie hat einen Sohn und eine Tochter.
 Lied|Ich liebe diesen Song.|Sie sang ein wunderschönes Lied.
 bald|Ich rufe dich bald an.|Sie wird bald ankommen.
-Tut mir leid .|Es tut mir leid für den Fehler.|Es tat ihr leid, die Neuigkeiten zu hören.
+Tut mir leid|Es tut mir leid für den Fehler.|Es tat ihr leid, die Neuigkeiten zu hören.
 Schall|Was war das für ein Geräusch?|Sie hat einen wunderschönen Gesangsschall.
 Suppe|Ich habe Suppe gemacht.|Sie mag Tomatensuppe.
 Süden|Wir leben im Süden.|Sie ist für den Winter nach Süden gereist.
@@ -732,7 +732,7 @@ Erklärung|Das ist eine eindeutige Aussage.|Sie gab eine Erklärung zu dem Thema
 Bahnhof|Der Zug kommt am Bahnhof an.|Sie wartete am Bahnhof.
 Bleiben|Ich bleibe hier.|Sie hat in einem Hotel übernachtet.
 noch|Ich warte noch.|Sie arbeitet noch daran.
-Aufhören!|Bitte hör auf zu reden.|Sie hat das Auto angehalten.
+Aufhören|Bitte hör auf zu reden.|Sie hat das Auto angehalten.
 Erzählung|Ich liebe diese Geschichte.|Sie erzählte eine lustige Geschichte.
 Straße|Der Laden ist auf der Straße.|Sie wohnt in einer ruhigen Straße.
 stark|Er ist ein starker Mensch.|Sie hat eine starke Meinung.
@@ -746,7 +746,7 @@ Sommer|Der Sommer ist heiß in dieser Region.|Sie liebt die Sommerferien.
 Sonne|Die Sonne scheint hell.|Sie saß in der Sonne.
 Sonntag|Sonntag ist ein Tag der Ruhe.|Sie geht sonntags in die Kirche.
 Supermarkt|Ich muss zum Supermarkt.|Sie kaufte Lebensmittel im Supermarkt.
-Sicher .|Sind Sie sich da sicher?|Sie ist sich ihrer Entscheidung sicher.
+Sicher|Sind Sie sich da sicher?|Sie ist sich ihrer Entscheidung sicher.
 Pullover|Ich habe mir einen neuen Pullover gekauft.|Sie trug einen warmen Pullover.
 Schwimmen|Ich schwimme gerne im Pool.|Sie schwimmt jeden Morgen.
 Schwimmen|Schwimmen ist eine gute Übung.|Sie schwimmt gerne im Ozean.
@@ -765,12 +765,12 @@ Fernsehen|Der Fernseher liegt auf dem Tisch.|Sie schaut jeden Abend fern.
 erzählen|Bitte sagen Sie mir Ihren Namen.|Sie erzählte mir ein Geheimnis.
 Zehn|Ich habe zehn Äpfel.|Sie ist zehn Jahre alt.
 Tennis|Ich spiele gerne Tennis.|Sie spielt am Wochenende Tennis.
-Schrecklich .|Der Film war schrecklich.|Sie hatte eine schreckliche Erfahrung.
+Schrecklich|Der Film war schrecklich.|Sie hatte eine schreckliche Erfahrung.
 Prüfung|Ich habe morgen einen Test.|Sie hat den Test bestanden.
 Schrift|Bitte lesen Sie den Text.|Sie hat eine SMS geschrieben.
 als|Sie ist größer als ihr Bruder.|Dieses Buch ist besser als jenes.
-Danke .|Ich möchte Ihnen danken.|Sie dankte mir für meine Hilfe.
-Danke .|Danke für Ihre Hilfe.|Sie bedankte sich und ging.
+Danke|Ich möchte Ihnen danken.|Sie dankte mir für meine Hilfe.
+Danke|Danke für Ihre Hilfe.|Sie bedankte sich und ging.
 das|Das ist mein Buch.|Sie sagte, dass sie kommen würde.
 die|Die Katze ist auf dem Dach.|Sie mag das blaue Kleid.
 Theater|Wir gehen ins Theater.|Sie liebt es, Theaterstücke zu sehen.
@@ -800,8 +800,8 @@ zusammen|Wir werden zusammenarbeiten.|Sie spielt gerne Spiele mit ihren Freunden
 Toilette|Wo ist die Toilette?|Sie ging vor dem Film auf die Toilette.
 Tomaten|Ich brauche eine Tomate für den Salat.|Sie hat auf dem Markt eine Tomate gekauft.
 Morgen früh|Ich rufe dich morgen an.|Sie hat morgen ein Meeting.
-Heute Abend .|Ich habe Pläne für heute Abend.|Sie bleibt heute Nacht zu Hause.
-Auch .|Ich will auch mit.|Sie kommt auch.
+Heute Abend|Ich habe Pläne für heute Abend.|Sie bleibt heute Nacht zu Hause.
+Auch|Ich will auch mit.|Sie kommt auch.
 Zahn|Mein Zahn tut weh.|Sie hat einen Hohlraum in ihrem Zahn.
 Thema|Was ist das Thema der Diskussion?|Sie führte ein neues Thema ein.
 Tourist|Der Tourist hat viele Fotos gemacht.|Sie ist eine Touristin in der Stadt.
@@ -826,11 +826,11 @@ Typ|Was für Musik magst du?|Sie bevorzugt eine andere Art von Buch.
 Regenschirm|Vergiss nicht deinen Regenschirm.|Sie hat einen neuen Regenschirm gekauft.
 Onkel|Mein Onkel lebt in New York.|Sie hat letzten Sommer ihren Onkel besucht.
 unter|Die Katze ist unter dem Tisch.|Sie fand ihre Schlüssel unter der Couch.
-Ich verstehe.|Ich verstehe die Frage nicht.|Sie versteht das Problem.
+Ich verstehe|Ich verstehe die Frage nicht.|Sie versteht das Problem.
 Hochschule|Sie studiert an der Universität.|Er hat seinen Abschluss an der Universität gemacht.
 bis|Ich werde warten, bis du ankommst.|Sie blieb bis zum Ende der Show.
 aufstehen|Die Katze kletterte auf den Baum.|Sie blickte in den Himmel.
-Nach oben .|Das Schlafzimmer ist oben.|Sie ging nach oben, um zu lernen.
+Nach oben|Das Schlafzimmer ist oben.|Sie ging nach oben, um zu lernen.
 uns|Kannst du uns helfen?|Sie hat uns zu ihrer Party eingeladen.
 Verwendung|Ich muss den Computer benutzen.|Sie benutzt viele Apps auf ihrem Handy.
 nützlich|Dieses Buch ist sehr nützlich.|Sie fand die Informationen nützlich.
@@ -842,7 +842,7 @@ Video|Ich habe ein lustiges Video im Internet gesehen.|Sie macht gerne Videos.
 Dorf|Er wuchs in einem kleinen Dorf auf.|Sie besuchte ihre Großeltern im Dorf.
 Besuch|Ich werde morgen meinen Freund besuchen.|Sie hat letzte Woche das Museum besucht.
 Besucher|Der Besucher stellte viele Fragen.|Sie besucht das Museum häufig.
-Warten Sie.|Ich werde auf dich warten.|Sie hat eine Stunde gewartet.
+Warten Sie|Ich werde auf dich warten.|Sie hat eine Stunde gewartet.
 Bedienung|Der Kellner nahm unsere Bestellung entgegen.|Sie hat früher als Kellnerin gearbeitet.
 Aufwachen|Ich wache um 7 Uhr auf.|Sie ist heute spät aufgewacht.
 gehen|Ich gehe gerne im Park spazieren.|Sie bringt ihren Hund jeden Morgen spazieren.
@@ -863,13 +863,13 @@ Wochenende|Ich liebe es, am Wochenende zu entspannen.|Sie hat Pläne für das Wo
 Willkommen|Willkommen in unserem Zuhause!|Sie hat die Gäste willkommen geheißen.
 gut|Ich hoffe, es geht Ihnen gut.|Sie fühlt sich heute gut.
 Westen|Die Sonne geht im Westen unter.|Sie ist an die Westküste gereist.
-Was ist ?|- Wie heißt du?|Sie hat gefragt, wie spät es ist.
+Was ist|- Wie heißt du?|Sie hat gefragt, wie spät es ist.
 wenn|Wann hast du Geburtstag?|Sie hat nicht gesagt, wann sie ankommen würde.
 wo|Wo wohnen Sie?|Sie fragte, wo der nächste Bahnhof sei.
 die|Welches Buch möchtest du?|Sie hat nicht gesagt, welches Kleid sie mag.
 Weiß|Die weiße Katze schläft.|Sie hat ein weißes Kleid gekauft.
 Wer ist|Wer ist dein bester Freund?|Sie hat nicht gesagt, mit wem sie zusammen war.
-Warum ?|Warum bist du traurig?|Sie fragte, warum ich zu spät komme.
+Warum|Warum bist du traurig?|Sie fragte, warum ich zu spät komme.
 Ehefrau|Meine Frau ist Ärztin.|Sie ist seine Frau.
 wird|Ich rufe dich morgen an.|Sie sagte, sie würde uns helfen.
 Gewinnen|Ich hoffe, das Spiel zu gewinnen.|Sie gewann einen Preis im Wettbewerb.
@@ -879,7 +879,7 @@ Winter|Der Winter ist meine Lieblingsjahreszeit.|Sie genießt es, im Winter Ski 
 mit|Ich ging mit meinem Freund einkaufen.|Sie studiert mit ihren Klassenkameraden.
 ohne|Ich kann nicht ohne dich leben.|Sie vollendete das Projekt ohne Hilfe.
 Frau|Die Frau liest ein Buch.|Sie ist eine starke Frau.
-Das ist wunderbar.|Du hast einen tollen Job gemacht!|Sie hat ein wunderbares Lächeln.
+Das ist wunderbar|Du hast einen tollen Job gemacht!|Sie hat ein wunderbares Lächeln.
 Wort|Kannst du das Wort buchstabieren?|Sie suchte das Wort im Wörterbuch nach.
 Arbeit|Ich muss heute Abend bis spät arbeiten.|Sie sucht eine neue Arbeit.
 Arbeiter|Der Arbeiter repariert die Straße.|Sie ist eine fleißige Arbeiterin.
@@ -889,10 +889,10 @@ schreiben|Ich schreibe gerne Geschichten.|Sie schreibt einen Brief.
 Schriftsteller|Er ist ein berühmter Schriftsteller.|Sie will Schriftstellerin werden.
 Schreiben|Schreiben ist mein Hobby.|Sie schreibt gerne in ihrer Freizeit.
 Unrecht|Das ist die falsche Antwort.|Sie erkannte, dass sie sich geirrt hatte.
-Ja, das stimmt.|Ja, ich stimme dir zu.|Sie sagte Ja zum Antrag.
+Ja, das stimmt|Ja, ich stimme dir zu.|Sie sagte Ja zum Antrag.
 Jahr|Dieses Jahr war eine Herausforderung.|Sie hat letztes Jahr ihren Abschluss gemacht.
 gelb|Die gelbe Blume ist wunderschön.|Sie trug ein gelbes Kleid.
-Ja, das stimmt.|Ja, das verstehe ich.|Sie hat der Einladung zugestimmt.
+Ja, das stimmt|Ja, das verstehe ich.|Sie hat der Einladung zugestimmt.
 Gestern|Ich habe sie gestern gesehen.|Sie hat mich gestern angerufen.
 Sie|Du bist mein bester Freund.|Sie sagte, du kommst.
 jung|Der Junge spielt.|Sie ist jung und talentiert.

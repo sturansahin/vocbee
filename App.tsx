@@ -16,6 +16,7 @@ import { LoginScreen, SignUpScreen } from './screens/AuthScreens';
 import { SetupScreen } from './screens/SetupScreens';
 import HomeScreen from './screens/HomeScreen';
 import SettingsScreen from './screens/SettingsScreen';
+import FavoritesScreen from './screens/FavoritesScreen';
 import ExampleSentencesScreen from './screens/ExampleSentencesScreen';
 import LevelTestScreen from './screens/LevelTestScreen';
 
@@ -74,6 +75,9 @@ export default function App() {
 
             {/* Settings Screen */}
             <Stack.Screen name="Settings" component={SettingsScreen} />
+
+            {/* Favorites Screen */}
+            <Stack.Screen name="Favorites" component={FavoritesScreen} />
 
             {/* Detail Screens */}
             <Stack.Screen name="ExampleSentences" component={ExampleSentencesScreen} />

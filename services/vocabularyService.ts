@@ -2,38 +2,164 @@
  * Vocabulary Service
  * 
  * Manages vocabulary data loading and storage for language learning.
- * Combines native and target language data for flashcard display.
+ * Uses LEVEL-BASED files for better performance (e.g., english_A1.json)
  */
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Asset } from 'expo-asset';
+import * as FileSystem from 'expo-file-system';
 
-// Vocabulary loaders - each loader is invoked only when needed
-// This prevents Metro from bundling all JSON files at startup
-const getVocabularyLoader = (language: string): (() => any) | null => {
-    switch (language) {
-        case 'amharic': return () => require('../assets/vocabulary/amharic.json');
-        case 'arabic': return () => require('../assets/vocabulary/arabic.json');
-        case 'chinese': return () => require('../assets/vocabulary/chinese.json');
-        case 'english': return () => require('../assets/vocabulary/english.json');
-        case 'french': return () => require('../assets/vocabulary/french.json');
-        case 'german': return () => require('../assets/vocabulary/german.json');
-        case 'hindi': return () => require('../assets/vocabulary/hindi.json');
-        case 'indonesian': return () => require('../assets/vocabulary/indonesian.json');
-        case 'italian': return () => require('../assets/vocabulary/italian.json');
-        case 'japanese': return () => require('../assets/vocabulary/japanese.json');
-        case 'korean': return () => require('../assets/vocabulary/korean.json');
-        case 'persian': return () => require('../assets/vocabulary/persian.json');
-        case 'portuguese': return () => require('../assets/vocabulary/portuguese.json');
-        case 'russian': return () => require('../assets/vocabulary/russian.json');
-        case 'serbian': return () => require('../assets/vocabulary/serbian.json');
-        case 'spanish': return () => require('../assets/vocabulary/spanish.json');
-        case 'swahili': return () => require('../assets/vocabulary/swahili.json');
-        case 'thai': return () => require('../assets/vocabulary/thai.json');
-        case 'turkish': return () => require('../assets/vocabulary/turkish.json');
-        case 'urdu': return () => require('../assets/vocabulary/urdu.json');
-        case 'vietnamese': return () => require('../assets/vocabulary/vietnamese.json');
-        default: return null;
-    }
+// Vocabulary assets organized by language.
+// NOTE: Vocabulary files are stored as text assets (JSON content) to avoid Metro bundling/parsing
+// huge JSON modules during development.
+const VOCABULARY_ASSETS: Record<string, Partial<Record<Level, number>>> = {
+    english: {
+        A1: require('../assets/vocabulary/english_A1.txt'),
+        A2: require('../assets/vocabulary/english_A2.txt'),
+        B1: require('../assets/vocabulary/english_B1.txt'),
+        B2: require('../assets/vocabulary/english_B2.txt'),
+        C1: require('../assets/vocabulary/english_C1.txt'),
+    },
+    turkish: {
+        A1: require('../assets/vocabulary/turkish_A1.txt'),
+        A2: require('../assets/vocabulary/turkish_A2.txt'),
+        B1: require('../assets/vocabulary/turkish_B1.txt'),
+        B2: require('../assets/vocabulary/turkish_B2.txt'),
+        C1: require('../assets/vocabulary/turkish_C1.txt'),
+    },
+    german: {
+        A1: require('../assets/vocabulary/german_A1.txt'),
+        A2: require('../assets/vocabulary/german_A2.txt'),
+        B1: require('../assets/vocabulary/german_B1.txt'),
+        B2: require('../assets/vocabulary/german_B2.txt'),
+        C1: require('../assets/vocabulary/german_C1.txt'),
+    },
+    french: {
+        A1: require('../assets/vocabulary/french_A1.txt'),
+        A2: require('../assets/vocabulary/french_A2.txt'),
+        B1: require('../assets/vocabulary/french_B1.txt'),
+        B2: require('../assets/vocabulary/french_B2.txt'),
+        C1: require('../assets/vocabulary/french_C1.txt'),
+    },
+    spanish: {
+        A1: require('../assets/vocabulary/spanish_A1.txt'),
+        A2: require('../assets/vocabulary/spanish_A2.txt'),
+        B1: require('../assets/vocabulary/spanish_B1.txt'),
+        B2: require('../assets/vocabulary/spanish_B2.txt'),
+        C1: require('../assets/vocabulary/spanish_C1.txt'),
+    },
+    italian: {
+        A1: require('../assets/vocabulary/italian_A1.txt'),
+        A2: require('../assets/vocabulary/italian_A2.txt'),
+        B1: require('../assets/vocabulary/italian_B1.txt'),
+        B2: require('../assets/vocabulary/italian_B2.txt'),
+        C1: require('../assets/vocabulary/italian_C1.txt'),
+    },
+    portuguese: {
+        A1: require('../assets/vocabulary/portuguese_A1.txt'),
+        A2: require('../assets/vocabulary/portuguese_A2.txt'),
+        B1: require('../assets/vocabulary/portuguese_B1.txt'),
+        B2: require('../assets/vocabulary/portuguese_B2.txt'),
+        C1: require('../assets/vocabulary/portuguese_C1.txt'),
+    },
+    russian: {
+        A1: require('../assets/vocabulary/russian_A1.txt'),
+        A2: require('../assets/vocabulary/russian_A2.txt'),
+        B1: require('../assets/vocabulary/russian_B1.txt'),
+        B2: require('../assets/vocabulary/russian_B2.txt'),
+        C1: require('../assets/vocabulary/russian_C1.txt'),
+    },
+    japanese: {
+        A1: require('../assets/vocabulary/japanese_A1.txt'),
+        A2: require('../assets/vocabulary/japanese_A2.txt'),
+        B1: require('../assets/vocabulary/japanese_B1.txt'),
+        B2: require('../assets/vocabulary/japanese_B2.txt'),
+        C1: require('../assets/vocabulary/japanese_C1.txt'),
+    },
+    korean: {
+        A1: require('../assets/vocabulary/korean_A1.txt'),
+        A2: require('../assets/vocabulary/korean_A2.txt'),
+        B1: require('../assets/vocabulary/korean_B1.txt'),
+        B2: require('../assets/vocabulary/korean_B2.txt'),
+        C1: require('../assets/vocabulary/korean_C1.txt'),
+    },
+    chinese: {
+        A1: require('../assets/vocabulary/chinese_A1.txt'),
+        A2: require('../assets/vocabulary/chinese_A2.txt'),
+        B1: require('../assets/vocabulary/chinese_B1.txt'),
+        B2: require('../assets/vocabulary/chinese_B2.txt'),
+        C1: require('../assets/vocabulary/chinese_C1.txt'),
+    },
+    arabic: {
+        A1: require('../assets/vocabulary/arabic_A1.txt'),
+        A2: require('../assets/vocabulary/arabic_A2.txt'),
+        B1: require('../assets/vocabulary/arabic_B1.txt'),
+        B2: require('../assets/vocabulary/arabic_B2.txt'),
+        C1: require('../assets/vocabulary/arabic_C1.txt'),
+    },
+    hindi: {
+        A1: require('../assets/vocabulary/hindi_A1.txt'),
+        A2: require('../assets/vocabulary/hindi_A2.txt'),
+        B1: require('../assets/vocabulary/hindi_B1.txt'),
+        B2: require('../assets/vocabulary/hindi_B2.txt'),
+        C1: require('../assets/vocabulary/hindi_C1.txt'),
+    },
+    indonesian: {
+        A1: require('../assets/vocabulary/indonesian_A1.txt'),
+        A2: require('../assets/vocabulary/indonesian_A2.txt'),
+        B1: require('../assets/vocabulary/indonesian_B1.txt'),
+        B2: require('../assets/vocabulary/indonesian_B2.txt'),
+        C1: require('../assets/vocabulary/indonesian_C1.txt'),
+    },
+    persian: {
+        A1: require('../assets/vocabulary/persian_A1.txt'),
+        A2: require('../assets/vocabulary/persian_A2.txt'),
+        B1: require('../assets/vocabulary/persian_B1.txt'),
+        B2: require('../assets/vocabulary/persian_B2.txt'),
+        C1: require('../assets/vocabulary/persian_C1.txt'),
+    },
+    serbian: {
+        A1: require('../assets/vocabulary/serbian_A1.txt'),
+        A2: require('../assets/vocabulary/serbian_A2.txt'),
+        B1: require('../assets/vocabulary/serbian_B1.txt'),
+        B2: require('../assets/vocabulary/serbian_B2.txt'),
+        C1: require('../assets/vocabulary/serbian_C1.txt'),
+    },
+    swahili: {
+        A1: require('../assets/vocabulary/swahili_A1.txt'),
+        A2: require('../assets/vocabulary/swahili_A2.txt'),
+        B1: require('../assets/vocabulary/swahili_B1.txt'),
+        B2: require('../assets/vocabulary/swahili_B2.txt'),
+        C1: require('../assets/vocabulary/swahili_C1.txt'),
+    },
+    thai: {
+        A1: require('../assets/vocabulary/thai_A1.txt'),
+        A2: require('../assets/vocabulary/thai_A2.txt'),
+        B1: require('../assets/vocabulary/thai_B1.txt'),
+        B2: require('../assets/vocabulary/thai_B2.txt'),
+        C1: require('../assets/vocabulary/thai_C1.txt'),
+    },
+    urdu: {
+        A1: require('../assets/vocabulary/urdu_A1.txt'),
+        A2: require('../assets/vocabulary/urdu_A2.txt'),
+        B1: require('../assets/vocabulary/urdu_B1.txt'),
+        B2: require('../assets/vocabulary/urdu_B2.txt'),
+        C1: require('../assets/vocabulary/urdu_C1.txt'),
+    },
+    vietnamese: {
+        A1: require('../assets/vocabulary/vietnamese_A1.txt'),
+        A2: require('../assets/vocabulary/vietnamese_A2.txt'),
+        B1: require('../assets/vocabulary/vietnamese_B1.txt'),
+        B2: require('../assets/vocabulary/vietnamese_B2.txt'),
+        C1: require('../assets/vocabulary/vietnamese_C1.txt'),
+    },
+    amharic: {
+        A1: require('../assets/vocabulary/amharic_A1.txt'),
+        A2: require('../assets/vocabulary/amharic_A2.txt'),
+        B1: require('../assets/vocabulary/amharic_B1.txt'),
+        B2: require('../assets/vocabulary/amharic_B2.txt'),
+        C1: require('../assets/vocabulary/amharic_C1.txt'),
+    },
 };
 
 // Cache for loaded vocabulary data
@@ -73,26 +199,29 @@ export function getFirstLevelForUserLevel(userLevel: string): Level {
     return levels[0];
 }
 
-/**
- * Load vocabulary data for a language (lazy loaded)
- */
-function loadVocabularyData(language: string): any {
-    if (vocabularyCache[language]) {
-        return vocabularyCache[language];
+async function loadLevelVocabularyData(language: string, level: Level): Promise<any> {
+    const cacheKey = `${language}_${level}`;
+
+    if (vocabularyCache[cacheKey]) {
+        return vocabularyCache[cacheKey];
     }
 
-    const loader = getVocabularyLoader(language);
-    if (!loader) {
-        console.warn(`No vocabulary loader for ${language}`);
+    const moduleId = VOCABULARY_ASSETS[language]?.[level];
+    if (!moduleId) {
+        console.warn(`No vocabulary asset for ${language}_${level}`);
         return null;
     }
 
     try {
-        const data = loader();
-        vocabularyCache[language] = data;
+        const asset = Asset.fromModule(moduleId);
+        await asset.downloadAsync();
+        const uri = asset.localUri ?? asset.uri;
+        const raw = await FileSystem.readAsStringAsync(uri);
+        const data = JSON.parse(raw);
+        vocabularyCache[cacheKey] = data;
         return data;
     } catch (error) {
-        console.error(`Error loading vocabulary for ${language}:`, error);
+        console.error(`Error loading vocabulary for ${language}_${level}:`, error);
         return null;
     }
 }
@@ -100,35 +229,38 @@ function loadVocabularyData(language: string): any {
 /**
  * Get vocabulary data for a specific language and level
  */
-export function getLanguageVocabulary(language: string, level: Level): VocabularyWord[] | null {
-    const data = loadVocabularyData(language);
-    if (!data || !data[level]) {
-        console.warn(`No vocabulary data for ${language} - ${level}`);
+export async function getLanguageVocabulary(
+    language: string,
+    level: Level
+): Promise<VocabularyWord[] | null> {
+    const data = await loadLevelVocabularyData(language, level);
+    if (!data || !data.words) {
+        console.warn(`No vocabulary data for ${language}_${level}`);
         return null;
     }
-    return data[level].words;
+    return data.words;
 }
 
 /**
  * Merge native and target language vocabulary
- * Creates a combined vocabulary with words from target language and translations from native
  */
-export function mergeVocabulary(
+export async function mergeVocabulary(
     nativeLanguage: string,
     targetLanguage: string,
     level: Level
-): VocabularyWord[] {
-    const targetWords = getLanguageVocabulary(targetLanguage, level);
-    const nativeWords = getLanguageVocabulary(nativeLanguage, level);
+): Promise<VocabularyWord[]> {
+    const [targetWords, nativeWords] = await Promise.all([
+        getLanguageVocabulary(targetLanguage, level),
+        getLanguageVocabulary(nativeLanguage, level),
+    ]);
 
     if (!targetWords) {
-        console.warn(`No target vocabulary for ${targetLanguage} - ${level}`);
+        console.warn(`No target vocabulary for ${targetLanguage}_${level}`);
         return [];
     }
 
     if (!nativeWords) {
-        console.warn(`No native vocabulary for ${nativeLanguage} - ${level}`);
-        // Return target words without translation
+        console.warn(`No native vocabulary for ${nativeLanguage}_${level}`);
         return targetWords.map(word => ({
             ...word,
             translation: word.word,
@@ -137,7 +269,6 @@ export function mergeVocabulary(
         }));
     }
 
-    // Merge words by index (they should have matching IDs)
     const mergedWords: VocabularyWord[] = [];
 
     for (let i = 0; i < targetWords.length && i < nativeWords.length; i++) {
@@ -158,77 +289,92 @@ export function mergeVocabulary(
     return mergedWords;
 }
 
+// Storage keys
+const VOCABULARY_KEY = '@vocabulary';
+const NATIVE_LANGUAGE_KEY = '@native_language';
+const TARGET_LANGUAGE_KEY = '@target_language';
+
 /**
- * Generate and save all level vocabularies for a language pair
+ * Generate and store vocabulary for a user's language pair
  */
-export async function generateAllVocabulary(
+export async function generateVocabulary(
     nativeLanguage: string,
     targetLanguage: string
 ): Promise<void> {
-    console.log(`Generating vocabulary: ${nativeLanguage} -> ${targetLanguage}`);
+    try {
+        console.log(`Generating vocabulary: ${nativeLanguage} -> ${targetLanguage}`);
 
-    for (const level of LEVELS) {
-        const vocabulary = mergeVocabulary(nativeLanguage, targetLanguage, level);
-        const key = `@vocabulary_${level}`;
+        await AsyncStorage.setItem(NATIVE_LANGUAGE_KEY, nativeLanguage);
+        await AsyncStorage.setItem(TARGET_LANGUAGE_KEY, targetLanguage);
 
-        try {
-            await AsyncStorage.setItem(key, JSON.stringify(vocabulary));
-            console.log(`Saved ${vocabulary.length} words for ${level}`);
-        } catch (error) {
-            console.error(`Error saving vocabulary for ${level}:`, error);
+        const allVocabulary: { [level: string]: VocabularyWord[] } = {};
+
+        for (const level of LEVELS) {
+            const merged = await mergeVocabulary(nativeLanguage, targetLanguage, level);
+            allVocabulary[level] = merged;
+            console.log(`  ${level}: ${merged.length} words`);
         }
-    }
 
-    // Save language settings
-    await AsyncStorage.setItem('@native_language', nativeLanguage);
-    await AsyncStorage.setItem('@target_language', targetLanguage);
+        await AsyncStorage.setItem(VOCABULARY_KEY, JSON.stringify(allVocabulary));
+        console.log('Vocabulary saved to storage');
+    } catch (error) {
+        console.error('Error generating vocabulary:', error);
+        throw error;
+    }
 }
 
 /**
- * Get vocabulary for a specific level from storage
+ * Get stored vocabulary for a specific level
  */
 export async function getStoredVocabulary(level: Level): Promise<VocabularyWord[]> {
     try {
-        const key = `@vocabulary_${level}`;
-        const data = await AsyncStorage.getItem(key);
-
-        if (data) {
-            return JSON.parse(data);
+        const data = await AsyncStorage.getItem(VOCABULARY_KEY);
+        if (!data) {
+            console.warn('No stored vocabulary found');
+            return [];
         }
 
-        return [];
+        const vocabulary = JSON.parse(data);
+        return vocabulary[level] || [];
     } catch (error) {
-        console.error(`Error loading vocabulary for ${level}:`, error);
+        console.error('Error getting stored vocabulary:', error);
         return [];
     }
 }
 
 /**
- * Get current language settings
- */
-export async function getLanguageSettings(): Promise<{
-    nativeLanguage: string | null;
-    targetLanguage: string | null;
-}> {
-    const nativeLanguage = await AsyncStorage.getItem('@native_language');
-    const targetLanguage = await AsyncStorage.getItem('@target_language');
-
-    return { nativeLanguage, targetLanguage };
-}
-
-/**
- * Check if vocabulary is already generated
+ * Check if vocabulary has been generated
  */
 export async function isVocabularyGenerated(): Promise<boolean> {
-    const { nativeLanguage, targetLanguage } = await getLanguageSettings();
-    if (!nativeLanguage || !targetLanguage) return false;
-
-    const vocabulary = await getStoredVocabulary('A1');
-    return vocabulary.length > 0;
+    try {
+        const data = await AsyncStorage.getItem(VOCABULARY_KEY);
+        return data !== null;
+    } catch (error) {
+        console.error('Error checking vocabulary:', error);
+        return false;
+    }
 }
 
 /**
- * Shuffle array using Fisher-Yates algorithm
+ * Get the stored language pair
+ */
+export async function getLanguagePair(): Promise<{ native: string; target: string } | null> {
+    try {
+        const native = await AsyncStorage.getItem(NATIVE_LANGUAGE_KEY);
+        const target = await AsyncStorage.getItem(TARGET_LANGUAGE_KEY);
+
+        if (native && target) {
+            return { native, target };
+        }
+        return null;
+    } catch (error) {
+        console.error('Error getting language pair:', error);
+        return null;
+    }
+}
+
+/**
+ * Shuffle an array randomly (Fisher-Yates algorithm)
  */
 export function shuffleArray<T>(array: T[]): T[] {
     const shuffled = [...array];
@@ -237,4 +383,18 @@ export function shuffleArray<T>(array: T[]): T[] {
         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
     }
     return shuffled;
+}
+
+/**
+ * Clear all vocabulary data
+ */
+export async function clearVocabulary(): Promise<void> {
+    try {
+        await AsyncStorage.removeItem(VOCABULARY_KEY);
+        await AsyncStorage.removeItem(NATIVE_LANGUAGE_KEY);
+        await AsyncStorage.removeItem(TARGET_LANGUAGE_KEY);
+        console.log('Vocabulary cleared');
+    } catch (error) {
+        console.error('Error clearing vocabulary:', error);
+    }
 }

@@ -17,7 +17,7 @@ akurasi|Akurasi informasi sangat penting.|Kita perlu memastikan keakuratan data 
 tepat|Informasi yang diberikan adalah akurat.|Kita harus tepat dalam pengukuran kita.
 dengan tepat|Dia menjawab pertanyaan dengan akurat.|Data dicatat dengan akurat.
 menuduh|Mereka menuduhnya mencuri.|Dia dituduh berbohong.
-Akui|Dia mengakui kesalahannya.|Kita harus mengakui kontribusi orang lain.
+akui|Dia mengakui kesalahannya.|Kita harus mengakui kontribusi orang lain.
 mendapatkan|Dia berhasil memperoleh pengetahuan bahasa Inggris yang baik.|Perusahaan berencana untuk memperoleh teknologi baru.
 satu hektar|Peternakan ini mencakup area seluas 100 hektar.|Dia membeli satu hektar tanah.
 mengaktifkan|Anda harus mengaktifkan akun Anda sebelum menggunakannya.|Perangkat lunak akan diaktifkan secara otomatis.
@@ -41,7 +41,7 @@ lembaga|Dia bekerja untuk agen perjalanan.|Agensi ini bertanggung jawab untuk me
 agenda|Agenda untuk pertemuan itu didistribusikan sebelumnya.|Kita perlu menambahkan item ini ke agenda.
 agresif|Perilaku agresifnya mengkhawatirkan.|Perusahaan mengadopsi strategi pemasaran yang agresif.
 pertanian|Pertanian sangat penting bagi perekonomian.|Kemajuan dalam pertanian telah meningkatkan produksi makanan.
-Bantuan|Mereka memberikan bantuan kepada para korban bencana.|Organisasi ini bertujuan untuk memberikan bantuan medis.
+bantuan|Mereka memberikan bantuan kepada para korban bencana.|Organisasi ini bertujuan untuk memberikan bantuan medis.
 AIDS|AIDS adalah masalah kesehatan yang serius.|Pendidikan adalah kunci untuk mencegah AIDS.
 pesawat|Pesawat siap untuk lepas landas.|Pesawat militer sering digunakan dalam konflik.
 alarm|Aku mengatur alarm untuk jam 7 pagi.|Alarm kebakaran berbunyi tak terduga.
@@ -51,7 +51,7 @@ mengubah|Anda dapat mengubah dokumen sesuai kebutuhan.|Kursus ini diubah agar le
 sama sekali|Proyek ini sama sekali berhasil.|Kita harus memikirkan kembali strategi kita.
 ambisius|Dia adalah seorang wanita muda yang ambisius.|Rencananya yang ambisius membuat semua orang terkesan.
 ambulans|Ambulans tiba dengan cepat di tempat kejadian.|Dia dibawa ke rumah sakit dengan ambulans.
-Jumlah|Jumlah air di tangki rendah.|Silahkan tentukan jumlah yang Anda butuhkan.
+jumlah|Jumlah air di tangki rendah.|Silahkan tentukan jumlah yang Anda butuhkan.
 lucu|Film itu cukup menghibur.|Dia punya cara menghibur untuk menceritakan cerita.
 analis|Analis memberikan wawasan berharga.|Dia bekerja sebagai analis keuangan.
 nenek moyang|Nenek moyangku berasal dari Italia.|Kita harus menghormati nenek moyang kita.
@@ -64,9 +64,9 @@ setiap tahun|Acara ini diselenggarakan setiap tahun di musim semi.|Kami meninjau
 mengantisipasi|Kami mengantisipasi respon positif terhadap usulan kami.|Dia mengantisipasi tantangan di masa depan.
 kegelisahan|Dia merasa cemas sebelum ujian.|Kekhawatiran dapat menyerang siapa saja, di usia berapa pun.
 cemas|Dia cemas tentang wawancara yang akan datang.|Dia merasa cemas menunggu hasilnya.
-Maafkan aku.|Aku berutang maaf padamu atas kesalahanku.|Dia menerima permintaan maafnya dengan baik hati.
+maafkan aku|Aku berutang maaf padamu atas kesalahanku.|Dia menerima permintaan maafnya dengan baik hati.
 tampak|Sudah jelas bahwa dia marah.|Solusi untuk masalah itu sudah jelas.
-Sepertinya|Tampaknya, mereka sudah membuat keputusan.|Dia tampaknya tidak menyadari situasi.
+sepertinya|Tampaknya, mereka sudah membuat keputusan.|Dia tampaknya tidak menyadari situasi.
 banding|Mereka memutuskan untuk mengajukan banding atas keputusan pengadilan.|Badan amal itu meminta sumbangan.
 pemohon|Pemohon mengirimkan resume secara online.|Kami mewawancarai beberapa pelamar untuk posisi itu.
 pendekatan|Pendekatan untuk memecahkan masalah sangat efektif.|Kita perlu pendekatan baru untuk masalah ini.
@@ -74,7 +74,7 @@ yang tepat|Apakah perilaku ini sesuai untuk lingkungan profesional?|Kita harus m
 dengan tepat|Dia menangani situasi dengan tepat.|Tolong berpakaian sesuai untuk acara ini.
 persetujuan|Kami masih menunggu persetujuan dari manajemen.|Persetujuannya diperlukan sebelum kita melanjutkan.
 menyetujui|Komite akan menyetujui anggaran minggu depan.|Kuharap mereka menyetujui usulanku.
-Bangkitlah|Masalah mungkin muncul selama proyek.|Kesempatan muncul ketika Anda paling tidak mengharapkan mereka.
+bangkitlah|Masalah mungkin muncul selama proyek.|Kesempatan muncul ketika Anda paling tidak mengharapkan mereka.
 bersenjata|Pasukan bersenjata siap untuk dikerahkan.|Dia dipersenjatai dengan pisau untuk perlindungan.
 lengan|Dia membuka lengannya untuk memeluknya.|Patung itu memiliki lengan yang terentang.
 anak panah|Panah itu menembak tepat sasaran.|Dia menunjuk panahnya ke arah pegunungan.
@@ -87,7 +87,7 @@ menilai|Guru akan menilai kemajuan siswa.|Kita perlu menilai risiko sebelum mela
 penilaian|Penilaian akan berlangsung minggu depan.|Kita harus mempersiapkan penilaian secara menyeluruh.
 aset|Real estate adalah aset yang berharga.|Perusahaan ini memiliki banyak aset yang dapat digunakan.
 memberikan|Mereka akan memberikan tugas kepada setiap anggota tim.|Tolong tetapkan batas waktu untuk proyek ini.
-Bantuan|Aku butuh bantuan dengan PR-ku.|Organisasi memberikan bantuan kepada mereka yang membutuhkan.
+bantuan|Aku butuh bantuan dengan PR-ku.|Organisasi memberikan bantuan kepada mereka yang membutuhkan.
 rekan|Aku selalu mengaitkan musim panas dengan pantai.|Dia adalah rekan terkenal dari perusahaan.
 terkait|Gejalanya berhubungan dengan penyakit.|Dia memiliki banyak masalah terkait untuk ditangani.
 asosiasi|Dia adalah anggota asosiasi profesional.|Asosiasi ini bertujuan untuk mempromosikan pertukaran budaya.
@@ -101,7 +101,7 @@ percobaan|Aku akan mencoba untuk memecahkan masalah.|Dia mencoba untuk meningkat
 suara|Kualitas suaranya sangat bagus.|Aku lebih suka mendengarkan buku audio.
 kesadaran|Meningkatkan kesadaran tentang masalah lingkungan adalah penting.|Dia memiliki kesadaran yang kuat tentang keadilan sosial.
 canggung|Keheningan itu tidak nyaman setelah pertanyaan itu.|Dia merasa canggung di pesta itu.
-Kembali|Silakan kembali nanti.|Dia melihat kembali ke rumah.
+kembali|Silakan kembali nanti.|Dia melihat kembali ke rumah.
 bakteri|Beberapa bakteri berbahaya bagi manusia.|Yogurt mengandung bakteri hidup.
 lencana|"""Dia mengenakan lencana yang bertuliskan ""Volunteer"". """|Petugas polisi menunjukkan lencananya.
 seimbang|Dia memiliki diet seimbang dengan banyak buah-buahan dan sayuran.|Anggaran harus seimbang.
@@ -122,7 +122,7 @@ mohon|Dia harus memohon maaf.|Dia memohon untuk tinggal.
 menjadi|Makhluk dalam lukisan itu tampak hidup.|Manusia mampu berbelas kasihan.
 menguntungkan|Olahraga teratur bermanfaat bagi kesehatan Anda.|Program ini memiliki dampak yang menguntungkan bagi masyarakat.
 bengkok|Pohon itu ditekuk oleh angin kencang.|Dia memiliki kecenderungan untuk musik dari usia muda.
-Selain persiapan|Dia duduk di sampingnya selama film.|Taman ini terletak di samping sungai.
+selain persiapan|Dia duduk di sampingnya selama film.|Taman ini terletak di samping sungai.
 selain persiapan|Selain belajar, dia bekerja paruh waktu.|Selain biaya, ada banyak faktor lain yang perlu dipertimbangkan.
 taruhan|Aku yakin kau tak bisa menebak usiaku.|Dia menempatkan taruhan pada pacuan kuda.
 di luar|Gunung berada di luar cakrawala.|Kemampuannya melampaui apa yang dibutuhkan untuk pekerjaan itu.
@@ -132,7 +132,7 @@ tagihan|Aku harus membayar tagihan listrik.|Tagihan itu lebih tinggi dari yang s
 biologis|Keanekaragaman hayati penting bagi ekosistem.|Studi ini berfokus pada proses biologis dalam tubuh.
 pahit|Obat ini memiliki rasa pahit.|Dia merasa kecewa setelah kalah dalam pertandingan itu.
 menyalahkan|Jangan menyalahkanku atas kesalahanmu.|Ia cepat menyalahkan orang lain atas kegagalan-kegagalannya.
-Selimut|Aku butuh selimut hangat untuk musim dingin.|Selimut itu terbuat dari wol lembut.
+selimut|Aku butuh selimut hangat untuk musim dingin.|Selimut itu terbuat dari wol lembut.
 buta|Orang buta itu menggunakan tongkat untuk menavigasi jalan.|Dia merasa buta terhadap masalah di sekitarnya.
 pukulan|Tiupan dari angin menjatuhkan vas.|Dia merasakan pukulan terhadap kepercayaan dirinya setelah kritik itu.
 tebal|Dia membuat keputusan berani untuk mengubah karir.|Teks ditulis dengan huruf tebal untuk penekanan.
@@ -149,7 +149,7 @@ luas|Sungai ini lebar pada titik ini.|Dia memiliki pengetahuan luas tentang seja
 siaran|Acara ini akan disiarkan langsung di televisi.|Mereka memutuskan untuk menyiarkan konser secara online.
 penyiar|Penyelenggara ini dikenal karena liputan berita.|Dia bekerja sebagai penyiar untuk stasiun radio lokal.
 secara luas|Konsep ini dapat didefinisikan secara luas.|Masalah ini dibahas secara luas dalam pertemuan tersebut.
-Buck|Aku perlu menyimpan beberapa dolar untuk konser.|Dia membuat uang dengan cepat dengan menjual pakaian lama.
+buck|Aku perlu menyimpan beberapa dolar untuk konser.|Dia membuat uang dengan cepat dengan menjual pakaian lama.
 anggaran|Kita harus tetap pada anggaran kita bulan ini.|Proyek ini diselesaikan di bawah anggaran.
 kecoak|Aku menemukan seekor serangga merangkak di dinding.|Perangkat lunak ini memiliki bug yang perlu diperbaiki.
 peluru|Tentara itu menembakkan peluru ke target.|Dia membuat daftar tujuan-tujuannya.
@@ -178,7 +178,7 @@ kepastian|Ada tingkat kepastian yang tinggi dalam hasilnya.|Dia berbicara dengan
 sertifikat|Ia menerima sertifikat karena telah menyelesaikan kursus tersebut.|Sertifikat ini berlaku selama dua tahun.
 rantai|Sepeda itu terkunci dengan rantai yang berat.|Dia memakai rantai perak di lehernya.
 kursi|Silakan duduk di kursi.|Kursi itu terbuat dari kayu ek.
-Ketua|Ketua memanggil pertemuan untuk perintah.|Dia terpilih sebagai ketua dewan.
+ketua|Ketua memanggil pertemuan untuk perintah.|Dia terpilih sebagai ketua dewan.
 tantangan|Belajar bahasa baru bisa jadi tantangan.|Dia menghadapi tantangan itu dan berhasil.
 menantang|Ujian itu sangat menantang.|Dia senang menantang dirinya dengan tugas-tugas yang sulit.
 kejuaraan|Pertandingan kejuaraan akan diadakan minggu depan.|Mereka memenangkan kejuaraan tahun lalu.
@@ -188,7 +188,7 @@ grafik|Grafik menunjukkan angka penjualan untuk tahun ini.|Kita perlu memperbaru
 mengejar|Anjing itu suka mengejar bola.|Polisi sedang mengejar dengan kecepatan tinggi dengan tersangka.
 pipi|Dia mencium pipinya.|Dia punya lubang di pipinya.
 bersorak|Orang banyak bersorak gembira atas kemenangan itu.|Dia selalu mencoba untuk membawa semangat kepada orang lain.
-Kepala|Kepala suku membuat pengumuman penting.|Dia adalah kepala editor majalah itu.
+kepala|Kepala suku membuat pengumuman penting.|Dia adalah kepala editor majalah itu.
 potong|Tolong potong sayuran untuk salad.|Dia menggunakan pisau untuk memotong kayu.
 sirkuit|Sirkuit listriknya rusak.|Mereka memasang sirkuit baru di rumah.
 keadaan|Dalam keadaan ini, kami harus membatalkan acara itu.|Dia lahir dalam keadaan yang sulit.
@@ -213,10 +213,10 @@ kombinasi|Kombinasi rasa yang unik.|Mereka menemukan kombinasi yang berhasil.
 kenyamanan|Kursi ini memberikan kenyamanan yang baik.|Ia mendapat penghiburan dari dukungan teman-temannya.
 komik|Dia dikenal karena waktu komiknya.|Dia suka membaca buku komik.
 perintah|Jenderal mengeluarkan perintah untuk pasukannya.|Anda harus mematuhi perintah.
-Komandan|Komandan memberi perintah kepada para prajurit.|Dia adalah komandan unit.
+komandan|Komandan memberi perintah kepada para prajurit.|Dia adalah komandan unit.
 komisi|Sang seniman menerima komisi untuk membuat sebuah mural.|Komisi akan meninjau proposal.
 komitmen|Dia menunjukkan komitmen yang kuat untuk pekerjaannya.|Perusahaan memiliki komitmen terhadap keberlanjutan.
-Komite|Komite akan bertemu minggu depan.|Dia adalah anggota komite keuangan.
+komite|Komite akan bertemu minggu depan.|Dia adalah anggota komite keuangan.
 biasanya|Istilah ini biasanya digunakan dalam tulisan akademik.|Gejala-gejala ini biasanya berhubungan dengan flu.
 komparatif|Studi ini membuat analisis komparatif dari dua metode.|Dia lebih suka pendekatan komparatif untuk penelitian.
 penyelesaian|Proyek ini selesai lebih cepat dari jadwal.|Kami sedang menunggu penyelesaian laporan akhir.
@@ -227,7 +227,7 @@ menyusun|Dia suka menyusun musiknya sendiri.|Puisi ini ditulis pada abad ke-19.
 komposer|Beethoven adalah seorang komposer terkenal.|Komposer menulis banyak simfoni.
 senyawa|Air adalah senyawa yang terbuat dari hidrogen dan oksigen.|Ahli kimia mempelajari sifat senyawa tersebut.
 komprehensif|Laporan ini memberikan gambaran yang komprehensif tentang topik ini.|Dia memiliki pemahaman yang komprehensif tentang subjek.
-Termasuk|Tim ini terdiri dari para ahli dari berbagai bidang.|Koleksinya terdiri dari buku-buku dan naskah-naskah langka.
+termasuk|Tim ini terdiri dari para ahli dari berbagai bidang.|Koleksinya terdiri dari buku-buku dan naskah-naskah langka.
 wajib|Pendidikan adalah wajib bagi anak-anak.|Kursus ini wajib bagi semua siswa.
 konsentrasi|Konsentrasi larutan terlalu tinggi.|Dia perlu meningkatkan konsentrasi saat belajar.
 konsep|Konsep kebebasan adalah inti dari demokrasi.|Dia memiliki konsep yang jelas tentang apa yang ingin dia capai.
@@ -241,7 +241,7 @@ konflik|Konflik antara kedua negara meningkat.|Mereka menyelesaikan konflik mere
 bingung|Instruksinya membingungkan dan sulit untuk diikuti.|Dia menemukan alur filmnya membingungkan.
 kebingungan|Ada kebingungan tentang waktu pertemuan.|Perubahan mendadak menyebabkan banyak kebingungan.
 sadar|Dia sadar akan risiko yang terlibat.|Ia berupaya keras untuk memperbaiki kesehatannya.
-Akibatnya|Proyek itu tertunda; akibatnya, tenggat waktu diperpanjang.|Dia tidak belajar; akibatnya, dia gagal dalam ujian.
+akibatnya|Proyek itu tertunda; akibatnya, tenggat waktu diperpanjang.|Dia tidak belajar; akibatnya, dia gagal dalam ujian.
 konservasi|Konservasi satwa liar sangat penting untuk keanekaragaman hayati.|Organisasi ini berfokus pada konservasi lingkungan.
 konservatif|Dia memiliki pandangan konservatif tentang masalah sosial.|Partai ini dikenal karena kebijakannya yang konservatif.
 cukup besar|Ada kemajuan yang cukup besar di lapangan.|Dia telah membuat dampak yang cukup besar pada masyarakat.
@@ -277,7 +277,7 @@ inti|Inti bumi sangat panas.|Mereka fokus pada isu-isu inti dari proyek.
 perusahaan|Dunia perusahaan terus berubah.|Mereka mengadakan acara perusahaan untuk memamerkan produk mereka.
 perusahaan|Perusahaan ini memperluas operasinya di luar negeri.|Dia bekerja untuk sebuah perusahaan multinasional besar.
 koridor|Koridor itu dipenuhi dengan lukisan.|Mereka berjalan menuruni koridor panjang menuju kantor mereka.
-Dewan|Dewan akan bertemu untuk membahas proposal.|Dia terpilih menjadi anggota dewan mahasiswa.
+dewan|Dewan akan bertemu untuk membahas proposal.|Dia terpilih menjadi anggota dewan mahasiswa.
 penghitung|Penjaga kasir berdiri di belakang konter.|Mereka meletakkan tas mereka di atas meja.
 kabupaten|Kabupaten ini terkenal dengan pemandangan yang indah.|Mereka tinggal di daerah pedesaan.
 keberanian|Dibutuhkan keberanian untuk membela apa yang benar.|Ia sangat berani menghadapi kesulitan.
@@ -341,7 +341,7 @@ pengiriman|Pengiriman paket tertunda.|Dia di rumah untuk menerima pengiriman.
 permintaan|Ada permintaan tinggi untuk pekerja terampil.|Perusahaan tidak dapat memenuhi permintaan.
 demokrasi|Demokrasi sangat penting bagi masyarakat yang bebas.|Mereka berjuang untuk demokrasi dan hak asasi manusia.
 demokratis|Negara ini memiliki sistem pemerintahan yang demokratis.|Mereka percaya pada nilai-nilai demokrasi.
-Tunjukkan|Guru akan mendemonstrasikan percobaan.|Mereka menunjukkan komitmen mereka terhadap proyek ini.
+tunjukkan|Guru akan mendemonstrasikan percobaan.|Mereka menunjukkan komitmen mereka terhadap proyek ini.
 demonstrasi|Akan ada demonstrasi perangkat lunak baru.|Demonstrasi itu sangat informatif.
 menyangkal|Dia membantah semua tuduhan kesalahan.|Dia membantah memiliki pengetahuan tentang insiden itu.
 berangkat|Kereta akan berangkat dari peron 3.|Mereka memutuskan untuk berangkat pagi-pagi sekali.
@@ -351,7 +351,7 @@ depresi|Dia merasa depresi akhir-akhir ini.|Cuaca yang suram membuatnya merasa l
 menyedihkan|Berita itu cukup menyedihkan.|Dia menemukan film itu sangat menyedihkan.
 depresi|Dia sedang menjalani pengobatan untuk depresi.|Depresi ekonomi mempengaruhi banyak bisnis.
 kedalaman|kedalaman lautan masih dieksplorasi.|Dia mengukur kedalaman air.
-Turunkan|Banyak kata dalam bahasa Inggris berasal dari bahasa Latin.|"""Kata ""kebahagiaan"" berasal dari kata ""happy""."
+turunkan|Banyak kata dalam bahasa Inggris berasal dari bahasa Latin.|"""Kata ""kebahagiaan"" berasal dari kata ""happy""."
 padang pasir|Sahara adalah gurun panas terbesar di dunia.|Mereka melakukan perjalanan melewati gurun selama berhari-hari.
 layak|Kau layak istirahat setelah semua kerja kerasmu.|Dia layak mendapat pengakuan atas prestasinya.
 keinginan|Dia memiliki keinginan kuat untuk berhasil.|Keinginannya untuk pengetahuan jelas.
@@ -365,7 +365,7 @@ penentuan|Tekadnya untuk berhasil sangat mengagumkan.|Ia menunjukkan tekad yang 
 mengabdikan|Dia berencana untuk mengabdikan hidupnya untuk membantu orang lain.|Dia mengabdikan dirinya pada studinya.
 berbeda|Dua produk berbeda dalam kualitas.|Pendapat mereka berbeda-beda dalam hal ini.
 menggali|Mereka harus menggali lubang untuk pondasi.|Dia suka menggali di kebun.
-Sepuluh sen|Aku menemukan sepeser pun di jalan.|Dia menyimpan uangnya untuk acara khusus.
+sepuluh sen|Aku menemukan sepeser pun di jalan.|Dia menyimpan uangnya untuk acara khusus.
 cacat|Dia memiliki cacat yang mempengaruhi mobilitasnya.|Organisasi ini mendukung para penyandang disabilitas.
 cacat|Tempat parkir untuk penyandang cacat terletak di dekat pintu masuk.|Dia bekerja dengan orang cacat.
 perselisihan|Ada perselisihan antara kedua belah pihak.|Mereka menyelesaikan perselisihan mereka melalui diskusi.
@@ -378,7 +378,7 @@ mengecilkan hati|Jangan biarkan kegagalan mengecewakanmu.|Dia putus asa dengan u
 tidak jujur|Dia tidak jujur tentang kualifikasinya.|Perilaku tidak jujur tidak ditoleransi.
 melepaskannya|Sang guru memutuskan untuk memecat kelas lebih awal.|Jangan mengabaikan ide-ide saya tanpa pertimbangan.
 gangguan|Dia menderita gangguan tidur.|Ruang itu dalam keadaan kacau.
-Tampilkan|Museum akan menampilkan artefak kuno.|Dia suka memamerkan karya seninya di galeri lokal.
+tampilkan|Museum akan menampilkan artefak kuno.|Dia suka memamerkan karya seninya di galeri lokal.
 jauh|Mereka tinggal di negara yang jauh.|Dia punya kerabat jauh di Kanada.
 berbeda|Kedua spesies ini berbeda satu sama lain.|Ada perbedaan yang jelas antara keduanya.
 membedakan|Sulit untuk membedakan keduanya.|Dia bisa dengan mudah membedakan antara berbagai rasa.
@@ -389,7 +389,7 @@ kabupaten|Sekolah ini terletak di daerah pedesaan.|Setiap distrik memiliki perat
 mengganggu|Tolong jangan ganggu aku saat aku bekerja.|Suara keras itu mengganggu seluruh lingkungan.
 menyelam|Dia suka menyelam di laut.|Mereka pergi menyelam di terumbu karang.
 beragam|Kota ini memiliki populasi yang beragam.|Mereka menawarkan berbagai macam kursus.
-Keanekaragaman|Keanekaragaman budaya penting bagi masyarakat.|Festival ini merayakan keragaman dalam segala bentuknya.
+keanekaragaman|Keanekaragaman budaya penting bagi masyarakat.|Festival ini merayakan keragaman dalam segala bentuknya.
 membagi|Kita perlu membagi tugas di antara anggota tim.|Kue itu dibagi menjadi bagian yang sama.
 pembagian|Pembagian kerja sangat penting untuk efisiensi.|Ada pembagian yang jelas antara pekerjaan dan kehidupan pribadi.
 perceraian|Perceraian mereka selesai tahun lalu.|Dia mengalami perceraian yang sulit.
@@ -472,7 +472,7 @@ melebihi|Biaya akhir mungkin melebihi anggaran kami.|Dia berharap untuk melampau
 pengecualian|Ada pengecualian untuk setiap aturan.|Dia membuat pengecualian untuk sahabatnya.
 berlebihan|Kebisingan yang berlebihan membuat sulit untuk berkonsentrasi.|Dia dihukum karena terlalu cepat.
 mengecualikan|Perempuan dikecualikan dari proses pengambilan keputusan.|Studi ini bertujuan untuk mengecualikan data yang bias.
-Maafkan aku.|Dia punya alasan yang valid untuk terlambat.|Jangan membuat alasan untuk kesalahan Anda.
+maafkan aku|Dia punya alasan yang valid untuk terlambat.|Jangan membuat alasan untuk kesalahan Anda.
 eksekutif|Tim eksekutif bertanggung jawab atas strategi perusahaan.|Dia dipromosikan ke posisi eksekutif.
 keberadaan|Keberadaan kehidupan di luar bumi masih menjadi topik perdebatan.|Banyak filsuf merenungkan sifat keberadaan.
 eksotis|Restoran ini menyajikan hidangan eksotis dari seluruh dunia.|Dia memiliki selera untuk tujuan perjalanan yang eksotis.
@@ -483,7 +483,7 @@ biaya|Biaya perjalanan lebih tinggi dari yang diharapkan.|Mereka perlu melacak p
 keahlian|Tim memiliki banyak keahlian di bidang ini.|Keahliannya dalam pemasaran sangat berharga untuk proyek ini.
 eksploitasi|Perusahaan itu dituduh mengeksploitasi para pekerja.|Kita harus mengeksploitasi sumber daya kita dengan bijak.
 eksplorasi|Eksplorasi luar angkasa selalu mempesona umat manusia.|Eksplorasi kedalaman lautan masih berlangsung.
-Mengekspos|Penyelidikan ini bertujuan untuk mengekspos korupsi di pemerintahan.|Dia terkena ide-ide baru selama perjalanannya.
+mengekspos|Penyelidikan ini bertujuan untuk mengekspos korupsi di pemerintahan.|Dia terkena ide-ide baru selama perjalanannya.
 eksposur|Paparan sinar matahari bisa berbahaya.|Dia menerima banyak paparan media setelah acara tersebut.
 melebarkan|Mereka berencana untuk memperpanjang tenggat waktu untuk pengajuan.|Jembatan itu diperpanjang untuk mengakomodasi lebih banyak lalu lintas.
 perpanjangan|Perpanjangan tenggat waktu disambut oleh semua.|Dia meminta perpanjangan proyeknya.
@@ -511,9 +511,9 @@ bulu|Bulu burung itu lembut dan berwarna-warni.|Dia menemukan bulu di tanah.
 biaya|Biaya keanggotaan adalah $ 50 per tahun.|Mereka tidak membayar biaya pendaftaran.
 pakan|Penting untuk memberi makan hewan peliharaan Anda secara teratur.|Dia memutuskan untuk memberi makan kucing liar.
 umpan balik|Saya menghargai umpan balik Anda pada presentasi saya.|Guru memberikan umpan balik yang konstruktif.
-Rasakan|Aku merasa bahagia hari ini.|Dia bisa merasakan ketegangan di ruangan itu.
+rasakan|Aku merasa bahagia hari ini.|Dia bisa merasakan ketegangan di ruangan itu.
 teman|Dia adalah teman sekelasku.|Mereka adalah rekan perjalanan dalam perjalanan yang sama.
-Angka|Patung itu adalah sosok pemimpin terkenal.|Dia memiliki sosok yang ramping.
+angka|Patung itu adalah sosok pemimpin terkenal.|Dia memiliki sosok yang ramping.
 berkas|Tolong upload file.|File ini terlalu besar untuk dikirim.
 keuangan|Dia bekerja di bidang keuangan.|Departemen keuangan bertanggung jawab atas penganggaran.
 penemuan|Temuan itu mengejutkan.|Mereka menerbitkan temuan mereka dalam sebuah jurnal.
@@ -535,7 +535,7 @@ mendongak|Dia menyukai musik klasik.|Dia memiliki kenangan indah tentang masa ke
 bodoh|Jangan bodoh.|Dia merasa bodoh karena percaya kebohongan itu.
 larang|Mereka melarang merokok di dalam gedung.|Hukum melarang diskriminasi.
 perkiraan|Ramalan cuaca memprediksi hujan.|Dia memeriksa cuaca sebelum pergi.
-Maafkan aku.|Bisakah kau memaafkanku?|Dia berjuang untuk memaafkan pengkhianatannya.
+maafkan aku|Bisakah kau memaafkanku?|Dia berjuang untuk memaafkan pengkhianatannya.
 format|Tolong formatkan dokumen dengan benar.|Format laporan itu membingungkan.
 formasi|Pembentukan batuan ini berusia jutaan tahun.|Mereka mempelajari pembentukan awan.
 mantan|Dia adalah mantan juara.|Mantan presiden memberikan pidato.
@@ -558,10 +558,10 @@ bebas|Dia mengungkapkan pendapatnya dengan bebas.|Informasi itu dibagikan secara
 frekuensi|Frekuensi pertemuan meningkat.|Mereka mengukur frekuensi gelombang suara.
 sering|Dia adalah pengunjung yang sering ke museum.|Mereka sering melakukan perjalanan ke kota.
 bahan bakar|Mobil ini berjalan dengan bahan bakar diesel.|Mereka perlu mengisi bahan bakar pesawat sebelum lepas landas.
-Memenuhi|Dia bertujuan untuk memenuhi mimpinya.|Mereka bekerja keras untuk memenuhi persyaratan.
+memenuhi|Dia bertujuan untuk memenuhi mimpinya.|Mereka bekerja keras untuk memenuhi persyaratan.
 penuh waktu|Dia bekerja penuh waktu sebagai guru.|Dia sedang mencari pekerjaan penuh waktu.
 sepenuhnya|Proyek ini sepenuhnya didanai.|Dia benar-benar berkomitmen pada studinya.
-Fungsi|Fungsi utama jantung adalah memompa darah.|Mereka mempelajari fungsi otak.
+fungsi|Fungsi utama jantung adalah memompa darah.|Mereka mempelajari fungsi otak.
 dana|Organisasi ini mengandalkan sumbangan untuk mendanai program-programnya.|Mereka mendirikan dana untuk pendidikan.
 mendasar|Kebebasan berbicara adalah hak dasar.|Mereka membahas prinsip-prinsip dasar demokrasi.
 pada dasarnya|Teori ini pada dasarnya salah.|Mereka secara fundamental berbeda satu sama lain.
@@ -610,9 +610,9 @@ perawatan kesehatan|Akses terhadap perawatan kesehatan yang berkualitas sangat p
 mendengar|Mendengar adalah salah satu dari lima indera.|Dia memiliki gangguan pendengaran.
 surga|Banyak yang percaya bahwa kehidupan setelah kematian adalah di surga.|Pemandangan dari gunung itu seperti surga.
 tumit|Dia mengenakan sepatu hak tinggi ke pesta.|Dia cedera tumitnya saat bermain sepak bola.
-Neraka|Ada yang percaya bahwa neraka adalah tempat hukuman.|Film itu menggambarkan sebuah visi tentang neraka.
+neraka|Ada yang percaya bahwa neraka adalah tempat hukuman.|Film itu menggambarkan sebuah visi tentang neraka.
 helm|Dia memakai helm untuk keselamatan saat bersepeda.|Pekerja konstruksi harus memakai helm di lokasi.
-Oleh karena itu|Dia lelah; oleh karena itu, dia pergi tidur lebih awal.|Proyek itu tertunda; oleh karena itu, tenggat waktu diperpanjang.
+oleh karena itu|Dia lelah; oleh karena itu, dia pergi tidur lebih awal.|Proyek itu tertunda; oleh karena itu, tenggat waktu diperpanjang.
 rumput|Basil adalah ramuan populer yang digunakan dalam memasak.|Mereka menanam berbagai macam ramuan di kebun mereka.
 ragu-ragu|Jangan ragu untuk meminta bantuan jika Anda membutuhkannya.|Dia ragu-ragu sebelum membuat keputusan.
 tersembunyi|Harta karun itu tersembunyi di bawah pohon ek tua.|Dia memiliki bakat tersembunyi untuk melukis.
@@ -621,14 +621,14 @@ lucu sekali|Film itu sangat lucu.|Dia punya selera humor yang lucu.
 pinggul|Dia cedera pinggulnya saat bermain basket.|Dia memakai sabuk pinggul untuk mendukung punggungnya.
 menyewa|Mereka memutuskan untuk mempekerjakan karyawan baru.|Dia dipekerjakan sebagai desainer grafis.
 ahli sejarah|Sejarawan itu menulis sebuah buku tentang peradaban kuno.|Dia adalah seorang sejarawan terkenal di bidangnya.
-Tunggu|Tolong tahan pintunya terbuka.|Dia memegang tangannya erat.
+tunggu|Tolong tahan pintunya terbuka.|Dia memegang tangannya erat.
 berongga|Pohon itu memiliki batang berlubang.|Mereka menemukan ruang berlubang di gua.
 kudus|Situs ini dianggap suci oleh banyak agama.|Dia melakukan ziarah suci ke kuil.
 tak berumah|Kota ini memiliki program untuk membantu individu tunawisma.|Mereka menjadi sukarelawan di tempat penampungan bagi para tunawisma.
 kejujuran|Kejujuran adalah nilai yang penting.|Dia dikenal karena kejujuran dan integritasnya.
 madu|Madu adalah zat manis yang dihasilkan lebah.|Dia suka menambahkan madu ke tehnya.
 kehormatan|Ini adalah kehormatan untuk bertemu presiden.|Mereka menerima penghargaan untuk menghormati prestasi mereka.
-Hook|Dia menggunakan kail untuk menangkap ikan.|Mantel itu tergantung di kail di dekat pintu.
+hook|Dia menggunakan kail untuk menangkap ikan.|Mantel itu tergantung di kail di dekat pintu.
 semoga|Mudah-mudahan, tidak akan hujan besok.|Dia bilang dia akan meneleponku nanti, semoga dengan kabar baik.
 tuan rumah|Mereka akan menjadi tuan rumah konferensi tahun depan.|Dia adalah tuan rumah yang hebat dan membuat semua orang merasa diterima.
 rumah|Mereka tinggal di rumah besar.|Rumah ini memiliki taman yang indah.
@@ -642,7 +642,7 @@ berburu|Berburu adalah kegiatan yang populer di wilayah ini.|Dia suka berburu di
 terluka|Aku tidak bermaksud menyakiti perasaanmu.|Dia terluka oleh kata-kata kasarnya.
 hipotesis|Ilmuwan itu mengusulkan hipotesis baru.|Mereka menguji hipotesis melalui percobaan.
 ikon|Ikon jantung mewakili cinta.|Dia adalah ikon dalam industri mode.
-Identitas|Tolong tunjukkan KTP Anda di pintu masuk.|Dia punya ID pengemudi.
+identitas|Tolong tunjukkan KTP Anda di pintu masuk.|Dia punya ID pengemudi.
 ideal|Dia adalah kandidat yang ideal untuk pekerjaan itu.|Mereka tinggal di lingkungan yang ideal.
 sama|Kembar itu identik dalam penampilan.|Mereka memiliki minat yang sama.
 khayalan|Penyihir menciptakan ilusi kelinci yang menghilang.|Itu hanya ilusi optik.
@@ -685,18 +685,18 @@ inisiatif|Dia mengambil inisiatif untuk memulai proyek ini.|Inisiatif ini diteri
 tinta|Pena kehabisan tinta.|Dia menumpahkan tinta di atas kertas.
 bagian dalam|Dia memiliki kekuatan batin yang kuat.|Cara kerja mesin ini sangat rumit.
 inovasi|Perusahaan ini dikenal karena inovasi.|Inovasi adalah kunci untuk tetap kompetitif.
-Inovatif|Desain inovatifnya memenangkan beberapa penghargaan.|Mereka dikenal karena pendekatan inovatif mereka.
+inovatif|Desain inovatifnya memenangkan beberapa penghargaan.|Mereka dikenal karena pendekatan inovatif mereka.
 input|Silakan masukkan masukan Anda dalam formulir di bawah ini.|Sistem membutuhkan input pengguna untuk berfungsi.
-Masukkan|Anda dapat memasukkan gambar ke dalam dokumen.|Silakan masukkan kartu identitasmu ke dalam scanner.
+masukkan|Anda dapat memasukkan gambar ke dalam dokumen.|Silakan masukkan kartu identitasmu ke dalam scanner.
 wawasan|Penelitian ini memberikan wawasan berharga tentang perilaku konsumen.|Pemahamannya membantu tim membuat keputusan yang lebih baik.
 bersikeras|Aku bersikeras untuk melihat manajer.|Mereka bersikeras agar proyek selesai tepat waktu.
-Inspektur|Inspektur memeriksa bangunan untuk pelanggaran keamanan.|Seorang inspektur akan meninjau lamaran Anda.
+inspektur|Inspektur memeriksa bangunan untuk pelanggaran keamanan.|Seorang inspektur akan meninjau lamaran Anda.
 menginspirasi|Kata-kata sang pembicara menginspirasi para hadirin.|Dia berharap untuk menginspirasi orang lain dengan ceritanya.
 menginstal|Silakan instal perangkat lunak sebelum menggunakannya.|Teknisi akan memasang peralatan baru.
 instalasi|Pemasangan sistem baru memakan waktu beberapa jam.|Kita harus menjadwalkan pemasangan untuk minggu depan.
 contoh|Ini hanya salah satu contoh masalah.|Dapatkah Anda memberikan contoh lain untuk mendukung argumen Anda?
-Segera|Kopi instan cepat larut dalam air panas.|Dia langsung merasa terhubung dengannya.
-Segera|Hasilnya langsung tersedia secara online.|Dia langsung mengenalinya.
+segera|Kopi instan cepat larut dalam air panas.|Dia langsung merasa terhubung dengannya.
+segera|Hasilnya langsung tersedia secara online.|Dia langsung mengenalinya.
 lembaga|Lembaga ini melakukan penelitian tentang energi terbarukan.|Dia adalah seorang profesor di institut.
 lembaga|Lembaga ini memberikan dukungan bagi kaum muda yang kurang beruntung.|Dia bekerja untuk lembaga pendidikan bergengsi.
 asuransi|Dia memiliki asuransi kesehatan melalui majikannya.|Asuransi penting untuk melindungi aset Anda.
@@ -715,7 +715,7 @@ menyerang|Tentara berencana untuk menyerang negara tetangga.|Mereka merasa priva
 invasi|Invasi menyebabkan kehancuran luas.|Mereka mempersiapkan invasi dengan memperkuat pertahanan mereka.
 investigasi|Polisi memulai penyelidikan atas kejahatan tersebut.|Penyelidikan mengungkapkan bukti baru.
 investasi|Investasi dalam pendidikan sangat penting untuk masa depan.|Pasar saham adalah bentuk investasi yang populer.
-Investor|Investor senang dengan kinerja perusahaan.|Banyak investor mencari pilihan yang berkelanjutan.
+investor|Investor senang dengan kinerja perusahaan.|Banyak investor mencari pilihan yang berkelanjutan.
 mengisolasi|Virus dapat mengisolasi individu yang terinfeksi dari masyarakat.|Penting untuk mengisolasi masalah sebelum menemukan solusi.
 terisolasi|Desa terisolasi dari seluruh dunia.|Dia merasa terisolasi di lingkungan barunya.
 masalah|Masalah utamanya adalah kurangnya dana.|Kita harus mengatasi masalah ini secepat mungkin.
@@ -729,7 +729,7 @@ anak muda|Dia adalah anggota junior tim.|Karyawan junior seringkali membutuhkan 
 juri|Para juri mencapai keputusan bulat.|Melayani juri adalah tugas warga negara.
 keadilan|Keadilan adalah prinsip dasar.|Banyak aktivis berjuang untuk keadilan sosial.
 membenarkan|Dia mencoba untuk membenarkan tindakannya.|Tidak ada cara untuk membenarkan keputusan ini.
-TK|Dia bekerja sebagai guru TK.|TK adalah tahap penting dalam pendidikan anak usia dini.
+tK|Dia bekerja sebagai guru TK.|TK adalah tahap penting dalam pendidikan anak usia dini.
 kit|Dia membeli peralatan baru untuk bengkelnya.|Alat pertolongan pertama berada di dapur.
 tenaga kerja|Pasar tenaga kerja berubah dengan cepat.|Banyak negara mengandalkan tenaga kerja asing.
 tangga|Dia memanjat tangga untuk memperbaiki atap.|Perusahaan menawarkan tangga karir yang jelas.
@@ -738,7 +738,7 @@ lansekap|Pemandangan di sana penuh dengan pohon-pohon dan perbukitan.|Dia meluki
 jalur|Mobil itu berganti jalur untuk menyalip truk.|Ada jalur sepeda di jalan.
 sebagian besar|Proyek ini sebagian besar berhasil.|Hasilnya sebagian besar ditentukan oleh faktor eksternal.
 akhir-akhir ini|Aku belum melihatnya akhir-akhir ini.|Akhir-akhir ini, aku merasa lebih optimis.
-Terbaru|Berita terbaru cukup mengejutkan.|Dia selalu ingin tahu tren terbaru.
+terbaru|Berita terbaru cukup mengejutkan.|Dia selalu ingin tahu tren terbaru.
 peluncuran|Peluncuran produk baru itu sukses.|Mereka berencana untuk meluncurkan kampanye bulan depan.
 kepemimpinan|Keterampilan kepemimpinan sangat penting untuk peran ini.|Dia menunjukkan kepemimpinan yang luar biasa selama krisis.
 liga|Tim ini berada di puncak liga.|Mereka bermain di liga nasional.
@@ -750,7 +750,7 @@ tingkat|Proyek ini masih dalam tahap perencanaan.|Dia mencapai tingkat pemahaman
 lisensi|Anda perlu surat izin untuk mengendarai mobil.|Perangkat lunak ini tersedia di bawah lisensi bebas.
 masa hidup|Umur baterai terbatas.|Mereka menawarkan garansi seumur hidup pada produk mereka.
 pencahayaan|Pencahayaan di ruangan itu terlalu redup.|Pencahayaan yang baik sangat penting untuk fotografi.
-Begitu juga|Dia suka hiking; saudara laki-lakinya juga suka berada di luar ruangan.|Kedua proposal ini juga sangat berbeda.
+begitu juga|Dia suka hiking; saudara laki-lakinya juga suka berada di luar ruangan.|Kedua proposal ini juga sangat berbeda.
 pembatasan|Ada batasan untuk apa yang bisa kita capai.|Keterbatasan utama dari penelitian ini adalah ukuran sampelnya yang kecil.
 terbatas|Penawaran ini hanya berlaku untuk waktu yang terbatas.|Mereka memiliki anggaran terbatas untuk proyek ini.
 garis|Tolong gambar garis lurus.|Antrian itu panjang dan berliku.
@@ -764,7 +764,7 @@ logis|Argumentasinya jelas dan logis.|Adalah logis untuk berasumsi bahwa dia ber
 logo|Perusahaan memiliki logo baru.|Logo ini sederhana namun efektif.
 jangka panjang|Mereka merencanakan investasi jangka panjang.|Tujuan jangka panjang membutuhkan kesabaran.
 longgar|Sekrupnya longgar dan perlu diperketat.|Dia mengenakan gaun longgar yang mengalir dengan angin.
-Tuan|Tuan rumah itu sangat kaya.|Dia diperlakukan seperti tuan di rumahnya sendiri.
+tuan|Tuan rumah itu sangat kaya.|Dia diperlakukan seperti tuan di rumahnya sendiri.
 undian|Dia memenangkan satu juta dolar di lotere.|Lotere adalah permainan keberuntungan.
 rendah|Suhu hari ini rendah.|Dia memiliki pendapat yang buruk tentang proyek ini.
 lebih rendah|Kita perlu mengurangi pengeluaran kita.|Semakin rendah harga, semakin banyak penjualan yang kita hasilkan.
@@ -779,14 +779,14 @@ makeup|Dia memakai make up dengan hati-hati.|Artis makeup menggunakan warna-warn
 membuat|Pembuatan film ini memakan waktu beberapa bulan.|Dia senang membuat kerajinan tangan.
 pembuatan|Pabrik akan memproduksi model baru.|Mereka mengkhususkan diri dalam pembuatan barang elektronik.
 manufaktur|Proses manufaktur sangat otomatis.|Manufaktur adalah sektor utama ekonomi.
-Peta|Bisa tunjukkan di peta?|Peta menunjukkan lokasi hotel.
+peta|Bisa tunjukkan di peta?|Peta menunjukkan lokasi hotel.
 maraton|Dia berlatih selama berbulan-bulan untuk lari maraton.|Kota ini menjadi tuan rumah maraton tahunan.
 margin|Tolong tinggalkan jarak satu inci.|Margin keuntungan cukup tipis.
 penanda|Gunakan penanda untuk menyoroti poin-poin penting.|Penanda kehabisan tinta.
 bela diri|Seni bela diri membutuhkan disiplin dan fokus.|Dia berlatih seni bela diri setiap akhir pekan.
 massa|Massa objek diukur dalam kilogram.|Massa Bumi adalah sekitar 5,97 × 10 ^ 24 kg.
 besar|Bangunan besar itu menjulang tinggi di atas kota.|Mereka menemukan sebuah sistem gua besar.
-Kepala sekolah|Dia adalah seorang master dari kerajinan.|Dia mendapat gelar master di bidang biologi.
+kepala sekolah|Dia adalah seorang master dari kerajinan.|Dia mendapat gelar master di bidang biologi.
 cocok|Pencocokan warna sangat penting dalam desain.|Mereka sedang mengerjakan sistem pencocokan untuk database.
 teman|Dia adalah teman terbaikku.|Mereka adalah teman dari universitas.
 bahan|Bahan ini tahan lama dan tahan air.|Kita perlu menemukan bahan yang cocok untuk proyek ini.
@@ -823,9 +823,9 @@ monster|Film ini menampilkan monster yang menakutkan.|Jangan biarkan ketakutanmu
 bulanan|Kita punya pertemuan bulanan.|Laporan ini diterbitkan setiap bulan.
 monumen|Patung ini adalah monumen sejarah kota.|Mereka membangun sebuah monumen untuk menghormati para pahlawan.
 moral|Cerita ini memiliki pelajaran moral.|Penting untuk mempertimbangkan implikasi moral.
-Selain itu|Selain itu, kita perlu bertindak cepat.|Proyek ini terlambat; lebih dari itu, itu melebihi anggaran.
+selain itu|Selain itu, kita perlu bertindak cepat.|Proyek ini terlambat; lebih dari itu, itu melebihi anggaran.
 hipotek|Mereka mengambil hipotek untuk membeli rumah.|Suku bunga hipotek telah meningkat.
-Masjid|Masjid ini terbuka untuk pengunjung.|Mereka berdoa di masjid.
+masjid|Masjid ini terbuka untuk pengunjung.|Mereka berdoa di masjid.
 nyamuk|Nyamuk adalah umum di musim panas.|Gunakan obat penangkal nyamuk untuk menghindari gigitan nyamuk.
 gerakan|Gerakan planet-planet sangat menarik.|Dia membuat usul untuk menyetujui anggaran.
 memotivasi|Guru harus memotivasi siswa mereka.|Keinginan untuk berhasil dapat memotivasi Anda.
@@ -842,15 +842,15 @@ sempit|Jalan sempit itu penuh sesak.|Dia memiliki minat yang sempit.
 buruk|Makanan berbau busuk.|Dia membuat komentar yang buruk.
 nasional|Lagu kebangsaan dimainkan.|Mereka merayakan hari libur nasional mereka.
 navigasi|Navigasi sangat penting bagi pengemudi.|Aplikasi ini menyediakan navigasi real-time.
-Dekat|Ada taman di dekat sini.|Dia tinggal di dekat sini.
+dekat|Ada taman di dekat sini.|Dia tinggal di dekat sini.
 rapi|Kamarnya selalu rapi.|Tulisan tangannya bagus.
-Kebutuhan|Air adalah kebutuhan untuk kehidupan.|Kebutuhan pendidikan tidak bisa dilebih-lebihkan.
+kebutuhan|Air adalah kebutuhan untuk kehidupan.|Kebutuhan pendidikan tidak bisa dilebih-lebihkan.
 negatif|Dia punya sikap negatif.|Hasil tes negatif.
 bernegosiasi|Mereka harus menegosiasikan kesepakatan yang lebih baik.|Dia terampil dalam negosiasi kontrak.
 negosiasi|Negosiasi berlangsung beberapa jam.|Negosiasi yang sukses membutuhkan kesabaran.
 saraf|Dia punya keberanian untuk berbicara.|Operasi ini melibatkan memotong saraf.
 netral|Mediator tetap netral.|Dia memiliki ekspresi netral.
-Namun demikian|Saat itu hujan; namun, kami pergi hiking.|Meskipun lelah, ia berhasil menyelesaikan perlombaan.
+namun demikian|Saat itu hujan; namun, kami pergi hiking.|Meskipun lelah, ia berhasil menyelesaikan perlombaan.
 baru|Pasangan yang baru menikah sedang berbulan madu.|Dia pindah ke apartemen yang baru dibangun.
 nikel|Koin itu terbuat dari nikel.|Nikel digunakan dalam pembuatan baterai.
 mimpi buruk|Dia terbangun dari mimpi buruk.|Film itu adalah mimpi buruk untuk ditonton.
@@ -884,7 +884,7 @@ yang sedang berlangsung|Penyelidikan sedang berlangsung.|Mereka sedang bernegosi
 pembukaan|Pembukaan toko baru itu sukses.|Dia menghadiri upacara pembukaan.
 secara terbuka|Dia berbicara secara terbuka tentang kekhawatiran-kekhawatirannya.|Mereka mendiskusikan masalah ini secara terbuka.
 opera|Dia suka pergi ke opera.|Opera itu dipersembahkan dengan indah.
-Beroperasi|Mereka harus mengoperasikan mesin dengan hati-hati.|Dia belajar bagaimana mengoperasikan peralatan.
+beroperasi|Mereka harus mengoperasikan mesin dengan hati-hati.|Dia belajar bagaimana mengoperasikan peralatan.
 operator|Operator bertanggung jawab untuk mengendalikan mesin.|Dia adalah operator mesin terampil.
 lawan|Dia menghadapi lawannya di pertandingan final.|Dia adalah lawan yang kuat dalam perdebatan.
 menentang|Mereka memutuskan untuk menentang kebijakan baru.|Dia akan menentang setiap perubahan rencana.
@@ -895,7 +895,7 @@ orkestra|Orkestra bermain dengan indah.|Dia adalah anggota orkestra lokal.
 organ|Jantung adalah organ vital.|Dia menyumbangkan organnya untuk menyelamatkan nyawa.
 organik|Makanan organik seringkali lebih mahal.|Dia lebih suka produk organik.
 asal usul|Mereka melacak asal kata itu.|Asal usul tradisi ini tidak diketahui.
-Jika tidak|Anda perlu belajar; jika tidak, Anda akan gagal.|Dia harus pergi sekarang; jika tidak, dia akan terlambat.
+jika tidak|Anda perlu belajar; jika tidak, Anda akan gagal.|Dia harus pergi sekarang; jika tidak, dia akan terlambat.
 hasil|Hasil percobaan tidak meyakinkan.|Kami masih menunggu hasil akhir.
 luar|Lapisan luar kulit melindungi tubuh.|Planet-planet luar adalah raksasa gas.
 pakaian|Dia mengenakan pakaian bergaya untuk pesta itu.|Pakaiannya sangat santai.
@@ -916,7 +916,7 @@ panel|Panel kontrol terletak di bagian depan.|Dia adalah anggota panel diskusi.
 panik|Dia merasakan gelombang kepanikan melanda dirinya.|Jangan panik; kita bisa menyelesaikan masalah ini.
 parade|Parade akan dimulai pada siang hari.|Dia menyaksikan parade dari tepi.
 paralel|Kedua garis itu sejajar satu sama lain.|Kita harus menemukan solusi paralel.
-Parlemen|Parlemen akan memilih undang-undang baru.|Dia bekerja sebagai konsultan untuk parlemen.
+parlemen|Parlemen akan memilih undang-undang baru.|Dia bekerja sebagai konsultan untuk parlemen.
 paruh waktu|Dia bekerja paruh waktu di toko buku.|Dia belajar penuh waktu dan bekerja paruh waktu.
 peserta|Setiap peserta akan menerima sertifikat.|Konferensi ini memiliki lebih dari 100 peserta.
 partisipasi|Partisipasi dalam survei ini bersifat sukarela.|Kami mendorong partisipasi aktif dari semua anggota.
@@ -928,7 +928,7 @@ kata sandi|Silakan masukkan kata sandi Anda untuk melanjutkan.|Dia mengubah kata
 patch|Aku perlu menerapkan patch ke perangkat lunak.|Patch memperbaiki beberapa bug dalam sistem.
 sabar|Kesabaran adalah kebajikan.|Dia menunggu dengan sangat sabar.
 pasien|Pasien pulih dengan baik.|Dia adalah orang yang sangat sabar.
-Berhenti|Ada jeda singkat sebelum ia menjawab.|Dia mengambil jeda untuk mengumpulkan pikirannya.
+berhenti|Ada jeda singkat sebelum ia menjawab.|Dia mengambil jeda untuk mengumpulkan pikirannya.
 teman sebaya|Dia dihormati oleh teman-temannya.|Studi ini melibatkan sekelompok teman sebaya.
 hukuman|Hukuman untuk kecurangan sangat berat.|Dia menerima hukuman atas tindakannya.
 pensiun|Dia menerima pensiun setelah pensiun.|Sistem pensiun membutuhkan reformasi.
@@ -937,7 +937,7 @@ persepsi|Persepsi kita tentang realitas adalah subjektif.|Dia memiliki persepsi 
 permanen|Ini adalah solusi permanen untuk masalah ini.|Dia ingin mencari pekerjaan tetap.
 secara permanen|Perubahan akan diterapkan secara permanen.|Dia pindah untuk selamanya.
 izin|Kau butuh izin untuk parkir di sini.|Mereka diberi izin untuk membangun.
-Perspektif|Dari sudut pandang saya, keputusan itu salah.|Dia punya perspektif unik tentang masalah ini.
+perspektif|Dari sudut pandang saya, keputusan itu salah.|Dia punya perspektif unik tentang masalah ini.
 apotek|Aku harus pergi ke apotek untuk mengambil resepku.|Apotek ini buka 24 jam.
 fase|Kami berada di fase akhir proyek.|Setiap fase proyek memiliki tantangannya sendiri.
 fenomena|Fenomena perubahan iklim sangat kompleks.|Para ilmuwan mempelajari berbagai fenomena alam.
@@ -948,7 +948,7 @@ gambar|Aku mengambil gambar matahari terbenam yang indah.|Gambar itu dipamerkan 
 tumpukan|Ada tumpukan buku di atas meja.|Dia memilah-milah tumpukan kertas.
 obat|Dia minum pil untuk alergi.|Dokter meresepkan pil baru.
 ketinggian|Dia memberikan pitch untuk ide start-upnya.|Pitch ini diterima dengan baik oleh investor.
-Kasihan.|Sayang sekali kau tidak bisa datang ke pesta.|Dia merasa kasihan pada pria tunawisma itu.
+kasihan|Sayang sekali kau tidak bisa datang ke pesta.|Dia merasa kasihan pada pria tunawisma itu.
 penempatan|Penempatan furnitur penting.|Dia mendapatkan penempatan magang.
 biasa|Desainnya sangat sederhana dan sederhana.|Dia lebih suka pakaian biasa daripada yang mencolok.
 plot|Plot film ini sangat menarik.|Mereka menemukan rencana untuk menggulingkan pemerintah.
@@ -985,7 +985,7 @@ cetak|Tolong cetak dokumen ini.|Dia suka mencetak foto dari perjalanannya.
 sebelumnya|Versi sebelumnya dari perangkat lunak memiliki banyak bug.|Dia punya pertunangan sebelumnya dan tidak bisa hadir.
 prioritas|Keamanan adalah prioritas utama kami.|Dia menetapkan prioritasnya dengan benar.
 privasi|Privasi Anda penting bagi kami.|Dia sangat menghargai privasinya.
-Probabilitas|Kemungkinan hujan besok sangat tinggi.|Ada kemungkinan kecil untuk berhasil.
+probabilitas|Kemungkinan hujan besok sangat tinggi.|Ada kemungkinan kecil untuk berhasil.
 kemungkinan|Kemungkinan dia akan datang ke pesta.|Kemungkinan penyebab kecelakaan adalah kecepatannya.
 prosedur|Prosedur aplikasi cukup sederhana.|Dia mengikuti prosedur yang benar.
 lanjutkan|Kami akan melanjutkan proyek seperti yang direncanakan.|Silakan lanjut ke langkah berikutnya.
@@ -1063,7 +1063,7 @@ memperkuat|Sang guru menggunakan contoh-contoh untuk memperkuat pelajaran.|Tim p
 relatif|Tugas ini relatif mudah dibandingkan dengan yang lain.|Dia relatif baru dalam pekerjaan ini.
 yang relevan|Informasi ini relevan dengan diskusi kita.|Dia memiliki pengalaman yang relevan untuk posisi.
 bantuan|Dia merasa lega setelah menyelesaikan ujian.|Obat itu memberikan bantuan dari rasa sakit.
-Menghilangkan|Terapi itu membantu meredakan kecemasannya.|Dia menarik napas dalam-dalam untuk menghilangkan stresnya.
+menghilangkan|Terapi itu membantu meredakan kecemasannya.|Dia menarik napas dalam-dalam untuk menghilangkan stresnya.
 lega|Dia merasa lega setelah mendengar kabar baik itu.|Dia lega karena menemukan dompetnya yang hilang.
 mengandalkan|Kau bisa mengandalkan dia untuk menyelesaikan tugasnya.|Mereka sangat bergantung pada transportasi umum.
 catatan|Dia membuat komentar tentang cuaca.|Komentar-komentarnya berwawasan dan membuat saya berpikir.
@@ -1084,7 +1084,7 @@ tempat wisata|Mereka harus mengambil langkah-langkah ekstrim untuk menyelesaikan
 mengembalikan|Pemerintah berencana untuk memulihkan bangunan bersejarah.|Dia bekerja untuk mengembalikan lukisan ke kondisi aslinya.
 membatasi|Undang-undang baru akan membatasi akses ke area tertentu.|Mereka harus membatasi rencana perjalanan mereka karena keterbatasan anggaran.
 pembatasan|Pembatasan parkir telah menyebabkan masalah bagi penduduk.|Mereka bekerja untuk mengangkat pembatasan makan di luar ruangan.
-Resume|Dia memperbarui resume-nya sebelum melamar pekerjaan.|Resume yang ditulis dengan baik dapat membuat perbedaan besar.
+resume|Dia memperbarui resume-nya sebelum melamar pekerjaan.|Resume yang ditulis dengan baik dapat membuat perbedaan besar.
 ritel|Industri ritel telah terpengaruh oleh pandemi.|Dia bekerja di manajemen ritel.
 pertahankan|Penting untuk mempertahankan kepercayaan pelanggan.|Perusahaan ini bertujuan untuk mempertahankan talenta terbaiknya.
 pensiun|Dia menantikan masa pensiunnya tahun depan.|Pensiun bisa menjadi waktu untuk petualangan baru.
@@ -1188,7 +1188,7 @@ kemiringan|Kemiringan bukit itu curam.|Mereka membangun sebuah slide di lereng r
 yang disebut|Orang yang disebut ahli itu tidak begitu berpengetahuan luas.|Dia menolak argumennya sebagai pendapat dari apa yang disebut otoritas.
 matahari|Energi matahari adalah sumber daya terbarukan.|Mereka memasang panel surya di atap.
 entah bagaimana|Entah bagaimana, mereka berhasil menyelesaikan proyek tepat waktu.|Dia merasa bahwa entah bagaimana hal-hal akan bekerja.
-Kadang-kadang|Kita harus bertemu minggu depan.|Dia berencana untuk melakukan perjalanan ke Eropa tahun ini.
+kadang-kadang|Kita harus bertemu minggu depan.|Dia berencana untuk melakukan perjalanan ke Eropa tahun ini.
 agak|Situasinya agak lebih baik dari sebelumnya.|Dia agak terkejut dengan berita itu.
 canggih|Perangkat lunaknya sangat canggih.|Dia memiliki pemahaman yang canggih tentang subjek.
 jiwa|Musik adalah bahasa jiwa.|Dia memiliki jiwa yang baik.
@@ -1242,7 +1242,7 @@ pemogokan|Para pekerja mogok untuk upah yang lebih baik.|Jam akan segera pukul t
 mencolok|Lukisan itu memiliki penggunaan warna yang mencolok.|Dia sangat mirip dengan ibunya.
 stroke|Dia mengalami stroke tahun lalu.|Dokter bilang itu stroke ringan.
 struktur|Struktur bangunan sangat modern.|Mereka mempelajari struktur molekul DNA.
-Perjuangan|Dia harus berjuang untuk menyampaikan pendapatnya.|Negara ini masih dalam perjuangan untuk kemerdekaan.
+perjuangan|Dia harus berjuang untuk menyampaikan pendapatnya.|Negara ini masih dalam perjuangan untuk kemerdekaan.
 barang-barang|Aku harus membeli beberapa barang untuk pesta.|Dia mengemas semua barangnya ke dalam kotak.
 memukau|Pemandangan dari puncak gunung itu menakjubkan.|Dia mengenakan gaun yang memukau untuk acara itu.
 subjek|Topik pertemuan tidak diungkapkan.|Dia adalah ahli dalam bidang linguistik.
@@ -1271,15 +1271,15 @@ menyapu|Tolong sapu lantai sebelum para tamu tiba.|Angin mulai menyapu melalui p
 saklar|Kau bisa menyalakan dan mematikan lampu dengan remote ini.|Dia memutuskan untuk berganti karir setelah sepuluh tahun.
 simpati|Dia bersimpati pada situasi dia.|Guru bersimpati terhadap siswa yang berjuang.
 simpati|Ia sangat bersimpati kepada para korban.|Rasa simpati terhadap para tunawisma mendorongnya untuk menjadi sukarelawan.
-Tag|Tolong taruh label pada bagasi Anda.|Label harga masih melekat pada barang tersebut.
+tag|Tolong taruh label pada bagasi Anda.|Label harga masih melekat pada barang tersebut.
 cerita|Dia menceritakan kisah yang menarik tentang perjalanannya.|Buku ini adalah kisah petualangan dan persahabatan.
-Tangki|Tentara mengerahkan tank ke medan perang.|Tangki ikan perlu dibersihkan secara teratur.
+tangki|Tentara mengerahkan tank ke medan perang.|Tangki ikan perlu dibersihkan secara teratur.
 mengetuk|Silahkan ketuk layar untuk melanjutkan.|Dia memberi meja tap lembut.
 target|Kampanye pemasaran bertujuan untuk menjangkau target audiens yang lebih muda.|Pemanah menembak dengan hati-hati ke sasaran.
 air mata|Hati-hati jangan merobek kertasnya.|Dia merasakan air mata mengalir di pipinya.
 teknologi|Kemajuan teknologi telah mengubah cara hidup kita.|Dia bekerja di bidang inovasi teknologi.
 remaja|Remaja sering menghadapi berbagai tantangan.|Program ini dirancang untuk remaja berusia 13 sampai 19 tahun.
-Kuil|Bait suci kuno adalah tempat ibadah.|Mereka mengunjungi kuil selama perjalanan mereka.
+kuil|Bait suci kuno adalah tempat ibadah.|Mereka mengunjungi kuil selama perjalanan mereka.
 sementara|Toko ditutup sementara untuk renovasi.|Dia tinggal di hotel sementara.
 sementara|Ini hanya solusi sementara untuk masalah ini.|Dia menemukan pekerjaan sementara saat mencari pekerjaan permanen.
 kecenderungan|Ada kecenderungan yang berkembang terhadap pekerjaan jarak jauh.|Dia memiliki kecenderungan untuk menunda-nunda.
@@ -1287,7 +1287,7 @@ ketegangan|Ketegangan di ruangan itu terasa.|Dia merasakan sakit kepala yang dat
 istilah|Keberlanjutan adalah istilah kunci dalam diskusi lingkungan.|Istilah hukum memiliki implikasi spesifik.
 terminal|Pesawat itu tiba di terminal internasional.|Dia bekerja di terminal bus.
 istilah|Ketentuan perjanjian jelas diuraikan.|Dia setuju dengan syarat tanpa ragu.
-Sangat buruk|Film itu sangat membosankan.|Dia sangat kesal dengan berita itu.
+sangat buruk|Film itu sangat membosankan.|Dia sangat kesal dengan berita itu.
 menakutkan|Suara keras itu cukup untuk menakut-nakuti anak-anak.|Dia ketakutan dengan film horor itu.
 wilayah|Hewan itu menandai wilayahnya dengan aroma.|Mereka menjelajahi wilayah yang belum dipetakan.
 teror|Negara ini berada di bawah ancaman serangan teroris.|Film ini menggambarkan kengerian perang dan teror.
@@ -1304,7 +1304,7 @@ benar-benar|Tugas ini diperiksa secara menyeluruh sebelum diimplementasikan.|Dia
 ancaman|Laporan tersebut menyoroti ancaman perubahan iklim.|Mereka bekerja untuk mengurangi ancaman terorisme.
 mengancam|Awan gelap mengancam hujan.|Dia diancam dengan tindakan hukum.
 jempol|Dia memberikan jempol ke atas untuk menunjukkan persetujuan.|Jempol adalah bagian penting dari tangan.
-Dengan demikian|Dia belajar keras; dengan demikian, dia lulus ujian.|Proyek itu berhasil; dengan demikian, kami menerima dana.
+dengan demikian|Dia belajar keras; dengan demikian, dia lulus ujian.|Proyek itu berhasil; dengan demikian, kami menerima dana.
 waktu|Waktu berlalu begitu saja saat kau bersenang-senang.|Kita perlu mengatur waktu dengan efektif.
 waktu|Waktu kejadian itu sempurna.|Waktu yang tepat sangat penting untuk sukses.
 jaringan|Sampel jaringan dikirim untuk analisis.|Dia memiliki alergi jaringan dan perlu berhati-hati.
@@ -1334,7 +1334,7 @@ tropis|Iklim tropis sangat ideal untuk menanam pisang.|Mereka berlibur di surga 
 masalah|Dia bermasalah dengan hukum.|Jangan masuk masalah di sekolah.
 benar-benar|Aku benar-benar percaya pada kemampuanmu.|Dia sangat berbakat.
 kepercayaan|Kepercayaan sangat penting dalam sebuah hubungan.|Dia menaruh kepercayaan padanya.
-Cobalah|Aku akan mencoba yang terbaik untuk membantumu.|Jangan takut untuk mencoba hal-hal baru.
+cobalah|Aku akan mencoba yang terbaik untuk membantumu.|Jangan takut untuk mencoba hal-hal baru.
 tsunami|Tsunami menyebabkan kehancuran luas.|Mereka mengevakuasi daerah itu sebelum tsunami melanda.
 menyanyi|Musisi itu memainkan lagu yang indah.|Bisakah kau mengomel lagu itu untukku?
 terowongan|Terowongan itu digali melalui batuan padat.|Mereka menemukan terowongan tersembunyi di bawah kota.
@@ -1379,7 +1379,7 @@ terlihat|Bintang-bintang terlihat di langit malam yang cerah.|Dia memiliki bekas
 penglihatan|Visi perusahaan adalah untuk berinovasi industri.|Dia memiliki visi yang jelas untuk masa depan.
 visual|Presentasi itu memiliki banyak alat bantu visual.|Dia adalah seorang pelajar visual.
 sangat penting|Air sangat penting bagi semua makhluk hidup.|Penelitian ini sangat penting bagi pemahaman kita tentang penyakit ini.
-Vitamin|Vitamin C penting untuk sistem kekebalan tubuh.|Dia mengonsumsi suplemen vitamin setiap hari.
+vitamin|Vitamin C penting untuk sistem kekebalan tubuh.|Dia mengonsumsi suplemen vitamin setiap hari.
 volume|Volume wadah adalah dua liter.|Tolong turunkan volume musiknya.
 sukarela|Partisipasi dalam penelitian ini bersifat sukarela.|Dia menawarkan jasa sukarela.
 pemungutan suara|Memilih adalah kewajiban warga negara yang penting.|Proses pemungutan suara transparan.
@@ -1394,10 +1394,10 @@ mingguan|Pertemuan mingguan adalah pada hari Senin.|Dia menerima surat kabar min
 aneh|Itu kebetulan yang aneh.|Dia punya selera humor yang aneh.
 kesejahteraan|Pemerintah menyediakan program kesejahteraan.|Kesejahteraan penting untuk masyarakat yang sehat.
 gandum|Gandum adalah makanan pokok di banyak negara.|Panen gandum tahun ini berlimpah.
-Mengingat bahwa|Dia suka musik klasik, sedangkan dia lebih suka rock.|Sementara saya suka hiking, adik saya suka berenang.
+mengingat bahwa|Dia suka musik klasik, sedangkan dia lebih suka rock.|Sementara saya suka hiking, adik saya suka berenang.
 dimanapun|Kau bisa duduk dimanapun kau suka.|Dimanapun kau pergi, aku akan mengikutimu.
 berbisik|Dia berbisik sebuah rahasia di telingaku.|Dia berbicara dengan bisik-bisik untuk menghindari didengar.
-Siapa pun|Siapa pun yang selesai pertama akan memenangkan hadiah.|Siapapun yang bertanggung jawab harus bertanggung jawab.
+siapa pun|Siapa pun yang selesai pertama akan memenangkan hadiah.|Siapapun yang bertanggung jawab harus bertanggung jawab.
 siapa|Kepada siapa saja yang peduli.|Siapa yang kau lihat di pesta itu?
 secara luas|Teori ini diterima secara luas oleh komunitas ilmiah.|Dia secara luas dianggap sebagai ahli di bidangnya.
 meluas|Penyakit ini semakin meluas.|Ada dukungan luas untuk inisiatif ini.

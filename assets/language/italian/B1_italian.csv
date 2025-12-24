@@ -21,7 +21,7 @@ avanti|La strada è chiusa per lavori.|Dobbiamo pianificare in anticipo il proge
 mira|Il mio obiettivo è migliorare le mie abilità in inglese.|Ha un chiaro obiettivo per la sua carriera.
 allarme|Ho impostato l'allarme per le 7 del mattino.|L'allarme antincendio si è attivato inaspettatamente.
 album|Ho appena comprato il nuovo album della mia band preferita.|L'album fotografico contiene ricordi del nostro viaggio.
-Alcol|Lui non beve alcol.|L'alcol può essere dannoso in grandi quantità.
+alcol|Lui non beve alcol.|L'alcol può essere dannoso in grandi quantità.
 alcolici|E' un alcolista in via di guarigione.|Le bevande alcoliche non sono permesse qui.
 alternativa|Dobbiamo trovare una soluzione alternativa.|Esistono molte fonti energetiche alternative.
 stupiti|Sono rimasto sbalordito dalla performance.|Lei era stupita dalla bellezza del paesaggio.
@@ -35,11 +35,11 @@ fastidioso|Le sue costanti lamentele mi irritano.|Non infastidire il tuo fratell
 infastidito|Lei era infastidita dal rumore forte.|Si sentiva infastidito dal ritardo.
 fastidioso|Il ronzio delle mosche è fastidioso.|E' fastidioso quando la gente interrompe.
 separati|I due edifici sono separati l'uno dall'altro.|Si sono allontanati nel corso degli anni.
-Chiedete scusa|Devo scusarmi per il mio errore.|Si scusò per essere in ritardo.
+chiedete scusa|Devo scusarmi per il mio errore.|Si scusò per essere in ritardo.
 applicazione|Ho presentato la mia domanda per il lavoro.|Il processo di candidatura è piuttosto semplice.
 nomina|Ho un appuntamento dal dottore alle 15.|Ha saltato l'appuntamento e ha dovuto rimandare.
 apprezzare|Apprezzo davvero il tuo aiuto.|Lei apprezza la bellezza della natura.
-Circa|L'incontro durerà circa due ore.|C'erano circa 100 persone all'evento.
+circa|L'incontro durerà circa due ore.|C'erano circa 100 persone all'evento.
 arresto|La polizia ha arrestato il sospetto ieri sera.|E' stato arrestato per guida in stato di ebbrezza.
 arrivo|L'arrivo del treno fu ritardato.|Eravamo eccitati per l'arrivo dei nostri ospiti.
 assegnazione|Domani devo fare un compito di matematica.|L'insegnante ci diede un compito difficile.
@@ -86,7 +86,7 @@ sposa|La sposa era bellissima il giorno del suo matrimonio.|È un'amica della sp
 bolla|I bambini soffiarono delle bolle nel parco.|Una bolla è scoppiata nell'aria.
 sepoltura|Hanno deciso di seppellire la capsula del tempo.|Vuole seppellire il suo passato.
 di|Il libro è stato scritto da un autore famoso.|Ha viaggiato in treno.
-Calma .|Si prega di mantenere la calma durante l'emergenza.|Ha parlato con voce calma.
+calma|Si prega di mantenere la calma durante l'emergenza.|Ha parlato con voce calma.
 campagna|La campagna ha avuto successo.|Hanno lanciato una nuova campagna pubblicitaria.
 campus universitario|Il campus universitario è bellissimo.|Ci sono molti alberi nel campus.
 candidato|Lei è una candidata per la posizione.|I candidati saranno intervistati domani.
@@ -163,7 +163,7 @@ campagna|Vivono in campagna.|La campagna è bellissima in primavera.
 tribunale|La corte e' in seduta.|E' stato portato in tribunale per il crimine.
 copertura|Per favore, copri il tavolo con un panno.|La neve copriva il terreno.
 coperto|Il libro è coperto di polvere.|L'auto è coperta di neve.
-Crema|Mi piace mettere la panna nel mio caffè.|Si è applicata della crema sulla pelle.
+crema|Mi piace mettere la panna nel mio caffè.|Si è applicata della crema sulla pelle.
 criminale|Il criminale è stato catturato dalla polizia.|Ha una fedina penale.
 crudele|E' stato crudele trattarlo cosi'.|La punizione crudele ha scioccato tutti.
 culturale|Le differenze culturali possono rappresentare una sfida.|Sta studiando antropologia culturale.
@@ -192,7 +192,7 @@ sviluppo|Lo sviluppo della tecnologia è rapido.|Ci concentriamo sullo sviluppo 
 diagramma|Si prega di fare riferimento al diagramma per chiarimenti.|Il diagramma illustra il processo.
 diamante|Il diamante è molto prezioso.|Ha ricevuto un anello di diamanti.
 difficoltà|Ha affrontato molte difficoltà.|La difficoltà del compito era inaspettata.
-Diretto|Per favore, mi dia una risposta diretta.|La strada è un percorso diretto per la città.
+diretto|Per favore, mi dia una risposta diretta.|La strada è un percorso diretto per la città.
 direttamente|Ho parlato direttamente con lui.|Le informazioni sono state inviate direttamente a lei.
 polvere|La sporcizia sulle tue scarpe è evidente.|Per favore, pulisci la terra dal pavimento.
 svantaggio|Lo svantaggio principale è il costo.|Questo approccio presenta vantaggi e svantaggi.
@@ -277,7 +277,7 @@ caratteristica|Il nuovo telefono ha diverse caratteristiche interessanti.|Una de
 recinzione|Hanno costruito una recinzione intorno al giardino.|La recinzione deve essere dipinta.
 combattimento|I combattimenti nella zona sono aumentati.|Lottavano per i loro diritti.
 archivio|Salva il file prima di chiudere.|Devo organizzare i miei file.
-Finanziario|La società è in una posizione finanziaria solida.|Offrono assistenza finanziaria agli studenti.
+finanziario|La società è in una posizione finanziaria solida.|Offrono assistenza finanziaria agli studenti.
 fuoco|L'incendio si diffuse rapidamente nella foresta.|I vigili del fuoco hanno lavorato per controllare il fuoco.
 forma fisica|E' concentrata sui suoi obiettivi di fitness.|L'esercizio fisico regolare è importante per la forma fisica.
 fisso|Il prezzo fisso non è negoziabile.|Ha un programma fisso ogni settimana.
@@ -289,7 +289,7 @@ piegare|Per favore, piega la carta a metà.|Sa come piegare un lenzuolo.
 popolare|La musica folk è popolare in questa regione.|La festa celebra le tradizioni popolari.
 seguendo|Il giorno seguente era soleggiato.|Ha un seguito di fedeli fan.
 forza|La forza dell'esplosione era immensa.|Hanno usato tutta la loro forza per spingere l'auto.
-Per sempre.|Ti amerò per sempre.|Questo momento rimarrà impresso nella mia memoria per sempre.
+per sempre|Ti amerò per sempre.|Questo momento rimarrà impresso nella mia memoria per sempre.
 cornice|Ha comprato una cornice nuova per il quadro.|Il telaio era fatto di legno massiccio.
 congelare|L'acqua si congela se la temperatura scende.|Ho dimenticato di congelare gli avanzi.
 frequentemente|Viaggia spesso per lavoro.|L'autobus parte frequentemente durante il giorno.
@@ -300,7 +300,7 @@ spaventoso|Il film era così spaventoso che non potevo dormire.|Ha una spaventos
 congelati|Il lago è congelato d'inverno.|Ha trovato una pizza congelata nel congelatore.
 fritto|Mi piace friggere le verdure nell'olio d'oliva.|Dovresti friggere le patate finché non diventano dorate.
 carburante|L'auto va a gasolio.|Dobbiamo trovare una fonte di carburante per il generatore.
-Funzione|La funzione principale del cuore è di pompare il sangue.|Questo pulsante ha una funzione specifica nel software.
+funzione|La funzione principale del cuore è di pompare il sangue.|Questo pulsante ha una funzione specifica nel software.
 pelliccia|Il cappotto è fatto di vera pelliccia.|Alcuni animali hanno una spessa pelliccia per tenersi al caldo.
 ulteriori|Dobbiamo indagare ulteriormente su questa questione.|Può fornire ulteriori dettagli sul progetto?
 garage|Ha parcheggiato la sua macchina nel garage.|Il garage è pieno di vecchi attrezzi.
@@ -312,10 +312,10 @@ gentile|Ha un modo gentile.|La leggera brezza era rinfrescante.
 signore|È un vero gentiluomo.|Il signore le tenne la porta aperta.
 fantasma|Il fantasma è apparso a mezzanotte.|Lei crede nei fantasmi e negli spiriti.
 gigante|L'albero gigante si ergeva sopra la foresta.|Ha una collezione gigantesca di francobolli.
-Con piacere.|Sono felice di rivederti.|Era felice di sentire la buona notizia.
+con piacere|Sono felice di rivederti.|Era felice di sentire la buona notizia.
 globale|Il cambiamento climatico è un problema globale.|Abbiamo bisogno di una soluzione globale a questo problema.
 guanto|Si è messo i guanti prima di uscire.|Questi guanti sono fatti di lana calda.
-Vai via.|Devo andare al negozio.|Andiamo a fare una passeggiata.
+vai via|Devo andare al negozio.|Andiamo a fare una passeggiata.
 merci|Il negozio vende una varietà di merci.|Dobbiamo trasportare questa merce al magazzino.
 grado|Ha ricevuto un alto voto al suo esame.|L'insegnante punterà i compiti questo fine settimana.
 laureato|Io mi laureerò all'università l'anno prossimo.|È orgogliosa di essersi laureata con lode.
@@ -327,7 +327,7 @@ colpevole|Si sentiva in colpa per non aver aiutato.|Il verdetto di colpevolezza 
 mano|Lei alzò la mano per fare una domanda.|Strinse la mano a tutti.
 appeso|Hanno deciso di appendere il quadro alla parete.|Non dimenticare di appendere il cappotto.
 felicità|La felicità è la chiave per una vita appagante.|Irradia felicità ovunque vada.
-Difficilmente.|Non riesco a sentirti.|Lei esce quasi mai.
+difficilmente|Non riesco a sentirti.|Lei esce quasi mai.
 odio|Odio aspettare in fila.|Odia l'ingiustizia.
 testa|Lei annuì con la testa in accordo.|Lui tenne la testa alta.
 titolo|Il titolo ha attirato la mia attenzione.|Scrive titoli per un giornale.
@@ -345,7 +345,7 @@ orrore|Il film dell'orrore mi ha tenuto sul bordo del sedile.|Lei ama leggere st
 ospite|Ospiteranno l'evento a casa loro.|E' un'ottima ospite per le cene.
 caccia|Sono andati a caccia di cervi.|Ama cacciare in montagna.
 uragano|L'uragano ha causato gravi danni alla costa.|Hanno evacuato la zona prima che l'uragano colpisse.
-Sbrigati !|Devi sbrigarti se vuoi prendere l'autobus.|Lei ha sempre fretta al mattino.
+sbrigati|Devi sbrigarti se vuoi prendere l'autobus.|Lei ha sempre fretta al mattino.
 identità|La tua identità è modellata dalle tue esperienze.|Ha lottato con la sua identità culturale.
 ignorare|E' facile ignorare il problema.|Ha scelto di ignorare i segnali di avvertimento.
 illegale|E' illegale parcheggiare qui.|Sono stati beccati a contrabbandare merci illegali.
@@ -355,13 +355,13 @@ immigrato|La città ha una grande popolazione di immigrati.|Molti immigrati veng
 impatto|L'impatto della nuova politica è ancora sconosciuto.|È stato valutato l'impatto ambientale del progetto.
 importazione|Il paese dipende dall'importazione di petrolio.|Hanno deciso di importare beni dall'estero.
 importanza|L'importanza dell'istruzione non può essere sottovalutata.|Lei capisce l'importanza del duro lavoro.
-Impressione|Ha fatto una forte impressione durante l'intervista.|La sua prima impressione della città fu positiva.
+impressione|Ha fatto una forte impressione durante l'intervista.|La sua prima impressione della città fu positiva.
 impressionante|L'esibizione è stata davvero impressionante.|Ha un curriculum impressionante.
 miglioramento|C'è stato un significativo miglioramento nei suoi voti.|L'azienda sta cercando modi per apportare miglioramenti.
-incredibile .|E' incredibilmente talentuosa.|La vista dall'alto è incredibilmente bella.
-In effetti|È stato davvero un risultato notevole.|Lei è davvero la migliore candidata per il lavoro.
+incredibile|E' incredibilmente talentuosa.|La vista dall'alto è incredibilmente bella.
+in effetti|È stato davvero un risultato notevole.|Lei è davvero la migliore candidata per il lavoro.
 indicare|I risultati indicano la necessità di ulteriori ricerche.|Per favore, indichi le tue preferenze sul modulo.
-Indiretta|I suoi commenti indiretti erano difficili da interpretare.|Ha preso una strada indiretta per evitare il traffico.
+indiretta|I suoi commenti indiretti erano difficili da interpretare.|Ha preso una strada indiretta per evitare il traffico.
 all' interno|Le piante da interno possono migliorare la qualità dell'aria.|Abbiamo deciso di fare la festa all'interno.
 all' interno|Fa troppo freddo per giocare all'aperto, restiamo dentro.|I bambini giocano in casa oggi.
 influenza|Il suo discorso ebbe una profonda influenza sull'uditorio.|I social media possono influenzare l'opinione pubblica.
@@ -450,15 +450,15 @@ necessità|Dobbiamo trovare una soluzione a questo problema.|Ha bisogno di compa
 aghi|Ha usato un ago e un filo per fissare la camicia.|L'ago era troppo spesso per il tessuto.
 quartiere|Vivono in un quartiere tranquillo.|Il quartiere ha molti parchi e scuole.
 nessuna|Nessuna delle due opzioni mi sembra ideale.|A lei non piacciono né il caffè né il tè.
-Rettifica|La rete catturò parecchi pesci.|Lavora nell'industria della rete.
+rettifica|La rete catturò parecchi pesci.|Lavora nell'industria della rete.
 successivo|Il prossimo treno arriva alle 17.|Lei è la prossima in fila per la promozione.
 né|Non gli piacciono né le mele né le arance.|Lei non è né dottore né avvocato.
 normale|E' normale sentirsi nervosi prima di un esame.|Ha la pressione normale.
 nord|Le regioni settentrionali sono più fredde in inverno.|Viene da una città del nord.
-Nota|Si prega di prendere nota dei punti importanti.|Ti ho lasciato un biglietto sulla scrivania.
+nota|Si prega di prendere nota dei punti importanti.|Ti ho lasciato un biglietto sulla scrivania.
 nucleare|Il paese sta sviluppando l'energia nucleare.|Il nucleare ha i suoi vantaggi e gli svantaggi.
 ovvio|Era ovvio che fosse sconvolta.|La soluzione è ovvia una volta che capisci il problema.
-Ovviamente .|Ovviamente, non ha capito le istruzioni.|Lei è ovviamente talentuosa in musica.
+ovviamente|Ovviamente, non ha capito le istruzioni.|Lei è ovviamente talentuosa in musica.
 occasione|E' un'occasione speciale da festeggiare.|In questa occasione, dovremmo riflettere sulle nostre conquiste.
 si verificano|L'incidente si è verificato a tarda notte.|Potrebbero verificarsi dei cambiamenti se attuassimo la nuova politica.
 dispari|Questo è un modo strano di risolvere il problema.|Ha uno strano senso dell'umorismo.
@@ -487,12 +487,12 @@ percorso|Camminavamo lungo il sentiero stretto.|Il sentiero porta al vecchio cas
 pagamento|Il pagamento è dovuto la prossima settimana.|Ho ricevuto il pagamento per il mio lavoro.
 pacifica|Il giardino è un luogo tranquillo per rilassarsi.|Ha un atteggiamento pacifico.
 percentuale|Quale percentuale della popolazione è colpita?|La percentuale di studenti che hanno superato l'esame è aumentata.
-Perfetto .|Lei canta perfettamente.|Tutto e' andato perfettamente secondo i piani.
+perfetto|Lei canta perfettamente.|Tutto e' andato perfettamente secondo i piani.
 prestazioni|L'esibizione è stata eccezionale.|Ha ricevuto elogi per la sua interpretazione.
 personalmente|Personalmente credo nella sua innocenza.|Ha consegnato personalmente il messaggio.
 persuadere|Ho cercato di convincerlo a restare.|Lei fu in grado di persuaderli a cambiare idea.
 fotografo|Il fotografo ha catturato il momento alla perfezione.|Lavora come fotografa freelance.
-Fotografia|Ha una passione per la fotografia.|Ha studiato fotografia al college.
+fotografia|Ha una passione per la fotografia.|Ha studiato fotografia al college.
 spilla|Mi serve un perno per attaccare questo foglio.|Indossava una spilla decorativa sulla giacca.
 tubo|L'idraulico ha riparato il tubo che perdeva.|Il fumo si alzava dal tubo.
 luogo|Questo è un bel posto da visitare.|Il posto era affollato di turisti.
@@ -531,7 +531,7 @@ pressione|La pressione si sta accumulando.|E' sottoposta a molta pressione al la
 fare finta|A loro piace fingere di essere dei supereroi.|Non fare finta di non avermi visto.
 precedente|Il precedente proprietario ha fatto molti miglioramenti.|Nel capitolo precedente, abbiamo discusso...
 precedentemente|Prima vivevo a Londra.|Prima aveva lavorato in un'altra azienda.
-Sacerdote|Il prete ha tenuto un sermone la domenica.|Vuole diventare prete.
+sacerdote|Il prete ha tenuto un sermone la domenica.|Vuole diventare prete.
 primario|L'educazione è una preoccupazione primaria.|L'obiettivo principale è quello di migliorare l'alfabetizzazione.
 principe|Il principe erediterà il trono.|Ha ballato con il principe al ballo.
 principessa|La principessa indossava un bel vestito.|Ogni bambino sogna di essere una principessa.
@@ -589,7 +589,7 @@ ricordare|Per favore, ricordami di chiamarla.|Devo ricordarmi di fare una pausa.
 remoto|Lavora a distanza da casa sua.|Il telecomando è sul tavolo.
 affitto|Hanno deciso di noleggiare un'auto per il viaggio.|L'affitto è dovuto all'inizio del mese.
 riparazione|Devo riparare la mia moto.|La riparazione ha richiesto più tempo del previsto.
-Ripetizione|Può ripeterlo, per favore?|Devo ripetere il processo per ogni oggetto.
+ripetizione|Può ripeterlo, per favore?|Devo ripetere il processo per ogni oggetto.
 ripetuta|I ripetuti tentativi non hanno avuto successo.|Ha un modello di comportamento ripetuto.
 rappresentare|È stato scelto per rappresentare la squadra.|Il dipinto rappresenta la visione dell'artista.
 richiesta|Vorrei chiedere un incontro.|La richiesta è stata approvata dalla direzione.
@@ -605,7 +605,7 @@ in pensione|È un'insegnante in pensione.|Gli individui in pensione spesso fanno
 revisione|Devo rivedere il mio saggio prima di inviarlo.|L'insegnante rivedrà il piano di lezione.
 anello|Ha ricevuto un bellissimo anello in regalo.|L'anello è fatto d'oro.
 aumento|Il sole sorgerà alle 6 del mattino.|I prezzi dovrebbero salire l'anno prossimo.
-Rischio|C'è il rischio che piova domani.|Dobbiamo valutare i rischi.
+rischio|C'è il rischio che piova domani.|Dobbiamo valutare i rischi.
 robot|Il robot può svolgere molti compiti.|I robot stanno diventando sempre più comuni nelle industrie.
 rullino|Ti prego, lancia la palla verso di me.|La pasta deve essere tirata fuori.
 romantico|Hanno fatto una cena romantica a lume di candela.|Il film ha una trama romantica.
@@ -629,7 +629,7 @@ sicurezza|Ci sono misure di sicurezza per proteggere l'edificio.|La guardia di s
 sementi|Il contadino ha piantato i semi in primavera.|I semi hanno bisogno di acqua e luce solare per crescere.
 sensibile|È saggio risparmiare denaro per il futuro.|Ha preso la decisione saggia di rimanere a casa.
 separato|Separate i materiali riciclabili dalla spazzatura.|Hanno deciso di separare le loro finanze dopo il divorzio.
-- Davvero ?|Prese la questione sul serio e fece ulteriori indagini.|Ha parlato seriamente delle sfide future.
+- Davvero|Prese la questione sul serio e fece ulteriori indagini.|Ha parlato seriamente delle sfide future.
 servo|Il servo preparò il pasto per gli ospiti.|Lavorava come domestica in una grande casa.
 set (put)|Per favore, metta il libro sul tavolo.|Ha impostato l'allarme per le 7 del mattino.
 set (gruppo)|Il set di piatti era ben disposto.|Ha aderito ad un club del libro nel suo quartiere.
@@ -651,7 +651,7 @@ segnale|Il semaforo è diventato rosso.|Ha usato un segnale per comunicare.
 silenzioso|La stanza silenziosa era piena di tensione.|Lei rimase in silenzio durante la riunione.
 sciocco|E' sciocco preoccuparsi di cose che non si possono controllare.|Lui fece una faccia sciocca per farla ridere.
 somiglianza|C'è una somiglianza tra i due dipinti.|La somiglianza delle loro storie è sorprendente.
-Analogamente|Analogamente le piace fare escursioni in montagna.|Le due proposte sono strutturate in modo simile.
+analogamente|Analogamente le piace fare escursioni in montagna.|Le due proposte sono strutturate in modo simile.
 semplicemente|La soluzione è semplicemente chiedere aiuto.|Ha spiegato il concetto in modo semplice e chiaro.
 dal momento che|Vivo qui dal 2010.|Dopo l'incidente, e' stato piu' attento.
 lavandino|Il Titanic affondò nel 1912.|I piatti devono bagnarsi nel lavandino.
@@ -664,7 +664,7 @@ software|Il software deve essere aggiornato regolarmente.|Lavora come sviluppato
 terreni|Il terreno in questa zona è molto fertile.|Hanno testato il terreno per i contaminanti.
 solido|L'acqua è solida quando si congela.|Il tavolo è fatto di legno massiccio.
 classificazione|Per favore, ordinate i file per data.|Gli piace ordinare i suoi libri per genere.
-Sud|La regione meridionale è nota per il suo clima caldo.|Hanno viaggiato verso la parte meridionale del paese.
+sud|La regione meridionale è nota per il suo clima caldo.|Hanno viaggiato verso la parte meridionale del paese.
 in particolare|Ha menzionato il problema specificamente nella sua relazione.|Sto cercando un libro specificamente sulla storia.
 spesa|La spesa dell'azienda è aumentata quest'anno.|È attento alle sue abitudini di spesa.
 piccante|Questo piatto è troppo piccante per i miei gusti.|Le piace il cibo piccante di culture diverse.
@@ -676,7 +676,7 @@ molla|I fiori fioriscono in primavera.|Il tempo si sta riscaldando con l'avvicin
 stadio|Lo stadio era pieno di tifosi entusiasti.|Hanno costruito un nuovo stadio per i prossimi giochi.
 personale|Il personale dell'hotel è stato molto disponibile.|È membro del corpo docente.
 standard|Il prodotto soddisfa gli standard di qualità internazionali.|Stanno lavorando per migliorare il tenore di vita.
-Stato|Lo stato dell'economia è una delle principali preoccupazioni.|È in stato di shock dopo la notizia.
+stato|Lo stato dell'economia è una delle principali preoccupazioni.|È in stato di shock dopo la notizia.
 statistica|Le statistiche mostrano un aumento significativo delle vendite.|Ha analizzato i dati e presentato le statistiche chiave.
 statua|La statua della Libertà è un simbolo di libertà.|Hanno visitato la famosa statua nel parco.
 bastoncino (attacco)|Per favore, attacca l'etichetta sulla scatola.|Ha usato la colla per incollare i pezzi insieme.
@@ -699,7 +699,7 @@ riassumere|Può riassumere i punti principali?|Ha riassunto l'articolo in poche 
 riassunto|La sintesi fornisce una rapida panoramica della relazione.|Si prega di leggere la sintesi prima della riunione.
 fornitura|L'azienda mira a fornire prodotti di alta qualità.|Hanno una fornitura costante di prodotti freschi.
 sostenitore|È una forte sostenitrice delle cause ambientali.|La campagna ha molti sostenitori entusiasti.
-Certo .|Non puoi essere serio.|Lei vincerà sicuramente la competizione.
+certo|Non puoi essere serio.|Lei vincerà sicuramente la competizione.
 superficie|La superficie dell'acqua era calma.|Ha graffiato la superficie del tavolo.
 sopravvivere|Molte specie lottano per sopravvivere in ambienti difficili.|È riuscita a sopravvivere all'incidente.
 nuotare|Amo nuotare nell'oceano.|Ha imparato a nuotare in giovane età.
@@ -715,11 +715,11 @@ tecnica|Ha usato una nuova tecnica per risolvere il problema.|L'artista è conos
 tendenza|Le persone tendono ad essere più produttive al mattino.|Tende a pensare troppo alle cose.
 tenda|Abbiamo montato una tenda per il campeggio.|La tenda era abbastanza spaziosa per sei persone.
 che|Non mi piace questa idea.|E' stato un film fantastico!
-La loro|Questo libro è loro.|Ho trovato le loro chiavi sul tavolo.
+la loro|Questo libro è loro.|Ho trovato le loro chiavi sul tavolo.
 argomento|Il tema della festa e' tropicale.|Ha scritto un saggio sul tema dell'amore.
 teoria|Ha proposto una nuova teoria sul cambiamento climatico.|La teoria fu ampiamente accettata dagli scienziati.
 quindi|Pioveva; perciò la partita fu cancellata.|Ha studiato duramente; quindi, ha superato l'esame.
-questo.|Questo è il mio libro preferito.|Non posso credere che stia succedendo.
+questo|Questo è il mio libro preferito.|Non posso credere che stia succedendo.
 anche se|Anche se pioveva, siamo andati a fare una passeggiata.|Lei è molto talentuosa, anche se le manca l'esperienza.
 gola|Ha mal di gola.|Lei si sgorgò la gola prima di parlare.
 per tutto il|Il museo è aperto tutto l'anno.|Ha viaggiato in tutta Europa la scorsa estate.
@@ -742,7 +742,7 @@ trattamento|Il medico curerà la tua ferita.|Le piace godersi una giornata in sp
 trattamento|Il trattamento per la malattia è costoso.|E' sottoposta a un trattamento per la sua malattia.
 tendenza|Il lavoro a distanza è sempre più diffuso.|Le tendenze della moda cambiano rapidamente.
 trucco|Ha eseguito un trucco magico.|E' solo un trucco della luce.
-Verità|La verità è spesso difficile da accettare.|Finalmente mi ha detto la verità.
+verità|La verità è spesso difficile da accettare.|Finalmente mi ha detto la verità.
 tubo|Il dentifricio e' in un tubo.|Viaggiava in metropolitana.
 tipo|Che tipo di musica ti piace?|Lei è il tipo di persona che ama l'avventura.
 tipicamente|Il tempo è generalmente mite in primavera.|Di solito va a letto presto.
@@ -754,7 +754,7 @@ biancheria intima|Ha comprato delle mutande nuove.|Preferisce la biancheria inti
 disoccupati|È disoccupato da sei mesi.|La popolazione disoccupata sta aumentando.
 disoccupazione|La disoccupazione è un problema importante nella città.|Il governo lavora per ridurre la disoccupazione.
 ingiusto|È ingiusto incolparla per l'errore.|La decisione è stata vista da molti come ingiusta.
-Unione|I lavoratori formarono un sindacato per proteggere i loro diritti.|Il sindacato sta negoziando per salari migliori.
+unione|I lavoratori formarono un sindacato per proteggere i loro diritti.|Il sindacato sta negoziando per salari migliori.
 a meno che|Non avrai successo a meno che tu non lavori duramente.|Io andrò a meno che non piova.
 a differenza|A differenza di sua sorella, lei è molto socievole.|Questo tessuto è diverso da tutto quello che ho visto prima.
 improbabile|È improbabile che nevichi ad aprile.|È improbabile che accetti l'offerta.
@@ -783,7 +783,7 @@ ondata|L'onda si schiantò contro la riva.|Ha salutato le sue amiche.
 arma|Il soldato era addestrato a usare varie armi.|L'arma e' stata trovata sulla scena del crimine.
 pesare|E' importante valutare i pro e i contro.|Si pesa ogni mattina.
 occidentale|I paesi occidentali hanno culture diverse.|Il film è ambientato in una città occidentale.
-Qualunque cosa.|Fai quello che ti rende felice.|Ti sosterrà, qualunque cosa accada.
+qualunque cosa|Fai quello che ti rende felice.|Ti sosterrà, qualunque cosa accada.
 ogni volta|Puoi chiamarmi quando hai bisogno di aiuto.|Saro' li' quando avrai bisogno di me.
 sia|Non so se andare o restare.|Chiese se stava per piovere.
 mentre|Mi piace ascoltare la musica mentre lavoro.|Lei lesse un libro mentre aspettava l'autobus.

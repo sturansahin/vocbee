@@ -16,7 +16,8 @@
       "package": "com.vocbee.app"
     },
     "plugins": [
-      "expo-font"
+      "expo-font",
+      "expo-asset"
     ]
   }
 }

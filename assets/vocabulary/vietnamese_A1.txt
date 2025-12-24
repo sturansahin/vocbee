@@ -1,0 +1,5398 @@
+{
+  "words": [
+    {
+      "id": 1,
+      "word": "a/an",
+      "sentence1": "Tôi có một con mèo.",
+      "sentence2": "Cô ấy là một kỹ sư."
+    },
+    {
+      "id": 2,
+      "word": "khoảng",
+      "sentence1": "Cuốn sách này là về lịch sử.",
+      "sentence2": "Anh nghĩ sao về nó?"
+    },
+    {
+      "id": 3,
+      "word": "trên",
+      "sentence1": "Bức ảnh ở trên ghế sofa.",
+      "sentence2": "Máy bay đang bay trên mây."
+    },
+    {
+      "id": 4,
+      "word": "qua",
+      "sentence1": "Ngân hàng ở bên kia đường.",
+      "sentence2": "Cô ấy đi bộ qua cây cầu."
+    },
+    {
+      "id": 5,
+      "word": "hành động",
+      "sentence1": "Hãy hành động ngay.",
+      "sentence2": "Tôi thích phim hành động."
+    },
+    {
+      "id": 6,
+      "word": "hoạt động",
+      "sentence1": "Bơi là hoạt động yêu thích của tôi.",
+      "sentence2": "Bạn thích hoạt động gì?"
+    },
+    {
+      "id": 7,
+      "word": "diễn viên",
+      "sentence1": "Anh ấy là một diễn viên nổi tiếng.",
+      "sentence2": "Diễn viên đã đóng vai của mình tốt."
+    },
+    {
+      "id": 8,
+      "word": "nữ diễn viên",
+      "sentence1": "Cô ấy là một nữ diễn viên tài năng.",
+      "sentence2": "Nữ diễn viên đã giành được một giải thưởng."
+    },
+    {
+      "id": 9,
+      "word": "thêm vào",
+      "sentence1": "Thêm muối vào súp.",
+      "sentence2": "Anh có thể thêm số của tôi không?"
+    },
+    {
+      "id": 10,
+      "word": "địa chỉ",
+      "sentence1": "Địa chỉ của anh là gì?",
+      "sentence2": "Viết địa chỉ của bạn ở đây."
+    },
+    {
+      "id": 11,
+      "word": "trưởng thành",
+      "sentence1": "Bộ phim này chỉ dành cho người lớn.",
+      "sentence2": "Tôi đã trưởng thành rồi."
+    },
+    {
+      "id": 12,
+      "word": "lời khuyên",
+      "sentence1": "Anh có thể cho tôi lời khuyên không?",
+      "sentence2": "Lời khuyên của anh ấy rất hữu ích."
+    },
+    {
+      "id": 13,
+      "word": "sợ hãi",
+      "sentence1": "Tôi sợ nhện.",
+      "sentence2": "Đừng sợ."
+    },
+    {
+      "id": 14,
+      "word": "sau",
+      "sentence1": "Gặp nhau sau giờ làm.",
+      "sentence2": "Sau bữa ăn tối, chúng tôi xem tivi."
+    },
+    {
+      "id": 15,
+      "word": "buổi chiều",
+      "sentence1": "Chào buổi chiều!",
+      "sentence2": "Tôi ngủ vào buổi chiều."
+    },
+    {
+      "id": 16,
+      "word": "một lần nữa",
+      "sentence1": "Nói lại đi, làm ơn.",
+      "sentence2": "Tôi muốn gặp lại anh."
+    },
+    {
+      "id": 17,
+      "word": "tuổi",
+      "sentence1": "Mày bao nhiêu tuổi?",
+      "sentence2": "Cô ấy 25 tuổi."
+    },
+    {
+      "id": 18,
+      "word": "trước đây",
+      "sentence1": "Tôi đã gặp anh ấy hai năm trước.",
+      "sentence2": "Cô ấy đã đi một tiếng trước."
+    },
+    {
+      "id": 19,
+      "word": "đồng ý",
+      "sentence1": "Tôi đồng ý với anh.",
+      "sentence2": "Anh có đồng ý với kế hoạch này không?"
+    },
+    {
+      "id": 20,
+      "word": "không khí",
+      "sentence1": "Không khí ở đây rất trong lành.",
+      "sentence2": "Tôi cần một chút không khí trong lành."
+    },
+    {
+      "id": 21,
+      "word": "sân bay",
+      "sentence1": "Tôi sẽ đón anh ở sân bay.",
+      "sentence2": "Sân bay rất bận rộn."
+    },
+    {
+      "id": 22,
+      "word": "tất cả",
+      "sentence1": "Tất cả học sinh đều vượt qua kỳ thi.",
+      "sentence2": "Tôi đã ăn hết bánh quy."
+    },
+    {
+      "id": 23,
+      "word": "cũng vậy",
+      "sentence1": "Tôi cũng thích pizza.",
+      "sentence2": "Cô ấy cũng sẽ đến bữa tiệc."
+    },
+    {
+      "id": 24,
+      "word": "luôn luôn",
+      "sentence1": "Tôi luôn thức dậy sớm.",
+      "sentence2": "Cô ấy luôn hạnh phúc."
+    },
+    {
+      "id": 25,
+      "word": "tuyệt vời",
+      "sentence1": "Khung cảnh từ trên cao thật tuyệt vời.",
+      "sentence2": "Anh đã làm một công việc tuyệt vời!"
+    },
+    {
+      "id": 26,
+      "word": "và",
+      "sentence1": "Tôi thích trà và cà phê.",
+      "sentence2": "Cô ấy đang học và làm việc."
+    },
+    {
+      "id": 27,
+      "word": "tức giận",
+      "sentence1": "Anh ta tức giận với bạn mình.",
+      "sentence2": "Đừng giận, làm ơn."
+    },
+    {
+      "id": 28,
+      "word": "động vật",
+      "sentence1": "Con voi là một con vật lớn.",
+      "sentence2": "Tôi có thú cưng."
+    },
+    {
+      "id": 29,
+      "word": "khác",
+      "sentence1": "Tôi có thể có một miếng bánh nữa không?",
+      "sentence2": "Cô ấy muốn có một cơ hội khác."
+    },
+    {
+      "id": 30,
+      "word": "trả lời",
+      "sentence1": "Câu trả lời của anh là gì?",
+      "sentence2": "Tôi không biết câu trả lời."
+    },
+    {
+      "id": 31,
+      "word": "bất kỳ",
+      "sentence1": "Anh có câu hỏi nào không?",
+      "sentence2": "Tôi không có tiền."
+    },
+    {
+      "id": 32,
+      "word": "bất cứ ai",
+      "sentence1": "Có ai ở đó không?",
+      "sentence2": "Tôi không biết ai ở đây."
+    },
+    {
+      "id": 33,
+      "word": "bất cứ điều gì",
+      "sentence1": "Cô cần gì không?",
+      "sentence2": "Tôi không tìm thấy gì cả."
+    },
+    {
+      "id": 34,
+      "word": "căn hộ",
+      "sentence1": "Tôi sống trong một căn hộ nhỏ.",
+      "sentence2": "Căn hộ rất đẹp."
+    },
+    {
+      "id": 35,
+      "word": "táo",
+      "sentence1": "Tôi thích ăn một quả táo mỗi ngày.",
+      "sentence2": "Cô ấy làm bánh táo."
+    },
+    {
+      "id": 36,
+      "word": "tháng 4",
+      "sentence1": "Tháng Tư là tháng thứ tư.",
+      "sentence2": "Tôi sinh nhật vào tháng Tư."
+    },
+    {
+      "id": 37,
+      "word": "diện tích",
+      "sentence1": "Đây là một khu vực rộng lớn.",
+      "sentence2": "Công viên ở trong khu vực này."
+    },
+    {
+      "id": 38,
+      "word": "cánh tay",
+      "sentence1": "Anh ta bị gãy tay.",
+      "sentence2": "Cô ấy có một hình xăm trên cánh tay."
+    },
+    {
+      "id": 39,
+      "word": "xung quanh",
+      "sentence1": "Con mèo đang ngồi quanh bàn.",
+      "sentence2": "Hãy đi bộ quanh công viên."
+    },
+    {
+      "id": 40,
+      "word": "đến rồi",
+      "sentence1": "Chúng tôi sẽ đến lúc 5 giờ chiều.",
+      "sentence2": "Xin hãy đến đúng giờ."
+    },
+    {
+      "id": 41,
+      "word": "nghệ thuật",
+      "sentence1": "Tôi yêu nghệ thuật hiện đại.",
+      "sentence2": "Cô ấy đang học lịch sử nghệ thuật."
+    },
+    {
+      "id": 42,
+      "word": "vật phẩm",
+      "sentence1": "Tôi đã đọc một bài viết thú vị.",
+      "sentence2": "Bài viết được viết rất hay."
+    },
+    {
+      "id": 43,
+      "word": "nghệ sĩ",
+      "sentence1": "Anh ấy là một nghệ sĩ nổi tiếng.",
+      "sentence2": "Nghệ sĩ vẽ một bức tranh đẹp."
+    },
+    {
+      "id": 44,
+      "word": "như",
+      "sentence1": "Cô ấy làm giáo viên.",
+      "sentence2": "Ông ta được biết đến là một nhà lãnh đạo vĩ đại."
+    },
+    {
+      "id": 45,
+      "word": "hỏi",
+      "sentence1": "Tôi có thể hỏi anh một câu được không?",
+      "sentence2": "Cô ấy yêu cầu giúp đỡ."
+    },
+    {
+      "id": 46,
+      "word": "tại",
+      "sentence1": "Tôi sẽ gặp anh ở công viên.",
+      "sentence2": "Cuốn sách đang ở thư viện."
+    },
+    {
+      "id": 47,
+      "word": "tháng 8",
+      "sentence1": "Tháng 8 là tháng thứ 8.",
+      "sentence2": "Tôi sẽ đi nghỉ vào tháng Tám."
+    },
+    {
+      "id": 48,
+      "word": "chú cô",
+      "sentence1": "Dì tôi sống ở thành phố khác.",
+      "sentence2": "Tôi đã đến thăm dì tôi cuối tuần trước."
+    },
+    {
+      "id": 49,
+      "word": "mùa thu",
+      "sentence1": "Mùa thu là mùa tôi thích nhất.",
+      "sentence2": "Lá rơi vào mùa thu."
+    },
+    {
+      "id": 50,
+      "word": "đi xa",
+      "sentence1": "Cửa hàng xa lắm.",
+      "sentence2": "Anh ấy đi nghỉ."
+    },
+    {
+      "id": 51,
+      "word": "em bé",
+      "sentence1": "Em bé đang ngủ.",
+      "sentence2": "Tôi có một em gái."
+    },
+    {
+      "id": 52,
+      "word": "lưng",
+      "sentence1": "Cuốn sách ở trên kệ phía sau.",
+      "sentence2": "Anh ấy bị đau lưng khi nâng."
+    },
+    {
+      "id": 53,
+      "word": "xấu",
+      "sentence1": "Thức ăn này có vị xấu.",
+      "sentence2": "Anh ấy có một ngày tồi tệ."
+    },
+    {
+      "id": 54,
+      "word": "túi",
+      "sentence1": "Tôi cần một cái túi mới.",
+      "sentence2": "Cô ấy đóng gói hành lý cho chuyến đi."
+    },
+    {
+      "id": 55,
+      "word": "bóng",
+      "sentence1": "Quả bóng tròn.",
+      "sentence2": "Tôi đá bóng."
+    },
+    {
+      "id": 56,
+      "word": "chuối",
+      "sentence1": "Tôi thích ăn chuối.",
+      "sentence2": "Cô ấy làm một ly chuối."
+    },
+    {
+      "id": 57,
+      "word": "dải",
+      "sentence1": "Ban nhạc đang chơi nhạc.",
+      "sentence2": "Tôi yêu ban nhạc này."
+    },
+    {
+      "id": 58,
+      "word": "ngân hàng (tiền)",
+      "sentence1": "Tôi cần đến ngân hàng.",
+      "sentence2": "Cô ấy làm việc tại ngân hàng."
+    },
+    {
+      "id": 59,
+      "word": "tắm",
+      "sentence1": "Tôi tắm mỗi tối.",
+      "sentence2": "Tắm là thư giãn."
+    },
+    {
+      "id": 60,
+      "word": "phòng tắm",
+      "sentence1": "Phòng tắm sạch.",
+      "sentence2": "Tôi cần đi vệ sinh."
+    },
+    {
+      "id": 61,
+      "word": "được",
+      "sentence1": "Tôi muốn trở thành bác sĩ.",
+      "sentence2": "Cô ấy sẽ rất hạnh phúc."
+    },
+    {
+      "id": 62,
+      "word": "bãi biển",
+      "sentence1": "Bãi biển đông đúc.",
+      "sentence2": "Tôi yêu bãi biển."
+    },
+    {
+      "id": 63,
+      "word": "đẹp quá",
+      "sentence1": "Mặt trời lặn thật đẹp.",
+      "sentence2": "Cô ấy là một người đẹp."
+    },
+    {
+      "id": 64,
+      "word": "vì",
+      "sentence1": "Tôi hạnh phúc vì trời có nắng.",
+      "sentence2": "Cô ấy đi vì cô ấy mệt mỏi."
+    },
+    {
+      "id": 65,
+      "word": "trở thành",
+      "sentence1": "Tôi muốn trở thành bác sĩ.",
+      "sentence2": "Cô ấy sẽ trở thành một nhà lãnh đạo vĩ đại."
+    },
+    {
+      "id": 66,
+      "word": "giường",
+      "sentence1": "Tôi ngủ trên giường của mình.",
+      "sentence2": "Giường rất thoải mái."
+    },
+    {
+      "id": 67,
+      "word": "phòng ngủ",
+      "sentence1": "Phòng ngủ của tôi nhỏ.",
+      "sentence2": "Tôi thích phòng ngủ của mình."
+    },
+    {
+      "id": 68,
+      "word": "bia",
+      "sentence1": "Tôi thích uống bia.",
+      "sentence2": "Anh ta gọi bia."
+    },
+    {
+      "id": 69,
+      "word": "trước đây",
+      "sentence1": "Tôi rửa tay trước khi ăn.",
+      "sentence2": "Cô ấy đến trước tôi."
+    },
+    {
+      "id": 70,
+      "word": "bắt đầu",
+      "sentence1": "Tôi sẽ bắt đầu bài tập về nhà.",
+      "sentence2": "Cô ấy bắt đầu hát."
+    },
+    {
+      "id": 71,
+      "word": "bắt đầu",
+      "sentence1": "Sự khởi đầu của bộ phim rất thú vị.",
+      "sentence2": "Tôi đã bỏ lỡ phần đầu của chương trình."
+    },
+    {
+      "id": 72,
+      "word": "đằng sau",
+      "sentence1": "Con mèo đang trốn đằng sau ghế sofa.",
+      "sentence2": "Anh ta đứng sau lưng cô ấy."
+    },
+    {
+      "id": 73,
+      "word": "tin",
+      "sentence1": "Tôi tin vào anh.",
+      "sentence2": "Anh có tin vào ma không?"
+    },
+    {
+      "id": 74,
+      "word": "dưới đây",
+      "sentence1": "Nhiệt độ dưới mức đóng băng.",
+      "sentence2": "Hầm dưới đất."
+    },
+    {
+      "id": 75,
+      "word": "tốt nhất",
+      "sentence1": "Đây là cuốn sách hay nhất mà tôi từng đọc.",
+      "sentence2": "Cô ấy là học sinh giỏi nhất trong lớp."
+    },
+    {
+      "id": 76,
+      "word": "tốt hơn",
+      "sentence1": "Hôm nay tôi cảm thấy tốt hơn.",
+      "sentence2": "Bộ phim này hay hơn bộ phim trước."
+    },
+    {
+      "id": 77,
+      "word": "giữa",
+      "sentence1": "Công viên nằm giữa trường và thư viện.",
+      "sentence2": "Tôi ngồi giữa các bạn của tôi trong lớp."
+    },
+    {
+      "id": 78,
+      "word": "xe đạp",
+      "sentence1": "Tôi đi xe đạp đến trường.",
+      "sentence2": "Cô ấy mua một chiếc xe đạp mới."
+    },
+    {
+      "id": 79,
+      "word": "to",
+      "sentence1": "Đây là một ngôi nhà lớn.",
+      "sentence2": "Anh ta có một con chó lớn."
+    },
+    {
+      "id": 80,
+      "word": "xe đạp",
+      "sentence1": "Tôi cần sửa xe đạp.",
+      "sentence2": "Cô ấy đi xe đạp mỗi ngày."
+    },
+    {
+      "id": 81,
+      "word": "hóa đơn",
+      "sentence1": "Tôi nhận được hóa đơn hôm qua.",
+      "sentence2": "Xin hãy trả hóa đơn."
+    },
+    {
+      "id": 82,
+      "word": "chim",
+      "sentence1": "Con chim đang hát.",
+      "sentence2": "Tôi thấy một con chim đầy màu sắc."
+    },
+    {
+      "id": 83,
+      "word": "sinh nhật",
+      "sentence1": "Tôi sinh nhật vào tháng Bảy.",
+      "sentence2": "Cô ấy có một bữa tiệc sinh nhật."
+    },
+    {
+      "id": 84,
+      "word": "đen",
+      "sentence1": "Tôi có một con mèo đen.",
+      "sentence2": "Chiếc váy màu đen."
+    },
+    {
+      "id": 85,
+      "word": "blog",
+      "sentence1": "Tôi đã đọc một blog về du lịch.",
+      "sentence2": "Cô ấy viết một blog nổi tiếng."
+    },
+    {
+      "id": 86,
+      "word": "tóc vàng",
+      "sentence1": "Cô ấy có mái tóc vàng dài.",
+      "sentence2": "Anh ta thích phụ nữ tóc vàng hơn."
+    },
+    {
+      "id": 87,
+      "word": "màu xanh",
+      "sentence1": "Bầu trời xanh.",
+      "sentence2": "Tôi thích hoa xanh."
+    },
+    {
+      "id": 88,
+      "word": "thuyền",
+      "sentence1": "Tàu đang trên mặt nước.",
+      "sentence2": "Chúng tôi đi thuyền."
+    },
+    {
+      "id": 89,
+      "word": "cơ thể",
+      "sentence1": "Cơ thể con người rất phức tạp.",
+      "sentence2": "Cô ấy tập thể dục để giữ thể lực."
+    },
+    {
+      "id": 90,
+      "word": "sách",
+      "sentence1": "Tôi đang đọc sách.",
+      "sentence2": "Cô ấy có nhiều cuốn sách."
+    },
+    {
+      "id": 91,
+      "word": "giày",
+      "sentence1": "Tôi đã mua đôi giày mới.",
+      "sentence2": "Những đôi giày này rất thoải mái."
+    },
+    {
+      "id": 92,
+      "word": "chán",
+      "sentence1": "Tôi chán ở nhà.",
+      "sentence2": "Cô ấy cảm thấy chán trong lớp."
+    },
+    {
+      "id": 93,
+      "word": "nhàm chán",
+      "sentence1": "Bộ phim này thật nhàm chán.",
+      "sentence2": "Tôi thấy toán học nhàm chán."
+    },
+    {
+      "id": 94,
+      "word": "sinh ra",
+      "sentence1": "Tôi sinh năm 2000.",
+      "sentence2": "Cô ấy sinh ra ở một thị trấn nhỏ."
+    },
+    {
+      "id": 95,
+      "word": "cả hai",
+      "sentence1": "Cả hai lựa chọn đều tốt.",
+      "sentence2": "Tôi thích cả hai bộ phim."
+    },
+    {
+      "id": 96,
+      "word": "chai",
+      "sentence1": "Tôi cần một chai nước.",
+      "sentence2": "Cô ấy mua một chai thủy tinh."
+    },
+    {
+      "id": 97,
+      "word": "hộp",
+      "sentence1": "Đồ chơi ở trong hộp.",
+      "sentence2": "Tôi cần một cái hộp cho sách của tôi."
+    },
+    {
+      "id": 98,
+      "word": "con trai",
+      "sentence1": "Cậu bé đang chơi bên ngoài.",
+      "sentence2": "Tôi đã thấy một cậu bé với một con diều."
+    },
+    {
+      "id": 99,
+      "word": "bạn trai",
+      "sentence1": "Bạn trai tôi rất tốt bụng.",
+      "sentence2": "Cô ấy giới thiệu tôi với bạn trai của cô ấy."
+    },
+    {
+      "id": 100,
+      "word": "bánh mì",
+      "sentence1": "Tôi cần một miếng bánh mì.",
+      "sentence2": "Cô ấy nướng bánh mì tươi."
+    },
+    {
+      "id": 101,
+      "word": "phá vỡ",
+      "sentence1": "Hãy nghỉ ngơi.",
+      "sentence2": "Tôi cần phải bỏ thói quen này."
+    },
+    {
+      "id": 102,
+      "word": "bữa sáng",
+      "sentence1": "Tôi đã ăn ngũ cốc cho bữa sáng.",
+      "sentence2": "Bữa sáng là bữa ăn quan trọng nhất."
+    },
+    {
+      "id": 103,
+      "word": "mang theo",
+      "sentence1": "Anh mang cho tôi một ly nước được không?",
+      "sentence2": "Tôi sẽ mang các tài liệu vào ngày mai."
+    },
+    {
+      "id": 104,
+      "word": "anh trai",
+      "sentence1": "Anh trai tôi đang học ở nước ngoài.",
+      "sentence2": "Anh ấy có một người em trai."
+    },
+    {
+      "id": 105,
+      "word": "màu nâu",
+      "sentence1": "Con chó nâu rất thân thiện.",
+      "sentence2": "Tôi thích sô cô la nâu."
+    },
+    {
+      "id": 106,
+      "word": "xây dựng",
+      "sentence1": "Họ sẽ xây một ngôi nhà mới.",
+      "sentence2": "Anh ấy muốn xây dựng sự nghiệp."
+    },
+    {
+      "id": 107,
+      "word": "tòa nhà",
+      "sentence1": "Tòa nhà rất cao.",
+      "sentence2": "Họ làm việc trong tòa nhà đó."
+    },
+    {
+      "id": 108,
+      "word": "xe buýt",
+      "sentence1": "Tôi đi xe buýt đến trường.",
+      "sentence2": "Hôm nay xe buýt trễ."
+    },
+    {
+      "id": 109,
+      "word": "kinh doanh",
+      "sentence1": "Cô ấy tự điều hành công việc của mình.",
+      "sentence2": "Kinh doanh đang bùng nổ trong năm nay."
+    },
+    {
+      "id": 110,
+      "word": "bận rộn",
+      "sentence1": "Tôi đang bận.",
+      "sentence2": "Cô ấy có một lịch trình bận rộn."
+    },
+    {
+      "id": 111,
+      "word": "nhưng",
+      "sentence1": "Tôi thích trà, nhưng tôi thích cà phê hơn.",
+      "sentence2": "Anh ấy cao, nhưng anh trai anh ấy thì thấp."
+    },
+    {
+      "id": 112,
+      "word": "bơ",
+      "sentence1": "Tôi cần bơ cho công thức.",
+      "sentence2": "Cô ấy thích bơ trên bánh mì của mình."
+    },
+    {
+      "id": 113,
+      "word": "mua",
+      "sentence1": "Tôi muốn mua điện thoại mới.",
+      "sentence2": "Hôm qua cô ấy đã mua một chiếc váy."
+    },
+    {
+      "id": 114,
+      "word": "bởi",
+      "sentence1": "Cuốn sách được viết bởi một tác giả nổi tiếng.",
+      "sentence2": "Tôi thích đi tàu hỏa hơn."
+    },
+    {
+      "id": 115,
+      "word": "tạm biệt",
+      "sentence1": "Tôi đã nói lời tạm biệt với bạn bè của mình.",
+      "sentence2": "Cô ấy vẫy tay chào tạm biệt ở sân bay."
+    },
+    {
+      "id": 116,
+      "word": "quán cà phê",
+      "sentence1": "Gặp nhau ở quán cà phê đi.",
+      "sentence2": "Cô ấy làm việc trong một quán cà phê nhỏ."
+    },
+    {
+      "id": 117,
+      "word": "bánh",
+      "sentence1": "Tôi đã nướng bánh sô cô la.",
+      "sentence2": "Cô ấy thích bánh dâu tây."
+    },
+    {
+      "id": 118,
+      "word": "gọi",
+      "sentence1": "Tôi sẽ gọi cho anh sau.",
+      "sentence2": "Cô ấy nhận được một cuộc gọi từ mẹ cô ấy."
+    },
+    {
+      "id": 119,
+      "word": "máy quay",
+      "sentence1": "Tôi đã mua một chiếc máy ảnh mới.",
+      "sentence2": "Cô ấy đang chụp ảnh bằng máy ảnh của mình."
+    },
+    {
+      "id": 120,
+      "word": "có thể",
+      "sentence1": "Tôi bơi giỏi.",
+      "sentence2": "Cô ấy có thể nói ba ngôn ngữ."
+    },
+    {
+      "id": 121,
+      "word": "không thể",
+      "sentence1": "Tôi không thể tìm thấy chìa khóa của mình.",
+      "sentence2": "Anh ấy không thể đến bữa tiệc."
+    },
+    {
+      "id": 122,
+      "word": "vốn",
+      "sentence1": "Ankara là thủ đô của Thổ Nhĩ Kỳ.",
+      "sentence2": "Thủ đô rất bận rộn."
+    },
+    {
+      "id": 123,
+      "word": "xe hơi",
+      "sentence1": "Tôi lái một chiếc xe màu đỏ.",
+      "sentence2": "Cô ấy muốn mua một chiếc xe mới."
+    },
+    {
+      "id": 124,
+      "word": "thẻ",
+      "sentence1": "Tôi cần một thẻ tín dụng mới.",
+      "sentence2": "Cô ấy gửi cho tôi một tấm thiệp sinh nhật."
+    },
+    {
+      "id": 125,
+      "word": "sự nghiệp",
+      "sentence1": "Anh ấy đang xây dựng một sự nghiệp thành công.",
+      "sentence2": "Cô ấy thay đổi con đường sự nghiệp của mình."
+    },
+    {
+      "id": 126,
+      "word": "cà rốt",
+      "sentence1": "Tôi thích ăn cà rốt sống.",
+      "sentence2": "Cô ấy làm bánh cà rốt."
+    },
+    {
+      "id": 127,
+      "word": "mang theo",
+      "sentence1": "Anh mang cái túi này được không?",
+      "sentence2": "Anh ấy mang laptop của mình đi khắp mọi nơi."
+    },
+    {
+      "id": 128,
+      "word": "mèo",
+      "sentence1": "Mèo của tôi rất vui tươi.",
+      "sentence2": "Cô ấy nhận nuôi một con mèo hoang."
+    },
+    {
+      "id": 129,
+      "word": "CD",
+      "sentence1": "Tôi nghe CD trong xe.",
+      "sentence2": "Hôm qua cô ấy đã mua một đĩa CD mới."
+    },
+    {
+      "id": 130,
+      "word": "100 đồng",
+      "sentence1": "Giá là một trăm xu.",
+      "sentence2": "Tôi tìm thấy một xu trên đường."
+    },
+    {
+      "id": 131,
+      "word": "trung tâm",
+      "sentence1": "Trung tâm thành phố rất bận rộn.",
+      "sentence2": "Có một công viên ở trung tâm thành phố."
+    },
+    {
+      "id": 132,
+      "word": "thế kỷ",
+      "sentence1": "Thế kỷ 21 bắt đầu vào năm 2001.",
+      "sentence2": "Nhiều thay đổi đã xảy ra trong thế kỷ 20."
+    },
+    {
+      "id": 133,
+      "word": "ghế",
+      "sentence1": "Làm ơn ngồi xuống ghế.",
+      "sentence2": "Cô ấy mua một chiếc ghế mới cho văn phòng của mình."
+    },
+    {
+      "id": 134,
+      "word": "thay đổi",
+      "sentence1": "Tôi muốn thay đổi kiểu tóc của mình.",
+      "sentence2": "Cô ấy đổi ý về chuyến đi."
+    },
+    {
+      "id": 135,
+      "word": "biểu đồ",
+      "sentence1": "Biểu đồ cho thấy dữ liệu bán hàng.",
+      "sentence2": "Cô ấy đã tạo ra một biểu đồ cho bài thuyết trình của mình."
+    },
+    {
+      "id": 136,
+      "word": "rẻ tiền",
+      "sentence1": "Áo này rất rẻ.",
+      "sentence2": "Tôi đã tìm được một khách sạn giá rẻ cho kỳ nghỉ của tôi."
+    },
+    {
+      "id": 137,
+      "word": "kiểm tra",
+      "sentence1": "Vui lòng kiểm tra email của bạn.",
+      "sentence2": "Tôi cần kiểm tra thời tiết."
+    },
+    {
+      "id": 138,
+      "word": "phô mai",
+      "sentence1": "Tôi thích ăn phô mai với bánh mì.",
+      "sentence2": "Cô ấy mua một ít pho mát từ chợ."
+    },
+    {
+      "id": 139,
+      "word": "gà",
+      "sentence1": "Tôi muốn ăn gà vào bữa tối.",
+      "sentence2": "Cô ấy đang nấu gà trong nhà bếp."
+    },
+    {
+      "id": 140,
+      "word": "trẻ em",
+      "sentence1": "Đứa trẻ đang chơi trong công viên.",
+      "sentence2": "Cô ấy có một đứa con và hai thú cưng."
+    },
+    {
+      "id": 141,
+      "word": "sô cô la",
+      "sentence1": "Tôi thích kem sô-cô-la.",
+      "sentence2": "Cô ấy cho tôi một hộp sô cô la."
+    },
+    {
+      "id": 142,
+      "word": "chọn",
+      "sentence1": "Tôi cần chọn một chiếc váy cho bữa tiệc.",
+      "sentence2": "Cô ấy chọn cái màu xanh."
+    },
+    {
+      "id": 143,
+      "word": "điện ảnh",
+      "sentence1": "Tối nay chúng ta hãy đi xem phim.",
+      "sentence2": "Cô ấy làm ở rạp chiếu phim địa phương."
+    },
+    {
+      "id": 144,
+      "word": "thành phố",
+      "sentence1": "Thành phố rất lớn.",
+      "sentence2": "Cô ấy sống ở trung tâm thành phố."
+    },
+    {
+      "id": 145,
+      "word": "lớp",
+      "sentence1": "Tôi đang ở lớp năm.",
+      "sentence2": "Cô ấy dạy môn toán."
+    },
+    {
+      "id": 146,
+      "word": "lớp học",
+      "sentence1": "Phòng học sáng và sạch sẽ.",
+      "sentence2": "Cô ấy trang trí lớp học cho năm mới."
+    },
+    {
+      "id": 147,
+      "word": "sạch",
+      "sentence1": "Xin hãy giữ cho phòng của bạn sạch sẽ.",
+      "sentence2": "Cô ấy dọn dẹp nhà hôm qua."
+    },
+    {
+      "id": 148,
+      "word": "leo lên",
+      "sentence1": "Tôi thích leo núi.",
+      "sentence2": "Cô leo lên cây để có cái nhìn tốt hơn."
+    },
+    {
+      "id": 149,
+      "word": "đồng hồ",
+      "sentence1": "Giờ trên đồng hồ là mấy giờ?",
+      "sentence2": "Cô ấy nhìn đồng hồ để kiểm tra thời gian."
+    },
+    {
+      "id": 150,
+      "word": "khép lại",
+      "sentence1": "Xin hãy đóng cửa lại.",
+      "sentence2": "Cô ấy đóng cửa sổ vì trời lạnh."
+    },
+    {
+      "id": 151,
+      "word": "quần áo",
+      "sentence1": "Tôi cần mua quần áo mới.",
+      "sentence2": "Cô ấy tặng quần áo cũ cho tổ chức từ thiện."
+    },
+    {
+      "id": 152,
+      "word": "câu lạc bộ",
+      "sentence1": "Anh ấy là thành viên của câu lạc bộ cờ vua.",
+      "sentence2": "Cô ấy đi câu lạc bộ mỗi tối thứ Sáu."
+    },
+    {
+      "id": 153,
+      "word": "áo khoác",
+      "sentence1": "Tôi mặc áo khoác vào mùa đông.",
+      "sentence2": "Cô ấy mua một chiếc áo khoác mới cho thời tiết lạnh."
+    },
+    {
+      "id": 154,
+      "word": "cà phê",
+      "sentence1": "Tôi thích uống cà phê vào buổi sáng.",
+      "sentence2": "Cô ấy gọi một tách cà phê ở quán cà phê."
+    },
+    {
+      "id": 155,
+      "word": "lạnh",
+      "sentence1": "Bên ngoài rất lạnh.",
+      "sentence2": "Cô ấy mặc áo khoác vì trời lạnh."
+    },
+    {
+      "id": 156,
+      "word": "trường đại học",
+      "sentence1": "Anh ấy đang học tại một trường đại học ở Luân Đôn.",
+      "sentence2": "Cô ấy muốn học đại học sau khi tốt nghiệp trung học."
+    },
+    {
+      "id": 157,
+      "word": "màu",
+      "sentence1": "Màu yêu thích của anh là gì?",
+      "sentence2": "Cô ấy sơn các bức tường một màu xanh nhạt."
+    },
+    {
+      "id": 158,
+      "word": "đi thôi",
+      "sentence1": "Xin hãy đến bữa tiệc của tôi.",
+      "sentence2": "Cô ấy sẽ đến cuộc họp ngày mai."
+    },
+    {
+      "id": 159,
+      "word": "thường",
+      "sentence1": "Tiếng Anh là một ngôn ngữ phổ biến.",
+      "sentence2": "Cô ấy có cùng sở thích với âm nhạc."
+    },
+    {
+      "id": 160,
+      "word": "công ty",
+      "sentence1": "Anh ta làm việc cho một công ty lớn.",
+      "sentence2": "Năm ngoái cô ấy bắt đầu công ty riêng."
+    },
+    {
+      "id": 161,
+      "word": "so sánh",
+      "sentence1": "Hãy so sánh câu trả lời của chúng ta.",
+      "sentence2": "Cô ấy so sánh hai sản phẩm trước khi mua."
+    },
+    {
+      "id": 162,
+      "word": "hoàn thành",
+      "sentence1": "Vui lòng điền vào mẫu.",
+      "sentence2": "Cô ấy hoàn thành dự án đúng giờ."
+    },
+    {
+      "id": 163,
+      "word": "máy tính",
+      "sentence1": "Tôi sử dụng máy tính để làm việc.",
+      "sentence2": "Tuần trước cô ấy đã mua một chiếc máy tính mới."
+    },
+    {
+      "id": 164,
+      "word": "buổi hòa nhạc",
+      "sentence1": "Tối nay tôi sẽ đi xem một buổi hòa nhạc.",
+      "sentence2": "Cô ấy thích nghe các bản thu âm nhạc trực tiếp."
+    },
+    {
+      "id": 165,
+      "word": "trò chuyện",
+      "sentence1": "Chúng tôi đã có một cuộc trò chuyện tuyệt vời.",
+      "sentence2": "Chị thích trò chuyện sâu sắc với bạn bè."
+    },
+    {
+      "id": 166,
+      "word": "nấu ăn",
+      "sentence1": "Tôi thích nấu món ăn Ý.",
+      "sentence2": "Bà nấu một bữa ăn ngon cho gia đình."
+    },
+    {
+      "id": 167,
+      "word": "nấu ăn",
+      "sentence1": "Nấu ăn là sở thích yêu thích của tôi.",
+      "sentence2": "Cô ấy tham gia một lớp học nấu ăn để cải thiện kỹ năng của mình."
+    },
+    {
+      "id": 168,
+      "word": "tốt",
+      "sentence1": "Cái áo khoác đó thật sự rất tuyệt.",
+      "sentence2": "Cô ấy có một bộ sưu tập đĩa cổ điển tuyệt vời."
+    },
+    {
+      "id": 169,
+      "word": "đúng",
+      "sentence1": "Xin hãy sửa lỗi.",
+      "sentence2": "Cô ấy luôn cố gắng sửa lỗi ngữ pháp của mình."
+    },
+    {
+      "id": 170,
+      "word": "chi phí",
+      "sentence1": "Chi phí của cuốn sách này là bao nhiêu?",
+      "sentence2": "Cô ấy ngạc nhiên bởi chi phí sinh hoạt cao ở thành phố."
+    },
+    {
+      "id": 171,
+      "word": "có thể",
+      "sentence1": "Tôi có thể giúp anh.",
+      "sentence2": "Cô ấy nói cô ấy có thể đến bữa tiệc nếu cô ấy kết thúc công việc sớm."
+    },
+    {
+      "id": 172,
+      "word": "quốc gia",
+      "sentence1": "Tôi sống ở một đất nước nhỏ.",
+      "sentence2": "Cô ấy muốn đi du lịch đến các quốc gia khác nhau."
+    },
+    {
+      "id": 173,
+      "word": "đường",
+      "sentence1": "Tôi đang học môn sinh học.",
+      "sentence2": "Cô ấy đăng ký một khóa học nấu ăn."
+    },
+    {
+      "id": 174,
+      "word": "anh em họ",
+      "sentence1": "Em họ tôi sẽ đến thăm vào cuối tuần này.",
+      "sentence2": "Cô ấy có một người anh em họ sống ở nước ngoài."
+    },
+    {
+      "id": 175,
+      "word": "bò",
+      "sentence1": "Con bò đang ăn cỏ trên đồng.",
+      "sentence2": "Cô ấy lớn lên trên một trang trại với bò và gà."
+    },
+    {
+      "id": 176,
+      "word": "kem",
+      "sentence1": "Tôi thích kem trong cà phê.",
+      "sentence2": "Cô ấy thêm kem vào súp để thêm hương vị."
+    },
+    {
+      "id": 177,
+      "word": "tạo ra",
+      "sentence1": "Tôi muốn tạo ra một dự án mới.",
+      "sentence2": "Cô ấy đã tạo ra một bức tranh đẹp."
+    },
+    {
+      "id": 178,
+      "word": "văn hóa",
+      "sentence1": "Tôi quan tâm đến việc học hỏi về các nền văn hóa khác nhau.",
+      "sentence2": "Cô ấy thích khám phá văn hóa địa phương khi đi du lịch."
+    },
+    {
+      "id": 179,
+      "word": "cốc",
+      "sentence1": "Tôi uống trà từ một tách.",
+      "sentence2": "Cô ấy mua một bộ ly đẹp."
+    },
+    {
+      "id": 180,
+      "word": "khách hàng",
+      "sentence1": "Khách hàng luôn đúng.",
+      "sentence2": "Cô ấy là một khách hàng trung thành của cửa hàng đó."
+    },
+    {
+      "id": 181,
+      "word": "cắt",
+      "sentence1": "Xin hãy cắt giấy theo đường.",
+      "sentence2": "Cô ấy cắt bánh thành những miếng bằng nhau."
+    },
+    {
+      "id": 182,
+      "word": "bố ơi",
+      "sentence1": "Bố tôi là một đầu bếp tuyệt vời.",
+      "sentence2": "Cô ấy thích dành thời gian với cha mình."
+    },
+    {
+      "id": 183,
+      "word": "nhảy múa",
+      "sentence1": "Tôi thích khiêu vũ ở các bữa tiệc.",
+      "sentence2": "Cô ấy đã học nhảy trong một năm."
+    },
+    {
+      "id": 184,
+      "word": "vũ công",
+      "sentence1": "Người vũ công biểu diễn rất đẹp.",
+      "sentence2": "Cô ấy muốn trở thành một vũ công chuyên nghiệp."
+    },
+    {
+      "id": 185,
+      "word": "nhảy múa",
+      "sentence1": "Khiêu vũ là một cách vui vẻ để tập thể dục.",
+      "sentence2": "Cô ấy thích khiêu vũ theo những bài hát yêu thích của mình."
+    },
+    {
+      "id": 186,
+      "word": "nguy hiểm",
+      "sentence1": "Con vật đó rất nguy hiểm.",
+      "sentence2": "Cô ấy nhận ra tình hình rất nguy hiểm."
+    },
+    {
+      "id": 187,
+      "word": "đen",
+      "sentence1": "Bên ngoài tối rồi.",
+      "sentence2": "Cô ấy thích sô-cô-la đen hơn sô-cô-la sữa."
+    },
+    {
+      "id": 188,
+      "word": "ngày",
+      "sentence1": "Ngày hôm nay là ngày nào?",
+      "sentence2": "Cô ấy đã viết ngày trên tờ giấy."
+    },
+    {
+      "id": 189,
+      "word": "con gái",
+      "sentence1": "Con gái tôi rất tài năng.",
+      "sentence2": "Cô ấy tự hào về thành tựu của con gái mình."
+    },
+    {
+      "id": 190,
+      "word": "ngày",
+      "sentence1": "Hôm nay là một ngày đẹp.",
+      "sentence2": "Cô ấy có kế hoạch thư giãn cả ngày."
+    },
+    {
+      "id": 191,
+      "word": "cưng à",
+      "sentence1": "Bạn thân của tôi sẽ đến thăm.",
+      "sentence2": "Cô ấy viết một lá thư cho mẹ thân yêu của mình."
+    },
+    {
+      "id": 192,
+      "word": "tháng 12",
+      "sentence1": "Tháng 12 là tháng cuối cùng của năm.",
+      "sentence2": "Cô ấy thích trang trí lễ hội vào tháng Mười Hai."
+    },
+    {
+      "id": 193,
+      "word": "quyết định",
+      "sentence1": "Tôi cần phải quyết định mình sẽ mặc gì.",
+      "sentence2": "Cô ấy quyết định nghỉ làm."
+    },
+    {
+      "id": 194,
+      "word": "ngon lắm",
+      "sentence1": "Bánh này rất ngon.",
+      "sentence2": "Bà thích nấu những bữa ăn ngon cho gia đình."
+    },
+    {
+      "id": 195,
+      "word": "mô tả",
+      "sentence1": "Anh có thể mô tả bức tranh không?",
+      "sentence2": "Cô ấy miêu tả một cách chi tiết kỳ nghỉ mơ ước của mình."
+    },
+    {
+      "id": 196,
+      "word": "mô tả",
+      "sentence1": "Mô tả của cuốn sách rất hấp dẫn.",
+      "sentence2": "Cô ấy đã viết một mô tả chi tiết về sự kiện."
+    },
+    {
+      "id": 197,
+      "word": "thiết kế",
+      "sentence1": "Thiết kế của tòa nhà là hiện đại.",
+      "sentence2": "Cô ấy học thiết kế đồ họa ở trường đại học."
+    },
+    {
+      "id": 198,
+      "word": "bàn",
+      "sentence1": "Bàn của tôi đầy giấy tờ.",
+      "sentence2": "Cô ấy giữ cho bàn của mình được sắp xếp và gọn gàng."
+    },
+    {
+      "id": 199,
+      "word": "chi tiết",
+      "sentence1": "Vui lòng cung cấp thêm chi tiết về dự án.",
+      "sentence2": "Cô ấy nhận thấy một chi tiết nhỏ trong bức tranh."
+    },
+    {
+      "id": 200,
+      "word": "đối thoại",
+      "sentence1": "Các cuộc đối thoại trong phim là thực tế.",
+      "sentence2": "Cô ấy đã viết một cuộc đối thoại giữa hai nhân vật."
+    },
+    {
+      "id": 201,
+      "word": "từ điển",
+      "sentence1": "Tôi cần một từ điển để tìm từ đó.",
+      "sentence2": "Cô ấy mua một cuốn từ điển tiếng Anh-Thổ Nhĩ Kỳ mới."
+    },
+    {
+      "id": 202,
+      "word": "chết",
+      "sentence1": "Tôi không muốn chết trẻ.",
+      "sentence2": "Cô ấy sợ cô ấy sẽ chết một mình."
+    },
+    {
+      "id": 203,
+      "word": "chế độ ăn kiêng",
+      "sentence1": "Tôi đang ăn kiêng lành mạnh.",
+      "sentence2": "Cô ấy tuân theo một chế độ ăn kiêng nghiêm ngặt để giữ thể chất."
+    },
+    {
+      "id": 204,
+      "word": "khác biệt",
+      "sentence1": "Sự khác biệt giữa hai bức ảnh này là gì?",
+      "sentence2": "Lúc đầu cô ấy không thể nhận ra sự khác biệt."
+    },
+    {
+      "id": 205,
+      "word": "khác nhau",
+      "sentence1": "Cuốn sách này khác với những cuốn khác.",
+      "sentence2": "Cô ấy có quan điểm khác về vấn đề này."
+    },
+    {
+      "id": 206,
+      "word": "khó khăn",
+      "sentence1": "Bài tập này rất khó.",
+      "sentence2": "Cô ấy thấy vấn đề toán học khó giải quyết."
+    },
+    {
+      "id": 207,
+      "word": "bữa tối",
+      "sentence1": "Chúng tôi ăn tối lúc 7 giờ tối.",
+      "sentence2": "Cô ấy đã chuẩn bị một bữa ăn ngon cho gia đình mình."
+    },
+    {
+      "id": 208,
+      "word": "bẩn",
+      "sentence1": "Tay tôi bẩn vì làm vườn.",
+      "sentence2": "Cô ấy không thích mặc quần áo bẩn."
+    },
+    {
+      "id": 209,
+      "word": "thảo luận",
+      "sentence1": "Hãy thảo luận chi tiết dự án.",
+      "sentence2": "Cô ấy muốn thảo luận ý tưởng của mình với nhóm."
+    },
+    {
+      "id": 210,
+      "word": "món ăn",
+      "sentence1": "Món này là món yêu thích của tôi.",
+      "sentence2": "Cô ấy phục vụ thức ăn trên một chiếc đĩa đẹp."
+    },
+    {
+      "id": 211,
+      "word": "làm",
+      "sentence1": "Hôm nay anh muốn làm gì?",
+      "sentence2": "Cô ấy thích tập yoga vào buổi sáng."
+    },
+    {
+      "id": 212,
+      "word": "bác sĩ",
+      "sentence1": "Bác sĩ sẽ gặp cô ngay.",
+      "sentence2": "Cô ấy muốn trở thành bác sĩ trong tương lai."
+    },
+    {
+      "id": 213,
+      "word": "chó",
+      "sentence1": "Con chó của tôi thích chơi lấy.",
+      "sentence2": "Cô ấy nhận nuôi một con chó đi lạc từ nơi trú ẩn."
+    },
+    {
+      "id": 214,
+      "word": "đô la",
+      "sentence1": "Giá là hai mươi đô la.",
+      "sentence2": "Cô ấy đã tiết kiệm đủ tiền để mua một chiếc điện thoại mới."
+    },
+    {
+      "id": 215,
+      "word": "cửa",
+      "sentence1": "Xin hãy đóng cửa sau khi đi.",
+      "sentence2": "Bà gõ cửa và chờ đợi một người trả lời."
+    },
+    {
+      "id": 216,
+      "word": "xuống",
+      "sentence1": "Con mèo nhảy xuống khỏi kệ.",
+      "sentence2": "Cô ấy đã viết ra những hướng dẫn trên giấy."
+    },
+    {
+      "id": 217,
+      "word": "tầng dưới",
+      "sentence1": "Phòng giặt là ở tầng dưới.",
+      "sentence2": "Cô ấy xuống lầu để lấy đồ ăn nhẹ."
+    },
+    {
+      "id": 218,
+      "word": "rút",
+      "sentence1": "Tôi thích vẽ trong thời gian rảnh rỗi.",
+      "sentence2": "Cô ấy vẽ một cảnh quan đẹp."
+    },
+    {
+      "id": 219,
+      "word": "váy",
+      "sentence1": "Cô ấy mặc một chiếc váy đỏ đến bữa tiệc.",
+      "sentence2": "Chiếc váy đang giảm giá tại cửa hàng."
+    },
+    {
+      "id": 220,
+      "word": "uống",
+      "sentence1": "Tôi thích uống cà phê vào buổi sáng.",
+      "sentence2": "Cô ấy mời tôi uống nước."
+    },
+    {
+      "id": 221,
+      "word": "lái xe",
+      "sentence1": "Tôi học lái xe khi tôi 18 tuổi.",
+      "sentence2": "Cô ấy thích lái xe trên những chuyến đi đường dài."
+    },
+    {
+      "id": 222,
+      "word": "tài xế",
+      "sentence1": "Tài xế đưa chúng tôi đến sân bay.",
+      "sentence2": "Cô ấy là một tài xế xe buýt chuyên nghiệp."
+    },
+    {
+      "id": 223,
+      "word": "trong suốt",
+      "sentence1": "Tôi thích nghe nhạc khi đi làm.",
+      "sentence2": "Cô ấy ngủ thiếp đi trong khi xem phim."
+    },
+    {
+      "id": 224,
+      "word": "DVD",
+      "sentence1": "Tôi đã mua một đĩa DVD mới của bộ phim yêu thích của tôi.",
+      "sentence2": "Cô ấy thích xem phim trên DVD."
+    },
+    {
+      "id": 225,
+      "word": "mỗi người",
+      "sentence1": "Mỗi học sinh phải nộp bài tập của mình.",
+      "sentence2": "Bà ấy tặng mỗi đứa trẻ một món quà."
+    },
+    {
+      "id": 226,
+      "word": "tai",
+      "sentence1": "Tai tôi đau vì âm nhạc to.",
+      "sentence2": "Cô ấy có một chiếc nhẫn đẹp trong tai."
+    },
+    {
+      "id": 227,
+      "word": "sớm",
+      "sentence1": "Tôi thích thức dậy sớm vào buổi sáng.",
+      "sentence2": "Bà đến sớm để chuẩn bị cho buổi họp."
+    },
+    {
+      "id": 228,
+      "word": "phương Đông",
+      "sentence1": "Mặt trời mọc ở phía đông.",
+      "sentence2": "Cô ấy đi về phía đông để khám phá những thành phố mới."
+    },
+    {
+      "id": 229,
+      "word": "dễ dàng",
+      "sentence1": "Bài tập này dễ dàng với tôi.",
+      "sentence2": "Cô ấy tìm ra một cách dễ dàng để giải quyết vấn đề."
+    },
+    {
+      "id": 230,
+      "word": "ăn",
+      "sentence1": "Tôi thích ăn thức ăn lành mạnh.",
+      "sentence2": "Cô ấy đã chuẩn bị một bữa ăn ngon cho chúng tôi ăn."
+    },
+    {
+      "id": 231,
+      "word": "trứng",
+      "sentence1": "Tôi đã ăn một quả trứng cho bữa sáng.",
+      "sentence2": "Cô ấy thích ăn trứng trộn."
+    },
+    {
+      "id": 232,
+      "word": "tám",
+      "sentence1": "Có tám quả táo trong giỏ.",
+      "sentence2": "Cô ấy 8 tuổi."
+    },
+    {
+      "id": 233,
+      "word": "mười tám",
+      "sentence1": "Tôi sẽ mười tám tuổi vào tháng tới.",
+      "sentence2": "Cô ấy đã mười tám tuổi và có thể bỏ phiếu."
+    },
+    {
+      "id": 234,
+      "word": "80",
+      "sentence1": "Cuốn sách có giá tám mươi đô la.",
+      "sentence2": "Bà ấy đã tám mươi tuổi và vẫn rất năng động."
+    },
+    {
+      "id": 235,
+      "word": "voi",
+      "sentence1": "Con voi là động vật trên đất lớn nhất.",
+      "sentence2": "Cô ấy thấy một con voi con ở sở thú."
+    },
+    {
+      "id": 236,
+      "word": "mười một",
+      "sentence1": "Có mười một cầu thủ trong một đội bóng đá.",
+      "sentence2": "Tuần tới cô ấy sẽ 11 tuổi."
+    },
+    {
+      "id": 237,
+      "word": "khác",
+      "sentence1": "Anh còn cần gì nữa không?",
+      "sentence2": "Cô ấy không thích chiếc váy, nên cô ấy chọn thứ khác."
+    },
+    {
+      "id": 238,
+      "word": "email",
+      "sentence1": "Tôi đã gửi email cho anh với chi tiết.",
+      "sentence2": "Cô ấy kiểm tra email mỗi sáng."
+    },
+    {
+      "id": 239,
+      "word": "kết thúc",
+      "sentence1": "Bộ phim có một kết thúc bất ngờ.",
+      "sentence2": "Cô ấy buồn khi thấy chương trình kết thúc."
+    },
+    {
+      "id": 240,
+      "word": "thưởng thức",
+      "sentence1": "Tôi thích đọc sách trong thời gian rảnh rỗi.",
+      "sentence2": "Cô ấy thích đi dạo trong công viên."
+    },
+    {
+      "id": 241,
+      "word": "đủ rồi",
+      "sentence1": "Chúng ta có đủ thức ăn cho tất cả mọi người không?",
+      "sentence2": "Cô ấy không có đủ tiền để mua chiếc váy."
+    },
+    {
+      "id": 242,
+      "word": "đồng euro",
+      "sentence1": "Giá là năm mươi euro.",
+      "sentence2": "Cô ấy đổi đô la sang euro tại ngân hàng."
+    },
+    {
+      "id": 243,
+      "word": "thậm chí",
+      "sentence1": "Thử nghiệm thậm chí còn dễ dàng hơn tôi mong đợi.",
+      "sentence2": "Cô ấy thậm chí còn không nói lời tạm biệt."
+    },
+    {
+      "id": 244,
+      "word": "buổi tối",
+      "sentence1": "Tôi thích thư giãn vào buổi tối sau khi làm việc.",
+      "sentence2": "Cô ấy có một cuộc họp được lên lịch cho buổi tối nay."
+    },
+    {
+      "id": 245,
+      "word": "sự kiện",
+      "sentence1": "Sự kiện thường niên sẽ diễn ra vào tháng tới.",
+      "sentence2": "Cô ấy đang tổ chức sự kiện năm nay."
+    },
+    {
+      "id": 246,
+      "word": "bao giờ",
+      "sentence1": "Anh đã từng đến Paris chưa?",
+      "sentence2": "Cô ấy chưa bao giờ thử sushi."
+    },
+    {
+      "id": 247,
+      "word": "mỗi",
+      "sentence1": "Mỗi học sinh phải nộp bài tập của mình.",
+      "sentence2": "Cô ấy học mỗi tối trước kỳ thi."
+    },
+    {
+      "id": 248,
+      "word": "mọi người",
+      "sentence1": "Mọi người đều được mời đến bữa tiệc.",
+      "sentence2": "Cô ấy biết tất cả mọi người trong khu phố."
+    },
+    {
+      "id": 249,
+      "word": "tất cả mọi người",
+      "sentence1": "Ai cũng nên nghỉ ngơi đôi khi.",
+      "sentence2": "Cô ấy tin rằng mọi người đều xứng đáng có một cơ hội thứ hai."
+    },
+    {
+      "id": 250,
+      "word": "mọi thứ",
+      "sentence1": "Cuối cùng mọi thứ sẽ ổn thôi.",
+      "sentence2": "Cô ấy đóng gói mọi thứ cần thiết cho chuyến đi."
+    },
+    {
+      "id": 251,
+      "word": "kỳ thi",
+      "sentence1": "Ngày mai tôi có một kỳ thi.",
+      "sentence2": "Cô ấy học chăm chỉ cho kỳ thi."
+    },
+    {
+      "id": 252,
+      "word": "ví dụ",
+      "sentence1": "Anh có thể cho tôi một ví dụ không?",
+      "sentence2": "Cô ấy là một ví dụ tuyệt vời của một người thành công."
+    },
+    {
+      "id": 253,
+      "word": "phấn khích",
+      "sentence1": "Tôi rất hào hứng về buổi hòa nhạc.",
+      "sentence2": "Cô ấy rất hào hứng khi gặp tác giả yêu thích của mình."
+    },
+    {
+      "id": 254,
+      "word": "thú vị",
+      "sentence1": "Bộ phim thật sự rất thú vị.",
+      "sentence2": "Cô ấy có một công việc thú vị mà cô ấy yêu thích."
+    },
+    {
+      "id": 255,
+      "word": "tập thể dục",
+      "sentence1": "Tôi cố gắng tập thể dục mỗi ngày.",
+      "sentence2": "Cô ấy thích yoga như một hình thức tập thể dục."
+    },
+    {
+      "id": 256,
+      "word": "đắt tiền",
+      "sentence1": "Cái váy đó quá đắt đối với tôi.",
+      "sentence2": "Cô ấy mua một chiếc đồng hồ đắt tiền làm quà."
+    },
+    {
+      "id": 257,
+      "word": "giải thích",
+      "sentence1": "Anh có thể giải thích cho tôi luật lệ không?",
+      "sentence2": "Chị dành thời gian để giải thích quan điểm của mình."
+    },
+    {
+      "id": 258,
+      "word": "thêm",
+      "sentence1": "Tôi cần thêm thời gian để hoàn thành.",
+      "sentence2": "Cô ấy mang thêm đồ ăn nhẹ cho chuyến đi."
+    },
+    {
+      "id": 259,
+      "word": "mắt",
+      "sentence1": "Cô ấy có đôi mắt xanh đẹp.",
+      "sentence2": "Tôi cần kiểm tra mắt."
+    },
+    {
+      "id": 260,
+      "word": "mặt",
+      "sentence1": "Anh ấy có một khuôn mặt tốt bụng.",
+      "sentence2": "Cô ấy không thể che giấu vẻ mặt của mình."
+    },
+    {
+      "id": 261,
+      "word": "sự thật",
+      "sentence1": "Đó là một sự thật rằng Trái Đất quay quanh Mặt Trời.",
+      "sentence2": "Cô ấy biết rất nhiều sự thật thú vị."
+    },
+    {
+      "id": 262,
+      "word": "mùa thu",
+      "sentence1": "Cẩn thận đừng ngã.",
+      "sentence2": "Lá rơi từ cây vào mùa thu."
+    },
+    {
+      "id": 263,
+      "word": "sai",
+      "sentence1": "Tuyên bố đó là sai.",
+      "sentence2": "Cô ấy nhận ra niềm tin của mình là sai."
+    },
+    {
+      "id": 264,
+      "word": "gia đình",
+      "sentence1": "Gia đình tôi rất quan trọng với tôi.",
+      "sentence2": "Cô ấy đến từ một gia đình đông người."
+    },
+    {
+      "id": 265,
+      "word": "nổi tiếng",
+      "sentence1": "Anh ấy là một diễn viên nổi tiếng.",
+      "sentence2": "Một ngày nào đó cô ấy muốn nổi tiếng."
+    },
+    {
+      "id": 266,
+      "word": "tuyệt vời",
+      "sentence1": "Khung cảnh từ trên cao thật tuyệt vời.",
+      "sentence2": "Cô ấy đã làm một công việc tuyệt vời trong dự án."
+    },
+    {
+      "id": 267,
+      "word": "xa",
+      "sentence1": "Cửa hàng xa nhà tôi.",
+      "sentence2": "Cô ấy sống ở một thành phố xa xôi."
+    },
+    {
+      "id": 268,
+      "word": "trang trại",
+      "sentence1": "Họ có một trang trại ở nông thôn.",
+      "sentence2": "Cô ấy thích đến thăm trang trại vào mùa hè."
+    },
+    {
+      "id": 269,
+      "word": "nông dân",
+      "sentence1": "Người nông dân làm việc chăm chỉ trên cánh đồng.",
+      "sentence2": "Cô ấy muốn cưới một nông dân."
+    },
+    {
+      "id": 270,
+      "word": "nhanh chóng",
+      "sentence1": "Anh ấy là một người chạy nhanh.",
+      "sentence2": "Cô ấy lái một chiếc xe nhanh."
+    },
+    {
+      "id": 271,
+      "word": "mỡ",
+      "sentence1": "Con mèo béo và lười biếng.",
+      "sentence2": "Cô ấy đang ăn kiêng để giảm mỡ."
+    },
+    {
+      "id": 272,
+      "word": "cha",
+      "sentence1": "Cha tôi là bác sĩ.",
+      "sentence2": "Cô ấy rất yêu cha mình."
+    },
+    {
+      "id": 273,
+      "word": "yêu thích",
+      "sentence1": "Màu yêu thích của tôi là màu xanh.",
+      "sentence2": "Cô ấy có một cuốn sách yêu thích mà cô ấy thường xuyên đọc."
+    },
+    {
+      "id": 274,
+      "word": "tháng 2",
+      "sentence1": "Tháng Hai là tháng thứ hai trong năm.",
+      "sentence2": "Ngày Valentine là vào tháng 2."
+    },
+    {
+      "id": 275,
+      "word": "cảm thấy",
+      "sentence1": "Hôm nay tôi cảm thấy hạnh phúc.",
+      "sentence2": "Hôm qua cô ấy không khỏe."
+    },
+    {
+      "id": 276,
+      "word": "cảm giác",
+      "sentence1": "Tôi có cảm giác có gì đó không ổn.",
+      "sentence2": "Bà bày tỏ cảm xúc của mình trong một lá thư."
+    },
+    {
+      "id": 277,
+      "word": "lễ hội",
+      "sentence1": "Lễ hội âm nhạc thật tuyệt vời.",
+      "sentence2": "Cô ấy mong chờ lễ hội hàng năm."
+    },
+    {
+      "id": 278,
+      "word": "ít",
+      "sentence1": "Tôi có vài người bạn ở thành phố này.",
+      "sentence2": "Cô ấy chụp một vài bức ảnh trong chuyến đi của mình."
+    },
+    {
+      "id": 279,
+      "word": "mười lăm",
+      "sentence1": "Có mười lăm học sinh trong lớp của tôi.",
+      "sentence2": "Cô ấy sẽ tròn mười lăm tuổi vào tháng tới."
+    },
+    {
+      "id": 280,
+      "word": "thứ năm",
+      "sentence1": "Anh ấy kết thúc ở vị trí thứ năm.",
+      "sentence2": "Cuốn thứ năm trong loạt sách là cuốn yêu thích của tôi."
+    },
+    {
+      "id": 281,
+      "word": "năm mươi",
+      "sentence1": "Có năm mươi tiểu bang ở Hoa Kỳ.",
+      "sentence2": "Cô ấy năm mươi tuổi."
+    },
+    {
+      "id": 282,
+      "word": "lấp đầy",
+      "sentence1": "Xin hãy điền vào mẫu này.",
+      "sentence2": "Cô ấy cần đổ xăng vào xe."
+    },
+    {
+      "id": 283,
+      "word": "phim",
+      "sentence1": "Tôi đã xem một bộ phim tuyệt vời tối qua.",
+      "sentence2": "Cô ấy muốn làm phim một ngày nào đó."
+    },
+    {
+      "id": 284,
+      "word": "cuối cùng",
+      "sentence1": "Kỳ thi cuối cùng là tuần sau.",
+      "sentence2": "Cô ấy học chăm chỉ cho kỳ thi cuối cùng."
+    },
+    {
+      "id": 285,
+      "word": "tìm thấy",
+      "sentence1": "Tôi không thể tìm thấy chìa khóa của mình.",
+      "sentence2": "Cô ấy đã giúp tôi tìm ra con đường."
+    },
+    {
+      "id": 286,
+      "word": "tốt",
+      "sentence1": "Tôi cảm thấy ổn, cảm ơn.",
+      "sentence2": "Cô ấy có một bộ sưu tập tem tốt."
+    },
+    {
+      "id": 287,
+      "word": "kết thúc",
+      "sentence1": "Làm ơn hoàn thành bài tập về nhà.",
+      "sentence2": "Cô ấy sẽ hoàn thành dự án vào ngày mai."
+    },
+    {
+      "id": 288,
+      "word": "lửa",
+      "sentence1": "Lửa rất nóng.",
+      "sentence2": "Cô ấy sợ lửa."
+    },
+    {
+      "id": 289,
+      "word": "đầu tiên",
+      "sentence1": "Cô ấy là người đầu tiên đến.",
+      "sentence2": "Chương đầu tiên của cuốn sách rất thú vị."
+    },
+    {
+      "id": 290,
+      "word": "cá",
+      "sentence1": "Tôi bắt được một con cá lớn.",
+      "sentence2": "Cô ấy thích ăn cá cho bữa tối."
+    },
+    {
+      "id": 291,
+      "word": "năm",
+      "sentence1": "Tôi có năm quả táo.",
+      "sentence2": "Cô ấy năm tuổi."
+    },
+    {
+      "id": 292,
+      "word": "phẳng",
+      "sentence1": "Con đường là bằng phẳng và thẳng.",
+      "sentence2": "Cô ấy sống trong một căn hộ ở thành phố."
+    },
+    {
+      "id": 293,
+      "word": "chuyến bay",
+      "sentence1": "Chuyến bay của tôi khởi hành lúc 6 giờ chiều.",
+      "sentence2": "Cô ấy đang trên chuyến bay tới Paris."
+    },
+    {
+      "id": 294,
+      "word": "sàn nhà",
+      "sentence1": "Cuốn sách nằm trên sàn.",
+      "sentence2": "Hôm qua cô ấy đã lau sàn nhà."
+    },
+    {
+      "id": 295,
+      "word": "hoa",
+      "sentence1": "Tôi đã mua một bông hoa đẹp.",
+      "sentence2": "Cô ấy thích trồng hoa trong vườn của mình."
+    },
+    {
+      "id": 296,
+      "word": "bay",
+      "sentence1": "Tôi muốn bay đến New York.",
+      "sentence2": "Cô ấy có thể bay diều rất tốt."
+    },
+    {
+      "id": 297,
+      "word": "tiếp theo",
+      "sentence1": "Xin hãy theo tôi đến nhà ga.",
+      "sentence2": "Cô ấy quyết định theo đuổi ước mơ của mình."
+    },
+    {
+      "id": 298,
+      "word": "thực phẩm",
+      "sentence1": "Tôi yêu món ăn Ý.",
+      "sentence2": "Cô ấy chuẩn bị một món ăn ngon cho bữa tối."
+    },
+    {
+      "id": 299,
+      "word": "chân",
+      "sentence1": "Chân tôi đau.",
+      "sentence2": "Cô ấy vô tình đạp vào chân tôi."
+    },
+    {
+      "id": 300,
+      "word": "bóng đá",
+      "sentence1": "Tôi chơi bóng đá vào cuối tuần.",
+      "sentence2": "Cô ấy là một người hâm mộ bóng đá lớn."
+    },
+    {
+      "id": 301,
+      "word": "cho",
+      "sentence1": "Món quà này dành cho anh.",
+      "sentence2": "Cô ấy làm việc chăm chỉ cho gia đình mình."
+    },
+    {
+      "id": 302,
+      "word": "quên đi",
+      "sentence1": "Đừng quên gọi cho tôi.",
+      "sentence2": "Cô ấy luôn quên chỗ để chìa khóa."
+    },
+    {
+      "id": 303,
+      "word": "hình thức",
+      "sentence1": "Xin hãy điền vào mẫu này.",
+      "sentence2": "Cô ấy nộp đơn trực tuyến."
+    },
+    {
+      "id": 304,
+      "word": "bốn mươi",
+      "sentence1": "Có bốn mươi học sinh trong trường.",
+      "sentence2": "Cô ấy bốn mươi tuổi."
+    },
+    {
+      "id": 305,
+      "word": "bốn",
+      "sentence1": "Tôi có bốn anh trai.",
+      "sentence2": "Bốn mùa là đẹp."
+    },
+    {
+      "id": 306,
+      "word": "mười bốn",
+      "sentence1": "Cô ấy mười bốn tuổi.",
+      "sentence2": "Mười bốn là con số yêu thích của tôi."
+    },
+    {
+      "id": 307,
+      "word": "thứ tư",
+      "sentence1": "Anh ấy kết thúc ở vị trí thứ tư.",
+      "sentence2": "Ngày 4 tháng 7 là Ngày Độc Lập."
+    },
+    {
+      "id": 308,
+      "word": "tự do",
+      "sentence1": "Bảo tàng miễn phí vào ngày chủ nhật.",
+      "sentence2": "Cô ấy có một buổi chiều rảnh."
+    },
+    {
+      "id": 309,
+      "word": "thứ Sáu",
+      "sentence1": "Thứ sáu là ngày yêu thích của tôi.",
+      "sentence2": "Cô ấy có một cuộc họp vào thứ Sáu."
+    },
+    {
+      "id": 310,
+      "word": "bạn",
+      "sentence1": "Bạn thân của tôi sẽ đến đây.",
+      "sentence2": "Cô ấy là một người bạn trung thành."
+    },
+    {
+      "id": 311,
+      "word": "thân thiện",
+      "sentence1": "Con chó rất thân thiện.",
+      "sentence2": "Cô ấy mỉm cười thân thiện với tôi."
+    },
+    {
+      "id": 312,
+      "word": "từ",
+      "sentence1": "Tôi đến từ Thổ Nhĩ Kỳ.",
+      "sentence2": "Cô ấy nhận được một lá thư từ người bạn của mình."
+    },
+    {
+      "id": 313,
+      "word": "mặt trước",
+      "sentence1": "Xe đang đỗ trước nhà.",
+      "sentence2": "Cô ấy đứng ở đầu hàng."
+    },
+    {
+      "id": 314,
+      "word": "trái cây",
+      "sentence1": "Tôi thích ăn trái cây cho bữa sáng.",
+      "sentence2": "Cô ấy mua một ít trái cây tươi tại chợ."
+    },
+    {
+      "id": 315,
+      "word": "đầy đủ",
+      "sentence1": "Cốc đầy nước.",
+      "sentence2": "Hôm nay cô ấy có một lịch trình đầy đủ."
+    },
+    {
+      "id": 316,
+      "word": "vui vẻ",
+      "sentence1": "Chúng tôi đã có rất nhiều niềm vui tại bữa tiệc.",
+      "sentence2": "Cô ấy thích các hoạt động vui chơi ngoài trời."
+    },
+    {
+      "id": 317,
+      "word": "buồn cười",
+      "sentence1": "Bộ phim đó thật sự rất vui.",
+      "sentence2": "Cô ấy có một cảm giác hài hước buồn cười."
+    },
+    {
+      "id": 318,
+      "word": "tương lai",
+      "sentence1": "Tôi rất hào hứng về tương lai.",
+      "sentence2": "Cô ấy có những kế hoạch lớn cho tương lai của mình."
+    },
+    {
+      "id": 319,
+      "word": "trò chơi",
+      "sentence1": "Tôi thích chơi trò chơi video.",
+      "sentence2": "Cô ấy thắng trận đấu tối qua."
+    },
+    {
+      "id": 320,
+      "word": "vườn",
+      "sentence1": "Cô ấy có một khu vườn xinh đẹp ở sân sau nhà.",
+      "sentence2": "Cô ấy thích trồng hoa trong vườn của mình."
+    },
+    {
+      "id": 321,
+      "word": "địa lý",
+      "sentence1": "Tôi học địa lý ở trường.",
+      "sentence2": "Cô ấy quan tâm đến địa lý thế giới."
+    },
+    {
+      "id": 322,
+      "word": "nhận được",
+      "sentence1": "Tôi cần đi mua đồ.",
+      "sentence2": "Cô ấy sẽ sớm có được một công việc mới."
+    },
+    {
+      "id": 323,
+      "word": "cô gái",
+      "sentence1": "Cô gái đang đọc sách.",
+      "sentence2": "Cô ấy là một cô gái thông minh."
+    },
+    {
+      "id": 324,
+      "word": "bạn gái",
+      "sentence1": "Bạn gái tôi sẽ đến đây.",
+      "sentence2": "Cô ấy là một người bạn gái hỗ trợ."
+    },
+    {
+      "id": 325,
+      "word": "cho",
+      "sentence1": "Tôi muốn tặng anh một món quà.",
+      "sentence2": "Cô ấy tặng tôi một cuốn sách cho sinh nhật của tôi."
+    },
+    {
+      "id": 326,
+      "word": "kính",
+      "sentence1": "Cẩn thận với cái ly đó.",
+      "sentence2": "Cô ấy uống nước từ một ly."
+    },
+    {
+      "id": 327,
+      "word": "đi đi",
+      "sentence1": "Tôi cần đi mua sắm.",
+      "sentence2": "Cô ấy sẽ đi tiệc sau."
+    },
+    {
+      "id": 328,
+      "word": "tốt",
+      "sentence1": "Đây là một ý tưởng hay.",
+      "sentence2": "Cô ấy là một học sinh giỏi."
+    },
+    {
+      "id": 329,
+      "word": "tạm biệt",
+      "sentence1": "Tôi đã nói lời tạm biệt với bạn tôi.",
+      "sentence2": "Cô ấy vẫy tay chào tạm biệt khi rời đi."
+    },
+    {
+      "id": 330,
+      "word": "ông nội",
+      "sentence1": "Ông tôi rất khôn ngoan.",
+      "sentence2": "Anh ấy kể những câu chuyện tuyệt vời về quá khứ."
+    },
+    {
+      "id": 331,
+      "word": "bà nội",
+      "sentence1": "Bà tôi làm bánh quy ngon nhất.",
+      "sentence2": "Cô ấy thích kể những câu chuyện từ thời thơ ấu."
+    },
+    {
+      "id": 332,
+      "word": "ông bà",
+      "sentence1": "Ông bà thường làm hư cháu của họ.",
+      "sentence2": "Họ có một mối liên kết đặc biệt với các cháu của họ."
+    },
+    {
+      "id": 333,
+      "word": "tốt",
+      "sentence1": "Anh đã làm một công việc tuyệt vời trong dự án.",
+      "sentence2": "Cô ấy có những ý tưởng tuyệt vời cho tương lai."
+    },
+    {
+      "id": 334,
+      "word": "màu xanh lá cây",
+      "sentence1": "Cỏ xanh.",
+      "sentence2": "Cô ấy mặc một chiếc váy xanh."
+    },
+    {
+      "id": 335,
+      "word": "màu xám",
+      "sentence1": "Bầu trời hôm nay màu xám.",
+      "sentence2": "Cô ấy có một con mèo xám."
+    },
+    {
+      "id": 336,
+      "word": "nhóm",
+      "sentence1": "Chúng tôi thành lập một nhóm nghiên cứu.",
+      "sentence2": "Cô ấy là thủ lĩnh của nhóm."
+    },
+    {
+      "id": 337,
+      "word": "lớn lên",
+      "sentence1": "Cây cần nước để phát triển.",
+      "sentence2": "Cô ấy nhìn con mình lớn lên."
+    },
+    {
+      "id": 338,
+      "word": "đoán xem",
+      "sentence1": "Anh đoán được câu trả lời không?",
+      "sentence2": "Cô ta đoán đúng."
+    },
+    {
+      "id": 339,
+      "word": "đàn guitar",
+      "sentence1": "Tôi thích chơi guitar.",
+      "sentence2": "Cô ấy đang học chơi guitar."
+    },
+    {
+      "id": 340,
+      "word": "thể thao",
+      "sentence1": "Tôi đi tập thể dục mỗi sáng.",
+      "sentence2": "Cô ấy tập thể dục ở phòng tập thể dục."
+    },
+    {
+      "id": 341,
+      "word": "tóc",
+      "sentence1": "Cô ấy có mái tóc dài.",
+      "sentence2": "Tôi cần cắt tóc."
+    },
+    {
+      "id": 342,
+      "word": "một nửa",
+      "sentence1": "Tôi đã ăn một nửa pizza.",
+      "sentence2": "Cô ấy đã đọc được một nửa cuốn sách."
+    },
+    {
+      "id": 343,
+      "word": "tay",
+      "sentence1": "Anh ta vẫy tay.",
+      "sentence2": "Cô ấy nắm chặt tay anh ta."
+    },
+    {
+      "id": 344,
+      "word": "xảy ra",
+      "sentence1": "Chuyện gì sẽ xảy ra tiếp theo?",
+      "sentence2": "Tôi không nghĩ chuyện đó sẽ xảy ra."
+    },
+    {
+      "id": 345,
+      "word": "hạnh phúc",
+      "sentence1": "Cô ấy là một người hạnh phúc.",
+      "sentence2": "Hôm nay tôi cảm thấy hạnh phúc."
+    },
+    {
+      "id": 346,
+      "word": "khó khăn",
+      "sentence1": "Bài tập này rất khó.",
+      "sentence2": "Cô ấy làm việc chăm chỉ mỗi ngày."
+    },
+    {
+      "id": 347,
+      "word": "mũ",
+      "sentence1": "Anh ấy đội mũ đến bữa tiệc.",
+      "sentence2": "Cô ấy mua một chiếc mũ mới."
+    },
+    {
+      "id": 348,
+      "word": "ghét",
+      "sentence1": "Tôi ghét phải xếp hàng.",
+      "sentence2": "Cô ấy ghét làm bài tập về nhà."
+    },
+    {
+      "id": 349,
+      "word": "có",
+      "sentence1": "Tôi có chó.",
+      "sentence2": "Cô ấy có một con mèo."
+    },
+    {
+      "id": 350,
+      "word": "phải",
+      "sentence1": "Tôi phải học cho kỳ thi.",
+      "sentence2": "Cô ấy phải đi làm."
+    },
+    {
+      "id": 351,
+      "word": "anh ấy",
+      "sentence1": "Anh ấy là anh trai tôi.",
+      "sentence2": "Tôi đã gặp anh ta hôm qua."
+    },
+    {
+      "id": 352,
+      "word": "đầu",
+      "sentence1": "Cô ấy gật đầu.",
+      "sentence2": "Anh ấy bị đau đầu."
+    },
+    {
+      "id": 353,
+      "word": "sức khỏe",
+      "sentence1": "Sức khỏe rất quan trọng.",
+      "sentence2": "Cô ấy lo lắng về sức khỏe của mình."
+    },
+    {
+      "id": 354,
+      "word": "khỏe mạnh",
+      "sentence1": "Ăn trái cây và rau quả là một phần của chế độ ăn uống lành mạnh.",
+      "sentence2": "Trông cô ấy khỏe mạnh và khỏe mạnh."
+    },
+    {
+      "id": 355,
+      "word": "nghe thấy",
+      "sentence1": "Tôi có thể nghe nhạc.",
+      "sentence2": "Cô ấy nghe thấy một tiếng động lạ."
+    },
+    {
+      "id": 356,
+      "word": "xin chào",
+      "sentence1": "Xin chào, cô thế nào?",
+      "sentence2": "Cô ấy vẫy tay chào."
+    },
+    {
+      "id": 357,
+      "word": "giúp đỡ",
+      "sentence1": "Anh giúp tôi với cái này được không?",
+      "sentence2": "Cô ấy luôn giúp đỡ bạn bè của mình."
+    },
+    {
+      "id": 358,
+      "word": "cô ấy",
+      "sentence1": "Đây là cuốn sách của cô ấy.",
+      "sentence2": "Tôi đã thấy cô ấy ở công viên."
+    },
+    {
+      "id": 359,
+      "word": "ở đây",
+      "sentence1": "Lại đây, làm ơn.",
+      "sentence2": "Cô ấy không có ở đây."
+    },
+    {
+      "id": 360,
+      "word": "này",
+      "sentence1": "Này, có chuyện gì thế?",
+      "sentence2": "Cô ấy chào và mỉm cười."
+    },
+    {
+      "id": 361,
+      "word": "xin chào",
+      "sentence1": "Xin chào, rất vui được gặp anh!",
+      "sentence2": "Cô ấy vẫy tay chào."
+    },
+    {
+      "id": 362,
+      "word": "cao",
+      "sentence1": "Tòa nhà rất cao.",
+      "sentence2": "Cô ấy vươn tay đến kệ cao."
+    },
+    {
+      "id": 363,
+      "word": "anh ấy",
+      "sentence1": "Tôi đã thấy anh ta ở công viên.",
+      "sentence2": "Cô ấy tặng anh ấy một món quà."
+    },
+    {
+      "id": 364,
+      "word": "của anh ta",
+      "sentence1": "Đây là xe của hắn.",
+      "sentence2": "Tôi đã gặp em gái anh ta."
+    },
+    {
+      "id": 365,
+      "word": "lịch sử",
+      "sentence1": "Lịch sử thật hấp dẫn.",
+      "sentence2": "Cô ấy thích học lịch sử."
+    },
+    {
+      "id": 366,
+      "word": "sở thích",
+      "sentence1": "Sở thích của tôi là vẽ tranh.",
+      "sentence2": "Cô ấy có nhiều sở thích."
+    },
+    {
+      "id": 367,
+      "word": "kỳ nghỉ",
+      "sentence1": "Chúng ta sẽ đi nghỉ.",
+      "sentence2": "Cô ấy thích kỳ nghỉ hè."
+    },
+    {
+      "id": 368,
+      "word": "nhà",
+      "sentence1": "Chào mừng về nhà!",
+      "sentence2": "Cô ấy đang dọn dẹp nhà của mình."
+    },
+    {
+      "id": 369,
+      "word": "bài tập về nhà",
+      "sentence1": "Tôi có rất nhiều bài tập về nhà.",
+      "sentence2": "Cô ấy giúp anh trai mình làm bài tập về nhà."
+    },
+    {
+      "id": 370,
+      "word": "hy vọng",
+      "sentence1": "Tôi hy vọng anh sẽ sớm khỏe lại.",
+      "sentence2": "Cô ấy có hy vọng về tương lai."
+    },
+    {
+      "id": 371,
+      "word": "ngựa",
+      "sentence1": "Con ngựa đang chạy nhanh.",
+      "sentence2": "Cô ấy thích cưỡi ngựa."
+    },
+    {
+      "id": 372,
+      "word": "bệnh viện",
+      "sentence1": "Anh ấy đang ở bệnh viện.",
+      "sentence2": "Cô ấy làm việc tại bệnh viện."
+    },
+    {
+      "id": 373,
+      "word": "khách sạn",
+      "sentence1": "Chúng tôi ở một khách sạn đẹp.",
+      "sentence2": "Cô ấy đã đặt một khách sạn cho kỳ nghỉ của mình."
+    },
+    {
+      "id": 374,
+      "word": "giờ",
+      "sentence1": "Phải mất một giờ để đến đó.",
+      "sentence2": "Cô ấy sẽ trở lại trong một giờ nữa."
+    },
+    {
+      "id": 375,
+      "word": "nóng",
+      "sentence1": "Cà phê nóng rồi.",
+      "sentence2": "Cô ấy thích thời tiết nóng."
+    },
+    {
+      "id": 376,
+      "word": "nhà",
+      "sentence1": "Đây là nhà của tôi.",
+      "sentence2": "Cô ấy muốn mua một ngôi nhà."
+    },
+    {
+      "id": 377,
+      "word": "làm thế nào",
+      "sentence1": "Anh khỏe không?",
+      "sentence2": "Cô ấy hỏi làm thế nào."
+    },
+    {
+      "id": 378,
+      "word": "tuy nhiên",
+      "sentence1": "Trời mưa; tuy nhiên, chúng tôi ra ngoài.",
+      "sentence2": "Cô ấy rất bận rộn; tuy nhiên, cô ấy sẽ giúp bạn."
+    },
+    {
+      "id": 379,
+      "word": "một trăm",
+      "sentence1": "Có một trăm học sinh trong trường.",
+      "sentence2": "Cô ấy có một trăm đô la."
+    },
+    {
+      "id": 380,
+      "word": "đói khát",
+      "sentence1": "Tôi đói rồi.",
+      "sentence2": "Cô ấy luôn cảm thấy đói sau khi tập thể dục."
+    },
+    {
+      "id": 381,
+      "word": "chồng",
+      "sentence1": "Chồng tôi là bác sĩ.",
+      "sentence2": "Cô ấy rất yêu chồng mình."
+    },
+    {
+      "id": 382,
+      "word": "băng",
+      "sentence1": "Băng đang tan chảy.",
+      "sentence2": "Cô ấy cho đá vào đồ uống của mình."
+    },
+    {
+      "id": 383,
+      "word": "kem",
+      "sentence1": "Tôi thích kem.",
+      "sentence2": "Cô ấy mua kem cho bọn trẻ."
+    },
+    {
+      "id": 384,
+      "word": "ý tưởng",
+      "sentence1": "Đó là một ý tưởng tuyệt vời!",
+      "sentence2": "Cô ấy có một ý tưởng thú vị cho dự án."
+    },
+    {
+      "id": 385,
+      "word": "nếu",
+      "sentence1": "Nếu trời mưa, chúng tôi sẽ ở trong nhà.",
+      "sentence2": "Cô ấy hỏi tôi có muốn tham gia không."
+    },
+    {
+      "id": 386,
+      "word": "tưởng tượng",
+      "sentence1": "Tôi có thể tưởng tượng ra một thế giới tốt đẹp hơn.",
+      "sentence2": "Cô ấy thích tưởng tượng những kịch bản khác nhau."
+    },
+    {
+      "id": 387,
+      "word": "quan trọng",
+      "sentence1": "Đây là một quyết định quan trọng.",
+      "sentence2": "Cô ấy biết cách ưu tiên các nhiệm vụ quan trọng."
+    },
+    {
+      "id": 388,
+      "word": "cải thiện",
+      "sentence1": "Tôi muốn cải thiện kỹ năng tiếng Anh của mình.",
+      "sentence2": "Cô ấy đang làm việc chăm chỉ để cải thiện điểm số của mình."
+    },
+    {
+      "id": 389,
+      "word": "trong",
+      "sentence1": "Cuốn sách ở trong túi.",
+      "sentence2": "Cô ấy sống ở một thị trấn nhỏ."
+    },
+    {
+      "id": 390,
+      "word": "bao gồm",
+      "sentence1": "Xin hãy ghi tên của bạn vào danh sách.",
+      "sentence2": "Cô ấy muốn bao gồm tất cả mọi người trong cuộc thảo luận."
+    },
+    {
+      "id": 391,
+      "word": "thông tin",
+      "sentence1": "Ông có thể cung cấp thêm thông tin không?",
+      "sentence2": "Cô ấy thấy thông tin đó hữu ích."
+    },
+    {
+      "id": 392,
+      "word": "lãi suất",
+      "sentence1": "Tôi rất quan tâm đến nghệ thuật.",
+      "sentence2": "Cô ấy cũng thích âm nhạc như tôi."
+    },
+    {
+      "id": 393,
+      "word": "quan tâm",
+      "sentence1": "Tôi thích học tiếng Tây Ban Nha.",
+      "sentence2": "Cô ấy quan tâm đến du lịch."
+    },
+    {
+      "id": 394,
+      "word": "thú vị",
+      "sentence1": "Cuốn sách này rất thú vị.",
+      "sentence2": "Cô ấy có vài ý tưởng thú vị."
+    },
+    {
+      "id": 395,
+      "word": "internet",
+      "sentence1": "Tôi tìm thấy nó trên internet.",
+      "sentence2": "Cô ấy dành rất nhiều thời gian trên internet."
+    },
+    {
+      "id": 396,
+      "word": "phỏng vấn",
+      "sentence1": "Ngày mai tôi có một cuộc phỏng vấn xin việc.",
+      "sentence2": "Cô ấy chuẩn bị cho cuộc phỏng vấn."
+    },
+    {
+      "id": 397,
+      "word": "vào",
+      "sentence1": "Anh ấy bước vào phòng.",
+      "sentence2": "Cô ấy lặn xuống hồ bơi."
+    },
+    {
+      "id": 398,
+      "word": "giới thiệu",
+      "sentence1": "Để tôi giới thiệu bạn tôi.",
+      "sentence2": "Cô ấy sẽ giới thiệu diễn giả."
+    },
+    {
+      "id": 399,
+      "word": "đảo",
+      "sentence1": "Bali là một hòn đảo đẹp.",
+      "sentence2": "Cô ấy mơ đến thăm một hòn đảo nhiệt đới."
+    },
+    {
+      "id": 400,
+      "word": "nó",
+      "sentence1": "Tôi tìm thấy nó trên bàn.",
+      "sentence2": "Cô ấy nói đó là cuốn sách của cô ấy."
+    },
+    {
+      "id": 401,
+      "word": "của nó",
+      "sentence1": "Con chó lắc đuôi.",
+      "sentence2": "Bà tự hào về những thành tựu của mình."
+    },
+    {
+      "id": 402,
+      "word": "áo khoác",
+      "sentence1": "Tôi đã mua một chiếc áo khoác mới.",
+      "sentence2": "Cô ấy mặc một chiếc áo khoác da."
+    },
+    {
+      "id": 403,
+      "word": "tháng Giêng",
+      "sentence1": "Tháng Giêng là tháng đầu tiên.",
+      "sentence2": "Cô ấy sinh vào tháng Giêng."
+    },
+    {
+      "id": 404,
+      "word": "quần jean",
+      "sentence1": "Tôi cần mua quần jean mới.",
+      "sentence2": "Cô ấy thích mặc quần jean hơn."
+    },
+    {
+      "id": 405,
+      "word": "công việc",
+      "sentence1": "Tôi có một công việc mới.",
+      "sentence2": "Cô ấy yêu công việc của mình."
+    },
+    {
+      "id": 406,
+      "word": "tham gia",
+      "sentence1": "Tôi muốn gia nhập câu lạc bộ.",
+      "sentence2": "Cô ấy quyết định tham gia cùng chúng tôi."
+    },
+    {
+      "id": 407,
+      "word": "hành trình",
+      "sentence1": "Chuyến đi dài và mệt mỏi.",
+      "sentence2": "Cô ấy thích chuyến đi."
+    },
+    {
+      "id": 408,
+      "word": "nước ép",
+      "sentence1": "Tôi muốn một ít nước cam.",
+      "sentence2": "Bà ấy uống nước ép mỗi buổi sáng."
+    },
+    {
+      "id": 409,
+      "word": "tháng Bảy",
+      "sentence1": "Tháng Bảy là tháng thứ 7.",
+      "sentence2": "Cô ấy thích đi nghỉ trong tháng Bảy."
+    },
+    {
+      "id": 410,
+      "word": "tháng 6",
+      "sentence1": "Tháng Sáu là tháng thứ sáu.",
+      "sentence2": "Cô ấy tốt nghiệp vào tháng 6."
+    },
+    {
+      "id": 411,
+      "word": "chỉ là",
+      "sentence1": "Tôi chỉ muốn giúp.",
+      "sentence2": "Cô ấy chỉ là một người bạn."
+    },
+    {
+      "id": 412,
+      "word": "k",
+      "sentence1": "K là chữ cái thứ 11 trong bảng chữ cái.",
+      "sentence2": "Cô ấy thích chữ K."
+    },
+    {
+      "id": 413,
+      "word": "giữ",
+      "sentence1": "Xin hãy giữ cửa đóng lại.",
+      "sentence2": "Cô ấy muốn giữ cho căn phòng của mình sạch sẽ."
+    },
+    {
+      "id": 414,
+      "word": "chìa khóa",
+      "sentence1": "Tôi mất chìa khóa nhà.",
+      "sentence2": "Cô ấy tìm thấy chìa khóa dưới tấm thảm."
+    },
+    {
+      "id": 415,
+      "word": "kilometre",
+      "sentence1": "Cửa hàng cách đây 5 km.",
+      "sentence2": "Hôm qua cô ấy đã chạy 10 km."
+    },
+    {
+      "id": 416,
+      "word": "loại (type)",
+      "sentence1": "Anh thích loại nhạc nào?",
+      "sentence2": "Cô ấy là một người tốt bụng."
+    },
+    {
+      "id": 417,
+      "word": "bếp",
+      "sentence1": "Nhà bếp rất rộng rãi.",
+      "sentence2": "Cô ấy thích nấu ăn trong nhà bếp của mình."
+    },
+    {
+      "id": 418,
+      "word": "biết",
+      "sentence1": "Tôi biết câu trả lời.",
+      "sentence2": "Cô ấy không biết tên anh ta."
+    },
+    {
+      "id": 419,
+      "word": "đất đai",
+      "sentence1": "Đất rất màu mỡ.",
+      "sentence2": "Cô ấy đã mua một mảnh đất."
+    },
+    {
+      "id": 420,
+      "word": "ngôn ngữ",
+      "sentence1": "Tiếng Anh là một ngôn ngữ toàn cầu.",
+      "sentence2": "Cô ấy nói ba thứ tiếng."
+    },
+    {
+      "id": 421,
+      "word": "lớn",
+      "sentence1": "Họ sống trong một ngôi nhà lớn.",
+      "sentence2": "Cô ấy có một bộ sưu tập tem lớn."
+    },
+    {
+      "id": 422,
+      "word": "cuối cùng",
+      "sentence1": "Đây là cơ hội cuối cùng.",
+      "sentence2": "Cô ấy là người cuối cùng rời đi."
+    },
+    {
+      "id": 423,
+      "word": "muộn",
+      "sentence1": "Tôi trễ cuộc họp rồi.",
+      "sentence2": "Cô ấy đến tiệc muộn."
+    },
+    {
+      "id": 424,
+      "word": "sau này",
+      "sentence1": "Chúng ta có thể thảo luận sau.",
+      "sentence2": "Cô ấy gọi cho tôi vào cuối ngày hôm đó."
+    },
+    {
+      "id": 425,
+      "word": "cười",
+      "sentence1": "Em thích làm anh cười.",
+      "sentence2": "Cô ấy không thể không cười."
+    },
+    {
+      "id": 426,
+      "word": "học hỏi",
+      "sentence1": "Tôi muốn học một ngôn ngữ mới.",
+      "sentence2": "Cô ấy học nhanh."
+    },
+    {
+      "id": 427,
+      "word": "ra đi",
+      "sentence1": "Tôi phải đi sớm.",
+      "sentence2": "Cô ấy rời khỏi bữa tiệc mà không nói lời tạm biệt."
+    },
+    {
+      "id": 428,
+      "word": "trái",
+      "sentence1": "Quay trái ở đèn giao thông",
+      "sentence2": "Cô ấy thuận tay trái."
+    },
+    {
+      "id": 429,
+      "word": "chân",
+      "sentence1": "Chân tôi đau.",
+      "sentence2": "Cô ấy giương chân qua nhau."
+    },
+    {
+      "id": 430,
+      "word": "bài học",
+      "sentence1": "Hôm nay tôi có bài toán.",
+      "sentence2": "Chị thích bài học."
+    },
+    {
+      "id": 431,
+      "word": "để",
+      "sentence1": "Để tôi giúp anh.",
+      "sentence2": "Cô ấy cho anh ấy mượn cuốn sách của mình."
+    },
+    {
+      "id": 432,
+      "word": "thư",
+      "sentence1": "Tôi nhận được một lá thư từ người bạn của tôi.",
+      "sentence2": "Cô ấy viết một lá thư cho bà ngoại của mình."
+    },
+    {
+      "id": 433,
+      "word": "thư viện",
+      "sentence1": "Thư viện mở cửa đến 8 giờ tối.",
+      "sentence2": "Cô ấy mượn một cuốn sách từ thư viện."
+    },
+    {
+      "id": 434,
+      "word": "nói dối",
+      "sentence1": "Đừng nói dối tôi.",
+      "sentence2": "Cô ấy nói dối về tuổi của mình."
+    },
+    {
+      "id": 435,
+      "word": "cuộc sống",
+      "sentence1": "Cuộc sống thật đẹp.",
+      "sentence2": "Cô ấy muốn đi du lịch thế giới trong cuộc sống của mình."
+    },
+    {
+      "id": 436,
+      "word": "ánh sáng (từ mặt trời/một đèn)",
+      "sentence1": "Ánh sáng quá sáng.",
+      "sentence2": "Cô ấy tắt đèn trước khi đi ngủ."
+    },
+    {
+      "id": 437,
+      "word": "như (tương tự)",
+      "sentence1": "Cái váy này giống cái tôi thấy hôm qua.",
+      "sentence2": "Cô ấy có một nhóm bạn cùng quan điểm."
+    },
+    {
+      "id": 438,
+      "word": "như (tìm thấy sb/sth dễ chịu)",
+      "sentence1": "Tôi thích bài hát này.",
+      "sentence2": "Cô ấy thích đọc trước khi đi ngủ."
+    },
+    {
+      "id": 439,
+      "word": "đường",
+      "sentence1": "Vẽ một đường thẳng.",
+      "sentence2": "Cô ấy đứng xếp hàng để mua vé."
+    },
+    {
+      "id": 440,
+      "word": "sư tử",
+      "sentence1": "Sư tử là vua của rừng.",
+      "sentence2": "Cô ấy thấy một con sư tử ở sở thú."
+    },
+    {
+      "id": 441,
+      "word": "danh sách",
+      "sentence1": "Tôi đã làm một danh sách mua sắm.",
+      "sentence2": "Cô ấy đã đánh dấu các mục trong danh sách của mình."
+    },
+    {
+      "id": 442,
+      "word": "nghe này",
+      "sentence1": "Tôi thích nghe nhạc.",
+      "sentence2": "Cô ấy lắng nghe cẩn thận các hướng dẫn."
+    },
+    {
+      "id": 443,
+      "word": "nhỏ",
+      "sentence1": "Cái hộp này quá nhỏ.",
+      "sentence2": "Cô ấy có một con chó nhỏ."
+    },
+    {
+      "id": 444,
+      "word": "sống",
+      "sentence1": "Tôi sống ở một thị trấn nhỏ.",
+      "sentence2": "Cô ấy muốn sống ở thành phố."
+    },
+    {
+      "id": 445,
+      "word": "địa phương",
+      "sentence1": "Tôi thích đồ ăn địa phương.",
+      "sentence2": "Cô ấy hỗ trợ các doanh nghiệp địa phương."
+    },
+    {
+      "id": 446,
+      "word": "dài",
+      "sentence1": "Đây là một cuốn sách dài.",
+      "sentence2": "Cô ấy đã có một ngày làm việc dài."
+    },
+    {
+      "id": 447,
+      "word": "nhìn này",
+      "sentence1": "Nhìn bầu trời kìa!",
+      "sentence2": "Cô ấy nhìn ra cửa sổ."
+    },
+    {
+      "id": 448,
+      "word": "mất",
+      "sentence1": "Tôi không muốn mất chìa khóa.",
+      "sentence2": "Cô ấy mất điện thoại ở trung tâm mua sắm."
+    },
+    {
+      "id": 449,
+      "word": "rất nhiều",
+      "sentence1": "Có rất nhiều người ở đây.",
+      "sentence2": "Cô ấy có rất nhiều bạn bè."
+    },
+    {
+      "id": 450,
+      "word": "tình yêu",
+      "sentence1": "Tình yêu là tất cả những gì bạn cần.",
+      "sentence2": "Cô ấy đã tìm thấy tình yêu ở một nơi bất ngờ."
+    },
+    {
+      "id": 451,
+      "word": "bữa trưa",
+      "sentence1": "Tôi thường ăn trưa vào buổi trưa.",
+      "sentence2": "Cô ấy đã đóng gói một bữa trưa cho buổi dã ngoại."
+    },
+    {
+      "id": 452,
+      "word": "máy móc",
+      "sentence1": "Máy bị hỏng rồi.",
+      "sentence2": "Cô ấy vận hành máy với kỹ năng."
+    },
+    {
+      "id": 453,
+      "word": "tạp chí",
+      "sentence1": "Tôi đã đọc một bài viết thú vị trong tạp chí.",
+      "sentence2": "Cô ấy đăng ký vài tạp chí."
+    },
+    {
+      "id": 454,
+      "word": "chính",
+      "sentence1": "Lối vào chính là ở góc.",
+      "sentence2": "Cô ấy là nhân vật chính trong câu chuyện."
+    },
+    {
+      "id": 455,
+      "word": "làm",
+      "sentence1": "Tôi muốn làm bánh.",
+      "sentence2": "Cô ấy làm đồ gốm đẹp."
+    },
+    {
+      "id": 456,
+      "word": "người đàn ông",
+      "sentence1": "Người đàn ông đang đọc sách.",
+      "sentence2": "Cô ấy nhìn thấy một người đàn ông trong bộ đồ."
+    },
+    {
+      "id": 457,
+      "word": "nhiều",
+      "sentence1": "Có rất nhiều cuốn sách trên kệ.",
+      "sentence2": "Cô ấy không có nhiều bạn."
+    },
+    {
+      "id": 458,
+      "word": "bản đồ",
+      "sentence1": "Tôi cần một bản đồ để tìm vị trí.",
+      "sentence2": "Cô ấy nghiên cứu bản đồ cẩn thận."
+    },
+    {
+      "id": 459,
+      "word": "tháng 3",
+      "sentence1": "Tháng Ba là tháng thứ ba trong năm.",
+      "sentence2": "Cô ấy sinh vào tháng Ba."
+    },
+    {
+      "id": 460,
+      "word": "thị trường",
+      "sentence1": "Tôi mua rau ở chợ.",
+      "sentence2": "Cô ấy thích mua sắm tại chợ địa phương."
+    },
+    {
+      "id": 461,
+      "word": "kết hôn",
+      "sentence1": "Họ là một cặp vợ chồng.",
+      "sentence2": "Cô ấy kết hôn với một bác sĩ."
+    },
+    {
+      "id": 462,
+      "word": "trận đấu",
+      "sentence1": "Trận đấu sẽ được tổ chức vào ngày mai.",
+      "sentence2": "Cô ấy đã thắng trận đấu tuần trước."
+    },
+    {
+      "id": 463,
+      "word": "tháng 5",
+      "sentence1": "Tháng 5 là một tháng đẹp.",
+      "sentence2": "Cô ấy thích hoa vào tháng Năm."
+    },
+    {
+      "id": 464,
+      "word": "có thể",
+      "sentence1": "Có lẽ chúng ta có thể đi công viên.",
+      "sentence2": "Cô ấy nói có lẽ cô ấy sẽ tham gia cùng chúng tôi."
+    },
+    {
+      "id": 465,
+      "word": "tôi",
+      "sentence1": "Anh giúp tôi được không?",
+      "sentence2": "Cô ấy đã gọi cho tôi hôm qua."
+    },
+    {
+      "id": 466,
+      "word": "bột",
+      "sentence1": "Bữa sáng là bữa ăn yêu thích của tôi.",
+      "sentence2": "Cô ấy chuẩn bị một bữa ăn lành mạnh mỗi ngày."
+    },
+    {
+      "id": 467,
+      "word": "trung bình",
+      "sentence1": "Từ này có nghĩa là gì?",
+      "sentence2": "Cô ấy không có ý làm tổn thương anh."
+    },
+    {
+      "id": 468,
+      "word": "ý nghĩa",
+      "sentence1": "Ý nghĩa của cuộc sống là một câu hỏi triết học.",
+      "sentence2": "Cô ấy tìm kiếm ý nghĩa của bài thơ."
+    },
+    {
+      "id": 469,
+      "word": "thịt",
+      "sentence1": "Tôi không ăn thịt.",
+      "sentence2": "Cô ấy nấu một món thịt ngon."
+    },
+    {
+      "id": 470,
+      "word": "gặp nhau",
+      "sentence1": "Chúng ta gặp nhau tại quán cà phê.",
+      "sentence2": "Cô ấy sẽ gặp bạn bè của mình sau."
+    },
+    {
+      "id": 471,
+      "word": "hội nghị",
+      "sentence1": "Cuộc họp được lên kế hoạch vào lúc 10 giờ sáng.",
+      "sentence2": "Cô ấy đã tham dự cuộc họp hôm qua."
+    },
+    {
+      "id": 472,
+      "word": "thành viên",
+      "sentence1": "Anh ta là thành viên của câu lạc bộ.",
+      "sentence2": "Cô ấy mời một thành viên mới vào nhóm."
+    },
+    {
+      "id": 473,
+      "word": "thực đơn",
+      "sentence1": "Tôi có thể xem thực đơn được không?",
+      "sentence2": "Cô ấy đã đặt hàng từ thực đơn chay."
+    },
+    {
+      "id": 474,
+      "word": "tin nhắn",
+      "sentence1": "Tôi nhận được một tin nhắn từ cô ấy.",
+      "sentence2": "Cô ấy để lại tin nhắn trên điện thoại của tôi."
+    },
+    {
+      "id": 475,
+      "word": "mét",
+      "sentence1": "Cái bàn dài hai mét.",
+      "sentence2": "Cô ấy chạy 100 mét dưới 12 giây."
+    },
+    {
+      "id": 476,
+      "word": "nửa đêm",
+      "sentence1": "Tiệc sẽ kết thúc lúc nửa đêm.",
+      "sentence2": "Cô ấy luôn đi ngủ trước nửa đêm."
+    },
+    {
+      "id": 477,
+      "word": "dặm",
+      "sentence1": "Cửa hàng cách đây 5 dặm.",
+      "sentence2": "Bà ấy đi bộ một dặm mỗi sáng."
+    },
+    {
+      "id": 478,
+      "word": "sữa",
+      "sentence1": "Tôi uống sữa mỗi ngày.",
+      "sentence2": "Cô ấy thích sữa hạnh nhân hơn."
+    },
+    {
+      "id": 479,
+      "word": "triệu",
+      "sentence1": "Có hàng triệu ngôi sao trên bầu trời.",
+      "sentence2": "Cô ấy đã thắng một triệu đô la trong xổ số."
+    },
+    {
+      "id": 480,
+      "word": "phút",
+      "sentence1": "Tôi cần một phút để suy nghĩ.",
+      "sentence2": "Cô ấy đến trễ một phút."
+    },
+    {
+      "id": 481,
+      "word": "xin lỗi",
+      "sentence1": "Tôi nhớ gia đình mình.",
+      "sentence2": "Sáng nay cô ấy lỡ xe buýt."
+    },
+    {
+      "id": 482,
+      "word": "sai lầm",
+      "sentence1": "Tôi đã phạm sai lầm trong bài kiểm tra.",
+      "sentence2": "Cô ấy đã học hỏi từ những sai lầm của mình."
+    },
+    {
+      "id": 483,
+      "word": "mô hình",
+      "sentence1": "Chiếc xe là mẫu mới.",
+      "sentence2": "Cô ấy thích mô hình mới nhất."
+    },
+    {
+      "id": 484,
+      "word": "hiện đại",
+      "sentence1": "Đây là một tòa nhà hiện đại.",
+      "sentence2": "Cô ấy thích nghệ thuật hiện đại."
+    },
+    {
+      "id": 485,
+      "word": "khoan đã",
+      "sentence1": "Chờ một chút.",
+      "sentence2": "Cô ấy đã ghi lại khoảnh khắc đó trong một bức ảnh."
+    },
+    {
+      "id": 486,
+      "word": "thứ hai",
+      "sentence1": "Thứ Hai là ngày đầu tiên của tuần.",
+      "sentence2": "Cô ấy có một cuộc họp vào thứ Hai."
+    },
+    {
+      "id": 487,
+      "word": "tiền",
+      "sentence1": "Tôi cần thêm tiền.",
+      "sentence2": "Cô ấy tiết kiệm tiền cho một kỳ nghỉ."
+    },
+    {
+      "id": 488,
+      "word": "tháng",
+      "sentence1": "Tháng 2 là tháng ngắn nhất.",
+      "sentence2": "Cô ấy sinh vào tháng Năm."
+    },
+    {
+      "id": 489,
+      "word": "nhiều hơn",
+      "sentence1": "Tôi cần thêm thời gian.",
+      "sentence2": "Cô ấy muốn tìm hiểu thêm về chủ đề này."
+    },
+    {
+      "id": 490,
+      "word": "buổi sáng",
+      "sentence1": "Tôi thức dậy sớm vào buổi sáng.",
+      "sentence2": "Cô ấy thích chạy bộ vào buổi sáng."
+    },
+    {
+      "id": 491,
+      "word": "hầu hết",
+      "sentence1": "Đây là cuốn sách thú vị nhất mà tôi từng đọc.",
+      "sentence2": "Cô ấy là nghệ sĩ tài năng nhất trong nhóm."
+    },
+    {
+      "id": 492,
+      "word": "mẹ",
+      "sentence1": "Mẹ tôi là một giáo viên.",
+      "sentence2": "Cô ấy chăm sóc mẹ mình."
+    },
+    {
+      "id": 493,
+      "word": "núi",
+      "sentence1": "Núi bị phủ tuyết.",
+      "sentence2": "Mùa hè năm ngoái, cô ấy đã leo lên núi."
+    },
+    {
+      "id": 494,
+      "word": "chuột",
+      "sentence1": "Con chuột chạy qua sàn nhà.",
+      "sentence2": "Cô ấy có một con chuột."
+    },
+    {
+      "id": 495,
+      "word": "miệng",
+      "sentence1": "Mở miệng rộng ra.",
+      "sentence2": "Nàng có một nụ cười đẹp trên miệng."
+    },
+    {
+      "id": 496,
+      "word": "di chuyển",
+      "sentence1": "Làm ơn di chuyển ghế đi.",
+      "sentence2": "Cô ấy muốn chuyển đến một ngôi nhà mới."
+    },
+    {
+      "id": 497,
+      "word": "phim ảnh",
+      "sentence1": "Tôi đã xem một bộ phim tuyệt vời tối qua.",
+      "sentence2": "Cô ấy thích xem phim lãng mạn."
+    },
+    {
+      "id": 498,
+      "word": "rất nhiều",
+      "sentence1": "Tôi không có nhiều thời gian.",
+      "sentence2": "Cô ấy không ăn nhiều."
+    },
+    {
+      "id": 499,
+      "word": "mẹ",
+      "sentence1": "Mẹ tôi là bạn thân nhất của tôi.",
+      "sentence2": "Cô ấy là một người mẹ tuyệt vời."
+    },
+    {
+      "id": 500,
+      "word": "bảo tàng",
+      "sentence1": "Tôi đến thăm bảo tàng nghệ thuật.",
+      "sentence2": "Cô ấy thích đi bảo tàng."
+    },
+    {
+      "id": 501,
+      "word": "âm nhạc",
+      "sentence1": "Tôi nghe nhạc mỗi ngày.",
+      "sentence2": "Cô ấy chơi nhạc vào buổi tối."
+    },
+    {
+      "id": 502,
+      "word": "phải",
+      "sentence1": "Anh phải hoàn thành bài tập về nhà.",
+      "sentence2": "Cô ấy phải đi làm lúc 9 giờ sáng."
+    },
+    {
+      "id": 503,
+      "word": "tôi",
+      "sentence1": "Đây là cuốn sách của tôi.",
+      "sentence2": "Cô ấy là bạn thân nhất của tôi."
+    },
+    {
+      "id": 504,
+      "word": "tên",
+      "sentence1": "Tên anh là gì?",
+      "sentence2": "Cô ấy đã viết tên mình trên tờ giấy."
+    },
+    {
+      "id": 505,
+      "word": "tự nhiên",
+      "sentence1": "Đây là một sản phẩm tự nhiên.",
+      "sentence2": "Cô ấy thích các thành phần tự nhiên."
+    },
+    {
+      "id": 506,
+      "word": "gần",
+      "sentence1": "Cửa hàng gần nhà tôi.",
+      "sentence2": "Cô ấy sống gần công viên."
+    },
+    {
+      "id": 507,
+      "word": "cần",
+      "sentence1": "Tôi cần một cốc nước.",
+      "sentence2": "Cô ấy cần giúp đỡ bài tập về nhà."
+    },
+    {
+      "id": 508,
+      "word": "âm tính",
+      "sentence1": "Đây là một câu trả lời tiêu cực.",
+      "sentence2": "Cô ấy có thái độ tiêu cực."
+    },
+    {
+      "id": 509,
+      "word": "hàng xóm",
+      "sentence1": "Người hàng xóm của tôi rất thân thiện.",
+      "sentence2": "Cô ấy thường trò chuyện với người hàng xóm của mình."
+    },
+    {
+      "id": 510,
+      "word": "không bao giờ",
+      "sentence1": "Tôi không bao giờ ăn sáng.",
+      "sentence2": "Cô ấy chưa bao giờ đến Paris."
+    },
+    {
+      "id": 511,
+      "word": "mới",
+      "sentence1": "Tôi đã mua một chiếc xe mới.",
+      "sentence2": "Cô ấy đang mặc một chiếc váy mới."
+    },
+    {
+      "id": 512,
+      "word": "tin tức",
+      "sentence1": "Tôi đọc tin tức mỗi sáng.",
+      "sentence2": "Cô ấy thích xem tin tức."
+    },
+    {
+      "id": 513,
+      "word": "báo chí",
+      "sentence1": "Tôi đăng ký một tờ báo hàng ngày.",
+      "sentence2": "Cô ấy đọc báo vào bữa sáng."
+    },
+    {
+      "id": 514,
+      "word": "tiếp theo",
+      "sentence1": "Xe lửa tiếp theo là gì?",
+      "sentence2": "Cô ấy đang ngồi trong phòng bên cạnh."
+    },
+    {
+      "id": 515,
+      "word": "bên cạnh",
+      "sentence1": "Ngân hàng nằm bên cạnh bưu điện.",
+      "sentence2": "Cô ấy sống bên cạnh người bạn thân nhất của mình."
+    },
+    {
+      "id": 516,
+      "word": "tốt",
+      "sentence1": "Đây là một nơi tốt để thư giãn.",
+      "sentence2": "Cô ấy có một nụ cười đẹp."
+    },
+    {
+      "id": 517,
+      "word": "đêm",
+      "sentence1": "Tôi thích ngắm các vì sao vào ban đêm.",
+      "sentence2": "Cô ấy làm ca đêm."
+    },
+    {
+      "id": 518,
+      "word": "chín",
+      "sentence1": "Tôi có chín quả táo.",
+      "sentence2": "Cô ấy sinh ngày 9 tháng 5."
+    },
+    {
+      "id": 519,
+      "word": "19",
+      "sentence1": "Cô ấy mười chín tuổi.",
+      "sentence2": "Mười chín là con số yêu thích của tôi."
+    },
+    {
+      "id": 520,
+      "word": "90",
+      "sentence1": "Tôi có 90 đô la.",
+      "sentence2": "Cô ấy sinh năm 1990."
+    },
+    {
+      "id": 521,
+      "word": "không",
+      "sentence1": "Không, tôi không muốn đi.",
+      "sentence2": "Cô ấy từ chối lời đề nghị."
+    },
+    {
+      "id": 522,
+      "word": "không ai cả",
+      "sentence1": "Không ai biết câu trả lời.",
+      "sentence2": "Cô ấy cảm thấy như không ai hiểu cô ấy."
+    },
+    {
+      "id": 523,
+      "word": "không ai cả",
+      "sentence1": "Không ai hoàn hảo cả.",
+      "sentence2": "Cô ấy nói không ai gọi cho cô ấy."
+    },
+    {
+      "id": 524,
+      "word": "bắc",
+      "sentence1": "Cực Bắc rất lạnh.",
+      "sentence2": "Cô ấy sống ở phía bắc thành phố."
+    },
+    {
+      "id": 525,
+      "word": "mũi",
+      "sentence1": "Nó có một cái mũi to.",
+      "sentence2": "Cô ấy chọc mũi khi ngửi thấy mùi."
+    },
+    {
+      "id": 526,
+      "word": "không",
+      "sentence1": "Đó không phải là cuốn sách của tôi.",
+      "sentence2": "Cô ấy không hài lòng với kết quả."
+    },
+    {
+      "id": 527,
+      "word": "ghi chú",
+      "sentence1": "Xin hãy ghi nhận điều này.",
+      "sentence2": "Cô ấy để lại một lá thư trên bàn."
+    },
+    {
+      "id": 528,
+      "word": "không có gì cả",
+      "sentence1": "Không có gì phải lo lắng cả.",
+      "sentence2": "Cô ấy không nói gì trong cuộc họp."
+    },
+    {
+      "id": 529,
+      "word": "tháng 11",
+      "sentence1": "Sinh nhật của tôi là vào tháng 11.",
+      "sentence2": "Cô ấy thích mùa thu vào tháng 11."
+    },
+    {
+      "id": 530,
+      "word": "bây giờ",
+      "sentence1": "Tôi sẽ làm ngay.",
+      "sentence2": "Cô ấy đang ở đây."
+    },
+    {
+      "id": 531,
+      "word": "số",
+      "sentence1": "Số điện thoại của anh là gì?",
+      "sentence2": "Cô ấy có số may mắn."
+    },
+    {
+      "id": 532,
+      "word": "y tá",
+      "sentence1": "Y tá sẽ giúp anh.",
+      "sentence2": "Cô ấy muốn làm y tá."
+    },
+    {
+      "id": 533,
+      "word": "đối tượng",
+      "sentence1": "Vật thể này nặng lắm.",
+      "sentence2": "Cô ấy tìm thấy một vật thú vị."
+    },
+    {
+      "id": 534,
+      "word": "đêm",
+      "sentence1": "Cuộc họp là lúc ba giờ.",
+      "sentence2": "Cô ấy luôn thức dậy lúc bảy giờ."
+    },
+    {
+      "id": 535,
+      "word": "tháng 10",
+      "sentence1": "Sinh nhật của tôi là vào tháng Mười.",
+      "sentence2": "Cô ấy thích màu sắc của tháng Mười."
+    },
+    {
+      "id": 536,
+      "word": "của",
+      "sentence1": "Bìa của cuốn sách màu xanh.",
+      "sentence2": "Cô ấy là bạn của tôi."
+    },
+    {
+      "id": 537,
+      "word": "tắt",
+      "sentence1": "Đèn tắt rồi.",
+      "sentence2": "Cô ấy đã nghỉ một ngày."
+    },
+    {
+      "id": 538,
+      "word": "văn phòng",
+      "sentence1": "Tôi làm việc trong văn phòng.",
+      "sentence2": "Cô ấy có một văn phòng lớn."
+    },
+    {
+      "id": 539,
+      "word": "thường xuyên",
+      "sentence1": "Tôi thường đi tập thể dục.",
+      "sentence2": "Cô ấy thường đọc sách trước khi đi ngủ."
+    },
+    {
+      "id": 540,
+      "word": "ôi",
+      "sentence1": "Oh, tôi không thấy anh ở đó.",
+      "sentence2": "Ồ, điều đó thật thú vị!"
+    },
+    {
+      "id": 541,
+      "word": "được rồi",
+      "sentence1": "- Không, không sao.",
+      "sentence2": "Cô ấy nói có thể đi sớm."
+    },
+    {
+      "id": 542,
+      "word": "già rồi",
+      "sentence1": "Ông tôi rất già.",
+      "sentence2": "Cô ấy có một chiếc xe cũ."
+    },
+    {
+      "id": 543,
+      "word": "vào",
+      "sentence1": "Cuốn sách nằm trên bàn.",
+      "sentence2": "Cô ấy đang gọi điện."
+    },
+    {
+      "id": 544,
+      "word": "một lần",
+      "sentence1": "Tôi đã từng ở đó một lần.",
+      "sentence2": "Cô ấy đã nói điều đó trước đây."
+    },
+    {
+      "id": 545,
+      "word": "một",
+      "sentence1": "Tôi có một em gái.",
+      "sentence2": "Cô ấy là người mà tôi đã nói với anh."
+    },
+    {
+      "id": 546,
+      "word": "hành tây",
+      "sentence1": "Tôi cần một quả hành cho công thức.",
+      "sentence2": "Cô ấy không thích hành trong salad."
+    },
+    {
+      "id": 547,
+      "word": "trực tuyến",
+      "sentence1": "Tôi tìm thấy nó trên mạng.",
+      "sentence2": "Cô ấy thích mua sắm trực tuyến hơn."
+    },
+    {
+      "id": 548,
+      "word": "chỉ có",
+      "sentence1": "Tôi chỉ có năm đô la.",
+      "sentence2": "Cô ấy là người duy nhất có thể giúp đỡ."
+    },
+    {
+      "id": 549,
+      "word": "mở",
+      "sentence1": "Xin hãy mở cửa sổ.",
+      "sentence2": "Cô ấy thích để cửa mở."
+    },
+    {
+      "id": 550,
+      "word": "ý kiến",
+      "sentence1": "Ông có ý kiến gì về vấn đề này?",
+      "sentence2": "Cô ấy có ý kiến mạnh mẽ về chính trị."
+    },
+    {
+      "id": 551,
+      "word": "đối diện",
+      "sentence1": "Ngược lại của tình yêu là thù hận.",
+      "sentence2": "Cô ấy sống ở phía đối diện đường."
+    },
+    {
+      "id": 552,
+      "word": "hoặc",
+      "sentence1": "Cô muốn uống trà hay cà phê không?",
+      "sentence2": "Cô ấy có thể hát hoặc nhảy."
+    },
+    {
+      "id": 553,
+      "word": "cam",
+      "sentence1": "Tôi thích nước cam.",
+      "sentence2": "Cô ấy mặc một chiếc váy màu cam."
+    },
+    {
+      "id": 554,
+      "word": "trật tự",
+      "sentence1": "Tôi muốn đặt hàng.",
+      "sentence2": "Cô ấy hủy đơn đặt hàng."
+    },
+    {
+      "id": 555,
+      "word": "khác",
+      "sentence1": "Tôi có ý khác.",
+      "sentence2": "Cô ấy là nửa kia của tôi."
+    },
+    {
+      "id": 556,
+      "word": "của chúng ta",
+      "sentence1": "Đây là nhà của chúng ta.",
+      "sentence2": "Cô ấy là một thành viên của nhóm của chúng tôi."
+    },
+    {
+      "id": 557,
+      "word": "ra ngoài",
+      "sentence1": "Đi dạo một chút đi.",
+      "sentence2": "Hôm nay cô ấy đi làm."
+    },
+    {
+      "id": 558,
+      "word": "bên ngoài",
+      "sentence1": "Trẻ em đang chơi bên ngoài.",
+      "sentence2": "Cô ấy thích làm việc ngoài trời."
+    },
+    {
+      "id": 559,
+      "word": "đủ rồi",
+      "sentence1": "Bức tranh đang treo trên ghế sofa.",
+      "sentence2": "Cô ấy xem qua các tài liệu."
+    },
+    {
+      "id": 560,
+      "word": "của riêng mình",
+      "sentence1": "Tôi có xe riêng.",
+      "sentence2": "Cô ấy tự hào về công việc của mình."
+    },
+    {
+      "id": 561,
+      "word": "trang",
+      "sentence1": "Mở trang 10.",
+      "sentence2": "Cô ấy đã đánh dấu trang."
+    },
+    {
+      "id": 562,
+      "word": "sơn",
+      "sentence1": "Tôi cần mua sơn.",
+      "sentence2": "Cô ấy thích vẽ phong cảnh."
+    },
+    {
+      "id": 563,
+      "word": "sơn",
+      "sentence1": "Tôi thích vẽ tranh trong thời gian rảnh rỗi.",
+      "sentence2": "Cô ấy có một bức tranh đẹp trong phòng khách."
+    },
+    {
+      "id": 564,
+      "word": "cặp",
+      "sentence1": "Tôi đã mua một đôi giày mới.",
+      "sentence2": "Cô ấy có một đôi bông tai phù hợp."
+    },
+    {
+      "id": 565,
+      "word": "giấy",
+      "sentence1": "Tôi cần một tờ giấy.",
+      "sentence2": "Cô ấy viết những ghi chú của mình trên giấy."
+    },
+    {
+      "id": 566,
+      "word": "đoạn",
+      "sentence1": "Vui lòng đọc đoạn đầu tiên.",
+      "sentence2": "Cô ấy đã viết một đoạn về kỳ nghỉ của mình."
+    },
+    {
+      "id": 567,
+      "word": "cha mẹ",
+      "sentence1": "Cha mẹ tôi sống ở thành phố khác.",
+      "sentence2": "Cô ấy là một phụ huynh đơn thân."
+    },
+    {
+      "id": 568,
+      "word": "công viên",
+      "sentence1": "Hãy đi dạo trong công viên.",
+      "sentence2": "Cô ấy thích đi dã ngoại trong công viên."
+    },
+    {
+      "id": 569,
+      "word": "phần",
+      "sentence1": "Tôi cần một bộ phận cho xe của tôi.",
+      "sentence2": "Cô ấy đang làm một phần mới cho dự án."
+    },
+    {
+      "id": 570,
+      "word": "đối tác",
+      "sentence1": "Anh ấy là đối tác kinh doanh của tôi.",
+      "sentence2": "Cô ấy đang tìm một đối tác để hợp tác."
+    },
+    {
+      "id": 571,
+      "word": "tiệc",
+      "sentence1": "Chúng tôi sẽ tổ chức một bữa tiệc vào thứ Bảy.",
+      "sentence2": "Cô ấy thích tổ chức những bữa tiệc bất ngờ."
+    },
+    {
+      "id": 572,
+      "word": "hộ chiếu",
+      "sentence1": "Tôi cần gia hạn hộ chiếu.",
+      "sentence2": "Cô ấy mất hộ chiếu trong khi đi du lịch."
+    },
+    {
+      "id": 573,
+      "word": "quá khứ",
+      "sentence1": "Chúng ta đừng nói về quá khứ.",
+      "sentence2": "Cô ấy đã học hỏi từ những sai lầm trong quá khứ."
+    },
+    {
+      "id": 574,
+      "word": "trả tiền",
+      "sentence1": "Tôi cần phải trả các hóa đơn.",
+      "sentence2": "Cô ấy luôn trả nợ đúng giờ."
+    },
+    {
+      "id": 575,
+      "word": "bút",
+      "sentence1": "Tôi mượn bút của anh được không?",
+      "sentence2": "Cô ấy viết bằng bút màu xanh."
+    },
+    {
+      "id": 576,
+      "word": "bút chì",
+      "sentence1": "Tôi thích dùng bút chì hơn.",
+      "sentence2": "Cô ấy vẽ một bản phác thảo bằng bút chì."
+    },
+    {
+      "id": 577,
+      "word": "người dân",
+      "sentence1": "Có rất nhiều người tham dự sự kiện.",
+      "sentence2": "Cô ấy thích gặp gỡ những người mới."
+    },
+    {
+      "id": 578,
+      "word": "ớt",
+      "sentence1": "Tôi thích thêm ớt vào thức ăn của mình.",
+      "sentence2": "Cô ấy mua một quả ớt đỏ ở chợ."
+    },
+    {
+      "id": 579,
+      "word": "hoàn hảo",
+      "sentence1": "Đây là giải pháp hoàn hảo.",
+      "sentence2": "Cô ấy có điểm hoàn hảo trong bài kiểm tra."
+    },
+    {
+      "id": 580,
+      "word": "thời gian",
+      "sentence1": "Đây là một giai đoạn khó khăn đối với tôi.",
+      "sentence2": "Cô ấy học trong thời gian thi."
+    },
+    {
+      "id": 581,
+      "word": "người",
+      "sentence1": "Anh ấy là một người tốt bụng.",
+      "sentence2": "Cô ấy là người đầu tiên đến nơi."
+    },
+    {
+      "id": 582,
+      "word": "cá nhân",
+      "sentence1": "Đây là vấn đề cá nhân.",
+      "sentence2": "Cô chia sẻ kinh nghiệm cá nhân của mình."
+    },
+    {
+      "id": 583,
+      "word": "điện thoại",
+      "sentence1": "Tôi cần sạc điện thoại.",
+      "sentence2": "Cô ấy nhanh chóng trả lời điện thoại."
+    },
+    {
+      "id": 584,
+      "word": "hình ảnh",
+      "sentence1": "Tôi chụp ảnh hoàng hôn.",
+      "sentence2": "Cô ấy có một bộ sưu tập những bức ảnh cũ."
+    },
+    {
+      "id": 585,
+      "word": "hình ảnh",
+      "sentence1": "Bức ảnh này được chụp năm ngoái.",
+      "sentence2": "Cô ấy thích trưng bày những bức ảnh của mình."
+    },
+    {
+      "id": 586,
+      "word": "câu nói",
+      "sentence1": "Anh có thể giải thích cụm từ đó không?",
+      "sentence2": "Bà ấy dùng một cụm từ phổ biến trong bài phát biểu của mình."
+    },
+    {
+      "id": 587,
+      "word": "đàn piano",
+      "sentence1": "Tôi muốn học chơi piano.",
+      "sentence2": "Cô ấy chơi piano rất hay."
+    },
+    {
+      "id": 588,
+      "word": "hình ảnh",
+      "sentence1": "Anh có thể cho tôi xem bức ảnh không?",
+      "sentence2": "Cô ấy vẽ một bức tranh đẹp."
+    },
+    {
+      "id": 589,
+      "word": "mảnh",
+      "sentence1": "Tôi cần một mảnh giấy.",
+      "sentence2": "Cô ấy cho tôi một lời khuyên."
+    },
+    {
+      "id": 590,
+      "word": "lợn",
+      "sentence1": "Con lợn đang ở trong chuồng.",
+      "sentence2": "Bà nuôi một con lợn trong trang trại của mình."
+    },
+    {
+      "id": 591,
+      "word": "màu hồng",
+      "sentence1": "Màu yêu thích của tôi là màu hồng.",
+      "sentence2": "Cô ấy mặc một chiếc váy màu hồng đến bữa tiệc."
+    },
+    {
+      "id": 592,
+      "word": "nơi",
+      "sentence1": "Đây là một nơi tốt để thư giãn.",
+      "sentence2": "Cô ấy tìm một nơi yên tĩnh để đọc."
+    },
+    {
+      "id": 593,
+      "word": "kế hoạch",
+      "sentence1": "Tôi có kế hoạch cho cuối tuần.",
+      "sentence2": "Cô ấy đã lập một kế hoạch chi tiết cho dự án."
+    },
+    {
+      "id": 594,
+      "word": "máy bay",
+      "sentence1": "Máy bay đang bay cao.",
+      "sentence2": "Cô ấy đang trên máy bay đi New York."
+    },
+    {
+      "id": 595,
+      "word": "cây",
+      "sentence1": "Tôi có một cái cây trong phòng.",
+      "sentence2": "Cô ấy tưới cây mỗi ngày."
+    },
+    {
+      "id": 596,
+      "word": "chơi",
+      "sentence1": "Trẻ em thích chơi ngoài trời.",
+      "sentence2": "Cô ấy chơi bóng đá vào cuối tuần."
+    },
+    {
+      "id": 597,
+      "word": "người chơi",
+      "sentence1": "Anh ấy là một cầu thủ tài năng.",
+      "sentence2": "Cô ấy là cầu thủ giỏi nhất trong đội."
+    },
+    {
+      "id": 598,
+      "word": "làm ơn",
+      "sentence1": "Anh giúp tôi được không?",
+      "sentence2": "Cô ấy nói có, làm ơn."
+    },
+    {
+      "id": 599,
+      "word": "điểm",
+      "sentence1": "Bạn có thể thấy điểm đó trên bản đồ không?",
+      "sentence2": "Cô ấy đã đưa ra một điểm quan trọng trong cuộc thảo luận."
+    },
+    {
+      "id": 600,
+      "word": "cảnh sát",
+      "sentence1": "Cảnh sát đang điều tra vụ án.",
+      "sentence2": "Cô ấy muốn trở thành một sĩ quan cảnh sát."
+    },
+    {
+      "id": 601,
+      "word": "cảnh sát",
+      "sentence1": "Cảnh sát đã giúp đứa trẻ bị lạc.",
+      "sentence2": "Cô ấy cảm ơn cảnh sát vì đã giúp đỡ."
+    },
+    {
+      "id": 602,
+      "word": "hồ bơi",
+      "sentence1": "Bể bơi mở cửa vào mùa hè.",
+      "sentence2": "Cô ấy thích bơi trong hồ bơi."
+    },
+    {
+      "id": 603,
+      "word": "nghèo",
+      "sentence1": "Gia đình nghèo cần được giúp đỡ.",
+      "sentence2": "Cô ấy tặng quần áo cho người nghèo."
+    },
+    {
+      "id": 604,
+      "word": "phổ biến",
+      "sentence1": "Bài hát này rất nổi tiếng.",
+      "sentence2": "Cô ấy là một nhân vật nổi tiếng trong cộng đồng."
+    },
+    {
+      "id": 605,
+      "word": "tích cực",
+      "sentence1": "Cô ấy có thái độ tích cực.",
+      "sentence2": "Phản hồi rất tích cực."
+    },
+    {
+      "id": 606,
+      "word": "có thể",
+      "sentence1": "Ngày mai gặp được không?",
+      "sentence2": "Cô ấy đã làm cho tôi có thể hoàn thành đúng giờ."
+    },
+    {
+      "id": 607,
+      "word": "bưu điện",
+      "sentence1": "Tôi cần gửi thư này qua đường bưu điện.",
+      "sentence2": "Cô ấy làm ở bưu điện."
+    },
+    {
+      "id": 608,
+      "word": "khoai tây",
+      "sentence1": "Tôi muốn ăn khoai tây nướng.",
+      "sentence2": "Cô ấy trồng khoai tây trong vườn của mình."
+    },
+    {
+      "id": 609,
+      "word": "pound (giá)",
+      "sentence1": "Một pound là một đơn vị đo trọng lượng.",
+      "sentence2": "Cô ấy nhấc một pound khoai tây."
+    },
+    {
+      "id": 610,
+      "word": "thực hành",
+      "sentence1": "Thực hành làm cho hoàn hảo.",
+      "sentence2": "Cô ấy cần luyện tập nhiều hơn để cải thiện."
+    },
+    {
+      "id": 611,
+      "word": "thực hành",
+      "sentence1": "Tôi cần luyện tiếng Anh.",
+      "sentence2": "Cô ấy luyện piano mỗi ngày."
+    },
+    {
+      "id": 612,
+      "word": "ưa thích",
+      "sentence1": "Tôi thích trà hơn cà phê.",
+      "sentence2": "Cô ấy thích đọc sách vào buổi tối."
+    },
+    {
+      "id": 613,
+      "word": "chuẩn bị",
+      "sentence1": "Tôi cần chuẩn bị cho kỳ thi.",
+      "sentence2": "Cô ấy chuẩn bị một bữa ăn ngon cho bữa tối."
+    },
+    {
+      "id": 614,
+      "word": "hiện tại",
+      "sentence1": "Tôi muốn giới thiệu dự án của mình.",
+      "sentence2": "Cô ấy trình bày những phát hiện của mình tại hội nghị."
+    },
+    {
+      "id": 615,
+      "word": "xinh đẹp",
+      "sentence1": "Cô ấy có một nụ cười đẹp.",
+      "sentence2": "Khu vườn đẹp vào mùa xuân."
+    },
+    {
+      "id": 616,
+      "word": "giá",
+      "sentence1": "Giá của cuốn sách này là bao nhiêu?",
+      "sentence2": "Cô ấy đã có được một giá tốt cho chiếc xe mới của mình."
+    },
+    {
+      "id": 617,
+      "word": "có lẽ",
+      "sentence1": "Ngày mai có lẽ sẽ mưa.",
+      "sentence2": "Cô ấy có lẽ đang ở nhà ngay bây giờ."
+    },
+    {
+      "id": 618,
+      "word": "vấn đề",
+      "sentence1": "Chúng ta cần phải giải quyết vấn đề này.",
+      "sentence2": "Cô ấy có vấn đề với máy tính."
+    },
+    {
+      "id": 619,
+      "word": "sản phẩm",
+      "sentence1": "Sản phẩm này rất phổ biến.",
+      "sentence2": "Cô ấy mua một sản phẩm mới từ cửa hàng."
+    },
+    {
+      "id": 620,
+      "word": "chương trình",
+      "sentence1": "Tôi đang xem một chương trình mới trên TV.",
+      "sentence2": "Cô ấy chịu trách nhiệm về chương trình đào tạo."
+    },
+    {
+      "id": 621,
+      "word": "dự án",
+      "sentence1": "Tôi đang làm một dự án ở trường.",
+      "sentence2": "Cô ấy trình bày dự án của mình cho lớp."
+    },
+    {
+      "id": 622,
+      "word": "màu tím",
+      "sentence1": "Màu yêu thích của tôi là màu tím.",
+      "sentence2": "Cô ấy mặc một chiếc váy màu tím xinh đẹp."
+    },
+    {
+      "id": 623,
+      "word": "đặt",
+      "sentence1": "Xin hãy đặt cuốn sách lên kệ.",
+      "sentence2": "Cô ấy bỏ điện thoại vào túi."
+    },
+    {
+      "id": 624,
+      "word": "quý",
+      "sentence1": "Một phần tư bánh còn lại.",
+      "sentence2": "Cô ấy trả 25 cent cho vé xe buýt."
+    },
+    {
+      "id": 625,
+      "word": "câu hỏi",
+      "sentence1": "Tôi có thể hỏi anh một câu được không?",
+      "sentence2": "Cô ấy có một câu hỏi về bài tập về nhà."
+    },
+    {
+      "id": 626,
+      "word": "nhanh lên",
+      "sentence1": "Anh ấy học nhanh.",
+      "sentence2": "Cô ấy trả lời câu hỏi nhanh chóng."
+    },
+    {
+      "id": 627,
+      "word": "nhanh chóng",
+      "sentence1": "Làm ơn nhanh chóng làm xong bài tập về nhà.",
+      "sentence2": "Cô nhanh chóng nhận ra sai lầm của mình."
+    },
+    {
+      "id": 628,
+      "word": "im lặng",
+      "sentence1": "Xin hãy im lặng trong thư viện.",
+      "sentence2": "Cô ấy thích sự yên tĩnh của vùng nông thôn."
+    },
+    {
+      "id": 629,
+      "word": "khá",
+      "sentence1": "Bên ngoài khá lạnh.",
+      "sentence2": "Cô ấy khá giỏi toán."
+    },
+    {
+      "id": 630,
+      "word": "radio",
+      "sentence1": "Tôi nghe đài mỗi buổi sáng.",
+      "sentence2": "Cô ấy làm việc cho một đài phát thanh."
+    },
+    {
+      "id": 631,
+      "word": "mưa",
+      "sentence1": "Tôi thích nghe tiếng mưa.",
+      "sentence2": "Cô ấy bị rơi trong mưa mà không có ô."
+    },
+    {
+      "id": 632,
+      "word": "đọc",
+      "sentence1": "Tôi thích đọc trước khi đi ngủ.",
+      "sentence2": "Cô ấy đọc một cuốn sách mỗi tuần."
+    },
+    {
+      "id": 633,
+      "word": "người đọc",
+      "sentence1": "Người đọc luôn tham gia vào câu chuyện.",
+      "sentence2": "Cô ấy là một người thích đọc sách."
+    },
+    {
+      "id": 634,
+      "word": "đọc sách",
+      "sentence1": "Đọc là một cách tuyệt vời để thư giãn.",
+      "sentence2": "Cô ấy thích đọc tiểu thuyết bí ẩn."
+    },
+    {
+      "id": 635,
+      "word": "sẵn sàng rồi",
+      "sentence1": "Sẵn sàng đi chưa?",
+      "sentence2": "Cô ấy đã sẵn sàng cho kỳ thi."
+    },
+    {
+      "id": 636,
+      "word": "thật",
+      "sentence1": "Đây là một viên kim cương thật.",
+      "sentence2": "Cô ấy muốn thấy sự thay đổi thực sự trên thế giới."
+    },
+    {
+      "id": 637,
+      "word": "thật đấy",
+      "sentence1": "Tôi thực sự thích bài hát này.",
+      "sentence2": "Cô ấy thực sự giỏi công việc của mình."
+    },
+    {
+      "id": 638,
+      "word": "lý do",
+      "sentence1": "Lý do của chuyến viếng thăm của anh là gì?",
+      "sentence2": "Cô ấy có lý do chính đáng để đến trễ."
+    },
+    {
+      "id": 639,
+      "word": "đỏ",
+      "sentence1": "Màu yêu thích của tôi là màu đỏ.",
+      "sentence2": "Cô ấy mặc một chiếc váy đỏ đến bữa tiệc."
+    },
+    {
+      "id": 640,
+      "word": "thư giãn đi",
+      "sentence1": "Tôi thích thư giãn bên hồ bơi.",
+      "sentence2": "Cô ấy tắm để thư giãn."
+    },
+    {
+      "id": 641,
+      "word": "nhớ lại",
+      "sentence1": "Xin hãy nhớ tắt đèn đi.",
+      "sentence2": "Cô ấy không nhớ cô ấy để chìa khóa ở đâu."
+    },
+    {
+      "id": 642,
+      "word": "lặp lại",
+      "sentence1": "Anh có thể lặp lại không?",
+      "sentence2": "Cô phải lặp lại bài tập nhiều lần."
+    },
+    {
+      "id": 643,
+      "word": "báo cáo",
+      "sentence1": "Tôi cần phải viết một bản báo cáo cho công việc.",
+      "sentence2": "Cô ấy nộp báo cáo đúng giờ."
+    },
+    {
+      "id": 644,
+      "word": "nhà hàng",
+      "sentence1": "Chúng ta đi ăn tối ở nhà hàng nào.",
+      "sentence2": "Cô ấy làm việc tại một nhà hàng sang trọng."
+    },
+    {
+      "id": 645,
+      "word": "kết quả",
+      "sentence1": "Kết quả của thí nghiệm là gì?",
+      "sentence2": "Cô ấy hài lòng với kết quả."
+    },
+    {
+      "id": 646,
+      "word": "trở về",
+      "sentence1": "Tôi sẽ trả lại cuốn sách vào ngày mai.",
+      "sentence2": "Cô ấy trở về nhà sau chuyến đi."
+    },
+    {
+      "id": 647,
+      "word": "gạo",
+      "sentence1": "Tôi thích ăn cơm với bữa ăn của mình.",
+      "sentence2": "Cô ấy nấu cơm cho bữa tối."
+    },
+    {
+      "id": 648,
+      "word": "giàu có",
+      "sentence1": "Ông ấy là một người giàu có.",
+      "sentence2": "Cô ấy muốn lấy một người chồng giàu có."
+    },
+    {
+      "id": 649,
+      "word": "cưỡi ngựa",
+      "sentence1": "Tôi thích đi xe đạp trong công viên.",
+      "sentence2": "Lần đầu tiên cô ấy cưỡi ngựa."
+    },
+    {
+      "id": 650,
+      "word": "đúng",
+      "sentence1": "Quay phải ở đèn giao thông.",
+      "sentence2": "Cô ấy đang ngồi bên phải tôi."
+    },
+    {
+      "id": 651,
+      "word": "sông",
+      "sentence1": "Con sông chảy qua thung lũng.",
+      "sentence2": "Cô ấy thích câu cá trong sông."
+    },
+    {
+      "id": 652,
+      "word": "đường",
+      "sentence1": "Con đường bị đóng cửa vì xây dựng.",
+      "sentence2": "Cô ấy sống trên một con đường yên tĩnh."
+    },
+    {
+      "id": 653,
+      "word": "phòng",
+      "sentence1": "Đây là phòng ngủ của tôi.",
+      "sentence2": "Hôm qua cô ấy dọn dẹp phòng."
+    },
+    {
+      "id": 654,
+      "word": "thói quen",
+      "sentence1": "Tôi có thói quen buổi sáng.",
+      "sentence2": "Cô ấy tuân theo một thói quen tập thể dục nghiêm ngặt."
+    },
+    {
+      "id": 655,
+      "word": "quy tắc",
+      "sentence1": "Anh phải tuân thủ luật lệ.",
+      "sentence2": "Cô ấy đã vi phạm quy tắc và gặp rắc rối."
+    },
+    {
+      "id": 656,
+      "word": "chạy",
+      "sentence1": "Tôi thích chạy bộ vào buổi sáng.",
+      "sentence2": "Cô ấy chạy 8km mỗi ngày."
+    },
+    {
+      "id": 657,
+      "word": "buồn",
+      "sentence1": "Hôm nay trông cô ấy buồn.",
+      "sentence2": "Tôi cảm thấy buồn về tình hình này."
+    },
+    {
+      "id": 658,
+      "word": "salad",
+      "sentence1": "Tôi muốn một món salad cho bữa trưa.",
+      "sentence2": "Cô ấy làm một món salad ngon."
+    },
+    {
+      "id": 659,
+      "word": "muối",
+      "sentence1": "Làm ơn cho tôi muối.",
+      "sentence2": "Cô ấy thêm muối vào súp."
+    },
+    {
+      "id": 660,
+      "word": "tương tự",
+      "sentence1": "Chúng ta có cùng một vấn đề.",
+      "sentence2": "Cô ấy mặc cùng một chiếc váy với tôi."
+    },
+    {
+      "id": 661,
+      "word": "bánh sandwich",
+      "sentence1": "Tôi muốn một cái bánh sandwich cho bữa trưa.",
+      "sentence2": "Cô ấy làm bánh sandwich gà tây."
+    },
+    {
+      "id": 662,
+      "word": "thứ bảy",
+      "sentence1": "Thứ bảy là ngày yêu thích của tôi.",
+      "sentence2": "Cô ấy có một bữa tiệc vào thứ Bảy."
+    },
+    {
+      "id": 663,
+      "word": "nói đi",
+      "sentence1": "Anh nói gì vậy?",
+      "sentence2": "Cô ấy không nói gì cả."
+    },
+    {
+      "id": 664,
+      "word": "trường học",
+      "sentence1": "Tôi đi học mỗi ngày.",
+      "sentence2": "Cô ấy là một học sinh ở trường."
+    },
+    {
+      "id": 665,
+      "word": "khoa học",
+      "sentence1": "Khoa học thật hấp dẫn.",
+      "sentence2": "Cô ấy muốn học khoa học."
+    },
+    {
+      "id": 666,
+      "word": "nhà khoa học",
+      "sentence1": "Anh ấy là một nhà khoa học.",
+      "sentence2": "Cô ấy muốn trở thành một nhà khoa học."
+    },
+    {
+      "id": 667,
+      "word": "biển",
+      "sentence1": "Hôm nay biển bình tĩnh.",
+      "sentence2": "Cô ấy thích bơi trong biển."
+    },
+    {
+      "id": 668,
+      "word": "thứ hai",
+      "sentence1": "Đây là lần thứ hai tôi cố gắng.",
+      "sentence2": "Cô ấy kết thúc ở vị trí thứ hai."
+    },
+    {
+      "id": 669,
+      "word": "phần",
+      "sentence1": "Đây là một phần khó khăn.",
+      "sentence2": "Cô đọc phần đó cẩn thận."
+    },
+    {
+      "id": 670,
+      "word": "xem",
+      "sentence1": "Tôi thấy một con chim trên cây.",
+      "sentence2": "Cô ấy có thể nhìn thấy những ngọn núi từ cửa sổ của mình."
+    },
+    {
+      "id": 671,
+      "word": "bán",
+      "sentence1": "Tôi muốn bán chiếc xe cũ của mình.",
+      "sentence2": "Cô ấy bán đồ trang sức thủ công trên mạng."
+    },
+    {
+      "id": 672,
+      "word": "gửi đi",
+      "sentence1": "Xin hãy gửi cho tôi chi tiết.",
+      "sentence2": "Cô ấy gửi một lá thư cho bạn mình."
+    },
+    {
+      "id": 673,
+      "word": "câu",
+      "sentence1": "Anh có thể viết một câu không?",
+      "sentence2": "Cô ấy nói những câu hoàn chỉnh."
+    },
+    {
+      "id": 674,
+      "word": "tháng 9",
+      "sentence1": "Tháng 9 là tháng thứ 9.",
+      "sentence2": "Cô ấy sinh vào tháng 9."
+    },
+    {
+      "id": 675,
+      "word": "bảy",
+      "sentence1": "Tôi có bảy quả táo.",
+      "sentence2": "Cô ấy bảy tuổi."
+    },
+    {
+      "id": 676,
+      "word": "mười bảy",
+      "sentence1": "17 là con số yêu thích của tôi.",
+      "sentence2": "Tuần trước cô ấy đã 17 tuổi."
+    },
+    {
+      "id": 677,
+      "word": "bảy mươi",
+      "sentence1": "70 là một con số lớn.",
+      "sentence2": "Bà ấy đã bảy mươi tuổi."
+    },
+    {
+      "id": 678,
+      "word": "chia sẻ",
+      "sentence1": "Cô có thể chia sẻ đồ chơi của mình không?",
+      "sentence2": "Cô ấy thích chia sẻ thức ăn của mình."
+    },
+    {
+      "id": 679,
+      "word": "cô ấy",
+      "sentence1": "Cô ấy là bạn thân nhất của tôi.",
+      "sentence2": "Tôi đã gặp cô ấy hôm qua."
+    },
+    {
+      "id": 680,
+      "word": "cừu",
+      "sentence1": "Con cừu đang ở ngoài đồng.",
+      "sentence2": "Cô ấy có một con cừu cưng."
+    },
+    {
+      "id": 681,
+      "word": "áo sơ mi",
+      "sentence1": "Tôi cần một cái áo mới.",
+      "sentence2": "Cô ấy mua một chiếc áo sơ mi xanh."
+    },
+    {
+      "id": 682,
+      "word": "giày",
+      "sentence1": "Tôi đã mua một đôi giày mới.",
+      "sentence2": "Cô ấy yêu đôi giày màu đỏ của mình."
+    },
+    {
+      "id": 683,
+      "word": "cửa hàng",
+      "sentence1": "Tôi cần phải đến cửa hàng.",
+      "sentence2": "Cô ấy làm việc trong một cửa hàng quần áo."
+    },
+    {
+      "id": 684,
+      "word": "mua sắm",
+      "sentence1": "Tôi thích mua sắm vào cuối tuần.",
+      "sentence2": "Cô ấy đi mua sắm."
+    },
+    {
+      "id": 685,
+      "word": "ngắn",
+      "sentence1": "Đây là một câu chuyện ngắn.",
+      "sentence2": "Cô ấy mặc váy ngắn."
+    },
+    {
+      "id": 686,
+      "word": "nên",
+      "sentence1": "Cô nên đi khám bác sĩ.",
+      "sentence2": "Cô ấy nên xin lỗi."
+    },
+    {
+      "id": 687,
+      "word": "cho thấy",
+      "sentence1": "Anh có thể chỉ đường cho tôi không?",
+      "sentence2": "Cô ấy cho tôi xem chiếc váy mới của cô ấy."
+    },
+    {
+      "id": 688,
+      "word": "tắm",
+      "sentence1": "Tôi thích tắm vào buổi sáng.",
+      "sentence2": "Cô ấy đã tắm lâu."
+    },
+    {
+      "id": 689,
+      "word": "ốm",
+      "sentence1": "Hôm nay tôi thấy ốm.",
+      "sentence2": "Tuần trước cô ấy bị bệnh."
+    },
+    {
+      "id": 690,
+      "word": "tương tự",
+      "sentence1": "Hai bức ảnh này tương tự nhau.",
+      "sentence2": "Cô ấy có một chiếc váy tương tự."
+    },
+    {
+      "id": 691,
+      "word": "hát",
+      "sentence1": "Tôi thích hát trong phòng tắm.",
+      "sentence2": "Cô ấy hát rất hay."
+    },
+    {
+      "id": 692,
+      "word": "ca sĩ",
+      "sentence1": "Em gái tôi là một ca sĩ.",
+      "sentence2": "Cô ấy muốn trở thành một ca sĩ nổi tiếng."
+    },
+    {
+      "id": 693,
+      "word": "em gái",
+      "sentence1": "Tôi có một em gái.",
+      "sentence2": "Cô ấy là em gái tôi."
+    },
+    {
+      "id": 694,
+      "word": "ngồi",
+      "sentence1": "Xin hãy ngồi xuống.",
+      "sentence2": "Cô ấy thích ngồi cạnh cửa sổ."
+    },
+    {
+      "id": 695,
+      "word": "tình hình",
+      "sentence1": "Đây là một tình huống khó khăn.",
+      "sentence2": "Cô ấy đã xử lý tình hình tốt."
+    },
+    {
+      "id": 696,
+      "word": "sáu",
+      "sentence1": "Tôi có sáu cuốn sách.",
+      "sentence2": "Cô ấy mới 6 tuổi."
+    },
+    {
+      "id": 697,
+      "word": "mười sáu",
+      "sentence1": "Mười sáu là con số yêu thích của tôi.",
+      "sentence2": "Cô ấy đã 16 tuổi vào tháng trước."
+    },
+    {
+      "id": 698,
+      "word": "sáu mươi",
+      "sentence1": "Sáu mươi là một con số lớn.",
+      "sentence2": "Cô ấy đã sáu mươi tuổi."
+    },
+    {
+      "id": 699,
+      "word": "kỹ năng",
+      "sentence1": "Anh ta có một kỹ năng đặc biệt.",
+      "sentence2": "Cô ấy đang học một kỹ năng mới."
+    },
+    {
+      "id": 700,
+      "word": "váy",
+      "sentence1": "Tôi thích váy của cô.",
+      "sentence2": "Cô ấy mặc váy dài."
+    },
+    {
+      "id": 701,
+      "word": "ngủ",
+      "sentence1": "Tôi cần ngủ nhiều hơn.",
+      "sentence2": "Cô ấy ngủ tám tiếng một đêm."
+    },
+    {
+      "id": 702,
+      "word": "chậm",
+      "sentence1": "Làm ơn lái chậm đi.",
+      "sentence2": "Cô ấy đọc chậm."
+    },
+    {
+      "id": 703,
+      "word": "nhỏ",
+      "sentence1": "Đây là một cái hộp nhỏ.",
+      "sentence2": "Cô ấy có một con chó nhỏ."
+    },
+    {
+      "id": 704,
+      "word": "rắn",
+      "sentence1": "Tôi thấy một con rắn trong vườn.",
+      "sentence2": "Cô ấy sợ rắn."
+    },
+    {
+      "id": 705,
+      "word": "tuyết",
+      "sentence1": "Tuyết đang rơi.",
+      "sentence2": "Cô ấy thích chơi trong tuyết."
+    },
+    {
+      "id": 706,
+      "word": "vậy thì",
+      "sentence1": "Tôi mệt mỏi, vì vậy tôi đi ngủ sớm.",
+      "sentence2": "Cô ấy hạnh phúc, nên cô ấy mỉm cười."
+    },
+    {
+      "id": 707,
+      "word": "một số",
+      "sentence1": "Tôi có vài ý tưởng.",
+      "sentence2": "Cô ấy mua vài quả táo."
+    },
+    {
+      "id": 708,
+      "word": "ai đó",
+      "sentence1": "Có ai đó ở cửa.",
+      "sentence2": "Cô ấy biết một người nổi tiếng."
+    },
+    {
+      "id": 709,
+      "word": "ai đó",
+      "sentence1": "Có người bỏ túi ở đây.",
+      "sentence2": "Cô ấy đang tìm ai đó để giúp đỡ."
+    },
+    {
+      "id": 710,
+      "word": "cái gì đó",
+      "sentence1": "Tôi cần ăn gì đó.",
+      "sentence2": "Cô ấy đang che giấu điều gì đó."
+    },
+    {
+      "id": 711,
+      "word": "đôi khi",
+      "sentence1": "Đôi khi tôi đi dạo.",
+      "sentence2": "Cô ấy thỉnh thoảng đến thăm ông bà."
+    },
+    {
+      "id": 712,
+      "word": "con trai",
+      "sentence1": "Con trai tôi đang chơi bên ngoài.",
+      "sentence2": "Cô ấy có một con trai và một con gái."
+    },
+    {
+      "id": 713,
+      "word": "bài hát",
+      "sentence1": "Tôi yêu bài hát này.",
+      "sentence2": "Cô ấy hát một bài hát đẹp."
+    },
+    {
+      "id": 714,
+      "word": "sớm thôi",
+      "sentence1": "Tôi sẽ gọi cho anh ngay.",
+      "sentence2": "Cô ấy sẽ sớm đến."
+    },
+    {
+      "id": 715,
+      "word": "xin lỗi",
+      "sentence1": "Tôi xin lỗi vì sai lầm.",
+      "sentence2": "Cô ấy rất tiếc khi nghe tin."
+    },
+    {
+      "id": 716,
+      "word": "âm thanh",
+      "sentence1": "Âm thanh gì vậy?",
+      "sentence2": "Cô ấy có một âm thanh hát đẹp."
+    },
+    {
+      "id": 717,
+      "word": "súp",
+      "sentence1": "Tôi đã làm súp.",
+      "sentence2": "Cô ấy thích súp cà chua."
+    },
+    {
+      "id": 718,
+      "word": "nam",
+      "sentence1": "Chúng tôi sống ở miền Nam.",
+      "sentence2": "Cô ấy đi về phía nam để nghỉ đông."
+    },
+    {
+      "id": 719,
+      "word": "không gian",
+      "sentence1": "Có rất nhiều không gian ở đây.",
+      "sentence2": "Cô ấy muốn khám phá vũ trụ."
+    },
+    {
+      "id": 720,
+      "word": "nói chuyện",
+      "sentence1": "Tôi có thể nói tiếng Anh.",
+      "sentence2": "Cô ấy nói ba thứ tiếng."
+    },
+    {
+      "id": 721,
+      "word": "đặc biệt",
+      "sentence1": "Hôm nay là một ngày đặc biệt.",
+      "sentence2": "Cô ấy nhận được một món quà đặc biệt."
+    },
+    {
+      "id": 722,
+      "word": "phép thuật",
+      "sentence1": "Cô có thể đánh vần tên mình không?",
+      "sentence2": "Cô ấy đánh vần đúng từ."
+    },
+    {
+      "id": 723,
+      "word": "chính tả",
+      "sentence1": "Việc đánh vần rất quan trọng khi viết.",
+      "sentence2": "Cô ấy thắng một cuộc thi đánh vần."
+    },
+    {
+      "id": 724,
+      "word": "chi tiêu",
+      "sentence1": "Tôi thích dành thời gian với bạn bè.",
+      "sentence2": "Cô ấy đã tiêu hết tiền của mình."
+    },
+    {
+      "id": 725,
+      "word": "thể thao",
+      "sentence1": "Bóng đá là môn thể thao yêu thích của tôi.",
+      "sentence2": "Cô ấy chơi rất nhiều môn thể thao."
+    },
+    {
+      "id": 726,
+      "word": "mùa xuân",
+      "sentence1": "Mùa xuân là mùa tôi thích nhất.",
+      "sentence2": "Hoa nở vào mùa xuân."
+    },
+    {
+      "id": 727,
+      "word": "đứng",
+      "sentence1": "Xin hãy đứng dậy.",
+      "sentence2": "Cô ấy đứng bên cửa sổ."
+    },
+    {
+      "id": 728,
+      "word": "sao",
+      "sentence1": "Ngôi sao đang tỏa sáng.",
+      "sentence2": "Cô ấy muốn trở thành một ngôi sao."
+    },
+    {
+      "id": 729,
+      "word": "bắt đầu",
+      "sentence1": "Tôi sẽ bắt đầu bài tập về nhà.",
+      "sentence2": "Cô ấy bắt đầu một dự án mới."
+    },
+    {
+      "id": 730,
+      "word": "tuyên bố",
+      "sentence1": "Đây là lời nói rõ ràng.",
+      "sentence2": "Cô ấy đã đưa ra một tuyên bố về vấn đề này."
+    },
+    {
+      "id": 731,
+      "word": "trạm",
+      "sentence1": "Xe lửa đến ga.",
+      "sentence2": "Cô ấy đợi ở nhà ga."
+    },
+    {
+      "id": 732,
+      "word": "ở lại",
+      "sentence1": "Tôi sẽ ở lại đây.",
+      "sentence2": "Cô ấy ở khách sạn."
+    },
+    {
+      "id": 733,
+      "word": "vẫn còn",
+      "sentence1": "Tôi vẫn đang chờ.",
+      "sentence2": "Cô ấy vẫn đang làm việc với nó."
+    },
+    {
+      "id": 734,
+      "word": "dừng lại",
+      "sentence1": "Làm ơn đừng nói nữa.",
+      "sentence2": "Cô ấy dừng xe lại."
+    },
+    {
+      "id": 735,
+      "word": "câu chuyện",
+      "sentence1": "Tôi thích câu chuyện này.",
+      "sentence2": "Cô ấy kể một câu chuyện vui nhộn."
+    },
+    {
+      "id": 736,
+      "word": "đường phố",
+      "sentence1": "Cửa hàng nằm trên đường.",
+      "sentence2": "Cô ấy sống trên một con phố yên tĩnh."
+    },
+    {
+      "id": 737,
+      "word": "mạnh mẽ",
+      "sentence1": "Anh ấy là một người mạnh mẽ.",
+      "sentence2": "Cô ấy có một ý kiến mạnh mẽ."
+    },
+    {
+      "id": 738,
+      "word": "học sinh",
+      "sentence1": "Học sinh đang học.",
+      "sentence2": "Cô ấy là một học sinh giỏi."
+    },
+    {
+      "id": 739,
+      "word": "nghiên cứu",
+      "sentence1": "Tôi cần phải học cho kỳ thi.",
+      "sentence2": "Cô ấy học mỗi đêm."
+    },
+    {
+      "id": 740,
+      "word": "phong cách",
+      "sentence1": "Tôi thích phong cách của anh.",
+      "sentence2": "Cô ấy có phong cách độc đáo."
+    },
+    {
+      "id": 741,
+      "word": "chủ đề",
+      "sentence1": "Chủ đề của bài học là gì?",
+      "sentence2": "Cô ấy quan tâm đến chủ đề này."
+    },
+    {
+      "id": 742,
+      "word": "thành công",
+      "sentence1": "Thành công đòi hỏi sự chăm chỉ.",
+      "sentence2": "Cô ấy đã đạt được thành công lớn."
+    },
+    {
+      "id": 743,
+      "word": "đường",
+      "sentence1": "Tôi uống cà phê với đường.",
+      "sentence2": "Cô ấy thích đường trong trà."
+    },
+    {
+      "id": 744,
+      "word": "mùa hè",
+      "sentence1": "Mùa hè nóng ở khu vực này.",
+      "sentence2": "Cô ấy thích kỳ nghỉ hè."
+    },
+    {
+      "id": 745,
+      "word": "mặt trời",
+      "sentence1": "Mặt trời đang tỏa sáng.",
+      "sentence2": "Cô ấy ngồi dưới ánh mặt trời."
+    },
+    {
+      "id": 746,
+      "word": "chủ nhật",
+      "sentence1": "Chủ nhật là ngày nghỉ.",
+      "sentence2": "Cô ấy đi nhà thờ vào Chủ nhật."
+    },
+    {
+      "id": 747,
+      "word": "siêu thị",
+      "sentence1": "Tôi cần đi siêu thị.",
+      "sentence2": "Cô ấy mua hàng tạp hóa ở siêu thị."
+    },
+    {
+      "id": 748,
+      "word": "chắc chắn",
+      "sentence1": "Anh có chắc không?",
+      "sentence2": "Cô ấy chắc chắn về quyết định của mình."
+    },
+    {
+      "id": 749,
+      "word": "áo len",
+      "sentence1": "Tôi đã mua một chiếc áo len mới.",
+      "sentence2": "Cô ấy mặc một chiếc áo len ấm."
+    },
+    {
+      "id": 750,
+      "word": "bơi",
+      "sentence1": "Tôi thích bơi trong hồ bơi.",
+      "sentence2": "Bà ấy bơi mỗi buổi sáng."
+    },
+    {
+      "id": 751,
+      "word": "bơi lội",
+      "sentence1": "Bơi là một bài tập tốt.",
+      "sentence2": "Cô ấy thích bơi trong đại dương."
+    },
+    {
+      "id": 752,
+      "word": "bảng",
+      "sentence1": "Cái bàn được làm bằng gỗ.",
+      "sentence2": "Cô ấy dọn bàn cho bữa tối."
+    },
+    {
+      "id": 753,
+      "word": "lấy",
+      "sentence1": "Tôi sẽ đi xe buýt.",
+      "sentence2": "Cô ấy chụp ảnh hoàng hôn."
+    },
+    {
+      "id": 754,
+      "word": "nói chuyện",
+      "sentence1": "Chúng ta cần nói chuyện.",
+      "sentence2": "Cô ấy nói về kế hoạch của mình."
+    },
+    {
+      "id": 755,
+      "word": "cao",
+      "sentence1": "Anh ấy cao và thể thao.",
+      "sentence2": "Cô ấy thích những tòa nhà cao."
+    },
+    {
+      "id": 756,
+      "word": "taxi",
+      "sentence1": "Tôi cần một chiếc taxi đến sân bay.",
+      "sentence2": "Cô ấy đi taxi về nhà."
+    },
+    {
+      "id": 757,
+      "word": "trà",
+      "sentence1": "Tôi thích uống trà.",
+      "sentence2": "Cô ấy thích trà xanh hơn."
+    },
+    {
+      "id": 758,
+      "word": "dạy",
+      "sentence1": "Tôi muốn dạy tiếng Anh.",
+      "sentence2": "Cô ấy dạy toán ở trường."
+    },
+    {
+      "id": 759,
+      "word": "giáo viên",
+      "sentence1": "Giáo viên rất hữu ích.",
+      "sentence2": "Cô ấy là giáo viên yêu thích của tôi."
+    },
+    {
+      "id": 760,
+      "word": "đội",
+      "sentence1": "Đội của chúng tôi đã thắng trận đấu.",
+      "sentence2": "Cô ấy là một thành viên có giá trị trong nhóm."
+    },
+    {
+      "id": 761,
+      "word": "thiếu niên",
+      "sentence1": "Thanh thiếu niên phải đối mặt với nhiều thử thách.",
+      "sentence2": "Cô ấy là một thiếu niên điển hình."
+    },
+    {
+      "id": 762,
+      "word": "điện thoại",
+      "sentence1": "Tôi cần gọi điện cho anh.",
+      "sentence2": "Cô ấy trả lời điện thoại."
+    },
+    {
+      "id": 763,
+      "word": "truyền hình",
+      "sentence1": "Tivi nằm trên bàn.",
+      "sentence2": "Cô ấy xem tivi mỗi tối."
+    },
+    {
+      "id": 764,
+      "word": "nói",
+      "sentence1": "Làm ơn cho tôi biết tên của bạn.",
+      "sentence2": "Cô ấy nói với tôi một bí mật."
+    },
+    {
+      "id": 765,
+      "word": "mười",
+      "sentence1": "Tôi có mười quả táo.",
+      "sentence2": "Cô ấy mười tuổi."
+    },
+    {
+      "id": 766,
+      "word": "quần vợt",
+      "sentence1": "Tôi thích chơi tennis.",
+      "sentence2": "Cô ấy chơi tennis vào cuối tuần."
+    },
+    {
+      "id": 767,
+      "word": "khủng khiếp",
+      "sentence1": "Phim rất tệ.",
+      "sentence2": "Cô ấy đã có một trải nghiệm khủng khiếp."
+    },
+    {
+      "id": 768,
+      "word": "thử nghiệm",
+      "sentence1": "Ngày mai tôi có bài kiểm tra.",
+      "sentence2": "Cô ấy đã vượt qua bài kiểm tra."
+    },
+    {
+      "id": 769,
+      "word": "văn bản",
+      "sentence1": "Xin hãy đọc đoạn văn.",
+      "sentence2": "Cô ấy đã viết một tin nhắn."
+    },
+    {
+      "id": 770,
+      "word": "hơn",
+      "sentence1": "Cô ấy cao hơn anh trai mình.",
+      "sentence2": "Cuốn sách này tốt hơn cuốn kia."
+    },
+    {
+      "id": 771,
+      "word": "cảm ơn",
+      "sentence1": "Tôi muốn cảm ơn anh.",
+      "sentence2": "Cô ấy cảm ơn tôi vì sự giúp đỡ của tôi."
+    },
+    {
+      "id": 772,
+      "word": "cảm ơn",
+      "sentence1": "Cảm ơn vì sự giúp đỡ của anh.",
+      "sentence2": "Cô ấy nói cảm ơn và rời đi."
+    },
+    {
+      "id": 773,
+      "word": "cái đó",
+      "sentence1": "Đó là cuốn sách của tôi.",
+      "sentence2": "Cô ấy nói rằng cô ấy sẽ đến."
+    },
+    {
+      "id": 774,
+      "word": "của",
+      "sentence1": "Con mèo đang trên mái nhà.",
+      "sentence2": "Cô ấy thích chiếc váy xanh."
+    },
+    {
+      "id": 775,
+      "word": "nhà hát",
+      "sentence1": "Chúng ta sẽ đi rạp hát.",
+      "sentence2": "Cô ấy thích xem các vở kịch ở nhà hát."
+    },
+    {
+      "id": 776,
+      "word": "của họ",
+      "sentence1": "Đây là nhà của họ.",
+      "sentence2": "Cô ấy chụp ảnh họ."
+    },
+    {
+      "id": 777,
+      "word": "họ",
+      "sentence1": "Tôi đã thấy họ ở công viên.",
+      "sentence2": "Cô ấy mời họ đến bữa tiệc."
+    },
+    {
+      "id": 778,
+      "word": "vậy thì",
+      "sentence1": "Chúng ta có thể đi sau đó.",
+      "sentence2": "Lúc đó cô ấy mệt mỏi."
+    },
+    {
+      "id": 779,
+      "word": "ở đó",
+      "sentence1": "Cuốn sách ở đằng kia.",
+      "sentence2": "Cô ấy sống ở đó."
+    },
+    {
+      "id": 780,
+      "word": "họ",
+      "sentence1": "Họ là bạn của tôi.",
+      "sentence2": "Cô ấy nói họ sẽ đến."
+    },
+    {
+      "id": 781,
+      "word": "cái gì đó",
+      "sentence1": "Cái gì vậy?",
+      "sentence2": "Cô ấy đã mất thứ cô ấy yêu thích."
+    },
+    {
+      "id": 782,
+      "word": "nghĩ",
+      "sentence1": "Tôi cần phải nghĩ về nó.",
+      "sentence2": "Cô ấy nghĩ rất nhiều về anh."
+    },
+    {
+      "id": 783,
+      "word": "thứ ba",
+      "sentence1": "Đây là lần thứ ba tôi cố gắng.",
+      "sentence2": "Cô ấy kết thúc ở vị trí thứ ba."
+    },
+    {
+      "id": 784,
+      "word": "khát nước",
+      "sentence1": "Tôi khát rồi.",
+      "sentence2": "Cô ấy luôn cảm thấy khát sau khi tập thể dục."
+    },
+    {
+      "id": 785,
+      "word": "mười ba",
+      "sentence1": "Tôi có mười ba quả táo.",
+      "sentence2": "Cô ấy mười ba tuổi."
+    },
+    {
+      "id": 786,
+      "word": "ba mươi",
+      "sentence1": "Có ba mươi học sinh trong lớp.",
+      "sentence2": "Cô ấy sẽ ba mươi tuổi vào năm tới."
+    },
+    {
+      "id": 787,
+      "word": "cái này",
+      "sentence1": "Đây là cuốn sách của tôi.",
+      "sentence2": "Cô ấy nói đây là món yêu thích của cô ấy."
+    },
+    {
+      "id": 788,
+      "word": "ngàn",
+      "sentence1": "Tôi có hàng ngàn ý tưởng.",
+      "sentence2": "Cô ấy thắng một ngàn đô la."
+    },
+    {
+      "id": 789,
+      "word": "ba",
+      "sentence1": "Tôi có ba anh trai.",
+      "sentence2": "Cô ấy mới 3 tuổi."
+    },
+    {
+      "id": 790,
+      "word": "qua",
+      "sentence1": "Chúng tôi đi bộ qua công viên.",
+      "sentence2": "Cô ấy nhìn qua cửa sổ."
+    },
+    {
+      "id": 791,
+      "word": "thứ Năm",
+      "sentence1": "Thứ Năm là ngày yêu thích của tôi.",
+      "sentence2": "Cô ấy có một cuộc họp vào thứ Năm."
+    },
+    {
+      "id": 792,
+      "word": "vé",
+      "sentence1": "Tôi cần mua vé.",
+      "sentence2": "Cô ấy cho thấy vé của mình ở lối vào."
+    },
+    {
+      "id": 793,
+      "word": "thời gian",
+      "sentence1": "Giờ mấy giờ rồi?",
+      "sentence2": "Cô ấy dành rất nhiều thời gian để đọc sách."
+    },
+    {
+      "id": 794,
+      "word": "mệt mỏi",
+      "sentence1": "Tôi mệt rồi.",
+      "sentence2": "Cô cảm thấy mệt mỏi sau chuyến đi dài."
+    },
+    {
+      "id": 795,
+      "word": "tiêu đề",
+      "sentence1": "Tên của cuốn sách là gì?",
+      "sentence2": "Cô ấy đặt cho câu chuyện của mình một tiêu đề hấp dẫn."
+    },
+    {
+      "id": 796,
+      "word": "đến",
+      "sentence1": "Tôi sẽ đi mua sắm.",
+      "sentence2": "Cô ấy đưa cuốn sách cho bạn mình."
+    },
+    {
+      "id": 797,
+      "word": "hôm nay",
+      "sentence1": "Hôm nay là một ngày đẹp.",
+      "sentence2": "Hôm nay cô ấy sẽ đến thăm bà ngoại."
+    },
+    {
+      "id": 798,
+      "word": "cùng nhau",
+      "sentence1": "Chúng ta sẽ làm việc cùng nhau.",
+      "sentence2": "Cô ấy thích chơi trò chơi cùng với bạn bè."
+    },
+    {
+      "id": 799,
+      "word": "nhà vệ sinh",
+      "sentence1": "Nhà vệ sinh ở đâu?",
+      "sentence2": "Cô ấy đi vệ sinh trước khi xem phim."
+    },
+    {
+      "id": 800,
+      "word": "cà chua",
+      "sentence1": "Tôi cần một quả cà chua cho món salad.",
+      "sentence2": "Cô ấy mua một quả cà chua từ chợ."
+    },
+    {
+      "id": 801,
+      "word": "ngày mai",
+      "sentence1": "Tôi sẽ gọi cho anh vào ngày mai.",
+      "sentence2": "Cô ấy có một cuộc họp vào ngày mai."
+    },
+    {
+      "id": 802,
+      "word": "tối nay",
+      "sentence1": "Tối nay tôi có kế hoạch.",
+      "sentence2": "Cô ấy sẽ ở nhà đêm nay."
+    },
+    {
+      "id": 803,
+      "word": "cũng vậy",
+      "sentence1": "Tôi cũng muốn đi.",
+      "sentence2": "Cô ấy cũng sẽ đến."
+    },
+    {
+      "id": 804,
+      "word": "răng",
+      "sentence1": "Răng tôi đau.",
+      "sentence2": "Cô ấy bị sâu răng."
+    },
+    {
+      "id": 805,
+      "word": "chủ đề",
+      "sentence1": "Chủ đề của cuộc thảo luận là gì?",
+      "sentence2": "Cô ấy giới thiệu một chủ đề mới."
+    },
+    {
+      "id": 806,
+      "word": "du lịch",
+      "sentence1": "Khách du lịch chụp nhiều bức ảnh.",
+      "sentence2": "Cô ấy là một khách du lịch trong thành phố."
+    },
+    {
+      "id": 807,
+      "word": "thành phố",
+      "sentence1": "Tôi sống ở một thị trấn nhỏ.",
+      "sentence2": "Cô ấy lớn lên ở thị trấn này."
+    },
+    {
+      "id": 808,
+      "word": "giao thông",
+      "sentence1": "Hôm nay giao thông rất đông.",
+      "sentence2": "Cô ấy bị kẹt xe."
+    },
+    {
+      "id": 809,
+      "word": "xe lửa",
+      "sentence1": "Tôi sẽ đi xe lửa đi làm.",
+      "sentence2": "Cô ấy lỡ chuyến tàu."
+    },
+    {
+      "id": 810,
+      "word": "du lịch",
+      "sentence1": "Tôi thích đi du lịch.",
+      "sentence2": "Cô ấy đang lên kế hoạch cho một hành trình du lịch."
+    },
+    {
+      "id": 811,
+      "word": "cây",
+      "sentence1": "Cây rất cao.",
+      "sentence2": "Cô ấy trèo lên cây."
+    },
+    {
+      "id": 812,
+      "word": "chuyến đi",
+      "sentence1": "Tôi sẽ đi du lịch.",
+      "sentence2": "Cô ấy thích chuyến đi."
+    },
+    {
+      "id": 813,
+      "word": "quần dài",
+      "sentence1": "Tôi đã mua quần mới.",
+      "sentence2": "Cô ấy đang mặc quần xanh."
+    },
+    {
+      "id": 814,
+      "word": "đúng",
+      "sentence1": "Câu nói đó là đúng.",
+      "sentence2": "Cô ấy luôn nói sự thật."
+    },
+    {
+      "id": 815,
+      "word": "thử đi",
+      "sentence1": "Tôi sẽ cố gắng hết sức.",
+      "sentence2": "Cô ấy đã cố gắng giải quyết vấn đề."
+    },
+    {
+      "id": 816,
+      "word": "áo phông",
+      "sentence1": "Tôi cần một chiếc áo phông mới.",
+      "sentence2": "Cô ấy mua một chiếc áo phông từ cửa hàng."
+    },
+    {
+      "id": 817,
+      "word": "thứ ba",
+      "sentence1": "Thứ ba là ngày yêu thích của tôi.",
+      "sentence2": "Cô ấy có một cuộc họp vào thứ Ba."
+    },
+    {
+      "id": 818,
+      "word": "quay lại",
+      "sentence1": "Làm ơn tắt đèn đi.",
+      "sentence2": "Cô ấy lật trang."
+    },
+    {
+      "id": 819,
+      "word": "TV",
+      "sentence1": "Tôi xem TV vào buổi tối.",
+      "sentence2": "Cô ấy bật TV."
+    },
+    {
+      "id": 820,
+      "word": "mười hai",
+      "sentence1": "Một năm có mười hai tháng.",
+      "sentence2": "Cô ấy mười hai tuổi."
+    },
+    {
+      "id": 821,
+      "word": "hai mươi",
+      "sentence1": "Tôi có hai mươi đô la.",
+      "sentence2": "Cô ấy hai mươi tuổi."
+    },
+    {
+      "id": 822,
+      "word": "hai lần",
+      "sentence1": "Tôi đã xem bộ phim đó hai lần.",
+      "sentence2": "Cô ấy đến thăm cha mẹ mình hai lần một tháng."
+    },
+    {
+      "id": 823,
+      "word": "hai",
+      "sentence1": "Tôi có hai con mèo.",
+      "sentence2": "Cô ấy muốn hai vé."
+    },
+    {
+      "id": 824,
+      "word": "loại",
+      "sentence1": "Anh thích loại nhạc nào?",
+      "sentence2": "Cô ấy thích một loại sách khác."
+    },
+    {
+      "id": 825,
+      "word": "ô dù",
+      "sentence1": "Đừng quên ô.",
+      "sentence2": "Cô ấy mua một chiếc ô mới."
+    },
+    {
+      "id": 826,
+      "word": "chú tôi",
+      "sentence1": "Chú tôi sống ở New York.",
+      "sentence2": "Mùa hè năm ngoái, cô ấy đến thăm chú của mình."
+    },
+    {
+      "id": 827,
+      "word": "dưới",
+      "sentence1": "Con mèo nằm dưới bàn.",
+      "sentence2": "Cô ấy tìm thấy chìa khóa của mình dưới ghế sofa."
+    },
+    {
+      "id": 828,
+      "word": "hiểu không",
+      "sentence1": "Tôi không hiểu câu hỏi.",
+      "sentence2": "Cô ấy hiểu vấn đề."
+    },
+    {
+      "id": 829,
+      "word": "trường đại học",
+      "sentence1": "Cô ấy học tại trường đại học.",
+      "sentence2": "Anh ta tốt nghiệp đại học."
+    },
+    {
+      "id": 830,
+      "word": "cho đến khi",
+      "sentence1": "Tôi sẽ đợi cho đến khi anh đến.",
+      "sentence2": "Cô ấy ở lại cho đến cuối chương trình."
+    },
+    {
+      "id": 831,
+      "word": "lên",
+      "sentence1": "Con mèo leo lên cây.",
+      "sentence2": "Cô ấy nhìn lên bầu trời."
+    },
+    {
+      "id": 832,
+      "word": "lầu trên",
+      "sentence1": "Phòng ngủ ở trên lầu.",
+      "sentence2": "Cô ấy lên lầu để học."
+    },
+    {
+      "id": 833,
+      "word": "chúng ta",
+      "sentence1": "Anh có thể giúp chúng tôi không?",
+      "sentence2": "Cô ấy mời chúng tôi đến bữa tiệc của cô ấy."
+    },
+    {
+      "id": 834,
+      "word": "sử dụng",
+      "sentence1": "Tôi cần dùng máy tính.",
+      "sentence2": "Cô ấy dùng rất nhiều ứng dụng trên điện thoại."
+    },
+    {
+      "id": 835,
+      "word": "hữu ích",
+      "sentence1": "Cuốn sách này rất hữu ích.",
+      "sentence2": "Cô ấy thấy thông tin đó hữu ích."
+    },
+    {
+      "id": 836,
+      "word": "thường",
+      "sentence1": "Tôi thường thức dậy sớm.",
+      "sentence2": "Cô ấy thường đi dạo vào buổi tối."
+    },
+    {
+      "id": 837,
+      "word": "nghỉ ngơi",
+      "sentence1": "Tuần tới tôi sẽ đi nghỉ.",
+      "sentence2": "Cô ấy thích đi du lịch trong kỳ nghỉ của mình."
+    },
+    {
+      "id": 838,
+      "word": "rau",
+      "sentence1": "Tôi ăn nhiều rau.",
+      "sentence2": "Cô ấy thích trái cây hơn rau."
+    },
+    {
+      "id": 839,
+      "word": "rất",
+      "sentence1": "Đây là một cuốn sách rất thú vị.",
+      "sentence2": "Cô ấy rất tài năng."
+    },
+    {
+      "id": 840,
+      "word": "video",
+      "sentence1": "Tôi đã xem một đoạn video hài hước trên mạng.",
+      "sentence2": "Cô ấy thích quay video."
+    },
+    {
+      "id": 841,
+      "word": "làng",
+      "sentence1": "Anh ấy lớn lên ở một ngôi làng nhỏ.",
+      "sentence2": "Cô ấy đến thăm ông bà ở làng."
+    },
+    {
+      "id": 842,
+      "word": "thăm viếng",
+      "sentence1": "Ngày mai tôi sẽ đến thăm bạn tôi.",
+      "sentence2": "Tuần trước cô ấy đến thăm bảo tàng."
+    },
+    {
+      "id": 843,
+      "word": "khách",
+      "sentence1": "Người khách hỏi nhiều câu hỏi.",
+      "sentence2": "Cô ấy là một du khách thường xuyên đến bảo tàng."
+    },
+    {
+      "id": 844,
+      "word": "chờ đã",
+      "sentence1": "Tôi sẽ chờ anh.",
+      "sentence2": "Cô ấy đã đợi một tiếng."
+    },
+    {
+      "id": 845,
+      "word": "bồi bàn",
+      "sentence1": "Người bồi bàn đã nhận đơn hàng của chúng tôi.",
+      "sentence2": "Cô ấy từng làm bồi bàn."
+    },
+    {
+      "id": 846,
+      "word": "thức dậy",
+      "sentence1": "Tôi thức dậy lúc 7 giờ sáng.",
+      "sentence2": "Hôm nay cô ấy thức khuya."
+    },
+    {
+      "id": 847,
+      "word": "đi bộ",
+      "sentence1": "Tôi thích đi bộ trong công viên.",
+      "sentence2": "Bà ấy dắt chó đi dạo mỗi buổi sáng."
+    },
+    {
+      "id": 848,
+      "word": "tường",
+      "sentence1": "Bức tranh đang treo trên tường.",
+      "sentence2": "Cô ấy sơn tường màu xanh."
+    },
+    {
+      "id": 849,
+      "word": "muốn",
+      "sentence1": "Tôi muốn học tiếng Anh.",
+      "sentence2": "Cô ấy muốn một chiếc điện thoại mới."
+    },
+    {
+      "id": 850,
+      "word": "ấm áp",
+      "sentence1": "Súp ấm rồi.",
+      "sentence2": "Cô ấy thích thời tiết ấm áp."
+    },
+    {
+      "id": 851,
+      "word": "giặt",
+      "sentence1": "Tôi cần rửa tay.",
+      "sentence2": "Cô ấy rửa xe mỗi tuần."
+    },
+    {
+      "id": 852,
+      "word": "xem",
+      "sentence1": "Tôi thích xem phim.",
+      "sentence2": "Tối qua cô ấy xem một bộ phim tài liệu."
+    },
+    {
+      "id": 853,
+      "word": "nước",
+      "sentence1": "Tôi uống nhiều nước.",
+      "sentence2": "Cô ấy tưới cây."
+    },
+    {
+      "id": 854,
+      "word": "đường",
+      "sentence1": "Đây là cách tốt nhất để học.",
+      "sentence2": "Cô ấy tìm ra một cách mới để giải quyết vấn đề."
+    },
+    {
+      "id": 855,
+      "word": "chúng ta",
+      "sentence1": "Chúng ta sẽ đi công viên.",
+      "sentence2": "Họ mời chúng tôi đến đám cưới của họ."
+    },
+    {
+      "id": 856,
+      "word": "đeo",
+      "sentence1": "Tôi thích mặc quần áo thoải mái.",
+      "sentence2": "Cô ấy mặc một chiếc váy đẹp đến bữa tiệc."
+    },
+    {
+      "id": 857,
+      "word": "thời tiết",
+      "sentence1": "Hôm nay thời tiết đẹp.",
+      "sentence2": "Cô ấy kiểm tra dự báo thời tiết."
+    },
+    {
+      "id": 858,
+      "word": "trang web",
+      "sentence1": "Tôi đã tìm thấy một trang web hữu ích.",
+      "sentence2": "Cô ấy đã tạo ra một trang web cho doanh nghiệp của mình."
+    },
+    {
+      "id": 859,
+      "word": "thứ tư",
+      "sentence1": "Thứ Tư là ngày yêu thích của tôi.",
+      "sentence2": "Cô ấy có một cuộc họp vào thứ Tư."
+    },
+    {
+      "id": 860,
+      "word": "tuần",
+      "sentence1": "Tôi làm việc năm ngày một tuần.",
+      "sentence2": "Tuần tới cô ấy sẽ đi nghỉ."
+    },
+    {
+      "id": 861,
+      "word": "cuối tuần",
+      "sentence1": "Tôi thích thư giãn vào cuối tuần.",
+      "sentence2": "Cô ấy có kế hoạch cho cuối tuần."
+    },
+    {
+      "id": 862,
+      "word": "chào mừng",
+      "sentence1": "Chào mừng đến nhà chúng tôi!",
+      "sentence2": "Cô ấy chào đón khách."
+    },
+    {
+      "id": 863,
+      "word": "được rồi",
+      "sentence1": "Tôi hy vọng anh khỏe.",
+      "sentence2": "Hôm nay cô ấy cảm thấy tốt."
+    },
+    {
+      "id": 864,
+      "word": "tây",
+      "sentence1": "Mặt trời lặn ở phía tây.",
+      "sentence2": "Cô ấy đi đến bờ biển phía tây."
+    },
+    {
+      "id": 865,
+      "word": "cái gì",
+      "sentence1": "Tên anh là gì?",
+      "sentence2": "Cô ấy hỏi giờ là bao giờ."
+    },
+    {
+      "id": 866,
+      "word": "khi nào",
+      "sentence1": "Ngày sinh nhật của anh là khi nào?",
+      "sentence2": "Cô ấy không nói khi nào cô ấy sẽ đến."
+    },
+    {
+      "id": 867,
+      "word": "ở đâu",
+      "sentence1": "Anh sống ở đâu?",
+      "sentence2": "Cô ấy hỏi trạm xe gần nhất ở đâu."
+    },
+    {
+      "id": 868,
+      "word": "mà",
+      "sentence1": "Anh muốn cuốn sách nào?",
+      "sentence2": "Cô ấy không nói cô ấy thích chiếc váy nào."
+    },
+    {
+      "id": 869,
+      "word": "trắng",
+      "sentence1": "Con mèo trắng đang ngủ.",
+      "sentence2": "Cô ấy mua một chiếc váy trắng."
+    },
+    {
+      "id": 870,
+      "word": "ai",
+      "sentence1": "Bạn thân của anh là ai?",
+      "sentence2": "Cô ấy không nói cô ấy đi với ai."
+    },
+    {
+      "id": 871,
+      "word": "tại sao",
+      "sentence1": "Sao anh buồn?",
+      "sentence2": "Cô ấy hỏi tại sao tôi đến trễ."
+    },
+    {
+      "id": 872,
+      "word": "vợ",
+      "sentence1": "Vợ tôi là bác sĩ.",
+      "sentence2": "Cô ấy là vợ anh ta."
+    },
+    {
+      "id": 873,
+      "word": "sẽ",
+      "sentence1": "Tôi sẽ gọi cho anh vào ngày mai.",
+      "sentence2": "Cô ấy nói cô ấy sẽ giúp chúng tôi."
+    },
+    {
+      "id": 874,
+      "word": "thắng",
+      "sentence1": "Tôi hy vọng sẽ thắng trận đấu.",
+      "sentence2": "Cô ấy đã giành được một giải thưởng trong cuộc thi."
+    },
+    {
+      "id": 875,
+      "word": "cửa sổ",
+      "sentence1": "Cửa sổ mở.",
+      "sentence2": "Cô ấy nhìn ra cửa sổ."
+    },
+    {
+      "id": 876,
+      "word": "rượu vang",
+      "sentence1": "Tôi thích uống rượu vang đỏ.",
+      "sentence2": "Cô ấy phục vụ rượu với bữa tối."
+    },
+    {
+      "id": 877,
+      "word": "mùa đông",
+      "sentence1": "Mùa đông là mùa tôi thích nhất.",
+      "sentence2": "Cô ấy thích trượt tuyết vào mùa đông."
+    },
+    {
+      "id": 878,
+      "word": "với",
+      "sentence1": "Tôi đi mua sắm với bạn tôi.",
+      "sentence2": "Cô ấy đang học với các bạn cùng lớp."
+    },
+    {
+      "id": 879,
+      "word": "không có",
+      "sentence1": "Em không thể sống mà không có anh.",
+      "sentence2": "Cô ấy hoàn thành dự án mà không cần sự giúp đỡ."
+    },
+    {
+      "id": 880,
+      "word": "phụ nữ",
+      "sentence1": "Người phụ nữ đang đọc sách.",
+      "sentence2": "Cô ấy là một người phụ nữ mạnh mẽ."
+    },
+    {
+      "id": 881,
+      "word": "tuyệt vời",
+      "sentence1": "Anh đã làm một công việc tuyệt vời!",
+      "sentence2": "Cô ấy có một nụ cười tuyệt vời."
+    },
+    {
+      "id": 882,
+      "word": "từ",
+      "sentence1": "Anh có thể đánh vần từ đó không?",
+      "sentence2": "Cô ấy tìm từ trong từ điển."
+    },
+    {
+      "id": 883,
+      "word": "làm việc",
+      "sentence1": "Tối nay tôi phải làm muộn.",
+      "sentence2": "Cô ấy đang tìm một công việc mới."
+    },
+    {
+      "id": 884,
+      "word": "công nhân",
+      "sentence1": "Người công nhân đang sửa chữa đường.",
+      "sentence2": "Cô ấy là một người chăm chỉ."
+    },
+    {
+      "id": 885,
+      "word": "thế giới",
+      "sentence1": "Thế giới là một nơi đẹp.",
+      "sentence2": "Cô ấy muốn đi du lịch thế giới."
+    },
+    {
+      "id": 886,
+      "word": "sẽ",
+      "sentence1": "Tôi muốn uống cà phê.",
+      "sentence2": "Cô ấy nói cô ấy sẽ đến bữa tiệc."
+    },
+    {
+      "id": 887,
+      "word": "viết",
+      "sentence1": "Tôi thích viết truyện.",
+      "sentence2": "Cô ấy đang viết một lá thư."
+    },
+    {
+      "id": 888,
+      "word": "nhà văn",
+      "sentence1": "Anh ấy là một nhà văn nổi tiếng.",
+      "sentence2": "Cô ấy muốn trở thành một nhà văn."
+    },
+    {
+      "id": 889,
+      "word": "viết",
+      "sentence1": "Viết là sở thích của tôi.",
+      "sentence2": "Cô ấy thích viết trong thời gian rảnh rỗi của mình."
+    },
+    {
+      "id": 890,
+      "word": "sai",
+      "sentence1": "Đó là câu trả lời sai.",
+      "sentence2": "Cô ấy nhận ra mình đã sai."
+    },
+    {
+      "id": 891,
+      "word": "vâng",
+      "sentence1": "Ừ, tôi đồng ý với anh.",
+      "sentence2": "Cô ấy đồng ý với lời cầu hôn."
+    },
+    {
+      "id": 892,
+      "word": "năm",
+      "sentence1": "Năm nay là một thử thách.",
+      "sentence2": "Cô ấy tốt nghiệp năm ngoái."
+    },
+    {
+      "id": 893,
+      "word": "vàng",
+      "sentence1": "Bông hoa vàng đẹp.",
+      "sentence2": "Cô ấy mặc một chiếc váy màu vàng."
+    },
+    {
+      "id": 894,
+      "word": "vâng",
+      "sentence1": "Vâng, tôi hiểu.",
+      "sentence2": "Cô ấy đồng ý với lời mời."
+    },
+    {
+      "id": 895,
+      "word": "hôm qua",
+      "sentence1": "Tôi đã gặp cô ấy hôm qua.",
+      "sentence2": "Cô ấy đã gọi cho tôi hôm qua."
+    },
+    {
+      "id": 896,
+      "word": "anh ấy",
+      "sentence1": "Anh là bạn thân của em.",
+      "sentence2": "Cô ấy nói anh sẽ đến."
+    },
+    {
+      "id": 897,
+      "word": "trẻ",
+      "sentence1": "Cậu bé đang chơi.",
+      "sentence2": "Cô ấy còn trẻ và tài năng."
+    },
+    {
+      "id": 898,
+      "word": "của bạn",
+      "sentence1": "Cuốn sách của anh đang trên bàn.",
+      "sentence2": "Cô ấy nói ý tưởng của anh rất thú vị."
+    },
+    {
+      "id": 899,
+      "word": "chính mình",
+      "sentence1": "Chăm sóc bản thân nhé.",
+      "sentence2": "Cô ấy đã tự làm."
+    }
+  ]
+}

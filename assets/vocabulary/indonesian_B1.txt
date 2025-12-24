@@ -1,0 +1,4834 @@
+{
+  "words": [
+    {
+      "id": 1,
+      "word": "benar-benar",
+      "sentence1": "Aku sangat suka buku ini.",
+      "sentence2": "Dia benar-benar yakin akan keputusannya."
+    },
+    {
+      "id": 2,
+      "word": "akademis",
+      "sentence1": "Dia memiliki latar belakang akademik dalam fisika.",
+      "sentence2": "Tahun akademik dimulai pada bulan September."
+    },
+    {
+      "id": 3,
+      "word": "akses",
+      "sentence1": "Anda perlu kata sandi untuk mengakses sistem.",
+      "sentence2": "Akses informasi sangat penting."
+    },
+    {
+      "id": 4,
+      "word": "akomodasi",
+      "sentence1": "Kita harus mencari tempat untuk bermalam.",
+      "sentence2": "Hotel ini menawarkan akomodasi yang sangat baik."
+    },
+    {
+      "id": 5,
+      "word": "akun",
+      "sentence1": "Aku membuka rekening bank minggu lalu.",
+      "sentence2": "Silakan periksa saldo rekening Anda."
+    },
+    {
+      "id": 6,
+      "word": "pencapaian",
+      "sentence1": "Prestasi terbesarnya adalah memenangkan kejuaraan.",
+      "sentence2": "Dia bangga dengan prestasi akademiknya."
+    },
+    {
+      "id": 7,
+      "word": "bertindak",
+      "sentence1": "Kau harus bertindak cepat dalam situasi ini.",
+      "sentence2": "Dia memutuskan untuk bertindak berdasarkan nalurinya."
+    },
+    {
+      "id": 8,
+      "word": "tambahkan",
+      "sentence1": "Tolong tambahkan nama Anda ke daftar.",
+      "sentence2": "Jangan lupa untuk menambahkan sentuhan akhir."
+    },
+    {
+      "id": 9,
+      "word": "penambahan",
+      "sentence1": "Penambahan fitur baru meningkatkan perangkat lunak.",
+      "sentence2": "Selain gajinya, ia menerima bonus."
+    },
+    {
+      "id": 10,
+      "word": "mengagumi",
+      "sentence1": "Aku mengagumi dedikasinya pada pekerjaannya.",
+      "sentence2": "Banyak orang mengagumi bakat artistiknya."
+    },
+    {
+      "id": 11,
+      "word": "mengakui",
+      "sentence1": "Dia mengakui kesalahannya dan meminta maaf.",
+      "sentence2": "Dia tidak mau mengakui bahwa dia salah."
+    },
+    {
+      "id": 12,
+      "word": "maju",
+      "sentence1": "Dia mengambil kursus lanjutan dalam matematika.",
+      "sentence2": "Teknologi ini canggih dan efisien."
+    },
+    {
+      "id": 13,
+      "word": "sarankan",
+      "sentence1": "Aku sarankan kau untuk menerima tawaran pekerjaan.",
+      "sentence2": "Dia disarankan untuk menemui dokter."
+    },
+    {
+      "id": 14,
+      "word": "mampu",
+      "sentence1": "Aku tidak mampu membeli mobil baru.",
+      "sentence2": "Mereka mampu menjalani gaya hidup mewah."
+    },
+    {
+      "id": 15,
+      "word": "usia",
+      "sentence1": "Berapa usiamu?",
+      "sentence2": "Dia sudah usia sekolah."
+    },
+    {
+      "id": 16,
+      "word": "tua",
+      "sentence1": "Pria tua itu duduk di bangku.",
+      "sentence2": "Keju tua memiliki rasa yang lebih kuat."
+    },
+    {
+      "id": 17,
+      "word": "agen",
+      "sentence1": "Dia bekerja sebagai agen rahasia.",
+      "sentence2": "Agen perjalanan membantu kami merencanakan perjalanan kami."
+    },
+    {
+      "id": 18,
+      "word": "perjanjian",
+      "sentence1": "Mereka mencapai kesepakatan setelah negosiasi yang panjang.",
+      "sentence2": "Perjanjian itu ditandatangani oleh kedua belah pihak."
+    },
+    {
+      "id": 19,
+      "word": "ke depan",
+      "sentence1": "Jalan di depan ditutup untuk konstruksi.",
+      "sentence2": "Kita harus merencanakan proyek ini."
+    },
+    {
+      "id": 20,
+      "word": "tujuan",
+      "sentence1": "Tujuan saya adalah untuk meningkatkan kemampuan bahasa Inggris saya.",
+      "sentence2": "Dia memiliki tujuan yang jelas untuk karirnya."
+    },
+    {
+      "id": 21,
+      "word": "alarm",
+      "sentence1": "Aku mengatur alarm untuk jam 7 pagi.",
+      "sentence2": "Alarm kebakaran berbunyi tak terduga."
+    },
+    {
+      "id": 22,
+      "word": "album",
+      "sentence1": "Aku baru saja membeli album baru dari band favoritku.",
+      "sentence2": "Album foto berisi kenangan dari perjalanan kami."
+    },
+    {
+      "id": 23,
+      "word": "alkohol",
+      "sentence1": "Dia tidak minum alkohol.",
+      "sentence2": "Alkohol dapat berbahaya jika dikonsumsi dalam jumlah besar."
+    },
+    {
+      "id": 24,
+      "word": "alkohol",
+      "sentence1": "Dia seorang pecandu alkohol yang sedang pulih.",
+      "sentence2": "Minuman beralkohol tidak diizinkan di sini."
+    },
+    {
+      "id": 25,
+      "word": "alternatif",
+      "sentence1": "Kita harus menemukan solusi alternatif.",
+      "sentence2": "Ada banyak sumber energi alternatif."
+    },
+    {
+      "id": 26,
+      "word": "kagum",
+      "sentence1": "Aku kagum dengan penampilannya.",
+      "sentence2": "Dia kagum dengan keindahan pemandangan."
+    },
+    {
+      "id": 27,
+      "word": "ambisi",
+      "sentence1": "Ambisi dia adalah menjadi pengusaha sukses.",
+      "sentence2": "Dia memiliki ambisi yang kuat untuk berhasil."
+    },
+    {
+      "id": 28,
+      "word": "ambisius",
+      "sentence1": "Dia adalah seorang wanita muda yang ambisius.",
+      "sentence2": "Rencananya yang ambisius membuat semua orang terkesan."
+    },
+    {
+      "id": 29,
+      "word": "analisis",
+      "sentence1": "Kita harus menganalisis data dengan hati-hati.",
+      "sentence2": "Laporan ini akan menganalisis dampak kebijakan."
+    },
+    {
+      "id": 30,
+      "word": "analisis",
+      "sentence1": "Analisis mengungkapkan tren penting.",
+      "sentence2": "Analisis menyeluruh sangat penting untuk pengambilan keputusan."
+    },
+    {
+      "id": 31,
+      "word": "mengumumkan",
+      "sentence1": "Mereka akan mengumumkan hasilnya besok.",
+      "sentence2": "Dia mengumumkan pertunangan kepada keluarganya."
+    },
+    {
+      "id": 32,
+      "word": "pengumuman",
+      "sentence1": "Pengumuman itu dibuat selama pertemuan.",
+      "sentence2": "Kami menerima pengumuman tentang kebijakan baru."
+    },
+    {
+      "id": 33,
+      "word": "mengganggu",
+      "sentence1": "Keluhan terus menerusnya membuatku kesal.",
+      "sentence2": "Jangan mengganggu adikmu."
+    },
+    {
+      "id": 34,
+      "word": "kesal",
+      "sentence1": "Dia kesal dengan suara bising.",
+      "sentence2": "Dia merasa kesal dengan penundaan."
+    },
+    {
+      "id": 35,
+      "word": "mengganggu",
+      "sentence1": "Suara lalat itu mengganggu.",
+      "sentence2": "Ini menjengkelkan ketika orang mengganggu."
+    },
+    {
+      "id": 36,
+      "word": "terpisah",
+      "sentence1": "Dua bangunan terpisah satu sama lain.",
+      "sentence2": "Mereka tumbuh terpisah selama bertahun-tahun."
+    },
+    {
+      "id": 37,
+      "word": "minta maaf",
+      "sentence1": "Aku harus meminta maaf atas kesalahanku.",
+      "sentence2": "Dia meminta maaf karena terlambat."
+    },
+    {
+      "id": 38,
+      "word": "aplikasi",
+      "sentence1": "Aku telah mengirimkan lamaranku untuk pekerjaan itu.",
+      "sentence2": "Proses aplikasi cukup sederhana."
+    },
+    {
+      "id": 39,
+      "word": "pengangkatan",
+      "sentence1": "Aku punya janji dengan dokter jam 3 sore.",
+      "sentence2": "Dia melewatkan janjinya dan harus menjadwal ulang."
+    },
+    {
+      "id": 40,
+      "word": "menghargai",
+      "sentence1": "Aku sangat menghargai bantuanmu.",
+      "sentence2": "Dia menghargai keindahan alam."
+    },
+    {
+      "id": 41,
+      "word": "sekitar",
+      "sentence1": "Pertemuan akan berlangsung sekitar dua jam.",
+      "sentence2": "Ada sekitar 100 orang di acara tersebut."
+    },
+    {
+      "id": 42,
+      "word": "penangkapan",
+      "sentence1": "Polisi menangkap tersangka tadi malam.",
+      "sentence2": "Dia ditangkap karena mengemudi di bawah pengaruh."
+    },
+    {
+      "id": 43,
+      "word": "kedatangan",
+      "sentence1": "Kedatangan kereta itu tertunda.",
+      "sentence2": "Kami sangat bersemangat dengan kedatangan tamu kami."
+    },
+    {
+      "id": 44,
+      "word": "penugasan",
+      "sentence1": "Aku punya tugas matematika besok.",
+      "sentence2": "Guru memberi kami tugas yang menantang."
+    },
+    {
+      "id": 45,
+      "word": "membantu",
+      "sentence1": "Bisakah kau membantuku dengan tugas ini?",
+      "sentence2": "Dia dipekerjakan untuk membantu manajer."
+    },
+    {
+      "id": 46,
+      "word": "atmosfer",
+      "sentence1": "Suasana di ruangan itu tegang.",
+      "sentence2": "Kita perlu menciptakan suasana yang positif untuk belajar."
+    },
+    {
+      "id": 47,
+      "word": "menempel",
+      "sentence1": "Silakan lampiran file ke email Anda.",
+      "sentence2": "Aku lupa untuk melampirkan dokumen."
+    },
+    {
+      "id": 48,
+      "word": "sikap",
+      "sentence1": "Sikapnya terhadap proyek itu positif.",
+      "sentence2": "Sangat penting untuk memiliki sikap yang baik di tempat kerja."
+    },
+    {
+      "id": 49,
+      "word": "menarik",
+      "sentence1": "Iklan itu dirancang untuk menarik pelanggan.",
+      "sentence2": "Bunga menarik lebah dan penyerbuk lainnya."
+    },
+    {
+      "id": 50,
+      "word": "daya tarik",
+      "sentence1": "Ada daya tarik yang kuat antara kedua karakter.",
+      "sentence2": "Taman hiburan ini merupakan tempat wisata yang populer bagi keluarga."
+    },
+    {
+      "id": 51,
+      "word": "otoritas",
+      "sentence1": "Dia adalah seorang ahli sejarah kuno.",
+      "sentence2": "Anda harus menghormati otoritas guru Anda."
+    },
+    {
+      "id": 52,
+      "word": "rata-rata",
+      "sentence1": "Suhu rata-rata di bulan Juli adalah 30 derajat.",
+      "sentence2": "Dia memiliki nilai rata-rata dalam matematika."
+    },
+    {
+      "id": 53,
+      "word": "penghargaan",
+      "sentence1": "Dia menerima penghargaan untuk penampilannya yang luar biasa.",
+      "sentence2": "Hadiah Nobel adalah penghargaan bergengsi."
+    },
+    {
+      "id": 54,
+      "word": "sadar",
+      "sentence1": "Apakah Anda menyadari perubahan dalam jadwal?",
+      "sentence2": "Dia tidak menyadari potensi risiko."
+    },
+    {
+      "id": 55,
+      "word": "ke belakang",
+      "sentence1": "Mobilnya berputar mundur menuruni bukit.",
+      "sentence2": "Dia mengambil beberapa langkah mundur."
+    },
+    {
+      "id": 56,
+      "word": "memasak",
+      "sentence1": "Aku suka membuat kue di akhir pekan.",
+      "sentence2": "Dia memanggang kue lezat untuk pesta."
+    },
+    {
+      "id": 57,
+      "word": "keseimbangan",
+      "sentence1": "Penting untuk menjaga keseimbangan antara pekerjaan dan kehidupan.",
+      "sentence2": "Dia memiliki keseimbangan yang baik dari tanggung jawab."
+    },
+    {
+      "id": 58,
+      "word": "larangan",
+      "sentence1": "Sekolah memutuskan untuk melarang ponsel di kelas.",
+      "sentence2": "Dia dilarang dari klub karena perilaku yang tidak pantas."
+    },
+    {
+      "id": 59,
+      "word": "tepi (sungai)",
+      "sentence1": "Kami piknik di tepi sungai.",
+      "sentence2": "Anak-anak bermain di tepi sungai."
+    },
+    {
+      "id": 60,
+      "word": "dasar",
+      "sentence1": "Dasar patung terbuat dari marmer.",
+      "sentence2": "Kita perlu menemukan dasar yang kuat untuk proyek kita."
+    },
+    {
+      "id": 61,
+      "word": "dasar",
+      "sentence1": "Kursus ini mencakup prinsip-prinsip dasar ekonomi.",
+      "sentence2": "Penting untuk memiliki pemahaman dasar matematika."
+    },
+    {
+      "id": 62,
+      "word": "dasar",
+      "sentence1": "Dasar dari argumennya adalah cacat.",
+      "sentence2": "Kita perlu membangun dasar yang kuat untuk penelitian kita."
+    },
+    {
+      "id": 63,
+      "word": "baterai",
+      "sentence1": "Aku perlu mengganti baterai di remote control-ku.",
+      "sentence2": "Umur baterai ponselku semakin pendek."
+    },
+    {
+      "id": 64,
+      "word": "pertarungan",
+      "sentence1": "Pertempuran berlangsung selama beberapa hari.",
+      "sentence2": "Mereka berjuang dengan berani dalam pertempuran."
+    },
+    {
+      "id": 65,
+      "word": "kecantikan",
+      "sentence1": "Keindahan matahari terbenam membuatku terengah-engah.",
+      "sentence2": "Dia dikenal karena kecantikannya yang alami."
+    },
+    {
+      "id": 66,
+      "word": "lebah",
+      "sentence1": "Lebah adalah penyerbuk yang penting.",
+      "sentence2": "Peternakan lebah adalah hobi yang menarik."
+    },
+    {
+      "id": 67,
+      "word": "keyakinan",
+      "sentence1": "Kepercayaannya pada keadilan tak tergoyahkan.",
+      "sentence2": "Banyak orang percaya bahwa pendidikan itu penting."
+    },
+    {
+      "id": 68,
+      "word": "lonceng",
+      "sentence1": "Lonceng sekolah berdering jam 8 pagi.",
+      "sentence2": "Dia memiliki lonceng yang indah di kebunnya."
+    },
+    {
+      "id": 69,
+      "word": "membengkok",
+      "sentence1": "Hati-hati jangan membengkokkan kertasnya.",
+      "sentence2": "Dia harus membungkuk untuk mengikat sepatu."
+    },
+    {
+      "id": 70,
+      "word": "manfaat",
+      "sentence1": "Kebijakan baru akan menguntungkan banyak orang.",
+      "sentence2": "Dia menikmati manfaat dari gaya hidup sehat."
+    },
+    {
+      "id": 71,
+      "word": "lebih baik",
+      "sentence1": "Aku merasa lebih baik setelah tidur nyenyak.",
+      "sentence2": "Solusi ini lebih baik dari yang sebelumnya."
+    },
+    {
+      "id": 72,
+      "word": "menggigit",
+      "sentence1": "Hati-hati jangan menggigit lidahmu.",
+      "sentence2": "Anjing itu suka menggigit mainannya."
+    },
+    {
+      "id": 73,
+      "word": "blok",
+      "sentence1": "Mereka mencoba memblokir jalan dengan mobil.",
+      "sentence2": "Undang-undang baru akan memblokir praktik tidak adil."
+    },
+    {
+      "id": 74,
+      "word": "papan",
+      "sentence1": "Guru menulis pelajaran di papan tulis.",
+      "sentence2": "Kita butuh papan yang lebih besar untuk proyek ini."
+    },
+    {
+      "id": 75,
+      "word": "bom",
+      "sentence1": "Bom itu meledak di pusat kota.",
+      "sentence2": "Mereka menemukan bom di gedung yang ditinggalkan."
+    },
+    {
+      "id": 76,
+      "word": "perbatasan",
+      "sentence1": "Sungai ini membentuk perbatasan alami antara kedua negara.",
+      "sentence2": "Mereka melintasi perbatasan tanpa masalah."
+    },
+    {
+      "id": 77,
+      "word": "repot-repot",
+      "sentence1": "Jangan ganggu aku saat aku bekerja.",
+      "sentence2": "Itu mengganggu saya ketika orang-orang terlambat."
+    },
+    {
+      "id": 78,
+      "word": "cabang",
+      "sentence1": "Pohon itu memiliki cabang yang kuat.",
+      "sentence2": "Dia duduk di cabang dan membaca sebuah buku."
+    },
+    {
+      "id": 79,
+      "word": "merek",
+      "sentence1": "Nike adalah merek olahraga yang populer.",
+      "sentence2": "Aku lebih suka merek kopi ini."
+    },
+    {
+      "id": 80,
+      "word": "berani",
+      "sentence1": "Prajurit yang berani menyelamatkan anak itu.",
+      "sentence2": "Dibutuhkan orang yang berani untuk membela apa yang benar."
+    },
+    {
+      "id": 81,
+      "word": "napas",
+      "sentence1": "Ambil napas dalam-dalam dan rilekslah.",
+      "sentence2": "Nafasnya berbau bawang putih."
+    },
+    {
+      "id": 82,
+      "word": "bernapas",
+      "sentence1": "Ingatlah untuk bernapas dalam-dalam.",
+      "sentence2": "Dia lupa bernapas saat berenang."
+    },
+    {
+      "id": 83,
+      "word": "pernapasan",
+      "sentence1": "Latihan pernapasan dapat mengurangi stres.",
+      "sentence2": "Dia punya masalah pernapasan."
+    },
+    {
+      "id": 84,
+      "word": "pengantin",
+      "sentence1": "Pengantin wanita terlihat cantik pada hari pernikahannya.",
+      "sentence2": "Dia adalah teman dari pengantin perempuan."
+    },
+    {
+      "id": 85,
+      "word": "gelembung",
+      "sentence1": "Anak-anak meniup gelembung di taman.",
+      "sentence2": "Sebuah gelembung meledak di udara."
+    },
+    {
+      "id": 86,
+      "word": "mengubur",
+      "sentence1": "Mereka memutuskan untuk mengubur kapsul waktu.",
+      "sentence2": "Dia ingin mengubur masa lalunya."
+    },
+    {
+      "id": 87,
+      "word": "oleh",
+      "sentence1": "Buku itu ditulis oleh seorang penulis terkenal.",
+      "sentence2": "Dia bepergian dengan kereta api."
+    },
+    {
+      "id": 88,
+      "word": "tenang",
+      "sentence1": "Tolong tetap tenang selama keadaan darurat.",
+      "sentence2": "Dia berbicara dengan suara tenang."
+    },
+    {
+      "id": 89,
+      "word": "kampanye",
+      "sentence1": "Kampanye itu berhasil.",
+      "sentence2": "Mereka meluncurkan kampanye iklan baru."
+    },
+    {
+      "id": 90,
+      "word": "kampus",
+      "sentence1": "Kampus universitas itu indah.",
+      "sentence2": "Ada banyak pohon di kampus."
+    },
+    {
+      "id": 91,
+      "word": "calon",
+      "sentence1": "Dia adalah kandidat untuk posisi itu.",
+      "sentence2": "Para kandidat akan diwawancarai besok."
+    },
+    {
+      "id": 92,
+      "word": "tutup",
+      "sentence1": "Dia memakai topi bisbol.",
+      "sentence2": "Topi melindungi mata Anda dari matahari."
+    },
+    {
+      "id": 93,
+      "word": "kapten",
+      "sentence1": "Kapten tim ini sangat berpengalaman.",
+      "sentence2": "Dia diangkat menjadi kapten tahun lalu."
+    },
+    {
+      "id": 94,
+      "word": "ceroboh",
+      "sentence1": "Kesalahan cerobohnya membuat perusahaan kehilangan uang.",
+      "sentence2": "Berhati-hatilah; jangan terlalu ceroboh."
+    },
+    {
+      "id": 95,
+      "word": "kategori",
+      "sentence1": "Buku ini termasuk dalam kategori fiksi.",
+      "sentence2": "Ada banyak kategori musik."
+    },
+    {
+      "id": 96,
+      "word": "batas atas",
+      "sentence1": "Langit-langitnya dicat putih.",
+      "sentence2": "Lustre tergantung dari langit-langit."
+    },
+    {
+      "id": 97,
+      "word": "perayaan",
+      "sentence1": "Kami mengadakan perayaan besar untuk ulang tahunnya.",
+      "sentence2": "Perayaan berlangsung sepanjang malam."
+    },
+    {
+      "id": 98,
+      "word": "pusat",
+      "sentence1": "Central Park adalah tempat yang bagus untuk bersantai.",
+      "sentence2": "Masalah utama masih belum terpecahkan."
+    },
+    {
+      "id": 99,
+      "word": "pusat",
+      "sentence1": "Pusat perbelanjaan sangat sibuk pada akhir pekan.",
+      "sentence2": "Dia tinggal di pusat kota."
+    },
+    {
+      "id": 100,
+      "word": "upacara",
+      "sentence1": "Upacara wisuda akan diadakan pada bulan Juni.",
+      "sentence2": "Mereka melakukan upacara pernikahan tradisional."
+    },
+    {
+      "id": 101,
+      "word": "rantai",
+      "sentence1": "Sepeda itu terkunci dengan rantai.",
+      "sentence2": "Dia memakai rantai di lehernya."
+    },
+    {
+      "id": 102,
+      "word": "tantangan",
+      "sentence1": "Mendaki gunung itu adalah tantangan besar.",
+      "sentence2": "Dia suka tantangan yang bagus."
+    },
+    {
+      "id": 103,
+      "word": "juara",
+      "sentence1": "Dia adalah juara turnamen.",
+      "sentence2": "Dia menjadi juara setelah memenangkan pertandingan final."
+    },
+    {
+      "id": 104,
+      "word": "saluran",
+      "sentence1": "Aku menonton acara favoritku di saluran ini.",
+      "sentence2": "Saluran ini menyiarkan berita 24/7."
+    },
+    {
+      "id": 105,
+      "word": "pasal",
+      "sentence1": "Ini adalah bab pertama dari buku.",
+      "sentence2": "Setiap bab memiliki ringkasan di akhir."
+    },
+    {
+      "id": 106,
+      "word": "biaya",
+      "sentence1": "Ada biaya untuk parkir di sini.",
+      "sentence2": "Mereka akan menagihmu untuk layanan tambahan."
+    },
+    {
+      "id": 107,
+      "word": "murah",
+      "sentence1": "Kaos ini sangat murah.",
+      "sentence2": "Aku menemukan hotel murah untuk liburanku."
+    },
+    {
+      "id": 108,
+      "word": "menipu",
+      "sentence1": "Jangan curang di ujian.",
+      "sentence2": "Dia tertangkap selingkuh."
+    },
+    {
+      "id": 109,
+      "word": "ceria",
+      "sentence1": "Dia memiliki kepribadian yang ceria.",
+      "sentence2": "Musik yang ceria itu mengangkat semangat saya."
+    },
+    {
+      "id": 110,
+      "word": "bahan kimia",
+      "sentence1": "Air adalah senyawa kimia.",
+      "sentence2": "Reaksi kimia menghasilkan panas."
+    },
+    {
+      "id": 111,
+      "word": "dada",
+      "sentence1": "Dia punya tato di dadanya.",
+      "sentence2": "Kotak harta itu penuh dengan emas."
+    },
+    {
+      "id": 112,
+      "word": "masa kecil",
+      "sentence1": "Aku punya masa kecil yang bahagia.",
+      "sentence2": "Kenangan masa kecil sangat berharga."
+    },
+    {
+      "id": 113,
+      "word": "klaim",
+      "sentence1": "Dia membuat klaim tentang produk.",
+      "sentence2": "Klaimnya didukung oleh bukti."
+    },
+    {
+      "id": 114,
+      "word": "klausul",
+      "sentence1": "Ini adalah klausul hukum.",
+      "sentence2": "Kontrak memiliki klausa kerahasiaan."
+    },
+    {
+      "id": 115,
+      "word": "jelas",
+      "sentence1": "Instruksinya jelas.",
+      "sentence2": "Dia memiliki tujuan yang jelas untuk masa depan."
+    },
+    {
+      "id": 116,
+      "word": "klik",
+      "sentence1": "Silahkan klik linknya.",
+      "sentence2": "Aku mendengar suara klik."
+    },
+    {
+      "id": 117,
+      "word": "klien",
+      "sentence1": "Klien selalu benar.",
+      "sentence2": "Kita harus bertemu dengan klien."
+    },
+    {
+      "id": 118,
+      "word": "mendaki",
+      "sentence1": "Mereka berencana untuk mendaki gunung.",
+      "sentence2": "Dia suka memanjat pohon."
+    },
+    {
+      "id": 119,
+      "word": "dekat",
+      "sentence1": "Tolong tutup pintunya.",
+      "sentence2": "Toko itu dekat dengan rumahku."
+    },
+    {
+      "id": 120,
+      "word": "kain",
+      "sentence1": "Kain ini terbuat dari kapas.",
+      "sentence2": "Aku butuh sepotong kain untuk proyek ini."
+    },
+    {
+      "id": 121,
+      "word": "petunjuk",
+      "sentence1": "Aku punya petunjuk tentang misteri.",
+      "sentence2": "Detektif menemukan petunjuk penting."
+    },
+    {
+      "id": 122,
+      "word": "pelatih",
+      "sentence1": "Dia adalah pelatih sepak bola.",
+      "sentence2": "Pelatih memberi kami saran yang berharga."
+    },
+    {
+      "id": 123,
+      "word": "batubara",
+      "sentence1": "Kereta ini berjalan dengan batubara.",
+      "sentence2": "Mereka menemukan sebuah tambang batubara."
+    },
+    {
+      "id": 124,
+      "word": "koin",
+      "sentence1": "Aku menemukan koin di jalan.",
+      "sentence2": "Dia mengumpulkan koin langka."
+    },
+    {
+      "id": 125,
+      "word": "pengumpulan",
+      "sentence1": "Dia memiliki koleksi perangko.",
+      "sentence2": "Museum memiliki koleksi seni baru."
+    },
+    {
+      "id": 126,
+      "word": "berwarna",
+      "sentence1": "Aku suka pensil berwarna.",
+      "sentence2": "Dindingnya dicat dengan warna terang."
+    },
+    {
+      "id": 127,
+      "word": "gabungkan",
+      "sentence1": "Mari kita gabungkan usaha kita.",
+      "sentence2": "Resep ini menggabungkan rasa manis dan asam."
+    },
+    {
+      "id": 128,
+      "word": "komentar",
+      "sentence1": "Bisakah saya meninggalkan komentar?",
+      "sentence2": "Komentarnya sangat berwawasan."
+    },
+    {
+      "id": 129,
+      "word": "komersial",
+      "sentence1": "Ini adalah produk komersial.",
+      "sentence2": "Iklan itu sangat menghibur."
+    },
+    {
+      "id": 130,
+      "word": "melakukan",
+      "sentence1": "Aku berkomitmen untuk menyelesaikan proyek ini.",
+      "sentence2": "Dia berkomitmen untuk tujuan."
+    },
+    {
+      "id": 131,
+      "word": "komunikasi",
+      "sentence1": "Komunikasi yang baik adalah kunci.",
+      "sentence2": "Kita perlu meningkatkan komunikasi kita."
+    },
+    {
+      "id": 132,
+      "word": "perbandingan",
+      "sentence1": "Ini adalah perbandingan harga.",
+      "sentence2": "Dibandingkan dengan tahun lalu, penjualan telah meningkat."
+    },
+    {
+      "id": 133,
+      "word": "pesaing",
+      "sentence1": "Pesaing utama kita sangat kuat.",
+      "sentence2": "Kita perlu menganalisis pesaing kita."
+    },
+    {
+      "id": 134,
+      "word": "kompetitif",
+      "sentence1": "Ini adalah pasar yang kompetitif.",
+      "sentence2": "Dia sangat kompetitif dalam olahraga."
+    },
+    {
+      "id": 135,
+      "word": "keluhan",
+      "sentence1": "Aku punya keluhan tentang layanan.",
+      "sentence2": "Keluhan itu diselesaikan dengan cepat."
+    },
+    {
+      "id": 136,
+      "word": "kompleks",
+      "sentence1": "Ini adalah masalah yang kompleks.",
+      "sentence2": "Instruksinya terlalu rumit."
+    },
+    {
+      "id": 137,
+      "word": "konsentrasi",
+      "sentence1": "Aku harus berkonsentrasi pada pekerjaanku.",
+      "sentence2": "Dia merasa sulit berkonsentrasi."
+    },
+    {
+      "id": 138,
+      "word": "menyimpulkan",
+      "sentence1": "Kita bisa mengakhiri pertemuan sekarang.",
+      "sentence2": "Dia mengakhiri pidatonya dengan sebuah kutipan."
+    },
+    {
+      "id": 139,
+      "word": "kesimpulan",
+      "sentence1": "Apa kesimpulannya?",
+      "sentence2": "Kesimpulannya didasarkan pada bukti."
+    },
+    {
+      "id": 140,
+      "word": "percaya diri",
+      "sentence1": "Dia yakin dengan kemampuannya.",
+      "sentence2": "Dia berbicara dengan percaya diri."
+    },
+    {
+      "id": 141,
+      "word": "mengkonfirmasi",
+      "sentence1": "Bisakah kau konfirmasi janji temu?",
+      "sentence2": "Aku menerima email konfirmasi."
+    },
+    {
+      "id": 142,
+      "word": "bingung",
+      "sentence1": "Pertanyaan ini mungkin membingungkan beberapa orang.",
+      "sentence2": "Jangan membingungkan masalah ini."
+    },
+    {
+      "id": 143,
+      "word": "bingung",
+      "sentence1": "Dia bingung dengan instruksi.",
+      "sentence2": "Dia tampak bingung selama pertemuan."
+    },
+    {
+      "id": 144,
+      "word": "koneksi",
+      "sentence1": "Ada hubungan yang kuat antara mereka.",
+      "sentence2": "Koneksi internetnya lambat."
+    },
+    {
+      "id": 145,
+      "word": "akibatnya",
+      "sentence1": "Setiap tindakan memiliki konsekuensi.",
+      "sentence2": "Konsekuensi dari keputusan itu sangat serius."
+    },
+    {
+      "id": 146,
+      "word": "terdiri dari",
+      "sentence1": "Tim ini terdiri dari lima anggota.",
+      "sentence2": "Komite ini terdiri dari para ahli di bidang ini."
+    },
+    {
+      "id": 147,
+      "word": "mengkonsumsi",
+      "sentence1": "Kita perlu mengkonsumsi lebih sedikit energi.",
+      "sentence2": "Api membakar seluruh bangunan."
+    },
+    {
+      "id": 148,
+      "word": "konsumen",
+      "sentence1": "Konsumen selalu benar.",
+      "sentence2": "Kita perlu memahami perilaku konsumen."
+    },
+    {
+      "id": 149,
+      "word": "kontak",
+      "sentence1": "Tolong tetap berhubungan denganku.",
+      "sentence2": "Aku kehilangan kontak dengan teman-teman lama saya."
+    },
+    {
+      "id": 150,
+      "word": "wadah",
+      "sentence1": "Kontainer pengiriman penuh.",
+      "sentence2": "Kita perlu lebih banyak wadah untuk penyimpanan."
+    },
+    {
+      "id": 151,
+      "word": "isi",
+      "sentence1": "Isi buku ini menarik.",
+      "sentence2": "Silakan periksa isinya dengan hati-hati."
+    },
+    {
+      "id": 152,
+      "word": "terus menerus",
+      "sentence1": "Suara terus menerus menjengkelkan.",
+      "sentence2": "Dia terus mendapat dukungan dari keluarganya."
+    },
+    {
+      "id": 153,
+      "word": "kontras",
+      "sentence1": "Ada kontras antara kedua lukisan.",
+      "sentence2": "Berbeda dengan tahun lalu, penjualan telah meningkat."
+    },
+    {
+      "id": 154,
+      "word": "nyaman",
+      "sentence1": "Lokasi ini sangat nyaman.",
+      "sentence2": "Apakah ada waktu yang cocok untuk Anda?"
+    },
+    {
+      "id": 155,
+      "word": "meyakinkan",
+      "sentence1": "Aku harus meyakinkan dia untuk membantu kita.",
+      "sentence2": "Dia meyakinkanku untuk mencoba restoran baru."
+    },
+    {
+      "id": 156,
+      "word": "keren",
+      "sentence1": "Jaket itu sangat keren.",
+      "sentence2": "Dia punya gaya yang keren."
+    },
+    {
+      "id": 157,
+      "word": "kostum",
+      "sentence1": "Dia memakai kostum superhero.",
+      "sentence2": "Pesta kostum itu sangat menyenangkan."
+    },
+    {
+      "id": 158,
+      "word": "pondok",
+      "sentence1": "Mereka punya pondok di pegunungan.",
+      "sentence2": "Pondoknya sangat nyaman."
+    },
+    {
+      "id": 159,
+      "word": "kapas",
+      "sentence1": "Kemeja ini terbuat dari kapas.",
+      "sentence2": "Katun adalah bahan yang lembut."
+    },
+    {
+      "id": 160,
+      "word": "menghitung",
+      "sentence1": "Bisakah kau menghitung sampai sepuluh?",
+      "sentence2": "Aku bisa menghitung uangnya."
+    },
+    {
+      "id": 161,
+      "word": "pedesaan",
+      "sentence1": "Mereka tinggal di desa.",
+      "sentence2": "Pemandangan pedesaan indah di musim semi."
+    },
+    {
+      "id": 162,
+      "word": "pengadilan",
+      "sentence1": "Sidang dimulai.",
+      "sentence2": "Dia dibawa ke pengadilan untuk kejahatan itu."
+    },
+    {
+      "id": 163,
+      "word": "penutup",
+      "sentence1": "Tolong tutup meja dengan kain.",
+      "sentence2": "Salju menutupi tanah."
+    },
+    {
+      "id": 164,
+      "word": "tertutup",
+      "sentence1": "Buku itu tertutup debu.",
+      "sentence2": "Mobilnya ditutupi salju."
+    },
+    {
+      "id": 165,
+      "word": "krim",
+      "sentence1": "Aku suka menambahkan krim ke dalam kopi.",
+      "sentence2": "Dia mengoleskan krim pada kulitnya."
+    },
+    {
+      "id": 166,
+      "word": "kriminal",
+      "sentence1": "Penjahatnya ditangkap oleh polisi.",
+      "sentence2": "Dia punya catatan kriminal."
+    },
+    {
+      "id": 167,
+      "word": "kejam",
+      "sentence1": "Itu kejam untuk memperlakukan dia seperti itu.",
+      "sentence2": "Hukuman kejam itu mengejutkan semua orang."
+    },
+    {
+      "id": 168,
+      "word": "budaya",
+      "sentence1": "Perbedaan kebudayaan bisa jadi tantangan.",
+      "sentence2": "Dia belajar antropologi budaya."
+    },
+    {
+      "id": 169,
+      "word": "mata uang",
+      "sentence1": "Mata uang Jepang adalah yen.",
+      "sentence2": "Aku perlu menukar mata uang."
+    },
+    {
+      "id": 170,
+      "word": "saat ini",
+      "sentence1": "Situasi saat ini sulit.",
+      "sentence2": "Apa pekerjaan Anda saat ini?"
+    },
+    {
+      "id": 171,
+      "word": "saat ini",
+      "sentence1": "Aku sedang mengerjakan sebuah proyek.",
+      "sentence2": "Dia saat ini sedang belajar di luar negeri."
+    },
+    {
+      "id": 172,
+      "word": "tirai",
+      "sentence1": "Tirai itu biru.",
+      "sentence2": "Tolong tutup tirai."
+    },
+    {
+      "id": 173,
+      "word": "adat",
+      "sentence1": "Ini adalah desain khusus.",
+      "sentence2": "Mereka menawarkan solusi khusus."
+    },
+    {
+      "id": 174,
+      "word": "dipotong",
+      "sentence1": "Tolong potong kertasnya.",
+      "sentence2": "Dia memotong kue menjadi beberapa bagian."
+    },
+    {
+      "id": 175,
+      "word": "setiap hari",
+      "sentence1": "Aku membaca berita setiap hari.",
+      "sentence2": "Dia memiliki rutinitas sehari-hari."
+    },
+    {
+      "id": 176,
+      "word": "kerusakan",
+      "sentence1": "Badai menyebabkan kerusakan pada atap.",
+      "sentence2": "Kita perlu menilai kerusakan."
+    },
+    {
+      "id": 177,
+      "word": "kesepakatan",
+      "sentence1": "Mereka membuat kesepakatan untuk bekerja sama.",
+      "sentence2": "Kesepakatan itu menguntungkan kedua belah pihak."
+    },
+    {
+      "id": 178,
+      "word": "dekade",
+      "sentence1": "Satu dekade adalah sepuluh tahun.",
+      "sentence2": "Dekade terakhir telah melihat perubahan yang signifikan."
+    },
+    {
+      "id": 179,
+      "word": "menghiasi",
+      "sentence1": "Kami akan mendekorasi ruangan untuk pesta.",
+      "sentence2": "Dia suka menghias rumahnya."
+    },
+    {
+      "id": 180,
+      "word": "dalam",
+      "sentence1": "Danau ini sangat dalam.",
+      "sentence2": "Dia mengambil napas dalam sebelum menyelam."
+    },
+    {
+      "id": 181,
+      "word": "mendefinisikan",
+      "sentence1": "Dapatkah Anda mendefinisikan kata itu?",
+      "sentence2": "Sulit untuk mendefinisikan kebahagiaan."
+    },
+    {
+      "id": 182,
+      "word": "pasti",
+      "sentence1": "Ada jawaban pasti untuk pertanyaan itu.",
+      "sentence2": "Kita perlu rencana yang pasti."
+    },
+    {
+      "id": 183,
+      "word": "pengertian",
+      "sentence1": "Apa definisi dari kata ini?",
+      "sentence2": "Definisinya tidak jelas."
+    },
+    {
+      "id": 184,
+      "word": "memberikan",
+      "sentence1": "Aku akan mengirimkan paket besok.",
+      "sentence2": "Mereka menawarkan untuk mengirimkan makanan."
+    },
+    {
+      "id": 185,
+      "word": "keberangkatan",
+      "sentence1": "Waktu keberangkatan adalah jam 10 pagi.",
+      "sentence2": "Kami sedih tentang kepergiannya."
+    },
+    {
+      "id": 186,
+      "word": "meskipun",
+      "sentence1": "Meskipun hujan, kami pergi hiking.",
+      "sentence2": "Dia berhasil meskipun kesulitan."
+    },
+    {
+      "id": 187,
+      "word": "tujuan",
+      "sentence1": "Paris adalah tujuan wisata yang populer.",
+      "sentence2": "Apa tujuan perjalanan impianmu?"
+    },
+    {
+      "id": 188,
+      "word": "menentukan",
+      "sentence1": "Kita perlu menentukan penyebab masalah.",
+      "sentence2": "Tes akan membantu menentukan tingkat Anda."
+    },
+    {
+      "id": 189,
+      "word": "ditentukan",
+      "sentence1": "Dia bertekad untuk berhasil.",
+      "sentence2": "Ia tetap bertekad meskipun menghadapi tantangan."
+    },
+    {
+      "id": 190,
+      "word": "pembangunan",
+      "sentence1": "Perkembangan teknologi sangat cepat.",
+      "sentence2": "Kami fokus pada pengembangan pribadi."
+    },
+    {
+      "id": 191,
+      "word": "diagram",
+      "sentence1": "Silakan lihat diagram untuk klarifikasi.",
+      "sentence2": "Diagram menggambarkan prosesnya."
+    },
+    {
+      "id": 192,
+      "word": "berlian",
+      "sentence1": "Berlian ini sangat berharga.",
+      "sentence2": "Dia menerima cincin berlian."
+    },
+    {
+      "id": 193,
+      "word": "kesulitan",
+      "sentence1": "Dia menghadapi banyak kesulitan.",
+      "sentence2": "Kesulitan tugas itu tak terduga."
+    },
+    {
+      "id": 194,
+      "word": "langsung",
+      "sentence1": "Tolong beri saya jawaban langsung.",
+      "sentence2": "Jalan ini adalah rute langsung ke kota."
+    },
+    {
+      "id": 195,
+      "word": "langsung",
+      "sentence1": "Aku bicara langsung dengannya.",
+      "sentence2": "Informasi itu dikirim langsung kepadanya."
+    },
+    {
+      "id": 196,
+      "word": "kotoran",
+      "sentence1": "Kotoran pada sepatu Anda terlihat.",
+      "sentence2": "Tolong bersihkan kotoran dari lantai."
+    },
+    {
+      "id": 197,
+      "word": "kerugian",
+      "sentence1": "Kelemahan utamanya adalah biayanya.",
+      "sentence2": "Ada kelebihan dan kekurangan dari pendekatan ini."
+    },
+    {
+      "id": 198,
+      "word": "kecewa",
+      "sentence1": "Dia kecewa dengan hasilnya.",
+      "sentence2": "Aku merasa kecewa setelah film."
+    },
+    {
+      "id": 199,
+      "word": "mengecewakan",
+      "sentence1": "Penampilannya mengecewakan.",
+      "sentence2": "Sangat mengecewakan untuk tidak melihat kemajuan."
+    },
+    {
+      "id": 200,
+      "word": "diskon",
+      "sentence1": "Mereka menawarkan diskon pada produk.",
+      "sentence2": "Aku suka berbelanja saat musim liburan."
+    },
+    {
+      "id": 201,
+      "word": "tidak suka",
+      "sentence1": "Aku tidak suka suara keras.",
+      "sentence2": "Dia tidak suka makanan pedas."
+    },
+    {
+      "id": 202,
+      "word": "membagi",
+      "sentence1": "Kita perlu membagi tugas di antara tim.",
+      "sentence2": "Kue itu dibagi menjadi bagian yang sama."
+    },
+    {
+      "id": 203,
+      "word": "film dokumenter",
+      "sentence1": "Aku menonton sebuah film dokumenter yang menarik.",
+      "sentence2": "Film dokumenter ini mengeksplorasi perubahan iklim."
+    },
+    {
+      "id": 204,
+      "word": "menyumbangkan",
+      "sentence1": "Aku ingin menyumbang untuk amal.",
+      "sentence2": "Mereka mendorong orang untuk menyumbangkan darah."
+    },
+    {
+      "id": 205,
+      "word": "ganda",
+      "sentence1": "Bolehkah saya memiliki espresso ganda?",
+      "sentence2": "Harganya telah meningkat dua kali lipat dalam setahun terakhir."
+    },
+    {
+      "id": 206,
+      "word": "keraguan",
+      "sentence1": "Aku punya beberapa keraguan tentang kejujurannya.",
+      "sentence2": "Tidak ada keraguan bahwa dia berbakat."
+    },
+    {
+      "id": 207,
+      "word": "berpakaian",
+      "sentence1": "Dia mengenakan gaun yang indah.",
+      "sentence2": "Dia berpakaian bagus untuk acara itu."
+    },
+    {
+      "id": 208,
+      "word": "jatuh",
+      "sentence1": "Hati-hati jangan menjatuhkan gelasnya.",
+      "sentence2": "Suhu akan turun dalam semalam."
+    },
+    {
+      "id": 209,
+      "word": "drum",
+      "sentence1": "Dia bermain drum di band.",
+      "sentence2": "Suara drumnya keras."
+    },
+    {
+      "id": 210,
+      "word": "mabuk",
+      "sentence1": "Dia mabuk setelah pesta.",
+      "sentence2": "Jangan minum dan mengemudi saat mabuk."
+    },
+    {
+      "id": 211,
+      "word": "karena",
+      "sentence1": "Pembayarannya minggu depan.",
+      "sentence2": "Dia akan melahirkan pada bulan Mei."
+    },
+    {
+      "id": 212,
+      "word": "debu",
+      "sentence1": "Debu di rak tebal.",
+      "sentence2": "Tolong lap debu dari meja."
+    },
+    {
+      "id": 213,
+      "word": "tugas",
+      "sentence1": "Ini tugasmu untuk membantu orang lain.",
+      "sentence2": "Dia mengambil tugasnya dengan serius."
+    },
+    {
+      "id": 214,
+      "word": "gempa bumi",
+      "sentence1": "Gempa menyebabkan kerusakan yang signifikan.",
+      "sentence2": "Kami merasakan gempa dari jauh."
+    },
+    {
+      "id": 215,
+      "word": "timur",
+      "sentence1": "Bagian timur negara ini bergunung-gunung.",
+      "sentence2": "Mereka melakukan perjalanan ke pantai timur."
+    },
+    {
+      "id": 216,
+      "word": "ekonomi",
+      "sentence1": "Situasi ekonomi membaik.",
+      "sentence2": "Mereka membahas kebijakan ekonomi."
+    },
+    {
+      "id": 217,
+      "word": "ekonomi",
+      "sentence1": "Ekonomi terus tumbuh.",
+      "sentence2": "Ekonomi yang kuat menguntungkan semua orang."
+    },
+    {
+      "id": 218,
+      "word": "tepi",
+      "sentence1": "Berhati-hatilah dekat tepi tebing.",
+      "sentence2": "Pisau itu tajam."
+    },
+    {
+      "id": 219,
+      "word": "editor",
+      "sentence1": "Editor meninjau artikel sebelum dipublikasikan.",
+      "sentence2": "Dia bekerja sebagai editor majalah."
+    },
+    {
+      "id": 220,
+      "word": "mendidik",
+      "sentence1": "Sekolah bertujuan untuk mendidik siswa secara efektif.",
+      "sentence2": "Penting untuk mendidik masyarakat tentang masalah kesehatan."
+    },
+    {
+      "id": 221,
+      "word": "berpendidikan",
+      "sentence1": "Dia adalah seorang wanita berpendidikan dengan gelar.",
+      "sentence2": "Orang-orang yang berpendidikan seringkali memiliki prospek pekerjaan yang lebih baik."
+    },
+    {
+      "id": 222,
+      "word": "pendidikan",
+      "sentence1": "Film dokumenter itu sekaligus menghibur dan mendidik.",
+      "sentence2": "Program pendidikan sangat penting bagi perkembangan anak."
+    },
+    {
+      "id": 223,
+      "word": "efektif",
+      "sentence1": "Strategi pemasaran baru terbukti efektif.",
+      "sentence2": "Komunikasi yang efektif adalah kunci untuk hubungan yang sukses."
+    },
+    {
+      "id": 224,
+      "word": "secara efektif",
+      "sentence1": "Dia mengatur waktunya secara efektif untuk memenuhi tenggat waktu.",
+      "sentence2": "Tim bekerja sama secara efektif untuk memecahkan masalah."
+    },
+    {
+      "id": 225,
+      "word": "usaha",
+      "sentence1": "Dibutuhkan banyak usaha untuk menyelesaikan proyek ini.",
+      "sentence2": "Upaya untuk meningkatkan kemampuannya membuahkan hasil."
+    },
+    {
+      "id": 226,
+      "word": "pemilu",
+      "sentence1": "Pemilu akan diadakan bulan depan.",
+      "sentence2": "Jumlah pemilih sangat tinggi pada pemilu lalu."
+    },
+    {
+      "id": 227,
+      "word": "elemen",
+      "sentence1": "Air adalah unsur penting bagi semua makhluk hidup.",
+      "sentence2": "Unsur kunci dari rencana ini adalah kerja sama tim."
+    },
+    {
+      "id": 228,
+      "word": "malu",
+      "sentence1": "Dia merasa malu setelah lupa namanya.",
+      "sentence2": "Dia malu dengan kesalahannya."
+    },
+    {
+      "id": 229,
+      "word": "malu",
+      "sentence1": "Itu adalah saat yang memalukan bagi semua orang yang terlibat.",
+      "sentence2": "Situasi yang memalukan itu segera dilupakan."
+    },
+    {
+      "id": 230,
+      "word": "darurat",
+      "sentence1": "Hubungi 911 jika ada keadaan darurat.",
+      "sentence2": "Layanan darurat tiba dengan cepat."
+    },
+    {
+      "id": 231,
+      "word": "emosi",
+      "sentence1": "Dia mengekspresikan emosinya melalui seni.",
+      "sentence2": "Penting untuk memahami emosi Anda."
+    },
+    {
+      "id": 232,
+      "word": "pekerjaan",
+      "sentence1": "Tingkat pekerjaan telah meningkat tahun ini.",
+      "sentence2": "Dia mencari pekerjaan di bidangnya."
+    },
+    {
+      "id": 233,
+      "word": "kosong",
+      "sentence1": "Ruang itu kosong dan tenang.",
+      "sentence2": "Dia merasa kosong di dalam setelah kehilangan."
+    },
+    {
+      "id": 234,
+      "word": "mendorong",
+      "sentence1": "Guru mendorong siswa untuk mengajukan pertanyaan.",
+      "sentence2": "Orang tua harus mendorong anak-anak mereka untuk membaca."
+    },
+    {
+      "id": 235,
+      "word": "musuh",
+      "sentence1": "Mereka dulunya teman, tapi sekarang mereka musuh.",
+      "sentence2": "Pasukan musuh dikalahkan dalam pertempuran."
+    },
+    {
+      "id": 236,
+      "word": "bertunangan",
+      "sentence1": "Mereka bertunangan dan akan menikah tahun depan.",
+      "sentence2": "Dia terlibat dalam percakapan dengan temannya."
+    },
+    {
+      "id": 237,
+      "word": "teknik",
+      "sentence1": "Dia belajar teknik di universitas.",
+      "sentence2": "Teknik adalah bidang yang menantang."
+    },
+    {
+      "id": 238,
+      "word": "menghibur",
+      "sentence1": "Pekerjaan badut adalah menghibur anak-anak.",
+      "sentence2": "Kita harus menemukan cara untuk menghibur tamu kita."
+    },
+    {
+      "id": 239,
+      "word": "hiburan",
+      "sentence1": "Kota ini menawarkan berbagai pilihan hiburan.",
+      "sentence2": "Dia bekerja di industri hiburan."
+    },
+    {
+      "id": 240,
+      "word": "pintu masuk",
+      "sentence1": "Pintu masuk ke museum berada di sebelah kiri.",
+      "sentence2": "Dia membuat sebuah pintu masuk besar di pesta."
+    },
+    {
+      "id": 241,
+      "word": "entri",
+      "sentence1": "Masuk ke acara ini gratis.",
+      "sentence2": "Tolong simpan tiket masukmu dengan aman."
+    },
+    {
+      "id": 242,
+      "word": "lingkungan",
+      "sentence1": "Masalah lingkungan menjadi semakin penting.",
+      "sentence2": "Organisasi ini berfokus pada perlindungan lingkungan."
+    },
+    {
+      "id": 243,
+      "word": "episode",
+      "sentence1": "Episode terakhir dari seri ini sangat mendebarkan.",
+      "sentence2": "Setiap episode mengeksplorasi tema yang berbeda."
+    },
+    {
+      "id": 244,
+      "word": "sama",
+      "sentence1": "Semua orang harus diperlakukan sama.",
+      "sentence2": "Hukum menjamin hak yang sama bagi semua warga negara."
+    },
+    {
+      "id": 245,
+      "word": "sama-sama",
+      "sentence1": "Hadiah akan diberikan secara sama kepada semua pemenang.",
+      "sentence2": "Mereka harus diperlakukan sama, terlepas dari latar belakang mereka."
+    },
+    {
+      "id": 246,
+      "word": "melarikan diri",
+      "sentence1": "Satu-satunya jalan keluar dari kenyataan adalah melalui imajinasi.",
+      "sentence2": "Dia merencanakan pelariannya dengan hati-hati."
+    },
+    {
+      "id": 247,
+      "word": "penting",
+      "sentence1": "Air sangat penting untuk kehidupan.",
+      "sentence2": "Sangat penting untuk mengikuti instruksi."
+    },
+    {
+      "id": 248,
+      "word": "akhirnya",
+      "sentence1": "Akhirnya, mereka menemukan solusi untuk masalah itu.",
+      "sentence2": "Dia akhirnya memutuskan untuk menerima tawaran itu."
+    },
+    {
+      "id": 249,
+      "word": "memeriksa",
+      "sentence1": "Dokter akan memeriksa Anda sekarang.",
+      "sentence2": "Penting untuk memeriksa semua bukti."
+    },
+    {
+      "id": 250,
+      "word": "kecuali",
+      "sentence1": "Semua orang diundang kecuali John.",
+      "sentence2": "Aku suka semua buah kecuali pisang."
+    },
+    {
+      "id": 251,
+      "word": "pertukaran",
+      "sentence1": "Mereka bertukar hadiah di pesta itu.",
+      "sentence2": "Pertukaran ide penting untuk kemajuan."
+    },
+    {
+      "id": 252,
+      "word": "kegembiraan",
+      "sentence1": "Kegembiraan di udara terasa.",
+      "sentence2": "Dia tidak bisa menyembunyikan kegembiraannya tentang perjalanan."
+    },
+    {
+      "id": 253,
+      "word": "pameran",
+      "sentence1": "Pameran seni itu menarik banyak pengunjung.",
+      "sentence2": "Dia sedang mempersiapkan pameran solo pertamanya."
+    },
+    {
+      "id": 254,
+      "word": "memperluas",
+      "sentence1": "Perusahaan berencana untuk memperluas operasinya di luar negeri.",
+      "sentence2": "Kita perlu memperluas lini produk kita."
+    },
+    {
+      "id": 255,
+      "word": "yang diharapkan",
+      "sentence1": "Hasilnya lebih baik dari yang diharapkan.",
+      "sentence2": "Dia adalah pemenang yang diharapkan dari kompetisi."
+    },
+    {
+      "id": 256,
+      "word": "ekspedisi",
+      "sentence1": "Ekspedisi ke Kutub Selatan berhasil.",
+      "sentence2": "Mereka mempersiapkan ekspedisi selama berbulan-bulan."
+    },
+    {
+      "id": 257,
+      "word": "pengalaman",
+      "sentence1": "Dia punya banyak pengalaman dalam pemasaran.",
+      "sentence2": "Perjalanan ke luar negeri adalah pengalaman berharga baginya."
+    },
+    {
+      "id": 258,
+      "word": "berpengalaman",
+      "sentence1": "Dia adalah seorang guru yang berpengalaman.",
+      "sentence2": "Tim membutuhkan pemain berpengalaman."
+    },
+    {
+      "id": 259,
+      "word": "percobaan",
+      "sentence1": "Para ilmuwan melakukan percobaan.",
+      "sentence2": "Eksperimen itu menghasilkan hasil yang menarik."
+    },
+    {
+      "id": 260,
+      "word": "meledak",
+      "sentence1": "Kembang api akan meledak pada tengah malam.",
+      "sentence2": "Balon bisa meledak jika kamu terlalu membengkakkannya."
+    },
+    {
+      "id": 261,
+      "word": "menjelajahi",
+      "sentence1": "Mereka berencana untuk menjelajahi gua.",
+      "sentence2": "Dia suka menjelajahi tempat baru."
+    },
+    {
+      "id": 262,
+      "word": "ledakan",
+      "sentence1": "Ledakan itu terdengar dari jauh.",
+      "sentence2": "Mereka menyelidiki penyebab ledakan itu."
+    },
+    {
+      "id": 263,
+      "word": "ekspor",
+      "sentence1": "Negara ini mengekspor minyak ke negara-negara lain.",
+      "sentence2": "Mereka perlu menemukan pasar baru untuk mengekspor produk mereka."
+    },
+    {
+      "id": 264,
+      "word": "tambahan",
+      "sentence1": "Anda akan membutuhkan waktu tambahan untuk menyelesaikan proyek.",
+      "sentence2": "Dia membawa makanan tambahan untuk perjalanan."
+    },
+    {
+      "id": 265,
+      "word": "wajah",
+      "sentence1": "Dia berbalik untuk menghadapi kerumunan.",
+      "sentence2": "Dia tidak tahan untuk menghadapinya setelah apa yang terjadi."
+    },
+    {
+      "id": 266,
+      "word": "cukup",
+      "sentence1": "Tesnya cukup mudah.",
+      "sentence2": "Dia cukup yakin dengan keputusannya."
+    },
+    {
+      "id": 267,
+      "word": "akrab",
+      "sentence1": "Tempat ini terlihat akrab.",
+      "sentence2": "Aku tidak akrab dengan konsep itu."
+    },
+    {
+      "id": 268,
+      "word": "mewah",
+      "sentence1": "Dia mengenakan gaun mewah ke pesta.",
+      "sentence2": "Mereka menginap di hotel mewah."
+    },
+    {
+      "id": 269,
+      "word": "jauh",
+      "sentence1": "Toko itu jauh dari sini.",
+      "sentence2": "Dia tinggal jauh di desa."
+    },
+    {
+      "id": 270,
+      "word": "menarik",
+      "sentence1": "Film dokumenter itu menarik.",
+      "sentence2": "Dia punya cerita menarik untuk diceritakan."
+    },
+    {
+      "id": 271,
+      "word": "modis",
+      "sentence1": "Dia selalu memakai pakaian modis.",
+      "sentence2": "Warna musim ini sangat modis."
+    },
+    {
+      "id": 272,
+      "word": "mengikat",
+      "sentence1": "Tolong ikat sabuk pengamanmu.",
+      "sentence2": "Dia menggunakan klip untuk mengikat kertas bersama-sama."
+    },
+    {
+      "id": 273,
+      "word": "mendukung",
+      "sentence1": "Bisakah kau membantuku?",
+      "sentence2": "Dia mendukung kebijakan baru."
+    },
+    {
+      "id": 274,
+      "word": "takut",
+      "sentence1": "Dia takut ketinggian.",
+      "sentence2": "Takut gagal bisa melumpuhkan."
+    },
+    {
+      "id": 275,
+      "word": "fitur",
+      "sentence1": "Ponsel baru ini memiliki beberapa fitur menarik.",
+      "sentence2": "Salah satu fitur utamanya adalah kameranya."
+    },
+    {
+      "id": 276,
+      "word": "pagar",
+      "sentence1": "Mereka membangun pagar di sekitar taman.",
+      "sentence2": "Pagar itu perlu dicat."
+    },
+    {
+      "id": 277,
+      "word": "berkelahi",
+      "sentence1": "Pertempuran di daerah ini telah meningkat.",
+      "sentence2": "Mereka berjuang untuk hak-hak mereka."
+    },
+    {
+      "id": 278,
+      "word": "berkas",
+      "sentence1": "Tolong simpan berkasnya sebelum tutup.",
+      "sentence2": "Aku perlu mengatur file-file saya."
+    },
+    {
+      "id": 279,
+      "word": "keuangan",
+      "sentence1": "Perusahaan ini dalam posisi keuangan yang kuat.",
+      "sentence2": "Mereka menawarkan bantuan keuangan untuk siswa."
+    },
+    {
+      "id": 280,
+      "word": "api",
+      "sentence1": "Api menyebar dengan cepat ke seluruh hutan.",
+      "sentence2": "Petugas pemadam kebakaran bekerja untuk mengendalikan api."
+    },
+    {
+      "id": 281,
+      "word": "kebugaran",
+      "sentence1": "Dia fokus pada tujuan kebugaran.",
+      "sentence2": "Olahraga teratur penting untuk kebugaran."
+    },
+    {
+      "id": 282,
+      "word": "tetap",
+      "sentence1": "Harga tetap tidak dapat dinegosiasikan.",
+      "sentence2": "Dia punya jadwal tetap setiap minggu."
+    },
+    {
+      "id": 283,
+      "word": "bendera",
+      "sentence1": "Bendera berkibar di angin.",
+      "sentence2": "Mereka mengangkat bendera untuk merayakannya."
+    },
+    {
+      "id": 284,
+      "word": "banjir",
+      "sentence1": "Banjir menyebabkan kerusakan yang signifikan.",
+      "sentence2": "Mereka bekerja untuk mencegah banjir di masa depan."
+    },
+    {
+      "id": 285,
+      "word": "tepung",
+      "sentence1": "Dia butuh tepung untuk membuat roti.",
+      "sentence2": "Resepnya membutuhkan dua cangkir tepung."
+    },
+    {
+      "id": 286,
+      "word": "aliran",
+      "sentence1": "Aliran sungai sangat kuat.",
+      "sentence2": "Kita perlu meningkatkan aliran informasi."
+    },
+    {
+      "id": 287,
+      "word": "melipat",
+      "sentence1": "Tolong lipat kertas itu menjadi dua.",
+      "sentence2": "Dia tahu cara melipat seprai yang sudah dipasang."
+    },
+    {
+      "id": 288,
+      "word": "rakyat",
+      "sentence1": "Musik rakyat sangat populer di daerah ini.",
+      "sentence2": "Festival ini merayakan tradisi rakyat."
+    },
+    {
+      "id": 289,
+      "word": "mengikuti",
+      "sentence1": "Hari berikutnya cerah.",
+      "sentence2": "Dia membuat pengikut setia."
+    },
+    {
+      "id": 290,
+      "word": "kekuatan",
+      "sentence1": "Kekuatan ledakan itu sangat besar.",
+      "sentence2": "Mereka menggunakan semua kekuatan mereka untuk mendorong mobil."
+    },
+    {
+      "id": 291,
+      "word": "selamanya",
+      "sentence1": "Aku akan mencintaimu selamanya.",
+      "sentence2": "Saat ini akan terukir dalam ingatanku selamanya."
+    },
+    {
+      "id": 292,
+      "word": "bingkai",
+      "sentence1": "Dia membeli bingkai baru untuk foto itu.",
+      "sentence2": "Bingkai itu terbuat dari kayu solid."
+    },
+    {
+      "id": 293,
+      "word": "membekukan",
+      "sentence1": "Air akan membeku jika suhu turun.",
+      "sentence2": "Aku lupa untuk membekukan sisa makanan."
+    },
+    {
+      "id": 294,
+      "word": "sering",
+      "sentence1": "Dia sering bepergian untuk bekerja.",
+      "sentence2": "Bus ini sering berangkat di siang hari."
+    },
+    {
+      "id": 295,
+      "word": "persahabatan",
+      "sentence1": "Persahabatan mereka telah berlangsung bertahun-tahun.",
+      "sentence2": "Dia menghargai persahabatan dengan dia."
+    },
+    {
+      "id": 296,
+      "word": "takut",
+      "sentence1": "Suara kerasnya mungkin membuat anak-anak takut.",
+      "sentence2": "Dia tidak bermaksud menakutimu."
+    },
+    {
+      "id": 297,
+      "word": "takut",
+      "sentence1": "Dia takut dengan suara tiba-tiba.",
+      "sentence2": "Kucing yang ketakutan itu bersembunyi di bawah tempat tidur."
+    },
+    {
+      "id": 298,
+      "word": "menakutkan",
+      "sentence1": "Film itu begitu menakutkan sehingga aku tidak bisa tidur.",
+      "sentence2": "Dia memiliki kemampuan menakutkan untuk memprediksi masa depan."
+    },
+    {
+      "id": 299,
+      "word": "beku",
+      "sentence1": "Danau ini beku di musim dingin.",
+      "sentence2": "Dia menemukan pizza beku di freezer."
+    },
+    {
+      "id": 300,
+      "word": "goreng",
+      "sentence1": "Aku suka menggoreng sayuran dalam minyak zaitun.",
+      "sentence2": "Anda harus menggoreng kentang sampai mereka coklat keemasan."
+    },
+    {
+      "id": 301,
+      "word": "bahan bakar",
+      "sentence1": "Mobil ini berjalan dengan bahan bakar diesel.",
+      "sentence2": "Kita harus menemukan sumber bahan bakar untuk generator."
+    },
+    {
+      "id": 302,
+      "word": "fungsi",
+      "sentence1": "Fungsi utama jantung adalah memompa darah.",
+      "sentence2": "Tombol ini memiliki fungsi tertentu dalam perangkat lunak."
+    },
+    {
+      "id": 303,
+      "word": "bulu",
+      "sentence1": "Mantelnya terbuat dari bulu asli.",
+      "sentence2": "Beberapa hewan memiliki bulu tebal untuk tetap hangat."
+    },
+    {
+      "id": 304,
+      "word": "lebih lanjut",
+      "sentence1": "Kita perlu menyelidiki masalah ini lebih lanjut.",
+      "sentence2": "Bisakah Anda memberikan rincian lebih lanjut tentang proyek ini?"
+    },
+    {
+      "id": 305,
+      "word": "garasi",
+      "sentence1": "Dia parkir mobilnya di garasi.",
+      "sentence2": "Garasi penuh dengan alat-alat tua."
+    },
+    {
+      "id": 306,
+      "word": "berkumpul",
+      "sentence1": "Mari kita kumpulkan semua bahan yang kita butuhkan.",
+      "sentence2": "Dia suka mengumpulkan bunga di musim semi."
+    },
+    {
+      "id": 307,
+      "word": "umumnya",
+      "sentence1": "Aku biasanya bangun pagi.",
+      "sentence2": "Cuaca pada musim gugur umumnya ringan."
+    },
+    {
+      "id": 308,
+      "word": "generasi",
+      "sentence1": "Generasi ini lebih paham teknologi.",
+      "sentence2": "Setiap generasi memiliki tantangan tersendiri."
+    },
+    {
+      "id": 309,
+      "word": "murah hati",
+      "sentence1": "Dia sangat murah hati dengan waktunya.",
+      "sentence2": "Sumbangan murah hati itu membantu banyak orang."
+    },
+    {
+      "id": 310,
+      "word": "lembut",
+      "sentence1": "Dia memiliki cara yang lembut.",
+      "sentence2": "Angin yang lembut menyegarkan."
+    },
+    {
+      "id": 311,
+      "word": "tuan-tuan",
+      "sentence1": "Dia adalah seorang pria sejati.",
+      "sentence2": "Pria itu membuka pintu untuknya."
+    },
+    {
+      "id": 312,
+      "word": "hantu",
+      "sentence1": "Hantu itu muncul di tengah malam.",
+      "sentence2": "Dia percaya pada hantu dan roh."
+    },
+    {
+      "id": 313,
+      "word": "raksasa",
+      "sentence1": "Pohon raksasa itu menjulang tinggi di atas hutan.",
+      "sentence2": "Dia memiliki koleksi perangko yang besar."
+    },
+    {
+      "id": 314,
+      "word": "senang",
+      "sentence1": "Aku senang melihatmu lagi.",
+      "sentence2": "Dia senang mendengar kabar baik itu."
+    },
+    {
+      "id": 315,
+      "word": "global",
+      "sentence1": "Perubahan iklim adalah masalah global.",
+      "sentence2": "Kita perlu solusi global untuk masalah ini."
+    },
+    {
+      "id": 316,
+      "word": "sarung tangan",
+      "sentence1": "Dia memakai sarung tangannya sebelum pergi ke luar.",
+      "sentence2": "Sarung tangan ini terbuat dari wol hangat."
+    },
+    {
+      "id": 317,
+      "word": "pergilah",
+      "sentence1": "Aku harus pergi ke toko.",
+      "sentence2": "Mari kita jalan-jalan."
+    },
+    {
+      "id": 318,
+      "word": "barang-barang",
+      "sentence1": "Toko ini menjual berbagai macam barang.",
+      "sentence2": "Kita harus mengangkut barang ini ke gudang."
+    },
+    {
+      "id": 319,
+      "word": "kelas",
+      "sentence1": "Dia mendapat nilai tinggi dalam ujian.",
+      "sentence2": "Guru akan menilai makalah akhir pekan ini."
+    },
+    {
+      "id": 320,
+      "word": "lulusan",
+      "sentence1": "Aku akan lulus dari universitas tahun depan.",
+      "sentence2": "Dia bangga lulus dengan kehormatan."
+    },
+    {
+      "id": 321,
+      "word": "biji-bijian",
+      "sentence1": "Gandum adalah biji-bijian biasa yang digunakan untuk roti.",
+      "sentence2": "Petani menanam tanaman gandum baru musim ini."
+    },
+    {
+      "id": 322,
+      "word": "berterima kasih",
+      "sentence1": "Aku berterima kasih atas bantuanmu.",
+      "sentence2": "Dia merasa bersyukur atas dukungan teman-temannya."
+    },
+    {
+      "id": 323,
+      "word": "pertumbuhan",
+      "sentence1": "Tanaman ini menunjukkan pertumbuhan yang signifikan musim semi ini.",
+      "sentence2": "Pertumbuhan ekonomi sangat penting untuk pembangunan."
+    },
+    {
+      "id": 324,
+      "word": "penjaga",
+      "sentence1": "Penjaga keamanan sedang mengawasi pintu masuk.",
+      "sentence2": "Kita harus menjaga privasi online kita."
+    },
+    {
+      "id": 325,
+      "word": "bersalah",
+      "sentence1": "Dia merasa bersalah karena tidak membantu.",
+      "sentence2": "Putusan bersalah telah diumumkan."
+    },
+    {
+      "id": 326,
+      "word": "tangan",
+      "sentence1": "Dia mengangkat tangannya untuk mengajukan pertanyaan.",
+      "sentence2": "Dia berjabat tangan dengan semua orang."
+    },
+    {
+      "id": 327,
+      "word": "menggantung",
+      "sentence1": "Mereka memutuskan untuk menggantung gambar itu di dinding.",
+      "sentence2": "Jangan lupa untuk menggantung mantel Anda."
+    },
+    {
+      "id": 328,
+      "word": "kebahagiaan",
+      "sentence1": "Kebahagiaan adalah kunci untuk kehidupan yang memuaskan.",
+      "sentence2": "Dia memancarkan kebahagiaan kemanapun dia pergi."
+    },
+    {
+      "id": 329,
+      "word": "hampir tidak",
+      "sentence1": "Aku hampir tidak bisa mendengarmu.",
+      "sentence2": "Dia hampir tidak pernah keluar."
+    },
+    {
+      "id": 330,
+      "word": "benci",
+      "sentence1": "Aku benci antri.",
+      "sentence2": "Dia membenci ketidakadilan."
+    },
+    {
+      "id": 331,
+      "word": "kepala",
+      "sentence1": "Dia mengangguk setuju.",
+      "sentence2": "Dia mengangkat kepalanya."
+    },
+    {
+      "id": 332,
+      "word": "judul",
+      "sentence1": "Judulnya menarik perhatianku.",
+      "sentence2": "Dia menulis berita utama untuk sebuah surat kabar."
+    },
+    {
+      "id": 333,
+      "word": "pemanasan",
+      "sentence1": "Sistem pemanas tidak berfungsi.",
+      "sentence2": "Kita harus memperbaiki pemanas sebelum musim dingin."
+    },
+    {
+      "id": 334,
+      "word": "sangat",
+      "sentence1": "Hujan deras sepanjang malam.",
+      "sentence2": "Dia bernapas berat setelah latihan."
+    },
+    {
+      "id": 335,
+      "word": "helikopter",
+      "sentence1": "Helikopter terbang di atas kota.",
+      "sentence2": "Kami mengambil tur helikopter di pulau itu."
+    },
+    {
+      "id": 336,
+      "word": "menyoroti",
+      "sentence1": "Silakan sorot poin-poin penting.",
+      "sentence2": "Guru menggunakan penanda untuk menyoroti teks."
+    },
+    {
+      "id": 337,
+      "word": "sangat",
+      "sentence1": "Dia sangat terampil dalam profesinya.",
+      "sentence2": "Film ini sangat dipuji oleh para kritikus."
+    },
+    {
+      "id": 338,
+      "word": "menyewa",
+      "sentence1": "Kita perlu mempekerjakan lebih banyak staf.",
+      "sentence2": "Dia dipekerjakan sebagai manajer proyek."
+    },
+    {
+      "id": 339,
+      "word": "sejarah",
+      "sentence1": "Penandatanganan perjanjian itu adalah peristiwa bersejarah.",
+      "sentence2": "Dia mengunjungi banyak situs bersejarah di kota."
+    },
+    {
+      "id": 340,
+      "word": "sejarah",
+      "sentence1": "Museum ini memiliki koleksi artefak sejarah.",
+      "sentence2": "Mereka mempelajari konteks sejarah novel."
+    },
+    {
+      "id": 341,
+      "word": "jujur",
+      "sentence1": "Penting untuk jujur dalam hubungan Anda.",
+      "sentence2": "Dia memberikan jawaban jujur atas pertanyaan itu."
+    },
+    {
+      "id": 342,
+      "word": "mengerikan",
+      "sentence1": "Film itu begitu mengerikan sehingga aku tidak bisa menontonnya.",
+      "sentence2": "Dia mengalami pengalaman mengerikan selama perjalanan."
+    },
+    {
+      "id": 343,
+      "word": "mengerikan",
+      "sentence1": "Film horor itu membuatku tertekan.",
+      "sentence2": "Dia suka membaca cerita horor."
+    },
+    {
+      "id": 344,
+      "word": "tuan rumah",
+      "sentence1": "Mereka akan menyelenggarakan acara di rumah mereka.",
+      "sentence2": "Dia adalah tuan rumah yang hebat untuk pesta makan malam."
+    },
+    {
+      "id": 345,
+      "word": "berburu",
+      "sentence1": "Mereka pergi berburu rusa.",
+      "sentence2": "Dia suka berburu di pegunungan."
+    },
+    {
+      "id": 346,
+      "word": "badai",
+      "sentence1": "Badai itu menyebabkan kerusakan parah di pantai.",
+      "sentence2": "Mereka mengevakuasi daerah itu sebelum badai melanda."
+    },
+    {
+      "id": 347,
+      "word": "cepatlah",
+      "sentence1": "Kau harus cepat jika kau ingin menaiki bus.",
+      "sentence2": "Dia selalu terburu-buru di pagi hari."
+    },
+    {
+      "id": 348,
+      "word": "identitas",
+      "sentence1": "Identitas Anda dibentuk oleh pengalaman Anda.",
+      "sentence2": "Dia berjuang dengan identitas budaya."
+    },
+    {
+      "id": 349,
+      "word": "mengabaikan",
+      "sentence1": "Sangat mudah untuk mengabaikan masalahnya.",
+      "sentence2": "Dia memilih untuk mengabaikan tanda-tanda peringatan."
+    },
+    {
+      "id": 350,
+      "word": "ilegal",
+      "sentence1": "Ini ilegal untuk parkir di sini.",
+      "sentence2": "Mereka tertangkap menyelundupkan barang ilegal."
+    },
+    {
+      "id": 351,
+      "word": "imajiner",
+      "sentence1": "Dia punya teman khayalan.",
+      "sentence2": "Mereka menciptakan dunia imajiner dalam cerita mereka."
+    },
+    {
+      "id": 352,
+      "word": "segera",
+      "sentence1": "Kita harus mengambil tindakan segera.",
+      "sentence2": "Situasi ini membutuhkan perhatian segera."
+    },
+    {
+      "id": 353,
+      "word": "imigran",
+      "sentence1": "Kota ini memiliki populasi imigran yang besar.",
+      "sentence2": "Banyak imigran datang untuk mencari peluang yang lebih baik."
+    },
+    {
+      "id": 354,
+      "word": "dampak",
+      "sentence1": "Dampak dari kebijakan baru masih belum diketahui.",
+      "sentence2": "Dampak lingkungan dari proyek ini dinilai."
+    },
+    {
+      "id": 355,
+      "word": "impor",
+      "sentence1": "Negara ini bergantung pada impor minyak.",
+      "sentence2": "Mereka memutuskan untuk mengimpor barang dari luar negeri."
+    },
+    {
+      "id": 356,
+      "word": "pentingnya",
+      "sentence1": "Pentingnya pendidikan tidak bisa dilebih-lebihkan.",
+      "sentence2": "Dia mengerti pentingnya kerja keras."
+    },
+    {
+      "id": 357,
+      "word": "kesan",
+      "sentence1": "Dia membuat kesan yang kuat selama wawancara.",
+      "sentence2": "Kesan pertamanya tentang kota itu positif."
+    },
+    {
+      "id": 358,
+      "word": "mengesankan",
+      "sentence1": "Penampilannya sungguh mengesankan.",
+      "sentence2": "Dia memiliki resume yang mengesankan."
+    },
+    {
+      "id": 359,
+      "word": "peningkatan",
+      "sentence1": "Ada peningkatan yang signifikan dalam nilainya.",
+      "sentence2": "Perusahaan sedang mencari cara untuk membuat perbaikan."
+    },
+    {
+      "id": 360,
+      "word": "luar biasa",
+      "sentence1": "Dia sangat berbakat.",
+      "sentence2": "Pemandangan dari atas sangat indah."
+    },
+    {
+      "id": 361,
+      "word": "memang",
+      "sentence1": "Itu memang prestasi yang luar biasa.",
+      "sentence2": "Dia memang kandidat terbaik untuk pekerjaan itu."
+    },
+    {
+      "id": 362,
+      "word": "menunjukkan",
+      "sentence1": "Hasilnya menunjukkan perlunya penelitian lebih lanjut.",
+      "sentence2": "Mohon tunjukkan preferensi Anda pada formulir."
+    },
+    {
+      "id": 363,
+      "word": "tidak langsung",
+      "sentence1": "Komentar tidak langsungnya sulit untuk ditafsirkan.",
+      "sentence2": "Dia mengambil rute tidak langsung untuk menghindari lalu lintas."
+    },
+    {
+      "id": 364,
+      "word": "dalam ruangan",
+      "sentence1": "Tanaman dalam ruangan dapat meningkatkan kualitas udara.",
+      "sentence2": "Kami memutuskan untuk mengadakan pesta di dalam ruangan."
+    },
+    {
+      "id": 365,
+      "word": "dalam ruangan",
+      "sentence1": "Ini terlalu dingin untuk bermain di luar, mari kita tinggal di dalam rumah.",
+      "sentence2": "Anak-anak bermain di dalam rumah hari ini."
+    },
+    {
+      "id": 366,
+      "word": "pengaruh",
+      "sentence1": "Ucapannya sangat berpengaruh pada hadirin.",
+      "sentence2": "Media sosial dapat mempengaruhi opini publik."
+    },
+    {
+      "id": 367,
+      "word": "bahan",
+      "sentence1": "Bahan utama dalam resep ini adalah ayam.",
+      "sentence2": "Pastikan untuk memeriksa daftar bahan untuk alergen."
+    },
+    {
+      "id": 368,
+      "word": "melukai",
+      "sentence1": "Dia tidak bermaksud melukai siapa pun selama pertandingan.",
+      "sentence2": "Dia terluka dalam kecelakaan mobil."
+    },
+    {
+      "id": 369,
+      "word": "terluka",
+      "sentence1": "Yang terluka dibawa ke rumah sakit.",
+      "sentence2": "Dia masih pulih dari lukanya."
+    },
+    {
+      "id": 370,
+      "word": "tidak bersalah",
+      "sentence1": "Orang yang tidak bersalah itu dibebaskan dari penjara.",
+      "sentence2": "Dia memiliki ekspresi tidak bersalah di wajahnya."
+    },
+    {
+      "id": 371,
+      "word": "kecerdasan",
+      "sentence1": "Kecerdasan buatan adalah bidang yang berkembang pesat.",
+      "sentence2": "Dia memiliki tingkat kecerdasan emosional yang tinggi."
+    },
+    {
+      "id": 372,
+      "word": "maksud",
+      "sentence1": "Aku berniat menyelesaikan PR-ku sebelum makan malam.",
+      "sentence2": "Mereka tidak berniat untuk menyakiti."
+    },
+    {
+      "id": 373,
+      "word": "niat",
+      "sentence1": "Niat saya adalah untuk membantu Anda berhasil.",
+      "sentence2": "Dia bertindak dengan niat baik."
+    },
+    {
+      "id": 374,
+      "word": "berinvestasi",
+      "sentence1": "Mereka berencana untuk berinvestasi dalam teknologi baru.",
+      "sentence2": "Dia telah menginvestasikan banyak waktu untuk pendidikan."
+    },
+    {
+      "id": 375,
+      "word": "menyelidiki",
+      "sentence1": "Polisi akan menyelidiki kejahatan itu.",
+      "sentence2": "Kita perlu menyelidiki penyebab masalah ini."
+    },
+    {
+      "id": 376,
+      "word": "terlibat",
+      "sentence1": "Dia terlibat dalam proyek ini sejak awal.",
+      "sentence2": "Banyak orang terlibat dalam proses pengambilan keputusan."
+    },
+    {
+      "id": 377,
+      "word": "besi",
+      "sentence1": "Besi adalah mineral penting bagi tubuh.",
+      "sentence2": "Gerbangnya terbuat dari besi."
+    },
+    {
+      "id": 378,
+      "word": "masalah",
+      "sentence1": "Masalah utamanya adalah kurangnya dana.",
+      "sentence2": "Kita harus mengatasi masalah ini secepat mungkin."
+    },
+    {
+      "id": 379,
+      "word": "jurnal",
+      "sentence1": "Dia menulis untuk jurnal ilmiah.",
+      "sentence2": "Jurnal ini menerbitkan penelitian baru setiap bulan."
+    },
+    {
+      "id": 380,
+      "word": "hakim",
+      "sentence1": "Tidak adil untuk menilai seseorang tanpa mengetahui fakta.",
+      "sentence2": "Hakim akan mengumumkan putusan besok."
+    },
+    {
+      "id": 381,
+      "word": "bersemangat",
+      "sentence1": "Dia sangat tertarik pada seni.",
+      "sentence2": "Ia adalah pengamat yang cermat terhadap perilaku manusia."
+    },
+    {
+      "id": 382,
+      "word": "kunci",
+      "sentence1": "Bisakah kau berikan kuncinya?",
+      "sentence2": "Kunci kesuksesan adalah kerja keras."
+    },
+    {
+      "id": 383,
+      "word": "keyboard",
+      "sentence1": "Dia mengetik dokumen itu menggunakan keyboardnya.",
+      "sentence2": "Keyboard tidak berfungsi dengan baik."
+    },
+    {
+      "id": 384,
+      "word": "tendangan",
+      "sentence1": "Dia mencoba menendang bola ke gawang.",
+      "sentence2": "Dia memberinya tendangan bermain di kaki."
+    },
+    {
+      "id": 385,
+      "word": "membunuh",
+      "sentence1": "Pembunuhan orang yang tidak bersalah memicu kemarahan.",
+      "sentence2": "Dia dituduh membunuh istrinya."
+    },
+    {
+      "id": 386,
+      "word": "ramah (peduli)",
+      "sentence1": "Dia selalu baik pada hewan.",
+      "sentence2": "Terima kasih telah membantuku."
+    },
+    {
+      "id": 387,
+      "word": "cium",
+      "sentence1": "Mereka berbagi ciuman di bawah bintang.",
+      "sentence2": "Dia memberinya ciuman dari seberang ruangan."
+    },
+    {
+      "id": 388,
+      "word": "mengetuk",
+      "sentence1": "Tolong ketuk sebelum masuk.",
+      "sentence2": "Aku mendengar ketukan di pintu."
+    },
+    {
+      "id": 389,
+      "word": "label",
+      "sentence1": "Pastikan untuk memberi label pada semua kotak Anda.",
+      "sentence2": "Label pada botolnya sulit dibaca."
+    },
+    {
+      "id": 390,
+      "word": "laboratorium",
+      "sentence1": "Laboratorium ini dilengkapi dengan teknologi terbaru.",
+      "sentence2": "Dia bekerja di laboratorium kimia."
+    },
+    {
+      "id": 391,
+      "word": "kekurangan",
+      "sentence1": "Ada kekurangan bukti dalam kasus ini.",
+      "sentence2": "Kurangnya dana adalah masalah utama."
+    },
+    {
+      "id": 392,
+      "word": "terbaru",
+      "sentence1": "Berita terbaru tidak terlalu menggembirakan.",
+      "sentence2": "Dia selalu memakai busana terbaru."
+    },
+    {
+      "id": 393,
+      "word": "berbaring",
+      "sentence1": "Tolong letakkan buku di atas meja.",
+      "sentence2": "Dia suka berbaring di rumput dan melihat awan."
+    },
+    {
+      "id": 394,
+      "word": "lapisan",
+      "sentence1": "Kue ini memiliki tiga lapisan cokelat.",
+      "sentence2": "Ada lapisan debu di rak."
+    },
+    {
+      "id": 395,
+      "word": "timah",
+      "sentence1": "Dia akan memimpin tim dalam proyek ini.",
+      "sentence2": "Dia dipilih untuk memimpin diskusi."
+    },
+    {
+      "id": 396,
+      "word": "memimpin",
+      "sentence1": "Dia adalah ahli terkemuka di bidangnya.",
+      "sentence2": "Penyebab utama kematian adalah penyakit jantung."
+    },
+    {
+      "id": 397,
+      "word": "daun",
+      "sentence1": "Daun jatuh dari pohon.",
+      "sentence2": "Daunnya berubah warna di musim gugur."
+    },
+    {
+      "id": 398,
+      "word": "kulit",
+      "sentence1": "Dia membeli jaket kulit baru.",
+      "sentence2": "Sofa terbuat dari kulit berkualitas tinggi."
+    },
+    {
+      "id": 399,
+      "word": "hukum",
+      "sentence1": "Mereka mencari nasihat hukum.",
+      "sentence2": "Sistem hukumnya rumit."
+    },
+    {
+      "id": 400,
+      "word": "waktu luang",
+      "sentence1": "Dia suka membaca di waktu luangnya.",
+      "sentence2": "Kegiatan rekreasi penting untuk kesehatan mental."
+    },
+    {
+      "id": 401,
+      "word": "panjang",
+      "sentence1": "Panjang meja adalah enam kaki.",
+      "sentence2": "Kita perlu mengukur panjang ruangan."
+    },
+    {
+      "id": 402,
+      "word": "tingkat",
+      "sentence1": "Dia berada pada tingkat pemula dalam bahasa Spanyol.",
+      "sentence2": "Tingkat air naik karena hujan."
+    },
+    {
+      "id": 403,
+      "word": "berbohong (berbohong)",
+      "sentence1": "Tidak benar untuk berbohong kepada teman-temanmu.",
+      "sentence2": "Dia tertangkap berbohong tentang keberadaannya."
+    },
+    {
+      "id": 404,
+      "word": "batas",
+      "sentence1": "Ada batas untuk berapa banyak yang dapat Anda pinjam.",
+      "sentence2": "Kita harus membatasi pengeluaran."
+    },
+    {
+      "id": 405,
+      "word": "bibir",
+      "sentence1": "Dia memakai lipstik di bibirnya.",
+      "sentence2": "Dia mencium bibirnya."
+    },
+    {
+      "id": 406,
+      "word": "cairan",
+      "sentence1": "Air adalah cairan pada suhu kamar.",
+      "sentence2": "Cairan tumpah di seluruh meja."
+    },
+    {
+      "id": 407,
+      "word": "literatur",
+      "sentence1": "Dia suka membaca sastra klasik.",
+      "sentence2": "Kursus ini mencakup literatur modern."
+    },
+    {
+      "id": 408,
+      "word": "hidup",
+      "sentence1": "Konser akan disiarkan secara langsung.",
+      "sentence2": "Mereka ingin tinggal di kota besar."
+    },
+    {
+      "id": 409,
+      "word": "hidup",
+      "sentence1": "Biaya hidup di kota ini tinggi.",
+      "sentence2": "Dia berfokus pada peningkatan kondisi hidupnya."
+    },
+    {
+      "id": 410,
+      "word": "lokal",
+      "sentence1": "Pasar setempat buka setiap hari Minggu.",
+      "sentence2": "Dia lebih suka membeli produk lokal."
+    },
+    {
+      "id": 411,
+      "word": "temukan",
+      "sentence1": "Bisakah kau membantuku menemukan kunciku?",
+      "sentence2": "Peta akan membantu Anda menemukan restoran."
+    },
+    {
+      "id": 412,
+      "word": "terletak",
+      "sentence1": "Hotel ini terletak di dekat pantai.",
+      "sentence2": "Kantor terletak di lantai atas."
+    },
+    {
+      "id": 413,
+      "word": "lokasi",
+      "sentence1": "Apa lokasi Anda saat ini?",
+      "sentence2": "Lokasi acara telah berubah."
+    },
+    {
+      "id": 414,
+      "word": "kesepian",
+      "sentence1": "Dia merasa kesepian di kota baru.",
+      "sentence2": "Itu normal untuk merasa kesepian kadang-kadang."
+    },
+    {
+      "id": 415,
+      "word": "kehilangan",
+      "sentence1": "Kehilangan hewan peliharaannya sangat menyedihkan.",
+      "sentence2": "Dia masih berduka atas kehilangan ayahnya."
+    },
+    {
+      "id": 416,
+      "word": "mewah",
+      "sentence1": "Mereka hidup mewah.",
+      "sentence2": "Hotel ini menawarkan akomodasi mewah."
+    },
+    {
+      "id": 417,
+      "word": "gila",
+      "sentence1": "Dia marah pada temannya karena terlambat.",
+      "sentence2": "Dia punya ide gila untuk proyek baru."
+    },
+    {
+      "id": 418,
+      "word": "sihir",
+      "sentence1": "Penyihir itu melakukan trik sulap.",
+      "sentence2": "Dia percaya pada sihir cinta."
+    },
+    {
+      "id": 419,
+      "word": "terutama",
+      "sentence1": "Buku ini terutama tentang sejarah.",
+      "sentence2": "Dia terutama tertarik pada ilmu pengetahuan."
+    },
+    {
+      "id": 420,
+      "word": "pusat belanja",
+      "sentence1": "Mereka pergi ke mal untuk berbelanja.",
+      "sentence2": "Mall ini memiliki berbagai toko."
+    },
+    {
+      "id": 421,
+      "word": "manajemen",
+      "sentence1": "Dia bekerja di manajemen di sebuah perusahaan besar.",
+      "sentence2": "Manajemen yang efektif adalah kunci kesuksesan."
+    },
+    {
+      "id": 422,
+      "word": "pasar",
+      "sentence1": "Pasar buka setiap hari Sabtu.",
+      "sentence2": "Dia membeli sayuran segar di pasar."
+    },
+    {
+      "id": 423,
+      "word": "pemasaran",
+      "sentence1": "Dia belajar pemasaran di perguruan tinggi.",
+      "sentence2": "Kampanye pemasaran itu sukses."
+    },
+    {
+      "id": 424,
+      "word": "pernikahan",
+      "sentence1": "Mereka merencanakan upacara pernikahan.",
+      "sentence2": "Pernikahan membutuhkan komitmen dan upaya."
+    },
+    {
+      "id": 425,
+      "word": "sementara itu",
+      "sentence1": "Sementara itu, anak-anak bermain di luar.",
+      "sentence2": "Dia sedang belajar; sementara itu, teman-temannya sedang berpesta."
+    },
+    {
+      "id": 426,
+      "word": "tindakan",
+      "sentence1": "Penting untuk mengukur kemajuan Anda.",
+      "sentence2": "Kita perlu mengukur ruangan sebelum membeli furnitur."
+    },
+    {
+      "id": 427,
+      "word": "rata-rata",
+      "sentence1": "Lukisan itu dibuat dalam gaya medium.",
+      "sentence2": "Dia lebih suka bekerja dalam media yang memungkinkan untuk detail."
+    },
+    {
+      "id": 428,
+      "word": "mental",
+      "sentence1": "Kesehatan mental sama pentingnya dengan kesehatan fisik.",
+      "sentence2": "Dia mengambil langkah-langkah untuk meningkatkan kesejahteraan mentalnya."
+    },
+    {
+      "id": 429,
+      "word": "menyebutkan",
+      "sentence1": "Tolong sebutkan alergi apa pun yang Anda miliki.",
+      "sentence2": "Aku lupa menyebutkan bahwa aku akan terlambat."
+    },
+    {
+      "id": 430,
+      "word": "berantakan",
+      "sentence1": "Ruang itu berantakan setelah pesta.",
+      "sentence2": "Dia suka menjaga mejanya tetap rapi dan bebas dari kekacauan."
+    },
+    {
+      "id": 431,
+      "word": "ringan",
+      "sentence1": "Cuaca sedang di musim semi.",
+      "sentence2": "Dia lebih suka rasa yang lembut dalam makanannya."
+    },
+    {
+      "id": 432,
+      "word": "tambang (lubang)",
+      "sentence1": "Mereka menemukan emas di tambang.",
+      "sentence2": "Tambang ditutup karena masalah keamanan."
+    },
+    {
+      "id": 433,
+      "word": "campuran",
+      "sentence1": "Silakan campur bahan-bahan dengan baik.",
+      "sentence2": "Dia suka mencampur berbagai warna dalam lukisannya."
+    },
+    {
+      "id": 434,
+      "word": "campuran",
+      "sentence1": "Adonan kue adalah campuran tepung dan telur.",
+      "sentence2": "Dia menciptakan campuran suara yang unik dalam musiknya."
+    },
+    {
+      "id": 435,
+      "word": "suasana hati",
+      "sentence1": "Dia dalam suasana hati yang bahagia sepanjang hari.",
+      "sentence2": "Musik mengubah suasana pesta."
+    },
+    {
+      "id": 436,
+      "word": "bergerak",
+      "sentence1": "Tolong pindahkan kursi lebih dekat ke meja.",
+      "sentence2": "Mereka memutuskan untuk pindah ke kota baru."
+    },
+    {
+      "id": 437,
+      "word": "lumpur",
+      "sentence1": "Anak-anak bermain di lumpur setelah hujan.",
+      "sentence2": "Dia tergelincir di lumpur dan jatuh."
+    },
+    {
+      "id": 438,
+      "word": "pembunuhan",
+      "sentence1": "Detektif menyelidiki kasus pembunuhan.",
+      "sentence2": "Dia dituduh melakukan pembunuhan tapi mengaku tidak bersalah."
+    },
+    {
+      "id": 439,
+      "word": "otot",
+      "sentence1": "Dia mengalami ketegangan otot karena mengangkat beban.",
+      "sentence2": "Olahraga teratur membantu membangun otot."
+    },
+    {
+      "id": 440,
+      "word": "musik",
+      "sentence1": "Musikal itu sukses besar.",
+      "sentence2": "Dia memiliki bakat untuk komposisi musik."
+    },
+    {
+      "id": 441,
+      "word": "misterius",
+      "sentence1": "Buku ini adalah novel misteri.",
+      "sentence2": "Mereka mencoba untuk memecahkan misteri bersama-sama."
+    },
+    {
+      "id": 442,
+      "word": "kuku",
+      "sentence1": "Dia menancapkan paku ke dinding.",
+      "sentence2": "Kuku itu lepas dan jatuh."
+    },
+    {
+      "id": 443,
+      "word": "narasi",
+      "sentence1": "Narasinya menarik dan ditulis dengan baik.",
+      "sentence2": "Dia lebih suka puisi naratif daripada bentuk lainnya."
+    },
+    {
+      "id": 444,
+      "word": "bangsa",
+      "sentence1": "Bangsa merayakan hari kemerdekaan.",
+      "sentence2": "Dia bangga dengan sejarah negaranya."
+    },
+    {
+      "id": 445,
+      "word": "asli",
+      "sentence1": "Penduduk asli memiliki warisan budaya yang kaya.",
+      "sentence2": "Dia berbicara bahasa ibunya dengan lancar."
+    },
+    {
+      "id": 446,
+      "word": "tentu saja",
+      "sentence1": "Tentu saja, dia bersemangat tentang perjalanan.",
+      "sentence2": "Bunga tumbuh secara alami di daerah ini."
+    },
+    {
+      "id": 447,
+      "word": "tentu saja",
+      "sentence1": "Ini tidak berarti Anda akan berhasil.",
+      "sentence2": "Anda tidak harus mengikuti aturan."
+    },
+    {
+      "id": 448,
+      "word": "kebutuhan",
+      "sentence1": "Kita perlu menemukan solusi untuk masalah ini.",
+      "sentence2": "Dia butuh teman."
+    },
+    {
+      "id": 449,
+      "word": "jarum",
+      "sentence1": "Dia menggunakan jarum dan benang untuk memperbaiki kemeja itu.",
+      "sentence2": "Jarumnya terlalu tebal untuk kain."
+    },
+    {
+      "id": 450,
+      "word": "lingkungan",
+      "sentence1": "Mereka tinggal di lingkungan yang tenang.",
+      "sentence2": "Lingkungan ini memiliki banyak taman dan sekolah."
+    },
+    {
+      "id": 451,
+      "word": "tak ada",
+      "sentence1": "Kedua pilihan ini tampaknya tidak ideal.",
+      "sentence2": "Dia tidak suka kopi atau teh."
+    },
+    {
+      "id": 452,
+      "word": "bersih",
+      "sentence1": "Jaring itu menangkap beberapa ikan.",
+      "sentence2": "Dia bekerja di industri internet."
+    },
+    {
+      "id": 453,
+      "word": "berikutnya",
+      "sentence1": "Kereta berikutnya tiba jam 5 sore.",
+      "sentence2": "Dia adalah yang berikutnya untuk promosi."
+    },
+    {
+      "id": 454,
+      "word": "juga tidak",
+      "sentence1": "Dia tidak suka apel atau jeruk.",
+      "sentence2": "Dia bukan dokter atau pengacara."
+    },
+    {
+      "id": 455,
+      "word": "normal",
+      "sentence1": "Itu normal untuk merasa gugup sebelum tes.",
+      "sentence2": "Tekanan darahnya normal."
+    },
+    {
+      "id": 456,
+      "word": "utara",
+      "sentence1": "Wilayah utara lebih dingin di musim dingin.",
+      "sentence2": "Dia berasal dari kota utara."
+    },
+    {
+      "id": 457,
+      "word": "catatan",
+      "sentence1": "Silakan perhatikan poin-poin penting.",
+      "sentence2": "Aku meninggalkan catatan di meja Anda."
+    },
+    {
+      "id": 458,
+      "word": "nuklir",
+      "sentence1": "Negara ini sedang mengembangkan energi nuklir.",
+      "sentence2": "Tenaga nuklir memiliki kelebihan dan kekurangannya."
+    },
+    {
+      "id": 459,
+      "word": "jelas",
+      "sentence1": "Sudah jelas bahwa dia marah.",
+      "sentence2": "Solusinya jelas sekali jika Anda memahami masalahnya."
+    },
+    {
+      "id": 460,
+      "word": "jelas",
+      "sentence1": "Jelas, dia tidak mengerti instruksi.",
+      "sentence2": "Dia jelas berbakat dalam musik."
+    },
+    {
+      "id": 461,
+      "word": "kesempatan",
+      "sentence1": "Ini adalah kesempatan khusus untuk merayakan.",
+      "sentence2": "Pada kesempatan ini, kita harus merenungkan prestasi kita."
+    },
+    {
+      "id": 462,
+      "word": "terjadi",
+      "sentence1": "Kecelakaan itu terjadi pada larut malam.",
+      "sentence2": "Perubahan mungkin terjadi jika kita menerapkan kebijakan baru."
+    },
+    {
+      "id": 463,
+      "word": "ganjil",
+      "sentence1": "Itu cara yang aneh untuk memecahkan masalah.",
+      "sentence2": "Dia memiliki selera humor yang aneh."
+    },
+    {
+      "id": 464,
+      "word": "pejabat",
+      "sentence1": "Laporan resmi akan dirilis besok.",
+      "sentence2": "Dia adalah perwakilan resmi perusahaan."
+    },
+    {
+      "id": 465,
+      "word": "kuno",
+      "sentence1": "Dia lebih suka pakaian kuno.",
+      "sentence2": "Idenya tampak agak kuno."
+    },
+    {
+      "id": 466,
+      "word": "sekali",
+      "sentence1": "Dulu, ada seorang ksatria pemberani.",
+      "sentence2": "Aku hanya bertemu dengannya sekali."
+    },
+    {
+      "id": 467,
+      "word": "operasi",
+      "sentence1": "Operasi itu sukses.",
+      "sentence2": "Mereka merencanakan operasi militer."
+    },
+    {
+      "id": 468,
+      "word": "terorganisir",
+      "sentence1": "Acara itu terorganisir dengan baik.",
+      "sentence2": "Dia sangat teratur dalam pekerjaannya."
+    },
+    {
+      "id": 469,
+      "word": "penyelenggara",
+      "sentence1": "Penyelenggara acara ini melakukan pekerjaan yang hebat.",
+      "sentence2": "Dia adalah penyelenggara acara profesional."
+    },
+    {
+      "id": 470,
+      "word": "asli",
+      "sentence1": "Lukisan aslinya ada di museum.",
+      "sentence2": "Dia punya ide-ide asli untuk proyek ini."
+    },
+    {
+      "id": 471,
+      "word": "awalnya",
+      "sentence1": "Awalnya, rencananya akan dimulai pada bulan Juni.",
+      "sentence2": "Dia berasal dari Spanyol."
+    },
+    {
+      "id": 472,
+      "word": "seharusnya",
+      "sentence1": "Kau harus ke dokter.",
+      "sentence2": "Kita harus membantu mereka yang membutuhkan."
+    },
+    {
+      "id": 473,
+      "word": "milik kita",
+      "sentence1": "Buku ini milik kita.",
+      "sentence2": "Keluarga kami kecil tapi akrab."
+    },
+    {
+      "id": 474,
+      "word": "luar ruangan",
+      "sentence1": "Kami menikmati kegiatan di luar ruangan seperti hiking.",
+      "sentence2": "Konser di luar ruangan itu sukses besar."
+    },
+    {
+      "id": 475,
+      "word": "di luar ruangan",
+      "sentence1": "Aku suka menghabiskan waktu di luar ruangan.",
+      "sentence2": "Anak-anak sedang bermain di luar."
+    },
+    {
+      "id": 476,
+      "word": "kemasan",
+      "sentence1": "Aku harus berkemas untuk perjalanan.",
+      "sentence2": "Dia membeli satu paket permen karet."
+    },
+    {
+      "id": 477,
+      "word": "paket",
+      "sentence1": "Aku menerima paket di pos.",
+      "sentence2": "Paket itu dikirim tepat waktu."
+    },
+    {
+      "id": 478,
+      "word": "sakit",
+      "sentence1": "Cedera itu menyakitkan.",
+      "sentence2": "Itu adalah keputusan yang menyakitkan untuk dibuat."
+    },
+    {
+      "id": 479,
+      "word": "pucat",
+      "sentence1": "Dia tampak pucat setelah sakit.",
+      "sentence2": "Langit menjadi pucat saat matahari terbenam."
+    },
+    {
+      "id": 480,
+      "word": "pan",
+      "sentence1": "Aku butuh wajan untuk memasak telur.",
+      "sentence2": "Panci terlalu panas untuk disentuh."
+    },
+    {
+      "id": 481,
+      "word": "berpartisipasi",
+      "sentence1": "Aku ingin berpartisipasi dalam kompetisi.",
+      "sentence2": "Semua orang didorong untuk berpartisipasi."
+    },
+    {
+      "id": 482,
+      "word": "khususnya",
+      "sentence1": "Dia sangat pandai dalam matematika.",
+      "sentence2": "Saya menemukan buku ini sangat menarik."
+    },
+    {
+      "id": 483,
+      "word": "lulus",
+      "sentence1": "Aku harus lulus ujian mengemudi.",
+      "sentence2": "Dia memberikan bola ke rekan setimnya."
+    },
+    {
+      "id": 484,
+      "word": "gairah",
+      "sentence1": "Dia memiliki gairah untuk melukis.",
+      "sentence2": "Semangatnya untuk musik jelas."
+    },
+    {
+      "id": 485,
+      "word": "jalan",
+      "sentence1": "Kami berjalan di sepanjang jalan sempit.",
+      "sentence2": "Jalan menuju ke kastil tua."
+    },
+    {
+      "id": 486,
+      "word": "pembayaran",
+      "sentence1": "Pembayarannya minggu depan.",
+      "sentence2": "Aku menerima pembayaran untuk pekerjaanku."
+    },
+    {
+      "id": 487,
+      "word": "damai",
+      "sentence1": "Taman adalah tempat yang damai untuk bersantai.",
+      "sentence2": "Dia memiliki sikap damai."
+    },
+    {
+      "id": 488,
+      "word": "persen",
+      "sentence1": "Berapa persentase penduduk yang terkena dampaknya?",
+      "sentence2": "Persentase siswa yang lulus ujian meningkat."
+    },
+    {
+      "id": 489,
+      "word": "sempurna",
+      "sentence1": "Dia bernyanyi dengan sempurna.",
+      "sentence2": "Semuanya berjalan sesuai rencana."
+    },
+    {
+      "id": 490,
+      "word": "kinerja",
+      "sentence1": "Penampilannya luar biasa.",
+      "sentence2": "Dia mendapat pujian atas penampilannya."
+    },
+    {
+      "id": 491,
+      "word": "secara pribadi",
+      "sentence1": "Saya pribadi percaya pada ketidakbersalahannya.",
+      "sentence2": "Dia secara pribadi menyampaikan pesannya."
+    },
+    {
+      "id": 492,
+      "word": "membujuk",
+      "sentence1": "Aku mencoba membujuknya untuk tinggal.",
+      "sentence2": "Dia bisa membujuk mereka untuk mengubah pikiran mereka."
+    },
+    {
+      "id": 493,
+      "word": "fotografer",
+      "sentence1": "Fotografer menangkap momen itu dengan sempurna.",
+      "sentence2": "Dia bekerja sebagai fotografer lepas."
+    },
+    {
+      "id": 494,
+      "word": "fotografi",
+      "sentence1": "Dia memiliki gairah untuk fotografi.",
+      "sentence2": "Dia belajar fotografi di perguruan tinggi."
+    },
+    {
+      "id": 495,
+      "word": "pin",
+      "sentence1": "Aku butuh pin untuk melampirkan kertas ini.",
+      "sentence2": "Dia memakai pin dekoratif pada jaketnya."
+    },
+    {
+      "id": 496,
+      "word": "pipa",
+      "sentence1": "Tukang ledeng memperbaiki pipa yang bocor.",
+      "sentence2": "Asap mengepul dari pipa."
+    },
+    {
+      "id": 497,
+      "word": "tempat",
+      "sentence1": "Ini tempat yang bagus untuk dikunjungi.",
+      "sentence2": "Tempat itu penuh sesak dengan turis."
+    },
+    {
+      "id": 498,
+      "word": "perencanaan",
+      "sentence1": "Perencanaan sangat penting untuk sukses.",
+      "sentence2": "Dia bertanggung jawab untuk perencanaan acara."
+    },
+    {
+      "id": 499,
+      "word": "menyenangkan",
+      "sentence1": "Cuaca hari ini menyenangkan.",
+      "sentence2": "Kami memiliki percakapan yang menyenangkan."
+    },
+    {
+      "id": 500,
+      "word": "kesenangan",
+      "sentence1": "Senang bertemu denganmu.",
+      "sentence2": "Dia menikmati pekerjaannya."
+    },
+    {
+      "id": 501,
+      "word": "banyak",
+      "sentence1": "Ada banyak makanan untuk semua orang.",
+      "sentence2": "Dia punya banyak waktu untuk menyelesaikan proyeknya."
+    },
+    {
+      "id": 502,
+      "word": "plot",
+      "sentence1": "Plot filmnya menarik.",
+      "sentence2": "Dia menikmati plot twist dalam buku."
+    },
+    {
+      "id": 503,
+      "word": "ditambah",
+      "sentence1": "Dua tambah dua sama dengan empat.",
+      "sentence2": "Pekerjaan ini menawarkan gaji yang bagus ditambah manfaat."
+    },
+    {
+      "id": 504,
+      "word": "puisi",
+      "sentence1": "Dia menulis puisi yang indah.",
+      "sentence2": "Puisi menangkap esensi cinta."
+    },
+    {
+      "id": 505,
+      "word": "penyair",
+      "sentence1": "Dia adalah seorang penyair terkenal.",
+      "sentence2": "Penyair mengungkapkan emosi yang mendalam dalam karyanya."
+    },
+    {
+      "id": 506,
+      "word": "puisi",
+      "sentence1": "Dia suka membaca puisi.",
+      "sentence2": "Puisi era mencerminkan nilai-nilai."
+    },
+    {
+      "id": 507,
+      "word": "titik",
+      "sentence1": "Dia membuat poin yang valid selama diskusi.",
+      "sentence2": "Tujuan dari latihan ini adalah untuk meningkatkan kemampuanmu."
+    },
+    {
+      "id": 508,
+      "word": "racun",
+      "sentence1": "Racunnya mematikan.",
+      "sentence2": "Dia dituduh meracuni saingannya."
+    },
+    {
+      "id": 509,
+      "word": "beracun",
+      "sentence1": "Tanaman beracun harus disimpan di luar jangkauan.",
+      "sentence2": "Beberapa jamur beracun jika dimakan."
+    },
+    {
+      "id": 510,
+      "word": "kebijakan",
+      "sentence1": "Pemerintah mengumumkan kebijakan baru.",
+      "sentence2": "Kebijakan ini bertujuan untuk mengurangi polusi."
+    },
+    {
+      "id": 511,
+      "word": "politik",
+      "sentence1": "Dia terlibat dalam aktivisme politik.",
+      "sentence2": "Lanskap politik berubah dengan cepat."
+    },
+    {
+      "id": 512,
+      "word": "politisi",
+      "sentence1": "Dia adalah seorang politisi terkenal.",
+      "sentence2": "Politisi itu berbicara kepada orang banyak."
+    },
+    {
+      "id": 513,
+      "word": "politik",
+      "sentence1": "Politik bisa sangat memecah belah.",
+      "sentence2": "Dia belajar politik di universitas."
+    },
+    {
+      "id": 514,
+      "word": "pelabuhan",
+      "sentence1": "Kapal berlabuh di pelabuhan.",
+      "sentence2": "Pelabuhan sibuk dengan lalu lintas kargo."
+    },
+    {
+      "id": 515,
+      "word": "gambar",
+      "sentence1": "Dia melukis potret yang indah.",
+      "sentence2": "Potret itu menangkap kemiripannya dengan sempurna."
+    },
+    {
+      "id": 516,
+      "word": "mungkin",
+      "sentence1": "Kemungkinan akan hujan besok.",
+      "sentence2": "Dia mungkin kandidat terbaik untuk pekerjaan itu."
+    },
+    {
+      "id": 517,
+      "word": "pot",
+      "sentence1": "Panci itu terbuat dari tanah liat.",
+      "sentence2": "Dia memasak sup dalam panci besar."
+    },
+    {
+      "id": 518,
+      "word": "mencurahkan",
+      "sentence1": "Tolong tuangkan susu ke dalam gelas.",
+      "sentence2": "Dia suka menuangkan kopinya perlahan."
+    },
+    {
+      "id": 519,
+      "word": "kemiskinan",
+      "sentence1": "Kemiskinan adalah masalah serius.",
+      "sentence2": "Organisasi ini bertujuan untuk mengurangi kemiskinan."
+    },
+    {
+      "id": 520,
+      "word": "bubuk",
+      "sentence1": "Bubuknya digunakan untuk membuat roti.",
+      "sentence2": "Dia menabur bubuk di atas kue."
+    },
+    {
+      "id": 521,
+      "word": "kuat",
+      "sentence1": "Mesin ini sangat kuat.",
+      "sentence2": "Dia memberikan pidato yang kuat."
+    },
+    {
+      "id": 522,
+      "word": "praktis",
+      "sentence1": "Ini adalah solusi praktis.",
+      "sentence2": "Dia memiliki pendekatan praktis untuk masalah."
+    },
+    {
+      "id": 523,
+      "word": "berdoa",
+      "sentence1": "Mereka berkumpul untuk berdoa setiap hari Jumat.",
+      "sentence2": "Dia berdoa untuk keselamatan keluarganya."
+    },
+    {
+      "id": 524,
+      "word": "doa",
+      "sentence1": "Dia berdoa sebelum makan.",
+      "sentence2": "Doa dapat menjadi sumber penghiburan."
+    },
+    {
+      "id": 525,
+      "word": "prediksi",
+      "sentence1": "Ramalan cuaca tidak menjanjikan.",
+      "sentence2": "Dia membuat prediksi yang akurat tentang hasilnya."
+    },
+    {
+      "id": 526,
+      "word": "disiapkan",
+      "sentence1": "Makanannya disiapkan dengan baik.",
+      "sentence2": "Dia merasa siap untuk ujian."
+    },
+    {
+      "id": 527,
+      "word": "presentasi",
+      "sentence1": "Presentasi itu informatif.",
+      "sentence2": "Dia memberikan presentasi tentang perubahan iklim."
+    },
+    {
+      "id": 528,
+      "word": "pers",
+      "sentence1": "Pers meliput acara ini secara luas.",
+      "sentence2": "Dia bekerja sebagai petugas pers."
+    },
+    {
+      "id": 529,
+      "word": "tekanan",
+      "sentence1": "Tekanan meningkat.",
+      "sentence2": "Dia berada di bawah banyak tekanan di tempat kerja."
+    },
+    {
+      "id": 530,
+      "word": "berpura-pura",
+      "sentence1": "Mereka suka berpura-pura menjadi superhero.",
+      "sentence2": "Jangan pura-pura tidak melihatku."
+    },
+    {
+      "id": 531,
+      "word": "sebelumnya",
+      "sentence1": "Pemilik sebelumnya membuat banyak perbaikan.",
+      "sentence2": "Dalam bab sebelumnya, kita membahas..."
+    },
+    {
+      "id": 532,
+      "word": "sebelumnya",
+      "sentence1": "Saya sebelumnya tinggal di London.",
+      "sentence2": "Dia sebelumnya bekerja di perusahaan yang berbeda."
+    },
+    {
+      "id": 533,
+      "word": "pendeta",
+      "sentence1": "Pendeta memberikan khotbah pada hari Minggu.",
+      "sentence2": "Dia ingin menjadi imam."
+    },
+    {
+      "id": 534,
+      "word": "primer",
+      "sentence1": "Pendidikan adalah perhatian utama.",
+      "sentence2": "Tujuan utamanya adalah untuk meningkatkan literasi."
+    },
+    {
+      "id": 535,
+      "word": "pangeran",
+      "sentence1": "Pangeran akan mewarisi tahta.",
+      "sentence2": "Dia menari dengan pangeran di pesta dansa."
+    },
+    {
+      "id": 536,
+      "word": "putri",
+      "sentence1": "Sang putri mengenakan gaun yang indah.",
+      "sentence2": "Setiap anak bermimpi menjadi seorang putri."
+    },
+    {
+      "id": 537,
+      "word": "pencetakan",
+      "sentence1": "Proses pencetakan sangat rumit.",
+      "sentence2": "Dia bekerja di industri percetakan."
+    },
+    {
+      "id": 538,
+      "word": "tahanan",
+      "sentence1": "Tahanan itu dibebaskan lebih awal.",
+      "sentence2": "Dia tahanan politik."
+    },
+    {
+      "id": 539,
+      "word": "pribadi",
+      "sentence1": "Dia punya pertemuan pribadi hari ini.",
+      "sentence2": "Dia lebih memilih untuk menjaga pribadinya."
+    },
+    {
+      "id": 540,
+      "word": "produsen",
+      "sentence1": "Produser sedang mengerjakan film baru.",
+      "sentence2": "Dia adalah produser musik terkenal."
+    },
+    {
+      "id": 541,
+      "word": "produksi",
+      "sentence1": "Produksi barang telah meningkat.",
+      "sentence2": "Pabrik ini mengkhususkan diri dalam produksi mobil."
+    },
+    {
+      "id": 542,
+      "word": "profesi",
+      "sentence1": "Mengajar adalah profesi yang mulia.",
+      "sentence2": "Dia memilih profesi sebagai dokter."
+    },
+    {
+      "id": 543,
+      "word": "keuntungan",
+      "sentence1": "Perusahaan itu mendapat keuntungan besar tahun lalu.",
+      "sentence2": "Mereka bertujuan untuk meningkatkan margin keuntungan mereka."
+    },
+    {
+      "id": 544,
+      "word": "program",
+      "sentence1": "Program ini mencakup berbagai kegiatan.",
+      "sentence2": "Dia terdaftar dalam program pelatihan."
+    },
+    {
+      "id": 545,
+      "word": "memajukan",
+      "sentence1": "Kampanye ini bertujuan untuk mempromosikan pola makan sehat.",
+      "sentence2": "Mereka ingin mempromosikan produk baru mereka."
+    },
+    {
+      "id": 546,
+      "word": "benar",
+      "sentence1": "Penting untuk memakai pakaian yang tepat.",
+      "sentence2": "Dia tidak mengikuti prosedur yang tepat."
+    },
+    {
+      "id": 547,
+      "word": "dengan benar",
+      "sentence1": "Tolong perlakukan peralatan dengan benar.",
+      "sentence2": "Tugas itu tidak selesai dengan benar."
+    },
+    {
+      "id": 548,
+      "word": "properti",
+      "sentence1": "Properti ini dijual.",
+      "sentence2": "Mereka berinvestasi di properti komersial."
+    },
+    {
+      "id": 549,
+      "word": "protes",
+      "sentence1": "Protes itu damai.",
+      "sentence2": "Mereka mengorganisir protes terhadap hukum tersebut."
+    },
+    {
+      "id": 550,
+      "word": "bangga",
+      "sentence1": "Dia bangga dengan prestasinya.",
+      "sentence2": "Dia berjalan dengan sikap sombong."
+    },
+    {
+      "id": 551,
+      "word": "buktikan",
+      "sentence1": "Kau harus membuktikan identitasmu.",
+      "sentence2": "Bukti akan membuktikan bahwa dia tidak bersalah."
+    },
+    {
+      "id": 552,
+      "word": "menarik",
+      "sentence1": "Tolong tarik pintu untuk membukanya.",
+      "sentence2": "Dia mencoba untuk menarik kotak berat."
+    },
+    {
+      "id": 553,
+      "word": "menghukum",
+      "sentence1": "Mereka memutuskan untuk menghukum para penjahat.",
+      "sentence2": "Dia dihukum karena terlambat."
+    },
+    {
+      "id": 554,
+      "word": "hukuman",
+      "sentence1": "Hukuman itu berat.",
+      "sentence2": "Dia menerima hukuman atas tindakannya."
+    },
+    {
+      "id": 555,
+      "word": "dorong",
+      "sentence1": "Tolong tekan tombol untuk memulai.",
+      "sentence2": "Dia harus mendorong mobil untuk memulainya."
+    },
+    {
+      "id": 556,
+      "word": "kualifikasi",
+      "sentence1": "Dia memiliki kualifikasi yang diperlukan.",
+      "sentence2": "Kualifikasinya membuatnya menjadi kandidat yang kuat."
+    },
+    {
+      "id": 557,
+      "word": "berkualifikasi",
+      "sentence1": "Dia adalah guru yang berkualitas.",
+      "sentence2": "Mereka sedang mencari pelamar yang berkualitas."
+    },
+    {
+      "id": 558,
+      "word": "memenuhi syarat",
+      "sentence1": "Kau harus memenuhi syarat untuk posisi itu.",
+      "sentence2": "Dia tidak lolos ke babak final."
+    },
+    {
+      "id": 559,
+      "word": "antrian",
+      "sentence1": "Ada antrian panjang di konter tiket.",
+      "sentence2": "Mereka menunggu di antrian selama lebih dari satu jam."
+    },
+    {
+      "id": 560,
+      "word": "berhenti",
+      "sentence1": "Dia memutuskan untuk berhenti bekerja.",
+      "sentence2": "Dia ingin berhenti merokok."
+    },
+    {
+      "id": 561,
+      "word": "kutipan",
+      "sentence1": "Buku ini dimulai dengan kutipan terkenal.",
+      "sentence2": "Dia memasukkan kutipan dari Shakespeare."
+    },
+    {
+      "id": 562,
+      "word": "mengutip",
+      "sentence1": "Tolong sebutkan sumber informasi Anda.",
+      "sentence2": "Dia suka mengutip penulis terkenal."
+    },
+    {
+      "id": 563,
+      "word": "ras (orang)",
+      "sentence1": "Perlombaan itu dimenangkan oleh seorang atlet lokal.",
+      "sentence2": "Ras yang berbeda memiliki budaya yang unik."
+    },
+    {
+      "id": 564,
+      "word": "balap",
+      "sentence1": "Balap adalah olahraga yang populer.",
+      "sentence2": "Dia menikmati balap mobil di akhir pekan."
+    },
+    {
+      "id": 565,
+      "word": "rentang",
+      "sentence1": "Suhu berkisar antara 20 sampai 30 derajat.",
+      "sentence2": "Mereka menawarkan berbagai macam produk."
+    },
+    {
+      "id": 566,
+      "word": "langka",
+      "sentence1": "Jarang sekali melihat matahari terbenam yang begitu indah.",
+      "sentence2": "Dia memiliki bakat musik yang langka."
+    },
+    {
+      "id": 567,
+      "word": "jarang sekali",
+      "sentence1": "Dia jarang keluar di malam hari.",
+      "sentence2": "Dia jarang terlihat tanpa kameranya."
+    },
+    {
+      "id": 568,
+      "word": "reaksi",
+      "sentence1": "Reaksinya tak terduga.",
+      "sentence2": "Dia memiliki reaksi yang kuat terhadap berita itu."
+    },
+    {
+      "id": 569,
+      "word": "realitas",
+      "sentence1": "Kenyataannya situasi ini rumit.",
+      "sentence2": "Mereka menghadapi kenyataan yang keras."
+    },
+    {
+      "id": 570,
+      "word": "penerimaan",
+      "sentence1": "Tolong simpan tanda terima.",
+      "sentence2": "Aku butuh tanda terima untuk pembelianku."
+    },
+    {
+      "id": 571,
+      "word": "rekomendasi",
+      "sentence1": "Aku menghargai rekomendasi Anda.",
+      "sentence2": "Dia membuat rekomendasi untuk proyek ini."
+    },
+    {
+      "id": 572,
+      "word": "referensi",
+      "sentence1": "Bisakah Anda memberikan referensi untuk pekerjaan Anda?",
+      "sentence2": "Dia menyebutkan beberapa referensi dalam laporannya."
+    },
+    {
+      "id": 573,
+      "word": "merenungkan",
+      "sentence1": "Cermin akan mencerminkan citra Anda.",
+      "sentence2": "Dia mengambil waktu sejenak untuk merenungkan pilihannya."
+    },
+    {
+      "id": 574,
+      "word": "secara teratur",
+      "sentence1": "Dia berolahraga secara teratur agar tetap bugar.",
+      "sentence2": "Pertemuan diadakan secara teratur setiap hari Senin."
+    },
+    {
+      "id": 575,
+      "word": "menolak",
+      "sentence1": "Mereka memutuskan untuk menolak proposal itu.",
+      "sentence2": "Dia merasa sakit hati ketika ia menolak undangan."
+    },
+    {
+      "id": 576,
+      "word": "berhubungan",
+      "sentence1": "Penting untuk menghubungkan teori dengan praktek.",
+      "sentence2": "Dia dapat dengan mudah berhubungan dengan karakter dalam buku."
+    },
+    {
+      "id": 577,
+      "word": "terkait",
+      "sentence1": "Kedua topik ini terkait erat.",
+      "sentence2": "Dia punya banyak pengalaman terkait."
+    },
+    {
+      "id": 578,
+      "word": "hubungan",
+      "sentence1": "Ada hubungan yang kuat antara diet dan kesehatan.",
+      "sentence2": "Mereka mempelajari hubungan antara bahasa dan budaya."
+    },
+    {
+      "id": 579,
+      "word": "relatif",
+      "sentence1": "Dia adalah kerabat jauhku.",
+      "sentence2": "Konsep ini relatif terhadap situasi."
+    },
+    {
+      "id": 580,
+      "word": "santai",
+      "sentence1": "Dia merasa santai setelah pijat.",
+      "sentence2": "Suasana tenang dan santai."
+    },
+    {
+      "id": 581,
+      "word": "santai",
+      "sentence1": "Mendengarkan musik santai.",
+      "sentence2": "Mereka memiliki hari yang santai di spa."
+    },
+    {
+      "id": 582,
+      "word": "pelepasan",
+      "sentence1": "Burung itu dibebaskan dari sangkarnya.",
+      "sentence2": "Mereka berencana merilis produk baru bulan depan."
+    },
+    {
+      "id": 583,
+      "word": "dapat dipercaya",
+      "sentence1": "Dia adalah teman yang bisa dipercaya.",
+      "sentence2": "Kita perlu sumber informasi yang dapat dipercaya."
+    },
+    {
+      "id": 584,
+      "word": "agama",
+      "sentence1": "Dia menjalankan agamanya dengan penuh pengabdian.",
+      "sentence2": "Agama memainkan peran penting dalam kehidupan mereka."
+    },
+    {
+      "id": 585,
+      "word": "beragama",
+      "sentence1": "Dia sangat religius dan pergi ke gereja setiap hari Minggu.",
+      "sentence2": "Kepercayaan agama bisa sangat beragam."
+    },
+    {
+      "id": 586,
+      "word": "tetap",
+      "sentence1": "Mereka memutuskan untuk tetap berteman.",
+      "sentence2": "Harap tetap duduk sampai pertunjukan berakhir."
+    },
+    {
+      "id": 587,
+      "word": "ingatkan",
+      "sentence1": "Tolong ingatkan aku untuk meneleponnya.",
+      "sentence2": "Aku perlu mengingatkan diriku untuk istirahat."
+    },
+    {
+      "id": 588,
+      "word": "jarak jauh",
+      "sentence1": "Dia bekerja dari jarak jauh dari rumahnya.",
+      "sentence2": "Remote controlnya ada di atas meja."
+    },
+    {
+      "id": 589,
+      "word": "sewa",
+      "sentence1": "Mereka memutuskan untuk menyewa mobil untuk perjalanan itu.",
+      "sentence2": "Sewa harus dibayar di awal bulan."
+    },
+    {
+      "id": 590,
+      "word": "perbaikan",
+      "sentence1": "Aku harus memperbaiki sepeda motorku.",
+      "sentence2": "Perbaikan memakan waktu lebih lama dari yang diharapkan."
+    },
+    {
+      "id": 591,
+      "word": "ulangi",
+      "sentence1": "Bisa kau ulangi itu, tolong?",
+      "sentence2": "Aku perlu mengulangi proses untuk setiap item."
+    },
+    {
+      "id": 592,
+      "word": "berulang",
+      "sentence1": "Upaya berulang tidak berhasil.",
+      "sentence2": "Dia memiliki pola perilaku berulang."
+    },
+    {
+      "id": 593,
+      "word": "mewakili",
+      "sentence1": "Dia dipilih untuk mewakili tim.",
+      "sentence2": "Lukisan ini mewakili visi artis."
+    },
+    {
+      "id": 594,
+      "word": "permintaan",
+      "sentence1": "Aku ingin meminta pertemuan.",
+      "sentence2": "Permintaan itu disetujui oleh manajemen."
+    },
+    {
+      "id": 595,
+      "word": "membutuhkan",
+      "sentence1": "Pekerjaan ini membutuhkan banyak pengalaman.",
+      "sentence2": "Anda akan membutuhkan sumber daya tambahan."
+    },
+    {
+      "id": 596,
+      "word": "pemesanan",
+      "sentence1": "Aku membuat reservasi di restoran.",
+      "sentence2": "Pemesanan dikonfirmasi melalui email."
+    },
+    {
+      "id": 597,
+      "word": "sumber daya",
+      "sentence1": "Perpustakaan adalah sumber yang berharga bagi para siswa.",
+      "sentence2": "Kita perlu mengalokasikan lebih banyak sumber daya untuk proyek ini."
+    },
+    {
+      "id": 598,
+      "word": "rasa hormat",
+      "sentence1": "Penting untuk menunjukkan rasa hormat pada orang lain.",
+      "sentence2": "Dia telah mendapatkan rasa hormat dari rekan-rekannya."
+    },
+    {
+      "id": 599,
+      "word": "tanggung jawab",
+      "sentence1": "Dia mengambil tanggung jawabnya dengan serius.",
+      "sentence2": "Ini adalah tanggung jawab kita untuk melindungi lingkungan."
+    },
+    {
+      "id": 600,
+      "word": "bertanggung jawab",
+      "sentence1": "Dia orang dewasa yang bertanggung jawab.",
+      "sentence2": "Kita harus bertanggung jawab dengan sumber daya kita."
+    },
+    {
+      "id": 601,
+      "word": "hasilnya",
+      "sentence1": "Hasilnya lebih baik dari yang diharapkan.",
+      "sentence2": "Kita perlu menganalisis hasilnya dengan hati-hati."
+    },
+    {
+      "id": 602,
+      "word": "pensiun",
+      "sentence1": "Dia berencana pensiun tahun depan.",
+      "sentence2": "Banyak orang memilih untuk pensiun di usia 60-an."
+    },
+    {
+      "id": 603,
+      "word": "pensiun",
+      "sentence1": "Dia adalah seorang pensiunan guru.",
+      "sentence2": "Orang-orang yang sudah pensiun sering menjadi sukarelawan di komunitas mereka."
+    },
+    {
+      "id": 604,
+      "word": "revisi",
+      "sentence1": "Aku perlu merevisi esaiku sebelum menyerahkannya.",
+      "sentence2": "Guru akan merevisi rencana pelajaran."
+    },
+    {
+      "id": 605,
+      "word": "cincin",
+      "sentence1": "Dia menerima cincin yang indah sebagai hadiah.",
+      "sentence2": "Cincin itu terbuat dari emas."
+    },
+    {
+      "id": 606,
+      "word": "naik",
+      "sentence1": "Matahari akan terbit jam 6 pagi.",
+      "sentence2": "Harga diperkirakan akan naik tahun depan."
+    },
+    {
+      "id": 607,
+      "word": "resiko",
+      "sentence1": "Ada risiko hujan besok.",
+      "sentence2": "Kita perlu menilai resiko yang terlibat."
+    },
+    {
+      "id": 608,
+      "word": "robot",
+      "sentence1": "Robot dapat melakukan banyak tugas.",
+      "sentence2": "Robot menjadi semakin umum di industri."
+    },
+    {
+      "id": 609,
+      "word": "gulungan",
+      "sentence1": "Tolong lemparkan bola ke arahku.",
+      "sentence2": "Uang harus digulung."
+    },
+    {
+      "id": 610,
+      "word": "romantis",
+      "sentence1": "Mereka makan malam romantis dengan cahaya lilin.",
+      "sentence2": "Film ini memiliki alur cerita romantis."
+    },
+    {
+      "id": 611,
+      "word": "tali",
+      "sentence1": "Dia memanjat tali untuk mencapai puncak.",
+      "sentence2": "Tali terbuat dari bahan yang kuat."
+    },
+    {
+      "id": 612,
+      "word": "kasar",
+      "sentence1": "Permukaannya kasar dan tidak rata.",
+      "sentence2": "Dia memiliki ide kasar tentang apa yang diharapkan."
+    },
+    {
+      "id": 613,
+      "word": "baris",
+      "sentence1": "Silakan duduk di barisan depan.",
+      "sentence2": "Buku-buku disusun dengan rapi."
+    },
+    {
+      "id": 614,
+      "word": "kerajaan",
+      "sentence1": "Keluarga kerajaan menghadiri acara tersebut.",
+      "sentence2": "Dia memiliki sikap kerajaan."
+    },
+    {
+      "id": 615,
+      "word": "sepak bola",
+      "sentence1": "Rugby adalah olahraga populer di banyak negara.",
+      "sentence2": "Dia bermain rugby di akhir pekan."
+    },
+    {
+      "id": 616,
+      "word": "aturan",
+      "sentence1": "Ada aturan yang harus diikuti dalam permainan.",
+      "sentence2": "Dia melanggar aturan dan dihukum."
+    },
+    {
+      "id": 617,
+      "word": "keamanan",
+      "sentence1": "Keamanan adalah prioritas utama kami.",
+      "sentence2": "Langkah-langkah keamanan efektif."
+    },
+    {
+      "id": 618,
+      "word": "layar",
+      "sentence1": "Mereka berencana untuk berlayar keliling dunia.",
+      "sentence2": "Kapal layar menangkap angin dengan sempurna."
+    },
+    {
+      "id": 619,
+      "word": "pelaut",
+      "sentence1": "Pelaut menavigasi kapal melalui badai.",
+      "sentence2": "Banyak pelaut bekerja di perahu nelayan."
+    },
+    {
+      "id": 620,
+      "word": "sampel",
+      "sentence1": "Bisakah Anda memberikan sampel pekerjaan Anda?",
+      "sentence2": "Guru memberikan contoh pertanyaan untuk latihan."
+    },
+    {
+      "id": 621,
+      "word": "pasir",
+      "sentence1": "Anak-anak bermain di pasir di pantai.",
+      "sentence2": "Pasir terdiri dari partikel-partikel kecil batu."
+    },
+    {
+      "id": 622,
+      "word": "pemindaian",
+      "sentence1": "Aku perlu memindai dokumen ini untuk catatanku.",
+      "sentence2": "Pemindai dapat dengan cepat memindai beberapa halaman."
+    },
+    {
+      "id": 623,
+      "word": "ilmiah",
+      "sentence1": "Metode ilmiah sangat penting dalam penelitian.",
+      "sentence2": "Dia menerbitkan sebuah makalah ilmiah tentang temuannya."
+    },
+    {
+      "id": 624,
+      "word": "naskah",
+      "sentence1": "Naskah untuk drama itu ditulis dengan baik.",
+      "sentence2": "Dia sedang mengerjakan naskah baru untuk sebuah film."
+    },
+    {
+      "id": 625,
+      "word": "patung",
+      "sentence1": "Patung itu dibuat oleh seorang seniman terkenal.",
+      "sentence2": "Dia belajar patung di sekolah seni."
+    },
+    {
+      "id": 626,
+      "word": "sekunder",
+      "sentence1": "Pendidikan menengah penting untuk pengembangan karir.",
+      "sentence2": "Efek samping obat ini masih belum diketahui."
+    },
+    {
+      "id": 627,
+      "word": "keamanan",
+      "sentence1": "Langkah-langkah keamanan di tempat untuk melindungi bangunan.",
+      "sentence2": "Penjaga keamanan memeriksa semua pengunjung di pintu masuk."
+    },
+    {
+      "id": 628,
+      "word": "benih",
+      "sentence1": "Petani menanam benih di musim semi.",
+      "sentence2": "Benih membutuhkan air dan sinar matahari untuk tumbuh."
+    },
+    {
+      "id": 629,
+      "word": "masuk akal",
+      "sentence1": "Adalah bijaksana untuk menabung uang untuk masa depan.",
+      "sentence2": "Dia membuat keputusan yang bijaksana untuk tinggal di rumah."
+    },
+    {
+      "id": 630,
+      "word": "terpisah",
+      "sentence1": "Silakan pisahkan bahan daur ulang dari sampah.",
+      "sentence2": "Mereka memutuskan untuk memisahkan keuangan mereka setelah perceraian."
+    },
+    {
+      "id": 631,
+      "word": "serius",
+      "sentence1": "Ia menganggap serius hal itu dan menyelidiki lebih lanjut.",
+      "sentence2": "Dia berbicara serius tentang tantangan di depan."
+    },
+    {
+      "id": 632,
+      "word": "pelayan",
+      "sentence1": "Pelayan itu menyiapkan makanan untuk para tamu.",
+      "sentence2": "Dia bekerja sebagai pelayan di sebuah rumah tangga besar."
+    },
+    {
+      "id": 633,
+      "word": "set (put)",
+      "sentence1": "Tolong letakkan buku di atas meja.",
+      "sentence2": "Dia mengatur alarm untuk jam 7 pagi."
+    },
+    {
+      "id": 634,
+      "word": "set (kelompok)",
+      "sentence1": "Set piring diatur dengan indah.",
+      "sentence2": "Dia bergabung dengan sebuah klub buku yang didirikan di lingkungan rumahnya."
+    },
+    {
+      "id": 635,
+      "word": "pengaturan",
+      "sentence1": "Cerita ini terjadi di sebuah desa kecil.",
+      "sentence2": "Anda dapat mengubah pengaturan di aplikasi."
+    },
+    {
+      "id": 636,
+      "word": "jenis kelamin",
+      "sentence1": "Pendidikan seks sangat penting bagi anak muda.",
+      "sentence2": "Buku ini membahas aspek biologis seks."
+    },
+    {
+      "id": 637,
+      "word": "seksual",
+      "sentence1": "Orientasi seksual adalah aspek identitas pribadi.",
+      "sentence2": "Kampanye ini mempromosikan kesadaran kesehatan seksual."
+    },
+    {
+      "id": 638,
+      "word": "goyang",
+      "sentence1": "Silakan goyang botol sebelum digunakan.",
+      "sentence2": "Dia memberikan tangannya goyang lembut."
+    },
+    {
+      "id": 639,
+      "word": "saham",
+      "sentence1": "Senang berbagi mainan dengan orang lain.",
+      "sentence2": "Mereka memutuskan untuk membagi tanggung jawab sama rata."
+    },
+    {
+      "id": 640,
+      "word": "tajam",
+      "sentence1": "Hati-hati dengan pisau tajam itu.",
+      "sentence2": "Belok tajam itu membuat dia tak siap."
+    },
+    {
+      "id": 641,
+      "word": "rak",
+      "sentence1": "Rak itu penuh dengan buku.",
+      "sentence2": "Dia meletakkan vas di rak."
+    },
+    {
+      "id": 642,
+      "word": "kerang",
+      "sentence1": "Penyu itu bersembunyi di dalam cangkangnya.",
+      "sentence2": "Kulit telur itu rapuh."
+    },
+    {
+      "id": 643,
+      "word": "pergeseran",
+      "sentence1": "Silakan fokus pada masalah utama.",
+      "sentence2": "Perusahaan berencana untuk mengubah strateginya."
+    },
+    {
+      "id": 644,
+      "word": "bersinar",
+      "sentence1": "Bintang-bintang bersinar terang di langit malam.",
+      "sentence2": "Dia menggunakan kain untuk menyinari piring perak."
+    },
+    {
+      "id": 645,
+      "word": "mengkilap",
+      "sentence1": "Mobil ini sudah dicat dengan cat baru.",
+      "sentence2": "Dia memakai sepatu berkilau ke pesta."
+    },
+    {
+      "id": 646,
+      "word": "menembak",
+      "sentence1": "Pemburu harus menembak rusa.",
+      "sentence2": "Mereka akan syuting adegan besok."
+    },
+    {
+      "id": 647,
+      "word": "pemalu",
+      "sentence1": "Dia terlalu malu untuk berbicara di depan umum.",
+      "sentence2": "Dia tersenyum malu saat dipuji."
+    },
+    {
+      "id": 648,
+      "word": "penglihatan",
+      "sentence1": "Pemandangan pegunungan sangat menakjubkan.",
+      "sentence2": "Dia memiliki penglihatan yang sempurna tanpa kacamata."
+    },
+    {
+      "id": 649,
+      "word": "sinyal",
+      "sentence1": "Lampu lalu lintas berubah menjadi merah.",
+      "sentence2": "Dia menggunakan sinyal tangan untuk berkomunikasi."
+    },
+    {
+      "id": 650,
+      "word": "diam",
+      "sentence1": "Ruang yang sepi dipenuhi dengan ketegangan.",
+      "sentence2": "Dia tetap diam selama pertemuan."
+    },
+    {
+      "id": 651,
+      "word": "konyol",
+      "sentence1": "Ini konyol untuk khawatir tentang hal-hal yang tidak bisa Anda kendalikan.",
+      "sentence2": "Dia membuat wajah konyol untuk membuatnya tertawa."
+    },
+    {
+      "id": 652,
+      "word": "kesamaan",
+      "sentence1": "Ada kesamaan antara kedua lukisan.",
+      "sentence2": "Kesamaan dalam cerita mereka sangat mencolok."
+    },
+    {
+      "id": 653,
+      "word": "begitu juga",
+      "sentence1": "Dia juga suka mendaki gunung.",
+      "sentence2": "Kedua usulan tersebut memiliki struktur yang sama."
+    },
+    {
+      "id": 654,
+      "word": "hanya",
+      "sentence1": "Solusinya adalah meminta bantuan.",
+      "sentence2": "Dia menjelaskan konsepnya dengan sederhana dan jelas."
+    },
+    {
+      "id": 655,
+      "word": "sejak",
+      "sentence1": "Aku tinggal di sini sejak 2010.",
+      "sentence2": "Sejak kecelakaan itu, dia lebih berhati-hati."
+    },
+    {
+      "id": 656,
+      "word": "wastafel",
+      "sentence1": "Titanic tenggelam pada tahun 1912.",
+      "sentence2": "Piring harus direndam di wastafel."
+    },
+    {
+      "id": 657,
+      "word": "potong",
+      "sentence1": "Tolong potong roti sebelum disajikan.",
+      "sentence2": "Dia mengambil sepotong kue."
+    },
+    {
+      "id": 658,
+      "word": "sedikit",
+      "sentence1": "Suhu sedikit meningkat.",
+      "sentence2": "Dia sedikit kesal dengan komentar itu."
+    },
+    {
+      "id": 659,
+      "word": "perlahan",
+      "sentence1": "Mobilnya bergerak terlalu lambat.",
+      "sentence2": "Dia berbicara dengan suara yang lambat dan jelas."
+    },
+    {
+      "id": 660,
+      "word": "cerdas",
+      "sentence1": "Dia sangat pintar dan cepat berpikiran.",
+      "sentence2": "Dia membuat keputusan cerdas untuk berinvestasi lebih awal."
+    },
+    {
+      "id": 661,
+      "word": "halus",
+      "sentence1": "Permukaan airnya halus seperti kaca.",
+      "sentence2": "Dia memiliki suara nyanyian yang halus."
+    },
+    {
+      "id": 662,
+      "word": "perangkat lunak",
+      "sentence1": "Perangkat lunak perlu diperbarui secara teratur.",
+      "sentence2": "Dia bekerja sebagai pengembang perangkat lunak."
+    },
+    {
+      "id": 663,
+      "word": "tanah",
+      "sentence1": "Tanah di daerah ini sangat subur.",
+      "sentence2": "Mereka menguji tanah untuk kontaminan."
+    },
+    {
+      "id": 664,
+      "word": "padat",
+      "sentence1": "Air menjadi padat saat membeku.",
+      "sentence2": "Meja itu terbuat dari kayu solid."
+    },
+    {
+      "id": 665,
+      "word": "mengurutkan",
+      "sentence1": "Silakan susun berkas-berkas berdasarkan tanggal.",
+      "sentence2": "Dia suka menyortir bukunya menurut genre."
+    },
+    {
+      "id": 666,
+      "word": "selatan",
+      "sentence1": "Wilayah selatan dikenal karena iklimnya yang hangat.",
+      "sentence2": "Mereka melakukan perjalanan ke bagian selatan negara itu."
+    },
+    {
+      "id": 667,
+      "word": "secara khusus",
+      "sentence1": "Dia menyebutkan masalah ini secara khusus dalam laporannya.",
+      "sentence2": "Aku sedang mencari buku khusus tentang sejarah."
+    },
+    {
+      "id": 668,
+      "word": "pengeluaran",
+      "sentence1": "Pengeluaran perusahaan telah meningkat tahun ini.",
+      "sentence2": "Dia berhati-hati tentang kebiasaan belanjanya."
+    },
+    {
+      "id": 669,
+      "word": "pedas",
+      "sentence1": "Hidangan ini terlalu pedas untuk selera saya.",
+      "sentence2": "Dia suka makanan pedas dari budaya yang berbeda."
+    },
+    {
+      "id": 670,
+      "word": "minuman keras",
+      "sentence1": "Semangat tim tinggi setelah kemenangan.",
+      "sentence2": "Dia memiliki semangat bertarung yang kuat."
+    },
+    {
+      "id": 671,
+      "word": "diucapkan",
+      "sentence1": "Bahasa Inggris adalah bahasa yang paling banyak digunakan di dunia.",
+      "sentence2": "Dia fasih dalam beberapa bahasa lisan."
+    },
+    {
+      "id": 672,
+      "word": "tempat",
+      "sentence1": "Dapatkah Anda melihat perbedaan antara kedua gambar ini?",
+      "sentence2": "Dia menemukan tempat yang bagus untuk duduk dan bersantai."
+    },
+    {
+      "id": 673,
+      "word": "penyebaran",
+      "sentence1": "Berita itu menyebar dengan cepat melalui media sosial.",
+      "sentence2": "Dia suka menyebar mentega di roti panggangnya."
+    },
+    {
+      "id": 674,
+      "word": "musim semi",
+      "sentence1": "Bunga mekar di musim semi.",
+      "sentence2": "Cuaca semakin hangat saat musim semi mendekat."
+    },
+    {
+      "id": 675,
+      "word": "stadion",
+      "sentence1": "Stadion penuh dengan penggemar yang bersorak.",
+      "sentence2": "Mereka membangun stadion baru untuk pertandingan yang akan datang."
+    },
+    {
+      "id": 676,
+      "word": "staf",
+      "sentence1": "Staf di hotel sangat membantu.",
+      "sentence2": "Dia adalah anggota staf pengajar."
+    },
+    {
+      "id": 677,
+      "word": "standar",
+      "sentence1": "Produk ini memenuhi standar kualitas internasional.",
+      "sentence2": "Mereka bekerja untuk meningkatkan standar hidup."
+    },
+    {
+      "id": 678,
+      "word": "negara bagian",
+      "sentence1": "Kondisi ekonomi adalah kekhawatiran utama.",
+      "sentence2": "Dia dalam keadaan shock setelah berita itu."
+    },
+    {
+      "id": 679,
+      "word": "statistik",
+      "sentence1": "Statistik menunjukkan peningkatan penjualan yang signifikan.",
+      "sentence2": "Dia menganalisis data dan mempresentasikan statistik utama."
+    },
+    {
+      "id": 680,
+      "word": "patung",
+      "sentence1": "Patung Liberty adalah simbol kebebasan.",
+      "sentence2": "Mereka mengunjungi patung terkenal di taman."
+    },
+    {
+      "id": 681,
+      "word": "tongkat (menempel)",
+      "sentence1": "Tolong tempelkan label pada kotaknya.",
+      "sentence2": "Dia menggunakan lem untuk menempelkan potongan-potongan itu."
+    },
+    {
+      "id": 682,
+      "word": "tongkat (potongan kayu)",
+      "sentence1": "Dia mengambil tongkat dari tanah.",
+      "sentence2": "Anjing itu mengunyah tongkatnya."
+    },
+    {
+      "id": 683,
+      "word": "masih",
+      "sentence1": "Dia masih menunggu bus.",
+      "sentence2": "Airnya tenang dan tenang."
+    },
+    {
+      "id": 684,
+      "word": "toko",
+      "sentence1": "Aku harus pergi ke toko untuk membeli bahan makanan.",
+      "sentence2": "Toko ini buka dari jam 9 pagi sampai jam 9 malam."
+    },
+    {
+      "id": 685,
+      "word": "orang asing",
+      "sentence1": "Dia merasa seperti orang asing di kota baru.",
+      "sentence2": "Jangan berbicara dengan orang asing secara online."
+    },
+    {
+      "id": 686,
+      "word": "kekuatan",
+      "sentence1": "Dia memiliki kekuatan untuk mengangkat beban berat.",
+      "sentence2": "Kekuatan mental sama pentingnya dengan kekuatan fisik."
+    },
+    {
+      "id": 687,
+      "word": "rantai",
+      "sentence1": "Dia mengikat paket itu dengan tali.",
+      "sentence2": "Gitar string rusak selama pertunjukan."
+    },
+    {
+      "id": 688,
+      "word": "sangat kuat",
+      "sentence1": "Dia sangat percaya pada pentingnya pendidikan.",
+      "sentence2": "Dia menyatakan pendapatnya dengan kuat selama debat."
+    },
+    {
+      "id": 689,
+      "word": "studio",
+      "sentence1": "Artis bekerja di sebuah studio kecil.",
+      "sentence2": "Mereka menyewa sebuah studio untuk pemotretan."
+    },
+    {
+      "id": 690,
+      "word": "barang-barang",
+      "sentence1": "Aku harus berkemas untuk perjalanan.",
+      "sentence2": "Dia punya banyak barang menarik dalam koleksinya."
+    },
+    {
+      "id": 691,
+      "word": "zat",
+      "sentence1": "Air adalah zat yang penting bagi kehidupan.",
+      "sentence2": "Ilmuwan mempelajari zat kimia di laboratorium."
+    },
+    {
+      "id": 692,
+      "word": "berhasil",
+      "sentence1": "Dia menyelesaikan proyeknya dengan sukses.",
+      "sentence2": "Mereka bekerja sama dan mencapai tujuan mereka dengan sukses."
+    },
+    {
+      "id": 693,
+      "word": "tiba-tiba",
+      "sentence1": "Ada perubahan suhu yang tiba-tiba.",
+      "sentence2": "Suara mendadak itu mengejutkan semua orang."
+    },
+    {
+      "id": 694,
+      "word": "menderita",
+      "sentence1": "Dia harus menderita melalui proses pemulihan yang panjang.",
+      "sentence2": "Banyak orang menderita kecemasan dan depresi."
+    },
+    {
+      "id": 695,
+      "word": "pakaian",
+      "sentence1": "Dia mengenakan setelan untuk wawancara kerja.",
+      "sentence2": "Pengacara itu mengenakan pakaian formal."
+    },
+    {
+      "id": 696,
+      "word": "cocok",
+      "sentence1": "Gaun ini cocok untuk acara ini.",
+      "sentence2": "Mereka perlu menemukan lokasi yang cocok untuk acara tersebut."
+    },
+    {
+      "id": 697,
+      "word": "rangkuman",
+      "sentence1": "Dapatkah Anda meringkas poin-poin utamanya?",
+      "sentence2": "Dia meringkas artikel dalam beberapa kalimat."
+    },
+    {
+      "id": 698,
+      "word": "ringkasan",
+      "sentence1": "Ringkasan ini memberikan gambaran singkat dari laporan tersebut.",
+      "sentence2": "Silakan baca ringkasan sebelum pertemuan."
+    },
+    {
+      "id": 699,
+      "word": "persediaan",
+      "sentence1": "Perusahaan ini bertujuan untuk memasok produk berkualitas tinggi.",
+      "sentence2": "Mereka memiliki persediaan tetap produk segar."
+    },
+    {
+      "id": 700,
+      "word": "pendukung",
+      "sentence1": "Dia adalah pendukung kuat dari penyebab lingkungan.",
+      "sentence2": "Kampanye ini memiliki banyak pendukung yang antusias."
+    },
+    {
+      "id": 701,
+      "word": "tentu saja",
+      "sentence1": "Tentu saja, kau tidak bisa serius tentang itu.",
+      "sentence2": "Dia pasti akan memenangkan kompetisi."
+    },
+    {
+      "id": 702,
+      "word": "permukaan",
+      "sentence1": "Permukaan air tenang.",
+      "sentence2": "Dia menggaruk permukaan meja."
+    },
+    {
+      "id": 703,
+      "word": "bertahan hidup",
+      "sentence1": "Banyak spesies berjuang untuk bertahan hidup di lingkungan yang keras.",
+      "sentence2": "Dia berhasil selamat dari kecelakaan itu."
+    },
+    {
+      "id": 704,
+      "word": "berenang",
+      "sentence1": "Aku suka berenang di laut.",
+      "sentence2": "Dia belajar berenang di usia muda."
+    },
+    {
+      "id": 705,
+      "word": "saklar",
+      "sentence1": "Bisakah kau mematikan lampunya, tolong?",
+      "sentence2": "Dia memutuskan untuk berganti karir."
+    },
+    {
+      "id": 706,
+      "word": "gejala",
+      "sentence1": "Batuk adalah gejala umum dari pilek.",
+      "sentence2": "Ia melaporkan beberapa gejala kepada dokter."
+    },
+    {
+      "id": 707,
+      "word": "ekor",
+      "sentence1": "Anjing itu menggeleng-gelengkan ekornya dengan gembira.",
+      "sentence2": "Lampu belakang kereta berkedip."
+    },
+    {
+      "id": 708,
+      "word": "bakat",
+      "sentence1": "Dia memiliki bakat alami untuk musik.",
+      "sentence2": "Bakatnya diakui pada usia muda."
+    },
+    {
+      "id": 709,
+      "word": "berbakat",
+      "sentence1": "Dia adalah seniman berbakat.",
+      "sentence2": "Tim ini terdiri dari individu-individu berbakat."
+    },
+    {
+      "id": 710,
+      "word": "pita",
+      "sentence1": "Aku butuh beberapa pita untuk membungkus hadiah ini.",
+      "sentence2": "Pita itu mudah lepas."
+    },
+    {
+      "id": 711,
+      "word": "pajak",
+      "sentence1": "Pemerintah memberlakukan pajak baru pada barang mewah.",
+      "sentence2": "Dia mencoba untuk mengurangi kewajiban pajaknya."
+    },
+    {
+      "id": 712,
+      "word": "teknis",
+      "sentence1": "Dia memiliki latar belakang teknis yang kuat di bidang teknik.",
+      "sentence2": "Rincian teknis diuraikan dalam laporan."
+    },
+    {
+      "id": 713,
+      "word": "teknik",
+      "sentence1": "Dia menggunakan teknik baru untuk memecahkan masalah.",
+      "sentence2": "Seniman ini dikenal karena teknik melukisnya yang unik."
+    },
+    {
+      "id": 714,
+      "word": "cenderung",
+      "sentence1": "Orang cenderung lebih produktif di pagi hari.",
+      "sentence2": "Dia cenderung berpikir terlalu banyak."
+    },
+    {
+      "id": 715,
+      "word": "tenda",
+      "sentence1": "Kami mendirikan tenda untuk perjalanan berkemah.",
+      "sentence2": "Kemah itu cukup luas untuk enam orang."
+    },
+    {
+      "id": 716,
+      "word": "itu",
+      "sentence1": "Aku tidak suka ide itu.",
+      "sentence2": "Itu adalah film yang hebat!"
+    },
+    {
+      "id": 717,
+      "word": "mereka",
+      "sentence1": "Buku ini milik mereka.",
+      "sentence2": "Aku menemukan kuncinya di atas meja."
+    },
+    {
+      "id": 718,
+      "word": "tema",
+      "sentence1": "Tema pesta ini adalah tropis.",
+      "sentence2": "Dia menulis esai tentang tema cinta."
+    },
+    {
+      "id": 719,
+      "word": "teori",
+      "sentence1": "Dia mengusulkan teori baru tentang perubahan iklim.",
+      "sentence2": "Teori ini diterima secara luas oleh para ilmuwan."
+    },
+    {
+      "id": 720,
+      "word": "oleh karena itu",
+      "sentence1": "Hujan turun; oleh karena itu, pertandingan dibatalkan.",
+      "sentence2": "Dia belajar keras; oleh karena itu, dia lulus ujian."
+    },
+    {
+      "id": 721,
+      "word": "ini",
+      "sentence1": "Ini buku favoritku.",
+      "sentence2": "Aku tidak percaya ini terjadi."
+    },
+    {
+      "id": 722,
+      "word": "meskipun",
+      "sentence1": "Meskipun hujan, kami pergi berjalan-jalan.",
+      "sentence2": "Dia sangat berbakat, meskipun dia tidak memiliki pengalaman."
+    },
+    {
+      "id": 723,
+      "word": "tenggorokan",
+      "sentence1": "Dia sakit tenggorokan.",
+      "sentence2": "Dia membersihkan tenggorokannya sebelum berbicara."
+    },
+    {
+      "id": 724,
+      "word": "di seluruh",
+      "sentence1": "Museum ini buka sepanjang tahun.",
+      "sentence2": "Dia melakukan perjalanan ke seluruh Eropa musim panas lalu."
+    },
+    {
+      "id": 725,
+      "word": "kencang",
+      "sentence1": "Gaun ini terlalu ketat untukku.",
+      "sentence2": "Dia punya jadwal yang ketat minggu ini."
+    },
+    {
+      "id": 726,
+      "word": "sampai",
+      "sentence1": "Aku akan menunggu sampai kau tiba.",
+      "sentence2": "Dia bekerja sampai tengah malam."
+    },
+    {
+      "id": 727,
+      "word": "timah",
+      "sentence1": "Makanan disimpan dalam kaleng.",
+      "sentence2": "Dia membuka kaleng kacang."
+    },
+    {
+      "id": 728,
+      "word": "kecil",
+      "sentence1": "Anak kucingnya kecil dan lucu.",
+      "sentence2": "Dia memiliki bekas luka kecil di pipinya."
+    },
+    {
+      "id": 729,
+      "word": "ujung",
+      "sentence1": "Bisakah kau memberi aku tip untuk ujian?",
+      "sentence2": "Dia meninggalkan tip yang murah hati untuk pelayan."
+    },
+    {
+      "id": 730,
+      "word": "jari kaki",
+      "sentence1": "Aku menabrak jari kakiku di atas meja.",
+      "sentence2": "Dia mengecat kuku kakinya merah."
+    },
+    {
+      "id": 731,
+      "word": "lidah",
+      "sentence1": "Dia menjulurkan lidahnya padaku.",
+      "sentence2": "Dia punya tindikan di lidahnya."
+    },
+    {
+      "id": 732,
+      "word": "total",
+      "sentence1": "Total biayanya $100.",
+      "sentence2": "Dia memenangkan total tiga penghargaan."
+    },
+    {
+      "id": 733,
+      "word": "benar-benar",
+      "sentence1": "Aku benar-benar setuju denganmu.",
+      "sentence2": "Film itu benar-benar membosankan."
+    },
+    {
+      "id": 734,
+      "word": "sentuh",
+      "sentence1": "Tolong jangan sentuh lukisan.",
+      "sentence2": "Dia memiliki sentuhan lembut."
+    },
+    {
+      "id": 735,
+      "word": "tur",
+      "sentence1": "Kami melakukan tur berpemandu di kota.",
+      "sentence2": "Tur berlangsung selama dua jam."
+    },
+    {
+      "id": 736,
+      "word": "perdagangan",
+      "sentence1": "Perdagangan internasional sangat penting untuk pertumbuhan ekonomi.",
+      "sentence2": "Dia bekerja di industri perdagangan."
+    },
+    {
+      "id": 737,
+      "word": "menerjemahkan",
+      "sentence1": "Bisakah kau menerjemahkan dokumen ini ke dalam bahasa Inggris?",
+      "sentence2": "Dia sedang belajar menerjemahkan teks."
+    },
+    {
+      "id": 738,
+      "word": "terjemahan",
+      "sentence1": "Terjemahan buku itu diterbitkan tahun lalu.",
+      "sentence2": "Dia mengkhususkan diri dalam terjemahan sastra."
+    },
+    {
+      "id": 739,
+      "word": "transportasi",
+      "sentence1": "Mereka menggunakan truk untuk mengangkut barang.",
+      "sentence2": "Sistem transportasi sangat efisien."
+    },
+    {
+      "id": 740,
+      "word": "mengobati",
+      "sentence1": "Dokter akan merawat luka Anda.",
+      "sentence2": "Dia suka memperlakukan dirinya dengan spa hari."
+    },
+    {
+      "id": 741,
+      "word": "pengobatan",
+      "sentence1": "Perawatan untuk penyakit ini mahal.",
+      "sentence2": "Dia sedang menjalani perawatan untuk kondisinya."
+    },
+    {
+      "id": 742,
+      "word": "tren",
+      "sentence1": "Ada kecenderungan yang berkembang terhadap pekerjaan jarak jauh.",
+      "sentence2": "Tren mode berubah dengan cepat."
+    },
+    {
+      "id": 743,
+      "word": "tipuan",
+      "sentence1": "Dia melakukan trik sulap.",
+      "sentence2": "Ini hanya trik cahaya."
+    },
+    {
+      "id": 744,
+      "word": "kebenaran",
+      "sentence1": "Kebenaran seringkali sulit diterima.",
+      "sentence2": "Dia akhirnya mengatakan yang sebenarnya."
+    },
+    {
+      "id": 745,
+      "word": "tabung",
+      "sentence1": "Pasta gigi dalam tabung.",
+      "sentence2": "Dia bepergian dengan kereta bawah tanah."
+    },
+    {
+      "id": 746,
+      "word": "jenis",
+      "sentence1": "Apa jenis musik yang Anda suka?",
+      "sentence2": "Dia adalah tipe orang yang menyukai petualangan."
+    },
+    {
+      "id": 747,
+      "word": "biasanya",
+      "sentence1": "Cuaca biasanya ringan di musim semi.",
+      "sentence2": "Dia biasanya tidur lebih awal."
+    },
+    {
+      "id": 748,
+      "word": "ban",
+      "sentence1": "Aku perlu mengganti ban yang pecah.",
+      "sentence2": "Mobil ini memiliki ban cadangan di bagasi."
+    },
+    {
+      "id": 749,
+      "word": "jelek",
+      "sentence1": "Kebenaran yang buruk sulit untuk dihadapi.",
+      "sentence2": "Dia memiliki bekas luka di lengannya."
+    },
+    {
+      "id": 750,
+      "word": "tidak mampu",
+      "sentence1": "Dia tidak dapat menghadiri pertemuan itu.",
+      "sentence2": "Dia merasa tidak mampu mengatasi situasi itu."
+    },
+    {
+      "id": 751,
+      "word": "tidak nyaman",
+      "sentence1": "Kursi itu tidak nyaman untuk duduk.",
+      "sentence2": "Dia merasa tidak nyaman dengan gaun yang ketat."
+    },
+    {
+      "id": 752,
+      "word": "pakaian dalam",
+      "sentence1": "Dia membeli pakaian dalam baru.",
+      "sentence2": "Dia lebih suka celana dalam katun."
+    },
+    {
+      "id": 753,
+      "word": "pengangguran",
+      "sentence1": "Dia sudah menganggur selama enam bulan.",
+      "sentence2": "Populasi pengangguran meningkat."
+    },
+    {
+      "id": 754,
+      "word": "pengangguran",
+      "sentence1": "Pengangguran adalah masalah utama di kota ini.",
+      "sentence2": "Pemerintah bekerja untuk mengurangi pengangguran."
+    },
+    {
+      "id": 755,
+      "word": "tidak adil",
+      "sentence1": "Tidak adil menyalahkan dia atas kesalahan itu.",
+      "sentence2": "Keputusan itu dipandang tidak adil oleh banyak orang."
+    },
+    {
+      "id": 756,
+      "word": "persatuan",
+      "sentence1": "Para pekerja membentuk serikat untuk melindungi hak-hak mereka.",
+      "sentence2": "Persatuan sedang bernegosiasi untuk upah yang lebih baik."
+    },
+    {
+      "id": 757,
+      "word": "kecuali",
+      "sentence1": "Anda tidak akan berhasil kecuali Anda bekerja keras.",
+      "sentence2": "Aku akan pergi kecuali hujan."
+    },
+    {
+      "id": 758,
+      "word": "tidak seperti",
+      "sentence1": "Tidak seperti kakaknya, dia sangat terbuka.",
+      "sentence2": "Kain ini tidak seperti apapun yang pernah kulihat sebelumnya."
+    },
+    {
+      "id": 759,
+      "word": "tidak mungkin",
+      "sentence1": "Tidak mungkin salju turun di bulan April.",
+      "sentence2": "Dia tidak mungkin menerima tawaran itu."
+    },
+    {
+      "id": 760,
+      "word": "tidak perlu",
+      "sentence1": "Tidak perlu membeli pakaian baru.",
+      "sentence2": "Laporan itu dianggap tidak perlu."
+    },
+    {
+      "id": 761,
+      "word": "tidak menyenangkan",
+      "sentence1": "Baunya tidak enak.",
+      "sentence2": "Dia memiliki pengalaman yang tidak menyenangkan di hotel."
+    },
+    {
+      "id": 762,
+      "word": "memperbarui",
+      "sentence1": "Aku perlu memperbarui perangkat lunakku.",
+      "sentence2": "Pembaruan ini akan meningkatkan kinerja."
+    },
+    {
+      "id": 763,
+      "word": "atas",
+      "sentence1": "Dulu, ada seorang putri.",
+      "sentence2": "Keputusan itu didasarkan pada pertimbangan yang cermat."
+    },
+    {
+      "id": 764,
+      "word": "kesal",
+      "sentence1": "Dia marah tentang berita itu.",
+      "sentence2": "Jangan marah, ini bukan salahmu."
+    },
+    {
+      "id": 765,
+      "word": "digunakan",
+      "sentence1": "Buku itu sudah digunakan, tapi dalam kondisi baik.",
+      "sentence2": "Dia membeli mobil bekas."
+    },
+    {
+      "id": 766,
+      "word": "berharga",
+      "sentence1": "Waktu adalah sumber daya yang berharga.",
+      "sentence2": "Dia memberi saya beberapa saran berharga."
+    },
+    {
+      "id": 767,
+      "word": "nilai",
+      "sentence1": "Berapa nilai lukisan ini?",
+      "sentence2": "Dia tahu nilai kerja keras."
+    },
+    {
+      "id": 768,
+      "word": "bermacam-macam",
+      "sentence1": "Ada berbagai pilihan untuk dipilih.",
+      "sentence2": "Dia telah tinggal di berbagai negara."
+    },
+    {
+      "id": 769,
+      "word": "versi",
+      "sentence1": "Versi perangkat lunak apa yang kau gunakan?",
+      "sentence2": "Versi terbaru mencakup fitur baru."
+    },
+    {
+      "id": 770,
+      "word": "korban",
+      "sentence1": "Korban ditemukan tidak sadarkan diri.",
+      "sentence2": "Banyak korban bencana membutuhkan bantuan."
+    },
+    {
+      "id": 771,
+      "word": "pandangan",
+      "sentence1": "Pemandangan dari atas sangat menakjubkan.",
+      "sentence2": "Dia memiliki pandangan yang berbeda tentang masalah ini."
+    },
+    {
+      "id": 772,
+      "word": "pemirsa",
+      "sentence1": "Film ini menarik banyak penonton.",
+      "sentence2": "Sebagai pemirsa, kau punya hak untuk pendapatmu."
+    },
+    {
+      "id": 773,
+      "word": "kejam",
+      "sentence1": "Film ini berisi adegan kekerasan.",
+      "sentence2": "Dia memiliki temperamen yang ganas."
+    },
+    {
+      "id": 774,
+      "word": "relawan",
+      "sentence1": "Dia memutuskan untuk menjadi sukarelawan di tempat penampungan setempat.",
+      "sentence2": "Relawan dibutuhkan untuk acara ini."
+    },
+    {
+      "id": 775,
+      "word": "suara",
+      "sentence1": "Penting untuk memilih dalam pemilihan.",
+      "sentence2": "Dia berencana untuk memilih untuk pertama kalinya."
+    },
+    {
+      "id": 776,
+      "word": "hangat",
+      "sentence1": "Supnya hangat dan menghibur.",
+      "sentence2": "Dia memberinya senyuman hangat."
+    },
+    {
+      "id": 777,
+      "word": "memperingatkan",
+      "sentence1": "Aku ingin memperingatkanmu tentang bahaya.",
+      "sentence2": "Dia diperingatkan untuk tidak pergi ke sana."
+    },
+    {
+      "id": 778,
+      "word": "peringatan",
+      "sentence1": "Peringatan itu dikeluarkan setelah badai.",
+      "sentence2": "Dia mengabaikan tanda-tanda peringatan."
+    },
+    {
+      "id": 779,
+      "word": "limbah",
+      "sentence1": "Jangan buang waktu Anda dengan tugas-tugas yang tidak penting.",
+      "sentence2": "Limbahnya dibuang dengan benar."
+    },
+    {
+      "id": 780,
+      "word": "air",
+      "sentence1": "Air sangat penting untuk kehidupan.",
+      "sentence2": "Dia menuangkan air ke dalam gelas."
+    },
+    {
+      "id": 781,
+      "word": "gelombang",
+      "sentence1": "Gelombang itu menabrak pantai.",
+      "sentence2": "Dia melambaikan tangan untuk mengucapkan selamat tinggal kepada teman-temannya."
+    },
+    {
+      "id": 782,
+      "word": "senjata",
+      "sentence1": "Prajurit dilatih untuk menggunakan berbagai senjata.",
+      "sentence2": "Senjata itu ditemukan di TKP."
+    },
+    {
+      "id": 783,
+      "word": "menimbang",
+      "sentence1": "Penting untuk menimbang pro dan kontra.",
+      "sentence2": "Dia menimbang dirinya sendiri setiap pagi."
+    },
+    {
+      "id": 784,
+      "word": "barat",
+      "sentence1": "Negara-negara Barat memiliki budaya yang berbeda.",
+      "sentence2": "Film ini diatur di sebuah kota barat."
+    },
+    {
+      "id": 785,
+      "word": "apapun",
+      "sentence1": "Lakukan apapun yang membuatmu bahagia.",
+      "sentence2": "Dia akan mendukungmu, apapun yang terjadi."
+    },
+    {
+      "id": 786,
+      "word": "kapanpun",
+      "sentence1": "Anda dapat menelepon saya kapan pun Anda membutuhkan bantuan.",
+      "sentence2": "Aku akan berada di sana kapanpun kau membutuhkanku."
+    },
+    {
+      "id": 787,
+      "word": "apakah",
+      "sentence1": "Aku tidak tahu apakah harus pergi atau tinggal.",
+      "sentence2": "Dia bertanya apakah akan hujan."
+    },
+    {
+      "id": 788,
+      "word": "sementara",
+      "sentence1": "Aku suka mendengarkan musik saat bekerja.",
+      "sentence2": "Dia membaca sebuah buku saat menunggu bus."
+    },
+    {
+      "id": 789,
+      "word": "seluruhnya",
+      "sentence1": "Seluruh keluarga berkumpul untuk reuni.",
+      "sentence2": "Dia makan seluruh pizza sendirian."
+    },
+    {
+      "id": 790,
+      "word": "akan",
+      "sentence1": "Aku akan meneleponmu besok.",
+      "sentence2": "Dia akan menyelesaikan PR-nya nanti."
+    },
+    {
+      "id": 791,
+      "word": "menang",
+      "sentence1": "Saya berharap untuk memenangkan kompetisi.",
+      "sentence2": "Mereka memenangkan pertandingan dengan margin yang besar."
+    },
+    {
+      "id": 792,
+      "word": "sayap",
+      "sentence1": "Burung itu membuka sayapnya dan terbang pergi.",
+      "sentence2": "Sayap pesawat rusak."
+    },
+    {
+      "id": 793,
+      "word": "dalam",
+      "sentence1": "Jawabannya ada di dalam teks.",
+      "sentence2": "Dia menemukan kedamaian dalam dirinya."
+    },
+    {
+      "id": 794,
+      "word": "heran",
+      "sentence1": "Aku ingin tahu apa yang akan terjadi selanjutnya.",
+      "sentence2": "Dia bertanya-tanya apakah dia akan datang."
+    },
+    {
+      "id": 795,
+      "word": "wol",
+      "sentence1": "Sweater ini terbuat dari wol lembut.",
+      "sentence2": "Dia membeli bola wol untuk merajut."
+    },
+    {
+      "id": 796,
+      "word": "di seluruh dunia",
+      "sentence1": "Kampanye ini sukses di seluruh dunia.",
+      "sentence2": "Dia punya teman di seluruh dunia."
+    },
+    {
+      "id": 797,
+      "word": "khawatir",
+      "sentence1": "Jangan khawatir tentang hal-hal kecil.",
+      "sentence2": "Dia khawatir tentang masa depannya."
+    },
+    {
+      "id": 798,
+      "word": "lebih buruk",
+      "sentence1": "Situasinya semakin memburuk.",
+      "sentence2": "Dia merasa lebih buruk setelah mendengar berita itu."
+    },
+    {
+      "id": 799,
+      "word": "terburuk",
+      "sentence1": "Ini adalah hari terburuk yang pernah.",
+      "sentence2": "Dia memiliki keberuntungan terburuk dalam permainan."
+    },
+    {
+      "id": 800,
+      "word": "nilai",
+      "sentence1": "Lukisan ini bernilai banyak uang.",
+      "sentence2": "Ini tidak layak usaha."
+    },
+    {
+      "id": 801,
+      "word": "tertulis",
+      "sentence1": "Peraturannya tertulis di buku panduan.",
+      "sentence2": "Dia punya perjanjian tertulis."
+    },
+    {
+      "id": 802,
+      "word": "salah",
+      "sentence1": "Kurasa kau salah nomor.",
+      "sentence2": "Ini salah untuk berbohong."
+    },
+    {
+      "id": 803,
+      "word": "halaman",
+      "sentence1": "Anak-anak sedang bermain di halaman.",
+      "sentence2": "Dia memiliki taman yang indah di halaman rumahnya."
+    },
+    {
+      "id": 804,
+      "word": "muda",
+      "sentence1": "Gadis muda itu sedang belajar bermain piano.",
+      "sentence2": "Dia masih muda dan memiliki masa depan yang cerah."
+    },
+    {
+      "id": 805,
+      "word": "pemuda",
+      "sentence1": "Masa muda adalah masa eksplorasi dan pertumbuhan.",
+      "sentence2": "Program ini dirancang untuk pengembangan pemuda."
+    }
+  ]
+}

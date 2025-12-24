@@ -1,0 +1,5206 @@
+{
+  "words": [
+    {
+      "id": 1,
+      "word": "uwezo",
+      "sentence1": "Ana uwezo wa kutatua matatizo magumu.",
+      "sentence2": "Uwezo wake wa kubadilikana upesi ni wenye kutokeza."
+    },
+    {
+      "id": 2,
+      "word": "mwenye uwezo",
+      "sentence1": "Anaweza kukamilisha mradi huo kwa wakati.",
+      "sentence2": "Wanaweza kuzungumza lugha tatu kwa ufasaha."
+    },
+    {
+      "id": 3,
+      "word": "nje ya nchi",
+      "sentence1": "Alijifunza nje ya nchi kwa mwaka mmoja.",
+      "sentence2": "Kusafiri ng'ambo kwaweza kuwa ono zuri."
+    },
+    {
+      "id": 4,
+      "word": "kukubali",
+      "sentence1": "Nakubali msamaha wako.",
+      "sentence2": "Alikubaliwa katika chuo kikuu."
+    },
+    {
+      "id": 5,
+      "word": "aksidenti",
+      "sentence1": "Alijeruhiwa katika aksidenti ya gari.",
+      "sentence2": "Aksidenti zaweza kutokea wakati wowote."
+    },
+    {
+      "id": 6,
+      "word": "kulingana na",
+      "sentence1": "Kulingana na ripoti hiyo, mauzo yameongezeka.",
+      "sentence2": "Kulingana naye, mkutano huo umefutwa."
+    },
+    {
+      "id": 7,
+      "word": "kufikia",
+      "sentence1": "Alijitahidi sana kufikia miradi yake.",
+      "sentence2": "Walifanikiwa sana katika mradi wao."
+    },
+    {
+      "id": 8,
+      "word": "kitendo",
+      "sentence1": "Unahitaji kutenda haraka katika hali hii.",
+      "sentence2": "Alitenda kana kwamba hakuna kilichotokea."
+    },
+    {
+      "id": 9,
+      "word": "kazi",
+      "sentence1": "Yeye huishi maisha yenye shughuli nyingi.",
+      "sentence2": "Yeye ni mtendaji sana katika jumuiya yake."
+    },
+    {
+      "id": 10,
+      "word": "kwa kweli",
+      "sentence1": "Kwa kweli napendelea chai kuliko kahawa.",
+      "sentence2": "Kwa kweli ana kipaji kikubwa."
+    },
+    {
+      "id": 11,
+      "word": "mtu mzima",
+      "sentence1": "Watu wazima wanawajibika kwa matendo yao.",
+      "sentence2": "Filamu hiyo haifai kwa watu wazima."
+    },
+    {
+      "id": 12,
+      "word": "faida",
+      "sentence1": "Kuwa na gari hukupa faida kubwa.",
+      "sentence2": "Alitumia vizuri nafasi hiyo."
+    },
+    {
+      "id": 13,
+      "word": "utamaduni",
+      "sentence1": "Walisafiri hadi milimani.",
+      "sentence2": "Maisha ni safari inayosubiri kuchunguzwa."
+    },
+    {
+      "id": 14,
+      "word": "tangaza",
+      "sentence1": "Waliamua kutangaza tukio hilo mtandaoni.",
+      "sentence2": "Ni muhimu kutangaza biashara yako vizuri."
+    },
+    {
+      "id": 15,
+      "word": "matangazo",
+      "sentence1": "Niliona tangazo la simu mpya.",
+      "sentence2": "Matangazo ya biashara yanaweza kuathiri maamuzi yetu ya kununua vitu."
+    },
+    {
+      "id": 16,
+      "word": "matangazo",
+      "sentence1": "Anafanya kazi ya matangazo na anaipenda kazi yake.",
+      "sentence2": "Matangazo ya biashara hutimiza fungu muhimu sana katika biashara."
+    },
+    {
+      "id": 17,
+      "word": "kuathiri",
+      "sentence1": "Hali ya hewa inaweza kuathiri hisia zako.",
+      "sentence2": "Maneno yake yalimgusa moyo sana."
+    },
+    {
+      "id": 18,
+      "word": "baada ya",
+      "sentence1": "Tunaweza kukutana baada ya darasa.",
+      "sentence2": "Baada ya mvua, jua lilitokea."
+    },
+    {
+      "id": 19,
+      "word": "dhidi ya",
+      "sentence1": "Yeye anapinga wazo la kufanya kazi siku za mwisho-juma.",
+      "sentence2": "Walipigana dhidi ya ukosefu wa haki."
+    },
+    {
+      "id": 20,
+      "word": "ah",
+      "sentence1": "Ah, naona unamaanisha nini.",
+      "sentence2": "Ah, hiyo ni ya kuvutia!"
+    },
+    {
+      "id": 21,
+      "word": "ndege",
+      "sentence1": "Niliweka tiketi ya ndege ya bei nafuu.",
+      "sentence2": "Kampuni hiyo ya ndege hutoa bei nzuri kwenye ndege za kimataifa."
+    },
+    {
+      "id": 22,
+      "word": "hai",
+      "sentence1": "Maua hayo bado yako hai na yanachanua.",
+      "sentence2": "Alijisikia mwenye uhai zaidi kuliko wakati mwingine wowote."
+    },
+    {
+      "id": 23,
+      "word": "wote",
+      "sentence1": "Wanafunzi wote wanapaswa kuwasilisha migawo yao.",
+      "sentence2": "Alikula keki zote."
+    },
+    {
+      "id": 24,
+      "word": "sawa",
+      "sentence1": "Je, kila kitu ni sawa?",
+      "sentence2": "Ni sawa kuomba msaada."
+    },
+    {
+      "id": 25,
+      "word": "ruhusu",
+      "sentence1": "Hawaruhusiwi kuvuta sigara ndani ya jengo hilo.",
+      "sentence2": "Alimruhusu mwana wake kulala usiku sana."
+    },
+    {
+      "id": 26,
+      "word": "karibu",
+      "sentence1": "Karibu nisahau siku yako ya kuzaliwa!",
+      "sentence2": "Ni karibu wakati wa kwenda."
+    },
+    {
+      "id": 27,
+      "word": "peke yake",
+      "sentence1": "Yeye hupendelea kufanya kazi peke yake.",
+      "sentence2": "Alijisikia peke yake katika umati huo."
+    },
+    {
+      "id": 28,
+      "word": "pamoja",
+      "sentence1": "Tulitembea kando ya pwani.",
+      "sentence2": "Ana rafiki anayesafiri naye."
+    },
+    {
+      "id": 29,
+      "word": "tayari",
+      "sentence1": "Tayari nimekula chakula cha mchana.",
+      "sentence2": "Je, tayari ni wakati wa kwenda?"
+    },
+    {
+      "id": 30,
+      "word": "mbadala",
+      "sentence1": "Tunahitaji kutafuta suluhisho jingine.",
+      "sentence2": "Kuna vyanzo vingi vya nishati."
+    },
+    {
+      "id": 31,
+      "word": "ingawa",
+      "sentence1": "Ingawa ilikuwa ikinyesha, tulitembea.",
+      "sentence2": "Ingawa alikuwa amechoka, alimaliza kazi hiyo."
+    },
+    {
+      "id": 32,
+      "word": "kati ya",
+      "sentence1": "Alikuwa ameketi miongoni mwa marafiki zake.",
+      "sentence2": "Siri ilikuwa imefichwa kati ya kurasa za kitabu hicho."
+    },
+    {
+      "id": 33,
+      "word": "kiasi",
+      "sentence1": "Kiasi cha maji katika chupa ni kidogo.",
+      "sentence2": "Alitoa kiasi kikubwa cha fedha kwa ajili ya misaada."
+    },
+    {
+      "id": 34,
+      "word": "ya kale",
+      "sentence1": "Walivumbua magofu ya kale jangwani.",
+      "sentence2": "Utamaduni wa kale ulikuwa na ujuzi wa hali ya juu."
+    },
+    {
+      "id": 35,
+      "word": "kifundo cha mguu",
+      "sentence1": "Alijiuma mguu alipokuwa akikimbia.",
+      "sentence2": "Majeraha ya vifundo vya miguu yanaweza kuwa yenye maumivu sana."
+    },
+    {
+      "id": 36,
+      "word": "yoyote",
+      "sentence1": "Je, una maswali yoyote?",
+      "sentence2": "Sina pesa yoyote iliyobaki."
+    },
+    {
+      "id": 37,
+      "word": "mtu yeyote",
+      "sentence1": "Je, kuna mtu yeyote nyumbani?",
+      "sentence2": "Sidhani kama mtu yeyote alituona."
+    },
+    {
+      "id": 38,
+      "word": "tena",
+      "sentence1": "Siwezi kula tena; nimeshiba.",
+      "sentence2": "Je, una maswali zaidi?"
+    },
+    {
+      "id": 39,
+      "word": "hata hivyo",
+      "sentence1": "Sikupenda sinema hiyo, lakini nilienda hata hivyo.",
+      "sentence2": "Kwa vyovyote vile, hebu tuendelee kwenye mada inayofuata."
+    },
+    {
+      "id": 40,
+      "word": "mahali popote",
+      "sentence1": "Siwezi kupata funguo zangu popote.",
+      "sentence2": "Je, umekuwa mahali popote kuvutia hivi karibuni?"
+    },
+    {
+      "id": 41,
+      "word": "app",
+      "sentence1": "Nilipakua programu mpya kwenye simu yangu.",
+      "sentence2": "Programu hiyo hukusaidia kufuatilia matumizi yako."
+    },
+    {
+      "id": 42,
+      "word": "kuonekana",
+      "sentence1": "Hakuonekana kuwa na furaha.",
+      "sentence2": "Nyota huonekana usiku."
+    },
+    {
+      "id": 43,
+      "word": "sura",
+      "sentence1": "Sura yake imebadilika kwa miaka mingi.",
+      "sentence2": "Maoni ya kwanza hutegemea sura."
+    },
+    {
+      "id": 44,
+      "word": "kutumika",
+      "sentence1": "Nataka kuomba kazi hiyo.",
+      "sentence2": "Unaweza kuomba udhamini mtandaoni."
+    },
+    {
+      "id": 45,
+      "word": "mtengenezaji",
+      "sentence1": "Mjenzi huyo alibuni jengo maridadi.",
+      "sentence2": "Yeye anataka kuwa mbunifu wa majengo wakati ujao."
+    },
+    {
+      "id": 46,
+      "word": "usanifu",
+      "sentence1": "Alijifunza usanifu wa majengo katika chuo kikuu.",
+      "sentence2": "Usanifu wa jengo hilo ni wa kisasa."
+    },
+    {
+      "id": 47,
+      "word": "kubishana",
+      "sentence1": "Mara nyingi wao hubishana kuhusu siasa.",
+      "sentence2": "Hakuna haja ya kubishana juu ya mambo madogo."
+    },
+    {
+      "id": 48,
+      "word": "hoja",
+      "sentence1": "Walibishana vikali usiku wa jana.",
+      "sentence2": "Hoja kuu katika insha hiyo iko wazi."
+    },
+    {
+      "id": 49,
+      "word": "jeshi",
+      "sentence1": "Alitumikia jeshini kwa miaka mitano.",
+      "sentence2": "Jeshi linajitayarisha kwa ajili ya mazoezi makubwa."
+    },
+    {
+      "id": 50,
+      "word": "kupanga",
+      "sentence1": "Je, unaweza kupanga viti katika mduara?",
+      "sentence2": "Alipanga kukutana na msimamizi."
+    },
+    {
+      "id": 51,
+      "word": "mpango",
+      "sentence1": "Mpangilio wa fanicha ni muhimu.",
+      "sentence2": "Tunahitaji kubadilisha mpangilio wa chumba."
+    },
+    {
+      "id": 52,
+      "word": "kama",
+      "sentence1": "Anafanya kazi ya ualimu.",
+      "sentence2": "Anajulikana kuwa mwanamuziki mwenye kipaji."
+    },
+    {
+      "id": 53,
+      "word": "usingizi",
+      "sentence1": "Mtoto amelala kitandani.",
+      "sentence2": "Nililala usingizi wakati wa sinema."
+    },
+    {
+      "id": 54,
+      "word": "msaidizi",
+      "sentence1": "Anafanya kazi kama msaidizi katika ofisi.",
+      "sentence2": "Msaidizi huyo alinisaidia kufanya kazi zangu."
+    },
+    {
+      "id": 55,
+      "word": "mwanariadha",
+      "sentence1": "Yeye ni mwanariadha mtaalamu.",
+      "sentence2": "Wanariadha wanahitaji kuzoezwa kwa ukawaida."
+    },
+    {
+      "id": 56,
+      "word": "kushambulia",
+      "sentence1": "Jeshi lilizindua shambulio dhidi ya ngome ya adui.",
+      "sentence2": "Ugonjwa huo unaweza kushambulia mfumo wa kinga."
+    },
+    {
+      "id": 57,
+      "word": "kuhudhuria",
+      "sentence1": "Nitahudhuria mkutano kesho.",
+      "sentence2": "Ni watu wangapi waliohudhuria tukio hilo?"
+    },
+    {
+      "id": 58,
+      "word": "tahadhari",
+      "sentence1": "Tafadhali fuata maagizo.",
+      "sentence2": "Alivuta uangalifu wa wasikilizaji kwa hotuba yake."
+    },
+    {
+      "id": 59,
+      "word": "kuvutia",
+      "sentence1": "Ana tabasamu yenye kuvutia.",
+      "sentence2": "Tangazo hilo linavutia sana."
+    },
+    {
+      "id": 60,
+      "word": "wasikilizaji",
+      "sentence1": "Wahudhuriaji walipiga makofi baada ya wonyesho huo.",
+      "sentence2": "Filamu hiyo ilipokelewa vizuri na watazamaji."
+    },
+    {
+      "id": 61,
+      "word": "mwandishi",
+      "sentence1": "Yeye ni mwandishi wa riwaya kadhaa za kuuza zaidi.",
+      "sentence2": "Mwandishi atasaini vitabu katika tukio hilo."
+    },
+    {
+      "id": 62,
+      "word": "inapatikana",
+      "sentence1": "Kitabu hicho kinapatikana katika lugha kadhaa.",
+      "sentence2": "Je, kiti hiki ni cha bure?"
+    },
+    {
+      "id": 63,
+      "word": "wastani",
+      "sentence1": "Joto la wastani katika Julai ni la juu.",
+      "sentence2": "Ana alama ya wastani darasani."
+    },
+    {
+      "id": 64,
+      "word": "kuepuka",
+      "sentence1": "Unapaswa kuepuka kula sukari nyingi mno.",
+      "sentence2": "Alijaribu kuepuka swali hilo."
+    },
+    {
+      "id": 65,
+      "word": "tuzo",
+      "sentence1": "Alipata tuzo kwa utendaji wake.",
+      "sentence2": "Sherehe ya tuzo itafanyika wiki ijayo."
+    },
+    {
+      "id": 66,
+      "word": "mbaya sana",
+      "sentence1": "Hali ya hewa leo ni mbaya sana.",
+      "sentence2": "Nilikuwa na siku mbaya kazini."
+    },
+    {
+      "id": 67,
+      "word": "nyuma",
+      "sentence1": "Aliketi nyuma ya darasa.",
+      "sentence2": "Aliumia mgongo wake alipokuwa akiinua vyuma."
+    },
+    {
+      "id": 68,
+      "word": "historia",
+      "sentence1": "Picha ya nyuma ni nzuri sana.",
+      "sentence2": "Ana ujuzi wa historia ya sanaa."
+    },
+    {
+      "id": 69,
+      "word": "vibaya",
+      "sentence1": "Alijeruhiwa vibaya katika aksidenti hiyo.",
+      "sentence2": "Yeye huimba vibaya lakini hufurahia."
+    },
+    {
+      "id": 70,
+      "word": "baridi",
+      "sentence1": "Tulienda baa kunywa.",
+      "sentence2": "Baa hiyo ilikuwa imejaa watu Ijumaa usiku."
+    },
+    {
+      "id": 71,
+      "word": "mchezo wa besiboli",
+      "sentence1": "Yeye hucheza besiboli mwishoni mwa juma.",
+      "sentence2": "Baseball ni mchezo maarufu nchini Marekani."
+    },
+    {
+      "id": 72,
+      "word": "msingi",
+      "sentence1": "Sinema hiyo inategemea hadithi ya kweli.",
+      "sentence2": "Maoni yetu yanategemea mambo hakika."
+    },
+    {
+      "id": 73,
+      "word": "mpira wa kikapu",
+      "sentence1": "Yeye hucheza mpira wa kikapu kila Jumamosi.",
+      "sentence2": "Mpira wa kikapu ni mchezo unaobadilika haraka."
+    },
+    {
+      "id": 74,
+      "word": "mbegu",
+      "sentence1": "Ninapenda kula maharagwe ya kijani.",
+      "sentence2": "Maharagwe ni chanzo kizuri cha protini."
+    },
+    {
+      "id": 75,
+      "word": "dubu (mnyama)",
+      "sentence1": "Dubu ni mnyama mkubwa na mwenye nguvu.",
+      "sentence2": "Niliona dubu msituni."
+    },
+    {
+      "id": 76,
+      "word": "kupigwa",
+      "sentence1": "Timu yetu ilifanikiwa kuwashinda mabingwa.",
+      "sentence2": "Alipigwa katika mchezo wa mwisho."
+    },
+    {
+      "id": 77,
+      "word": "nyama ya ng'ombe",
+      "sentence1": "Ninapendelea kuku kuliko nyama ya ng'ombe.",
+      "sentence2": "Nyama ya ng'ombe hutumiwa sana katika vyakula vingi."
+    },
+    {
+      "id": 78,
+      "word": "kabla",
+      "sentence1": "Sikuwa nimewahi kuona machweo mazuri kama hayo.",
+      "sentence2": "Tafadhali kumaliza kazi yako ya nyumbani kabla ya chakula cha jioni."
+    },
+    {
+      "id": 79,
+      "word": "kujiendesha",
+      "sentence1": "Watoto wanapaswa kujifunza jinsi ya kujiendesha mbele ya watu.",
+      "sentence2": "Hakujiendesha vizuri kwenye sherehe."
+    },
+    {
+      "id": 80,
+      "word": "tabia",
+      "sentence1": "Tabia yake ilikuwa ya ajabu sana jana.",
+      "sentence2": "Tunahitaji kubadilisha tabia zetu kuelekea mazingira."
+    },
+    {
+      "id": 81,
+      "word": "kuwa",
+      "sentence1": "Kitabu hiki ni changu.",
+      "sentence2": "Je, unahisi kama wewe ni wa hapa?"
+    },
+    {
+      "id": 82,
+      "word": "mkanda",
+      "sentence1": "Alikuwa amevaa mkanda mweusi pamoja na suruali zake.",
+      "sentence2": "Kufunga mkanda wa usalama ni muhimu sana kwa usalama."
+    },
+    {
+      "id": 83,
+      "word": "faida",
+      "sentence1": "Sheria mpya itawanufaisha watu wengi.",
+      "sentence2": "Kuna faida gani za kufanya mazoezi?"
+    },
+    {
+      "id": 84,
+      "word": "bora",
+      "sentence1": "Yeye ndiye mwanafunzi bora zaidi darasani.",
+      "sentence2": "Hii ni pizza bora ambayo nimewahi kula."
+    },
+    {
+      "id": 85,
+      "word": "bora",
+      "sentence1": "Ninajisikia vizuri leo kuliko jana.",
+      "sentence2": "Suluhisho hili ni bora kuliko lile la awali."
+    },
+    {
+      "id": 86,
+      "word": "kati ya",
+      "sentence1": "Hifadhi hiyo iko kati ya shule na maktaba.",
+      "sentence2": "Kuna tofauti kubwa kati ya mapendekezo hayo mawili."
+    },
+    {
+      "id": 87,
+      "word": "bilioni",
+      "sentence1": "Kampuni hiyo ina thamani ya zaidi ya dola bilioni moja.",
+      "sentence2": "Kuna mabilioni ya nyota katika ulimwengu."
+    },
+    {
+      "id": 88,
+      "word": "kitanda",
+      "sentence1": "Tafadhali weka takataka ndani ya pipa.",
+      "sentence2": "Kiwanda cha kuchakata vitu kimekwisha kujazwa."
+    },
+    {
+      "id": 89,
+      "word": "biolojia",
+      "sentence1": "Anajifunza biolojia katika chuo kikuu.",
+      "sentence2": "Biolojia ni elimu ya viumbe hai."
+    },
+    {
+      "id": 90,
+      "word": "kuzaliwa",
+      "sentence1": "Kuzaliwa kwa mtoto kulikuwa tukio la shangwe.",
+      "sentence2": "Walikuwa wakisherehekea kuzaliwa kwa binti yao."
+    },
+    {
+      "id": 91,
+      "word": "biskuti",
+      "sentence1": "Ninapenda kula biskuti pamoja na chai yangu.",
+      "sentence2": "Biskuti hizi zimetengenezwa nyumbani."
+    },
+    {
+      "id": 92,
+      "word": "kidogo",
+      "sentence1": "Je, ninaweza kuwa na kidogo ya chocolate yako?",
+      "sentence2": "Unahitaji tu chumvi zaidi kidogo."
+    },
+    {
+      "id": 93,
+      "word": "tupu",
+      "sentence1": "Tafadhali jaza blankani na jibu sahihi.",
+      "sentence2": "Ukurasa huo uliachwa ukiwa tupu kwa ajili ya maandishi."
+    },
+    {
+      "id": 94,
+      "word": "damu",
+      "sentence1": "Damu ni muhimu kwa uhai.",
+      "sentence2": "Alitoa damu hospitalini."
+    },
+    {
+      "id": 95,
+      "word": "pigo",
+      "sentence1": "Tafadhali punguza mishumaa kwenye keki.",
+      "sentence2": "Upepo ulianza kuvuma kwa nguvu zaidi."
+    },
+    {
+      "id": 96,
+      "word": "ubao",
+      "sentence1": "Mwalimu aliandika somo hilo kwenye ubao.",
+      "sentence2": "Tunahitaji ubao wa maonyesho."
+    },
+    {
+      "id": 97,
+      "word": "kuchemsha",
+      "sentence1": "Tafadhali chemsha maji kabla ya kuongeza tambi.",
+      "sentence2": "Mayai yatachemka baada ya dakika 10 hivi."
+    },
+    {
+      "id": 98,
+      "word": "mfupa",
+      "sentence1": "Mbwa alizika mfupa katika uwanja.",
+      "sentence2": "Wanadamu wana mifupa 206 katika mwili wao."
+    },
+    {
+      "id": 99,
+      "word": "kitabu",
+      "sentence1": "Ninasoma kitabu chenye kupendeza.",
+      "sentence2": "Ana mkusanyiko mkubwa wa vitabu."
+    },
+    {
+      "id": 100,
+      "word": "kukopa",
+      "sentence1": "Je, ninaweza kukopa kalamu yako?",
+      "sentence2": "Alikopa kitabu kwenye maktaba."
+    },
+    {
+      "id": 101,
+      "word": "mkuu",
+      "sentence1": "Msimamizi wangu hunisaidia sana.",
+      "sentence2": "Yeye ndiye mkuu wa timu ya uuzaji."
+    },
+    {
+      "id": 102,
+      "word": "chini",
+      "sentence1": "Hazina hiyo imezikwa chini ya bahari.",
+      "sentence2": "Aliketi chini ya ngazi."
+    },
+    {
+      "id": 103,
+      "word": "bakuli",
+      "sentence1": "Alitumia supu katika bakuli kubwa.",
+      "sentence2": "Mchuzi huo umetengenezwa kwa kauri."
+    },
+    {
+      "id": 104,
+      "word": "ubongo",
+      "sentence1": "Ubongo ndio kituo cha kudhibiti mwili.",
+      "sentence2": "Ana akili nzuri na akili kali."
+    },
+    {
+      "id": 105,
+      "word": "daraja",
+      "sentence1": "Daraja hilo linaunganisha pande mbili za mto huo.",
+      "sentence2": "Tulivuka daraja hilo kwa miguu hadi upande ule mwingine."
+    },
+    {
+      "id": 106,
+      "word": "mkali",
+      "sentence1": "Jua linaangaza sana leo.",
+      "sentence2": "Alikuwa amevaa vazi jekundu."
+    },
+    {
+      "id": 107,
+      "word": "wa ajabu",
+      "sentence1": "Alipata wazo zuri sana.",
+      "sentence2": "Mwanasayansi huyo alifanya ugunduzi mzuri sana."
+    },
+    {
+      "id": 108,
+      "word": "kuvunjwa",
+      "sentence1": "Bonde limevunjika.",
+      "sentence2": "Ana mkono uliovunjika kutokana na aksidenti."
+    },
+    {
+      "id": 109,
+      "word": "mswaki",
+      "sentence1": "Alitumia brashi kuchora picha hiyo.",
+      "sentence2": "Ana mswaki wa nywele zake."
+    },
+    {
+      "id": 110,
+      "word": "kuchoma",
+      "sentence1": "Uwe mwangalifu usijichome kwenye jiko.",
+      "sentence2": "Moto utaendelea kuwaka kwa saa nyingi."
+    },
+    {
+      "id": 111,
+      "word": "mfanyabiashara",
+      "sentence1": "Yeye ni mfanyabiashara mwenye mafanikio.",
+      "sentence2": "Mara nyingi wafanyabiashara husafiri kwa ajili ya kazi."
+    },
+    {
+      "id": 112,
+      "word": "kifungo",
+      "sentence1": "Tafadhali bonyeza kitufe ili kuanzisha mashine.",
+      "sentence2": "Alifunga kifungo kwenye shati lake."
+    },
+    {
+      "id": 113,
+      "word": "kambi",
+      "sentence1": "Tulienda kupiga kambi milimani mwishoni mwa juma lililopita.",
+      "sentence2": "Kupanga kambi ni njia nzuri ya kufurahia mazingira."
+    },
+    {
+      "id": 114,
+      "word": "kupiga kambi",
+      "sentence1": "Kupiga kambi msituni kunaleta amani.",
+      "sentence2": "Wanapenda kupiga kambi wakati wa kiangazi."
+    },
+    {
+      "id": 115,
+      "word": "inaweza",
+      "sentence1": "Naweza kuogelea vizuri sana.",
+      "sentence2": "Je, unaweza kunisaidia na kazi hii?"
+    },
+    {
+      "id": 116,
+      "word": "utunzaji",
+      "sentence1": "Kutunza mimea ni jambo lenye kuburudisha.",
+      "sentence2": "Anajali sana familia yake."
+    },
+    {
+      "id": 117,
+      "word": "makini",
+      "sentence1": "Uwe mwangalifu unapovuka barabara.",
+      "sentence2": "Yeye hujihadhari sana na maneno yake."
+    },
+    {
+      "id": 118,
+      "word": "kwa uangalifu",
+      "sentence1": "Kwa uangalifu aliweka mtungi juu ya meza.",
+      "sentence2": "Alisikiliza kwa makini maagizo."
+    },
+    {
+      "id": 119,
+      "word": "kitambaa",
+      "sentence1": "Sakafu katika chumba cha kulala ni mpya.",
+      "sentence2": "Alikata-kata kabisa zulia hilo."
+    },
+    {
+      "id": 120,
+      "word": "katuni",
+      "sentence1": "Katuni ninayopenda inaonyeshwa kwenye televisheni.",
+      "sentence2": "Watoto walitazama katuni ya kuchekesha."
+    },
+    {
+      "id": 121,
+      "word": "kesi",
+      "sentence1": "Katika hali ya dharura, piga simu 911.",
+      "sentence2": "Hii ni kesi ya pekee inayohitaji uangalifu."
+    },
+    {
+      "id": 122,
+      "word": "pesa taslimu",
+      "sentence1": "Napendelea kulipa kwa fedha taslimu.",
+      "sentence2": "Je, una fedha yoyote juu yako?"
+    },
+    {
+      "id": 123,
+      "word": "ngome",
+      "sentence1": "Ngome hiyo ina zaidi ya miaka 500.",
+      "sentence2": "Walizuru ngome hiyo wakati wa likizo yao."
+    },
+    {
+      "id": 124,
+      "word": "samaki",
+      "sentence1": "Nilijaribu kukamata mpira.",
+      "sentence2": "Alipata homa wiki iliyopita."
+    },
+    {
+      "id": 125,
+      "word": "sababu",
+      "sentence1": "Kuvuta sigara kunaweza kusababisha matatizo ya afya.",
+      "sentence2": "Mvua kubwa ilisababisha mafuriko katika eneo hilo."
+    },
+    {
+      "id": 126,
+      "word": "kusherehekea",
+      "sentence1": "Sisi husherehekea usiku wa kuamkia mwaka mpya kwa mienge.",
+      "sentence2": "Waliadhimisha ukumbusho wao kwa mlo wa jioni."
+    },
+    {
+      "id": 127,
+      "word": "mtu mashuhuri",
+      "sentence1": "Yeye ni mtu mashuhuri.",
+      "sentence2": "Mara nyingi watu mashuhuri huhudhuria maonyesho ya ukumbi mwekundu."
+    },
+    {
+      "id": 128,
+      "word": "hakika",
+      "sentence1": "Nina hakika kwamba niliacha funguo zangu hapa.",
+      "sentence2": "Je, una hakika kuhusu uamuzi huu?"
+    },
+    {
+      "id": 129,
+      "word": "bila shaka",
+      "sentence1": "Bila shaka nitakusaidia kufanya hivyo.",
+      "sentence2": "Bila shaka ana kipawa cha muziki."
+    },
+    {
+      "id": 130,
+      "word": "nafasi",
+      "sentence1": "Una nafasi ya kushinda tuzo.",
+      "sentence2": "Chukua nafasi na ujaribu jambo jipya."
+    },
+    {
+      "id": 131,
+      "word": "tabia",
+      "sentence1": "Ana utu wenye nguvu.",
+      "sentence2": "Mhusika mkuu wa kitabu hicho ni mwenye kupendeza sana."
+    },
+    {
+      "id": 132,
+      "word": "uhisani",
+      "sentence1": "Walitoa pesa kwa ajili ya kazi ya upendo.",
+      "sentence2": "Matukio ya hisani ni muhimu kwa jamii."
+    },
+    {
+      "id": 133,
+      "word": "kuzungumza",
+      "sentence1": "Hebu tuwe na mazungumzo juu ya kahawa.",
+      "sentence2": "Walifurahia mazungumzo ya kirafiki."
+    },
+    {
+      "id": 134,
+      "word": "cheki",
+      "sentence1": "Tafadhali angalia barua pepe yako kwa maelezo.",
+      "sentence2": "Ninahitaji kuangalia ratiba yangu."
+    },
+    {
+      "id": 135,
+      "word": "mpishi",
+      "sentence1": "Mpishi alitayarisha mlo mtamu.",
+      "sentence2": "Anataka kuwa mpishi stadi."
+    },
+    {
+      "id": 136,
+      "word": "kemia",
+      "sentence1": "Somo ninalopenda zaidi ni kemia.",
+      "sentence2": "Walifanya majaribio ya kemia."
+    },
+    {
+      "id": 137,
+      "word": "kipande",
+      "sentence1": "Kompyuta hiyo inahitaji kipande kipya.",
+      "sentence2": "Alipata chip katika keki."
+    },
+    {
+      "id": 138,
+      "word": "uchaguzi",
+      "sentence1": "Una uchaguzi kati ya mambo mawili.",
+      "sentence2": "Ni uamuzi mgumu kufanya."
+    },
+    {
+      "id": 139,
+      "word": "kanisa",
+      "sentence1": "Wanaenda kanisani kila Jumapili.",
+      "sentence2": "Kanisa hilo lilijengwa katika karne ya 18."
+    },
+    {
+      "id": 140,
+      "word": "sigara",
+      "sentence1": "Alivuta sigareti baada ya chakula cha jioni.",
+      "sentence2": "Matangazo ya sigareti yamepigwa marufuku katika nchi nyingi."
+    },
+    {
+      "id": 141,
+      "word": "mzunguko",
+      "sentence1": "Chora duara kwenye karatasi.",
+      "sentence2": "Watoto waliketi katika mzunguko."
+    },
+    {
+      "id": 142,
+      "word": "ya kawaida",
+      "sentence1": "Mimi hufurahia kusikiliza muziki wa zamani.",
+      "sentence2": "Tamasha hilo lilihusisha watungaji wa muziki wa kale."
+    },
+    {
+      "id": 143,
+      "word": "wazi",
+      "sentence1": "Tafadhali safisha meza baada ya chakula cha jioni.",
+      "sentence2": "Maagizo yalikuwa wazi na rahisi kufuata."
+    },
+    {
+      "id": 144,
+      "word": "waziwazi",
+      "sentence1": "Alizungumza waziwazi wakati wa hotuba.",
+      "sentence2": "Sasa naona waziwazi."
+    },
+    {
+      "id": 145,
+      "word": "mwenye busara",
+      "sentence1": "Yeye ni mwanafunzi mwenye akili.",
+      "sentence2": "Alipata suluhisho la busara."
+    },
+    {
+      "id": 146,
+      "word": "hali ya hewa",
+      "sentence1": "Hali ya hewa inabadilika haraka.",
+      "sentence2": "Tunahitaji kuchukua hatua kulinda hali ya hewa."
+    },
+    {
+      "id": 147,
+      "word": "karibu",
+      "sentence1": "Tafadhali funga mlango nyuma yako.",
+      "sentence2": "Duka hilo liko karibu na nyumba yangu."
+    },
+    {
+      "id": 148,
+      "word": "kufungwa",
+      "sentence1": "Duka limefungwa Jumapili.",
+      "sentence2": "Tafadhali funga mlango."
+    },
+    {
+      "id": 149,
+      "word": "mavazi",
+      "sentence1": "Alinunua nguo mpya kwa ajili ya majira ya baridi.",
+      "sentence2": "Duka hilo linauza nguo mbalimbali."
+    },
+    {
+      "id": 150,
+      "word": "wingu",
+      "sentence1": "Anga limejaa mawingu.",
+      "sentence2": "Wingu lilipita juu ya kichwa chake."
+    },
+    {
+      "id": 151,
+      "word": "mwalimu",
+      "sentence1": "Yeye ni kocha wa mpira wa kikapu.",
+      "sentence2": "Kocha alitoa hotuba yenye kuchochea."
+    },
+    {
+      "id": 152,
+      "word": "pwani",
+      "sentence1": "Tulitembea kando ya pwani.",
+      "sentence2": "Pwani ni nzuri wakati wa kiangazi."
+    },
+    {
+      "id": 153,
+      "word": "nambari",
+      "sentence1": "Tafadhali andika kificho cha programu.",
+      "sentence2": "Nambari hiyo haifanyi kazi vizuri."
+    },
+    {
+      "id": 154,
+      "word": "mwenzangu",
+      "sentence1": "Mfanyakazi mwenzangu hunisaidia sana.",
+      "sentence2": "Mara nyingi tunashirikiana na wafanyakazi wenzetu."
+    },
+    {
+      "id": 155,
+      "word": "kukusanya",
+      "sentence1": "Mimi hupenda kukusanya stampu.",
+      "sentence2": "Wao hukusanya habari kwa ajili ya utafiti wao."
+    },
+    {
+      "id": 156,
+      "word": "safu",
+      "sentence1": "Jedwali hilo lina safu tatu.",
+      "sentence2": "Tafadhali kujaza safu ya kwanza."
+    },
+    {
+      "id": 157,
+      "word": "ucheshi",
+      "sentence1": "Mimi hufurahia kutazama filamu za ucheshi.",
+      "sentence2": "Mchezo huo ulikuwa wa kuchekesha sana."
+    },
+    {
+      "id": 158,
+      "word": "starehe",
+      "sentence1": "Kiti hiki ni kizuri sana.",
+      "sentence2": "Nilijihisi vizuri katika mavazi yangu mapya."
+    },
+    {
+      "id": 159,
+      "word": "maoni",
+      "sentence1": "Alitoa maelezo kuhusu sinema hiyo.",
+      "sentence2": "Tafadhali acha maoni yako hapa chini."
+    },
+    {
+      "id": 160,
+      "word": "kuwasiliana",
+      "sentence1": "Ni muhimu kuwasiliana waziwazi.",
+      "sentence2": "Wao hutumia lugha ya ishara kuwasiliana."
+    },
+    {
+      "id": 161,
+      "word": "jamii",
+      "sentence1": "Jumuiya iliungana kusaidia.",
+      "sentence2": "Yeye ni mwenye bidii sana katika jamii yake."
+    },
+    {
+      "id": 162,
+      "word": "kushindana",
+      "sentence1": "Wanariadha wengi hushindana katika Michezo ya Olimpiki.",
+      "sentence2": "Ni jambo la afya kushindana na wewe mwenyewe."
+    },
+    {
+      "id": 163,
+      "word": "ushindani",
+      "sentence1": "Ushindani ulikuwa mkali mwaka huu.",
+      "sentence2": "Alishinda tuzo ya kwanza katika mashindano hayo."
+    },
+    {
+      "id": 164,
+      "word": "kulalamika",
+      "sentence1": "Yeye hupenda kulalamika juu ya hali ya hewa.",
+      "sentence2": "Tafadhali usilalamike kuhusu huduma."
+    },
+    {
+      "id": 165,
+      "word": "kabisa",
+      "sentence1": "Nilimsahau kabisa kuhusu mkutano huo.",
+      "sentence2": "Alishangazwa kabisa na habari hiyo."
+    },
+    {
+      "id": 166,
+      "word": "hali",
+      "sentence1": "Gari liko katika hali nzuri sana.",
+      "sentence2": "Anapona kutokana na hali mbaya sana."
+    },
+    {
+      "id": 167,
+      "word": "mkutano",
+      "sentence1": "Alihudhuria mkutano kuhusu mabadiliko ya hali ya hewa.",
+      "sentence2": "Mkutano huo utafanyika mwezi ujao."
+    },
+    {
+      "id": 168,
+      "word": "kuunganisha",
+      "sentence1": "Unahitaji kuunganisha kwenye mtandao.",
+      "sentence2": "Vifaa vinaweza kuunganishwa bila waya."
+    },
+    {
+      "id": 169,
+      "word": "imeunganishwa",
+      "sentence1": "Printa imeunganishwa na kompyuta.",
+      "sentence2": "Zimeunganishwa kupitia mtandao wa pamoja."
+    },
+    {
+      "id": 170,
+      "word": "fikiria",
+      "sentence1": "Ninahitaji kufikiria chaguzi zote.",
+      "sentence2": "Je, umefikiria matokeo?"
+    },
+    {
+      "id": 171,
+      "word": "kuwa na",
+      "sentence1": "Sanduku hilo lina picha za zamani.",
+      "sentence2": "Hati hii inaweza kuwa na habari nyeti."
+    },
+    {
+      "id": 172,
+      "word": "muktadha",
+      "sentence1": "Muktadha ni muhimu ili kuelewa.",
+      "sentence2": "Tafadhali toa muktadha zaidi wa swali lako."
+    },
+    {
+      "id": 173,
+      "word": "bara",
+      "sentence1": "Afrika ni bara la pili kwa ukubwa duniani.",
+      "sentence2": "Bara hilo ni makao ya tamaduni nyingi mbalimbali."
+    },
+    {
+      "id": 174,
+      "word": "endelea",
+      "sentence1": "Tutaendelea na mkutano baada ya chakula cha mchana.",
+      "sentence2": "Tafadhali endelea na utoaji wako."
+    },
+    {
+      "id": 175,
+      "word": "kudhibiti",
+      "sentence1": "Unahitaji kudhibiti hisia zako.",
+      "sentence2": "Kijijini ni juu ya meza."
+    },
+    {
+      "id": 176,
+      "word": "kupika",
+      "sentence1": "Ninapenda kupika chakula cha Kiitaliano.",
+      "sentence2": "Alijifunza kupika kutoka kwa mama yake."
+    },
+    {
+      "id": 177,
+      "word": "jiko",
+      "sentence1": "Jiko la kupikia mchele ni rahisi sana.",
+      "sentence2": "Nahitaji kununua jiko jipya."
+    },
+    {
+      "id": 178,
+      "word": "nakala",
+      "sentence1": "Tafadhali nakala hati hiyo.",
+      "sentence2": "Nahitaji kunakili faili hii kwenye kompyuta yangu."
+    },
+    {
+      "id": 179,
+      "word": "kona",
+      "sentence1": "Paka anajificha kwenye kona.",
+      "sentence2": "Tafadhali geuka kushoto kwenye kona inayofuata."
+    },
+    {
+      "id": 180,
+      "word": "kwa usahihi",
+      "sentence1": "Tafadhali jibu maswali kwa usahihi.",
+      "sentence2": "Alitamka neno hilo kwa usahihi."
+    },
+    {
+      "id": 181,
+      "word": "hesabu",
+      "sentence1": "Je, unaweza kuhesabu hadi kumi?",
+      "sentence2": "Nahitaji kuhesabu idadi ya washiriki."
+    },
+    {
+      "id": 182,
+      "word": "wawili wawili",
+      "sentence1": "Wanafanyiza wenzi wa ndoa wenye kupendeza.",
+      "sentence2": "Wenzi hao wanasherehekea siku yao ya arusi."
+    },
+    {
+      "id": 183,
+      "word": "kufunika",
+      "sentence1": "Tafadhali funika chakula.",
+      "sentence2": "Paa litafunika nyumba nzima."
+    },
+    {
+      "id": 184,
+      "word": "wazimu",
+      "sentence1": "Wazo hilo laonekana kuwa la kipumbavu.",
+      "sentence2": "Yeye ni kutenda kidogo wazimu leo."
+    },
+    {
+      "id": 185,
+      "word": "ubunifu",
+      "sentence1": "Ana akili ya ubunifu.",
+      "sentence2": "Mradi huo unahitaji kufikiri kwa ubunifu."
+    },
+    {
+      "id": 186,
+      "word": "mkopo",
+      "sentence1": "Ninahitaji kuomba kadi ya mkopo.",
+      "sentence2": "Alipewa sifa kwa kazi yake."
+    },
+    {
+      "id": 187,
+      "word": "uhalifu",
+      "sentence1": "Kiwango cha uhalifu kinaongezeka.",
+      "sentence2": "Alipatikana na hatia ya kosa zito."
+    },
+    {
+      "id": 188,
+      "word": "uhalifu",
+      "sentence1": "Mhalifu huyo alikamatwa na polisi.",
+      "sentence2": "Yeye hufanya kazi akiwa mwanasheria wa mambo ya uhalifu."
+    },
+    {
+      "id": 189,
+      "word": "msalaba",
+      "sentence1": "Tafadhali vuka barabara kwa uangalifu.",
+      "sentence2": "Njia ya kuvuka kwa miguu imewekwa alama kwa mistari meupe."
+    },
+    {
+      "id": 190,
+      "word": "umati",
+      "sentence1": "Umati ulipigia timu hiyo kelele.",
+      "sentence2": "Kulikuwa na umati mkubwa kwenye tamasha hilo."
+    },
+    {
+      "id": 191,
+      "word": "wenye watu wengi",
+      "sentence1": "Gari-moshi hilo lilikuwa na watu wengi wakati wa saa za msongamano.",
+      "sentence2": "Sipendi mahali penye watu wengi."
+    },
+    {
+      "id": 192,
+      "word": "kulia",
+      "sentence1": "Ni sawa kulia unapokuwa na huzuni.",
+      "sentence2": "Mtoto alianza kulia."
+    },
+    {
+      "id": 193,
+      "word": "kabati",
+      "sentence1": "Sahani ziko katika kabati.",
+      "sentence2": "Alifungua kabati ili kupata glasi."
+    },
+    {
+      "id": 194,
+      "word": "wenye manyoya",
+      "sentence1": "Ana nywele zenye kung'aa.",
+      "sentence2": "Mimi hupendelea nywele laini kuliko nywele zenye kukunjamana."
+    },
+    {
+      "id": 195,
+      "word": "mzunguko",
+      "sentence1": "Mzunguko wa maji ni muhimu kwa mazingira.",
+      "sentence2": "Yeye huenda kwa baiskeli kila anapopata nafasi ya kuendesha baiskeli."
+    },
+    {
+      "id": 196,
+      "word": "kila siku",
+      "sentence1": "Mimi husoma habari kila siku.",
+      "sentence2": "Ana ratiba ya kila siku ambayo anafuata."
+    },
+    {
+      "id": 197,
+      "word": "hatari",
+      "sentence1": "Kuwa makini, kuna hatari mbele.",
+      "sentence2": "Ishara hizo zilionya kuhusu hatari."
+    },
+    {
+      "id": 198,
+      "word": "giza",
+      "sentence1": "Ni giza nje.",
+      "sentence2": "Chumba kilikuwa na giza na kimya."
+    },
+    {
+      "id": 199,
+      "word": "data",
+      "sentence1": "Takwimu zinaonyesha mwelekeo ulio wazi.",
+      "sentence2": "Tunahitaji kuchanganua habari kwa uangalifu."
+    },
+    {
+      "id": 200,
+      "word": "kufa",
+      "sentence1": "Mti huo umekufa.",
+      "sentence2": "Alipata ndege aliyekufa katika bustani."
+    },
+    {
+      "id": 201,
+      "word": "mpango",
+      "sentence1": "Tulifikia makubaliano baada ya mazungumzo marefu.",
+      "sentence2": "Ni mpango mzuri kwa pande zote mbili."
+    },
+    {
+      "id": 202,
+      "word": "mpendwa",
+      "sentence1": "Alimwandikia rafiki yake mpendwa barua.",
+      "sentence2": "Ananipenda sana."
+    },
+    {
+      "id": 203,
+      "word": "kifo",
+      "sentence1": "Habari ziliripoti kifo cha ghafula.",
+      "sentence2": "Aliomboleza kifo cha mnyama wake."
+    },
+    {
+      "id": 204,
+      "word": "uamuzi",
+      "sentence1": "Ni wakati wa kufanya uamuzi.",
+      "sentence2": "Alihitaji kufanya uamuzi mgumu."
+    },
+    {
+      "id": 205,
+      "word": "kina",
+      "sentence1": "Maji ni ya kina hapa.",
+      "sentence2": "Alivuta pumzi kwa kina kabla ya kusema."
+    },
+    {
+      "id": 206,
+      "word": "kwa hakika",
+      "sentence1": "Bila shaka nitakuwapo.",
+      "sentence2": "Bila shaka yeye ndiye mgombea bora."
+    },
+    {
+      "id": 207,
+      "word": "kiwango",
+      "sentence1": "Ana shahada ya uzamili katika biolojia.",
+      "sentence2": "Joto lilifikia kiwango cha juu sana leo."
+    },
+    {
+      "id": 208,
+      "word": "daktari wa meno",
+      "sentence1": "Nina miadi na daktari wa meno.",
+      "sentence2": "Yeye hufanya kazi akiwa daktari wa meno katika kliniki ya kibinafsi."
+    },
+    {
+      "id": 209,
+      "word": "idara",
+      "sentence1": "Yeye hufanya kazi katika idara ya uuzaji.",
+      "sentence2": "Idara inawajibika kwa huduma ya wateja."
+    },
+    {
+      "id": 210,
+      "word": "kutegemea",
+      "sentence1": "Huenda mafanikio yako yakategemea jitihada zako.",
+      "sentence2": "Ninategemea marafiki wangu wanisaidie."
+    },
+    {
+      "id": 211,
+      "word": "jangwa",
+      "sentence1": "Jangwa la Sahara ndilo jangwa kubwa zaidi lenye joto ulimwenguni.",
+      "sentence2": "Wanyama wengi wamezoea kuishi jangwani."
+    },
+    {
+      "id": 212,
+      "word": "mtengenezaji",
+      "sentence1": "Yeye ni mtengenezaji wa mitindo.",
+      "sentence2": "Mbuni huyo aliwasilisha mkusanyiko wake mpya."
+    },
+    {
+      "id": 213,
+      "word": "kuharibu",
+      "sentence1": "Moto utaharibu jengo hilo.",
+      "sentence2": "Wanapanga kuharibu daraja la zamani."
+    },
+    {
+      "id": 214,
+      "word": "mchunguzi",
+      "sentence1": "Mchunguzi huyo alisuluhisha kesi hiyo.",
+      "sentence2": "Anataka kuwa mpelelezi atakapokuwa mkubwa."
+    },
+    {
+      "id": 215,
+      "word": "kuendeleza",
+      "sentence1": "Tunahitaji kubuni mbinu mpya.",
+      "sentence2": "Kampuni hiyo inapanga kutengeneza bidhaa mpya."
+    },
+    {
+      "id": 216,
+      "word": "kifaa",
+      "sentence1": "Kifaa hiki kinaweza kuunganishwa kwenye mtandao.",
+      "sentence2": "Alinunua kifaa kipya cha kompyuta yake."
+    },
+    {
+      "id": 217,
+      "word": "daftari",
+      "sentence1": "Yeye huandika mawazo yake katika kitabu cha kumbukumbu.",
+      "sentence2": "Kuandika katika kitabu cha kumbukumbu kunaweza kukusaidia."
+    },
+    {
+      "id": 218,
+      "word": "tofauti",
+      "sentence1": "Walishughulikia tatizo hilo kwa njia tofauti.",
+      "sentence2": "Yeye hufikiri tofauti na marika wake."
+    },
+    {
+      "id": 219,
+      "word": "digital",
+      "sentence1": "Umri wa dijitali umebadilisha mawasiliano.",
+      "sentence2": "Yeye hupendelea vitabu vya kielektroniki kuliko vya karatasi."
+    },
+    {
+      "id": 220,
+      "word": "moja kwa moja",
+      "sentence1": "Tafadhali nijibu moja kwa moja.",
+      "sentence2": "Barabara iliyo mbele yetu inaongoza moja kwa moja jijini."
+    },
+    {
+      "id": 221,
+      "word": "mwelekeo",
+      "sentence1": "Twapaswa kwenda upande gani?",
+      "sentence2": "Dira inaonyesha upande wa kaskazini."
+    },
+    {
+      "id": 222,
+      "word": "msimamizi",
+      "sentence1": "Mkurugenzi alitoa wonyesho mzuri sana.",
+      "sentence2": "Anataka kuwa mkurugenzi wa filamu."
+    },
+    {
+      "id": 223,
+      "word": "kutokubaliana",
+      "sentence1": "Sikubaliani na maoni yako.",
+      "sentence2": "Mara nyingi hawapatani kuhusu masuala ya kisiasa."
+    },
+    {
+      "id": 224,
+      "word": "kutoweka",
+      "sentence1": "Mchawi alimfanya sungura huyo kutoweka.",
+      "sentence2": "Spishi nyingi ziko hatarini mwa kutoweka."
+    },
+    {
+      "id": 225,
+      "word": "msiba",
+      "sentence1": "Tetemeko hilo la nchi lilikuwa msiba mkubwa.",
+      "sentence2": "Wanajitahidi kuzuia misiba ya wakati ujao."
+    },
+    {
+      "id": 226,
+      "word": "kugundua",
+      "sentence1": "Wanatumaini kugundua sayari mpya.",
+      "sentence2": "Aligundua kwamba alikuwa na kipawa cha kupaka rangi."
+    },
+    {
+      "id": 227,
+      "word": "ugunduzi",
+      "sentence1": "Ugunduzi wa penisilini ulikuwa hatua muhimu katika tiba.",
+      "sentence2": "Walifanya ugunduzi muhimu katika uwanja wa chembe za urithi."
+    },
+    {
+      "id": 228,
+      "word": "majadiliano",
+      "sentence1": "Tulikuwa na mazungumzo kuhusu sera mpya.",
+      "sentence2": "Mazungumzo hayo yalikuwa yenye matokeo sana."
+    },
+    {
+      "id": 229,
+      "word": "ugonjwa",
+      "sentence1": "Ugonjwa wa kisukari ni ugonjwa wa kawaida.",
+      "sentence2": "Wanafanya utafiti ili kupata tiba ya ugonjwa huo."
+    },
+    {
+      "id": 230,
+      "word": "umbali",
+      "sentence1": "Umbali kati ya miji hiyo miwili ni maili 100.",
+      "sentence2": "Anapendelea kujiepusha na ugomvi."
+    },
+    {
+      "id": 231,
+      "word": "wametalikiana",
+      "sentence1": "Ameachana na mke wake na anaishi peke yake.",
+      "sentence2": "Watu wengi waliotalikiana huona ni vigumu kuanzisha urafiki wa kimapenzi tena."
+    },
+    {
+      "id": 232,
+      "word": "hati",
+      "sentence1": "Tafadhali saini hati hiyo.",
+      "sentence2": "Hati hiyo ina habari muhimu."
+    },
+    {
+      "id": 233,
+      "word": "mara mbili",
+      "sentence1": "Ningependa espresso mara mbili, tafadhali.",
+      "sentence2": "Bei imeongezeka maradufu ikilinganishwa na mwaka jana."
+    },
+    {
+      "id": 234,
+      "word": "kupakua",
+      "sentence1": "Unaweza kupakua faili kutoka kwenye tovuti.",
+      "sentence2": "Nahitaji kupakua programu mpya."
+    },
+    {
+      "id": 235,
+      "word": "chini",
+      "sentence1": "Chumba cha kufua nguo kiko chini.",
+      "sentence2": "Alienda chini kuchukua kiamsha kinywa."
+    },
+    {
+      "id": 236,
+      "word": "tamthiliya",
+      "sentence1": "Mchezo huo ulikuwa mchezo wa kuigiza wenye kugusa moyo.",
+      "sentence2": "Anapenda kutazama vipindi vya televisheni."
+    },
+    {
+      "id": 237,
+      "word": "kuchora",
+      "sentence1": "Alinionyesha mchoro wake wa mandhari.",
+      "sentence2": "Kuchora ni njia nzuri ya kuonyesha ubunifu."
+    },
+    {
+      "id": 238,
+      "word": "ndoto",
+      "sentence1": "Niliota ndoto ya ajabu usiku uliopita.",
+      "sentence2": "Anatumaini kutimiza ndoto yake."
+    },
+    {
+      "id": 239,
+      "word": "kuendesha",
+      "sentence1": "Ninapenda kuendesha gari kandokando ya pwani.",
+      "sentence2": "Aliendesha gari ili kupumzika na kusafisha akili yake."
+    },
+    {
+      "id": 240,
+      "word": "kuendesha",
+      "sentence1": "Huenda ikawa vigumu kuendesha gari jijini.",
+      "sentence2": "Anafurahia kuendesha gari lake jipya."
+    },
+    {
+      "id": 241,
+      "word": "kushuka",
+      "sentence1": "Tafadhali usiangushe glasi.",
+      "sentence2": "Aliamua kuacha kuzungumzia jambo hilo na kusonga mbele."
+    },
+    {
+      "id": 242,
+      "word": "dawa ya kulevya",
+      "sentence1": "Daktari alimwandikia dawa mpya.",
+      "sentence2": "Wanatafuta dawa za kutibu ugonjwa huo."
+    },
+    {
+      "id": 243,
+      "word": "kavu",
+      "sentence1": "Mavazi yamekauka baada ya kuota jua.",
+      "sentence2": "Jangwa hilo linajulikana kwa sababu ya hali yake ya hewa kavu."
+    },
+    {
+      "id": 244,
+      "word": "kupata",
+      "sentence1": "Yeye hufanya kazi kwa bidii ili kupata riziki.",
+      "sentence2": "Anatumaini kupandishwa cheo kazini."
+    },
+    {
+      "id": 245,
+      "word": "ardhi",
+      "sentence1": "Dunia huzunguka jua.",
+      "sentence2": "Kuna spishi nyingi duniani."
+    },
+    {
+      "id": 246,
+      "word": "kwa urahisi",
+      "sentence1": "Alitatua tatizo hilo kwa urahisi.",
+      "sentence2": "Anaweza kuzoea hali mpya kwa urahisi."
+    },
+    {
+      "id": 247,
+      "word": "elimu",
+      "sentence1": "Elimu ni muhimu kwa ukuzi wa kibinafsi.",
+      "sentence2": "Yeye huthamini sana elimu yake."
+    },
+    {
+      "id": 248,
+      "word": "matokeo",
+      "sentence1": "Dawa hiyo iliboresha afya yake.",
+      "sentence2": "Tunahitaji kuchunguza matokeo ya mabadiliko hayo."
+    },
+    {
+      "id": 249,
+      "word": "ama",
+      "sentence1": "Unaweza kunipigia simu au kunitumia barua pepe.",
+      "sentence2": "Chochote kinachowezekana kinanifaa."
+    },
+    {
+      "id": 250,
+      "word": "umeme",
+      "sentence1": "Magari ya umeme yanazidi kupendwa.",
+      "sentence2": "Yeye hupendelea vifaa vya umeme kwa sababu ya ufanisi wavyo."
+    },
+    {
+      "id": 251,
+      "word": "umeme",
+      "sentence1": "Mfumo wa umeme unahitaji kusasishwa.",
+      "sentence2": "Yeye anasomea uhandisi wa umeme katika chuo kikuu."
+    },
+    {
+      "id": 252,
+      "word": "umeme",
+      "sentence1": "Umeme ni chanzo kikuu cha nishati.",
+      "sentence2": "Gharama ya umeme imeongezeka mwaka huu."
+    },
+    {
+      "id": 253,
+      "word": "kielektroniki",
+      "sentence1": "Vifaa vya kielektroniki vinatumiwa sana leo.",
+      "sentence2": "Yeye hufanya kazi katika kiwanda cha kutengeneza vifaa vya elektroniki."
+    },
+    {
+      "id": 254,
+      "word": "kuajiri",
+      "sentence1": "Kampuni hiyo inapanga kuajiri wafanyakazi zaidi.",
+      "sentence2": "Watu wengi wanaajiriwa katika sekta ya huduma."
+    },
+    {
+      "id": 255,
+      "word": "mfanyakazi",
+      "sentence1": "Mfanyakazi huyo alitambuliwa kwa kazi yake ngumu.",
+      "sentence2": "Wafanyakazi wanahimizwa kushiriki mawazo yao."
+    },
+    {
+      "id": 256,
+      "word": "mwajiri",
+      "sentence1": "Mwajiri lazima kutoa mazingira salama ya kazi.",
+      "sentence2": "Waajiri wengi hutoa faida ili kuvutia vipaji."
+    },
+    {
+      "id": 257,
+      "word": "tupu",
+      "sentence1": "Chumba hicho kilikuwa tupu isipokuwa kiti kimoja.",
+      "sentence2": "Alihisi utupu baada ya kuvunjika kwa uhusiano."
+    },
+    {
+      "id": 258,
+      "word": "mwisho",
+      "sentence1": "Mwisho wa sinema hiyo haukutarajiwa.",
+      "sentence2": "Aliandika mwisho tofauti wa hadithi hiyo."
+    },
+    {
+      "id": 259,
+      "word": "nishati",
+      "sentence1": "Nishati ya jua ni rasilimali mbadala.",
+      "sentence2": "Ana nishati nyingi kwa umri wake."
+    },
+    {
+      "id": 260,
+      "word": "injini",
+      "sentence1": "Injini ndiyo moyo wa gari.",
+      "sentence2": "Alisikia kelele ya ajabu kutoka kwa injini."
+    },
+    {
+      "id": 261,
+      "word": "mhandisi",
+      "sentence1": "Yeye ni mhandisi wa programu katika kampuni ya teknolojia.",
+      "sentence2": "Wahandisi hubuni na kujenga mifumo tata."
+    },
+    {
+      "id": 262,
+      "word": "kubwa mno",
+      "sentence1": "Tembo ni mnyama mkubwa sana.",
+      "sentence2": "Wanaishi katika nyumba kubwa sana."
+    },
+    {
+      "id": 263,
+      "word": "kuingia",
+      "sentence1": "Tafadhali ingiza nenosiri lako ili kuendelea.",
+      "sentence2": "Alisahau kuingiza data katika mfumo."
+    },
+    {
+      "id": 264,
+      "word": "mazingira",
+      "sentence1": "Ni lazima tulinde mazingira kwa ajili ya vizazi vijavyo.",
+      "sentence2": "Kampuni hiyo imejitolea kupunguza athari zake kwa mazingira."
+    },
+    {
+      "id": 265,
+      "word": "vifaa",
+      "sentence1": "Jumba la mazoezi lina vifaa vingi vya kisasa.",
+      "sentence2": "Alinunua vifaa vipya kwa ajili ya biashara yake ya kupiga picha."
+    },
+    {
+      "id": 266,
+      "word": "kosa",
+      "sentence1": "Kulikuwa na kosa katika kanuni.",
+      "sentence2": "Tafadhali kurekebisha kosa kabla ya kuwasilisha."
+    },
+    {
+      "id": 267,
+      "word": "hasa",
+      "sentence1": "Ninapenda matunda, hasa matofaa.",
+      "sentence2": "Yeye ni mzuri katika hesabu, hasa katika aljebra."
+    },
+    {
+      "id": 268,
+      "word": "insha",
+      "sentence1": "Aliandika insha kuhusu mabadiliko ya hali ya hewa.",
+      "sentence2": "Mwalimu alimpa kazi ya kuandika insha yenye maneno 500."
+    },
+    {
+      "id": 269,
+      "word": "kila siku",
+      "sentence1": "Fanya mazoezi kila siku.",
+      "sentence2": "Yeye huvaa nguo za kila siku kwenda kazini."
+    },
+    {
+      "id": 270,
+      "word": "kila mahali",
+      "sentence1": "Mimi hutafuta funguo zangu kila mahali.",
+      "sentence2": "Yeye huhisi akiwa nyumbani popote aendapo."
+    },
+    {
+      "id": 271,
+      "word": "uthibitisho",
+      "sentence1": "Ushahidi haukutosha kumhukumu.",
+      "sentence2": "Hakuna uthibitisho unaounga mkono dai hilo."
+    },
+    {
+      "id": 272,
+      "word": "sahihi",
+      "sentence1": "Je, unaweza kunipa vipimo sahihi?",
+      "sentence2": "Eneo hususa limewekwa alama kwenye ramani."
+    },
+    {
+      "id": 273,
+      "word": "hasa",
+      "sentence1": "Sijui ni nini hasa kilichotokea.",
+      "sentence2": "Alifika kwa wakati."
+    },
+    {
+      "id": 274,
+      "word": "bora",
+      "sentence1": "Chakula katika mkahawa kilikuwa kizuri sana.",
+      "sentence2": "Ana ustadi mzuri wa kuwasiliana."
+    },
+    {
+      "id": 275,
+      "word": "isipokuwa",
+      "sentence1": "Wote walialikwa isipokuwa Yohana.",
+      "sentence2": "Ninapenda matunda yote isipokuwa ndizi."
+    },
+    {
+      "id": 276,
+      "word": "kuwepo",
+      "sentence1": "Je, viumbe wa kigeni wako?",
+      "sentence2": "Kuna spishi nyingi katika msitu wa mvua."
+    },
+    {
+      "id": 277,
+      "word": "kutarajia",
+      "sentence1": "Natarajia kupata jibu karibuni.",
+      "sentence2": "Wanatarajia mauzo ya juu katika robo hii."
+    },
+    {
+      "id": 278,
+      "word": "uzoefu",
+      "sentence1": "Ana uzoefu mwingi katika masoko.",
+      "sentence2": "Kusafiri ni njia nzuri ya kupata mambo mapya."
+    },
+    {
+      "id": 279,
+      "word": "jaribio",
+      "sentence1": "Mara nyingi wanasayansi hufanya majaribio ili kuthibitisha nadharia zao.",
+      "sentence2": "Jaribio hilo lilitokeza matokeo yenye kupendeza."
+    },
+    {
+      "id": 280,
+      "word": "mtaalamu",
+      "sentence1": "Yeye ni mtaalamu wa akili bandia.",
+      "sentence2": "Mtaalamu huyo alitoa ufahamu wenye thamani."
+    },
+    {
+      "id": 281,
+      "word": "maelezo",
+      "sentence1": "Je, unaweza kunipa maelezo ya tatizo hilo?",
+      "sentence2": "Maelezo ya mwalimu yalikuwa wazi sana."
+    },
+    {
+      "id": 282,
+      "word": "kueleza",
+      "sentence1": "Alieleza hisia zake katika barua.",
+      "sentence2": "Ni muhimu kueleza mawazo yako."
+    },
+    {
+      "id": 283,
+      "word": "maneno",
+      "sentence1": "Uso wake ulionyesha mshangao.",
+      "sentence2": "Ana mtindo wa pekee wa kujieleza."
+    },
+    {
+      "id": 284,
+      "word": "kupita kiasi",
+      "sentence1": "Hali ya hewa ilikuwa kali sana.",
+      "sentence2": "Ana maoni makali kuhusu jambo hilo."
+    },
+    {
+      "id": 285,
+      "word": "sana",
+      "sentence1": "Alifurahi sana na matokeo.",
+      "sentence2": "Filamu hiyo ilikuwa yenye kusisimua sana."
+    },
+    {
+      "id": 286,
+      "word": "sababu",
+      "sentence1": "Mambo mengi huchangia mafanikio.",
+      "sentence2": "Hali ya hewa ni jambo muhimu katika kupanga tukio hilo."
+    },
+    {
+      "id": 287,
+      "word": "kiwanda",
+      "sentence1": "Kiwanda hicho hutengeneza maelfu ya magari kila mwaka.",
+      "sentence2": "Hali ya kazi katika kiwanda imeboreka."
+    },
+    {
+      "id": 288,
+      "word": "kushindwa",
+      "sentence1": "Ukishindwa, jaribu tena.",
+      "sentence2": "Mradi huo ulishindwa kutimiza malengo yake."
+    },
+    {
+      "id": 289,
+      "word": "haki",
+      "sentence1": "Mashindano yalikuwa ya haki na ya uwazi.",
+      "sentence2": "Yeye anaamini katika matibabu ya haki kwa wote."
+    },
+    {
+      "id": 290,
+      "word": "kuanguka",
+      "sentence1": "Uwe mwangalifu usianguke.",
+      "sentence2": "Majani huanguka kutoka kwenye miti wakati wa vuli."
+    },
+    {
+      "id": 291,
+      "word": "shabiki",
+      "sentence1": "Yeye ni shabiki mkubwa wa muziki wa roki.",
+      "sentence2": "Kipaza-hewa kilikuwa kikipeperusha hewa baridi."
+    },
+    {
+      "id": 292,
+      "word": "shamba",
+      "sentence1": "Wana shamba mashambani.",
+      "sentence2": "Shamba hilo hutokeza mboga za kikaboni."
+    },
+    {
+      "id": 293,
+      "word": "kilimo",
+      "sentence1": "Kilimo ni biashara muhimu.",
+      "sentence2": "Watu wengi hutegemea kilimo ili kupata riziki."
+    },
+    {
+      "id": 294,
+      "word": "mtindo",
+      "sentence1": "Yeye anapendezwa na kubuni mitindo.",
+      "sentence2": "Mitindo ya mavazi hubadilika haraka."
+    },
+    {
+      "id": 295,
+      "word": "mafuta",
+      "sentence1": "Chakula hiki kina mafuta mengi.",
+      "sentence2": "Anajaribu kupunguza uzito."
+    },
+    {
+      "id": 296,
+      "word": "hofu",
+      "sentence1": "Anaogopa mahali palipoinuka.",
+      "sentence2": "Hofu yaweza kuwa kichocheo chenye nguvu."
+    },
+    {
+      "id": 297,
+      "word": "kipengele",
+      "sentence1": "Simu hiyo mpya ina mambo mengi yenye kusisimua.",
+      "sentence2": "Kipengele kuu ya programu ni urafiki wake user."
+    },
+    {
+      "id": 298,
+      "word": "chakula",
+      "sentence1": "Wanawalisha wanyama katika bustani ya wanyama.",
+      "sentence2": "Ni muhimu kuwalisha wanyama-vipenzi wako kwa ukawaida."
+    },
+    {
+      "id": 299,
+      "word": "mwanamke",
+      "sentence1": "Ndege wa kike ana rangi nyingi kuliko yule wa kiume.",
+      "sentence2": "Wafanyakazi wa kike hufanyiza sehemu kubwa ya wafanyakazi."
+    },
+    {
+      "id": 300,
+      "word": "hadithi",
+      "sentence1": "Yeye hufurahia kusoma riwaya za ubuni wa kisayansi.",
+      "sentence2": "Filamu hiyo ni hadithi tu."
+    },
+    {
+      "id": 301,
+      "word": "shamba",
+      "sentence1": "Yeye hufanya kazi katika uwanja wa dawa.",
+      "sentence2": "Shamba limejaa maua ya mwituni wakati wa masika."
+    },
+    {
+      "id": 302,
+      "word": "kupigana",
+      "sentence1": "Waligombana kwa sababu ya kitu cha kuchezea.",
+      "sentence2": "Wapiganaji hao wawili watapigana kwa ajili ya taji la ubingwa."
+    },
+    {
+      "id": 303,
+      "word": "sura",
+      "sentence1": "Sanamu hiyo ni ya mtu mashuhuri katika historia.",
+      "sentence2": "Ana mwili mwembamba."
+    },
+    {
+      "id": 304,
+      "word": "filamu",
+      "sentence1": "Walitazama filamu kwenye sinema.",
+      "sentence2": "Filamu hiyo ilipokea maoni mazuri."
+    },
+    {
+      "id": 305,
+      "word": "mwisho",
+      "sentence1": "Mtihani wa mwisho ni wiki ijayo.",
+      "sentence2": "Alishinda mchezo wa mwisho."
+    },
+    {
+      "id": 306,
+      "word": "hatimaye",
+      "sentence1": "Hatimaye, mradi huo umekamilika.",
+      "sentence2": "Hatimaye alipata funguo zake."
+    },
+    {
+      "id": 307,
+      "word": "kidole",
+      "sentence1": "Aliumia kidole chake alipokuwa akipika.",
+      "sentence2": "Alionyesha kwa kidole chake."
+    },
+    {
+      "id": 308,
+      "word": "kumaliza",
+      "sentence1": "Tafadhali kumaliza kazi yako ya nyumbani kabla ya chakula cha jioni.",
+      "sentence2": "Alimaliza shindano hilo akiwa wa kwanza."
+    },
+    {
+      "id": 309,
+      "word": "kwanza",
+      "sentence1": "Alikuwa wa kwanza kufika kwenye sherehe.",
+      "sentence2": "Hii ni mara yangu ya kwanza kutembelea Paris."
+    },
+    {
+      "id": 310,
+      "word": "kwanza",
+      "sentence1": "Kwanza, tunahitaji kukusanya vifaa vyote.",
+      "sentence2": "Kwanza kabisa, ningependa kuwashukuru nyote kwa kuja."
+    },
+    {
+      "id": 311,
+      "word": "samaki",
+      "sentence1": "Ninapenda kula samaki kwa chakula cha jioni.",
+      "sentence2": "Alikamata samaki mkubwa katika ziwa."
+    },
+    {
+      "id": 312,
+      "word": "uvuvi",
+      "sentence1": "Uvuvi ni tafrija inayopendwa sana katika eneo hili.",
+      "sentence2": "Walienda kuvua samaki mwishoni mwa juma."
+    },
+    {
+      "id": 313,
+      "word": "kufaa",
+      "sentence1": "Viatu hivi havininifaa.",
+      "sentence2": "Yeye hufanya mazoezi ili awe na afya nzuri."
+    },
+    {
+      "id": 314,
+      "word": "kurekebisha",
+      "sentence1": "Je, unaweza kurekebisha kompyuta yangu?",
+      "sentence2": "Alirekebisha bomba lililovuja."
+    },
+    {
+      "id": 315,
+      "word": "gorofa",
+      "sentence1": "Nchi hiyo ni tambarare na inafaa kabisa kwa ajili ya kilimo.",
+      "sentence2": "Anaishi katika nyumba ya ghorofa mjini."
+    },
+    {
+      "id": 316,
+      "word": "homa",
+      "sentence1": "Nilipatwa na homa na nikalazimika kukaa nyumbani.",
+      "sentence2": "Homa ni ya kawaida wakati wa baridi kali."
+    },
+    {
+      "id": 317,
+      "word": "kuruka",
+      "sentence1": "Ndege wanaweza kuruka juu angani.",
+      "sentence2": "Nilitazama ndege ikiruka juu ya kichwa changu."
+    },
+    {
+      "id": 318,
+      "word": "kuruka",
+      "sentence1": "Ndege huyo anayeruka alinivutia.",
+      "sentence2": "Anapenda kutazama wadudu wanaoruka."
+    },
+    {
+      "id": 319,
+      "word": "fikira",
+      "sentence1": "Unahitaji kuzingatia masomo yako.",
+      "sentence2": "Siwezi kukaza fikira kwa kelele hii yote."
+    },
+    {
+      "id": 320,
+      "word": "kufuatia",
+      "sentence1": "Siku iliyofuata kulikuwa na jua na mwangaza mwingi.",
+      "sentence2": "Ana wafuasi kwenye mitandao ya kijamii."
+    },
+    {
+      "id": 321,
+      "word": "kigeni",
+      "sentence1": "Anajifunza lugha za kigeni.",
+      "sentence2": "Mwanafunzi huyo wa kigeni kutoka Hispania."
+    },
+    {
+      "id": 322,
+      "word": "msitu",
+      "sentence1": "Msitu huo una wanyama wengi.",
+      "sentence2": "Tulienda kutembea msituni."
+    },
+    {
+      "id": 323,
+      "word": "kisima",
+      "sentence1": "Je, unaweza kunipatia uma, tafadhali?",
+      "sentence2": "Alitumia uma kula saladi yake."
+    },
+    {
+      "id": 324,
+      "word": "rasmi",
+      "sentence1": "Mwaliko huo ni wa tukio rasmi.",
+      "sentence2": "Alivaa suti rasmi kwenye arusi."
+    },
+    {
+      "id": 325,
+      "word": "kwa bahati",
+      "sentence1": "Jambo la kufurahisha ni kwamba tulifika kwa wakati.",
+      "sentence2": "Kwa bahati nzuri, alipata mkoba wake uliopotea."
+    },
+    {
+      "id": 326,
+      "word": "mbele",
+      "sentence1": "Tafadhali njoo mbele useme.",
+      "sentence2": "Aliinama mbele ili kusikiliza vizuri zaidi."
+    },
+    {
+      "id": 327,
+      "word": "huru",
+      "sentence1": "Jumba la makumbusho linatoa kiingilio cha bure siku ya Jumapili.",
+      "sentence2": "Yeye ni roho huru anayependa kusafiri."
+    },
+    {
+      "id": 328,
+      "word": "safi",
+      "sentence1": "Ninapenda harufu ya mkate mpya.",
+      "sentence2": "Alichukua maua mapya kutoka bustani."
+    },
+    {
+      "id": 329,
+      "word": "friji",
+      "sentence1": "Tafadhali weka maziwa kwenye friji.",
+      "sentence2": "Friji imejaa chakula kilichobaki."
+    },
+    {
+      "id": 330,
+      "word": "chawa",
+      "sentence1": "Bui aliruka ndani ya ziwa.",
+      "sentence2": "Niliona chura wa kijani kwenye kichaka cha lily."
+    },
+    {
+      "id": 331,
+      "word": "kufurahisha",
+      "sentence1": "Tulifurahia sana sherehe hiyo.",
+      "sentence2": "Daima ni furaha kujaribu mambo mapya."
+    },
+    {
+      "id": 332,
+      "word": "fanicha",
+      "sentence1": "Walinunua fanicha mpya kwa ajili ya sebule yao.",
+      "sentence2": "Samani katika duka hili ni za mtindo sana."
+    },
+    {
+      "id": 333,
+      "word": "zaidi",
+      "sentence1": "Tunahitaji kuchunguza jambo hilo zaidi.",
+      "sentence2": "Aliendeleza utafiti wake."
+    },
+    {
+      "id": 334,
+      "word": "wakati ujao",
+      "sentence1": "Wakati ujao umejaa uwezekano.",
+      "sentence2": "Anafanya mipango kuhusu kazi yake ya wakati ujao."
+    },
+    {
+      "id": 335,
+      "word": "nyumba ya sanaa",
+      "sentence1": "Nyumba ya sanaa inakaribisha maonyesho mapya.",
+      "sentence2": "Alitembelea nyumba ya sanaa ili kuona kazi za sanaa za karibuni zaidi."
+    },
+    {
+      "id": 336,
+      "word": "pengo",
+      "sentence1": "Kuna pengo katika uzio.",
+      "sentence2": "Tunahitaji kujaza pengo katika ujuzi wetu."
+    },
+    {
+      "id": 337,
+      "word": "gesi",
+      "sentence1": "Gesi inavuja kutoka kwenye bomba.",
+      "sentence2": "Tunahitaji kununua petroli zaidi kwa ajili ya gari."
+    },
+    {
+      "id": 338,
+      "word": "mlango",
+      "sentence1": "Lango hilo hufungwa usiku.",
+      "sentence2": "Tafadhali funga mlango nyuma yako."
+    },
+    {
+      "id": 339,
+      "word": "kwa ujumla",
+      "sentence1": "Maoni ya watu wengi yanaunga mkono mpango huo.",
+      "sentence2": "Ana ufahamu wa jumla juu ya mada hiyo."
+    },
+    {
+      "id": 340,
+      "word": "zawadi",
+      "sentence1": "Alipokea zawadi nzuri kwa siku yake ya kuzaliwa.",
+      "sentence2": "Sikuzote ni vizuri kutoa zawadi yenye ufikirio."
+    },
+    {
+      "id": 341,
+      "word": "lengo",
+      "sentence1": "Lengo langu ni kujifunza lugha mpya.",
+      "sentence2": "Alifikia mradi wake baada ya kufanya kazi kwa bidii kwa miaka mingi."
+    },
+    {
+      "id": 342,
+      "word": "mungu",
+      "sentence1": "Watu wengi huamini katika mungu mkuu.",
+      "sentence2": "Mara nyingi mungu wa bahari huonyeshwa kuwa mwenye nguvu."
+    },
+    {
+      "id": 343,
+      "word": "dhahabu",
+      "sentence1": "Dhahabu ni chuma chenye thamani.",
+      "sentence2": "Alikuwa amevaa mkufu wa dhahabu."
+    },
+    {
+      "id": 344,
+      "word": "gofu",
+      "sentence1": "Yeye hufurahia kucheza gofu mwishoni mwa juma.",
+      "sentence2": "Gofu ni mchezo unaopendwa sana ulimwenguni pote."
+    },
+    {
+      "id": 345,
+      "word": "nzuri",
+      "sentence1": "Yeye ni mwanafunzi mzuri.",
+      "sentence2": "Daima ni vizuri kuwasaidia wengine."
+    },
+    {
+      "id": 346,
+      "word": "serikali",
+      "sentence1": "Serikali inatekeleza sera mpya.",
+      "sentence2": "Raia wana haki ya kupiga kura kwa ajili ya serikali yao."
+    },
+    {
+      "id": 347,
+      "word": "nyasi",
+      "sentence1": "Watoto wanacheza kwenye nyasi.",
+      "sentence2": "Nyasi zinahitaji kukatwa."
+    },
+    {
+      "id": 348,
+      "word": "kusalimiana",
+      "sentence1": "Ni adabu kumsalimu mtu unapoonana naye.",
+      "sentence2": "Aliwasalimu wageni wake mlangoni."
+    },
+    {
+      "id": 349,
+      "word": "ardhi",
+      "sentence1": "Ardhi ni mvua baada ya mvua.",
+      "sentence2": "Walikaa chini ili kupumzika."
+    },
+    {
+      "id": 350,
+      "word": "mgeni",
+      "sentence1": "Chumba cha wageni kiko tayari kwa wageni.",
+      "sentence2": "Tuna mgeni anayekaa nasi mwishoni mwa juma hili."
+    },
+    {
+      "id": 351,
+      "word": "mwongozo",
+      "sentence1": "Kiongozi huyo alitutembeza jijini.",
+      "sentence2": "Yeye ni kiongozi wa watalii katika jumba la kumbukumbu."
+    },
+    {
+      "id": 352,
+      "word": "bunduki",
+      "sentence1": "Ofisa huyo wa polisi alikuwa na bunduki.",
+      "sentence2": "Udhibiti wa bunduki ni suala lenye kubishaniwa."
+    },
+    {
+      "id": 353,
+      "word": "mwanaume",
+      "sentence1": "Mtu huyo ni ndugu yangu.",
+      "sentence2": "Kuna watu wengi katika chama."
+    },
+    {
+      "id": 354,
+      "word": "tabia",
+      "sentence1": "Ana tabia ya kujilaza kucha.",
+      "sentence2": "Ni muhimu kuacha mazoea mabaya."
+    },
+    {
+      "id": 355,
+      "word": "nusu",
+      "sentence1": "Nilikula nusu ya pizza.",
+      "sentence2": "Yeye ni nusu Mwingereza na nusu Mhispania."
+    },
+    {
+      "id": 356,
+      "word": "jumba",
+      "sentence1": "Jumba lilipambwa kwa ajili ya karamu hiyo.",
+      "sentence2": "Tulikutana katika ukumbi mkubwa."
+    },
+    {
+      "id": 357,
+      "word": "kwa furaha",
+      "sentence1": "Waliishi kwa furaha milele.",
+      "sentence2": "Alitabasamu kwa furaha aliposikia habari hiyo."
+    },
+    {
+      "id": 358,
+      "word": "kuwa na",
+      "sentence1": "Nina gari.",
+      "sentence2": "Je, una maswali yoyote?"
+    },
+    {
+      "id": 359,
+      "word": "maumivu ya kichwa",
+      "sentence1": "Nina maumivu ya kichwa.",
+      "sentence2": "Alichukua dawa ya maumivu ya kichwa."
+    },
+    {
+      "id": 360,
+      "word": "moyo",
+      "sentence1": "Moyo ni kiungo muhimu.",
+      "sentence2": "Alihisi moyo wake ukimpiga."
+    },
+    {
+      "id": 361,
+      "word": "joto",
+      "sentence1": "Joto halivumiliki wakati wa kiangazi.",
+      "sentence2": "Aliongeza joto ndani ya nyumba."
+    },
+    {
+      "id": 362,
+      "word": "nzito",
+      "sentence1": "Sanduku hili ni zito sana kuliinua.",
+      "sentence2": "Alihisi mzigo mzito juu ya mabega yake."
+    },
+    {
+      "id": 363,
+      "word": "urefu",
+      "sentence1": "Urefu wa jengo hilo unavutia.",
+      "sentence2": "Alipima urefu wa mti huo."
+    },
+    {
+      "id": 364,
+      "word": "wenye kusaidia",
+      "sentence1": "Sikuzote yeye huwasaidia marafiki wake.",
+      "sentence2": "Kijitabu chenye habari za kusaidia kinaweza kusaidia sana."
+    },
+    {
+      "id": 365,
+      "word": "shujaa",
+      "sentence1": "Yeye ni shujaa katika jumuiya yake.",
+      "sentence2": "Watu wengi huwaona wazima-moto kuwa mashujaa."
+    },
+    {
+      "id": 366,
+      "word": "yake",
+      "sentence1": "Kitabu hicho ni chake.",
+      "sentence2": "Nilipata mkoba wake; ni wake."
+    },
+    {
+      "id": 367,
+      "word": "mwenyewe",
+      "sentence1": "Alifanya hivyo peke yake.",
+      "sentence2": "Alijitazama kwenye kioo."
+    },
+    {
+      "id": 368,
+      "word": "kuficha",
+      "sentence1": "Alijaribu kuficha hisia zake.",
+      "sentence2": "Paka anapenda kujificha chini ya kitanda."
+    },
+    {
+      "id": 369,
+      "word": "juu",
+      "sentence1": "Mlima huo ni mrefu sana.",
+      "sentence2": "Aliinua mkono wake kuelekea kwenye rafu ya juu."
+    },
+    {
+      "id": 370,
+      "word": "mlima",
+      "sentence1": "Tulipanda juu ya kilima.",
+      "sentence2": "Mtazamo kutoka mlimani ni mzuri."
+    },
+    {
+      "id": 371,
+      "word": "mwenyewe",
+      "sentence1": "Alifanya hivyo peke yake.",
+      "sentence2": "Alijitazama katika kioo."
+    },
+    {
+      "id": 372,
+      "word": "wake",
+      "sentence1": "Hii ni kitabu chake.",
+      "sentence2": "Nilipata funguo zake mezani."
+    },
+    {
+      "id": 373,
+      "word": "kugongwa",
+      "sentence1": "Alijaribu kupiga mpira.",
+      "sentence2": "Aligongwa na gari."
+    },
+    {
+      "id": 374,
+      "word": "mpira wa magongo",
+      "sentence1": "Yeye hucheza mpira wa magongo katika miisho-juma.",
+      "sentence2": "Hockey ni mchezo maarufu nchini Kanada."
+    },
+    {
+      "id": 375,
+      "word": "kushikilia",
+      "sentence1": "Tafadhali shika mkono wangu.",
+      "sentence2": "Alimshika mtoto huyo kwa upole."
+    },
+    {
+      "id": 376,
+      "word": "shimo",
+      "sentence1": "Kuna shimo kwenye soksi yangu.",
+      "sentence2": "Alichimba shimo ardhini."
+    },
+    {
+      "id": 377,
+      "word": "nyumbani",
+      "sentence1": "Hii ni nyumba yangu.",
+      "sentence2": "Ninapenda kuwa nyumbani."
+    },
+    {
+      "id": 378,
+      "word": "matumaini",
+      "sentence1": "Natumaini kuwa na siku kubwa.",
+      "sentence2": "Ana tumaini la wakati ujao."
+    },
+    {
+      "id": 379,
+      "word": "kubwa",
+      "sentence1": "Tembo huyo ni mkubwa sana.",
+      "sentence2": "Ana makusanyo makubwa ya stempu."
+    },
+    {
+      "id": 380,
+      "word": "binadamu",
+      "sentence1": "Wanadamu wanaweza kutimiza mambo makubwa.",
+      "sentence2": "Ubongo wa mwanadamu ni tata sana."
+    },
+    {
+      "id": 381,
+      "word": "kuumiza",
+      "sentence1": "Sikutaka kuumiza hisia zako.",
+      "sentence2": "Aliumia mguu wakati wa kucheza mpira wa miguu."
+    },
+    {
+      "id": 382,
+      "word": "bora",
+      "sentence1": "Hii ni mahali pazuri pa kupumzikia.",
+      "sentence2": "Ana maono mazuri ya wakati ujao."
+    },
+    {
+      "id": 383,
+      "word": "chagua",
+      "sentence1": "Je, waweza kutambua spishi za ndege?",
+      "sentence2": "Aliweza kutambua tatizo hilo upesi."
+    },
+    {
+      "id": 384,
+      "word": "mgonjwa",
+      "sentence1": "Yeye ni mgonjwa na hawezi kuhudhuria mkutano.",
+      "sentence2": "Aliugua baada ya safari hiyo."
+    },
+    {
+      "id": 385,
+      "word": "ugonjwa",
+      "sentence1": "Ugonjwa wake ulimfanya abaki nyumbani.",
+      "sentence2": "Anapona ugonjwa mbaya."
+    },
+    {
+      "id": 386,
+      "word": "picha",
+      "sentence1": "Picha hiyo haionekani wazi.",
+      "sentence2": "Alichukua picha nzuri ya machweo."
+    },
+    {
+      "id": 387,
+      "word": "mara moja",
+      "sentence1": "Tafadhali nipigie simu mara moja.",
+      "sentence2": "Aliondoka chumbani mara moja."
+    },
+    {
+      "id": 388,
+      "word": "haiwezekani",
+      "sentence1": "Haiwezekani kujua kila kitu.",
+      "sentence2": "Alifanya jambo lisilowezekana liwezekane."
+    },
+    {
+      "id": 389,
+      "word": "pamoja na",
+      "sentence1": "Bei hiyo ilitia ndani kodi zote.",
+      "sentence2": "Alijisikia kuwa sehemu ya kikundi hicho."
+    },
+    {
+      "id": 390,
+      "word": "pamoja na",
+      "sentence1": "Kwa kuongezea gharama zote, safari hiyo ilikuwa ghali sana.",
+      "sentence2": "Yeye anafurahia shughuli ikiwa ni pamoja na hiking na kuogelea."
+    },
+    {
+      "id": 391,
+      "word": "ongezeko",
+      "sentence1": "Tunahitaji kuongeza jitihada zetu.",
+      "sentence2": "Idadi ya watu inaendelea kuongezeka."
+    },
+    {
+      "id": 392,
+      "word": "ajabu",
+      "sentence1": "Mtazamo kutoka juu ni wa ajabu.",
+      "sentence2": "Ana kipawa cha ajabu cha muziki."
+    },
+    {
+      "id": 393,
+      "word": "huru",
+      "sentence1": "Yeye ni mwanamke mwenye kujitegemea.",
+      "sentence2": "Nchi hiyo ilipata uhuru mwaka wa 1923."
+    },
+    {
+      "id": 394,
+      "word": "mtu binafsi",
+      "sentence1": "Kila mtu ana sifa za pekee.",
+      "sentence2": "Programu hiyo hufanywa kulingana na mahitaji ya kila mtu."
+    },
+    {
+      "id": 395,
+      "word": "sekta",
+      "sentence1": "Viwanda vya magari vinasitawi haraka.",
+      "sentence2": "Yeye hufanya kazi katika biashara ya mitindo."
+    },
+    {
+      "id": 396,
+      "word": "isiyo rasmi",
+      "sentence1": "Mkutano huo ulikuwa wa kawaida.",
+      "sentence2": "Yeye hupendelea mavazi yasiyo rasmi."
+    },
+    {
+      "id": 397,
+      "word": "majeraha",
+      "sentence1": "Anapona kutokana na majeraha ya michezo.",
+      "sentence2": "Alikosa kucheza kwa sababu ya jeraha hilo."
+    },
+    {
+      "id": 398,
+      "word": "wadudu",
+      "sentence1": "Wadudu hao wanapanda ukutani.",
+      "sentence2": "Yeye hujifunza kuhusu wadudu katika somo lake la biolojia."
+    },
+    {
+      "id": 399,
+      "word": "ndani",
+      "sentence1": "Paka anajificha ndani ya sanduku.",
+      "sentence2": "Kuna joto ndani ya nyumba."
+    },
+    {
+      "id": 400,
+      "word": "badala yake",
+      "sentence1": "Alichagua chai badala ya kahawa.",
+      "sentence2": "Alikaa nyumbani badala ya kutoka nje."
+    },
+    {
+      "id": 401,
+      "word": "maagizo",
+      "sentence1": "Fuata maagizo kwa uangalifu.",
+      "sentence2": "Maagizo yalikuwa wazi na rahisi kuelewa."
+    },
+    {
+      "id": 402,
+      "word": "mwalimu",
+      "sentence1": "Mwalimu alifafanua vizuri habari hiyo.",
+      "sentence2": "Yeye ni mwalimu wa yoga aliyehitimu."
+    },
+    {
+      "id": 403,
+      "word": "kifaa",
+      "sentence1": "Yeye hucheza ala fulani ya muziki.",
+      "sentence2": "Piano ni ala ngumu ya muziki."
+    },
+    {
+      "id": 404,
+      "word": "mwenye akili",
+      "sentence1": "Yeye ni mwanafunzi mwenye akili.",
+      "sentence2": "Kila mtu alivutiwa na jinsi mfumo huo ulivyobuniwa kwa ustadi."
+    },
+    {
+      "id": 405,
+      "word": "kimataifa",
+      "sentence1": "Mkutano huo ulikuwa na washiriki wa kimataifa.",
+      "sentence2": "Anafanya kazi katika shirika moja la kimataifa."
+    },
+    {
+      "id": 406,
+      "word": "utangulizi",
+      "sentence1": "Utangulizi ulikuwa wenye kuvutia na wenye kuelimisha.",
+      "sentence2": "Alitoa utangulizi mfupi wa habari hiyo."
+    },
+    {
+      "id": 407,
+      "word": "kubuni",
+      "sentence1": "Anataka kubuni kifaa kipya.",
+      "sentence2": "Thomas Edison alivumbua balbu."
+    },
+    {
+      "id": 408,
+      "word": "uvumbuzi",
+      "sentence1": "Simu ilikuwa uvumbuzi wa hali ya juu.",
+      "sentence2": "Uvumbuzi wake wa karibuni umepata uangalifu mwingi."
+    },
+    {
+      "id": 409,
+      "word": "mwaliko",
+      "sentence1": "Nilipokea mwaliko wa harusi.",
+      "sentence2": "Mwaliko huo uliandikwa kwa njia nzuri sana."
+    },
+    {
+      "id": 410,
+      "word": "mwaliko",
+      "sentence1": "Ningependa kukukaribisha kwenye karamu.",
+      "sentence2": "Walitualika kwenye arusi yao."
+    },
+    {
+      "id": 411,
+      "word": "kuhusisha",
+      "sentence1": "Mradi huo utahusisha hatua kadhaa.",
+      "sentence2": "Hakutaka kuwahusisha rafiki zake katika uamuzi huo."
+    },
+    {
+      "id": 412,
+      "word": "kipengee",
+      "sentence1": "Tafadhali angalia kila kitu katika orodha hiyo.",
+      "sentence2": "Kifaa hiki hakipo tena."
+    },
+    {
+      "id": 413,
+      "word": "yenyewe",
+      "sentence1": "Paka alijitakasa mwenyewe.",
+      "sentence2": "Tatizo hilo litatatuliwa baada ya muda."
+    },
+    {
+      "id": 414,
+      "word": "mchuzi",
+      "sentence1": "Ninapenda jam ya jordgubbar kwenye mkate wangu uliookwa.",
+      "sentence2": "Alitengeneza jamu ya nyumbani kutokana na matunda safi."
+    },
+    {
+      "id": 415,
+      "word": "muziki wa jazz",
+      "sentence1": "Mimi hufurahia kusikiliza muziki wa jazba.",
+      "sentence2": "Yeye hucheza piano ya jazba kwa uzuri."
+    },
+    {
+      "id": 416,
+      "word": "vito",
+      "sentence1": "Alivaa vito maridadi kwenye sherehe hiyo.",
+      "sentence2": "Duka hilo huuza vito vilivyotengenezwa kwa mikono."
+    },
+    {
+      "id": 417,
+      "word": "utani",
+      "sentence1": "Alieleza mzaha wenye kuchekesha.",
+      "sentence2": "Sikupata mzaha."
+    },
+    {
+      "id": 418,
+      "word": "mwandishi",
+      "sentence1": "Mwandishi huyo wa habari aliandika makala kuhusu tukio hilo.",
+      "sentence2": "Yeye ni mwandishi wa habari anayefanya uchunguzi."
+    },
+    {
+      "id": 419,
+      "word": "kuruka",
+      "sentence1": "Mbwa anapenda kuruka hewani.",
+      "sentence2": "Aliruka kwa kasi sana juu ya kidimbwi."
+    },
+    {
+      "id": 420,
+      "word": "mtoto",
+      "sentence1": "Mvulana huyo alicheza katika bustani.",
+      "sentence2": "Yeye ni mtoto mwenye akili."
+    },
+    {
+      "id": 421,
+      "word": "kuua",
+      "sentence1": "Hakukusudia kuua wadudu hao.",
+      "sentence2": "Sumu hiyo inaweza kukuua."
+    },
+    {
+      "id": 422,
+      "word": "mfalme",
+      "sentence1": "Mfalme huyo aliitawala nchi hiyo kwa miaka mingi.",
+      "sentence2": "Anataka kuwa mfalme."
+    },
+    {
+      "id": 423,
+      "word": "goti",
+      "sentence1": "Aliumia goti alipokuwa akicheza mpira wa miguu.",
+      "sentence2": "Alipiga magoti kwenye goti moja."
+    },
+    {
+      "id": 424,
+      "word": "kisu",
+      "sentence1": "Kuwa makini na kisu hicho.",
+      "sentence2": "Alikata mkate kwa kisu mkali."
+    },
+    {
+      "id": 425,
+      "word": "kugonga",
+      "sentence1": "Tafadhali gonga kabla ya kuingia.",
+      "sentence2": "Alibisha mlango kwa sauti kubwa."
+    },
+    {
+      "id": 426,
+      "word": "maarifa",
+      "sentence1": "Ujuzi ni nguvu.",
+      "sentence2": "Ana ujuzi mwingi wa historia."
+    },
+    {
+      "id": 427,
+      "word": "maabara",
+      "sentence1": "Maabara hiyo ina vifaa vya kisasa.",
+      "sentence2": "Yeye hufanya kazi katika maabara ya utafiti."
+    },
+    {
+      "id": 428,
+      "word": "mwanamke",
+      "sentence1": "Mwanamke aliyeshughulikia chakula alikuwa mwenye kusaidia sana.",
+      "sentence2": "Yeye ni mwanamke mwenye fadhili."
+    },
+    {
+      "id": 429,
+      "word": "ziwa",
+      "sentence1": "Tulikuwa na matembezi kando ya ziwa.",
+      "sentence2": "Ziwa hilo limezungukwa na milima."
+    },
+    {
+      "id": 430,
+      "word": "taa",
+      "sentence1": "Tafadhali zima taa kabla ya kuondoka.",
+      "sentence2": "Alinunua taa mpya kwa ajili ya chumba chake."
+    },
+    {
+      "id": 431,
+      "word": "ardhi",
+      "sentence1": "Nchi hiyo ni yenye rutuba na inafaa kwa ajili ya kilimo.",
+      "sentence2": "Walinunua kipande cha ardhi ili kujenga nyumba."
+    },
+    {
+      "id": 432,
+      "word": "kompyuta ya mkononi",
+      "sentence1": "Mimi hutumia kompyuta yangu ndogo ninapofanya kazi na ninapojifunza.",
+      "sentence2": "Ana kompyuta ndogo yenye uwezo wa kucheza michezo ya kompyuta."
+    },
+    {
+      "id": 433,
+      "word": "mwisho",
+      "sentence1": "Hii ni nafasi ya mwisho ya kununua tiketi.",
+      "sentence2": "Yeye ndiye aliyekuwa wa mwisho kuondoka chumbani."
+    },
+    {
+      "id": 434,
+      "word": "baadaye",
+      "sentence1": "Tunaweza kuzungumzia hili baadaye.",
+      "sentence2": "Alifika baadaye kuliko ilivyotarajiwa."
+    },
+    {
+      "id": 435,
+      "word": "kicheko",
+      "sentence1": "Kicheko ndicho dawa bora.",
+      "sentence2": "Ningeweza kusikia kicheko chao kutoka nje."
+    },
+    {
+      "id": 436,
+      "word": "sheria",
+      "sentence1": "Sheria inalinda haki zako.",
+      "sentence2": "Alijifunza sheria katika chuo kikuu."
+    },
+    {
+      "id": 437,
+      "word": "mwanasheria",
+      "sentence1": "Yeye ni mwanasheria aliye mtaalamu wa sheria za uhalifu.",
+      "sentence2": "Aliajiri mwanasheria ili amsaidie katika kesi hiyo."
+    },
+    {
+      "id": 438,
+      "word": "wavivu",
+      "sentence1": "Yeye ni mvivu sana kusafisha chumba chake.",
+      "sentence2": "Usiwe mvivu; inuka na ufanye jambo fulani!"
+    },
+    {
+      "id": 439,
+      "word": "risasi",
+      "sentence1": "Ataongoza mradi huo kuanzia mwanzo hadi mwisho.",
+      "sentence2": "Alichaguliwa kuongoza timu hiyo."
+    },
+    {
+      "id": 440,
+      "word": "kiongozi",
+      "sentence1": "Kiongozi wa kikundi hicho alitoa hotuba.",
+      "sentence2": "Yeye ni kiongozi aliyezaliwa."
+    },
+    {
+      "id": 441,
+      "word": "kujifunza",
+      "sentence1": "Inachukua muda kujifunza lugha mpya.",
+      "sentence2": "Yeye hujishughulisha na kujifunza."
+    },
+    {
+      "id": 442,
+      "word": "angalau",
+      "sentence1": "Yeye ndiye mshiriki asiye na uzoefu zaidi katika kikundi hicho.",
+      "sentence2": "Angalau tulijitahidi kadiri tulivyoweza."
+    },
+    {
+      "id": 443,
+      "word": "hotuba",
+      "sentence1": "Profesa alitoa hotuba yenye kupendeza.",
+      "sentence2": "Nina hotuba ya kuhudhuria alasiri hii."
+    },
+    {
+      "id": 444,
+      "word": "ndimu",
+      "sentence1": "Ninapenda kuongeza limao kwenye chai yangu.",
+      "sentence2": "Mchele wa limao ni wa chumvi."
+    },
+    {
+      "id": 445,
+      "word": "kulipa",
+      "sentence1": "Je, unaweza kunikopesha kalamu?",
+      "sentence2": "Nitakukopesha kitabu changu."
+    },
+    {
+      "id": 446,
+      "word": "chini",
+      "sentence1": "Nahitaji sukari kidogo katika kahawa yangu.",
+      "sentence2": "Havutiwi sana na michezo."
+    },
+    {
+      "id": 447,
+      "word": "kiwango",
+      "sentence1": "Una kiwango gani cha Kiingereza?",
+      "sentence2": "Yeye ni katika kiwango cha juu."
+    },
+    {
+      "id": 448,
+      "word": "mtindo wa maisha",
+      "sentence1": "Yeye ana mtindo wa maisha wenye afya.",
+      "sentence2": "Wanaendeleza mtindo wa maisha wenye kudumu."
+    },
+    {
+      "id": 449,
+      "word": "kuinua",
+      "sentence1": "Tafadhali chukua lifti hadi orofa ya tatu.",
+      "sentence2": "Lifti imeharibika."
+    },
+    {
+      "id": 450,
+      "word": "nuru (taa)",
+      "sentence1": "Tafadhali ingiza taa.",
+      "sentence2": "Nuru katika chumba hiki ni nyepesi mno."
+    },
+    {
+      "id": 451,
+      "word": "mwanga (si nzito)",
+      "sentence1": "Mfuko huu ni mwepesi wa kutosha kubeba.",
+      "sentence2": "Yeye hupendelea nguo nyepesi wakati wa kiangazi."
+    },
+    {
+      "id": 452,
+      "word": "uwezekano",
+      "sentence1": "Kuna uwezekano wa mvua kesho.",
+      "sentence2": "Yaelekea atapata kazi hiyo."
+    },
+    {
+      "id": 453,
+      "word": "kiungo",
+      "sentence1": "Je, unaweza kunitumia kiungo?",
+      "sentence2": "Kuna uhusiano kati ya chakula na afya."
+    },
+    {
+      "id": 454,
+      "word": "msikilizaji",
+      "sentence1": "Yeye ni msikilizaji mzuri.",
+      "sentence2": "Wasikilizaji walikuwa makini na wenye kujihusisha."
+    },
+    {
+      "id": 455,
+      "word": "kidogo",
+      "sentence1": "Ana mbwa mdogo.",
+      "sentence2": "Ninahitaji muda zaidi."
+    },
+    {
+      "id": 456,
+      "word": "ufunguo",
+      "sentence1": "Usisahau kufunga mlango.",
+      "sentence2": "Nahitaji kununua kufuli mpya."
+    },
+    {
+      "id": 457,
+      "word": "tazama",
+      "sentence1": "Ana sura ya kipekee.",
+      "sentence2": "Tazama picha hii."
+    },
+    {
+      "id": 458,
+      "word": "lori",
+      "sentence1": "Lori hilo linasafirisha bidhaa.",
+      "sentence2": "Niliona lori barabarani."
+    },
+    {
+      "id": 459,
+      "word": "waliopotea",
+      "sentence1": "Nadhani nimepoteza funguo zangu.",
+      "sentence2": "Mbwa aliyepotea alipatikana."
+    },
+    {
+      "id": 460,
+      "word": "kwa sauti kubwa",
+      "sentence1": "Muziki huo ni wenye sauti kubwa mno.",
+      "sentence2": "Alizungumza kwa sauti kubwa."
+    },
+    {
+      "id": 461,
+      "word": "kwa sauti kubwa",
+      "sentence1": "Alizungumza kwa sauti kubwa ili asikiwe.",
+      "sentence2": "Umati ulipiga makofi kwa sauti kubwa."
+    },
+    {
+      "id": 462,
+      "word": "kupendeza",
+      "sentence1": "Bustani imejaa maua mazuri.",
+      "sentence2": "Ana tabasamu nzuri."
+    },
+    {
+      "id": 463,
+      "word": "chini",
+      "sentence1": "Meza ni ya chini sana kwangu.",
+      "sentence2": "Alizungumza kwa sauti ya chini."
+    },
+    {
+      "id": 464,
+      "word": "bahati",
+      "sentence1": "Bahati nzuri katika mtihani wako!",
+      "sentence2": "Amekuwa na bahati mbaya hivi karibuni."
+    },
+    {
+      "id": 465,
+      "word": "mwenye bahati",
+      "sentence1": "Ninajisikia mwenye bahati leo.",
+      "sentence2": "Yeye ni mtu mwenye bahati."
+    },
+    {
+      "id": 466,
+      "word": "barua",
+      "sentence1": "Nilipokea barua yako jana.",
+      "sentence2": "Tafadhali angalia barua zako."
+    },
+    {
+      "id": 467,
+      "word": "mkuu",
+      "sentence1": "Yeye ni msomi wa biolojia.",
+      "sentence2": "Hili ni suala kubwa."
+    },
+    {
+      "id": 468,
+      "word": "wa kiume",
+      "sentence1": "Yeye ndiye mhusika mkuu wa kiume katika mchezo huo.",
+      "sentence2": "Kwa kawaida paka wa kiume ni wakubwa."
+    },
+    {
+      "id": 469,
+      "word": "kusimamia",
+      "sentence1": "Atasimamia mradi huo.",
+      "sentence2": "Je, unaweza kujitegemea?"
+    },
+    {
+      "id": 470,
+      "word": "msimamizi",
+      "sentence1": "Meneja anawajibika kwa timu.",
+      "sentence2": "Yeye ni meneja mzuri."
+    },
+    {
+      "id": 471,
+      "word": "namna",
+      "sentence1": "Yeye ana tabia nzuri.",
+      "sentence2": "Tafadhali jiendeshe kwa njia ya heshima."
+    },
+    {
+      "id": 472,
+      "word": "alama",
+      "sentence1": "Tafadhali tia alama kwenye jibu sahihi.",
+      "sentence2": "Ana alama ya kuzaliwa kwenye mkono wake."
+    },
+    {
+      "id": 473,
+      "word": "kuoa",
+      "sentence1": "Wanapanga kuoana mwaka ujao.",
+      "sentence2": "Anataka kuoa kwa sababu ya upendo."
+    },
+    {
+      "id": 474,
+      "word": "nyenzo",
+      "sentence1": "Kifaa hiki ni chenye kudumu sana.",
+      "sentence2": "Tunahitaji kununua vifaa zaidi."
+    },
+    {
+      "id": 475,
+      "word": "hesabu",
+      "sentence1": "Somo la hisabati ndilo ninalopenda zaidi.",
+      "sentence2": "Yeye ni bora katika hesabu."
+    },
+    {
+      "id": 476,
+      "word": "hesabu",
+      "sentence1": "Hesabu zaweza kuwa jambo gumu.",
+      "sentence2": "Mimi hufurahia kutatua matatizo ya hesabu."
+    },
+    {
+      "id": 477,
+      "word": "jambo",
+      "sentence1": "Ni suala la muda.",
+      "sentence2": "Jambo la maana hasa ni furaha yako."
+    },
+    {
+      "id": 478,
+      "word": "huenda modal",
+      "sentence1": "Unaweza kuondoka mapema leo.",
+      "sentence2": "Naweza kukusaidia?"
+    },
+    {
+      "id": 479,
+      "word": "vyombo",
+      "sentence1": "Vyombo vya habari vina daraka muhimu katika jamii.",
+      "sentence2": "Mimi hufuata habari kwenye mitandao ya kijamii."
+    },
+    {
+      "id": 480,
+      "word": "matibabu",
+      "sentence1": "Anahitaji matibabu.",
+      "sentence2": "Wafanyakazi wa hospitali walitusaidia sana."
+    },
+    {
+      "id": 481,
+      "word": "dawa",
+      "sentence1": "Yeye huchukua dawa kwa ajili ya mzio wake.",
+      "sentence2": "Dawa zaweza kusaidia kupunguza dalili."
+    },
+    {
+      "id": 482,
+      "word": "kumbukumbu",
+      "sentence1": "Kumbukumbu yangu si kama ilivyokuwa zamani.",
+      "sentence2": "Ana kumbukumbu nzuri ya majina."
+    },
+    {
+      "id": 483,
+      "word": "kutaja",
+      "sentence1": "Tafadhali taja jina langu katika hotuba yako.",
+      "sentence2": "Sikukusudia kutaja hilo."
+    },
+    {
+      "id": 484,
+      "word": "chuma",
+      "sentence1": "Meza hii imetengenezwa kwa chuma.",
+      "sentence2": "Chuma hutokeza joto vizuri."
+    },
+    {
+      "id": 485,
+      "word": "njia",
+      "sentence1": "Tunahitaji njia mpya ya kutatua tatizo hili.",
+      "sentence2": "Njia ya kisayansi ni muhimu kwa ajili ya utafiti."
+    },
+    {
+      "id": 486,
+      "word": "katikati",
+      "sentence1": "Katikati ya barabara ndiyo mahali salama zaidi pa kutembea.",
+      "sentence2": "Aliketi katikati ya kikundi hicho."
+    },
+    {
+      "id": 487,
+      "word": "huenda",
+      "sentence1": "Huenda ukataka kufikiria njia tofauti.",
+      "sentence2": "Inaweza kunyesha baadaye."
+    },
+    {
+      "id": 488,
+      "word": "akili",
+      "sentence1": "Ana akili nzuri sana.",
+      "sentence2": "Tafadhali uwe na akili iliyofunguka."
+    },
+    {
+      "id": 489,
+      "word": "yangu (ni yangu)",
+      "sentence1": "Kitabu hiki ni changu.",
+      "sentence2": "Je, kalamu hii ni yako au yangu?"
+    },
+    {
+      "id": 490,
+      "word": "kioo",
+      "sentence1": "Alijitazama kwenye kioo.",
+      "sentence2": "Kioo huonyesha nuru."
+    },
+    {
+      "id": 491,
+      "word": "kukosa",
+      "sentence1": "Sehemu inayokosekana ni muhimu.",
+      "sentence2": "Niligundua kwamba kuna ukurasa uliokosekana katika kitabu hicho."
+    },
+    {
+      "id": 492,
+      "word": "kuhamishwa",
+      "sentence1": "Yeye hutumia simu ya mkononi.",
+      "sentence2": "Teknolojia ya simu za mkononi inaendelea kwa kasi."
+    },
+    {
+      "id": 493,
+      "word": "nyani",
+      "sentence1": "Nyani huyo alirukaruka kutoka mti mmoja hadi mwingine.",
+      "sentence2": "Nyani wanajulikana kwa sababu ya akili zao."
+    },
+    {
+      "id": 494,
+      "word": "mwezi",
+      "sentence1": "Mwezi huangaza kwa uangavu usiku.",
+      "sentence2": "Tulienda kutembea chini ya mwezi mpevu."
+    },
+    {
+      "id": 495,
+      "word": "hasa",
+      "sentence1": "Ninasoma hasa vitabu vya hadithi.",
+      "sentence2": "Hali ya hewa ni ya jua wiki hii."
+    },
+    {
+      "id": 496,
+      "word": "pikipiki",
+      "sentence1": "Yeye huendesha pikipiki kwenda kazini.",
+      "sentence2": "Pikipiki zaweza kuwa zenye mwendo wa kasi sana."
+    },
+    {
+      "id": 497,
+      "word": "harakati",
+      "sentence1": "Gari lilisonga kwa urahisi.",
+      "sentence2": "Kuna mwendo mwingi katika umati."
+    },
+    {
+      "id": 498,
+      "word": "muziki",
+      "sentence1": "Ana kipawa cha muziki.",
+      "sentence2": "Muziki huo ulifanikiwa sana."
+    },
+    {
+      "id": 499,
+      "word": "mwanamuziki",
+      "sentence1": "Yeye ni mwanamuziki mwenye kipaji.",
+      "sentence2": "Wanamuziki wengi hujitahidi kupata riziki."
+    },
+    {
+      "id": 500,
+      "word": "mwenyewe",
+      "sentence1": "Mimi mwenyewe nilifanya hivyo.",
+      "sentence2": "Ninahitaji kujikumbusha niendelee kukaza fikira."
+    },
+    {
+      "id": 501,
+      "word": "nyembamba",
+      "sentence1": "Barabara hiyo ni nyembamba sana kwa ajili ya magari.",
+      "sentence2": "Ana maoni madogo-madogo juu ya ulimwengu."
+    },
+    {
+      "id": 502,
+      "word": "kitaifa",
+      "sentence1": "Wimbo wa taifa uliimbwa.",
+      "sentence2": "Sikukuu za kitaifa ni muhimu kwa utamaduni."
+    },
+    {
+      "id": 503,
+      "word": "asili",
+      "sentence1": "Asili ni nzuri wakati wa masika.",
+      "sentence2": "Tunapaswa kulinda asili."
+    },
+    {
+      "id": 504,
+      "word": "karibu",
+      "sentence1": "Karibu nisahau siku yako ya kuzaliwa.",
+      "sentence2": "Karibu amalize mradi wake."
+    },
+    {
+      "id": 505,
+      "word": "zinahitajika",
+      "sentence1": "Ni lazima kufuata sheria.",
+      "sentence2": "Maji ni muhimu kwa uhai."
+    },
+    {
+      "id": 506,
+      "word": "shingo",
+      "sentence1": "Alikuwa amevaa shati shingoni mwake.",
+      "sentence2": "Shingo ya chupa ni nyembamba."
+    },
+    {
+      "id": 507,
+      "word": "uhitaji",
+      "sentence1": "Ninahitaji msaada kwa kazi hii.",
+      "sentence2": "Kuna uhitaji wa rasilimali zaidi."
+    },
+    {
+      "id": 508,
+      "word": "hakuna",
+      "sentence1": "Hakuna mojawapo ya njia hizo inayofaa.",
+      "sentence2": "Sipendi kahawa wala chai."
+    },
+    {
+      "id": 509,
+      "word": "mwenye wasiwasi",
+      "sentence1": "Alikuwa na wasiwasi kabla ya mahojiano.",
+      "sentence2": "Ni jambo la kawaida kuhisi wasiwasi kabla ya tukio kubwa."
+    },
+    {
+      "id": 510,
+      "word": "mtandao",
+      "sentence1": "Kompyuta imeunganishwa kwenye mtandao.",
+      "sentence2": "Mitandao ya kijamii inaweza kuwa na uvutano mkubwa."
+    },
+    {
+      "id": 511,
+      "word": "kelele",
+      "sentence1": "Kelele ya ujenzi ilikuwa yenye kusumbua.",
+      "sentence2": "Siwezi kujishughulisha kwa sababu ya kelele."
+    },
+    {
+      "id": 512,
+      "word": "wenye kelele",
+      "sentence1": "Watoto wanafanya kelele katika chumba kingine.",
+      "sentence2": "Mazingira yenye kelele yanaweza kukengeusha fikira."
+    },
+    {
+      "id": 513,
+      "word": "hakuna",
+      "sentence1": "Hakuna jibu lolote lililokuwa sahihi.",
+      "sentence2": "Sina kitu chochote katika orodha hiyo."
+    },
+    {
+      "id": 514,
+      "word": "kawaida",
+      "sentence1": "Ni jambo la kawaida kuhisi uchovu baada ya siku ndefu.",
+      "sentence2": "Matokeo yako ni ya kawaida."
+    },
+    {
+      "id": 515,
+      "word": "kwa kawaida",
+      "sentence1": "Kwa kawaida mimi huamka mapema.",
+      "sentence2": "Duka hilo huwa na shughuli nyingi siku za mwisho-juma."
+    },
+    {
+      "id": 516,
+      "word": "taarifa",
+      "sentence1": "Sikuona kosa hilo.",
+      "sentence2": "Tafadhali angalia mabadiliko katika hati."
+    },
+    {
+      "id": 517,
+      "word": "riwaya",
+      "sentence1": "Anasoma riwaya.",
+      "sentence2": "Riwaya hiyo ilichapishwa mwaka jana."
+    },
+    {
+      "id": 518,
+      "word": "hakuna mahali",
+      "sentence1": "Nilitafuta funguo zangu, lakini sikuzipata popote.",
+      "sentence2": "Alihisi kwamba maisha yake hayakuwa na kusudi."
+    },
+    {
+      "id": 519,
+      "word": "namba",
+      "sentence1": "Nambari yako ya simu ni ipi?",
+      "sentence2": "Idadi ya washiriki inaongezeka."
+    },
+    {
+      "id": 520,
+      "word": "siagi",
+      "sentence1": "Ninapenda kula karanga kama chakula cha mchana.",
+      "sentence2": "Keki ni chanzo kizuri cha protini."
+    },
+    {
+      "id": 521,
+      "word": "bahari",
+      "sentence1": "Bahari ni kubwa na ni nzito.",
+      "sentence2": "Viumbe wengi huishi baharini."
+    },
+    {
+      "id": 522,
+      "word": "kutoa",
+      "sentence1": "Ningependa kukupa ofa.",
+      "sentence2": "Alipata kazi nzuri sana."
+    },
+    {
+      "id": 523,
+      "word": "afisa",
+      "sentence1": "Ofisa huyo wa polisi alinisaidia kupata njia.",
+      "sentence2": "Yeye ni ofisa wa cheo cha juu katika jeshi."
+    },
+    {
+      "id": 524,
+      "word": "mafuta",
+      "sentence1": "Nahitaji kununua mafuta ya kupikia.",
+      "sentence2": "Gari linahitaji kubadilishwa mafuta."
+    },
+    {
+      "id": 525,
+      "word": "juu",
+      "sentence1": "Paka aliruka juu ya meza.",
+      "sentence2": "Aliweka kitabu hicho kwenye rafu."
+    },
+    {
+      "id": 526,
+      "word": "nafasi",
+      "sentence1": "Hii ni fursa kubwa kwako.",
+      "sentence2": "Usikose nafasi ya kujifunza."
+    },
+    {
+      "id": 527,
+      "word": "chaguo",
+      "sentence1": "Una chaguzi kadhaa za kuchagua.",
+      "sentence2": "Hiyo ndiyo njia bora zaidi."
+    },
+    {
+      "id": 528,
+      "word": "kawaida",
+      "sentence1": "Anaishi maisha ya kawaida.",
+      "sentence2": "Ni siku ya kawaida tu."
+    },
+    {
+      "id": 529,
+      "word": "shirika",
+      "sentence1": "Shirika hilo limejitolea kuwasaidia wengine.",
+      "sentence2": "Anafanya kazi katika shirika lisilo la faida."
+    },
+    {
+      "id": 530,
+      "word": "kupanga",
+      "sentence1": "Tunahitaji kupanga faili hizo.",
+      "sentence2": "Je, unaweza kunisaidia kupanga tukio hilo?"
+    },
+    {
+      "id": 531,
+      "word": "asili",
+      "sentence1": "Hii ni picha ya awali.",
+      "sentence2": "Ninapendelea toleo la awali la wimbo huo."
+    },
+    {
+      "id": 532,
+      "word": "sisi wenyewe",
+      "sentence1": "Tunahitaji kujitunza.",
+      "sentence2": "Hebu tujifurahie wenyewe katika chama."
+    },
+    {
+      "id": 533,
+      "word": "nje",
+      "sentence1": "Watoto wanacheza nje.",
+      "sentence2": "Ni vizuri kuketi nje siku yenye jua."
+    },
+    {
+      "id": 534,
+      "word": "tanuri",
+      "sentence1": "Ninahitaji kupasha moto tanuri.",
+      "sentence2": "Keki zinaoka kwenye tanuri."
+    },
+    {
+      "id": 535,
+      "word": "mwenyewe",
+      "sentence1": "Nataka kuwa na nyumba yangu mwenyewe.",
+      "sentence2": "Ana biashara yenye mafanikio."
+    },
+    {
+      "id": 536,
+      "word": "mmiliki",
+      "sentence1": "Mwenye mkahawa huyo ni mwenye urafiki sana.",
+      "sentence2": "Yeye ni mmiliki wa kampuni kubwa."
+    },
+    {
+      "id": 537,
+      "word": "kifurushi",
+      "sentence1": "Ninahitaji kupakia mifuko yangu kwa ajili ya safari.",
+      "sentence2": "Karatasi ziko juu ya meza."
+    },
+    {
+      "id": 538,
+      "word": "maumivu",
+      "sentence1": "Nina maumivu ya mgongo.",
+      "sentence2": "Maumivu yalikuwa makali sana."
+    },
+    {
+      "id": 539,
+      "word": "mchoraji",
+      "sentence1": "Mchoraji huyo alichora picha nzuri sana ya ukuta.",
+      "sentence2": "Yeye ni mchoraji mwenye kipaji."
+    },
+    {
+      "id": 540,
+      "word": "nyumba ya kifalme",
+      "sentence1": "Jumba hilo la kifalme liko katikati ya jiji.",
+      "sentence2": "Watalii wengi hutembelea jumba hilo la kifalme kila mwaka."
+    },
+    {
+      "id": 541,
+      "word": "suruali",
+      "sentence1": "Nahitaji kununua suruali mpya.",
+      "sentence2": "Panti hizi ni nyembamba sana."
+    },
+    {
+      "id": 542,
+      "word": "maegesho",
+      "sentence1": "Hakuna mahali pa kuegesha magari.",
+      "sentence2": "Nilipata mahali pa kuegesha gari barabarani."
+    },
+    {
+      "id": 543,
+      "word": "maalum",
+      "sentence1": "Mimi hupendezwa hasa na sanaa.",
+      "sentence2": "Je, kuna sababu hususa ya ziara yako?"
+    },
+    {
+      "id": 544,
+      "word": "kupita",
+      "sentence1": "Unahitaji kupita mtihani ili uhitimu.",
+      "sentence2": "Nitapitisha ujumbe huo."
+    },
+    {
+      "id": 545,
+      "word": "msafiri",
+      "sentence1": "Msafiri alikuwa amechoka sana.",
+      "sentence2": "Abiria wote lazima waonyeshe tiketi zao."
+    },
+    {
+      "id": 546,
+      "word": "zamani",
+      "sentence1": "Mara nyingi wakati uliopita husahauliwa.",
+      "sentence2": "Tunajifunza kutokana na mambo yaliyopita."
+    },
+    {
+      "id": 547,
+      "word": "mgonjwa",
+      "sentence1": "Mgonjwa anapona vizuri.",
+      "sentence2": "Ni lazima madaktari wawe wenye subira na wenye kuelewa."
+    },
+    {
+      "id": 548,
+      "word": "mfano",
+      "sentence1": "Nguo hiyo ina rangi maridadi ya maua.",
+      "sentence2": "Je, unaweza kuona jambo linalofanana katika tarakimu hizo?"
+    },
+    {
+      "id": 549,
+      "word": "kulipa",
+      "sentence1": "Ninahitaji kulipa bili.",
+      "sentence2": "Ungependa kulipiaje tiketi hizo?"
+    },
+    {
+      "id": 550,
+      "word": "amani",
+      "sentence1": "Sote tunataka amani ulimwenguni.",
+      "sentence2": "Mazungumzo ya amani yalifanikiwa."
+    },
+    {
+      "id": 551,
+      "word": "sarafu",
+      "sentence1": "Pesa iliyookolewa ni pesa iliyopatikana.",
+      "sentence2": "Alipata senti moja barabarani."
+    },
+    {
+      "id": 552,
+      "word": "kwa",
+      "sentence1": "Bei ni dola 10 kwa kila kitu.",
+      "sentence2": "Tunahitaji kulipa dola 5 kwa kila mtu."
+    },
+    {
+      "id": 553,
+      "word": "asilimia",
+      "sentence1": "Kiasi cha riba ni asilimia 5.",
+      "sentence2": "Ni asilimia ndogo tu ya watu wanaoathiriwa."
+    },
+    {
+      "id": 554,
+      "word": "kufanya",
+      "sentence1": "Kundi litacheza kwenye tamasha hilo.",
+      "sentence2": "Anataka kucheza kwenye jukwaa."
+    },
+    {
+      "id": 555,
+      "word": "labda",
+      "sentence1": "Labda tunapaswa kujaribu mbinu nyingine.",
+      "sentence2": "Labda nitaenda kwenye karamu baadaye."
+    },
+    {
+      "id": 556,
+      "word": "ruhusa",
+      "sentence1": "Unahitaji ruhusa ya kuingia jengo hilo.",
+      "sentence2": "Nina ruhusa ya kutumia gari."
+    },
+    {
+      "id": 557,
+      "word": "utu",
+      "sentence1": "Ana utu wenye nguvu.",
+      "sentence2": "Uchunguzi wa utu unaweza kufunua mengi."
+    },
+    {
+      "id": 558,
+      "word": "mnyama",
+      "sentence1": "Nina paka wa kipenzi.",
+      "sentence2": "Wanyama-vipenzi huhitaji utunzaji mwingi."
+    },
+    {
+      "id": 559,
+      "word": "petroli",
+      "sentence1": "Gari linaendesha kwa petroli.",
+      "sentence2": "Bei ya petroli inaongezeka."
+    },
+    {
+      "id": 560,
+      "word": "picha",
+      "sentence1": "Nilipiga picha ya machweo.",
+      "sentence2": "Ana picha nyingi za zamani."
+    },
+    {
+      "id": 561,
+      "word": "kimwili",
+      "sentence1": "Mazoezi ni muhimu kwa afya.",
+      "sentence2": "Ana uchunguzi wa kimwili juma lijalo."
+    },
+    {
+      "id": 562,
+      "word": "fizikia",
+      "sentence1": "Fizikia ni elimu ya vitu na nishati.",
+      "sentence2": "Yeye hufurahia kujifunza fizikia."
+    },
+    {
+      "id": 563,
+      "word": "chagua",
+      "sentence1": "Tafadhali chagua kadi moja kutoka kwenye karatasi.",
+      "sentence2": "Nitakuja kukuchukua saa 5 jioni."
+    },
+    {
+      "id": 564,
+      "word": "mwendesha ndege",
+      "sentence1": "Rubani aliendesha ndege hiyo kwa usalama.",
+      "sentence2": "Anataka kuwa rubani."
+    },
+    {
+      "id": 565,
+      "word": "sayari",
+      "sentence1": "Dunia ni sayari ya tatu kutoka jua.",
+      "sentence2": "Mara nyingi sayari hiyo huitwa Sayari Nyekundu."
+    },
+    {
+      "id": 566,
+      "word": "mmea",
+      "sentence1": "Mti huo unahitaji maji na mwangaza wa jua.",
+      "sentence2": "Kuna aina nyingi za mimea."
+    },
+    {
+      "id": 567,
+      "word": "plastiki",
+      "sentence1": "Chupa hii imetengenezwa kwa plastiki.",
+      "sentence2": "Uchafuzi wa plastiki ni tatizo kubwa la mazingira."
+    },
+    {
+      "id": 568,
+      "word": "bamba",
+      "sentence1": "Tafadhali weka sahani yako kwenye sinki.",
+      "sentence2": "Sahani hiyo imetengenezwa kwa kauri."
+    },
+    {
+      "id": 569,
+      "word": "jukwaa",
+      "sentence1": "Gari-moshi hilo litawasili kwenye gati la 2.",
+      "sentence2": "Alisimama kwenye jukwaa akingojea gari-moshi."
+    },
+    {
+      "id": 570,
+      "word": "tafadhali",
+      "sentence1": "Tafadhali funga mlango.",
+      "sentence2": "Je, unaweza kunisaidia?"
+    },
+    {
+      "id": 571,
+      "word": "radhi",
+      "sentence1": "Nimeridhika na matokeo.",
+      "sentence2": "Alifurahi kukutana naye."
+    },
+    {
+      "id": 572,
+      "word": "mfukoni",
+      "sentence1": "Nilipata sarafu kadhaa mfukoni mwangu.",
+      "sentence2": "Ana shimo katika mfuko wake."
+    },
+    {
+      "id": 573,
+      "word": "mwenye adabu",
+      "sentence1": "\"\"\"Ni jambo la adabu kusema 'asante.'\"\"\"",
+      "sentence2": "Sikuzote yeye huwa mwenye adabu kwa wageni wake."
+    },
+    {
+      "id": 574,
+      "word": "uchafuzi",
+      "sentence1": "Uchafuzi wa hewa ni tatizo kubwa.",
+      "sentence2": "Tunahitaji kupunguza uchafuzi katika miji yetu."
+    },
+    {
+      "id": 575,
+      "word": "pop-up",
+      "sentence1": "Baluni itapasuka ukiikandamiza sana.",
+      "sentence2": "Nilisikia mlio kutoka jikoni."
+    },
+    {
+      "id": 576,
+      "word": "idadi ya watu",
+      "sentence1": "Idadi ya watu wa jiji hilo inaongezeka.",
+      "sentence2": "Idadi ya watu ulimwenguni ni zaidi ya bilioni 7."
+    },
+    {
+      "id": 577,
+      "word": "msimamo",
+      "sentence1": "Aliomba kazi katika kampuni hiyo.",
+      "sentence2": "Nafasi yake katika timu ni muhimu sana."
+    },
+    {
+      "id": 578,
+      "word": "kumiliki",
+      "sentence1": "Kuwa na dawa haramu ni uhalifu.",
+      "sentence2": "Alipoteza gari lake."
+    },
+    {
+      "id": 579,
+      "word": "uwezekano",
+      "sentence1": "Kuna uwezekano wa mvua kesho.",
+      "sentence2": "Tunapaswa kufikiria kila uwezekano."
+    },
+    {
+      "id": 580,
+      "word": "chapa",
+      "sentence1": "Bango hilo lilitangaza maonyesho ya muziki yaliyokuwa yakikaribia.",
+      "sentence2": "Alitundika bango la chumba chake cha kulala."
+    },
+    {
+      "id": 581,
+      "word": "nguvu",
+      "sentence1": "Umeme ulikatika wakati wa dhoruba.",
+      "sentence2": "Ana uwezo wa kufanya maamuzi."
+    },
+    {
+      "id": 582,
+      "word": "kutabiri",
+      "sentence1": "Ni vigumu kutabiri hali ya hewa.",
+      "sentence2": "Anaweza kutabiri matokeo ya mchezo."
+    },
+    {
+      "id": 583,
+      "word": "sasa",
+      "sentence1": "Atatoa matokeo ya uchunguzi wake kwenye mkutano huo.",
+      "sentence2": "Alipokea zawadi kwa siku yake ya kuzaliwa."
+    },
+    {
+      "id": 584,
+      "word": "rais",
+      "sentence1": "Rais alitoa hotuba kwa taifa.",
+      "sentence2": "Anataka kuwa rais siku moja."
+    },
+    {
+      "id": 585,
+      "word": "kuzuia",
+      "sentence1": "Ni lazima tuzuie aksidenti barabarani.",
+      "sentence2": "Hatua zilichukuliwa ili kuzuia kuenea kwa ugonjwa huo."
+    },
+    {
+      "id": 586,
+      "word": "kuchapisha",
+      "sentence1": "Nahitaji kuchapisha hati hii.",
+      "sentence2": "Printa haina wino."
+    },
+    {
+      "id": 587,
+      "word": "kichapishaji",
+      "sentence1": "Printa haifanyi kazi vizuri.",
+      "sentence2": "Nahitaji kununua kichapishaji kipya."
+    },
+    {
+      "id": 588,
+      "word": "kifungo",
+      "sentence1": "Alifungwa gerezani kwa sababu ya uhalifu wake.",
+      "sentence2": "Gereza hilo liko nje ya jiji."
+    },
+    {
+      "id": 589,
+      "word": "tuzo",
+      "sentence1": "Alishinda tuzo katika mashindano hayo.",
+      "sentence2": "Tuzo ya Nobel hutolewa kila mwaka."
+    },
+    {
+      "id": 590,
+      "word": "utaratibu",
+      "sentence1": "Utaratibu huo ni mgumu.",
+      "sentence2": "Tunahitaji kurekebisha utaratibu huo."
+    },
+    {
+      "id": 591,
+      "word": "mazao",
+      "sentence1": "Wanatengeneza bidhaa mbalimbali.",
+      "sentence2": "Kiwanda hicho hutengeneza magari."
+    },
+    {
+      "id": 592,
+      "word": "mtaalamu",
+      "sentence1": "Yeye ni mchezaji wa dansi wa kitaalamu.",
+      "sentence2": "Alitoa hotuba ya kitaalamu."
+    },
+    {
+      "id": 593,
+      "word": "mwalimu",
+      "sentence1": "Profesa anafundisha biolojia.",
+      "sentence2": "Yeye ni profesa anayeheshimiwa katika chuo kikuu."
+    },
+    {
+      "id": 594,
+      "word": "umbo",
+      "sentence1": "Tafadhali sasisha maelezo yako ya wasifu.",
+      "sentence2": "Anajulikana sana mtandaoni."
+    },
+    {
+      "id": 595,
+      "word": "programu",
+      "sentence1": "Programu huanza saa 8 jioni.",
+      "sentence2": "Amejiandikisha katika programu ya sayansi ya kompyuta."
+    },
+    {
+      "id": 596,
+      "word": "maendeleo",
+      "sentence1": "Tunafanya maendeleo katika mradi huo.",
+      "sentence2": "Ameonyesha maendeleo makubwa katika masomo yake."
+    },
+    {
+      "id": 597,
+      "word": "ahadi",
+      "sentence1": "Ninakuahidi kukusaidia kufanya kazi zako za shule.",
+      "sentence2": "Alimwahidi kwamba angekuwa pamoja naye sikuzote."
+    },
+    {
+      "id": 598,
+      "word": "kutamka",
+      "sentence1": "Ni vigumu kutamka maneno fulani vizuri.",
+      "sentence2": "Je, unaweza kutamka jina langu?"
+    },
+    {
+      "id": 599,
+      "word": "kulinda",
+      "sentence1": "Ni lazima tulinde mazingira.",
+      "sentence2": "Sheria hiyo imekusudiwa kuwalinda watumiaji."
+    },
+    {
+      "id": 600,
+      "word": "kutoa",
+      "sentence1": "Tunahitaji kutoa rasilimali zaidi kwa wanafunzi.",
+      "sentence2": "Lengo la shirika hilo ni kutoa msaada kwa wale wanaohitaji."
+    },
+    {
+      "id": 601,
+      "word": "nyumba ya kupikia",
+      "sentence1": "Walikutana kwenye baa ya mahali hapo ili kunywa.",
+      "sentence2": "Baa hiyo inajulikana kwa muziki wake wa moja kwa moja."
+    },
+    {
+      "id": 602,
+      "word": "umma",
+      "sentence1": "Umma umealikwa kuhudhuria tukio hilo.",
+      "sentence2": "Usafiri wa umma ni muhimu kwa jiji."
+    },
+    {
+      "id": 603,
+      "word": "kuchapisha",
+      "sentence1": "Wanapanga kuchapisha kitabu kipya mwaka ujao.",
+      "sentence2": "Makala hiyo ilichapishwa katika jarida la kisayansi."
+    },
+    {
+      "id": 604,
+      "word": "kuvuta",
+      "sentence1": "Tafadhali fungua mlango.",
+      "sentence2": "Alijaribu kuvuta sanduku hilo zito juu ya sakafu."
+    },
+    {
+      "id": 605,
+      "word": "kusudi",
+      "sentence1": "Kusudi la mkutano huo ni kuzungumzia mradi huo.",
+      "sentence2": "Ana kusudi la wazi katika kazi yake."
+    },
+    {
+      "id": 606,
+      "word": "kusukuma",
+      "sentence1": "Ilimbidi asukume gari ili lianze.",
+      "sentence2": "Alimsukuma ili amsaidie kupanda mlima."
+    },
+    {
+      "id": 607,
+      "word": "ubora",
+      "sentence1": "Ubora wa bidhaa hiyo ni wa juu sana.",
+      "sentence2": "Tunahitaji kuboresha ubora wa huduma zetu."
+    },
+    {
+      "id": 608,
+      "word": "kiasi",
+      "sentence1": "Kuna chakula cha kutosha kwa wote.",
+      "sentence2": "Tunahitaji kupunguza kiasi cha taka tunazotengeneza."
+    },
+    {
+      "id": 609,
+      "word": "malkia",
+      "sentence1": "Malkia anatembelea mji.",
+      "sentence2": "Alitawazwa kuwa malkia mwaka jana."
+    },
+    {
+      "id": 610,
+      "word": "swali",
+      "sentence1": "Je, una swali kwa ajili yangu?",
+      "sentence2": "Aliuliza swali gumu."
+    },
+    {
+      "id": 611,
+      "word": "kimya kimya",
+      "sentence1": "Alizungumza kimya-kimya ili mtu yeyote asisikie.",
+      "sentence2": "Alitembea kimya-kimya ndani ya nyumba."
+    },
+    {
+      "id": 612,
+      "word": "mbio (kimbia)",
+      "sentence1": "Watashindana wiki ijayo.",
+      "sentence2": "Alishinda mbio hiyo kwa sekunde chache."
+    },
+    {
+      "id": 613,
+      "word": "reli",
+      "sentence1": "Kituo cha reli kina shughuli nyingi leo.",
+      "sentence2": "Alichukua gari-moshi kutoka kituo cha reli."
+    },
+    {
+      "id": 614,
+      "word": "kuongeza",
+      "sentence1": "Tunahitaji kuongeza ufahamu kuhusu suala hili.",
+      "sentence2": "Wanapanga kukusanya fedha kwa ajili ya kazi ya upendo."
+    },
+    {
+      "id": 615,
+      "word": "kiwango",
+      "sentence1": "Kiwango cha riba kimeongezeka.",
+      "sentence2": "Tunahitaji kutafuta njia za kuboresha kiwango chetu cha mafanikio."
+    },
+    {
+      "id": 616,
+      "word": "badala yake",
+      "sentence1": "Ningependa kukaa nyumbani usiku wa leo.",
+      "sentence2": "Anapenda muziki wa kawaida."
+    },
+    {
+      "id": 617,
+      "word": "kufikia",
+      "sentence1": "Tunahitaji kufikia uamuzi kufikia Ijumaa.",
+      "sentence2": "Hatimaye alifikia mradi wake baada ya miaka mingi."
+    },
+    {
+      "id": 618,
+      "word": "kujibu",
+      "sentence1": "Hakuitikia habari hiyo kama ilivyotarajiwa.",
+      "sentence2": "Kwa kawaida wewe hutendaje unapokabili hali zenye kufadhaisha?"
+    },
+    {
+      "id": 619,
+      "word": "kutambua",
+      "sentence1": "Sikuona jinsi ilivyokuwa imechelewa.",
+      "sentence2": "Hatimaye alitimiza ndoto yake ya kuwa daktari."
+    },
+    {
+      "id": 620,
+      "word": "kupokea",
+      "sentence1": "Nilifurahi kupokea barua yako.",
+      "sentence2": "Je, umepokea kifurushi nilichokutumia?"
+    },
+    {
+      "id": 621,
+      "word": "hivi karibuni",
+      "sentence1": "Mabadiliko ya hivi karibuni yameboresha mfumo huo.",
+      "sentence2": "Anachunguza maendeleo ya karibuni ya kiteknolojia."
+    },
+    {
+      "id": 622,
+      "word": "hivi karibuni",
+      "sentence1": "Hivi majuzi nilianza kazi mpya.",
+      "sentence2": "Je, umeona filamu yoyote nzuri hivi karibuni?"
+    },
+    {
+      "id": 623,
+      "word": "kupokea",
+      "sentence1": "Karamu hiyo ilifanywa katika hoteli ya kifahari.",
+      "sentence2": "Yeye hufanya kazi kwenye dawati la mapokezi."
+    },
+    {
+      "id": 624,
+      "word": "kichocheo",
+      "sentence1": "Je, una kichocheo cha keki ya chokoleti?",
+      "sentence2": "Kichocheo hiki ni rahisi kufuata."
+    },
+    {
+      "id": 625,
+      "word": "kutambua",
+      "sentence1": "Ninaweza kumtambua kutokana na picha.",
+      "sentence2": "Ni muhimu kutambua nguvu zako."
+    },
+    {
+      "id": 626,
+      "word": "kupendekeza",
+      "sentence1": "Ninapendekeza ujaribu mkahawa mpya.",
+      "sentence2": "Je, unaweza kupendekeza kitabu kizuri?"
+    },
+    {
+      "id": 627,
+      "word": "rekodi",
+      "sentence1": "Tafadhali andika maelezo ya mkutano.",
+      "sentence2": "Rekodi inaonyesha ongezeko kubwa la mauzo."
+    },
+    {
+      "id": 628,
+      "word": "kurekodi",
+      "sentence1": "Rekodi ya hotuba inapatikana mtandaoni.",
+      "sentence2": "Alisikiliza rekodi ya maonyesho yake."
+    },
+    {
+      "id": 629,
+      "word": "kutumia tena",
+      "sentence1": "Tunapaswa kutumia tena karatasi na plastiki.",
+      "sentence2": "Kutumia tena vitu vilivyopotea husaidia kupunguza taka."
+    },
+    {
+      "id": 630,
+      "word": "kupunguza",
+      "sentence1": "Tunahitaji kupunguza matumizi yetu ya nishati.",
+      "sentence2": "Sera hiyo inalenga kupunguza uchafuzi."
+    },
+    {
+      "id": 631,
+      "word": "rejea",
+      "sentence1": "Tafadhali rejea mwongozo wa mtumiaji kwa maagizo.",
+      "sentence2": "Katika ripoti yake alitaja uchunguzi mbalimbali."
+    },
+    {
+      "id": 632,
+      "word": "kukataa",
+      "sentence1": "Ilinibidi kukataa mwaliko huo.",
+      "sentence2": "Alikataa kujibu swali hilo."
+    },
+    {
+      "id": 633,
+      "word": "eneo",
+      "sentence1": "Eneo hilo linajulikana kwa mandhari yake maridadi.",
+      "sentence2": "Hali ya hewa hutofautiana sana katika maeneo mbalimbali."
+    },
+    {
+      "id": 634,
+      "word": "kawaida",
+      "sentence1": "Mimi huenda kwenye mazoezi kwa ukawaida.",
+      "sentence2": "Ana ratiba ya kawaida ya kulala."
+    },
+    {
+      "id": 635,
+      "word": "mahusiano",
+      "sentence1": "Wana uhusiano wa karibu.",
+      "sentence2": "Yeye huthamini urafiki wake na mahusiano ya familia."
+    },
+    {
+      "id": 636,
+      "word": "kuondoa",
+      "sentence1": "Tafadhali vua viatu kabla ya kuingia.",
+      "sentence2": "Aliondoa ukuta wa zamani."
+    },
+    {
+      "id": 637,
+      "word": "kurekebisha",
+      "sentence1": "Nahitaji kurekebisha baiskeli yangu.",
+      "sentence2": "Kazi ya kurekebisha ilichukua muda mrefu kuliko ilivyotarajiwa."
+    },
+    {
+      "id": 638,
+      "word": "kubadilisha",
+      "sentence1": "Tunahitaji kubadilisha betri za zamani.",
+      "sentence2": "Alibadilisha dirisha lililovunjika."
+    },
+    {
+      "id": 639,
+      "word": "jibu",
+      "sentence1": "Tafadhali jibu barua pepe yangu.",
+      "sentence2": "Hakujibu ujumbe wangu."
+    },
+    {
+      "id": 640,
+      "word": "ripoti",
+      "sentence1": "Ripoti hiyo iliwasilishwa kwa wakati.",
+      "sentence2": "Anaandika ripoti juu ya mabadiliko ya hali ya hewa."
+    },
+    {
+      "id": 641,
+      "word": "mwandishi",
+      "sentence1": "Mwandishi wa habari aliripoti tukio hilo moja kwa moja.",
+      "sentence2": "Yeye ni mwandishi maarufu wa habari za kisiasa."
+    },
+    {
+      "id": 642,
+      "word": "ombi",
+      "sentence1": "Ningependa kutoa ombi.",
+      "sentence2": "Ombi hilo lilikubaliwa na usimamizi."
+    },
+    {
+      "id": 643,
+      "word": "utafiti",
+      "sentence1": "Anafanya utafiti kuhusu nishati mbadala.",
+      "sentence2": "Matokeo ya utafiti huo yalichapishwa katika jarida fulani."
+    },
+    {
+      "id": 644,
+      "word": "mtafiti",
+      "sentence1": "Mtafiti huyo aliwasilisha matokeo ya utafiti wake kwenye mkutano huo.",
+      "sentence2": "Yeye ni mtafiti mashuhuri katika uwanja wake."
+    },
+    {
+      "id": 645,
+      "word": "kujibu",
+      "sentence1": "Tafadhali jibu swali langu.",
+      "sentence2": "Alijibu barua pepe hiyo haraka."
+    },
+    {
+      "id": 646,
+      "word": "majibu",
+      "sentence1": "Waliitikia vizuri.",
+      "sentence2": "Bado tunangojea jibu."
+    },
+    {
+      "id": 647,
+      "word": "pumzika",
+      "sentence1": "Nahitaji kupumzika kwa muda.",
+      "sentence2": "Alipumzika baada ya safari ndefu."
+    },
+    {
+      "id": 648,
+      "word": "kuchunguza",
+      "sentence1": "Tafadhali soma hati hiyo kwa uangalifu.",
+      "sentence2": "Utaratibu wa kuchunguza ulichukua majuma kadhaa."
+    },
+    {
+      "id": 649,
+      "word": "kusafiri",
+      "sentence1": "Ninapenda kuendesha baiskeli mwishoni mwa juma.",
+      "sentence2": "Alitembea kwa gari hilo jipya."
+    },
+    {
+      "id": 650,
+      "word": "pete",
+      "sentence1": "Alikuwa amevaa pete maridadi ya dhahabu.",
+      "sentence2": "Pete hiyo ilikuwa ngumu sana kwa kidole chake."
+    },
+    {
+      "id": 651,
+      "word": "pete",
+      "sentence1": "Nilisikia simu ikilia.",
+      "sentence2": "Kengele za kanisa hulia kila saa."
+    },
+    {
+      "id": 652,
+      "word": "kuongezeka",
+      "sentence1": "Jua litatokea saa 6 asubuhi.",
+      "sentence2": "Bei inatarajiwa kuongezeka mwaka ujao."
+    },
+    {
+      "id": 653,
+      "word": "mwamba",
+      "sentence1": "Jiwe hilo lilikuwa zito sana.",
+      "sentence2": "Alikusanya mawe mazuri kwenye ufuo wa bahari."
+    },
+    {
+      "id": 654,
+      "word": "jukumu",
+      "sentence1": "Alitimiza fungu muhimu katika mradi huo.",
+      "sentence2": "Msimamo wake katika filamu hiyo ulikuwa mgumu."
+    },
+    {
+      "id": 655,
+      "word": "paa",
+      "sentence1": "Paa linahitaji kurekebishwa.",
+      "sentence2": "Waliweka paneli za jua kwenye paa."
+    },
+    {
+      "id": 656,
+      "word": "mviringo",
+      "sentence1": "Meza ni mviringo.",
+      "sentence2": "Ana uso mviringo."
+    },
+    {
+      "id": 657,
+      "word": "njia",
+      "sentence1": "Njia bora ya kwenda uwanja wa ndege ni ipi?",
+      "sentence2": "Njia hiyo ilifungwa kwa sababu ya ujenzi."
+    },
+    {
+      "id": 658,
+      "word": "takataka",
+      "sentence1": "Tafadhali toa takataka.",
+      "sentence2": "Bustani hiyo ilikuwa imejaa takataka."
+    },
+    {
+      "id": 659,
+      "word": "kiburi",
+      "sentence1": "Haikuwa adabu kumkatiza.",
+      "sentence2": "Alikuwa mtukutu kwa mhudumu."
+    },
+    {
+      "id": 660,
+      "word": "kukimbia",
+      "sentence1": "Ninapenda kukimbia asubuhi.",
+      "sentence2": "Yeye hukimbia maili tano kila siku."
+    },
+    {
+      "id": 661,
+      "word": "mkimbiaji",
+      "sentence1": "Mkimbiaji huyo alimaliza mbio hizo kwa wakati usio na kifani.",
+      "sentence2": "Yeye ni mkimbiaji wa mbio za masafa marefu."
+    },
+    {
+      "id": 662,
+      "word": "kukimbia",
+      "sentence1": "Kukimbia ni njia nzuri ya kudumisha afya.",
+      "sentence2": "Yeye hufurahia kukimbia katika bustani."
+    },
+    {
+      "id": 663,
+      "word": "kwa huzuni",
+      "sentence1": "Kwa huzuni aliwaaga rafiki zake.",
+      "sentence2": "Alimtazama kwa huzuni."
+    },
+    {
+      "id": 664,
+      "word": "salama",
+      "sentence1": "Jengo hilo liko salama kutokana na matetemeko ya ardhi.",
+      "sentence2": "Hakikisha eneo hilo liko salama kabla ya kucheza."
+    },
+    {
+      "id": 665,
+      "word": "meli",
+      "sentence1": "Waliamua kusafiri kwa meli kuzunguka ulimwengu.",
+      "sentence2": "Yeye hupenda kusafiri baharini mwishoni mwa juma."
+    },
+    {
+      "id": 666,
+      "word": "kusafiri kwa meli",
+      "sentence1": "Kusafiri kwa mashua ni jambo linalopendwa sana wakati wa kiangazi.",
+      "sentence2": "Alichukua kozi ya kuendesha meli mwaka jana."
+    },
+    {
+      "id": 667,
+      "word": "mshahara",
+      "sentence1": "Mshahara wake ni mkubwa kuliko wastani wa sekta hiyo.",
+      "sentence2": "Anajadiliana mshahara wake na kampuni."
+    },
+    {
+      "id": 668,
+      "word": "kuuza",
+      "sentence1": "Duka hilo linatoa ofa kubwa mwishoni mwa juma hili.",
+      "sentence2": "Nilinunua nguo hii kwa bei ya chini."
+    },
+    {
+      "id": 669,
+      "word": "mchuzi",
+      "sentence1": "Ninapenda kuweka mchuzi wa nyanya kwenye pasta yangu.",
+      "sentence2": "Kichocheo hicho kinatia ndani mchuzi wenye vikolezo."
+    },
+    {
+      "id": 670,
+      "word": "kuokoa",
+      "sentence1": "Tunahitaji kuokoa mazingira.",
+      "sentence2": "Alihifadhi pesa zake kwa ajili ya gari jipya."
+    },
+    {
+      "id": 671,
+      "word": "kuogopa",
+      "sentence1": "Aliogopa wakati wa filamu ya kutisha.",
+      "sentence2": "Aliogopa kutembea peke yake usiku."
+    },
+    {
+      "id": 672,
+      "word": "kuogopesha",
+      "sentence1": "Nyumba hiyo yenye kuogopwa ilikuwa yenye kuogopesha sana.",
+      "sentence2": "Sipendi filamu za kutisha."
+    },
+    {
+      "id": 673,
+      "word": "tukio",
+      "sentence1": "Mandhari ya mwisho ya sinema hiyo ilikuwa yenye kusisimua.",
+      "sentence2": "Walipiga picha ya tukio hilo katika bustani."
+    },
+    {
+      "id": 674,
+      "word": "ratiba",
+      "sentence1": "Ratiba ya mkutano inapatikana mtandaoni.",
+      "sentence2": "Ana ratiba yenye shughuli nyingi juma hili."
+    },
+    {
+      "id": 675,
+      "word": "alama",
+      "sentence1": "Matokeo ya mwisho yalikuwa 3-2.",
+      "sentence2": "Alifunga bao la ushindi."
+    },
+    {
+      "id": 676,
+      "word": "kiwambo",
+      "sentence1": "Skrini ni mkali sana.",
+      "sentence2": "Alitazama filamu hiyo kwenye skrini kubwa."
+    },
+    {
+      "id": 677,
+      "word": "utafutaji",
+      "sentence1": "Nahitaji kutafuta funguo zangu.",
+      "sentence2": "Utafutaji wa mtu aliyepotea unaendelea."
+    },
+    {
+      "id": 678,
+      "word": "msimu",
+      "sentence1": "Majira ya baridi kali ndiyo majira ninayopenda zaidi.",
+      "sentence2": "Msimu mpya wa kipindi huanza wiki ijayo."
+    },
+    {
+      "id": 679,
+      "word": "kiti",
+      "sentence1": "Tafadhali kaa.",
+      "sentence2": "Kiti kilicho karibu yangu ni tupu."
+    },
+    {
+      "id": 680,
+      "word": "pili (ijayo)",
+      "sentence1": "Sura ya pili ni ya kuvutia zaidi.",
+      "sentence2": "Tutazungumzia jambo hilo katika mkutano ujao."
+    },
+    {
+      "id": 681,
+      "word": "pili",
+      "sentence1": "Pili, tunahitaji kuzingatia bajeti.",
+      "sentence2": "Pili, yeye ni mshiriki mzuri wa timu."
+    },
+    {
+      "id": 682,
+      "word": "siri",
+      "sentence1": "Ni siri kati yetu.",
+      "sentence2": "Alinisimulia siri hiyo."
+    },
+    {
+      "id": 683,
+      "word": "katibu",
+      "sentence1": "Katibu atapanga mkutano huo.",
+      "sentence2": "Yeye hufanya kazi akiwa karani katika kampuni ya sheria."
+    },
+    {
+      "id": 684,
+      "word": "kuonekana",
+      "sentence1": "Wanaonekana kuwa na furaha pamoja.",
+      "sentence2": "Yaonekana tuna tatizo."
+    },
+    {
+      "id": 685,
+      "word": "hisia",
+      "sentence1": "Ninaweza kuhisi msisimko wako.",
+      "sentence2": "Yeye ana hisia nzuri ya ucheshi."
+    },
+    {
+      "id": 686,
+      "word": "tofauti",
+      "sentence1": "Tunahitaji kutenganisha masuala hayo mawili.",
+      "sentence2": "Waliamua kuishi katika nyumba tofauti."
+    },
+    {
+      "id": 687,
+      "word": "mfululizo",
+      "sentence1": "Nilitazama mfululizo wote katika mwisho-juma mmoja.",
+      "sentence2": "Kitabu hicho ni sehemu ya mfululizo."
+    },
+    {
+      "id": 688,
+      "word": "nzito",
+      "sentence1": "Yeye ni mtu mwenye kuchukua mambo kwa uzito.",
+      "sentence2": "Hilo ni jambo zito."
+    },
+    {
+      "id": 689,
+      "word": "kutumika",
+      "sentence1": "Lengo la mkahawa huo ni kuandaa chakula cha hali ya juu.",
+      "sentence2": "Wanaandaa kiamsha kinywa kuanzia saa 7 asubuhi hadi saa 11 asubuhi."
+    },
+    {
+      "id": 690,
+      "word": "huduma",
+      "sentence1": "Hoteli hiyo hutoa huduma bora ya chumba.",
+      "sentence2": "Huduma ya wateja ni muhimu sana kwetu."
+    },
+    {
+      "id": 691,
+      "word": "kadhaa",
+      "sentence1": "Nimesoma vitabu kadhaa juu ya habari hii.",
+      "sentence2": "Watu kadhaa walihudhuria mkutano huo."
+    },
+    {
+      "id": 692,
+      "word": "kutikisa",
+      "sentence1": "Tafadhali tetema chupa kabla ya kuitumia.",
+      "sentence2": "Walishikana mikono kwa uchangamfu."
+    },
+    {
+      "id": 693,
+      "word": "lazima",
+      "sentence1": "Tutashinda changamoto hii pamoja.",
+      "sentence2": "Je, sisi kucheza?"
+    },
+    {
+      "id": 694,
+      "word": "umbo",
+      "sentence1": "Kuki ina umbo la nyota.",
+      "sentence2": "Yeye ana hisia ya kipekee ya umbo katika sanaa yake."
+    },
+    {
+      "id": 695,
+      "word": "karatasi",
+      "sentence1": "Ninahitaji shuka safi kwa ajili ya kitanda.",
+      "sentence2": "Msanii huyo alitumia karatasi kubwa."
+    },
+    {
+      "id": 696,
+      "word": "meli",
+      "sentence1": "Meli hiyo inavuka bahari.",
+      "sentence2": "Walijenga mashua ya mfano kwa ajili ya mradi huo."
+    },
+    {
+      "id": 697,
+      "word": "bega",
+      "sentence1": "Ana tattoo kwenye bega lake.",
+      "sentence2": "Alibeba mfuko huo kwenye bega lake."
+    },
+    {
+      "id": 698,
+      "word": "kupiga kelele",
+      "sentence1": "Usipige kelele katika maktaba.",
+      "sentence2": "Ilimbidi apaaze sauti ili asikike kwa sababu ya kelele."
+    },
+    {
+      "id": 699,
+      "word": "kufungwa",
+      "sentence1": "Tafadhali funga mlango nyuma yako.",
+      "sentence2": "Alifunga dirisha ili kuzuia baridi."
+    },
+    {
+      "id": 700,
+      "word": "upande",
+      "sentence1": "Upande wa jengo hilo unapakwa rangi.",
+      "sentence2": "Yeye hupendelea kulala kwa upande wake."
+    },
+    {
+      "id": 701,
+      "word": "ishara",
+      "sentence1": "Kuna ishara inayoonyesha njia ya kuingia kwenye bustani.",
+      "sentence2": "Alitoa ishara ya kuniambia kwamba yuko tayari."
+    },
+    {
+      "id": 702,
+      "word": "fedha",
+      "sentence1": "Alikuwa amevaa mkufu maridadi wa fedha.",
+      "sentence2": "Upande mzuri wa wingu ulionekana."
+    },
+    {
+      "id": 703,
+      "word": "rahisi",
+      "sentence1": "Hilo ni jambo rahisi.",
+      "sentence2": "Alifafanua wazo hilo kwa njia rahisi."
+    },
+    {
+      "id": 704,
+      "word": "tangu",
+      "sentence1": "Nimekuwa nikiishi hapa tangu 2010.",
+      "sentence2": "Kwa kuwa umeniomba, nitakusaidia."
+    },
+    {
+      "id": 705,
+      "word": "kuimba",
+      "sentence1": "Yeye hufurahia kuimba kwenye bafu.",
+      "sentence2": "Kuimba ni njia nzuri ya kueleza hisia."
+    },
+    {
+      "id": 706,
+      "word": "pekee",
+      "sentence1": "Yeye ni mzazi asiye na mwenzi.",
+      "sentence2": "Ningependa tiketi moja, tafadhali."
+    },
+    {
+      "id": 707,
+      "word": "bwana",
+      "sentence1": "Naomba radhi, Mheshimiwa, naweza kukusaidia?",
+      "sentence2": "\"Mwalimu alimwita \"\"bwana\"\".\""
+    },
+    {
+      "id": 708,
+      "word": "mahali",
+      "sentence1": "Ujenzi una shughuli nyingi leo.",
+      "sentence2": "Tovuti hii ni rasilimali kubwa ya kujifunza."
+    },
+    {
+      "id": 709,
+      "word": "ukubwa",
+      "sentence1": "Unatumia saizi gani?",
+      "sentence2": "Shati hilo linapatikana katika saizi mbalimbali."
+    },
+    {
+      "id": 710,
+      "word": "skiing",
+      "sentence1": "Ninapenda kuteleza kwenye theluji wakati wa baridi kali.",
+      "sentence2": "Kucheza kwenye theluji ni mchezo unaopendwa sana wakati wa majira ya baridi kali."
+    },
+    {
+      "id": 711,
+      "word": "mchezo wa kuteleza",
+      "sentence1": "Mimi hupenda sana kuteleza kwenye theluji wakati wa baridi kali.",
+      "sentence2": "Yeye hufurahia kuteleza kwenye milima."
+    },
+    {
+      "id": 712,
+      "word": "ngozi",
+      "sentence1": "Ngozi yako inaonekana yenye afya na yenye kung'aa.",
+      "sentence2": "Alitumia losheni kwenye ngozi yake iliyokauka."
+    },
+    {
+      "id": 713,
+      "word": "anga",
+      "sentence1": "Leo anga ni safi na bluu.",
+      "sentence2": "Tulitazama nyota angani usiku."
+    },
+    {
+      "id": 714,
+      "word": "usingizi",
+      "sentence1": "Ninahitaji kulala zaidi usiku.",
+      "sentence2": "Usingizi ni muhimu kwa afya njema."
+    },
+    {
+      "id": 715,
+      "word": "polepole",
+      "sentence1": "Alitembea polepole hadi kwenye kituo cha basi.",
+      "sentence2": "Muda ulipita polepole."
+    },
+    {
+      "id": 716,
+      "word": "simu ya mkononi",
+      "sentence1": "Yeye hutumia simu yake ya mkononi kuangalia barua pepe.",
+      "sentence2": "Simu mahiri zimekuwa muhimu katika maisha ya kisasa."
+    },
+    {
+      "id": 717,
+      "word": "harufu",
+      "sentence1": "Ninapenda harufu ya kahawa safi.",
+      "sentence2": "Harufu ya maua ilijaa hewani."
+    },
+    {
+      "id": 718,
+      "word": "tabasamu",
+      "sentence1": "Alinikaribisha kwa tabasamu.",
+      "sentence2": "Tabasamu inaweza kufanya siku ya mtu iwe yenye furaha."
+    },
+    {
+      "id": 719,
+      "word": "moshi",
+      "sentence1": "Kulikuwa na moshi kutoka kwenye chemchemi.",
+      "sentence2": "Alijaribu kuvuta pipa lakini hakulipenda."
+    },
+    {
+      "id": 720,
+      "word": "kuvuta sigara",
+      "sentence1": "Kuvuta sigara ni marufuku katika eneo hili.",
+      "sentence2": "Aliacha kuvuta sigara kwa sababu za kiafya."
+    },
+    {
+      "id": 721,
+      "word": "sabuni",
+      "sentence1": "Nahitaji kununua sabuni.",
+      "sentence2": "Sabuni hiyo ina harufu nzuri."
+    },
+    {
+      "id": 722,
+      "word": "mpira wa miguu",
+      "sentence1": "Soka ni mchezo maarufu ulimwenguni pote.",
+      "sentence2": "Yeye hucheza soka kila mwisho-juma."
+    },
+    {
+      "id": 723,
+      "word": "kijamii",
+      "sentence1": "Mitandao ya kijamii imebadilisha namna tunavyowasiliana.",
+      "sentence2": "Yeye ni mtendaji sana katika sababu za kijamii."
+    },
+    {
+      "id": 724,
+      "word": "jamii",
+      "sentence1": "Jamii inabadilika daima.",
+      "sentence2": "Lazima tufanye kazi pamoja kwa ajili ya jamii bora."
+    },
+    {
+      "id": 725,
+      "word": "soksi",
+      "sentence1": "Nahitaji kununua soksi mpya.",
+      "sentence2": "Soksi hizi zimetengenezwa kwa nyenzo laini."
+    },
+    {
+      "id": 726,
+      "word": "laini",
+      "sentence1": "Mto huo ni laini na wenye starehe sana.",
+      "sentence2": "Ana ngozi laini, laini."
+    },
+    {
+      "id": 727,
+      "word": "askari",
+      "sentence1": "Askari alisimama kwa makini.",
+      "sentence2": "Askari wengi walipigana kwa ujasiri katika vita."
+    },
+    {
+      "id": 728,
+      "word": "suluhisho",
+      "sentence1": "Tunahitaji kupata suluhisho la tatizo hili.",
+      "sentence2": "Suluhisho ni rahisi na lenye matokeo."
+    },
+    {
+      "id": 729,
+      "word": "kusuluhisha",
+      "sentence1": "Je, unaweza kunisaidia kutatua fumbo hili?",
+      "sentence2": "Walifanya kazi pamoja ili kutatua tatizo hilo."
+    },
+    {
+      "id": 730,
+      "word": "mahali fulani",
+      "sentence1": "Nadhani nimeacha funguo zangu mahali fulani ndani ya nyumba.",
+      "sentence2": "Hebu tukutane mahali pa kimya ili tuzungumze."
+    },
+    {
+      "id": 731,
+      "word": "aina",
+      "sentence1": "Tafadhali tengeneza nyaraka kulingana na tarehe.",
+      "sentence2": "Ni muhimu kupanga mambo unayotanguliza."
+    },
+    {
+      "id": 732,
+      "word": "chanzo",
+      "sentence1": "Chanzo cha habari hiyo hakijulikani.",
+      "sentence2": "Tunahitaji kuthibitisha chanzo kabla ya kuendelea."
+    },
+    {
+      "id": 733,
+      "word": "msemaji",
+      "sentence1": "Msemaji alitoa hotuba yenye kuchochea.",
+      "sentence2": "Yeye ni msemaji maarufu wa masuala ya mazingira."
+    },
+    {
+      "id": 734,
+      "word": "maalum",
+      "sentence1": "Je, unaweza kutaja matakwa yako waziwazi zaidi?",
+      "sentence2": "Tunahitaji vielelezo maalum ili kuelewa suala hilo."
+    },
+    {
+      "id": 735,
+      "word": "hotuba",
+      "sentence1": "Hotuba ya rais ilikuwa yenye kugusa moyo sana.",
+      "sentence2": "Alitoa hotuba juu ya umuhimu wa elimu."
+    },
+    {
+      "id": 736,
+      "word": "kasi",
+      "sentence1": "Kiwango cha kasi kwenye barabara hii ni 60 km/h.",
+      "sentence2": "Aliendesha gari kwa mwendo wa kasi ili apate gari-moshi."
+    },
+    {
+      "id": 737,
+      "word": "buibui",
+      "sentence1": "Niliona buibui katika kona ya chumba.",
+      "sentence2": "Anaogopa buibui."
+    },
+    {
+      "id": 738,
+      "word": "kijiko",
+      "sentence1": "Je, unaweza kunipatia kijiko, tafadhali?",
+      "sentence2": "Alichanganya chai yake kwa kijiko."
+    },
+    {
+      "id": 739,
+      "word": "mraba",
+      "sentence1": "Meza hiyo ina umbo la mraba.",
+      "sentence2": "Alichora mraba kwenye karatasi."
+    },
+    {
+      "id": 740,
+      "word": "hatua",
+      "sentence1": "Mchezo huo utachezwa kwenye jukwaa kuu.",
+      "sentence2": "Yeye yuko nyuma ya pazia akijitayarisha kwa ajili ya maonyesho yake."
+    },
+    {
+      "id": 741,
+      "word": "ngazi",
+      "sentence1": "Ngazi hizo ni nyembamba na zenye mwinuko.",
+      "sentence2": "Aliteleza kwenye ngazi na kuanguka."
+    },
+    {
+      "id": 742,
+      "word": "muhuri",
+      "sentence1": "Nahitaji stempu ili kutuma barua hii.",
+      "sentence2": "Yeye hukusanya stempu za pekee kutoka ulimwenguni pote."
+    },
+    {
+      "id": 743,
+      "word": "nyota",
+      "sentence1": "Anga la usiku limejaa nyota.",
+      "sentence2": "Anataka kuwa nyota katika Hollywood."
+    },
+    {
+      "id": 744,
+      "word": "kuanza",
+      "sentence1": "Ni wakati wa kuanza mkutano.",
+      "sentence2": "Wataanza mradi huo wiki ijayo."
+    },
+    {
+      "id": 745,
+      "word": "hali",
+      "sentence1": "Hali ya uchumi inazidi kuwa bora.",
+      "sentence2": "Yeye ni katika hali ya mshtuko."
+    },
+    {
+      "id": 746,
+      "word": "kubaki",
+      "sentence1": "Nitakaa nyumbani usiku wa leo.",
+      "sentence2": "Tafadhali kaa kimya wakati wa maonyesho."
+    },
+    {
+      "id": 747,
+      "word": "kuiba",
+      "sentence1": "Mtu fulani alijaribu kuiba baiskeli yangu.",
+      "sentence2": "Ni kosa kuiba kutoka kwa wengine."
+    },
+    {
+      "id": 748,
+      "word": "hatua",
+      "sentence1": "Chukua hatua na ufikirie jambo hilo.",
+      "sentence2": "Alichukua hatua ya kumsaidia."
+    },
+    {
+      "id": 749,
+      "word": "tumbo",
+      "sentence1": "Tumbo langu linaugua; nahitaji kula.",
+      "sentence2": "Ana maumivu ya tumbo kwa sababu ya kula sana."
+    },
+    {
+      "id": 750,
+      "word": "jiwe",
+      "sentence1": "Jiwe hilo lilikuwa zito sana.",
+      "sentence2": "Alikusanya mawe mazuri kutoka ufuoni."
+    },
+    {
+      "id": 751,
+      "word": "duka",
+      "sentence1": "Nahitaji kwenda dukani kununua vyakula.",
+      "sentence2": "Duka hilo lina mapunguzo mwishoni mwa juma hili."
+    },
+    {
+      "id": 752,
+      "word": "dhoruba",
+      "sentence1": "Dhoruba hiyo ilisababisha uharibifu mwingi.",
+      "sentence2": "Tulikaa ndani ya nyumba wakati wa dhoruba."
+    },
+    {
+      "id": 753,
+      "word": "sawa",
+      "sentence1": "Barabara iliyo mbele ni sawa kwa kilometa nyingi.",
+      "sentence2": "Ana nywele zilizonyooka ambazo hufika kwenye mabega yake."
+    },
+    {
+      "id": 754,
+      "word": "ajabu",
+      "sentence1": "Ni ajabu kuona theluji mwezi Aprili.",
+      "sentence2": "Alikuwa na hisia ya ajabu kuhusu hali hiyo."
+    },
+    {
+      "id": 755,
+      "word": "mkakati",
+      "sentence1": "Mkakati wa kampuni ni kuzingatia uvumbuzi.",
+      "sentence2": "Tunahitaji mkakati ulio wazi ili kufanikiwa."
+    },
+    {
+      "id": 756,
+      "word": "mkazo",
+      "sentence1": "Ana mkazo mwingi kazini.",
+      "sentence2": "Ni muhimu kudhibiti mfadhaiko kwa njia yenye matokeo."
+    },
+    {
+      "id": 757,
+      "word": "muundo",
+      "sentence1": "Muundo wa jengo hilo ni wa kisasa sana.",
+      "sentence2": "Tunahitaji kuboresha muundo wa timu yetu."
+    },
+    {
+      "id": 758,
+      "word": "upumbavu",
+      "sentence1": "Ilikuwa upumbavu kwangu kusahau mkutano huo.",
+      "sentence2": "Usiwe mpumbavu; fikiria kabla ya kutenda."
+    },
+    {
+      "id": 759,
+      "word": "kufanikiwa",
+      "sentence1": "Alijitahidi sana kufanikiwa katika kazi yake.",
+      "sentence2": "Ikiwa unataka kufanikiwa, ni lazima uwe mvumilivu."
+    },
+    {
+      "id": 760,
+      "word": "mafanikio",
+      "sentence1": "Yeye ni mfanyabiashara mwenye mafanikio.",
+      "sentence2": "Mradi wao ulifanikiwa sana."
+    },
+    {
+      "id": 761,
+      "word": "namna hiyo",
+      "sentence1": "Mwenendo kama huo haukubaliki.",
+      "sentence2": "Sijawahi kamwe kuona machweo mazuri kama hayo."
+    },
+    {
+      "id": 762,
+      "word": "kwa ghafula",
+      "sentence1": "Taa zilizimika ghafula.",
+      "sentence2": "Ghafla alitambua ukweli."
+    },
+    {
+      "id": 763,
+      "word": "kupendekeza",
+      "sentence1": "Ninapendekeza tufanye mapumziko.",
+      "sentence2": "Je, unaweza kupendekeza mkahawa mzuri?"
+    },
+    {
+      "id": 764,
+      "word": "pendekezo",
+      "sentence1": "Hilo ni wazo zuri sana!",
+      "sentence2": "Nina pendekezo la kuboresha utaratibu huo."
+    },
+    {
+      "id": 765,
+      "word": "suti",
+      "sentence1": "Alivaa suti kwenye mahojiano.",
+      "sentence2": "Suti inahitajika kwa tukio hili."
+    },
+    {
+      "id": 766,
+      "word": "msaada",
+      "sentence1": "Nahitaji msaada wako kwa mradi huu.",
+      "sentence2": "Wao hutoa msaada wa kifedha kwa wanafunzi."
+    },
+    {
+      "id": 767,
+      "word": "kudhani",
+      "sentence1": "Nadhani wewe ni haki.",
+      "sentence2": "Unafikiri ni nini kitakachotukia baadaye?"
+    },
+    {
+      "id": 768,
+      "word": "hakika",
+      "sentence1": "Je, una uhakika kuhusu hili?",
+      "sentence2": "Sijui kama naweza kusaidia."
+    },
+    {
+      "id": 769,
+      "word": "mshangao",
+      "sentence1": "Ilikuwa sherehe ya mshangao ya siku yake ya kuzaliwa.",
+      "sentence2": "Yeye hupenda mambo ya kushangaza na zawadi zisizotarajiwa."
+    },
+    {
+      "id": 770,
+      "word": "kushangaa",
+      "sentence1": "Nilishangazwa na habari hiyo.",
+      "sentence2": "Alionekana kushangaa nilipomwambia."
+    },
+    {
+      "id": 771,
+      "word": "kushangaza",
+      "sentence1": "Matokeo yalikuwa yenye kushangaza.",
+      "sentence2": "Inashangaza jinsi mambo yanavyoweza kubadilika upesi."
+    },
+    {
+      "id": 772,
+      "word": "uchunguzi",
+      "sentence1": "Tulifanya utafiti ili kupata maoni.",
+      "sentence2": "Matokeo ya uchunguzi yatachapishwa wiki ijayo."
+    },
+    {
+      "id": 773,
+      "word": "tamu",
+      "sentence1": "Keki hii ni tamu sana.",
+      "sentence2": "Ana utu mzuri."
+    },
+    {
+      "id": 774,
+      "word": "ishara",
+      "sentence1": "Moyo ni ishara ya upendo.",
+      "sentence2": "Mara nyingi amani huwakilishwa na mfano wa njiwa."
+    },
+    {
+      "id": 775,
+      "word": "mfumo",
+      "sentence1": "Mfumo wa kompyuta hautumiki kwa ajili ya matengenezo.",
+      "sentence2": "Tunahitaji kuboresha mfumo wetu wa mawasiliano."
+    },
+    {
+      "id": 776,
+      "word": "kidonge",
+      "sentence1": "Mimi hutumia kompyuta kibao kusoma.",
+      "sentence2": "Kompyuta kibao ni nzuri kwa ajili ya kuvinjari mtandao."
+    },
+    {
+      "id": 777,
+      "word": "kuongea",
+      "sentence1": "Tunahitaji kuzungumza juu ya utendaji wako.",
+      "sentence2": "Je, tunaweza kuzungumza baadaye?"
+    },
+    {
+      "id": 778,
+      "word": "lengo",
+      "sentence1": "Lengo letu ni kuongeza mauzo kwa 20%.",
+      "sentence2": "Ni nani ambao ungependa kuwahubiria?"
+    },
+    {
+      "id": 779,
+      "word": "kazi",
+      "sentence1": "Ni muhimu kukamilisha kazi hiyo.",
+      "sentence2": "Nina kazi kwa ajili yenu."
+    },
+    {
+      "id": 780,
+      "word": "ladha",
+      "sentence1": "Mlo huu una ladha ya kipekee.",
+      "sentence2": "Ninapenda ladha ya matunda safi."
+    },
+    {
+      "id": 781,
+      "word": "kufundisha",
+      "sentence1": "Ualimu ni kazi yenye kuthawabisha.",
+      "sentence2": "Yeye anapenda sana kuwafundisha watoto wadogo."
+    },
+    {
+      "id": 782,
+      "word": "teknolojia",
+      "sentence1": "Teknolojia inabadilika haraka.",
+      "sentence2": "Tunahitaji kufuata mbinu mpya za kiteknolojia."
+    },
+    {
+      "id": 783,
+      "word": "kijana",
+      "sentence1": "Matineja wanaweza kukabili hali ngumu.",
+      "sentence2": "Ana mtazamo wa kawaida wa tineja."
+    },
+    {
+      "id": 784,
+      "word": "joto",
+      "sentence1": "Joto linaongezeka.",
+      "sentence2": "Kuna joto gani nje?"
+    },
+    {
+      "id": 785,
+      "word": "neno",
+      "sentence1": "Hili ni neno la kiufundi.",
+      "sentence2": "Je, unaweza kueleza maana ya neno hilo?"
+    },
+    {
+      "id": 786,
+      "word": "maandishi",
+      "sentence1": "Tafadhali soma andiko hilo kwa uangalifu.",
+      "sentence2": "Ni vigumu kuelewa andiko hilo."
+    },
+    {
+      "id": 787,
+      "word": "wenyewe",
+      "sentence1": "Walifanya hivyo wenyewe.",
+      "sentence2": "Anaweza kujitunza."
+    },
+    {
+      "id": 788,
+      "word": "nzito",
+      "sentence1": "Kitabu hiki ni nene sana.",
+      "sentence2": "Ana nywele nzito."
+    },
+    {
+      "id": 789,
+      "word": "mwizi",
+      "sentence1": "Mwizi huyo alikamatwa na polisi.",
+      "sentence2": "Anaogopa wezi."
+    },
+    {
+      "id": 790,
+      "word": "nyembamba",
+      "sentence1": "Karatasi hii ni nyembamba sana.",
+      "sentence2": "Ana mwili mwembamba."
+    },
+    {
+      "id": 791,
+      "word": "kufikiri",
+      "sentence1": "Kufikiri ni hatua ya kwanza ya kutatua tatizo.",
+      "sentence2": "Sikuzote yeye hufikiri sana."
+    },
+    {
+      "id": 792,
+      "word": "tatu",
+      "sentence1": "Hii ni mara yangu ya tatu kutembelea mji huu.",
+      "sentence2": "Alimaliza katika nafasi ya tatu."
+    },
+    {
+      "id": 793,
+      "word": "mawazo",
+      "sentence1": "Hilo ni wazo lenye kupendeza.",
+      "sentence2": "Nilikuwa na wazo kama hilo jana."
+    },
+    {
+      "id": 794,
+      "word": "kutupa",
+      "sentence1": "Tafadhali nipe mpira.",
+      "sentence2": "Ana upanga wenye nguvu."
+    },
+    {
+      "id": 795,
+      "word": "kuwa nadhifu",
+      "sentence1": "Tafadhali weka chumba chako katika hali nzuri.",
+      "sentence2": "Yeye ana sura yenye utaratibu."
+    },
+    {
+      "id": 796,
+      "word": "kifungo",
+      "sentence1": "Alivaa tai kwenye mahojiano.",
+      "sentence2": "Nguo ya kawaida ya mavazi ni tai."
+    },
+    {
+      "id": 797,
+      "word": "ncha",
+      "sentence1": "Je, unaweza kunipa ncha kwa ajili ya mtihani?",
+      "sentence2": "Ana vidokezo vya kupika vyenye kupendeza."
+    },
+    {
+      "id": 798,
+      "word": "chombo",
+      "sentence1": "Chombo hiki hutumiwa kukata mbao.",
+      "sentence2": "Ana vifaa vyote vya kutunza bustani."
+    },
+    {
+      "id": 799,
+      "word": "juu",
+      "sentence1": "Juu ya mlima imefunikwa kwa theluji.",
+      "sentence2": "Yeye ni wa kwanza darasani."
+    },
+    {
+      "id": 800,
+      "word": "kugusa",
+      "sentence1": "Tafadhali usiguse michoro hiyo.",
+      "sentence2": "Sauti yake ni yenye kutuliza."
+    },
+    {
+      "id": 801,
+      "word": "ziara",
+      "sentence1": "Tulitembelea mji.",
+      "sentence2": "Ziara hiyo ilikuwa yenye kuelimisha sana."
+    },
+    {
+      "id": 802,
+      "word": "utalii",
+      "sentence1": "Utalii ni sekta muhimu.",
+      "sentence2": "Nchi hiyo inategemea sana utalii."
+    },
+    {
+      "id": 803,
+      "word": "kuelekea",
+      "sentence1": "Alitembea kuelekea bustani.",
+      "sentence2": "Yeye leaned kuelekea yake kusikiliza vizuri zaidi."
+    },
+    {
+      "id": 804,
+      "word": "kitambaa",
+      "sentence1": "Tafadhali nipe kitambaa.",
+      "sentence2": "Nahitaji taulo baada ya kuoga."
+    },
+    {
+      "id": 805,
+      "word": "mnara",
+      "sentence1": "Mnara huo una urefu wa mita 100.",
+      "sentence2": "Tulipanda juu ya mnara."
+    },
+    {
+      "id": 806,
+      "word": "kichezeo",
+      "sentence1": "Kichezeo kiko juu ya meza.",
+      "sentence2": "Alimnunulia mbwa wake toy mpya."
+    },
+    {
+      "id": 807,
+      "word": "njia",
+      "sentence1": "Gari-moshi hilo husafiri kwenye reli hii.",
+      "sentence2": "Aliacha alama kwenye theluji."
+    },
+    {
+      "id": 808,
+      "word": "utamaduni",
+      "sentence1": "Ni desturi kusherehekea usiku wa kuamkia mwaka mpya na familia.",
+      "sentence2": "Wao wana desturi ya kutoa zawadi."
+    },
+    {
+      "id": 809,
+      "word": "utamaduni",
+      "sentence1": "Huu ni mlo wa kitamaduni kutoka nchi yangu.",
+      "sentence2": "Alivaa mavazi ya kitamaduni kwenye sherehe hiyo."
+    },
+    {
+      "id": 810,
+      "word": "gari moshi",
+      "sentence1": "Treni inaondoka saa 5 jioni.",
+      "sentence2": "Napendelea kusafiri kwa gari-moshi."
+    },
+    {
+      "id": 811,
+      "word": "mwalimu",
+      "sentence1": "Mzoezaji alinisaidia kuboresha ustadi wangu.",
+      "sentence2": "Yeye ni mzoezaji wa mazoezi ya mwili aliyeidhinishwa."
+    },
+    {
+      "id": 812,
+      "word": "mafunzo",
+      "sentence1": "Nina vipindi vya mazoezi kila Jumatatu.",
+      "sentence2": "Kampuni hutoa mafunzo kwa wafanyakazi wapya."
+    },
+    {
+      "id": 813,
+      "word": "usafiri",
+      "sentence1": "Usafiri wa umma ni mzuri sana katika jiji hili.",
+      "sentence2": "Wao hutumia baiskeli kama njia yao kuu ya usafiri."
+    },
+    {
+      "id": 814,
+      "word": "msafiri",
+      "sentence1": "Msafiri mzuri huheshimu desturi za mahali anapoishi.",
+      "sentence2": "Yeye ni msafiri mwenye uzoefu ambaye ametembelea nchi nyingi."
+    },
+    {
+      "id": 815,
+      "word": "ugumu",
+      "sentence1": "Nina tatizo na kompyuta yangu.",
+      "sentence2": "Alipata matatizo kwa sababu ya kuchelewa."
+    },
+    {
+      "id": 816,
+      "word": "lori",
+      "sentence1": "Lori hilo limejaa bidhaa.",
+      "sentence2": "Wao hutumia lori kusafirisha vitu vizito."
+    },
+    {
+      "id": 817,
+      "word": "pacha",
+      "sentence1": "Wao ni ndugu mapacha.",
+      "sentence2": "Mapacha hao wawili wanapendezwa na mambo yaleyale."
+    },
+    {
+      "id": 818,
+      "word": "kawaida",
+      "sentence1": "Ni siku ya kawaida ofisini.",
+      "sentence2": "Hali ya hewa ni ya kawaida wakati huu wa mwaka."
+    },
+    {
+      "id": 819,
+      "word": "chini ya ardhi",
+      "sentence1": "Kituo cha gari-moshi la chini ya ardhi kimejaa watu.",
+      "sentence2": "Walipata handaki la chini ya ardhi."
+    },
+    {
+      "id": 820,
+      "word": "kuelewa",
+      "sentence1": "Ana ufahamu mzuri wa mada hiyo.",
+      "sentence2": "Uelewevu wake wa suala hilo ni wenye kuvutia."
+    },
+    {
+      "id": 821,
+      "word": "kwa bahati mbaya",
+      "sentence1": "Kwa bahati mbaya, hatuwezi kuhudhuria mkutano huo.",
+      "sentence2": "Kwa kusikitisha, tukio hilo lilifutwa."
+    },
+    {
+      "id": 822,
+      "word": "wasiokuwa na furaha",
+      "sentence1": "Hakuwa na furaha kazini.",
+      "sentence2": "Mteja huyo asiyefurahi alilalamika kuhusu huduma hiyo."
+    },
+    {
+      "id": 823,
+      "word": "sare",
+      "sentence1": "Wanafunzi huvaa sare shuleni.",
+      "sentence2": "Ofisa huyo wa polisi alikuwa amevalia sare kamili."
+    },
+    {
+      "id": 824,
+      "word": "kitengo",
+      "sentence1": "Hii ni kitengo cha kipimo.",
+      "sentence2": "Kila kitengo kina vipimo vyake."
+    },
+    {
+      "id": 825,
+      "word": "umoja",
+      "sentence1": "Marekani ni nchi ya Amerika Kaskazini.",
+      "sentence2": "Vikosi hivyo viwili vilifanya kazi pamoja."
+    },
+    {
+      "id": 826,
+      "word": "isiyo ya kawaida",
+      "sentence1": "Ni jambo lisilo la kawaida kuona theluji mwezi Aprili.",
+      "sentence2": "Ana kipawa cha ajabu cha muziki."
+    },
+    {
+      "id": 827,
+      "word": "juu",
+      "sentence1": "Bafuni ni juu.",
+      "sentence2": "Anaishi katika nyumba ya juu."
+    },
+    {
+      "id": 828,
+      "word": "kutumia",
+      "sentence1": "Mimi hutumia simu yangu kuangalia hali ya hewa.",
+      "sentence2": "Tafadhali tumia kalamu kujaza fomu."
+    },
+    {
+      "id": 829,
+      "word": "kutumika kwa",
+      "sentence1": "Nilikuwa nikicheza soka kila mwisho-juma.",
+      "sentence2": "Amezoea hali ya hewa ya baridi."
+    },
+    {
+      "id": 830,
+      "word": "kawaida",
+      "sentence1": "Ni kawaida kwake kufika marehemu.",
+      "sentence2": "Utaratibu wa kawaida ni kuchunguza hati."
+    },
+    {
+      "id": 831,
+      "word": "bonde",
+      "sentence1": "Bonde hilo limezungukwa na milima.",
+      "sentence2": "Walienda kutembea katika bonde."
+    },
+    {
+      "id": 832,
+      "word": "gari",
+      "sentence1": "Gari limeegeshwa nje.",
+      "sentence2": "Wao hutumia gari la kukokotwa kwa ajili ya safari za kikundi."
+    },
+    {
+      "id": 833,
+      "word": "aina",
+      "sentence1": "Kuna aina nyingi za matunda.",
+      "sentence2": "Yeye hufurahia kujaribu aina mbalimbali za chai."
+    },
+    {
+      "id": 834,
+      "word": "gari",
+      "sentence1": "Magari ndiyo aina ya gari inayopendwa zaidi.",
+      "sentence2": "Kampuni hiyo inauza magari ya umeme."
+    },
+    {
+      "id": 835,
+      "word": "maoni",
+      "sentence1": "Mtazamo kutoka juu ni wenye kuvutia sana.",
+      "sentence2": "Wana mandhari nzuri ya ziwa."
+    },
+    {
+      "id": 836,
+      "word": "virusi",
+      "sentence1": "Virusi huenea kwa urahisi kutoka kwa mtu mmoja hadi mwingine.",
+      "sentence2": "Chanjo zinaweza kusaidia kuzuia maambukizo ya virusi."
+    },
+    {
+      "id": 837,
+      "word": "sauti",
+      "sentence1": "Ana sauti nzuri ya kuimba.",
+      "sentence2": "Sauti yake ilisikika kwa shida kwa sababu ya kelele."
+    },
+    {
+      "id": 838,
+      "word": "subiri",
+      "sentence1": "Nitakungojea kwenye kituo.",
+      "sentence2": "Tafadhali subiri kidogo."
+    },
+    {
+      "id": 839,
+      "word": "vita",
+      "sentence1": "Vita hivyo viliendelea kwa miaka kadhaa.",
+      "sentence2": "Watu wengi walikufa wakati wa vita."
+    },
+    {
+      "id": 840,
+      "word": "kuosha",
+      "sentence1": "Nahitaji kunawa mikono yangu kabla ya chakula cha jioni.",
+      "sentence2": "Tafadhali safisha vyombo baada ya kula."
+    },
+    {
+      "id": 841,
+      "word": "kuosha",
+      "sentence1": "Ni muhimu kunawa mikono kwa ukawaida.",
+      "sentence2": "Mashine ya kufua imeharibika."
+    },
+    {
+      "id": 842,
+      "word": "wimbi",
+      "sentence1": "Wimbi hilo liligonga pwani.",
+      "sentence2": "Alitembea huku akipeperusha mkono wake wakati basi lilipokuwa likiondoka."
+    },
+    {
+      "id": 843,
+      "word": "dhaifu",
+      "sentence1": "Alijisikia dhaifu baada ya ugonjwa huo.",
+      "sentence2": "Uchumi dhaifu unawahangaisha watu wengi."
+    },
+    {
+      "id": 844,
+      "word": "mtandao",
+      "sentence1": "Buibui alichonga utando katika kona.",
+      "sentence2": "Internet mara nyingi huitwa World Wide Web."
+    },
+    {
+      "id": 845,
+      "word": "harusi",
+      "sentence1": "Wanapanga kufanya arusi wakati wa masika.",
+      "sentence2": "Harusi hiyo ilikuwa sherehe nzuri."
+    },
+    {
+      "id": 846,
+      "word": "uzito",
+      "sentence1": "Uzito wa kifurushi hicho ni kilogramu 5.",
+      "sentence2": "Anajaribu kupunguza uzito."
+    },
+    {
+      "id": 847,
+      "word": "kuwakaribisha",
+      "sentence1": "Karibu nyumbani kwetu.",
+      "sentence2": "Tunakaribisha maoni yako."
+    },
+    {
+      "id": 848,
+      "word": "mvua",
+      "sentence1": "Ardhi ni mvua baada ya mvua.",
+      "sentence2": "Tafadhali usitembee juu ya sakafu yenye mvua."
+    },
+    {
+      "id": 849,
+      "word": "gurudumu",
+      "sentence1": "Gurudumu limeharibika na linahitaji kubadilishwa.",
+      "sentence2": "Aligeuza usukani kwa kasi."
+    },
+    {
+      "id": 850,
+      "word": "wakati",
+      "sentence1": "Nilisoma kitabu nilipokuwa nikisubiri basi.",
+      "sentence2": "Yeye husikiliza muziki wakati wa kujifunza."
+    },
+    {
+      "id": 851,
+      "word": "nzima",
+      "sentence1": "Familia nzima ilihudhuria mkusanyiko huo.",
+      "sentence2": "Alikula pizza nzima peke yake."
+    },
+    {
+      "id": 852,
+      "word": "ambaye",
+      "sentence1": "Kitabu hiki ni cha nani?",
+      "sentence2": "Nilipata mkoba ambao mmiliki wake hajulikani."
+    },
+    {
+      "id": 853,
+      "word": "pana",
+      "sentence1": "Mto ni mpana wakati huu.",
+      "sentence2": "Ana mapendezi mbalimbali."
+    },
+    {
+      "id": 854,
+      "word": "mwitu",
+      "sentence1": "Wanyama wa mwituni hutembea-tembea kwa uhuru msituni.",
+      "sentence2": "Ana mawazo mengi sana."
+    },
+    {
+      "id": 855,
+      "word": "upepo",
+      "sentence1": "Upepo unavuma kwa nguvu leo.",
+      "sentence2": "Alihisi upepo ukivuma katika nywele zake."
+    },
+    {
+      "id": 856,
+      "word": "mshindi",
+      "sentence1": "Mshindi wa mashindano hayo atatangazwa kesho.",
+      "sentence2": "Yeye ni mshindi wa medali ya dhahabu ya Olimpiki mara mbili."
+    },
+    {
+      "id": 857,
+      "word": "matamanio",
+      "sentence1": "Nakutakia mema katika kazi yako mpya.",
+      "sentence2": "Alitamani nyota."
+    },
+    {
+      "id": 858,
+      "word": "mbao",
+      "sentence1": "Meza hiyo imetengenezwa kwa kuni.",
+      "sentence2": "Alikusanya kuni za kuwasha moto."
+    },
+    {
+      "id": 859,
+      "word": "mbao",
+      "sentence1": "Kiti cha mbao ni kizuri sana.",
+      "sentence2": "Ana mkusanyiko wa vitu vya kuchezea vya mbao."
+    },
+    {
+      "id": 860,
+      "word": "kufanya kazi",
+      "sentence1": "Anafanya kazi kwenye mradi mpya.",
+      "sentence2": "Hali za kazi zinaboreka."
+    },
+    {
+      "id": 861,
+      "word": "wasiwasi",
+      "sentence1": "Alikuwa na wasiwasi juu ya matokeo ya mtihani.",
+      "sentence2": "Amekuwa na wasiwasi siku hizi."
+    },
+    {
+      "id": 862,
+      "word": "wasiwasi",
+      "sentence1": "Usijali kuhusu mambo madogo madogo.",
+      "sentence2": "Ana mahangaiko mengi akilini."
+    },
+    {
+      "id": 863,
+      "word": "mbaya zaidi",
+      "sentence1": "Hali inazidi kuwa mbaya.",
+      "sentence2": "Hii ni siku mbaya zaidi ya maisha yangu."
+    },
+    {
+      "id": 864,
+      "word": "mbaya zaidi",
+      "sentence1": "Alikuwa na bahati mbaya zaidi duniani.",
+      "sentence2": "Hii ni filamu mbaya zaidi ambayo nimewahi kuona."
+    },
+    {
+      "id": 865,
+      "word": "wow",
+      "sentence1": "Wow, hiyo ni mtazamo wa ajabu!",
+      "sentence2": "\"\"\"Alisema \"\"\"\"wow\"\"\"\" alipoona mshangao wa mshangao. \"\"\""
+    },
+    {
+      "id": 866,
+      "word": "bado",
+      "sentence1": "Sijamaliza kazi yangu ya nyumbani bado.",
+      "sentence2": "Yeye hayuko hapa bado."
+    },
+    {
+      "id": 867,
+      "word": "yako",
+      "sentence1": "Je, kitabu hiki ni chako?",
+      "sentence2": "Nilipata kalamu ambayo ni yako."
+    }
+  ]
+}

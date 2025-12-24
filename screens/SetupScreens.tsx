@@ -22,7 +22,7 @@ import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import { LANGUAGES, LEVELS, COLORS } from '../constants';
 import { useTheme } from '../context/ThemeContext';
 import { FONT_FAMILY } from '../utils/typography';
-import { generateAllVocabulary, getFirstLevelForUserLevel } from '../services/vocabularyService';
+import { generateVocabulary, getFirstLevelForUserLevel } from '../services/vocabularyService';
 import { setCurrentLevel } from '../services/progressService';
 
 type SetupNavProp = StackNavigationProp<RootStackParamList>;
@@ -96,7 +96,7 @@ export const SetupScreen = () => {
         await AsyncStorage.setItem('@user_level', level);
 
         // Generate vocabulary for selected language pair
-        await generateAllVocabulary(nativeLanguage, targetLanguage);
+        await generateVocabulary(nativeLanguage, targetLanguage);
 
         // Set initial level based on user selection
         const initialLevel = getFirstLevelForUserLevel(level);

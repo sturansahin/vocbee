@@ -1,0 +1,5206 @@
+{
+  "words": [
+    {
+      "id": 1,
+      "word": "yeteneği",
+      "sentence1": "Karmaşık problemleri çözme yeteneğine sahiptir.",
+      "sentence2": "Hızla uyum sağlama yeteneği etkileyici."
+    },
+    {
+      "id": 2,
+      "word": "yetenekli",
+      "sentence1": "O, projeyi zamanında tamamlayabiliyor.",
+      "sentence2": "Onlar üç dili akıcı bir şekilde konuşabilirler."
+    },
+    {
+      "id": 3,
+      "word": "yurtdışında",
+      "sentence1": "Bir yıl boyunca yurtdışında okudu.",
+      "sentence2": "Yurtdışına seyahat etmek harika bir deneyim olabilir."
+    },
+    {
+      "id": 4,
+      "word": "kabul et",
+      "sentence1": "Özrünü kabul ediyorum.",
+      "sentence2": "O, üniversiteye kabul edildi."
+    },
+    {
+      "id": 5,
+      "word": "kaza",
+      "sentence1": "O bir araba kazasında yaralandı.",
+      "sentence2": "Kazalar her an olabilir."
+    },
+    {
+      "id": 6,
+      "word": "buna göre",
+      "sentence1": "Rapora göre, satışlar arttı.",
+      "sentence2": "Ona göre, toplantı iptal edildi."
+    },
+    {
+      "id": 7,
+      "word": "başarmak",
+      "sentence1": "Hedeflerine ulaşmak için çok çalıştı.",
+      "sentence2": "Onlar projelerinde büyük başarı elde ettiler."
+    },
+    {
+      "id": 8,
+      "word": "eylem",
+      "sentence1": "Bu durumda hızlı hareket etmelisin.",
+      "sentence2": "Hiçbir şey olmamış gibi davrandı."
+    },
+    {
+      "id": 9,
+      "word": "aktif",
+      "sentence1": "Aktif bir yaşam tarzı sürdürüyor.",
+      "sentence2": "O, topluluğunda çok aktif."
+    },
+    {
+      "id": 10,
+      "word": "aslında",
+      "sentence1": "Aslında kahve yerine çayı tercih ederim.",
+      "sentence2": "Aslında oldukça yetenekli."
+    },
+    {
+      "id": 11,
+      "word": "yetişkin",
+      "sentence1": "Yetişkinler yaptıklarından sorumludur.",
+      "sentence2": "Film yetişkinler için uygun değil."
+    },
+    {
+      "id": 12,
+      "word": "avantaj",
+      "sentence1": "Bir arabaya sahip olmak size büyük bir avantaj sağlar.",
+      "sentence2": "O, fırsatı değerlendirdi."
+    },
+    {
+      "id": 13,
+      "word": "macera",
+      "sentence1": "Dağlarda bir maceraya çıktılar.",
+      "sentence2": "Hayat keşfedilmeyi bekleyen bir maceradır."
+    },
+    {
+      "id": 14,
+      "word": "reklam yap",
+      "sentence1": "Olayı internette tanıtmaya karar verdiler.",
+      "sentence2": "İşletmenizi etkili bir şekilde tanıtmak önemlidir."
+    },
+    {
+      "id": 15,
+      "word": "reklam",
+      "sentence1": "Yeni bir telefon için bir reklam gördüm.",
+      "sentence2": "Reklamlar satın alma kararlarımızı etkileyebilir."
+    },
+    {
+      "id": 16,
+      "word": "reklamcılık",
+      "sentence1": "Reklamcılıkta çalışıyor ve işini seviyor.",
+      "sentence2": "Reklam, iş dünyasında çok önemli bir rol oynar."
+    },
+    {
+      "id": 17,
+      "word": "etkilemek",
+      "sentence1": "Hava ruh halinizi etkileyebilir.",
+      "sentence2": "Onun sözleri kadını derinden etkiledi."
+    },
+    {
+      "id": 18,
+      "word": "sonra",
+      "sentence1": "Sınıftan sonra buluşabiliriz.",
+      "sentence2": "Yağmurdan sonra güneş doğdu."
+    },
+    {
+      "id": 19,
+      "word": "karşı",
+      "sentence1": "O, hafta sonları çalışmak fikrine karşı.",
+      "sentence2": "Adaletsizliğe karşı savaştılar."
+    },
+    {
+      "id": 20,
+      "word": "- Evet",
+      "sentence1": "Ne demek istediğini anladım.",
+      "sentence2": "Çok ilginç!"
+    },
+    {
+      "id": 21,
+      "word": "havayolu",
+      "sentence1": "Düşük maliyetli bir havayolu şirketiyle bir uçuş rezervasyonu yaptım.",
+      "sentence2": "Havayolu şirketi uluslararası uçuşlarda harika fırsatlar sunuyor."
+    },
+    {
+      "id": 22,
+      "word": "canlı",
+      "sentence1": "Çiçekler hala canlı ve çiçek açıyor.",
+      "sentence2": "Kendini her zamankinden daha canlı hissediyordu."
+    },
+    {
+      "id": 23,
+      "word": "hepsi",
+      "sentence1": "Tüm öğrenciler ödevlerini teslim etmelidir.",
+      "sentence2": "Bütün kurabiyeleri yedi."
+    },
+    {
+      "id": 24,
+      "word": "tamamdır",
+      "sentence1": "Her şey yolunda mı?",
+      "sentence2": "Yardım istemek sorun değil."
+    },
+    {
+      "id": 25,
+      "word": "izin ver",
+      "sentence1": "Binanın içinde sigara içilmesine izin vermiyorlar.",
+      "sentence2": "Oğlunun geç saatlere kadar kalmasına izin verdi."
+    },
+    {
+      "id": 26,
+      "word": "neredeyse",
+      "sentence1": "Neredeyse doğum gününü unutuyordum!",
+      "sentence2": "Gitme vakti geldi."
+    },
+    {
+      "id": 27,
+      "word": "yalnız",
+      "sentence1": "Yalnız çalışmayı tercih eder.",
+      "sentence2": "Kalabalıkta kendini yalnız hissetti."
+    },
+    {
+      "id": 28,
+      "word": "birlikte",
+      "sentence1": "Sahilde yürüdük.",
+      "sentence2": "Yolculuk için yanında bir arkadaşı var."
+    },
+    {
+      "id": 29,
+      "word": "zaten",
+      "sentence1": "Ben zaten öğle yemeği yedim.",
+      "sentence2": "Gitme vakti geldi mi?"
+    },
+    {
+      "id": 30,
+      "word": "alternatif",
+      "sentence1": "Alternatif bir çözüm bulmalıyız.",
+      "sentence2": "Birçok alternatif enerji kaynağı vardır."
+    },
+    {
+      "id": 31,
+      "word": "her ne kadar",
+      "sentence1": "Yağmur yağmasına rağmen, yürüyüşe çıktık.",
+      "sentence2": "Yorgun olmasına rağmen, projeyi bitirdi."
+    },
+    {
+      "id": 32,
+      "word": "aralarında",
+      "sentence1": "Arkadaşlarının arasında oturuyordu.",
+      "sentence2": "Sır, kitabın sayfaları arasında saklıydı."
+    },
+    {
+      "id": 33,
+      "word": "miktarı",
+      "sentence1": "Şişedeki su miktarı düşük.",
+      "sentence2": "O, hayır kurumlarına büyük miktarda para bağışladı."
+    },
+    {
+      "id": 34,
+      "word": "eski",
+      "sentence1": "Çölde eski kalıntılar keşfettiler.",
+      "sentence2": "Eski uygarlıklar gelişmiş bilgiye sahipti."
+    },
+    {
+      "id": 35,
+      "word": "ayak bileği",
+      "sentence1": "Koşarken bileğini bükmüş.",
+      "sentence2": "Bilek yaralanmaları oldukça acı verici olabilir."
+    },
+    {
+      "id": 36,
+      "word": "herhangi",
+      "sentence1": "Sorunuz var mı?",
+      "sentence2": "Hiç param kalmadı."
+    },
+    {
+      "id": 37,
+      "word": "herhangi biri",
+      "sentence1": "Evde kimse var mı?",
+      "sentence2": "Kimsenin bizi gördüğünü sanmıyorum."
+    },
+    {
+      "id": 38,
+      "word": "daha fazla",
+      "sentence1": "Daha fazla yemek yiyemiyorum, doluyum.",
+      "sentence2": "Başka sorunuz var mı?"
+    },
+    {
+      "id": 39,
+      "word": "her neyse",
+      "sentence1": "Filmi sevmedim, ama yine de gittim.",
+      "sentence2": "Her neyse, bir sonraki konuya geçelim."
+    },
+    {
+      "id": 40,
+      "word": "her yere",
+      "sentence1": "Anahtarlarımı hiçbir yerde bulamıyorum.",
+      "sentence2": "Son zamanlarda ilginç bir yerde miydin?"
+    },
+    {
+      "id": 41,
+      "word": "uygulamayı",
+      "sentence1": "Telefonuma yeni bir uygulama indirdim.",
+      "sentence2": "Uygulama, harcamalarınızı takip etmenize yardımcı olur."
+    },
+    {
+      "id": 42,
+      "word": "görünmek",
+      "sentence1": "O mutlu görünmüyordu.",
+      "sentence2": "Yıldızlar geceleri görünür."
+    },
+    {
+      "id": 43,
+      "word": "görünüşü",
+      "sentence1": "Görünüşü yıllar içinde değişti.",
+      "sentence2": "İlk izlenimler dış görünüşe dayanır."
+    },
+    {
+      "id": 44,
+      "word": "uygula",
+      "sentence1": "O işe başvurmak istiyorum.",
+      "sentence2": "Burs için internet üzerinden başvuruda bulunabilirsiniz."
+    },
+    {
+      "id": 45,
+      "word": "mimar",
+      "sentence1": "Mimar güzel bir bina tasarladı.",
+      "sentence2": "Gelecekte mimar olmak istiyor."
+    },
+    {
+      "id": 46,
+      "word": "mimarlık",
+      "sentence1": "Üniversitede mimarlık okudu.",
+      "sentence2": "Binanın mimarisi modern."
+    },
+    {
+      "id": 47,
+      "word": "tartışmak",
+      "sentence1": "Sık sık politika hakkında tartışırlar.",
+      "sentence2": "Küçük şeyler için tartışmaya değmez."
+    },
+    {
+      "id": 48,
+      "word": "argüman",
+      "sentence1": "Dün gece ateşli bir tartışma yaptılar.",
+      "sentence2": "Makaledeki ana argüman açıktır."
+    },
+    {
+      "id": 49,
+      "word": "ordu",
+      "sentence1": "Beş yıl orduda görev yaptı.",
+      "sentence2": "Ordu büyük bir tatbikat için hazırlanıyor."
+    },
+    {
+      "id": 50,
+      "word": "düzenle",
+      "sentence1": "Sandalyeleri bir daire halinde düzenleyebilir misin?",
+      "sentence2": "Müdürle bir toplantı ayarladı."
+    },
+    {
+      "id": 51,
+      "word": "düzenleme",
+      "sentence1": "Mobilyaların düzenlenmesi önemlidir.",
+      "sentence2": "Odanın düzenini değiştirmemiz gerek."
+    },
+    {
+      "id": 52,
+      "word": "gibi",
+      "sentence1": "O bir öğretmen olarak çalışıyor.",
+      "sentence2": "O, yetenekli bir müzisyen olarak bilinir."
+    },
+    {
+      "id": 53,
+      "word": "uyuyor",
+      "sentence1": "Bebek beşikte uyuyor.",
+      "sentence2": "Film sırasında uyuyakaldım."
+    },
+    {
+      "id": 54,
+      "word": "asistan",
+      "sentence1": "Ofiste asistan olarak çalışıyor.",
+      "sentence2": "Asistan bana görevlerimle yardım etti."
+    },
+    {
+      "id": 55,
+      "word": "sporcu",
+      "sentence1": "O profesyonel bir sporcu.",
+      "sentence2": "Sporcuların düzenli olarak antrenman yapmaları gerekir."
+    },
+    {
+      "id": 56,
+      "word": "saldırı",
+      "sentence1": "Ordu düşman üssüne bir saldırı başlattı.",
+      "sentence2": "Hastalık bağışıklık sistemine saldırabilir."
+    },
+    {
+      "id": 57,
+      "word": "katılın",
+      "sentence1": "Yarınki toplantıya katılacağım.",
+      "sentence2": "Etkinliğe kaç kişi katıldı?"
+    },
+    {
+      "id": 58,
+      "word": "dikkat et",
+      "sentence1": "Lütfen talimatlara dikkat edin.",
+      "sentence2": "O, konuşmasıyla dinleyicilerin dikkatini çekti."
+    },
+    {
+      "id": 59,
+      "word": "çekici",
+      "sentence1": "Onun çekici bir gülümsemesi var.",
+      "sentence2": "Reklam çok çekici."
+    },
+    {
+      "id": 60,
+      "word": "seyirci",
+      "sentence1": "Seyirci performansın ardından alkışladı.",
+      "sentence2": "Film seyirci tarafından iyi karşılandı."
+    },
+    {
+      "id": 61,
+      "word": "yazar",
+      "sentence1": "Birkaç en çok satan romanın yazarıdır.",
+      "sentence2": "Yazar, etkinlikte kitap imzalayacak."
+    },
+    {
+      "id": 62,
+      "word": "kullanılabilir",
+      "sentence1": "Kitap birkaç dilde mevcuttur.",
+      "sentence2": "Bu koltuk boş mu?"
+    },
+    {
+      "id": 63,
+      "word": "ortalama",
+      "sentence1": "Temmuz ayındaki ortalama sıcaklık yüksektir.",
+      "sentence2": "Sınıfta ortalama bir puanı var."
+    },
+    {
+      "id": 64,
+      "word": "kaçınmak",
+      "sentence1": "Çok fazla şeker yemekten kaçınmalısın.",
+      "sentence2": "O, sorudan kaçınmaya çalıştı."
+    },
+    {
+      "id": 65,
+      "word": "ödül",
+      "sentence1": "Performansı için bir ödül aldı.",
+      "sentence2": "Ödül töreni gelecek hafta yapılacak."
+    },
+    {
+      "id": 66,
+      "word": "korkunç",
+      "sentence1": "Bugün hava korkunç.",
+      "sentence2": "İş yerinde berbat bir gün geçirdim."
+    },
+    {
+      "id": 67,
+      "word": "arka",
+      "sentence1": "Sınıfın en arkasına oturdu.",
+      "sentence2": "Ağırlık kaldırırken sırtını incitti."
+    },
+    {
+      "id": 68,
+      "word": "arka plan",
+      "sentence1": "Fotoğrafın arka planı çok güzel.",
+      "sentence2": "Sanat tarihinde bir geçmişi var."
+    },
+    {
+      "id": 69,
+      "word": "kötü",
+      "sentence1": "O, kazada ağır yaralandı.",
+      "sentence2": "Kötü şarkı söylüyor ama hoşuna gidiyor."
+    },
+    {
+      "id": 70,
+      "word": "bar",
+      "sentence1": "İçki içmek için bir bara gittik.",
+      "sentence2": "Bar Cuma gecesi kalabalık oldu."
+    },
+    {
+      "id": 71,
+      "word": "beyzbol",
+      "sentence1": "Hafta sonları beyzbol oynuyor.",
+      "sentence2": "Beyzbol, ABD'de popüler bir spordur."
+    },
+    {
+      "id": 72,
+      "word": "temelli",
+      "sentence1": "Film gerçek bir hikayeye dayanıyor.",
+      "sentence2": "Sonuçlarımız verilere dayanıyor."
+    },
+    {
+      "id": 73,
+      "word": "basketbol",
+      "sentence1": "O, her cumartesi basketbol oynuyor.",
+      "sentence2": "Basketbol hızla gelişen bir spor."
+    },
+    {
+      "id": 74,
+      "word": "fasulye",
+      "sentence1": "Yeşil fasulye yemeyi severim.",
+      "sentence2": "Fasulye iyi bir protein kaynağıdır."
+    },
+    {
+      "id": 75,
+      "word": "ayı",
+      "sentence1": "Ayı büyük ve güçlü bir hayvandır.",
+      "sentence2": "Ormanda bir ayı gördüm."
+    },
+    {
+      "id": 76,
+      "word": "vuruş",
+      "sentence1": "Takımımız şampiyonları yenmeyi başardı.",
+      "sentence2": "Final maçında yenildi."
+    },
+    {
+      "id": 77,
+      "word": "sığır eti",
+      "sentence1": "Tavuğu sığır eti yerine tercih ederim.",
+      "sentence2": "Sığır eti birçok yemekte yaygın bir malzemedir."
+    },
+    {
+      "id": 78,
+      "word": "önceden",
+      "sentence1": "Daha önce hiç böyle güzel bir gün batımı görmemiştim.",
+      "sentence2": "Lütfen akşam yemeğinden önce ödevini bitir."
+    },
+    {
+      "id": 79,
+      "word": "iyi davran",
+      "sentence1": "Çocuklar toplum içinde nasıl davranacaklarını öğrenmelidirler.",
+      "sentence2": "Partide iyi davranmadı."
+    },
+    {
+      "id": 80,
+      "word": "davranış",
+      "sentence1": "Dün çok garip davrandı.",
+      "sentence2": "Çevreye karşı davranışlarımızı değiştirmemiz gerekiyor."
+    },
+    {
+      "id": 81,
+      "word": "ait olmak",
+      "sentence1": "Bu kitap bana ait.",
+      "sentence2": "Buraya ait olduğunu hissediyor musun?"
+    },
+    {
+      "id": 82,
+      "word": "kemer",
+      "sentence1": "Pantolonuna siyah kuşak takıyordu.",
+      "sentence2": "Emniyet kemeri güvenlik için çok önemlidir."
+    },
+    {
+      "id": 83,
+      "word": "ödeme",
+      "sentence1": "Yeni yasa birçok insana fayda sağlayacak.",
+      "sentence2": "Egzersizin faydaları nelerdir?"
+    },
+    {
+      "id": 84,
+      "word": "en iyisi",
+      "sentence1": "O, sınıfın en iyi öğrencisi.",
+      "sentence2": "Bu şimdiye kadar yediğim en iyi pizza."
+    },
+    {
+      "id": 85,
+      "word": "daha iyi",
+      "sentence1": "Bugün dünden daha iyi hissediyorum.",
+      "sentence2": "Bu çözüm önceki çözümden daha iyidir."
+    },
+    {
+      "id": 86,
+      "word": "arasında",
+      "sentence1": "Park okul ve kütüphane arasında yer almaktadır.",
+      "sentence2": "İki teklif arasında büyük bir fark var."
+    },
+    {
+      "id": 87,
+      "word": "milyar",
+      "sentence1": "Şirketin değeri bir milyar doların üzerinde.",
+      "sentence2": "Evrende milyarlarca yıldız var."
+    },
+    {
+      "id": 88,
+      "word": "çuval",
+      "sentence1": "Lütfen çöpü çöpe koy.",
+      "sentence2": "Geri dönüşüm kutusu dolu."
+    },
+    {
+      "id": 89,
+      "word": "biyoloji",
+      "sentence1": "O, üniversitede biyoloji okuyor.",
+      "sentence2": "Biyoloji, canlı organizmaların incelenmesidir."
+    },
+    {
+      "id": 90,
+      "word": "doğum",
+      "sentence1": "Bebeğin doğumu sevinçli bir olaydı.",
+      "sentence2": "Onlar kızlarının doğumunu kutladılar."
+    },
+    {
+      "id": 91,
+      "word": "kurabiye",
+      "sentence1": "Çayımda bisküvi içmeyi severim.",
+      "sentence2": "Bu bisküviler ev yapımı."
+    },
+    {
+      "id": 92,
+      "word": "biraz",
+      "sentence1": "Çikolatandan biraz alabilir miyim?",
+      "sentence2": "Sadece biraz daha tuz gerekiyor."
+    },
+    {
+      "id": 93,
+      "word": "boş",
+      "sentence1": "Lütfen boş alanı doğru yanıtla doldurun.",
+      "sentence2": "Sayfa notlar için boş bırakılmıştı."
+    },
+    {
+      "id": 94,
+      "word": "kan",
+      "sentence1": "Kan yaşam için gereklidir.",
+      "sentence2": "Hastanede kan bağışladı."
+    },
+    {
+      "id": 95,
+      "word": "vurmak",
+      "sentence1": "Lütfen pastanın üzerindeki mumları üfle.",
+      "sentence2": "Rüzgar daha sert esmeye başladı."
+    },
+    {
+      "id": 96,
+      "word": "tahta",
+      "sentence1": "Öğretmen dersleri tahtaya yazdı.",
+      "sentence2": "Sunum için bir tahtaya ihtiyacımız var."
+    },
+    {
+      "id": 97,
+      "word": "kaynatmak",
+      "sentence1": "Makarna eklemeden önce lütfen suyu kaynatın.",
+      "sentence2": "Yumurtalar yaklaşık 10 dakika içinde kaynar."
+    },
+    {
+      "id": 98,
+      "word": "kemik",
+      "sentence1": "Köpek bahçeye bir kemik gömdü.",
+      "sentence2": "İnsan vücudunda 206 kemik vardır."
+    },
+    {
+      "id": 99,
+      "word": "kitap",
+      "sentence1": "Büyüleyici bir kitap okuyorum.",
+      "sentence2": "Onun büyük bir kitap koleksiyonu var."
+    },
+    {
+      "id": 100,
+      "word": "ödünç almak",
+      "sentence1": "Kalemini ödünç alabilir miyim?",
+      "sentence2": "Kütüphaneden bir kitap ödünç aldı."
+    },
+    {
+      "id": 101,
+      "word": "patron",
+      "sentence1": "Patronum bana çok destek oluyor.",
+      "sentence2": "O pazarlama ekibinin patronu."
+    },
+    {
+      "id": 102,
+      "word": "alt",
+      "sentence1": "Hazine denizin dibinde gömülü.",
+      "sentence2": "O, merdivenlerin dibinde oturdu."
+    },
+    {
+      "id": 103,
+      "word": "kase",
+      "sentence1": "O, çorbayı büyük bir kase içinde servis etti.",
+      "sentence2": "Kasek seramikten yapılmıştır."
+    },
+    {
+      "id": 104,
+      "word": "beyin",
+      "sentence1": "Beyin vücudun kontrol merkezi.",
+      "sentence2": "Parlak bir aklı ve keskin bir beyni var."
+    },
+    {
+      "id": 105,
+      "word": "köprü",
+      "sentence1": "Köprü nehrin iki tarafını birbirine bağlar.",
+      "sentence2": "Biz köprüyü diğer tarafa doğru yürüdük."
+    },
+    {
+      "id": 106,
+      "word": "parlak",
+      "sentence1": "Güneş bugün parlak.",
+      "sentence2": "Parlak kırmızı bir elbise giyiyordu."
+    },
+    {
+      "id": 107,
+      "word": "harika",
+      "sentence1": "O, parlak bir fikirle geldi.",
+      "sentence2": "Bilim adamı parlak bir keşif yaptı."
+    },
+    {
+      "id": 108,
+      "word": "kırılmış",
+      "sentence1": "Vazo kırıldı.",
+      "sentence2": "Kaza yüzünden kolunu kırdı."
+    },
+    {
+      "id": 109,
+      "word": "fırça",
+      "sentence1": "O, resmi çizmek için bir fırça kullandı.",
+      "sentence2": "Saçları için fırçası var."
+    },
+    {
+      "id": 110,
+      "word": "yanmak",
+      "sentence1": "Kendini fırında yakmamak için dikkatli ol.",
+      "sentence2": "Ateş saatlerce yanacak."
+    },
+    {
+      "id": 111,
+      "word": "iş adamı",
+      "sentence1": "O başarılı bir işadamıdır.",
+      "sentence2": "İş adamları sık sık iş için seyahat ederler."
+    },
+    {
+      "id": 112,
+      "word": "düğme",
+      "sentence1": "Lütfen makineyi çalıştırmak için düğmeye basın.",
+      "sentence2": "Gömleğine bir düğme dikti."
+    },
+    {
+      "id": 113,
+      "word": "kamp",
+      "sentence1": "Geçen hafta sonu dağlarda kamp yapmaya gittik.",
+      "sentence2": "Kamp, doğanın tadını çıkarmanın harika bir yoludur."
+    },
+    {
+      "id": 114,
+      "word": "kamp yapmak",
+      "sentence1": "Ormanda kamp yapmak huzurlu bir şeydir.",
+      "sentence2": "Yaz aylarında kamp yapmayı severler."
+    },
+    {
+      "id": 115,
+      "word": "dökülebilir",
+      "sentence1": "Çok iyi yüzebilirim.",
+      "sentence2": "Bu görevde bana yardım edebilir misin?"
+    },
+    {
+      "id": 116,
+      "word": "bakım",
+      "sentence1": "Bitkilere bakmak rahatlatıcıdır.",
+      "sentence2": "O, ailesini derinden önemser."
+    },
+    {
+      "id": 117,
+      "word": "dikkatli ol",
+      "sentence1": "Caddeden geçerken dikkatli ol.",
+      "sentence2": "Sözlerine çok dikkat eder."
+    },
+    {
+      "id": 118,
+      "word": "dikkatli ol",
+      "sentence1": "Vazoyu dikkatlice masaya koydu.",
+      "sentence2": "Talimatları dikkatle dinledi."
+    },
+    {
+      "id": 119,
+      "word": "halı",
+      "sentence1": "Oturma odasındaki halı yeni.",
+      "sentence2": "O, halıyı iyice süpürdü."
+    },
+    {
+      "id": 120,
+      "word": "çizgi film",
+      "sentence1": "En sevdiğim karikatür televizyonda.",
+      "sentence2": "Çocuklar komik bir çizgi film izlediler."
+    },
+    {
+      "id": 121,
+      "word": "durum",
+      "sentence1": "Acil bir durumda, 911'i arayın.",
+      "sentence2": "Bu özel bir durum ve dikkat edilmesi gerekiyor."
+    },
+    {
+      "id": 122,
+      "word": "nakit",
+      "sentence1": "Nakit ödemeyi tercih ederim.",
+      "sentence2": "Üzerinde nakit var mı?"
+    },
+    {
+      "id": 123,
+      "word": "kale",
+      "sentence1": "Kale 500 yıldan daha eski.",
+      "sentence2": "Onlar tatillerinde kaleyi ziyaret ettiler."
+    },
+    {
+      "id": 124,
+      "word": "yakalama",
+      "sentence1": "Topu yakalamaya çalıştım.",
+      "sentence2": "Geçen hafta soğuk algınlığı yakaladı."
+    },
+    {
+      "id": 125,
+      "word": "sebep",
+      "sentence1": "Sigara içmek sağlık sorunlarına neden olabilir.",
+      "sentence2": "Şiddetli yağmur bölgede sel yarattı."
+    },
+    {
+      "id": 126,
+      "word": "kutlamak",
+      "sentence1": "Yılbaşı gecesini havai fişeklerle kutluyoruz.",
+      "sentence2": "Onlar yıldönümlerini bir yemekle kutladılar."
+    },
+    {
+      "id": 127,
+      "word": "ünlüler",
+      "sentence1": "O ünlü bir ünlüdür.",
+      "sentence2": "Ünlüler genellikle kırmızı halı etkinliklerine katılırlar."
+    },
+    {
+      "id": 128,
+      "word": "kesin",
+      "sentence1": "Anahtarlarımı burada bıraktığımdan eminim.",
+      "sentence2": "Bu karardan emin misin?"
+    },
+    {
+      "id": 129,
+      "word": "kesinlikle",
+      "sentence1": "Bu konuda sana kesinlikle yardım edeceğim.",
+      "sentence2": "Kesinlikle müzik için bir yeteneği var."
+    },
+    {
+      "id": 130,
+      "word": "şans",
+      "sentence1": "Bir ödül kazanma şansın var.",
+      "sentence2": "Şansını dene ve yeni bir şey dene."
+    },
+    {
+      "id": 131,
+      "word": "karakter",
+      "sentence1": "Onun güçlü bir karakteri var.",
+      "sentence2": "Kitabın ana karakteri çok ilginçtir."
+    },
+    {
+      "id": 132,
+      "word": "hayırseverlik",
+      "sentence1": "Bir hayır kurumuna para bağışladılar.",
+      "sentence2": "Yardım etkinlikleri topluluk için önemlidir."
+    },
+    {
+      "id": 133,
+      "word": "sohbet etmek",
+      "sentence1": "Kahve içip sohbet edelim.",
+      "sentence2": "Onlar dostça bir sohbetin keyfini çıkardılar."
+    },
+    {
+      "id": 134,
+      "word": "kontrol et",
+      "sentence1": "Detaylar için lütfen e-postanızı kontrol edin.",
+      "sentence2": "Programıma bakmalıyım."
+    },
+    {
+      "id": 135,
+      "word": "şef",
+      "sentence1": "Şef lezzetli bir yemek hazırladı.",
+      "sentence2": "O profesyonel bir şef olmak istiyor."
+    },
+    {
+      "id": 136,
+      "word": "kimya",
+      "sentence1": "Kimya benim en sevdiğim konudur.",
+      "sentence2": "Kimya deneyi yaptılar."
+    },
+    {
+      "id": 137,
+      "word": "çip",
+      "sentence1": "Bilgisayarın yeni bir çip ihtiyacı var.",
+      "sentence2": "Kurabiyede bir çip buldu."
+    },
+    {
+      "id": 138,
+      "word": "seçim",
+      "sentence1": "İki seçenek arasında bir seçim yapabilirsin.",
+      "sentence2": "Yapılması zor bir seçim."
+    },
+    {
+      "id": 139,
+      "word": "kilise",
+      "sentence1": "Onlar her Pazar kiliseye giderler.",
+      "sentence2": "Kilise 18. yüzyılda inşa edildi."
+    },
+    {
+      "id": 140,
+      "word": "sigara",
+      "sentence1": "Akşam yemeğinden sonra bir sigara içti.",
+      "sentence2": "Birçok ülkede sigara reklamı yasaktır."
+    },
+    {
+      "id": 141,
+      "word": "çember",
+      "sentence1": "Kağıda bir daire çiz.",
+      "sentence2": "Çocuklar bir çember halinde oturdular."
+    },
+    {
+      "id": 142,
+      "word": "klasik",
+      "sentence1": "Klasik müzik dinlemeyi severim.",
+      "sentence2": "Konserde klasik besteciler yer aldı."
+    },
+    {
+      "id": 143,
+      "word": "açık",
+      "sentence1": "Lütfen akşam yemeğinden sonra masayı boşaltın.",
+      "sentence2": "Talimatlar açık ve takip etmek kolaydı."
+    },
+    {
+      "id": 144,
+      "word": "açıkça",
+      "sentence1": "Sunum sırasında açıkça konuştu.",
+      "sentence2": "Şimdi açıkça görebiliyorum."
+    },
+    {
+      "id": 145,
+      "word": "akıllı",
+      "sentence1": "O zeki bir öğrencidir.",
+      "sentence2": "Akıllı bir çözüm buldu."
+    },
+    {
+      "id": 146,
+      "word": "iklim",
+      "sentence1": "İklim hızla değişiyor.",
+      "sentence2": "İklimi korumak için harekete geçmeliyiz."
+    },
+    {
+      "id": 147,
+      "word": "yakın",
+      "sentence1": "Lütfen arkanızdaki kapıyı kapatın.",
+      "sentence2": "Mağaza evime yakın."
+    },
+    {
+      "id": 148,
+      "word": "kapalı",
+      "sentence1": "Dükkân pazarları kapalıdır.",
+      "sentence2": "Lütfen kapıyı kapalı tut."
+    },
+    {
+      "id": 149,
+      "word": "giyim",
+      "sentence1": "Kış için yeni kıyafetler aldı.",
+      "sentence2": "Mağaza çeşitli kıyafetler satar."
+    },
+    {
+      "id": 150,
+      "word": "bulut",
+      "sentence1": "Gökyüzü bulutlarla dolu.",
+      "sentence2": "Bir bulut başımızın üstünden geçti."
+    },
+    {
+      "id": 151,
+      "word": "koç",
+      "sentence1": "O bir basketbol koçu.",
+      "sentence2": "Koç motive edici bir konuşma yaptı."
+    },
+    {
+      "id": 152,
+      "word": "sahil",
+      "sentence1": "Sahil boyunca yürüdük.",
+      "sentence2": "Kıyı yazın çok güzel."
+    },
+    {
+      "id": 153,
+      "word": "kod",
+      "sentence1": "Lütfen programın kodunu yazın.",
+      "sentence2": "Kod düzgün çalışmıyor."
+    },
+    {
+      "id": 154,
+      "word": "arkadaşım",
+      "sentence1": "Meslektaşım çok yardımcı oldu.",
+      "sentence2": "Sık sık meslektaşlarımızla işbirliği yapıyoruz."
+    },
+    {
+      "id": 155,
+      "word": "topla",
+      "sentence1": "Pul toplamayı severim.",
+      "sentence2": "Araştırmaları için veri topluyorlar."
+    },
+    {
+      "id": 156,
+      "word": "sütun",
+      "sentence1": "Tablonun üç sütunu var.",
+      "sentence2": "Lütfen ilk sütunu doldurun."
+    },
+    {
+      "id": 157,
+      "word": "komedi",
+      "sentence1": "Komedi filmleri izlemeyi severim.",
+      "sentence2": "Oyun çok komikti."
+    },
+    {
+      "id": 158,
+      "word": "rahat",
+      "sentence1": "Bu sandalye çok rahat.",
+      "sentence2": "Yeni kıyafetlerimle kendimi rahat hissettim."
+    },
+    {
+      "id": 159,
+      "word": "yorum",
+      "sentence1": "Film hakkında bir yorum yaptı.",
+      "sentence2": "Lütfen aşağıda yorumlarınızı bırakın."
+    },
+    {
+      "id": 160,
+      "word": "iletişim",
+      "sentence1": "Açıkça iletişim kurmak önemlidir.",
+      "sentence2": "İletişim kurmak için işaret dili kullanıyorlar."
+    },
+    {
+      "id": 161,
+      "word": "topluluk",
+      "sentence1": "Toplum yardım etmek için bir araya geldi.",
+      "sentence2": "Yerel topluluğunda çok aktif."
+    },
+    {
+      "id": 162,
+      "word": "yarışmak",
+      "sentence1": "Birçok sporcu Olimpiyatlarda yarışır.",
+      "sentence2": "Kendinle rekabet etmek sağlıklıdır."
+    },
+    {
+      "id": 163,
+      "word": "rekabet",
+      "sentence1": "Rekabet bu yıl şiddetliydi.",
+      "sentence2": "O, yarışmada birincilik ödülünü kazandı."
+    },
+    {
+      "id": 164,
+      "word": "şikayet et",
+      "sentence1": "Hava hakkında şikayet etmeyi sever.",
+      "sentence2": "Lütfen servis hakkında şikayet etme."
+    },
+    {
+      "id": 165,
+      "word": "tamamen",
+      "sentence1": "Toplantıyı tamamen unuttum.",
+      "sentence2": "Haber ona tamamen şaşırtıcı geldi."
+    },
+    {
+      "id": 166,
+      "word": "durum",
+      "sentence1": "Araba mükemmel durumda.",
+      "sentence2": "Ciddi bir durumdan iyileşiyor."
+    },
+    {
+      "id": 167,
+      "word": "konferans",
+      "sentence1": "İklim değişikliğiyle ilgili bir konferansa katıldı.",
+      "sentence2": "Konferans gelecek ay yapılacak."
+    },
+    {
+      "id": 168,
+      "word": "bağla",
+      "sentence1": "İnternet'e bağlanman gerek.",
+      "sentence2": "Cihazlar kablosuz olarak bağlanabilir."
+    },
+    {
+      "id": 169,
+      "word": "bağlantılı",
+      "sentence1": "Yazıcı bilgisayara bağlı.",
+      "sentence2": "Paylaşılan bir ağla bağlantılılar."
+    },
+    {
+      "id": 170,
+      "word": "düşünün",
+      "sentence1": "Tüm seçenekleri göz önünde bulundurmalıyım.",
+      "sentence2": "Sonuçlarını düşündün mü?"
+    },
+    {
+      "id": 171,
+      "word": "içeriği",
+      "sentence1": "Kutunun içinde eski fotoğraflar var.",
+      "sentence2": "Bu belge hassas bilgiler içerebilir."
+    },
+    {
+      "id": 172,
+      "word": "bağlam",
+      "sentence1": "Anlamak için bağlam önemlidir.",
+      "sentence2": "Lütfen sorunuzun bağlamını açıklayın."
+    },
+    {
+      "id": 173,
+      "word": "kıta",
+      "sentence1": "Afrika ikinci büyük kıttır.",
+      "sentence2": "Kıta birçok farklı kültürün yuvasıdır."
+    },
+    {
+      "id": 174,
+      "word": "devam et",
+      "sentence1": "Öğle yemeğinden sonra toplantıya devam edeceğiz.",
+      "sentence2": "Lütfen sunumunuza devam edin."
+    },
+    {
+      "id": 175,
+      "word": "kontrol",
+      "sentence1": "Duygularını kontrol etmelisin.",
+      "sentence2": "Uzaktan kumanda masanın üzerinde."
+    },
+    {
+      "id": 176,
+      "word": "pişirme",
+      "sentence1": "İtalyan yemeği pişirmeyi seviyorum.",
+      "sentence2": "Yemek pişirmeyi annesinden öğrendi."
+    },
+    {
+      "id": 177,
+      "word": "pişirme makinesi",
+      "sentence1": "Pirinç ocağı çok kullanışlı.",
+      "sentence2": "Yeni bir ocak almalıyım."
+    },
+    {
+      "id": 178,
+      "word": "kopyası",
+      "sentence1": "Lütfen belgeyi kopyalayın.",
+      "sentence2": "Bu dosyayı bilgisayarıma kopyalamam gerek."
+    },
+    {
+      "id": 179,
+      "word": "köşe",
+      "sentence1": "Kedi köşede saklanıyor.",
+      "sentence2": "Lütfen bir sonraki köşede sola dön."
+    },
+    {
+      "id": 180,
+      "word": "doğru",
+      "sentence1": "Lütfen soruları doğru cevaplayın.",
+      "sentence2": "O, kelimeyi doğru heceledi."
+    },
+    {
+      "id": 181,
+      "word": "sayın",
+      "sentence1": "On'a kadar sayabilir misin?",
+      "sentence2": "Katılımcıların sayısını saymam gerek."
+    },
+    {
+      "id": 182,
+      "word": "çift",
+      "sentence1": "Çok güzel bir çift oluyorlar.",
+      "sentence2": "Çift yıldönümlerini kutluyor."
+    },
+    {
+      "id": 183,
+      "word": "kapak",
+      "sentence1": "Lütfen yemeği örtün.",
+      "sentence2": "Çatı bütün evi kaplayacak."
+    },
+    {
+      "id": 184,
+      "word": "çılgın",
+      "sentence1": "Bu fikir çılgınca geliyor.",
+      "sentence2": "Bugün biraz çılgınca davranıyor."
+    },
+    {
+      "id": 185,
+      "word": "yaratıcı",
+      "sentence1": "Yaratıcı bir aklı var.",
+      "sentence2": "Proje yaratıcı düşünmeyi gerektirir."
+    },
+    {
+      "id": 186,
+      "word": "kredi",
+      "sentence1": "Kredi kartı için başvuruda bulunmalıyım.",
+      "sentence2": "İşinden ötürü övgü aldı."
+    },
+    {
+      "id": 187,
+      "word": "suç",
+      "sentence1": "Suç oranı artıyor.",
+      "sentence2": "Ciddi bir suçtan suçlu bulundu."
+    },
+    {
+      "id": 188,
+      "word": "suçlu",
+      "sentence1": "Suçlu polis tarafından yakalandı.",
+      "sentence2": "O bir suç avukatı olarak çalışıyor."
+    },
+    {
+      "id": 189,
+      "word": "haç",
+      "sentence1": "Lütfen caddeden dikkatlice geçin.",
+      "sentence2": "Çapraz beyaz çizgilerle işaretlenmiştir."
+    },
+    {
+      "id": 190,
+      "word": "kalabalık",
+      "sentence1": "Kalabalık takımı alkışladı.",
+      "sentence2": "Konserde büyük bir kalabalık vardı."
+    },
+    {
+      "id": 191,
+      "word": "kalabalık",
+      "sentence1": "Tren, yoğun saatlerde kalabalıktı.",
+      "sentence2": "Kalabalık yerleri sevmem."
+    },
+    {
+      "id": 192,
+      "word": "ağla",
+      "sentence1": "Üzgün olduğun zaman ağlamanın bir sakıncası yok.",
+      "sentence2": "Bebek ağlamaya başladı."
+    },
+    {
+      "id": 193,
+      "word": "dolap",
+      "sentence1": "Bulaşıklar dolapta.",
+      "sentence2": "Bir bardak almak için dolabı açtı."
+    },
+    {
+      "id": 194,
+      "word": "kıvırcık",
+      "sentence1": "Onun kıvırcık saçları var.",
+      "sentence2": "Düz saçları kıvırcık saçlara tercih ederim."
+    },
+    {
+      "id": 195,
+      "word": "döngü",
+      "sentence1": "Su döngüsü çevre için önemlidir.",
+      "sentence2": "Bisiklete binme şansı bulduğu her seferinde bisiklet sürmeye gider."
+    },
+    {
+      "id": 196,
+      "word": "her gün",
+      "sentence1": "Haberleri her gün okuyorum.",
+      "sentence2": "Onun takip ettiği bir günlük rutini var."
+    },
+    {
+      "id": 197,
+      "word": "tehlike",
+      "sentence1": "Dikkatli ol, önümüzde bir tehlike var.",
+      "sentence2": "İşaretler tehlikeden uyarıyordu."
+    },
+    {
+      "id": 198,
+      "word": "karanlık",
+      "sentence1": "Dışarısı karanlık.",
+      "sentence2": "Oda karanlık ve sessizdi."
+    },
+    {
+      "id": 199,
+      "word": "veriler",
+      "sentence1": "Veriler açık bir eğilim gösteriyor.",
+      "sentence2": "Verileri dikkatlice analiz etmeliyiz."
+    },
+    {
+      "id": 200,
+      "word": "öldü",
+      "sentence1": "Ağaç öldü.",
+      "sentence2": "O bahçede ölü bir kuş buldu."
+    },
+    {
+      "id": 201,
+      "word": "anlaşma",
+      "sentence1": "Uzun müzakerelerden sonra bir anlaşmaya vardık.",
+      "sentence2": "Her iki taraf için de iyi bir anlaşma."
+    },
+    {
+      "id": 202,
+      "word": "sevgilim",
+      "sentence1": "Sevgili arkadaşına bir mektup yazdı.",
+      "sentence2": "O benim için çok değerli."
+    },
+    {
+      "id": 203,
+      "word": "ölüm",
+      "sentence1": "Haberlerde ani bir ölüm haberi vardı.",
+      "sentence2": "O, evcil hayvanının ölümü için yas tuttu."
+    },
+    {
+      "id": 204,
+      "word": "karar",
+      "sentence1": "Karar verme zamanı geldi.",
+      "sentence2": "Zor bir kararla karşı karşıyaydı."
+    },
+    {
+      "id": 205,
+      "word": "derin",
+      "sentence1": "Su burada derin.",
+      "sentence2": "Konuşmadan önce derin bir nefes aldı."
+    },
+    {
+      "id": 206,
+      "word": "kesinlikle",
+      "sentence1": "Kesinlikle orada olacağım.",
+      "sentence2": "Kesinlikle en iyi aday."
+    },
+    {
+      "id": 207,
+      "word": "derece",
+      "sentence1": "O, biyolojide yüksek lisans derecesine sahip.",
+      "sentence2": "Sıcaklık bugün yüksek bir dereceye ulaştı."
+    },
+    {
+      "id": 208,
+      "word": "diş hekimi",
+      "sentence1": "Dişçiye randevum var.",
+      "sentence2": "O, özel bir klinikte dişçi olarak çalışıyor."
+    },
+    {
+      "id": 209,
+      "word": "bölüm",
+      "sentence1": "Pazarlama bölümünde çalışıyor.",
+      "sentence2": "Bölüm müşteri hizmetlerinden sorumludur."
+    },
+    {
+      "id": 210,
+      "word": "bağlı",
+      "sentence1": "Başarınız çabalarınıza bağlı olabilir.",
+      "sentence2": "Destek için arkadaşlarıma bağımlıyım."
+    },
+    {
+      "id": 211,
+      "word": "çöl",
+      "sentence1": "Sahra, dünyanın en büyük sıcak çölüdür.",
+      "sentence2": "Birçok hayvan çölde yaşamaya adapte oldu."
+    },
+    {
+      "id": 212,
+      "word": "tasarımcı",
+      "sentence1": "O bir moda tasarımcısı.",
+      "sentence2": "Tasarımcı yeni koleksiyonunu sundu."
+    },
+    {
+      "id": 213,
+      "word": "yok etmek",
+      "sentence1": "Yangın binayı yok edecek.",
+      "sentence2": "Eski köprüyü yok etmeyi planlıyorlar."
+    },
+    {
+      "id": 214,
+      "word": "dedektif",
+      "sentence1": "Dedektif davayı çözdü.",
+      "sentence2": "Büyüdüğünde dedektif olmak istiyor."
+    },
+    {
+      "id": 215,
+      "word": "geliştir",
+      "sentence1": "Yeni bir strateji geliştirmemiz gerekiyor.",
+      "sentence2": "Şirket yeni bir ürün geliştirmeyi planlıyor."
+    },
+    {
+      "id": 216,
+      "word": "aygıt",
+      "sentence1": "Bu cihaz internete bağlanabilir.",
+      "sentence2": "O, bilgisayarı için yeni bir cihaz aldı."
+    },
+    {
+      "id": 217,
+      "word": "günlük",
+      "sentence1": "Düşüncelerinin bir günlüğünü tutuyor.",
+      "sentence2": "Günlük tutmak tedavi edici olabilir."
+    },
+    {
+      "id": 218,
+      "word": "farklı",
+      "sentence1": "Soruna farklı yaklaştılar.",
+      "sentence2": "O, yaşıtlarından farklı düşünüyor."
+    },
+    {
+      "id": 219,
+      "word": "dijital",
+      "sentence1": "Dijital çağ, iletişimi değiştirdi.",
+      "sentence2": "O, kağıt kitaplardan çok dijital kitapları tercih eder."
+    },
+    {
+      "id": 220,
+      "word": "doğrudan",
+      "sentence1": "Lütfen bana doğrudan cevap ver.",
+      "sentence2": "Önümüzdeki yol şehre giden doğrudan bir yol."
+    },
+    {
+      "id": 221,
+      "word": "yönü",
+      "sentence1": "Hangi yöne gitmeliyiz?",
+      "sentence2": "Pusula kuzey yönünü gösteriyor."
+    },
+    {
+      "id": 222,
+      "word": "müdür",
+      "sentence1": "Yönetmen parlak bir performans sergiledi.",
+      "sentence2": "O bir film yönetmeni olmak istiyor."
+    },
+    {
+      "id": 223,
+      "word": "anlamıyorum",
+      "sentence1": "Senin görüşüne katılmıyorum.",
+      "sentence2": "Siyasi konularda sık sık fikir ayrılığına düşerler."
+    },
+    {
+      "id": 224,
+      "word": "kaybol",
+      "sentence1": "Sihirbaz tavşanı ortadan kaldırdı.",
+      "sentence2": "Birçok tür yok olma tehlikesiyle karşı karşıyadır."
+    },
+    {
+      "id": 225,
+      "word": "felaket",
+      "sentence1": "Deprem büyük bir felaketti.",
+      "sentence2": "Gelecekteki felaketleri önlemek için çalışıyorlar."
+    },
+    {
+      "id": 226,
+      "word": "keşfetmek",
+      "sentence1": "Yeni gezegenler keşfetmeyi umuyorlar.",
+      "sentence2": "O, resim için gizli bir yetenek keşfetti."
+    },
+    {
+      "id": 227,
+      "word": "keşif",
+      "sentence1": "Penisilin keşfi tıpta bir dönüm noktasıydı.",
+      "sentence2": "Genetik alanında önemli bir keşif yaptılar."
+    },
+    {
+      "id": 228,
+      "word": "tartışma",
+      "sentence1": "Yeni politika hakkında bir tartışma yaptık.",
+      "sentence2": "Tartışma çok verimli oldu."
+    },
+    {
+      "id": 229,
+      "word": "hastalık",
+      "sentence1": "Diyabet yaygın bir hastalıktır.",
+      "sentence2": "Onlar hastalığın tedavisini araştırıyorlar."
+    },
+    {
+      "id": 230,
+      "word": "uzaklık",
+      "sentence1": "İki şehir arasındaki mesafe 100 mil.",
+      "sentence2": "Çatışmalardan uzak durmayı tercih ediyor."
+    },
+    {
+      "id": 231,
+      "word": "boşanmış",
+      "sentence1": "Boşanmış ve yalnız yaşıyor.",
+      "sentence2": "Boşanmış birçok kişi yeniden biriyle çıkmayı zor buluyor."
+    },
+    {
+      "id": 232,
+      "word": "belge",
+      "sentence1": "Lütfen belgeyi imzalayın.",
+      "sentence2": "Belge önemli bilgiler içerir."
+    },
+    {
+      "id": 233,
+      "word": "iki katı",
+      "sentence1": "Çift espresso istiyorum, lütfen.",
+      "sentence2": "Fiyat geçen yılın iki katı."
+    },
+    {
+      "id": 234,
+      "word": "indir",
+      "sentence1": "Dosyayı web sitesinden indirebilirsiniz.",
+      "sentence2": "Bazı yazılım güncellemelerini indirmem gerek."
+    },
+    {
+      "id": 235,
+      "word": "aşağıda",
+      "sentence1": "Çamaşırhane aşağıda.",
+      "sentence2": "Atıştırmalık almak için aşağıya indi."
+    },
+    {
+      "id": 236,
+      "word": "drama",
+      "sentence1": "Oyun duygusal bir dramdı.",
+      "sentence2": "Televizyonda drama dizilerini izlemeyi sever."
+    },
+    {
+      "id": 237,
+      "word": "çizim",
+      "sentence1": "Bana peyzaj çizimini gösterdi.",
+      "sentence2": "Çizim yaratıcılığı ifade etmenin harika bir yoludur."
+    },
+    {
+      "id": 238,
+      "word": "rüya",
+      "sentence1": "Dün gece garip bir rüya gördüm.",
+      "sentence2": "Rüyasını gerçeğe dönüştürmeyi umuyor."
+    },
+    {
+      "id": 239,
+      "word": "sürücü",
+      "sentence1": "Sahil boyunca sürmeyi seviyorum.",
+      "sentence2": "Rahatlamak ve zihnini temizlemek için arabayla gitti."
+    },
+    {
+      "id": 240,
+      "word": "sürüş",
+      "sentence1": "Şehirde araba kullanmak zor olabilir.",
+      "sentence2": "O, yeni arabasını sürmekten hoşlanıyor."
+    },
+    {
+      "id": 241,
+      "word": "düşüş",
+      "sentence1": "Lütfen bardağı düşürme.",
+      "sentence2": "Konuyu bırakmaya ve devam etmeye karar verdi."
+    },
+    {
+      "id": 242,
+      "word": "uyuşturucu",
+      "sentence1": "Doktor yeni bir ilaç yazdı.",
+      "sentence2": "Onlar hastalığı tedavi etmek için ilaçlar araştırıyorlar."
+    },
+    {
+      "id": 243,
+      "word": "kuru",
+      "sentence1": "Kıyafetler güneşte kalınca kurur.",
+      "sentence2": "Çöl, kuru iklimi ile bilinir."
+    },
+    {
+      "id": 244,
+      "word": "kazanmak",
+      "sentence1": "Hayatını kazanmak için çok çalışıyor.",
+      "sentence2": "İş yerinde terfi kazanmayı umuyor."
+    },
+    {
+      "id": 245,
+      "word": "dünya",
+      "sentence1": "Dünya güneşin etrafında döner.",
+      "sentence2": "Yeryüzünde birçok tür yaşar."
+    },
+    {
+      "id": 246,
+      "word": "kolayca",
+      "sentence1": "O, sorunu kolayca çözdü.",
+      "sentence2": "Yeni durumlara kolayca adapte olabilir."
+    },
+    {
+      "id": 247,
+      "word": "eğitim",
+      "sentence1": "Eğitim kişisel gelişim için önemlidir.",
+      "sentence2": "O, eğitimine çok değer verir."
+    },
+    {
+      "id": 248,
+      "word": "etkisi",
+      "sentence1": "İlaç onun sağlığı üzerinde olumlu bir etkiye sahipti.",
+      "sentence2": "Değişikliklerin etkisini değerlendirmemiz gerekiyor."
+    },
+    {
+      "id": 249,
+      "word": "ya da",
+      "sentence1": "Beni arayabilir ya da e-posta gönderebilirsiniz.",
+      "sentence2": "Her iki seçenek de bana uyar."
+    },
+    {
+      "id": 250,
+      "word": "elektrikli",
+      "sentence1": "Elektrikli araba daha popüler hale geliyor.",
+      "sentence2": "Verimlilikleri için elektrikli aletleri tercih ediyor."
+    },
+    {
+      "id": 251,
+      "word": "elektrik",
+      "sentence1": "Elektrik sisteminin güncellenmesi gerekiyor.",
+      "sentence2": "O, üniversitede elektrik mühendisliği okuyor."
+    },
+    {
+      "id": 252,
+      "word": "elektrik",
+      "sentence1": "Elektrik önemli bir enerji kaynağıdır.",
+      "sentence2": "Bu yıl elektrik maliyeti arttı."
+    },
+    {
+      "id": 253,
+      "word": "elektronik",
+      "sentence1": "Günümüzde elektronik cihazlar yaygın olarak kullanılmaktadır.",
+      "sentence2": "Elektronik imalat endüstrisinde çalışıyor."
+    },
+    {
+      "id": 254,
+      "word": "çalışmak",
+      "sentence1": "Şirket daha fazla personel işe almayı planlıyor.",
+      "sentence2": "Birçok kişi hizmet sektöründe çalışmaktadır."
+    },
+    {
+      "id": 255,
+      "word": "çalışan",
+      "sentence1": "Çalışan, sıkı çalışmalarından dolayı tanındı.",
+      "sentence2": "Çalışanlar fikirlerini paylaşmaya teşvik edilir."
+    },
+    {
+      "id": 256,
+      "word": "işveren",
+      "sentence1": "İşveren güvenli bir çalışma ortamı sağlamalıdır.",
+      "sentence2": "Birçok işveren yetenekleri çekmek için avantajlar sunar."
+    },
+    {
+      "id": 257,
+      "word": "boş",
+      "sentence1": "Oda tek bir sandalye dışında boştu.",
+      "sentence2": "Ayrılıktan sonra boşluk hissetti."
+    },
+    {
+      "id": 258,
+      "word": "sonlandırma",
+      "sentence1": "Filmin sonu beklenmedikti.",
+      "sentence2": "Hikaye için alternatif bir son yazdı."
+    },
+    {
+      "id": 259,
+      "word": "enerji",
+      "sentence1": "Güneş enerjisi yenilenebilir bir kaynaktır.",
+      "sentence2": "Yaşına göre çok fazla enerjisi var."
+    },
+    {
+      "id": 260,
+      "word": "motor",
+      "sentence1": "Motor, arabanın kalbi.",
+      "sentence2": "Motordan gelen garip bir ses duydu."
+    },
+    {
+      "id": 261,
+      "word": "mühendis",
+      "sentence1": "Bir teknoloji şirketinde yazılım mühendisi.",
+      "sentence2": "Mühendisler karmaşık sistemleri tasarlar ve inşa ederler."
+    },
+    {
+      "id": 262,
+      "word": "muazzam",
+      "sentence1": "Fil muazzam bir hayvandır.",
+      "sentence2": "Onlar muazzam bir evde yaşıyorlar."
+    },
+    {
+      "id": 263,
+      "word": "içeri girin",
+      "sentence1": "Lütfen devam etmek için şifrenizi girin.",
+      "sentence2": "Verileri sisteme girmeyi unuttu."
+    },
+    {
+      "id": 264,
+      "word": "çevre",
+      "sentence1": "Gelecek nesiller için çevreyi korumalıyız.",
+      "sentence2": "Şirket çevresel etkisini azaltmaya kararlıdır."
+    },
+    {
+      "id": 265,
+      "word": "ekipman",
+      "sentence1": "Spor salonunda çok modern ekipman var.",
+      "sentence2": "Fotoğrafçılık işi için yeni ekipman satın aldı."
+    },
+    {
+      "id": 266,
+      "word": "hata",
+      "sentence1": "Kodda bir hata vardı.",
+      "sentence2": "Lütfen göndermeden önce hatayı düzeltin."
+    },
+    {
+      "id": 267,
+      "word": "özellikle",
+      "sentence1": "Meyve severim, özellikle elma.",
+      "sentence2": "Matematikte, özellikle cebirde iyidir."
+    },
+    {
+      "id": 268,
+      "word": "deneme",
+      "sentence1": "İklim değişikliği hakkında bir makale yazdı.",
+      "sentence2": "Öğretmen 500 kelimelik bir kompozisyon yazdı."
+    },
+    {
+      "id": 269,
+      "word": "her gün",
+      "sentence1": "Egzersiz günlük rutininizin bir parçası olmalıdır.",
+      "sentence2": "İşe günlük kıyafetler giyer."
+    },
+    {
+      "id": 270,
+      "word": "her yerde",
+      "sentence1": "Anahtarlarımı her yerde arıyorum.",
+      "sentence2": "Gittiği her yerde kendini evinde hissediyor."
+    },
+    {
+      "id": 271,
+      "word": "kanıt",
+      "sentence1": "Kanıtlar onu mahkum edecek kadar güçlü değildi.",
+      "sentence2": "Bu iddiayı destekleyecek hiçbir kanıt yok."
+    },
+    {
+      "id": 272,
+      "word": "kesinlikle",
+      "sentence1": "Bana tam ölçümleri verebilir misin?",
+      "sentence2": "Tam yeri haritada belirtilmiştir."
+    },
+    {
+      "id": 273,
+      "word": "kesinlikle",
+      "sentence1": "Tam olarak ne olduğunu bilmiyorum.",
+      "sentence2": "Tam zamanında geldi."
+    },
+    {
+      "id": 274,
+      "word": "çok güzel",
+      "sentence1": "Restorandaki yemek mükemmeldi.",
+      "sentence2": "Mükemmel iletişim becerileri var."
+    },
+    {
+      "id": 275,
+      "word": "hariç",
+      "sentence1": "John hariç herkes davet edildi.",
+      "sentence2": "Muz dışında tüm meyveleri severim."
+    },
+    {
+      "id": 276,
+      "word": "var",
+      "sentence1": "Uzaylılar var mı?",
+      "sentence2": "Yağmur ormanlarında birçok tür vardır."
+    },
+    {
+      "id": 277,
+      "word": "bekliyorum",
+      "sentence1": "Yakında bir yanıt almayı bekliyorum.",
+      "sentence2": "Bu çeyrekte yüksek satışlar bekliyorlar."
+    },
+    {
+      "id": 278,
+      "word": "tecrübe",
+      "sentence1": "Pazarlamada çok deneyimi var.",
+      "sentence2": "Seyahat etmek yeni deneyimler kazanmanın harika bir yoludur."
+    },
+    {
+      "id": 279,
+      "word": "deney",
+      "sentence1": "Bilim adamları, hipotezlerini test etmek için sıklıkla deneyler yaparlar.",
+      "sentence2": "Deney ilginç sonuçlar verdi."
+    },
+    {
+      "id": 280,
+      "word": "uzman",
+      "sentence1": "O yapay zeka konusunda bir uzmandır.",
+      "sentence2": "Uzman değerli bilgiler verdi."
+    },
+    {
+      "id": 281,
+      "word": "açıklama",
+      "sentence1": "Bana sorunun açıklamasını verebilir misin?",
+      "sentence2": "Öğretmenin açıklaması çok açıktı."
+    },
+    {
+      "id": 282,
+      "word": "ekspres",
+      "sentence1": "O, duygularını bir mektupta ifade etti.",
+      "sentence2": "Düşüncelerini ifade etmek önemlidir."
+    },
+    {
+      "id": 283,
+      "word": "ifade",
+      "sentence1": "Yüz ifadesi şaşkınlığı gösterdi.",
+      "sentence2": "Onun eşsiz bir ifade tarzı var."
+    },
+    {
+      "id": 284,
+      "word": "aşırı",
+      "sentence1": "Hava son derece sıcaktı.",
+      "sentence2": "Onun bu konuda aşırı görüşleri var."
+    },
+    {
+      "id": 285,
+      "word": "son derece",
+      "sentence1": "Sonuçlardan son derece memnun kaldı.",
+      "sentence2": "Film son derece eğlenceliydi."
+    },
+    {
+      "id": 286,
+      "word": "faktör",
+      "sentence1": "Başarıya birçok etken katkıda bulunur.",
+      "sentence2": "Bu etkinliğin planlanmasında hava durumu önemli bir faktördür."
+    },
+    {
+      "id": 287,
+      "word": "fabrika",
+      "sentence1": "Fabrika her yıl binlerce araba üretiyor.",
+      "sentence2": "Fabrikadaki çalışma koşulları iyileşti."
+    },
+    {
+      "id": 288,
+      "word": "başarısız",
+      "sentence1": "Başarısız olursan, tekrar dene.",
+      "sentence2": "Proje hedeflerine ulaşamadı."
+    },
+    {
+      "id": 289,
+      "word": "adil",
+      "sentence1": "Yarışma adil ve şeffafdı.",
+      "sentence2": "Herkes için adil muameleye inanıyor."
+    },
+    {
+      "id": 290,
+      "word": "sonbahar",
+      "sentence1": "Dikkatli ol, düşme.",
+      "sentence2": "Sonbaharda yapraklar ağaçlardan düşer."
+    },
+    {
+      "id": 291,
+      "word": "fan",
+      "sentence1": "O, rock müziğinin büyük bir hayranıdır.",
+      "sentence2": "Fan soğuk hava üfliyordu."
+    },
+    {
+      "id": 292,
+      "word": "çiftlik",
+      "sentence1": "Kırsalda bir çiftlikleri var.",
+      "sentence2": "Çiftlik organik sebze üretir."
+    },
+    {
+      "id": 293,
+      "word": "çiftçilik",
+      "sentence1": "Tarım önemli bir sanayidir.",
+      "sentence2": "Birçok insan geçimlerini tarıma bağlıyorlar."
+    },
+    {
+      "id": 294,
+      "word": "moda",
+      "sentence1": "O, moda tasarımı ile ilgileniyor.",
+      "sentence2": "Moda eğilimleri hızla değişir."
+    },
+    {
+      "id": 295,
+      "word": "yağlı",
+      "sentence1": "Bu yiyecek yağ bakımından yüksek.",
+      "sentence2": "O yağ kaybetmeye çalışıyor."
+    },
+    {
+      "id": 296,
+      "word": "korku",
+      "sentence1": "Yükseklik korkusu var.",
+      "sentence2": "Korku güçlü bir motivasyon kaynağı olabilir."
+    },
+    {
+      "id": 297,
+      "word": "özellik",
+      "sentence1": "Yeni telefonun birçok heyecan verici özelliği var.",
+      "sentence2": "Yazılımın ana özelliği, kullanıcı dostudur."
+    },
+    {
+      "id": 298,
+      "word": "yem",
+      "sentence1": "Hayvanat bahçesinde hayvanları besliyorlar.",
+      "sentence2": "Evcil hayvanlarınızı düzenli olarak beslemek önemlidir."
+    },
+    {
+      "id": 299,
+      "word": "dişi",
+      "sentence1": "Dişi kuş, erkek kuştan daha renkli.",
+      "sentence2": "Kadın çalışanlar iş gücünün büyük bir bölümünü oluşturuyor."
+    },
+    {
+      "id": 300,
+      "word": "kurgu",
+      "sentence1": "O, bilim kurgu romanları okumayı sever.",
+      "sentence2": "Film bir kurgu."
+    },
+    {
+      "id": 301,
+      "word": "tarla",
+      "sentence1": "O, tıp alanında çalışıyor.",
+      "sentence2": "Baharda tarla yaban çiçekleriyle doludur."
+    },
+    {
+      "id": 302,
+      "word": "dövüşmek",
+      "sentence1": "Bir oyuncak için kavga etmişler.",
+      "sentence2": "İki boksör şampiyonluk unvanı için mücadele edecek."
+    },
+    {
+      "id": 303,
+      "word": "şekil",
+      "sentence1": "Heykel tarihte ünlü bir figürdür.",
+      "sentence2": "Onun ince bir vücudu var."
+    },
+    {
+      "id": 304,
+      "word": "film",
+      "sentence1": "Sinemada bir film izlediler.",
+      "sentence2": "Film olumlu eleştiriler aldı."
+    },
+    {
+      "id": 305,
+      "word": "son",
+      "sentence1": "Son sınav gelecek hafta.",
+      "sentence2": "Son maçı kazandı."
+    },
+    {
+      "id": 306,
+      "word": "sonunda",
+      "sentence1": "Sonunda, proje tamamlandı.",
+      "sentence2": "Sonunda anahtarlarını buldu."
+    },
+    {
+      "id": 307,
+      "word": "parmak",
+      "sentence1": "Yemek yaparken parmağını incitti.",
+      "sentence2": "Parmağıyla işaret etti."
+    },
+    {
+      "id": 308,
+      "word": "bitirme",
+      "sentence1": "Lütfen akşam yemeğinden önce ödevini bitir.",
+      "sentence2": "Yarışı birinci olarak bitirdi."
+    },
+    {
+      "id": 309,
+      "word": "öncelikle",
+      "sentence1": "Partiye ilk gelen oydu.",
+      "sentence2": "Paris'i ilk kez ziyaret ediyorum."
+    },
+    {
+      "id": 310,
+      "word": "birincisi",
+      "sentence1": "Önce tüm malzemeleri toplamalıyız.",
+      "sentence2": "Öncelikle, buraya geldiğiniz için herkese teşekkür ederim."
+    },
+    {
+      "id": 311,
+      "word": "balık",
+      "sentence1": "Akşam yemeğinde balık yemeyi severim.",
+      "sentence2": "O, gölde büyük bir balık yakaladı."
+    },
+    {
+      "id": 312,
+      "word": "balıkçılık",
+      "sentence1": "Balık tutmak bu bölgede popüler bir eğlencedir.",
+      "sentence2": "Hafta sonu balığa gittiler."
+    },
+    {
+      "id": 313,
+      "word": "uygun",
+      "sentence1": "Bu ayakkabılar bana uymuyor.",
+      "sentence2": "Fit kalmak için egzersiz yapıyor."
+    },
+    {
+      "id": 314,
+      "word": "düzeltmek",
+      "sentence1": "Bilgisayarımı tamir edebilir misin?",
+      "sentence2": "Sızan musluğu onardı."
+    },
+    {
+      "id": 315,
+      "word": "düz",
+      "sentence1": "Toprak düz ve tarım için mükemmel.",
+      "sentence2": "Şehirde bir dairede yaşıyor."
+    },
+    {
+      "id": 316,
+      "word": "grip",
+      "sentence1": "Gribe yakalandım ve evde kalmak zorunda kaldım.",
+      "sentence2": "Grip kışın yaygındır."
+    },
+    {
+      "id": 317,
+      "word": "uçmak",
+      "sentence1": "Kuşlar gökyüzünde yükseklerde uçabilirler.",
+      "sentence2": "Uçağın başımın üstünden uçtuğunu izledim."
+    },
+    {
+      "id": 318,
+      "word": "uçmak",
+      "sentence1": "Uçan kuş dikkatimi çekti.",
+      "sentence2": "Uçan böcekleri izlemeyi sever."
+    },
+    {
+      "id": 319,
+      "word": "odaklan",
+      "sentence1": "Derslerine odaklanmalısın.",
+      "sentence2": "Bu gürültüde konsantre olamıyorum."
+    },
+    {
+      "id": 320,
+      "word": "sonraki",
+      "sentence1": "Ertesi gün güneşli ve parlak bir gündü.",
+      "sentence2": "Sosyal medyada takipçisi var."
+    },
+    {
+      "id": 321,
+      "word": "yabancı",
+      "sentence1": "O, yabancı diller öğreniyor.",
+      "sentence2": "Yabancı değişim öğrencisi İspanya'dan."
+    },
+    {
+      "id": 322,
+      "word": "orman",
+      "sentence1": "Orman birçok hayvana ev sahipliği yapar.",
+      "sentence2": "Ormanda yürüyüşe çıktık."
+    },
+    {
+      "id": 323,
+      "word": "çatal",
+      "sentence1": "Bana çatalı uzatır mısın, lütfen?",
+      "sentence2": "Salatasını yemek için bir çatal kullandı."
+    },
+    {
+      "id": 324,
+      "word": "resmi",
+      "sentence1": "Davet resmi bir etkinlik için.",
+      "sentence2": "Düğünde resmi bir takım elbise giydi."
+    },
+    {
+      "id": 325,
+      "word": "neyse ki",
+      "sentence1": "Neyse ki, zamanında geldik.",
+      "sentence2": "Kayıp cüzdanını buldu, neyse ki."
+    },
+    {
+      "id": 326,
+      "word": "ileri",
+      "sentence1": "Lütfen konuşmak için öne çıkın.",
+      "sentence2": "Daha iyi dinlemek için öne eğildi."
+    },
+    {
+      "id": 327,
+      "word": "özgür",
+      "sentence1": "Müze, Pazar günleri ücretsiz giriş sunar.",
+      "sentence2": "O, seyahat etmeyi seven özgür bir ruhtur."
+    },
+    {
+      "id": 328,
+      "word": "taze",
+      "sentence1": "Taze ekmeğin kokusunu seviyorum.",
+      "sentence2": "Bahçeden taze çiçekler topladı."
+    },
+    {
+      "id": 329,
+      "word": "buzdolabı",
+      "sentence1": "Lütfen sütü buzdolabına koy.",
+      "sentence2": "Buzdolabı yemek kalıntılarıyla dolu."
+    },
+    {
+      "id": 330,
+      "word": "kurbağa",
+      "sentence1": "Kurbağa göle atladı.",
+      "sentence2": "Zambak üzerinde yeşil bir kurbağa gördüm."
+    },
+    {
+      "id": 331,
+      "word": "eğlenceli",
+      "sentence1": "Partide çok eğlendik.",
+      "sentence2": "Yeni şeyler denemek her zaman eğlencelidir."
+    },
+    {
+      "id": 332,
+      "word": "mobilya",
+      "sentence1": "Oturma odası için yeni mobilya satın aldılar.",
+      "sentence2": "Bu mağazadaki mobilyalar çok şık."
+    },
+    {
+      "id": 333,
+      "word": "daha fazla",
+      "sentence1": "Bu konuya daha derinlemesine bakmamız gerekiyor.",
+      "sentence2": "Araştırmayı daha da ileri götürdü."
+    },
+    {
+      "id": 334,
+      "word": "gelecek",
+      "sentence1": "Gelecek olasılıklarla dolu.",
+      "sentence2": "O, gelecekteki kariyeri için plan yapıyor."
+    },
+    {
+      "id": 335,
+      "word": "galerisi",
+      "sentence1": "Sanat galerisi yeni bir sergi düzenliyor.",
+      "sentence2": "O, en yeni sanat eserlerini görmek için galeriyi ziyaret etti."
+    },
+    {
+      "id": 336,
+      "word": "boşluk",
+      "sentence1": "Çitlerde bir boşluk var.",
+      "sentence2": "Bilgimizdeki boşluğu doldurmamız gerekiyor."
+    },
+    {
+      "id": 337,
+      "word": "gaz",
+      "sentence1": "Gaz borudan sızıyor.",
+      "sentence2": "Arabaya daha fazla benzin almalıyız."
+    },
+    {
+      "id": 338,
+      "word": "kapı",
+      "sentence1": "Gece kapı kilitli.",
+      "sentence2": "Lütfen arkanızdaki kapıyı kapatın."
+    },
+    {
+      "id": 339,
+      "word": "genel",
+      "sentence1": "Genel görüş planın lehine.",
+      "sentence2": "O, konuyla ilgili genel bir anlayışa sahiptir."
+    },
+    {
+      "id": 340,
+      "word": "hediye",
+      "sentence1": "O, doğum günü için güzel bir hediye aldı.",
+      "sentence2": "Düşünceli bir hediye vermek her zaman güzel."
+    },
+    {
+      "id": 341,
+      "word": "hedef",
+      "sentence1": "Hedefim yeni bir dil öğrenmektir.",
+      "sentence2": "Yıllarca sıkı çalışmanın ardından hedefine ulaştı."
+    },
+    {
+      "id": 342,
+      "word": "tanrım",
+      "sentence1": "Birçok insan daha üstün bir tanrıya inanır.",
+      "sentence2": "Deniz tanrısı genellikle güçlü olarak tasvir edilir."
+    },
+    {
+      "id": 343,
+      "word": "altın",
+      "sentence1": "Altın değerli bir metal.",
+      "sentence2": "Altın bir kolye takıyordu."
+    },
+    {
+      "id": 344,
+      "word": "golf",
+      "sentence1": "Hafta sonları golf oynamayı sever.",
+      "sentence2": "Golf dünya çapında popüler bir spordur."
+    },
+    {
+      "id": 345,
+      "word": "güzel",
+      "sentence1": "O iyi bir öğrencidir.",
+      "sentence2": "Başkalarına yardım etmek her zaman iyidir."
+    },
+    {
+      "id": 346,
+      "word": "hükümet",
+      "sentence1": "Hükümet yeni politikalar uyguluyor.",
+      "sentence2": "Vatandaşlar hükümetleri için oy kullanma hakkına sahiptir."
+    },
+    {
+      "id": 347,
+      "word": "çimen",
+      "sentence1": "Çocuklar çimlerde oynuyorlar.",
+      "sentence2": "Çimenlerin biçilmesi gerekiyor."
+    },
+    {
+      "id": 348,
+      "word": "selam ver",
+      "sentence1": "Birini gördüğünde selamlamak kibarlık olur.",
+      "sentence2": "O, kapıda konuklarını karşıladı."
+    },
+    {
+      "id": 349,
+      "word": "toprak",
+      "sentence1": "Yağmurdan sonra toprak ıslaktır.",
+      "sentence2": "Dinlenmek için yere oturdular."
+    },
+    {
+      "id": 350,
+      "word": "misafir",
+      "sentence1": "Misafir odası ziyaretçiler için hazır.",
+      "sentence2": "Bu hafta sonu bir misafirimiz var."
+    },
+    {
+      "id": 351,
+      "word": "rehber",
+      "sentence1": "Rehber bize şehri gösterdi.",
+      "sentence2": "O, müzenin tur rehberi."
+    },
+    {
+      "id": 352,
+      "word": "silah",
+      "sentence1": "Polis memuru silah taşıyordu.",
+      "sentence2": "Silah kontrolü tartışmalı bir konudur."
+    },
+    {
+      "id": 353,
+      "word": "adam",
+      "sentence1": "O adam benim kardeşim.",
+      "sentence2": "Partide bir sürü adam var."
+    },
+    {
+      "id": 354,
+      "word": "alışkanlık",
+      "sentence1": "Onun tırnaklarını ısırma alışkanlığı var.",
+      "sentence2": "Kötü alışkanlıkları bırakmak önemlidir."
+    },
+    {
+      "id": 355,
+      "word": "yarı",
+      "sentence1": "Pizza'nın yarısını yedim.",
+      "sentence2": "O yarı İngiliz ve yarı İspanyol."
+    },
+    {
+      "id": 356,
+      "word": "salon",
+      "sentence1": "Salon parti için süslenmişti.",
+      "sentence2": "Ana salonda buluştuk."
+    },
+    {
+      "id": 357,
+      "word": "mutlulukla",
+      "sentence1": "Sonunda mutlu yaşadılar.",
+      "sentence2": "O, haberi duyduğunda mutlu bir şekilde gülümsedi."
+    },
+    {
+      "id": 358,
+      "word": "var mı",
+      "sentence1": "Bir arabam var.",
+      "sentence2": "Sorunuz var mı?"
+    },
+    {
+      "id": 359,
+      "word": "baş ağrısı",
+      "sentence1": "Başım ağrıyor.",
+      "sentence2": "O, baş ağrısı için ilaç aldı."
+    },
+    {
+      "id": 360,
+      "word": "kalp",
+      "sentence1": "Kalp hayati bir organdır.",
+      "sentence2": "Kalbinin hızlandığını hissetti."
+    },
+    {
+      "id": 361,
+      "word": "sıcaklık",
+      "sentence1": "Yazın sıcak dayanılmaz.",
+      "sentence2": "Evde ısıtmayı açtı."
+    },
+    {
+      "id": 362,
+      "word": "ağır",
+      "sentence1": "Bu kutu kaldırılamayacak kadar ağır.",
+      "sentence2": "Omuzlarında ağır bir yük hissetti."
+    },
+    {
+      "id": 363,
+      "word": "yükseklik",
+      "sentence1": "Binanın yüksekliği etkileyici.",
+      "sentence2": "O, ağacın yüksekliğini ölçtü."
+    },
+    {
+      "id": 364,
+      "word": "yardımcı",
+      "sentence1": "O, arkadaşlarına her zaman yardımcıdır.",
+      "sentence2": "Yararlı bir ipucu büyük bir fark yaratabilir."
+    },
+    {
+      "id": 365,
+      "word": "kahraman",
+      "sentence1": "O, kendi topluluğunda bir kahraman.",
+      "sentence2": "Birçok insan itfaiyecileri kahraman olarak görüyor."
+    },
+    {
+      "id": 366,
+      "word": "onun",
+      "sentence1": "Kitap onun.",
+      "sentence2": "Çantasını buldum, onun."
+    },
+    {
+      "id": 367,
+      "word": "kendisi",
+      "sentence1": "Her şeyi tek başına yaptı.",
+      "sentence2": "Aynada kendine baktı."
+    },
+    {
+      "id": 368,
+      "word": "saklanmak",
+      "sentence1": "Duygularını gizlemeye çalıştı.",
+      "sentence2": "Kedi yatağın altına saklanmayı sever."
+    },
+    {
+      "id": 369,
+      "word": "yüksek",
+      "sentence1": "Dağ çok yüksek.",
+      "sentence2": "Yüksek rafa uzandı."
+    },
+    {
+      "id": 370,
+      "word": "tepe",
+      "sentence1": "Tepenin tepesine tırmandık.",
+      "sentence2": "Tepeden manzara güzel."
+    },
+    {
+      "id": 371,
+      "word": "kendisi",
+      "sentence1": "Tek başına yaptı.",
+      "sentence2": "Kendisine aynada baktı."
+    },
+    {
+      "id": 372,
+      "word": "onun",
+      "sentence1": "Bu onun kitabı.",
+      "sentence2": "Anahtarlarını masada buldum."
+    },
+    {
+      "id": 373,
+      "word": "vuruldum",
+      "sentence1": "Topa vurmaya çalıştı.",
+      "sentence2": "Bir araba çarptı."
+    },
+    {
+      "id": 374,
+      "word": "hokey",
+      "sentence1": "Hafta sonları hokey oynuyor.",
+      "sentence2": "Hokey, Kanada'da popüler bir spordur."
+    },
+    {
+      "id": 375,
+      "word": "bekle",
+      "sentence1": "Lütfen elimi tut.",
+      "sentence2": "Bebeği nazikçe tuttu."
+    },
+    {
+      "id": 376,
+      "word": "delik",
+      "sentence1": "Çorabımda bir delik var.",
+      "sentence2": "O, toprağa bir delik kazdı."
+    },
+    {
+      "id": 377,
+      "word": "evim",
+      "sentence1": "Burası benim evim.",
+      "sentence2": "Evde olmayı seviyorum."
+    },
+    {
+      "id": 378,
+      "word": "umut",
+      "sentence1": "Umarım iyi bir gün geçirirsin.",
+      "sentence2": "Gelecek için bir umudu var."
+    },
+    {
+      "id": 379,
+      "word": "çok büyük",
+      "sentence1": "Fil çok büyük.",
+      "sentence2": "Onun büyük bir pul koleksiyonu var."
+    },
+    {
+      "id": 380,
+      "word": "insan",
+      "sentence1": "İnsanlar büyük şeyler yapabilir.",
+      "sentence2": "İnsan beyni karmaşıktır."
+    },
+    {
+      "id": 381,
+      "word": "acıdı",
+      "sentence1": "Duygularını incitmek istemedim.",
+      "sentence2": "O, futbol oynarken bacağını incitti."
+    },
+    {
+      "id": 382,
+      "word": "ideal",
+      "sentence1": "Burası piknik için ideal bir yer.",
+      "sentence2": "Gelecek hakkında ideal bir vizyonu var."
+    },
+    {
+      "id": 383,
+      "word": "belirle",
+      "sentence1": "Kuş türlerini tanımlayabilir misin?",
+      "sentence2": "Sorunu hemen belirleyebildi."
+    },
+    {
+      "id": 384,
+      "word": "hasta",
+      "sentence1": "O hasta ve toplantıya katılamıyor.",
+      "sentence2": "Yolculuktan sonra hastalandı."
+    },
+    {
+      "id": 385,
+      "word": "hastalık",
+      "sentence1": "Hastalığı onu evde tuttu.",
+      "sentence2": "O, ciddi bir hastalıktan iyileşiyor."
+    },
+    {
+      "id": 386,
+      "word": "resim",
+      "sentence1": "Görüntü bulanık.",
+      "sentence2": "O, gün batımının güzel bir resmini çekti."
+    },
+    {
+      "id": 387,
+      "word": "hemen",
+      "sentence1": "Lütfen beni hemen ara.",
+      "sentence2": "O, odayı derhal terk etti."
+    },
+    {
+      "id": 388,
+      "word": "imkansız",
+      "sentence1": "Her şeyi bilmek imkansız.",
+      "sentence2": "O imkansızı mümkün kıldı."
+    },
+    {
+      "id": 389,
+      "word": "dahil",
+      "sentence1": "Fiyat tüm vergiler dahil.",
+      "sentence2": "Kendini grubun içinde hissetti."
+    },
+    {
+      "id": 390,
+      "word": "içinde",
+      "sentence1": "Tüm masrafları dahil, yolculuk pahalıydı.",
+      "sentence2": "Yürüyüş ve yüzme gibi aktivitelerden hoşlanır."
+    },
+    {
+      "id": 391,
+      "word": "artış",
+      "sentence1": "Çabalarımızı artırmamız gerekiyor.",
+      "sentence2": "Nüfus artmaya devam ediyor."
+    },
+    {
+      "id": 392,
+      "word": "inanılmaz",
+      "sentence1": "Yukarıdaki manzara inanılmaz.",
+      "sentence2": "Müzik konusunda inanılmaz bir yeteneği var."
+    },
+    {
+      "id": 393,
+      "word": "bağımsız",
+      "sentence1": "O bağımsız bir kadın.",
+      "sentence2": "Ülke 1923'te bağımsız oldu."
+    },
+    {
+      "id": 394,
+      "word": "bireysel",
+      "sentence1": "Her bireyin kendine özgü nitelikleri vardır.",
+      "sentence2": "Program bireysel ihtiyaçlara göre uyarlanır."
+    },
+    {
+      "id": 395,
+      "word": "sanayi",
+      "sentence1": "Otomotiv endüstrisi hızla büyüyor.",
+      "sentence2": "Moda endüstrisinde çalışıyor."
+    },
+    {
+      "id": 396,
+      "word": "gayri resmi",
+      "sentence1": "Toplantı gayri resmi bir atmosfere sahipti.",
+      "sentence2": "Resmi olmayan kıyafetleri tercih eder."
+    },
+    {
+      "id": 397,
+      "word": "yaralanma",
+      "sentence1": "O bir spor yaralanmasından iyileşiyor.",
+      "sentence2": "Yaralanma onu oyundan uzak tuttu."
+    },
+    {
+      "id": 398,
+      "word": "böcek",
+      "sentence1": "Böcek duvarda sürünüyor.",
+      "sentence2": "Biyoloji dersinde böcekleri inceliyor."
+    },
+    {
+      "id": 399,
+      "word": "içeride",
+      "sentence1": "Kedi kutunun içinde saklanıyor.",
+      "sentence2": "Evin içinde sıcak."
+    },
+    {
+      "id": 400,
+      "word": "bunun yerine",
+      "sentence1": "O, kahve yerine çay seçti.",
+      "sentence2": "Dışarı çıkmak yerine evde kaldı."
+    },
+    {
+      "id": 401,
+      "word": "talimat",
+      "sentence1": "Talimatları dikkatlice takip edin.",
+      "sentence2": "Bu talimatlar net ve anlaşılırdı."
+    },
+    {
+      "id": 402,
+      "word": "eğitmen",
+      "sentence1": "Eğitmen konuyu iyi açıkladı.",
+      "sentence2": "O, nitelikli bir yoga eğitmeni."
+    },
+    {
+      "id": 403,
+      "word": "alet",
+      "sentence1": "O bir müzik aleti çalıyor.",
+      "sentence2": "Piyano ustalık kazanması zor bir enstrümandır."
+    },
+    {
+      "id": 404,
+      "word": "akıllı",
+      "sentence1": "O zeki bir öğrencidir.",
+      "sentence2": "Sistemin akıllı tasarımı herkesi etkiledi."
+    },
+    {
+      "id": 405,
+      "word": "uluslararası",
+      "sentence1": "Konferansın uluslararası katılımcıları vardı.",
+      "sentence2": "Uluslararası bir organizasyon için çalışıyor."
+    },
+    {
+      "id": 406,
+      "word": "giriş",
+      "sentence1": "Giriş ilgi çekici ve bilgilendiriciydi.",
+      "sentence2": "O, konuyla ilgili kısa bir giriş yaptı."
+    },
+    {
+      "id": 407,
+      "word": "icat etmek",
+      "sentence1": "Yeni bir alet icat etmek istiyor.",
+      "sentence2": "Thomas Edison ampulü icat etti."
+    },
+    {
+      "id": 408,
+      "word": "icat",
+      "sentence1": "Telefon çığır açan bir buluştu.",
+      "sentence2": "Son icadı çok dikkat çekti."
+    },
+    {
+      "id": 409,
+      "word": "davet",
+      "sentence1": "Düğüne bir davetiye aldım.",
+      "sentence2": "Davet çok güzel tasarlanmıştı."
+    },
+    {
+      "id": 410,
+      "word": "davet et",
+      "sentence1": "Seni partiye davet etmek istiyorum.",
+      "sentence2": "Bizi düğünlerine davet ettiler."
+    },
+    {
+      "id": 411,
+      "word": "içeri al",
+      "sentence1": "Proje birkaç aşamayı içerecek.",
+      "sentence2": "Karar vermek için arkadaşlarını dahil etmek istemedi."
+    },
+    {
+      "id": 412,
+      "word": "madde",
+      "sentence1": "Lütfen listedeki her bir öğeyi kontrol edin.",
+      "sentence2": "Bu eşya stokta değil."
+    },
+    {
+      "id": 413,
+      "word": "kendisi",
+      "sentence1": "Kedi kendini temizledi.",
+      "sentence2": "Sorun zamanla kendiliğinden çözülecek."
+    },
+    {
+      "id": 414,
+      "word": "çikolata",
+      "sentence1": "Ekmeğime çilekli reçel koymayı severim.",
+      "sentence2": "Taze meyvelerden ev yapımı reçel yaptı."
+    },
+    {
+      "id": 415,
+      "word": "jazz",
+      "sentence1": "Caz müziği dinlemekten hoşlanıyorum.",
+      "sentence2": "O, caz piyanosunu güzel çalar."
+    },
+    {
+      "id": 416,
+      "word": "mücevherler",
+      "sentence1": "O, etkinliğe güzel mücevherler giydi.",
+      "sentence2": "Dükkan el yapımı mücevherler satar."
+    },
+    {
+      "id": 417,
+      "word": "şaka",
+      "sentence1": "Komik bir şaka anlattı.",
+      "sentence2": "Şakayı anlamadım."
+    },
+    {
+      "id": 418,
+      "word": "gazeteci",
+      "sentence1": "Gazeteci olay hakkında bir makale yazdı.",
+      "sentence2": "O bir araştırmacı gazeteci."
+    },
+    {
+      "id": 419,
+      "word": "atlamak",
+      "sentence1": "Köpek havada atlamayı sever.",
+      "sentence2": "Su birikintisinin üzerinden büyük bir sıçrama yaptı."
+    },
+    {
+      "id": 420,
+      "word": "çocuk",
+      "sentence1": "Çocuk parkta oynadı.",
+      "sentence2": "O zeki bir çocuk."
+    },
+    {
+      "id": 421,
+      "word": "öldür",
+      "sentence1": "Böceği öldürmek istemedi.",
+      "sentence2": "Zehir seni öldürebilir."
+    },
+    {
+      "id": 422,
+      "word": "kral",
+      "sentence1": "Kral ülkeyi uzun yıllar yönetti.",
+      "sentence2": "Kral olmak istiyor."
+    },
+    {
+      "id": 423,
+      "word": "diz",
+      "sentence1": "O, futbol oynarken dizini incitti.",
+      "sentence2": "Tek bir diz üzerine diz çöktü."
+    },
+    {
+      "id": 424,
+      "word": "bıçak",
+      "sentence1": "Bıçağa dikkat et.",
+      "sentence2": "O, ekmeği keskin bir bıçakla kesti."
+    },
+    {
+      "id": 425,
+      "word": "kapıyı çal",
+      "sentence1": "Lütfen girmeden önce çal.",
+      "sentence2": "Kapıyı yüksek sesle çaldı."
+    },
+    {
+      "id": 426,
+      "word": "bilgi",
+      "sentence1": "Bilgi güçtür.",
+      "sentence2": "Onun geniş bir tarih bilgisi var."
+    },
+    {
+      "id": 427,
+      "word": "laboratuvar",
+      "sentence1": "Laboratuvar modern teknolojiyle donatılmıştır.",
+      "sentence2": "Bir araştırma laboratuvarında çalışıyor."
+    },
+    {
+      "id": 428,
+      "word": "hanımefendi",
+      "sentence1": "Kasadaki bayan çok yardımcı oldu.",
+      "sentence2": "O nazik bir hanımefendi."
+    },
+    {
+      "id": 429,
+      "word": "göl",
+      "sentence1": "Göl kenarında piknik yaptık.",
+      "sentence2": "Göl dağlarla çevrilidir."
+    },
+    {
+      "id": 430,
+      "word": "lamba",
+      "sentence1": "Lütfen çıkmadan önce lambayı kapatın.",
+      "sentence2": "O, odası için yeni bir lamba aldı."
+    },
+    {
+      "id": 431,
+      "word": "toprak",
+      "sentence1": "Toprak verimli ve tarım için iyi.",
+      "sentence2": "Bir ev inşa etmek için bir parça toprak satın aldılar."
+    },
+    {
+      "id": 432,
+      "word": "dizüstü bilgisayar",
+      "sentence1": "Dizüstü bilgisayarımı çalışmak ve okumak için kullanıyorum.",
+      "sentence2": "Güçlü bir oyun dizüstü bilgisayarı var."
+    },
+    {
+      "id": 433,
+      "word": "sonuncusu",
+      "sentence1": "Bu bilet almak için son şans.",
+      "sentence2": "O, odadan çıkan son kişiydi."
+    },
+    {
+      "id": 434,
+      "word": "daha sonra",
+      "sentence1": "Bunu daha sonra konuşuruz.",
+      "sentence2": "O, beklenenden daha geç geldi."
+    },
+    {
+      "id": 435,
+      "word": "kahkaha",
+      "sentence1": "Gülmek en iyi ilaçtır.",
+      "sentence2": "Dışarıdan kahkahalarını duyabiliyordum."
+    },
+    {
+      "id": 436,
+      "word": "hukuk",
+      "sentence1": "Kanun sizin haklarınızı korur.",
+      "sentence2": "Üniversitede hukuk okudu."
+    },
+    {
+      "id": 437,
+      "word": "avukat",
+      "sentence1": "O, ceza hukuku konusunda uzmanlaşmış bir avukat.",
+      "sentence2": "Dava için bir avukat tutmuş."
+    },
+    {
+      "id": 438,
+      "word": "tembel",
+      "sentence1": "O, odasını temizlemek için çok tembeldir.",
+      "sentence2": "Tembellik etme; kalk ve bir şeyler yap!"
+    },
+    {
+      "id": 439,
+      "word": "kurşun",
+      "sentence1": "Projeyi baştan sona o yönetecek.",
+      "sentence2": "Takımı yönetmek için seçildi."
+    },
+    {
+      "id": 440,
+      "word": "lider",
+      "sentence1": "Grubun lideri bir konuşma yaptı.",
+      "sentence2": "O doğuştan bir lider."
+    },
+    {
+      "id": 441,
+      "word": "öğrenme",
+      "sentence1": "Yeni bir dil öğrenmek zaman alır.",
+      "sentence2": "O, öğrenmesine odaklanmıştır."
+    },
+    {
+      "id": 442,
+      "word": "en az",
+      "sentence1": "Takımın en az deneyimli üyesidir.",
+      "sentence2": "En azından elimizden geleni yaptık."
+    },
+    {
+      "id": 443,
+      "word": "ders",
+      "sentence1": "Profesör ilginç bir ders verdi.",
+      "sentence2": "Bu öğleden sonra katılacağım bir dersim var."
+    },
+    {
+      "id": 444,
+      "word": "limon",
+      "sentence1": "Çayıma limon eklemeyi severim.",
+      "sentence2": "Limon ekşi."
+    },
+    {
+      "id": 445,
+      "word": "borç ver",
+      "sentence1": "Bana bir kalem ödünç verebilir misin?",
+      "sentence2": "Sana kitabımı ödünç vereceğim."
+    },
+    {
+      "id": 446,
+      "word": "daha az",
+      "sentence1": "Kahvemde daha az şeker lazım.",
+      "sentence2": "O, sporla daha az ilgileniyor."
+    },
+    {
+      "id": 447,
+      "word": "seviye",
+      "sentence1": "İngilizce'de hangi seviyedesin?",
+      "sentence2": "Gelişmiş bir seviyede."
+    },
+    {
+      "id": 448,
+      "word": "yaşam tarzı",
+      "sentence1": "Sağlıklı bir yaşam tarzı var.",
+      "sentence2": "Sürdürülebilir bir yaşam tarzını teşvik ediyorlar."
+    },
+    {
+      "id": 449,
+      "word": "kaldırma",
+      "sentence1": "Lütfen asansöre üçüncü kata çıkın.",
+      "sentence2": "Asansör bozuldu."
+    },
+    {
+      "id": 450,
+      "word": "ışık (bir lamba)",
+      "sentence1": "Lütfen ışığı açın.",
+      "sentence2": "Bu odadaki ışık çok parlak."
+    },
+    {
+      "id": 451,
+      "word": "hafif (ağır değil)",
+      "sentence1": "Bu çanta taşıyacak kadar hafiftir.",
+      "sentence2": "Yaz aylarında hafif kumaşları tercih eder."
+    },
+    {
+      "id": 452,
+      "word": "muhtemelen",
+      "sentence1": "Yarın yağmur yağması muhtemel.",
+      "sentence2": "O muhtemelen işi alacak."
+    },
+    {
+      "id": 453,
+      "word": "bağlantı",
+      "sentence1": "Bana bağlantıyı gönderebilir misin?",
+      "sentence2": "Beslenme ve sağlık arasında bir bağlantı vardır."
+    },
+    {
+      "id": 454,
+      "word": "dinleyici",
+      "sentence1": "O iyi bir dinleyicidir.",
+      "sentence2": "Dinleyiciler dikkatli ve ilgiliydi."
+    },
+    {
+      "id": 455,
+      "word": "küçük",
+      "sentence1": "Onun küçük bir köpeği var.",
+      "sentence2": "Biraz daha zaman lazım."
+    },
+    {
+      "id": 456,
+      "word": "kilit",
+      "sentence1": "Kapıyı kilitlemeyi unutma.",
+      "sentence2": "Yeni bir kilit almalıyım."
+    },
+    {
+      "id": 457,
+      "word": "bakın",
+      "sentence1": "Eşsiz bir görünüşü var.",
+      "sentence2": "Şu resme bir bak."
+    },
+    {
+      "id": 458,
+      "word": "kamyon",
+      "sentence1": "Kamyon malları teslim ediyor.",
+      "sentence2": "Yolda bir kamyon gördüm."
+    },
+    {
+      "id": 459,
+      "word": "kayboldu",
+      "sentence1": "Sanırım anahtarlarımı kaybettim.",
+      "sentence2": "Kayıp köpek bulundu."
+    },
+    {
+      "id": 460,
+      "word": "yüksek sesle",
+      "sentence1": "Müzik çok yüksek.",
+      "sentence2": "Yüksek sesle konuştu."
+    },
+    {
+      "id": 461,
+      "word": "yüksek sesle",
+      "sentence1": "O, duyulmak için yüksek sesle konuştu.",
+      "sentence2": "Kalabalık yüksek sesle alkışladı."
+    },
+    {
+      "id": 462,
+      "word": "çok güzel",
+      "sentence1": "Bahçe güzel çiçeklerle doludur.",
+      "sentence2": "Çok güzel bir gülümsemesi var."
+    },
+    {
+      "id": 463,
+      "word": "düşük",
+      "sentence1": "Masa benim için çok düşük.",
+      "sentence2": "O, alçak sesle konuştu."
+    },
+    {
+      "id": 464,
+      "word": "şans",
+      "sentence1": "Sınavında iyi şanslar!",
+      "sentence2": "Son zamanlarda kötü şansları oldu."
+    },
+    {
+      "id": 465,
+      "word": "şanslı",
+      "sentence1": "Bugün kendimi şanslı hissediyorum.",
+      "sentence2": "O şanslı bir insandır."
+    },
+    {
+      "id": 466,
+      "word": "posta",
+      "sentence1": "Mektubunu dün aldım.",
+      "sentence2": "Lütfen postalarınızı kontrol edin."
+    },
+    {
+      "id": 467,
+      "word": "büyük",
+      "sentence1": "O biyolojide uzman.",
+      "sentence2": "Bu önemli bir konu."
+    },
+    {
+      "id": 468,
+      "word": "erkek",
+      "sentence1": "O oyundaki erkek başrol oyuncusu.",
+      "sentence2": "Erkek kediler genellikle daha büyüktür."
+    },
+    {
+      "id": 469,
+      "word": "yönetmek",
+      "sentence1": "O projeyi yönetecek.",
+      "sentence2": "Tek başına halledebilir misin?"
+    },
+    {
+      "id": 470,
+      "word": "müdür",
+      "sentence1": "Müdür takımdan sorumludur.",
+      "sentence2": "O iyi bir yönetici."
+    },
+    {
+      "id": 471,
+      "word": "şekil",
+      "sentence1": "Kibar bir tavır sergiliyor.",
+      "sentence2": "Lütfen saygılı davranın."
+    },
+    {
+      "id": 472,
+      "word": "işaretle",
+      "sentence1": "Lütfen doğru cevabı işaretleyin.",
+      "sentence2": "Kolunda bir doğum lekesi var."
+    },
+    {
+      "id": 473,
+      "word": "evlenmek",
+      "sentence1": "Gelecek yıl evlenmeyi planlıyorlar.",
+      "sentence2": "Aşk için evlenmek istiyor."
+    },
+    {
+      "id": 474,
+      "word": "malzeme",
+      "sentence1": "Bu malzeme çok dayanıklı.",
+      "sentence2": "Daha fazla malzeme satın almamız gerekiyor."
+    },
+    {
+      "id": 475,
+      "word": "matematik",
+      "sentence1": "Matematik benim en sevdiğim konudur.",
+      "sentence2": "Matematikte çok başarılı."
+    },
+    {
+      "id": 476,
+      "word": "matematik",
+      "sentence1": "Matematik zor olabilir.",
+      "sentence2": "Matematik problemlerini çözmekten hoşlanıyorum."
+    },
+    {
+      "id": 477,
+      "word": "madde",
+      "sentence1": "Zaman meselesi.",
+      "sentence2": "Asıl önemli olan senin mutluluğun."
+    },
+    {
+      "id": 478,
+      "word": "modal olabilir",
+      "sentence1": "Bugün erken gidebilirsin.",
+      "sentence2": "Yardımcı olabilir miyim?"
+    },
+    {
+      "id": 479,
+      "word": "medya",
+      "sentence1": "Medya toplumda çok önemli bir rol oynuyor.",
+      "sentence2": "Haberleri sosyal medyada takip ediyorum."
+    },
+    {
+      "id": 480,
+      "word": "tıbbi",
+      "sentence1": "Tıbbi yardıma ihtiyacı var.",
+      "sentence2": "Tıbbi personel çok yardımcı oldu."
+    },
+    {
+      "id": 481,
+      "word": "ilaç",
+      "sentence1": "Alerjisi için ilaç alıyor.",
+      "sentence2": "İlaçlar semptomları hafifletmeye yardımcı olabilir."
+    },
+    {
+      "id": 482,
+      "word": "hafıza",
+      "sentence1": "Hafızam eskisi gibi değil.",
+      "sentence2": "İsimler için harika bir hafızası var."
+    },
+    {
+      "id": 483,
+      "word": "bahsetmek",
+      "sentence1": "Lütfen konuşmanda adımı söyle.",
+      "sentence2": "Bahsetmek istemedim."
+    },
+    {
+      "id": 484,
+      "word": "metal",
+      "sentence1": "Bu masa metalden yapılmıştır.",
+      "sentence2": "Metal iyi bir ısı ileticisidir."
+    },
+    {
+      "id": 485,
+      "word": "yöntem",
+      "sentence1": "Bu problemi çözmek için yeni bir yönteme ihtiyacımız var.",
+      "sentence2": "Bilimsel yöntem araştırma için gereklidir."
+    },
+    {
+      "id": 486,
+      "word": "orta",
+      "sentence1": "Yürümenin en güvenli yeri yolun ortasıdır.",
+      "sentence2": "O, grubun ortasında oturdu."
+    },
+    {
+      "id": 487,
+      "word": "olabilir",
+      "sentence1": "Farklı bir yaklaşımı düşünmelisin.",
+      "sentence2": "Daha sonra yağmur yağabilir."
+    },
+    {
+      "id": 488,
+      "word": "akıl",
+      "sentence1": "Çok zeki bir aklı var.",
+      "sentence2": "Lütfen açık fikirli ol."
+    },
+    {
+      "id": 489,
+      "word": "benim (bana aittir)",
+      "sentence1": "Bu kitap benim.",
+      "sentence2": "Bu kalem senin mi benim mi?"
+    },
+    {
+      "id": 490,
+      "word": "ayna",
+      "sentence1": "Aynada kendine baktı.",
+      "sentence2": "Ayna ışığı yansıtır."
+    },
+    {
+      "id": 491,
+      "word": "eksik",
+      "sentence1": "Eksik parça çok önemli.",
+      "sentence2": "Kitabın kayıp bir sayfasını fark ettim."
+    },
+    {
+      "id": 492,
+      "word": "mobil",
+      "sentence1": "Cep telefonu kullanıyor.",
+      "sentence2": "Mobil teknoloji hızla ilerliyor."
+    },
+    {
+      "id": 493,
+      "word": "maymun",
+      "sentence1": "Maymun ağaçtan ağaca sallandı.",
+      "sentence2": "Maymunlar zekasıyla tanınırlar."
+    },
+    {
+      "id": 494,
+      "word": "ay",
+      "sentence1": "Ay geceleri parlak parlıyor.",
+      "sentence2": "Dolunayda yürüyüşe çıktık."
+    },
+    {
+      "id": 495,
+      "word": "çoğunlukla",
+      "sentence1": "Çoğunlukla kurgu kitapları okurum.",
+      "sentence2": "Hava bu hafta çoğunlukla güneşli."
+    },
+    {
+      "id": 496,
+      "word": "motosiklet",
+      "sentence1": "O, işe motosikletle gider.",
+      "sentence2": "Motosikletler çok hızlı olabilir."
+    },
+    {
+      "id": 497,
+      "word": "hareket",
+      "sentence1": "Arabanın hareketi pürüzsüzdü.",
+      "sentence2": "Kalabalıkta çok fazla hareket var."
+    },
+    {
+      "id": 498,
+      "word": "müzikal",
+      "sentence1": "Müzikal bir yeteneği var.",
+      "sentence2": "Müzikal büyük bir başarıydı."
+    },
+    {
+      "id": 499,
+      "word": "müzisyen",
+      "sentence1": "O yetenekli bir müzisyen.",
+      "sentence2": "Birçok müzisyen geçim için mücadele ediyor."
+    },
+    {
+      "id": 500,
+      "word": "kendim",
+      "sentence1": "Kendim yaptım.",
+      "sentence2": "Kendime odaklanmayı hatırlatmam gerek."
+    },
+    {
+      "id": 501,
+      "word": "dar",
+      "sentence1": "Sokak arabalar için çok dar.",
+      "sentence2": "Dünyaya dar bir bakış açısı var."
+    },
+    {
+      "id": 502,
+      "word": "ulusal",
+      "sentence1": "Ulusal marş çalındı.",
+      "sentence2": "Ulusal bayramlar kültür için önemlidir."
+    },
+    {
+      "id": 503,
+      "word": "doğa",
+      "sentence1": "Doğa baharda güzeldir.",
+      "sentence2": "Doğayı korumalıyız."
+    },
+    {
+      "id": 504,
+      "word": "neredeyse",
+      "sentence1": "Neredeyse doğum gününü unutuyordum.",
+      "sentence2": "O, projesini neredeyse bitirdi."
+    },
+    {
+      "id": 505,
+      "word": "gerekli",
+      "sentence1": "Kurallara uymak gerekir.",
+      "sentence2": "Su yaşam için gereklidir."
+    },
+    {
+      "id": 506,
+      "word": "boyun",
+      "sentence1": "Boynunda bir eşarp takıyordu.",
+      "sentence2": "Şişenin boynu dar."
+    },
+    {
+      "id": 507,
+      "word": "ihtiyaç",
+      "sentence1": "Bu görevde biraz yardıma ihtiyacım var.",
+      "sentence2": "Daha fazla kaynağa ihtiyaç var."
+    },
+    {
+      "id": 508,
+      "word": "hiçbiri",
+      "sentence1": "İkisi de ideal değil.",
+      "sentence2": "Ben ne kahveyi ne de çayı severim."
+    },
+    {
+      "id": 509,
+      "word": "gergin",
+      "sentence1": "Röportajdan önce gergindi.",
+      "sentence2": "Önemli bir olaydan önce gergin olmak normaldir."
+    },
+    {
+      "id": 510,
+      "word": "ağ",
+      "sentence1": "Bilgisayar bir ağa bağlı.",
+      "sentence2": "Sosyal ağlar çok etkili olabilir."
+    },
+    {
+      "id": 511,
+      "word": "gürültü",
+      "sentence1": "İnşaatın gürültüsü can sıkıcıydı.",
+      "sentence2": "Gürültü yüzünden konsantre olamıyorum."
+    },
+    {
+      "id": 512,
+      "word": "gürültülü",
+      "sentence1": "Çocuklar diğer odada gürültü yapıyorlar.",
+      "sentence2": "Gürültülü ortamlar dikkat dağıtabilir."
+    },
+    {
+      "id": 513,
+      "word": "hiçbiri",
+      "sentence1": "Cevapların hiçbiri doğru değildi.",
+      "sentence2": "Listedeki eşyaların hiçbiri bende değil."
+    },
+    {
+      "id": 514,
+      "word": "normal",
+      "sentence1": "Uzun bir günden sonra yorgun hissetmek normaldir.",
+      "sentence2": "Sonuçlar normal aralığında."
+    },
+    {
+      "id": 515,
+      "word": "normal olarak",
+      "sentence1": "Normalde erken kalkarım.",
+      "sentence2": "Mağaza normalde hafta sonları meşguldür."
+    },
+    {
+      "id": 516,
+      "word": "haber",
+      "sentence1": "Ben hatayı fark etmedim.",
+      "sentence2": "Lütfen belgedeki değişikliklere dikkat edin."
+    },
+    {
+      "id": 517,
+      "word": "roman",
+      "sentence1": "O bir roman okuyor.",
+      "sentence2": "Roman geçen yıl yayımlandı."
+    },
+    {
+      "id": 518,
+      "word": "hiçbir yerde",
+      "sentence1": "Anahtarlarımı aradım, ama hiçbir yerde bulunamadılar.",
+      "sentence2": "Hayatında bir yere varamadığını hissediyordu."
+    },
+    {
+      "id": 519,
+      "word": "numara",
+      "sentence1": "Telefon numaranız nedir?",
+      "sentence2": "Katılımcı sayısı artıyor."
+    },
+    {
+      "id": 520,
+      "word": "fındık",
+      "sentence1": "Atıştırmalık olarak fındık yemeyi severim.",
+      "sentence2": "Fındıklar iyi bir protein kaynağıdır."
+    },
+    {
+      "id": 521,
+      "word": "okyanus",
+      "sentence1": "Okyanus geniş ve derin.",
+      "sentence2": "Pek çok yaratık okyanusta yaşar."
+    },
+    {
+      "id": 522,
+      "word": "teklif",
+      "sentence1": "Sana bir teklif yapmak istiyorum.",
+      "sentence2": "İş teklifi çok çekiciydi."
+    },
+    {
+      "id": 523,
+      "word": "memur",
+      "sentence1": "Polis memuru yolumu bulmama yardım etti.",
+      "sentence2": "O, ordudaki yüksek rütbeli bir subaydı."
+    },
+    {
+      "id": 524,
+      "word": "yağ",
+      "sentence1": "Biraz yemek yağı almalıyım.",
+      "sentence2": "Arabanın yağ değiştirmesi gerekiyor."
+    },
+    {
+      "id": 525,
+      "word": "üzerine",
+      "sentence1": "Kedi masaya atladı.",
+      "sentence2": "Kitabı rafın üzerine koydu."
+    },
+    {
+      "id": 526,
+      "word": "fırsat",
+      "sentence1": "Bu senin için harika bir fırsat.",
+      "sentence2": "Öğrenme fırsatını kaçırma."
+    },
+    {
+      "id": 527,
+      "word": "seçenek",
+      "sentence1": "Seçmen gereken birkaç seçenek var.",
+      "sentence2": "Bu mevcut en iyi seçenek."
+    },
+    {
+      "id": 528,
+      "word": "sıradan",
+      "sentence1": "Sıradan bir hayat yaşıyor.",
+      "sentence2": "Sıradan bir gün."
+    },
+    {
+      "id": 529,
+      "word": "organizasyon",
+      "sentence1": "Örgüt başkalarına yardım etmeye adanmıştır.",
+      "sentence2": "Kâr amacı gütmeyen bir organizasyon için çalışıyor."
+    },
+    {
+      "id": 530,
+      "word": "organize etmek",
+      "sentence1": "Dosyaları organize etmeliyiz.",
+      "sentence2": "Bu etkinliği organize etmeme yardım edebilir misin?"
+    },
+    {
+      "id": 531,
+      "word": "orijinal",
+      "sentence1": "Bu orijinal tablo.",
+      "sentence2": "Şarkının orijinal versiyonunu tercih ederim."
+    },
+    {
+      "id": 532,
+      "word": "kendimizi",
+      "sentence1": "Kendimize dikkat etmeliyiz.",
+      "sentence2": "Partide eğlenelim."
+    },
+    {
+      "id": 533,
+      "word": "dışarıda",
+      "sentence1": "Çocuklar dışarıda oynuyorlar.",
+      "sentence2": "Güneşli bir günde dışarıda oturmak güzel."
+    },
+    {
+      "id": 534,
+      "word": "fırın",
+      "sentence1": "Fırını ısıtmam gerek.",
+      "sentence2": "Kurabiyeler fırında pişiriliyor."
+    },
+    {
+      "id": 535,
+      "word": "kendi",
+      "sentence1": "Kendi evimin sahibi olmak istiyorum.",
+      "sentence2": "Başarılı bir işi var."
+    },
+    {
+      "id": 536,
+      "word": "sahibi",
+      "sentence1": "Restoranın sahibi çok dost canlısıdır.",
+      "sentence2": "O, büyük bir şirketin sahibidir."
+    },
+    {
+      "id": 537,
+      "word": "paketleme",
+      "sentence1": "Yolculuk için eşyalarımı toplamalıyım.",
+      "sentence2": "Kart paketi masanın üzerinde."
+    },
+    {
+      "id": 538,
+      "word": "ağrı",
+      "sentence1": "Sırtım ağrıyor.",
+      "sentence2": "Acı dayanılmaz bir şeydi."
+    },
+    {
+      "id": 539,
+      "word": "ressam",
+      "sentence1": "Ressam güzel bir duvar resmi yarattı.",
+      "sentence2": "O, yetenekli bir ressamdır."
+    },
+    {
+      "id": 540,
+      "word": "saray",
+      "sentence1": "Saray şehir merkezinde yer almaktadır.",
+      "sentence2": "Her yıl birçok turist sarayı ziyaret eder."
+    },
+    {
+      "id": 541,
+      "word": "pantolon",
+      "sentence1": "Yeni bir pantolon almam gerekiyor.",
+      "sentence2": "Bu pantolon çok dar."
+    },
+    {
+      "id": 542,
+      "word": "park yeri",
+      "sentence1": "Park yeri yok.",
+      "sentence2": "Sokakta bir park yeri buldum."
+    },
+    {
+      "id": 543,
+      "word": "özel",
+      "sentence1": "Sanata özel bir ilgim var.",
+      "sentence2": "Ziyaretinizin özel bir nedeni var mı?"
+    },
+    {
+      "id": 544,
+      "word": "geçmek",
+      "sentence1": "Mezun olmak için sınavı geçmen gerek.",
+      "sentence2": "Mesajı iletirim."
+    },
+    {
+      "id": 545,
+      "word": "yolcu",
+      "sentence1": "Yolcu çok yorgundu.",
+      "sentence2": "Tüm yolcular biletlerini göstermelidir."
+    },
+    {
+      "id": 546,
+      "word": "geçmiş",
+      "sentence1": "Geçmiş genellikle unutulur.",
+      "sentence2": "Geçmişten ders alıyoruz."
+    },
+    {
+      "id": 547,
+      "word": "hasta",
+      "sentence1": "Hasta iyileşiyor.",
+      "sentence2": "Doktorlar sabırlı ve anlayışlı olmalı."
+    },
+    {
+      "id": 548,
+      "word": "şablon",
+      "sentence1": "Elbise güzel bir çiçek desenine sahip.",
+      "sentence2": "Bu sayılardaki örneği görebiliyor musun?"
+    },
+    {
+      "id": 549,
+      "word": "ödeme",
+      "sentence1": "Faturaları ödemem gerek.",
+      "sentence2": "Biletleri nasıl ödeyeceksin?"
+    },
+    {
+      "id": 550,
+      "word": "barış",
+      "sentence1": "Hepimiz dünyada barış istiyoruz.",
+      "sentence2": "Barış görüşmeleri başarılı oldu."
+    },
+    {
+      "id": 551,
+      "word": "bir kuruş",
+      "sentence1": "Bir kuruş tasarruf, bir kuruş kazançtır.",
+      "sentence2": "Sokakta bir kuruş buldu."
+    },
+    {
+      "id": 552,
+      "word": "için",
+      "sentence1": "Fiyatı 10 dolar.",
+      "sentence2": "Kişi başına 5 dolar ödememiz gerekiyor."
+    },
+    {
+      "id": 553,
+      "word": "yüzde",
+      "sentence1": "Faiz oranı yüzde 5'tir.",
+      "sentence2": "Nüfusun sadece küçük bir yüzdesi etkilenir."
+    },
+    {
+      "id": 554,
+      "word": "yapmak",
+      "sentence1": "Grup festivalde sahne alacak.",
+      "sentence2": "Sahnede sahne almak istiyor."
+    },
+    {
+      "id": 555,
+      "word": "belki",
+      "sentence1": "Belki de farklı bir yaklaşım denemeliyiz.",
+      "sentence2": "Belki daha sonra partiye gideceğim."
+    },
+    {
+      "id": 556,
+      "word": "izin",
+      "sentence1": "Binaya girmek için izne ihtiyacın var.",
+      "sentence2": "Arabayı kullanmak için iznim var."
+    },
+    {
+      "id": 557,
+      "word": "kişilik",
+      "sentence1": "Canlı bir kişiliği var.",
+      "sentence2": "Kişilik testleri açıklayıcı olabilir."
+    },
+    {
+      "id": 558,
+      "word": "evcil hayvan",
+      "sentence1": "Evcil bir kedim var.",
+      "sentence2": "Evcil hayvanlar çok bakım gerektirir."
+    },
+    {
+      "id": 559,
+      "word": "benzin",
+      "sentence1": "Araba benzinle çalışıyor.",
+      "sentence2": "Petrol fiyatları yükseliyor."
+    },
+    {
+      "id": 560,
+      "word": "fotoğraf",
+      "sentence1": "Güneşin batışının fotoğrafını çektim.",
+      "sentence2": "Onun eski fotoğraf koleksiyonu var."
+    },
+    {
+      "id": 561,
+      "word": "fiziksel",
+      "sentence1": "Fiziksel aktivite sağlık için önemlidir.",
+      "sentence2": "Önümüzdeki hafta muayene olacak."
+    },
+    {
+      "id": 562,
+      "word": "fizik",
+      "sentence1": "Fizik, madde ve enerjinin çalışmasıdır.",
+      "sentence2": "O, fizik çalışmaktan hoşlanır."
+    },
+    {
+      "id": 563,
+      "word": "seçmek",
+      "sentence1": "Lütfen güverteden bir kart seçin.",
+      "sentence2": "Saat 5'te seni alırım."
+    },
+    {
+      "id": 564,
+      "word": "pilot",
+      "sentence1": "Pilot uçağı güvenle uçurdu.",
+      "sentence2": "O bir pilot olmak istiyor."
+    },
+    {
+      "id": 565,
+      "word": "gezegen",
+      "sentence1": "Dünya güneşten üçüncü gezegendir.",
+      "sentence2": "Mars'a sıklıkla Kırmızı Gezegen denir."
+    },
+    {
+      "id": 566,
+      "word": "bitki",
+      "sentence1": "Bitkinin suya ve güneş ışığına ihtiyacı var.",
+      "sentence2": "Pek çok farklı bitki türü vardır."
+    },
+    {
+      "id": 567,
+      "word": "plastik",
+      "sentence1": "Bu şişe plastikten yapılmıştır.",
+      "sentence2": "Plastik kirliliği büyük bir çevre sorunudur."
+    },
+    {
+      "id": 568,
+      "word": "levha",
+      "sentence1": "Lütfen tabağını lavaboya koy.",
+      "sentence2": "Tabak seramikten yapılmıştır."
+    },
+    {
+      "id": 569,
+      "word": "platform",
+      "sentence1": "Tren 2. platformda gelecek.",
+      "sentence2": "O, treni beklerken platformda durdu."
+    },
+    {
+      "id": 570,
+      "word": "lütfen",
+      "sentence1": "Lütfen kapıyı kapatın.",
+      "sentence2": "Lütfen bana yardım eder misiniz?"
+    },
+    {
+      "id": 571,
+      "word": "memnun",
+      "sentence1": "Sonuçlardan memnunum.",
+      "sentence2": "Onunla tanışmaktan memnun oldu."
+    },
+    {
+      "id": 572,
+      "word": "cüzdan",
+      "sentence1": "Cebimde biraz para buldum.",
+      "sentence2": "Cebinde bir delik var."
+    },
+    {
+      "id": 573,
+      "word": "kibar",
+      "sentence1": "\"\"\"Teşekkür etmek kibarlıktır\"\".\"",
+      "sentence2": "O, konuklarına karşı her zaman kibardır."
+    },
+    {
+      "id": 574,
+      "word": "kirlilik",
+      "sentence1": "Hava kirliliği ciddi bir sorundur.",
+      "sentence2": "Şehirlerimizdeki kirliliği azaltmalıyız."
+    },
+    {
+      "id": 575,
+      "word": "çıkart",
+      "sentence1": "Eğer çok sıkırsan balon patlar.",
+      "sentence2": "Mutfaktan bir patlama sesi duydum."
+    },
+    {
+      "id": 576,
+      "word": "nüfusu",
+      "sentence1": "Şehrin nüfusu artıyor.",
+      "sentence2": "Dünya nüfusu 7 milyarın üzerinde."
+    },
+    {
+      "id": 577,
+      "word": "pozisyonu",
+      "sentence1": "Şirkette bir pozisyon için başvurdu.",
+      "sentence2": "Takımdaki konumu çok önemli."
+    },
+    {
+      "id": 578,
+      "word": "sahiplik",
+      "sentence1": "Yasadışı uyuşturucu bulundurmak suçtur.",
+      "sentence2": "Arabasını kaybetti."
+    },
+    {
+      "id": 579,
+      "word": "ihtimali",
+      "sentence1": "Yarın yağmur ihtimali var.",
+      "sentence2": "Her olasılığı göz önünde bulundurmalıyız."
+    },
+    {
+      "id": 580,
+      "word": "afiş",
+      "sentence1": "Poster yaklaşan konseri ilan ediyordu.",
+      "sentence2": "Posteri yatak odası duvarına astı."
+    },
+    {
+      "id": 581,
+      "word": "güç",
+      "sentence1": "Fırtına sırasında elektrikler kesildi.",
+      "sentence2": "Karar verme yetkisine sahiptir."
+    },
+    {
+      "id": 582,
+      "word": "tahmin et",
+      "sentence1": "Hava durumunu tahmin etmek zordur.",
+      "sentence2": "Oyunun sonucunu tahmin edebilir."
+    },
+    {
+      "id": 583,
+      "word": "hazır",
+      "sentence1": "Bulgularını konferansta sunacak.",
+      "sentence2": "O, doğum günü için bir hediye aldı."
+    },
+    {
+      "id": 584,
+      "word": "başkan",
+      "sentence1": "Başkan ulusa bir konuşma yaptı.",
+      "sentence2": "Bir gün başkan olmak istiyor."
+    },
+    {
+      "id": 585,
+      "word": "önlemek",
+      "sentence1": "Yollarda kazaları önlemeliyiz.",
+      "sentence2": "Hastalığın yayılmasını önlemek için önlemler alındı."
+    },
+    {
+      "id": 586,
+      "word": "baskı",
+      "sentence1": "Bu belgeyi yazdırmam gerek.",
+      "sentence2": "Yazıcıda mürekkep kalmadı."
+    },
+    {
+      "id": 587,
+      "word": "yazıcı",
+      "sentence1": "Yazıcı düzgün çalışmıyor.",
+      "sentence2": "Yeni bir yazıcı satın almam gerekiyor."
+    },
+    {
+      "id": 588,
+      "word": "hapishane",
+      "sentence1": "O, suçları için hapse gönderildi.",
+      "sentence2": "Hapishane şehrin dışında yer almaktadır."
+    },
+    {
+      "id": 589,
+      "word": "ödül",
+      "sentence1": "O, yarışmada bir ödül kazandı.",
+      "sentence2": "Nobel Ödülü her yıl verilir."
+    },
+    {
+      "id": 590,
+      "word": "süreç",
+      "sentence1": "Süreç karmaşık.",
+      "sentence2": "Süreci kolaylaştırmalıyız."
+    },
+    {
+      "id": 591,
+      "word": "ürünler",
+      "sentence1": "Çok çeşitli ürünler üretiyorlar.",
+      "sentence2": "Fabrika araba üretir."
+    },
+    {
+      "id": 592,
+      "word": "profesyonel",
+      "sentence1": "O profesyonel bir dansçıdır.",
+      "sentence2": "Profesyonel bir sunum yaptı."
+    },
+    {
+      "id": 593,
+      "word": "profesör",
+      "sentence1": "Profesör biyoloji öğretiyor.",
+      "sentence2": "O, üniversitede saygın bir profesördür."
+    },
+    {
+      "id": 594,
+      "word": "profil",
+      "sentence1": "Lütfen profil bilgilerinizi güncelleyin.",
+      "sentence2": "İnternette güçlü bir profili var."
+    },
+    {
+      "id": 595,
+      "word": "program",
+      "sentence1": "Program akşam 8'de başlıyor.",
+      "sentence2": "Bilgisayar bilimi programına kayıtlı."
+    },
+    {
+      "id": 596,
+      "word": "ilerleme",
+      "sentence1": "Projede ilerleme kaydediyoruz.",
+      "sentence2": "O, çalışmalarında önemli bir ilerleme gösterdi."
+    },
+    {
+      "id": 597,
+      "word": "söz ver",
+      "sentence1": "Sana ödevinde yardım edeceğime söz veriyorum.",
+      "sentence2": "Onun için her zaman orada olacağına dair bir söz verdi."
+    },
+    {
+      "id": 598,
+      "word": "ifade et",
+      "sentence1": "Bazı kelimeleri doğru telaffuz etmek zordur.",
+      "sentence2": "Adımı telaffuz edebilir misin?"
+    },
+    {
+      "id": 599,
+      "word": "korumak",
+      "sentence1": "Çevreyi korumalıyız.",
+      "sentence2": "Yasalar tüketicileri korumak için tasarlanmıştır."
+    },
+    {
+      "id": 600,
+      "word": "vermek",
+      "sentence1": "Öğrencilere daha fazla kaynak sağlamalıyız.",
+      "sentence2": "Örgüt, muhtaç olanlara yardım sağlamayı amaçlamaktadır."
+    },
+    {
+      "id": 601,
+      "word": "bar",
+      "sentence1": "İçkiler için yerel barda buluştular.",
+      "sentence2": "Bar, canlı müziği ile bilinir."
+    },
+    {
+      "id": 602,
+      "word": "kamuya",
+      "sentence1": "Halk bu etkinliğe davetlidir.",
+      "sentence2": "Toplu taşıma şehir için gereklidir."
+    },
+    {
+      "id": 603,
+      "word": "yayınla",
+      "sentence1": "Gelecek yıl yeni bir kitap yayınlamayı planlıyorlar.",
+      "sentence2": "Makale bilimsel bir dergide yayımlandı."
+    },
+    {
+      "id": 604,
+      "word": "çek",
+      "sentence1": "Lütfen kapıyı açmak için çek.",
+      "sentence2": "O ağır kutuyu zemin üzerinden çekmeye çalıştı."
+    },
+    {
+      "id": 605,
+      "word": "amaç",
+      "sentence1": "Toplantının amacı projeyi tartışmaktır.",
+      "sentence2": "Kariyerinde açık bir amacı var."
+    },
+    {
+      "id": 606,
+      "word": "itmek",
+      "sentence1": "Arabayı çalıştırmak için itmek zorunda kaldı.",
+      "sentence2": "Tepeye çıkmasına yardım etmek için ona bir itme verdi."
+    },
+    {
+      "id": 607,
+      "word": "kalite",
+      "sentence1": "Ürünün kalitesi çok yüksek.",
+      "sentence2": "Hizmetlerimizin kalitesini arttırmamız gerekiyor."
+    },
+    {
+      "id": 608,
+      "word": "miktarı",
+      "sentence1": "Herkes için yeterli miktarda yiyecek var.",
+      "sentence2": "Ürettiğimiz atık miktarını azaltmalıyız."
+    },
+    {
+      "id": 609,
+      "word": "kraliçe",
+      "sentence1": "Kraliçe şehri ziyaret ediyor.",
+      "sentence2": "Geçen yıl kraliçe taç giydi."
+    },
+    {
+      "id": 610,
+      "word": "soru",
+      "sentence1": "Bana bir sorunuz var mı?",
+      "sentence2": "Zor bir soru sordu."
+    },
+    {
+      "id": 611,
+      "word": "sessizce",
+      "sentence1": "Kimse duymasın diye sessizce konuştu.",
+      "sentence2": "O sessizce evin içinde hareket etti."
+    },
+    {
+      "id": 612,
+      "word": "yarış (koşu)",
+      "sentence1": "Gelecek hafta birbirleriyle yarışacaklar.",
+      "sentence2": "O, yarışı birkaç saniye önle kazandı."
+    },
+    {
+      "id": 613,
+      "word": "demiryolu",
+      "sentence1": "Tren istasyonu bugün meşgul.",
+      "sentence2": "Tren istasyonundan trene bindi."
+    },
+    {
+      "id": 614,
+      "word": "yükseltmek",
+      "sentence1": "Bu konuda farkındalık yaratmalıyız.",
+      "sentence2": "Yardım için para toplama planları var."
+    },
+    {
+      "id": 615,
+      "word": "oranı",
+      "sentence1": "Faiz oranı arttı.",
+      "sentence2": "Başarı oranımızı artırmanın yollarını bulmalıyız."
+    },
+    {
+      "id": 616,
+      "word": "daha çok",
+      "sentence1": "Bu gece evde kalmayı tercih ederim.",
+      "sentence2": "O, klasik müziğe oldukça düşkündür."
+    },
+    {
+      "id": 617,
+      "word": "ulaşmak",
+      "sentence1": "Cuma'ya kadar bir karara varmalıyız.",
+      "sentence2": "Yıllar sonra nihayet hedefine ulaştı."
+    },
+    {
+      "id": 618,
+      "word": "tepki ver",
+      "sentence1": "Habere beklendiği gibi tepki vermedi.",
+      "sentence2": "Stresli durumlarda genelde nasıl tepki veriyorsunuz?"
+    },
+    {
+      "id": 619,
+      "word": "anlamak",
+      "sentence1": "Ne kadar geç olduğunu fark etmedim.",
+      "sentence2": "Sonunda doktor olma hayalini gerçekleştirdi."
+    },
+    {
+      "id": 620,
+      "word": "alıyor",
+      "sentence1": "Mektubunuzu aldığım için mutlu oldum.",
+      "sentence2": "Gönderdiğim paketi aldın mı?"
+    },
+    {
+      "id": 621,
+      "word": "son zamanlarda",
+      "sentence1": "Son değişiklikler sistemi geliştirdi.",
+      "sentence2": "Teknolojideki son gelişmeleri inceliyor."
+    },
+    {
+      "id": 622,
+      "word": "yakın zamanda",
+      "sentence1": "Geçenlerde yeni bir işe başladım.",
+      "sentence2": "Son zamanlarda iyi bir film izledin mi?"
+    },
+    {
+      "id": 623,
+      "word": "karşılama",
+      "sentence1": "Resepsiyon lüks bir otelde yapıldı.",
+      "sentence2": "Resepsiyonda çalışıyor."
+    },
+    {
+      "id": 624,
+      "word": "tarif",
+      "sentence1": "Çikolatalı kek için bir tarifin var mı?",
+      "sentence2": "Bu tarifi takip etmek kolaydır."
+    },
+    {
+      "id": 625,
+      "word": "tanımak",
+      "sentence1": "Onu fotoğraftan tanıyabiliyorum.",
+      "sentence2": "Güçlü yanlarını tanımak önemlidir."
+    },
+    {
+      "id": 626,
+      "word": "tavsiye ederim",
+      "sentence1": "Yeni restoranı denemenizi tavsiye ederim.",
+      "sentence2": "İyi bir kitap önerebilir misiniz?"
+    },
+    {
+      "id": 627,
+      "word": "kayıt",
+      "sentence1": "Lütfen toplantı protokolünü kaydedin.",
+      "sentence2": "Kayıtlar satışlarda önemli bir artış olduğunu gösteriyor."
+    },
+    {
+      "id": 628,
+      "word": "kayıt",
+      "sentence1": "Konuşmanın kaydı internette mevcut.",
+      "sentence2": "O, performansının kaydını dinledi."
+    },
+    {
+      "id": 629,
+      "word": "geri dönüştür",
+      "sentence1": "Kağıt ve plastiği geri dönüştürmeliyiz.",
+      "sentence2": "Geri dönüşüm, atıkları azaltmaya yardımcı olur."
+    },
+    {
+      "id": 630,
+      "word": "azaltmak",
+      "sentence1": "Enerji tüketimimizi azaltmamız gerekiyor.",
+      "sentence2": "Bu politika kirliliği azaltmayı amaçlamaktadır."
+    },
+    {
+      "id": 631,
+      "word": "başvuru",
+      "sentence1": "Lütfen talimatlar için kullanıcı kılavuzuna bakın.",
+      "sentence2": "Raporunda birkaç çalışmaya değindi."
+    },
+    {
+      "id": 632,
+      "word": "reddetmek",
+      "sentence1": "Davetini reddetmek zorunda kaldım.",
+      "sentence2": "O, soruyu cevaplamayı reddetti."
+    },
+    {
+      "id": 633,
+      "word": "bölge",
+      "sentence1": "Bu bölge güzel manzaralarıyla bilinir.",
+      "sentence2": "İklim bölgeler arasında büyük farklılıklar gösterir."
+    },
+    {
+      "id": 634,
+      "word": "düzenli",
+      "sentence1": "Düzenli olarak spor salonuna gidiyorum.",
+      "sentence2": "Düzenli bir uyku programı var."
+    },
+    {
+      "id": 635,
+      "word": "ilişki",
+      "sentence1": "Yakın bir ilişkileri var.",
+      "sentence2": "Arkadaşlıklarına ve aile ilişkilerine değer verir."
+    },
+    {
+      "id": 636,
+      "word": "kaldır",
+      "sentence1": "Lütfen içeri girmeden önce ayakkabılarınızı çıkarın.",
+      "sentence2": "Eski duvar kağıdını kaldırdı."
+    },
+    {
+      "id": 637,
+      "word": "tamir",
+      "sentence1": "Bisikletimi tamir etmem gerekiyor.",
+      "sentence2": "Tamir beklenenden daha uzun sürdü."
+    },
+    {
+      "id": 638,
+      "word": "yerine koy",
+      "sentence1": "Eski pilleri değiştirmemiz gerek.",
+      "sentence2": "Kırık camı değiştirdi."
+    },
+    {
+      "id": 639,
+      "word": "cevapla",
+      "sentence1": "Lütfen e-postama cevap ver.",
+      "sentence2": "Mesajıma cevap vermedi."
+    },
+    {
+      "id": 640,
+      "word": "rapor",
+      "sentence1": "Rapor zamanında teslim edildi.",
+      "sentence2": "O, iklim değişikliği hakkında bir rapor yazıyor."
+    },
+    {
+      "id": 641,
+      "word": "haberci",
+      "sentence1": "Muhabir olayı canlı yayınladı.",
+      "sentence2": "O, tanınmış bir siyasi muhabirdir."
+    },
+    {
+      "id": 642,
+      "word": "istek",
+      "sentence1": "Bir ricam var.",
+      "sentence2": "İdare talebi onaylandı."
+    },
+    {
+      "id": 643,
+      "word": "araştırma",
+      "sentence1": "Yenilenebilir enerji üzerine araştırma yapıyor.",
+      "sentence2": "Araştırma sonuçları bir dergide yayınlandı."
+    },
+    {
+      "id": 644,
+      "word": "araştırmacı",
+      "sentence1": "Araştırmacı bulgularını konferansta sundu.",
+      "sentence2": "O, kendi alanında önde gelen bir araştırmacıdır."
+    },
+    {
+      "id": 645,
+      "word": "cevap ver",
+      "sentence1": "Lütfen soruma cevap verin.",
+      "sentence2": "E-postaya hızlıca yanıt verdi."
+    },
+    {
+      "id": 646,
+      "word": "yanıt",
+      "sentence1": "Cevap olumluydu.",
+      "sentence2": "Hala bir yanıt bekliyoruz."
+    },
+    {
+      "id": 647,
+      "word": "dinlenmek",
+      "sentence1": "Bir süre dinlenmem gerek.",
+      "sentence2": "Uzun yolculuktan sonra dinlendi."
+    },
+    {
+      "id": 648,
+      "word": "gözden geçirme",
+      "sentence1": "Lütfen belgeyi dikkatlice inceleyin.",
+      "sentence2": "İnceleme süreci birkaç hafta sürdü."
+    },
+    {
+      "id": 649,
+      "word": "atla",
+      "sentence1": "Hafta sonları bisiklet sürmeyi seviyorum.",
+      "sentence2": "Yeni arabayla yolculuk yaptı."
+    },
+    {
+      "id": 650,
+      "word": "yüzük",
+      "sentence1": "Güzel bir altın yüzük takıyordu.",
+      "sentence2": "Yüzük onun parmağı için çok sıkıydı."
+    },
+    {
+      "id": 651,
+      "word": "yüzük",
+      "sentence1": "Telefonun çaldığını duydum.",
+      "sentence2": "Kilise çanları her saat çalıyor."
+    },
+    {
+      "id": 652,
+      "word": "yükselmek",
+      "sentence1": "Güneş sabah 6'da doğacak.",
+      "sentence2": "Fiyatların gelecek yıl yükselmesi bekleniyor."
+    },
+    {
+      "id": 653,
+      "word": "kaya",
+      "sentence1": "Taş kaldırılamayacak kadar ağırydı.",
+      "sentence2": "Plajda güzel taşlar topladı."
+    },
+    {
+      "id": 654,
+      "word": "rolü",
+      "sentence1": "O, projede önemli bir rol oynadı.",
+      "sentence2": "Filmdeki rolü zorluydu."
+    },
+    {
+      "id": 655,
+      "word": "çatı",
+      "sentence1": "Çatının tamir edilmesi gerekiyor.",
+      "sentence2": "Çatıya güneş panelleri yerleştirdiler."
+    },
+    {
+      "id": 656,
+      "word": "yuvarlak",
+      "sentence1": "Masa yuvarlak.",
+      "sentence2": "Onun yuvarlak bir yüzü var."
+    },
+    {
+      "id": 657,
+      "word": "yolculuk",
+      "sentence1": "Havaalanına giden en iyi yol hangisi?",
+      "sentence2": "Yol inşaat nedeniyle kapalıydı."
+    },
+    {
+      "id": 658,
+      "word": "çöp",
+      "sentence1": "Lütfen çöpü dışarı çıkarın.",
+      "sentence2": "Park çöplerle doluydu."
+    },
+    {
+      "id": 659,
+      "word": "kaba",
+      "sentence1": "Sözünü kesmesi kabalık oldu.",
+      "sentence2": "Garson'a kaba davrandı."
+    },
+    {
+      "id": 660,
+      "word": "koş",
+      "sentence1": "Sabahları koşmayı severim.",
+      "sentence2": "O her gün beş mil koşar."
+    },
+    {
+      "id": 661,
+      "word": "koşucu",
+      "sentence1": "Koşucu yarışı rekor sürede bitirdi.",
+      "sentence2": "O, profesyonel bir maraton koşucusu."
+    },
+    {
+      "id": 662,
+      "word": "koşmak",
+      "sentence1": "Koşmak, formda kalmanın harika bir yoludur.",
+      "sentence2": "Parkta koşmaktan hoşlanıyor."
+    },
+    {
+      "id": 663,
+      "word": "ne yazık ki",
+      "sentence1": "O, arkadaşlarına üzüntüyle veda etti.",
+      "sentence2": "O, ona üzüntüyle baktı."
+    },
+    {
+      "id": 664,
+      "word": "güvenli",
+      "sentence1": "Bina depremlere karşı güvenlidir.",
+      "sentence2": "Oynamadan önce bölgenin güvenli olduğundan emin olun."
+    },
+    {
+      "id": 665,
+      "word": "yelken",
+      "sentence1": "Dünya çevresinde yelken açmaya karar verdiler.",
+      "sentence2": "Hafta sonları yelken açmayı sever."
+    },
+    {
+      "id": 666,
+      "word": "yelkenli",
+      "sentence1": "Yelkencilik yaz aylarında popüler bir aktivite.",
+      "sentence2": "Geçen yıl yelken kursuna girdi."
+    },
+    {
+      "id": 667,
+      "word": "maaş",
+      "sentence1": "Onun maaşı sektörün ortalamasından daha yüksek.",
+      "sentence2": "O, şirketle maaşını görüşüyor."
+    },
+    {
+      "id": 668,
+      "word": "satış",
+      "sentence1": "Mağaza bu hafta sonu büyük bir satış yapıyor.",
+      "sentence2": "Bu elbiseyi indirimde aldım."
+    },
+    {
+      "id": 669,
+      "word": "sos",
+      "sentence1": "Makarnama domates sosu koymayı severim.",
+      "sentence2": "Tarif, baharatlı bir sos istiyor."
+    },
+    {
+      "id": 670,
+      "word": "korumak",
+      "sentence1": "Çevreyi kurtarmalıyız.",
+      "sentence2": "O, yeni bir araba için para biriktirdi."
+    },
+    {
+      "id": 671,
+      "word": "korkuyorum",
+      "sentence1": "Korku filmi sırasında korkmuştu.",
+      "sentence2": "Geceleri yalnız yürümekten korkuyordu."
+    },
+    {
+      "id": 672,
+      "word": "korkunç",
+      "sentence1": "Hayaletli ev gerçekten korkutucuydu.",
+      "sentence2": "Korku filmlerini sevmem."
+    },
+    {
+      "id": 673,
+      "word": "sahne",
+      "sentence1": "Filmin son sahnesi çok duygusaldı.",
+      "sentence2": "Parkta sahneyi çektiler."
+    },
+    {
+      "id": 674,
+      "word": "zamanlama",
+      "sentence1": "Konferansın programı internette bulunabilir.",
+      "sentence2": "Bu hafta yoğun bir programı var."
+    },
+    {
+      "id": 675,
+      "word": "puan",
+      "sentence1": "Son skor 3-2 oldu.",
+      "sentence2": "Kazanan golü o attı."
+    },
+    {
+      "id": 676,
+      "word": "ekran",
+      "sentence1": "Ekran çok parlak.",
+      "sentence2": "O, filmi büyük bir ekranda izledi."
+    },
+    {
+      "id": 677,
+      "word": "arama",
+      "sentence1": "Anahtarlarımı aramalıyım.",
+      "sentence2": "Kayıp kişinin aranması devam ediyor."
+    },
+    {
+      "id": 678,
+      "word": "mevsim",
+      "sentence1": "Kış benim en sevdiğim mevsimdir.",
+      "sentence2": "Şovun yeni sezonu gelecek hafta başlıyor."
+    },
+    {
+      "id": 679,
+      "word": "koltuk",
+      "sentence1": "Lütfen oturun.",
+      "sentence2": "Yanımdaki koltuk boş."
+    },
+    {
+      "id": 680,
+      "word": "ikinci (sonraki)",
+      "sentence1": "İkinci bölüm daha ilginç.",
+      "sentence2": "Bunu bir sonraki toplantıda tartışacağız."
+    },
+    {
+      "id": 681,
+      "word": "ikincisi,",
+      "sentence1": "İkincisi, bütçeyi düşünmeliyiz.",
+      "sentence2": "İkincisi, harika bir takım oyuncusu."
+    },
+    {
+      "id": 682,
+      "word": "gizli",
+      "sentence1": "Bu aramızdaki bir sır.",
+      "sentence2": "O, sırrı kulağıma fısıldadı."
+    },
+    {
+      "id": 683,
+      "word": "sekreter",
+      "sentence1": "Sekreter toplantıyı planlayacak.",
+      "sentence2": "Bir hukuk firmasında sekreter olarak çalışıyor."
+    },
+    {
+      "id": 684,
+      "word": "görünmek",
+      "sentence1": "Birlikte mutlu görünüyorlar.",
+      "sentence2": "Görünüşe göre bir sorunumuz var."
+    },
+    {
+      "id": 685,
+      "word": "anlayış",
+      "sentence1": "Heyecanını hissediyorum.",
+      "sentence2": "Onun iyi bir espri anlayışı var."
+    },
+    {
+      "id": 686,
+      "word": "ayrı",
+      "sentence1": "İki konuyu birbirinden ayırmamız gerek.",
+      "sentence2": "Ayrı ayrı evlerde yaşamaya karar verdiler."
+    },
+    {
+      "id": 687,
+      "word": "seri",
+      "sentence1": "Bütün seriyi bir hafta sonu izledim.",
+      "sentence2": "Kitap bir seri parçasıdır."
+    },
+    {
+      "id": 688,
+      "word": "ciddi",
+      "sentence1": "O ciddi bir insandır.",
+      "sentence2": "Bu ciddi bir konu."
+    },
+    {
+      "id": 689,
+      "word": "hizmet etmek",
+      "sentence1": "Restoran, yüksek kaliteli yemekler sunmayı amaçlamaktadır.",
+      "sentence2": "Sabah 7'den 11'e kadar kahvaltı servisi yapıyorlar."
+    },
+    {
+      "id": 690,
+      "word": "hizmet",
+      "sentence1": "Otel mükemmel oda hizmeti sunuyor.",
+      "sentence2": "Müşteri hizmetleri bizim için çok önemlidir."
+    },
+    {
+      "id": 691,
+      "word": "birkaç",
+      "sentence1": "Bu konuda birkaç kitap okudum.",
+      "sentence2": "Birkaç kişi toplantıya katıldı."
+    },
+    {
+      "id": 692,
+      "word": "salla",
+      "sentence1": "Lütfen kullanmadan önce şişeyi sallayın.",
+      "sentence2": "Arkadaşça el sıkıştılar."
+    },
+    {
+      "id": 693,
+      "word": "olacak",
+      "sentence1": "Bu zorluğun üstesinden birlikte geleceğiz.",
+      "sentence2": "Dans edelim mi?"
+    },
+    {
+      "id": 694,
+      "word": "şekil",
+      "sentence1": "Kurabiye bir yıldız şeklindedir.",
+      "sentence2": "Sanatında eşsiz bir şekil anlayışı var."
+    },
+    {
+      "id": 695,
+      "word": "sayfa",
+      "sentence1": "Yatak için temiz çarşaf lazım.",
+      "sentence2": "Sanatçı büyük bir kağıt parçası kullandı."
+    },
+    {
+      "id": 696,
+      "word": "gemi",
+      "sentence1": "Gemi okyanusun karşısında yelken açıyor.",
+      "sentence2": "Proje için bir model gemi yaptılar."
+    },
+    {
+      "id": 697,
+      "word": "omuz",
+      "sentence1": "Omzunda bir dövmesi var.",
+      "sentence2": "Çantayı omzunda taşıdı."
+    },
+    {
+      "id": 698,
+      "word": "bağır",
+      "sentence1": "Kütüphanede bağırma.",
+      "sentence2": "Gürültüden duyulmak için bağırmak zorunda kaldı."
+    },
+    {
+      "id": 699,
+      "word": "kapalı",
+      "sentence1": "Lütfen arkanızdaki kapıyı kapatın.",
+      "sentence2": "Soğuğu dışarıda tutmak için pencereyi kapattı."
+    },
+    {
+      "id": 700,
+      "word": "yan taraf",
+      "sentence1": "Binanın yan tarafı boyanıyor.",
+      "sentence2": "Yan yatmayı tercih eder."
+    },
+    {
+      "id": 701,
+      "word": "işaret",
+      "sentence1": "Parka giden yolu gösteren bir işaret var.",
+      "sentence2": "Hazır olduğunu bana bildirmek için işaret yaptı."
+    },
+    {
+      "id": 702,
+      "word": "gümüş",
+      "sentence1": "O, güzel bir gümüş kolye takıyordu.",
+      "sentence2": "Bulutun gümüş astarları görünürdü."
+    },
+    {
+      "id": 703,
+      "word": "basit",
+      "sentence1": "Bu basit bir görev.",
+      "sentence2": "O, kavramı basit terimlerle açıkladı."
+    },
+    {
+      "id": 704,
+      "word": "o zamandan beri",
+      "sentence1": "2010'dan beri burada yaşıyorum.",
+      "sentence2": "Madem sordun, sana yardım edeceğim."
+    },
+    {
+      "id": 705,
+      "word": "şarkı söyleme",
+      "sentence1": "Duşta şarkı söylemekten hoşlanır.",
+      "sentence2": "Şarkı söylemek duyguları ifade etmenin harika bir yoludur."
+    },
+    {
+      "id": 706,
+      "word": "tek",
+      "sentence1": "Tek başına çocuk yetiştiriyor.",
+      "sentence2": "Tek bilet istiyorum, lütfen."
+    },
+    {
+      "id": 707,
+      "word": "efendim",
+      "sentence1": "Affedersiniz efendim, yardımcı olabilir miyim?",
+      "sentence2": "\"Öğretmen ona \"\"efendim\"\" diye hitap etti.\""
+    },
+    {
+      "id": 708,
+      "word": "site",
+      "sentence1": "İnşaat alanı bugün meşgul.",
+      "sentence2": "Bu web sitesi öğrenmek için harika bir kaynaktır."
+    },
+    {
+      "id": 709,
+      "word": "boyutu",
+      "sentence1": "Hangi beden giyiyorsun?",
+      "sentence2": "Gömlek farklı boyutlarda mevcuttur."
+    },
+    {
+      "id": 710,
+      "word": "kayak",
+      "sentence1": "Kışın kayak yapmayı severim.",
+      "sentence2": "Kayak popüler bir kış sporu."
+    },
+    {
+      "id": 711,
+      "word": "kayak",
+      "sentence1": "Kayak benim en sevdiğim kış etkinliğidir.",
+      "sentence2": "Dağlarda kayak yapmaktan hoşlanır."
+    },
+    {
+      "id": 712,
+      "word": "deri",
+      "sentence1": "Cildin sağlıklı ve parlak görünüyor.",
+      "sentence2": "O, kuru cildine losyon sürdü."
+    },
+    {
+      "id": 713,
+      "word": "gökyüzü",
+      "sentence1": "Gökyüzü bugün açık ve mavi.",
+      "sentence2": "Gece gökyüzündeki yıldızları izledik."
+    },
+    {
+      "id": 714,
+      "word": "uyku",
+      "sentence1": "Geceleri daha fazla uyumam gerek.",
+      "sentence2": "Uyku iyi sağlık için önemlidir."
+    },
+    {
+      "id": 715,
+      "word": "yavaşça",
+      "sentence1": "O, yavaşça otobüs durağına yürüdü.",
+      "sentence2": "Saat yavaşça tık tık etti."
+    },
+    {
+      "id": 716,
+      "word": "akıllı telefon",
+      "sentence1": "E-postalarını kontrol etmek için akıllı telefonunu kullanıyor.",
+      "sentence2": "Akıllı telefonlar modern hayatta gerekli hale geldi."
+    },
+    {
+      "id": 717,
+      "word": "koku",
+      "sentence1": "Taze kahvenin kokusunu seviyorum.",
+      "sentence2": "Çiçeklerin kokusu havayı doldurdu."
+    },
+    {
+      "id": 718,
+      "word": "gülümse",
+      "sentence1": "Beni sıcak bir gülümsemeyle karşıladı.",
+      "sentence2": "Bir gülümseme birinin gününü aydınlatabilir."
+    },
+    {
+      "id": 719,
+      "word": "duman",
+      "sentence1": "Çömlekten duman çıkıyordu.",
+      "sentence2": "Bir boru içmeye çalıştı ama hoşuna gitmedi."
+    },
+    {
+      "id": 720,
+      "word": "sigara içmek",
+      "sentence1": "Bu alanda sigara içmek yasaktır.",
+      "sentence2": "Sağlık nedenlerinden dolayı sigarayı bıraktı."
+    },
+    {
+      "id": 721,
+      "word": "sabun",
+      "sentence1": "Biraz sabun almam gerek.",
+      "sentence2": "Sabunun hoş bir kokusu var."
+    },
+    {
+      "id": 722,
+      "word": "futbol",
+      "sentence1": "Futbol dünya çapında popüler bir spordur.",
+      "sentence2": "O, her hafta sonu futbol oynar."
+    },
+    {
+      "id": 723,
+      "word": "sosyal",
+      "sentence1": "Sosyal medya iletişim şeklimizi değiştirdi.",
+      "sentence2": "Sosyal nedenlerle çok aktif."
+    },
+    {
+      "id": 724,
+      "word": "toplum",
+      "sentence1": "Toplum sürekli gelişiyor.",
+      "sentence2": "Daha iyi bir toplum için birlikte çalışmalıyız."
+    },
+    {
+      "id": 725,
+      "word": "çorap",
+      "sentence1": "Yeni bir çift çorap almalıyım.",
+      "sentence2": "Bu çoraplar yumuşak malzemeden yapılmıştır."
+    },
+    {
+      "id": 726,
+      "word": "yumuşak",
+      "sentence1": "Yastık çok yumuşak ve rahat.",
+      "sentence2": "Yumuşak, pürüzsüz bir cildi var."
+    },
+    {
+      "id": 727,
+      "word": "asker",
+      "sentence1": "Asker dikkatli durdu.",
+      "sentence2": "Birçok asker savaşta cesurca savaştı."
+    },
+    {
+      "id": 728,
+      "word": "çözeltisi",
+      "sentence1": "Bu soruna bir çözüm bulmalıyız.",
+      "sentence2": "Çözüm basit ve etkili."
+    },
+    {
+      "id": 729,
+      "word": "çözmek",
+      "sentence1": "Bu bulmacayı çözmeme yardım edebilir misin?",
+      "sentence2": "Sorunu çözmek için birlikte çalıştılar."
+    },
+    {
+      "id": 730,
+      "word": "bir yerlerde",
+      "sentence1": "Sanırım anahtarlarımı evde bir yerde unuttum.",
+      "sentence2": "Sessiz bir yerde buluşup konuşalım."
+    },
+    {
+      "id": 731,
+      "word": "sıralama",
+      "sentence1": "Lütfen belgeleri tarihe göre sıralayın.",
+      "sentence2": "Önceliklerinizi sıralamak önemlidir."
+    },
+    {
+      "id": 732,
+      "word": "kaynak",
+      "sentence1": "Bilginin kaynağı bilinmiyor.",
+      "sentence2": "Devam etmeden önce kaynağı doğrulamamız gerek."
+    },
+    {
+      "id": 733,
+      "word": "konuşmacı",
+      "sentence1": "Konuşmacı ilham verici bir konuşma yaptı.",
+      "sentence2": "O, çevre sorunları konusunda tanınmış bir konuşmacıdır."
+    },
+    {
+      "id": 734,
+      "word": "özel",
+      "sentence1": "İhtiyaçlarınız hakkında daha spesifik olabilir misiniz?",
+      "sentence2": "Meseleyi anlamak için belirli örneklere ihtiyacımız var."
+    },
+    {
+      "id": 735,
+      "word": "konuşma",
+      "sentence1": "Başkanın konuşması çok dokunaklıydı.",
+      "sentence2": "O, eğitimin önemi üzerine bir konuşma yaptı."
+    },
+    {
+      "id": 736,
+      "word": "hız",
+      "sentence1": "Bu yolda hız sınırı 60 km/saattir.",
+      "sentence2": "O, trene yetişmek için yüksek hızda sürdü."
+    },
+    {
+      "id": 737,
+      "word": "örümcek",
+      "sentence1": "Odanın köşesinde bir örümcek gördüm.",
+      "sentence2": "O, örümceklerden korkar."
+    },
+    {
+      "id": 738,
+      "word": "kaşık",
+      "sentence1": "Bana bir kaşık uzatır mısın lütfen?",
+      "sentence2": "O, çayını bir kaşıkla karıştırdı."
+    },
+    {
+      "id": 739,
+      "word": "kare",
+      "sentence1": "Masa kare şeklindedir.",
+      "sentence2": "O, kağıda bir kare çizdi."
+    },
+    {
+      "id": 740,
+      "word": "aşama",
+      "sentence1": "Oyun ana sahnede oynanacak.",
+      "sentence2": "Sahne arkasında performansına hazırlanıyor."
+    },
+    {
+      "id": 741,
+      "word": "merdiven",
+      "sentence1": "Merdivenler dik ve dar.",
+      "sentence2": "Merdivenlerde kaydı ve düştü."
+    },
+    {
+      "id": 742,
+      "word": "damga",
+      "sentence1": "Bu mektubu postalamak için bir pul lazım.",
+      "sentence2": "Dünyanın dört bir yanından nadir pullar toplar."
+    },
+    {
+      "id": 743,
+      "word": "yıldız",
+      "sentence1": "Gece gökyüzü yıldızlarla dolu.",
+      "sentence2": "Hollywood'da bir yıldız olmak istiyor."
+    },
+    {
+      "id": 744,
+      "word": "başla",
+      "sentence1": "Toplantıya başlama zamanı.",
+      "sentence2": "Gelecek hafta projeye başlayacaklar."
+    },
+    {
+      "id": 745,
+      "word": "eyalet",
+      "sentence1": "Ekonominin durumu iyileşiyor.",
+      "sentence2": "Şok halinde."
+    },
+    {
+      "id": 746,
+      "word": "kal",
+      "sentence1": "Bu gece evde kalacağım.",
+      "sentence2": "Lütfen sunum sırasında sessiz kalın."
+    },
+    {
+      "id": 747,
+      "word": "çalmak",
+      "sentence1": "Biri bisikletimi çalmaya çalıştı.",
+      "sentence2": "Başkalarından çalmak yanlıştır."
+    },
+    {
+      "id": 748,
+      "word": "adım",
+      "sentence1": "Bir adım geri çekil ve düşün.",
+      "sentence2": "Ona yardım etmek için bir adım ileri gitti."
+    },
+    {
+      "id": 749,
+      "word": "mide",
+      "sentence1": "Midem homurdanıyor, yemek yemem lazım.",
+      "sentence2": "Çok fazla yemek yemekten midesi ağrıyor."
+    },
+    {
+      "id": 750,
+      "word": "taş",
+      "sentence1": "Taş kaldırılamayacak kadar ağırydı.",
+      "sentence2": "Plajdan güzel taşlar topladı."
+    },
+    {
+      "id": 751,
+      "word": "mağaza",
+      "sentence1": "Marketten alışverişe gitmem gerek.",
+      "sentence2": "Mağaza bu hafta sonu satış yapıyor."
+    },
+    {
+      "id": 752,
+      "word": "fırtına",
+      "sentence1": "Fırtına çok fazla hasar verdi.",
+      "sentence2": "Fırtına sırasında içeride kaldık."
+    },
+    {
+      "id": 753,
+      "word": "düz",
+      "sentence1": "Önümüzde kilometrelerce düz yol var.",
+      "sentence2": "Omuzlarına kadar uzanan düz saçları var."
+    },
+    {
+      "id": 754,
+      "word": "garip",
+      "sentence1": "Nisan ayında kar görmek garip.",
+      "sentence2": "Durum hakkında garip bir hisse sahipti."
+    },
+    {
+      "id": 755,
+      "word": "strateji",
+      "sentence1": "Şirketin stratejisi inovasyona odaklanmaktır.",
+      "sentence2": "Başarılı olmak için net bir stratejiye ihtiyacımız var."
+    },
+    {
+      "id": 756,
+      "word": "stres",
+      "sentence1": "İş yerinde çok fazla stres yaşıyor.",
+      "sentence2": "Stresin etkili bir şekilde yönetilmesi önemlidir."
+    },
+    {
+      "id": 757,
+      "word": "yapı",
+      "sentence1": "Binanın yapısı çok modern.",
+      "sentence2": "Takımımızın yapısını geliştirmemiz gerekiyor."
+    },
+    {
+      "id": 758,
+      "word": "aptal",
+      "sentence1": "Toplantıyı unutmam aptallık oldu.",
+      "sentence2": "Aptal olma; hareket etmeden önce düşün."
+    },
+    {
+      "id": 759,
+      "word": "başarılı olmak",
+      "sentence1": "Kariyerinde başarılı olmak için çok çalıştı.",
+      "sentence2": "Başarılı olmak istiyorsan, ısrarlı olmalısın."
+    },
+    {
+      "id": 760,
+      "word": "başarılı",
+      "sentence1": "O başarılı bir işadamıdır.",
+      "sentence2": "Projeleri çok başarılı oldu."
+    },
+    {
+      "id": 761,
+      "word": "böyle",
+      "sentence1": "Böyle bir davranış kabul edilemez.",
+      "sentence2": "Hiç böyle güzel bir gün batımı görmemiştim."
+    },
+    {
+      "id": 762,
+      "word": "aniden",
+      "sentence1": "Işıklar aniden söndü.",
+      "sentence2": "O aniden gerçeği fark etti."
+    },
+    {
+      "id": 763,
+      "word": "önermek",
+      "sentence1": "Biraz ara vermemizi öneririm.",
+      "sentence2": "İyi bir restoran önerebilir misiniz?"
+    },
+    {
+      "id": 764,
+      "word": "öneri",
+      "sentence1": "Bu harika bir öneri!",
+      "sentence2": "Süreci geliştirmek için bir önerim var."
+    },
+    {
+      "id": 765,
+      "word": "takım elbise",
+      "sentence1": "Görüşmede takım elbise giyiyordu.",
+      "sentence2": "Bu etkinlik için takım elbise gereklidir."
+    },
+    {
+      "id": 766,
+      "word": "destek",
+      "sentence1": "Bu proje için desteğine ihtiyacım var.",
+      "sentence2": "Öğrencilere maddi destek sağlıyorlar."
+    },
+    {
+      "id": 767,
+      "word": "sanıyorum",
+      "sentence1": "Sanırım haklısın.",
+      "sentence2": "Sence bundan sonra ne olacak?"
+    },
+    {
+      "id": 768,
+      "word": "eminim",
+      "sentence1": "Bundan emin misin?",
+      "sentence2": "Yardım edebileceğimden emin değilim."
+    },
+    {
+      "id": 769,
+      "word": "sürpriz",
+      "sentence1": "Doğum günü için sürpriz bir partiydi.",
+      "sentence2": "Sürprizleri ve beklenmedik hediyeleri sever."
+    },
+    {
+      "id": 770,
+      "word": "şaşırdım",
+      "sentence1": "Haber beni şaşırttı.",
+      "sentence2": "Ona söylediğimde şaşırmış görünüyordu."
+    },
+    {
+      "id": 771,
+      "word": "şaşırtıcı",
+      "sentence1": "Sonuçlar şaşırtıcıydı.",
+      "sentence2": "İşlerin ne kadar çabuk değiştiği şaşırtıcı."
+    },
+    {
+      "id": 772,
+      "word": "anket",
+      "sentence1": "Geri bildirim almak için bir anket yaptık.",
+      "sentence2": "Anket sonuçları gelecek hafta yayınlanacak."
+    },
+    {
+      "id": 773,
+      "word": "tatlı",
+      "sentence1": "Bu pasta çok tatlı.",
+      "sentence2": "Tatlı bir kişiliği var."
+    },
+    {
+      "id": 774,
+      "word": "sembol",
+      "sentence1": "Kalp aşkın sembolüdür.",
+      "sentence2": "Barış genellikle bir güvercin sembolüyle temsil edilir."
+    },
+    {
+      "id": 775,
+      "word": "sistem",
+      "sentence1": "Bilgisayar sistemi bakım için çöktü.",
+      "sentence2": "İletişim sistemimizi geliştirmemiz gerekiyor."
+    },
+    {
+      "id": 776,
+      "word": "tablet",
+      "sentence1": "Okumak için bir tablet kullanıyorum.",
+      "sentence2": "Tabletler internette gezinmek için kullanışlıdır."
+    },
+    {
+      "id": 777,
+      "word": "konuşmak",
+      "sentence1": "Performansın hakkında konuşmamız gerek.",
+      "sentence2": "Daha sonra konuşabilir miyiz?"
+    },
+    {
+      "id": 778,
+      "word": "hedef",
+      "sentence1": "Hedefimiz satışları %20 artırmak.",
+      "sentence2": "Hedef kitleniz kim?"
+    },
+    {
+      "id": 779,
+      "word": "görev",
+      "sentence1": "Bu görevi tamamlamak önemlidir.",
+      "sentence2": "Senin için bir görevim var."
+    },
+    {
+      "id": 780,
+      "word": "tadı",
+      "sentence1": "Bu yemeğin eşsiz bir tadı var.",
+      "sentence2": "Taze meyvenin tadına bayılıyorum."
+    },
+    {
+      "id": 781,
+      "word": "öğretim",
+      "sentence1": "Öğretmenlik ödüllendirici bir meslektir.",
+      "sentence2": "Küçük çocuklara öğretme konusunda tutkulu."
+    },
+    {
+      "id": 782,
+      "word": "teknoloji",
+      "sentence1": "Teknoloji hızla değişiyor.",
+      "sentence2": "En son teknoloji trendlerine ayak uydurmamız gerekiyor."
+    },
+    {
+      "id": 783,
+      "word": "gençlik",
+      "sentence1": "Ergenlik yılları zor olabilir.",
+      "sentence2": "Tipik bir gençlik tavrı var."
+    },
+    {
+      "id": 784,
+      "word": "sıcaklık",
+      "sentence1": "Sıcaklık yükseliyor.",
+      "sentence2": "Dışarıdaki sıcaklık nedir?"
+    },
+    {
+      "id": 785,
+      "word": "terim",
+      "sentence1": "Bu teknik bir terim.",
+      "sentence2": "Bu terimi açıklayabilir misiniz?"
+    },
+    {
+      "id": 786,
+      "word": "metin",
+      "sentence1": "Lütfen metni dikkatlice okuyun.",
+      "sentence2": "Metni anlamak zor."
+    },
+    {
+      "id": 787,
+      "word": "kendileri",
+      "sentence1": "Kendi başlarına yaptılar.",
+      "sentence2": "Kendine bakabilir."
+    },
+    {
+      "id": 788,
+      "word": "kalın",
+      "sentence1": "Bu kitap çok kalın.",
+      "sentence2": "Onun kalın saçları var."
+    },
+    {
+      "id": 789,
+      "word": "hırsız",
+      "sentence1": "Hırsız polis tarafından yakalandı.",
+      "sentence2": "O, hırsızlardan korkar."
+    },
+    {
+      "id": 790,
+      "word": "ince",
+      "sentence1": "Bu kağıt çok ince.",
+      "sentence2": "İnce bir vücudu var."
+    },
+    {
+      "id": 791,
+      "word": "düşünmek",
+      "sentence1": "Düşünmek, bir sorunu çözmenin ilk adımıdır.",
+      "sentence2": "O her zaman düşüncelerinde kaybolur."
+    },
+    {
+      "id": 792,
+      "word": "üçüncü",
+      "sentence1": "Bu şehri üçüncü kez ziyaret ediyorum.",
+      "sentence2": "Üçüncü oldu."
+    },
+    {
+      "id": 793,
+      "word": "düşünce",
+      "sentence1": "İlginç bir düşünce.",
+      "sentence2": "Dün de benzer bir düşüncem vardı."
+    },
+    {
+      "id": 794,
+      "word": "atmak",
+      "sentence1": "Lütfen topu bana at.",
+      "sentence2": "Güçlü bir atışı var."
+    },
+    {
+      "id": 795,
+      "word": "düzgün",
+      "sentence1": "Lütfen odanızı temiz tutun.",
+      "sentence2": "Onun düzenli bir görünüşü var."
+    },
+    {
+      "id": 796,
+      "word": "bağ",
+      "sentence1": "Röportajda kravat giyiyordu.",
+      "sentence2": "Kravat resmi bir aksesuardır."
+    },
+    {
+      "id": 797,
+      "word": "ucu",
+      "sentence1": "Sınav için bana bahşiş verebilir misin?",
+      "sentence2": "Harika yemek tavsiyeleri var."
+    },
+    {
+      "id": 798,
+      "word": "alet",
+      "sentence1": "Bu alet odun kesmek için kullanılır.",
+      "sentence2": "Tam bir bahçecilik aleti seti var."
+    },
+    {
+      "id": 799,
+      "word": "üst",
+      "sentence1": "Dağın zirvesi karla kaplıdır.",
+      "sentence2": "O, sınıfının en iyisidir."
+    },
+    {
+      "id": 800,
+      "word": "dokunmak",
+      "sentence1": "Lütfen resimlere dokunmayın.",
+      "sentence2": "Sesinin rahatlatıcı bir dokunuşu var."
+    },
+    {
+      "id": 801,
+      "word": "tur",
+      "sentence1": "Şehir turuna çıktık.",
+      "sentence2": "Tur çok bilgilendiriciydi."
+    },
+    {
+      "id": 802,
+      "word": "turizm",
+      "sentence1": "Turizm önemli bir sanayidir.",
+      "sentence2": "Ülke ağırlıklı olarak turizme bağlıdır."
+    },
+    {
+      "id": 803,
+      "word": "yönünde",
+      "sentence1": "O, parka doğru yürüdü.",
+      "sentence2": "Daha iyi dinlemek için ona doğru eğildi."
+    },
+    {
+      "id": 804,
+      "word": "havlu",
+      "sentence1": "Lütfen bana havluyu uzat.",
+      "sentence2": "Duştan sonra havluya ihtiyacım var."
+    },
+    {
+      "id": 805,
+      "word": "kule",
+      "sentence1": "Kule 100 metre yüksekliğinde.",
+      "sentence2": "Biz kuleye tırmandık."
+    },
+    {
+      "id": 806,
+      "word": "oyuncak",
+      "sentence1": "Oyuncak masanın üzerinde.",
+      "sentence2": "Köpeği için yeni bir oyuncak aldı."
+    },
+    {
+      "id": 807,
+      "word": "iz",
+      "sentence1": "Tren bu raydan geçer.",
+      "sentence2": "Karda izler bıraktı."
+    },
+    {
+      "id": 808,
+      "word": "gelenek",
+      "sentence1": "Yılbaşı gecesini ailesiyle kutlamak bir gelenektir.",
+      "sentence2": "Hediye verme geleneği var."
+    },
+    {
+      "id": 809,
+      "word": "geleneksel",
+      "sentence1": "Bu benim ülkemin geleneksel bir yemeğidir.",
+      "sentence2": "O, festivalde geleneksel bir elbise giydi."
+    },
+    {
+      "id": 810,
+      "word": "tren",
+      "sentence1": "Tren saat 5'te kalkacak.",
+      "sentence2": "Trenle seyahat etmeyi tercih ederim."
+    },
+    {
+      "id": 811,
+      "word": "eğitmen",
+      "sentence1": "Antrenör yeteneklerimi geliştirmeme yardım etti.",
+      "sentence2": "O sertifikalı bir fitness eğitmeni."
+    },
+    {
+      "id": 812,
+      "word": "eğitim",
+      "sentence1": "Her pazartesi antrenmanlarım var.",
+      "sentence2": "Şirket yeni çalışanlar için eğitim sağlar."
+    },
+    {
+      "id": 813,
+      "word": "nakliye",
+      "sentence1": "Bu şehirde toplu taşıma çok verimli.",
+      "sentence2": "Ana ulaşım aracı olarak bisikleti kullanıyorlar."
+    },
+    {
+      "id": 814,
+      "word": "yolcu",
+      "sentence1": "İyi bir gezgin her zaman yerel geleneklere saygı duyar.",
+      "sentence2": "O, birçok ülkeyi ziyaret etmiş deneyimli bir gezgin."
+    },
+    {
+      "id": 815,
+      "word": "sıkıntı",
+      "sentence1": "Bilgisayarımla ilgili bir sorunum var.",
+      "sentence2": "Geç kaldığı için başı belaya girdi."
+    },
+    {
+      "id": 816,
+      "word": "kamyon",
+      "sentence1": "Kamyon mallarla dolu.",
+      "sentence2": "Ağır eşyaları taşımak için bir kamyon kullanırlar."
+    },
+    {
+      "id": 817,
+      "word": "ikiz",
+      "sentence1": "Onlar ikiz kardeşlerdir.",
+      "sentence2": "İkizlerin benzer ilgi alanları var."
+    },
+    {
+      "id": 818,
+      "word": "tipik",
+      "sentence1": "Ofisteki tipik bir gün.",
+      "sentence2": "Hava, yılın bu zamanı için tipik."
+    },
+    {
+      "id": 819,
+      "word": "yeraltı",
+      "sentence1": "Metro istasyonu kalabalık.",
+      "sentence2": "Bir yeraltı tüneli bulmuşlar."
+    },
+    {
+      "id": 820,
+      "word": "anlayış",
+      "sentence1": "O, konuyu iyi anlıyor.",
+      "sentence2": "Bu konuyu anladığı etkileyici."
+    },
+    {
+      "id": 821,
+      "word": "ne yazık ki",
+      "sentence1": "Ne yazık ki, toplantıya katılamayacağız.",
+      "sentence2": "Ne yazık ki, etkinlik iptal edildi."
+    },
+    {
+      "id": 822,
+      "word": "mutsuz",
+      "sentence1": "İşinden memnun değildi.",
+      "sentence2": "Mutsuz müşteri hizmetten şikayet etti."
+    },
+    {
+      "id": 823,
+      "word": "üniforma",
+      "sentence1": "Öğrenciler okula üniforma giyerler.",
+      "sentence2": "Polis memuru tam üniformalıydı."
+    },
+    {
+      "id": 824,
+      "word": "birim",
+      "sentence1": "Bu bir ölçü birimi.",
+      "sentence2": "Her birimin kendine özgü özellikleri var."
+    },
+    {
+      "id": 825,
+      "word": "birleşmiş",
+      "sentence1": "Amerika Birleşik Devletleri Kuzey Amerika'da bir ülkedir.",
+      "sentence2": "İki şirket birleşik bir cephe oluşturdu."
+    },
+    {
+      "id": 826,
+      "word": "alışılmadık",
+      "sentence1": "Nisan ayında kar görmek alışılmadık bir şey.",
+      "sentence2": "Müzik için sıra dışı bir yeteneği var."
+    },
+    {
+      "id": 827,
+      "word": "yukarı",
+      "sentence1": "Banyo üst katta.",
+      "sentence2": "Üst kattaki dairede yaşıyor."
+    },
+    {
+      "id": 828,
+      "word": "kullanım",
+      "sentence1": "Hava durumunu kontrol etmek için telefonumu kullanıyorum.",
+      "sentence2": "Lütfen formu doldurmak için bir kalem kullanın."
+    },
+    {
+      "id": 829,
+      "word": "kullanılan",
+      "sentence1": "Her hafta sonu futbol oynardım.",
+      "sentence2": "O, soğuk havaya alışkın."
+    },
+    {
+      "id": 830,
+      "word": "normal",
+      "sentence1": "Onun geç gelmesi normaldir.",
+      "sentence2": "Normal prosedür, belgeleri kontrol etmektir."
+    },
+    {
+      "id": 831,
+      "word": "vadi",
+      "sentence1": "Vadi dağlarla çevrilidir.",
+      "sentence2": "Vadide yürüyüşe çıktılar."
+    },
+    {
+      "id": 832,
+      "word": "araç",
+      "sentence1": "Minibüs dışarıda park etmiş.",
+      "sentence2": "Grup gezisi için minibüs kullanıyorlar."
+    },
+    {
+      "id": 833,
+      "word": "çeşidi",
+      "sentence1": "Çok çeşitli meyveler mevcuttur.",
+      "sentence2": "Farklı çay çeşitlerini denemekten hoşlanır."
+    },
+    {
+      "id": 834,
+      "word": "araç",
+      "sentence1": "Arabalar en yaygın araç türüdür.",
+      "sentence2": "Şirket elektrikli araç satıyor."
+    },
+    {
+      "id": 835,
+      "word": "bakış",
+      "sentence1": "Yukarıdan manzara nefes kesici.",
+      "sentence2": "Gölün güzel bir manzarası var."
+    },
+    {
+      "id": 836,
+      "word": "virüs",
+      "sentence1": "Virüs kolayca insandan insana yayılır.",
+      "sentence2": "Aşılar viral enfeksiyonları önlemeye yardımcı olabilir."
+    },
+    {
+      "id": 837,
+      "word": "ses",
+      "sentence1": "Onun güzel bir şarkı sesi var.",
+      "sentence2": "Gürültü yüzünden onun sesi zar zor duyuluyordu."
+    },
+    {
+      "id": 838,
+      "word": "bekle",
+      "sentence1": "Seni istasyonda bekleyeceğim.",
+      "sentence2": "Lütfen bir dakika bekleyin."
+    },
+    {
+      "id": 839,
+      "word": "savaş",
+      "sentence1": "Savaş birkaç yıl sürdü.",
+      "sentence2": "Savaş sırasında birçok hayat kaybedildi."
+    },
+    {
+      "id": 840,
+      "word": "yıkamak",
+      "sentence1": "Akşam yemeğinden önce ellerimi yıkamam gerek.",
+      "sentence2": "Lütfen yemekten sonra bulaşıkları yıkayın."
+    },
+    {
+      "id": 841,
+      "word": "yıkamak",
+      "sentence1": "Ellerinizi düzenli olarak yıkamak önemlidir.",
+      "sentence2": "Çamaşır makinesi bozuldu."
+    },
+    {
+      "id": 842,
+      "word": "dalga",
+      "sentence1": "Dalga kıyıya çarptı.",
+      "sentence2": "Otobüs uzaklaşırken el salladı."
+    },
+    {
+      "id": 843,
+      "word": "zayıf",
+      "sentence1": "Hastalıktan sonra kendini zayıf hissetti.",
+      "sentence2": "Zayıf ekonomi birçok kişiyi endişelendiriyor."
+    },
+    {
+      "id": 844,
+      "word": "web",
+      "sentence1": "Örümcek köşeye bir ağ ördü.",
+      "sentence2": "İnternet genellikle World Wide Web olarak adlandırılır."
+    },
+    {
+      "id": 845,
+      "word": "düğün",
+      "sentence1": "Onlar baharda bir düğün planlıyorlar.",
+      "sentence2": "Düğün güzel bir törendi."
+    },
+    {
+      "id": 846,
+      "word": "ağırlık",
+      "sentence1": "Paketin ağırlığı 5 kilogram.",
+      "sentence2": "O kilo vermeye çalışıyor."
+    },
+    {
+      "id": 847,
+      "word": "hoş geldiniz",
+      "sentence1": "Evimize hoş geldiniz.",
+      "sentence2": "Geri bildirimlerinizi memnuniyetle karşılıyoruz."
+    },
+    {
+      "id": 848,
+      "word": "ıslak",
+      "sentence1": "Yağmurdan sonra toprak ıslaktır.",
+      "sentence2": "Lütfen ıslak zemin üzerinde yürüme."
+    },
+    {
+      "id": 849,
+      "word": "tekerlek",
+      "sentence1": "Tekerlek kırıldı ve değiştirilmesi gerekiyor.",
+      "sentence2": "Direksiyonu keskin bir şekilde döndürdü."
+    },
+    {
+      "id": 850,
+      "word": "oysa",
+      "sentence1": "Otobüsü beklerken bir kitap okudum.",
+      "sentence2": "O, çalışırken müzik dinler."
+    },
+    {
+      "id": 851,
+      "word": "bütün",
+      "sentence1": "Bütün aile yeniden buluşmaya katıldı.",
+      "sentence2": "Bütün pizzayı tek başına yedi."
+    },
+    {
+      "id": 852,
+      "word": "kimin",
+      "sentence1": "Bu kimin kitabı?",
+      "sentence2": "Sahibi bilinmeyen bir cüzdan buldum."
+    },
+    {
+      "id": 853,
+      "word": "geniş",
+      "sentence1": "Nehir bu noktada geniş.",
+      "sentence2": "Çok çeşitli ilgi alanları var."
+    },
+    {
+      "id": 854,
+      "word": "vahşi",
+      "sentence1": "Vahşi hayvanlar ormanda özgürce dolaşıyorlar.",
+      "sentence2": "Çılgın bir hayal gücü var."
+    },
+    {
+      "id": 855,
+      "word": "rüzgar",
+      "sentence1": "Rüzgar bugün güçlü esiyor.",
+      "sentence2": "Saçlarında rüzgarı hissetti."
+    },
+    {
+      "id": 856,
+      "word": "kazanan",
+      "sentence1": "Yarışmanın kazananı yarın ilan edilecek.",
+      "sentence2": "İki kez Olimpiyat altın madalyası kazandı."
+    },
+    {
+      "id": 857,
+      "word": "dilek",
+      "sentence1": "Yeni işinde sana en iyi dileklerimi sunuyorum.",
+      "sentence2": "O bir yıldız üzerine dilek tutmuştu."
+    },
+    {
+      "id": 858,
+      "word": "ahşap",
+      "sentence1": "Masa ahşaptan yapılmıştır.",
+      "sentence2": "Ateş için odun topladı."
+    },
+    {
+      "id": 859,
+      "word": "ahşap",
+      "sentence1": "Ahşap sandalye çok rahat.",
+      "sentence2": "Onun ahşap oyuncak koleksiyonu var."
+    },
+    {
+      "id": 860,
+      "word": "çalışan",
+      "sentence1": "O yeni bir proje üzerinde çalışıyor.",
+      "sentence2": "Çalışma koşulları iyileşiyor."
+    },
+    {
+      "id": 861,
+      "word": "endişeli",
+      "sentence1": "Sınav sonuçları hakkında endişeliydi.",
+      "sentence2": "Son zamanlarda endişeli hissediyor."
+    },
+    {
+      "id": 862,
+      "word": "endişelenmek",
+      "sentence1": "Küçük detaylar için endişelenme.",
+      "sentence2": "Onun kafasında bir sürü endişe var."
+    },
+    {
+      "id": 863,
+      "word": "daha kötü",
+      "sentence1": "Durum gittikçe kötüleşiyor.",
+      "sentence2": "Bu hayatımın en kötü günü."
+    },
+    {
+      "id": 864,
+      "word": "en kötüsü",
+      "sentence1": "Dünyadaki en kötü şansı vardı.",
+      "sentence2": "Bu şimdiye kadar gördüğüm en kötü film."
+    },
+    {
+      "id": 865,
+      "word": "vay canına",
+      "sentence1": "Vay canına, harika bir manzara!",
+      "sentence2": "\"Sürpriz partiyi görünce \"\"vay\"\" dedi.\""
+    },
+    {
+      "id": 866,
+      "word": "daha değil",
+      "sentence1": "Henüz ödevimi bitirmedim.",
+      "sentence2": "O henüz burada değil."
+    },
+    {
+      "id": 867,
+      "word": "senindir",
+      "sentence1": "Bu kitap senin mi?",
+      "sentence2": "Sana ait bir kalem buldum."
+    }
+  ]
+}

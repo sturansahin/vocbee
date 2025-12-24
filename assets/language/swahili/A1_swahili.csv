@@ -34,7 +34,7 @@ mtu yeyote|Je, kuna mtu yeyote huko?|Sijui mtu yeyote hapa.
 chochote|Je, unahitaji kitu chochote?|Siwezi kupata chochote.
 nyumba|Ninaishi katika nyumba ndogo.|Nyumba ni nzuri sana.
 tunda|Ninapenda kula apple kila siku.|Alipika keki ya matofaa.
-Aprili|Aprili ni mwezi wa nne.|Siku yangu ya kuzaliwa ni Aprili.
+aprili|Aprili ni mwezi wa nne.|Siku yangu ya kuzaliwa ni Aprili.
 eneo|Eneo hili ni kubwa.|Hifadhi iko katika eneo hili.
 mkono|Alivunja mkono wake.|Ana tattoo kwenye mkono wake.
 karibu|Paka ameketi kuzunguka meza.|Hebu tutembee katika bustani.
@@ -45,7 +45,7 @@ msanii|Yeye ni msanii maarufu.|Msanii huyo alichora picha nzuri.
 kama|Anafanya kazi ya ualimu.|Anajulikana kuwa kiongozi mkuu.
 kuuliza|Naweza kukuuliza swali?|Aliomba msaada.
 katika|Nitakutana nawe katika bustani.|Kitabu hicho kiko katika maktaba.
-Agosti|Agosti ni mwezi wa nane.|Likizo yangu ni Agosti.
+agosti|Agosti ni mwezi wa nane.|Likizo yangu ni Agosti.
 mjomba|Shangazi yangu anaishi katika mji mwingine.|Nilimtembelea shangazi yangu mwishoni mwa juma lililopita.
 vuli|Majira ya kupukutika kwa majani ni majira ninayopenda zaidi.|Majani huanguka wakati wa vuli.
 mbali|Duka hilo liko mbali sana.|Ameenda likizo.
@@ -190,7 +190,7 @@ tarehe|Leo ni tarehe ngapi?|Aliandika tarehe hiyo kwenye karatasi.
 binti|Binti yangu ana kipawa sana.|Anajivunia mafanikio ya binti yake.
 siku|Leo ni siku nzuri.|Anapanga kupumzika siku nzima.
 mpendwa|Rafiki yangu mpendwa anakuja kututembelea.|Alimwandikia barua mama yake mpendwa.
-Desemba|Desemba ni mwezi wa mwisho wa mwaka.|Yeye hupenda mapambo ya sikukuu katika Desemba.
+desemba|Desemba ni mwezi wa mwisho wa mwaka.|Yeye hupenda mapambo ya sikukuu katika Desemba.
 kuamua|Ninahitaji kuamua nitavaa nini.|Aliamua kupumzika kidogo kazini.
 kitamu|Keki hii ni kitamu.|Yeye hufurahia kupikia familia yake chakula kitamu.
 eleza|Je, unaweza kueleza picha hiyo?|Alieleza kwa undani kuhusu likizo yake ya ndoto.
@@ -272,7 +272,7 @@ haraka|Yeye ni mkimbiaji mwepesi.|Anaendesha gari la kasi.
 mafuta|Paka ni mnene na mvivu.|Yeye anafuata mlo ili kupoteza mafuta.
 baba|Baba yangu ni daktari.|Anampenda sana baba yake.
 mpendwa|Rangi ninayopenda ni bluu.|Ana kitabu anachokipenda sana ambacho husoma mara nyingi.
-Februari|Februari ni mwezi wa pili wa mwaka.|Siku ya wapendanao ni Februari.
+februari|Februari ni mwezi wa pili wa mwaka.|Siku ya wapendanao ni Februari.
 kuhisi|Nina furaha leo.|Yeye hakujisikia vizuri jana.
 hisia|Nina hisia kwamba kuna kitu kibaya.|Alieleza hisia zake katika barua.
 sherehe|Tamasha la muziki lilikuwa lenye kustaajabisha.|Anatazamia kwa hamu sherehe hiyo ya kila mwaka.
@@ -307,7 +307,7 @@ nne|Nina ndugu wanne.|Majira manne ni mazuri.
 kumi na nne|Ana umri wa miaka kumi na minne.|Nambari ninayopenda ni 14.
 nne|Alimaliza katika nafasi ya nne.|Julai nne ni Siku ya Uhuru.
 huru|Jumba la makumbusho ni huru siku za Jumapili.|Yeye ana alasiri ya bure.
-Ijumaa|Ijumaa ni siku ninayopenda zaidi.|Ana mkutano Ijumaa.
+ijumaa|Ijumaa ni siku ninayopenda zaidi.|Ana mkutano Ijumaa.
 rafiki|Rafiki yangu wa karibu anakuja.|Yeye ni rafiki mshikamanifu.
 urafiki|Mbwa huyo ni rafiki sana.|Alinitabasamu kwa urafiki.
 kutoka|Mimi ni kutoka Uturuki.|Alipokea barua kutoka kwa rafiki yake.
@@ -401,16 +401,16 @@ kisiwa|Bali ni kisiwa maridadi.|Ana ndoto ya kutembelea kisiwa cha kitropiki.
 hiyo|Nilikipata mezani.|Alisema ni kitabu chake.
 yake|Mbwa huyo alitikisa mkia wake.|Anajivunia mafanikio yake.
 koti|Nilinunua koti jipya.|Alikuwa amevaa koti la ngozi.
-Januari|Januari ni mwezi wa kwanza.|Alizaliwa Januari.
+januari|Januari ni mwezi wa kwanza.|Alizaliwa Januari.
 suruali|Nahitaji kununua suruali mpya.|Yeye hupendelea kuvaa suruali.
 kazi|Nina kazi mpya.|Anapenda kazi yake.
 kujiunga|Nataka kujiunga na klabu.|Aliamua kujiunga nasi.
 safari|Safari ilikuwa ndefu na yenye kuchosha.|Alifurahia safari hiyo.
 juisi|Ningependa maji ya machungwa.|Yeye hunywa juisi kila asubuhi.
-Julai|Julai ni mwezi wa saba.|Yeye hupenda kwenda likizo mwezi Julai.
-Juni|Juni ni mwezi wa sita.|Alihitimu mwezi Juni.
+julai|Julai ni mwezi wa saba.|Yeye hupenda kwenda likizo mwezi Julai.
+juni|Juni ni mwezi wa sita.|Alihitimu mwezi Juni.
 tu|Nataka tu kusaidia.|Yeye ni rafiki tu.
-K|K ni herufi ya 11 ya alfabeti.|Anapenda herufi K.
+k|K ni herufi ya 11 ya alfabeti.|Anapenda herufi K.
 kudumisha|Tafadhali funga mlango.|Anataka chumba chake kiwe safi.
 ufunguo|Nilipoteza ufunguo wa nyumba yangu.|Alipata ufunguo chini ya mkeka.
 kilomita|Duka hilo liko umbali wa kilometa tano.|Alikimbia kilometa kumi jana.
@@ -457,11 +457,11 @@ fanya|Nataka kutengeneza keki.|Yeye hutengeneza vyombo vya udongo vyenye kupende
 mwanaume|Mwanamume huyo anasoma kitabu.|Aliona mwanamume aliyevalia suti.
 wengi|Kuna vitabu vingi kwenye rafu.|Hana marafiki wengi.
 ramani|Ninahitaji ramani ili kujua mahali.|Alichunguza ramani kwa uangalifu.
-Machi|Machi ni mwezi wa tatu wa mwaka.|Alizaliwa Machi.
+machi|Machi ni mwezi wa tatu wa mwaka.|Alizaliwa Machi.
 soko|Nilinunua mboga za majani sokoni.|Yeye hufurahia kwenda kununua vitu sokoni.
 ndoa|Wao ni wenzi wa ndoa.|Ameolewa na daktari.
 mechi (shindano)|Mchezo huo utafanyika kesho.|Alishinda mechi hiyo juma lililopita.
-Mei|Mei ni mwezi mzuri.|Yeye hupenda maua ya Mei.
+mei|Mei ni mwezi mzuri.|Yeye hupenda maua ya Mei.
 labda|Labda tunaweza kwenda kwenye bustani.|Alisema kwamba huenda akajiunga nasi.
 mimi|Je, unaweza kunisaidia?|Alinipigia simu jana.
 chakula|Mimi hupenda kula kiamsha-kinywa.|Yeye huandaa mlo wenye afya kila siku.
@@ -484,7 +484,7 @@ kosa|Nilifanya kosa kwenye mtihani.|Alijifunza kutokana na makosa yake.
 mfano|Gari hilo ni la mtindo mpya.|Yeye hupendelea mtindo wa karibuni zaidi.
 kisasa|Hii ni jengo la kisasa.|Yeye anapenda sanaa ya kisasa.
 dakika|Subiri dakika moja, tafadhali.|Alichukua picha ya tukio hilo.
-Jumatatu|Jumatatu ni siku ya kwanza ya juma.|Ana mkutano Jumatatu.
+jumatatu|Jumatatu ni siku ya kwanza ya juma.|Ana mkutano Jumatatu.
 fedha|Nahitaji pesa zaidi.|Alihifadhi pesa kwa ajili ya likizo.
 mwezi|Februari ndiyo mwezi mfupi zaidi.|Alizaliwa mwezi wa Mei.
 zaidi|Ninahitaji muda zaidi.|Anataka kujifunza mengi zaidi kuhusu habari hiyo.
@@ -527,19 +527,19 @@ pua|Ana pua kubwa.|Alifinya pua yake kwa harufu.
 hapana|Hiyo si kitabu changu.|Hana furaha na matokeo.
 kumbuka|Tafadhali andika jambo hili.|Aliacha barua mezani.
 hakuna|Hakuna haja ya kuwa na wasiwasi.|Hakusema lolote wakati wa mkutano.
-Novemba|Siku yangu ya kuzaliwa ni Novemba.|Yeye hupenda kuanguka katika Novemba.
+novemba|Siku yangu ya kuzaliwa ni Novemba.|Yeye hupenda kuanguka katika Novemba.
 sasa|Nitafanya hivyo sasa.|Yeye yuko hapa sasa.
 namba|Nambari yako ya simu ni ipi?|Ana namba ya bahati.
 muuguzi|Muuguzi atakusaidia.|Anataka kuwa muuguzi.
 kitu|Kitu hiki ni kizito.|Alipata kitu chenye kupendeza.
 saa|Mkutano ni saa tatu.|Yeye huamka kila wakati saa saba.
-Oktoba|Siku yangu ya kuzaliwa ni Oktoba.|Anapenda rangi za Oktoba.
+oktoba|Siku yangu ya kuzaliwa ni Oktoba.|Anapenda rangi za Oktoba.
 ya|Jalada la kitabu hicho ni la bluu.|Yeye ni rafiki yangu.
 mbali|Taa zimezimwa.|Alichukua siku ya mapumziko.
 ofisi|Mimi hufanya kazi ofisini.|Ana ofisi kubwa.
 mara nyingi|Mara nyingi mimi huenda kwenye mazoezi.|Mara nyingi yeye husoma kabla ya kulala.
 oh|Oh, sikukuona hapo.|Oh, hiyo ni ya kuvutia!
-Sawa|Je, kiti hiki kimechukuliwa?|Alisema ni sawa kuondoka mapema.
+sawa|Je, kiti hiki kimechukuliwa?|Alisema ni sawa kuondoka mapema.
 mzee|Babu yangu ni mzee sana.|Ana gari la zamani.
 kwenye|Kitabu kiko juu ya meza.|Yeye ni kwenye simu.
 mara moja|Nimekuwa huko mara moja.|Alisema mara moja kabla.
@@ -649,7 +649,7 @@ mchele|Ninapenda kula mchele pamoja na chakula changu.|Alipika mchele kwa chakul
 tajiri|Yeye ni mtu tajiri.|Anataka kuolewa na mume tajiri.
 kusafiri|Ninapenda kuendesha baiskeli yangu katika bustani.|Alipanda farasi kwa mara ya kwanza.
 haki|Geuka kulia kwenye mwangaza wa barabarani.|Yeye ameketi upande wangu wa kulia.
-Mto|Mto unapita katikati ya bonde hilo.|Anapenda kuvua samaki mtoni.
+mto|Mto unapita katikati ya bonde hilo.|Anapenda kuvua samaki mtoni.
 barabara|Barabara imefungwa kwa ajili ya ujenzi.|Anaishi katika barabara ya kimya.
 chumba|Hii ni chumba changu cha kulala.|Alisafisha chumba chake jana.
 utaratibu|Nina ratiba ya asubuhi.|Yeye hufuata ratiba kali ya kufanya mazoezi.
@@ -660,7 +660,7 @@ saladi|Nataka saladi kwa chakula cha mchana.|Aliandaa saladi nzuri sana.
 chumvi|Tafadhali nipe chumvi.|Aliongeza chumvi kwenye supu.
 sawa|Tuna tatizo lilelile.|Alikuwa amevaa vazi lilelile kama langu.
 sandwichi|Ningependa sandwich kwa chakula cha mchana.|Alitengeneza sandwichi ya nguruwe.
-Jumamosi|Jumamosi ni siku ninayopenda zaidi.|Ana sherehe Jumamosi.
+jumamosi|Jumamosi ni siku ninayopenda zaidi.|Ana sherehe Jumamosi.
 sema|Ulisema nini?|Hakusema lolote.
 shule|Mimi huenda shuleni kila siku.|Yeye ni mwanafunzi katika shule hiyo.
 sayansi|Sayansi inavutia.|Anataka kujifunza sayansi.
@@ -672,7 +672,7 @@ tazama|Naona ndege juu ya mti.|Anaweza kuona milima kutoka dirishani mwake.
 kuuza|Nataka kuuza gari langu la zamani.|Yeye huuza vito vilivyotengenezwa kwa mikono mtandaoni.
 kutuma|Tafadhali nitumie maelezo.|Alimtumia rafiki yake barua.
 hukumu|Je, unaweza kuandika sentensi?|Alizungumza kwa sentensi kamili.
-Septemba|Septemba ni mwezi wa tisa.|Alizaliwa Septemba.
+septemba|Septemba ni mwezi wa tisa.|Alizaliwa Septemba.
 saba|Nina matofaa saba.|Ana miaka saba.
 kumi na saba|Nambari ninayopenda zaidi ni 17.|Alitimiza miaka kumi na saba juma lililopita.
 sabini|70 ni idadi kubwa.|Ana umri wa miaka 70.
@@ -744,7 +744,7 @@ mafanikio|Mafanikio yanahitaji kufanya kazi kwa bidii.|Alifanikiwa sana.
 sukari|Mimi hunywa kahawa yangu na sukari.|Yeye hupenda sukari katika chai yake.
 majira ya joto|Majira ya kiangazi ni yenye joto katika eneo hili.|Yeye hupenda likizo ya kiangazi.
 jua|Jua linang'aa kwa uangavu.|Aliketi kwenye jua.
-Jumapili|Jumapili ni siku ya kupumzika.|Yeye huenda kanisani Jumapili.
+jumapili|Jumapili ni siku ya kupumzika.|Yeye huenda kanisani Jumapili.
 maduka makubwa|Nahitaji kwenda kwenye duka kubwa.|Alinunua vyakula katika duka kubwa.
 hakika|Je, una hakika kuhusu hilo?|Ana uhakika na uamuzi wake.
 sweta|Nilinunua sweta mpya.|Alikuwa amevaa sweta yenye joto.
@@ -789,7 +789,7 @@ hii|Kitabu hiki ni changu.|Alisema kwamba hii ni yake favorite.
 elfu|Nina mawazo elfu.|Alishinda dola elfu moja.
 tatu|Nina ndugu watatu.|Ana umri wa miaka mitatu.
 kupitia|Tulitembea katika bustani.|Alitazama nje ya dirisha.
-Alhamisi|Alhamisi ni siku ninayopenda zaidi.|Ana mkutano Alhamisi.
+alhamisi|Alhamisi ni siku ninayopenda zaidi.|Ana mkutano Alhamisi.
 tiketi|Nahitaji kununua tiketi.|Alionyesha tiketi yake kwenye mlango.
 wakati|Ni saa ngapi?|Yeye hutumia wakati mwingi akisoma.
 uchovu|Nimechoka.|Alihisi uchovu baada ya safari ndefu.
@@ -814,10 +814,10 @@ safari|Mimi ninaenda safari.|Alifurahia safari hiyo.
 suruali|Nilinunua suruali mpya.|Amevaa suruali ya bluu.
 kweli|Maneno hayo ni ya kweli.|Yeye husema kweli sikuzote.
 jaribu|Nitajitahidi kadiri niwezavyo.|Alijaribu kutatua tatizo hilo.
-T-shati|Nahitaji T-shati mpya.|Alinunua T-shati kutoka dukani.
-Jumanne|Jumanne ni siku ninayopenda zaidi.|Ana mkutano Jumanne.
+t-shati|Nahitaji T-shati mpya.|Alinunua T-shati kutoka dukani.
+jumanne|Jumanne ni siku ninayopenda zaidi.|Ana mkutano Jumanne.
 kugeuka|Tafadhali zima taa.|Alirudia maisha yake ya zamani.
-Televisheni|Mimi hutazama televisheni jioni.|Aliwasha televisheni.
+televisheni|Mimi hutazama televisheni jioni.|Aliwasha televisheni.
 kumi na mbili|Kuna miezi kumi na miwili katika mwaka.|Ana umri wa miaka kumi na miwili.
 ishirini|Nina dola ishirini.|Ana umri wa miaka ishirini.
 mara mbili|Nimeona filamu hiyo mara mbili.|Anawatembelea wazazi wake mara mbili kwa mwezi.
@@ -857,7 +857,7 @@ sisi|Tunakwenda kwenye bustani.|Walitualika kwenye arusi yao.
 kuvaa|Ninapenda kuvaa nguo zenye starehe.|Alivaa mavazi mazuri kwenye sherehe hiyo.
 hali ya hewa|Hali ya hewa ni nzuri leo.|Alichunguza utabiri wa hali ya hewa.
 tovuti|Nilipata tovuti yenye manufaa.|Alitengeneza tovuti ya biashara yake.
-Jumatano|Jumatano ni siku ninayopenda zaidi.|Ana mkutano Jumatano.
+jumatano|Jumatano ni siku ninayopenda zaidi.|Ana mkutano Jumatano.
 juma|Mimi hufanya kazi siku tano kwa juma.|Anaenda likizo juma lijalo.
 mwisho wa juma|Ninapenda kupumzika mwishoni mwa juma.|Ana mipango ya mwisho-juma.
 kuwakaribisha|Karibu nyumbani kwetu!|Alisema kuwakaribisha wageni.

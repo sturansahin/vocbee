@@ -8,13 +8,13 @@ attività|Nuotare è la mia attività preferita.|Quale attività preferisci?
 attore|È un attore famoso.|L'attore ha interpretato bene il suo ruolo.
 attrice|È un'attrice di talento.|L'attrice vinse un premio.
 aggiungere|Aggiungi del sale alla zuppa.|Puoi aggiungere il mio numero?
-Indirizzo|Qual è il tuo indirizzo?|Scriva il suo indirizzo qui.
+indirizzo|Qual è il tuo indirizzo?|Scriva il suo indirizzo qui.
 adulti|Questo film è solo per adulti.|Sono un adulto ora.
 consulenza|Puoi darmi un consiglio?|Il suo consiglio è stato utile.
 spaventato|Io ho paura dei ragni.|Non aver paura.
 dopo|Ci vediamo dopo il lavoro.|Dopo cena, abbiamo guardato la TV.
 pomeriggio|Buongiorno!|Io dormo nel pomeriggio.
-Ancora una volta .|Ripetilo, per favore.|Voglio rivederti.
+ancora una volta|Ripetilo, per favore.|Voglio rivederti.
 età|Quanti anni hai?|Ha 25 anni.
 prima|L'ho conosciuto due anni fa.|E' uscita un'ora fa.
 d' accordo|Sono d'accordo con lei.|Lei è d'accordo con questo piano?
@@ -22,7 +22,7 @@ aria|L'aria qui è fresca.|Ho bisogno di aria fresca.
 aeroporto|Ti verrò a prendere all'aeroporto.|L'aeroporto è molto affollato.
 tutti|Tutti gli studenti passarono l'esame.|Ho mangiato tutti i biscotti.
 anche|Mi piace anche la pizza.|Anche lei viene alla festa.
-Sempre .|Io mi sveglio sempre presto.|È sempre felice.
+sempre|Io mi sveglio sempre presto.|È sempre felice.
 straordinario|La vista dall'alto è incredibile.|Hai fatto un lavoro fantastico!
 e|A me piacciono il tè e il caffè.|Sta studiando e lavora.
 arrabbiato|Lui è arrabbiato con il suo amico.|Non arrabbiarti, ti prego.
@@ -31,10 +31,10 @@ un'altra|Posso avere un altro pezzo di torta?|Vuole un'altra possibilita'.
 risposta|Qual è la tua risposta?|Non so la risposta.
 qualsiasi|Ha qualche domanda?|Non ho soldi.
 chiunque|C'è qualcuno?|Non conosco nessuno qui.
-Qualsiasi cosa .|Ti serve qualcosa?|Non riesco a trovare niente.
+qualsiasi cosa|Ti serve qualcosa?|Non riesco a trovare niente.
 appartamento|Vivo in un piccolo appartamento.|L'appartamento è molto bello.
 mela|A me piace mangiare una mela ogni giorno.|Ha fatto una torta di mele.
-Aprile|Aprile è il quarto mese.|Il mio compleanno è in aprile.
+aprile|Aprile è il quarto mese.|Il mio compleanno è in aprile.
 superficie|E' una zona molto vasta.|Il parco è in questa zona.
 braccio|Si è rotto il braccio.|Ha un tatuaggio sul braccio.
 intorno|Il gatto è seduto intorno al tavolo.|Facciamo una passeggiata nel parco.
@@ -45,11 +45,11 @@ artista|È un artista famoso.|L'artista dipinse un bel quadro.
 come|Lei lavora come insegnante.|È conosciuto come un grande leader.
 chiedere|- Posso farti una domanda?|Ha chiesto aiuto.
 a|Ci vediamo al parco.|Il libro è in biblioteca.
-Agosto|Agosto è l'ottavo mese.|Le mie vacanze sono ad agosto.
+agosto|Agosto è l'ottavo mese.|Le mie vacanze sono ad agosto.
 zia|Mia zia vive in un'altra città.|Ho visitato mia zia lo scorso fine settimana.
 autunno|L'autunno è la mia stagione preferita.|Le foglie cadono in autunno.
 allontanamento|Il negozio è lontano.|È in vacanza.
-Bambino|Il bambino sta dormendo.|Ho una sorellina.
+bambino|Il bambino sta dormendo.|Ho una sorellina.
 schiena|Il libro è sullo scaffale posteriore.|Si è fatto male alla schiena mentre sollevava.
 male|Questo cibo ha un cattivo sapore.|Ha avuto una brutta giornata.
 sacchetto|Mi serve una borsa nuova.|Ha preparato la sua valigia per il viaggio.
@@ -109,11 +109,11 @@ edificio|L'edificio è molto alto.|Lavorano in quell'edificio.
 autobus|Io vado a scuola in autobus.|L'autobus è in ritardo oggi.
 commercio|Gestisce la sua attività.|Gli affari sono in piena espansione quest'anno.
 occupato|Sono occupato adesso.|Ha un programma impegnativo.
-ma ...|A me piace il tè, ma preferisco il caffè.|Lui è alto, ma suo fratello è basso.
+ma|A me piace il tè, ma preferisco il caffè.|Lui è alto, ma suo fratello è basso.
 burro|Mi serve del burro per la ricetta.|Le piace il burro sul pane.
 comprare|Voglio comprare un nuovo telefono.|Lei ha comprato un vestito ieri.
 di|Il libro è stato scritto da un autore famoso.|Io preferisco viaggiare in treno.
-- Ciao .|Ho detto addio ai miei amici.|Mi ha salutato all'aeroporto.
+- Ciao|Ho detto addio ai miei amici.|Mi ha salutato all'aeroporto.
 caffè|Incontriamoci al caffè.|Lavora in un piccolo bar.
 torta|Ho fatto una torta al cioccolato.|Adora la torta alla fragola.
 chiamare|Ti chiamo più tardi.|Ha ricevuto una telefonata da sua madre.
@@ -156,7 +156,7 @@ caffè|A me piace bere caffè la mattina.|Ha ordinato una tazza di caffè al caf
 freddo|Fa molto freddo fuori.|Indossava una giacca perché faceva freddo.
 università|Sta studiando in un college di Londra.|Vuole andare al college dopo il liceo.
 colore|Qual è il tuo colore preferito?|Dipinse le pareti di un colore blu chiaro.
-Vieni qui .|Vieni alla mia festa, per favore.|Lei verrà alla riunione di domani.
+vieni qui|Vieni alla mia festa, per favore.|Lei verrà alla riunione di domani.
 comune|L'inglese è una lingua comune.|Ha un interesse comune per la musica.
 società|Lavora per una grande azienda.|Ha fondato la sua azienda l'anno scorso.
 confronto|Confrontiamo le nostre risposte.|Ha confrontato i due prodotti prima di acquistarli.
@@ -170,17 +170,17 @@ fresco|Quella giacca e' davvero figa.|Ha una bella collezione di dischi d'epoca.
 corretto|Per favore, correggi i tuoi errori.|Lei cerca sempre di correggere i suoi errori di grammatica.
 costo|Qual è il costo di questo libro?|Lei era sorpresa dal costo della vita in città.
 potrebbe|Potrei aiutarti.|Ha detto che poteva venire alla festa se avesse finito di lavorare prima.
-Paese|Vivo in un piccolo paese.|Vuole viaggiare in paesi diversi.
+paese|Vivo in un piccolo paese.|Vuole viaggiare in paesi diversi.
 corso|Sto seguendo un corso di biologia.|Si e' iscritta a un corso di cucina.
 cugino|Mio cugino viene a trovarci questo fine settimana.|Lei ha un cugino che vive all'estero.
 vacca|La mucca sta pascolando nel campo.|È cresciuta in una fattoria con mucche e polli.
-Crema|Mi piace la panna nel mio caffè.|Aggiunse della panna alla zuppa per aggiungere sapore.
+crema|Mi piace la panna nel mio caffè.|Aggiunse della panna alla zuppa per aggiungere sapore.
 creare|Voglio creare un nuovo progetto.|Ha creato un bellissimo dipinto.
 cultura|Sono interessato a conoscere culture diverse.|Le piace esplorare la cultura locale quando viaggia.
 tazza|Bevo il tè da una tazza.|Ha comprato un set di bellissime tazze.
 cliente|Il cliente ha sempre ragione.|È una cliente fedele di quel negozio.
 taglio|Per favore taglia la carta lungo la linea.|Ha tagliato la torta in pezzi uguali.
-Papà !|Mio padre è un grande cuoco.|Le piace passare del tempo con suo padre.
+papà|Mio padre è un grande cuoco.|Le piace passare del tempo con suo padre.
 danza|Adoro ballare alle feste.|Ha preso lezioni di danza per un anno.
 ballerino|La ballerina si è esibita splendidamente.|Vuole diventare una ballerina professionista.
 ballare|Ballare è un modo divertente di fare esercizio.|Le piace ballare sulle sue canzoni preferite.
@@ -188,9 +188,9 @@ pericolosa|Quell'animale è pericoloso.|Si rese conto che la situazione era peri
 scuro|È buio fuori.|Lei preferisce il cioccolato fondente al cioccolato al latte.
 data|Che data è oggi?|Ha scritto la data sul foglio.
 figlia|Mia figlia ha molto talento.|È orgogliosa dei risultati di sua figlia.
-Giorno|Oggi e' una bellissima giornata.|Ha intenzione di rilassarsi tutto il giorno.
+giorno|Oggi e' una bellissima giornata.|Ha intenzione di rilassarsi tutto il giorno.
 caro|Il mio caro amico sta venendo a trovarmi.|Ha scritto una lettera alla sua cara madre.
-Dicembre|Dicembre è l'ultimo mese dell'anno.|Adora le decorazioni natalizie di dicembre.
+dicembre|Dicembre è l'ultimo mese dell'anno.|Adora le decorazioni natalizie di dicembre.
 decidere|Devo decidere cosa indossare.|Ha deciso di prendersi una pausa dal lavoro.
 delizioso|Questa torta è deliziosa.|A lei piace cucinare deliziosi pasti per la sua famiglia.
 descrivere|Può descrivere la foto?|Ha descritto la sua vacanza da sogno in dettaglio.
@@ -200,7 +200,7 @@ scrivania|La mia scrivania è piena di documenti.|Mantiene la sua scrivania ordi
 dettaglio|Si prega di fornire maggiori dettagli sul progetto.|Ha notato un piccolo dettaglio nel dipinto.
 dialogo|I dialoghi del film erano realistici.|Ha scritto un dialogo tra due personaggi.
 dizionario|Mi serve un dizionario per cercare la parola.|Ha comprato un nuovo dizionario inglese-turco.
-Morire|Non voglio morire giovane.|Aveva paura di morire da sola.
+morire|Non voglio morire giovane.|Aveva paura di morire da sola.
 dieta|Sono a dieta sana.|Segue una dieta rigorosa per rimanere in forma.
 differenza|Qual è la differenza tra queste due immagini?|All'inizio non riusciva a vedere la differenza.
 diversa|Questo libro è diverso dagli altri.|Lei ha una prospettiva diversa sulla questione.
@@ -215,7 +215,7 @@ cane|Il mio cane ama giocare a prendere.|Ha adottato un cane randagio dal rifugi
 dollaro|Il prezzo è di venti dollari.|Ha risparmiato abbastanza dollari per comprarsi un nuovo telefono.
 porta|Per favore, chiudi la porta dietro di te.|Ha bussato alla porta e ha aspettato una risposta.
 giù|Il gatto è saltato giù dallo scaffale.|Ha scritto le istruzioni su carta.
-di sotto.|La lavanderia è al piano di sotto.|E' scesa di sotto a prendere uno spuntino.
+di sotto|La lavanderia è al piano di sotto.|E' scesa di sotto a prendere uno spuntino.
 disegnare|Mi piace disegnare nel mio tempo libero.|Ha disegnato un bellissimo paesaggio.
 abito|Indossò un vestito rosso alla festa.|Il vestito era in vendita al negozio.
 bere|A me piace bere caffè la mattina.|Mi ha offerto un bicchiere d'acqua.
@@ -227,7 +227,7 @@ ciascuna|Ogni studente deve presentare il proprio compito.|Ha dato a ogni bambin
 orecchio|Mi fa male l'orecchio dalla musica ad alto volume.|Ha un bellissimo orecchino nell'orecchio.
 in anticipo|Mi piace svegliarmi presto la mattina.|È arrivata presto per prepararsi per la riunione.
 est|Il sole sorge a est.|Ha viaggiato verso est per esplorare nuove città.
-Facile.|Questo esercizio è facile per me.|Trovò un modo semplice per risolvere il problema.
+facile|Questo esercizio è facile per me.|Trovò un modo semplice per risolvere il problema.
 mangiare|A me piace mangiare cibo sano.|Ci preparò un pasto delizioso da mangiare.
 uovo|Ho mangiato un uovo a colazione.|Le piace mangiare le sue uova strapazzate.
 otto|Ci sono otto mele nel cestino.|Ha otto anni.
@@ -239,16 +239,16 @@ altro|C'è qualcos'altro che ti serve?|Non le piaceva il vestito, così ha scelt
 e-mail|Ti ho mandato un'email con i dettagli.|Controlla la sua email ogni mattina.
 fine|Il film ebbe un finale sorprendente.|Era triste di vedere la fine dello spettacolo.
 godere|Mi piace leggere libri nel tempo libero.|Le piace fare delle passeggiate nel parco.
-Basta .|Abbiamo abbastanza cibo per tutti?|Non aveva abbastanza soldi per comprare il vestito.
+basta|Abbiamo abbastanza cibo per tutti?|Non aveva abbastanza soldi per comprare il vestito.
 euro|Il prezzo è cinquanta euro.|Ha scambiato dollari per euro in banca.
 parziale|Il test è stato ancora più facile di quanto mi aspettassi.|Non ha nemmeno detto addio.
 sera|Mi piace rilassarmi la sera dopo il lavoro.|Ha una riunione fissata per questa sera.
 evento|L'evento annuale avrà luogo il mese prossimo.|Sta organizzando l'evento quest'anno.
 mai|Sei mai stata a Parigi?|Non ha mai mai provato il sushi.
 ogni|Ogni studente deve presentare il proprio compito.|Lei studia ogni sera prima dell'esame.
-Tutti quanti.|Tutti sono invitati alla festa.|Conosce tutti nel quartiere.
-Tutti quanti.|Tutti dovrebbero fare una pausa qualche volta.|Crede che tutti meritano una seconda possibilita'.
-Tutto .|Alla fine andrà tutto bene.|Ha preparato tutto ciò di cui aveva bisogno per il viaggio.
+tutti quanti|Tutti sono invitati alla festa.|Conosce tutti nel quartiere.
+tutti quanti|Tutti dovrebbero fare una pausa qualche volta.|Crede che tutti meritano una seconda possibilita'.
+tutto|Alla fine andrà tutto bene.|Ha preparato tutto ciò di cui aveva bisogno per il viaggio.
 esame|Domani ho un esame.|Ha studiato duramente per l'esame.
 esempio|Puoi darmi un esempio?|Lei è un grande esempio di persona di successo.
 eccitato|Sono emozionato per il concerto.|Era entusiasta di incontrare la sua scrittrice preferita.
@@ -272,8 +272,8 @@ veloce|È un corridore veloce.|Guida un'auto veloce.
 grassi|Il gatto è grasso e pigro.|È a dieta per perdere grasso.
 padre|Mio padre è un medico.|Lei ama molto suo padre.
 preferito|Il mio colore preferito è il blu.|Lei ha un libro preferito che legge spesso.
-Febbraio|Febbraio è il secondo mese dell'anno.|San Valentino è a febbraio.
-Sentire|Oggi mi sento felice.|Non si sentiva bene ieri.
+febbraio|Febbraio è il secondo mese dell'anno.|San Valentino è a febbraio.
+sentire|Oggi mi sento felice.|Non si sentiva bene ieri.
 sentimento|Ho la sensazione che qualcosa non vada.|Ha espresso i suoi sentimenti in una lettera.
 festa|Il festival musicale e' stato fantastico.|Non vede l'ora della festa annuale.
 pochi|Ho qualche amico in questa città.|Ha scattato qualche foto durante il suo viaggio.
@@ -297,17 +297,17 @@ fiore|Ho comprato un bellissimo fiore.|Ama piantare fiori nel suo giardino.
 mosca|Voglio volare a New York.|Lei sa far volare un aquilone molto bene.
 seguire|Per favore, seguitemi fino alla stazione.|Ha deciso di seguire i suoi sogni.
 alimenti|Adoro il cibo italiano.|Lei preparò un cibo delizioso per cena.
-Piede|Mi fa male il piede.|Mi ha calpestato il piede per sbaglio.
+piede|Mi fa male il piede.|Mi ha calpestato il piede per sbaglio.
 calcio|Gioco a calcio nei fine settimana.|Lei è una grande fan del calcio.
 per|Questo regalo è per te.|Lavora sodo per la sua famiglia.
 dimenticare|Non dimenticare di chiamarmi.|Dimentica sempre dove mette le chiavi.
 modulo|Per favore, compila questo modulo.|Ha inviato il modulo online.
-Quaranta|Ci sono quaranta studenti nella scuola.|Ha quarant'anni.
-Quattro|Io ho quattro fratelli.|Le quattro stagioni sono belle.
+quaranta|Ci sono quaranta studenti nella scuola.|Ha quarant'anni.
+quattro|Io ho quattro fratelli.|Le quattro stagioni sono belle.
 quattordici|Ha quattordici anni.|Quattordici è il mio numero preferito.
-Quarto|Finì al quarto posto.|Il 4 luglio è il giorno dell'indipendenza.
+quarto|Finì al quarto posto.|Il 4 luglio è il giorno dell'indipendenza.
 libera|Il museo è gratuito la domenica.|Ha il pomeriggio libero.
-Venerdì|Il venerdì è il mio giorno preferito.|Ha un incontro venerdì.
+venerdì|Il venerdì è il mio giorno preferito.|Ha un incontro venerdì.
 amico|La mia migliore amica sta arrivando.|È un'amica leale.
 amichevole|Il cane è molto amichevole.|Mi ha dato un sorriso amichevole.
 di|Io vengo dalla Turchia.|Ha ricevuto una lettera dal suo amico.
@@ -315,23 +315,23 @@ anteriore|L'auto è parcheggiata davanti alla casa.|Lei era in prima fila.
 frutta|A me piace mangiare frutta a colazione.|Ha comprato della frutta fresca al mercato.
 piena|Il bicchiere è pieno d'acqua.|Ha un programma pieno oggi.
 divertimento|Ci siamo divertiti molto alla festa.|Le piacciono le attività all'aperto.
-divertente .|Quel film era davvero divertente.|Ha uno strano senso dell'umorismo.
+divertente|Quel film era davvero divertente.|Ha uno strano senso dell'umorismo.
 futuro|Sono entusiasta del futuro.|Lei ha grandi piani per il suo futuro.
 gioco|Adoro giocare ai videogiochi.|Ha vinto la partita ieri sera.
 giardino|Lei ha un bellissimo giardino nel suo cortile.|Ama piantare fiori nel suo giardino.
-Geografia|Ho studiato geografia a scuola.|Lei è interessata alla geografia mondiale.
+geografia|Ho studiato geografia a scuola.|Lei è interessata alla geografia mondiale.
 prendere|Devo fare la spesa.|Lei troverà presto un nuovo lavoro.
 ragazza|La ragazza sta leggendo un libro.|È una ragazza intelligente.
 fidanzata|La mia ragazza sta arrivando.|E' una fidanzata che mi sostiene.
 dare|Voglio farti un regalo.|Mi ha regalato un libro per il mio compleanno.
 vetro|Stai attento con quel bicchiere.|Ha bevuto acqua da un bicchiere.
-Vai via.|Devo andare al negozio.|Andrà alla festa più tardi.
-Buono .|E' una buona idea.|È una brava studentessa.
-Arrivederci|Ho detto addio al mio amico.|Ha salutato con la mano mentre se ne andava.
+vai via|Devo andare al negozio.|Andrà alla festa più tardi.
+buono|E' una buona idea.|È una brava studentessa.
+arrivederci|Ho detto addio al mio amico.|Ha salutato con la mano mentre se ne andava.
 nonno|Mio nonno è molto saggio.|Racconta storie fantastiche sul passato.
 nonna|Mia nonna fa i migliori biscotti.|Ama raccontare storie della sua infanzia.
 nonno|I nonni spesso viziano i nipoti.|Hanno un legame speciale con i loro nipoti.
-Ottimo .|Hai fatto un ottimo lavoro sul progetto.|Ha grandi idee per il futuro.
+ottimo|Hai fatto un ottimo lavoro sul progetto.|Ha grandi idee per il futuro.
 verde|L'erba è verde.|Indossava un vestito verde.
 grigio|Il cielo è grigio oggi.|Lei ha un gatto grigio.
 gruppo|Abbiamo formato un gruppo di studio.|Lei è la leader del gruppo.
@@ -353,15 +353,15 @@ lui|Lui è mio fratello.|L'ho visto ieri.
 testa|Lei annuì con la testa.|Ha mal di testa.
 salute|La salute è molto importante.|È preoccupata per la sua salute.
 sano|Mangiare frutta e verdura fa parte di una dieta sana.|Sembra sana e in forma.
-Ascoltare|Sento la musica.|Ha sentito uno strano rumore.
-- Ciao .|Ciao, come stai?|Ha salutato con la mano.
-Aiuto !|Puoi aiutarmi con questo?|Aiuta sempre i suoi amici.
+ascoltare|Sento la musica.|Ha sentito uno strano rumore.
+- Ciao|Ciao, come stai?|Ha salutato con la mano.
+aiuto|Puoi aiutarmi con questo?|Aiuta sempre i suoi amici.
 lei|Questo è il suo libro.|L'ho vista al parco.
-Qui .|Vieni qui, per favore.|Non e' qui adesso.
-Ehi , ehi .|- Ehi, come va?|Ha salutato e ha sorriso.
-Salve .|Ciao, piacere di conoscerti!|Ha salutato.
+qui|Vieni qui, per favore.|Non e' qui adesso.
+ehi , ehi|- Ehi, come va?|Ha salutato e ha sorriso.
+salve|Ciao, piacere di conoscerti!|Ha salutato.
 alta|L'edificio è molto alto.|Ha raggiunto la mensola più alta.
-lui .|L'ho visto al parco.|Lei gli ha fatto un regalo.
+lui|L'ho visto al parco.|Lei gli ha fatto un regalo.
 il suo|Questa e' la sua macchina.|Ho conosciuto sua sorella.
 storia|La storia è affascinante.|Ama studiare storia.
 passione|Il mio hobby è dipingere.|Lei ha molti hobby.
@@ -389,11 +389,11 @@ importante|Questa e' una decisione importante.|Sa come dare la priorità alle co
 migliorare|Voglio migliorare le mie abilità in inglese.|Sta lavorando duramente per migliorare i suoi voti.
 in|Il libro è nella borsa.|Vive in una piccola città.
 includono|Per favore, inserisci il tuo nome sulla lista.|Vuole includere tutti nella discussione.
-Informazioni|Può fornire ulteriori informazioni?|Ha trovato utile l'informazione.
+informazioni|Può fornire ulteriori informazioni?|Ha trovato utile l'informazione.
 interessi|Ho un forte interesse per l'arte.|Lei condivide il mio interesse per la musica.
 interessato|Sono interessato a imparare lo spagnolo.|Lei è interessata ai viaggi.
 interessante|Questo libro è molto interessante.|Ha delle idee interessanti.
-Internet|L'ho trovato su internet.|Lei passa molto tempo su internet.
+internet|L'ho trovato su internet.|Lei passa molto tempo su internet.
 colloquio|Domani ho un colloquio di lavoro.|Si preparò per l'intervista.
 in|Lui entrò nella stanza.|Lei si tuffò nella piscina.
 introduzione|Lascia che ti presenti il mio amico.|Lei presenterà l'oratore.
@@ -407,17 +407,17 @@ lavoro|Ho un nuovo lavoro.|Ama il suo lavoro.
 aderire|Voglio entrare nel club.|Ha deciso di unirsi a noi.
 viaggio|Il viaggio fu lungo e faticoso.|Le e' piaciuto il viaggio.
 succo di frutta|Vorrei un po' di succo d'arancia.|Beve succo ogni mattina.
-Luglio|Luglio è il settimo mese.|Le piace andare in vacanza a luglio.
-Giugno|Giugno è il sesto mese.|Si e' laureata a giugno.
-Solo ...|Voglio solo aiutarvi.|E' solo un'amica.
-K|K è l'undicesima lettera dell'alfabeto.|Le piace la lettera K.
+luglio|Luglio è il settimo mese.|Le piace andare in vacanza a luglio.
+giugno|Giugno è il sesto mese.|Si e' laureata a giugno.
+solo|Voglio solo aiutarvi.|E' solo un'amica.
+k|K è l'undicesima lettera dell'alfabeto.|Le piace la lettera K.
 mantenere|Ti prego, tieni la porta chiusa.|Vuole tenere la sua stanza pulita.
 chiave|Ho perso la chiave di casa.|Ha trovato la chiave sotto il tappetino.
 chilometro|Il negozio è a cinque chilometri di distanza.|Ha corso dieci chilometri ieri.
 tipo (tipo)|Che tipo di musica ti piace?|Lei è una persona gentile.
 cucina|La cucina è molto spaziosa.|Adora cucinare nella sua cucina.
 conoscere|Io so la risposta.|Non sa il suo nome.
-Terreno|La terra è molto fertile.|Ha comprato un pezzo di terra.
+terreno|La terra è molto fertile.|Ha comprato un pezzo di terra.
 lingua|L'inglese è una lingua globale.|Lei parla tre lingue.
 grande|Vivono in una casa grande.|Lei ha una grande collezione di francobolli.
 ultimo (finale)|E' l'ultima occasione.|E' stata l'ultima persona a partire.
@@ -440,12 +440,12 @@ come (trovo sb/sth piacevole)|Mi piace questa canzone.|Le piace leggere prima di
 linea|Disegna una linea retta.|Era in fila per i biglietti.
 leone|Il leone è il re della giungla.|Ha visto un leone allo zoo.
 lista|Ho fatto una lista della spesa.|Ha spuntato gli elementi della sua lista.
-Ascoltate.|Mi piace ascoltare la musica.|Ha ascoltato attentamente le istruzioni.
+ascoltate|Mi piace ascoltare la musica.|Ha ascoltato attentamente le istruzioni.
 poco|Questa scatola è troppo piccola.|Ha un cagnolino.
 vivente|Vivo in una piccola città.|Vuole vivere in città.
 locale|Adoro il cibo locale.|Sostiene le aziende locali.
 lunghi|Questo è un libro lungo.|Ha avuto una lunga giornata di lavoro.
-Guarda .|Guarda il cielo!|Lei guardò fuori dalla finestra.
+guarda|Guarda il cielo!|Lei guardò fuori dalla finestra.
 perdere|Non voglio perdere le mie chiavi.|Ha perso il telefono al centro commerciale.
 lotto|C'è molta gente qui.|Lei ha un sacco di amici.
 amore|L'amore e' tutto cio' di cui hai bisogno.|Ha trovato l'amore in un posto inaspettato.
@@ -457,16 +457,16 @@ fare|Voglio fare una torta.|Fa delle bellissime ceramiche.
 uomo|L'uomo sta leggendo un libro.|Ha visto un uomo in costume.
 molti|Ci sono molti libri sullo scaffale.|Lei non ha molti amici.
 mappa|Mi serve una mappa per trovare la posizione.|Ha studiato attentamente la mappa.
-Marzo|Marzo è il terzo mese dell'anno.|È nata a marzo.
+marzo|Marzo è il terzo mese dell'anno.|È nata a marzo.
 mercato|Ho comprato delle verdure al mercato.|Le piace fare shopping al mercato locale.
 sposato|Sono una coppia sposata.|Lei è sposata con un medico.
 partita (contest)|La partita si terrà domani.|Ha vinto la partita la settimana scorsa.
-Maggio|Maggio è un mese bellissimo.|Ama i fiori a maggio.
-Forse .|Forse possiamo andare al parco.|Ha detto che forse si unira' a noi.
-Io .|Mi può aiutare?|Mi ha chiamato ieri.
+maggio|Maggio è un mese bellissimo.|Ama i fiori a maggio.
+forse|Forse possiamo andare al parco.|Ha detto che forse si unira' a noi.
+io|Mi può aiutare?|Mi ha chiamato ieri.
 farina|La colazione è il mio pasto preferito.|Prepara un pasto sano ogni giorno.
 media|Che cosa significa questa parola?|Non voleva farti del male.
-Significato|Il senso della vita è una questione filosofica.|Lei cercò il significato della poesia.
+significato|Il senso della vita è una questione filosofica.|Lei cercò il significato della poesia.
 carne|Io non mangio carne.|Ha cucinato un piatto di carne delizioso.
 incontrarsi|Incontriamoci al caffè.|Lei incontrerà i suoi amici più tardi.
 riunione|L'incontro e' fissato per le 10.|Ha partecipato alla riunione ieri.
@@ -483,8 +483,8 @@ signorina|Mi manca la mia famiglia.|Ha perso l'autobus stamattina.
 errore|Ho fatto un errore nel test.|Ha imparato dai suoi errori.
 modello|L'auto è un nuovo modello.|Lei preferisce l'ultimo modello.
 moderni|Questo è un edificio moderno.|Le piace l'arte moderna.
-Un attimo.|Aspetta un attimo, per favore.|Ha catturato il momento in una foto.
-Lunedì|Il lunedì è il primo giorno della settimana.|Ha un incontro lunedì.
+un attimo|Aspetta un attimo, per favore.|Ha catturato il momento in una foto.
+lunedì|Il lunedì è il primo giorno della settimana.|Ha un incontro lunedì.
 denaro|Mi servono altri soldi.|Ha risparmiato per una vacanza.
 mese|Febbraio è il mese più corto.|È nata nel mese di maggio.
 di più|Mi serve più tempo.|Vuole saperne di più sull'argomento.
@@ -508,38 +508,38 @@ vicino|Il negozio è vicino a casa mia.|Vive vicino al parco.
 necessità|Ho bisogno di un bicchiere d'acqua.|Ha bisogno di aiuto con i compiti.
 negativo|Questa è una risposta negativa.|Ha un atteggiamento negativo.
 vicinato|Il mio vicino è molto amichevole.|Parla spesso con la sua vicina.
-mai più .|Io non faccio mai colazione.|Non è mai stata a Parigi.
+mai più|Io non faccio mai colazione.|Non è mai stata a Parigi.
 nuovo|Ho comprato una macchina nuova.|Lei indossa un vestito nuovo.
 notizie|Leggo le notizie ogni mattina.|Le piace guardare i notiziari.
 giornale|Io sono abbonato a un quotidiano.|Lei legge il giornale a colazione.
 successivo|Qual è il prossimo treno?|Lei è seduta nella stanza accanto.
 accanto a|La banca è accanto all'ufficio postale.|Vive accanto alla sua migliore amica.
-Molto carino.|Questo è un bel posto per rilassarsi.|Ha un bel sorriso.
+molto carino|Questo è un bel posto per rilassarsi.|Ha un bel sorriso.
 notte|Mi piace guardare le stelle di notte.|Lavora di notte.
 nove|Io ho nove mele.|È nata il 9 maggio.
 diciannove|Ha diciannove anni.|Diciannove è il mio numero preferito.
 novanta|Io ho novanta dollari.|È nata nel 1990.
-No , no .|No, non voglio andarci.|Ha detto di no all'offerta.
-Nessuno .|Nessuno conosce la risposta.|Si sentiva come se nessuno la capisse.
+no , no|No, non voglio andarci.|Ha detto di no all'offerta.
+nessuno|Nessuno conosce la risposta.|Si sentiva come se nessuno la capisse.
 nessuno|Nessuno e' perfetto.|Ha detto che nessuno l'ha chiamata.
 nord|Il Polo Nord è molto freddo.|Vive a nord della città.
 narice|Ha un naso grande.|Si pizzicò il naso per l'odore.
 non|Quello non è il mio libro.|Non è contenta dei risultati.
-Nota|Vi prego di prendere nota di questo.|Ha lasciato un biglietto sul tavolo.
-niente .|Non c'è niente di cui preoccuparsi.|Lei non ha detto nulla durante l'incontro.
-Novembre|Il mio compleanno è a novembre.|Adora l'autunno a novembre.
-Ora .|Lo farò adesso.|E' qui adesso.
+nota|Vi prego di prendere nota di questo.|Ha lasciato un biglietto sul tavolo.
+niente|Non c'è niente di cui preoccuparsi.|Lei non ha detto nulla durante l'incontro.
+novembre|Il mio compleanno è a novembre.|Adora l'autunno a novembre.
+ora|Lo farò adesso.|E' qui adesso.
 numero|Qual è il tuo numero di telefono?|Ha un numero fortunato.
 infermiere|L'infermiera ti aiuterà.|Vuole fare l'infermiera.
 oggetto|Questo oggetto è pesante.|Ha trovato un oggetto interessante.
 ore|L'incontro è alle tre.|Si sveglia sempre alle sette.
-Ottobre|Il mio compleanno è in ottobre.|Adora i colori di ottobre.
+ottobre|Il mio compleanno è in ottobre.|Adora i colori di ottobre.
 di|La copertina del libro è blu.|E' una mia amica.
 spento|Le luci sono spente.|Si e' presa il giorno libero.
 ufficio|Lavoro in un ufficio.|Lei ha un grande ufficio.
 frequentemente|Vado spesso in palestra.|Lei legge spesso prima di andare a letto.
-Oh , no .|Oh, non ti avevo visto.|Oh, e' interessante!
-- Ok , va bene .|- Questo posto è occupato?|Ha detto che poteva andare via presto.
+oh , no|Oh, non ti avevo visto.|Oh, e' interessante!
+- Ok , va bene|- Questo posto è occupato?|Ha detto che poteva andare via presto.
 vecchia|Mio nonno è molto vecchio.|Lei ha un'auto vecchia.
 il|Il libro è sul tavolo.|E' al telefono.
 una volta|Ci sono stata una volta.|L'ha già detto una volta.
@@ -560,13 +560,13 @@ esterno|I bambini stanno giocando fuori.|Lei preferisce lavorare fuori.
 in alto|Il quadro è appeso sul divano.|Ha esaminato i documenti.
 di proprietà|Ho la mia macchina.|È orgogliosa del suo lavoro.
 pagina|Svolta a pagina 10.|Ha segnato la pagina.
-Vernice|Devo comprare della vernice.|Ama dipingere paesaggi.
+vernice|Devo comprare della vernice.|Ama dipingere paesaggi.
 pittura|Mi piace dipingere nel tempo libero.|Ha un bellissimo dipinto nel suo salotto.
 coppia|Ho comprato un nuovo paio di scarpe.|Lei ha un paio di orecchini che corrispondono.
 carta|Mi serve un foglio di carta.|Ha scritto i suoi appunti su carta.
 paragrafo|Ti prego di leggere il primo paragrafo.|Ha scritto un paragrafo sulle sue vacanze.
 genitore|I miei genitori vivono in un'altra città.|Lei è una madre single.
-Parco|Andiamo a fare una passeggiata nel parco.|Le piacciono i picnic nel parco.
+parco|Andiamo a fare una passeggiata nel parco.|Le piacciono i picnic nel parco.
 parte|Mi serve una parte per la mia macchina.|Sta lavorando a una nuova parte per il progetto.
 compagno|E' il mio socio d'affari.|Sta cercando un partner con cui collaborare.
 festa|Faremo una festa sabato.|Adora organizzare feste a sorpresa.
@@ -577,7 +577,7 @@ penna|Posso prendere in prestito la tua penna?|Lei scrive con una penna blu.
 matita|Io preferisco usare una matita.|Lei ha disegnato uno schizzo con una matita.
 popolazione|C'erano molte persone all'evento.|Le piace conoscere nuove persone.
 peperoncino|A me piace aggiungere pepe al cibo.|Ha comprato un pepe rosso al mercato.
-Perfetto .|Questa è la soluzione perfetta.|Ha un punteggio perfetto al test.
+perfetto|Questa è la soluzione perfetta.|Ha un punteggio perfetto al test.
 periodo|E' un periodo difficile per me.|Ha studiato durante il periodo di esame.
 persona|È una persona gentile.|Lei è la prima persona ad arrivare.
 personale|E' una questione personale.|Ha condiviso le sue esperienze personali.
@@ -596,7 +596,7 @@ piano|L'aereo sta volando alto.|E' su un aereo per New York.
 pianta|Ho una pianta nella mia stanza.|Lei innaffia la pianta ogni giorno.
 giocare|Ai bambini piace giocare fuori.|Lei gioca a calcio nei fine settimana.
 giocatore|È un giocatore di talento.|Lei è la miglior giocatrice della squadra.
-Per favore .|Puoi aiutarmi, per favore?|Ha detto di sì, per favore.
+per favore|Puoi aiutarmi, per favore?|Ha detto di sì, per favore.
 punto|Riesci a vedere quel punto sulla mappa?|Lei ha fatto un punto importante nella discussione.
 polizia|La polizia sta indagando sul caso.|Vuole diventare un agente di polizia.
 poliziotto|Il poliziotto aiutò il bambino smarrito.|Ha ringraziato il poliziotto per l'aiuto.
@@ -615,16 +615,16 @@ preparare|Devo prepararmi per l'esame.|Lei preparò un pasto delizioso per cena.
 presente|Vorrei presentarvi il mio progetto.|Ha presentato le sue scoperte alla conferenza.
 molto carino|Ha un bel sorriso.|Il giardino è bello in primavera.
 prezzo|Qual è il prezzo di questo libro?|Ha ottenuto un buon prezzo per la sua nuova macchina.
-Probabilmente .|Probabilmente pioverà domani.|Probabilmente e' a casa adesso.
+probabilmente|Probabilmente pioverà domani.|Probabilmente e' a casa adesso.
 problema|Dobbiamo risolvere questo problema.|Aveva un problema con il suo computer.
 prodotto|Questo prodotto è molto popolare.|Ha comprato un nuovo prodotto dal negozio.
 programma|Sto guardando un nuovo programma in TV.|Lei è responsabile del programma di formazione.
 progetto|Sto lavorando a un progetto scolastico.|Presentò il suo progetto alla classe.
 rosso|Il mio colore preferito è il viola.|Indossava un bellissimo vestito viola.
-Posizione|Per favore, metta il libro sullo scaffale.|Ha messo il telefono nella borsa.
+posizione|Per favore, metta il libro sullo scaffale.|Ha messo il telefono nella borsa.
 trimestre|È rimasto un quarto della torta.|Ha pagato un quarto per il biglietto dell'autobus.
 domanda|- Posso farti una domanda?|Ha una domanda sui compiti.
-Presto !|Impara rapidamente.|Ha dato una risposta rapida alla domanda.
+presto|Impara rapidamente.|Ha dato una risposta rapida alla domanda.
 velocemente|Per favore, finisci i compiti in fretta.|Si rese conto subito del suo errore.
 silenzio|Per favore, fate silenzio in biblioteca.|Le piace la tranquillità della campagna.
 abbastanza|Fa abbastanza freddo fuori.|È piuttosto brava in matematica.
@@ -633,22 +633,22 @@ pioggia|Amo ascoltare il suono della pioggia.|È rimasta bloccata sotto la piogg
 lettura|Mi piace leggere prima di andare a letto.|Lei legge un libro ogni settimana.
 lettore|Il lettore è sempre coinvolto nella storia.|Lei è una lettrice vorace.
 lettura|Leggere è un ottimo modo per rilassarsi.|Le piace leggere romanzi polizieschi.
-Pronto .|Sei pronta a partire?|È pronta per l'esame.
+pronto|Sei pronta a partire?|È pronta per l'esame.
 reale|Questo è un vero diamante.|Vuole vedere un vero cambiamento nel mondo.
-Davvero ?|Mi piace davvero questa canzone.|E' davvero brava nel suo lavoro.
+davvero|Mi piace davvero questa canzone.|E' davvero brava nel suo lavoro.
 ragione|Qual è il motivo della vostra visita?|Ha una buona ragione per essere in ritardo.
 rosso|Il mio colore preferito è il rosso.|Indossò un vestito rosso alla festa.
-Rilassati .|Mi piace rilassarmi in piscina.|Fa un bagno per rilassarsi.
-Ricordati.|Per favore, ricordati di spegnere le luci.|Non ricorda dove ha messo le chiavi.
-Ripetizione|Può ripeterlo, per favore?|Ha dovuto ripetere l'esercizio più volte.
+rilassati|Mi piace rilassarmi in piscina.|Fa un bagno per rilassarsi.
+ricordati|Per favore, ricordati di spegnere le luci.|Non ricorda dove ha messo le chiavi.
+ripetizione|Può ripeterlo, per favore?|Ha dovuto ripetere l'esercizio più volte.
 relazione|Devo scrivere un rapporto per il lavoro.|Ha presentato il suo rapporto in tempo.
 ristorante|Andiamo a cena in un ristorante.|Lavora in un ristorante di lusso.
 risultato|Qual è stato il risultato dell'esperimento?|Lei era soddisfatta del risultato.
 ritorno|Io restituirò il libro domani.|È tornata a casa dopo il viaggio.
-Arrozzo|A me piace mangiare riso con i pasti.|Ha cucinato del riso per cena.
+arrozzo|A me piace mangiare riso con i pasti.|Ha cucinato del riso per cena.
 ricco|È un uomo ricco.|Vuole sposare un marito ricco.
 cavalcare|A me piace andare in bicicletta nel parco.|Ha cavalcato per la prima volta.
-Destra|Gira a destra al semaforo.|Lei è seduta alla mia destra.
+destra|Gira a destra al semaforo.|Lei è seduta alla mia destra.
 fiume|Il fiume scorre attraverso la valle.|Ama pescare nel fiume.
 strada|La strada è chiusa per lavori di costruzione.|Vive su una strada tranquilla.
 camera|Questa è la mia camera da letto.|Ha pulito la sua stanza ieri.
@@ -656,11 +656,11 @@ di routine|Ho una routine mattutina.|Segue una rigorosa routine di esercizio.
 regola|Devi seguire le regole.|Ha infranto la regola e si e' cacciata nei guai.
 correre|Mi piace correre la mattina.|Corre cinque miglia ogni giorno.
 tristezza|Sembra triste oggi.|Sono triste per la situazione.
-Insalate|Voglio un'insalata per pranzo.|Ha fatto un'insalata deliziosa.
+insalate|Voglio un'insalata per pranzo.|Ha fatto un'insalata deliziosa.
 salato|Passami il sale, per favore.|Aggiunse del sale alla zuppa.
 stesso|Abbiamo lo stesso problema.|Indossava lo stesso vestito di me.
 panino|Vorrei un panino per pranzo.|Ha fatto un panino al tacchino.
-Sabato|Il sabato è il mio giorno preferito.|Ha una festa sabato.
+sabato|Il sabato è il mio giorno preferito.|Ha una festa sabato.
 dire|- Che cosa hai detto?|Non ha detto niente.
 scuola|Vado a scuola ogni giorno.|Lei è una studentessa della scuola.
 scienza|La scienza è affascinante.|Vuole studiare scienze.
@@ -672,7 +672,7 @@ vedete|Vedo un uccello sull'albero.|Lei può vedere le montagne dalla sua finest
 vendere|Voglio vendere la mia vecchia macchina.|Vende gioielli fatti a mano online.
 inviare|Per favore, mi mandi i dettagli.|Lei mandò una lettera alla sua amica.
 sentenza|Riesce a scrivere una frase?|Parlava in frasi complete.
-Settembre|Settembre è il nono mese.|È nata a settembre.
+settembre|Settembre è il nono mese.|È nata a settembre.
 sette|Io ho sette mele.|Ha sette anni.
 diciassette|Diciassette è il mio numero preferito.|Ha compiuto diciassette anni la settimana scorsa.
 settanta|Settanta è un numero grande.|Ha settant'anni.
@@ -704,7 +704,7 @@ lentamente|Per favore, guida piano.|Lei legge lentamente.
 piccole|Questa è una scatola piccola.|Lei ha un cane piccolo.
 serpente|Ho visto un serpente in giardino.|Ha paura dei serpenti.
 neve|Sta cadendo la neve.|Ama giocare sulla neve.
-Allora ...|Ero stanco, così sono andato a letto presto.|Era felice, quindi sorrise.
+allora|Ero stanco, così sono andato a letto presto.|Era felice, quindi sorrise.
 un po'|Ho delle idee.|Ha comprato delle mele.
 qualcuno|C'è qualcuno alla porta.|Conosce qualcuno famoso.
 qualcuno|Qualcuno ha dimenticato la borsa.|Sta cercando qualcuno che possa aiutarla.
@@ -712,11 +712,11 @@ qualcosa|Devo mangiare qualcosa.|Sta nascondendo qualcosa.
 a volte|A volte vado a fare una passeggiata.|Lei visita i suoi nonni a volte.
 figlio|Mio figlio sta giocando fuori.|Ha un figlio e una figlia.
 canzone|Adoro questa canzone.|Ha cantato una canzone bellissima.
-Presto|Ti chiamerò presto.|Arriverà presto.
-Mi dispiace.|Mi dispiace per l'errore.|Lei era dispiaciuta di sentire la notizia.
+presto|Ti chiamerò presto.|Arriverà presto.
+mi dispiace|Mi dispiace per l'errore.|Lei era dispiaciuta di sentire la notizia.
 suono|Cos'era quel suono?|Lei ha un bellissimo suono di canto.
 zuppa|Ho preparato della zuppa.|Le piace la zuppa di pomodoro.
-Sud|Viviamo nel sud.|Ha viaggiato a sud per l'inverno.
+sud|Viviamo nel sud.|Ha viaggiato a sud per l'inverno.
 spazio|C'è un sacco di spazio qui.|Vuole esplorare lo spazio.
 parlare|Io so parlare inglese.|Lei parla tre lingue.
 speciale|Questo è un giorno speciale.|Ha ricevuto un dono speciale.
@@ -732,7 +732,7 @@ dichiarazione|Questa è una dichiarazione chiara.|Ha fatto una dichiarazione sul
 stazione|Il treno arriva alla stazione.|Lei aspettava alla stazione.
 restare|Io resterò qui.|È rimasta in un albergo.
 ancora|Sto ancora aspettando.|Ci sta ancora lavorando.
-Fermo !|Per favore, smettila di parlare.|Lei ha fermato l'auto.
+fermo|Per favore, smettila di parlare.|Lei ha fermato l'auto.
 storia|Adoro questa storia.|Ha raccontato una storia divertente.
 strada|Il negozio è sulla strada.|Vive in una strada tranquilla.
 forte|È una persona forte.|Lei ha un'opinione forte.
@@ -744,9 +744,9 @@ successo|Il successo richiede duro lavoro.|Ha raggiunto un grande successo.
 zucchero|Prendo il mio caffè con lo zucchero.|Le piace lo zucchero nel suo tè.
 estate|L'estate è calda in questa regione.|Adora le vacanze estive.
 sole|Il sole splende.|Si è seduta al sole.
-Domenica|La domenica è un giorno di riposo.|Lei va in chiesa la domenica.
+domenica|La domenica è un giorno di riposo.|Lei va in chiesa la domenica.
 supermercato|Devo andare al supermercato.|Ha fatto la spesa al supermercato.
-Certo .|Ne sei sicura?|È sicura della sua decisione.
+certo|Ne sei sicura?|È sicura della sua decisione.
 maglione|Ho comprato un maglione nuovo.|Indossava un maglione caldo.
 nuotare|Mi piace nuotare in piscina.|Lei nuota ogni mattina.
 nuoto|Il nuoto è un buon esercizio.|Le piace nuotare nell'oceano.
@@ -769,27 +769,27 @@ terribile|Il film era terribile.|Ha avuto un'esperienza terribile.
 prova|Domani ho un esame.|Ha passato il test.
 testo|Per favore, leggi il testo.|Ha scritto un messaggio.
 di|È più alta di suo fratello.|Questo libro è migliore di quello.
-Grazie.|Voglio ringraziarla.|Mi ha ringraziato per il mio aiuto.
-Grazie .|Grazie per l'aiuto.|Ha detto grazie e se n'è andata.
+grazie|Voglio ringraziarla.|Mi ha ringraziato per il mio aiuto.
+grazie|Grazie per l'aiuto.|Ha detto grazie e se n'è andata.
 che|Quello è il mio libro.|Ha detto che sarebbe venuta.
 il|Il gatto è sul tetto.|Le piace il vestito blu.
 teatro|Andiamo al teatro.|Adora guardare le opere teatrali al teatro.
 loro|Questa è la loro casa.|Le ha fatto delle foto.
 loro|Li ho visti al parco.|Li ha invitati alla festa.
-Allora ...|Possiamo andare, allora.|Era stanca allora.
-C' è|Il libro è là.|Vive lì.
+allora|Possiamo andare, allora.|Era stanca allora.
+c' è|Il libro è là.|Vive lì.
 loro|Sono miei amici.|Ha detto che sarebbero venuti.
 cosa|Cos'è quella cosa?|Ha perso la sua cosa preferita.
 pensare|Devo pensarci.|Lei pensa molto di te.
-Terzo|Questo e' il mio terzo tentativo.|Finì al terzo posto.
+terzo|Questo e' il mio terzo tentativo.|Finì al terzo posto.
 sete|Io ho sete.|Si sente sempre assetata dopo l'esercizio.
 tredici|Io ho tredici mele.|Ha tredici anni.
 trenta|Ci sono trenta studenti nella classe.|Avrà trent'anni l'anno prossimo.
-questo.|Questo è il mio libro.|Ha detto che questo e' il suo preferito.
+questo|Questo è il mio libro.|Ha detto che questo e' il suo preferito.
 migliaia|Ho mille idee.|Ha vinto mille dollari.
 tre|Io ho tre fratelli.|Ha tre anni.
 attraverso|Abbiamo camminato attraverso il parco.|Lei guardò attraverso la finestra.
-Giovedì|Il giovedì è il mio giorno preferito.|Ha un incontro giovedì.
+giovedì|Il giovedì è il mio giorno preferito.|Ha un incontro giovedì.
 biglietto|Devo comprare un biglietto.|Mostrò il suo biglietto all'ingresso.
 tempo|- Che ore sono?|Lei passa molto tempo a leggere.
 stanco|Sono stanca.|Si sentiva stanca dopo il lungo viaggio.
@@ -799,9 +799,9 @@ oggi|Oggi e' una bellissima giornata.|Lei visiterà sua nonna oggi.
 insieme|Lavoreremo insieme.|Le piace giocare insieme ai suoi amici.
 bagno|Dov'è il bagno?|E' andata in bagno prima del film.
 pomodoro|Mi serve un pomodoro per l'insalata.|Ha comprato un pomodoro al mercato.
-Domani|Ti chiamerò domani.|Ha un incontro domani.
-Stasera .|Ho dei piani per stasera.|Stara' a casa stanotte.
-Anche io .|Voglio venire anch'io.|Sta venendo anche lei.
+domani|Ti chiamerò domani.|Ha un incontro domani.
+stasera|Ho dei piani per stasera.|Stara' a casa stanotte.
+anche io|Voglio venire anch'io.|Sta venendo anche lei.
 dente|Mi fa male il dente.|Ha una carie nel dente.
 argomento|Qual è l'argomento della discussione?|Ha introdotto un nuovo argomento.
 turistico|Il turista ha scattato molte foto.|Lei è una turista in città.
@@ -814,10 +814,10 @@ viaggio|Sto per fare un viaggio.|Le è piaciuto il viaggio.
 pantaloni|Ho comprato dei pantaloni nuovi.|Lei indossa dei pantaloni blu.
 vero|Questa affermazione è vera.|Lei dice sempre la verità.
 provare|Farò del mio meglio.|Lei ha cercato di risolvere il problema.
-T-shirt|Mi serve una nuova maglietta.|Ha comprato una maglietta dal negozio.
-Martedì|Il martedì è il mio giorno preferito.|Ha un incontro martedì.
+t-shirt|Mi serve una nuova maglietta.|Ha comprato una maglietta dal negozio.
+martedì|Il martedì è il mio giorno preferito.|Ha un incontro martedì.
 girare|Per favore, spegni le luci.|Ha voltato pagina.
-Televisione|Io guardo la TV la sera.|Lei accese la TV.
+televisione|Io guardo la TV la sera.|Lei accese la TV.
 dodici|Un anno ha dodici mesi.|Ha dodici anni.
 venti|Io ho venti dollari.|Lei ha vent'anni.
 due volte|Ho visto quel film due volte.|Lei visita i suoi genitori due volte al mese.
@@ -830,7 +830,7 @@ comprendere|Non capisco la domanda.|Lei capisce il problema.
 università|Lei studia all'università.|Si è laureato all'università.
 fino a|Aspetterò fino al tuo arrivo.|E' rimasta fino alla fine dello spettacolo.
 in alto|Il gatto è salito sull'albero.|Lei alzò lo sguardo verso il cielo.
-Di sopra.|La camera da letto è di sopra.|E' andata di sopra a studiare.
+di sopra|La camera da letto è di sopra.|E' andata di sopra a studiare.
 noi|Ci può aiutare?|Ci ha invitati alla sua festa.
 uso|Devo usare il computer.|Usa un sacco di app sul suo telefono.
 utile|Questo libro è molto utile.|Ha trovato utile l'informazione.
@@ -842,7 +842,7 @@ video|Ho guardato un video divertente online.|Le piace fare video.
 villaggio|Lui è cresciuto in un piccolo villaggio.|Lei ha visitato i suoi nonni nel villaggio.
 visita|Domani andrò a trovare il mio amico.|Ha visitato il museo la settimana scorsa.
 visitatore|Il visitatore fece molte domande.|Lei è una frequente visitatrice del museo.
-Aspetta .|Ti aspetterò.|Ha aspettato per un'ora.
+aspetta|Ti aspetterò.|Ha aspettato per un'ora.
 cameriere|Il cameriere ha preso il nostro ordine.|Lavorava come cameriera.
 svegliarsi|Mi sveglio alle 7 del mattino.|Si è svegliata tardi oggi.
 camminare|Mi piace camminare nel parco.|Lei porta a spasso il suo cane ogni mattina.
@@ -857,19 +857,19 @@ noi|Andiamo al parco.|Ci hanno invitato al loro matrimonio.
 usura|Mi piace indossare abiti comodi.|Lei indossò un bellissimo vestito alla festa.
 tempo|Il tempo è bello oggi.|Ha controllato le previsioni meteo.
 sito web|Ho trovato un sito utile.|Ha creato un sito web per la sua attività.
-Mercoledì|Il mercoledì è il mio giorno preferito.|Ha un incontro mercoledì.
+mercoledì|Il mercoledì è il mio giorno preferito.|Ha un incontro mercoledì.
 settimana|Lavoro cinque giorni alla settimana.|Lei andrà in vacanza la prossima settimana.
 fine settimana|Adoro rilassarmi nel fine settimana.|Ha dei piani per il fine settimana.
-Benvenuto.|Benvenuti nella nostra casa!|Ha detto benvenuti agli ospiti.
-Bene , bene .|Spero che tu stia bene.|Si sente bene oggi.
+benvenuto|Benvenuti nella nostra casa!|Ha detto benvenuti agli ospiti.
+bene , bene|Spero che tu stia bene.|Si sente bene oggi.
 est|Il sole tramonta a ovest.|Ha viaggiato verso la costa occidentale.
-Cosa ?|- Come ti chiami?|Ha chiesto che ora fosse.
+cosa|- Come ti chiami?|Ha chiesto che ora fosse.
 quando|Quando è il tuo compleanno?|Non ha detto quando sarebbe arrivata.
 dove|- Dove abita?|Chiese dov'era la stazione più vicina.
 che|Quale libro vuoi?|Non ha detto quale vestito le piaceva.
 bianco|Il gatto bianco sta dormendo.|Ha comprato un vestito bianco.
 che|Chi è il tuo migliore amico?|Non ha detto con chi era.
-Perché ?|Perché sei triste?|Mi ha chiesto perché ero in ritardo.
+perché|Perché sei triste?|Mi ha chiesto perché ero in ritardo.
 moglie|Mia moglie è una dottoressa.|Lei è sua moglie.
 volontà|Ti chiamerò domani.|Ha detto che ci aiuterà.
 vincere|Spero di vincere la partita.|Ha vinto un premio nel concorso.
@@ -889,12 +889,12 @@ scrivere|Mi piace scrivere storie.|Lei sta scrivendo una lettera.
 scrittore|È uno scrittore famoso.|Vuole essere una scrittrice.
 scrittura|Scrivere è il mio hobby.|Le piace scrivere nel suo tempo libero.
 sbagliato|E' la risposta sbagliata.|Si e' resa conto di aver sbagliato.
-- Si ' .|Si', sono d'accordo con te.|Ha detto di sì alla proposta.
+- Si '|Si', sono d'accordo con te.|Ha detto di sì alla proposta.
 anno|Quest'anno è stato impegnativo.|Si e' laureata l'anno scorso.
 giallo|Il fiore giallo è bello.|Indossava un vestito giallo.
-Sì , sì .|Sì, capisco.|Ha detto di sì all'invito.
+sì , sì|Sì, capisco.|Ha detto di sì all'invito.
 ieri|L'ho vista ieri.|Mi ha chiamato ieri.
-Lei .|Sei il mio migliore amico.|Ha detto che saresti venuto.
+lei|Sei il mio migliore amico.|Ha detto che saresti venuto.
 giovani|Il ragazzino sta giocando.|Lei è giovane e talentuosa.
 il suo|Il suo libro è sul tavolo.|Ha detto che la tua idea era interessante.
 di te stesso|Si prenda cura di se'.|L'ha fatto da sola.
