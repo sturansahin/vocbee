@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, Image, StyleSheet, Modal, Animated } from 'react-native';
+import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, Image, StyleSheet, Modal, Animated, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { COLORS, LANGUAGES } from '../constants';
@@ -7,6 +7,7 @@ import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import Feather from '@expo/vector-icons/Feather';
 import { FONT_FAMILY } from '../utils/typography';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { resetProgress } from '../services/progressService';
 
 const HOURS = Array.from({ length: 24 }, (_, i) => `${i.toString().padStart(2, '0')}:00`);
 const FREQUENCIES = ['Every 30 minutes', 'Every hour', 'Every 2 hours', 'Every 4 hours', 'Once a day'];
@@ -122,6 +123,8 @@ export default function SettingsScreen() {
    const [showFrequencyPicker, setShowFrequencyPicker] = useState(false);
    const [selectedLanguage, setSelectedLanguage] = useState('english');
    const [showLanguagePicker, setShowLanguagePicker] = useState(false);
+   const [showHelpModal, setShowHelpModal] = useState(false);
+   const [showPrivacyModal, setShowPrivacyModal] = useState(false);
 
    // Dynamic styles based on theme
    const dynamicStyles = {
@@ -279,10 +282,46 @@ export default function SettingsScreen() {
                )}
             </View>
 
+            {/* Section: Progress */}
+            <Text style={[styles.sectionTitle, dynamicStyles.textSecondary]}>Progress</Text>
+            <View style={[styles.sectionCard, dynamicStyles.sectionCard]}>
+               <TouchableOpacity
+                  style={[styles.settingItem, { borderBottomWidth: 0 }]}
+                  onPress={() => {
+                     Alert.alert(
+                        'Reset Progress',
+                        'Are you sure you want to reset all your learning progress? This action cannot be undone.',
+                        [
+                           { text: 'Cancel', style: 'cancel' },
+                           {
+                              text: 'Reset',
+                              style: 'destructive',
+                              onPress: async () => {
+                                 await resetProgress();
+                                 Alert.alert('Success', 'Your progress has been reset.');
+                              }
+                           }
+                        ]
+                     );
+                  }}
+               >
+                  <View style={styles.settingLeft}>
+                     <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
+                        <MaterialIcons name="refresh" size={24} color={colors.error} />
+                     </View>
+                     <View>
+                        <Text style={[styles.settingTitle, { color: colors.error }]}>Reset Progress</Text>
+                        <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>Clear all learned words</Text>
+                     </View>
+                  </View>
+                  <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
+               </TouchableOpacity>
+            </View>
+
             {/* Section: Support */}
             <Text style={[styles.sectionTitle, dynamicStyles.textSecondary]}>Support</Text>
             <View style={[styles.sectionCard, dynamicStyles.sectionCard]}>
-               <TouchableOpacity style={styles.settingItem}>
+               <TouchableOpacity style={styles.settingItem} onPress={() => setShowHelpModal(true)}>
                   <View style={styles.settingLeft}>
                      <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
                         <MaterialCommunityIcons name="help" size={20} color={colors.primary} />
@@ -291,7 +330,7 @@ export default function SettingsScreen() {
                   </View>
                   <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
                </TouchableOpacity>
-               <TouchableOpacity style={[styles.settingItem, { borderBottomWidth: 0 }]}>
+               <TouchableOpacity style={[styles.settingItem, { borderBottomWidth: 0 }]} onPress={() => setShowPrivacyModal(true)}>
                   <View style={styles.settingLeft}>
                      <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
                         <MaterialCommunityIcons name="security" size={24} color={colors.primary} />
@@ -679,5 +718,25 @@ const styles = StyleSheet.create({
    pickerItemNativeName: {
       fontSize: 14,
       fontWeight: 'bold',
+   },
+   faqQuestion: {
+      fontFamily: FONT_FAMILY,
+      fontSize: 16,
+      marginBottom: 8,
+   },
+   faqAnswer: {
+      fontFamily: FONT_FAMILY,
+      fontSize: 14,
+      lineHeight: 20,
+   },
+   privacyHeading: {
+      fontFamily: FONT_FAMILY,
+      fontSize: 16,
+      marginBottom: 8,
+   },
+   privacyText: {
+      fontFamily: FONT_FAMILY,
+      fontSize: 14,
+      lineHeight: 20,
    },
 });

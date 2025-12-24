@@ -1,16 +1,37 @@
 import React from 'react';
 import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '../context/ThemeContext';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import { FONT_FAMILY } from '../utils/typography';
+import { RootStackParamList } from '../types';
+
+type ExampleSentencesRouteProp = RouteProp<RootStackParamList, 'ExampleSentences'>;
 
 export default function ExampleSentencesScreen() {
     const navigation = useNavigation();
+    const route = useRoute<ExampleSentencesRouteProp>();
     const insets = useSafeAreaInsets();
     const { colors, isDarkMode } = useTheme();
+
+    // Get word data from route params
+    const {
+        word,
+        translation,
+        sentence1,
+        sentence2,
+        nativeSentence1,
+        nativeSentence2
+    } = route.params || {
+        word: 'Word',
+        translation: 'Translation',
+        sentence1: 'Example sentence 1',
+        sentence2: 'Example sentence 2',
+        nativeSentence1: 'Native sentence 1',
+        nativeSentence2: 'Native sentence 2'
+    };
 
     return (
         <View style={[styles.container, { backgroundColor: colors.background }]}>
@@ -20,14 +41,11 @@ export default function ExampleSentencesScreen() {
             >
                 {/* Title Section */}
                 <View style={styles.titleSection}>
-                    <Text style={[styles.wordTitle, { color: colors.text }]}>Serendipity</Text>
+                    <Text style={[styles.wordTitle, { color: colors.text }]}>{word}</Text>
                     <View style={styles.pronunciationRow}>
-                        <MaterialIcons name="graphic-eq" size={16} color={colors.primary} />
-                        <Text style={[styles.pronunciation, { color: colors.primary }]}>/ˌserənˈdipədē/</Text>
+                        <MaterialIcons name="translate" size={16} color={colors.primary} />
+                        <Text style={[styles.pronunciation, { color: colors.primary }]}>{translation}</Text>
                     </View>
-                    <Text style={[styles.definition, { color: colors.textSecondary }]}>
-                        The occurrence and development of events by chance in a happy or beneficial way.
-                    </Text>
                 </View>
 
                 <View style={[styles.divider, { backgroundColor: colors.border }]} />
@@ -37,29 +55,27 @@ export default function ExampleSentencesScreen() {
                     <Text style={[styles.sectionTitle, { color: colors.text }]}>Example Sentences</Text>
 
                     <View style={styles.examplesList}>
-                        {/* Item 1 */}
+                        {/* Sentence 1 */}
                         <View style={[styles.exampleCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
                             <Text style={[styles.exampleText, { color: colors.text }]}>
-                                It was pure <Text style={[styles.highlightWord, { color: colors.primary }]}>serendipity</Text> that we met at the coffee shop right before the rain started.
+                                {sentence1}
                             </Text>
                             <View style={[styles.exampleDivider, { backgroundColor: colors.border }]} />
                             <Text style={[styles.translationText, { color: colors.textSecondary }]}>
-                                Tamamen şans eseri yağmur başlamadan hemen önce kahve dükkanında karşılaştık.
+                                {nativeSentence1}
                             </Text>
                         </View>
 
-                        {/* Item 2 */}
+                        {/* Sentence 2 */}
                         <View style={[styles.exampleCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
                             <Text style={[styles.exampleText, { color: colors.text }]}>
-                                Many scientific discoveries are a result of <Text style={[styles.highlightWord, { color: colors.primary }]}>serendipity</Text> and hard work.
+                                {sentence2}
                             </Text>
                             <View style={[styles.exampleDivider, { backgroundColor: colors.border }]} />
                             <Text style={[styles.translationText, { color: colors.textSecondary }]}>
-                                Birçok bilimsel keşif, mutlu tesadüflerin ve sıkı çalışmanın bir sonucudur.
+                                {nativeSentence2}
                             </Text>
                         </View>
-
-
                     </View>
                 </View>
 
@@ -250,7 +266,7 @@ const styles = StyleSheet.create({
     },
     translationText: {
         color: '#9ca3af',
-        fontSize: 14,
+        fontSize: 16,
         fontStyle: 'italic',
         flex: 1,
         marginRight: 16,

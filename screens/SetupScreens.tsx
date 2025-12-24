@@ -11,6 +11,7 @@ import {
   Platform,
   Image
 } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -21,6 +22,8 @@ import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import { LANGUAGES, LEVELS, COLORS } from '../constants';
 import { useTheme } from '../context/ThemeContext';
 import { FONT_FAMILY } from '../utils/typography';
+import { generateAllVocabulary, getFirstLevelForUserLevel } from '../services/vocabularyService';
+import { setCurrentLevel } from '../services/progressService';
 
 type SetupNavProp = StackNavigationProp<RootStackParamList>;
 type SetupRouteProp = RouteProp<RootStackParamList, 'NativeLanguage'>;
@@ -34,8 +37,9 @@ export const SetupScreen = () => {
   const { colors, isDarkMode } = useTheme();
   const [currentStep, setCurrentStep] = useState(1);
   const [nativeLanguage, setNativeLanguage] = useState('english');
-  const [targetLanguage, setTargetLanguage] = useState('spanish');
+  const [targetLanguage, setTargetLanguage] = useState('turkish');
   const [level, setLevel] = useState('beginner');
+  const [isGenerating, setIsGenerating] = useState(false);
 
   // Animated values
   const progressAnim = useRef(new Animated.Value(33.33)).current;
@@ -81,11 +85,29 @@ export const SetupScreen = () => {
     });
   };
 
-  const handleNext = () => {
+  const handleNext = async () => {
     if (currentStep < totalSteps) {
       goToStep(currentStep + 1);
     } else {
-      // Final step - navigate to main app
+      // Final step - save settings, generate vocabulary and navigate to main app
+      setIsGenerating(true);
+      try {
+        // Save user level
+        await AsyncStorage.setItem('@user_level', level);
+
+        // Generate vocabulary for selected language pair
+        await generateAllVocabulary(nativeLanguage, targetLanguage);
+
+        // Set initial level based on user selection
+        const initialLevel = getFirstLevelForUserLevel(level);
+        await setCurrentLevel(initialLevel);
+
+        console.log(`Vocabulary generated: ${nativeLanguage} -> ${targetLanguage}, starting at ${initialLevel}`);
+      } catch (error) {
+        console.error('Error saving settings:', error);
+      } finally {
+        setIsGenerating(false);
+      }
       navigation.navigate('MainTabs');
     }
   };
@@ -398,6 +420,8 @@ const styles = StyleSheet.create({
     color: COLORS.textSecondary,
     fontSize: 13,
     marginTop: 2,
+    textAlign: 'left',
+    writingDirection: 'ltr',
   },
   checkCircle: {
     width: 28,

@@ -23,7 +23,7 @@ export const LoginScreen = () => {
 
         {/* Logo Section */}
         <View style={styles.logoSection}>
-          <SwarmLogo size={100} color={colors.primary} />
+          <SwarmLogo size={100} color={COLORS.primary} />
           <Text style={[styles.appTitle, { color: colors.text }]}>VocBee</Text>
           <Text style={[styles.appSubtitle, { color: colors.textSecondary }]}>Master new words effortlessly.</Text>
         </View>

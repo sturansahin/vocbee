@@ -8,7 +8,14 @@ export type RootStackParamList = {
   LevelTest: undefined;
   MainTabs: undefined;
   Settings: undefined;
-  ExampleSentences: { word: string; translation: string; definition: string };
+  ExampleSentences: {
+    word: string;
+    translation: string;
+    sentence1: string;
+    sentence2: string;
+    nativeSentence1: string;
+    nativeSentence2: string;
+  };
 };
 
 export interface Language {

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import {
     View,
     Text,
@@ -7,47 +7,221 @@ import {
     Dimensions,
     Animated,
     PanResponder,
-    Image
+    Image,
+    ActivityIndicator
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { useNavigation } from '@react-navigation/native';
+import { BlurView } from 'expo-blur';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../types';
-import { MaterialIcons } from '@expo/vector-icons';
 import Feather from '@expo/vector-icons/Feather';
+import { MaterialIcons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '../context/ThemeContext';
 import { FONT_FAMILY } from '../utils/typography';
 import { SwarmLogo } from '../components/SwarmLogo';
+import { ArrowIcon } from '../components/ArrowIcon';
+import { RetryIcon } from '../components/RetryIcon';
+import { StarIcon } from '../components/StarIcon';
+import {
+    VocabularyWord,
+    Level,
+    getStoredVocabulary,
+    shuffleArray,
+    isVocabularyGenerated
+} from '../services/vocabularyService';
+import {
+    markWordAsLearned,
+    getLearnedWords,
+    getCurrentLevel,
+    checkAndAdvanceLevel,
+    getLearnedCount,
+    getTotalWords
+} from '../services/progressService';
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;
-
-// Sample words for the word card
-const SAMPLE_WORDS = [
-    { id: 1, word: 'Serendipity', type: 'noun', definition: 'The occurrence and development of events by chance in a happy or beneficial way.', translation: 'Şans eseri' },
-    { id: 2, word: 'Ephemeral', type: 'adjective', definition: 'Lasting for a very short time.', translation: 'Geçici' },
-    { id: 3, word: 'Resilience', type: 'noun', definition: 'The capacity to recover quickly from difficulties.', translation: 'Dayanıklılık' },
-    { id: 4, word: 'Eloquent', type: 'adjective', definition: 'Fluent or persuasive in speaking or writing.', translation: 'Etkili konuşan' },
-    { id: 5, word: 'Ubiquitous', type: 'adjective', definition: 'Present, appearing, or found everywhere.', translation: 'Her yerde bulunan' },
-];
 
 export default function HomeScreen() {
     const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
     const insets = useSafeAreaInsets();
     const { colors, isDarkMode } = useTheme();
+
+    // State
+    const [words, setWords] = useState<VocabularyWord[]>([]);
     const [currentWordIndex, setCurrentWordIndex] = useState(0);
+    const [currentLevel, setCurrentLevel] = useState<Level>('A1');
+    const [userLevel, setUserLevel] = useState('beginner');
+    const [isLoading, setIsLoading] = useState(true);
+    const [learnedCount, setLearnedCount] = useState(0);
+    const [totalCount, setTotalCount] = useState(0);
 
-    const currentWord = SAMPLE_WORDS[currentWordIndex];
-    const nextWord = SAMPLE_WORDS[(currentWordIndex + 1) % SAMPLE_WORDS.length];
+    // Ref to track if initial load has been done
+    const hasInitiallyLoaded = useRef(false);
 
-    // Swipe animation setup (from FlashcardScreen)
+    // Load vocabulary and progress (only called on initial load or after reset)
+    const loadData = useCallback(async (forceReload = false) => {
+        // Skip if already loaded and not forcing reload
+        if (hasInitiallyLoaded.current && !forceReload) {
+            return;
+        }
+
+        setIsLoading(true);
+        try {
+            // Check if vocabulary is generated
+            const hasVocab = await isVocabularyGenerated();
+            if (!hasVocab) {
+                console.log('No vocabulary generated yet');
+                setIsLoading(false);
+                return;
+            }
+
+            // Get current level
+            const level = await getCurrentLevel();
+            setCurrentLevel(level);
+
+            // Get user level display
+            const savedUserLevel = await AsyncStorage.getItem('@user_level');
+            if (savedUserLevel) {
+                setUserLevel(savedUserLevel);
+            }
+
+            // Get vocabulary for current level
+            const vocabulary = await getStoredVocabulary(level);
+
+            // Get learned words
+            const learnedIds = await getLearnedWords(level);
+
+            // Filter out learned words and shuffle
+            const unlearnedWords = vocabulary.filter(word => !learnedIds.includes(word.id));
+            const shuffledWords = shuffleArray(unlearnedWords);
+
+            setWords(shuffledWords);
+            setCurrentWordIndex(0);
+
+            // Update counts
+            const learned = await getLearnedCount(level);
+            const total = await getTotalWords(level);
+            setLearnedCount(learned);
+            setTotalCount(total);
+
+            hasInitiallyLoaded.current = true;
+
+            console.log(`Loaded ${shuffledWords.length} unlearned words from ${vocabulary.length} total for level ${level}`);
+        } catch (error) {
+            console.error('Error loading data:', error);
+        } finally {
+            setIsLoading(false);
+        }
+    }, []);
+
+    // Update only counts (called on focus without reshuffling)
+    const updateCounts = useCallback(async () => {
+        try {
+            const learned = await getLearnedCount(currentLevel);
+            const total = await getTotalWords(currentLevel);
+            setLearnedCount(learned);
+            setTotalCount(total);
+        } catch (error) {
+            console.error('Error updating counts:', error);
+        }
+    }, [currentLevel]);
+
+    // Initial load - only once
+    useEffect(() => {
+        loadData();
+    }, [loadData]);
+
+    // Update counts on focus (without reshuffling)
+    useFocusEffect(
+        useCallback(() => {
+            if (hasInitiallyLoaded.current) {
+                updateCounts();
+            }
+        }, [updateCounts])
+    );
+
+    // Get level display
+    const getLevelDisplay = () => {
+        switch (userLevel) {
+            case 'beginner':
+                return { code: currentLevel, description: 'Beginner' };
+            case 'intermediate':
+                return { code: currentLevel, description: 'Intermediate' };
+            case 'advanced':
+                return { code: currentLevel, description: 'Advanced' };
+            default:
+                return { code: currentLevel, description: 'Beginner' };
+        }
+    };
+
+    const levelDisplay = getLevelDisplay();
+
+    const currentWord = words[currentWordIndex];
+    const nextWord = words[(currentWordIndex + 1) % Math.max(words.length, 1)];
+
+    // Swipe animation setup
     const position = useRef(new Animated.ValueXY()).current;
     const rotate = position.x.interpolate({
         inputRange: [-SCREEN_WIDTH / 2, 0, SCREEN_WIDTH / 2],
         outputRange: ['-15deg', '0deg', '15deg'],
         extrapolate: 'clamp',
     });
+
+    // Use refs for swipe functions to avoid stale closures in panResponder
+    const swipeCardRef = useRef<((direction: 'left' | 'right') => void) | null>(null);
+    const resetPositionRef = useRef<(() => void) | null>(null);
+
+    const swipeCard = useCallback(async (direction: 'left' | 'right') => {
+        const x = direction === 'right' ? SCREEN_WIDTH * 1.5 : -SCREEN_WIDTH * 1.5;
+
+        Animated.timing(position, {
+            toValue: { x, y: 0 },
+            duration: 300,
+            useNativeDriver: false,
+        }).start(async () => {
+            position.setValue({ x: 0, y: 0 });
+
+            // If swiped right, mark as learned
+            if (direction === 'right' && currentWord) {
+                await markWordAsLearned(currentLevel, currentWord.id);
+                setLearnedCount(prev => prev + 1);
+
+                // Check if level is complete
+                const newLevel = await checkAndAdvanceLevel();
+                if (newLevel !== currentLevel) {
+                    console.log(`Advanced to level ${newLevel}`);
+                    setCurrentLevel(newLevel);
+                    await loadData(true); // Force reload for new level
+                    return;
+                }
+            }
+
+            // Move to next word
+            if (currentWordIndex < words.length - 1) {
+                setCurrentWordIndex(prev => prev + 1);
+            } else {
+                // All words done, reload to get any remaining
+                await loadData(true);
+            }
+        });
+    }, [currentWord, currentLevel, currentWordIndex, words.length, loadData, position]);
+
+    const resetPosition = useCallback(() => {
+        Animated.spring(position, {
+            toValue: { x: 0, y: 0 },
+            useNativeDriver: false,
+            friction: 5,
+        }).start();
+    }, [position]);
+
+    // Update refs when functions change
+    useEffect(() => {
+        swipeCardRef.current = swipeCard;
+        resetPositionRef.current = resetPosition;
+    }, [swipeCard, resetPosition]);
 
     const panResponder = useRef(
         PanResponder.create({
@@ -57,35 +231,15 @@ export default function HomeScreen() {
             },
             onPanResponderRelease: (_, gesture) => {
                 if (gesture.dx > SWIPE_THRESHOLD) {
-                    swipeCard('right');
+                    swipeCardRef.current?.('right');
                 } else if (gesture.dx < -SWIPE_THRESHOLD) {
-                    swipeCard('left');
+                    swipeCardRef.current?.('left');
                 } else {
-                    resetPosition();
+                    resetPositionRef.current?.();
                 }
             },
         })
     ).current;
-
-    const swipeCard = (direction: 'left' | 'right') => {
-        const x = direction === 'right' ? SCREEN_WIDTH * 1.5 : -SCREEN_WIDTH * 1.5;
-        Animated.timing(position, {
-            toValue: { x, y: 0 },
-            duration: 300,
-            useNativeDriver: false,
-        }).start(() => {
-            position.setValue({ x: 0, y: 0 });
-            setCurrentWordIndex((prev) => (prev + 1) % SAMPLE_WORDS.length);
-        });
-    };
-
-    const resetPosition = () => {
-        Animated.spring(position, {
-            toValue: { x: 0, y: 0 },
-            useNativeDriver: false,
-            friction: 5,
-        }).start();
-    };
 
     const handleNext = () => {
         swipeCard('left');
@@ -95,8 +249,10 @@ export default function HomeScreen() {
         swipeCard('right');
     };
 
-    // Render background card (static, no animation)
+    // Render background card
     const renderBackgroundCard = () => {
+        if (!nextWord || words.length <= 1) return null;
+
         return (
             <View
                 style={[
@@ -121,12 +277,75 @@ export default function HomeScreen() {
                 ]}>
                     <View style={styles.cardCenter}>
                         <Text style={[styles.wordTitle, { color: colors.text }]}>{nextWord.word}</Text>
-                        <Text style={[styles.wordType, { color: colors.textSecondary }]}>{nextWord.type}</Text>
+                        <Text style={[styles.wordType, { color: colors.textSecondary }]}>{nextWord.translation}</Text>
                     </View>
                 </View>
             </View>
         );
     };
+
+    // Loading state
+    if (isLoading) {
+        return (
+            <LinearGradient
+                colors={isDarkMode ? ['#FFD700', '#1a1a1a', '#000000'] : ['#FFA500', '#f5f9f7', '#ffffff']}
+                locations={[0, 0.2, 1]}
+                style={[styles.container, { paddingTop: insets.top }]}
+                start={{ x: 0.7, y: 0 }}
+                end={{ x: 0.7, y: 2 }}
+            >
+                <View style={styles.loadingContainer}>
+                    <ActivityIndicator size="large" color={colors.primary} />
+                    <Text style={[styles.loadingText, { color: colors.text }]}>Loading vocabulary...</Text>
+                </View>
+            </LinearGradient>
+        );
+    }
+
+    // No words state
+    if (words.length === 0) {
+        return (
+            <LinearGradient
+                colors={isDarkMode ? ['#FFD700', '#1a1a1a', '#000000'] : ['#FFA500', '#f5f9f7', '#ffffff']}
+                locations={[0, 0.2, 1]}
+                style={[styles.container, { paddingTop: insets.top }]}
+                start={{ x: 0.7, y: 0 }}
+                end={{ x: 0.7, y: 2 }}
+            >
+                {/* Header */}
+                <View style={styles.header}>
+                    <View style={styles.headerSpacer} />
+                    <View style={styles.headerTitleContainer}>
+                        <View style={styles.logoContainer}>
+                            <SwarmLogo size={26} color={colors.text} />
+                        </View>
+                        <Text style={[styles.headerTitle, { color: colors.text }]}>VOCBEE</Text>
+                    </View>
+                    <TouchableOpacity
+                        style={styles.settingsButton}
+                        onPress={() => navigation.navigate('Settings')}
+                    >
+                        <Feather name="settings" size={24} color={colors.text} />
+                    </TouchableOpacity>
+                </View>
+
+                <View style={styles.emptyContainer}>
+                    <Text style={[styles.emptyTitle, { color: colors.text }]}>
+                        {totalCount > 0 ? '🎉 Level Complete!' : 'No Vocabulary'}
+                    </Text>
+                    <Text style={[styles.emptyText, { color: colors.textSecondary }]}>
+                        {totalCount > 0
+                            ? `You've learned all ${totalCount} words in ${currentLevel}!`
+                            : 'Please complete the setup to start learning.'
+                        }
+                    </Text>
+                </View>
+            </LinearGradient>
+        );
+    }
+
+    // Calculate progress
+    const progressPercentage = totalCount > 0 ? (learnedCount / totalCount) * 100 : 0;
 
     return (
         <LinearGradient
@@ -154,28 +373,35 @@ export default function HomeScreen() {
             </View>
 
             {/* Stats Section */}
-            <View style={styles.statsSection}>
-                <View style={styles.statsRow}>
+            <BlurView
+                intensity={20}
+                tint={isDarkMode ? "dark" : "light"}
+                style={styles.statsBlurContainer}
+            >
+                <View style={styles.statsSection}>
+                    {/* Level and Progress */}
                     <View>
-                        <Text style={[styles.levelLabel, { color: colors.textSecondary }]}>CURRENT LEVEL</Text>
                         <View style={styles.levelRow}>
-                            <Text style={[styles.levelValue, { color: colors.text }]}>LEVEL 5</Text>
-                            <Text style={[styles.levelSubtext, { color: colors.textSecondary }]}>Intermediate</Text>
+                            <Text style={[styles.levelValue, { color: colors.text }]}>{levelDisplay.code}</Text>
+                            <Text style={[styles.levelSubtext, { color: colors.textSecondary }]}>{levelDisplay.description}</Text>
+                            <Text style={[styles.goalValue, { color: colors.text, marginLeft: 'auto' }]}>
+                                {learnedCount}/{totalCount} words
+                            </Text>
+                        </View>
+                        <View style={[styles.progressBg, { backgroundColor: colors.surface }]}>
+                            <View
+                                style={[
+                                    styles.progressFill,
+                                    {
+                                        backgroundColor: colors.primary,
+                                        width: `${progressPercentage}%`
+                                    }
+                                ]}
+                            />
                         </View>
                     </View>
                 </View>
-
-                {/* Daily Goal */}
-                <View>
-                    <View style={styles.goalHeader}>
-                        <Text style={[styles.goalLabel, { color: colors.text }]}>Daily Goal</Text>
-                        <Text style={[styles.goalValue, { color: colors.text }]}>15/20 words</Text>
-                    </View>
-                    <View style={[styles.progressBg, { backgroundColor: colors.surface }]}>
-                        <View style={[styles.progressFill, { backgroundColor: colors.primary }]} />
-                    </View>
-                </View>
-            </View>
+            </BlurView>
 
             {/* Card Stack Area */}
             <View style={styles.cardArea}>
@@ -183,121 +409,131 @@ export default function HomeScreen() {
                 {renderBackgroundCard()}
 
                 {/* Top Card - Swipeable */}
-                <Animated.View
-                    style={[
-                        styles.cardContainer,
-                        {
-                            transform: [
-                                { translateX: position.x },
-                                { translateY: position.y },
-                                { rotate },
-                            ],
-                            zIndex: 10,
-                        },
-                    ]}
-                    {...panResponder.panHandlers}
-                >
-                    <View style={[
-                        styles.heroCard,
-                        {
-                            backgroundColor: colors.surface,
-                            borderColor: colors.border,
-                            borderWidth: 1,
-                            shadowColor: '#000',
-                            shadowOffset: { width: 0, height: 10 },
-                            shadowOpacity: 0.3,
-                            shadowRadius: 20,
-                            elevation: 10,
-                        }
-                    ]}>
-                        {/* Skip Overlay - Full card background */}
-                        <Animated.View
-                            style={[
-                                styles.swipeOverlay,
-                                {
-                                    backgroundColor: '#f4b1b1ff',
-                                    borderColor: '#fca8a8ff',
-                                    opacity: position.x.interpolate({
-                                        inputRange: [-SWIPE_THRESHOLD, 0],
-                                        outputRange: [1, 0],
-                                        extrapolate: 'clamp',
-                                    }),
-                                },
-                            ]}
-                        >
-                            <View style={styles.swipeLabelContainer}>
-                                <Text style={styles.skipText}>SKIP</Text>
-                            </View>
-                        </Animated.View>
-
-                        {/* Learned Overlay - Full card background */}
-                        <Animated.View
-                            style={[
-                                styles.swipeOverlay,
-                                {
-                                    backgroundColor: '#d5ffdfff',
-                                    borderColor: '#d5ffdfff',
-                                    opacity: position.x.interpolate({
-                                        inputRange: [0, SWIPE_THRESHOLD],
-                                        outputRange: [0, 1],
-                                        extrapolate: 'clamp',
-                                    }),
-                                },
-                            ]}
-                        >
-                            <View style={styles.swipeLabelContainer}>
-                                <Text style={styles.learnedText}>LEARNED</Text>
-                            </View>
-                        </Animated.View>
-
-                        {/* Card Content - above overlay */}
-                        <View style={styles.cardContentAbove}>
-                            <Text style={[styles.wordTitle, { color: colors.text }]}>{currentWord.word}</Text>
-                            <Text style={[styles.wordType, { color: colors.textSecondary }]}>{currentWord.type}</Text>
-
-                            <Text style={[styles.wordDefinition, { color: colors.text }]}>
-                                {currentWord.definition}
-                            </Text>
-
-                            <TouchableOpacity
-                                style={[styles.exampleButton, { borderColor: colors.border }]}
-                                onPress={() => navigation.navigate('ExampleSentences', {
-                                    word: currentWord.word,
-                                    definition: currentWord.definition,
-                                    translation: currentWord.translation
-                                })}
+                {currentWord && (
+                    <Animated.View
+                        style={[
+                            styles.cardContainer,
+                            {
+                                transform: [
+                                    { translateX: position.x },
+                                    { translateY: position.y },
+                                    { rotate },
+                                ],
+                                zIndex: 10,
+                            },
+                        ]}
+                        {...panResponder.panHandlers}
+                    >
+                        <View style={[
+                            styles.heroCard,
+                            {
+                                backgroundColor: colors.surface,
+                                borderColor: colors.border,
+                                borderWidth: 1,
+                                shadowColor: '#000',
+                                shadowOffset: { width: 0, height: 10 },
+                                shadowOpacity: 0.3,
+                                shadowRadius: 20,
+                                elevation: 10,
+                            }
+                        ]}>
+                            {/* Skip Overlay - Full card background */}
+                            <Animated.View
+                                style={[
+                                    styles.swipeOverlay,
+                                    {
+                                        backgroundColor: '#f4b1b1ff',
+                                        borderColor: '#fca8a8ff',
+                                        opacity: position.x.interpolate({
+                                            inputRange: [-SWIPE_THRESHOLD, 0],
+                                            outputRange: [1, 0],
+                                            extrapolate: 'clamp',
+                                        }),
+                                    },
+                                ]}
                             >
-                                <Text style={[styles.exampleButtonText, { color: colors.text }]}>EXAMPLE SENTENCES</Text>
-                            </TouchableOpacity>
+                                <View style={styles.swipeLabelContainer}>
+                                    <Text style={styles.skipText}>SKIP</Text>
+                                </View>
+                            </Animated.View>
+
+                            {/* Learned Overlay - Full card background */}
+                            <Animated.View
+                                style={[
+                                    styles.swipeOverlay,
+                                    {
+                                        backgroundColor: '#d5ffdfff',
+                                        borderColor: '#d5ffdfff',
+                                        opacity: position.x.interpolate({
+                                            inputRange: [0, SWIPE_THRESHOLD],
+                                            outputRange: [0, 1],
+                                            extrapolate: 'clamp',
+                                        }),
+                                    },
+                                ]}
+                            >
+                                <View style={styles.swipeLabelContainer}>
+                                    <Text style={styles.learnedText}>LEARNED</Text>
+                                </View>
+                            </Animated.View>
+
+                            {/* Card Content - above overlay */}
+                            <View style={styles.cardContentAbove}>
+                                <Text style={[styles.wordTitle, { color: colors.text }]}>{currentWord.word}</Text>
+                                <View style={styles.translationRow}>
+                                    <MaterialIcons name="translate" size={20} color={colors.primary} />
+                                    <Text style={[styles.translationText, { color: colors.primary }]}>{currentWord.translation}</Text>
+                                </View>
+
+                                <TouchableOpacity
+                                    style={styles.exampleButton}
+                                    onPress={() => navigation.navigate('ExampleSentences', {
+                                        word: currentWord.word,
+                                        translation: currentWord.translation,
+                                        sentence1: currentWord.sentence1,
+                                        sentence2: currentWord.sentence2,
+                                        nativeSentence1: currentWord.nativeSentence1,
+                                        nativeSentence2: currentWord.nativeSentence2
+                                    })}
+                                >
+                                    <Text style={[styles.exampleButtonText, { color: colors.text }]}>EXAMPLE SENTENCES</Text>
+                                </TouchableOpacity>
+                            </View>
                         </View>
-                    </View>
-                </Animated.View>
+                    </Animated.View>
+                )}
             </View>
 
-            {/* Tinder-style Action Buttons */}
+            {/* Action Buttons - Icons Only */}
             <View style={styles.actionButtonsContainer}>
                 <TouchableOpacity
-                    style={[
-                        styles.actionButton,
-                        styles.skipActionButton,
-                        { backgroundColor: colors.surface }
-                    ]}
+                    style={styles.actionButton}
                     onPress={handleNext}
-                    activeOpacity={0.8}
+                    activeOpacity={0.6}
                 >
-                    <Image source={require('../components/retry.png')} style={[styles.actionIcon, styles.retryIcon]} />
+                    <View style={styles.iconShadow}>
+                        <RetryIcon size={80} />
+                    </View>
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                    style={[
-                        styles.actionButton,
-                        styles.learnedActionButton,
-                        { backgroundColor: colors.surface }
-                    ]}
-                    onPress={handleLearned}
-                    activeOpacity={0.8}
+                    style={styles.actionButton}
+                    onPress={() => { }}
+                    activeOpacity={0.6}
                 >
-                    <Image source={require('../components/arrow.png')} style={[styles.actionIcon, styles.arrowIcon]} />
+                    <View style={styles.iconShadow}>
+                        <StarIcon size={100} />
+                    </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                    style={styles.actionButton}
+                    onPress={handleLearned}
+                    activeOpacity={0.6}
+                >
+                    <View style={styles.iconShadow}>
+                        <ArrowIcon size={80} />
+                    </View>
                 </TouchableOpacity>
             </View>
         </LinearGradient>
@@ -340,22 +576,16 @@ const styles = StyleSheet.create({
     settingsButton: {
         padding: 4,
     },
+    statsBlurContainer: {
+        marginHorizontal: 20,
+        marginBottom: 20,
+        borderRadius: 20,
+        overflow: 'hidden',
+        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    },
     statsSection: {
         paddingHorizontal: 20,
         marginBottom: 16,
-    },
-    statsRow: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        marginBottom: 16,
-    },
-    levelLabel: {
-        fontFamily: FONT_FAMILY,
-        fontSize: 10,
-        fontWeight: 'bold',
-        letterSpacing: 2,
-        marginBottom: 4,
     },
     levelRow: {
         flexDirection: 'row',
@@ -364,24 +594,11 @@ const styles = StyleSheet.create({
     },
     levelValue: {
         fontFamily: FONT_FAMILY,
-        fontSize: 28,
-        fontWeight: 'bold',
+        fontSize: 26,
     },
     levelSubtext: {
         fontFamily: FONT_FAMILY,
         fontSize: 14,
-        fontWeight: '500',
-    },
-    goalHeader: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'flex-end',
-        marginBottom: 8,
-    },
-    goalLabel: {
-        fontFamily: FONT_FAMILY,
-        fontSize: 14,
-        fontWeight: '500',
     },
     goalValue: {
         fontFamily: FONT_FAMILY,
@@ -395,7 +612,6 @@ const styles = StyleSheet.create({
     },
     progressFill: {
         height: '100%',
-        width: '75%',
         borderRadius: 4,
     },
     cardArea: {
@@ -433,7 +649,6 @@ const styles = StyleSheet.create({
     wordTitle: {
         fontFamily: FONT_FAMILY,
         fontSize: 32,
-        fontWeight: 'bold',
         marginBottom: 4,
         letterSpacing: 1,
         textAlign: 'center',
@@ -443,6 +658,17 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontStyle: 'italic',
         marginBottom: 24,
+    },
+    translationRow: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 8,
+        marginBottom: 24,
+    },
+    translationText: {
+        fontFamily: FONT_FAMILY,
+        fontSize: 20,
+        fontWeight: '500',
     },
     wordDefinition: {
         fontFamily: FONT_FAMILY,
@@ -462,7 +688,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         gap: 10,
-        borderWidth: 1.5,
     },
     exampleButtonText: {
         fontFamily: FONT_FAMILY,
@@ -470,40 +695,31 @@ const styles = StyleSheet.create({
         fontSize: 14,
         letterSpacing: 0.5,
     },
-    cardActions: {
-        flexDirection: 'row',
-        gap: 12,
-        marginTop: 16,
-        paddingHorizontal: 20,
-        paddingBottom: 20,
-    },
     actionButtonsContainer: {
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        gap: 100,
+        gap: 50,
         paddingBottom: 100,
         paddingTop: 10,
     },
     actionButton: {
-        width: 100,
-        height: 100,
-        borderRadius: 50,
+        padding: 10,
         alignItems: 'center',
         justifyContent: 'center',
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 4 },
-        shadowOpacity: 0.2,
-        shadowRadius: 8,
-        elevation: 5,
     },
     skipActionButton: {
-        borderWidth: 1,
-        borderColor: '#ea8484',
+    },
+    starActionButton: {
     },
     learnedActionButton: {
-        borderWidth: 1,
-        borderColor: '#35de5dff',
+    },
+    iconShadow: {
+        shadowColor: '#FF9B2F',
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.4,
+        shadowRadius: 8,
+        elevation: 8,
     },
     actionIcon: {
         width: 70,
@@ -515,30 +731,6 @@ const styles = StyleSheet.create({
     },
     arrowIcon: {
         tintColor: '#35de5dff',
-    },
-    learnedButton: {
-        flex: 1,
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: 8,
-        paddingVertical: 14,
-    },
-    learnedButtonText: {
-        fontFamily: FONT_FAMILY,
-        fontSize: 15,
-    },
-    nextButton: {
-        flex: 1,
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: 8,
-        paddingVertical: 14,
-    },
-    nextButtonText: {
-        fontFamily: FONT_FAMILY,
-        fontSize: 15,
     },
     swipeOverlay: {
         position: 'absolute',
@@ -568,5 +760,33 @@ const styles = StyleSheet.create({
         color: '#35de5dff',
         fontSize: 20,
         letterSpacing: 4,
+    },
+    loadingContainer: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: 16,
+    },
+    loadingText: {
+        fontFamily: FONT_FAMILY,
+        fontSize: 16,
+    },
+    emptyContainer: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 40,
+    },
+    emptyTitle: {
+        fontFamily: FONT_FAMILY,
+        fontSize: 28,
+        marginBottom: 16,
+        textAlign: 'center',
+    },
+    emptyText: {
+        fontFamily: FONT_FAMILY,
+        fontSize: 16,
+        textAlign: 'center',
+        lineHeight: 24,
     },
 });

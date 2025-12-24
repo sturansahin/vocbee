@@ -6,6 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../types';
 import { MaterialIcons } from '@expo/vector-icons';
+import { SwarmLogo } from '../components/SwarmLogo';
 import { FONT_FAMILY } from '../utils/typography';
 
 type OnboardingNavigationProp = StackNavigationProp<RootStackParamList, 'Onboarding'>;
@@ -53,7 +54,7 @@ export default function OnboardingScreen() {
         {/* Header Logo */}
         <View style={styles.header}>
           <View style={styles.logoContainer}>
-            <MaterialIcons name="local-florist" size={24} color={COLORS.primary} />
+            <SwarmLogo size={30} color={COLORS.primary} />
           </View>
           <Text style={styles.logoText}>VocBee</Text>
         </View>
@@ -122,7 +123,6 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     borderRadius: 20,
-    backgroundColor: 'rgba(255, 204, 0, 0.2)',
     alignItems: 'center',
     justifyContent: 'center',
   },
