@@ -2,15 +2,21 @@ import React, { useState, useRef, useEffect } from 'react';
 import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, Image, StyleSheet, Modal, Animated, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
-import { COLORS, LANGUAGES } from '../constants';
+import { COLORS, LANGUAGES, LEVELS } from '../constants';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import Feather from '@expo/vector-icons/Feather';
 import { FONT_FAMILY } from '../utils/typography';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { resetProgress } from '../services/progressService';
+import { resetProgress, setCurrentLevel } from '../services/progressService';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { getFirstLevelForUserLevel } from '../services/vocabularyService';
 
-const HOURS = Array.from({ length: 24 }, (_, i) => `${i.toString().padStart(2, '0')}:00`);
-const FREQUENCIES = ['Every 30 minutes', 'Every hour', 'Every 2 hours', 'Every 4 hours', 'Once a day'];
+const HOURS_LIST = Array.from({ length: 24 }, (_, i) => i.toString().padStart(2, '0'));
+const MINUTES_LIST = Array.from({ length: 60 }, (_, i) => i.toString().padStart(2, '0'));
+// Extended lists for infinite scroll effect (3x repeat)
+const HOURS_EXTENDED = [...HOURS_LIST, ...HOURS_LIST, ...HOURS_LIST];
+const MINUTES_EXTENDED = [...MINUTES_LIST, ...MINUTES_LIST, ...MINUTES_LIST];
+const FREQUENCIES = ['Every 15 minutes','Every 30 minutes', 'Every hour', 'Every 2 hours',];
 
 interface SwitchToggleProps {
    value: boolean;
@@ -116,15 +122,53 @@ export default function SettingsScreen() {
    const navigation = useNavigation();
    const { isDarkMode, toggleTheme, colors } = useTheme();
    const [reminderEnabled, setReminderEnabled] = useState(true);
-   const [startTime, setStartTime] = useState('09:00');
-   const [endTime, setEndTime] = useState('21:00');
+   const [startHour, setStartHour] = useState('09');
+   const [startMinute, setStartMinute] = useState('00');
+   const [endHour, setEndHour] = useState('21');
+   const [endMinute, setEndMinute] = useState('00');
    const [frequency, setFrequency] = useState('Every 2 hours');
    const [showTimePicker, setShowTimePicker] = useState<'start' | 'end' | null>(null);
+   const [tempHour, setTempHour] = useState('09');
+   const [tempMinute, setTempMinute] = useState('00');
    const [showFrequencyPicker, setShowFrequencyPicker] = useState(false);
    const [selectedLanguage, setSelectedLanguage] = useState('english');
    const [showLanguagePicker, setShowLanguagePicker] = useState(false);
    const [showHelpModal, setShowHelpModal] = useState(false);
    const [showPrivacyModal, setShowPrivacyModal] = useState(false);
+   const [selectedLevel, setSelectedLevel] = useState('beginner');
+   const [showLevelPicker, setShowLevelPicker] = useState(false);
+
+   // Refs for wheel picker scroll
+   const hourScrollRef = useRef<ScrollView>(null);
+   const minuteScrollRef = useRef<ScrollView>(null);
+   const ITEM_HEIGHT = 44; // Height of each wheel item
+
+   // Auto-scroll to selected values when picker opens (start from middle section)
+   useEffect(() => {
+      if (showTimePicker) {
+         setTimeout(() => {
+            const hourIndex = HOURS_LIST.indexOf(tempHour) + HOURS_LIST.length; // Start from middle section
+            const minuteIndex = MINUTES_LIST.indexOf(tempMinute) + MINUTES_LIST.length;
+            hourScrollRef.current?.scrollTo({ y: hourIndex * ITEM_HEIGHT, animated: false });
+            minuteScrollRef.current?.scrollTo({ y: minuteIndex * ITEM_HEIGHT, animated: false });
+         }, 100);
+      }
+   }, [showTimePicker]);
+
+   // Load current level from AsyncStorage
+   useEffect(() => {
+      const loadLevel = async () => {
+         try {
+            const level = await AsyncStorage.getItem('@user_level');
+            if (level) {
+               setSelectedLevel(level);
+            }
+         } catch (error) {
+            console.error('Error loading level:', error);
+         }
+      };
+      loadLevel();
+   }, []);
 
    // Dynamic styles based on theme
    const dynamicStyles = {
@@ -232,7 +276,11 @@ export default function SettingsScreen() {
                      {/* Time Range */}
                      <TouchableOpacity
                         style={styles.settingItem}
-                        onPress={() => setShowTimePicker('start')}
+                        onPress={() => {
+                           setTempHour(startHour);
+                           setTempMinute(startMinute);
+                           setShowTimePicker('start');
+                        }}
                      >
                         <View style={styles.settingLeft}>
                            <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
@@ -240,7 +288,7 @@ export default function SettingsScreen() {
                            </View>
                            <View>
                               <Text style={[styles.settingTitle, dynamicStyles.text]}>Start Time</Text>
-                              <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>{startTime}</Text>
+                              <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>{startHour}:{startMinute}</Text>
                            </View>
                         </View>
                         <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
@@ -248,7 +296,11 @@ export default function SettingsScreen() {
 
                      <TouchableOpacity
                         style={styles.settingItem}
-                        onPress={() => setShowTimePicker('end')}
+                        onPress={() => {
+                           setTempHour(endHour);
+                           setTempMinute(endMinute);
+                           setShowTimePicker('end');
+                        }}
                      >
                         <View style={styles.settingLeft}>
                            <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
@@ -256,7 +308,7 @@ export default function SettingsScreen() {
                            </View>
                            <View>
                               <Text style={[styles.settingTitle, dynamicStyles.text]}>End Time</Text>
-                              <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>{endTime}</Text>
+                              <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>{endHour}:{endMinute}</Text>
                            </View>
                         </View>
                         <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
@@ -285,6 +337,23 @@ export default function SettingsScreen() {
             {/* Section: Progress */}
             <Text style={[styles.sectionTitle, dynamicStyles.textSecondary]}>Progress</Text>
             <View style={[styles.sectionCard, dynamicStyles.sectionCard]}>
+               <TouchableOpacity
+                  style={styles.settingItem}
+                  onPress={() => setShowLevelPicker(true)}
+               >
+                  <View style={styles.settingLeft}>
+                     <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
+                        <MaterialCommunityIcons name="trophy-outline" size={24} color={colors.primary} />
+                     </View>
+                     <View>
+                        <Text style={[styles.settingTitle, dynamicStyles.text]}>Change Level</Text>
+                        <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>
+                           {LEVELS.find(l => l.id === selectedLevel)?.title} ({LEVELS.find(l => l.id === selectedLevel)?.range})
+                        </Text>
+                     </View>
+                  </View>
+                  <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
+               </TouchableOpacity>
                <TouchableOpacity
                   style={[styles.settingItem, { borderBottomWidth: 0 }]}
                   onPress={() => {
@@ -352,48 +421,132 @@ export default function SettingsScreen() {
             <Text style={[styles.versionText, dynamicStyles.textSecondary, { marginTop: 12, marginBottom: 0 }]}>VocBee v1.0.0</Text>
          </ScrollView>
 
-         {/* Time Picker Modal */}
+         {/* Time Picker Modal - Wheel Style */}
          <Modal
             visible={showTimePicker !== null}
             transparent
             animationType="fade"
             onRequestClose={() => setShowTimePicker(null)}
          >
-            <TouchableOpacity
-               style={styles.modalOverlay}
-               activeOpacity={1}
-               onPress={() => setShowTimePicker(null)}
-            >
-               <View style={styles.modalContent}>
-                  <Text style={styles.modalTitle}>
+            <View style={styles.modalOverlay}>
+               <TouchableOpacity
+                  style={StyleSheet.absoluteFill}
+                  activeOpacity={1}
+                  onPress={() => setShowTimePicker(null)}
+               />
+               <View style={[styles.modalContent, dynamicStyles.modalContent]}>
+                  <Text style={[styles.modalTitle, dynamicStyles.text]}>
                      Select {showTimePicker === 'start' ? 'Start' : 'End'} Time
                   </Text>
-                  <ScrollView style={styles.pickerScroll}>
-                     {HOURS.map((hour) => (
-                        <TouchableOpacity
-                           key={hour}
-                           style={[
-                              styles.pickerItem,
-                              (showTimePicker === 'start' ? startTime : endTime) === hour && styles.pickerItemSelected
-                           ]}
-                           onPress={() => {
-                              if (showTimePicker === 'start') {
-                                 setStartTime(hour);
-                              } else {
-                                 setEndTime(hour);
-                              }
-                              setShowTimePicker(null);
-                           }}
-                        >
-                           <Text style={[
-                              styles.pickerItemText,
-                              (showTimePicker === 'start' ? startTime : endTime) === hour && styles.pickerItemTextSelected
-                           ]}>{hour}</Text>
-                        </TouchableOpacity>
-                     ))}
-                  </ScrollView>
+
+                  {/* Wheel Picker Container */}
+                  <View style={styles.wheelPickerContainer}>
+                     {/* Hours Column */}
+                     <View style={styles.wheelColumn}>
+                        <Text style={[styles.wheelLabel, dynamicStyles.textSecondary]}>Hour</Text>
+                        <View style={styles.wheelScrollWrapper}>
+                           <View style={[styles.wheelCenterIndicator, { borderColor: colors.primary }]} pointerEvents="none" />
+                           <ScrollView
+                              ref={hourScrollRef}
+                              style={styles.wheelScroll}
+                              showsVerticalScrollIndicator={false}
+                              contentContainerStyle={styles.wheelScrollContent}
+                              decelerationRate="fast"
+                              nestedScrollEnabled={true}
+                              onMomentumScrollEnd={(e) => {
+                                 const y = e.nativeEvent.contentOffset.y;
+                                 const index = Math.round(y / ITEM_HEIGHT);
+                                 const actualIndex = ((index % HOURS_LIST.length) + HOURS_LIST.length) % HOURS_LIST.length;
+                                 setTempHour(HOURS_LIST[actualIndex]);
+
+                                 // Snap to exact position
+                                 const snappedY = index * ITEM_HEIGHT;
+                                 if (y !== snappedY) {
+                                    hourScrollRef.current?.scrollTo({ y: snappedY, animated: true });
+                                 }
+
+                                 // Reset to middle section if scrolled too far
+                                 if (index < HOURS_LIST.length || index >= HOURS_LIST.length * 2) {
+                                    const middleIndex = actualIndex + HOURS_LIST.length;
+                                    setTimeout(() => {
+                                       hourScrollRef.current?.scrollTo({ y: middleIndex * ITEM_HEIGHT, animated: false });
+                                    }, 100);
+                                 }
+                              }}
+                           >
+                              {HOURS_EXTENDED.map((hour, idx) => (
+                                 <View key={`hour-${idx}`} style={styles.wheelItem}>
+                                    <Text style={[styles.wheelItemText, { color: colors.text }]}>{hour}</Text>
+                                 </View>
+                              ))}
+                           </ScrollView>
+                        </View>
+                     </View>
+
+                     {/* Separator */}
+                     <Text style={[styles.wheelSeparator, dynamicStyles.text]}>:</Text>
+
+                     {/* Minutes Column */}
+                     <View style={styles.wheelColumn}>
+                        <Text style={[styles.wheelLabel, dynamicStyles.textSecondary]}>Min</Text>
+                        <View style={styles.wheelScrollWrapper}>
+                           <View style={[styles.wheelCenterIndicator, { borderColor: colors.primary }]} pointerEvents="none" />
+                           <ScrollView
+                              ref={minuteScrollRef}
+                              style={styles.wheelScroll}
+                              showsVerticalScrollIndicator={false}
+                              contentContainerStyle={styles.wheelScrollContent}
+                              decelerationRate="fast"
+                              nestedScrollEnabled={true}
+                              onMomentumScrollEnd={(e) => {
+                                 const y = e.nativeEvent.contentOffset.y;
+                                 const index = Math.round(y / ITEM_HEIGHT);
+                                 const actualIndex = ((index % MINUTES_LIST.length) + MINUTES_LIST.length) % MINUTES_LIST.length;
+                                 setTempMinute(MINUTES_LIST[actualIndex]);
+
+                                 // Snap to exact position
+                                 const snappedY = index * ITEM_HEIGHT;
+                                 if (y !== snappedY) {
+                                    minuteScrollRef.current?.scrollTo({ y: snappedY, animated: true });
+                                 }
+
+                                 // Reset to middle section if scrolled too far
+                                 if (index < MINUTES_LIST.length || index >= MINUTES_LIST.length * 2) {
+                                    const middleIndex = actualIndex + MINUTES_LIST.length;
+                                    setTimeout(() => {
+                                       minuteScrollRef.current?.scrollTo({ y: middleIndex * ITEM_HEIGHT, animated: false });
+                                    }, 100);
+                                 }
+                              }}
+                           >
+                              {MINUTES_EXTENDED.map((minute, idx) => (
+                                 <View key={`minute-${idx}`} style={styles.wheelItem}>
+                                    <Text style={[styles.wheelItemText, { color: colors.text }]}>{minute}</Text>
+                                 </View>
+                              ))}
+                           </ScrollView>
+                        </View>
+                     </View>
+                  </View>
+
+                  {/* Confirm Button */}
+                  <TouchableOpacity
+                     style={[styles.confirmButton, { backgroundColor: colors.primary }]}
+                     onPress={() => {
+                        if (showTimePicker === 'start') {
+                           setStartHour(tempHour);
+                           setStartMinute(tempMinute);
+                        } else {
+                           setEndHour(tempHour);
+                           setEndMinute(tempMinute);
+                        }
+                        setShowTimePicker(null);
+                     }}
+                  >
+                     <Text style={styles.confirmButtonText}>Confirm</Text>
+                  </TouchableOpacity>
                </View>
-            </TouchableOpacity>
+            </View>
          </Modal>
 
          {/* Frequency Picker Modal */}
@@ -408,14 +561,15 @@ export default function SettingsScreen() {
                activeOpacity={1}
                onPress={() => setShowFrequencyPicker(false)}
             >
-               <View style={styles.modalContent}>
-                  <Text style={styles.modalTitle}>Select Frequency</Text>
+               <View style={[styles.modalContent, dynamicStyles.modalContent]}>
+                  <Text style={[styles.modalTitle, dynamicStyles.text]}>Select Frequency</Text>
                   {FREQUENCIES.map((freq) => (
                      <TouchableOpacity
                         key={freq}
                         style={[
                            styles.pickerItem,
-                           frequency === freq && styles.pickerItemSelected
+                           { borderBottomColor: colors.border },
+                           frequency === freq && { backgroundColor: `${colors.primary}20` }
                         ]}
                         onPress={() => {
                            setFrequency(freq);
@@ -424,7 +578,8 @@ export default function SettingsScreen() {
                      >
                         <Text style={[
                            styles.pickerItemText,
-                           frequency === freq && styles.pickerItemTextSelected
+                           { color: colors.text },
+                           frequency === freq && { color: colors.primary }
                         ]}>{freq}</Text>
                      </TouchableOpacity>
                   ))}
@@ -476,6 +631,75 @@ export default function SettingsScreen() {
                                  { color: colors.textSecondary },
                                  selectedLanguage === lang.id && { color: colors.primary }
                               ]}> ({lang.nativeName})</Text>
+                           </View>
+                        </TouchableOpacity>
+                     ))}
+                  </ScrollView>
+               </View>
+            </TouchableOpacity>
+         </Modal>
+
+         {/* Level Picker Modal */}
+         <Modal
+            visible={showLevelPicker}
+            transparent
+            animationType="fade"
+            onRequestClose={() => setShowLevelPicker(false)}
+         >
+            <TouchableOpacity
+               style={styles.modalOverlay}
+               activeOpacity={1}
+               onPress={() => setShowLevelPicker(false)}
+            >
+               <View style={[styles.modalContent, dynamicStyles.modalContent, { maxHeight: '70%' }]}>
+                  <Text style={[styles.modalTitle, dynamicStyles.text]}>Select Your Level</Text>
+                  <ScrollView style={styles.pickerScroll} showsVerticalScrollIndicator={false}>
+                     {LEVELS.map((level) => (
+                        <TouchableOpacity
+                           key={level.id}
+                           style={[
+                              styles.levelPickerItem,
+                              { borderBottomColor: colors.border },
+                              selectedLevel === level.id && { backgroundColor: `${colors.primary}20`, borderColor: colors.primary }
+                           ]}
+                           onPress={async () => {
+                              setSelectedLevel(level.id);
+                              try {
+                                 await AsyncStorage.setItem('@user_level', level.id);
+                                 // Update the CEFR level for vocabulary service
+                                 const cefrLevel = getFirstLevelForUserLevel(level.id);
+                                 await setCurrentLevel(cefrLevel);
+                              } catch (error) {
+                                 console.error('Error saving level:', error);
+                              }
+                              setShowLevelPicker(false);
+                           }}
+                        >
+                           <View style={styles.levelPickerRow}>
+                              <View style={[
+                                 styles.levelRadio,
+                                 { borderColor: colors.border },
+                                 selectedLevel === level.id && { borderColor: colors.primary, backgroundColor: colors.primary }
+                              ]}>
+                                 {selectedLevel === level.id && <View style={[styles.levelRadioInner, { backgroundColor: colors.background }]} />}
+                              </View>
+                              <View style={{ flex: 1 }}>
+                                 <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10, marginBottom: 4 }}>
+                                    <Text style={[
+                                       styles.levelPickerTitle,
+                                       { color: colors.text },
+                                       selectedLevel === level.id && { color: colors.primary }
+                                    ]}>{level.title}</Text>
+                                    <View style={[styles.levelBadge, { backgroundColor: `${colors.primary}33` }]}>
+                                       <Text style={[styles.levelRange, { color: colors.primary }]}>{level.range}</Text>
+                                    </View>
+                                 </View>
+                                 <Text style={[
+                                    styles.levelPickerDesc,
+                                    { color: colors.textSecondary },
+                                    selectedLevel === level.id && { color: colors.primary }
+                                 ]}>{level.description}</Text>
+                              </View>
                            </View>
                         </TouchableOpacity>
                      ))}
@@ -679,7 +903,6 @@ const styles = StyleSheet.create({
    pickerItemTextSelected: {
       fontFamily: FONT_FAMILY,
       color: COLORS.primary,
-      fontWeight: 'bold',
    },
    switchTrack: {
       width: 48,
@@ -738,5 +961,117 @@ const styles = StyleSheet.create({
       fontFamily: FONT_FAMILY,
       fontSize: 14,
       lineHeight: 20,
+   },
+   levelPickerItem: {
+      paddingVertical: 16,
+      paddingHorizontal: 16,
+      borderRadius: 8,
+      borderWidth: 2,
+      borderColor: 'transparent',
+      marginBottom: 8,
+   },
+   levelPickerRow: {
+      flexDirection: 'row',
+      alignItems: 'flex-start',
+      gap: 16,
+   },
+   levelRadio: {
+      marginTop: 4,
+      width: 24,
+      height: 24,
+      borderRadius: 12,
+      borderWidth: 2,
+      alignItems: 'center',
+      justifyContent: 'center',
+   },
+   levelRadioInner: {
+      width: 10,
+      height: 10,
+      borderRadius: 5,
+   },
+   levelPickerTitle: {
+      fontFamily: FONT_FAMILY,
+      fontSize: 18,
+   },
+   levelPickerDesc: {
+      fontFamily: FONT_FAMILY,
+      fontSize: 14,
+      lineHeight: 20,
+   },
+   levelBadge: {
+      paddingHorizontal: 10,
+      paddingVertical: 4,
+      borderRadius: 12,
+   },
+   levelRange: {
+      fontFamily: FONT_FAMILY,
+      fontSize: 12,
+   },
+   wheelPickerContainer: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+      paddingVertical: 16,
+   },
+   wheelColumn: {
+      alignItems: 'center',
+      width: 80,
+   },
+   wheelLabel: {
+      fontFamily: FONT_FAMILY,
+      fontSize: 12,
+      marginBottom: 8,
+   },
+   wheelScroll: {
+      height: 200,
+      width: 70,
+   },
+   wheelScrollContent: {
+      paddingTop: 78,
+      paddingBottom: 78,
+   },
+   wheelItem: {
+      height: 44,
+      paddingHorizontal: 16,
+      borderRadius: 8,
+      alignItems: 'center',
+      justifyContent: 'center',
+   },
+   wheelItemText: {
+      fontFamily: FONT_FAMILY,
+      fontSize: 18,
+   },
+   wheelSeparator: {
+      fontSize: 32,
+      fontWeight: 'bold',
+      marginHorizontal: 8,
+      marginTop: 18,
+   },
+   confirmButton: {
+      marginTop: 16,
+      paddingVertical: 14,
+      paddingHorizontal: 32,
+      borderRadius: 12,
+      alignItems: 'center',
+   },
+   confirmButtonText: {
+      fontFamily: FONT_FAMILY,
+      fontSize: 16,
+      color: '#000',
+   },
+   wheelScrollWrapper: {
+      position: 'relative',
+      height: 200,
+   },
+   wheelCenterIndicator: {
+      position: 'absolute',
+      top: 78,
+      left: 0,
+      right: 0,
+      height: 44,
+      borderTopWidth: 2,
+      borderBottomWidth: 2,
+      borderRadius: 8,
+      zIndex: 1,
    },
 });

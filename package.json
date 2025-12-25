@@ -9,6 +9,8 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo-google-fonts/rubik-mono-one": "^0.4.1",
+    "@expo-google-fonts/science-gothic": "^0.4.0",
     "@expo-google-fonts/special-elite": "^0.4.1",
     "@expo-google-fonts/special-gothic-expanded-one": "^0.4.0",
     "@expo/vector-icons": "^14.0.2",

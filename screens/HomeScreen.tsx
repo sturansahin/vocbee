@@ -19,7 +19,7 @@ import Feather from '@expo/vector-icons/Feather';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '../context/ThemeContext';
-import { FONT_FAMILY } from '../utils/typography';
+import { FONT_FAMILY, HEADER_FONT_FAMILY } from '../utils/typography';
 import { SwarmLogo } from '../components/SwarmLogo';
 import { ArrowIcon } from '../components/ArrowIcon';
 import { RetryIcon } from '../components/RetryIcon';
@@ -134,13 +134,24 @@ export default function HomeScreen() {
         loadData();
     }, [loadData]);
 
-    // Update counts on focus (without reshuffling)
+    // Update counts on focus and check if level changed
     useFocusEffect(
         useCallback(() => {
-            if (hasInitiallyLoaded.current) {
-                updateCounts();
-            }
-        }, [updateCounts])
+            const checkAndUpdate = async () => {
+                if (hasInitiallyLoaded.current) {
+                    // Check if level has changed
+                    const newLevel = await getCurrentLevel();
+                    if (newLevel !== currentLevel) {
+                        // Level changed, reload everything
+                        hasInitiallyLoaded.current = false;
+                        loadData(true);
+                    } else {
+                        updateCounts();
+                    }
+                }
+            };
+            checkAndUpdate();
+        }, [currentLevel, loadData, updateCounts])
     );
 
     // Get level display
@@ -332,7 +343,6 @@ export default function HomeScreen() {
             >
                 {/* Header */}
                 <View style={styles.header}>
-                    <View style={styles.headerSpacer} />
                     <View style={styles.headerTitleContainer}>
                         <View style={styles.logoContainer}>
                             <SwarmLogo size={26} color={colors.text} />
@@ -383,10 +393,9 @@ export default function HomeScreen() {
         >
             {/* Header */}
             <View style={styles.header}>
-                <View style={styles.headerSpacer} />
                 <View style={styles.headerTitleContainer}>
                     <View style={styles.logoContainer}>
-                        <SwarmLogo size={26} color={colors.text} />
+                        <SwarmLogo size={28} color={colors.text} />
                     </View>
                     <Text style={[styles.headerTitle, { color: colors.text }]}>VOCBEE</Text>
                 </View>
@@ -586,20 +595,15 @@ const styles = StyleSheet.create({
         paddingVertical: 16,
         paddingHorizontal: 20,
     },
-    headerSpacer: {
-        width: 24,
-    },
     headerTitle: {
         fontSize: 22,
-        fontWeight: 'bold',
+        fontFamily: HEADER_FONT_FAMILY,
         letterSpacing: 6,
     },
     headerTitleContainer: {
         flexDirection: 'row',
-        alignItems: 'center',
-        gap: 8,
+        gap: 6,
         flex: 1,
-        justifyContent: 'center',
     },
     logoContainer: {
         shadowColor: '#000',

@@ -7,6 +7,7 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import * as NavigationBar from 'expo-navigation-bar';
 import * as SplashScreen from 'expo-splash-screen';
 import { useFonts, SpecialGothicExpandedOne_400Regular } from '@expo-google-fonts/special-gothic-expanded-one';
+import { RubikMonoOne_400Regular } from '@expo-google-fonts/rubik-mono-one';
 import { RootStackParamList } from './types';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
 
@@ -32,6 +33,7 @@ export default function App() {
   // Load fonts
   const [fontsLoaded] = useFonts({
     SpecialGothicExpandedOne_400Regular,
+    RubikMonoOne_400Regular,
   });
 
   // Set Android navigation bar to transparent

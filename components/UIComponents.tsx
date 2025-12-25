@@ -11,6 +11,7 @@ interface ButtonProps {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   icon?: keyof typeof MaterialIcons.glyphMap;
   fullWidth?: boolean;
+  disabled?: boolean;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -18,7 +19,8 @@ export const Button: React.FC<ButtonProps> = ({
   onPress,
   variant = 'primary',
   icon,
-  fullWidth = true
+  fullWidth = true,
+  disabled = false
 }) => {
   const getButtonStyle = () => {
     switch (variant) {
@@ -48,7 +50,8 @@ export const Button: React.FC<ButtonProps> = ({
     <TouchableOpacity
       onPress={onPress}
       activeOpacity={0.6}
-      style={[styles.buttonBase, getButtonStyle(), fullWidth && styles.fullWidth]}
+      disabled={disabled}
+      style={[styles.buttonBase, getButtonStyle(), fullWidth && styles.fullWidth, disabled && styles.buttonDisabled]}
     >
       {icon && <MaterialIcons name={icon} size={20} color={variant === 'primary' ? COLORS.background : 'white'} />}
       <Text style={[styles.buttonText, getTextStyle()]}>{title}</Text>
@@ -184,6 +187,9 @@ const styles = StyleSheet.create({
   },
   textDefault: {
     color: '#fff',
+  },
+  buttonDisabled: {
+    opacity: 0.5,
   },
 
   // Input styles

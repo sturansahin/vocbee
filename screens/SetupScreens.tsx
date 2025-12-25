@@ -36,9 +36,9 @@ export const SetupScreen = () => {
   const route = useRoute<SetupRouteProp>();
   const { colors, isDarkMode } = useTheme();
   const [currentStep, setCurrentStep] = useState(1);
-  const [nativeLanguage, setNativeLanguage] = useState('english');
-  const [targetLanguage, setTargetLanguage] = useState('turkish');
-  const [level, setLevel] = useState('beginner');
+  const [nativeLanguage, setNativeLanguage] = useState('');
+  const [targetLanguage, setTargetLanguage] = useState('');
+  const [level, setLevel] = useState('');
   const [isGenerating, setIsGenerating] = useState(false);
 
   // Animated values
@@ -297,7 +297,15 @@ export const SetupScreen = () => {
 
       {/* Button stays fixed - no animation */}
       <View style={[styles.bottomButton, { paddingBottom: insets.bottom + 16 }]}>
-        <Button title={currentStep === 3 ? "Start Learning" : "Continue"} onPress={handleNext} />
+        <Button
+          title={currentStep === 3 ? "Start Learning" : "Continue"}
+          onPress={handleNext}
+          disabled={
+            (currentStep === 1 && !nativeLanguage) ||
+            (currentStep === 2 && !targetLanguage) ||
+            (currentStep === 3 && !level)
+          }
+        />
       </View>
     </View>
   );
