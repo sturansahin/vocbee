@@ -18,12 +18,13 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     const [isDarkMode, setIsDarkMode] = useState(true);
 
     useEffect(() => {
-        // Load saved theme preference
+        // Load saved theme preference - default to dark if not set
         const loadTheme = async () => {
             try {
                 const savedTheme = await AsyncStorage.getItem(THEME_STORAGE_KEY);
-                if (savedTheme !== null) {
-                    setIsDarkMode(savedTheme === 'dark');
+                // Only change to light if explicitly saved as 'light', otherwise stay dark
+                if (savedTheme === 'light') {
+                    setIsDarkMode(false);
                 }
             } catch (error) {
                 console.log('Error loading theme:', error);

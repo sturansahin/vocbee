@@ -1,5 +1,15 @@
-import React, { useState } from 'react';
-import { View, Text, SafeAreaView, StyleSheet, TouchableOpacity } from 'react-native';
+import React, { useState, useRef } from 'react';
+import {
+  View,
+  Text,
+  SafeAreaView,
+  StyleSheet,
+  TouchableOpacity,
+  FlatList,
+  Dimensions,
+  NativeSyntheticEvent,
+  NativeScrollEvent
+} from 'react-native';
 import { Button } from '../components/UIComponents';
 import { COLORS } from '../constants';
 import { useNavigation } from '@react-navigation/native';
@@ -11,18 +21,23 @@ import { FONT_FAMILY } from '../utils/typography';
 
 type OnboardingNavigationProp = StackNavigationProp<RootStackParamList, 'Onboarding'>;
 
+const { width: SCREEN_WIDTH } = Dimensions.get('window');
+
 const ONBOARDING_STEPS = [
   {
+    id: '1',
     icon: 'menu-book',
     title: 'Learn New Words Daily',
     subtitle: 'Discover and master new vocabulary with personalized daily lessons tailored to your level.',
   },
   {
+    id: '2',
     icon: 'style',
     title: 'Practice with Flashcards',
     subtitle: 'Reinforce your learning with interactive flashcards. Swipe to mark words as learned.',
   },
   {
+    id: '3',
     icon: 'trending-up',
     title: 'Track Your Progress',
     subtitle: 'Monitor your learning journey and celebrate your achievements as you grow.',
@@ -32,9 +47,13 @@ const ONBOARDING_STEPS = [
 export default function OnboardingScreen() {
   const navigation = useNavigation<OnboardingNavigationProp>();
   const [currentStep, setCurrentStep] = useState(0);
+  const flatListRef = useRef<FlatList>(null);
+
+  const isLastStep = currentStep === ONBOARDING_STEPS.length - 1;
 
   const handleNext = () => {
     if (currentStep < ONBOARDING_STEPS.length - 1) {
+      flatListRef.current?.scrollToIndex({ index: currentStep + 1, animated: true });
       setCurrentStep(currentStep + 1);
     } else {
       navigation.navigate('Login');
@@ -45,7 +64,27 @@ export default function OnboardingScreen() {
     navigation.navigate('Login');
   };
 
-  const currentContent = ONBOARDING_STEPS[currentStep];
+  const handleStart = () => {
+    navigation.navigate('Login');
+  };
+
+  const onScroll = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
+    const offsetX = event.nativeEvent.contentOffset.x;
+    const newIndex = Math.round(offsetX / SCREEN_WIDTH);
+    if (newIndex !== currentStep && newIndex >= 0 && newIndex < ONBOARDING_STEPS.length) {
+      setCurrentStep(newIndex);
+    }
+  };
+
+  const renderItem = ({ item }: { item: typeof ONBOARDING_STEPS[0] }) => (
+    <View style={styles.slide}>
+      <View style={styles.imageContainer}>
+        <MaterialIcons name={item.icon as any} size={120} color={COLORS.primary} />
+      </View>
+      <Text style={styles.title}>{item.title}</Text>
+      <Text style={styles.subtitle}>{item.subtitle}</Text>
+    </View>
+  );
 
   return (
     <SafeAreaView style={styles.container}>
@@ -59,16 +98,20 @@ export default function OnboardingScreen() {
           <Text style={styles.logoText}>VocBee</Text>
         </View>
 
-        {/* Carousel Content */}
+        {/* Carousel with FlatList */}
         <View style={styles.carouselContainer}>
-          <View style={styles.imageContainer}>
-            <MaterialIcons name={currentContent.icon as any} size={120} color={COLORS.primary} />
-          </View>
-
-          <Text style={styles.title}>{currentContent.title}</Text>
-          <Text style={styles.subtitle}>
-            {currentContent.subtitle}
-          </Text>
+          <FlatList
+            ref={flatListRef}
+            data={ONBOARDING_STEPS}
+            renderItem={renderItem}
+            keyExtractor={(item) => item.id}
+            horizontal
+            pagingEnabled
+            showsHorizontalScrollIndicator={false}
+            onScroll={onScroll}
+            scrollEventThrottle={16}
+            bounces={false}
+          />
 
           {/* Dots */}
           <View style={styles.dotsContainer}>
@@ -84,18 +127,26 @@ export default function OnboardingScreen() {
           </View>
         </View>
 
-        {/* Actions */}
-        <View style={styles.actions}>
-          <Button
-            title="Skip"
-            variant="ghost"
-            onPress={handleSkip}
-            fullWidth={false}
-          />
-          <TouchableOpacity onPress={handleNext} style={styles.nextButton}>
-            <Text style={styles.nextButtonText}>Next</Text>
-          </TouchableOpacity>
-        </View>
+        {/* Actions - Start button on last step, Skip/Next otherwise */}
+        {isLastStep ? (
+          <View style={styles.startButtonContainer}>
+            <TouchableOpacity onPress={handleStart} style={styles.startButton}>
+              <Text style={styles.startButtonText}>Start</Text>
+            </TouchableOpacity>
+          </View>
+        ) : (
+          <View style={styles.actions}>
+            <Button
+              title="Skip"
+              variant="ghost"
+              onPress={handleSkip}
+              fullWidth={false}
+            />
+            <TouchableOpacity onPress={handleNext} style={styles.nextButton}>
+              <Text style={styles.nextButtonText}>Next</Text>
+            </TouchableOpacity>
+          </View>
+        )}
 
       </View>
     </SafeAreaView>
@@ -109,7 +160,6 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    paddingHorizontal: 24,
     justifyContent: 'space-between',
     paddingVertical: 40,
   },
@@ -118,6 +168,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 12,
     paddingTop: 16,
+    paddingHorizontal: 24,
   },
   logoContainer: {
     width: 40,
@@ -126,17 +177,22 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-
   logoText: {
     fontFamily: FONT_FAMILY,
     color: '#fff',
     fontSize: 24,
   },
   carouselContainer: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+  slide: {
+    width: SCREEN_WIDTH,
     alignItems: 'center',
+    paddingHorizontal: 24,
   },
   imageContainer: {
-    width: '100%',
+    width: SCREEN_WIDTH - 48,
     aspectRatio: 1,
     backgroundColor: 'rgba(168, 201, 158, 0.1)',
     borderRadius: 48,
@@ -163,6 +219,7 @@ const styles = StyleSheet.create({
   dotsContainer: {
     flexDirection: 'row',
     gap: 8,
+    justifyContent: 'center',
     marginTop: 32,
   },
   dot: {
@@ -179,6 +236,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    paddingHorizontal: 24,
   },
   nextButton: {
     paddingHorizontal: 32,
@@ -189,4 +247,19 @@ const styles = StyleSheet.create({
     color: COLORS.primary,
     fontSize: 16,
   },
+  startButtonContainer: {
+    alignItems: 'center',
+    paddingHorizontal: 24,
+  },
+  startButton: {
+    paddingHorizontal: 48,
+    paddingVertical: 14,
+  },
+  startButtonText: {
+    fontFamily: FONT_FAMILY,
+    color: COLORS.primary,
+    fontSize: 18,
+    fontWeight: '600',
+  },
 });
+

@@ -5,25 +5,40 @@ import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { COLORS, LANGUAGES, LEVELS } from '../constants';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import Feather from '@expo/vector-icons/Feather';
-import { FONT_FAMILY } from '../utils/typography';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { resetProgress, setCurrentLevel } from '../services/progressService';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useTheme } from '../context/ThemeContext';
+import { FONT_FAMILY } from '../utils/typography';
+import { resetProgress, setCurrentLevel } from '../services/progressService';
 import { getFirstLevelForUserLevel } from '../services/vocabularyService';
+import {
+   getNotificationSettings,
+   saveNotificationSettings,
+   requestNotificationPermissions,
+   scheduleVocabularyNotifications,
+   sendTestNotification,
+} from '../services/notificationService';
 
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Constants
+// ─────────────────────────────────────────────────────────────────────────────
 const HOURS_LIST = Array.from({ length: 24 }, (_, i) => i.toString().padStart(2, '0'));
 const MINUTES_LIST = Array.from({ length: 60 }, (_, i) => i.toString().padStart(2, '0'));
-// Extended lists for infinite scroll effect (3x repeat)
 const HOURS_EXTENDED = [...HOURS_LIST, ...HOURS_LIST, ...HOURS_LIST];
 const MINUTES_EXTENDED = [...MINUTES_LIST, ...MINUTES_LIST, ...MINUTES_LIST];
-const FREQUENCIES = ['Every 15 minutes','Every 30 minutes', 'Every hour', 'Every 2 hours',];
+const FREQUENCIES = ['Every 15 minutes', 'Every 30 minutes', 'Every hour', 'Every 2 hours'];
 
-interface SwitchToggleProps {
+// ─────────────────────────────────────────────────────────────────────────────
+// AnimatedSwitch Component - Unified toggle with variants
+// ─────────────────────────────────────────────────────────────────────────────
+interface AnimatedSwitchProps {
    value: boolean;
    onToggle: () => void;
+   variant?: 'default' | 'theme';
 }
 
-const SwitchToggle = ({ value, onToggle }: SwitchToggleProps) => {
+const AnimatedSwitch: React.FC<AnimatedSwitchProps> = ({ value, onToggle, variant = 'default' }) => {
    const translateX = useRef(new Animated.Value(value ? 22 : 2)).current;
    const bgColor = useRef(new Animated.Value(value ? 1 : 0)).current;
 
@@ -41,11 +56,13 @@ const SwitchToggle = ({ value, onToggle }: SwitchToggleProps) => {
             useNativeDriver: false,
          }),
       ]).start();
-   }, [value]);
+   }, [value, translateX, bgColor]);
 
+   // Colors based on variant
+   const activeColor = variant === 'theme' ? '#1a1a1a' : COLORS.primary;
    const backgroundColor = bgColor.interpolate({
       inputRange: [0, 1],
-      outputRange: ['#ffffff', COLORS.primary],
+      outputRange: ['#ffffff', activeColor],
    });
 
    return (
@@ -55,73 +72,26 @@ const SwitchToggle = ({ value, onToggle }: SwitchToggleProps) => {
             { backgroundColor },
             !value && { borderWidth: 1, borderColor: '#d0d0d0' }
          ]}>
-            <Animated.View
-               style={[
-                  styles.switchThumb,
-                  { transform: [{ translateX }] }
-               ]}
-            />
-         </Animated.View>
-      </TouchableOpacity>
-   );
-};
-
-// Dark Mode Switch with Moon/Sun icons
-const DarkModeSwitch = ({ value, onToggle }: SwitchToggleProps) => {
-   const translateX = useRef(new Animated.Value(value ? 22 : 2)).current;
-   const bgColor = useRef(new Animated.Value(value ? 1 : 0)).current;
-
-   useEffect(() => {
-      Animated.parallel([
-         Animated.spring(translateX, {
-            toValue: value ? 22 : 2,
-            useNativeDriver: true,
-            friction: 8,
-            tension: 100,
-         }),
-         Animated.timing(bgColor, {
-            toValue: value ? 1 : 0,
-            duration: 200,
-            useNativeDriver: false,
-         }),
-      ]).start();
-   }, [value]);
-
-   const backgroundColor = bgColor.interpolate({
-      inputRange: [0, 1],
-      outputRange: ['#ffffff', '#1a1a1a'],  // Light mode: white, Dark mode: black
-   });
-
-   return (
-      <TouchableOpacity onPress={onToggle} activeOpacity={0.8}>
-         <Animated.View style={[
-            styles.switchTrack,
-            { backgroundColor },
-            !value && { borderWidth: 1, borderColor: '#d0d0d0' }  // Border visible in light mode
-         ]}>
-            <Animated.View
-               style={[
-                  styles.switchThumb,
-                  { transform: [{ translateX }] }
-               ]}
-            >
-               <MaterialIcons
-                  name={value ? "nightlight-round" : "wb-sunny"}
-                  size={16}
-                  color={value ? "#FFD700" : "#FFA500"}
-               />
+            <Animated.View style={[styles.switchThumb, { transform: [{ translateX }] }]}>
+               {variant === 'theme' && (
+                  <MaterialIcons
+                     name={value ? 'nightlight-round' : 'wb-sunny'}
+                     size={16}
+                     color={value ? '#FFD700' : '#FFA500'}
+                  />
+               )}
             </Animated.View>
          </Animated.View>
       </TouchableOpacity>
    );
 };
 
-import { useTheme } from '../context/ThemeContext';
 
 export default function SettingsScreen() {
    const navigation = useNavigation();
    const { isDarkMode, toggleTheme, colors } = useTheme();
    const [reminderEnabled, setReminderEnabled] = useState(true);
+   const [autoMarkLearned, setAutoMarkLearned] = useState(true);
    const [startHour, setStartHour] = useState('09');
    const [startMinute, setStartMinute] = useState('00');
    const [endHour, setEndHour] = useState('21');
@@ -137,10 +107,92 @@ export default function SettingsScreen() {
    const [showPrivacyModal, setShowPrivacyModal] = useState(false);
    const [selectedLevel, setSelectedLevel] = useState('beginner');
    const [showLevelPicker, setShowLevelPicker] = useState(false);
+   const [showAutoMarkPicker, setShowAutoMarkPicker] = useState(false);
+
+   // Load notification settings on mount
+   useEffect(() => {
+      const loadSettings = async () => {
+         const settings = await getNotificationSettings();
+         setReminderEnabled(settings.enabled);
+         setAutoMarkLearned(settings.autoMarkLearned);
+         setStartHour(settings.startHour.toString().padStart(2, '0'));
+         setStartMinute(settings.startMinute.toString().padStart(2, '0'));
+         setEndHour(settings.endHour.toString().padStart(2, '0'));
+         setEndMinute(settings.endMinute.toString().padStart(2, '0'));
+         // Set frequency from minutes
+         switch (settings.frequencyMinutes) {
+            case 15: setFrequency('Every 15 minutes'); break;
+            case 30: setFrequency('Every 30 minutes'); break;
+            case 60: setFrequency('Every hour'); break;
+            default: setFrequency('Every 2 hours');
+         }
+      };
+      loadSettings();
+   }, []);
+
+   // Helper to convert frequency string to minutes
+   const getFrequencyMinutes = (freq: string): number => {
+      switch (freq) {
+         case 'Every 15 minutes': return 15;
+         case 'Every 30 minutes': return 30;
+         case 'Every hour': return 60;
+         default: return 120;
+      }
+   };
+
+   // Handle reminder toggle with permission request
+   const handleReminderToggle = async () => {
+      const newValue = !reminderEnabled;
+      if (newValue) {
+         const granted = await requestNotificationPermissions();
+         if (!granted) {
+            Alert.alert('Permission Required', 'Please enable notifications in your device settings.');
+            return;
+         }
+      }
+      setReminderEnabled(newValue);
+      await saveNotificationSettings({
+         enabled: newValue,
+         startHour: parseInt(startHour),
+         startMinute: parseInt(startMinute),
+         endHour: parseInt(endHour),
+         endMinute: parseInt(endMinute),
+         frequencyMinutes: getFrequencyMinutes(frequency),
+         autoMarkLearned,
+      });
+   };
+
+   // Handle auto-mark toggle
+   const handleAutoMarkToggle = async () => {
+      const newValue = !autoMarkLearned;
+      setAutoMarkLearned(newValue);
+      await saveNotificationSettings({ autoMarkLearned: newValue });
+   };
+
+   // Save time settings
+   const saveTimeSettings = async (type: 'start' | 'end', hour: string, minute: string) => {
+      if (type === 'start') {
+         await saveNotificationSettings({
+            startHour: parseInt(hour),
+            startMinute: parseInt(minute),
+         });
+      } else {
+         await saveNotificationSettings({
+            endHour: parseInt(hour),
+            endMinute: parseInt(minute),
+         });
+      }
+   };
+
+   // Save frequency
+   const handleFrequencyChange = async (freq: string) => {
+      setFrequency(freq);
+      await saveNotificationSettings({ frequencyMinutes: getFrequencyMinutes(freq) });
+   };
 
    // Refs for wheel picker scroll
-   const hourScrollRef = useRef<ScrollView>(null);
-   const minuteScrollRef = useRef<ScrollView>(null);
+   const hourScrollRef = useRef<any>(null);
+   const minuteScrollRef = useRef<any>(null);
    const ITEM_HEIGHT = 44; // Height of each wheel item
 
    // Auto-scroll to selected values when picker opens (start from middle section)
@@ -224,10 +276,7 @@ export default function SettingsScreen() {
                      </View>
                      <Text style={[styles.settingTitle, dynamicStyles.text]}>Theme</Text>
                   </View>
-                  <DarkModeSwitch
-                     value={isDarkMode}
-                     onToggle={toggleTheme}
-                  />
+                  <AnimatedSwitch value={isDarkMode} onToggle={toggleTheme} variant="theme" />
                </View>
                <TouchableOpacity
                   style={styles.settingItem}
@@ -253,6 +302,23 @@ export default function SettingsScreen() {
                   </View>
                   <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
                </TouchableOpacity>
+               <TouchableOpacity
+                  style={styles.settingItem}
+                  onPress={() => setShowAutoMarkPicker(true)}
+               >
+                  <View style={styles.settingLeft}>
+                     <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
+                        <MaterialCommunityIcons name="check-circle-outline" size={24} color={colors.primary} />
+                     </View>
+                     <View>
+                        <Text style={[styles.settingTitle, dynamicStyles.text]}>When Notification Arrives</Text>
+                        <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>
+                           {autoMarkLearned ? 'Mark as learned' : 'Do not mark'}
+                        </Text>
+                     </View>
+                  </View>
+                  <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
+               </TouchableOpacity>
             </View>
 
             {/* Section: Daily Reminder */}
@@ -265,10 +331,7 @@ export default function SettingsScreen() {
                      </View>
                      <Text style={[styles.settingTitle, dynamicStyles.text]}>Enable Reminders</Text>
                   </View>
-                  <SwitchToggle
-                     value={reminderEnabled}
-                     onToggle={() => setReminderEnabled(!reminderEnabled)}
-                  />
+                  <AnimatedSwitch value={reminderEnabled} onToggle={handleReminderToggle} />
                </View>
 
                {reminderEnabled && (
@@ -707,6 +770,88 @@ export default function SettingsScreen() {
                </View>
             </TouchableOpacity>
          </Modal>
+
+         {/* Auto-Mark Picker Modal */}
+         <Modal
+            visible={showAutoMarkPicker}
+            transparent
+            animationType="fade"
+            onRequestClose={() => setShowAutoMarkPicker(false)}
+         >
+            <TouchableOpacity
+               style={styles.modalOverlay}
+               activeOpacity={1}
+               onPress={() => setShowAutoMarkPicker(false)}
+            >
+               <View style={[styles.modalContent, dynamicStyles.modalContent]}>
+                  <Text style={[styles.modalTitle, dynamicStyles.text]}>When Notification Arrives</Text>
+
+                  <TouchableOpacity
+                     style={[
+                        styles.autoMarkOption,
+                        { borderBottomColor: colors.border },
+                        autoMarkLearned && { backgroundColor: `${colors.primary}20` }
+                     ]}
+                     onPress={async () => {
+                        setAutoMarkLearned(true);
+                        await saveNotificationSettings({ autoMarkLearned: true });
+                        setShowAutoMarkPicker(false);
+                     }}
+                  >
+                     <View style={styles.autoMarkOptionContent}>
+                        <MaterialCommunityIcons
+                           name="check-circle"
+                           size={24}
+                           color={autoMarkLearned ? colors.primary : colors.textSecondary}
+                        />
+                        <View style={{ flex: 1 }}>
+                           <Text style={[styles.autoMarkOptionTitle, { color: autoMarkLearned ? colors.primary : colors.text }]}>
+                              Mark as learned
+                           </Text>
+                           <Text style={[styles.autoMarkOptionDesc, { color: colors.textSecondary }]}>
+                              Word will be marked as learned when notification is sent
+                           </Text>
+                        </View>
+                     </View>
+                     {autoMarkLearned && (
+                        <MaterialIcons name="check" size={24} color={colors.primary} />
+                     )}
+                  </TouchableOpacity>
+
+                  <TouchableOpacity
+                     style={[
+                        styles.autoMarkOption,
+                        { borderBottomWidth: 0 },
+                        !autoMarkLearned && { backgroundColor: `${colors.primary}20` }
+                     ]}
+                     onPress={async () => {
+                        setAutoMarkLearned(false);
+                        await saveNotificationSettings({ autoMarkLearned: false });
+                        setShowAutoMarkPicker(false);
+                     }}
+                  >
+                     <View style={styles.autoMarkOptionContent}>
+                        <MaterialCommunityIcons
+                           name="close-circle-outline"
+                           size={24}
+                           color={!autoMarkLearned ? colors.primary : colors.textSecondary}
+                        />
+                        <View style={{ flex: 1 }}>
+                           <Text style={[styles.autoMarkOptionTitle, { color: !autoMarkLearned ? colors.primary : colors.text }]}>
+                              Do not mark
+                           </Text>
+                           <Text style={[styles.autoMarkOptionDesc, { color: colors.textSecondary }]}>
+                              Word will remain in your learning queue
+                           </Text>
+                        </View>
+                     </View>
+                     {!autoMarkLearned && (
+                        <MaterialIcons name="check" size={24} color={colors.primary} />
+                     )}
+                  </TouchableOpacity>
+               </View>
+            </TouchableOpacity>
+         </Modal>
       </SafeAreaView>
    );
 }
@@ -1073,5 +1218,29 @@ const styles = StyleSheet.create({
       borderBottomWidth: 2,
       borderRadius: 8,
       zIndex: 1,
+   },
+   autoMarkOption: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      padding: 16,
+      borderBottomWidth: 1,
+      borderRadius: 12,
+      marginBottom: 8,
+   },
+   autoMarkOptionContent: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      gap: 12,
+      flex: 1,
+   },
+   autoMarkOptionTitle: {
+      fontFamily: FONT_FAMILY,
+      fontSize: 16,
+      marginBottom: 4,
+   },
+   autoMarkOptionDesc: {
+      fontFamily: FONT_FAMILY,
+      fontSize: 13,
    },
 });

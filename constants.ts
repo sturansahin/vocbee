@@ -27,6 +27,16 @@ export const LIGHT_COLORS = {
 // Default export for backward compatibility
 export const COLORS = DARK_COLORS;
 
+// Gradient colors for LinearGradient backgrounds
+export const GRADIENT_COLORS = {
+  dark: ['#FFD700', '#1a1a1a', '#000000'] as const,
+  light: ['#FFA500', '#f5f9f7', '#ffffff'] as const,
+  locations: [0, 0.2, 1] as const,
+  start: { x: 0.7, y: 0 },
+  end: { x: 0.7, y: 2 },
+};
+
+
 // Languages available in assets/language folder
 export const LANGUAGES = [
   { id: 'amharic', name: 'Amharic', nativeName: 'አማርኛ', flagIcon: require('./assets/icons/et.png') },

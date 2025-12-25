@@ -40,6 +40,7 @@ import {
     getTotalWords
 } from '../services/progressService';
 import { addToFavorites } from '../services/favoritesService';
+import { getPendingNotificationWord } from '../services/notificationService';
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;
@@ -134,10 +135,28 @@ export default function HomeScreen() {
         loadData();
     }, [loadData]);
 
-    // Update counts on focus and check if level changed
+    // Update counts on focus and check if level changed or pending notification word
     useFocusEffect(
         useCallback(() => {
             const checkAndUpdate = async () => {
+                // Check for pending notification word first
+                const pendingWordId = await getPendingNotificationWord();
+                if (pendingWordId !== null) {
+                    // Find the word and move it to front
+                    const level = await getCurrentLevel();
+                    const vocabulary = await getStoredVocabulary(level);
+                    const pendingWord = vocabulary.find(w => w.id === pendingWordId);
+
+                    if (pendingWord) {
+                        // Put the pending word at the front
+                        const otherWords = words.filter(w => w.id !== pendingWordId);
+                        setWords([pendingWord, ...otherWords]);
+                        setCurrentWordIndex(0);
+                        console.log(`Showing word from notification: ${pendingWord.word}`);
+                    }
+                    return;
+                }
+
                 if (hasInitiallyLoaded.current) {
                     // Check if level has changed
                     const newLevel = await getCurrentLevel();
@@ -151,7 +170,7 @@ export default function HomeScreen() {
                 }
             };
             checkAndUpdate();
-        }, [currentLevel, loadData, updateCounts])
+        }, [currentLevel, loadData, updateCounts, words])
     );
 
     // Get level display
@@ -751,29 +770,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    skipActionButton: {
-    },
-    starActionButton: {
-    },
-    learnedActionButton: {
-    },
     iconShadow: {
         shadowColor: '#FF9B2F',
         shadowOffset: { width: 0, height: 4 },
         shadowOpacity: 0.4,
         shadowRadius: 8,
         elevation: 8,
-    },
-    actionIcon: {
-        width: 70,
-        height: 70,
-        resizeMode: 'contain',
-    },
-    retryIcon: {
-        tintColor: '#ea8484',
-    },
-    arrowIcon: {
-        tintColor: '#35de5dff',
     },
     swipeOverlay: {
         position: 'absolute',

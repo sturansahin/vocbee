@@ -1,15 +1,20 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, useCallback, useRef } from 'react';
 import { Platform, View, Text } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, NavigationContainerRef } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from 'expo-status-bar';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import * as NavigationBar from 'expo-navigation-bar';
 import * as SplashScreen from 'expo-splash-screen';
+import * as Notifications from 'expo-notifications';
 import { useFonts, SpecialGothicExpandedOne_400Regular } from '@expo-google-fonts/special-gothic-expanded-one';
 import { RubikMonoOne_400Regular } from '@expo-google-fonts/rubik-mono-one';
 import { RootStackParamList } from './types';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
+import {
+  configureNotifications,
+  handleNotificationResponse,
+} from './services/notificationService';
 
 // Screens
 import OnboardingScreen from './screens/OnboardingScreen';
@@ -21,6 +26,9 @@ import FavoritesScreen from './screens/FavoritesScreen';
 import ExampleSentencesScreen from './screens/ExampleSentencesScreen';
 import LevelTestScreen from './screens/LevelTestScreen';
 
+// Configure notifications globally
+configureNotifications();
+
 // Keep splash screen visible while loading fonts
 SplashScreen.preventAutoHideAsync();
 
@@ -30,6 +38,9 @@ const Stack = createStackNavigator<RootStackParamList>();
 export const FONT_FAMILY = 'SpecialGothicExpandedOne_400Regular';
 
 export default function App() {
+  // Navigation ref for programmatic navigation
+  const navigationRef = useRef<NavigationContainerRef<RootStackParamList>>(null);
+
   // Load fonts
   const [fontsLoaded] = useFonts({
     SpecialGothicExpandedOne_400Regular,
@@ -43,6 +54,22 @@ export default function App() {
       NavigationBar.setButtonStyleAsync('light');
       NavigationBar.setPositionAsync('absolute');
     }
+  }, []);
+
+  // Setup notification response listener
+  useEffect(() => {
+    // Handle notification when app is opened from background/killed state
+    const responseSubscription = Notifications.addNotificationResponseReceivedListener(async (response) => {
+      await handleNotificationResponse(response);
+      // Navigate to HomeScreen to show the word
+      if (navigationRef.current?.isReady()) {
+        navigationRef.current.navigate('MainTabs');
+      }
+    });
+
+    return () => {
+      responseSubscription.remove();
+    };
   }, []);
 
   // Hide splash screen when fonts are loaded
@@ -59,7 +86,7 @@ export default function App() {
   return (
     <ThemeProvider>
       <GestureHandlerRootView style={{ flex: 1 }} onLayout={onLayoutRootView}>
-        <NavigationContainer>
+        <NavigationContainer ref={navigationRef}>
           <StatusBar style="light" />
           <Stack.Navigator screenOptions={{ headerShown: false }}>
             {/* Onboarding Flow */}
@@ -89,3 +116,4 @@ export default function App() {
     </ThemeProvider>
   );
 }
+
