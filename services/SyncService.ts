@@ -4,16 +4,14 @@
 import { doc, setDoc, getDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../config/firebase';
 import {
-    getLocalProgress,
     getLastSyncTime,
     setLastSyncTime,
     clearSyncFlag,
     needsSync,
-    UserProgress,
     UserData,
-    saveLocalProgress,
     saveUserDataLocally,
 } from './storage';
+import { getUserProgress, getCurrentLevel, restoreProgressFromFirebase, getSkippedProgress, getLastWordIndex } from './progressService';
 
 // Check if sync should happen (once per day)
 export const shouldSync = async (): Promise<boolean> => {
@@ -27,7 +25,7 @@ export const shouldSync = async (): Promise<boolean> => {
         const now = new Date();
         const hoursSinceLastSync = (now.getTime() - lastSync.getTime()) / (1000 * 60 * 60);
 
-        // Sync if it's been more than 24 hours
+        // Sync if it's been more than ~1 minute (for testing)
         return hoursSinceLastSync >= 0.016;
     } catch (error) {
         console.error('Error checking sync status:', error);
@@ -38,12 +36,21 @@ export const shouldSync = async (): Promise<boolean> => {
 // Sync local progress to Firestore
 export const syncToFirestore = async (userId: string): Promise<boolean> => {
     try {
-        const localProgress = await getLocalProgress();
+        // Get progress from progressService (actual learning data)
+        const userProgress = await getUserProgress();
+        const skippedProgress = await getSkippedProgress();
+        const currentLevel = await getCurrentLevel();
+        const lastWordIndex = await getLastWordIndex();
+
+        console.log('Syncing progress to Firestore:', { currentLevel, lastWordIndex });
 
         const userRef = doc(db, 'users', userId);
         await setDoc(userRef, {
             progress: {
-                ...localProgress,
+                currentLevel: currentLevel,
+                learnedWords: userProgress,
+                skippedWords: skippedProgress,
+                lastWordIndex: lastWordIndex,
                 lastSync: serverTimestamp(),
             },
         }, { merge: true });
@@ -59,15 +66,11 @@ export const syncToFirestore = async (userId: string): Promise<boolean> => {
     }
 };
 
-// Force sync (on logout, profile change, etc.)
+// Force sync (on logout, profile change, etc.) - ALWAYS syncs
 export const forceSync = async (userId: string): Promise<boolean> => {
     try {
-        const hasChanges = await needsSync();
-        if (!hasChanges) {
-            console.log('No changes to sync');
-            return true;
-        }
-
+        console.log('Force sync triggered for user:', userId);
+        // Always sync on force - don't check needsSync flag
         return await syncToFirestore(userId);
     } catch (error) {
         console.error('Error in force sync:', error);
@@ -90,9 +93,9 @@ export const createUserDocument = async (
                 email,
                 displayName: displayName || '',
                 createdAt: serverTimestamp(),
-                setupCompleted: false, // User needs to complete setup
-                preferences: null, // Will be set during setup
-                progress: null, // Will be set after setup
+                setupCompleted: false,
+                preferences: null,
+                progress: null,
             });
             console.log('Created new user document');
         }
@@ -118,17 +121,19 @@ export const fetchAndSaveUserData = async (userId: string): Promise<UserData | n
                 preferences: data.preferences,
             };
 
-            const progress: UserProgress = {
-                currentLevel: data.progress?.currentLevel || 'A1',
-                learnedWords: data.progress?.learnedWords || {},
-                skippedWords: data.progress?.skippedWords || {},
-                lastUpdated: data.progress?.lastSync?.toDate?.()?.toISOString() || new Date().toISOString(),
-            };
-
-            // Save to local storage
             await saveUserDataLocally(userData);
-            await saveLocalProgress(progress);
-            await clearSyncFlag(); // Data is fresh from server
+
+            // Restore progress from Firebase to local progressService
+            if (data.progress) {
+                await restoreProgressFromFirebase(
+                    data.progress.learnedWords,
+                    data.progress.currentLevel,
+                    data.progress.skippedWords,
+                    data.progress.lastWordIndex
+                );
+            }
+
+            await clearSyncFlag();
 
             return userData;
         }
@@ -146,6 +151,7 @@ export const autoSync = async (userId: string | null): Promise<void> => {
     try {
         const shouldDoSync = await shouldSync();
         if (shouldDoSync) {
+            console.log('Auto sync triggered...');
             await syncToFirestore(userId);
         }
     } catch (error) {

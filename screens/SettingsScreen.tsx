@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, Image, StyleSheet, Modal, Animated, TextInput } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
 import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { COLORS, LANGUAGES, LEVELS } from '../constants';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
@@ -8,9 +9,11 @@ import Feather from '@expo/vector-icons/Feather';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useTheme } from '../context/ThemeContext';
+import { useAuth } from '../context/AuthContext';
 import { FONT_FAMILY } from '../utils/typography';
 import { resetProgress, setCurrentLevel } from '../services/progressService';
 import { getFirstLevelForUserLevel } from '../services/vocabularyService';
+import { forceSync } from '../services/SyncService';
 import { useAlert } from '../components/CustomAlert';
 import * as ImagePicker from 'expo-image-picker';
 import {
@@ -91,8 +94,9 @@ const AnimatedSwitch: React.FC<AnimatedSwitchProps> = ({ value, onToggle, varian
 
 
 export default function SettingsScreen() {
-   const navigation = useNavigation();
+   const navigation = useNavigation<StackNavigationProp<any>>();
    const { isDarkMode, toggleTheme, colors } = useTheme();
+   const { signOut, user } = useAuth();
    const { showAlert } = useAlert();
    const [reminderEnabled, setReminderEnabled] = useState(true);
    const [autoMarkLearned, setAutoMarkLearned] = useState(true);
@@ -525,6 +529,41 @@ export default function SettingsScreen() {
                   <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
                </TouchableOpacity>
                <TouchableOpacity
+                  style={styles.settingItem}
+                  onPress={() => {
+                     showAlert({
+                        title: 'Change Learning Language',
+                        message: 'This will reset all your progress and let you choose a new language to learn. Are you sure?',
+                        buttons: [
+                           { text: 'Cancel', style: 'cancel' },
+                           {
+                              text: 'Continue',
+                              style: 'destructive',
+                              onPress: async () => {
+                                 await resetProgress();
+                                 await forceSync(user?.uid || '');
+                                 navigation.reset({
+                                    index: 0,
+                                    routes: [{ name: 'NativeLanguage' as any }],
+                                 });
+                              }
+                           }
+                        ]
+                     });
+                  }}
+               >
+                  <View style={styles.settingLeft}>
+                     <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
+                        <MaterialCommunityIcons name="translate" size={24} color={colors.primary} />
+                     </View>
+                     <View>
+                        <Text style={[styles.settingTitle, dynamicStyles.text]}>Change Learning Language</Text>
+                        <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>Start learning a new language</Text>
+                     </View>
+                  </View>
+                  <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
+               </TouchableOpacity>
+               <TouchableOpacity
                   style={[styles.settingItem, { borderBottomWidth: 0 }]}
                   onPress={() => {
                      showAlert({
@@ -537,6 +576,8 @@ export default function SettingsScreen() {
                               style: 'destructive',
                               onPress: async () => {
                                  await resetProgress();
+                                 // Sync empty progress to Firebase
+                                 await forceSync(user?.uid || '');
                                  showAlert({ title: 'Success', message: 'Your progress has been reset.' });
                               }
                            }
@@ -583,7 +624,31 @@ export default function SettingsScreen() {
 
 
             {/* Log Out Button */}
-            <TouchableOpacity style={styles.logoutButton}>
+            <TouchableOpacity
+               style={styles.logoutButton}
+               onPress={() => {
+                  showAlert({
+                     title: 'Log Out',
+                     message: 'Are you sure you want to log out?',
+                     buttons: [
+                        { text: 'Cancel', style: 'cancel' },
+                        {
+                           text: 'Log Out', style: 'destructive', onPress: async () => {
+                              try {
+                                 await signOut();
+                                 navigation.reset({
+                                    index: 0,
+                                    routes: [{ name: 'Login' as any }],
+                                 });
+                              } catch (error) {
+                                 console.error('Logout error:', error);
+                              }
+                           }
+                        }
+                     ]
+                  });
+               }}
+            >
                <MaterialIcons name="logout" size={20} color={colors.error} />
                <Text style={[styles.logoutButtonText, { color: colors.error }]}>Log Out</Text>
             </TouchableOpacity>

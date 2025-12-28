@@ -38,7 +38,10 @@ import {
     getCurrentLevel,
     checkAndAdvanceLevel,
     getLearnedCount,
-    getTotalWords
+    getTotalWords,
+    markWordAsSkipped,
+    saveLastWordId,
+    getLastWordId
 } from '../services/progressService';
 import { addToFavorites } from '../services/favoritesService';
 import { getPendingNotificationWord } from '../services/notificationService';
@@ -101,7 +104,18 @@ export default function HomeScreen() {
             const shuffledWords = shuffleArray(unlearnedWords);
 
             setWords(shuffledWords);
-            setCurrentWordIndex(0);
+
+            // Resume from last saved word ID (find its position in shuffled array)
+            const lastWordId = await getLastWordId();
+            let resumeIndex = 0;
+            if (lastWordId !== null) {
+                const foundIndex = shuffledWords.findIndex(w => w.id === lastWordId);
+                if (foundIndex !== -1) {
+                    resumeIndex = foundIndex;
+                    console.log(`Resuming from word ID ${lastWordId} at position ${foundIndex}`);
+                }
+            }
+            setCurrentWordIndex(resumeIndex);
 
             // Update counts
             const learned = await getLearnedCount(level);
@@ -238,10 +252,20 @@ export default function HomeScreen() {
                     await loadData(true);
                     return;
                 }
+            } else if (direction === 'left' && swipedWord) {
+                // Mark word as skipped
+                await markWordAsSkipped(currentLevel, swipedWord.id);
+            }
+
+            // Save current word ID for resuming later (next word's ID)
+            const nextWordIndex = currentWordIndex + 1;
+            if (nextWordIndex < words.length) {
+                await saveLastWordId(words[nextWordIndex].id);
             }
 
             // If we were at the end, reload the deck
             if (wasLastWord) {
+                await saveLastWordId(0); // Reset to beginning
                 await loadData(true);
             }
         });

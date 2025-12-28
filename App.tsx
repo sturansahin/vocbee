@@ -78,6 +78,20 @@ function AppContent() {
     };
   }, [user]);
 
+  // Periodic sync every 5 minutes while app is active
+  useEffect(() => {
+    if (!user) return;
+
+    const syncInterval = setInterval(async () => {
+      if (appState.current === 'active') {
+        console.log('Periodic sync triggered...');
+        await autoSync(user.uid);
+      }
+    }, 5 * 60 * 1000); // 5 minutes
+
+    return () => clearInterval(syncInterval);
+  }, [user]);
+
   return (
     <NavigationContainer ref={navigationRef}>
       <StatusBar style="light" />

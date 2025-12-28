@@ -7,9 +7,12 @@
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Level, LEVELS, getStoredVocabulary } from './vocabularyService';
+import { markAsUnsynced } from './storage';
 
 const PROGRESS_KEY = '@user_progress';
+const SKIPPED_KEY = '@user_skipped';
 const CURRENT_LEVEL_KEY = '@current_level';
+const LAST_WORD_ID_KEY = '@last_word_id';
 
 export interface UserProgress {
     [level: string]: number[]; // Array of learned word IDs per level
@@ -37,6 +40,8 @@ export async function getUserProgress(): Promise<UserProgress> {
 async function saveUserProgress(progress: UserProgress): Promise<void> {
     try {
         await AsyncStorage.setItem(PROGRESS_KEY, JSON.stringify(progress));
+        // Mark as needing sync to Firebase
+        await markAsUnsynced();
     } catch (error) {
         console.error('Error saving progress:', error);
     }
@@ -165,8 +170,10 @@ export async function checkAndAdvanceLevel(): Promise<Level> {
 export async function resetProgress(): Promise<void> {
     try {
         await AsyncStorage.removeItem(PROGRESS_KEY);
+        await AsyncStorage.removeItem(SKIPPED_KEY);
         await AsyncStorage.removeItem(CURRENT_LEVEL_KEY);
-        console.log('Progress reset successfully');
+        await AsyncStorage.removeItem(LAST_WORD_ID_KEY);
+        console.log('Progress reset successfully (including skipped and last word)');
     } catch (error) {
         console.error('Error resetting progress:', error);
     }
@@ -217,4 +224,123 @@ export async function getOverallStats(): Promise<{
         percentage,
         completedLevels,
     };
+}
+
+/**
+ * Restore progress from Firebase data
+ * Called when user logs in to sync Firebase progress to local storage
+ */
+export async function restoreProgressFromFirebase(
+    learnedWords: { [level: string]: number[] } | null,
+    currentLevel: string | null,
+    skippedWords?: { [level: string]: number[] } | null,
+    lastWordIndex?: number | null
+): Promise<void> {
+    try {
+        // Restore learned words
+        if (learnedWords && typeof learnedWords === 'object') {
+            await AsyncStorage.setItem(PROGRESS_KEY, JSON.stringify(learnedWords));
+            console.log('Restored learned words from Firebase:', Object.keys(learnedWords).length, 'levels');
+        }
+
+        // Restore skipped words
+        if (skippedWords && typeof skippedWords === 'object') {
+            await AsyncStorage.setItem(SKIPPED_KEY, JSON.stringify(skippedWords));
+            console.log('Restored skipped words from Firebase');
+        }
+
+        // Restore current level
+        if (currentLevel) {
+            await AsyncStorage.setItem(CURRENT_LEVEL_KEY, currentLevel);
+            console.log('Restored current level from Firebase:', currentLevel);
+        }
+
+        // Restore last word ID
+        if (lastWordIndex !== undefined && lastWordIndex !== null) {
+            await AsyncStorage.setItem(LAST_WORD_ID_KEY, lastWordIndex.toString());
+            console.log('Restored last word ID from Firebase:', lastWordIndex);
+        }
+    } catch (error) {
+        console.error('Error restoring progress from Firebase:', error);
+    }
+}
+
+// ============ SKIPPED WORDS ============
+
+/**
+ * Get skipped words for all levels
+ */
+export async function getSkippedProgress(): Promise<UserProgress> {
+    try {
+        const data = await AsyncStorage.getItem(SKIPPED_KEY);
+        if (data) {
+            return JSON.parse(data);
+        }
+        return {};
+    } catch (error) {
+        console.error('Error loading skipped progress:', error);
+        return {};
+    }
+}
+
+/**
+ * Get skipped word IDs for a specific level
+ */
+export async function getSkippedWords(level: Level): Promise<number[]> {
+    const progress = await getSkippedProgress();
+    return progress[level] || [];
+}
+
+/**
+ * Mark a word as skipped
+ */
+export async function markWordAsSkipped(level: Level, wordId: number): Promise<void> {
+    const progress = await getSkippedProgress();
+
+    if (!progress[level]) {
+        progress[level] = [];
+    }
+
+    if (!progress[level].includes(wordId)) {
+        progress[level].push(wordId);
+        await AsyncStorage.setItem(SKIPPED_KEY, JSON.stringify(progress));
+        await markAsUnsynced();
+    }
+}
+
+// ============ LAST WORD ID ============
+
+/**
+ * Save the last viewed word ID (for resuming from same word after shuffle)
+ */
+export async function saveLastWordId(wordId: number): Promise<void> {
+    try {
+        await AsyncStorage.setItem(LAST_WORD_ID_KEY, wordId.toString());
+        await markAsUnsynced();
+    } catch (error) {
+        console.error('Error saving last word ID:', error);
+    }
+}
+
+/**
+ * Get the last viewed word ID
+ */
+export async function getLastWordId(): Promise<number | null> {
+    try {
+        const data = await AsyncStorage.getItem(LAST_WORD_ID_KEY);
+        return data ? parseInt(data, 10) : null;
+    } catch (error) {
+        console.error('Error getting last word ID:', error);
+        return null;
+    }
+}
+
+// Keep old functions for backward compatibility (but deprecated)
+export async function saveLastWordIndex(index: number): Promise<void> {
+    await saveLastWordId(index);
+}
+
+export async function getLastWordIndex(): Promise<number> {
+    const id = await getLastWordId();
+    return id || 0;
 }
