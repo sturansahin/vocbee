@@ -1,5 +1,5 @@
 import React, { useEffect, useCallback, useRef } from 'react';
-import { Platform, View, Text } from 'react-native';
+import { Platform, View, Text, AppState, AppStateStatus } from 'react-native';
 import { NavigationContainer, NavigationContainerRef } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from 'expo-status-bar';
@@ -11,6 +11,9 @@ import { useFonts, SpecialGothicExpandedOne_400Regular } from '@expo-google-font
 import { RubikMonoOne_400Regular } from '@expo-google-fonts/rubik-mono-one';
 import { RootStackParamList } from './types';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
+import { AuthProvider, useAuth } from './context/AuthContext';
+import { AlertProvider } from './components/CustomAlert';
+import { autoSync } from './services/SyncService';
 import {
   configureNotifications,
   handleNotificationResponse,
@@ -37,10 +40,75 @@ const Stack = createStackNavigator<RootStackParamList>();
 // Export font family name for use throughout the app
 export const FONT_FAMILY = 'SpecialGothicExpandedOne_400Regular';
 
-export default function App() {
-  // Navigation ref for programmatic navigation
+// AppContent component to access auth context
+function AppContent() {
+  const { user } = useAuth();
+  const appState = useRef(AppState.currentState);
   const navigationRef = useRef<NavigationContainerRef<RootStackParamList>>(null);
 
+  // Setup notification response listener
+  useEffect(() => {
+    const responseSubscription = Notifications.addNotificationResponseReceivedListener(async (response) => {
+      await handleNotificationResponse(response);
+      if (navigationRef.current?.isReady()) {
+        navigationRef.current.navigate('MainTabs');
+      }
+    });
+
+    return () => {
+      responseSubscription.remove();
+    };
+  }, []);
+
+  // AppState listener for background sync
+  useEffect(() => {
+    const handleAppStateChange = async (nextAppState: AppStateStatus) => {
+      // When app goes to background, trigger auto sync
+      if (appState.current === 'active' && nextAppState.match(/inactive|background/)) {
+        if (user) {
+          await autoSync(user.uid);
+        }
+      }
+      appState.current = nextAppState;
+    };
+
+    const subscription = AppState.addEventListener('change', handleAppStateChange);
+    return () => {
+      subscription.remove();
+    };
+  }, [user]);
+
+  return (
+    <NavigationContainer ref={navigationRef}>
+      <StatusBar style="light" />
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        {/* Onboarding Flow */}
+        <Stack.Screen name="Onboarding" component={OnboardingScreen} />
+
+        {/* Auth Flow */}
+        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="SignUp" component={SignUpScreen} />
+        {/* Setup Flow - Single unified screen with steps */}
+        <Stack.Screen name="NativeLanguage" component={SetupScreen} />
+        <Stack.Screen name="LevelTest" component={LevelTestScreen} />
+
+        {/* Main App - HomeScreen directly (no tabs) */}
+        <Stack.Screen name="MainTabs" component={HomeScreen} />
+
+        {/* Settings Screen */}
+        <Stack.Screen name="Settings" component={SettingsScreen} />
+
+        {/* Favorites Screen */}
+        <Stack.Screen name="Favorites" component={FavoritesScreen} />
+
+        {/* Detail Screens */}
+        <Stack.Screen name="ExampleSentences" component={ExampleSentencesScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default function App() {
   // Load fonts
   const [fontsLoaded] = useFonts({
     SpecialGothicExpandedOne_400Regular,
@@ -56,22 +124,6 @@ export default function App() {
     }
   }, []);
 
-  // Setup notification response listener
-  useEffect(() => {
-    // Handle notification when app is opened from background/killed state
-    const responseSubscription = Notifications.addNotificationResponseReceivedListener(async (response) => {
-      await handleNotificationResponse(response);
-      // Navigate to HomeScreen to show the word
-      if (navigationRef.current?.isReady()) {
-        navigationRef.current.navigate('MainTabs');
-      }
-    });
-
-    return () => {
-      responseSubscription.remove();
-    };
-  }, []);
-
   // Hide splash screen when fonts are loaded
   const onLayoutRootView = useCallback(async () => {
     if (fontsLoaded) {
@@ -85,35 +137,13 @@ export default function App() {
 
   return (
     <ThemeProvider>
-      <GestureHandlerRootView style={{ flex: 1 }} onLayout={onLayoutRootView}>
-        <NavigationContainer ref={navigationRef}>
-          <StatusBar style="light" />
-          <Stack.Navigator screenOptions={{ headerShown: false }}>
-            {/* Onboarding Flow */}
-            <Stack.Screen name="Onboarding" component={OnboardingScreen} />
-
-            {/* Auth Flow */}
-            <Stack.Screen name="Login" component={LoginScreen} />
-            <Stack.Screen name="SignUp" component={SignUpScreen} />
-            {/* Setup Flow - Single unified screen with steps */}
-            <Stack.Screen name="NativeLanguage" component={SetupScreen} />
-            <Stack.Screen name="LevelTest" component={LevelTestScreen} />
-
-            {/* Main App - HomeScreen directly (no tabs) */}
-            <Stack.Screen name="MainTabs" component={HomeScreen} />
-
-            {/* Settings Screen */}
-            <Stack.Screen name="Settings" component={SettingsScreen} />
-
-            {/* Favorites Screen */}
-            <Stack.Screen name="Favorites" component={FavoritesScreen} />
-
-            {/* Detail Screens */}
-            <Stack.Screen name="ExampleSentences" component={ExampleSentencesScreen} />
-          </Stack.Navigator>
-        </NavigationContainer>
-      </GestureHandlerRootView>
+      <AlertProvider>
+        <AuthProvider>
+          <GestureHandlerRootView style={{ flex: 1 }} onLayout={onLayoutRootView}>
+            <AppContent />
+          </GestureHandlerRootView>
+        </AuthProvider>
+      </AlertProvider>
     </ThemeProvider>
   );
 }
-

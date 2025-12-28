@@ -7,7 +7,6 @@ import {
     FlatList,
     ActivityIndicator
 } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../types';
@@ -87,12 +86,8 @@ export default function FavoritesScreen() {
     );
 
     return (
-        <LinearGradient
-            colors={isDarkMode ? ['#FFD700', '#1a1a1a', '#000000'] : ['#FFA500', '#f5f9f7', '#ffffff']}
-            locations={[0, 0.2, 1]}
-            style={[styles.container, { paddingTop: insets.top }]}
-            start={{ x: 0.7, y: 0 }}
-            end={{ x: 0.7, y: 2 }}
+        <View
+            style={[styles.container, { paddingTop: insets.top, backgroundColor: colors.background }]}
         >
             {/* Floating Back Button */}
             <TouchableOpacity
@@ -130,7 +125,7 @@ export default function FavoritesScreen() {
                     contentContainerStyle={styles.listContent}
                 />
             )}
-        </LinearGradient>
+        </View>
     );
 }
 

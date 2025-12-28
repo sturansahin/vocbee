@@ -15,6 +15,8 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
+import { db, auth } from '../config/firebase';
 import { RootStackParamList } from '../types';
 import { Button } from '../components/UIComponents';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -92,14 +94,37 @@ export const SetupScreen = () => {
       // Final step - save settings, generate vocabulary and navigate to main app
       setIsGenerating(true);
       try {
-        // Save user level
+        // Save user level to AsyncStorage
         await AsyncStorage.setItem('@user_level', level);
+
+        // Get initial level based on user selection
+        const initialLevel = getFirstLevelForUserLevel(level);
+
+        // Save preferences and progress to Firestore
+        const currentUser = auth.currentUser;
+        if (currentUser) {
+          const userRef = doc(db, 'users', currentUser.uid);
+          await setDoc(userRef, {
+            setupCompleted: true,
+            preferences: {
+              nativeLanguage: nativeLanguage,
+              targetLanguage: targetLanguage,
+              level: level,
+            },
+            progress: {
+              currentLevel: initialLevel,
+              learnedWords: {},
+              skippedWords: {},
+              lastSync: serverTimestamp(),
+            },
+          }, { merge: true });
+          console.log('Saved preferences to Firestore');
+        }
 
         // Generate vocabulary for selected language pair
         await generateVocabulary(nativeLanguage, targetLanguage);
 
-        // Set initial level based on user selection
-        const initialLevel = getFirstLevelForUserLevel(level);
+        // Set initial level
         await setCurrentLevel(initialLevel);
 
         console.log(`Vocabulary generated: ${nativeLanguage} -> ${targetLanguage}, starting at ${initialLevel}`);

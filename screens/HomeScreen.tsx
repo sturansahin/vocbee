@@ -31,6 +31,7 @@ import {
     shuffleArray,
     isVocabularyGenerated
 } from '../services/vocabularyService';
+import * as Speech from 'expo-speech';
 import {
     markWordAsLearned,
     getLearnedWords,
@@ -335,31 +336,19 @@ export default function HomeScreen() {
     // Loading state
     if (isLoading) {
         return (
-            <LinearGradient
-                colors={isDarkMode ? ['#FFD700', '#1a1a1a', '#000000'] : ['#FFA500', '#f5f9f7', '#ffffff']}
-                locations={[0, 0.2, 1]}
-                style={[styles.container, { paddingTop: insets.top }]}
-                start={{ x: 0.7, y: 0 }}
-                end={{ x: 0.7, y: 2 }}
-            >
+            <View style={[styles.container, { backgroundColor: colors.background, paddingTop: insets.top }]}>
                 <View style={styles.loadingContainer}>
                     <ActivityIndicator size="large" color={colors.primary} />
                     <Text style={[styles.loadingText, { color: colors.text }]}>Loading vocabulary...</Text>
                 </View>
-            </LinearGradient>
+            </View>
         );
     }
 
     // No words state
     if (words.length === 0) {
         return (
-            <LinearGradient
-                colors={isDarkMode ? ['#FFD700', '#1a1a1a', '#000000'] : ['#FFA500', '#f5f9f7', '#ffffff']}
-                locations={[0, 0.2, 1]}
-                style={[styles.container, { paddingTop: insets.top }]}
-                start={{ x: 0.7, y: 0 }}
-                end={{ x: 0.7, y: 2 }}
-            >
+            <View style={[styles.container, { backgroundColor: colors.background, paddingTop: insets.top }]}>
                 {/* Header */}
                 <View style={styles.header}>
                     <View style={styles.headerTitleContainer}>
@@ -395,7 +384,7 @@ export default function HomeScreen() {
                         }
                     </Text>
                 </View>
-            </LinearGradient>
+            </View>
         );
     }
 
@@ -403,13 +392,7 @@ export default function HomeScreen() {
     const progressPercentage = totalCount > 0 ? (learnedCount / totalCount) * 100 : 0;
 
     return (
-        <LinearGradient
-            colors={isDarkMode ? ['#FFD700', '#1a1a1a', '#000000'] : ['#FFA500', '#f5f9f7', '#ffffff']}
-            locations={[0, 0.2, 1]}
-            style={[styles.container, { paddingTop: insets.top }]}
-            start={{ x: 0.7, y: 0 }}
-            end={{ x: 0.7, y: 2 }}
-        >
+        <View style={[styles.container, { backgroundColor: colors.background, paddingTop: insets.top }]}>
             {/* Header */}
             <View style={styles.header}>
                 <View style={styles.headerTitleContainer}>
@@ -450,13 +433,18 @@ export default function HomeScreen() {
                                 {learnedCount}/{totalCount} words
                             </Text>
                         </View>
-                        <View style={[styles.progressBg, { backgroundColor: colors.surface }]}>
+                        <View style={[styles.progressBg, { backgroundColor: isDarkMode ? '#2c2c2e' : '#f0f0f0' }]}>
                             <View
                                 style={[
                                     styles.progressFill,
                                     {
                                         backgroundColor: colors.primary,
-                                        width: `${progressPercentage}%`
+                                        width: `${progressPercentage}%`,
+                                        shadowColor: '#FFD700',
+                                        shadowOffset: { width: 0, height: 0 },
+                                        shadowOpacity: 0.8,
+                                        shadowRadius: 6,
+                                        elevation: 5,
                                     }
                                 ]}
                             />
@@ -492,21 +480,20 @@ export default function HomeScreen() {
                             {
                                 backgroundColor: colors.surface,
                                 borderColor: colors.border,
-                                borderWidth: 1,
-                                shadowColor: '#000',
-                                shadowOffset: { width: 0, height: 10 },
-                                shadowOpacity: 0.3,
+                                borderWidth: 0.5,
+                                shadowColor: '#FFD700',
+                                shadowOffset: { width: 0, height: 0 },
+                                shadowOpacity: 0.5,
                                 shadowRadius: 20,
-                                elevation: 10,
+                                elevation: 15,
                             }
                         ]}>
-                            {/* Skip Overlay - Full card background */}
+                            {/* Skip Overlay */}
                             <Animated.View
                                 style={[
                                     styles.swipeOverlay,
                                     {
-                                        backgroundColor: '#f4b1b1ff',
-                                        borderColor: '#fca8a8ff',
+                                        backgroundColor: isDarkMode ? '#5c2a2a' : '#ffddddff',
                                         opacity: position.x.interpolate({
                                             inputRange: [-SWIPE_THRESHOLD, 0],
                                             outputRange: [1, 0],
@@ -516,17 +503,16 @@ export default function HomeScreen() {
                                 ]}
                             >
                                 <View style={styles.swipeLabelContainer}>
-                                    <Text style={styles.skipText}>SKIP</Text>
+                                    <Text style={[styles.skipText, { color: isDarkMode ? '#ff8a8a' : '#ff6b6bff' }]}>SKIP</Text>
                                 </View>
                             </Animated.View>
 
-                            {/* Learned Overlay - Full card background */}
+                            {/* Learned Overlay */}
                             <Animated.View
                                 style={[
                                     styles.swipeOverlay,
                                     {
-                                        backgroundColor: '#d5ffdfff',
-                                        borderColor: '#d5ffdfff',
+                                        backgroundColor: isDarkMode ? '#1a3d22' : '#d5ffdfff',
                                         opacity: position.x.interpolate({
                                             inputRange: [0, SWIPE_THRESHOLD],
                                             outputRange: [0, 1],
@@ -536,13 +522,20 @@ export default function HomeScreen() {
                                 ]}
                             >
                                 <View style={styles.swipeLabelContainer}>
-                                    <Text style={styles.learnedText}>LEARNED</Text>
+                                    <Text style={[styles.learnedText, { color: isDarkMode ? '#5eff82' : '#35de5dff' }]}>LEARNED</Text>
                                 </View>
                             </Animated.View>
 
                             {/* Card Content - above overlay */}
                             <View style={styles.cardContentAbove}>
-                                <Text style={[styles.wordTitle, { color: colors.text }]}>{currentWord.word}</Text>
+                                <TouchableOpacity
+                                    style={styles.wordTitleRow}
+                                    onPress={() => Speech.speak(currentWord.word, { language: 'en-US' })}
+                                    activeOpacity={0.7}
+                                >
+                                    <Text style={[styles.wordTitle, { color: colors.text }]}>{currentWord.word}</Text>
+                                    <MaterialIcons name="volume-up" size={24} color={colors.primary} />
+                                </TouchableOpacity>
                                 <View style={styles.translationRow}>
                                     <MaterialIcons name="translate" size={20} color={colors.primary} />
                                     <Text style={[styles.translationText, { color: colors.primary }]}>{currentWord.translation}</Text>
@@ -567,39 +560,63 @@ export default function HomeScreen() {
                 )}
             </View>
 
-            {/* Action Buttons - Icons Only */}
+            {/* Action Buttons - NanoBanana Pro Style */}
             <View style={styles.actionButtonsContainer}>
                 <TouchableOpacity
-                    style={styles.actionButton}
+                    style={[
+                        styles.nanoBananaButton,
+                        {
+                            backgroundColor: isDarkMode ? 'rgba(28, 28, 30, 0.9)' : 'rgba(255, 255, 255, 0.95)',
+                            shadowColor: '#FFD700',
+                            shadowOffset: { width: 0, height: 0 },
+                            shadowOpacity: 0.5,
+                            shadowRadius: 12,
+                            elevation: 8,
+                        }
+                    ]}
                     onPress={handleNext}
-                    activeOpacity={0.6}
+                    activeOpacity={0.7}
                 >
-                    <View style={styles.iconShadow}>
-                        <RetryIcon size={70} />
-                    </View>
+                    <RetryIcon size={32} />
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                    style={[styles.actionButton, { marginTop: -30 }]}
+                    style={[
+                        styles.nanoBananaButtonLarge,
+                        {
+                            backgroundColor: isDarkMode ? 'rgba(28, 28, 30, 0.95)' : 'rgba(255, 255, 255, 0.98)',
+                            shadowColor: '#FFD700',
+                            shadowOffset: { width: 0, height: 0 },
+                            shadowOpacity: 0.7,
+                            shadowRadius: 20,
+                            elevation: 12,
+                        }
+                    ]}
                     onPress={handleAddToFavorites}
-                    activeOpacity={0.6}
+                    activeOpacity={0.7}
                 >
-                    <View style={styles.iconShadow}>
-                        <StarIcon size={100} />
-                    </View>
+                    <StarIcon size={50} />
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                    style={styles.actionButton}
+                    style={[
+                        styles.nanoBananaButton,
+                        {
+                            backgroundColor: isDarkMode ? 'rgba(28, 28, 30, 0.9)' : 'rgba(255, 255, 255, 0.95)',
+                            shadowColor: '#FFD700',
+                            shadowOffset: { width: 0, height: 0 },
+                            shadowOpacity: 0.5,
+                            shadowRadius: 12,
+                            elevation: 8,
+                        }
+                    ]}
                     onPress={handleLearned}
-                    activeOpacity={0.6}
+                    activeOpacity={0.7}
                 >
-                    <View style={styles.iconShadow}>
-                        <ArrowIcon size={80} />
-                    </View>
+                    <ArrowIcon size={36} />
                 </TouchableOpacity>
             </View>
-        </LinearGradient>
+        </View>
     );
 }
 
@@ -761,9 +778,28 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        gap: 20,
+        gap: 24,
         paddingBottom: 100,
         paddingTop: 10,
+    },
+    nanoBananaButton: {
+        width: 64,
+        height: 64,
+        borderRadius: 32,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderWidth: 0.6,
+        borderColor: 'rgba(255, 215, 0, 0.3)',
+    },
+    nanoBananaButtonLarge: {
+        width: 88,
+        height: 88,
+        borderRadius: 44,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderWidth: 0.6,
+        borderColor: 'rgba(255, 215, 0, 0.4)',
+        marginTop: -8,
     },
     actionButton: {
         padding: 10,
@@ -784,7 +820,6 @@ const styles = StyleSheet.create({
         right: 0,
         bottom: 0,
         borderRadius: 32,
-        borderWidth: 4,
         alignItems: 'center',
         justifyContent: 'flex-start',
         paddingTop: 40,
@@ -833,5 +868,18 @@ const styles = StyleSheet.create({
         fontSize: 16,
         textAlign: 'center',
         lineHeight: 24,
+    },
+    // Speech button styles
+    wordTitleRow: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 12,
+    },
+    speakerButton: {
+        width: 44,
+        height: 44,
+        borderRadius: 22,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
 });

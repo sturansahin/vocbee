@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, Image, StyleSheet, Modal, Animated, Alert } from 'react-native';
+import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, Image, StyleSheet, Modal, Animated, TextInput } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { COLORS, LANGUAGES, LEVELS } from '../constants';
@@ -11,6 +11,8 @@ import { useTheme } from '../context/ThemeContext';
 import { FONT_FAMILY } from '../utils/typography';
 import { resetProgress, setCurrentLevel } from '../services/progressService';
 import { getFirstLevelForUserLevel } from '../services/vocabularyService';
+import { useAlert } from '../components/CustomAlert';
+import * as ImagePicker from 'expo-image-picker';
 import {
    getNotificationSettings,
    saveNotificationSettings,
@@ -70,7 +72,8 @@ const AnimatedSwitch: React.FC<AnimatedSwitchProps> = ({ value, onToggle, varian
          <Animated.View style={[
             styles.switchTrack,
             { backgroundColor },
-            !value && { borderWidth: 1, borderColor: '#d0d0d0' }
+            !value && { borderWidth: 1, borderColor: '#d0d0d0' },
+            value && variant === 'theme' && { borderWidth: 1, borderColor: '#444444' }
          ]}>
             <Animated.View style={[styles.switchThumb, { transform: [{ translateX }] }]}>
                {variant === 'theme' && (
@@ -90,6 +93,7 @@ const AnimatedSwitch: React.FC<AnimatedSwitchProps> = ({ value, onToggle, varian
 export default function SettingsScreen() {
    const navigation = useNavigation();
    const { isDarkMode, toggleTheme, colors } = useTheme();
+   const { showAlert } = useAlert();
    const [reminderEnabled, setReminderEnabled] = useState(true);
    const [autoMarkLearned, setAutoMarkLearned] = useState(true);
    const [startHour, setStartHour] = useState('09');
@@ -108,6 +112,15 @@ export default function SettingsScreen() {
    const [selectedLevel, setSelectedLevel] = useState('beginner');
    const [showLevelPicker, setShowLevelPicker] = useState(false);
    const [showAutoMarkPicker, setShowAutoMarkPicker] = useState(false);
+
+   // Profile states
+   const [showEditProfileModal, setShowEditProfileModal] = useState(false);
+   const [showImagePickerModal, setShowImagePickerModal] = useState(false);
+   const [profileImage, setProfileImage] = useState<string | null>(null);
+   const [profileName, setProfileName] = useState('Jane Doe');
+   const [profileEmail, setProfileEmail] = useState('jane.doe@vocbee.com');
+   const [tempName, setTempName] = useState('');
+   const [tempEmail, setTempEmail] = useState('');
 
    // Load notification settings on mount
    useEffect(() => {
@@ -146,7 +159,7 @@ export default function SettingsScreen() {
       if (newValue) {
          const granted = await requestNotificationPermissions();
          if (!granted) {
-            Alert.alert('Permission Required', 'Please enable notifications in your device settings.');
+            showAlert({ title: 'Permission Required', message: 'Please enable notifications in your device settings.' });
             return;
          }
       }
@@ -222,6 +235,97 @@ export default function SettingsScreen() {
       loadLevel();
    }, []);
 
+   // Load profile data from AsyncStorage
+   useEffect(() => {
+      const loadProfile = async () => {
+         try {
+            const savedImage = await AsyncStorage.getItem('@profile_image');
+            const savedName = await AsyncStorage.getItem('@profile_name');
+            const savedEmail = await AsyncStorage.getItem('@profile_email');
+            if (savedImage) setProfileImage(savedImage);
+            if (savedName) setProfileName(savedName);
+            if (savedEmail) setProfileEmail(savedEmail);
+         } catch (error) {
+            console.error('Error loading profile:', error);
+         }
+      };
+      loadProfile();
+   }, []);
+
+   // Pick image from gallery
+   const pickImageFromGallery = async () => {
+      const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
+      if (status !== 'granted') {
+         showAlert({ title: 'Permission Required', message: 'Please grant access to your photo library.' });
+         return;
+      }
+
+      const result = await ImagePicker.launchImageLibraryAsync({
+         mediaTypes: ImagePicker.MediaTypeOptions.Images,
+         allowsEditing: true,
+         aspect: [1, 1],
+         quality: 0.8,
+      });
+
+      if (!result.canceled && result.assets[0]) {
+         const uri = result.assets[0].uri;
+         setProfileImage(uri);
+         await AsyncStorage.setItem('@profile_image', uri);
+         setShowImagePickerModal(false);
+      }
+   };
+
+   // Take photo with camera
+   const takePhotoWithCamera = async () => {
+      const { status } = await ImagePicker.requestCameraPermissionsAsync();
+      if (status !== 'granted') {
+         showAlert({ title: 'Permission Required', message: 'Please grant access to your camera.' });
+         return;
+      }
+
+      const result = await ImagePicker.launchCameraAsync({
+         allowsEditing: true,
+         aspect: [1, 1],
+         quality: 0.8,
+      });
+
+      if (!result.canceled && result.assets[0]) {
+         const uri = result.assets[0].uri;
+         setProfileImage(uri);
+         await AsyncStorage.setItem('@profile_image', uri);
+         setShowImagePickerModal(false);
+      }
+   };
+
+   // Remove profile image
+   const removeProfileImage = async () => {
+      setProfileImage(null);
+      await AsyncStorage.removeItem('@profile_image');
+      setShowImagePickerModal(false);
+   };
+
+   // Save profile changes
+   const saveProfileChanges = async () => {
+      try {
+         setProfileName(tempName);
+         setProfileEmail(tempEmail);
+         await AsyncStorage.setItem('@profile_name', tempName);
+         await AsyncStorage.setItem('@profile_email', tempEmail);
+         setShowEditProfileModal(false);
+         showAlert({ title: 'Success', message: 'Profile updated successfully!' });
+      } catch (error) {
+         console.error('Error saving profile:', error);
+         showAlert({ title: 'Error', message: 'Failed to save profile.' });
+      }
+   };
+
+   // Open edit profile modal
+   const openEditProfileModal = () => {
+      setTempName(profileName);
+      setTempEmail(profileEmail);
+      setShowEditProfileModal(true);
+   };
+
    // Dynamic styles based on theme
    const dynamicStyles = {
       container: { backgroundColor: colors.background },
@@ -249,19 +353,22 @@ export default function SettingsScreen() {
          <ScrollView style={styles.scrollView} contentContainerStyle={styles.scrollContent}>
             {/* Profile */}
             <View style={[styles.profileSection, { paddingTop: 24 }]}>
-               <View style={styles.avatarContainer}>
+               <TouchableOpacity style={styles.avatarContainer} onPress={() => setShowImagePickerModal(true)}>
                   <Image
-                     source={{ uri: 'https://i.pravatar.cc/300?img=5' }}
+                     source={profileImage ? { uri: profileImage } : { uri: 'https://i.pravatar.cc/300?img=5' }}
                      style={[styles.avatar, { borderColor: colors.surface }]}
                   />
                   <View style={[styles.editBadge, { backgroundColor: colors.primary, borderColor: colors.background }]}>
-                     <MaterialIcons name="edit" size={16} color={isDarkMode ? '#000' : '#fff'} />
+                     <MaterialIcons name="camera-alt" size={16} color={isDarkMode ? '#000' : '#fff'} />
                   </View>
-               </View>
-               <Text style={[styles.profileName, dynamicStyles.text]}>Jane Doe</Text>
-               <Text style={[styles.profileEmail, dynamicStyles.textSecondary]}>jane.doe@vocbee.com</Text>
+               </TouchableOpacity>
+               <Text style={[styles.profileName, dynamicStyles.text]}>{profileName}</Text>
+               <Text style={[styles.profileEmail, dynamicStyles.textSecondary]}>{profileEmail}</Text>
 
-               <TouchableOpacity style={[styles.editButton, { borderColor: colors.border, backgroundColor: colors.surface }]}>
+               <TouchableOpacity
+                  style={[styles.editButton, { borderColor: colors.border, backgroundColor: colors.surface }]}
+                  onPress={openEditProfileModal}
+               >
                   <Text style={[styles.editButtonText, { color: colors.text }]}>Edit Profile</Text>
                </TouchableOpacity>
             </View>
@@ -420,21 +527,21 @@ export default function SettingsScreen() {
                <TouchableOpacity
                   style={[styles.settingItem, { borderBottomWidth: 0 }]}
                   onPress={() => {
-                     Alert.alert(
-                        'Reset Progress',
-                        'Are you sure you want to reset all your learning progress? This action cannot be undone.',
-                        [
+                     showAlert({
+                        title: 'Reset Progress',
+                        message: 'Are you sure you want to reset all your learning progress? This action cannot be undone.',
+                        buttons: [
                            { text: 'Cancel', style: 'cancel' },
                            {
                               text: 'Reset',
                               style: 'destructive',
                               onPress: async () => {
                                  await resetProgress();
-                                 Alert.alert('Success', 'Your progress has been reset.');
+                                 showAlert({ title: 'Success', message: 'Your progress has been reset.' });
                               }
                            }
                         ]
-                     );
+                     });
                   }}
                >
                   <View style={styles.settingLeft}>
@@ -852,6 +959,205 @@ export default function SettingsScreen() {
                </View>
             </TouchableOpacity>
          </Modal>
+
+         {/* Image Picker Modal */}
+         <Modal
+            visible={showImagePickerModal}
+            transparent
+            animationType="fade"
+            onRequestClose={() => setShowImagePickerModal(false)}
+         >
+            <TouchableOpacity
+               style={styles.modalOverlay}
+               activeOpacity={1}
+               onPress={() => setShowImagePickerModal(false)}
+            >
+               <View style={[styles.modalContent, dynamicStyles.modalContent]}>
+                  <Text style={[styles.modalTitle, dynamicStyles.text]}>Change Profile Photo</Text>
+
+                  <TouchableOpacity
+                     style={[styles.imagePickerOption, { borderBottomColor: colors.border }]}
+                     onPress={takePhotoWithCamera}
+                  >
+                     <View style={[styles.imagePickerIcon, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)' }]}>
+                        <MaterialIcons name="camera-alt" size={24} color={colors.primary} />
+                     </View>
+                     <Text style={[styles.imagePickerOptionText, dynamicStyles.text]}>Take Photo</Text>
+                  </TouchableOpacity>
+
+                  <TouchableOpacity
+                     style={[styles.imagePickerOption, { borderBottomColor: colors.border }]}
+                     onPress={pickImageFromGallery}
+                  >
+                     <View style={[styles.imagePickerIcon, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)' }]}>
+                        <MaterialIcons name="photo-library" size={24} color={colors.primary} />
+                     </View>
+                     <Text style={[styles.imagePickerOptionText, dynamicStyles.text]}>Choose from Gallery</Text>
+                  </TouchableOpacity>
+
+                  {profileImage && (
+                     <TouchableOpacity
+                        style={[styles.imagePickerOption, { borderBottomWidth: 0 }]}
+                        onPress={removeProfileImage}
+                     >
+                        <View style={[styles.imagePickerIcon, { backgroundColor: 'rgba(255,59,48,0.1)' }]}>
+                           <MaterialIcons name="delete" size={24} color={colors.error} />
+                        </View>
+                        <Text style={[styles.imagePickerOptionText, { color: colors.error }]}>Remove Photo</Text>
+                     </TouchableOpacity>
+                  )}
+
+                  <TouchableOpacity
+                     style={[styles.cancelButton, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)' }]}
+                     onPress={() => setShowImagePickerModal(false)}
+                  >
+                     <Text style={[styles.cancelButtonText, dynamicStyles.text]}>Cancel</Text>
+                  </TouchableOpacity>
+               </View>
+            </TouchableOpacity>
+         </Modal>
+
+         {/* Edit Profile Modal */}
+         <Modal
+            visible={showEditProfileModal}
+            transparent
+            animationType="fade"
+            onRequestClose={() => setShowEditProfileModal(false)}
+         >
+            <TouchableOpacity
+               style={styles.modalOverlay}
+               activeOpacity={1}
+               onPress={() => setShowEditProfileModal(false)}
+            >
+               <View
+                  style={[styles.modalContent, dynamicStyles.modalContent, { width: '90%' }]}
+                  onStartShouldSetResponder={() => true}
+               >
+                  <Text style={[styles.modalTitle, dynamicStyles.text]}>Edit Profile</Text>
+
+                  <View style={styles.inputContainer}>
+                     <Text style={[styles.inputLabel, dynamicStyles.textSecondary]}>Name</Text>
+                     <TextInput
+                        style={[
+                           styles.textInput,
+                           {
+                              backgroundColor: isDarkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)',
+                              color: colors.text,
+                              borderColor: colors.border
+                           }
+                        ]}
+                        value={tempName}
+                        onChangeText={setTempName}
+                        placeholder="Enter your name"
+                        placeholderTextColor={colors.textSecondary}
+                     />
+                  </View>
+                  <View style={styles.modalButtonRow}>
+                     <TouchableOpacity
+                        style={[styles.modalButton, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)' }]}
+                        onPress={() => setShowEditProfileModal(false)}
+                     >
+                        <Text style={[styles.modalButtonText, dynamicStyles.text]}>Cancel</Text>
+                     </TouchableOpacity>
+                     <TouchableOpacity
+                        style={[styles.modalButton, { backgroundColor: colors.primary }]}
+                        onPress={saveProfileChanges}
+                     >
+                        <Text style={[styles.modalButtonText, { color: isDarkMode ? '#000' : '#fff' }]}>Save</Text>
+                     </TouchableOpacity>
+                  </View>
+               </View>
+            </TouchableOpacity>
+         </Modal>
+
+         {/* Help & FAQ Modal */}
+         <Modal
+            visible={showHelpModal}
+            transparent
+            animationType="fade"
+            onRequestClose={() => setShowHelpModal(false)}
+         >
+            <TouchableOpacity
+               style={styles.modalOverlay}
+               activeOpacity={1}
+               onPress={() => setShowHelpModal(false)}
+            >
+               <View
+                  style={[styles.modalContent, dynamicStyles.modalContent, { width: '90%', maxHeight: '80%' }]}
+                  onStartShouldSetResponder={() => true}
+               >
+                  <View style={styles.modalHeader}>
+                     <Text style={[styles.modalTitle, dynamicStyles.text]}>Help & FAQ</Text>
+                     <TouchableOpacity onPress={() => setShowHelpModal(false)}>
+                        <MaterialIcons name="close" size={24} color={colors.textSecondary} />
+                     </TouchableOpacity>
+                  </View>
+                  <ScrollView showsVerticalScrollIndicator={false} style={styles.modalScroll}>
+                     <View style={styles.faqItem}>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>How do I learn new words?</Text>
+                        <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>Swipe right to mark as learned, left to skip.</Text>
+                     </View>
+                     <View style={styles.faqItem}>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>How do reminders work?</Text>
+                        <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>Enable in Settings to get notifications.</Text>
+                     </View>
+                     <View style={styles.faqItem}>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>Can I change my level?</Text>
+                        <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>Yes! Go to Progress - Change Level.</Text>
+                     </View>
+                     <View style={[styles.faqItem, { borderBottomWidth: 0 }]}>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>Need more help?</Text>
+                        <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>Contact support@vocbee.com</Text>
+                     </View>
+                  </ScrollView>
+               </View>
+            </TouchableOpacity>
+         </Modal>
+
+         {/* Privacy Policy Modal */}
+         <Modal
+            visible={showPrivacyModal}
+            transparent
+            animationType="fade"
+            onRequestClose={() => setShowPrivacyModal(false)}
+         >
+            <TouchableOpacity
+               style={styles.modalOverlay}
+               activeOpacity={1}
+               onPress={() => setShowPrivacyModal(false)}
+            >
+               <View
+                  style={[styles.modalContent, dynamicStyles.modalContent, { width: '90%', maxHeight: '80%' }]}
+                  onStartShouldSetResponder={() => true}
+               >
+                  <View style={styles.modalHeader}>
+                     <Text style={[styles.modalTitle, dynamicStyles.text]}>Privacy Policy</Text>
+                     <TouchableOpacity onPress={() => setShowPrivacyModal(false)}>
+                        <MaterialIcons name="close" size={24} color={colors.textSecondary} />
+                     </TouchableOpacity>
+                  </View>
+                  <ScrollView showsVerticalScrollIndicator={false} style={styles.modalScroll}>
+                     <Text style={[styles.policyDate, dynamicStyles.textSecondary]}>Last updated: December 2024</Text>
+                     <View style={styles.policySection}>
+                        <Text style={[styles.policyHeading, dynamicStyles.text]}>1. Data Collection</Text>
+                        <Text style={[styles.policyText, dynamicStyles.textSecondary]}>VocBee stores all data locally on your device.</Text>
+                     </View>
+                     <View style={styles.policySection}>
+                        <Text style={[styles.policyHeading, dynamicStyles.text]}>2. Data Usage</Text>
+                        <Text style={[styles.policyText, dynamicStyles.textSecondary]}>Used only for tracking progress and sending reminders.</Text>
+                     </View>
+                     <View style={styles.policySection}>
+                        <Text style={[styles.policyHeading, dynamicStyles.text]}>3. Your Rights</Text>
+                        <Text style={[styles.policyText, dynamicStyles.textSecondary]}>Delete data via Reset Progress or uninstall.</Text>
+                     </View>
+                     <View style={[styles.policySection, { marginBottom: 0 }]}>
+                        <Text style={[styles.policyHeading, dynamicStyles.text]}>4. Contact</Text>
+                        <Text style={[styles.policyText, dynamicStyles.textSecondary]}>privacy@vocbee.com</Text>
+                     </View>
+                  </ScrollView>
+               </View>
+            </TouchableOpacity>
+         </Modal>
       </SafeAreaView>
    );
 }
@@ -1087,16 +1393,6 @@ const styles = StyleSheet.create({
       fontSize: 14,
       fontWeight: 'bold',
    },
-   faqQuestion: {
-      fontFamily: FONT_FAMILY,
-      fontSize: 16,
-      marginBottom: 8,
-   },
-   faqAnswer: {
-      fontFamily: FONT_FAMILY,
-      fontSize: 14,
-      lineHeight: 20,
-   },
    privacyHeading: {
       fontFamily: FONT_FAMILY,
       fontSize: 16,
@@ -1242,5 +1538,108 @@ const styles = StyleSheet.create({
    autoMarkOptionDesc: {
       fontFamily: FONT_FAMILY,
       fontSize: 13,
+   },
+   // Profile Modal Styles
+   imagePickerOption: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      paddingVertical: 16,
+      borderBottomWidth: 1,
+      gap: 16,
+   },
+   imagePickerIcon: {
+      width: 48,
+      height: 48,
+      borderRadius: 24,
+      alignItems: 'center',
+      justifyContent: 'center',
+   },
+   imagePickerOptionText: {
+      fontFamily: FONT_FAMILY,
+      fontSize: 16,
+   },
+   cancelButton: {
+      marginTop: 16,
+      paddingVertical: 14,
+      borderRadius: 12,
+      alignItems: 'center',
+   },
+   cancelButtonText: {
+      fontFamily: FONT_FAMILY,
+      fontSize: 16,
+   },
+   inputContainer: {
+      marginBottom: 16,
+   },
+   inputLabel: {
+      fontFamily: FONT_FAMILY,
+      fontSize: 14,
+      marginBottom: 8,
+   },
+   textInput: {
+      fontFamily: FONT_FAMILY,
+      fontSize: 16,
+      paddingHorizontal: 16,
+      paddingVertical: 14,
+      borderRadius: 12,
+      borderWidth: 1,
+   },
+   modalButtonRow: {
+      flexDirection: 'row',
+      gap: 12,
+      marginTop: 8,
+   },
+   modalButton: {
+      flex: 1,
+      paddingVertical: 14,
+      borderRadius: 12,
+      alignItems: 'center',
+   },
+   modalButtonText: {
+      fontFamily: FONT_FAMILY,
+      fontSize: 16,
+   },
+   // Help & Privacy Modal Styles
+   modalHeader: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      marginBottom: 16,
+   },
+   modalScroll: {
+      maxHeight: 400,
+   },
+   faqItem: {
+      paddingVertical: 16,
+      borderBottomWidth: 1,
+      borderBottomColor: 'rgba(128,128,128,0.2)',
+   },
+   faqQuestion: {
+      fontFamily: FONT_FAMILY,
+      fontSize: 16,
+      marginBottom: 8,
+   },
+   faqAnswer: {
+      fontFamily: FONT_FAMILY,
+      fontSize: 14,
+      lineHeight: 20,
+   },
+   policyDate: {
+      fontFamily: FONT_FAMILY,
+      fontSize: 12,
+      marginBottom: 16,
+   },
+   policySection: {
+      marginBottom: 20,
+   },
+   policyHeading: {
+      fontFamily: FONT_FAMILY,
+      fontSize: 16,
+      marginBottom: 8,
+   },
+   policyText: {
+      fontFamily: FONT_FAMILY,
+      fontSize: 14,
+      lineHeight: 20,
    },
 });

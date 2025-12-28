@@ -7,6 +7,7 @@ import { useTheme } from '../context/ThemeContext';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import { FONT_FAMILY } from '../utils/typography';
 import { RootStackParamList } from '../types';
+import * as Speech from 'expo-speech';
 
 type ExampleSentencesRouteProp = RouteProp<RootStackParamList, 'ExampleSentences'>;
 
@@ -41,7 +42,14 @@ export default function ExampleSentencesScreen() {
             >
                 {/* Title Section */}
                 <View style={styles.titleSection}>
-                    <Text style={[styles.wordTitle, { color: colors.text }]}>{word}</Text>
+                    <TouchableOpacity
+                        style={styles.wordTitleRow}
+                        onPress={() => Speech.speak(word, { language: 'en-US' })}
+                        activeOpacity={0.7}
+                    >
+                        <Text style={[styles.wordTitle, { color: colors.text }]}>{word}</Text>
+                        <MaterialIcons name="volume-up" size={24} color={colors.primary} />
+                    </TouchableOpacity>
                     <View style={styles.pronunciationRow}>
                         <MaterialIcons name="translate" size={16} color={colors.primary} />
                         <Text style={[styles.pronunciation, { color: colors.primary }]}>{translation}</Text>
@@ -57,9 +65,16 @@ export default function ExampleSentencesScreen() {
                     <View style={styles.examplesList}>
                         {/* Sentence 1 */}
                         <View style={[styles.exampleCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
-                            <Text style={[styles.exampleText, { color: colors.text }]}>
-                                {sentence1}
-                            </Text>
+                            <TouchableOpacity
+                                style={styles.sentenceRow}
+                                onPress={() => Speech.speak(sentence1, { language: 'en-US' })}
+                                activeOpacity={0.7}
+                            >
+                                <Text style={[styles.exampleText, { color: colors.text, flex: 1 }]}>
+                                    {sentence1}
+                                </Text>
+                                <MaterialIcons name="volume-up" size={20} color={colors.primary} />
+                            </TouchableOpacity>
                             <View style={[styles.exampleDivider, { backgroundColor: colors.border }]} />
                             <Text style={[styles.translationText, { color: colors.textSecondary }]}>
                                 {nativeSentence1}
@@ -68,9 +83,16 @@ export default function ExampleSentencesScreen() {
 
                         {/* Sentence 2 */}
                         <View style={[styles.exampleCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
-                            <Text style={[styles.exampleText, { color: colors.text }]}>
-                                {sentence2}
-                            </Text>
+                            <TouchableOpacity
+                                style={styles.sentenceRow}
+                                onPress={() => Speech.speak(sentence2, { language: 'en-US' })}
+                                activeOpacity={0.7}
+                            >
+                                <Text style={[styles.exampleText, { color: colors.text, flex: 1 }]}>
+                                    {sentence2}
+                                </Text>
+                                <MaterialIcons name="volume-up" size={20} color={colors.primary} />
+                            </TouchableOpacity>
                             <View style={[styles.exampleDivider, { backgroundColor: colors.border }]} />
                             <Text style={[styles.translationText, { color: colors.textSecondary }]}>
                                 {nativeSentence2}
@@ -332,5 +354,31 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(255, 215, 0, 0.2)',
         borderRadius: 12,
         padding: 4,
+    },
+    // Speech button styles
+    wordTitleRow: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 12,
+    },
+    speakerButton: {
+        width: 44,
+        height: 44,
+        borderRadius: 22,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    sentenceRow: {
+        flexDirection: 'row',
+        alignItems: 'flex-start',
+        gap: 12,
+    },
+    speakerButtonSmall: {
+        width: 36,
+        height: 36,
+        borderRadius: 18,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: -4,
     },
 });

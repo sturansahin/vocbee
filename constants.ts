@@ -2,25 +2,25 @@
 export const DARK_COLORS = {
   primary: '#FFD700',          // Gold/Yellow
   primaryDark: '#FFA500',      // Dark orange/gold
-  background: '#000000',        // Pure black
-  surface: '#1a1a1a',          // Dark gray
-  surfaceLight: '#2a2a2a',     // Slightly lighter gray
+  background: '#000000',       // Pure black
+  surface: '#1c1c1e',          // Slightly lighter gray for cards
+  surfaceLight: '#2c2c2e',     // Even lighter gray
   text: '#ffffff',
   textSecondary: '#b8b8b8',    // Gray text
-  border: '#333333',           // Dark border
+  border: '#3a3a3c',           // Lighter border
   error: '#ff6b6b',
 };
 
-// Light Theme Colors - Soft mint/cream tones
+// Light Theme Colors - Pure white background
 export const LIGHT_COLORS = {
   primary: '#FFA500',          // Orange/Gold
   primaryDark: '#FF8C00',      // Dark orange
-  background: '#f5f9f7',
-  surface: '#ffffff',
-  surfaceLight: '#e8f5ec',
+  background: '#ffffff',       // Pure white
+  surface: '#ffffff',          // Pure white
+  surfaceLight: '#f5f5f5',     // Very light gray
   text: '#1a2c22',
   textSecondary: '#5a7d68',
-  border: '#d4e5db',
+  border: '#e0e0e0',
   error: '#e53935',
 };
 

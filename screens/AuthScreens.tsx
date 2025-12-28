@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text, SafeAreaView, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, SafeAreaView, TouchableOpacity, ScrollView, StyleSheet, ActivityIndicator } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../types';
@@ -8,6 +8,8 @@ import { MaterialIcons, AntDesign } from '@expo/vector-icons';
 import { SwarmLogo } from '../components/SwarmLogo';
 import { COLORS } from '../constants';
 import { useTheme } from '../context/ThemeContext';
+import { useAuth } from '../context/AuthContext';
+import { useAlert } from '../components/CustomAlert';
 import { FONT_FAMILY } from '../utils/typography';
 
 type AuthNavProp = StackNavigationProp<RootStackParamList>;
@@ -15,7 +17,36 @@ type AuthNavProp = StackNavigationProp<RootStackParamList>;
 export const LoginScreen = () => {
   const navigation = useNavigation<AuthNavProp>();
   const { colors, isDarkMode } = useTheme();
-  const [showPassword, setShowPassword] = React.useState(false);
+  const { signIn, signInWithGoogle, isLoading } = useAuth();
+  const { showAlert } = useAlert();
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleLogin = async () => {
+    if (!email || !password) {
+      showAlert({ title: 'Error', message: 'Please fill in all fields' });
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      const result = await signIn(email, password);
+
+      // Navigate based on setup status
+      if (result && result.setupCompleted) {
+        navigation.navigate('MainTabs');
+      } else {
+        navigation.navigate('NativeLanguage');
+      }
+    } catch (error: any) {
+      showAlert({ title: 'Login Failed', message: error.message });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
@@ -33,15 +64,21 @@ export const LoginScreen = () => {
           label="Email"
           placeholder="Email or Username"
           icon="mail"
+          value={email}
+          onChangeText={setEmail}
           backgroundColor={colors.surface}
           borderColor={colors.border}
           labelColor={colors.textSecondary}
           textColor={colors.text}
           iconColor={colors.textSecondary}
+          keyboardType="email-address"
+          autoCapitalize="none"
         />
         <Input
           label="Password"
           placeholder="Password"
+          value={password}
+          onChangeText={setPassword}
           secureTextEntry={!showPassword}
           rightIcon={showPassword ? "visibility" : "visibility-off"}
           onRightIconPress={() => setShowPassword(!showPassword)}
@@ -58,7 +95,15 @@ export const LoginScreen = () => {
           </TouchableOpacity>
         </View>
 
-        <Button title="Log In" onPress={() => navigation.navigate('NativeLanguage')} />
+        <Button
+          title={isSubmitting ? "Logging in..." : "Log In"}
+          onPress={handleLogin}
+          disabled={isSubmitting}
+        />
+
+        {isSubmitting && (
+          <ActivityIndicator size="small" color={colors.primary} style={{ marginTop: 16 }} />
+        )}
 
         {/* Divider */}
         <View style={styles.divider}>
@@ -69,7 +114,10 @@ export const LoginScreen = () => {
 
         {/* Social Buttons */}
         <View style={styles.socialRow}>
-          <TouchableOpacity style={[styles.socialButton, { backgroundColor: colors.surface, borderColor: colors.border }]}>
+          <TouchableOpacity
+            style={[styles.socialButton, { backgroundColor: colors.surface, borderColor: colors.border }]}
+            onPress={signInWithGoogle}
+          >
             <AntDesign name="google" size={16} color={colors.text} />
             <Text style={[styles.socialButtonText, { color: colors.text }]}>Google</Text>
           </TouchableOpacity>
@@ -90,8 +138,49 @@ export const LoginScreen = () => {
 export const SignUpScreen = () => {
   const navigation = useNavigation<AuthNavProp>();
   const { colors, isDarkMode } = useTheme();
-  const [showPassword, setShowPassword] = React.useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = React.useState(false);
+  const { signUp, signInWithGoogle, signOut, isLoading } = useAuth();
+  const { showAlert } = useAlert();
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSignUp = async () => {
+    if (!name || !email || !password || !confirmPassword) {
+      showAlert({ title: 'Error', message: 'Please fill in all fields' });
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      showAlert({ title: 'Error', message: 'Passwords do not match' });
+      return;
+    }
+
+    if (password.length < 6) {
+      showAlert({ title: 'Error', message: 'Password must be at least 6 characters' });
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      await signUp(email, password, name);
+      // Sign out immediately after signup to require login
+      await signOut();
+      showAlert({
+        title: 'Account Created!',
+        message: 'Your account has been created successfully. Please log in to continue.',
+        buttons: [{ text: 'OK', onPress: () => navigation.navigate('Login') }]
+      });
+    } catch (error: any) {
+      showAlert({ title: 'Sign Up Failed', message: error.message });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
@@ -111,9 +200,11 @@ export const SignUpScreen = () => {
         </View>
 
         <Input
-          label="Email"
-          placeholder="Enter your email"
-          icon="mail"
+          label="Full Name"
+          placeholder="Enter your name"
+          icon="person"
+          value={name}
+          onChangeText={setName}
           backgroundColor={colors.surface}
           borderColor={colors.border}
           labelColor={colors.textSecondary}
@@ -121,8 +212,24 @@ export const SignUpScreen = () => {
           iconColor={colors.textSecondary}
         />
         <Input
+          label="Email"
+          placeholder="Enter your email"
+          icon="mail"
+          value={email}
+          onChangeText={setEmail}
+          backgroundColor={colors.surface}
+          borderColor={colors.border}
+          labelColor={colors.textSecondary}
+          textColor={colors.text}
+          iconColor={colors.textSecondary}
+          keyboardType="email-address"
+          autoCapitalize="none"
+        />
+        <Input
           label="Password"
           placeholder="Create password"
+          value={password}
+          onChangeText={setPassword}
           secureTextEntry={!showPassword}
           rightIcon={showPassword ? "visibility" : "visibility-off"}
           onRightIconPress={() => setShowPassword(!showPassword)}
@@ -135,6 +242,8 @@ export const SignUpScreen = () => {
         <Input
           label="Confirm Password"
           placeholder="Confirm password"
+          value={confirmPassword}
+          onChangeText={setConfirmPassword}
           secureTextEntry={!showConfirmPassword}
           rightIcon={showConfirmPassword ? "visibility" : "visibility-off"}
           onRightIconPress={() => setShowConfirmPassword(!showConfirmPassword)}
@@ -145,7 +254,15 @@ export const SignUpScreen = () => {
           iconColor={colors.textSecondary}
         />
 
-        <Button title="Sign Up" onPress={() => navigation.navigate('NativeLanguage')} />
+        <Button
+          title={isSubmitting ? "Creating account..." : "Sign Up"}
+          onPress={handleSignUp}
+          disabled={isSubmitting}
+        />
+
+        {isSubmitting && (
+          <ActivityIndicator size="small" color={colors.primary} style={{ marginTop: 16 }} />
+        )}
 
         {/* Divider & Socials */}
         <View style={styles.divider}>
@@ -155,7 +272,10 @@ export const SignUpScreen = () => {
         </View>
 
         <View style={styles.socialRow}>
-          <TouchableOpacity style={[styles.socialButton, { backgroundColor: colors.surface, borderColor: colors.border }]}>
+          <TouchableOpacity
+            style={[styles.socialButton, { backgroundColor: colors.surface, borderColor: colors.border }]}
+            onPress={signInWithGoogle}
+          >
             <AntDesign name="google" size={16} color={colors.text} />
             <Text style={[styles.socialButtonText, { color: colors.text }]}>Google</Text>
           </TouchableOpacity>
@@ -263,11 +383,11 @@ const styles = StyleSheet.create({
   titleWhite: {
     fontFamily: FONT_FAMILY,
     color: '#fff',
-    fontSize: 36,
-    fontWeight: 'bold',
+    fontSize: 28,
     lineHeight: 44,
   },
   titleGreen: {
+    fontFamily: FONT_FAMILY,
     color: COLORS.primary,
   },
 });
