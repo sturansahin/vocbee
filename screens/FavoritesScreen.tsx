@@ -16,7 +16,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '../context/ThemeContext';
 import { FONT_FAMILY } from '../utils/typography';
-import { VocabularyWord } from '../services/vocabularyService';
+import { VocabularyWord, Level } from '../services/vocabularyService';
 import { getFavorites, removeFromFavorites } from '../services/favoritesService';
 
 export default function FavoritesScreen() {
@@ -24,7 +24,7 @@ export default function FavoritesScreen() {
     const insets = useSafeAreaInsets();
     const { colors, isDarkMode } = useTheme();
 
-    const [favorites, setFavorites] = useState<VocabularyWord[]>([]);
+    const [favorites, setFavorites] = useState<(VocabularyWord & { level: Level })[]>([]);
     const [isLoading, setIsLoading] = useState(true);
 
     // Load favorites when screen is focused
@@ -46,12 +46,12 @@ export default function FavoritesScreen() {
         }
     };
 
-    const handleRemoveFavorite = async (wordId: number) => {
-        await removeFromFavorites(wordId);
+    const handleRemoveFavorite = async (wordId: number, level: Level) => {
+        await removeFromFavorites(wordId, level);
         await loadFavorites(); // Reload list
     };
 
-    const renderFavoriteItem = ({ item }: { item: VocabularyWord }) => (
+    const renderFavoriteItem = ({ item }: { item: VocabularyWord & { level: Level } }) => (
         <TouchableOpacity
             style={[styles.favoriteCard, { backgroundColor: colors.surface, borderColor: colors.border }]}
             onPress={() => navigation.navigate('ExampleSentences', {
@@ -75,14 +75,14 @@ export default function FavoritesScreen() {
                 <TouchableOpacity
                     onPress={(e) => {
                         e.stopPropagation();
-                        handleRemoveFavorite(item.id);
+                        handleRemoveFavorite(item.id, item.level);
                     }}
                     hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
                 >
                     <Feather name="trash-2" size={22} color={colors.textSecondary} />
                 </TouchableOpacity>
-            </View>
-        </TouchableOpacity>
+            </View >
+        </TouchableOpacity >
     );
 
     return (
@@ -121,7 +121,7 @@ export default function FavoritesScreen() {
                 <FlatList
                     data={favorites}
                     renderItem={renderFavoriteItem}
-                    keyExtractor={(item) => item.id.toString()}
+                    keyExtractor={(item) => `${item.id}_${item.level}`}
                     contentContainerStyle={styles.listContent}
                 />
             )}

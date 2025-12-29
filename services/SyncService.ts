@@ -12,7 +12,7 @@ import {
     saveUserDataLocally,
 } from './storage';
 import { getUserProgress, getCurrentLevel, restoreProgressFromFirebase, getLastWordIndex } from './progressService';
-import { restoreFavoritesFromFirebase } from './favoritesService';
+import { restoreFavoritesFromFirebase, syncFavoritesToFirebase } from './favoritesService';
 
 // Check if sync should happen (once per day)
 export const shouldSync = async (): Promise<boolean> => {
@@ -26,15 +26,15 @@ export const shouldSync = async (): Promise<boolean> => {
         const now = new Date();
         const hoursSinceLastSync = (now.getTime() - lastSync.getTime()) / (1000 * 60 * 60);
 
-        // Sync if it's been more than ~1 minute (for testing)
-        return hoursSinceLastSync >= 0.016;
+        // Sync if it's been more than 24 hours (daily sync)
+        return hoursSinceLastSync >= 24;
     } catch (error) {
         console.error('Error checking sync status:', error);
         return false;
     }
 };
 
-// Sync local progress to Firestore (only learned words, not skipped)
+// Sync local progress, favorites, and profile to Firestore
 export const syncToFirestore = async (userId: string): Promise<boolean> => {
     try {
         // Get progress from progressService (actual learning data)
@@ -42,7 +42,12 @@ export const syncToFirestore = async (userId: string): Promise<boolean> => {
         const currentLevel = await getCurrentLevel();
         const lastWordIndex = await getLastWordIndex();
 
-        console.log('Syncing progress to Firestore:', { currentLevel, lastWordIndex });
+        // Get profile data from AsyncStorage
+        const AsyncStorage = require('@react-native-async-storage/async-storage').default;
+        const profileName = await AsyncStorage.getItem('@profile_name');
+        const profileImage = await AsyncStorage.getItem('@profile_image');
+
+        console.log('Syncing progress and profile to Firestore:', { currentLevel, lastWordIndex, hasProfileName: !!profileName, hasProfileImage: !!profileImage });
 
         const userRef = doc(db, 'users', userId);
         await setDoc(userRef, {
@@ -52,12 +57,19 @@ export const syncToFirestore = async (userId: string): Promise<boolean> => {
                 lastWordIndex: lastWordIndex,
                 lastSync: serverTimestamp(),
             },
+            // Sync profile name if available
+            ...(profileName && { displayName: profileName }),
+            // Sync profile image if available
+            ...(profileImage && { photoURL: profileImage }),
         }, { merge: true });
+
+        // Sync favorites
+        await syncFavoritesToFirebase();
 
         await setLastSyncTime();
         await clearSyncFlag();
 
-        console.log('Successfully synced to Firestore');
+        console.log('Successfully synced progress, profile and favorites to Firestore');
         return true;
     } catch (error) {
         console.error('Error syncing to Firestore:', error);
@@ -65,12 +77,14 @@ export const syncToFirestore = async (userId: string): Promise<boolean> => {
     }
 };
 
-// Force sync (on logout, profile change, etc.) - ALWAYS syncs
+// Force sync (on logout, profile change, etc.) - ALWAYS syncs progress AND favorites
 export const forceSync = async (userId: string): Promise<boolean> => {
     try {
         console.log('Force sync triggered for user:', userId);
         // Always sync on force - don't check needsSync flag
-        return await syncToFirestore(userId);
+        const result = await syncToFirestore(userId);
+        console.log('Force sync completed - progress and favorites synced');
+        return result;
     } catch (error) {
         console.error('Error in force sync:', error);
         return false;
@@ -121,6 +135,15 @@ export const fetchAndSaveUserData = async (userId: string): Promise<UserData | n
             };
 
             await saveUserDataLocally(userData);
+
+            // Restore profile data from Firebase to AsyncStorage
+            const AsyncStorage = require('@react-native-async-storage/async-storage').default;
+            if (data.displayName) {
+                await AsyncStorage.setItem('@profile_name', data.displayName);
+            }
+            if (data.photoURL) {
+                await AsyncStorage.setItem('@profile_image', data.photoURL);
+            }
 
             // Restore progress from Firebase to local progressService
             if (data.progress) {

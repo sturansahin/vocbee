@@ -2,6 +2,7 @@
 // Handles user authentication state and Firebase Auth operations
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
     User,
     createUserWithEmailAndPassword,
@@ -24,6 +25,12 @@ import {
     forceSync,
 } from '../services/SyncService';
 
+interface ProfileData {
+    name: string;
+    image: string | null;
+    email: string;
+}
+
 // Types
 interface AuthContextType {
     user: User | null;
@@ -36,6 +43,8 @@ interface AuthContextType {
     signInWithGoogle: () => Promise<void>;
     resetPassword: (email: string) => Promise<void>;
     refreshUserData: () => Promise<void>;
+    profile: ProfileData;
+    updateProfileData: (data: Partial<ProfileData>) => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -49,6 +58,11 @@ interface AuthProviderProps {
 export function AuthProvider({ children }: AuthProviderProps) {
     const [user, setUser] = useState<User | null>(null);
     const [userData, setUserData] = useState<UserData | null>(null);
+    const [profile, setProfile] = useState<ProfileData>({
+        name: '',
+        image: null,
+        email: ''
+    });
     const [isLoading, setIsLoading] = useState(true);
 
     // Listen to auth state changes
@@ -66,8 +80,24 @@ export function AuthProvider({ children }: AuthProviderProps) {
                     const fetchedData = await fetchAndSaveUserData(firebaseUser.uid);
                     setUserData(fetchedData);
                 }
+
+                // Load profile data
+                try {
+                    const savedName = await AsyncStorage.getItem('@profile_name');
+                    const savedImage = await AsyncStorage.getItem('@profile_image');
+                    const savedEmail = await AsyncStorage.getItem('@profile_email');
+
+                    setProfile({
+                        name: savedName || firebaseUser.displayName || '',
+                        image: savedImage,
+                        email: firebaseUser.email || savedEmail || ''
+                    });
+                } catch (e) {
+                    console.error('Error loading profile data:', e);
+                }
             } else {
                 setUserData(null);
+                setProfile({ name: '', image: null, email: '' });
             }
 
             setIsLoading(false);
@@ -194,6 +224,27 @@ export function AuthProvider({ children }: AuthProviderProps) {
         }
     };
 
+    // Update profile data
+    const updateProfileData = async (data: Partial<ProfileData>) => {
+        const newProfile = { ...profile, ...data };
+        setProfile(newProfile);
+
+        try {
+            if (data.name !== undefined) await AsyncStorage.setItem('@profile_name', data.name);
+            if (data.image !== undefined) {
+                if (data.image) {
+                    await AsyncStorage.setItem('@profile_image', data.image);
+                } else {
+                    await AsyncStorage.removeItem('@profile_image');
+                }
+            }
+            if (data.email !== undefined) await AsyncStorage.setItem('@profile_email', data.email);
+        } catch (error) {
+            console.error('Error updating profile data:', error);
+            throw error;
+        }
+    };
+
     const value: AuthContextType = {
         user,
         userData,
@@ -205,6 +256,8 @@ export function AuthProvider({ children }: AuthProviderProps) {
         signInWithGoogle,
         resetPassword,
         refreshUserData,
+        profile,
+        updateProfileData,
     };
 
     return (

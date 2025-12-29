@@ -313,9 +313,9 @@ export default function HomeScreen() {
 
     const handleAddToFavorites = async () => {
         if (currentWord) {
-            await addToFavorites(currentWord);
+            await addToFavorites(currentWord, currentLevel);
             // Optional: Show feedback to user
-            console.log('Added to favorites:', currentWord.word);
+            console.log('Added to favorites:', currentWord.word, `(${currentLevel})`);
         }
     };
 

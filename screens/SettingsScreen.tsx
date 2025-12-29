@@ -99,7 +99,12 @@ const AnimatedSwitch: React.FC<AnimatedSwitchProps> = ({ value, onToggle, varian
 export default function SettingsScreen() {
    const navigation = useNavigation<StackNavigationProp<any>>();
    const { isDarkMode, toggleTheme, colors } = useTheme();
-   const { signOut, user } = useAuth();
+   const {
+      signOut,
+      user,
+      profile,
+      updateProfileData
+   } = useAuth();
    const { showAlert } = useAlert();
    const [reminderEnabled, setReminderEnabled] = useState(true);
    const [autoMarkLearned, setAutoMarkLearned] = useState(true);
@@ -120,12 +125,11 @@ export default function SettingsScreen() {
    const [currentLevel, setCurrentLevelState] = useState('A1');
    const [showAutoMarkPicker, setShowAutoMarkPicker] = useState(false);
 
-   // Profile states - Initialize from Firebase Auth immediately
+   // Profile states
    const [showEditProfileModal, setShowEditProfileModal] = useState(false);
    const [showImagePickerModal, setShowImagePickerModal] = useState(false);
-   const [profileImage, setProfileImage] = useState<string | null>(null);
-   const [profileName, setProfileName] = useState(user?.displayName || '');
-   const [profileEmail, setProfileEmail] = useState(user?.email || '');
+
+   // Temp states for editing
    const [tempName, setTempName] = useState('');
    const [tempEmail, setTempEmail] = useState('');
 
@@ -242,34 +246,7 @@ export default function SettingsScreen() {
       loadLevel();
    }, []);
 
-   // Load profile data from AsyncStorage and Firebase Auth
-   useEffect(() => {
-      const loadProfile = async () => {
-         try {
-            const savedImage = await AsyncStorage.getItem('@profile_image');
-            const savedName = await AsyncStorage.getItem('@profile_name');
-
-            if (savedImage) setProfileImage(savedImage);
-            if (savedName) setProfileName(savedName);
-
-            // Get email from Firebase Auth (more reliable source)
-            if (user?.email) {
-               setProfileEmail(user.email);
-            } else {
-               const savedEmail = await AsyncStorage.getItem('@profile_email');
-               if (savedEmail) setProfileEmail(savedEmail);
-            }
-
-            // Get display name from Firebase Auth if available
-            if (user?.displayName && !savedName) {
-               setProfileName(user.displayName);
-            }
-         } catch (error) {
-            console.error('Error loading profile:', error);
-         }
-      };
-      loadProfile();
-   }, [user]);
+   // Removed local profile loading useEffect - data now comes from AuthContext
 
    // Pick image from gallery
    const pickImageFromGallery = async () => {
@@ -288,8 +265,7 @@ export default function SettingsScreen() {
 
       if (!result.canceled && result.assets[0]) {
          const uri = result.assets[0].uri;
-         setProfileImage(uri);
-         await AsyncStorage.setItem('@profile_image', uri);
+         await updateProfileData({ image: uri });
          setShowImagePickerModal(false);
       }
    };
@@ -310,42 +286,21 @@ export default function SettingsScreen() {
 
       if (!result.canceled && result.assets[0]) {
          const uri = result.assets[0].uri;
-         setProfileImage(uri);
-         await AsyncStorage.setItem('@profile_image', uri);
+         await updateProfileData({ image: uri });
          setShowImagePickerModal(false);
       }
    };
 
    // Remove profile image
    const removeProfileImage = async () => {
-      setProfileImage(null);
-      await AsyncStorage.removeItem('@profile_image');
+      await updateProfileData({ image: null });
       setShowImagePickerModal(false);
    };
 
-   // Save profile changes
+   // Save profile changes (local only - Firebase sync happens daily)
    const saveProfileChanges = async () => {
       try {
-         setProfileName(tempName);
-         setProfileEmail(tempEmail);
-
-         // Save to AsyncStorage
-         await AsyncStorage.setItem('@profile_name', tempName);
-         await AsyncStorage.setItem('@profile_email', tempEmail);
-
-         // Update Firebase Auth displayName
-         if (auth.currentUser) {
-            await updateProfile(auth.currentUser, { displayName: tempName });
-         }
-
-         // Save to Firestore
-         if (user?.uid) {
-            const userRef = doc(db, 'users', user.uid);
-            await setDoc(userRef, {
-               displayName: tempName,
-               email: tempEmail,
-            }, { merge: true });
-         }
+         await updateProfileData({ name: tempName });
 
          setShowEditProfileModal(false);
          showAlert({ title: 'Success', message: 'Profile updated successfully!' });
@@ -357,8 +312,8 @@ export default function SettingsScreen() {
 
    // Open edit profile modal
    const openEditProfileModal = () => {
-      setTempName(profileName);
-      setTempEmail(profileEmail);
+      setTempName(profile.name);
+      setTempEmail(profile.email);
       setShowEditProfileModal(true);
    };
 
@@ -390,16 +345,22 @@ export default function SettingsScreen() {
             {/* Profile */}
             <View style={[styles.profileSection, { paddingTop: 24 }]}>
                <TouchableOpacity style={styles.avatarContainer} onPress={() => setShowImagePickerModal(true)}>
-                  <Image
-                     source={profileImage ? { uri: profileImage } : { uri: 'https://i.pravatar.cc/300?img=5' }}
-                     style={[styles.avatar, { borderColor: colors.surface }]}
-                  />
+                  {profile.image ? (
+                     <Image
+                        source={{ uri: profile.image }}
+                        style={[styles.avatar, { borderColor: colors.surface }]}
+                     />
+                  ) : (
+                     <View style={[styles.avatar, styles.avatarPlaceholder, { borderColor: colors.border, backgroundColor: colors.surface }]}>
+                        <MaterialIcons name="person" size={56} color={colors.textSecondary} />
+                     </View>
+                  )}
                   <View style={[styles.editBadge, { backgroundColor: colors.primary, borderColor: colors.background }]}>
                      <MaterialIcons name="camera-alt" size={16} color={isDarkMode ? '#000' : '#fff'} />
                   </View>
                </TouchableOpacity>
-               <Text style={[styles.profileName, dynamicStyles.text]}>{profileName}</Text>
-               <Text style={[styles.profileEmail, dynamicStyles.textSecondary]}>{profileEmail}</Text>
+               <Text style={[styles.profileName, dynamicStyles.text]}>{profile.name || 'User'}</Text>
+               <Text style={[styles.profileEmail, dynamicStyles.textSecondary]}>{profile.email}</Text>
 
                <TouchableOpacity
                   style={[styles.editButton, { borderColor: colors.border, backgroundColor: colors.surface }]}
@@ -930,7 +891,7 @@ export default function SettingsScreen() {
                               currentLevel === level.id && { backgroundColor: `${colors.primary}20`, borderColor: colors.primary }
                            ]}
                            onPress={async () => {
-                              setcurrentLevel(level.id);
+                              setCurrentLevelState(level.id);
                               try {
                                  await AsyncStorage.setItem('@user_level', level.id);
                                  // Update the CEFR level for vocabulary service
@@ -1092,7 +1053,7 @@ export default function SettingsScreen() {
                      <Text style={[styles.imagePickerOptionText, dynamicStyles.text]}>Choose from Gallery</Text>
                   </TouchableOpacity>
 
-                  {profileImage && (
+                  {profile.image && (
                      <TouchableOpacity
                         style={[styles.imagePickerOption, { borderBottomWidth: 0 }]}
                         onPress={removeProfileImage}
@@ -1160,10 +1121,10 @@ export default function SettingsScreen() {
                         style={[
                            styles.modalButton,
                            { backgroundColor: colors.primary },
-                           tempName === profileName && { opacity: 0.5 }
+                           tempName === profile.name && { opacity: 0.5 }
                         ]}
                         onPress={saveProfileChanges}
-                        disabled={tempName === profileName}
+                        disabled={tempName === profile.name}
                      >
                         <Text style={[styles.modalButtonText, { color: isDarkMode ? '#000' : '#fff' }]}>Save</Text>
                      </TouchableOpacity>
@@ -1318,6 +1279,10 @@ const styles = StyleSheet.create({
       borderRadius: 56,
       borderWidth: 4,
       borderColor: COLORS.surface,
+   },
+   avatarPlaceholder: {
+      alignItems: 'center',
+      justifyContent: 'center',
    },
    editBadge: {
       position: 'absolute',
