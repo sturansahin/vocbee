@@ -11,7 +11,8 @@ import {
     UserData,
     saveUserDataLocally,
 } from './storage';
-import { getUserProgress, getCurrentLevel, restoreProgressFromFirebase, getSkippedProgress, getLastWordIndex } from './progressService';
+import { getUserProgress, getCurrentLevel, restoreProgressFromFirebase, getLastWordIndex } from './progressService';
+import { restoreFavoritesFromFirebase } from './favoritesService';
 
 // Check if sync should happen (once per day)
 export const shouldSync = async (): Promise<boolean> => {
@@ -33,12 +34,11 @@ export const shouldSync = async (): Promise<boolean> => {
     }
 };
 
-// Sync local progress to Firestore
+// Sync local progress to Firestore (only learned words, not skipped)
 export const syncToFirestore = async (userId: string): Promise<boolean> => {
     try {
         // Get progress from progressService (actual learning data)
         const userProgress = await getUserProgress();
-        const skippedProgress = await getSkippedProgress();
         const currentLevel = await getCurrentLevel();
         const lastWordIndex = await getLastWordIndex();
 
@@ -49,7 +49,6 @@ export const syncToFirestore = async (userId: string): Promise<boolean> => {
             progress: {
                 currentLevel: currentLevel,
                 learnedWords: userProgress,
-                skippedWords: skippedProgress,
                 lastWordIndex: lastWordIndex,
                 lastSync: serverTimestamp(),
             },
@@ -132,6 +131,9 @@ export const fetchAndSaveUserData = async (userId: string): Promise<UserData | n
                     data.progress.lastWordIndex
                 );
             }
+
+            // Restore favorites from Firebase
+            await restoreFavoritesFromFirebase();
 
             await clearSyncFlag();
 

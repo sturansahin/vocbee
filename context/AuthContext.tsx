@@ -9,6 +9,7 @@ import {
     signOut as firebaseSignOut,
     onAuthStateChanged,
     updateProfile,
+    sendPasswordResetEmail,
 } from 'firebase/auth';
 import { auth } from '../config/firebase';
 import {
@@ -33,6 +34,7 @@ interface AuthContextType {
     signIn: (email: string, password: string) => Promise<{ setupCompleted: boolean }>;
     signOut: () => Promise<void>;
     signInWithGoogle: () => Promise<void>;
+    resetPassword: (email: string) => Promise<void>;
     refreshUserData: () => Promise<void>;
 }
 
@@ -167,6 +169,23 @@ export function AuthProvider({ children }: AuthProviderProps) {
         }
     };
 
+    // Reset Password
+    const resetPassword = async (email: string) => {
+        try {
+            // Configure redirection URL
+            const actionCodeSettings = {
+                url: 'https://vocbee-6fe24.firebaseapp.com',
+                handleCodeInApp: false,
+            };
+
+            await sendPasswordResetEmail(auth, email, actionCodeSettings);
+            console.log('Password reset email sent successfully to:', email);
+        } catch (error: any) {
+            console.error('Password reset error:', error);
+            throw new Error(getAuthErrorMessage(error.code));
+        }
+    };
+
     // Refresh user data from Firestore
     const refreshUserData = async () => {
         if (user) {
@@ -184,6 +203,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
         signIn,
         signOut,
         signInWithGoogle,
+        resetPassword,
         refreshUserData,
     };
 

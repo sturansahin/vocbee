@@ -7,9 +7,8 @@ import {
   StyleSheet,
   Animated,
   Dimensions,
-  StatusBar,
-  Platform,
-  Image
+  Image,
+  Linking,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
@@ -19,42 +18,69 @@ import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
 import { db, auth } from '../config/firebase';
 import { RootStackParamList } from '../types';
 import { Button } from '../components/UIComponents';
-import { MaterialIcons } from '@expo/vector-icons';
+import { MaterialIcons, MaterialCommunityIcons, Feather } from '@expo/vector-icons';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import { LANGUAGES, LEVELS, COLORS } from '../constants';
 import { useTheme } from '../context/ThemeContext';
 import { FONT_FAMILY } from '../utils/typography';
 import { generateVocabulary, getFirstLevelForUserLevel } from '../services/vocabularyService';
 import { setCurrentLevel } from '../services/progressService';
+import {
+  requestNotificationPermissions,
+  saveNotificationSettings,
+  scheduleVocabularyNotifications,
+} from '../services/notificationService';
+import { useAlert } from '../components/CustomAlert';
 
 type SetupNavProp = StackNavigationProp<RootStackParamList>;
 type SetupRouteProp = RouteProp<RootStackParamList, 'NativeLanguage'>;
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
-// Unified Setup Screen with Steps
+// Constants for time picker
+const HOURS_LIST = Array.from({ length: 24 }, (_, i) => i.toString().padStart(2, '0'));
+const MINUTES_LIST = Array.from({ length: 60 }, (_, i) => i.toString().padStart(2, '0'));
+const HOURS_EXTENDED = [...HOURS_LIST, ...HOURS_LIST, ...HOURS_LIST];
+const MINUTES_EXTENDED = [...MINUTES_LIST, ...MINUTES_LIST, ...MINUTES_LIST];
+const FREQUENCIES = ['Every 15 minutes', 'Every 30 minutes', 'Every hour', 'Every 2 hours'];
+const ITEM_HEIGHT = 44;
+
+// Unified Setup Screen with Steps (5 steps: language -> language -> level -> notifications -> schedule)
 export const SetupScreen = () => {
   const navigation = useNavigation<SetupNavProp>();
   const route = useRoute<SetupRouteProp>();
   const { colors, isDarkMode } = useTheme();
+  const { showAlert } = useAlert();
   const [currentStep, setCurrentStep] = useState(1);
   const [nativeLanguage, setNativeLanguage] = useState('');
   const [targetLanguage, setTargetLanguage] = useState('');
   const [level, setLevel] = useState('');
+  const [notificationPermissionGranted, setNotificationPermissionGranted] = useState(false);
+  const [startHour, setStartHour] = useState('09');
+  const [startMinute, setStartMinute] = useState('00');
+  const [endHour, setEndHour] = useState('21');
+  const [endMinute, setEndMinute] = useState('00');
+  const [frequency, setFrequency] = useState('Every 2 hours');
   const [isGenerating, setIsGenerating] = useState(false);
+  const [waitingForSettings, setWaitingForSettings] = useState(false);
+
+  // Wheel picker refs
+  const startHourRef = useRef<any>(null);
+  const startMinuteRef = useRef<any>(null);
+  const endHourRef = useRef<any>(null);
+  const endMinuteRef = useRef<any>(null);
 
   // Animated values
-  const progressAnim = useRef(new Animated.Value(33.33)).current;
-  const slideAnim = useRef(new Animated.Value(0)).current;
+  const progressAnim = useRef(new Animated.Value(20)).current;
   const fadeAnim = useRef(new Animated.Value(1)).current;
 
-  const totalSteps = 3;
+  const totalSteps = 5; // Reduced from 6 to 5 (removed name step)
 
   // Handle detected level from quiz
   useEffect(() => {
     if (route.params?.detectedLevel) {
       setLevel(route.params.detectedLevel);
-      setCurrentStep(3); // Navigate to level selection step
+      setCurrentStep(3);
     }
   }, [route.params?.detectedLevel]);
 
@@ -69,8 +95,40 @@ export const SetupScreen = () => {
     }).start();
   }, [currentStep]);
 
+  // Auto-scroll wheel pickers on step 5
+  useEffect(() => {
+    if (currentStep === 5) {
+      setTimeout(() => {
+        const startHourIndex = HOURS_LIST.indexOf(startHour) + HOURS_LIST.length;
+        const startMinuteIndex = MINUTES_LIST.indexOf(startMinute) + MINUTES_LIST.length;
+        const endHourIndex = HOURS_LIST.indexOf(endHour) + HOURS_LIST.length;
+        const endMinuteIndex = MINUTES_LIST.indexOf(endMinute) + MINUTES_LIST.length;
+        startHourRef.current?.scrollTo({ y: startHourIndex * ITEM_HEIGHT, animated: false });
+        startMinuteRef.current?.scrollTo({ y: startMinuteIndex * ITEM_HEIGHT, animated: false });
+        endHourRef.current?.scrollTo({ y: endHourIndex * ITEM_HEIGHT, animated: false });
+        endMinuteRef.current?.scrollTo({ y: endMinuteIndex * ITEM_HEIGHT, animated: false });
+      }, 100);
+    }
+  }, [currentStep]);
+
+  // Poll for notification permission every 2 seconds when waiting
+  useEffect(() => {
+    if (!waitingForSettings || currentStep !== 4) return;
+
+    const checkPermission = async () => {
+      const granted = await requestNotificationPermissions();
+      if (granted) {
+        setWaitingForSettings(false);
+        setNotificationPermissionGranted(true);
+        goToStep(5);
+      }
+    };
+
+    const interval = setInterval(checkPermission, 2000);
+    return () => clearInterval(interval);
+  }, [waitingForSettings, currentStep]);
+
   const goToStep = (newStep: number) => {
-    // Fade out, then change step, then fade in
     Animated.sequence([
       Animated.timing(fadeAnim, {
         toValue: 0,
@@ -87,59 +145,154 @@ export const SetupScreen = () => {
     });
   };
 
-  const handleNext = async () => {
-    if (currentStep < totalSteps) {
-      goToStep(currentStep + 1);
-    } else {
-      // Final step - save settings, generate vocabulary and navigate to main app
-      setIsGenerating(true);
-      try {
-        // Save user level to AsyncStorage
-        await AsyncStorage.setItem('@user_level', level);
+  const getFrequencyMinutes = (freq: string): number => {
+    switch (freq) {
+      case 'Every 15 minutes': return 15;
+      case 'Every 30 minutes': return 30;
+      case 'Every hour': return 60;
+      default: return 120;
+    }
+  };
 
-        // Get initial level based on user selection
-        const initialLevel = getFirstLevelForUserLevel(level);
+  const handleNotificationPermission = async () => {
+    try {
+      const granted = await requestNotificationPermissions();
+      console.log('Notification permission result:', granted);
 
-        // Save preferences and progress to Firestore
-        const currentUser = auth.currentUser;
-        if (currentUser) {
-          const userRef = doc(db, 'users', currentUser.uid);
-          await setDoc(userRef, {
-            setupCompleted: true,
-            preferences: {
-              nativeLanguage: nativeLanguage,
-              targetLanguage: targetLanguage,
-              level: level,
+      if (granted) {
+        setNotificationPermissionGranted(true);
+        goToStep(5);
+      } else {
+        // Show themed alert with options
+        showAlert({
+          title: 'Notifications Disabled',
+          message: 'Without notifications, you won\'t receive daily word reminders to help you learn. Would you like to enable them in Settings?',
+          buttons: [
+            {
+              text: 'Open Settings',
+              onPress: () => {
+                setWaitingForSettings(true);
+                Linking.openSettings();
+              }
             },
-            progress: {
-              currentLevel: initialLevel,
-              learnedWords: {},
-              skippedWords: {},
-              lastSync: serverTimestamp(),
-            },
-          }, { merge: true });
-          console.log('Saved preferences to Firestore');
+            {
+              text: 'Continue Without',
+              style: 'cancel',
+              onPress: () => {
+                setNotificationPermissionGranted(false);
+                handleFinalStep();
+              }
+            }
+          ]
+        });
+      }
+    } catch (error) {
+      console.error('Error requesting notification permission:', error);
+      // Continue without notifications on error
+      setNotificationPermissionGranted(false);
+      handleFinalStep();
+    }
+  };
+
+  const handleFinalStep = async () => {
+    setIsGenerating(true);
+    try {
+      // Save user level to AsyncStorage
+      await AsyncStorage.setItem('@user_level', level);
+
+      // Get initial level based on user selection
+      const initialLevel = getFirstLevelForUserLevel(level);
+
+      // Save preferences and progress to Firestore
+      const currentUser = auth.currentUser;
+      if (currentUser) {
+        // Save email to AsyncStorage
+        await AsyncStorage.setItem('@profile_email', currentUser.email || '');
+
+        // Save name from Firebase Auth displayName
+        if (currentUser.displayName) {
+          await AsyncStorage.setItem('@profile_name', currentUser.displayName);
         }
 
-        // Generate vocabulary for selected language pair
-        await generateVocabulary(nativeLanguage, targetLanguage);
-
-        // Set initial level
-        await setCurrentLevel(initialLevel);
-
-        console.log(`Vocabulary generated: ${nativeLanguage} -> ${targetLanguage}, starting at ${initialLevel}`);
-      } catch (error) {
-        console.error('Error saving settings:', error);
-      } finally {
-        setIsGenerating(false);
+        const userRef = doc(db, 'users', currentUser.uid);
+        await setDoc(userRef, {
+          setupCompleted: true,
+          preferences: {
+            nativeLanguage: nativeLanguage,
+            targetLanguage: targetLanguage,
+            level: level,
+          },
+          progress: {
+            currentLevel: initialLevel,
+            learnedWords: {},
+            skippedWords: {},
+            lastSync: serverTimestamp(),
+          },
+          notificationSettings: notificationPermissionGranted ? {
+            enabled: true,
+            startHour: parseInt(startHour),
+            startMinute: parseInt(startMinute),
+            endHour: parseInt(endHour),
+            endMinute: parseInt(endMinute),
+            frequencyMinutes: getFrequencyMinutes(frequency),
+          } : { enabled: false },
+        }, { merge: true });
+        console.log('Saved preferences to Firestore');
       }
-      navigation.navigate('MainTabs');
+
+      // Save notification settings locally
+      if (notificationPermissionGranted) {
+        await saveNotificationSettings({
+          enabled: true,
+          startHour: parseInt(startHour),
+          startMinute: parseInt(startMinute),
+          endHour: parseInt(endHour),
+          endMinute: parseInt(endMinute),
+          frequencyMinutes: getFrequencyMinutes(frequency),
+          autoMarkLearned: true,
+        });
+        await scheduleVocabularyNotifications();
+      }
+
+      // Generate vocabulary for selected language pair
+      await generateVocabulary(nativeLanguage, targetLanguage);
+
+      // Set initial level
+      await setCurrentLevel(initialLevel);
+
+      console.log(`Vocabulary generated: ${nativeLanguage} -> ${targetLanguage}, starting at ${initialLevel}`);
+    } catch (error) {
+      console.error('Error saving settings:', error);
+    } finally {
+      setIsGenerating(false);
+    }
+    navigation.navigate('MainTabs');
+  };
+
+  const handleNext = async () => {
+    if (currentStep < totalSteps) {
+      if (currentStep === 3) {
+        // After level selection, go to notification permission step
+        goToStep(4);
+      } else if (currentStep === 4) {
+        // Request notification permission
+        await handleNotificationPermission();
+      } else {
+        goToStep(currentStep + 1);
+      }
+    } else {
+      // Final step - save everything
+      await handleFinalStep();
     }
   };
 
   const handleBack = () => {
     if (currentStep > 1) {
-      goToStep(currentStep - 1);
+      if (currentStep === 5 && !notificationPermissionGranted) {
+        goToStep(3); // Skip back to level if no permission
+      } else {
+        goToStep(currentStep - 1);
+      }
     } else {
       navigation.goBack();
     }
@@ -150,12 +303,13 @@ export const SetupScreen = () => {
     outputRange: ['0%', '100%'],
   });
 
-  // Get step content
   const getStepTitle = () => {
     switch (currentStep) {
       case 1: return { white: "What's your", green: "native language?" };
       case 2: return { white: "I want to learn", green: "this language..." };
       case 3: return { white: "What's your", green: "current level?" };
+      case 4: return { white: "Stay on track with", green: "daily reminders" };
+      case 5: return { white: "Set your", green: "reminder schedule" };
       default: return { white: "", green: "" };
     }
   };
@@ -165,19 +319,33 @@ export const SetupScreen = () => {
       case 1: return "We'll use this to translate words for you.";
       case 2: return "Select the language you want to master.";
       case 3: return "Choose the level that best describes your proficiency.";
+      case 4: return "Get notified with new words throughout the day.";
+      case 5: return "Choose when and how often you want to be reminded.";
       default: return "";
     }
   };
 
   const getButtonTitle = () => {
     switch (currentStep) {
-      case 1: return "Continue";
-      case 2: return "Continue";
-      case 3: return "Start Learning";
+      case 1:
+      case 2:
+      case 3: return "Continue";
+      case 4: return "Enable Notifications";
+      case 5: return "Start Learning";
       default: return "Continue";
     }
   };
 
+  const isButtonDisabled = () => {
+    switch (currentStep) {
+      case 1: return !nativeLanguage;
+      case 2: return !targetLanguage;
+      case 3: return !level;
+      default: return false;
+    }
+  };
+
+  // Render functions for each step
   const renderStep1Content = () => (
     <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
       <View style={styles.languageList}>
@@ -289,8 +457,213 @@ export const SetupScreen = () => {
     </ScrollView>
   );
 
-  const stepTitle = getStepTitle();
+  const renderStep4Content = () => (
+    <View style={styles.notificationContainer}>
+      <View style={[styles.notificationIconContainer, { backgroundColor: `${colors.primary}20` }]}>
+        <MaterialCommunityIcons name="bell-ring" size={60} color={colors.primary} />
+      </View>
+      <Text style={[styles.notificationTitle, { color: colors.text }]}>
+        Learn with Reminders
+      </Text>
+      <Text style={[styles.notificationDesc, { color: colors.textSecondary }]}>
+        We'll send you daily vocabulary words to help you learn consistently. You can customize the timing in the next step.
+      </Text>
+      <View style={styles.notificationFeatures}>
+        <View style={styles.featureRow}>
+          <MaterialIcons name="check-circle" size={20} color={colors.primary} />
+          <Text style={[styles.featureText, { color: colors.text }]}>New words delivered daily</Text>
+        </View>
+        <View style={styles.featureRow}>
+          <MaterialIcons name="check-circle" size={20} color={colors.primary} />
+          <Text style={[styles.featureText, { color: colors.text }]}>Customizable schedule</Text>
+        </View>
+        <View style={styles.featureRow}>
+          <MaterialIcons name="check-circle" size={20} color={colors.primary} />
+          <Text style={[styles.featureText, { color: colors.text }]}>Learn without opening the app</Text>
+        </View>
+      </View>
+    </View>
+  );
+
+  const renderStep5Content = () => (
+    <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
+      <View style={styles.scheduleContainer}>
+        {/* Start Time */}
+        <View style={[styles.scheduleSection, { backgroundColor: colors.surface, borderColor: colors.border }]}>
+          <View style={styles.scheduleLabelRow}>
+            <MaterialIcons name="wb-sunny" size={20} color={colors.primary} />
+            <Text style={[styles.scheduleLabel, { color: colors.text }]}>Start Time</Text>
+          </View>
+          <View style={styles.timePickerRow}>
+            {/* Hour */}
+            <View style={styles.wheelColumn}>
+              <View style={styles.wheelScrollWrapper}>
+                <View style={[styles.wheelCenterIndicator, { borderColor: colors.primary }]} pointerEvents="none" />
+                <ScrollView
+                  ref={startHourRef}
+                  style={styles.wheelScroll}
+                  showsVerticalScrollIndicator={false}
+                  contentContainerStyle={styles.wheelScrollContent}
+                  decelerationRate="fast"
+                  nestedScrollEnabled={true}
+                  onMomentumScrollEnd={(e) => {
+                    const y = e.nativeEvent.contentOffset.y;
+                    const index = Math.round(y / ITEM_HEIGHT);
+                    const actualIndex = ((index % HOURS_LIST.length) + HOURS_LIST.length) % HOURS_LIST.length;
+                    setStartHour(HOURS_LIST[actualIndex]);
+                    const snappedY = index * ITEM_HEIGHT;
+                    if (y !== snappedY) {
+                      startHourRef.current?.scrollTo({ y: snappedY, animated: true });
+                    }
+                  }}
+                >
+                  {HOURS_EXTENDED.map((hour, idx) => (
+                    <View key={`sh-${idx}`} style={styles.wheelItem}>
+                      <Text style={[styles.wheelItemText, { color: colors.text }]}>{hour}</Text>
+                    </View>
+                  ))}
+                </ScrollView>
+              </View>
+            </View>
+            <Text style={[styles.timeSeparator, { color: colors.text }]}>:</Text>
+            {/* Minute */}
+            <View style={styles.wheelColumn}>
+              <View style={styles.wheelScrollWrapper}>
+                <View style={[styles.wheelCenterIndicator, { borderColor: colors.primary }]} pointerEvents="none" />
+                <ScrollView
+                  ref={startMinuteRef}
+                  style={styles.wheelScroll}
+                  showsVerticalScrollIndicator={false}
+                  contentContainerStyle={styles.wheelScrollContent}
+                  decelerationRate="fast"
+                  nestedScrollEnabled={true}
+                  onMomentumScrollEnd={(e) => {
+                    const y = e.nativeEvent.contentOffset.y;
+                    const index = Math.round(y / ITEM_HEIGHT);
+                    const actualIndex = ((index % MINUTES_LIST.length) + MINUTES_LIST.length) % MINUTES_LIST.length;
+                    setStartMinute(MINUTES_LIST[actualIndex]);
+                    const snappedY = index * ITEM_HEIGHT;
+                    if (y !== snappedY) {
+                      startMinuteRef.current?.scrollTo({ y: snappedY, animated: true });
+                    }
+                  }}
+                >
+                  {MINUTES_EXTENDED.map((minute, idx) => (
+                    <View key={`sm-${idx}`} style={styles.wheelItem}>
+                      <Text style={[styles.wheelItemText, { color: colors.text }]}>{minute}</Text>
+                    </View>
+                  ))}
+                </ScrollView>
+              </View>
+            </View>
+          </View>
+        </View>
+
+        {/* End Time */}
+        <View style={[styles.scheduleSection, { backgroundColor: colors.surface, borderColor: colors.border }]}>
+          <View style={styles.scheduleLabelRow}>
+            <MaterialIcons name="nightlight-round" size={20} color={colors.primary} />
+            <Text style={[styles.scheduleLabel, { color: colors.text }]}>End Time</Text>
+          </View>
+          <View style={styles.timePickerRow}>
+            {/* Hour */}
+            <View style={styles.wheelColumn}>
+              <View style={styles.wheelScrollWrapper}>
+                <View style={[styles.wheelCenterIndicator, { borderColor: colors.primary }]} pointerEvents="none" />
+                <ScrollView
+                  ref={endHourRef}
+                  style={styles.wheelScroll}
+                  showsVerticalScrollIndicator={false}
+                  contentContainerStyle={styles.wheelScrollContent}
+                  decelerationRate="fast"
+                  nestedScrollEnabled={true}
+                  onMomentumScrollEnd={(e) => {
+                    const y = e.nativeEvent.contentOffset.y;
+                    const index = Math.round(y / ITEM_HEIGHT);
+                    const actualIndex = ((index % HOURS_LIST.length) + HOURS_LIST.length) % HOURS_LIST.length;
+                    setEndHour(HOURS_LIST[actualIndex]);
+                    const snappedY = index * ITEM_HEIGHT;
+                    if (y !== snappedY) {
+                      endHourRef.current?.scrollTo({ y: snappedY, animated: true });
+                    }
+                  }}
+                >
+                  {HOURS_EXTENDED.map((hour, idx) => (
+                    <View key={`eh-${idx}`} style={styles.wheelItem}>
+                      <Text style={[styles.wheelItemText, { color: colors.text }]}>{hour}</Text>
+                    </View>
+                  ))}
+                </ScrollView>
+              </View>
+            </View>
+            <Text style={[styles.timeSeparator, { color: colors.text }]}>:</Text>
+            {/* Minute */}
+            <View style={styles.wheelColumn}>
+              <View style={styles.wheelScrollWrapper}>
+                <View style={[styles.wheelCenterIndicator, { borderColor: colors.primary }]} pointerEvents="none" />
+                <ScrollView
+                  ref={endMinuteRef}
+                  style={styles.wheelScroll}
+                  showsVerticalScrollIndicator={false}
+                  contentContainerStyle={styles.wheelScrollContent}
+                  decelerationRate="fast"
+                  nestedScrollEnabled={true}
+                  onMomentumScrollEnd={(e) => {
+                    const y = e.nativeEvent.contentOffset.y;
+                    const index = Math.round(y / ITEM_HEIGHT);
+                    const actualIndex = ((index % MINUTES_LIST.length) + MINUTES_LIST.length) % MINUTES_LIST.length;
+                    setEndMinute(MINUTES_LIST[actualIndex]);
+                    const snappedY = index * ITEM_HEIGHT;
+                    if (y !== snappedY) {
+                      endMinuteRef.current?.scrollTo({ y: snappedY, animated: true });
+                    }
+                  }}
+                >
+                  {MINUTES_EXTENDED.map((minute, idx) => (
+                    <View key={`em-${idx}`} style={styles.wheelItem}>
+                      <Text style={[styles.wheelItemText, { color: colors.text }]}>{minute}</Text>
+                    </View>
+                  ))}
+                </ScrollView>
+              </View>
+            </View>
+          </View>
+        </View>
+
+        {/* Frequency */}
+        <View style={[styles.scheduleSection, { backgroundColor: colors.surface, borderColor: colors.border }]}>
+          <View style={styles.scheduleLabelRow}>
+            <Feather name="repeat" size={18} color={colors.primary} />
+            <Text style={[styles.scheduleLabel, { color: colors.text }]}>Frequency</Text>
+          </View>
+          <View style={styles.frequencyList}>
+            {FREQUENCIES.map((freq) => (
+              <TouchableOpacity
+                key={freq}
+                style={[
+                  styles.frequencyItem,
+                  { borderColor: colors.border },
+                  frequency === freq && { borderColor: colors.primary, backgroundColor: `${colors.primary}15` }
+                ]}
+                onPress={() => setFrequency(freq)}
+              >
+                <Text style={[
+                  styles.frequencyText,
+                  { color: frequency === freq ? colors.primary : colors.text }
+                ]}>{freq}</Text>
+                {frequency === freq && (
+                  <MaterialIcons name="check" size={18} color={colors.primary} />
+                )}
+              </TouchableOpacity>
+            ))}
+          </View>
+        </View>
+      </View>
+    </ScrollView>
+  );
+
   const insets = useSafeAreaInsets();
+  const stepTitle = getStepTitle();
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background, paddingTop: insets.top }]}>
@@ -318,25 +691,23 @@ export const SetupScreen = () => {
         {currentStep === 1 && renderStep1Content()}
         {currentStep === 2 && renderStep2Content()}
         {currentStep === 3 && renderStep3Content()}
+        {currentStep === 4 && renderStep4Content()}
+        {currentStep === 5 && renderStep5Content()}
       </Animated.View>
 
-      {/* Button stays fixed - no animation */}
+      {/* Button stays fixed */}
       <View style={[styles.bottomButton, { paddingBottom: insets.bottom + 16 }]}>
         <Button
-          title={currentStep === 3 ? "Start Learning" : "Continue"}
+          title={getButtonTitle()}
           onPress={handleNext}
-          disabled={
-            (currentStep === 1 && !nativeLanguage) ||
-            (currentStep === 2 && !targetLanguage) ||
-            (currentStep === 3 && !level)
-          }
+          disabled={isButtonDisabled()}
         />
       </View>
     </View>
   );
 };
 
-// Export individual screens for backward compatibility (they now redirect to SetupScreen)
+// Export individual screens for backward compatibility
 export const NativeLanguageScreen = SetupScreen;
 export const TargetLanguageScreen = SetupScreen;
 export const LevelSelectionScreen = SetupScreen;
@@ -346,8 +717,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: COLORS.background,
   },
-
-  // Header & Progress
   headerContainer: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -378,17 +747,9 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.primary,
     borderRadius: 3,
   },
-  progressText: {
-    color: COLORS.textSecondary,
-    fontSize: 12,
-    marginTop: 6,
-    fontWeight: '500',
-  },
   headerSpacer: {
     width: 44,
   },
-
-  // Content
   content: {
     flex: 1,
     paddingHorizontal: 20,
@@ -412,8 +773,6 @@ const styles = StyleSheet.create({
     marginBottom: 24,
     lineHeight: 22,
   },
-
-  // Language List
   scrollView: {
     flex: 1,
   },
@@ -434,10 +793,6 @@ const styles = StyleSheet.create({
     borderColor: COLORS.primary,
     backgroundColor: 'rgba(255, 215, 0, 0.1)',
   },
-  flag: {
-    fontSize: 28,
-    marginRight: 16,
-  },
   languageInfo: {
     flex: 1,
     marginLeft: 20,
@@ -453,8 +808,6 @@ const styles = StyleSheet.create({
     color: COLORS.textSecondary,
     fontSize: 13,
     marginTop: 2,
-    textAlign: 'left',
-    writingDirection: 'ltr',
   },
   checkCircle: {
     width: 28,
@@ -464,8 +817,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-
-  // Level Selection
   levelList: {
     gap: 16,
     paddingBottom: 24,
@@ -551,8 +902,6 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     textDecorationLine: 'underline',
   },
-
-  // Bottom Button
   bottomButton: {
     position: 'absolute',
     bottom: 0,
@@ -560,5 +909,128 @@ const styles = StyleSheet.create({
     right: 0,
     padding: 20,
     paddingBottom: 32,
+  },
+  // Step 4 - Notification Permission
+  notificationContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 16,
+  },
+  notificationIconContainer: {
+    width: 120,
+    height: 120,
+    borderRadius: 60,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 24,
+  },
+  notificationTitle: {
+    fontFamily: FONT_FAMILY,
+    fontSize: 22,
+    marginBottom: 12,
+    textAlign: 'center',
+  },
+  notificationDesc: {
+    fontFamily: FONT_FAMILY,
+    fontSize: 15,
+    textAlign: 'center',
+    lineHeight: 22,
+    marginBottom: 24,
+  },
+  notificationFeatures: {
+    alignSelf: 'stretch',
+    gap: 12,
+  },
+  featureRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+  },
+  featureText: {
+    fontFamily: FONT_FAMILY,
+    fontSize: 15,
+  },
+  // Step 5 - Notification Schedule
+  scheduleContainer: {
+    gap: 16,
+    paddingBottom: 120,
+  },
+  scheduleSection: {
+    borderRadius: 16,
+    borderWidth: 1,
+    padding: 16,
+  },
+  scheduleLabelRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    marginBottom: 12,
+  },
+  scheduleLabel: {
+    fontFamily: FONT_FAMILY,
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  timePickerRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+  },
+  wheelColumn: {
+    alignItems: 'center',
+  },
+  wheelScrollWrapper: {
+    height: ITEM_HEIGHT * 3,
+    width: 60,
+    overflow: 'hidden',
+    position: 'relative',
+  },
+  wheelCenterIndicator: {
+    position: 'absolute',
+    top: ITEM_HEIGHT,
+    left: 0,
+    right: 0,
+    height: ITEM_HEIGHT,
+    borderTopWidth: 2,
+    borderBottomWidth: 2,
+    zIndex: 10,
+  },
+  wheelScroll: {
+    flex: 1,
+  },
+  wheelScrollContent: {
+    paddingVertical: ITEM_HEIGHT,
+  },
+  wheelItem: {
+    height: ITEM_HEIGHT,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  wheelItemText: {
+    fontFamily: FONT_FAMILY,
+    fontSize: 20,
+  },
+  timeSeparator: {
+    fontFamily: FONT_FAMILY,
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginHorizontal: 4,
+  },
+  frequencyList: {
+    gap: 8,
+  },
+  frequencyItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: 14,
+    borderRadius: 12,
+    borderWidth: 1,
+  },
+  frequencyText: {
+    fontFamily: FONT_FAMILY,
+    fontSize: 15,
   },
 });

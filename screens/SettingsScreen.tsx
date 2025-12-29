@@ -23,6 +23,9 @@ import {
    scheduleVocabularyNotifications,
    sendTestNotification,
 } from '../services/notificationService';
+import { doc, setDoc } from 'firebase/firestore';
+import { db, auth } from '../config/firebase';
+import { updateProfile } from 'firebase/auth';
 
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -113,16 +116,16 @@ export default function SettingsScreen() {
    const [showLanguagePicker, setShowLanguagePicker] = useState(false);
    const [showHelpModal, setShowHelpModal] = useState(false);
    const [showPrivacyModal, setShowPrivacyModal] = useState(false);
-   const [selectedLevel, setSelectedLevel] = useState('beginner');
    const [showLevelPicker, setShowLevelPicker] = useState(false);
+   const [currentLevel, setCurrentLevelState] = useState('A1');
    const [showAutoMarkPicker, setShowAutoMarkPicker] = useState(false);
 
-   // Profile states
+   // Profile states - Initialize from Firebase Auth immediately
    const [showEditProfileModal, setShowEditProfileModal] = useState(false);
    const [showImagePickerModal, setShowImagePickerModal] = useState(false);
    const [profileImage, setProfileImage] = useState<string | null>(null);
-   const [profileName, setProfileName] = useState('Jane Doe');
-   const [profileEmail, setProfileEmail] = useState('jane.doe@vocbee.com');
+   const [profileName, setProfileName] = useState(user?.displayName || '');
+   const [profileEmail, setProfileEmail] = useState(user?.email || '');
    const [tempName, setTempName] = useState('');
    const [tempEmail, setTempEmail] = useState('');
 
@@ -230,7 +233,7 @@ export default function SettingsScreen() {
          try {
             const level = await AsyncStorage.getItem('@user_level');
             if (level) {
-               setSelectedLevel(level);
+               setCurrentLevelState(level);
             }
          } catch (error) {
             console.error('Error loading level:', error);
@@ -239,22 +242,34 @@ export default function SettingsScreen() {
       loadLevel();
    }, []);
 
-   // Load profile data from AsyncStorage
+   // Load profile data from AsyncStorage and Firebase Auth
    useEffect(() => {
       const loadProfile = async () => {
          try {
             const savedImage = await AsyncStorage.getItem('@profile_image');
             const savedName = await AsyncStorage.getItem('@profile_name');
-            const savedEmail = await AsyncStorage.getItem('@profile_email');
+
             if (savedImage) setProfileImage(savedImage);
             if (savedName) setProfileName(savedName);
-            if (savedEmail) setProfileEmail(savedEmail);
+
+            // Get email from Firebase Auth (more reliable source)
+            if (user?.email) {
+               setProfileEmail(user.email);
+            } else {
+               const savedEmail = await AsyncStorage.getItem('@profile_email');
+               if (savedEmail) setProfileEmail(savedEmail);
+            }
+
+            // Get display name from Firebase Auth if available
+            if (user?.displayName && !savedName) {
+               setProfileName(user.displayName);
+            }
          } catch (error) {
             console.error('Error loading profile:', error);
          }
       };
       loadProfile();
-   }, []);
+   }, [user]);
 
    // Pick image from gallery
    const pickImageFromGallery = async () => {
@@ -313,8 +328,25 @@ export default function SettingsScreen() {
       try {
          setProfileName(tempName);
          setProfileEmail(tempEmail);
+
+         // Save to AsyncStorage
          await AsyncStorage.setItem('@profile_name', tempName);
          await AsyncStorage.setItem('@profile_email', tempEmail);
+
+         // Update Firebase Auth displayName
+         if (auth.currentUser) {
+            await updateProfile(auth.currentUser, { displayName: tempName });
+         }
+
+         // Save to Firestore
+         if (user?.uid) {
+            const userRef = doc(db, 'users', user.uid);
+            await setDoc(userRef, {
+               displayName: tempName,
+               email: tempEmail,
+            }, { merge: true });
+         }
+
          setShowEditProfileModal(false);
          showAlert({ title: 'Success', message: 'Profile updated successfully!' });
       } catch (error) {
@@ -522,7 +554,7 @@ export default function SettingsScreen() {
                      <View>
                         <Text style={[styles.settingTitle, dynamicStyles.text]}>Change Level</Text>
                         <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>
-                           {LEVELS.find(l => l.id === selectedLevel)?.title} ({LEVELS.find(l => l.id === selectedLevel)?.range})
+                           {LEVELS.find(l => l.id === currentLevel)?.title} ({LEVELS.find(l => l.id === currentLevel)?.range})
                         </Text>
                      </View>
                   </View>
@@ -895,10 +927,10 @@ export default function SettingsScreen() {
                            style={[
                               styles.levelPickerItem,
                               { borderBottomColor: colors.border },
-                              selectedLevel === level.id && { backgroundColor: `${colors.primary}20`, borderColor: colors.primary }
+                              currentLevel === level.id && { backgroundColor: `${colors.primary}20`, borderColor: colors.primary }
                            ]}
                            onPress={async () => {
-                              setSelectedLevel(level.id);
+                              setcurrentLevel(level.id);
                               try {
                                  await AsyncStorage.setItem('@user_level', level.id);
                                  // Update the CEFR level for vocabulary service
@@ -914,16 +946,16 @@ export default function SettingsScreen() {
                               <View style={[
                                  styles.levelRadio,
                                  { borderColor: colors.border },
-                                 selectedLevel === level.id && { borderColor: colors.primary, backgroundColor: colors.primary }
+                                 currentLevel === level.id && { borderColor: colors.primary, backgroundColor: colors.primary }
                               ]}>
-                                 {selectedLevel === level.id && <View style={[styles.levelRadioInner, { backgroundColor: colors.background }]} />}
+                                 {currentLevel === level.id && <View style={[styles.levelRadioInner, { backgroundColor: colors.background }]} />}
                               </View>
                               <View style={{ flex: 1 }}>
                                  <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10, marginBottom: 4 }}>
                                     <Text style={[
                                        styles.levelPickerTitle,
                                        { color: colors.text },
-                                       selectedLevel === level.id && { color: colors.primary }
+                                       currentLevel === level.id && { color: colors.primary }
                                     ]}>{level.title}</Text>
                                     <View style={[styles.levelBadge, { backgroundColor: `${colors.primary}33` }]}>
                                        <Text style={[styles.levelRange, { color: colors.primary }]}>{level.range}</Text>
@@ -932,7 +964,7 @@ export default function SettingsScreen() {
                                  <Text style={[
                                     styles.levelPickerDesc,
                                     { color: colors.textSecondary },
-                                    selectedLevel === level.id && { color: colors.primary }
+                                    currentLevel === level.id && { color: colors.primary }
                                  ]}>{level.description}</Text>
                               </View>
                            </View>
@@ -1125,8 +1157,13 @@ export default function SettingsScreen() {
                         <Text style={[styles.modalButtonText, dynamicStyles.text]}>Cancel</Text>
                      </TouchableOpacity>
                      <TouchableOpacity
-                        style={[styles.modalButton, { backgroundColor: colors.primary }]}
+                        style={[
+                           styles.modalButton,
+                           { backgroundColor: colors.primary },
+                           tempName === profileName && { opacity: 0.5 }
+                        ]}
                         onPress={saveProfileChanges}
+                        disabled={tempName === profileName}
                      >
                         <Text style={[styles.modalButtonText, { color: isDarkMode ? '#000' : '#fff' }]}>Save</Text>
                      </TouchableOpacity>

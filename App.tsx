@@ -28,6 +28,7 @@ import SettingsScreen from './screens/SettingsScreen';
 import FavoritesScreen from './screens/FavoritesScreen';
 import ExampleSentencesScreen from './screens/ExampleSentencesScreen';
 import LevelTestScreen from './screens/LevelTestScreen';
+import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
 
 // Configure notifications globally
 configureNotifications();
@@ -102,6 +103,7 @@ function AppContent() {
         {/* Auth Flow */}
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="SignUp" component={SignUpScreen} />
+        <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen} />
         {/* Setup Flow - Single unified screen with steps */}
         <Stack.Screen name="NativeLanguage" component={SetupScreen} />
         <Stack.Screen name="LevelTest" component={LevelTestScreen} />

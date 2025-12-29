@@ -112,19 +112,19 @@ export default function OnboardingScreen() {
             scrollEventThrottle={16}
             bounces={false}
           />
+        </View>
 
-          {/* Dots */}
-          <View style={styles.dotsContainer}>
-            {ONBOARDING_STEPS.map((_, index) => (
-              <View
-                key={index}
-                style={[
-                  styles.dot,
-                  index === currentStep && styles.dotActive,
-                ]}
-              />
-            ))}
-          </View>
+        {/* Dots */}
+        <View style={styles.dotsContainer}>
+          {ONBOARDING_STEPS.map((_, index) => (
+            <View
+              key={index}
+              style={[
+                styles.dot,
+                index === currentStep && styles.dotActive,
+              ]}
+            />
+          ))}
         </View>
 
         {/* Actions - Start button on last step, Skip/Next otherwise */}
@@ -185,6 +185,7 @@ const styles = StyleSheet.create({
   carouselContainer: {
     flex: 1,
     justifyContent: 'center',
+    paddingTop: 24,
   },
   slide: {
     width: SCREEN_WIDTH,
@@ -220,7 +221,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 8,
     justifyContent: 'center',
-    marginTop: 32,
+    marginBottom: 40,
   },
   dot: {
     width: 8,

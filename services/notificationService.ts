@@ -67,35 +67,42 @@ export function configureNotifications(): void {
  * Request notification permissions
  */
 export async function requestNotificationPermissions(): Promise<boolean> {
-    if (!Device.isDevice) {
-        console.log('Notifications require a physical device');
+    // Note: We removed Device.isDevice check as it can return false in Expo Go
+    // even on physical devices. The permission request itself will handle errors.
+
+    try {
+        const { status: existingStatus } = await Notifications.getPermissionsAsync();
+        let finalStatus = existingStatus;
+
+        console.log('Current notification permission status:', existingStatus);
+
+        if (existingStatus !== 'granted') {
+            const { status } = await Notifications.requestPermissionsAsync();
+            finalStatus = status;
+            console.log('Requested notification permission, new status:', status);
+        }
+
+        if (finalStatus !== 'granted') {
+            console.log('Notification permissions not granted');
+            return false;
+        }
+
+        // Android specific channel
+        if (Platform.OS === 'android') {
+            await Notifications.setNotificationChannelAsync('vocabulary', {
+                name: 'Vocabulary Reminders',
+                importance: Notifications.AndroidImportance.HIGH,
+                vibrationPattern: [0, 250, 250, 250],
+                lightColor: '#FFD700',
+            });
+        }
+
+        console.log('Notification permissions granted successfully');
+        return true;
+    } catch (error) {
+        console.error('Error requesting notification permissions:', error);
         return false;
     }
-
-    const { status: existingStatus } = await Notifications.getPermissionsAsync();
-    let finalStatus = existingStatus;
-
-    if (existingStatus !== 'granted') {
-        const { status } = await Notifications.requestPermissionsAsync();
-        finalStatus = status;
-    }
-
-    if (finalStatus !== 'granted') {
-        console.log('Notification permissions not granted');
-        return false;
-    }
-
-    // Android specific channel
-    if (Platform.OS === 'android') {
-        await Notifications.setNotificationChannelAsync('vocabulary', {
-            name: 'Vocabulary Reminders',
-            importance: Notifications.AndroidImportance.HIGH,
-            vibrationPattern: [0, 250, 250, 250],
-            lightColor: '#FFD700',
-        });
-    }
-
-    return true;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
