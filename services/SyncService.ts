@@ -44,8 +44,10 @@ export const syncToFirestore = async (userId: string): Promise<boolean> => {
 
         // Get profile data from AsyncStorage
         const AsyncStorage = require('@react-native-async-storage/async-storage').default;
-        const profileName = await AsyncStorage.getItem('@profile_name');
-        const profileImage = await AsyncStorage.getItem('@profile_image');
+        const storedProfile = await AsyncStorage.getItem(`profile_${userId}`);
+        const profileData = storedProfile ? JSON.parse(storedProfile) : {};
+        const profileName = profileData.name;
+        const profileImage = profileData.image;
 
         console.log('Syncing progress and profile to Firestore:', { currentLevel, lastWordIndex, hasProfileName: !!profileName, hasProfileImage: !!profileImage });
 
@@ -138,12 +140,12 @@ export const fetchAndSaveUserData = async (userId: string): Promise<UserData | n
 
             // Restore profile data from Firebase to AsyncStorage
             const AsyncStorage = require('@react-native-async-storage/async-storage').default;
-            if (data.displayName) {
-                await AsyncStorage.setItem('@profile_name', data.displayName);
-            }
-            if (data.photoURL) {
-                await AsyncStorage.setItem('@profile_image', data.photoURL);
-            }
+            const newProfile = {
+                name: data.displayName || '',
+                image: data.photoURL || null,
+                email: data.email || ''
+            };
+            await AsyncStorage.setItem(`profile_${userId}`, JSON.stringify(newProfile));
 
             // Restore progress from Firebase to local progressService
             if (data.progress) {

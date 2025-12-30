@@ -63,12 +63,6 @@ export default function ForgotPasswordScreen() {
 
     return (
         <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
-            <Header
-                showBack
-                onBack={() => navigation.goBack()}
-                backgroundColor={colors.background}
-                textColor={colors.text}
-            />
             <KeyboardAvoidingView
                 behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
                 style={styles.keyboardView}
@@ -78,10 +72,7 @@ export default function ForgotPasswordScreen() {
                     keyboardShouldPersistTaps="handled"
                 >
                     {/* Logo Section */}
-                    <View style={styles.logoSection}>
-                        <SwarmLogo size={80} color={COLORS.primary} />
-                        <Text style={[styles.appTitle, { color: colors.text }]}>VocBee</Text>
-                    </View>
+                    {/* Logo Section Removed */}
 
                     {/* Title Section */}
                     <View style={styles.titleSection}>
@@ -109,7 +100,7 @@ export default function ForgotPasswordScreen() {
 
                     {/* Submit Button */}
                     <TouchableOpacity
-                        style={[styles.submitButton, isSubmitting && styles.submitButtonDisabled]}
+                        style={[styles.submitButton, isSubmitting && styles.submitButtonDisabled, { backgroundColor: colors.primary }]}
                         onPress={handleResetPassword}
                         disabled={isSubmitting}
                     >

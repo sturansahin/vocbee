@@ -18,6 +18,7 @@ import { RootStackParamList } from '../types';
 import { MaterialIcons } from '@expo/vector-icons';
 import { SwarmLogo } from '../components/SwarmLogo';
 import { FONT_FAMILY } from '../utils/typography';
+import { useTheme } from '../context/ThemeContext';
 
 type OnboardingNavigationProp = StackNavigationProp<RootStackParamList, 'Onboarding'>;
 
@@ -46,6 +47,7 @@ const ONBOARDING_STEPS = [
 
 export default function OnboardingScreen() {
   const navigation = useNavigation<OnboardingNavigationProp>();
+  const { colors } = useTheme(); // Use theme
   const [currentStep, setCurrentStep] = useState(0);
   const flatListRef = useRef<FlatList>(null);
 
@@ -78,24 +80,24 @@ export default function OnboardingScreen() {
 
   const renderItem = ({ item }: { item: typeof ONBOARDING_STEPS[0] }) => (
     <View style={styles.slide}>
-      <View style={styles.imageContainer}>
-        <MaterialIcons name={item.icon as any} size={120} color={COLORS.primary} />
+      <View style={[styles.imageContainer, { backgroundColor: colors.surfaceLight }]}>
+        <MaterialIcons name={item.icon as any} size={120} color={colors.primary} />
       </View>
-      <Text style={styles.title}>{item.title}</Text>
-      <Text style={styles.subtitle}>{item.subtitle}</Text>
+      <Text style={[styles.title, { color: colors.text }]}>{item.title}</Text>
+      <Text style={[styles.subtitle, { color: colors.textSecondary }]}>{item.subtitle}</Text>
     </View>
   );
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
       <View style={styles.content}>
 
         {/* Header Logo */}
         <View style={styles.header}>
           <View style={styles.logoContainer}>
-            <SwarmLogo size={30} color={COLORS.primary} />
+            <SwarmLogo size={30} color={colors.primary} />
           </View>
-          <Text style={styles.logoText}>VocBee</Text>
+          <Text style={[styles.logoText, { color: colors.text }]}>VocBee</Text>
         </View>
 
         {/* Carousel with FlatList */}
@@ -121,7 +123,8 @@ export default function OnboardingScreen() {
               key={index}
               style={[
                 styles.dot,
-                index === currentStep && styles.dotActive,
+                { backgroundColor: index === currentStep ? colors.primary : colors.border },
+                index === currentStep && styles.dotActive
               ]}
             />
           ))}
@@ -130,8 +133,8 @@ export default function OnboardingScreen() {
         {/* Actions - Start button on last step, Skip/Next otherwise */}
         {isLastStep ? (
           <View style={styles.startButtonContainer}>
-            <TouchableOpacity onPress={handleStart} style={styles.startButton}>
-              <Text style={styles.startButtonText}>Start</Text>
+            <TouchableOpacity onPress={handleStart} style={[styles.startButton]}>
+              <Text style={[styles.startButtonText, { color: colors.primary }]}>Start</Text>
             </TouchableOpacity>
           </View>
         ) : (
@@ -143,7 +146,7 @@ export default function OnboardingScreen() {
               fullWidth={false}
             />
             <TouchableOpacity onPress={handleNext} style={styles.nextButton}>
-              <Text style={styles.nextButtonText}>Next</Text>
+              <Text style={[styles.nextButtonText, { color: colors.primary }]}>Next</Text>
             </TouchableOpacity>
           </View>
         )}
@@ -246,7 +249,7 @@ const styles = StyleSheet.create({
   nextButtonText: {
     fontFamily: FONT_FAMILY,
     color: COLORS.primary,
-    fontSize: 16,
+    fontSize: 18,
   },
   startButtonContainer: {
     alignItems: 'center',

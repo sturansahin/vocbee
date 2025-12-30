@@ -11,7 +11,12 @@ import {
     onAuthStateChanged,
     updateProfile,
     sendPasswordResetEmail,
+    GoogleAuthProvider,
+    signInWithCredential,
 } from 'firebase/auth';
+import * as Google from 'expo-auth-session/providers/google';
+import * as WebBrowser from 'expo-web-browser';
+import { makeRedirectUri } from 'expo-auth-session';
 import { auth } from '../config/firebase';
 import {
     getLocalUserData,
@@ -24,6 +29,7 @@ import {
     fetchAndSaveUserData,
     forceSync,
 } from '../services/SyncService';
+import { resetProgress } from '../services/progressService';
 
 interface ProfileData {
     name: string;
@@ -48,6 +54,8 @@ interface AuthContextType {
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
+
+WebBrowser.maybeCompleteAuthSession();
 
 // Provider Props
 interface AuthProviderProps {
@@ -83,23 +91,32 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
                 // Load profile data
                 try {
-                    const savedName = await AsyncStorage.getItem('@profile_name');
-                    const savedImage = await AsyncStorage.getItem('@profile_image');
-                    const savedEmail = await AsyncStorage.getItem('@profile_email');
-
-                    setProfile({
-                        name: savedName || firebaseUser.displayName || '',
-                        image: savedImage,
-                        email: firebaseUser.email || savedEmail || ''
-                    });
+                    // Check if we have local profile data
+                    const storedProfile = await AsyncStorage.getItem(`profile_${firebaseUser.uid}`);
+                    if (storedProfile) {
+                        setProfile(JSON.parse(storedProfile));
+                    } else if (firebaseUser.displayName) {
+                        // Initialize from Firebase if available
+                        const initialProfile = {
+                            name: firebaseUser.displayName,
+                            image: firebaseUser.photoURL,
+                            email: firebaseUser.email || ''
+                        };
+                        setProfile(initialProfile);
+                        await AsyncStorage.setItem(`profile_${firebaseUser.uid}`, JSON.stringify(initialProfile));
+                    }
                 } catch (e) {
-                    console.error('Error loading profile data:', e);
+                    console.error('Error loading profile:', e);
                 }
+
             } else {
                 setUserData(null);
-                setProfile({ name: '', image: null, email: '' });
+                setProfile({
+                    name: '',
+                    image: null,
+                    email: ''
+                });
             }
-
             setIsLoading(false);
         });
 
@@ -149,6 +166,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
             // Clear local storage first to prevent old data from persisting
             await clearAllLocalData();
+            await resetProgress();
 
             const userCredential = await signInWithEmailAndPassword(auth, email, password);
 
@@ -167,11 +185,10 @@ export function AuthProvider({ children }: AuthProviderProps) {
         }
     };
 
-    // Sign In with Google - TODO: Implement when expo-auth-session works
+    // Sign In with Google
     const signInWithGoogle = async () => {
-        // Google Sign-In temporarily disabled due to expo-auth-session build issues
-        console.log('Google Sign-In not yet implemented');
-        throw new Error('Google Sign-In coming soon!');
+        console.log('Google Sign-In disabled');
+        throw new Error('This feature is currently disabled.');
     };
 
     // Sign Out
@@ -186,6 +203,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
             // Clear local data
             await clearAllLocalData();
+            await resetProgress();
 
             // Sign out from Firebase
             await firebaseSignOut(auth);
@@ -226,19 +244,13 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
     // Update profile data
     const updateProfileData = async (data: Partial<ProfileData>) => {
+        if (!user) return;
+
         const newProfile = { ...profile, ...data };
         setProfile(newProfile);
 
         try {
-            if (data.name !== undefined) await AsyncStorage.setItem('@profile_name', data.name);
-            if (data.image !== undefined) {
-                if (data.image) {
-                    await AsyncStorage.setItem('@profile_image', data.image);
-                } else {
-                    await AsyncStorage.removeItem('@profile_image');
-                }
-            }
-            if (data.email !== undefined) await AsyncStorage.setItem('@profile_email', data.email);
+            await AsyncStorage.setItem(`profile_${user.uid}`, JSON.stringify(newProfile));
         } catch (error) {
             console.error('Error updating profile data:', error);
             throw error;

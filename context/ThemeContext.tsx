@@ -15,16 +15,16 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 const THEME_STORAGE_KEY = '@vocbee_theme';
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-    const [isDarkMode, setIsDarkMode] = useState(true);
+    const [isDarkMode, setIsDarkMode] = useState(false);
 
     useEffect(() => {
-        // Load saved theme preference - default to dark if not set
+        // Load saved theme preference - default to light if not set
         const loadTheme = async () => {
             try {
                 const savedTheme = await AsyncStorage.getItem(THEME_STORAGE_KEY);
-                // Only change to light if explicitly saved as 'light', otherwise stay dark
-                if (savedTheme === 'light') {
-                    setIsDarkMode(false);
+                // Only change to dark if explicitly saved as 'dark'
+                if (savedTheme === 'dark') {
+                    setIsDarkMode(true);
                 }
             } catch (error) {
                 console.log('Error loading theme:', error);

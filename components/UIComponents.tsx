@@ -4,6 +4,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import { COLORS } from '../constants';
 import { FONT_FAMILY } from '../utils/typography';
+import { useTheme } from '../context/ThemeContext';
 
 interface ButtonProps {
   title: string;
@@ -22,27 +23,29 @@ export const Button: React.FC<ButtonProps> = ({
   fullWidth = true,
   disabled = false
 }) => {
+  const { colors } = useTheme(); // Use dynamic theme
+
   const getButtonStyle = () => {
     switch (variant) {
       case 'primary':
-        return styles.buttonPrimary;
+        return [styles.buttonPrimary, { backgroundColor: colors.primary }];
       case 'outline':
-        return styles.buttonOutline;
+        return [styles.buttonOutline, { borderColor: colors.border }];
       case 'ghost':
         return styles.buttonGhost;
       default:
-        return styles.buttonPrimary;
+        return [styles.buttonPrimary, { backgroundColor: colors.primary }];
     }
   };
 
   const getTextStyle = () => {
     switch (variant) {
       case 'primary':
-        return styles.textPrimary;
+        return [styles.textPrimary, { color: '#000000' }];
       case 'ghost':
-        return styles.textGhost;
+        return [styles.textGhost, { color: colors.textSecondary }];
       default:
-        return styles.textDefault;
+        return [styles.textDefault, { color: '#fff' }]; // Default usually white on primary? Wait. textDefault was #fff.
     }
   };
 
@@ -53,10 +56,10 @@ export const Button: React.FC<ButtonProps> = ({
       disabled={disabled}
       style={[styles.buttonBase, getButtonStyle(), fullWidth && styles.fullWidth, disabled && styles.buttonDisabled]}
     >
-      {icon && <MaterialIcons name={icon} size={20} color={variant === 'primary' ? COLORS.background : 'white'} />}
+      {icon && <MaterialIcons name={icon} size={20} color={variant === 'primary' ? '#000000' : 'white'} />}
       <Text style={[styles.buttonText, getTextStyle()]}>{title}</Text>
       {variant === 'primary' && !icon && (
-        <MaterialIcons name="arrow-forward" size={20} color={COLORS.background} />
+        <MaterialIcons name="arrow-forward" size={20} color={'#000000'} />
       )}
     </TouchableOpacity>
   );
@@ -79,28 +82,36 @@ export const Input: React.FC<InputProps> = ({
   icon,
   rightIcon,
   onRightIconPress,
-  backgroundColor = COLORS.surface,
-  borderColor = COLORS.border,
-  labelColor = '#fff',
-  textColor = '#fff',
-  iconColor = COLORS.textSecondary,
+  backgroundColor,
+  borderColor,
+  labelColor,
+  textColor,
+  iconColor,
   ...props
 }) => {
+  const { colors } = useTheme();
+
+  const finalBg = backgroundColor || colors.surface;
+  const finalBorder = borderColor || colors.border;
+  const finalLabelColor = labelColor || colors.text; // Was white default? Usually text color.
+  const finalTextColor = textColor || colors.text; // Was white default.
+  const finalIconColor = iconColor || colors.textSecondary;
+
   return (
     <View style={styles.inputContainer}>
-      {label && <Text style={[styles.inputLabel, { color: labelColor }]}>{label}</Text>}
-      <View style={[styles.inputWrapper, { backgroundColor, borderColor }]}>
+      {label && <Text style={[styles.inputLabel, { color: finalLabelColor }]}>{label}</Text>}
+      <View style={[styles.inputWrapper, { backgroundColor: finalBg, borderColor: finalBorder }]}>
         <TextInput
-          style={[styles.textInput, { color: textColor }]}
-          placeholderTextColor={iconColor}
+          style={[styles.textInput, { color: finalTextColor }]}
+          placeholderTextColor={finalIconColor}
           {...props}
         />
         {rightIcon ? (
           <TouchableOpacity onPress={onRightIconPress}>
-            <MaterialIcons name={rightIcon} size={22} color={iconColor} />
+            <MaterialIcons name={rightIcon} size={22} color={finalIconColor} />
           </TouchableOpacity>
         ) : icon ? (
-          <MaterialIcons name={icon} size={22} color={iconColor} />
+          <MaterialIcons name={icon} size={22} color={finalIconColor} />
         ) : null}
       </View>
     </View>
@@ -123,24 +134,28 @@ export const Header: React.FC<HeaderProps> = ({
   showBack,
   onBack,
   rightAction,
-  backgroundColor = COLORS.background,
-  textColor = '#fff'
+  backgroundColor,
+  textColor
 }) => {
+  const { colors } = useTheme();
+  const finalBg = backgroundColor || colors.background;
+  const finalTextColor = textColor || colors.text; // Was #fff default.
+
   return (
-    <View style={[styles.headerContainer, { backgroundColor }]}>
+    <View style={[styles.headerContainer, { backgroundColor: finalBg }]}>
       {showBack ? (
         <TouchableOpacity
           onPress={onBack}
           style={styles.backButton}
         >
-          <FontAwesome5 name="arrow-left" size={24} color={textColor} />
+          <FontAwesome5 name="arrow-left" size={24} color={finalTextColor} />
         </TouchableOpacity>
       ) : (
         <View style={styles.placeholder} />
       )}
 
       <View style={styles.headerCenter}>
-        {title && <Text style={[styles.headerTitle, { color: textColor }]}>{title}</Text>}
+        {title && <Text style={[styles.headerTitle, { color: finalTextColor }]}>{title}</Text>}
         {subtitle && <Text style={styles.headerSubtitle}>{subtitle}</Text>}
       </View>
 

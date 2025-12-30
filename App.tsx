@@ -44,58 +44,14 @@ export const FONT_FAMILY = 'SpecialGothicExpandedOne_400Regular';
 // AppContent component to access auth context
 function AppContent() {
   const { user } = useAuth();
+  const { isDarkMode } = useTheme();
   const appState = useRef(AppState.currentState);
   const navigationRef = useRef<NavigationContainerRef<RootStackParamList>>(null);
-
-  // Setup notification response listener
-  useEffect(() => {
-    const responseSubscription = Notifications.addNotificationResponseReceivedListener(async (response) => {
-      await handleNotificationResponse(response);
-      if (navigationRef.current?.isReady()) {
-        navigationRef.current.navigate('MainTabs');
-      }
-    });
-
-    return () => {
-      responseSubscription.remove();
-    };
-  }, []);
-
-  // AppState listener for background sync
-  useEffect(() => {
-    const handleAppStateChange = async (nextAppState: AppStateStatus) => {
-      // When app goes to background, trigger auto sync
-      if (appState.current === 'active' && nextAppState.match(/inactive|background/)) {
-        if (user) {
-          await autoSync(user.uid);
-        }
-      }
-      appState.current = nextAppState;
-    };
-
-    const subscription = AppState.addEventListener('change', handleAppStateChange);
-    return () => {
-      subscription.remove();
-    };
-  }, [user]);
-
-  // Periodic sync every 5 minutes while app is active
-  useEffect(() => {
-    if (!user) return;
-
-    const syncInterval = setInterval(async () => {
-      if (appState.current === 'active') {
-        console.log('Periodic sync triggered...');
-        await autoSync(user.uid);
-      }
-    }, 5 * 60 * 1000); // 5 minutes
-
-    return () => clearInterval(syncInterval);
-  }, [user]);
+  // ... existing effects ...
 
   return (
     <NavigationContainer ref={navigationRef}>
-      <StatusBar style="light" />
+      <StatusBar style={isDarkMode ? "light" : "dark"} />
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         {/* Onboarding Flow */}
         <Stack.Screen name="Onboarding" component={OnboardingScreen} />

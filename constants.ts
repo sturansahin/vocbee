@@ -13,7 +13,7 @@ export const DARK_COLORS = {
 
 // Light Theme Colors - Pure white background
 export const LIGHT_COLORS = {
-  primary: '#FFA500',          // Orange/Gold
+  primary: '#FFD700',          // Gold/Yellow
   primaryDark: '#FF8C00',      // Dark orange
   background: '#ffffff',       // Pure white
   surface: '#ffffff',          // Pure white

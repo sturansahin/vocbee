@@ -99,20 +99,20 @@ export const LoginScreen = () => {
           title={isSubmitting ? "Logging in..." : "Log In"}
           onPress={handleLogin}
           disabled={isSubmitting}
+          variant="primary"
         />
 
         {isSubmitting && (
           <ActivityIndicator size="small" color={colors.primary} style={{ marginTop: 16 }} />
         )}
 
-        {/* Divider */}
+        {/* Social Buttons - Disabled
         <View style={styles.divider}>
           <View style={[styles.dividerLine, { backgroundColor: colors.border }]} />
           <Text style={[styles.dividerText, { color: colors.textSecondary }]}>Or continue with</Text>
           <View style={[styles.dividerLine, { backgroundColor: colors.border }]} />
         </View>
 
-        {/* Social Buttons */}
         <View style={styles.socialRow}>
           <TouchableOpacity
             style={[styles.socialButton, { backgroundColor: colors.surface, borderColor: colors.border }]}
@@ -122,6 +122,7 @@ export const LoginScreen = () => {
             <Text style={[styles.socialButtonText, { color: colors.text }]}>Google</Text>
           </TouchableOpacity>
         </View>
+        */}
 
         <View style={styles.signupRow}>
           <Text style={[styles.signupText, { color: colors.textSecondary }]}>Don't have an account? </Text>
@@ -264,7 +265,7 @@ export const SignUpScreen = () => {
           <ActivityIndicator size="small" color={colors.primary} style={{ marginTop: 16 }} />
         )}
 
-        {/* Divider & Socials */}
+        {/* Divider & Socials - Disabled 
         <View style={styles.divider}>
           <View style={[styles.dividerLine, { backgroundColor: colors.border }]} />
           <Text style={[styles.dividerText, { color: colors.textSecondary }]}>Or continue with</Text>
@@ -280,6 +281,7 @@ export const SignUpScreen = () => {
             <Text style={[styles.socialButtonText, { color: colors.text }]}>Google</Text>
           </TouchableOpacity>
         </View>
+        */}
 
       </ScrollView>
     </SafeAreaView>
@@ -365,6 +367,7 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   signupRow: {
+    marginTop: 24,
     flexDirection: 'row',
     justifyContent: 'center',
   },
