@@ -11,14 +11,13 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useTheme } from '../context/ThemeContext';
 import { useAuth } from '../context/AuthContext';
 import { FONT_FAMILY } from '../utils/typography';
-import { resetProgress, setCurrentLevel } from '../services/progressService';
+import { resetProgress, setCurrentLevel, getCurrentLevel } from '../services/progressService';
 import { getFirstLevelForUserLevel } from '../services/vocabularyService';
 import { forceSync } from '../services/SyncService';
 import { useAlert } from '../components/CustomAlert';
 import * as ImagePicker from 'expo-image-picker';
 import {
    getNotificationSettings,
-   saveNotificationSettings,
    requestNotificationPermissions,
    scheduleVocabularyNotifications,
    sendTestNotification,
@@ -103,16 +102,30 @@ export default function SettingsScreen() {
       signOut,
       user,
       profile,
-      updateProfileData
+      updateProfileData,
+      notificationSettings,
+      updateNotificationSettings
    } = useAuth();
    const { showAlert } = useAlert();
-   const [reminderEnabled, setReminderEnabled] = useState(true);
-   const [autoMarkLearned, setAutoMarkLearned] = useState(true);
-   const [startHour, setStartHour] = useState('09');
-   const [startMinute, setStartMinute] = useState('00');
-   const [endHour, setEndHour] = useState('21');
-   const [endMinute, setEndMinute] = useState('00');
-   const [frequency, setFrequency] = useState('Every 2 hours');
+
+   // Initialize state from context (use fallback to context values)
+   const [reminderEnabled, setReminderEnabled] = useState(notificationSettings.enabled);
+   const [autoMarkLearned, setAutoMarkLearned] = useState(notificationSettings.autoMarkLearned);
+   const [startHour, setStartHour] = useState(notificationSettings.startHour.toString().padStart(2, '0'));
+   const [startMinute, setStartMinute] = useState(notificationSettings.startMinute.toString().padStart(2, '0'));
+   const [endHour, setEndHour] = useState(notificationSettings.endHour.toString().padStart(2, '0'));
+   const [endMinute, setEndMinute] = useState(notificationSettings.endMinute.toString().padStart(2, '0'));
+   // Helper to get freq string
+   const getFreqString = (min: number) => {
+      switch (min) {
+         case 15: return 'Every 15 minutes';
+         case 30: return 'Every 30 minutes';
+         case 60: return 'Every hour';
+         default: return 'Every 2 hours';
+      }
+   };
+   const [frequency, setFrequency] = useState(getFreqString(notificationSettings.frequencyMinutes));
+
    const [showTimePicker, setShowTimePicker] = useState<'start' | 'end' | null>(null);
    const [tempHour, setTempHour] = useState('09');
    const [tempMinute, setTempMinute] = useState('00');
@@ -133,26 +146,18 @@ export default function SettingsScreen() {
    const [tempName, setTempName] = useState('');
    const [tempEmail, setTempEmail] = useState('');
 
-   // Load notification settings on mount
+   // No Loading state needed!
+
+   // Sync state when context updates (e.g. initial load finishes)
    useEffect(() => {
-      const loadSettings = async () => {
-         const settings = await getNotificationSettings();
-         setReminderEnabled(settings.enabled);
-         setAutoMarkLearned(settings.autoMarkLearned);
-         setStartHour(settings.startHour.toString().padStart(2, '0'));
-         setStartMinute(settings.startMinute.toString().padStart(2, '0'));
-         setEndHour(settings.endHour.toString().padStart(2, '0'));
-         setEndMinute(settings.endMinute.toString().padStart(2, '0'));
-         // Set frequency from minutes
-         switch (settings.frequencyMinutes) {
-            case 15: setFrequency('Every 15 minutes'); break;
-            case 30: setFrequency('Every 30 minutes'); break;
-            case 60: setFrequency('Every hour'); break;
-            default: setFrequency('Every 2 hours');
-         }
-      };
-      loadSettings();
-   }, []);
+      setReminderEnabled(notificationSettings.enabled);
+      setAutoMarkLearned(notificationSettings.autoMarkLearned);
+      setStartHour(notificationSettings.startHour.toString().padStart(2, '0'));
+      setStartMinute(notificationSettings.startMinute.toString().padStart(2, '0'));
+      setEndHour(notificationSettings.endHour.toString().padStart(2, '0'));
+      setEndMinute(notificationSettings.endMinute.toString().padStart(2, '0'));
+      setFrequency(getFreqString(notificationSettings.frequencyMinutes));
+   }, [notificationSettings]);
 
    // Helper to convert frequency string to minutes
    const getFrequencyMinutes = (freq: string): number => {
@@ -174,34 +179,30 @@ export default function SettingsScreen() {
             return;
          }
       }
-      setReminderEnabled(newValue);
-      await saveNotificationSettings({
+      // setReminderEnabled(newValue); // Handled by effect
+      await updateNotificationSettings({
          enabled: newValue,
-         startHour: parseInt(startHour),
-         startMinute: parseInt(startMinute),
-         endHour: parseInt(endHour),
-         endMinute: parseInt(endMinute),
-         frequencyMinutes: getFrequencyMinutes(frequency),
-         autoMarkLearned,
+         // Pass other current values to ensure consistency or just partial? Partial is enough.
+         // updateNotificationSettings handles merging.
       });
    };
 
    // Handle auto-mark toggle
    const handleAutoMarkToggle = async () => {
       const newValue = !autoMarkLearned;
-      setAutoMarkLearned(newValue);
-      await saveNotificationSettings({ autoMarkLearned: newValue });
+      // setAutoMarkLearned(newValue); // Handled by effect
+      await updateNotificationSettings({ autoMarkLearned: newValue });
    };
 
    // Save time settings
    const saveTimeSettings = async (type: 'start' | 'end', hour: string, minute: string) => {
       if (type === 'start') {
-         await saveNotificationSettings({
+         await updateNotificationSettings({
             startHour: parseInt(hour),
             startMinute: parseInt(minute),
          });
       } else {
-         await saveNotificationSettings({
+         await updateNotificationSettings({
             endHour: parseInt(hour),
             endMinute: parseInt(minute),
          });
@@ -210,8 +211,8 @@ export default function SettingsScreen() {
 
    // Save frequency
    const handleFrequencyChange = async (freq: string) => {
-      setFrequency(freq);
-      await saveNotificationSettings({ frequencyMinutes: getFrequencyMinutes(freq) });
+      // setFrequency(freq); // Handled by effect
+      await updateNotificationSettings({ frequencyMinutes: getFrequencyMinutes(freq) });
    };
 
    // Refs for wheel picker scroll
@@ -231,20 +232,7 @@ export default function SettingsScreen() {
       }
    }, [showTimePicker]);
 
-   // Load current level from AsyncStorage
-   useEffect(() => {
-      const loadLevel = async () => {
-         try {
-            const level = await AsyncStorage.getItem('@user_level');
-            if (level) {
-               setCurrentLevelState(level);
-            }
-         } catch (error) {
-            console.error('Error loading level:', error);
-         }
-      };
-      loadLevel();
-   }, []);
+   // Removed separate loadLevel useEffect as it is merged above
 
    // Removed local profile loading useEffect - data now comes from AuthContext
 
@@ -425,7 +413,6 @@ export default function SettingsScreen() {
                </TouchableOpacity>
             </View>
 
-            {/* Section: Daily Reminder */}
             <Text style={[styles.sectionTitle, dynamicStyles.textSecondary]}>Daily Reminder</Text>
             <View style={[styles.sectionCard, dynamicStyles.sectionCard]}>
                <View style={styles.settingItem}>
@@ -958,8 +945,8 @@ export default function SettingsScreen() {
                         autoMarkLearned && { backgroundColor: `${colors.primary}20` }
                      ]}
                      onPress={async () => {
-                        setAutoMarkLearned(true);
-                        await saveNotificationSettings({ autoMarkLearned: true });
+                        // setAutoMarkLearned(true); // Handled by effect
+                        await updateNotificationSettings({ autoMarkLearned: true });
                         setShowAutoMarkPicker(false);
                      }}
                   >
@@ -990,8 +977,8 @@ export default function SettingsScreen() {
                         !autoMarkLearned && { backgroundColor: `${colors.primary}20` }
                      ]}
                      onPress={async () => {
-                        setAutoMarkLearned(false);
-                        await saveNotificationSettings({ autoMarkLearned: false });
+                        // setAutoMarkLearned(false); // Handled by effect
+                        await updateNotificationSettings({ autoMarkLearned: false });
                         setShowAutoMarkPicker(false);
                      }}
                   >

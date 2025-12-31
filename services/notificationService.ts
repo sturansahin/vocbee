@@ -47,6 +47,14 @@ export const DEFAULT_NOTIFICATION_SETTINGS: NotificationSettings = {
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
+// Notification Content Templates (Patterns)
+// ─────────────────────────────────────────────────────────────────────────────
+export const getNotificationContent = (word: VocabularyWord) => ({
+    title: `VocBee`,
+    body: `${word.word} - ${word.translation}, Tap to see example sentences`,
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
 // Permission & Setup
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -56,8 +64,8 @@ export const DEFAULT_NOTIFICATION_SETTINGS: NotificationSettings = {
 export function configureNotifications(): void {
     Notifications.setNotificationHandler({
         handleNotification: async () => ({
-            shouldShowAlert: true,
-            shouldPlaySound: true,
+            shouldShowAlert: false, // Do not show alert when app is in foreground
+            shouldPlaySound: false, // Do not play sound when app is in foreground
             shouldSetBadge: false,
         }),
     });
@@ -217,10 +225,12 @@ export async function scheduleVocabularyNotifications(): Promise<void> {
 
             const secondsUntilNotification = Math.floor((notificationTime.getTime() - now.getTime()) / 1000);
 
+            const { title, body } = getNotificationContent(word);
+
             await Notifications.scheduleNotificationAsync({
                 content: {
-                    title: `📚 ${word.word}`,
-                    body: `${word.translation}`,
+                    title,
+                    body,
                     data: {
                         wordId: word.id,
                         word: word.word,
@@ -315,10 +325,12 @@ export async function sendTestNotification(): Promise<void> {
         return;
     }
 
+    const { title, body } = getNotificationContent(word);
+
     await Notifications.scheduleNotificationAsync({
         content: {
-            title: `📚 ${word.word}`,
-            body: `${word.translation}`,
+            title,
+            body,
             data: {
                 wordId: word.id,
                 word: word.word,

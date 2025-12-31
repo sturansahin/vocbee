@@ -30,6 +30,12 @@ import {
     forceSync,
 } from '../services/SyncService';
 import { resetProgress } from '../services/progressService';
+import {
+    NotificationSettings,
+    DEFAULT_NOTIFICATION_SETTINGS,
+    getNotificationSettings,
+    saveNotificationSettings
+} from '../services/notificationService';
 
 interface ProfileData {
     name: string;
@@ -51,6 +57,8 @@ interface AuthContextType {
     refreshUserData: () => Promise<void>;
     profile: ProfileData;
     updateProfileData: (data: Partial<ProfileData>) => Promise<void>;
+    notificationSettings: NotificationSettings;
+    updateNotificationSettings: (settings: Partial<NotificationSettings>) => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -71,12 +79,22 @@ export function AuthProvider({ children }: AuthProviderProps) {
         image: null,
         email: ''
     });
+    const [notificationSettings, setNotificationSettings] = useState<NotificationSettings>(DEFAULT_NOTIFICATION_SETTINGS);
     const [isLoading, setIsLoading] = useState(true);
 
     // Listen to auth state changes
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
             setUser(firebaseUser);
+
+            // Load Global Settings (Notifications) immediately
+            // This ensures they are ready for SettingsScreen without extra loading state
+            try {
+                const settings = await getNotificationSettings();
+                setNotificationSettings(settings);
+            } catch (e) {
+                console.error('Error loading initial notification settings:', e);
+            }
 
             if (firebaseUser) {
                 // Try to load local data first
@@ -257,6 +275,13 @@ export function AuthProvider({ children }: AuthProviderProps) {
         }
     };
 
+    // Update notification settings
+    const updateNotificationSettings = async (settings: Partial<NotificationSettings>) => {
+        const newSettings = { ...notificationSettings, ...settings };
+        setNotificationSettings(newSettings); // Optimistic update
+        await saveNotificationSettings(settings);
+    };
+
     const value: AuthContextType = {
         user,
         userData,
@@ -270,6 +295,8 @@ export function AuthProvider({ children }: AuthProviderProps) {
         refreshUserData,
         profile,
         updateProfileData,
+        notificationSettings,
+        updateNotificationSettings,
     };
 
     return (
