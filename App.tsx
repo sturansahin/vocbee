@@ -80,6 +80,13 @@ function AppContent() {
   );
 }
 
+import { ErrorBoundary } from './components/ErrorBoundary';
+import { OfflineNotice } from './components/OfflineNotice';
+
+// ... existing imports ...
+
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+
 export default function App() {
   // Load fonts
   const [fontsLoaded] = useFonts({
@@ -108,14 +115,19 @@ export default function App() {
   }
 
   return (
-    <ThemeProvider>
-      <AlertProvider>
-        <AuthProvider>
-          <GestureHandlerRootView style={{ flex: 1 }} onLayout={onLayoutRootView}>
-            <AppContent />
-          </GestureHandlerRootView>
-        </AuthProvider>
-      </AlertProvider>
-    </ThemeProvider>
+    <SafeAreaProvider>
+      <ThemeProvider>
+        <AlertProvider>
+          <AuthProvider>
+            <ErrorBoundary>
+              <GestureHandlerRootView style={{ flex: 1 }} onLayout={onLayoutRootView}>
+                <OfflineNotice />
+                <AppContent />
+              </GestureHandlerRootView>
+            </ErrorBoundary>
+          </AuthProvider>
+        </AlertProvider>
+      </ThemeProvider>
+    </SafeAreaProvider>
   );
 }

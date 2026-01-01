@@ -11,6 +11,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useTheme } from '../context/ThemeContext';
 import { useAuth } from '../context/AuthContext';
 import { FONT_FAMILY } from '../utils/typography';
+import { RootStackParamList } from '../types';
 import { resetProgress, setCurrentLevel, getCurrentLevel } from '../services/progressService';
 import { getFirstLevelForUserLevel } from '../services/vocabularyService';
 import { forceSync } from '../services/SyncService';
@@ -96,7 +97,7 @@ const AnimatedSwitch: React.FC<AnimatedSwitchProps> = ({ value, onToggle, varian
 
 
 export default function SettingsScreen() {
-   const navigation = useNavigation<StackNavigationProp<any>>();
+   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
    const { isDarkMode, toggleTheme, colors } = useTheme();
    const {
       signOut,
@@ -288,7 +289,18 @@ export default function SettingsScreen() {
    // Save profile changes (local only - Firebase sync happens daily)
    const saveProfileChanges = async () => {
       try {
-         await updateProfileData({ name: tempName });
+         // Validation
+         if (!tempName.trim()) {
+            showAlert({ title: 'Invalid Name', message: 'Name cannot be empty.' });
+            return;
+         }
+
+         if (tempName.trim().length < 2) {
+            showAlert({ title: 'Invalid Name', message: 'Name must be at least 2 characters long.' });
+            return;
+         }
+
+         await updateProfileData({ name: tempName.trim() });
 
          setShowEditProfileModal(false);
          showAlert({ title: 'Success', message: 'Profile updated successfully!' });

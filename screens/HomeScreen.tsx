@@ -32,6 +32,7 @@ import {
     isVocabularyGenerated
 } from '../services/vocabularyService';
 import * as Speech from 'expo-speech';
+import * as Network from 'expo-network';
 import {
     markWordAsLearned,
     getLearnedWords,
@@ -45,6 +46,7 @@ import {
 } from '../services/progressService';
 import { addToFavorites } from '../services/favoritesService';
 import { getPendingNotificationWord } from '../services/notificationService';
+import { useAlert } from '../components/CustomAlert';
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;
@@ -53,6 +55,7 @@ export default function HomeScreen() {
     const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
     const insets = useSafeAreaInsets();
     const { colors, isDarkMode } = useTheme();
+    const { showAlert } = useAlert();
 
     // State
     const [words, setWords] = useState<VocabularyWord[]>([]);
@@ -291,7 +294,20 @@ export default function HomeScreen() {
             onPanResponderMove: (_, gesture) => {
                 position.setValue({ x: gesture.dx, y: gesture.dy * 0.3 });
             },
-            onPanResponderRelease: (_, gesture) => {
+            onPanResponderRelease: async (_, gesture) => {
+                // Check connectivity
+                const networkState = await Network.getNetworkStateAsync();
+
+                // If offline and trying to swipe far enough to trigger action
+                if (!networkState.isConnected && (gesture.dx > SWIPE_THRESHOLD || gesture.dx < -SWIPE_THRESHOLD)) {
+                    showAlert({
+                        title: 'Offline Mode',
+                        message: 'Internet connection is required to track your progress.',
+                    });
+                    resetPositionRef.current?.();
+                    return;
+                }
+
                 if (gesture.dx > SWIPE_THRESHOLD) {
                     swipeCardRef.current?.('right');
                 } else if (gesture.dx < -SWIPE_THRESHOLD) {
