@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
-import { View, Text, SafeAreaView, TouchableOpacity, ScrollView, StyleSheet, ActivityIndicator } from 'react-native';
+import React, { useState, useRef, useMemo } from 'react';
+import { View, Text, SafeAreaView, TouchableOpacity, ScrollView, StyleSheet, ActivityIndicator, Animated, Dimensions } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../types';
 import { Button, Input, Header } from '../components/UIComponents';
 import { MaterialIcons, AntDesign } from '@expo/vector-icons';
-import { SwarmLogo } from '../components/SwarmLogo';
+import LottieView from 'lottie-react-native';
 import { COLORS } from '../constants';
 import { useTheme } from '../context/ThemeContext';
 import { useAuth } from '../context/AuthContext';
 import { useAlert } from '../components/CustomAlert';
 import { FONT_FAMILY } from '../utils/typography';
+import { createSwarmAnimation } from '../assets/animations/swarmAnimation';
+
+const { height: SCREEN_HEIGHT } = Dimensions.get('window');
 
 type AuthNavProp = StackNavigationProp<RootStackParamList>;
 
@@ -24,13 +27,40 @@ export const LoginScreen = () => {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
 
-  const handleLogin = async () => {
-    if (!email || !password) {
-      showAlert({ title: 'Error', message: 'Please fill in all fields' });
-      return;
-    }
+  // Lottie animation ref
+  const lottieRef = useRef<LottieView>(null);
 
+  // Yellow bee color
+  const beeColor: [number, number, number, number] = [1, 0.78, 0.08, 1]; // #FFC814 - golden yellow
+
+  // Static animation (wings at rest) - shown initially
+  const staticAnimation = useMemo(() => createSwarmAnimation(beeColor, true), []);
+
+  // Animated version (wings flapping) - shown when animating
+  const animatedAnimation = useMemo(() => createSwarmAnimation(beeColor, false), []);
+
+  // Animated values for fly-away effect
+  const translateX = useRef(new Animated.Value(0)).current;
+  const translateY = useRef(new Animated.Value(0)).current;
+  const opacity = useRef(new Animated.Value(1)).current;
+  const rotation = useRef(new Animated.Value(0)).current; // Rotation for direction
+  const scale = useRef(new Animated.Value(1)).current; // Scale for perspective
+
+  // Reset animation to initial state
+  const resetAnimation = () => {
+    translateX.setValue(0);
+    translateY.setValue(0);
+    opacity.setValue(1);
+    rotation.setValue(0);
+    scale.setValue(1);
+    lottieRef.current?.reset();
+    setIsAnimating(false);
+  };
+
+  // Actual login logic (called after animation)
+  const performLogin = async () => {
     setIsSubmitting(true);
     try {
       const result = await signIn(email, password);
@@ -43,18 +73,156 @@ export const LoginScreen = () => {
       }
     } catch (error: any) {
       showAlert({ title: 'Login Failed', message: error.message });
+      // Reset animation on failure so user can try again
+      resetAnimation();
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  // Handle login with fly-away animation
+  const handleLoginWithAnimation = () => {
+    // Validate first
+    if (!email || !password) {
+      showAlert({ title: 'Error', message: 'Please fill in all fields' });
+      return;
+    }
+
+    setIsAnimating(true);
+
+    // Start Lottie wing animation
+    lottieRef.current?.play();
+
+    // Create realistic bee fly-away animation
+    Animated.sequence([
+      // Wait a moment for wings to start flapping
+      Animated.delay(150),
+
+      // Move left with rotation (face left) - like hovering
+      Animated.parallel([
+        Animated.timing(translateX, {
+          toValue: -50,
+          duration: 350,
+          useNativeDriver: true,
+        }),
+        Animated.timing(rotation, {
+          toValue: -25, // Tilt left
+          duration: 350,
+          useNativeDriver: true,
+        }),
+        Animated.timing(translateY, {
+          toValue: -15, // Slight up movement
+          duration: 350,
+          useNativeDriver: true,
+        }),
+      ]),
+
+      // Move right with rotation (face right) - swoop across
+      Animated.parallel([
+        Animated.timing(translateX, {
+          toValue: 70,
+          duration: 450,
+          useNativeDriver: true,
+        }),
+        Animated.timing(rotation, {
+          toValue: 25, // Tilt right
+          duration: 450,
+          useNativeDriver: true,
+        }),
+        Animated.timing(translateY, {
+          toValue: 10, // Dip down slightly
+          duration: 450,
+          useNativeDriver: true,
+        }),
+      ]),
+
+      // Prepare for takeoff - center and tilt up
+      Animated.parallel([
+        Animated.timing(translateX, {
+          toValue: 20,
+          duration: 200,
+          useNativeDriver: true,
+        }),
+        Animated.timing(rotation, {
+          toValue: -45, // Tilt up-left for takeoff angle
+          duration: 200,
+          useNativeDriver: true,
+        }),
+        Animated.timing(translateY, {
+          toValue: -20,
+          duration: 200,
+          useNativeDriver: true,
+        }),
+      ]),
+
+      // Fly away - diagonal up-left with spin
+      Animated.parallel([
+        Animated.timing(translateY, {
+          toValue: -SCREEN_HEIGHT,
+          duration: 700,
+          useNativeDriver: true,
+        }),
+        Animated.timing(translateX, {
+          toValue: -100, // Fly off to the left side
+          duration: 700,
+          useNativeDriver: true,
+        }),
+        Animated.timing(rotation, {
+          toValue: -60, // Keep angled during flight
+          duration: 700,
+          useNativeDriver: true,
+        }),
+        Animated.timing(scale, {
+          toValue: 0.3, // Get smaller as it flies away
+          duration: 700,
+          useNativeDriver: true,
+        }),
+        Animated.timing(opacity, {
+          toValue: 0,
+          duration: 500,
+          useNativeDriver: true,
+        }),
+      ]),
+    ]).start(() => {
+      // After animation completes, perform actual login
+      performLogin();
+    });
   };
 
   return (
     <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
       <ScrollView contentContainerStyle={styles.scrollContent}>
 
-        {/* Logo Section */}
+        {/* Logo Section with Lottie Animation */}
         <View style={styles.logoSection}>
-          <SwarmLogo size={100} color={COLORS.primary} />
+          <Animated.View
+            style={[
+              styles.lottieContainer,
+              {
+                transform: [
+                  { translateX: translateX },
+                  { translateY: translateY },
+                  {
+                    rotate: rotation.interpolate({
+                      inputRange: [-360, 360],
+                      outputRange: ['-360deg', '360deg'],
+                    })
+                  },
+                  { scale: scale },
+                ],
+                opacity: opacity,
+              },
+            ]}
+          >
+            <LottieView
+              ref={lottieRef}
+              source={isAnimating ? animatedAnimation : staticAnimation}
+              style={styles.lottieAnimation}
+              autoPlay={isAnimating}
+              loop={true}
+              speed={1.5}
+            />
+          </Animated.View>
           <Text style={[styles.appTitle, { color: colors.text }]}>VocBee</Text>
           <Text style={[styles.appSubtitle, { color: colors.textSecondary }]}>Master new words effortlessly.</Text>
         </View>
@@ -96,9 +264,9 @@ export const LoginScreen = () => {
         </View>
 
         <Button
-          title={isSubmitting ? "Logging in..." : "Log In"}
-          onPress={handleLogin}
-          disabled={isSubmitting}
+          title={isSubmitting ? "Logging in..." : isAnimating ? "" : "Log In"}
+          onPress={handleLoginWithAnimation}
+          disabled={isSubmitting || isAnimating}
           variant="primary"
         />
 
@@ -305,6 +473,16 @@ const styles = StyleSheet.create({
   logoSection: {
     alignItems: 'center',
     marginBottom: 40,
+  },
+  lottieContainer: {
+    width: 100,
+    height: 92,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  lottieAnimation: {
+    width: 100,
+    height: 92,
   },
   appTitle: {
     fontFamily: FONT_FAMILY,

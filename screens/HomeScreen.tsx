@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react';
 import {
     View,
     Text,
@@ -7,8 +7,9 @@ import {
     Dimensions,
     Animated,
     PanResponder,
-    ActivityIndicator
 } from 'react-native';
+import LottieView from 'lottie-react-native';
+import { createSwarmAnimation } from '../assets/animations/swarmAnimation';
 import { LinearGradient } from 'expo-linear-gradient';
 import { BlurView } from 'expo-blur';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -375,10 +376,19 @@ export default function HomeScreen() {
 
     // Loading state
     if (isLoading) {
+        // Create yellow bee animation for loading
+        const loadingAnimation = createSwarmAnimation([1, 0.78, 0.08, 1], false); // Animated wings
+
         return (
             <View style={[styles.container, { backgroundColor: colors.background, paddingTop: insets.top }]}>
                 <View style={styles.loadingContainer}>
-                    <ActivityIndicator size="large" color={colors.primary} />
+                    <LottieView
+                        source={loadingAnimation}
+                        style={styles.loadingLottie}
+                        autoPlay={true}
+                        loop={true}
+                        speed={1.5}
+                    />
                     <Text style={[styles.loadingText, { color: colors.text }]}>Loading vocabulary...</Text>
                 </View>
             </View>
@@ -890,6 +900,10 @@ const styles = StyleSheet.create({
     loadingText: {
         fontFamily: FONT_FAMILY,
         fontSize: 16,
+    },
+    loadingLottie: {
+        width: 100,
+        height: 92,
     },
     emptyContainer: {
         flex: 1,
