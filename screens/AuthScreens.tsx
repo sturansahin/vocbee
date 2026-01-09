@@ -59,24 +59,47 @@ export const LoginScreen = () => {
     setIsAnimating(false);
   };
 
-  // Actual login logic (called after animation)
-  const performLogin = async () => {
-    setIsSubmitting(true);
+  // Store login result for navigation after animation
+  const loginResultRef = useRef<{ setupCompleted: boolean } | null>(null);
+  const loginErrorRef = useRef<string | null>(null);
+  const animationCompleteRef = useRef(false);
+  const loginCompleteRef = useRef(false);
+
+  // Check if both animation and login are complete, then navigate
+  const checkAndNavigate = () => {
+    if (animationCompleteRef.current && loginCompleteRef.current) {
+      setIsSubmitting(false);
+
+      if (loginErrorRef.current) {
+        showAlert({ title: 'Login Failed', message: loginErrorRef.current });
+        resetAnimation();
+        // Reset refs for next attempt
+        loginResultRef.current = null;
+        loginErrorRef.current = null;
+        animationCompleteRef.current = false;
+        loginCompleteRef.current = false;
+      } else if (loginResultRef.current) {
+        if (loginResultRef.current.setupCompleted) {
+          navigation.navigate('MainTabs');
+        } else {
+          navigation.navigate('NativeLanguage');
+        }
+      }
+    }
+  };
+
+  // Start Firebase login (runs in parallel with animation)
+  const startFirebaseLogin = async () => {
     try {
       const result = await signIn(email, password);
-
-      // Navigate based on setup status
-      if (result && result.setupCompleted) {
-        navigation.navigate('MainTabs');
-      } else {
-        navigation.navigate('NativeLanguage');
-      }
+      loginResultRef.current = result;
+      loginErrorRef.current = null;
     } catch (error: any) {
-      showAlert({ title: 'Login Failed', message: error.message });
-      // Reset animation on failure so user can try again
-      resetAnimation();
+      loginResultRef.current = null;
+      loginErrorRef.current = error.message;
     } finally {
-      setIsSubmitting(false);
+      loginCompleteRef.current = true;
+      checkAndNavigate();
     }
   };
 
@@ -88,7 +111,17 @@ export const LoginScreen = () => {
       return;
     }
 
+    // Reset refs
+    loginResultRef.current = null;
+    loginErrorRef.current = null;
+    animationCompleteRef.current = false;
+    loginCompleteRef.current = false;
+
     setIsAnimating(true);
+    setIsSubmitting(true);
+
+    // Start Firebase login immediately (parallel with animation)
+    startFirebaseLogin();
 
     // Start Lottie wing animation
     lottieRef.current?.play();
@@ -184,8 +217,9 @@ export const LoginScreen = () => {
         }),
       ]),
     ]).start(() => {
-      // After animation completes, perform actual login
-      performLogin();
+      // Animation complete
+      animationCompleteRef.current = true;
+      checkAndNavigate();
     });
   };
 

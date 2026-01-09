@@ -295,20 +295,7 @@ export default function HomeScreen() {
             onPanResponderMove: (_, gesture) => {
                 position.setValue({ x: gesture.dx, y: gesture.dy * 0.3 });
             },
-            onPanResponderRelease: async (_, gesture) => {
-                // Check connectivity
-                const networkState = await Network.getNetworkStateAsync();
-
-                // If offline and trying to swipe far enough to trigger action
-                if (!networkState.isConnected && (gesture.dx > SWIPE_THRESHOLD || gesture.dx < -SWIPE_THRESHOLD)) {
-                    showAlert({
-                        title: 'Offline Mode',
-                        message: 'Internet connection is required to track your progress.',
-                    });
-                    resetPositionRef.current?.();
-                    return;
-                }
-
+            onPanResponderRelease: (_, gesture) => {
                 if (gesture.dx > SWIPE_THRESHOLD) {
                     swipeCardRef.current?.('right');
                 } else if (gesture.dx < -SWIPE_THRESHOLD) {
