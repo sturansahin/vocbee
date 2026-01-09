@@ -7,6 +7,7 @@ import {
     Dimensions,
     Animated,
     PanResponder,
+    Easing,
 } from 'react-native';
 import LottieView from 'lottie-react-native';
 import { createSwarmAnimation } from '../assets/animations/swarmAnimation';
@@ -70,7 +71,277 @@ export default function HomeScreen() {
     // Ref to track if initial load has been done
     const hasInitiallyLoaded = useRef(false);
 
-    // Load vocabulary and progress (only called on initial load or after reset)
+    // Bee animation state
+    interface BeePosition {
+        id: number;
+        x: number;
+        y: number;
+        translateX: Animated.Value;
+        translateY: Animated.Value;
+        opacity: Animated.Value;
+        rotation: Animated.Value;
+        scale: Animated.Value;
+    }
+
+    const [beePositions, setBeePositions] = useState<BeePosition[]>([]);
+    const [beesAnimating, setBeesAnimating] = useState(false);
+    const beeAnimationRef = useRef<any>(null);
+
+    // Yellow bee color (same as login screen)
+    const beeColor: [number, number, number, number] = [1, 0.78, 0.08, 1];
+
+    // Generate position for single bee in top-right corner
+    const generateBeePositions = useCallback((): BeePosition[] => {
+        const cardWidth = SCREEN_WIDTH - 40; // Card container width
+
+        // Single bee positioned in top-right corner area
+        const beePosition: BeePosition = {
+            id: 0,
+            x: cardWidth - 60, // 60px from right edge
+            y: 20,              // 20px from top
+            translateX: new Animated.Value(0),
+            translateY: new Animated.Value(0),
+            opacity: new Animated.Value(0),
+            rotation: new Animated.Value(0),
+            scale: new Animated.Value(0.5),
+        };
+
+        return [beePosition];
+    }, []);
+
+    // Animate bee flying in with realistic exploration flight before landing
+    const animateBeesIn = useCallback((positions: BeePosition[]) => {
+        if (positions.length === 0) return;
+
+        setBeesAnimating(true);
+        const bee = positions[0];
+
+        // Set initial off-screen position (coming from left)
+        bee.translateX.setValue(-350);
+        bee.translateY.setValue(-250 + Math.random() * 500); // Random height between 50-200
+        bee.opacity.setValue(1);
+        bee.rotation.setValue(-20);
+        bee.scale.setValue(0.7);
+
+        // Realistic flight sequence with exploration
+        const animation = Animated.sequence([
+            // Phase 1: Fly in from left side
+            Animated.parallel([
+                Animated.timing(bee.translateX, {
+                    toValue: -20,
+                    duration: 1000,
+                    easing: Easing.linear,
+                    useNativeDriver: true,
+                }),
+                Animated.timing(bee.translateY, {
+                    toValue: -20,
+                    duration: 1000,
+                    easing: Easing.linear,
+                    useNativeDriver: true,
+                }),
+                Animated.timing(bee.rotation, {
+                    toValue: 10,
+                    duration: 1000,
+                    easing: Easing.linear,
+                    useNativeDriver: true,
+                }),
+                Animated.spring(bee.scale, {
+                    toValue: 1,
+                    useNativeDriver: true,
+                    tension: 30,
+                    friction: 5,
+                }),
+            ]),
+
+            // Phase 2: Exploration flight (2 seconds) - flying around the screen
+            // Move 1: Fly right and up
+            Animated.parallel([
+                Animated.timing(bee.translateX, {
+                    toValue: 15,
+                    duration: 500,
+                    easing: Easing.linear,
+                    useNativeDriver: true,
+                }),
+                Animated.timing(bee.translateY, {
+                    toValue: -15,
+                    duration: 500,
+                    easing: Easing.linear,
+                    useNativeDriver: true,
+                }),
+                Animated.timing(bee.rotation, {
+                    toValue: -10,
+                    duration: 500,
+                    easing: Easing.linear,
+                    useNativeDriver: true,
+                }),
+            ]),
+
+            // Move 2: Fly left and down
+            Animated.parallel([
+                Animated.timing(bee.translateX, {
+                    toValue: -10,
+                    duration: 450,
+                    easing: Easing.linear,
+                    useNativeDriver: true,
+                }),
+                Animated.timing(bee.translateY, {
+                    toValue: -10,
+                    duration: 450,
+                    easing: Easing.linear,
+                    useNativeDriver: true,
+                }),
+                Animated.timing(bee.rotation, {
+                    toValue: 15,
+                    duration: 450,
+                    easing: Easing.linear,
+                    useNativeDriver: true,
+                }),
+            ]),
+
+            // Move 3: Fly right and down
+            Animated.parallel([
+                Animated.timing(bee.translateX, {
+                    toValue: 5,
+                    duration: 500,
+                    easing: Easing.linear,
+                    useNativeDriver: true,
+                }),
+                Animated.timing(bee.translateY, {
+                    toValue: -5,
+                    duration: 500,
+                    easing: Easing.linear,
+                    useNativeDriver: true,
+                }),
+                Animated.timing(bee.rotation, {
+                    toValue: -8,
+                    duration: 500,
+                    easing: Easing.linear,
+                    useNativeDriver: true,
+                }),
+            ]),
+
+            // Move 4: Fly up
+            Animated.parallel([
+                Animated.timing(bee.translateX, {
+                    toValue: 5,
+                    duration: 550,
+                    easing: Easing.linear,
+                    useNativeDriver: true,
+                }),
+                Animated.timing(bee.translateY, {
+                    toValue: -5,
+                    duration: 550,
+                    easing: Easing.linear,
+                    useNativeDriver: true,
+                }),
+                Animated.timing(bee.rotation, {
+                    toValue: 5,
+                    duration: 550,
+                    easing: Easing.linear,
+                    useNativeDriver: true,
+                }),
+            ]),
+
+            // Phase 3: Approach target position (slowing down)
+            Animated.parallel([
+                Animated.timing(bee.translateX, {
+                    toValue: 3,
+                    duration: 600,
+                    useNativeDriver: true,
+                }),
+                Animated.timing(bee.translateY, {
+                    toValue: -3,
+                    duration: 600,
+                    useNativeDriver: true,
+                }),
+                Animated.timing(bee.rotation, {
+                    toValue: -3,
+                    duration: 600,
+                    useNativeDriver: true,
+                }),
+            ]),
+
+            // Phase 5: Landing (settle down gently)
+            Animated.parallel([
+                Animated.spring(bee.translateX, {
+                    toValue: 0,
+                    useNativeDriver: true,
+                    tension: 15,
+                    friction: 8,
+                }),
+                Animated.spring(bee.translateY, {
+                    toValue: 0,
+                    useNativeDriver: true,
+                    tension: 15,
+                    friction: 8,
+                }),
+                Animated.spring(bee.rotation, {
+                    toValue: 0,
+                    useNativeDriver: true,
+                    tension: 20,
+                    friction: 7,
+                }),
+            ]),
+        ]);
+
+        beeAnimationRef.current = animation.start(() => {
+            setBeesAnimating(false);
+        });
+    }, []);
+
+    // Animate bees flying away when card is swiped
+    const animateBeesAway = useCallback((positions: BeePosition[], callback?: () => void) => {
+        setBeesAnimating(true);
+
+        // Create animations for each bee to fly away
+        const animations = positions.map((bee, index) => {
+            // Random exit direction
+            const exitDirections = [
+                { x: -300, y: -400 },  // Top-left
+                { x: 300, y: -400 },   // Top-right
+                { x: -400, y: -200 },  // Mid-left
+                { x: 400, y: -200 },   // Mid-right
+                { x: 0, y: -500 },     // Straight up
+            ];
+
+            const exitPos = exitDirections[index % exitDirections.length];
+
+            return Animated.parallel([
+                Animated.timing(bee.translateX, {
+                    toValue: exitPos.x,
+                    duration: 600,
+                    useNativeDriver: true,
+                }),
+                Animated.timing(bee.translateY, {
+                    toValue: exitPos.y,
+                    duration: 600,
+                    useNativeDriver: true,
+                }),
+                Animated.timing(bee.opacity, {
+                    toValue: 0,
+                    duration: 400,
+                    useNativeDriver: true,
+                }),
+                Animated.timing(bee.rotation, {
+                    toValue: (Math.random() - 0.5) * 120,
+                    duration: 600,
+                    useNativeDriver: true,
+                }),
+                Animated.timing(bee.scale, {
+                    toValue: 0.3,
+                    duration: 600,
+                    useNativeDriver: true,
+                }),
+            ]);
+        });
+
+        beeAnimationRef.current = Animated.stagger(50, animations).start(() => {
+            setBeesAnimating(false);
+            callback?.();
+        });
+    }, []);
+
+
     const loadData = useCallback(async (forceReload = false) => {
         // Skip if already loaded and not forcing reload
         if (hasInitiallyLoaded.current && !forceReload) {
@@ -211,6 +482,20 @@ export default function HomeScreen() {
     const currentWord = words[currentWordIndex];
     const nextWord = words[(currentWordIndex + 1) % Math.max(words.length, 1)];
 
+    // Initialize bees when component mounts or word changes
+    useEffect(() => {
+        if (currentWord && !isLoading && words.length > 0) {
+            // Generate new positions
+            const newPositions = generateBeePositions();
+            setBeePositions(newPositions);
+
+            // Animate them in after a short delay
+            setTimeout(() => {
+                animateBeesIn(newPositions);
+            }, 300);
+        }
+    }, [currentWordIndex, currentWord, isLoading, words.length, generateBeePositions, animateBeesIn]);
+
     // Swipe animation setup
     const position = useRef(new Animated.ValueXY()).current;
     const rotate = position.x.interpolate({
@@ -225,6 +510,11 @@ export default function HomeScreen() {
 
     const swipeCard = useCallback(async (direction: 'left' | 'right') => {
         const x = direction === 'right' ? SCREEN_WIDTH * 1.5 : -SCREEN_WIDTH * 1.5;
+
+        // Trigger bees to fly away first
+        if (beePositions.length > 0) {
+            animateBeesAway(beePositions);
+        }
 
         Animated.timing(position, {
             toValue: { x, y: 0 },
@@ -273,7 +563,7 @@ export default function HomeScreen() {
                 await loadData(true);
             }
         });
-    }, [currentWord, currentLevel, currentWordIndex, words.length, loadData, position]);
+    }, [currentWord, currentLevel, currentWordIndex, words.length, loadData, position, beePositions, animateBeesAway]);
 
     const resetPosition = useCallback(() => {
         Animated.spring(position, {
@@ -592,6 +882,44 @@ export default function HomeScreen() {
                                     <Text style={[styles.exampleButtonText, { color: colors.text }]}>EXAMPLE SENTENCES</Text>
                                 </TouchableOpacity>
                             </View>
+
+                            {/* Bees */}
+                            {beePositions.map((bee) => {
+                                const animation = createSwarmAnimation(beeColor, !beesAnimating);
+
+                                return (
+                                    <Animated.View
+                                        key={bee.id}
+                                        style={[
+                                            styles.beeContainer,
+                                            {
+                                                left: bee.x,
+                                                top: bee.y,
+                                                transform: [
+                                                    { translateX: bee.translateX },
+                                                    { translateY: bee.translateY },
+                                                    {
+                                                        rotate: bee.rotation.interpolate({
+                                                            inputRange: [-360, 360],
+                                                            outputRange: ['-360deg', '360deg'],
+                                                        })
+                                                    },
+                                                    { scale: bee.scale },
+                                                ],
+                                                opacity: bee.opacity,
+                                            },
+                                        ]}
+                                    >
+                                        <LottieView
+                                            source={animation}
+                                            style={styles.beeAnimation}
+                                            autoPlay={beesAnimating}
+                                            loop={true}
+                                            speed={1.5}
+                                        />
+                                    </Animated.View>
+                                );
+                            })}
                         </View>
                     </Animated.View>
                 )}
@@ -922,5 +1250,17 @@ const styles = StyleSheet.create({
         borderRadius: 22,
         alignItems: 'center',
         justifyContent: 'center',
+    },
+    // Bee styles
+    beeContainer: {
+        position: 'absolute',
+        width: 30,
+        height: 27,
+        zIndex: 100,
+        pointerEvents: 'none',
+    },
+    beeAnimation: {
+        width: 30,
+        height: 27,
     },
 });
