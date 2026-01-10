@@ -31,7 +31,8 @@ import {
     Level,
     getStoredVocabulary,
     shuffleArray,
-    isVocabularyGenerated
+    isVocabularyGenerated,
+    generateVocabulary
 } from '../services/vocabularyService';
 import * as Speech from 'expo-speech';
 import * as Network from 'expo-network';
@@ -117,7 +118,7 @@ export default function HomeScreen() {
         const bee = positions[0];
 
         // Set initial off-screen position (coming from left)
-        bee.translateX.setValue(-350);
+        bee.translateX.setValue(-SCREEN_WIDTH);
         bee.translateY.setValue(-250 + Math.random() * 500); // Random height between 50-200
         bee.opacity.setValue(1);
         bee.rotation.setValue(-20);
@@ -353,9 +354,21 @@ export default function HomeScreen() {
             // Check if vocabulary is generated
             const hasVocab = await isVocabularyGenerated();
             if (!hasVocab) {
-                console.log('No vocabulary generated yet');
-                setIsLoading(false);
-                return;
+                console.log('No vocabulary generated yet - attempting to regenerate...');
+
+                // Try to get language preferences from AsyncStorage or Firebase
+                const nativeLanguage = await AsyncStorage.getItem('@native_language');
+                const targetLanguage = await AsyncStorage.getItem('@target_language');
+
+                if (nativeLanguage && targetLanguage) {
+                    console.log(`Regenerating vocabulary: ${nativeLanguage} -> ${targetLanguage}`);
+                    await generateVocabulary(nativeLanguage, targetLanguage);
+                    console.log('Vocabulary regenerated successfully');
+                } else {
+                    console.log('No stored language preferences found');
+                    setIsLoading(false);
+                    return;
+                }
             }
 
             // Get current level
@@ -581,7 +594,12 @@ export default function HomeScreen() {
 
     const panResponder = useRef(
         PanResponder.create({
-            onStartShouldSetPanResponder: () => true,
+            onStartShouldSetPanResponder: () => false,
+            onMoveShouldSetPanResponderCapture: (_, gesture) => {
+                // Use Capture phase to intercept the gesture before children can lock it in.
+                // If the user drags more than 10px, execute the swipe and cancel the button press.
+                return Math.abs(gesture.dx) > 10 || Math.abs(gesture.dy) > 10;
+            },
             onPanResponderMove: (_, gesture) => {
                 position.setValue({ x: gesture.dx, y: gesture.dy * 0.3 });
             },
@@ -639,11 +657,37 @@ export default function HomeScreen() {
                         borderWidth: 1,
                     }
                 ]}>
-                    <View style={styles.cardCenter}>
-                        <Text style={[styles.wordTitle, { color: colors.text }]}>{nextWord.word}</Text>
-                        <View style={styles.translationRow}>
-                            <MaterialIcons name="translate" size={24} color={colors.primary} />
-                            <Text style={[styles.wordType, { color: colors.primary }]}>{nextWord.translation}</Text>
+                    <View style={styles.cardContentAbove}>
+                        {/* Upper Section - Word and Translation */}
+                        <View style={styles.cardUpperSection}>
+                            <Text style={[styles.wordTitle, { color: colors.text }]}>{nextWord.word}</Text>
+                            <View style={styles.translationRow}>
+                                <MaterialIcons name="translate" size={20} color={colors.primary} />
+                                <Text style={[styles.translationText, { color: colors.primary }]}>{nextWord.translation}</Text>
+                            </View>
+                        </View>
+
+                        {/* Lower Section - Example Sentences with Gray Background */}
+                        <View style={[styles.cardLowerSection, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.04)' }]}>
+                            <View style={styles.exampleSentencesContainer}>
+                                <Text style={[styles.cardExampleText, { color: colors.text }]}>
+                                    {nextWord.sentence1}
+                                </Text>
+                                <View style={[styles.thinDivider, { backgroundColor: colors.border }]} />
+                                <Text style={[styles.cardTranslationText, { color: colors.textSecondary }]}>
+                                    {nextWord.nativeSentence1}
+                                </Text>
+
+                                {/* Audio button - positioned in corner */}
+                                <View style={[styles.cardAudioButton]}>
+                                    <MaterialIcons name="volume-up" size={18} color={colors.primary} />
+                                </View>
+                            </View>
+
+                            {/* More Example Button placeholder */}
+                            <View style={[styles.fullWidthButton, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)' }]}>
+                                <Text style={[styles.fullWidthButtonText, { color: colors.text }]}>MORE EXAMPLE</Text>
+                            </View>
                         </View>
                     </View>
                 </View>
@@ -855,32 +899,63 @@ export default function HomeScreen() {
 
                             {/* Card Content - above overlay */}
                             <View style={styles.cardContentAbove}>
-                                <TouchableOpacity
-                                    style={styles.wordTitleRow}
-                                    onPress={() => Speech.speak(currentWord.word, { language: 'en-US' })}
-                                    activeOpacity={0.7}
-                                >
-                                    <Text style={[styles.wordTitle, { color: colors.text }]}>{currentWord.word}</Text>
-                                    <MaterialIcons name="volume-up" size={24} color={colors.primary} />
-                                </TouchableOpacity>
-                                <View style={styles.translationRow}>
-                                    <MaterialIcons name="translate" size={20} color={colors.primary} />
-                                    <Text style={[styles.translationText, { color: colors.primary }]}>{currentWord.translation}</Text>
+                                {/* Upper Section - Word and Translation */}
+                                <View style={styles.cardUpperSection}>
+                                    <TouchableOpacity
+                                        style={styles.wordTitleRow}
+                                        onPress={() => Speech.speak(currentWord.word, { language: 'en-US' })}
+                                        activeOpacity={0.7}
+                                    >
+                                        <Text style={[styles.wordTitle, { color: colors.text }]}>{currentWord.word}</Text>
+                                        <MaterialIcons name="volume-up" size={24} color={colors.primary} />
+                                    </TouchableOpacity>
+                                    <View style={styles.translationRow}>
+                                        <MaterialIcons name="translate" size={20} color={colors.primary} />
+                                        <Text style={[styles.translationText, { color: colors.primary }]}>{currentWord.translation}</Text>
+                                    </View>
                                 </View>
 
-                                <TouchableOpacity
-                                    style={styles.exampleButton}
-                                    onPress={() => navigation.navigate('ExampleSentences', {
-                                        word: currentWord.word,
-                                        translation: currentWord.translation,
-                                        sentence1: currentWord.sentence1,
-                                        sentence2: currentWord.sentence2,
-                                        nativeSentence1: currentWord.nativeSentence1,
-                                        nativeSentence2: currentWord.nativeSentence2
-                                    })}
-                                >
-                                    <Text style={[styles.exampleButtonText, { color: colors.text }]}>EXAMPLE SENTENCES</Text>
-                                </TouchableOpacity>
+                                {/* Lower Section - Example Sentences with Gray Background */}
+                                <View style={[styles.cardLowerSection, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.04)' }]}>
+                                    <View style={styles.exampleSentencesContainer}>
+                                        {/* Example Sentence */}
+                                        <Text style={[styles.cardExampleText, { color: colors.text }]}>
+                                            {currentWord.sentence1}
+                                        </Text>
+
+                                        {/* Thin Divider Line */}
+                                        <View style={[styles.thinDivider, { backgroundColor: colors.border }]} />
+
+                                        {/* Translation */}
+                                        <Text style={[styles.cardTranslationText, { color: colors.textSecondary }]}>
+                                            {currentWord.nativeSentence1}
+                                        </Text>
+
+                                        {/* Audio button - positioned in corner */}
+                                        <TouchableOpacity
+                                            style={[styles.cardAudioButton]}
+                                            onPress={() => Speech.speak(currentWord.sentence1, { language: 'en-US' })}
+                                            activeOpacity={0.7}
+                                        >
+                                            <MaterialIcons name="volume-up" size={18} color={colors.primary} />
+                                        </TouchableOpacity>
+                                    </View>
+
+                                    {/* More Example Button - Full Width at Bottom */}
+                                    <TouchableOpacity
+                                        style={[styles.fullWidthButton, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)' }]}
+                                        onPress={() => navigation.navigate('ExampleSentences', {
+                                            word: currentWord.word,
+                                            translation: currentWord.translation,
+                                            sentence1: currentWord.sentence1,
+                                            sentence2: currentWord.sentence2,
+                                            nativeSentence1: currentWord.nativeSentence1,
+                                            nativeSentence2: currentWord.nativeSentence2
+                                        })}
+                                    >
+                                        <Text style={[styles.fullWidthButtonText, { color: colors.text }]}>MORE EXAMPLE</Text>
+                                    </TouchableOpacity>
+                                </View>
                             </View>
 
                             {/* Bees */}
@@ -1075,8 +1150,9 @@ const styles = StyleSheet.create({
     heroCard: {
         flex: 1,
         borderRadius: 32,
-        padding: 24,
+        padding: 0,
         justifyContent: 'center',
+        overflow: 'hidden', // Ensure children adhere to border radius
     },
     cardCenter: {
         flex: 1,
@@ -1086,9 +1162,8 @@ const styles = StyleSheet.create({
     },
     cardContentAbove: {
         flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        paddingVertical: 20,
+        width: '100%',
+        justifyContent: 'space-between',
         zIndex: 200,
     },
     wordTitle: {
@@ -1262,5 +1337,75 @@ const styles = StyleSheet.create({
     beeAnimation: {
         width: 30,
         height: 27,
+    },
+    // Two-section card styles
+    cardUpperSection: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingHorizontal: 24,
+        paddingTop: 10,
+        paddingBottom: 10,
+    },
+    cardLowerSection: {
+        width: '100%',
+        paddingTop: 20,
+        paddingHorizontal: 0,
+        backgroundColor: 'rgba(0,0,0,0.05)',
+        alignItems: 'center',
+        borderBottomLeftRadius: 32,
+        borderBottomRightRadius: 32,
+        overflow: 'hidden',
+    },
+    exampleSentencesContainer: {
+        width: '100%',
+        paddingHorizontal: 20,
+        paddingBottom: 12,
+        alignItems: 'center',
+    },
+    cardExampleText: {
+        fontFamily: FONT_FAMILY,
+        fontSize: 15,
+        lineHeight: 22,
+        textAlign: 'center',
+    },
+    thinDivider: {
+        height: 1,
+        width: '100%',
+        marginVertical: 10,
+        opacity: 0.5,
+    },
+    cardTranslationText: {
+        fontFamily: FONT_FAMILY,
+        fontSize: 14,
+        fontStyle: 'italic',
+        lineHeight: 20,
+        textAlign: 'center',
+    },
+    cardAudioButton: {
+        position: 'absolute',
+        bottom: 12,
+        right: 12,
+        width: 32,
+        height: 18,
+        borderRadius: 16,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    fullWidthButton: {
+        width: '100%',
+        paddingVertical: 18,
+        paddingHorizontal: 0,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 8,
+        borderBottomLeftRadius: 32,
+        borderBottomRightRadius: 32,
+    },
+    fullWidthButtonText: {
+        fontFamily: FONT_FAMILY,
+        fontSize: 14,
+        fontWeight: '600',
+        letterSpacing: 0.5,
     },
 });

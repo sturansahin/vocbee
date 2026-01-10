@@ -1,5 +1,5 @@
 import React, { useState, useRef, useMemo } from 'react';
-import { View, Text, SafeAreaView, TouchableOpacity, ScrollView, StyleSheet, ActivityIndicator, Animated, Dimensions } from 'react-native';
+import { View, Text, SafeAreaView, TouchableOpacity, ScrollView, StyleSheet, ActivityIndicator, Animated, Easing, Dimensions } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../types';
@@ -129,90 +129,148 @@ export const LoginScreen = () => {
     // Create realistic bee fly-away animation
     Animated.sequence([
       // Wait a moment for wings to start flapping
-      Animated.delay(150),
+      Animated.delay(100),
 
-      // Move left with rotation (face left) - like hovering
+      // Phase 1: Initial hover - small circular movement
       Animated.parallel([
         Animated.timing(translateX, {
-          toValue: -50,
-          duration: 350,
-          useNativeDriver: true,
-        }),
-        Animated.timing(rotation, {
-          toValue: -25, // Tilt left
-          duration: 350,
+          toValue: -15,
+          duration: 300,
+          easing: Easing.bezier(0.25, 0.1, 0.25, 1),
           useNativeDriver: true,
         }),
         Animated.timing(translateY, {
-          toValue: -15, // Slight up movement
-          duration: 350,
+          toValue: -10,
+          duration: 300,
+          easing: Easing.bezier(0.25, 0.1, 0.25, 1),
+          useNativeDriver: true,
+        }),
+        Animated.timing(rotation, {
+          toValue: -15,
+          duration: 300,
+          easing: Easing.bezier(0.25, 0.1, 0.25, 1),
           useNativeDriver: true,
         }),
       ]),
 
-      // Move right with rotation (face right) - swoop across
+      // Phase 2: Exploration flight - right and up
       Animated.parallel([
         Animated.timing(translateX, {
-          toValue: 70,
-          duration: 450,
-          useNativeDriver: true,
-        }),
-        Animated.timing(rotation, {
-          toValue: 25, // Tilt right
-          duration: 450,
+          toValue: 25,
+          duration: 400,
+          easing: Easing.bezier(0.42, 0, 0.58, 1),
           useNativeDriver: true,
         }),
         Animated.timing(translateY, {
-          toValue: 10, // Dip down slightly
-          duration: 450,
+          toValue: -25,
+          duration: 400,
+          easing: Easing.bezier(0.42, 0, 0.58, 1),
+          useNativeDriver: true,
+        }),
+        Animated.timing(rotation, {
+          toValue: 10,
+          duration: 400,
+          easing: Easing.bezier(0.42, 0, 0.58, 1),
           useNativeDriver: true,
         }),
       ]),
 
-      // Prepare for takeoff - center and tilt up
+      // Phase 3: Mid-flight adjustment - left dip
       Animated.parallel([
         Animated.timing(translateX, {
-          toValue: 20,
-          duration: 200,
-          useNativeDriver: true,
-        }),
-        Animated.timing(rotation, {
-          toValue: -45, // Tilt up-left for takeoff angle
-          duration: 200,
+          toValue: -10,
+          duration: 350,
+          easing: Easing.bezier(0.42, 0, 0.58, 1),
           useNativeDriver: true,
         }),
         Animated.timing(translateY, {
+          toValue: -15,
+          duration: 350,
+          easing: Easing.bezier(0.42, 0, 0.58, 1),
+          useNativeDriver: true,
+        }),
+        Animated.timing(rotation, {
           toValue: -20,
-          duration: 200,
+          duration: 350,
+          easing: Easing.bezier(0.42, 0, 0.58, 1),
           useNativeDriver: true,
         }),
       ]),
 
-      // Fly away - diagonal up-left with spin
+      // Phase 4: Another exploration - right side
       Animated.parallel([
-        Animated.timing(translateY, {
-          toValue: -SCREEN_HEIGHT,
-          duration: 700,
+        Animated.timing(translateX, {
+          toValue: 15,
+          duration: 380,
+          easing: Easing.bezier(0.42, 0, 0.58, 1),
           useNativeDriver: true,
         }),
-        Animated.timing(translateX, {
-          toValue: -100, // Fly off to the left side
-          duration: 700,
+        Animated.timing(translateY, {
+          toValue: -30,
+          duration: 380,
+          easing: Easing.bezier(0.42, 0, 0.58, 1),
           useNativeDriver: true,
         }),
         Animated.timing(rotation, {
-          toValue: -60, // Keep angled during flight
-          duration: 700,
+          toValue: 8,
+          duration: 380,
+          easing: Easing.bezier(0.42, 0, 0.58, 1),
+          useNativeDriver: true,
+        }),
+      ]),
+
+      // Phase 5: Prepare for final ascent - center position
+      Animated.parallel([
+        Animated.timing(translateX, {
+          toValue: 0,
+          duration: 300,
+          easing: Easing.bezier(0.42, 0, 0.58, 1),
+          useNativeDriver: true,
+        }),
+        Animated.timing(translateY, {
+          toValue: -40,
+          duration: 300,
+          easing: Easing.bezier(0.42, 0, 0.58, 1),
+          useNativeDriver: true,
+        }),
+        Animated.timing(rotation, {
+          toValue: -5,
+          duration: 300,
+          easing: Easing.bezier(0.42, 0, 0.58, 1),
+          useNativeDriver: true,
+        }),
+      ]),
+
+      // Phase 6: Final ascent - smooth exit upward
+      Animated.parallel([
+        Animated.timing(translateY, {
+          toValue: -SCREEN_HEIGHT * 1.2,
+          duration: 800,
+          easing: Easing.bezier(0.33, 0, 0.2, 1),
+          useNativeDriver: true,
+        }),
+        Animated.timing(translateX, {
+          toValue: -30,
+          duration: 800,
+          easing: Easing.bezier(0.33, 0, 0.2, 1),
+          useNativeDriver: true,
+        }),
+        Animated.timing(rotation, {
+          toValue: -15,
+          duration: 800,
+          easing: Easing.bezier(0.33, 0, 0.2, 1),
           useNativeDriver: true,
         }),
         Animated.timing(scale, {
-          toValue: 0.3, // Get smaller as it flies away
-          duration: 700,
+          toValue: 0.4,
+          duration: 800,
+          easing: Easing.bezier(0.33, 0, 0.2, 1),
           useNativeDriver: true,
         }),
         Animated.timing(opacity, {
           toValue: 0,
-          duration: 500,
+          duration: 600,
+          easing: Easing.bezier(0.33, 0, 0.2, 1),
           useNativeDriver: true,
         }),
       ]),
