@@ -7,8 +7,10 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import * as NavigationBar from 'expo-navigation-bar';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Notifications from 'expo-notifications';
+import * as Font from 'expo-font';
 import { useFonts, SpecialGothicExpandedOne_400Regular } from '@expo-google-fonts/special-gothic-expanded-one';
 import { RubikMonoOne_400Regular } from '@expo-google-fonts/rubik-mono-one';
+import { MaterialIcons, MaterialCommunityIcons, FontAwesome5, Feather, Ionicons } from '@expo/vector-icons';
 import { RootStackParamList } from './types';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
 import { AuthProvider, useAuth } from './context/AuthContext';
@@ -88,11 +90,34 @@ import { OfflineNotice } from './components/OfflineNotice';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 export default function App() {
-  // Load fonts
+  // Load custom fonts
   const [fontsLoaded] = useFonts({
     SpecialGothicExpandedOne_400Regular,
     RubikMonoOne_400Regular,
   });
+
+  // Preload icon fonts
+  const [iconFontsLoaded, setIconFontsLoaded] = React.useState(false);
+
+  useEffect(() => {
+    async function loadIconFonts() {
+      try {
+        await Font.loadAsync({
+          ...MaterialIcons.font,
+          ...MaterialCommunityIcons.font,
+          ...FontAwesome5.font,
+          ...Feather.font,
+          ...Ionicons.font,
+        });
+        setIconFontsLoaded(true);
+      } catch (error) {
+        console.error('Error loading icon fonts:', error);
+        // Still allow app to start even if icon fonts fail
+        setIconFontsLoaded(true);
+      }
+    }
+    loadIconFonts();
+  }, []);
 
   // Set Android navigation bar to transparent
   useEffect(() => {
@@ -103,14 +128,15 @@ export default function App() {
     }
   }, []);
 
-  // Hide splash screen when fonts are loaded
+  // Hide splash screen when all fonts are loaded
   const onLayoutRootView = useCallback(async () => {
-    if (fontsLoaded) {
+    if (fontsLoaded && iconFontsLoaded) {
       await SplashScreen.hideAsync();
     }
-  }, [fontsLoaded]);
+  }, [fontsLoaded, iconFontsLoaded]);
 
-  if (!fontsLoaded) {
+  // Wait for both custom fonts and icon fonts to load
+  if (!fontsLoaded || !iconFontsLoaded) {
     return null;
   }
 

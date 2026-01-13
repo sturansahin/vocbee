@@ -147,6 +147,25 @@ export const fetchAndSaveUserData = async (userId: string): Promise<UserData | n
             };
             await AsyncStorage.setItem(`profile_${userId}`, JSON.stringify(newProfile));
 
+            // Restore language preferences from Firebase to AsyncStorage
+            if (data.preferences) {
+                const { nativeLanguage, targetLanguage } = data.preferences;
+                if (nativeLanguage && targetLanguage) {
+                    await AsyncStorage.setItem('@native_language', nativeLanguage);
+                    await AsyncStorage.setItem('@target_language', targetLanguage);
+                    console.log(`Restored language preferences: ${nativeLanguage} -> ${targetLanguage}`);
+
+                    // Check if vocabulary needs to be generated
+                    const { isVocabularyGenerated, generateVocabulary } = require('./vocabularyService');
+                    const hasVocab = await isVocabularyGenerated();
+                    if (!hasVocab) {
+                        console.log('Generating vocabulary for restored preferences...');
+                        await generateVocabulary(nativeLanguage, targetLanguage);
+                        console.log('Vocabulary generated successfully');
+                    }
+                }
+            }
+
             // Restore progress from Firebase to local progressService
             if (data.progress) {
                 await restoreProgressFromFirebase(

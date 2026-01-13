@@ -47,8 +47,10 @@ export default function FavoritesScreen() {
     };
 
     const handleRemoveFavorite = async (wordId: number, level: Level) => {
+        // Optimistically update UI by removing from state
+        setFavorites(prev => prev.filter(item => !(item.id === wordId && item.level === level)));
+        // Remove from storage in background
         await removeFromFavorites(wordId, level);
-        await loadFavorites(); // Reload list
     };
 
     const renderFavoriteItem = ({ item }: { item: VocabularyWord & { level: Level } }) => (

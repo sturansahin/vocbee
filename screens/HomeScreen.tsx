@@ -343,6 +343,12 @@ export default function HomeScreen() {
     }, []);
 
 
+    // Memoize bee animation to prevent recreation on each render (fixes white flash)
+    const beeAnimation = useMemo(() => {
+        return createSwarmAnimation(beeColor, !beesAnimating);
+    }, [beesAnimating, beeColor]);
+
+
     const loadData = useCallback(async (forceReload = false) => {
         // Skip if already loaded and not forcing reload
         if (hasInitiallyLoaded.current && !forceReload) {
@@ -595,10 +601,10 @@ export default function HomeScreen() {
     const panResponder = useRef(
         PanResponder.create({
             onStartShouldSetPanResponder: () => false,
-            onMoveShouldSetPanResponderCapture: (_, gesture) => {
-                // Use Capture phase to intercept the gesture before children can lock it in.
-                // If the user drags more than 10px, execute the swipe and cancel the button press.
-                return Math.abs(gesture.dx) > 10 || Math.abs(gesture.dy) > 10;
+            onMoveShouldSetPanResponder: (_, gesture) => {
+                // Allow TouchableOpacity children to handle taps by not using Capture
+                // Only take over for swipe gestures (larger movement threshold)
+                return Math.abs(gesture.dx) > 15 || Math.abs(gesture.dy) > 15;
             },
             onPanResponderMove: (_, gesture) => {
                 position.setValue({ x: gesture.dx, y: gesture.dy * 0.3 });
@@ -662,7 +668,7 @@ export default function HomeScreen() {
                         <View style={styles.cardUpperSection}>
                             <Text style={[styles.wordTitle, { color: colors.text }]}>{nextWord.word}</Text>
                             <View style={styles.translationRow}>
-                                <MaterialIcons name="translate" size={20} color={colors.primary} />
+                                <MaterialIcons name="translate" size={24} color={colors.primary} />
                                 <Text style={[styles.translationText, { color: colors.primary }]}>{nextWord.translation}</Text>
                             </View>
                         </View>
@@ -883,7 +889,7 @@ export default function HomeScreen() {
                                 style={[
                                     styles.swipeOverlay,
                                     {
-                                        backgroundColor: isDarkMode ? '#1a3d22' : '#d5ffdfff',
+                                        backgroundColor: isDarkMode ? '#2a5c3a' : '#ddffddff',
                                         opacity: position.x.interpolate({
                                             inputRange: [0, SWIPE_THRESHOLD],
                                             outputRange: [0, 1],
@@ -893,17 +899,30 @@ export default function HomeScreen() {
                                 ]}
                             >
                                 <View style={styles.swipeLabelContainer}>
-                                    <Text style={[styles.learnedText, { color: isDarkMode ? '#5eff82' : '#35de5dff' }]}>LEARNED</Text>
+                                    <Text style={[styles.learnedText, { color: isDarkMode ? '#8aff8a' : '#6bff6bff' }]}>LEARNED</Text>
                                 </View>
                             </Animated.View>
 
                             {/* Card Content - above overlay */}
-                            <View style={styles.cardContentAbove}>
+                            <View style={styles.cardContentAbove} pointerEvents="box-none">
                                 {/* Upper Section - Word and Translation */}
                                 <View style={styles.cardUpperSection}>
                                     <TouchableOpacity
                                         style={styles.wordTitleRow}
-                                        onPress={() => Speech.speak(currentWord.word, { language: 'en-US' })}
+                                        onPress={async () => {
+                                            console.log('Word button pressed:', currentWord.word);
+                                            try {
+                                                await Speech.stop(); // Stop any ongoing speech
+                                                await Speech.speak(currentWord.word, {
+                                                    language: 'en-US',
+                                                    pitch: 1.0,
+                                                    rate: 0.75,
+                                                });
+                                                console.log('Speech started successfully');
+                                            } catch (error) {
+                                                console.error('Speech error:', error);
+                                            }
+                                        }}
                                         activeOpacity={0.7}
                                     >
                                         <Text style={[styles.wordTitle, { color: colors.text }]}>{currentWord.word}</Text>
@@ -934,7 +953,20 @@ export default function HomeScreen() {
                                         {/* Audio button - positioned in corner */}
                                         <TouchableOpacity
                                             style={[styles.cardAudioButton]}
-                                            onPress={() => Speech.speak(currentWord.sentence1, { language: 'en-US' })}
+                                            onPress={async () => {
+                                                console.log('Sentence button pressed:', currentWord.sentence1);
+                                                try {
+                                                    await Speech.stop(); // Stop any ongoing speech
+                                                    await Speech.speak(currentWord.sentence1, {
+                                                        language: 'en-US',
+                                                        pitch: 1.0,
+                                                        rate: 0.75,
+                                                    });
+                                                    console.log('Speech started successfully');
+                                                } catch (error) {
+                                                    console.error('Speech error:', error);
+                                                }
+                                            }}
                                             activeOpacity={0.7}
                                         >
                                             <MaterialIcons name="volume-up" size={18} color={colors.primary} />
@@ -957,45 +989,41 @@ export default function HomeScreen() {
                                     </TouchableOpacity>
                                 </View>
                             </View>
-
-                            {/* Bees */}
-                            {beePositions.map((bee) => {
-                                const animation = createSwarmAnimation(beeColor, !beesAnimating);
-
-                                return (
-                                    <Animated.View
-                                        key={bee.id}
-                                        style={[
-                                            styles.beeContainer,
-                                            {
-                                                left: bee.x,
-                                                top: bee.y,
-                                                transform: [
-                                                    { translateX: bee.translateX },
-                                                    { translateY: bee.translateY },
-                                                    {
-                                                        rotate: bee.rotation.interpolate({
-                                                            inputRange: [-360, 360],
-                                                            outputRange: ['-360deg', '360deg'],
-                                                        })
-                                                    },
-                                                    { scale: bee.scale },
-                                                ],
-                                                opacity: bee.opacity,
-                                            },
-                                        ]}
-                                    >
-                                        <LottieView
-                                            source={animation}
-                                            style={styles.beeAnimation}
-                                            autoPlay={beesAnimating}
-                                            loop={true}
-                                            speed={1.5}
-                                        />
-                                    </Animated.View>
-                                );
-                            })}
                         </View>
+
+                        {/* Bees - Moved outside heroCard to avoid clipping by overflow:hidden */}
+                        {beePositions.map((bee) => (
+                            <Animated.View
+                                key={bee.id}
+                                style={[
+                                    styles.bee,
+                                    {
+                                        left: bee.x,
+                                        top: bee.y,
+                                        transform: [
+                                            { translateX: bee.translateX },
+                                            { translateY: bee.translateY },
+                                            {
+                                                rotate: bee.rotation.interpolate({
+                                                    inputRange: [-360, 360],
+                                                    outputRange: ['-360deg', '360deg'],
+                                                })
+                                            },
+                                            { scale: bee.scale },
+                                        ],
+                                        opacity: bee.opacity,
+                                    },
+                                ]}
+                            >
+                                <LottieView
+                                    source={beeAnimation}
+                                    style={styles.beeAnim}
+                                    autoPlay={beesAnimating}
+                                    loop={true}
+                                    speed={1.5}
+                                />
+                            </Animated.View>
+                        ))}
                     </Animated.View>
                 )}
             </View>
@@ -1168,7 +1196,7 @@ const styles = StyleSheet.create({
     },
     wordTitle: {
         fontFamily: FONT_FAMILY,
-        fontSize: 32,
+        fontSize: 36,
         marginBottom: 4,
         letterSpacing: 1,
         textAlign: 'center',
@@ -1186,12 +1214,12 @@ const styles = StyleSheet.create({
     },
     translationText: {
         fontFamily: FONT_FAMILY,
-        fontSize: 20,
+        fontSize: 24,
         fontWeight: '500',
     },
     wordDefinition: {
         fontFamily: FONT_FAMILY,
-        fontSize: 16,
+        fontSize: 24,
         fontWeight: '500',
         textAlign: 'center',
         lineHeight: 24,
@@ -1407,5 +1435,15 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: '600',
         letterSpacing: 0.5,
+    },
+    bee: {
+        position: 'absolute',
+        width: 35,
+        height: 35,
+        zIndex: 300,
+    },
+    beeAnim: {
+        width: 35,
+        height: 35,
     },
 });

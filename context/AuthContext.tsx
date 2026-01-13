@@ -184,7 +184,6 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
             // Clear local storage first to prevent old data from persisting
             await clearAllLocalData();
-            await resetProgress();
 
             const userCredential = await signInWithEmailAndPassword(auth, email, password);
 
