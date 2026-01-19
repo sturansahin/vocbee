@@ -2,7 +2,6 @@ import React, { useState, useRef } from 'react';
 import {
   View,
   Text,
-  SafeAreaView,
   StyleSheet,
   TouchableOpacity,
   FlatList,
@@ -10,6 +9,8 @@ import {
   NativeSyntheticEvent,
   NativeScrollEvent
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Button } from '../components/UIComponents';
 import { COLORS } from '../constants';
 import { useNavigation } from '@react-navigation/native';
@@ -19,6 +20,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { SwarmLogo } from '../components/SwarmLogo';
 import { FONT_FAMILY } from '../utils/typography';
 import { useTheme } from '../context/ThemeContext';
+import { STORAGE_KEYS } from '../services/storageKeys';
 
 type OnboardingNavigationProp = StackNavigationProp<RootStackParamList, 'Onboarding'>;
 
@@ -51,22 +53,35 @@ export default function OnboardingScreen() {
   const [currentStep, setCurrentStep] = useState(0);
   const flatListRef = useRef<FlatList>(null);
 
+  console.log('[Onboarding] Rendering...');
+
   const isLastStep = currentStep === ONBOARDING_STEPS.length - 1;
 
-  const handleNext = () => {
+  const markOnboardingAsSeen = async () => {
+    try {
+      await AsyncStorage.setItem(STORAGE_KEYS.HAS_SEEN_ONBOARDING, 'true');
+    } catch (error) {
+      console.error('Error marking onboarding as seen:', error);
+    }
+  };
+
+  const handleNext = async () => {
     if (currentStep < ONBOARDING_STEPS.length - 1) {
       flatListRef.current?.scrollToIndex({ index: currentStep + 1, animated: true });
       setCurrentStep(currentStep + 1);
     } else {
+      await markOnboardingAsSeen();
       navigation.navigate('Login');
     }
   };
 
-  const handleSkip = () => {
+  const handleSkip = async () => {
+    await markOnboardingAsSeen();
     navigation.navigate('Login');
   };
 
-  const handleStart = () => {
+  const handleStart = async () => {
+    await markOnboardingAsSeen();
     navigation.navigate('Login');
   };
 

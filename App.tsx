@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useRef } from 'react';
+import React, { useEffect, useCallback, useRef, useState } from 'react';
 import { Platform, View, Text, AppState, AppStateStatus } from 'react-native';
 import { NavigationContainer, NavigationContainerRef } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -8,6 +8,7 @@ import * as NavigationBar from 'expo-navigation-bar';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Notifications from 'expo-notifications';
 import * as Font from 'expo-font';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFonts, SpecialGothicExpandedOne_400Regular } from '@expo-google-fonts/special-gothic-expanded-one';
 import { RubikMonoOne_400Regular } from '@expo-google-fonts/rubik-mono-one';
 import { MaterialIcons, MaterialCommunityIcons, FontAwesome5, Feather, Ionicons } from '@expo/vector-icons';
@@ -20,8 +21,10 @@ import {
   configureNotifications,
   handleNotificationResponse,
 } from './services/notificationService';
+import { STORAGE_KEYS } from './services/storageKeys';
 
 // Screens
+import CustomSplashScreen from './screens/SplashScreen';
 import OnboardingScreen from './screens/OnboardingScreen';
 import { LoginScreen, SignUpScreen } from './screens/AuthScreens';
 import { SetupScreen } from './screens/SetupScreens';
@@ -33,7 +36,7 @@ import LevelTestScreen from './screens/LevelTestScreen';
 import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
 
 // Configure notifications globally
-configureNotifications();
+// configureNotifications();
 
 // Keep splash screen visible while loading fonts
 SplashScreen.preventAutoHideAsync();
@@ -45,16 +48,112 @@ export const FONT_FAMILY = 'SpecialGothicExpandedOne_400Regular';
 
 // AppContent component to access auth context
 function AppContent() {
-  const { user } = useAuth();
+  const { user, userData, isLoading } = useAuth();
   const { isDarkMode } = useTheme();
   const appState = useRef(AppState.currentState);
   const navigationRef = useRef<NavigationContainerRef<RootStackParamList>>(null);
-  // ... existing effects ...
+
+  const [isAppReady, setIsAppReady] = useState(false);
+  const [initialRoute, setInitialRoute] = useState<keyof RootStackParamList>('Onboarding');
+  const [showSplash, setShowSplash] = useState(true);
+
+  // Determine initial route based on app state
+  useEffect(() => {
+    const determineInitialRoute = async () => {
+      try {
+        console.log('[App] Determining initial route...');
+        // Check if user has seen onboarding
+        const hasSeenOnboarding = await AsyncStorage.getItem(STORAGE_KEYS.HAS_SEEN_ONBOARDING);
+        console.log('[App] Has seen onboarding:', hasSeenOnboarding);
+
+        // Wait for auth to finish loading
+        if (isLoading) {
+          console.log('[App] Auth still loading, waiting...');
+          return;
+        }
+        console.log('[App] Auth loaded. User:', user ? 'logged in' : 'not logged in');
+
+        let route: keyof RootStackParamList = 'Onboarding';
+
+        if (!hasSeenOnboarding) {
+          // First time user - show onboarding
+          route = 'Onboarding';
+        } else if (user) {
+          // User is logged in
+          if (userData?.preferences) {
+            // Setup completed - go to home
+            route = 'MainTabs';
+          } else {
+            // Logged in but setup not completed
+            route = 'NativeLanguage';
+          }
+        } else {
+          // Has seen onboarding but not logged in
+          route = 'Login';
+        }
+
+        console.log('[App] Setting initial route to:', route);
+        setInitialRoute(route);
+        console.log('[App] App is ready!');
+        setIsAppReady(true);
+      } catch (error) {
+        console.error('Error determining initial route:', error);
+        // Default to onboarding on error
+        setInitialRoute('Onboarding');
+        setIsAppReady(true);
+      }
+    };
+
+    determineInitialRoute();
+  }, [user, userData, isLoading]);
+
+  // Auto-sync setup - run immediately when user is available
+  useEffect(() => {
+    if (!user) return;
+
+    // Run auto sync immediately
+    autoSync(user.uid);
+  }, [user]);
+
+  // Handle notification responses
+  useEffect(() => {
+    const subscription = Notifications.addNotificationResponseReceivedListener((response) => {
+      handleNotificationResponse(response);
+    });
+
+    return () => subscription.remove();
+  }, []);
+
+  // Handle app state changes for background sync
+  useEffect(() => {
+    const subscription = AppState.addEventListener('change', (nextAppState: AppStateStatus) => {
+      if (appState.current.match(/inactive|background/) && nextAppState === 'active') {
+        // App has come to foreground - trigger sync if user is logged in
+        if (user) {
+          autoSync(user.uid);
+        }
+      }
+      appState.current = nextAppState;
+    });
+
+    return () => {
+      subscription.remove();
+    };
+  }, [user]);
+
+  // Show splash screen while app is not ready
+  console.log('[App] Render - showSplash:', showSplash, 'isAppReady:', isAppReady);
+  if (showSplash || !isAppReady) {
+    return <CustomSplashScreen onFinish={() => { console.log('[App] Splash finished'); setShowSplash(false); }} />;
+  }
 
   return (
     <NavigationContainer ref={navigationRef}>
       <StatusBar style={isDarkMode ? "light" : "dark"} />
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Navigator
+        screenOptions={{ headerShown: false }}
+        initialRouteName={initialRoute}
+      >
         {/* Onboarding Flow */}
         <Stack.Screen name="Onboarding" component={OnboardingScreen} />
 

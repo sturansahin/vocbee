@@ -567,10 +567,11 @@ const styles = StyleSheet.create({
     marginBottom: 40,
   },
   lottieContainer: {
-    width: 100,
-    height: 92,
+    width: 140,
+    height: 130,
     alignItems: 'center',
     justifyContent: 'center',
+    overflow: 'hidden',
   },
   lottieAnimation: {
     width: 100,
