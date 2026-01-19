@@ -506,6 +506,7 @@ export const SetupScreen = () => {
                   contentContainerStyle={styles.wheelScrollContent}
                   decelerationRate="fast"
                   nestedScrollEnabled={true}
+                  snapToInterval={ITEM_HEIGHT}
                   onMomentumScrollEnd={(e) => {
                     const y = e.nativeEvent.contentOffset.y;
                     const index = Math.round(y / ITEM_HEIGHT);
@@ -537,6 +538,7 @@ export const SetupScreen = () => {
                   contentContainerStyle={styles.wheelScrollContent}
                   decelerationRate="fast"
                   nestedScrollEnabled={true}
+                  snapToInterval={ITEM_HEIGHT}
                   onMomentumScrollEnd={(e) => {
                     const y = e.nativeEvent.contentOffset.y;
                     const index = Math.round(y / ITEM_HEIGHT);
@@ -577,6 +579,7 @@ export const SetupScreen = () => {
                   contentContainerStyle={styles.wheelScrollContent}
                   decelerationRate="fast"
                   nestedScrollEnabled={true}
+                  snapToInterval={ITEM_HEIGHT}
                   onMomentumScrollEnd={(e) => {
                     const y = e.nativeEvent.contentOffset.y;
                     const index = Math.round(y / ITEM_HEIGHT);
@@ -608,6 +611,7 @@ export const SetupScreen = () => {
                   contentContainerStyle={styles.wheelScrollContent}
                   decelerationRate="fast"
                   nestedScrollEnabled={true}
+                  snapToInterval={ITEM_HEIGHT}
                   onMomentumScrollEnd={(e) => {
                     const y = e.nativeEvent.contentOffset.y;
                     const index = Math.round(y / ITEM_HEIGHT);

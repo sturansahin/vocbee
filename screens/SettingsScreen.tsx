@@ -680,17 +680,12 @@ export default function SettingsScreen() {
                               contentContainerStyle={styles.wheelScrollContent}
                               decelerationRate="fast"
                               nestedScrollEnabled={true}
+                              snapToInterval={ITEM_HEIGHT}
                               onMomentumScrollEnd={(e) => {
                                  const y = e.nativeEvent.contentOffset.y;
                                  const index = Math.round(y / ITEM_HEIGHT);
                                  const actualIndex = ((index % HOURS_LIST.length) + HOURS_LIST.length) % HOURS_LIST.length;
                                  setTempHour(HOURS_LIST[actualIndex]);
-
-                                 // Snap to exact position
-                                 const snappedY = index * ITEM_HEIGHT;
-                                 if (y !== snappedY) {
-                                    hourScrollRef.current?.scrollTo({ y: snappedY, animated: true });
-                                 }
 
                                  // Reset to middle section if scrolled too far
                                  if (index < HOURS_LIST.length || index >= HOURS_LIST.length * 2) {
@@ -725,17 +720,12 @@ export default function SettingsScreen() {
                               contentContainerStyle={styles.wheelScrollContent}
                               decelerationRate="fast"
                               nestedScrollEnabled={true}
+                              snapToInterval={ITEM_HEIGHT}
                               onMomentumScrollEnd={(e) => {
                                  const y = e.nativeEvent.contentOffset.y;
                                  const index = Math.round(y / ITEM_HEIGHT);
                                  const actualIndex = ((index % MINUTES_LIST.length) + MINUTES_LIST.length) % MINUTES_LIST.length;
                                  setTempMinute(MINUTES_LIST[actualIndex]);
-
-                                 // Snap to exact position
-                                 const snappedY = index * ITEM_HEIGHT;
-                                 if (y !== snappedY) {
-                                    minuteScrollRef.current?.scrollTo({ y: snappedY, animated: true });
-                                 }
 
                                  // Reset to middle section if scrolled too far
                                  if (index < MINUTES_LIST.length || index >= MINUTES_LIST.length * 2) {
