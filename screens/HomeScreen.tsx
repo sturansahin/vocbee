@@ -23,9 +23,6 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '../context/ThemeContext';
 import { FONT_FAMILY, HEADER_FONT_FAMILY } from '../utils/typography';
 import { SwarmLogo } from '../components/SwarmLogo';
-import { ArrowIcon } from '../components/ArrowIcon';
-import { RetryIcon } from '../components/RetryIcon';
-import { StarIcon } from '../components/StarIcon';
 import {
     VocabularyWord,
     Level,
@@ -53,6 +50,12 @@ import { useAlert } from '../components/CustomAlert';
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;
+
+// Responsive utilities
+const BASE_WIDTH = 393; // iPhone 14 Pro base width
+const scale = (size: number) => (SCREEN_WIDTH / BASE_WIDTH) * size;
+const moderateScale = (size: number, factor = 0.5) => size + (scale(size) - size) * factor;
+
 
 export default function HomeScreen() {
     const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
@@ -907,6 +910,13 @@ export default function HomeScreen() {
                             <View style={styles.cardContentAbove} pointerEvents="box-none">
                                 {/* Upper Section - Word and Translation */}
                                 <View style={styles.cardUpperSection}>
+                                    {/* Favorite Button - Top Left Corner */}
+                                    <TouchableOpacity
+                                        style={styles.favoriteButton}
+                                        onPress={handleAddToFavorites}
+                                    >
+                                        <Feather name="star" size={22} color={colors.primary} />
+                                    </TouchableOpacity>
                                     <TouchableOpacity
                                         style={styles.wordTitleRow}
                                         onPress={async () => {
@@ -1028,62 +1038,7 @@ export default function HomeScreen() {
                 )}
             </View>
 
-            {/* Action Buttons - NanoBanana Pro Style */}
-            <View style={styles.actionButtonsContainer}>
-                <TouchableOpacity
-                    style={[
-                        styles.nanoBananaButton,
-                        {
-                            backgroundColor: isDarkMode ? 'rgba(28, 28, 30, 0.9)' : 'rgba(255, 255, 255, 0.95)',
-                            shadowColor: '#FFD700',
-                            shadowOffset: { width: 0, height: 0 },
-                            shadowOpacity: 0.5,
-                            shadowRadius: 12,
-                            elevation: 8,
-                        }
-                    ]}
-                    onPress={handleNext}
-                    activeOpacity={0.7}
-                >
-                    <RetryIcon size={32} />
-                </TouchableOpacity>
 
-                <TouchableOpacity
-                    style={[
-                        styles.nanoBananaButtonLarge,
-                        {
-                            backgroundColor: isDarkMode ? 'rgba(28, 28, 30, 0.95)' : 'rgba(255, 255, 255, 0.98)',
-                            shadowColor: '#FFD700',
-                            shadowOffset: { width: 0, height: 0 },
-                            shadowOpacity: 0.7,
-                            shadowRadius: 20,
-                            elevation: 12,
-                        }
-                    ]}
-                    onPress={handleAddToFavorites}
-                    activeOpacity={0.7}
-                >
-                    <StarIcon size={50} />
-                </TouchableOpacity>
-
-                <TouchableOpacity
-                    style={[
-                        styles.nanoBananaButton,
-                        {
-                            backgroundColor: isDarkMode ? 'rgba(28, 28, 30, 0.9)' : 'rgba(255, 255, 255, 0.95)',
-                            shadowColor: '#FFD700',
-                            shadowOffset: { width: 0, height: 0 },
-                            shadowOpacity: 0.5,
-                            shadowRadius: 12,
-                            elevation: 8,
-                        }
-                    ]}
-                    onPress={handleLearned}
-                    activeOpacity={0.7}
-                >
-                    <ArrowIcon size={36} />
-                </TouchableOpacity>
-            </View>
         </View>
     );
 }
@@ -1096,13 +1051,13 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        paddingVertical: 16,
-        paddingHorizontal: 20,
+        paddingVertical: scale(16),
+        paddingHorizontal: scale(20),
     },
     headerTitle: {
-        fontSize: 22,
+        fontSize: moderateScale(22),
         fontFamily: HEADER_FONT_FAMILY,
-        letterSpacing: 6,
+        letterSpacing: scale(6),
     },
     headerTitleContainer: {
         flexDirection: 'row',
@@ -1142,7 +1097,7 @@ const styles = StyleSheet.create({
     },
     levelValue: {
         fontFamily: FONT_FAMILY,
-        fontSize: 26,
+        fontSize: moderateScale(26),
     },
     levelSubtext: {
         fontFamily: FONT_FAMILY,
@@ -1150,7 +1105,7 @@ const styles = StyleSheet.create({
     },
     goalValue: {
         fontFamily: FONT_FAMILY,
-        fontSize: 12,
+        fontSize: moderateScale(12),
     },
     progressBg: {
         height: 8,
@@ -1180,13 +1135,7 @@ const styles = StyleSheet.create({
         borderRadius: 32,
         padding: 0,
         justifyContent: 'center',
-        overflow: 'hidden', // Ensure children adhere to border radius
-    },
-    cardCenter: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        paddingVertical: 20,
+        overflow: 'hidden',
     },
     cardContentAbove: {
         flex: 1,
@@ -1196,15 +1145,10 @@ const styles = StyleSheet.create({
     },
     wordTitle: {
         fontFamily: FONT_FAMILY,
-        fontSize: 36,
-        marginBottom: 4,
+        fontSize: moderateScale(36),
+        marginBottom: scale(4),
         letterSpacing: 1,
         textAlign: 'center',
-    },
-    wordType: {
-        fontFamily: FONT_FAMILY,
-        fontSize: 20,
-
     },
     translationRow: {
         flexDirection: 'row',
@@ -1214,72 +1158,19 @@ const styles = StyleSheet.create({
     },
     translationText: {
         fontFamily: FONT_FAMILY,
-        fontSize: 24,
+        fontSize: moderateScale(24),
         fontWeight: '500',
     },
-    wordDefinition: {
-        fontFamily: FONT_FAMILY,
-        fontSize: 24,
-        fontWeight: '500',
-        textAlign: 'center',
-        lineHeight: 24,
-        marginBottom: 24,
-        paddingHorizontal: 10,
-    },
-    exampleButton: {
-        paddingVertical: 14,
-        paddingHorizontal: 28,
-        backgroundColor: 'rgba(128, 128, 128, 0.15)',
-        borderRadius: 24,
-        flexDirection: 'row',
+    favoriteButton: {
+        position: 'absolute',
+        top: scale(16),
+        left: scale(16),
+        width: scale(40),
+        height: scale(40),
+        borderRadius: scale(20),
         alignItems: 'center',
         justifyContent: 'center',
-        gap: 10,
-    },
-    exampleButtonText: {
-        fontFamily: FONT_FAMILY,
-        fontWeight: '500',
-        fontSize: 14,
-        letterSpacing: 0.5,
-    },
-    actionButtonsContainer: {
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        gap: 24,
-        paddingBottom: 100,
-        paddingTop: 10,
-    },
-    nanoBananaButton: {
-        width: 64,
-        height: 64,
-        borderRadius: 32,
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderWidth: 0.6,
-        borderColor: 'rgba(255, 215, 0, 0.3)',
-    },
-    nanoBananaButtonLarge: {
-        width: 88,
-        height: 88,
-        borderRadius: 44,
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderWidth: 0.6,
-        borderColor: 'rgba(255, 215, 0, 0.4)',
-        marginTop: -8,
-    },
-    actionButton: {
-        padding: 10,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    iconShadow: {
-        shadowColor: '#FF9B2F',
-        shadowOffset: { width: 0, height: 4 },
-        shadowOpacity: 0.4,
-        shadowRadius: 8,
-        elevation: 8,
+        zIndex: 100,
     },
     swipeOverlay: {
         position: 'absolute',
@@ -1341,32 +1232,11 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         lineHeight: 24,
     },
-    // Speech button styles
     wordTitleRow: {
         flexDirection: 'row',
         alignItems: 'center',
         gap: 12,
     },
-    speakerButton: {
-        width: 44,
-        height: 44,
-        borderRadius: 22,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    // Bee styles
-    beeContainer: {
-        position: 'absolute',
-        width: 30,
-        height: 27,
-        zIndex: 100,
-        pointerEvents: 'none',
-    },
-    beeAnimation: {
-        width: 30,
-        height: 27,
-    },
-    // Two-section card styles
     cardUpperSection: {
         flex: 1,
         alignItems: 'center',

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, Image, StyleSheet, Modal, Animated, TextInput } from 'react-native';
+import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, Image, StyleSheet, Modal, Animated, TextInput, Dimensions } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
@@ -26,6 +26,14 @@ import {
 import { doc, setDoc } from 'firebase/firestore';
 import { db, auth } from '../config/firebase';
 import { updateProfile } from 'firebase/auth';
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Responsive Utilities
+// ─────────────────────────────────────────────────────────────────────────────
+const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
+const BASE_WIDTH = 393; // iPhone 14 Pro base width
+const scale = (size: number) => (SCREEN_WIDTH / BASE_WIDTH) * size;
+const moderateScale = (size: number, factor = 0.5) => size + (scale(size) - size) * factor;
 
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -1222,26 +1230,26 @@ const styles = StyleSheet.create({
    header: {
       flexDirection: 'row',
       alignItems: 'center',
-      paddingHorizontal: 16,
-      paddingTop: 50,
-      paddingBottom: 0,
-      gap: 12,
+      paddingHorizontal: scale(16),
+      paddingTop: scale(12),
+      paddingBottom: scale(8),
+      gap: scale(12),
    },
    backButton: {
-      width: 44,
-      height: 44,
-      borderRadius: 22,
+      width: scale(44),
+      height: scale(44),
+      borderRadius: scale(22),
       alignItems: 'center',
       justifyContent: 'center',
    },
    headerTitle: {
       fontFamily: FONT_FAMILY,
-      fontSize: 20,
+      fontSize: moderateScale(20),
       flex: 1,
       textAlign: 'center',
    },
    headerSpacer: {
-      width: 44,
+      width: scale(44),
    },
    scrollView: {
       flex: 1,
@@ -1263,10 +1271,10 @@ const styles = StyleSheet.create({
       marginBottom: 16,
    },
    avatar: {
-      width: 112,
-      height: 112,
-      borderRadius: 56,
-      borderWidth: 4,
+      width: scale(112),
+      height: scale(112),
+      borderRadius: scale(56),
+      borderWidth: scale(4),
       borderColor: COLORS.surface,
    },
    avatarPlaceholder: {
@@ -1286,12 +1294,12 @@ const styles = StyleSheet.create({
    profileName: {
       fontFamily: FONT_FAMILY,
       color: '#fff',
-      fontSize: 24,
+      fontSize: moderateScale(24),
    },
    profileEmail: {
       fontFamily: FONT_FAMILY,
       color: COLORS.textSecondary,
-      fontSize: 14,
+      fontSize: moderateScale(14),
       fontWeight: '500',
       marginBottom: 16,
    },
@@ -1340,9 +1348,9 @@ const styles = StyleSheet.create({
       gap: 16,
    },
    settingIcon: {
-      width: 40,
-      height: 40,
-      borderRadius: 20,
+      width: scale(40),
+      height: scale(40),
+      borderRadius: scale(20),
       backgroundColor: 'rgba(255,255,255,0.05)',
       alignItems: 'center',
       justifyContent: 'center',
@@ -1350,13 +1358,13 @@ const styles = StyleSheet.create({
    settingTitle: {
       fontFamily: FONT_FAMILY,
       color: '#fff',
-      fontSize: 16,
+      fontSize: moderateScale(16),
       fontWeight: '500',
    },
    settingSubtitle: {
       fontFamily: FONT_FAMILY,
       color: COLORS.primary,
-      fontSize: 12,
+      fontSize: moderateScale(12),
       fontWeight: '500',
       marginTop: 2,
    },

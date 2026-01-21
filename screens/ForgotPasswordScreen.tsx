@@ -9,6 +9,7 @@ import {
     ActivityIndicator,
     KeyboardAvoidingView,
     Platform,
+    useWindowDimensions,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
@@ -29,9 +30,23 @@ export default function ForgotPasswordScreen() {
     const { colors } = useTheme();
     const { resetPassword } = useAuth();
     const { showAlert } = useAlert();
+    const { width: screenWidth, height: screenHeight } = useWindowDimensions();
 
     const [email, setEmail] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);
+
+    // Responsive calculations
+    const isSmallScreen = screenHeight < 700;
+    const isLargeScreen = screenHeight > 900;
+
+    // Dynamic sizing
+    const titleFontSize = isSmallScreen ? 22 : isLargeScreen ? 30 : 26;
+    const subtitleFontSize = isSmallScreen ? 13 : isLargeScreen ? 16 : 15;
+    const subtitleLineHeight = subtitleFontSize * 1.5;
+    const padding = isSmallScreen ? 20 : 24;
+    const titleMarginBottom = isSmallScreen ? 20 : 32;
+    const buttonHeight = isSmallScreen ? 48 : 52;
+    const buttonFontSize = isSmallScreen ? 14 : 16;
 
     const handleResetPassword = async () => {
         if (!email) {
@@ -68,16 +83,22 @@ export default function ForgotPasswordScreen() {
                 style={styles.keyboardView}
             >
                 <ScrollView
-                    contentContainerStyle={styles.scrollContent}
+                    contentContainerStyle={[styles.scrollContent, { padding }]}
                     keyboardShouldPersistTaps="handled"
                 >
-                    {/* Logo Section */}
-                    {/* Logo Section Removed */}
-
                     {/* Title Section */}
-                    <View style={styles.titleSection}>
-                        <Text style={[styles.title, { color: colors.text }]}>Forgot Password?</Text>
-                        <Text style={[styles.subtitle, { color: colors.textSecondary }]}>
+                    <View style={[styles.titleSection, { marginBottom: titleMarginBottom }]}>
+                        <Text style={[styles.title, { color: colors.text, fontSize: titleFontSize }]}>
+                            Forgot Password?
+                        </Text>
+                        <Text style={[
+                            styles.subtitle,
+                            {
+                                color: colors.textSecondary,
+                                fontSize: subtitleFontSize,
+                                lineHeight: subtitleLineHeight,
+                            }
+                        ]}>
                             No worries! Enter your email and we'll send you a link to reset your password.
                         </Text>
                     </View>
@@ -100,7 +121,11 @@ export default function ForgotPasswordScreen() {
 
                     {/* Submit Button */}
                     <TouchableOpacity
-                        style={[styles.submitButton, isSubmitting && styles.submitButtonDisabled, { backgroundColor: colors.primary }]}
+                        style={[
+                            styles.submitButton,
+                            isSubmitting && styles.submitButtonDisabled,
+                            { backgroundColor: colors.primary, height: buttonHeight }
+                        ]}
                         onPress={handleResetPassword}
                         disabled={isSubmitting}
                     >
@@ -108,8 +133,10 @@ export default function ForgotPasswordScreen() {
                             <ActivityIndicator size="small" color={COLORS.background} />
                         ) : (
                             <>
-                                <MaterialIcons name="send" size={20} color={COLORS.background} />
-                                <Text style={styles.submitButtonText}>Send Reset Link</Text>
+                                <MaterialIcons name="send" size={isSmallScreen ? 18 : 20} color={COLORS.background} />
+                                <Text style={[styles.submitButtonText, { fontSize: buttonFontSize }]}>
+                                    Send Reset Link
+                                </Text>
                             </>
                         )}
                     </TouchableOpacity>
@@ -119,8 +146,8 @@ export default function ForgotPasswordScreen() {
                         style={styles.backToLogin}
                         onPress={() => navigation.goBack()}
                     >
-                        <MaterialIcons name="arrow-back" size={16} color={colors.textSecondary} />
-                        <Text style={[styles.backToLoginText, { color: colors.textSecondary }]}>
+                        <MaterialIcons name="arrow-back" size={isSmallScreen ? 14 : 16} color={colors.textSecondary} />
+                        <Text style={[styles.backToLoginText, { color: colors.textSecondary, fontSize: isSmallScreen ? 13 : 14 }]}>
                             Back to Login
                         </Text>
                     </TouchableOpacity>
@@ -141,7 +168,6 @@ const styles = StyleSheet.create({
     },
     scrollContent: {
         flexGrow: 1,
-        padding: 24,
         justifyContent: 'center',
     },
     logoSection: {
@@ -154,24 +180,16 @@ const styles = StyleSheet.create({
         fontSize: 28,
         marginTop: 8,
     },
-    titleSection: {
-        marginBottom: 32,
-    },
+    titleSection: {},
     title: {
         fontFamily: FONT_FAMILY,
-        color: '#fff',
-        fontSize: 26,
         marginBottom: 12,
     },
     subtitle: {
         fontFamily: FONT_FAMILY,
-        color: COLORS.textSecondary,
-        fontSize: 15,
-        lineHeight: 22,
     },
     submitButton: {
         backgroundColor: COLORS.primary,
-        height: 52,
         borderRadius: 12,
         flexDirection: 'row',
         alignItems: 'center',
@@ -185,7 +203,6 @@ const styles = StyleSheet.create({
     submitButtonText: {
         fontFamily: FONT_FAMILY,
         color: COLORS.background,
-        fontSize: 16,
         fontWeight: '600',
     },
     backToLogin: {
@@ -197,6 +214,5 @@ const styles = StyleSheet.create({
     },
     backToLoginText: {
         fontFamily: FONT_FAMILY,
-        fontSize: 14,
     },
 });

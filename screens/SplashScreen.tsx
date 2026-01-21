@@ -50,6 +50,7 @@ export default function SplashScreen({ onFinish }: SplashScreenProps) {
                     ref={lottieRef}
                     source={animatedAnimation}
                     style={styles.lottieAnimation}
+                    resizeMode="cover"
                     loop={true}
                     speed={1.5}
                 />
@@ -65,14 +66,14 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     logoContainer: {
-        width: 140,
-        height: 130,
+        width: 200,
+        height: 188,
         alignItems: 'center',
         justifyContent: 'center',
-        overflow: 'hidden',
+        overflow: 'visible',
     },
     lottieAnimation: {
-        width: 100,
-        height: 92,
+        width: 200,
+        height: 188,
     },
 });

@@ -1,5 +1,6 @@
 import React, { useState, useRef, useMemo } from 'react';
-import { View, Text, SafeAreaView, TouchableOpacity, ScrollView, StyleSheet, ActivityIndicator, Animated, Easing, Dimensions } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView, StyleSheet, ActivityIndicator, Animated, Easing, useWindowDimensions } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../types';
@@ -13,8 +14,6 @@ import { useAlert } from '../components/CustomAlert';
 import { FONT_FAMILY } from '../utils/typography';
 import { createSwarmAnimation } from '../assets/animations/swarmAnimation';
 
-const { height: SCREEN_HEIGHT } = Dimensions.get('window');
-
 type AuthNavProp = StackNavigationProp<RootStackParamList>;
 
 export const LoginScreen = () => {
@@ -22,12 +21,26 @@ export const LoginScreen = () => {
   const { colors, isDarkMode } = useTheme();
   const { signIn, signInWithGoogle, isLoading } = useAuth();
   const { showAlert } = useAlert();
+  const { width: screenWidth, height: screenHeight } = useWindowDimensions();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+
+  // Responsive calculations
+  const isSmallScreen = screenHeight < 700;
+  const isLargeScreen = screenHeight > 900;
+
+  // Dynamic sizing
+  const lottieSize = isSmallScreen ? 100 : isLargeScreen ? 150 : 130;
+  const lottieContainerWidth = lottieSize * 1.5;
+  const lottieContainerHeight = lottieSize;
+  const titleFontSize = isSmallScreen ? 28 : isLargeScreen ? 40 : 36;
+  const subtitleFontSize = isSmallScreen ? 14 : isLargeScreen ? 18 : 16;
+  const logoMarginBottom = isSmallScreen ? 24 : 40;
+  const padding = isSmallScreen ? 20 : 24;
 
   // Lottie animation ref
   const lottieRef = useRef<LottieView>(null);
@@ -244,7 +257,7 @@ export const LoginScreen = () => {
       // Phase 6: Final ascent - smooth exit upward
       Animated.parallel([
         Animated.timing(translateY, {
-          toValue: -SCREEN_HEIGHT * 1.2,
+          toValue: -screenHeight * 1.2,
           duration: 800,
           easing: Easing.bezier(0.33, 0, 0.2, 1),
           useNativeDriver: true,
@@ -283,14 +296,16 @@ export const LoginScreen = () => {
 
   return (
     <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
-      <ScrollView contentContainerStyle={styles.scrollContent}>
+      <ScrollView contentContainerStyle={[styles.scrollContent, { padding }]}>
 
         {/* Logo Section with Lottie Animation */}
-        <View style={styles.logoSection}>
+        <View style={[styles.logoSection, { marginBottom: logoMarginBottom }]}>
           <Animated.View
             style={[
               styles.lottieContainer,
               {
+                width: lottieContainerWidth,
+                height: lottieContainerHeight,
                 transform: [
                   { translateX: translateX },
                   { translateY: translateY },
@@ -309,14 +324,14 @@ export const LoginScreen = () => {
             <LottieView
               ref={lottieRef}
               source={isAnimating ? animatedAnimation : staticAnimation}
-              style={styles.lottieAnimation}
+              style={{ width: lottieSize, height: lottieSize * 0.92 }}
               autoPlay={isAnimating}
               loop={true}
               speed={1.5}
             />
           </Animated.View>
-          <Text style={[styles.appTitle, { color: colors.text }]}>VocBee</Text>
-          <Text style={[styles.appSubtitle, { color: colors.textSecondary }]}>Master new words effortlessly.</Text>
+          <Text style={[styles.appTitle, { color: colors.text, fontSize: titleFontSize }]}>VocBee</Text>
+          <Text style={[styles.appSubtitle, { color: colors.textSecondary, fontSize: subtitleFontSize }]}>Master new words effortlessly.</Text>
         </View>
 
         {/* Form */}
@@ -401,6 +416,7 @@ export const SignUpScreen = () => {
   const { colors, isDarkMode } = useTheme();
   const { signUp, signInWithGoogle, signOut, isLoading } = useAuth();
   const { showAlert } = useAlert();
+  const { width: screenWidth, height: screenHeight } = useWindowDimensions();
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -409,6 +425,16 @@ export const SignUpScreen = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Responsive calculations
+  const isSmallScreen = screenHeight < 700;
+  const isLargeScreen = screenHeight > 900;
+
+  // Dynamic sizing
+  const titleFontSize = isSmallScreen ? 22 : isLargeScreen ? 32 : 28;
+  const titleLineHeight = titleFontSize * 1.5;
+  const padding = isSmallScreen ? 20 : 24;
+  const titleMarginBottom = isSmallScreen ? 20 : 32;
 
   const handleSignUp = async () => {
     if (!name || !email || !password || !confirmPassword) {
@@ -451,10 +477,10 @@ export const SignUpScreen = () => {
         backgroundColor={colors.background}
         textColor={colors.text}
       />
-      <ScrollView contentContainerStyle={styles.scrollContentSignup}>
+      <ScrollView contentContainerStyle={[styles.scrollContentSignup, { padding }]}>
 
-        <View style={styles.titleSection}>
-          <Text style={[styles.titleWhite, { color: colors.text }]}>
+        <View style={[styles.titleSection, { marginBottom: titleMarginBottom }]}>
+          <Text style={[styles.titleWhite, { color: colors.text, fontSize: titleFontSize, lineHeight: titleLineHeight }]}>
             Start your language{"\n"}
             <Text style={[styles.titleGreen, { color: colors.primary }]}>journey today.</Text>
           </Text>
@@ -556,38 +582,25 @@ const styles = StyleSheet.create({
   scrollContent: {
     flexGrow: 1,
     justifyContent: 'center',
-    padding: 24,
   },
   scrollContentSignup: {
     flexGrow: 1,
-    padding: 24,
   },
   logoSection: {
     alignItems: 'center',
-    marginBottom: 40,
   },
   lottieContainer: {
-    width: 140,
-    height: 130,
     alignItems: 'center',
     justifyContent: 'center',
-    overflow: 'hidden',
-  },
-  lottieAnimation: {
-    width: 100,
-    height: 92,
+    overflow: 'visible',
   },
   appTitle: {
     fontFamily: FONT_FAMILY,
-    color: '#fff',
-    fontSize: 36,
     marginBottom: 8,
-    marginTop: 8,
+    marginTop: 0,
   },
   appSubtitle: {
     fontFamily: FONT_FAMILY,
-    color: COLORS.textSecondary,
-    fontSize: 16,
   },
   forgotContainer: {
     alignItems: 'flex-end',
@@ -595,7 +608,6 @@ const styles = StyleSheet.create({
   },
   forgotText: {
     fontFamily: FONT_FAMILY,
-    color: COLORS.textSecondary,
     fontWeight: '500',
     fontSize: 13,
   },
@@ -651,14 +663,10 @@ const styles = StyleSheet.create({
     color: COLORS.primary,
   },
   titleSection: {
-    marginBottom: 32,
     marginTop: 8,
   },
   titleWhite: {
     fontFamily: FONT_FAMILY,
-    color: '#fff',
-    fontSize: 28,
-    lineHeight: 44,
   },
   titleGreen: {
     fontFamily: FONT_FAMILY,

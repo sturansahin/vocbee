@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Platform, View, Text, AppState, AppStateStatus } from 'react-native';
 import { NavigationContainer, NavigationContainerRef } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -228,10 +228,18 @@ export default function App() {
   }, []);
 
   // Hide splash screen when all fonts are loaded
-  const onLayoutRootView = useCallback(async () => {
-    if (fontsLoaded && iconFontsLoaded) {
-      await SplashScreen.hideAsync();
-    }
+  useEffect(() => {
+    const hideSplash = async () => {
+      if (fontsLoaded && iconFontsLoaded) {
+        try {
+          await SplashScreen.hideAsync();
+          console.log('[App] Native splash screen hidden');
+        } catch (error) {
+          console.log('[App] Error hiding splash screen:', error);
+        }
+      }
+    };
+    hideSplash();
   }, [fontsLoaded, iconFontsLoaded]);
 
   // Wait for both custom fonts and icon fonts to load
@@ -245,7 +253,7 @@ export default function App() {
         <AlertProvider>
           <AuthProvider>
             <ErrorBoundary>
-              <GestureHandlerRootView style={{ flex: 1 }} onLayout={onLayoutRootView}>
+              <GestureHandlerRootView style={{ flex: 1 }}>
                 <OfflineNotice />
                 <AppContent />
               </GestureHandlerRootView>
