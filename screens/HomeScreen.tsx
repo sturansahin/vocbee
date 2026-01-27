@@ -18,7 +18,8 @@ import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../types';
 import Feather from '@expo/vector-icons/Feather';
-import { MaterialIcons } from '@expo/vector-icons';
+import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
+import { MaterialIcons, Ionicons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '../context/ThemeContext';
 import { FONT_FAMILY, HEADER_FONT_FAMILY } from '../utils/typography';
@@ -44,9 +45,11 @@ import {
     saveLastWordId,
     getLastWordId
 } from '../services/progressService';
-import { addToFavorites } from '../services/favoritesService';
+import { addToFavorites, removeFromFavorites, isFavorite } from '../services/favoritesService';
 import { getPendingNotificationWord } from '../services/notificationService';
 import { useAlert } from '../components/CustomAlert';
+import { SafeBannerAd } from '../components/SafeBannerAd';
+import { loadInterstitial, showInterstitial, AD_IDS, getBannerAdSize } from '../services/adMobService';
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;
@@ -71,9 +74,13 @@ export default function HomeScreen() {
     const [isLoading, setIsLoading] = useState(true);
     const [learnedCount, setLearnedCount] = useState(0);
     const [totalCount, setTotalCount] = useState(0);
+    const [isCurrentWordFavorite, setIsCurrentWordFavorite] = useState(false);
 
     // Ref to track if initial load has been done
     const hasInitiallyLoaded = useRef(false);
+
+    // Track session learned words for Interstitial Ad
+    const sessionLearnedCount = useRef(0);
 
     // Bee animation state
     interface BeePosition {
@@ -507,6 +514,13 @@ export default function HomeScreen() {
     // Initialize bees when component mounts or word changes
     useEffect(() => {
         if (currentWord && !isLoading && words.length > 0) {
+            // Check if current word is favorite
+            const checkFavoriteStatus = async () => {
+                const fav = await isFavorite(currentWord.id, currentLevel);
+                setIsCurrentWordFavorite(fav);
+            };
+            checkFavoriteStatus();
+
             // Generate new positions
             const newPositions = generateBeePositions();
             setBeePositions(newPositions);
@@ -516,7 +530,7 @@ export default function HomeScreen() {
                 animateBeesIn(newPositions);
             }, 300);
         }
-    }, [currentWordIndex, currentWord, isLoading, words.length, generateBeePositions, animateBeesIn]);
+    }, [currentWordIndex, currentWord, isLoading, words.length, generateBeePositions, animateBeesIn, currentLevel]);
 
     // Swipe animation setup
     const position = useRef(new Animated.ValueXY()).current;
@@ -561,6 +575,15 @@ export default function HomeScreen() {
                 await markWordAsLearned(currentLevel, swipedWord.id);
                 setLearnedCount(prev => prev + 1);
 
+                // Increment session count and check for ad
+                sessionLearnedCount.current += 1;
+                console.log(`Session learned count: ${sessionLearnedCount.current}`);
+
+                if (sessionLearnedCount.current % 10 === 0) {
+                    console.log('Triggering Interstitial Ad');
+                    await showInterstitial();
+                }
+
                 const newLevel = await checkAndAdvanceLevel();
                 if (newLevel !== currentLevel) {
                     console.log(`Advanced to level ${newLevel}`);
@@ -594,6 +617,11 @@ export default function HomeScreen() {
             friction: 5,
         }).start();
     }, [position]);
+
+    // Load interstitial on mount
+    useEffect(() => {
+        loadInterstitial();
+    }, []);
 
     // Update refs when functions change
     useEffect(() => {
@@ -632,11 +660,17 @@ export default function HomeScreen() {
         swipeCard('right');
     };
 
-    const handleAddToFavorites = async () => {
+    const handleToggleFavorite = async () => {
         if (currentWord) {
-            await addToFavorites(currentWord, currentLevel);
-            // Optional: Show feedback to user
-            console.log('Added to favorites:', currentWord.word, `(${currentLevel})`);
+            if (isCurrentWordFavorite) {
+                await removeFromFavorites(currentWord.id, currentLevel);
+                setIsCurrentWordFavorite(false);
+                console.log('Removed from favorites:', currentWord.word);
+            } else {
+                await addToFavorites(currentWord, currentLevel);
+                setIsCurrentWordFavorite(true);
+                console.log('Added to favorites:', currentWord.word, `(${currentLevel})`);
+            }
         }
     };
 
@@ -669,7 +703,13 @@ export default function HomeScreen() {
                     <View style={styles.cardContentAbove}>
                         {/* Upper Section - Word and Translation */}
                         <View style={styles.cardUpperSection}>
-                            <Text style={[styles.wordTitle, { color: colors.text }]}>{nextWord.word}</Text>
+                            <Text
+                                style={[styles.wordTitle, { color: colors.text }]}
+                                adjustsFontSizeToFit
+                                numberOfLines={1}
+                            >
+                                {nextWord.word}
+                            </Text>
                             <View style={styles.translationRow}>
                                 <MaterialIcons name="translate" size={24} color={colors.primary} />
                                 <Text style={[styles.translationText, { color: colors.primary }]}>{nextWord.translation}</Text>
@@ -906,17 +946,27 @@ export default function HomeScreen() {
                                 </View>
                             </Animated.View>
 
-                            {/* Card Content - above overlay */}
                             <View style={styles.cardContentAbove} pointerEvents="box-none">
+                                {/* Favorite Button - Moved to root of content to ensure clickability */}
+                                <TouchableOpacity
+                                    style={styles.favoriteButton}
+                                    onPress={handleToggleFavorite}
+                                    activeOpacity={0.7}
+                                    hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
+                                >
+                                    <View style={{ width: 26, height: 26, justifyContent: 'center', alignItems: 'center' }}>
+                                        {isCurrentWordFavorite && (
+                                            <View style={{ position: 'absolute' }}>
+                                                <Ionicons name="star" size={22} color={colors.primary} />
+                                            </View>
+                                        )}
+                                        <Feather name="star" size={26} color={colors.primary} />
+                                    </View>
+                                </TouchableOpacity>
+
                                 {/* Upper Section - Word and Translation */}
                                 <View style={styles.cardUpperSection}>
-                                    {/* Favorite Button - Top Left Corner */}
-                                    <TouchableOpacity
-                                        style={styles.favoriteButton}
-                                        onPress={handleAddToFavorites}
-                                    >
-                                        <Feather name="star" size={22} color={colors.primary} />
-                                    </TouchableOpacity>
+
                                     <TouchableOpacity
                                         style={styles.wordTitleRow}
                                         onPress={async () => {
@@ -935,7 +985,13 @@ export default function HomeScreen() {
                                         }}
                                         activeOpacity={0.7}
                                     >
-                                        <Text style={[styles.wordTitle, { color: colors.text }]}>{currentWord.word}</Text>
+                                        <Text
+                                            style={[styles.wordTitle, { color: colors.text }]}
+                                            adjustsFontSizeToFit
+                                            numberOfLines={1}
+                                        >
+                                            {currentWord.word}
+                                        </Text>
                                         <MaterialIcons name="volume-up" size={24} color={colors.primary} />
                                     </TouchableOpacity>
                                     <View style={styles.translationRow}>
@@ -1039,7 +1095,18 @@ export default function HomeScreen() {
             </View>
 
 
-        </View>
+
+
+            {/* Banner Ad */}
+            <View style={{ alignItems: 'center', justifyContent: 'center', paddingBottom: insets.bottom > 0 ? 0 : 10, backgroundColor: colors.background }}>
+                <SafeBannerAd
+                    unitId={AD_IDS.BANNER}
+                    requestOptions={{
+                        requestNonPersonalizedAdsOnly: true,
+                    }}
+                />
+            </View>
+        </View >
     );
 }
 
@@ -1170,7 +1237,9 @@ const styles = StyleSheet.create({
         borderRadius: scale(20),
         alignItems: 'center',
         justifyContent: 'center',
-        zIndex: 100,
+        zIndex: 999,
+        elevation: 10,
+        backgroundColor: 'rgba(255,255,255,0.01)', // Ensure touchable area
     },
     swipeOverlay: {
         position: 'absolute',

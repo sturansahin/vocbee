@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, Image, StyleSheet, Modal, Animated, TextInput, Dimensions } from 'react-native';
+import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, Image, StyleSheet, Modal, Animated, TextInput, Dimensions, Pressable, Linking } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
@@ -43,7 +43,7 @@ const HOURS_LIST = Array.from({ length: 24 }, (_, i) => i.toString().padStart(2,
 const MINUTES_LIST = Array.from({ length: 60 }, (_, i) => i.toString().padStart(2, '0'));
 const HOURS_EXTENDED = [...HOURS_LIST, ...HOURS_LIST, ...HOURS_LIST];
 const MINUTES_EXTENDED = [...MINUTES_LIST, ...MINUTES_LIST, ...MINUTES_LIST];
-const FREQUENCIES = ['Every 15 minutes', 'Every 30 minutes', 'Every hour', 'Every 2 hours'];
+const FREQUENCIES = ['Every 30 minutes', 'Every hour', 'Every 2 hours'];
 
 // ─────────────────────────────────────────────────────────────────────────────
 // AnimatedSwitch Component - Unified toggle with variants
@@ -106,7 +106,7 @@ const AnimatedSwitch: React.FC<AnimatedSwitchProps> = ({ value, onToggle, varian
 
 export default function SettingsScreen() {
    const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
-   const { isDarkMode, toggleTheme, colors } = useTheme();
+   const { isDarkMode, colors } = useTheme();
    const {
       signOut,
       user,
@@ -127,7 +127,6 @@ export default function SettingsScreen() {
    // Helper to get freq string
    const getFreqString = (min: number) => {
       switch (min) {
-         case 15: return 'Every 15 minutes';
          case 30: return 'Every 30 minutes';
          case 60: return 'Every hour';
          default: return 'Every 2 hours';
@@ -168,10 +167,24 @@ export default function SettingsScreen() {
       setFrequency(getFreqString(notificationSettings.frequencyMinutes));
    }, [notificationSettings]);
 
+   // Load current level from AsyncStorage on mount
+   useEffect(() => {
+      const loadLevel = async () => {
+         try {
+            const savedLevel = await AsyncStorage.getItem('@user_level');
+            if (savedLevel) {
+               setCurrentLevelState(savedLevel);
+            }
+         } catch (error) {
+            console.error('Error loading level:', error);
+         }
+      };
+      loadLevel();
+   }, []);
+
    // Helper to convert frequency string to minutes
    const getFrequencyMinutes = (freq: string): number => {
       switch (freq) {
-         case 'Every 15 minutes': return 15;
          case 'Every 30 minutes': return 30;
          case 'Every hour': return 60;
          default: return 120;
@@ -381,15 +394,7 @@ export default function SettingsScreen() {
             {/* Section: Preferences */}
             <Text style={[styles.sectionTitle, dynamicStyles.textSecondary]}>Preferences</Text>
             <View style={[styles.sectionCard, dynamicStyles.sectionCard]}>
-               <View style={styles.settingItem}>
-                  <View style={styles.settingLeft}>
-                     <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
-                        <MaterialCommunityIcons name="theme-light-dark" size={24} color={colors.primary} />
-                     </View>
-                     <Text style={[styles.settingTitle, dynamicStyles.text]}>Theme</Text>
-                  </View>
-                  <AnimatedSwitch value={isDarkMode} onToggle={toggleTheme} variant="theme" />
-               </View>
+
                <TouchableOpacity
                   style={styles.settingItem}
                   onPress={() => setShowLanguagePicker(true)}
@@ -610,7 +615,7 @@ export default function SettingsScreen() {
                   </View>
                   <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
                </TouchableOpacity>
-               <TouchableOpacity style={[styles.settingItem, { borderBottomWidth: 0 }]} onPress={() => setShowPrivacyModal(true)}>
+               <TouchableOpacity style={[styles.settingItem, { borderBottomWidth: 0 }]} onPress={() => Linking.openURL('https://sturansahin.github.io/privacypolicy/')}>
                   <View style={styles.settingLeft}>
                      <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
                         <MaterialCommunityIcons name="security" size={24} color={colors.primary} />
@@ -884,8 +889,7 @@ export default function SettingsScreen() {
                            key={level.id}
                            style={[
                               styles.levelPickerItem,
-                              { borderBottomColor: colors.border },
-                              currentLevel === level.id && { backgroundColor: `${colors.primary}20`, borderColor: colors.primary }
+                              currentLevel === level.id && { backgroundColor: `${colors.primary}20` }
                            ]}
                            onPress={async () => {
                               setCurrentLevelState(level.id);
@@ -901,13 +905,6 @@ export default function SettingsScreen() {
                            }}
                         >
                            <View style={styles.levelPickerRow}>
-                              <View style={[
-                                 styles.levelRadio,
-                                 { borderColor: colors.border },
-                                 currentLevel === level.id && { borderColor: colors.primary, backgroundColor: colors.primary }
-                              ]}>
-                                 {currentLevel === level.id && <View style={[styles.levelRadioInner, { backgroundColor: colors.background }]} />}
-                              </View>
                               <View style={{ flex: 1 }}>
                                  <View style={{ flexDirection: 'row', alignItems: 'center', gap: 10, marginBottom: 4 }}>
                                     <Text style={[
@@ -925,6 +922,9 @@ export default function SettingsScreen() {
                                     currentLevel === level.id && { color: colors.primary }
                                  ]}>{level.description}</Text>
                               </View>
+                              {currentLevel === level.id && (
+                                 <MaterialIcons name="check" size={24} color={colors.primary} />
+                              )}
                            </View>
                         </TouchableOpacity>
                      ))}
@@ -1107,6 +1107,7 @@ export default function SettingsScreen() {
                         placeholderTextColor={colors.textSecondary}
                      />
                   </View>
+
                   <View style={styles.modalButtonRow}>
                      <TouchableOpacity
                         style={[styles.modalButton, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)' }]}
@@ -1137,14 +1138,13 @@ export default function SettingsScreen() {
             animationType="fade"
             onRequestClose={() => setShowHelpModal(false)}
          >
-            <TouchableOpacity
-               style={styles.modalOverlay}
-               activeOpacity={1}
-               onPress={() => setShowHelpModal(false)}
-            >
+            <View style={styles.modalOverlay}>
+               <Pressable
+                  style={StyleSheet.absoluteFill}
+                  onPress={() => setShowHelpModal(false)}
+               />
                <View
                   style={[styles.modalContent, dynamicStyles.modalContent, { width: '90%', maxHeight: '80%' }]}
-                  onStartShouldSetResponder={() => true}
                >
                   <View style={styles.modalHeader}>
                      <Text style={[styles.modalTitle, dynamicStyles.text]}>Help & FAQ</Text>
@@ -1152,26 +1152,117 @@ export default function SettingsScreen() {
                         <MaterialIcons name="close" size={24} color={colors.textSecondary} />
                      </TouchableOpacity>
                   </View>
-                  <ScrollView showsVerticalScrollIndicator={false} style={styles.modalScroll}>
+                  <ScrollView
+                     showsVerticalScrollIndicator={true}
+                     style={styles.modalScroll}
+                     nestedScrollEnabled={true}
+                     contentContainerStyle={{ paddingBottom: 20 }}
+                  >
+                     {/* Learning Basics */}
                      <View style={styles.faqItem}>
                         <Text style={[styles.faqQuestion, dynamicStyles.text]}>How do I learn new words?</Text>
-                        <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>Swipe right to mark as learned, left to skip.</Text>
+                        <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>
+                           Swipe the word card right to mark it as learned, or swipe left to skip and see it again later. You can also tap the buttons below the card.
+                        </Text>
                      </View>
+
+                     <View style={styles.faqItem}>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>How do I hear the pronunciation?</Text>
+                        <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>
+                           Tap the speaker icon on the word card to hear the correct pronunciation. Make sure your device volume is turned up.
+                        </Text>
+                     </View>
+
+                     <View style={styles.faqItem}>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>How do I save favorite words?</Text>
+                        <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>
+                           Tap the star icon on any word card to add it to your favorites. Access your saved words anytime from the Favorites screen via the star button on the home screen.
+                        </Text>
+                     </View>
+
+                     <View style={styles.faqItem}>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>What are example sentences?</Text>
+                        <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>
+                           Tap on any word card to see it used in real sentences with translations. This helps you understand context and usage.
+                        </Text>
+                     </View>
+
+                     <View style={styles.faqItem}>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>What is the "Explain Grammar" feature?</Text>
+                        <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>
+                           In the example sentences screen, tap "Explain Grammar" to get an AI-powered explanation of the word's grammar, usage patterns, and tips for remembering it.
+                        </Text>
+                     </View>
+
+                     {/* Progress & Levels */}
+                     <View style={styles.faqItem}>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>What are the proficiency levels?</Text>
+                        <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>
+                           VocBee uses CEFR levels: Beginner (A1-A2) for basic vocabulary, Intermediate (B1-B2) for conversational words, and Advanced (C1) for sophisticated vocabulary. Choose based on your current skill level.
+                        </Text>
+                     </View>
+
+                     <View style={styles.faqItem}>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>How do I change my level?</Text>
+                        <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>
+                           Go to Settings → Progress → Change Level. Select a new level and your word feed will update accordingly. Your learned words are saved across all levels.
+                        </Text>
+                     </View>
+
+                     <View style={styles.faqItem}>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>How is my progress tracked?</Text>
+                        <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>
+                           Your progress shows on the home screen with learned/total words and a progress bar. As you complete levels, VocBee automatically advances you to harder vocabulary.
+                        </Text>
+                     </View>
+
+                     {/* Reminders & Notifications */}
                      <View style={styles.faqItem}>
                         <Text style={[styles.faqQuestion, dynamicStyles.text]}>How do reminders work?</Text>
-                        <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>Enable in Settings to get notifications.</Text>
+                        <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>
+                           Enable Daily Reminders in Settings. Set your preferred time range and frequency (every 15min to 2 hours). You'll receive vocabulary notifications to practice throughout the day.
+                        </Text>
                      </View>
+
                      <View style={styles.faqItem}>
-                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>Can I change my level?</Text>
-                        <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>Yes! Go to Progress - Change Level.</Text>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>What does "When Notification Arrives" mean?</Text>
+                        <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>
+                           Choose whether words shown in notifications are automatically marked as learned or remain in your queue for manual review later.
+                        </Text>
                      </View>
+
+                     {/* Data & Sync */}
+                     <View style={styles.faqItem}>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>Is my progress saved to the cloud?</Text>
+                        <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>
+                           Yes! Your progress and favorites automatically sync to our cloud daily. Log in on any device to continue learning where you left off.
+                        </Text>
+                     </View>
+
+                     <View style={styles.faqItem}>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>Can I learn a different language?</Text>
+                        <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>
+                           Go to Settings → Progress → Change Learning Language. Note: This will reset your current progress as each language has its own vocabulary set.
+                        </Text>
+                     </View>
+
+                     <View style={styles.faqItem}>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>How do I reset my progress?</Text>
+                        <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>
+                           Go to Settings → Progress → Reset Progress. This clears all learned words and starts fresh. Warning: This action cannot be undone!
+                        </Text>
+                     </View>
+
+                     {/* Support */}
                      <View style={[styles.faqItem, { borderBottomWidth: 0 }]}>
                         <Text style={[styles.faqQuestion, dynamicStyles.text]}>Need more help?</Text>
-                        <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>Contact support@vocbee.com</Text>
+                        <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>
+                           For any questions, suggestions, or issues, please contact us at support@vocbee.com. We'd love to hear from you!
+                        </Text>
                      </View>
                   </ScrollView>
                </View>
-            </TouchableOpacity>
+            </View>
          </Modal>
 
          {/* Privacy Policy Modal */}
@@ -1471,8 +1562,6 @@ const styles = StyleSheet.create({
       paddingVertical: 16,
       paddingHorizontal: 16,
       borderRadius: 8,
-      borderWidth: 2,
-      borderColor: 'transparent',
       marginBottom: 8,
    },
    levelPickerRow: {

@@ -102,21 +102,26 @@ export function AuthProvider({ children }: AuthProviderProps) {
                 if (localData && localData.uid === firebaseUser.uid) {
                     setUserData(localData);
                 } else {
-                    // Fetch from Firestore if no local data
+                    // Fetch from Firestore if no local data - this also saves profile to AsyncStorage
                     const fetchedData = await fetchAndSaveUserData(firebaseUser.uid);
                     setUserData(fetchedData);
                 }
 
-                // Load profile data
+                // Load profile data (after fetchAndSaveUserData may have updated it)
                 try {
-                    // Check if we have local profile data
                     const storedProfile = await AsyncStorage.getItem(`profile_${firebaseUser.uid}`);
                     if (storedProfile) {
-                        setProfile(JSON.parse(storedProfile));
-                    } else if (firebaseUser.displayName) {
-                        // Initialize from Firebase if available
+                        const parsedProfile = JSON.parse(storedProfile);
+                        // Ensure email is always set from Firebase Auth if missing
+                        if (!parsedProfile.email && firebaseUser.email) {
+                            parsedProfile.email = firebaseUser.email;
+                            await AsyncStorage.setItem(`profile_${firebaseUser.uid}`, JSON.stringify(parsedProfile));
+                        }
+                        setProfile(parsedProfile);
+                    } else {
+                        // Initialize profile from Firebase Auth data
                         const initialProfile = {
-                            name: firebaseUser.displayName,
+                            name: firebaseUser.displayName || firebaseUser.email?.split('@')[0] || 'User',
                             image: firebaseUser.photoURL,
                             email: firebaseUser.email || ''
                         };
@@ -202,10 +207,72 @@ export function AuthProvider({ children }: AuthProviderProps) {
         }
     };
 
+    // Google OAuth Client IDs
+    const GOOGLE_WEB_CLIENT_ID = '540292978044-pjka45r8ej0k63564hicngf1prip5ctu.apps.googleusercontent.com';
+
+    // Google Sign-In request
+    const [request, response, promptAsync] = Google.useAuthRequest({
+        clientId: GOOGLE_WEB_CLIENT_ID,
+        iosClientId: GOOGLE_WEB_CLIENT_ID,
+        androidClientId: GOOGLE_WEB_CLIENT_ID,
+        webClientId: GOOGLE_WEB_CLIENT_ID,
+    });
+
+    // Handle Google Sign-In response
+    useEffect(() => {
+        const handleGoogleResponse = async () => {
+            if (response?.type === 'success') {
+                const { id_token } = response.params;
+
+                try {
+                    setIsLoading(true);
+
+                    // Clear local storage first
+                    await clearAllLocalData();
+
+                    // Create Firebase credential with Google ID token
+                    const credential = GoogleAuthProvider.credential(id_token);
+                    const userCredential = await signInWithCredential(auth, credential);
+
+                    // Check if user exists in Firestore, if not create document
+                    const fetchedData = await fetchAndSaveUserData(userCredential.user.uid);
+
+                    if (!fetchedData) {
+                        // New user - create document
+                        await createUserDocument(
+                            userCredential.user.uid,
+                            userCredential.user.email || '',
+                            userCredential.user.displayName || undefined
+                        );
+                    }
+
+                    setUserData(fetchedData);
+
+                } catch (error: any) {
+                    console.error('Google Sign-In error:', error);
+                    throw new Error('Failed to sign in with Google. Please try again.');
+                } finally {
+                    setIsLoading(false);
+                }
+            }
+        };
+
+        handleGoogleResponse();
+    }, [response]);
+
     // Sign In with Google
     const signInWithGoogle = async () => {
-        console.log('Google Sign-In disabled');
-        throw new Error('This feature is currently disabled.');
+        if (!request) {
+            console.error('Google Auth request not ready');
+            throw new Error('Google Sign-In is not available right now. Please try again.');
+        }
+
+        try {
+            await promptAsync();
+        } catch (error: any) {
+            console.error('Google Sign-In error:', error);
+            throw new Error('Failed to start Google Sign-In. Please try again.');
+        }
     };
 
     // Sign Out

@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, ScrollView, TouchableOpacity, StyleSheet, Modal, ActivityIndicator } from 'react-native';
 import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -8,6 +8,8 @@ import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import { FONT_FAMILY } from '../utils/typography';
 import { RootStackParamList } from '../types';
 import * as Speech from 'expo-speech';
+import { explainGrammar, GrammarResponse } from '../services/groqService';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 type ExampleSentencesRouteProp = RouteProp<RootStackParamList, 'ExampleSentences'>;
 
@@ -32,6 +34,35 @@ export default function ExampleSentencesScreen() {
         sentence2: 'Example sentence 2',
         nativeSentence1: 'Native sentence 1',
         nativeSentence2: 'Native sentence 2'
+    };
+
+    // AI State
+    const [isAiLoading, setIsAiLoading] = useState(false);
+    const [aiExplanation, setAiExplanation] = useState<GrammarResponse | null>(null);
+    const [showAiModal, setShowAiModal] = useState(false);
+
+    const handleExplainGrammar = async () => {
+        // Check if we already have the explanation cached in state
+        if (aiExplanation) {
+            setShowAiModal(true);
+            return;
+        }
+
+        setIsAiLoading(true);
+        setShowAiModal(true);
+        try {
+            // Get user's native language preference
+            const nativeLanguage = await AsyncStorage.getItem('@native_language') || 'Turkish';
+
+            const result = await explainGrammar(sentence1, sentence2, nativeLanguage);
+            setAiExplanation(result);
+        } catch (error) {
+            console.error('AI Error:', error);
+            // Fallback is handled by showing null or error state if needed, 
+            // but for now we'll just keep the loading state false and maybe show an alert in a real app
+        } finally {
+            setIsAiLoading(false);
+        }
     };
 
     return (
@@ -101,31 +132,120 @@ export default function ExampleSentencesScreen() {
                     </View>
                 </View>
 
-                {/* AI Assistant Promo */}
+                {/* AI Assistant Button */}
                 <View style={styles.aiSection}>
-                    <View style={[styles.aiCard, { backgroundColor: colors.surface, borderColor: `${colors.primary}33` }]}>
-                        <View style={[styles.aiGlow, { backgroundColor: `${colors.primary}1a` }]} />
+                    <TouchableOpacity
+                        style={[styles.aiButton, { backgroundColor: colors.primary }]}
+                        onPress={handleExplainGrammar}
+                        activeOpacity={0.8}
+                    >
+                        <MaterialIcons name="auto-awesome" size={20} color={colors.background} />
+                        <Text style={[styles.aiButtonText, { color: colors.background }]}>Explain Grammar with AI</Text>
+                    </TouchableOpacity>
+                </View>
+            </ScrollView>
 
-                        <View style={styles.aiHeader}>
-                            <View style={[styles.aiIcon, { backgroundColor: colors.primary }]}>
-                                <MaterialIcons name="smart-toy" size={24} color={colors.background} />
+            {/* AI Explanation Modal */}
+            <Modal
+                visible={showAiModal}
+                transparent={true}
+                animationType="slide"
+                onRequestClose={() => setShowAiModal(false)}
+            >
+                <View style={styles.modalOverlay}>
+                    <View style={[styles.modalContent, { backgroundColor: colors.surface, borderColor: colors.border }]}>
+                        {/* Modal Header */}
+                        <View style={styles.modalHeader}>
+                            <View style={styles.modalTitleRow}>
+                                <View style={[styles.aiIconSmall, { backgroundColor: colors.primary }]}>
+                                    <MaterialIcons name="smart-toy" size={16} color={colors.background} />
+                                </View>
+                                <Text style={[styles.modalTitle, { color: colors.text }]}>Grammar Explanation</Text>
                             </View>
-                            <View>
-                                <Text style={[styles.aiTitle, { color: colors.text }]}>VocBee AI Assistant</Text>
-                                <Text style={[styles.aiSubtitle, { color: colors.primary }]}>Ask about usage, nuance, or similar words.</Text>
-                            </View>
+                            <TouchableOpacity onPress={() => setShowAiModal(false)} style={styles.closeButton}>
+                                <MaterialIcons name="close" size={24} color={colors.textSecondary} />
+                            </TouchableOpacity>
                         </View>
 
-                        <TouchableOpacity style={[styles.aiInput, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)', borderColor: colors.border }]}>
-                            <Text style={[styles.aiInputText, { color: colors.textSecondary }]}>Ask a question about this word...</Text>
-                            <View style={[styles.aiSendButton, { backgroundColor: `${colors.primary}33` }]}>
-                                <MaterialIcons name="arrow-upward" size={14} color={colors.primary} />
-                            </View>
-                        </TouchableOpacity>
+                        {/* Content */}
+                        <ScrollView style={styles.modalScroll} contentContainerStyle={styles.modalScrollContent}>
+                            {isAiLoading ? (
+                                <View style={styles.loadingContainer}>
+                                    <ActivityIndicator size="large" color={colors.primary} />
+                                    <Text style={[styles.loadingText, { color: colors.textSecondary }]}>Analyzing grammar structure...</Text>
+                                    <Text style={[styles.loadingSubText, { color: colors.textSecondary }]}>Powering up AI teacher...</Text>
+                                </View>
+                            ) : aiExplanation ? (
+                                <View style={styles.resultContainer}>
+                                    {/* Sentence 1 Analysis */}
+                                    <View style={styles.analysisSection}>
+                                        <View style={[styles.sectionHeader, { borderLeftColor: colors.primary }]}>
+                                            <Text style={[styles.sectionTitleText, { color: colors.text }]}>Example 1 Analysis</Text>
+                                        </View>
+
+                                        <View style={[styles.analysisCard, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.03)' }]}>
+                                            <View style={styles.analysisRow}>
+                                                <Text style={[styles.label, { color: colors.primary }]}>Structure</Text>
+                                                <Text style={[styles.value, { color: colors.text }]}>{aiExplanation.sentence1.structure}</Text>
+                                            </View>
+                                            <View style={[styles.dividerLine, { backgroundColor: colors.border }]} />
+
+                                            <View style={styles.analysisRow}>
+                                                <Text style={[styles.label, { color: colors.primary }]}>Grammar</Text>
+                                                <Text style={[styles.value, { color: colors.text }]}>{aiExplanation.sentence1.grammar}</Text>
+                                            </View>
+                                            <View style={[styles.dividerLine, { backgroundColor: colors.border }]} />
+
+                                            <View style={styles.analysisRow}>
+                                                <Text style={[styles.label, { color: colors.primary }]}>Why?</Text>
+                                                <Text style={[styles.value, { color: colors.text }]}>{aiExplanation.sentence1.reason}</Text>
+                                            </View>
+                                        </View>
+                                    </View>
+
+                                    {/* Sentence 2 Analysis */}
+                                    <View style={styles.analysisSection}>
+                                        <View style={[styles.sectionHeader, { borderLeftColor: colors.primary }]}>
+                                            <Text style={[styles.sectionTitleText, { color: colors.text }]}>Example 2 Analysis</Text>
+                                        </View>
+
+                                        <View style={[styles.analysisCard, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.03)' }]}>
+                                            <View style={styles.analysisRow}>
+                                                <Text style={[styles.label, { color: colors.primary }]}>Structure</Text>
+                                                <Text style={[styles.value, { color: colors.text }]}>{aiExplanation.sentence2.structure}</Text>
+                                            </View>
+                                            <View style={[styles.dividerLine, { backgroundColor: colors.border }]} />
+
+                                            <View style={styles.analysisRow}>
+                                                <Text style={[styles.label, { color: colors.primary }]}>Grammar</Text>
+                                                <Text style={[styles.value, { color: colors.text }]}>{aiExplanation.sentence2.grammar}</Text>
+                                            </View>
+                                            <View style={[styles.dividerLine, { backgroundColor: colors.border }]} />
+
+                                            <View style={styles.analysisRow}>
+                                                <Text style={[styles.label, { color: colors.primary }]}>Why?</Text>
+                                                <Text style={[styles.value, { color: colors.text }]}>{aiExplanation.sentence2.reason}</Text>
+                                            </View>
+                                        </View>
+                                    </View>
+                                </View>
+                            ) : (
+                                <View style={styles.errorContainer}>
+                                    <Text style={[styles.errorText, { color: colors.textSecondary }]}>
+                                        Unable to load explanation. Please try again.
+                                    </Text>
+                                    <TouchableOpacity
+                                        style={[styles.retryButton, { backgroundColor: `${colors.primary}20` }]}
+                                        onPress={handleExplainGrammar}
+                                    >
+                                        <Text style={[styles.retryText, { color: colors.primary }]}>Retry</Text>
+                                    </TouchableOpacity>
+                                </View>
+                            )}
+                        </ScrollView>
                     </View>
                 </View>
-
-            </ScrollView>
+            </Modal>
 
             {/* Floating Back Button */}
             <TouchableOpacity
@@ -380,5 +500,148 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: -4,
+    },
+    // Updated AI Styles
+    aiButton: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingVertical: 14,
+        borderRadius: 12,
+        gap: 8,
+        marginTop: 8,
+    },
+    aiButtonText: {
+        fontFamily: FONT_FAMILY,
+        fontWeight: 'bold',
+        fontSize: 16,
+    },
+    // Modal Styles
+    modalOverlay: {
+        flex: 1,
+        backgroundColor: 'rgba(0,0,0,0.6)',
+        justifyContent: 'flex-end',
+    },
+    modalContent: {
+        height: '70%',
+        borderTopLeftRadius: 24,
+        borderTopRightRadius: 24,
+        borderWidth: 1,
+        borderBottomWidth: 0,
+        padding: 24,
+        paddingBottom: 40, // Extra padding for safe area
+    },
+    modalHeader: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginBottom: 20,
+    },
+    modalTitleRow: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 10,
+    },
+    modalTitle: {
+        fontFamily: FONT_FAMILY,
+        fontSize: 20,
+        fontWeight: 'bold',
+    },
+    aiIconSmall: {
+        width: 28,
+        height: 28,
+        borderRadius: 14,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    closeButton: {
+        padding: 4,
+    },
+    modalScroll: {
+        flex: 1,
+    },
+    modalScrollContent: {
+        paddingBottom: 20,
+    },
+    loadingContainer: {
+        padding: 40,
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: 16,
+    },
+    loadingText: {
+        fontFamily: FONT_FAMILY,
+        fontSize: 16,
+    },
+    explanationText: {
+        fontFamily: FONT_FAMILY,
+        fontSize: 16,
+        lineHeight: 26,
+    },
+    // AI Analysis UI
+    resultContainer: {
+        gap: 24,
+    },
+    analysisSection: {
+        gap: 12,
+    },
+    sectionHeader: {
+        borderLeftWidth: 3,
+        paddingLeft: 12,
+    },
+    sectionTitleText: {
+        fontFamily: FONT_FAMILY,
+        fontSize: 18,
+        fontWeight: 'bold',
+        letterSpacing: 0.5,
+    },
+    analysisCard: {
+        borderRadius: 16,
+        padding: 16,
+    },
+    analysisRow: {
+        gap: 6,
+    },
+    label: {
+        fontFamily: FONT_FAMILY,
+        fontSize: 12,
+        fontWeight: 'bold',
+        textTransform: 'uppercase',
+        letterSpacing: 1,
+    },
+    value: {
+        fontFamily: FONT_FAMILY,
+        fontSize: 15,
+        lineHeight: 22,
+    },
+    dividerLine: {
+        height: 1,
+        width: '100%',
+        marginVertical: 12,
+        opacity: 0.1,
+    },
+    loadingSubText: {
+        fontFamily: FONT_FAMILY,
+        fontSize: 13,
+        marginTop: 8,
+    },
+    errorContainer: {
+        padding: 40,
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: 20,
+    },
+    errorText: {
+        fontFamily: FONT_FAMILY,
+        textAlign: 'center',
+    },
+    retryButton: {
+        paddingHorizontal: 20,
+        paddingVertical: 10,
+        borderRadius: 20,
+    },
+    retryText: {
+        fontFamily: FONT_FAMILY,
+        fontWeight: 'bold',
     },
 });

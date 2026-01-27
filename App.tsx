@@ -22,6 +22,7 @@ import {
   handleNotificationResponse,
 } from './services/notificationService';
 import { STORAGE_KEYS } from './services/storageKeys';
+import { initializeAdMob, checkAndShowAppOpenAd } from './services/adMobService';
 
 // Screens
 import CustomSplashScreen from './screens/SplashScreen';
@@ -36,7 +37,7 @@ import LevelTestScreen from './screens/LevelTestScreen';
 import ForgotPasswordScreen from './screens/ForgotPasswordScreen';
 
 // Configure notifications globally
-// configureNotifications();
+configureNotifications();
 
 // Keep splash screen visible while loading fonts
 SplashScreen.preventAutoHideAsync();
@@ -215,7 +216,13 @@ export default function App() {
         setIconFontsLoaded(true);
       }
     }
+
     loadIconFonts();
+
+    // Initialize AdMob and Check for App Open Ad
+    initializeAdMob().then(() => {
+      checkAndShowAppOpenAd();
+    });
   }, []);
 
   // Set Android navigation bar to transparent

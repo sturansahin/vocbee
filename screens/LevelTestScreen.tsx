@@ -134,7 +134,13 @@ export default function LevelTestScreen() {
                 <View style={styles.questionSection}>
                     <Text style={[styles.questionText, { color: colors.text }]}>What does this word mean?</Text>
                     <View style={[styles.wordCard, { backgroundColor: colors.primary }]}>
-                        <Text style={[styles.wordText, { color: colors.background }]}>{currentQuestion.word.toUpperCase()}</Text>
+                        <Text
+                            style={[styles.wordText, { color: colors.background }]}
+                            adjustsFontSizeToFit
+                            numberOfLines={1}
+                        >
+                            {currentQuestion.word.toUpperCase()}
+                        </Text>
                     </View>
                 </View>
 
@@ -244,6 +250,8 @@ const styles = StyleSheet.create({
         paddingVertical: 20,
         borderRadius: 20,
         marginBottom: 32,
+        maxWidth: '90%',
+        alignSelf: 'center',
     },
     wordText: {
         fontFamily: FONT_FAMILY,

@@ -64,9 +64,11 @@ export const getNotificationContent = (word: VocabularyWord) => ({
 export function configureNotifications(): void {
     Notifications.setNotificationHandler({
         handleNotification: async () => ({
-            shouldShowAlert: false, // Do not show alert when app is in foreground
-            shouldPlaySound: false, // Do not play sound when app is in foreground
+            shouldShowAlert: true,
+            shouldPlaySound: false,
             shouldSetBadge: false,
+            shouldShowBanner: true,
+            shouldShowList: true,
         }),
     });
 }
@@ -182,6 +184,8 @@ async function getRandomUnlearnedWord(): Promise<VocabularyWord | null> {
 
 /**
  * Schedule vocabulary notifications based on settings
+ * Dynamically calculates how many days to schedule based on user settings
+ * Max 64 notifications (iOS/Android limit)
  */
 export async function scheduleVocabularyNotifications(): Promise<void> {
     try {
@@ -195,61 +199,75 @@ export async function scheduleVocabularyNotifications(): Promise<void> {
         // Cancel existing notifications first
         await cancelAllNotifications();
 
-        // Calculate notification times for the current day
+        const MAX_NOTIFICATIONS = 64;
         const now = new Date();
-        const startTime = new Date();
-        startTime.setHours(settings.startHour, settings.startMinute, 0, 0);
 
-        const endTime = new Date();
-        endTime.setHours(settings.endHour, settings.endMinute, 0, 0);
+        // Calculate notifications per day based on user settings
+        const dailyStartMinutes = settings.startHour * 60 + settings.startMinute;
+        const dailyEndMinutes = settings.endHour * 60 + settings.endMinute;
+        const dailyTimeRangeMinutes = dailyEndMinutes - dailyStartMinutes;
+        const notificationsPerDay = Math.floor(dailyTimeRangeMinutes / settings.frequencyMinutes) + 1;
 
-        // If current time is past end time, schedule for tomorrow
-        if (now > endTime) {
-            startTime.setDate(startTime.getDate() + 1);
-            endTime.setDate(endTime.getDate() + 1);
-        }
+        // Calculate how many days we can schedule
+        const daysToSchedule = Math.ceil(MAX_NOTIFICATIONS / notificationsPerDay);
 
-        // Calculate number of notifications
-        const timeDiffMinutes = (endTime.getTime() - startTime.getTime()) / (1000 * 60);
-        const numNotifications = Math.floor(timeDiffMinutes / settings.frequencyMinutes) + 1;
+        console.log(`Notifications per day: ${notificationsPerDay}, scheduling for ${daysToSchedule} days`);
 
-        // Schedule notifications
-        for (let i = 0; i < Math.min(numNotifications, 20); i++) { // Max 20 notifications
-            const notificationTime = new Date(startTime.getTime() + i * settings.frequencyMinutes * 60 * 1000);
+        let scheduledCount = 0;
 
-            // Skip if notification time is in the past
-            if (notificationTime <= now) continue;
+        // Schedule for multiple days
+        for (let day = 0; day < daysToSchedule && scheduledCount < MAX_NOTIFICATIONS; day++) {
+            const baseDate = new Date(now);
+            baseDate.setDate(baseDate.getDate() + day);
 
-            const word = await getRandomUnlearnedWord();
-            if (!word) continue;
+            const startTime = new Date(baseDate);
+            startTime.setHours(settings.startHour, settings.startMinute, 0, 0);
 
-            const secondsUntilNotification = Math.floor((notificationTime.getTime() - now.getTime()) / 1000);
+            const endTime = new Date(baseDate);
+            endTime.setHours(settings.endHour, settings.endMinute, 0, 0);
 
-            const { title, body } = getNotificationContent(word);
+            // Schedule notifications for this day
+            for (let i = 0; i < notificationsPerDay && scheduledCount < MAX_NOTIFICATIONS; i++) {
+                const notificationTime = new Date(startTime.getTime() + i * settings.frequencyMinutes * 60 * 1000);
 
-            await Notifications.scheduleNotificationAsync({
-                content: {
-                    title,
-                    body,
-                    data: {
-                        wordId: word.id,
-                        word: word.word,
-                        translation: word.translation,
-                        autoMark: settings.autoMarkLearned,
+                // Skip if notification time is in the past
+                if (notificationTime <= now) continue;
+
+                const word = await getRandomUnlearnedWord();
+                if (!word) continue;
+
+                const { title, body } = getNotificationContent(word);
+
+                await Notifications.scheduleNotificationAsync({
+                    content: {
+                        title,
+                        body,
+                        data: {
+                            wordId: word.id,
+                            word: word.word,
+                            translation: word.translation,
+                            autoMark: settings.autoMarkLearned,
+                        },
+                        sound: 'default',
                     },
-                    sound: 'default',
-                },
-                trigger: secondsUntilNotification > 0 ? { seconds: secondsUntilNotification } : null,
-            });
+                    trigger: {
+                        type: Notifications.SchedulableTriggerInputTypes.TIME_INTERVAL,
+                        seconds: Math.max(1, Math.floor((notificationTime.getTime() - now.getTime()) / 1000)),
+                        repeats: false,
+                    },
+                });
 
-            // If autoMarkLearned is enabled, mark word as learned when scheduling
-            if (settings.autoMarkLearned) {
-                const level = await getCurrentLevel();
-                await markWordAsLearned(level, word.id);
+                // If autoMarkLearned is enabled, mark word as learned when scheduling
+                if (settings.autoMarkLearned) {
+                    const level = await getCurrentLevel();
+                    await markWordAsLearned(level, word.id);
+                }
+
+                scheduledCount++;
             }
         }
 
-        console.log(`Scheduled ${numNotifications} vocabulary notifications`);
+        console.log(`Scheduled ${scheduledCount} notifications for ${daysToSchedule} days`);
     } catch (error) {
         console.error('Error scheduling notifications:', error);
     }
@@ -339,7 +357,11 @@ export async function sendTestNotification(): Promise<void> {
             },
             sound: 'default',
         },
-        trigger: { seconds: 5 },
+        trigger: {
+            type: Notifications.SchedulableTriggerInputTypes.TIME_INTERVAL,
+            seconds: 5,
+            repeats: false,
+        },
     });
 
     console.log('Test notification scheduled');

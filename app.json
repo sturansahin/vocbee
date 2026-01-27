@@ -5,7 +5,7 @@
     "scheme": "vocbee",
     "version": "1.0.0",
     "orientation": "portrait",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
     "assetBundlePatterns": [
       "**/*"
     ],
@@ -18,7 +18,14 @@
     },
     "plugins": [
       "expo-font",
-      "expo-asset"
+      "expo-asset",
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-3149431742550187~5197491242",
+          "iosAppId": "ca-app-pub-3149431742550187~5197491242"
+        }
+      ]
     ]
   }
 }

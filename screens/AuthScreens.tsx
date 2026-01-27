@@ -296,7 +296,7 @@ export const LoginScreen = () => {
 
   return (
     <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
-      <ScrollView contentContainerStyle={[styles.scrollContent, { padding }]}>
+      <ScrollView contentContainerStyle={[styles.scrollContent, { padding }]} showsVerticalScrollIndicator={false}>
 
         {/* Logo Section with Lottie Animation */}
         <View style={[styles.logoSection, { marginBottom: logoMarginBottom }]}>
@@ -381,23 +381,30 @@ export const LoginScreen = () => {
           <ActivityIndicator size="small" color={colors.primary} style={{ marginTop: 16 }} />
         )}
 
-        {/* Social Buttons - Disabled
-        <View style={styles.divider}>
+        {/* Social Login Buttons */}
+        <View style={[styles.divider, { marginVertical: isSmallScreen ? 20 : 32 }]}>
           <View style={[styles.dividerLine, { backgroundColor: colors.border }]} />
-          <Text style={[styles.dividerText, { color: colors.textSecondary }]}>Or continue with</Text>
+          <Text style={[styles.dividerText, { color: colors.textSecondary, fontSize: isSmallScreen ? 12 : 14 }]}>Or continue with</Text>
           <View style={[styles.dividerLine, { backgroundColor: colors.border }]} />
         </View>
 
-        <View style={styles.socialRow}>
+        <View style={[styles.socialRow, { marginBottom: isSmallScreen ? 8 : 12 }]}>
           <TouchableOpacity
-            style={[styles.socialButton, { backgroundColor: colors.surface, borderColor: colors.border }]}
+            style={[styles.socialButton, {
+              backgroundColor: colors.surface,
+              borderColor: colors.border,
+              height: isSmallScreen ? 44 : isLargeScreen ? 56 : 48,
+            }]}
             onPress={signInWithGoogle}
+            disabled={isSubmitting}
           >
-            <AntDesign name="google" size={16} color={colors.text} />
-            <Text style={[styles.socialButtonText, { color: colors.text }]}>Google</Text>
+            <AntDesign name="google" size={isSmallScreen ? 14 : isLargeScreen ? 20 : 16} color={colors.text} />
+            <Text style={[styles.socialButtonText, {
+              color: colors.text,
+              fontSize: isSmallScreen ? 13 : isLargeScreen ? 16 : 14,
+            }]}>Google</Text>
           </TouchableOpacity>
         </View>
-        */}
 
         <View style={styles.signupRow}>
           <Text style={[styles.signupText, { color: colors.textSecondary }]}>Don't have an account? </Text>
@@ -551,23 +558,30 @@ export const SignUpScreen = () => {
           <ActivityIndicator size="small" color={colors.primary} style={{ marginTop: 16 }} />
         )}
 
-        {/* Divider & Socials - Disabled 
-        <View style={styles.divider}>
+        {/* Social Login Buttons */}
+        <View style={[styles.divider, { marginVertical: isSmallScreen ? 20 : 32 }]}>
           <View style={[styles.dividerLine, { backgroundColor: colors.border }]} />
-          <Text style={[styles.dividerText, { color: colors.textSecondary }]}>Or continue with</Text>
+          <Text style={[styles.dividerText, { color: colors.textSecondary, fontSize: isSmallScreen ? 12 : 14 }]}>Or continue with</Text>
           <View style={[styles.dividerLine, { backgroundColor: colors.border }]} />
         </View>
 
-        <View style={styles.socialRow}>
+        <View style={[styles.socialRow, { marginBottom: isSmallScreen ? 20 : 32 }]}>
           <TouchableOpacity
-            style={[styles.socialButton, { backgroundColor: colors.surface, borderColor: colors.border }]}
+            style={[styles.socialButton, {
+              backgroundColor: colors.surface,
+              borderColor: colors.border,
+              height: isSmallScreen ? 44 : isLargeScreen ? 56 : 48,
+            }]}
             onPress={signInWithGoogle}
+            disabled={isSubmitting}
           >
-            <AntDesign name="google" size={16} color={colors.text} />
-            <Text style={[styles.socialButtonText, { color: colors.text }]}>Google</Text>
+            <AntDesign name="google" size={isSmallScreen ? 14 : isLargeScreen ? 20 : 16} color={colors.text} />
+            <Text style={[styles.socialButtonText, {
+              color: colors.text,
+              fontSize: isSmallScreen ? 13 : isLargeScreen ? 16 : 14,
+            }]}>Google</Text>
           </TouchableOpacity>
         </View>
-        */}
 
       </ScrollView>
     </SafeAreaView>

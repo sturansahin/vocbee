@@ -42,7 +42,7 @@ const HOURS_LIST = Array.from({ length: 24 }, (_, i) => i.toString().padStart(2,
 const MINUTES_LIST = Array.from({ length: 60 }, (_, i) => i.toString().padStart(2, '0'));
 const HOURS_EXTENDED = [...HOURS_LIST, ...HOURS_LIST, ...HOURS_LIST];
 const MINUTES_EXTENDED = [...MINUTES_LIST, ...MINUTES_LIST, ...MINUTES_LIST];
-const FREQUENCIES = ['Every 15 minutes', 'Every 30 minutes', 'Every hour', 'Every 2 hours'];
+const FREQUENCIES = ['Every 30 minutes', 'Every hour', 'Every 2 hours'];
 const ITEM_HEIGHT = 44;
 
 // Unified Setup Screen with Steps (5 steps: language -> language -> level -> notifications -> schedule)
@@ -74,7 +74,7 @@ export const SetupScreen = () => {
   const progressAnim = useRef(new Animated.Value(20)).current;
   const fadeAnim = useRef(new Animated.Value(1)).current;
 
-  const totalSteps = 5; // Reduced from 6 to 5 (removed name step)
+  const totalSteps = 7; // 7 steps: native -> target -> level -> notifications -> start time -> end time -> frequency
 
   // Handle detected level from quiz
   useEffect(() => {
@@ -95,16 +95,20 @@ export const SetupScreen = () => {
     }).start();
   }, [currentStep]);
 
-  // Auto-scroll wheel pickers on step 5
+  // Auto-scroll wheel pickers on step 5 (start time) and step 6 (end time)
   useEffect(() => {
     if (currentStep === 5) {
       setTimeout(() => {
         const startHourIndex = HOURS_LIST.indexOf(startHour) + HOURS_LIST.length;
         const startMinuteIndex = MINUTES_LIST.indexOf(startMinute) + MINUTES_LIST.length;
-        const endHourIndex = HOURS_LIST.indexOf(endHour) + HOURS_LIST.length;
-        const endMinuteIndex = MINUTES_LIST.indexOf(endMinute) + MINUTES_LIST.length;
         startHourRef.current?.scrollTo({ y: startHourIndex * ITEM_HEIGHT, animated: false });
         startMinuteRef.current?.scrollTo({ y: startMinuteIndex * ITEM_HEIGHT, animated: false });
+      }, 100);
+    }
+    if (currentStep === 6) {
+      setTimeout(() => {
+        const endHourIndex = HOURS_LIST.indexOf(endHour) + HOURS_LIST.length;
+        const endMinuteIndex = MINUTES_LIST.indexOf(endMinute) + MINUTES_LIST.length;
         endHourRef.current?.scrollTo({ y: endHourIndex * ITEM_HEIGHT, animated: false });
         endMinuteRef.current?.scrollTo({ y: endMinuteIndex * ITEM_HEIGHT, animated: false });
       }, 100);
@@ -147,7 +151,6 @@ export const SetupScreen = () => {
 
   const getFrequencyMinutes = (freq: string): number => {
     switch (freq) {
-      case 'Every 15 minutes': return 15;
       case 'Every 30 minutes': return 30;
       case 'Every hour': return 60;
       default: return 120;
@@ -252,6 +255,11 @@ export const SetupScreen = () => {
           autoMarkLearned: true,
         });
         await scheduleVocabularyNotifications();
+      } else {
+        // Save disabled state so Settings screen shows correct toggle
+        await saveNotificationSettings({
+          enabled: false,
+        });
       }
 
       // Generate vocabulary for selected language pair
@@ -281,14 +289,14 @@ export const SetupScreen = () => {
         goToStep(currentStep + 1);
       }
     } else {
-      // Final step - save everything
+      // Final step (7) - save everything
       await handleFinalStep();
     }
   };
 
   const handleBack = () => {
     if (currentStep > 1) {
-      if (currentStep === 5 && !notificationPermissionGranted) {
+      if ((currentStep === 5 || currentStep === 6 || currentStep === 7) && !notificationPermissionGranted) {
         goToStep(3); // Skip back to level if no permission
       } else {
         goToStep(currentStep - 1);
@@ -309,7 +317,9 @@ export const SetupScreen = () => {
       case 2: return { white: "I want to learn", green: "this language..." };
       case 3: return { white: "What's your", green: "current level?" };
       case 4: return { white: "Stay on track with", green: "daily reminders" };
-      case 5: return { white: "Set your", green: "reminder schedule" };
+      case 5: return { white: "When should we", green: "start reminding you?" };
+      case 6: return { white: "When should we", green: "stop reminding you?" };
+      case 7: return { white: "How often should we", green: "send reminders?" };
       default: return { white: "", green: "" };
     }
   };
@@ -320,7 +330,9 @@ export const SetupScreen = () => {
       case 2: return "Select the language you want to master.";
       case 3: return "Choose the level that best describes your proficiency.";
       case 4: return "Get notified with new words throughout the day.";
-      case 5: return "Choose when and how often you want to be reminded.";
+      case 5: return "We'll start sending you words at this time.";
+      case 6: return "We'll stop sending you words after this time.";
+      case 7: return "Choose how often you want to receive new words.";
       default: return "";
     }
   };
@@ -329,9 +341,11 @@ export const SetupScreen = () => {
     switch (currentStep) {
       case 1:
       case 2:
-      case 3: return "Continue";
+      case 3:
+      case 5:
+      case 6: return "Continue";
       case 4: return "Enable Notifications";
-      case 5: return "Start Learning";
+      case 7: return "Start Learning";
       default: return "Continue";
     }
   };
@@ -458,37 +472,39 @@ export const SetupScreen = () => {
   );
 
   const renderStep4Content = () => (
-    <View style={styles.notificationContainer}>
-      <View style={[styles.notificationIconContainer, { backgroundColor: `${colors.primary}20` }]}>
-        <MaterialCommunityIcons name="bell-ring" size={60} color={colors.primary} />
+    <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
+      <View style={styles.notificationContent}>
+        <View style={[styles.featureRow, { marginBottom: 16 }]}>
+          <MaterialCommunityIcons name="bell-ring" size={20} color={colors.primary} />
+          <Text style={[styles.notificationTitle, { color: colors.text }]}>
+            Learn with Reminders
+          </Text>
+        </View>
+        <Text style={[styles.notificationDesc, { color: colors.textSecondary, textAlign: 'center' }]}>
+          We'll send you daily vocabulary words to help you learn consistently. You can customize the timing in the next step.
+        </Text>
+        <View style={styles.notificationFeatures}>
+          <View style={styles.featureRow}>
+            <MaterialIcons name="check-circle" size={20} color={colors.primary} />
+            <Text style={[styles.featureText, { color: colors.text }]}>New words delivered daily</Text>
+          </View>
+          <View style={styles.featureRow}>
+            <MaterialIcons name="check-circle" size={20} color={colors.primary} />
+            <Text style={[styles.featureText, { color: colors.text }]}>Customizable schedule</Text>
+          </View>
+          <View style={styles.featureRow}>
+            <MaterialIcons name="check-circle" size={20} color={colors.primary} />
+            <Text style={[styles.featureText, { color: colors.text }]}>Learn without opening the app</Text>
+          </View>
+        </View>
       </View>
-      <Text style={[styles.notificationTitle, { color: colors.text }]}>
-        Learn with Reminders
-      </Text>
-      <Text style={[styles.notificationDesc, { color: colors.textSecondary }]}>
-        We'll send you daily vocabulary words to help you learn consistently. You can customize the timing in the next step.
-      </Text>
-      <View style={styles.notificationFeatures}>
-        <View style={styles.featureRow}>
-          <MaterialIcons name="check-circle" size={20} color={colors.primary} />
-          <Text style={[styles.featureText, { color: colors.text }]}>New words delivered daily</Text>
-        </View>
-        <View style={styles.featureRow}>
-          <MaterialIcons name="check-circle" size={20} color={colors.primary} />
-          <Text style={[styles.featureText, { color: colors.text }]}>Customizable schedule</Text>
-        </View>
-        <View style={styles.featureRow}>
-          <MaterialIcons name="check-circle" size={20} color={colors.primary} />
-          <Text style={[styles.featureText, { color: colors.text }]}>Learn without opening the app</Text>
-        </View>
-      </View>
-    </View>
+    </ScrollView>
   );
 
+  // Step 5 - Start Time
   const renderStep5Content = () => (
-    <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
+    <View style={[styles.scrollView, { justifyContent: 'center' }]}>
       <View style={styles.scheduleContainer}>
-        {/* Start Time */}
         <View style={[styles.scheduleSection, { backgroundColor: colors.surface, borderColor: colors.border }]}>
           <View style={styles.scheduleLabelRow}>
             <MaterialIcons name="wb-sunny" size={20} color={colors.primary} />
@@ -560,8 +576,14 @@ export const SetupScreen = () => {
             </View>
           </View>
         </View>
+      </View>
+    </View>
+  );
 
-        {/* End Time */}
+  // Step 6 - End Time
+  const renderStep6Content = () => (
+    <View style={[styles.scrollView, { justifyContent: 'center' }]}>
+      <View style={styles.scheduleContainer}>
         <View style={[styles.scheduleSection, { backgroundColor: colors.surface, borderColor: colors.border }]}>
           <View style={styles.scheduleLabelRow}>
             <MaterialIcons name="nightlight-round" size={20} color={colors.primary} />
@@ -633,8 +655,14 @@ export const SetupScreen = () => {
             </View>
           </View>
         </View>
+      </View>
+    </View>
+  );
 
-        {/* Frequency */}
+  // Step 7 - Frequency
+  const renderStep7Content = () => (
+    <View style={[styles.scrollView, { justifyContent: 'center' }]}>
+      <View style={styles.scheduleContainer}>
         <View style={[styles.scheduleSection, { backgroundColor: colors.surface, borderColor: colors.border }]}>
           <View style={styles.scheduleLabelRow}>
             <Feather name="repeat" size={18} color={colors.primary} />
@@ -663,7 +691,7 @@ export const SetupScreen = () => {
           </View>
         </View>
       </View>
-    </ScrollView>
+    </View>
   );
 
   const insets = useSafeAreaInsets();
@@ -697,6 +725,8 @@ export const SetupScreen = () => {
         {currentStep === 3 && renderStep3Content()}
         {currentStep === 4 && renderStep4Content()}
         {currentStep === 5 && renderStep5Content()}
+        {currentStep === 6 && renderStep6Content()}
+        {currentStep === 7 && renderStep7Content()}
       </Animated.View>
 
       {/* Button stays fixed */}
@@ -915,6 +945,23 @@ const styles = StyleSheet.create({
     paddingBottom: 32,
   },
   // Step 4 - Notification Permission
+  notificationContent: {
+    paddingVertical: 24,
+    paddingBottom: 100,
+  },
+  notificationHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    marginBottom: 16,
+  },
+  notificationIconSmall: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   notificationContainer: {
     flex: 1,
     alignItems: 'center',
@@ -932,8 +979,7 @@ const styles = StyleSheet.create({
   notificationTitle: {
     fontFamily: FONT_FAMILY,
     fontSize: 22,
-    marginBottom: 12,
-    textAlign: 'center',
+    flex: 1,
   },
   notificationDesc: {
     fontFamily: FONT_FAMILY,
