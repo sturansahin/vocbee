@@ -744,25 +744,9 @@ export default function HomeScreen() {
         );
     };
 
-    // Loading state
+    // Loading state - return null to let splash screen handle it
     if (isLoading) {
-        // Create yellow bee animation for loading
-        const loadingAnimation = createSwarmAnimation([1, 0.78, 0.08, 1], false); // Animated wings
-
-        return (
-            <View style={[styles.container, { backgroundColor: colors.background, paddingTop: insets.top }]}>
-                <View style={styles.loadingContainer}>
-                    <LottieView
-                        source={loadingAnimation}
-                        style={styles.loadingLottie}
-                        autoPlay={true}
-                        loop={true}
-                        speed={1.5}
-                    />
-                    <Text style={[styles.loadingText, { color: colors.text }]}>Loading vocabulary...</Text>
-                </View>
-            </View>
-        );
+        return null;
     }
 
     // No words state

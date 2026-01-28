@@ -16,8 +16,8 @@ export default function SplashScreen({ onFinish }: SplashScreenProps) {
     // Yellow bee color (same as LoginScreen)
     const beeColor: [number, number, number, number] = [1, 0.78, 0.08, 1]; // #FFC814
 
-    // Animated version (wings flapping)
-    const animatedAnimation = useMemo(() => createSwarmAnimation(beeColor, false), []);
+    // Animated version (wings flapping) - beeColor is constant so empty deps is safe
+    const animatedAnimation = useMemo(() => createSwarmAnimation(beeColor, false), [beeColor]);
 
     useEffect(() => {
         // Fade in animation
@@ -30,13 +30,13 @@ export default function SplashScreen({ onFinish }: SplashScreenProps) {
         // Start Lottie animation
         lottieRef.current?.play();
 
-        // Minimum splash duration (1.5 seconds) then finish
+        // Minimum splash duration (2.5 seconds) then finish
         const timer = setTimeout(() => {
             onFinish();
-        }, 1500);
+        }, 2500);
 
         return () => clearTimeout(timer);
-    }, [onFinish]);
+    }, [onFinish, fadeAnim]);
 
     return (
         <Animated.View
@@ -66,14 +66,14 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     logoContainer: {
-        width: 200,
-        height: 188,
+        width: 100,
+        height: 94,
         alignItems: 'center',
         justifyContent: 'center',
         overflow: 'visible',
     },
     lottieAnimation: {
-        width: 200,
-        height: 188,
+        width: 100,
+        height: 94,
     },
 });
