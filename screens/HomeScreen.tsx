@@ -702,6 +702,11 @@ export default function HomeScreen() {
                 ]}>
                     <View style={styles.cardContentAbove}>
                         {/* Upper Section - Word and Translation */}
+                        <View style={styles.favoriteButton}>
+                            <View style={{ width: 26, height: 26, justifyContent: 'center', alignItems: 'center' }}>
+                                <Feather name="star" size={24} color={colors.primary} />
+                            </View>
+                        </View>
                         <View style={styles.cardUpperSection}>
                             <Text
                                 style={[styles.wordTitle, { color: colors.text }]}
@@ -711,7 +716,9 @@ export default function HomeScreen() {
                                 {nextWord.word}
                             </Text>
                             <View style={styles.translationRow}>
-                                <MaterialIcons name="translate" size={24} color={colors.primary} />
+                                <View style={{ position: 'absolute', left: scale(36) - 35 }}>
+                                    <MaterialIcons name="translate" size={22} color={colors.primary} />
+                                </View>
                                 <Text style={[styles.translationText, { color: colors.primary }]}>{nextWord.translation}</Text>
                             </View>
                         </View>
@@ -944,7 +951,7 @@ export default function HomeScreen() {
                                                 <Ionicons name="star" size={22} color={colors.primary} />
                                             </View>
                                         )}
-                                        <Feather name="star" size={26} color={colors.primary} />
+                                        <Feather name="star" size={24} color={colors.primary} />
                                     </View>
                                 </TouchableOpacity>
 
@@ -952,7 +959,6 @@ export default function HomeScreen() {
                                 <View style={styles.cardUpperSection}>
 
                                     <TouchableOpacity
-                                        style={styles.wordTitleRow}
                                         onPress={async () => {
                                             console.log('Word button pressed:', currentWord.word);
                                             try {
@@ -976,10 +982,11 @@ export default function HomeScreen() {
                                         >
                                             {currentWord.word}
                                         </Text>
-                                        <MaterialIcons name="volume-up" size={24} color={colors.primary} />
                                     </TouchableOpacity>
                                     <View style={styles.translationRow}>
-                                        <MaterialIcons name="translate" size={20} color={colors.primary} />
+                                        <View style={{ position: 'absolute', left: scale(36) - 35 }}>
+                                            <MaterialIcons name="translate" size={22} color={colors.primary} />
+                                        </View>
                                         <Text style={[styles.translationText, { color: colors.primary }]}>{currentWord.translation}</Text>
                                     </View>
                                 </View>
@@ -1200,17 +1207,24 @@ const styles = StyleSheet.create({
         marginBottom: scale(4),
         letterSpacing: 1,
         textAlign: 'center',
+        paddingHorizontal: 40,
+        maxWidth: '100%',
     },
     translationRow: {
+        width: '100%',
         flexDirection: 'row',
         alignItems: 'center',
-        gap: 8,
+        justifyContent: 'center', // Center content horizontally
         marginBottom: 24,
+        position: 'relative', // For absolute positioning of icon
     },
     translationText: {
         fontFamily: FONT_FAMILY,
         fontSize: moderateScale(24),
         fontWeight: '500',
+        paddingHorizontal: 40,
+        maxWidth: '100%',
+        textAlign: 'center',
     },
     favoriteButton: {
         position: 'absolute',
@@ -1233,8 +1247,7 @@ const styles = StyleSheet.create({
         bottom: 0,
         borderRadius: 32,
         alignItems: 'center',
-        justifyContent: 'flex-start',
-        paddingTop: 40,
+        justifyContent: 'center',
         zIndex: 1,
     },
     swipeLabelContainer: {
@@ -1319,6 +1332,7 @@ const styles = StyleSheet.create({
         fontSize: 15,
         lineHeight: 22,
         textAlign: 'center',
+        paddingHorizontal: 40,
     },
     thinDivider: {
         height: 1,
@@ -1332,6 +1346,7 @@ const styles = StyleSheet.create({
         fontStyle: 'italic',
         lineHeight: 20,
         textAlign: 'center',
+        paddingHorizontal: 40,
     },
     cardAudioButton: {
         position: 'absolute',
