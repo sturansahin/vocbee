@@ -50,7 +50,7 @@ export default function SplashScreen({ onFinish }: SplashScreenProps) {
                     ref={lottieRef}
                     source={animatedAnimation}
                     style={styles.lottieAnimation}
-                    resizeMode="cover"
+                    resizeMode="contain"
                     loop={true}
                     speed={1.5}
                 />
