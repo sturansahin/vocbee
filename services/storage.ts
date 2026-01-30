@@ -23,11 +23,12 @@ export interface UserData {
     uid: string;
     email: string;
     displayName?: string;
-    preferences: {
+    setupCompleted?: boolean;
+    preferences?: {
         nativeLanguage: string;
         targetLanguage: string;
         level: string;
-    };
+    } | null;
 }
 
 // Save local progress

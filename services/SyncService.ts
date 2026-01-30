@@ -59,9 +59,8 @@ export const syncToFirestore = async (userId: string): Promise<boolean> => {
                 lastWordIndex: lastWordIndex,
                 lastSync: serverTimestamp(),
             },
-            // Sync profile name if available
+            // Preserve setupCompleted flag if it exists
             ...(profileName && { displayName: profileName }),
-            // Sync profile image if available
             ...(profileImage && { photoURL: profileImage }),
         }, { merge: true });
 
@@ -128,11 +127,18 @@ export const fetchAndSaveUserData = async (userId: string): Promise<UserData | n
 
         if (userDoc.exists()) {
             const data = userDoc.data();
+            console.log('[SyncService] Raw Firebase data:', JSON.stringify({
+                setupCompleted: data.setupCompleted,
+                hasPreferences: !!data.preferences,
+                preferences: data.preferences,
+                hasProgress: !!data.progress
+            }, null, 2));
 
             const userData: UserData = {
                 uid: userId,
                 email: data.email,
                 displayName: data.displayName,
+                setupCompleted: data.setupCompleted,
                 preferences: data.preferences,
             };
 

@@ -73,6 +73,7 @@ function AppContent() {
           return;
         }
         console.log('[App] Auth loaded. User:', user ? 'logged in' : 'not logged in');
+        console.log('[App] userData:', userData ? JSON.stringify({ setupCompleted: userData.setupCompleted, prefs: userData.preferences }) : 'null');
 
         let route: keyof RootStackParamList = 'Onboarding';
 
@@ -81,7 +82,11 @@ function AppContent() {
           route = 'Onboarding';
         } else if (user) {
           // User is logged in
-          if (userData?.preferences) {
+          // Check if setup is completed by verifying setupCompleted flag OR complete preferences
+          const hasCompletedSetup = (userData as any)?.setupCompleted === true ||
+            (userData?.preferences?.nativeLanguage && userData?.preferences?.targetLanguage);
+
+          if (hasCompletedSetup) {
             // Setup completed - go to home
             route = 'MainTabs';
           } else {

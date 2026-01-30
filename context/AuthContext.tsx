@@ -97,14 +97,22 @@ export function AuthProvider({ children }: AuthProviderProps) {
             }
 
             if (firebaseUser) {
-                // Try to load local data first
+                // Cache-first strategy: Use local cache if available
+                // Only fetch from Firebase on first login or when cache is cleared
                 const localData = await getLocalUserData();
-                if (localData && localData.uid === firebaseUser.uid) {
+
+                if (localData && localData.uid === firebaseUser.uid && localData.setupCompleted) {
+                    // Use cached data - faster startup, no network request
                     setUserData(localData);
+                    console.log('[AuthContext] Using cached user data (setupCompleted:', localData.setupCompleted, ')');
                 } else {
-                    // Fetch from Firestore if no local data - this also saves profile to AsyncStorage
+                    // No valid cache - fetch from Firebase (first login or cache cleared)
+                    console.log('[AuthContext] No valid cache, fetching from Firebase...');
                     const fetchedData = await fetchAndSaveUserData(firebaseUser.uid);
-                    setUserData(fetchedData);
+                    if (fetchedData) {
+                        setUserData(fetchedData);
+                        console.log('[AuthContext] Loaded user data from Firebase:', fetchedData.setupCompleted ? 'setup completed' : 'setup not completed');
+                    }
                 }
 
                 // Load profile data (after fetchAndSaveUserData may have updated it)

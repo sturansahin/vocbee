@@ -15,6 +15,7 @@ import { RootStackParamList } from '../types';
 import { resetProgress, setCurrentLevel, getCurrentLevel } from '../services/progressService';
 import { getFirstLevelForUserLevel } from '../services/vocabularyService';
 import { forceSync } from '../services/SyncService';
+import { clearAllLocalData } from '../services/storage';
 import { useAlert } from '../components/CustomAlert';
 import * as ImagePicker from 'expo-image-picker';
 import {
@@ -545,6 +546,8 @@ export default function SettingsScreen() {
                               text: 'Continue',
                               style: 'destructive',
                               onPress: async () => {
+                                 // Clear userData cache so AuthContext fetches fresh data after setup
+                                 await clearAllLocalData();
                                  await resetProgress();
                                  await forceSync(user?.uid || '');
                                  navigation.reset({

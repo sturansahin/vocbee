@@ -380,8 +380,24 @@ export default function HomeScreen() {
                     console.log(`Regenerating vocabulary: ${nativeLanguage} -> ${targetLanguage}`);
                     await generateVocabulary(nativeLanguage, targetLanguage);
                     console.log('Vocabulary regenerated successfully');
+
+                    // Get current level to verify vocabulary was generated
+                    const level = await getCurrentLevel();
+                    const testVocab = await getStoredVocabulary(level);
+                    if (testVocab.length === 0) {
+                        console.error('Vocabulary generation failed - no words loaded');
+                        setLearnedCount(0);
+                        setTotalCount(0);
+                        setWords([]);
+                        setIsLoading(false);
+                        return;
+                    }
+                    console.log(`Verified: ${testVocab.length} words generated for level ${level}`);
                 } else {
                     console.log('No stored language preferences found');
+                    setLearnedCount(0);
+                    setTotalCount(0);
+                    setWords([]);
                     setIsLoading(false);
                     return;
                 }
@@ -399,6 +415,16 @@ export default function HomeScreen() {
 
             // Get vocabulary for current level
             const vocabulary = await getStoredVocabulary(level);
+
+            // Validate vocabulary is not empty
+            if (vocabulary.length === 0) {
+                console.warn(`No vocabulary available for level ${level}`);
+                setLearnedCount(0);
+                setTotalCount(0);
+                setWords([]);
+                setIsLoading(false);
+                return;
+            }
 
             // Get learned words
             const learnedIds = await getLearnedWords(level);
@@ -421,7 +447,7 @@ export default function HomeScreen() {
             }
             setCurrentWordIndex(resumeIndex);
 
-            // Update counts
+            // Update counts - these should now be guaranteed correct
             const learned = await getLearnedCount(level);
             const total = await getTotalWords(level);
             setLearnedCount(learned);
@@ -429,9 +455,13 @@ export default function HomeScreen() {
 
             hasInitiallyLoaded.current = true;
 
-            console.log(`Loaded ${shuffledWords.length} unlearned words from ${vocabulary.length} total for level ${level}`);
+            console.log(`Loaded ${shuffledWords.length} unlearned words from ${vocabulary.length} total for level ${level} (${learned} learned)`);
         } catch (error) {
             console.error('Error loading data:', error);
+            // Set safe defaults on error
+            setLearnedCount(0);
+            setTotalCount(0);
+            setWords([]);
         } finally {
             setIsLoading(false);
         }
