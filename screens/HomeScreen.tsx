@@ -432,8 +432,10 @@ export default function HomeScreen() {
             // Filter out learned words
             const unlearnedWords = vocabulary.filter(word => !learnedIds.includes(word.id));
 
-            // Check if we have a saved shuffle order for this level
-            const shuffleOrderKey = `@shuffle_order_${level}`;
+            // Check if we have a saved shuffle order for this language pair and level
+            const nativeLang = await AsyncStorage.getItem('@native_language') || 'unknown';
+            const targetLang = await AsyncStorage.getItem('@target_language') || 'unknown';
+            const shuffleOrderKey = `@shuffle_order_${nativeLang}_${targetLang}_${level}`;
             const savedOrderJson = await AsyncStorage.getItem(shuffleOrderKey);
 
             let orderedWords: VocabularyWord[];

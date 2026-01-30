@@ -139,15 +139,29 @@ export const getLocalUserData = async (): Promise<UserData | null> => {
     }
 };
 
-// Clear all local data (for logout)
+// Clear all local data (for logout or language change)
 export const clearAllLocalData = async (): Promise<void> => {
     try {
-        await AsyncStorage.multiRemove([
+        // Get all keys to find shuffle order caches
+        const allKeys = await AsyncStorage.getAllKeys();
+
+        // Keys to remove: storage keys + shuffle order caches + progress keys
+        const keysToRemove = [
             STORAGE_KEYS.USER_PROGRESS,
             STORAGE_KEYS.SYNC_FLAG,
             STORAGE_KEYS.LAST_SYNC,
             STORAGE_KEYS.USER_DATA,
-        ]);
+            // Progress service keys
+            '@user_progress',
+            '@user_skipped',
+            '@current_level',
+            '@last_word_id',
+            // Add all shuffle order keys
+            ...allKeys.filter(key => key.startsWith('@shuffle_order_')),
+        ];
+
+        await AsyncStorage.multiRemove(keysToRemove);
+        console.log('Cleared all local data including shuffle order caches');
     } catch (error) {
         console.error('Error clearing local data:', error);
     }

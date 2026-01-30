@@ -24,7 +24,7 @@ import { LANGUAGES, LEVELS, COLORS } from '../constants';
 import { useTheme } from '../context/ThemeContext';
 import { FONT_FAMILY } from '../utils/typography';
 import { generateVocabulary, getFirstLevelForUserLevel } from '../services/vocabularyService';
-import { setCurrentLevel } from '../services/progressService';
+import { setCurrentLevel, resetProgress } from '../services/progressService';
 import {
   requestNotificationPermissions,
   saveNotificationSettings,
@@ -264,6 +264,9 @@ export const SetupScreen = () => {
 
       // Generate vocabulary for selected language pair
       await generateVocabulary(nativeLanguage, targetLanguage);
+
+      // Reset local progress to ensure clean slate for new language
+      await resetProgress();
 
       // Set initial level
       await setCurrentLevel(initialLevel);
