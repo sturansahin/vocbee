@@ -429,17 +429,47 @@ export default function HomeScreen() {
             // Get learned words
             const learnedIds = await getLearnedWords(level);
 
-            // Filter out learned words and shuffle
+            // Filter out learned words
             const unlearnedWords = vocabulary.filter(word => !learnedIds.includes(word.id));
-            const shuffledWords = shuffleArray(unlearnedWords);
 
-            setWords(shuffledWords);
+            // Check if we have a saved shuffle order for this level
+            const shuffleOrderKey = `@shuffle_order_${level}`;
+            const savedOrderJson = await AsyncStorage.getItem(shuffleOrderKey);
 
-            // Resume from last saved word ID (find its position in shuffled array)
+            let orderedWords: VocabularyWord[];
+
+            if (savedOrderJson && !forceReload) {
+                // Use saved shuffle order
+                const savedOrder: number[] = JSON.parse(savedOrderJson);
+                // Rebuild words array in saved order, filtering out any that no longer exist or are learned
+                orderedWords = savedOrder
+                    .map(id => unlearnedWords.find(w => w.id === id))
+                    .filter((w): w is VocabularyWord => w !== undefined);
+
+                // If saved order doesn't match current unlearned words, add any new words at the end
+                const savedIds = new Set(savedOrder);
+                const newWords = unlearnedWords.filter(w => !savedIds.has(w.id));
+                if (newWords.length > 0) {
+                    orderedWords = [...orderedWords, ...shuffleArray(newWords)];
+                    // Update saved order with new words
+                    await AsyncStorage.setItem(shuffleOrderKey, JSON.stringify(orderedWords.map(w => w.id)));
+                }
+
+                console.log(`Using saved shuffle order for level ${level}`);
+            } else {
+                // First time or force reload - shuffle and save order
+                orderedWords = shuffleArray(unlearnedWords);
+                await AsyncStorage.setItem(shuffleOrderKey, JSON.stringify(orderedWords.map(w => w.id)));
+                console.log(`Created new shuffle order for level ${level}`);
+            }
+
+            setWords(orderedWords);
+
+            // Resume from last saved word ID (find its position in ordered array)
             const lastWordId = await getLastWordId();
             let resumeIndex = 0;
             if (lastWordId !== null) {
-                const foundIndex = shuffledWords.findIndex(w => w.id === lastWordId);
+                const foundIndex = orderedWords.findIndex(w => w.id === lastWordId);
                 if (foundIndex !== -1) {
                     resumeIndex = foundIndex;
                     console.log(`Resuming from word ID ${lastWordId} at position ${foundIndex}`);
@@ -455,7 +485,7 @@ export default function HomeScreen() {
 
             hasInitiallyLoaded.current = true;
 
-            console.log(`Loaded ${shuffledWords.length} unlearned words from ${vocabulary.length} total for level ${level} (${learned} learned)`);
+            console.log(`Loaded ${orderedWords.length} unlearned words from ${vocabulary.length} total for level ${level} (${learned} learned)`);
         } catch (error) {
             console.error('Error loading data:', error);
             // Set safe defaults on error
