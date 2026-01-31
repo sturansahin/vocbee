@@ -13,6 +13,7 @@ import {
 } from './storage';
 import { getUserProgress, getCurrentLevel, restoreProgressFromFirebase, getLastWordIndex } from './progressService';
 import { restoreFavoritesFromFirebase, syncFavoritesToFirebase } from './favoritesService';
+import { getLanguagePair } from './vocabularyService';
 
 // Check if sync should happen (once per day)
 export const shouldSync = async (): Promise<boolean> => {
@@ -49,20 +50,45 @@ export const syncToFirestore = async (userId: string): Promise<boolean> => {
         const profileName = profileData.name;
         const profileImage = profileData.image;
 
-        console.log('Syncing progress and profile to Firestore:', { currentLevel, lastWordIndex, hasProfileName: !!profileName, hasProfileImage: !!profileImage });
+        // Get language preferences
+        const languagePair = await getLanguagePair();
+        // Check if we have valid preferences (need both languages and a level)
+        const hasPreferences = !!(languagePair && languagePair.native && languagePair.target && currentLevel);
+
+        console.log('Syncing progress, profile and preferences to Firestore:', {
+            currentLevel,
+            lastWordIndex,
+            hasProfileName: !!profileName,
+            hasPreferences
+        });
 
         const userRef = doc(db, 'users', userId);
-        await setDoc(userRef, {
+
+        // Prepare data payload
+        const syncData: any = {
             progress: {
                 currentLevel: currentLevel,
                 learnedWords: userProgress,
                 lastWordIndex: lastWordIndex,
                 lastSync: serverTimestamp(),
             },
-            // Preserve setupCompleted flag if it exists
+            // Update profile info
             ...(profileName && { displayName: profileName }),
             ...(profileImage && { photoURL: profileImage }),
-        }, { merge: true });
+        };
+
+        // If we have valid preferences locally, force update them in Firestore
+        // This ensures the user is marked as "Setup Completed"
+        if (hasPreferences && languagePair) {
+            syncData.preferences = {
+                nativeLanguage: languagePair.native,
+                targetLanguage: languagePair.target,
+                level: currentLevel,
+            };
+            syncData.setupCompleted = true;
+        }
+
+        await setDoc(userRef, syncData, { merge: true });
 
         // Sync favorites
         await syncFavoritesToFirebase();

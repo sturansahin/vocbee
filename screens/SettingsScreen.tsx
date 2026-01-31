@@ -15,6 +15,7 @@ import { RootStackParamList } from '../types';
 import { resetProgress, setCurrentLevel, getCurrentLevel } from '../services/progressService';
 import { getFirstLevelForUserLevel } from '../services/vocabularyService';
 import { forceSync } from '../services/SyncService';
+import { clearFavoritesOnFirebase } from '../services/favoritesService';
 import { clearAllLocalData } from '../services/storage';
 import { useAlert } from '../components/CustomAlert';
 import * as ImagePicker from 'expo-image-picker';
@@ -546,6 +547,10 @@ export default function SettingsScreen() {
                               text: 'Continue',
                               style: 'destructive',
                               onPress: async () => {
+                                 // FIRST: Clear favorites on Firebase while we have user ID
+                                 if (user?.uid) {
+                                    await clearFavoritesOnFirebase(user.uid);
+                                 }
                                  // Clear userData cache so AuthContext fetches fresh data after setup
                                  await clearAllLocalData();
                                  await resetProgress();
@@ -583,6 +588,10 @@ export default function SettingsScreen() {
                               text: 'Reset',
                               style: 'destructive',
                               onPress: async () => {
+                                 // FIRST: Clear favorites on Firebase
+                                 if (user?.uid) {
+                                    await clearFavoritesOnFirebase(user.uid);
+                                 }
                                  await resetProgress();
                                  // Sync empty progress to Firebase
                                  await forceSync(user?.uid || '');

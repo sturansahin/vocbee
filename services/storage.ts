@@ -156,8 +156,15 @@ export const clearAllLocalData = async (): Promise<void> => {
             '@user_skipped',
             '@current_level',
             '@last_word_id',
+            // Vocabulary and Language keys
+            '@vocabulary',
+            '@native_language',
+            '@target_language',
+            '@user_level',
             // Add all shuffle order keys
             ...allKeys.filter(key => key.startsWith('@shuffle_order_')),
+            // Add all favorites keys (generic and user-specific)
+            ...allKeys.filter(key => key.startsWith('@favorites')),
         ];
 
         await AsyncStorage.multiRemove(keysToRemove);

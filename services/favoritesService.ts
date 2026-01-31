@@ -191,6 +191,24 @@ export async function clearFavorites(): Promise<void> {
 }
 
 /**
+ * Clear favorites on Firebase (explicitly with user ID)
+ * Use this when resetting/changing language to ensure Firebase data is cleared
+ * even if auth.currentUser is not available
+ */
+export async function clearFavoritesOnFirebase(userId: string): Promise<void> {
+    try {
+        if (!userId) return;
+
+        const userRef = doc(db, 'users', userId);
+        await setDoc(userRef, { favorites: [] }, { merge: true });
+
+        console.log('Cleared favorites on Firebase for user:', userId);
+    } catch (error) {
+        console.error('Error clearing favorites on Firebase:', error);
+    }
+}
+
+/**
  * Sync favorites to Firebase
  * Called by SyncService during daily sync or logout
  */
