@@ -513,7 +513,6 @@ const styles = StyleSheet.create({
     },
     aiButtonText: {
         fontFamily: FONT_FAMILY,
-        fontWeight: 'bold',
         fontSize: 16,
     },
     // Modal Styles
@@ -545,7 +544,6 @@ const styles = StyleSheet.create({
     modalTitle: {
         fontFamily: FONT_FAMILY,
         fontSize: 20,
-        fontWeight: 'bold',
     },
     aiIconSmall: {
         width: 28,
@@ -592,7 +590,6 @@ const styles = StyleSheet.create({
     sectionTitleText: {
         fontFamily: FONT_FAMILY,
         fontSize: 18,
-        fontWeight: 'bold',
         letterSpacing: 0.5,
     },
     analysisCard: {
@@ -605,7 +602,6 @@ const styles = StyleSheet.create({
     label: {
         fontFamily: FONT_FAMILY,
         fontSize: 12,
-        fontWeight: 'bold',
         textTransform: 'uppercase',
         letterSpacing: 1,
     },
@@ -642,6 +638,5 @@ const styles = StyleSheet.create({
     },
     retryText: {
         fontFamily: FONT_FAMILY,
-        fontWeight: 'bold',
     },
 });

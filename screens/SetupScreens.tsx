@@ -9,6 +9,7 @@ import {
   Dimensions,
   Image,
   Linking,
+  Easing,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
@@ -31,6 +32,10 @@ import {
   scheduleVocabularyNotifications,
 } from '../services/notificationService';
 import { useAlert } from '../components/CustomAlert';
+import { SwarmLogo } from '../components/SwarmLogo';
+import LottieView from 'lottie-react-native';
+import { createSwarmAnimation } from '../assets/animations/swarmAnimation';
+import * as Notifications from 'expo-notifications';
 
 type SetupNavProp = StackNavigationProp<RootStackParamList>;
 type SetupRouteProp = RouteProp<RootStackParamList, 'NativeLanguage'>;
@@ -73,6 +78,13 @@ export const SetupScreen = () => {
   // Animated values
   const progressAnim = useRef(new Animated.Value(20)).current;
   const fadeAnim = useRef(new Animated.Value(1)).current;
+  const beeRotation = useRef(new Animated.Value(0)).current;
+  const beeBounce = useRef(new Animated.Value(0)).current;
+  const lottieRef = useRef<LottieView>(null);
+
+  // Yellow bee color for Lottie animation
+  const beeColor: [number, number, number, number] = [1, 0.78, 0.08, 1]; // #FFC814
+  const animatedAnimation = React.useMemo(() => createSwarmAnimation(beeColor, false), []);
 
   const totalSteps = 7; // 7 steps: native -> target -> level -> notifications -> start time -> end time -> frequency
 
@@ -82,7 +94,22 @@ export const SetupScreen = () => {
       setLevel(route.params.detectedLevel);
       setCurrentStep(3);
     }
-  }, [route.params?.detectedLevel]);
+  }, [route.params]);
+
+  // Check notification permission on mount
+  useEffect(() => {
+    const checkExistingPermission = async () => {
+      try {
+        const { status } = await Notifications.getPermissionsAsync();
+        if (status === 'granted') {
+          setNotificationPermissionGranted(true);
+        }
+      } catch (error) {
+        console.log('Error checking notification permission:', error);
+      }
+    };
+    checkExistingPermission();
+  }, []);
 
   // Animate progress bar when step changes
   useEffect(() => {
@@ -131,6 +158,63 @@ export const SetupScreen = () => {
     const interval = setInterval(checkPermission, 2000);
     return () => clearInterval(interval);
   }, [waitingForSettings, currentStep]);
+
+  // Bee animation for loading
+  useEffect(() => {
+    if (isGenerating) {
+      // Start wing flapping animation (rotation)
+      const rotateAnimation = Animated.loop(
+        Animated.sequence([
+          Animated.timing(beeRotation, {
+            toValue: 1,
+            duration: 150,
+            easing: Easing.linear,
+            useNativeDriver: true,
+          }),
+          Animated.timing(beeRotation, {
+            toValue: -1,
+            duration: 150,
+            easing: Easing.linear,
+            useNativeDriver: true,
+          }),
+          Animated.timing(beeRotation, {
+            toValue: 0,
+            duration: 150,
+            easing: Easing.linear,
+            useNativeDriver: true,
+          }),
+        ])
+      );
+
+      // Start bounce animation
+      const bounceAnimation = Animated.loop(
+        Animated.sequence([
+          Animated.timing(beeBounce, {
+            toValue: -10,
+            duration: 400,
+            easing: Easing.inOut(Easing.ease),
+            useNativeDriver: true,
+          }),
+          Animated.timing(beeBounce, {
+            toValue: 10,
+            duration: 400,
+            easing: Easing.inOut(Easing.ease),
+            useNativeDriver: true,
+          }),
+        ])
+      );
+
+      rotateAnimation.start();
+      bounceAnimation.start();
+
+      return () => {
+        rotateAnimation.stop();
+        bounceAnimation.stop();
+        beeRotation.setValue(0);
+        beeBounce.setValue(0);
+      };
+    }
+  }, [isGenerating]);
 
   const goToStep = (newStep: number) => {
     Animated.sequence([
@@ -283,8 +367,14 @@ export const SetupScreen = () => {
   const handleNext = async () => {
     if (currentStep < totalSteps) {
       if (currentStep === 3) {
-        // After level selection, go to notification permission step
-        goToStep(4);
+        // After level selection, check if notification permission already granted
+        if (notificationPermissionGranted) {
+          // Skip to step 5 (start time) since permission already granted
+          goToStep(5);
+        } else {
+          // Go to notification permission step
+          goToStep(4);
+        }
       } else if (currentStep === 4) {
         // Request notification permission
         await handleNotificationPermission();
@@ -704,9 +794,13 @@ export const SetupScreen = () => {
     <View style={[styles.container, { backgroundColor: colors.background, paddingTop: insets.top }]}>
       {/* Header with animated progress */}
       <View style={styles.headerContainer}>
-        <TouchableOpacity onPress={handleBack} style={styles.backButton}>
-          <FontAwesome5 name="arrow-left" size={24} color={colors.text} />
-        </TouchableOpacity>
+        {currentStep > 1 ? (
+          <TouchableOpacity onPress={handleBack} style={styles.backButton}>
+            <FontAwesome5 name="arrow-left" size={24} color={colors.text} />
+          </TouchableOpacity>
+        ) : (
+          <View style={styles.backButton} />
+        )}
 
         <View style={styles.progressWrapper}>
           <View style={[styles.progressBg, { backgroundColor: colors.surfaceLight }]}>
@@ -732,7 +826,6 @@ export const SetupScreen = () => {
         {currentStep === 7 && renderStep7Content()}
       </Animated.View>
 
-      {/* Button stays fixed */}
       <View style={[styles.bottomButton, { paddingBottom: insets.bottom + 16 }]}>
         <Button
           title={getButtonTitle()}
@@ -740,6 +833,23 @@ export const SetupScreen = () => {
           disabled={isButtonDisabled()}
         />
       </View>
+
+      {/* Loading Overlay */}
+      {isGenerating && (
+        <View style={[styles.loadingOverlay, { backgroundColor: colors.background }]}>
+          <View style={styles.beeContainer}>
+            <LottieView
+              ref={lottieRef}
+              source={animatedAnimation}
+              style={styles.lottieAnimation}
+              resizeMode="contain"
+              loop={true}
+              autoPlay={true}
+              speed={1.5}
+            />
+          </View>
+        </View>
+      )}
     </View>
   );
 };
@@ -1085,5 +1195,22 @@ const styles = StyleSheet.create({
   frequencyText: {
     fontFamily: FONT_FAMILY,
     fontSize: 15,
+  },
+  loadingOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 100,
+  },
+  beeContainer: {
+    width: 100,
+    height: 94,
+    alignItems: 'center',
+    justifyContent: 'center',
+    overflow: 'visible',
+  },
+  lottieAnimation: {
+    width: 100,
+    height: 94,
   },
 });
