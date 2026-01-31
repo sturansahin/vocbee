@@ -928,155 +928,106 @@ export default function HomeScreen() {
 
             {/* Card Stack Area */}
             <View style={styles.cardArea}>
-                {/* Background Card */}
-                {renderBackgroundCard()}
+                {/* Wrapper for vertical centering */}
+                <View style={styles.cardStackContainer}>
+                    {/* Background Card */}
+                    {renderBackgroundCard()}
 
-                {/* Top Card - Swipeable */}
-                {currentWord && (
-                    <Animated.View
-                        key={currentWord.id}
-                        style={[
-                            styles.cardContainer,
-                            {
-                                transform: [
-                                    { translateX: position.x },
-                                    { translateY: position.y },
-                                    { rotate },
-                                ],
-                                zIndex: 10,
-                            },
-                        ]}
-                        {...panResponder.panHandlers}
-                    >
-                        <View style={[
-                            styles.heroCard,
-                            {
-                                backgroundColor: colors.surface,
-                                borderColor: colors.border,
-                                borderWidth: 0.5,
-                                shadowColor: '#FFD700',
-                                shadowOffset: { width: 0, height: 0 },
-                                shadowOpacity: 0.5,
-                                shadowRadius: 20,
-                                elevation: 15,
-                            }
-                        ]}>
-                            {/* Skip Overlay */}
-                            <Animated.View
-                                style={[
-                                    styles.swipeOverlay,
-                                    {
-                                        backgroundColor: isDarkMode ? '#5c2a2a' : '#ffddddff',
-                                        opacity: position.x.interpolate({
-                                            inputRange: [-SWIPE_THRESHOLD, 0],
-                                            outputRange: [1, 0],
-                                            extrapolate: 'clamp',
-                                        }),
-                                    },
-                                ]}
-                            >
-                                <View style={styles.swipeLabelContainer}>
-                                    <Text style={[styles.skipText, { color: isDarkMode ? '#ff8a8a' : '#ff6b6bff' }]}>SKIP</Text>
-                                </View>
-                            </Animated.View>
-
-                            {/* Learned Overlay */}
-                            <Animated.View
-                                style={[
-                                    styles.swipeOverlay,
-                                    {
-                                        backgroundColor: isDarkMode ? '#2a5c3a' : '#ddffddff',
-                                        opacity: position.x.interpolate({
-                                            inputRange: [0, SWIPE_THRESHOLD],
-                                            outputRange: [0, 1],
-                                            extrapolate: 'clamp',
-                                        }),
-                                    },
-                                ]}
-                            >
-                                <View style={styles.swipeLabelContainer}>
-                                    <Text style={[styles.learnedText, { color: isDarkMode ? '#8aff8a' : '#6bff6bff' }]}>LEARNED</Text>
-                                </View>
-                            </Animated.View>
-
-                            <View style={styles.cardContentAbove} pointerEvents="box-none">
-                                {/* Favorite Button - Moved to root of content to ensure clickability */}
-                                <TouchableOpacity
-                                    style={styles.favoriteButton}
-                                    onPress={handleToggleFavorite}
-                                    activeOpacity={0.7}
-                                    hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
+                    {/* Top Card - Swipeable */}
+                    {currentWord && (
+                        <Animated.View
+                            key={currentWord.id}
+                            style={[
+                                styles.cardContainer,
+                                {
+                                    transform: [
+                                        { translateX: position.x },
+                                        { translateY: position.y },
+                                        { rotate },
+                                    ],
+                                    zIndex: 10,
+                                },
+                            ]}
+                            {...panResponder.panHandlers}
+                        >
+                            <View style={[
+                                styles.heroCard,
+                                {
+                                    backgroundColor: colors.surface,
+                                    borderColor: colors.border,
+                                    borderWidth: 0.5,
+                                    shadowColor: '#FFD700',
+                                    shadowOffset: { width: 0, height: 0 },
+                                    shadowOpacity: 0.5,
+                                    shadowRadius: 20,
+                                    elevation: 15,
+                                }
+                            ]}>
+                                {/* Skip Overlay */}
+                                <Animated.View
+                                    style={[
+                                        styles.swipeOverlay,
+                                        {
+                                            backgroundColor: isDarkMode ? '#5c2a2a' : '#ffddddff',
+                                            opacity: position.x.interpolate({
+                                                inputRange: [-SWIPE_THRESHOLD, 0],
+                                                outputRange: [1, 0],
+                                                extrapolate: 'clamp',
+                                            }),
+                                        },
+                                    ]}
                                 >
-                                    <View style={{ width: 26, height: 26, justifyContent: 'center', alignItems: 'center' }}>
-                                        {isCurrentWordFavorite && (
-                                            <View style={{ position: 'absolute' }}>
-                                                <Ionicons name="star" size={22} color={colors.primary} />
-                                            </View>
-                                        )}
-                                        <Feather name="star" size={24} color={colors.primary} />
+                                    <View style={styles.swipeLabelContainer}>
+                                        <Text style={[styles.skipText, { color: isDarkMode ? '#ff8a8a' : '#ff6b6bff' }]}>SKIP</Text>
                                     </View>
-                                </TouchableOpacity>
+                                </Animated.View>
 
-                                {/* Upper Section - Word and Translation */}
-                                <View style={styles.cardUpperSection}>
+                                {/* Learned Overlay */}
+                                <Animated.View
+                                    style={[
+                                        styles.swipeOverlay,
+                                        {
+                                            backgroundColor: isDarkMode ? '#2a5c3a' : '#ddffddff',
+                                            opacity: position.x.interpolate({
+                                                inputRange: [0, SWIPE_THRESHOLD],
+                                                outputRange: [0, 1],
+                                                extrapolate: 'clamp',
+                                            }),
+                                        },
+                                    ]}
+                                >
+                                    <View style={styles.swipeLabelContainer}>
+                                        <Text style={[styles.learnedText, { color: isDarkMode ? '#8aff8a' : '#6bff6bff' }]}>LEARNED</Text>
+                                    </View>
+                                </Animated.View>
 
+                                <View style={styles.cardContentAbove} pointerEvents="box-none">
+                                    {/* Favorite Button - Moved to root of content to ensure clickability */}
                                     <TouchableOpacity
-                                        onPress={async () => {
-                                            console.log('Word button pressed:', currentWord.word);
-                                            try {
-                                                await Speech.stop(); // Stop any ongoing speech
-                                                await Speech.speak(currentWord.word, {
-                                                    language: 'en-US',
-                                                    pitch: 1.0,
-                                                    rate: 0.75,
-                                                });
-                                                console.log('Speech started successfully');
-                                            } catch (error) {
-                                                console.error('Speech error:', error);
-                                            }
-                                        }}
+                                        style={styles.favoriteButton}
+                                        onPress={handleToggleFavorite}
                                         activeOpacity={0.7}
+                                        hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
                                     >
-                                        <Text
-                                            style={[styles.wordTitle, { color: colors.text }]}
-                                            adjustsFontSizeToFit
-                                            numberOfLines={1}
-                                        >
-                                            {currentWord.word}
-                                        </Text>
-                                    </TouchableOpacity>
-                                    <View style={styles.translationRow}>
-                                        <View style={{ position: 'absolute', left: scale(36) - 35 }}>
-                                            <MaterialIcons name="translate" size={22} color={colors.primary} />
+                                        <View style={{ width: 26, height: 26, justifyContent: 'center', alignItems: 'center' }}>
+                                            {isCurrentWordFavorite && (
+                                                <View style={{ position: 'absolute' }}>
+                                                    <Ionicons name="star" size={22} color={colors.primary} />
+                                                </View>
+                                            )}
+                                            <Feather name="star" size={24} color={colors.primary} />
                                         </View>
-                                        <Text style={[styles.translationText, { color: colors.primary }]}>{currentWord.translation}</Text>
-                                    </View>
-                                </View>
+                                    </TouchableOpacity>
 
-                                {/* Lower Section - Example Sentences with Gray Background */}
-                                <View style={[styles.cardLowerSection, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.04)' }]}>
-                                    <View style={styles.exampleSentencesContainer}>
-                                        {/* Example Sentence */}
-                                        <Text style={[styles.cardExampleText, { color: colors.text }]}>
-                                            {currentWord.sentence1}
-                                        </Text>
+                                    {/* Upper Section - Word and Translation */}
+                                    <View style={styles.cardUpperSection}>
 
-                                        {/* Thin Divider Line */}
-                                        <View style={[styles.thinDivider, { backgroundColor: colors.border }]} />
-
-                                        {/* Translation */}
-                                        <Text style={[styles.cardTranslationText, { color: colors.textSecondary }]}>
-                                            {currentWord.nativeSentence1}
-                                        </Text>
-
-                                        {/* Audio button - positioned in corner */}
                                         <TouchableOpacity
-                                            style={[styles.cardAudioButton]}
                                             onPress={async () => {
-                                                console.log('Sentence button pressed:', currentWord.sentence1);
+                                                console.log('Word button pressed:', currentWord.word);
                                                 try {
                                                     await Speech.stop(); // Stop any ongoing speech
-                                                    await Speech.speak(currentWord.sentence1, {
+                                                    await Speech.speak(currentWord.word, {
                                                         language: 'en-US',
                                                         pitch: 1.0,
                                                         rate: 0.75,
@@ -1088,63 +1039,115 @@ export default function HomeScreen() {
                                             }}
                                             activeOpacity={0.7}
                                         >
-                                            <MaterialIcons name="volume-up" size={18} color={colors.primary} />
+                                            <Text
+                                                style={[styles.wordTitle, { color: colors.text }]}
+                                                adjustsFontSizeToFit
+                                                numberOfLines={1}
+                                            >
+                                                {currentWord.word}
+                                            </Text>
                                         </TouchableOpacity>
+                                        <View style={styles.translationRow}>
+                                            <View style={{ position: 'absolute', left: scale(36) - 35 }}>
+                                                <MaterialIcons name="translate" size={22} color={colors.primary} />
+                                            </View>
+                                            <Text style={[styles.translationText, { color: colors.primary }]}>{currentWord.translation}</Text>
+                                        </View>
                                     </View>
 
-                                    {/* More Example Button - Full Width at Bottom */}
-                                    <TouchableOpacity
-                                        style={[styles.fullWidthButton, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)' }]}
-                                        onPress={() => navigation.navigate('ExampleSentences', {
-                                            word: currentWord.word,
-                                            translation: currentWord.translation,
-                                            sentence1: currentWord.sentence1,
-                                            sentence2: currentWord.sentence2,
-                                            nativeSentence1: currentWord.nativeSentence1,
-                                            nativeSentence2: currentWord.nativeSentence2
-                                        })}
-                                    >
-                                        <Text style={[styles.fullWidthButtonText, { color: colors.text }]}>MORE EXAMPLE</Text>
-                                    </TouchableOpacity>
+                                    {/* Lower Section - Example Sentences with Gray Background */}
+                                    <View style={[styles.cardLowerSection, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.04)' }]}>
+                                        <View style={styles.exampleSentencesContainer}>
+                                            {/* Example Sentence */}
+                                            <Text style={[styles.cardExampleText, { color: colors.text }]}>
+                                                {currentWord.sentence1}
+                                            </Text>
+
+                                            {/* Thin Divider Line */}
+                                            <View style={[styles.thinDivider, { backgroundColor: colors.border }]} />
+
+                                            {/* Translation */}
+                                            <Text style={[styles.cardTranslationText, { color: colors.textSecondary }]}>
+                                                {currentWord.nativeSentence1}
+                                            </Text>
+
+                                            {/* Audio button - positioned in corner */}
+                                            <TouchableOpacity
+                                                style={[styles.cardAudioButton]}
+                                                onPress={async () => {
+                                                    console.log('Sentence button pressed:', currentWord.sentence1);
+                                                    try {
+                                                        await Speech.stop(); // Stop any ongoing speech
+                                                        await Speech.speak(currentWord.sentence1, {
+                                                            language: 'en-US',
+                                                            pitch: 1.0,
+                                                            rate: 0.75,
+                                                        });
+                                                        console.log('Speech started successfully');
+                                                    } catch (error) {
+                                                        console.error('Speech error:', error);
+                                                    }
+                                                }}
+                                                activeOpacity={0.7}
+                                            >
+                                                <MaterialIcons name="volume-up" size={18} color={colors.primary} />
+                                            </TouchableOpacity>
+                                        </View>
+
+                                        {/* More Example Button - Full Width at Bottom */}
+                                        <TouchableOpacity
+                                            style={[styles.fullWidthButton, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)' }]}
+                                            onPress={() => navigation.navigate('ExampleSentences', {
+                                                word: currentWord.word,
+                                                translation: currentWord.translation,
+                                                sentence1: currentWord.sentence1,
+                                                sentence2: currentWord.sentence2,
+                                                nativeSentence1: currentWord.nativeSentence1,
+                                                nativeSentence2: currentWord.nativeSentence2
+                                            })}
+                                        >
+                                            <Text style={[styles.fullWidthButtonText, { color: colors.text }]}>MORE EXAMPLE</Text>
+                                        </TouchableOpacity>
+                                    </View>
                                 </View>
                             </View>
-                        </View>
 
-                        {/* Bees - Moved outside heroCard to avoid clipping by overflow:hidden */}
-                        {beePositions.map((bee) => (
-                            <Animated.View
-                                key={bee.id}
-                                style={[
-                                    styles.bee,
-                                    {
-                                        left: bee.x,
-                                        top: bee.y,
-                                        transform: [
-                                            { translateX: bee.translateX },
-                                            { translateY: bee.translateY },
-                                            {
-                                                rotate: bee.rotation.interpolate({
-                                                    inputRange: [-360, 360],
-                                                    outputRange: ['-360deg', '360deg'],
-                                                })
-                                            },
-                                            { scale: bee.scale },
-                                        ],
-                                        opacity: bee.opacity,
-                                    },
-                                ]}
-                            >
-                                <LottieView
-                                    source={beeAnimation}
-                                    style={styles.beeAnim}
-                                    autoPlay={beesAnimating}
-                                    loop={true}
-                                    speed={1.5}
-                                />
-                            </Animated.View>
-                        ))}
-                    </Animated.View>
-                )}
+                            {/* Bees - Moved outside heroCard to avoid clipping by overflow:hidden */}
+                            {beePositions.map((bee) => (
+                                <Animated.View
+                                    key={bee.id}
+                                    style={[
+                                        styles.bee,
+                                        {
+                                            left: bee.x,
+                                            top: bee.y,
+                                            transform: [
+                                                { translateX: bee.translateX },
+                                                { translateY: bee.translateY },
+                                                {
+                                                    rotate: bee.rotation.interpolate({
+                                                        inputRange: [-360, 360],
+                                                        outputRange: ['-360deg', '360deg'],
+                                                    })
+                                                },
+                                                { scale: bee.scale },
+                                            ],
+                                            opacity: bee.opacity,
+                                        },
+                                    ]}
+                                >
+                                    <LottieView
+                                        source={beeAnimation}
+                                        style={styles.beeAnim}
+                                        autoPlay={beesAnimating}
+                                        loop={true}
+                                        speed={1.5}
+                                    />
+                                </Animated.View>
+                            ))}
+                        </Animated.View>
+                    )}
+                </View>
             </View>
 
 
@@ -1240,10 +1243,13 @@ const styles = StyleSheet.create({
     cardArea: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'flex-start',
+        justifyContent: 'center', // Center vertically
         paddingHorizontal: 20,
-        paddingTop: 20,
-        paddingBottom: 10,
+    },
+    cardStackContainer: {
+        width: SCREEN_WIDTH - 40,
+        height: SCREEN_HEIGHT * 0.55,
+        position: 'relative',
     },
     cardContainer: {
         position: 'absolute',
@@ -1298,8 +1304,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         zIndex: 999,
-        elevation: 10,
-        backgroundColor: 'rgba(255,255,255,0.01)', // Ensure touchable area
     },
     swipeOverlay: {
         position: 'absolute',

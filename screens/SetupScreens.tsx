@@ -1208,14 +1208,15 @@ const styles = StyleSheet.create({
     zIndex: 100,
   },
   beeContainer: {
-    width: 100,
-    height: 94,
+    width: 120,
+    height: 112,
     alignItems: 'center',
     justifyContent: 'center',
     overflow: 'visible',
   },
   lottieAnimation: {
-    width: 100,
-    height: 94,
+    width: 120,
+    height: 112,
+    marginLeft: 12,  // Compensate for off-center bee in Lottie canvas
   },
 });
