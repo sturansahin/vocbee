@@ -59,6 +59,7 @@ interface AuthContextType {
     updateProfileData: (data: Partial<ProfileData>) => Promise<void>;
     notificationSettings: NotificationSettings;
     updateNotificationSettings: (settings: Partial<NotificationSettings>) => Promise<void>;
+    refreshNotificationSettings: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -356,6 +357,16 @@ export function AuthProvider({ children }: AuthProviderProps) {
         await saveNotificationSettings(settings);
     };
 
+    // Refresh notification settings from storage
+    const refreshNotificationSettings = async () => {
+        try {
+            const settings = await getNotificationSettings();
+            setNotificationSettings(settings);
+        } catch (e) {
+            console.error('Error refreshing notification settings:', e);
+        }
+    };
+
     const value: AuthContextType = {
         user,
         userData,
@@ -371,6 +382,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
         updateProfileData,
         notificationSettings,
         updateNotificationSettings,
+        refreshNotificationSettings,
     };
 
     return (

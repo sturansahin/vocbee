@@ -140,7 +140,9 @@ export const createAlert = (showAlert: AlertContextType['showAlert']) => ({
     },
 });
 
-const { width } = Dimensions.get('window');
+const { width: SCREEN_WIDTH } = Dimensions.get('window');
+const BASE_WIDTH = 393;
+const scale = (size: number) => (SCREEN_WIDTH / BASE_WIDTH) * size;
 
 const styles = StyleSheet.create({
     overlay: {
@@ -148,12 +150,13 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(0, 0, 0, 0.6)',
         justifyContent: 'center',
         alignItems: 'center',
-        padding: 40,
+        padding: scale(40),
     },
     alertBox: {
-        width: width - 80,
-        maxWidth: 320,
-        borderRadius: 16,
+        width: Math.min(SCREEN_WIDTH * 0.85, 360),
+        maxWidth: 400,
+        minWidth: 280,
+        borderRadius: scale(16),
         overflow: 'hidden',
     },
     title: {

@@ -32,6 +32,7 @@ import {
   scheduleVocabularyNotifications,
 } from '../services/notificationService';
 import { useAlert } from '../components/CustomAlert';
+import { useAuth } from '../context/AuthContext';
 import { SwarmLogo } from '../components/SwarmLogo';
 import LottieView from 'lottie-react-native';
 import { createSwarmAnimation } from '../assets/animations/swarmAnimation';
@@ -56,6 +57,7 @@ export const SetupScreen = () => {
   const route = useRoute<SetupRouteProp>();
   const { colors, isDarkMode } = useTheme();
   const { showAlert } = useAlert();
+  const { refreshNotificationSettings } = useAuth();
   const [currentStep, setCurrentStep] = useState(1);
   const [nativeLanguage, setNativeLanguage] = useState('');
   const [targetLanguage, setTargetLanguage] = useState('');
@@ -345,6 +347,9 @@ export const SetupScreen = () => {
           enabled: false,
         });
       }
+
+      // Refresh AuthContext notification settings to ensure sync
+      await refreshNotificationSettings();
 
       // Generate vocabulary for selected language pair
       await generateVocabulary(nativeLanguage, targetLanguage);

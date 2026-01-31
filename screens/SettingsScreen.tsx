@@ -28,6 +28,7 @@ import {
 import { doc, setDoc } from 'firebase/firestore';
 import { db, auth } from '../config/firebase';
 import { updateProfile } from 'firebase/auth';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Responsive Utilities
@@ -118,6 +119,7 @@ export default function SettingsScreen() {
       updateNotificationSettings
    } = useAuth();
    const { showAlert } = useAlert();
+   const insets = useSafeAreaInsets();
 
    // Initialize state from context (use fallback to context values)
    const [reminderEnabled, setReminderEnabled] = useState(notificationSettings.enabled);
@@ -353,7 +355,7 @@ export default function SettingsScreen() {
    return (
       <SafeAreaView style={[styles.container, dynamicStyles.container]}>
          {/* Header with Back Button */}
-         <View style={styles.header}>
+         <View style={[styles.header, { paddingTop: Math.max(insets.top, scale(12)) }]}>
             <TouchableOpacity
                onPress={() => navigation.goBack()}
                style={styles.backButton}
@@ -1334,7 +1336,6 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       alignItems: 'center',
       paddingHorizontal: scale(16),
-      paddingTop: scale(12),
       paddingBottom: scale(8),
       gap: scale(12),
    },
