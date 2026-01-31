@@ -1204,7 +1204,6 @@ const styles = StyleSheet.create({
     },
     statsBlurContainer: {
         marginHorizontal: 20,
-        marginBottom: 20,
         borderRadius: 20,
         overflow: 'hidden',
         backgroundColor: 'rgba(255, 255, 255, 0.1)',
@@ -1243,8 +1242,7 @@ const styles = StyleSheet.create({
     cardArea: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center', // Center vertically
-        paddingHorizontal: 20,
+        justifyContent: 'center',
     },
     cardStackContainer: {
         width: SCREEN_WIDTH - 40,

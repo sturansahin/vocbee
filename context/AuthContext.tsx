@@ -23,11 +23,13 @@ import {
     saveUserDataLocally,
     clearAllLocalData,
     UserData,
+    getDeviceId,
 } from '../services/storage';
 import {
     createUserDocument,
     fetchAndSaveUserData,
     forceSync,
+    getActiveDeviceIdFromFirebase,
 } from '../services/SyncService';
 import { resetProgress } from '../services/progressService';
 import {
@@ -98,21 +100,32 @@ export function AuthProvider({ children }: AuthProviderProps) {
             }
 
             if (firebaseUser) {
-                // Cache-first strategy: Use local cache if available
-                // Only fetch from Firebase on first login or when cache is cleared
+                // Cache-first strategy with device ID check
+                // Fetch from Firebase if: no cache, different user, different device, or setup not completed
                 const localData = await getLocalUserData();
+                const currentDeviceId = await getDeviceId();
+                const firebaseDeviceId = await getActiveDeviceIdFromFirebase(firebaseUser.uid);
 
-                if (localData && localData.uid === firebaseUser.uid && localData.setupCompleted) {
-                    // Use cached data - faster startup, no network request
+                const shouldUseCache = localData &&
+                    localData.uid === firebaseUser.uid &&
+                    localData.setupCompleted &&
+                    currentDeviceId === firebaseDeviceId;
+
+                if (shouldUseCache) {
+                    // Use cached data - same device, faster startup
                     setUserData(localData);
-                    console.log('[AuthContext] Using cached user data (setupCompleted:', localData.setupCompleted, ')');
+                    console.log('[AuthContext] Using cached user data (same device)');
                 } else {
-                    // No valid cache - fetch from Firebase (first login or cache cleared)
-                    console.log('[AuthContext] No valid cache, fetching from Firebase...');
+                    // Different device or no valid cache - fetch from Firebase
+                    const reason = !localData ? 'no cache' :
+                        localData.uid !== firebaseUser.uid ? 'different user' :
+                            !localData.setupCompleted ? 'setup not completed' :
+                                currentDeviceId !== firebaseDeviceId ? 'different device' : 'unknown';
+                    console.log(`[AuthContext] Fetching from Firebase (reason: ${reason})`);
                     const fetchedData = await fetchAndSaveUserData(firebaseUser.uid);
                     if (fetchedData) {
                         setUserData(fetchedData);
-                        console.log('[AuthContext] Loaded user data from Firebase:', fetchedData.setupCompleted ? 'setup completed' : 'setup not completed');
+                        console.log('[AuthContext] Loaded user data from Firebase');
                     }
                 }
 

@@ -9,6 +9,7 @@ const STORAGE_KEYS = {
     SYNC_FLAG: '@vocbee_needs_sync',
     LAST_SYNC: '@vocbee_last_sync',
     USER_DATA: '@vocbee_user_data',
+    DEVICE_ID: '@vocbee_device_id',
 };
 
 // Types
@@ -171,5 +172,22 @@ export const clearAllLocalData = async (): Promise<void> => {
         console.log('Cleared all local data including shuffle order caches');
     } catch (error) {
         console.error('Error clearing local data:', error);
+    }
+};
+
+// Get or create a unique device ID for this installation
+export const getDeviceId = async (): Promise<string> => {
+    try {
+        let deviceId = await AsyncStorage.getItem(STORAGE_KEYS.DEVICE_ID);
+        if (!deviceId) {
+            // Generate a new device ID (simple UUID-like string)
+            deviceId = 'device_' + Date.now() + '_' + Math.random().toString(36).substring(2, 15);
+            await AsyncStorage.setItem(STORAGE_KEYS.DEVICE_ID, deviceId);
+            console.log('[Storage] Generated new device ID:', deviceId);
+        }
+        return deviceId;
+    } catch (error) {
+        console.error('Error getting device ID:', error);
+        return 'unknown_device';
     }
 };

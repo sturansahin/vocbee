@@ -10,6 +10,7 @@ import {
     needsSync,
     UserData,
     saveUserDataLocally,
+    getDeviceId,
 } from './storage';
 import { getUserProgress, getCurrentLevel, restoreProgressFromFirebase, getLastWordIndex } from './progressService';
 import { restoreFavoritesFromFirebase, syncFavoritesToFirebase } from './favoritesService';
@@ -64,6 +65,9 @@ export const syncToFirestore = async (userId: string): Promise<boolean> => {
 
         const userRef = doc(db, 'users', userId);
 
+        // Get current device ID
+        const deviceId = await getDeviceId();
+
         // Prepare data payload
         const syncData: any = {
             progress: {
@@ -72,6 +76,8 @@ export const syncToFirestore = async (userId: string): Promise<boolean> => {
                 lastWordIndex: lastWordIndex,
                 lastSync: serverTimestamp(),
             },
+            // Track which device last synced
+            lastActiveDeviceId: deviceId,
             // Update profile info
             ...(profileName && { displayName: profileName }),
             ...(profileImage && { photoURL: profileImage }),
@@ -115,6 +121,23 @@ export const forceSync = async (userId: string): Promise<boolean> => {
     } catch (error) {
         console.error('Error in force sync:', error);
         return false;
+    }
+};
+
+// Get the last active device ID from Firebase (for device change detection)
+export const getActiveDeviceIdFromFirebase = async (userId: string): Promise<string | null> => {
+    try {
+        const userRef = doc(db, 'users', userId);
+        const userDoc = await getDoc(userRef);
+
+        if (userDoc.exists()) {
+            const data = userDoc.data();
+            return data.lastActiveDeviceId || null;
+        }
+        return null;
+    } catch (error) {
+        console.error('Error getting active device ID from Firebase:', error);
+        return null;
     }
 };
 
@@ -183,15 +206,25 @@ export const fetchAndSaveUserData = async (userId: string): Promise<UserData | n
             if (data.preferences) {
                 const { nativeLanguage, targetLanguage } = data.preferences;
                 if (nativeLanguage && targetLanguage) {
+                    // Get CURRENT language pair BEFORE overwriting with new values
+                    const { isVocabularyGenerated, generateVocabulary, getLanguagePair } = require('./vocabularyService');
+                    const currentPair = await getLanguagePair();
+                    const hasVocab = await isVocabularyGenerated();
+
+                    // Check if languages changed (compare OLD values with NEW Firebase values)
+                    const languagesChanged = currentPair &&
+                        (currentPair.native !== nativeLanguage || currentPair.target !== targetLanguage);
+
+                    // Now write the new language preferences
                     await AsyncStorage.setItem('@native_language', nativeLanguage);
                     await AsyncStorage.setItem('@target_language', targetLanguage);
                     console.log(`Restored language preferences: ${nativeLanguage} -> ${targetLanguage}`);
 
-                    // Check if vocabulary needs to be generated
-                    const { isVocabularyGenerated, generateVocabulary } = require('./vocabularyService');
-                    const hasVocab = await isVocabularyGenerated();
-                    if (!hasVocab) {
-                        console.log('Generating vocabulary for restored preferences...');
+                    // Regenerate if no vocabulary OR if language pair changed
+                    if (!hasVocab || languagesChanged) {
+                        console.log(languagesChanged
+                            ? `Language changed from ${currentPair?.native}->${currentPair?.target} to ${nativeLanguage}->${targetLanguage}, regenerating...`
+                            : 'Generating vocabulary for restored preferences...');
                         await generateVocabulary(nativeLanguage, targetLanguage);
                         console.log('Vocabulary generated successfully');
                     }
