@@ -215,7 +215,6 @@ const styles = StyleSheet.create({
   },
   inputLabel: {
     fontFamily: FONT_FAMILY,
-    color: '#fff',
     fontSize: 16,
     fontWeight: '500',
     marginLeft: 4,
@@ -233,7 +232,6 @@ const styles = StyleSheet.create({
   textInput: {
     fontFamily: FONT_FAMILY,
     flex: 1,
-    color: '#fff',
     fontSize: 16,
     height: '100%',
   },
@@ -263,7 +261,6 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     fontFamily: FONT_FAMILY,
-    color: '#fff',
     fontSize: 18,
     fontWeight: 'bold',
   },

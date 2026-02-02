@@ -1,4 +1,6 @@
-const GROQ_API_KEY = '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';
+// API key is loaded from environment variables for security
+// Create a .env file with EXPO_PUBLIC_GROQ_API_KEY=your_key
+const GROQ_API_KEY = process.env.EXPO_PUBLIC_GROQ_API_KEY || '';
 const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
 
 // Simple in-memory cache to store explanations during the app session

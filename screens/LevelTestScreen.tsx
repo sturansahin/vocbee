@@ -9,12 +9,14 @@ import {
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { RootStackParamList } from '../types';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import { useTheme } from '../context/ThemeContext';
 import { FONT_FAMILY } from '../utils/typography';
-import { LEVEL_TEST_QUESTIONS } from '../constants';
+import { LEVEL_TEST_QUESTIONS, LANGUAGES } from '../constants';
 import { Button } from '../components/UIComponents';
+import { STORAGE_KEYS } from '../services/storageKeys';
 
 type LevelTestNavProp = StackNavigationProp<RootStackParamList>;
 
@@ -28,28 +30,50 @@ export default function LevelTestScreen() {
     const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
     const [showResult, setShowResult] = useState(false);
     const [options, setOptions] = useState<string[]>([]);
-
-    const nativeLanguage = 'tr';
+    const [nativeLanguage, setNativeLanguage] = useState('tr');
 
     const currentQuestion = LEVEL_TEST_QUESTIONS[currentQuestionIndex];
     const totalQuestions = LEVEL_TEST_QUESTIONS.length;
     const progressPercent = ((currentQuestionIndex + 1) / totalQuestions) * 100;
 
-    // Shuffle options whenever question changes
+    // Load native language from storage
     useEffect(() => {
-        const translation = currentQuestion.translations[nativeLanguage];
-        const allOptions = [translation.correct, ...translation.options];
-        const shuffled = allOptions.sort(() => Math.random() - 0.5);
-        setOptions(shuffled);
-    }, [currentQuestionIndex]);
+        const loadNativeLanguage = async () => {
+            try {
+                const savedLang = await AsyncStorage.getItem(STORAGE_KEYS.NATIVE_LANGUAGE);
+                if (savedLang) {
+                    // Find the language code from the saved language name
+                    const lang = LANGUAGES.find(l => l.name === savedLang);
+                    if (lang) {
+                        setNativeLanguage(lang.code);
+                    }
+                }
+            } catch (error) {
+                console.error('Error loading native language:', error);
+            }
+        };
+        loadNativeLanguage();
+    }, []);
+
+    // Shuffle options whenever question changes or native language is loaded
+    useEffect(() => {
+        const translations = currentQuestion.translations as Record<string, { correct: string; options: string[] }>;
+        const translation = translations[nativeLanguage];
+        if (translation) {
+            const allOptions = [translation.correct, ...translation.options];
+            const shuffled = allOptions.sort(() => Math.random() - 0.5);
+            setOptions(shuffled);
+        }
+    }, [currentQuestionIndex, nativeLanguage]);
 
     const handleAnswerSelect = (answer: string) => {
         setSelectedAnswer(answer);
     };
 
     const handleNext = () => {
-        const translation = currentQuestion.translations[nativeLanguage];
-        if (selectedAnswer === translation.correct) {
+        const translations = currentQuestion.translations as Record<string, { correct: string; options: string[] }>;
+        const translation = translations[nativeLanguage];
+        if (selectedAnswer === translation?.correct) {
             setCorrectAnswers(prev => prev + 1);
         }
 
@@ -57,7 +81,7 @@ export default function LevelTestScreen() {
             setCurrentQuestionIndex(prev => prev + 1);
             setSelectedAnswer(null);
         } else {
-            const finalScore = selectedAnswer === translation.correct ? correctAnswers + 1 : correctAnswers;
+            const finalScore = selectedAnswer === translation?.correct ? correctAnswers + 1 : correctAnswers;
             setCorrectAnswers(finalScore);
             setShowResult(true);
         }

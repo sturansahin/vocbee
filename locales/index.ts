@@ -12,13 +12,13 @@ import ja from './ja';
 import ko from './ko';
 import hi from './hi';
 import id from './id';
-import nl from './nl';
-import pl from './pl';
 import vi from './vi';
 import th from './th';
-import uk from './uk';
-import ms from './ms';
 import am from './am';
+import fa from './fa';
+import sr from './sr';
+import sw from './sw';
+import ur from './ur';
 
 export default {
     en: { translation: en },
@@ -35,11 +35,11 @@ export default {
     ko: { translation: ko },
     hi: { translation: hi },
     id: { translation: id },
-    nl: { translation: nl },
-    pl: { translation: pl },
     vi: { translation: vi },
     th: { translation: th },
-    uk: { translation: uk },
-    ms: { translation: ms },
     am: { translation: am },
+    fa: { translation: fa },
+    sr: { translation: sr },
+    sw: { translation: sw },
+    ur: { translation: ur },
 };

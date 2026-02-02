@@ -8,6 +8,9 @@ export const STORAGE_KEYS = {
     // User Data
     USER_DATA: '@VocBee:userData',
 
+    // Language Settings
+    NATIVE_LANGUAGE: '@native_language',
+
     // Progress
     LEARNED_WORDS: '@VocBee:learnedWords',
     SKIPPED_WORDS: '@VocBee:skippedWords',
