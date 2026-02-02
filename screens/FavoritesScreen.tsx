@@ -18,11 +18,13 @@ import { useTheme } from '../context/ThemeContext';
 import { FONT_FAMILY } from '../utils/typography';
 import { VocabularyWord, Level } from '../services/vocabularyService';
 import { getFavorites, removeFromFavorites } from '../services/favoritesService';
+import { useTranslation } from 'react-i18next';
 
 export default function FavoritesScreen() {
     const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
     const insets = useSafeAreaInsets();
     const { colors, isDarkMode } = useTheme();
+    const { t } = useTranslation();
 
     const [favorites, setFavorites] = useState<(VocabularyWord & { level: Level })[]>([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -102,7 +104,7 @@ export default function FavoritesScreen() {
             {/* Header */}
             <View style={styles.header}>
                 <View style={styles.headerSpacer} />
-                <Text style={[styles.headerTitle, { color: colors.text }]}>Favorites</Text>
+                <Text style={[styles.headerTitle, { color: colors.text }]}>{t('favorites.title')}</Text>
                 <View style={styles.headerSpacer} />
             </View>
 
@@ -114,9 +116,9 @@ export default function FavoritesScreen() {
             ) : favorites.length === 0 ? (
                 <View style={styles.emptyContainer}>
                     <Feather name="star" size={64} color={colors.textSecondary} />
-                    <Text style={[styles.emptyTitle, { color: colors.text }]}>No Favorites Yet</Text>
+                    <Text style={[styles.emptyTitle, { color: colors.text }]}>{t('favorites.noFavoritesTitle')}</Text>
                     <Text style={[styles.emptyText, { color: colors.textSecondary }]}>
-                        Tap the star button while learning to save your favorite words here.
+                        {t('favorites.noFavoritesMsg')}
                     </Text>
                 </View>
             ) : (

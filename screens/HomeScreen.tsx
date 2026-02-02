@@ -50,6 +50,7 @@ import { getPendingNotificationWord } from '../services/notificationService';
 import { useAlert } from '../components/CustomAlert';
 import { SafeBannerAd } from '../components/SafeBannerAd';
 import { loadInterstitial, showInterstitial, AD_IDS, getBannerAdSize } from '../services/adMobService';
+import { useTranslation } from 'react-i18next';
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;
@@ -65,6 +66,7 @@ export default function HomeScreen() {
     const insets = useSafeAreaInsets();
     const { colors, isDarkMode } = useTheme();
     const { showAlert } = useAlert();
+    const { t } = useTranslation();
 
     // State
     const [words, setWords] = useState<VocabularyWord[]>([]);
@@ -558,13 +560,13 @@ export default function HomeScreen() {
     const getLevelDisplay = () => {
         switch (userLevel) {
             case 'beginner':
-                return { code: currentLevel, description: 'Beginner' };
+                return { code: currentLevel, description: t('level.beginner') };
             case 'intermediate':
-                return { code: currentLevel, description: 'Intermediate' };
+                return { code: currentLevel, description: t('level.intermediate') };
             case 'advanced':
-                return { code: currentLevel, description: 'Advanced' };
+                return { code: currentLevel, description: t('level.advanced') };
             default:
-                return { code: currentLevel, description: 'Beginner' };
+                return { code: currentLevel, description: t('level.beginner') };
         }
     };
 
@@ -804,7 +806,7 @@ export default function HomeScreen() {
 
                             {/* More Example Button placeholder */}
                             <View style={[styles.fullWidthButton, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)' }]}>
-                                <Text style={[styles.fullWidthButtonText, { color: colors.text }]}>MORE EXAMPLE</Text>
+                                <Text style={[styles.fullWidthButtonText, { color: colors.text }]}>{t('home.moreExample')}</Text>
                             </View>
                         </View>
                     </View>
@@ -848,12 +850,12 @@ export default function HomeScreen() {
 
                 <View style={styles.emptyContainer}>
                     <Text style={[styles.emptyTitle, { color: colors.text }]}>
-                        {totalCount > 0 ? '🎉 Level Complete!' : 'No Vocabulary'}
+                        {totalCount > 0 ? t('home.levelComplete') : t('home.noVocabulary')}
                     </Text>
                     <Text style={[styles.emptyText, { color: colors.textSecondary }]}>
                         {totalCount > 0
-                            ? `You've learned all ${totalCount} words in ${currentLevel}!`
-                            : 'Please complete the setup to start learning.'
+                            ? t('home.levelCompleteDesc', { count: totalCount, level: currentLevel })
+                            : t('home.setupRequired')
                         }
                     </Text>
                 </View>
@@ -903,7 +905,7 @@ export default function HomeScreen() {
                             <Text style={[styles.levelValue, { color: colors.text }]}>{levelDisplay.code}</Text>
                             <Text style={[styles.levelSubtext, { color: colors.textSecondary }]}>{levelDisplay.description}</Text>
                             <Text style={[styles.goalValue, { color: colors.text, marginLeft: 'auto' }]}>
-                                {learnedCount}/{totalCount} words
+                                {learnedCount}/{totalCount} {t('home.words')}
                             </Text>
                         </View>
                         <View style={[styles.progressBg, { backgroundColor: isDarkMode ? '#2c2c2e' : '#f0f0f0' }]}>
@@ -978,7 +980,7 @@ export default function HomeScreen() {
                                     ]}
                                 >
                                     <View style={styles.swipeLabelContainer}>
-                                        <Text style={[styles.skipText, { color: isDarkMode ? '#ff8a8a' : '#ff6b6bff' }]}>SKIP</Text>
+                                        <Text style={[styles.skipText, { color: isDarkMode ? '#ff8a8a' : '#ff6b6bff' }]}>{t('home.skip')}</Text>
                                     </View>
                                 </Animated.View>
 
@@ -997,7 +999,7 @@ export default function HomeScreen() {
                                     ]}
                                 >
                                     <View style={styles.swipeLabelContainer}>
-                                        <Text style={[styles.learnedText, { color: isDarkMode ? '#8aff8a' : '#6bff6bff' }]}>LEARNED</Text>
+                                        <Text style={[styles.learnedText, { color: isDarkMode ? '#8aff8a' : '#6bff6bff' }]}>{t('home.learned')}</Text>
                                     </View>
                                 </Animated.View>
 
@@ -1106,7 +1108,7 @@ export default function HomeScreen() {
                                                 nativeSentence2: currentWord.nativeSentence2
                                             })}
                                         >
-                                            <Text style={[styles.fullWidthButtonText, { color: colors.text }]}>MORE EXAMPLE</Text>
+                                            <Text style={[styles.fullWidthButtonText, { color: colors.text }]}>{t('home.moreExample')}</Text>
                                         </TouchableOpacity>
                                     </View>
                                 </View>

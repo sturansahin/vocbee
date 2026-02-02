@@ -3,11 +3,13 @@ import { View, Text, StyleSheet, Dimensions, Animated } from 'react-native';
 import * as Network from 'expo-network';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useTranslation } from 'react-i18next';
 
 const { width } = Dimensions.get('window');
 
 export const OfflineNotice = () => {
     const insets = useSafeAreaInsets();
+    const { t } = useTranslation();
     const [isConnected, setIsConnected] = useState(true);
     const [animation] = useState(new Animated.Value(0));
 
@@ -48,7 +50,7 @@ export const OfflineNotice = () => {
             ]}
         >
             <MaterialIcons name="wifi-off" size={20} color="#fff" />
-            <Text style={styles.text}>No Internet Connection</Text>
+            <Text style={styles.text}>{t('offline.message')}</Text>
         </Animated.View>
     );
 };

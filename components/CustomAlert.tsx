@@ -1,6 +1,3 @@
-// Custom Alert Component for VocBee
-// Themed modal alert that matches app design
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 import {
     View,
@@ -12,6 +9,7 @@ import {
 } from 'react-native';
 import { useTheme } from '../context/ThemeContext';
 import { FONT_FAMILY } from '../utils/typography';
+import { useTranslation } from 'react-i18next';
 
 interface AlertButton {
     text: string;
@@ -38,18 +36,19 @@ interface AlertProviderProps {
 
 export const AlertProvider = ({ children }: AlertProviderProps) => {
     const { colors } = useTheme();
+    const { t } = useTranslation();
     const [visible, setVisible] = useState(false);
     const [alertConfig, setAlertConfig] = useState<AlertOptions>({
         title: '',
         message: '',
-        buttons: [{ text: 'OK' }],
+        buttons: [{ text: t('common.ok') }],
     });
 
     const showAlert = (options: AlertOptions) => {
         setAlertConfig({
             title: options.title,
             message: options.message || '',
-            buttons: options.buttons || [{ text: 'OK' }],
+            buttons: options.buttons || [{ text: t('common.ok') }],
         });
         setVisible(true);
     };

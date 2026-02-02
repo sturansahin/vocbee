@@ -2,6 +2,7 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, SafeAreaView } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import * as Updates from 'expo-updates';
+import i18n from '../services/i18n';
 
 interface Props {
     children: ReactNode;
@@ -46,10 +47,10 @@ export class ErrorBoundary extends Component<Props, State> {
                     <View style={styles.content}>
                         <MaterialIcons name="error-outline" size={64} color="#FF6B6B" />
 
-                        <Text style={styles.title}>Oops! Something went wrong</Text>
+                        <Text style={styles.title}>{i18n.t('errorBoundary.title')}</Text>
 
                         <Text style={styles.message}>
-                            We're sorry, but the application encountered an unexpected error.
+                            {i18n.t('errorBoundary.message')}
                         </Text>
 
                         {this.state.error && (
@@ -65,7 +66,7 @@ export class ErrorBoundary extends Component<Props, State> {
                             onPress={this.handleRestart}
                             activeOpacity={0.8}
                         >
-                            <Text style={styles.buttonText}>Restart Application</Text>
+                            <Text style={styles.buttonText}>{i18n.t('errorBoundary.restart')}</Text>
                         </TouchableOpacity>
                     </View>
                 </SafeAreaView>

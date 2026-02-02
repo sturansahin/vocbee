@@ -22,6 +22,7 @@ import { useTheme } from '../context/ThemeContext';
 import { useAuth } from '../context/AuthContext';
 import { useAlert } from '../components/CustomAlert';
 import { FONT_FAMILY } from '../utils/typography';
+import { useTranslation } from 'react-i18next';
 
 type ForgotPasswordNavProp = StackNavigationProp<RootStackParamList, 'ForgotPassword'>;
 
@@ -31,6 +32,7 @@ export default function ForgotPasswordScreen() {
     const { resetPassword } = useAuth();
     const { showAlert } = useAlert();
     const { width: screenWidth, height: screenHeight } = useWindowDimensions();
+    const { t } = useTranslation();
 
     const [email, setEmail] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -50,14 +52,14 @@ export default function ForgotPasswordScreen() {
 
     const handleResetPassword = async () => {
         if (!email) {
-            showAlert({ title: 'Error', message: 'Please enter your email address' });
+            showAlert({ title: t('auth.error'), message: t('forgotPassword.enterEmail') });
             return;
         }
 
         // Basic email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
-            showAlert({ title: 'Error', message: 'Please enter a valid email address' });
+            showAlert({ title: t('auth.error'), message: t('forgotPassword.invalidEmail') });
             return;
         }
 
@@ -65,12 +67,12 @@ export default function ForgotPasswordScreen() {
         try {
             await resetPassword(email);
             showAlert({
-                title: 'Email Sent!',
-                message: 'Check your inbox for password reset instructions.',
-                buttons: [{ text: 'OK', onPress: () => navigation.goBack() }]
+                title: t('forgotPassword.emailSent'),
+                message: t('forgotPassword.checkInbox'),
+                buttons: [{ text: t('common.ok'), onPress: () => navigation.goBack() }]
             });
         } catch (error: any) {
-            showAlert({ title: 'Error', message: error.message });
+            showAlert({ title: t('auth.error'), message: error.message });
         } finally {
             setIsSubmitting(false);
         }
@@ -89,7 +91,7 @@ export default function ForgotPasswordScreen() {
                     {/* Title Section */}
                     <View style={[styles.titleSection, { marginBottom: titleMarginBottom }]}>
                         <Text style={[styles.title, { color: colors.text, fontSize: titleFontSize }]}>
-                            Forgot Password?
+                            {t('forgotPassword.title')}
                         </Text>
                         <Text style={[
                             styles.subtitle,
@@ -99,14 +101,14 @@ export default function ForgotPasswordScreen() {
                                 lineHeight: subtitleLineHeight,
                             }
                         ]}>
-                            No worries! Enter your email and we'll send you a link to reset your password.
+                            {t('forgotPassword.subtitle')}
                         </Text>
                     </View>
 
                     {/* Email Input */}
                     <Input
-                        label="Email"
-                        placeholder="Enter your email"
+                        label={t('auth.email')}
+                        placeholder={t('auth.enterEmail')}
                         icon="mail"
                         value={email}
                         onChangeText={setEmail}
@@ -135,7 +137,7 @@ export default function ForgotPasswordScreen() {
                             <>
                                 <MaterialIcons name="send" size={isSmallScreen ? 18 : 20} color={COLORS.background} />
                                 <Text style={[styles.submitButtonText, { fontSize: buttonFontSize }]}>
-                                    Send Reset Link
+                                    {t('forgotPassword.sendResetLink')}
                                 </Text>
                             </>
                         )}
@@ -148,7 +150,7 @@ export default function ForgotPasswordScreen() {
                     >
                         <MaterialIcons name="arrow-back" size={isSmallScreen ? 14 : 16} color={colors.textSecondary} />
                         <Text style={[styles.backToLoginText, { color: colors.textSecondary, fontSize: isSmallScreen ? 13 : 14 }]}>
-                            Back to Login
+                            {t('forgotPassword.backToLogin')}
                         </Text>
                     </TouchableOpacity>
 

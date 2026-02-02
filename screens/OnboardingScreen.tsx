@@ -19,29 +19,9 @@ import { SwarmLogo } from '../components/SwarmLogo';
 import { FONT_FAMILY } from '../utils/typography';
 import { useTheme } from '../context/ThemeContext';
 import { STORAGE_KEYS } from '../services/storageKeys';
+import { useTranslation } from 'react-i18next';
 
 type OnboardingNavigationProp = StackNavigationProp<RootStackParamList, 'Onboarding'>;
-
-const ONBOARDING_STEPS = [
-  {
-    id: '1',
-    icon: 'menu-book',
-    title: 'Learn New Words Daily',
-    subtitle: 'Discover and master new vocabulary with personalized daily lessons tailored to your level.',
-  },
-  {
-    id: '2',
-    icon: 'style',
-    title: 'Practice with Flashcards',
-    subtitle: 'Reinforce your learning with interactive flashcards. Swipe to mark words as learned.',
-  },
-  {
-    id: '3',
-    icon: 'trending-up',
-    title: 'Track Your Progress',
-    subtitle: 'Monitor your learning journey and celebrate your achievements as you grow.',
-  },
-];
 
 export default function OnboardingScreen() {
   const navigation = useNavigation<OnboardingNavigationProp>();
@@ -49,6 +29,29 @@ export default function OnboardingScreen() {
   const { width: screenWidth, height: screenHeight } = useWindowDimensions();
   const [currentStep, setCurrentStep] = useState(0);
   const flatListRef = useRef<FlatList>(null);
+  const { t } = useTranslation();
+
+  // Onboarding steps with translations
+  const ONBOARDING_STEPS = [
+    {
+      id: '1',
+      icon: 'menu-book',
+      title: t('onboarding.title1'),
+      subtitle: t('onboarding.subtitle1'),
+    },
+    {
+      id: '2',
+      icon: 'style',
+      title: t('onboarding.title2'),
+      subtitle: t('onboarding.subtitle2'),
+    },
+    {
+      id: '3',
+      icon: 'trending-up',
+      title: t('onboarding.title3'),
+      subtitle: t('onboarding.subtitle3'),
+    },
+  ];
 
   console.log('[Onboarding] Rendering...');
 
@@ -191,16 +194,16 @@ export default function OnboardingScreen() {
         {isLastStep ? (
           <View style={styles.startButtonContainer}>
             <TouchableOpacity onPress={handleStart} style={styles.startButton}>
-              <Text style={[styles.startButtonText, { color: colors.primary, fontSize: subtitleFontSize + 2 }]}>Start</Text>
+              <Text style={[styles.startButtonText, { color: colors.primary, fontSize: subtitleFontSize + 2 }]}>{t('onboarding.start')}</Text>
             </TouchableOpacity>
           </View>
         ) : (
           <View style={styles.actions}>
             <TouchableOpacity onPress={handleSkip} style={styles.skipButton}>
-              <Text style={[styles.skipButtonText, { color: colors.textSecondary, fontSize: subtitleFontSize + 2 }]}>Skip</Text>
+              <Text style={[styles.skipButtonText, { color: colors.textSecondary, fontSize: subtitleFontSize + 2 }]}>{t('onboarding.skip')}</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={handleNext} style={styles.nextButton}>
-              <Text style={[styles.nextButtonText, { color: colors.primary, fontSize: subtitleFontSize + 2 }]}>Next</Text>
+              <Text style={[styles.nextButtonText, { color: colors.primary, fontSize: subtitleFontSize + 2 }]}>{t('onboarding.next')}</Text>
             </TouchableOpacity>
           </View>
         )}

@@ -37,6 +37,7 @@ import { SwarmLogo } from '../components/SwarmLogo';
 import LottieView from 'lottie-react-native';
 import { createSwarmAnimation } from '../assets/animations/swarmAnimation';
 import * as Notifications from 'expo-notifications';
+import { useTranslation } from 'react-i18next';
 
 type SetupNavProp = StackNavigationProp<RootStackParamList>;
 type SetupRouteProp = RouteProp<RootStackParamList, 'NativeLanguage'>;
@@ -58,6 +59,7 @@ export const SetupScreen = () => {
   const { colors, isDarkMode } = useTheme();
   const { showAlert } = useAlert();
   const { refreshNotificationSettings } = useAuth();
+  const { t } = useTranslation();
   const [currentStep, setCurrentStep] = useState(1);
   const [nativeLanguage, setNativeLanguage] = useState('');
   const [targetLanguage, setTargetLanguage] = useState('');
@@ -254,18 +256,18 @@ export const SetupScreen = () => {
       } else {
         // Show themed alert with options
         showAlert({
-          title: 'Notifications Disabled',
-          message: 'Without notifications, you won\'t receive daily word reminders to help you learn. Would you like to enable them in Settings?',
+          title: t('setup.notificationsDisabled'),
+          message: t('setup.notificationsDisabledDesc'),
           buttons: [
             {
-              text: 'Open Settings',
+              text: t('setup.openSettings'),
               onPress: () => {
                 setWaitingForSettings(true);
                 Linking.openSettings();
               }
             },
             {
-              text: 'Continue Without',
+              text: t('setup.continueWithout'),
               style: 'cancel',
               onPress: () => {
                 setNotificationPermissionGranted(false);
@@ -411,26 +413,26 @@ export const SetupScreen = () => {
 
   const getStepTitle = () => {
     switch (currentStep) {
-      case 1: return { white: "What's your", green: "native language?" };
-      case 2: return { white: "I want to learn", green: "this language..." };
-      case 3: return { white: "What's your", green: "current level?" };
-      case 4: return { white: "Stay on track with", green: "daily reminders" };
-      case 5: return { white: "When should we", green: "start reminding you?" };
-      case 6: return { white: "When should we", green: "stop reminding you?" };
-      case 7: return { white: "How often should we", green: "send reminders?" };
+      case 1: return { white: t('setup.step1TitleWhite'), green: t('setup.step1TitleGreen') };
+      case 2: return { white: t('setup.step2TitleWhite'), green: t('setup.step2TitleGreen') };
+      case 3: return { white: t('setup.step3TitleWhite'), green: t('setup.step3TitleGreen') };
+      case 4: return { white: t('setup.step4TitleWhite'), green: t('setup.step4TitleGreen') };
+      case 5: return { white: t('setup.step5TitleWhite'), green: t('setup.step5TitleGreen') };
+      case 6: return { white: t('setup.step6TitleWhite'), green: t('setup.step6TitleGreen') };
+      case 7: return { white: t('setup.step7TitleWhite'), green: t('setup.step7TitleGreen') };
       default: return { white: "", green: "" };
     }
   };
 
   const getStepSubtitle = () => {
     switch (currentStep) {
-      case 1: return "We'll use this to translate words for you.";
-      case 2: return "Select the language you want to master.";
-      case 3: return "Choose the level that best describes your proficiency.";
-      case 4: return "Get notified with new words throughout the day.";
-      case 5: return "We'll start sending you words at this time.";
-      case 6: return "We'll stop sending you words after this time.";
-      case 7: return "Choose how often you want to receive new words.";
+      case 1: return t('setup.step1Subtitle');
+      case 2: return t('setup.step2Subtitle');
+      case 3: return t('setup.step3Subtitle');
+      case 4: return t('setup.step4Subtitle');
+      case 5: return t('setup.step5Subtitle');
+      case 6: return t('setup.step6Subtitle');
+      case 7: return t('setup.step7Subtitle');
       default: return "";
     }
   };
@@ -441,10 +443,10 @@ export const SetupScreen = () => {
       case 2:
       case 3:
       case 5:
-      case 6: return "Continue";
-      case 4: return "Enable Notifications";
-      case 7: return "Start Learning";
-      default: return "Continue";
+      case 6: return t('common.continue');
+      case 4: return t('setup.enableNotifications');
+      case 7: return t('setup.startLearning');
+      default: return t('common.continue');
     }
   };
 
@@ -564,7 +566,7 @@ export const SetupScreen = () => {
         onPress={() => navigation.navigate('LevelTest')}
       >
         <MaterialIcons name="quiz" size={20} color={colors.textSecondary} />
-        <Text style={[styles.testLinkText, { color: colors.textSecondary }]}>Don't know your level? Take a min test</Text>
+        <Text style={[styles.testLinkText, { color: colors.textSecondary }]}>{t('setup.takeTest')}</Text>
       </TouchableOpacity>
     </ScrollView>
   );
@@ -575,24 +577,24 @@ export const SetupScreen = () => {
         <View style={[styles.featureRow, { marginBottom: 16 }]}>
           <MaterialCommunityIcons name="bell-ring" size={20} color={colors.primary} />
           <Text style={[styles.notificationTitle, { color: colors.text }]}>
-            Learn with Reminders
+            {t('setup.learnWithReminders')}
           </Text>
         </View>
         <Text style={[styles.notificationDesc, { color: colors.textSecondary, textAlign: 'center' }]}>
-          We'll send you daily vocabulary words to help you learn consistently. You can customize the timing in the next step.
+          {t('setup.notificationBenefits')}
         </Text>
         <View style={styles.notificationFeatures}>
           <View style={styles.featureRow}>
             <MaterialIcons name="check-circle" size={20} color={colors.primary} />
-            <Text style={[styles.featureText, { color: colors.text }]}>New words delivered daily</Text>
+            <Text style={[styles.featureText, { color: colors.text }]}>{t('setup.feature1')}</Text>
           </View>
           <View style={styles.featureRow}>
             <MaterialIcons name="check-circle" size={20} color={colors.primary} />
-            <Text style={[styles.featureText, { color: colors.text }]}>Customizable schedule</Text>
+            <Text style={[styles.featureText, { color: colors.text }]}>{t('setup.feature2')}</Text>
           </View>
           <View style={styles.featureRow}>
             <MaterialIcons name="check-circle" size={20} color={colors.primary} />
-            <Text style={[styles.featureText, { color: colors.text }]}>Learn without opening the app</Text>
+            <Text style={[styles.featureText, { color: colors.text }]}>{t('setup.feature3')}</Text>
           </View>
         </View>
       </View>
@@ -606,7 +608,7 @@ export const SetupScreen = () => {
         <View style={[styles.scheduleSection, { backgroundColor: colors.surface, borderColor: colors.border }]}>
           <View style={styles.scheduleLabelRow}>
             <MaterialIcons name="wb-sunny" size={20} color={colors.primary} />
-            <Text style={[styles.scheduleLabel, { color: colors.text }]}>Start Time</Text>
+            <Text style={[styles.scheduleLabel, { color: colors.text }]}>{t('setup.startTime')}</Text>
           </View>
           <View style={styles.timePickerRow}>
             {/* Hour */}
@@ -685,7 +687,7 @@ export const SetupScreen = () => {
         <View style={[styles.scheduleSection, { backgroundColor: colors.surface, borderColor: colors.border }]}>
           <View style={styles.scheduleLabelRow}>
             <MaterialIcons name="nightlight-round" size={20} color={colors.primary} />
-            <Text style={[styles.scheduleLabel, { color: colors.text }]}>End Time</Text>
+            <Text style={[styles.scheduleLabel, { color: colors.text }]}>{t('setup.endTime')}</Text>
           </View>
           <View style={styles.timePickerRow}>
             {/* Hour */}
@@ -764,7 +766,7 @@ export const SetupScreen = () => {
         <View style={[styles.scheduleSection, { backgroundColor: colors.surface, borderColor: colors.border }]}>
           <View style={styles.scheduleLabelRow}>
             <Feather name="repeat" size={18} color={colors.primary} />
-            <Text style={[styles.scheduleLabel, { color: colors.text }]}>Frequency</Text>
+            <Text style={[styles.scheduleLabel, { color: colors.text }]}>{t('setup.frequency')}</Text>
           </View>
           <View style={styles.frequencyList}>
             {FREQUENCIES.map((freq) => (

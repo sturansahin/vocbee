@@ -56,4 +56,39 @@ i18n
         },
     });
 
+// Get device language code
+export const getDeviceLanguage = (): string => {
+    const deviceLanguage = getLocales()[0]?.languageCode;
+    const supportedLanguages = Object.keys(resources);
+
+    if (deviceLanguage && supportedLanguages.includes(deviceLanguage)) {
+        return deviceLanguage;
+    }
+    return 'en';
+};
+
+// Set app to use device language (removes saved preference)
+export const setToDeviceLanguage = async (): Promise<string> => {
+    try {
+        // Remove saved preference so app uses device language
+        await AsyncStorage.removeItem('@user_language');
+        const deviceLang = getDeviceLanguage();
+        await i18n.changeLanguage(deviceLang);
+        return deviceLang;
+    } catch (error) {
+        console.log('Error setting device language', error);
+        return 'en';
+    }
+};
+
+// Check if using system default (no saved preference)
+export const isUsingSystemLanguage = async (): Promise<boolean> => {
+    try {
+        const savedLanguage = await AsyncStorage.getItem('@user_language');
+        return savedLanguage === null;
+    } catch (error) {
+        return true;
+    }
+};
+
 export default i18n;

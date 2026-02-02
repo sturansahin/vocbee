@@ -17,6 +17,7 @@ import { FONT_FAMILY } from '../utils/typography';
 import { LEVEL_TEST_QUESTIONS, LANGUAGES } from '../constants';
 import { Button } from '../components/UIComponents';
 import { STORAGE_KEYS } from '../services/storageKeys';
+import { useTranslation } from 'react-i18next';
 
 type LevelTestNavProp = StackNavigationProp<RootStackParamList>;
 
@@ -24,6 +25,7 @@ export default function LevelTestScreen() {
     const navigation = useNavigation<LevelTestNavProp>();
     const insets = useSafeAreaInsets();
     const { colors } = useTheme();
+    const { t } = useTranslation();
 
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [correctAnswers, setCorrectAnswers] = useState(0);
@@ -99,10 +101,10 @@ export default function LevelTestScreen() {
     };
 
     const levelInfo = calculateLevel() === 'advanced'
-        ? { title: 'Advanced', range: 'C1' }
+        ? { title: t('levelTest.advanced'), range: 'C1' }
         : calculateLevel() === 'intermediate'
-            ? { title: 'Intermediate', range: 'B1-B2' }
-            : { title: 'Beginner', range: 'A1-A2' };
+            ? { title: t('levelTest.intermediate'), range: 'B1-B2' }
+            : { title: t('levelTest.beginner'), range: 'A1-A2' };
 
     // Result Screen
     if (showResult) {
@@ -110,25 +112,25 @@ export default function LevelTestScreen() {
             <View style={[styles.container, { backgroundColor: colors.background, paddingTop: insets.top }]}>
                 <ScrollView style={styles.content} contentContainerStyle={styles.resultContainer}>
                     <View style={styles.resultContent}>
-                        <Text style={[styles.resultTitle, { color: colors.text }]}>Test Complete!</Text>
+                        <Text style={[styles.resultTitle, { color: colors.text }]}>{t('levelTest.testComplete')}</Text>
                         <Text style={[styles.resultSubtitle, { color: colors.textSecondary }]}>
-                            You answered {correctAnswers} out of {totalQuestions} questions correctly
+                            {t('levelTest.resultDesc', { correct: correctAnswers, total: totalQuestions })}
                         </Text>
 
                         <View style={[styles.levelResultCard, { backgroundColor: colors.background }]}>
-                            <Text style={[styles.levelResultLabel, { color: colors.textSecondary }]}>YOUR LEVEL</Text>
+                            <Text style={[styles.levelResultLabel, { color: colors.textSecondary }]}>{t('levelTest.yourLevel')}</Text>
                             <Text style={[styles.levelResultTitle, { color: colors.primary }]}>{levelInfo.title}</Text>
                             <Text style={[styles.levelResultRange, { color: colors.text }]}>{levelInfo.range}</Text>
                         </View>
 
                         <Text style={[styles.resultMessage, { color: colors.textSecondary }]}>
-                            We'll customize your learning experience based on this level.
+                            {t('levelTest.customizeMessage')}
                         </Text>
                     </View>
                 </ScrollView>
 
                 <View style={[styles.bottomButton, { paddingBottom: insets.bottom + 16 }]}>
-                    <Button title="Continue" onPress={handleContinue} />
+                    <Button title={t('common.continue')} onPress={handleContinue} />
                 </View>
             </View>
         );
@@ -156,7 +158,7 @@ export default function LevelTestScreen() {
 
             <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
                 <View style={styles.questionSection}>
-                    <Text style={[styles.questionText, { color: colors.text }]}>What does this word mean?</Text>
+                    <Text style={[styles.questionText, { color: colors.text }]}>{t('levelTest.questionPrompt')}</Text>
                     <View style={[styles.wordCard, { backgroundColor: colors.primary }]}>
                         <Text
                             style={[styles.wordText, { color: colors.background }]}
@@ -200,7 +202,7 @@ export default function LevelTestScreen() {
             <View style={[styles.bottomButton, { paddingBottom: insets.bottom + 16 }]}>
                 {selectedAnswer && (
                     <Button
-                        title={currentQuestionIndex === totalQuestions - 1 ? "See Results" : "Next"}
+                        title={currentQuestionIndex === totalQuestions - 1 ? t('levelTest.seeResults') : t('levelTest.next')}
                         onPress={handleNext}
                     />
                 )}

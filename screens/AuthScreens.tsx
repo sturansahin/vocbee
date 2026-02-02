@@ -13,6 +13,7 @@ import { useAuth } from '../context/AuthContext';
 import { useAlert } from '../components/CustomAlert';
 import { FONT_FAMILY } from '../utils/typography';
 import { createSwarmAnimation } from '../assets/animations/swarmAnimation';
+import { useTranslation } from 'react-i18next';
 
 type AuthNavProp = StackNavigationProp<RootStackParamList>;
 
@@ -22,6 +23,7 @@ export const LoginScreen = () => {
   const { signIn, signInWithGoogle, isLoading } = useAuth();
   const { showAlert } = useAlert();
   const { width: screenWidth, height: screenHeight } = useWindowDimensions();
+  const { t } = useTranslation();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -84,7 +86,7 @@ export const LoginScreen = () => {
       setIsSubmitting(false);
 
       if (loginErrorRef.current) {
-        showAlert({ title: 'Login Failed', message: loginErrorRef.current });
+        showAlert({ title: t('auth.loginFailed'), message: loginErrorRef.current });
         resetAnimation();
         // Reset refs for next attempt
         loginResultRef.current = null;
@@ -120,7 +122,7 @@ export const LoginScreen = () => {
   const handleLoginWithAnimation = () => {
     // Validate first
     if (!email || !password) {
-      showAlert({ title: 'Error', message: 'Please fill in all fields' });
+      showAlert({ title: t('auth.error'), message: t('auth.fillAllFields') });
       return;
     }
 
@@ -331,13 +333,13 @@ export const LoginScreen = () => {
             />
           </Animated.View>
           <Text style={[styles.appTitle, { color: colors.text, fontSize: titleFontSize }]}>VocBee</Text>
-          <Text style={[styles.appSubtitle, { color: colors.textSecondary, fontSize: subtitleFontSize }]}>Master new words effortlessly.</Text>
+          <Text style={[styles.appSubtitle, { color: colors.textSecondary, fontSize: subtitleFontSize }]}>{t('auth.subtitle')}</Text>
         </View>
 
         {/* Form */}
         <Input
-          label="Email"
-          placeholder="Email or Username"
+          label={t('auth.email')}
+          placeholder={t('auth.emailPlaceholder')}
           icon="mail"
           value={email}
           onChangeText={setEmail}
@@ -350,8 +352,8 @@ export const LoginScreen = () => {
           autoCapitalize="none"
         />
         <Input
-          label="Password"
-          placeholder="Password"
+          label={t('auth.password')}
+          placeholder={t('auth.passwordPlaceholder')}
           value={password}
           onChangeText={setPassword}
           secureTextEntry={!showPassword}
@@ -366,12 +368,12 @@ export const LoginScreen = () => {
 
         <View style={styles.forgotContainer}>
           <TouchableOpacity onPress={() => navigation.navigate('ForgotPassword')}>
-            <Text style={[styles.forgotText, { color: colors.textSecondary }]}>Forgot Password?</Text>
+            <Text style={[styles.forgotText, { color: colors.textSecondary }]}>{t('auth.forgotPassword')}</Text>
           </TouchableOpacity>
         </View>
 
         <Button
-          title={isSubmitting ? "Logging in..." : isAnimating ? "" : "Log In"}
+          title={isSubmitting ? t('auth.loggingIn') : isAnimating ? "" : t('auth.logIn')}
           onPress={handleLoginWithAnimation}
           disabled={isSubmitting || isAnimating}
           variant="primary"
@@ -384,7 +386,7 @@ export const LoginScreen = () => {
         {/* Social Login Buttons */}
         <View style={[styles.divider, { marginVertical: isSmallScreen ? 20 : 32 }]}>
           <View style={[styles.dividerLine, { backgroundColor: colors.border }]} />
-          <Text style={[styles.dividerText, { color: colors.textSecondary, fontSize: isSmallScreen ? 12 : 14 }]}>Or continue with</Text>
+          <Text style={[styles.dividerText, { color: colors.textSecondary, fontSize: isSmallScreen ? 12 : 14 }]}>{t('auth.orContinueWith')}</Text>
           <View style={[styles.dividerLine, { backgroundColor: colors.border }]} />
         </View>
 
@@ -402,14 +404,14 @@ export const LoginScreen = () => {
             <Text style={[styles.socialButtonText, {
               color: colors.text,
               fontSize: isSmallScreen ? 13 : isLargeScreen ? 16 : 14,
-            }]}>Google</Text>
+            }]}>{t('auth.google')}</Text>
           </TouchableOpacity>
         </View>
 
         <View style={styles.signupRow}>
-          <Text style={[styles.signupText, { color: colors.textSecondary }]}>Don't have an account? </Text>
+          <Text style={[styles.signupText, { color: colors.textSecondary }]}>{t('auth.noAccount')} </Text>
           <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
-            <Text style={[styles.signupLink, { color: colors.primary }]}>Sign Up</Text>
+            <Text style={[styles.signupLink, { color: colors.primary }]}>{t('auth.signUp')}</Text>
           </TouchableOpacity>
         </View>
 
@@ -424,6 +426,7 @@ export const SignUpScreen = () => {
   const { signUp, signInWithGoogle, signOut, isLoading } = useAuth();
   const { showAlert } = useAlert();
   const { width: screenWidth, height: screenHeight } = useWindowDimensions();
+  const { t } = useTranslation();
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -445,17 +448,17 @@ export const SignUpScreen = () => {
 
   const handleSignUp = async () => {
     if (!name || !email || !password || !confirmPassword) {
-      showAlert({ title: 'Error', message: 'Please fill in all fields' });
+      showAlert({ title: t('auth.error'), message: t('auth.fillAllFields') });
       return;
     }
 
     if (password !== confirmPassword) {
-      showAlert({ title: 'Error', message: 'Passwords do not match' });
+      showAlert({ title: t('auth.error'), message: t('auth.passwordsMismatch') });
       return;
     }
 
     if (password.length < 6) {
-      showAlert({ title: 'Error', message: 'Password must be at least 6 characters' });
+      showAlert({ title: t('auth.error'), message: t('auth.passwordTooShort') });
       return;
     }
 
@@ -465,12 +468,12 @@ export const SignUpScreen = () => {
       // Sign out immediately after signup to require login
       await signOut();
       showAlert({
-        title: 'Account Created!',
-        message: 'Your account has been created successfully. Please log in to continue.',
-        buttons: [{ text: 'OK', onPress: () => navigation.navigate('Login') }]
+        title: t('auth.accountCreated'),
+        message: t('auth.accountCreatedDesc'),
+        buttons: [{ text: t('common.ok'), onPress: () => navigation.navigate('Login') }]
       });
     } catch (error: any) {
-      showAlert({ title: 'Sign Up Failed', message: error.message });
+      showAlert({ title: t('auth.signUpFailed'), message: error.message });
     } finally {
       setIsSubmitting(false);
     }
@@ -488,14 +491,14 @@ export const SignUpScreen = () => {
 
         <View style={[styles.titleSection, { marginBottom: titleMarginBottom }]}>
           <Text style={[styles.titleWhite, { color: colors.text, fontSize: titleFontSize, lineHeight: titleLineHeight }]}>
-            Start your language{"\n"}
-            <Text style={[styles.titleGreen, { color: colors.primary }]}>journey today.</Text>
+            {t('auth.startYourLanguage')}{"\n"}
+            <Text style={[styles.titleGreen, { color: colors.primary }]}>{t('auth.journeyToday')}</Text>
           </Text>
         </View>
 
         <Input
-          label="Full Name"
-          placeholder="Enter your name"
+          label={t('auth.fullName')}
+          placeholder={t('auth.namePlaceholder')}
           icon="person"
           value={name}
           onChangeText={setName}
@@ -506,8 +509,8 @@ export const SignUpScreen = () => {
           iconColor={colors.textSecondary}
         />
         <Input
-          label="Email"
-          placeholder="Enter your email"
+          label={t('auth.email')}
+          placeholder={t('auth.enterEmail')}
           icon="mail"
           value={email}
           onChangeText={setEmail}
@@ -520,8 +523,8 @@ export const SignUpScreen = () => {
           autoCapitalize="none"
         />
         <Input
-          label="Password"
-          placeholder="Create password"
+          label={t('auth.password')}
+          placeholder={t('auth.createPassword')}
           value={password}
           onChangeText={setPassword}
           secureTextEntry={!showPassword}
@@ -534,8 +537,8 @@ export const SignUpScreen = () => {
           iconColor={colors.textSecondary}
         />
         <Input
-          label="Confirm Password"
-          placeholder="Confirm password"
+          label={t('auth.confirmPassword')}
+          placeholder={t('auth.confirmPasswordPlaceholder')}
           value={confirmPassword}
           onChangeText={setConfirmPassword}
           secureTextEntry={!showConfirmPassword}
@@ -549,7 +552,7 @@ export const SignUpScreen = () => {
         />
 
         <Button
-          title={isSubmitting ? "Creating account..." : "Sign Up"}
+          title={isSubmitting ? t('auth.creatingAccount') : t('auth.signUp')}
           onPress={handleSignUp}
           disabled={isSubmitting}
         />
@@ -561,7 +564,7 @@ export const SignUpScreen = () => {
         {/* Social Login Buttons */}
         <View style={[styles.divider, { marginVertical: isSmallScreen ? 20 : 32 }]}>
           <View style={[styles.dividerLine, { backgroundColor: colors.border }]} />
-          <Text style={[styles.dividerText, { color: colors.textSecondary, fontSize: isSmallScreen ? 12 : 14 }]}>Or continue with</Text>
+          <Text style={[styles.dividerText, { color: colors.textSecondary, fontSize: isSmallScreen ? 12 : 14 }]}>{t('auth.orContinueWith')}</Text>
           <View style={[styles.dividerLine, { backgroundColor: colors.border }]} />
         </View>
 
@@ -579,7 +582,7 @@ export const SignUpScreen = () => {
             <Text style={[styles.socialButtonText, {
               color: colors.text,
               fontSize: isSmallScreen ? 13 : isLargeScreen ? 16 : 14,
-            }]}>Google</Text>
+            }]}>{t('auth.google')}</Text>
           </TouchableOpacity>
         </View>
 

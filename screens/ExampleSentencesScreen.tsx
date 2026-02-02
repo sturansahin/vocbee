@@ -19,6 +19,7 @@ import { RootStackParamList } from '../types';
 import * as Speech from 'expo-speech';
 import { explainGrammar, GrammarResponse } from '../services/groqService';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useTranslation } from 'react-i18next';
 
 // =============================================================================
 // RESPONSIVE UTILITIES
@@ -54,6 +55,7 @@ export default function ExampleSentencesScreen() {
     const route = useRoute<ExampleSentencesRouteProp>();
     const insets = useSafeAreaInsets();
     const { colors, isDarkMode } = useTheme();
+    const { t } = useTranslation();
 
     // Extract word data with defaults
     const {
@@ -206,7 +208,7 @@ export default function ExampleSentencesScreen() {
                 {/* Examples Section */}
                 <View style={[styles.examplesSection, { paddingHorizontal: HORIZONTAL_PADDING }]}>
                     <Text style={[styles.sectionTitle, { color: colors.text }]}>
-                        Example Sentences
+                        {t('example.title')}
                     </Text>
 
                     <View style={styles.examplesList}>
@@ -243,7 +245,7 @@ export default function ExampleSentencesScreen() {
                             color={colors.background}
                         />
                         <Text style={[styles.aiButtonText, { color: colors.background }]}>
-                            Explain Grammar with AI
+                            {t('example.explainGrammarBtn')}
                         </Text>
                     </TouchableOpacity>
                 </View>
@@ -258,6 +260,7 @@ export default function ExampleSentencesScreen() {
                 onRetry={handleExplainGrammar}
                 colors={colors}
                 isDarkMode={isDarkMode}
+                t={t}
             />
 
             {/* Floating Back Button */}
@@ -338,6 +341,7 @@ interface AIExplanationModalProps {
     onRetry: () => void;
     colors: any;
     isDarkMode: boolean;
+    t: (key: string) => string;
 }
 
 /**
@@ -351,6 +355,7 @@ const AIExplanationModal = React.memo<AIExplanationModalProps>(({
     onRetry,
     colors,
     isDarkMode,
+    t,
 }) => (
     <Modal
         visible={visible}
@@ -374,7 +379,7 @@ const AIExplanationModal = React.memo<AIExplanationModalProps>(({
                             />
                         </View>
                         <Text style={[styles.modalTitle, { color: colors.text }]}>
-                            Grammar Explanation
+                            {t('example.grammarExplanationTitle')}
                         </Text>
                     </View>
                     <TouchableOpacity
@@ -398,15 +403,16 @@ const AIExplanationModal = React.memo<AIExplanationModalProps>(({
                     showsVerticalScrollIndicator={false}
                 >
                     {isLoading ? (
-                        <LoadingState colors={colors} />
+                        <LoadingState colors={colors} t={t} />
                     ) : explanation ? (
                         <ExplanationContent
                             explanation={explanation}
                             colors={colors}
                             isDarkMode={isDarkMode}
+                            t={t}
                         />
                     ) : (
-                        <ErrorState colors={colors} onRetry={onRetry} />
+                        <ErrorState colors={colors} onRetry={onRetry} t={t} />
                     )}
                 </ScrollView>
             </View>
@@ -419,14 +425,14 @@ AIExplanationModal.displayName = 'AIExplanationModal';
 /**
  * Loading state component for AI modal
  */
-const LoadingState = React.memo<{ colors: any }>(({ colors }) => (
+const LoadingState = React.memo<{ colors: any; t: (key: string) => string }>(({ colors, t }) => (
     <View style={styles.loadingContainer}>
         <ActivityIndicator size="large" color={colors.primary} />
         <Text style={[styles.loadingText, { color: colors.textSecondary }]}>
-            Analyzing grammar structure...
+            {t('example.analyzingGrammar')}
         </Text>
         <Text style={[styles.loadingSubText, { color: colors.textSecondary }]}>
-            Powering up AI teacher...
+            {t('example.poweringAi')}
         </Text>
     </View>
 ));
@@ -436,10 +442,10 @@ LoadingState.displayName = 'LoadingState';
 /**
  * Error state component for AI modal
  */
-const ErrorState = React.memo<{ colors: any; onRetry: () => void }>(({ colors, onRetry }) => (
+const ErrorState = React.memo<{ colors: any; onRetry: () => void; t: (key: string) => string }>(({ colors, onRetry, t }) => (
     <View style={styles.errorContainer}>
         <Text style={[styles.errorText, { color: colors.textSecondary }]}>
-            Unable to load explanation. Please try again.
+            {t('example.explanationError')}
         </Text>
         <TouchableOpacity
             style={[styles.retryButton, { backgroundColor: `${colors.primary}20` }]}
@@ -447,7 +453,7 @@ const ErrorState = React.memo<{ colors: any; onRetry: () => void }>(({ colors, o
             accessibilityLabel="Retry loading explanation"
             accessibilityRole="button"
         >
-            <Text style={[styles.retryText, { color: colors.primary }]}>Retry</Text>
+            <Text style={[styles.retryText, { color: colors.primary }]}>{t('example.retry')}</Text>
         </TouchableOpacity>
     </View>
 ));
@@ -458,6 +464,7 @@ interface ExplanationContentProps {
     explanation: GrammarResponse;
     colors: any;
     isDarkMode: boolean;
+    t: (key: string) => string;
 }
 
 /**
@@ -466,20 +473,23 @@ interface ExplanationContentProps {
 const ExplanationContent = React.memo<ExplanationContentProps>(({
     explanation,
     colors,
-    isDarkMode
+    isDarkMode,
+    t
 }) => (
     <View style={styles.resultContainer}>
         <AnalysisSection
-            title="Example 1 Analysis"
+            title={t('example.example1Analysis')}
             data={explanation.sentence1}
             colors={colors}
             isDarkMode={isDarkMode}
+            t={t}
         />
         <AnalysisSection
-            title="Example 2 Analysis"
+            title={t('example.example2Analysis')}
             data={explanation.sentence2}
             colors={colors}
             isDarkMode={isDarkMode}
+            t={t}
         />
     </View>
 ));
@@ -491,6 +501,7 @@ interface AnalysisSectionProps {
     data: { structure: string; grammar: string; reason: string };
     colors: any;
     isDarkMode: boolean;
+    t: (key: string) => string;
 }
 
 /**
@@ -500,7 +511,8 @@ const AnalysisSection = React.memo<AnalysisSectionProps>(({
     title,
     data,
     colors,
-    isDarkMode
+    isDarkMode,
+    t
 }) => (
     <View style={styles.analysisSection}>
         <View style={[styles.sectionHeader, { borderLeftColor: colors.primary }]}>
@@ -513,13 +525,13 @@ const AnalysisSection = React.memo<AnalysisSectionProps>(({
             styles.analysisCard,
             { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.03)' }
         ]}>
-            <AnalysisRow label="Structure" value={data.structure} colors={colors} />
+            <AnalysisRow label={t('example.structure')} value={data.structure} colors={colors} />
             <View style={[styles.dividerLine, { backgroundColor: colors.border }]} />
 
-            <AnalysisRow label="Grammar" value={data.grammar} colors={colors} />
+            <AnalysisRow label={t('example.grammar')} value={data.grammar} colors={colors} />
             <View style={[styles.dividerLine, { backgroundColor: colors.border }]} />
 
-            <AnalysisRow label="Why?" value={data.reason} colors={colors} />
+            <AnalysisRow label={t('example.why')} value={data.reason} colors={colors} />
         </View>
     </View>
 ));

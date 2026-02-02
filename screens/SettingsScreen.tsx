@@ -29,6 +29,8 @@ import { doc, setDoc } from 'firebase/firestore';
 import { db, auth } from '../config/firebase';
 import { updateProfile } from 'firebase/auth';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useTranslation } from 'react-i18next';
+import i18n, { getDeviceLanguage, setToDeviceLanguage, isUsingSystemLanguage } from '../services/i18n';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Responsive Utilities
@@ -120,6 +122,7 @@ export default function SettingsScreen() {
    } = useAuth();
    const { showAlert } = useAlert();
    const insets = useSafeAreaInsets();
+   const { t } = useTranslation();
 
    // Initialize state from context (use fallback to context values)
    const [reminderEnabled, setReminderEnabled] = useState(notificationSettings.enabled);
@@ -142,7 +145,8 @@ export default function SettingsScreen() {
    const [tempHour, setTempHour] = useState('09');
    const [tempMinute, setTempMinute] = useState('00');
    const [showFrequencyPicker, setShowFrequencyPicker] = useState(false);
-   const [selectedLanguage, setSelectedLanguage] = useState('english');
+   const [selectedLanguage, setSelectedLanguage] = useState(i18n.language || 'en');
+   const [isSystemLanguage, setIsSystemLanguage] = useState(false);
    const [showLanguagePicker, setShowLanguagePicker] = useState(false);
    const [showHelpModal, setShowHelpModal] = useState(false);
    const [showPrivacyModal, setShowPrivacyModal] = useState(false);
@@ -184,6 +188,15 @@ export default function SettingsScreen() {
          }
       };
       loadLevel();
+   }, []);
+
+   // Check if using system language on mount
+   useEffect(() => {
+      const checkSystemLanguage = async () => {
+         const isSystem = await isUsingSystemLanguage();
+         setIsSystemLanguage(isSystem);
+      };
+      checkSystemLanguage();
    }, []);
 
    // Helper to convert frequency string to minutes
@@ -362,7 +375,7 @@ export default function SettingsScreen() {
             >
                <FontAwesome5 name="arrow-left" size={24} color={colors.text} />
             </TouchableOpacity>
-            <Text style={[styles.headerTitle, { color: colors.text }]}>Settings</Text>
+            <Text style={[styles.headerTitle, { color: colors.text }]}>{t('settings.title')}</Text>
             <View style={styles.headerSpacer} />
          </View>
 
@@ -391,12 +404,12 @@ export default function SettingsScreen() {
                   style={[styles.editButton, { borderColor: colors.border, backgroundColor: colors.surface }]}
                   onPress={openEditProfileModal}
                >
-                  <Text style={[styles.editButtonText, { color: colors.text }]}>Edit Profile</Text>
+                  <Text style={[styles.editButtonText, { color: colors.text }]}>{t('settings.editProfile')}</Text>
                </TouchableOpacity>
             </View>
 
             {/* Section: Preferences */}
-            <Text style={[styles.sectionTitle, dynamicStyles.textSecondary]}>Preferences</Text>
+            <Text style={[styles.sectionTitle, dynamicStyles.textSecondary]}>{t('settings.preferences')}</Text>
             <View style={[styles.sectionCard, dynamicStyles.sectionCard]}>
 
                <TouchableOpacity
@@ -408,16 +421,27 @@ export default function SettingsScreen() {
                         <Ionicons name="language" size={24} color={colors.primary} />
                      </View>
                      <View>
-                        <Text style={[styles.settingTitle, dynamicStyles.text]}>Language</Text>
+                        <Text style={[styles.settingTitle, dynamicStyles.text]}>{t('settings.language')}</Text>
                         <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
-                           <Image
-                              source={LANGUAGES.find(l => l.id === selectedLanguage)?.flagIcon}
-                              style={{ width: 12, height: 12, borderRadius: 2 }}
-                              resizeMode="contain"
-                           />
-                           <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>
-                              {LANGUAGES.find(l => l.id === selectedLanguage)?.name}
-                           </Text>
+                           {isSystemLanguage ? (
+                              <>
+                                 <MaterialIcons name="phone-iphone" size={12} color={colors.textSecondary} />
+                                 <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>
+                                    {t('settings.systemDefault')}
+                                 </Text>
+                              </>
+                           ) : (
+                              <>
+                                 <Image
+                                    source={LANGUAGES.find(l => l.code === selectedLanguage)?.flagIcon}
+                                    style={{ width: 12, height: 12, borderRadius: 2 }}
+                                    resizeMode="contain"
+                                 />
+                                 <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>
+                                    {LANGUAGES.find(l => l.code === selectedLanguage)?.name}
+                                 </Text>
+                              </>
+                           )}
                         </View>
                      </View>
                   </View>
@@ -432,9 +456,9 @@ export default function SettingsScreen() {
                         <MaterialCommunityIcons name="check-circle-outline" size={24} color={colors.primary} />
                      </View>
                      <View>
-                        <Text style={[styles.settingTitle, dynamicStyles.text]}>When Notification Arrives</Text>
+                        <Text style={[styles.settingTitle, dynamicStyles.text]}>{t('settings.notificationAction')}</Text>
                         <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>
-                           {autoMarkLearned ? 'Mark as learned' : 'Do not mark'}
+                           {autoMarkLearned ? t('settings.markasLearned') : t('settings.doNotMark')}
                         </Text>
                      </View>
                   </View>
@@ -442,14 +466,14 @@ export default function SettingsScreen() {
                </TouchableOpacity>
             </View>
 
-            <Text style={[styles.sectionTitle, dynamicStyles.textSecondary]}>Daily Reminder</Text>
+            <Text style={[styles.sectionTitle, dynamicStyles.textSecondary]}>{t('settings.dailyReminder')}</Text>
             <View style={[styles.sectionCard, dynamicStyles.sectionCard]}>
                <View style={styles.settingItem}>
                   <View style={styles.settingLeft}>
                      <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
                         <MaterialCommunityIcons name="bell-outline" size={24} color={colors.primary} />
                      </View>
-                     <Text style={[styles.settingTitle, dynamicStyles.text]}>Enable Reminders</Text>
+                     <Text style={[styles.settingTitle, dynamicStyles.text]}>{t('settings.enableReminders')}</Text>
                   </View>
                   <AnimatedSwitch value={reminderEnabled} onToggle={handleReminderToggle} />
                </View>
@@ -470,7 +494,7 @@ export default function SettingsScreen() {
                               <MaterialIcons name="schedule" size={20} color={colors.primary} />
                            </View>
                            <View>
-                              <Text style={[styles.settingTitle, dynamicStyles.text]}>Start Time</Text>
+                              <Text style={[styles.settingTitle, dynamicStyles.text]}>{t('settings.startTime')}</Text>
                               <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>{startHour}:{startMinute}</Text>
                            </View>
                         </View>
@@ -490,7 +514,7 @@ export default function SettingsScreen() {
                               <MaterialIcons name="schedule" size={20} color={colors.primary} />
                            </View>
                            <View>
-                              <Text style={[styles.settingTitle, dynamicStyles.text]}>End Time</Text>
+                              <Text style={[styles.settingTitle, dynamicStyles.text]}>{t('settings.endTime')}</Text>
                               <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>{endHour}:{endMinute}</Text>
                            </View>
                         </View>
@@ -507,7 +531,7 @@ export default function SettingsScreen() {
                               <Feather name="repeat" size={18} color={colors.primary} />
                            </View>
                            <View>
-                              <Text style={[styles.settingTitle, dynamicStyles.text]}>Frequency</Text>
+                              <Text style={[styles.settingTitle, dynamicStyles.text]}>{t('settings.frequency')}</Text>
                               <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>{frequency}</Text>
                            </View>
                         </View>
@@ -518,7 +542,7 @@ export default function SettingsScreen() {
             </View>
 
             {/* Section: Progress */}
-            <Text style={[styles.sectionTitle, dynamicStyles.textSecondary]}>Progress</Text>
+            <Text style={[styles.sectionTitle, dynamicStyles.textSecondary]}>{t('settings.progress')}</Text>
             <View style={[styles.sectionCard, dynamicStyles.sectionCard]}>
                <TouchableOpacity
                   style={styles.settingItem}
@@ -529,7 +553,7 @@ export default function SettingsScreen() {
                         <MaterialCommunityIcons name="trophy-outline" size={24} color={colors.primary} />
                      </View>
                      <View>
-                        <Text style={[styles.settingTitle, dynamicStyles.text]}>Change Level</Text>
+                        <Text style={[styles.settingTitle, dynamicStyles.text]}>{t('settings.changeLevel')}</Text>
                         <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>
                            {LEVELS.find(l => l.id === currentLevel)?.title} ({LEVELS.find(l => l.id === currentLevel)?.range})
                         </Text>
@@ -541,12 +565,12 @@ export default function SettingsScreen() {
                   style={styles.settingItem}
                   onPress={() => {
                      showAlert({
-                        title: 'Change Learning Language',
-                        message: 'This will reset all your progress and let you choose a new language to learn. Are you sure?',
+                        title: t('settings.changeLangConfirmTitle'),
+                        message: t('settings.changeLangConfirmDesc'),
                         buttons: [
-                           { text: 'Cancel', style: 'cancel' },
+                           { text: t('common.cancel'), style: 'cancel' },
                            {
-                              text: 'Continue',
+                              text: t('common.continue'),
                               style: 'destructive',
                               onPress: async () => {
                                  // FIRST: Clear favorites on Firebase while we have user ID
@@ -572,8 +596,8 @@ export default function SettingsScreen() {
                         <MaterialCommunityIcons name="translate" size={24} color={colors.primary} />
                      </View>
                      <View>
-                        <Text style={[styles.settingTitle, dynamicStyles.text]}>Change Learning Language</Text>
-                        <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>Start learning a new language</Text>
+                        <Text style={[styles.settingTitle, dynamicStyles.text]}>{t('settings.changeLanguage')}</Text>
+                        <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>{t('settings.changeLanguageDesc')}</Text>
                      </View>
                   </View>
                   <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
@@ -582,12 +606,12 @@ export default function SettingsScreen() {
                   style={[styles.settingItem, { borderBottomWidth: 0 }]}
                   onPress={() => {
                      showAlert({
-                        title: 'Reset Progress',
-                        message: 'Are you sure you want to reset all your learning progress? This action cannot be undone.',
+                        title: t('settings.resetConfirmTitle'),
+                        message: t('settings.resetConfirmDesc'),
                         buttons: [
-                           { text: 'Cancel', style: 'cancel' },
+                           { text: t('common.cancel'), style: 'cancel' },
                            {
-                              text: 'Reset',
+                              text: t('settings.reset'),
                               style: 'destructive',
                               onPress: async () => {
                                  // FIRST: Clear favorites on Firebase
@@ -597,7 +621,7 @@ export default function SettingsScreen() {
                                  await resetProgress();
                                  // Sync empty progress to Firebase
                                  await forceSync(user?.uid || '');
-                                 showAlert({ title: 'Success', message: 'Your progress has been reset.' });
+                                 showAlert({ title: t('common.success'), message: t('settings.resetProgressSuccess') });
                               }
                            }
                         ]
@@ -609,8 +633,8 @@ export default function SettingsScreen() {
                         <MaterialIcons name="refresh" size={24} color={colors.error} />
                      </View>
                      <View>
-                        <Text style={[styles.settingTitle, { color: colors.error }]}>Reset Progress</Text>
-                        <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>Clear all learned words</Text>
+                        <Text style={[styles.settingTitle, { color: colors.error }]}>{t('settings.resetProgress')}</Text>
+                        <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>{t('settings.resetProgressDesc')}</Text>
                      </View>
                   </View>
                   <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
@@ -618,14 +642,14 @@ export default function SettingsScreen() {
             </View>
 
             {/* Section: Support */}
-            <Text style={[styles.sectionTitle, dynamicStyles.textSecondary]}>Support</Text>
+            <Text style={[styles.sectionTitle, dynamicStyles.textSecondary]}>{t('settings.support')}</Text>
             <View style={[styles.sectionCard, dynamicStyles.sectionCard]}>
                <TouchableOpacity style={styles.settingItem} onPress={() => setShowHelpModal(true)}>
                   <View style={styles.settingLeft}>
                      <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
                         <MaterialCommunityIcons name="help" size={20} color={colors.primary} />
                      </View>
-                     <Text style={[styles.settingTitle, dynamicStyles.text]}>Help & FAQ</Text>
+                     <Text style={[styles.settingTitle, dynamicStyles.text]}>{t('settings.helpFaq')}</Text>
                   </View>
                   <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
                </TouchableOpacity>
@@ -634,7 +658,7 @@ export default function SettingsScreen() {
                      <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
                         <MaterialCommunityIcons name="security" size={24} color={colors.primary} />
                      </View>
-                     <Text style={[styles.settingTitle, dynamicStyles.text]}>Privacy Policy</Text>
+                     <Text style={[styles.settingTitle, dynamicStyles.text]}>{t('settings.privacyPolicy')}</Text>
                   </View>
                   <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
                </TouchableOpacity>
@@ -647,12 +671,12 @@ export default function SettingsScreen() {
                style={styles.logoutButton}
                onPress={() => {
                   showAlert({
-                     title: 'Log Out',
-                     message: 'Are you sure you want to log out?',
+                     title: t('settings.logoutConfirmTitle'),
+                     message: t('settings.logoutConfirmDesc'),
                      buttons: [
-                        { text: 'Cancel', style: 'cancel' },
+                        { text: t('common.cancel'), style: 'cancel' },
                         {
-                           text: 'Log Out', style: 'destructive', onPress: async () => {
+                           text: t('settings.logout'), style: 'destructive', onPress: async () => {
                               try {
                                  await signOut();
                                  navigation.reset({
@@ -669,7 +693,7 @@ export default function SettingsScreen() {
                }}
             >
                <MaterialIcons name="logout" size={20} color={colors.error} />
-               <Text style={[styles.logoutButtonText, { color: colors.error }]}>Log Out</Text>
+               <Text style={[styles.logoutButtonText, { color: colors.error }]}>{t('settings.logout')}</Text>
             </TouchableOpacity>
 
             <Text style={[styles.versionText, dynamicStyles.textSecondary, { marginTop: 12, marginBottom: 0 }]}>VocBee v1.0.0</Text>
@@ -690,14 +714,14 @@ export default function SettingsScreen() {
                />
                <View style={[styles.modalContent, dynamicStyles.modalContent]}>
                   <Text style={[styles.modalTitle, dynamicStyles.text]}>
-                     Select {showTimePicker === 'start' ? 'Start' : 'End'} Time
+                     {showTimePicker === 'start' ? t('settings.selectStartTime') : t('settings.selectEndTime')}
                   </Text>
 
                   {/* Wheel Picker Container */}
                   <View style={styles.wheelPickerContainer}>
                      {/* Hours Column */}
                      <View style={styles.wheelColumn}>
-                        <Text style={[styles.wheelLabel, dynamicStyles.textSecondary]}>Hour</Text>
+                        <Text style={[styles.wheelLabel, dynamicStyles.textSecondary]}>{t('settings.hour')}</Text>
                         <View style={styles.wheelScrollWrapper}>
                            <View style={[styles.wheelCenterIndicator, { borderColor: colors.primary }]} pointerEvents="none" />
                            <ScrollView
@@ -737,7 +761,7 @@ export default function SettingsScreen() {
 
                      {/* Minutes Column */}
                      <View style={styles.wheelColumn}>
-                        <Text style={[styles.wheelLabel, dynamicStyles.textSecondary]}>Min</Text>
+                        <Text style={[styles.wheelLabel, dynamicStyles.textSecondary]}>{t('settings.min')}</Text>
                         <View style={styles.wheelScrollWrapper}>
                            <View style={[styles.wheelCenterIndicator, { borderColor: colors.primary }]} pointerEvents="none" />
                            <ScrollView
@@ -773,7 +797,6 @@ export default function SettingsScreen() {
                      </View>
                   </View>
 
-                  {/* Confirm Button */}
                   <TouchableOpacity
                      style={[styles.confirmButton, { backgroundColor: colors.primary }]}
                      onPress={() => {
@@ -787,7 +810,7 @@ export default function SettingsScreen() {
                         setShowTimePicker(null);
                      }}
                   >
-                     <Text style={styles.confirmButtonText}>Confirm</Text>
+                     <Text style={styles.confirmButtonText}>{t('common.confirm')}</Text>
                   </TouchableOpacity>
                </View>
             </View>
@@ -806,7 +829,7 @@ export default function SettingsScreen() {
                onPress={() => setShowFrequencyPicker(false)}
             >
                <View style={[styles.modalContent, dynamicStyles.modalContent]}>
-                  <Text style={[styles.modalTitle, dynamicStyles.text]}>Select Frequency</Text>
+                  <Text style={[styles.modalTitle, dynamicStyles.text]}>{t('settings.selectFrequency')}</Text>
                   {FREQUENCIES.map((freq) => (
                      <TouchableOpacity
                         key={freq}
@@ -844,18 +867,49 @@ export default function SettingsScreen() {
                onPress={() => setShowLanguagePicker(false)}
             >
                <View style={[styles.modalContent, dynamicStyles.modalContent, { maxHeight: '70%' }]}>
-                  <Text style={[styles.modalTitle, dynamicStyles.text]}>Select Language</Text>
+                  <Text style={[styles.modalTitle, dynamicStyles.text]}>{t('settings.selectLanguage')}</Text>
                   <ScrollView style={styles.pickerScroll} showsVerticalScrollIndicator={false}>
+                     {/* System Default Language Option */}
+                     <TouchableOpacity
+                        style={[
+                           styles.pickerItem,
+                           { borderBottomColor: colors.border },
+                           isSystemLanguage && { backgroundColor: `${colors.primary}20` }
+                        ]}
+                        onPress={async () => {
+                           const deviceLang = await setToDeviceLanguage();
+                           setSelectedLanguage(deviceLang);
+                           setIsSystemLanguage(true);
+                           setShowLanguagePicker(false);
+                        }}
+                     >
+                        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
+                           <MaterialIcons name="phone-iphone" size={22} color={colors.primary} />
+                           <Text style={[
+                              styles.pickerItemText,
+                              { color: colors.text },
+                              isSystemLanguage && { color: colors.primary }
+                           ]}>{t('settings.systemDefault')}</Text>
+                           <Text style={[
+                              styles.pickerItemNativeName,
+                              { color: colors.textSecondary },
+                              isSystemLanguage && { color: colors.primary }
+                           ]}> ({getDeviceLanguage().toUpperCase()})</Text>
+                        </View>
+                     </TouchableOpacity>
                      {LANGUAGES.map((lang) => (
                         <TouchableOpacity
                            key={lang.id}
                            style={[
                               styles.pickerItem,
                               { borderBottomColor: colors.border },
-                              selectedLanguage === lang.id && { backgroundColor: `${colors.primary}20` }
+                              !isSystemLanguage && selectedLanguage === lang.code && { backgroundColor: `${colors.primary}20` }
                            ]}
-                           onPress={() => {
-                              setSelectedLanguage(lang.id);
+                           onPress={async () => {
+                              const langCode = lang.code || 'en';
+                              setSelectedLanguage(langCode);
+                              setIsSystemLanguage(false);
+                              await i18n.changeLanguage(langCode);
                               setShowLanguagePicker(false);
                            }}
                         >
@@ -868,12 +922,12 @@ export default function SettingsScreen() {
                               <Text style={[
                                  styles.pickerItemText,
                                  { color: colors.text },
-                                 selectedLanguage === lang.id && { color: colors.primary }
+                                 !isSystemLanguage && selectedLanguage === lang.code && { color: colors.primary }
                               ]}>{lang.name}</Text>
                               <Text style={[
                                  styles.pickerItemNativeName,
                                  { color: colors.textSecondary },
-                                 selectedLanguage === lang.id && { color: colors.primary }
+                                 !isSystemLanguage && selectedLanguage === lang.code && { color: colors.primary }
                               ]}> ({lang.nativeName})</Text>
                            </View>
                         </TouchableOpacity>
@@ -896,7 +950,7 @@ export default function SettingsScreen() {
                onPress={() => setShowLevelPicker(false)}
             >
                <View style={[styles.modalContent, dynamicStyles.modalContent, { maxHeight: '70%' }]}>
-                  <Text style={[styles.modalTitle, dynamicStyles.text]}>Select Your Level</Text>
+                  <Text style={[styles.modalTitle, dynamicStyles.text]}>{t('settings.selectLevel')}</Text>
                   <ScrollView style={styles.pickerScroll} showsVerticalScrollIndicator={false}>
                      {LEVELS.map((level) => (
                         <TouchableOpacity
@@ -960,7 +1014,7 @@ export default function SettingsScreen() {
                onPress={() => setShowAutoMarkPicker(false)}
             >
                <View style={[styles.modalContent, dynamicStyles.modalContent]}>
-                  <Text style={[styles.modalTitle, dynamicStyles.text]}>When Notification Arrives</Text>
+                  <Text style={[styles.modalTitle, dynamicStyles.text]}>{t('settings.notificationAction')}</Text>
 
                   <TouchableOpacity
                      style={[
@@ -982,10 +1036,10 @@ export default function SettingsScreen() {
                         />
                         <View style={{ flex: 1 }}>
                            <Text style={[styles.autoMarkOptionTitle, { color: autoMarkLearned ? colors.primary : colors.text }]}>
-                              Mark as learned
+                              {t('settings.markasLearned')}
                            </Text>
                            <Text style={[styles.autoMarkOptionDesc, { color: colors.textSecondary }]}>
-                              Word will be marked as learned when notification is sent
+                              {t('settings.autoMarkDesc1')}
                            </Text>
                         </View>
                      </View>
@@ -1014,10 +1068,10 @@ export default function SettingsScreen() {
                         />
                         <View style={{ flex: 1 }}>
                            <Text style={[styles.autoMarkOptionTitle, { color: !autoMarkLearned ? colors.primary : colors.text }]}>
-                              Do not mark
+                              {t('settings.doNotMark')}
                            </Text>
                            <Text style={[styles.autoMarkOptionDesc, { color: colors.textSecondary }]}>
-                              Word will remain in your learning queue
+                              {t('settings.autoMarkDesc2')}
                            </Text>
                         </View>
                      </View>
@@ -1042,7 +1096,7 @@ export default function SettingsScreen() {
                onPress={() => setShowImagePickerModal(false)}
             >
                <View style={[styles.modalContent, dynamicStyles.modalContent]}>
-                  <Text style={[styles.modalTitle, dynamicStyles.text]}>Change Profile Photo</Text>
+                  <Text style={[styles.modalTitle, dynamicStyles.text]}>{t('settings.changePhotoTitle')}</Text>
 
                   <TouchableOpacity
                      style={[styles.imagePickerOption, { borderBottomColor: colors.border }]}
@@ -1051,7 +1105,7 @@ export default function SettingsScreen() {
                      <View style={[styles.imagePickerIcon, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)' }]}>
                         <MaterialIcons name="camera-alt" size={24} color={colors.primary} />
                      </View>
-                     <Text style={[styles.imagePickerOptionText, dynamicStyles.text]}>Take Photo</Text>
+                     <Text style={[styles.imagePickerOptionText, dynamicStyles.text]}>{t('settings.takePhoto')}</Text>
                   </TouchableOpacity>
 
                   <TouchableOpacity
@@ -1061,7 +1115,7 @@ export default function SettingsScreen() {
                      <View style={[styles.imagePickerIcon, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)' }]}>
                         <MaterialIcons name="photo-library" size={24} color={colors.primary} />
                      </View>
-                     <Text style={[styles.imagePickerOptionText, dynamicStyles.text]}>Choose from Gallery</Text>
+                     <Text style={[styles.imagePickerOptionText, dynamicStyles.text]}>{t('settings.chooseFromGallery')}</Text>
                   </TouchableOpacity>
 
                   {profile.image && (
@@ -1072,7 +1126,7 @@ export default function SettingsScreen() {
                         <View style={[styles.imagePickerIcon, { backgroundColor: 'rgba(255,59,48,0.1)' }]}>
                            <MaterialIcons name="delete" size={24} color={colors.error} />
                         </View>
-                        <Text style={[styles.imagePickerOptionText, { color: colors.error }]}>Remove Photo</Text>
+                        <Text style={[styles.imagePickerOptionText, { color: colors.error }]}>{t('settings.removePhoto')}</Text>
                      </TouchableOpacity>
                   )}
 
@@ -1080,7 +1134,7 @@ export default function SettingsScreen() {
                      style={[styles.cancelButton, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)' }]}
                      onPress={() => setShowImagePickerModal(false)}
                   >
-                     <Text style={[styles.cancelButtonText, dynamicStyles.text]}>Cancel</Text>
+                     <Text style={[styles.cancelButtonText, dynamicStyles.text]}>{t('common.cancel')}</Text>
                   </TouchableOpacity>
                </View>
             </TouchableOpacity>
@@ -1102,10 +1156,10 @@ export default function SettingsScreen() {
                   style={[styles.modalContent, dynamicStyles.modalContent, { width: '90%' }]}
                   onStartShouldSetResponder={() => true}
                >
-                  <Text style={[styles.modalTitle, dynamicStyles.text]}>Edit Profile</Text>
+                  <Text style={[styles.modalTitle, dynamicStyles.text]}>{t('settings.editProfileTitle')}</Text>
 
                   <View style={styles.inputContainer}>
-                     <Text style={[styles.inputLabel, dynamicStyles.textSecondary]}>Name</Text>
+                     <Text style={[styles.inputLabel, dynamicStyles.textSecondary]}>{t('settings.nameLabel')}</Text>
                      <TextInput
                         style={[
                            styles.textInput,
@@ -1117,7 +1171,7 @@ export default function SettingsScreen() {
                         ]}
                         value={tempName}
                         onChangeText={setTempName}
-                        placeholder="Enter your name"
+                        placeholder={t('settings.namePlaceholder')}
                         placeholderTextColor={colors.textSecondary}
                      />
                   </View>
@@ -1127,7 +1181,7 @@ export default function SettingsScreen() {
                         style={[styles.modalButton, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)' }]}
                         onPress={() => setShowEditProfileModal(false)}
                      >
-                        <Text style={[styles.modalButtonText, dynamicStyles.text]}>Cancel</Text>
+                        <Text style={[styles.modalButtonText, dynamicStyles.text]}>{t('common.cancel')}</Text>
                      </TouchableOpacity>
                      <TouchableOpacity
                         style={[
@@ -1138,7 +1192,7 @@ export default function SettingsScreen() {
                         onPress={saveProfileChanges}
                         disabled={tempName === profile.name}
                      >
-                        <Text style={[styles.modalButtonText, { color: isDarkMode ? '#000' : '#fff' }]}>Save</Text>
+                        <Text style={[styles.modalButtonText, { color: isDarkMode ? '#000' : '#fff' }]}>{t('common.save')}</Text>
                      </TouchableOpacity>
                   </View>
                </View>
@@ -1161,7 +1215,7 @@ export default function SettingsScreen() {
                   style={[styles.modalContent, dynamicStyles.modalContent, { width: '90%', maxHeight: '80%' }]}
                >
                   <View style={styles.modalHeader}>
-                     <Text style={[styles.modalTitle, dynamicStyles.text]}>Help & FAQ</Text>
+                     <Text style={[styles.modalTitle, dynamicStyles.text]}>{t('help.title')}</Text>
                      <TouchableOpacity onPress={() => setShowHelpModal(false)}>
                         <MaterialIcons name="close" size={24} color={colors.textSecondary} />
                      </TouchableOpacity>
@@ -1174,104 +1228,104 @@ export default function SettingsScreen() {
                   >
                      {/* Learning Basics */}
                      <View style={styles.faqItem}>
-                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>How do I learn new words?</Text>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>{t('help.basics.q1')}</Text>
                         <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>
-                           Swipe the word card right to mark it as learned, or swipe left to skip and see it again later. You can also tap the buttons below the card.
+                           {t('help.basics.a1')}
                         </Text>
                      </View>
 
                      <View style={styles.faqItem}>
-                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>How do I hear the pronunciation?</Text>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>{t('help.basics.q2')}</Text>
                         <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>
-                           Tap the speaker icon on the word card to hear the correct pronunciation. Make sure your device volume is turned up.
+                           {t('help.basics.a2')}
                         </Text>
                      </View>
 
                      <View style={styles.faqItem}>
-                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>How do I save favorite words?</Text>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>{t('help.basics.q3')}</Text>
                         <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>
-                           Tap the star icon on any word card to add it to your favorites. Access your saved words anytime from the Favorites screen via the star button on the home screen.
+                           {t('help.basics.a3')}
                         </Text>
                      </View>
 
                      <View style={styles.faqItem}>
-                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>What are example sentences?</Text>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>{t('help.basics.q4')}</Text>
                         <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>
-                           Tap on any word card to see it used in real sentences with translations. This helps you understand context and usage.
+                           {t('help.basics.a4')}
                         </Text>
                      </View>
 
                      <View style={styles.faqItem}>
-                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>What is the "Explain Grammar" feature?</Text>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>{t('help.basics.q5')}</Text>
                         <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>
-                           In the example sentences screen, tap "Explain Grammar" to get an AI-powered explanation of the word's grammar, usage patterns, and tips for remembering it.
+                           {t('help.basics.a5')}
                         </Text>
                      </View>
 
                      {/* Progress & Levels */}
                      <View style={styles.faqItem}>
-                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>What are the proficiency levels?</Text>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>{t('help.levels.q1')}</Text>
                         <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>
-                           VocBee uses CEFR levels: Beginner (A1-A2) for basic vocabulary, Intermediate (B1-B2) for conversational words, and Advanced (C1) for sophisticated vocabulary. Choose based on your current skill level.
+                           {t('help.levels.a1')}
                         </Text>
                      </View>
 
                      <View style={styles.faqItem}>
-                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>How do I change my level?</Text>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>{t('help.levels.q2')}</Text>
                         <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>
-                           Go to Settings → Progress → Change Level. Select a new level and your word feed will update accordingly. Your learned words are saved across all levels.
+                           {t('help.levels.a2')}
                         </Text>
                      </View>
 
                      <View style={styles.faqItem}>
-                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>How is my progress tracked?</Text>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>{t('help.levels.q3')}</Text>
                         <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>
-                           Your progress shows on the home screen with learned/total words and a progress bar. As you complete levels, VocBee automatically advances you to harder vocabulary.
+                           {t('help.levels.a3')}
                         </Text>
                      </View>
 
                      {/* Reminders & Notifications */}
                      <View style={styles.faqItem}>
-                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>How do reminders work?</Text>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>{t('help.reminders.q1')}</Text>
                         <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>
-                           Enable Daily Reminders in Settings. Set your preferred time range and frequency (every 15min to 2 hours). You'll receive vocabulary notifications to practice throughout the day.
+                           {t('help.reminders.a1')}
                         </Text>
                      </View>
 
                      <View style={styles.faqItem}>
-                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>What does "When Notification Arrives" mean?</Text>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>{t('help.reminders.q2')}</Text>
                         <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>
-                           Choose whether words shown in notifications are automatically marked as learned or remain in your queue for manual review later.
+                           {t('help.reminders.a2')}
                         </Text>
                      </View>
 
                      {/* Data & Sync */}
                      <View style={styles.faqItem}>
-                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>Is my progress saved to the cloud?</Text>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>{t('help.data.q1')}</Text>
                         <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>
-                           Yes! Your progress and favorites automatically sync to our cloud daily. Log in on any device to continue learning where you left off.
+                           {t('help.data.a1')}
                         </Text>
                      </View>
 
                      <View style={styles.faqItem}>
-                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>Can I learn a different language?</Text>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>{t('help.data.q2')}</Text>
                         <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>
-                           Go to Settings → Progress → Change Learning Language. Note: This will reset your current progress as each language has its own vocabulary set.
+                           {t('help.data.a2')}
                         </Text>
                      </View>
 
                      <View style={styles.faqItem}>
-                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>How do I reset my progress?</Text>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>{t('help.data.q3')}</Text>
                         <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>
-                           Go to Settings → Progress → Reset Progress. This clears all learned words and starts fresh. Warning: This action cannot be undone!
+                           {t('help.data.a3')}
                         </Text>
                      </View>
 
                      {/* Support */}
                      <View style={[styles.faqItem, { borderBottomWidth: 0 }]}>
-                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>Need more help?</Text>
+                        <Text style={[styles.faqQuestion, dynamicStyles.text]}>{t('help.support.title')}</Text>
                         <Text style={[styles.faqAnswer, dynamicStyles.textSecondary]}>
-                           For any questions, suggestions, or issues, please contact us at support@vocbee.com. We'd love to hear from you!
+                           {t('help.support.desc')}
                         </Text>
                      </View>
                   </ScrollView>
