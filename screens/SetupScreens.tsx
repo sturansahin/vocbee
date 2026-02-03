@@ -49,7 +49,7 @@ const HOURS_LIST = Array.from({ length: 24 }, (_, i) => i.toString().padStart(2,
 const MINUTES_LIST = Array.from({ length: 60 }, (_, i) => i.toString().padStart(2, '0'));
 const HOURS_EXTENDED = [...HOURS_LIST, ...HOURS_LIST, ...HOURS_LIST];
 const MINUTES_EXTENDED = [...MINUTES_LIST, ...MINUTES_LIST, ...MINUTES_LIST];
-const FREQUENCIES = ['Every 30 minutes', 'Every hour', 'Every 2 hours'];
+const FREQUENCIES = ['Every hour', 'Every 2 hours'];
 const ITEM_HEIGHT = 44;
 
 // Unified Setup Screen with Steps (5 steps: language -> language -> level -> notifications -> schedule)
@@ -239,7 +239,6 @@ export const SetupScreen = () => {
 
   const getFrequencyMinutes = (freq: string): number => {
     switch (freq) {
-      case 'Every 30 minutes': return 30;
       case 'Every hour': return 60;
       default: return 120;
     }

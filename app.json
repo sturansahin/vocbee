@@ -4,6 +4,7 @@
     "slug": "vocbee",
     "scheme": "vocbee",
     "version": "1.0.0",
+    "icon": "./assets/icons/vocicon.png",
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
     "assetBundlePatterns": [
@@ -14,7 +15,11 @@
       "bundleIdentifier": "com.vocbee.app"
     },
     "android": {
-      "package": "com.vocbee.app"
+      "package": "com.vocbee.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icons/vocicon.png",
+        "backgroundColor": "#ffffff"
+      }
     },
     "plugins": [
       "expo-font",
@@ -25,7 +30,13 @@
           "androidAppId": "ca-app-pub-3149431742550187~5197491242",
           "iosAppId": "ca-app-pub-3149431742550187~5197491242"
         }
-      ]
-    ]
+      ],
+      "expo-localization"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "66067389-3a15-46ea-ade9-ed9a56f5d08b"
+      }
+    }
   }
 }

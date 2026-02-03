@@ -48,7 +48,7 @@ const HOURS_LIST = Array.from({ length: 24 }, (_, i) => i.toString().padStart(2,
 const MINUTES_LIST = Array.from({ length: 60 }, (_, i) => i.toString().padStart(2, '0'));
 const HOURS_EXTENDED = [...HOURS_LIST, ...HOURS_LIST, ...HOURS_LIST];
 const MINUTES_EXTENDED = [...MINUTES_LIST, ...MINUTES_LIST, ...MINUTES_LIST];
-const FREQUENCIES = ['Every 30 minutes', 'Every hour', 'Every 2 hours'];
+const FREQUENCIES = ['Every hour', 'Every 2 hours'];
 
 // ─────────────────────────────────────────────────────────────────────────────
 // AnimatedSwitch Component - Unified toggle with variants
@@ -134,7 +134,6 @@ export default function SettingsScreen() {
    // Helper to get freq string
    const getFreqString = (min: number) => {
       switch (min) {
-         case 30: return 'Every 30 minutes';
          case 60: return 'Every hour';
          default: return 'Every 2 hours';
       }
@@ -202,7 +201,6 @@ export default function SettingsScreen() {
    // Helper to convert frequency string to minutes
    const getFrequencyMinutes = (freq: string): number => {
       switch (freq) {
-         case 'Every 30 minutes': return 30;
          case 'Every hour': return 60;
          default: return 120;
       }

@@ -126,7 +126,12 @@ export async function getNotificationSettings(): Promise<NotificationSettings> {
     try {
         const data = await AsyncStorage.getItem(NOTIFICATION_SETTINGS_KEY);
         if (data) {
-            return { ...DEFAULT_NOTIFICATION_SETTINGS, ...JSON.parse(data) };
+            const settings = { ...DEFAULT_NOTIFICATION_SETTINGS, ...JSON.parse(data) };
+            // Enforce minimum 60 minutes (migration for legacy 30-min settings)
+            if (settings.frequencyMinutes < 60) {
+                settings.frequencyMinutes = 60;
+            }
+            return settings;
         }
         return DEFAULT_NOTIFICATION_SETTINGS;
     } catch (error) {
