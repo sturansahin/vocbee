@@ -387,9 +387,13 @@ export default function SettingsScreen() {
                         style={[styles.avatar, { borderColor: colors.surface }]}
                      />
                   ) : (
-                     <View style={[styles.avatar, styles.avatarPlaceholder, { borderColor: colors.border, backgroundColor: colors.surface }]}>
-                        <MaterialIcons name="person" size={56} color={colors.textSecondary} />
-                     </View>
+                     <Image
+                        source={isDarkMode
+                           ? require('../assets/icons/dflt_dark.png')
+                           : require('../assets/icons/dflt_light.png')
+                        }
+                        style={[styles.avatar, { borderColor: colors.border }]}
+                     />
                   )}
                   <View style={[styles.editBadge, { backgroundColor: colors.primary, borderColor: colors.background }]}>
                      <MaterialIcons name="camera-alt" size={16} color={isDarkMode ? '#000' : '#fff'} />
