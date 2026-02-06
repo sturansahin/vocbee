@@ -261,6 +261,12 @@ export default
         {
             message: 'İnternet Bağlantısı Yok',
         },
+        connection:
+        {
+            title: 'Bağlantı Sorunu',
+            message: 'Sunucuya bağlanılamadı. Lütfen internet bağlantınızı kontrol edin ve tekrar deneyin.',
+            retry: 'Tekrar Dene',
+        },
         help:
         {
             title: 'Yardım & SSS',

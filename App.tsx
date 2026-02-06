@@ -49,7 +49,7 @@ export const FONT_FAMILY = 'SpecialGothicExpandedOne_400Regular';
 
 // AppContent component to access auth context
 function AppContent() {
-  const { user, userData, isLoading } = useAuth();
+  const { user, userData, isLoading, connectionError } = useAuth();
   const { isDarkMode } = useTheme();
   const appState = useRef(AppState.currentState);
   const navigationRef = useRef<NavigationContainerRef<RootStackParamList>>(null);
@@ -148,9 +148,14 @@ function AppContent() {
   }, [user]);
 
   // Show splash screen while app is not ready
-  console.log('[App] Render - showSplash:', showSplash, 'isAppReady:', isAppReady);
+  console.log('[App] Render - showSplash:', showSplash, 'isAppReady:', isAppReady, 'connectionError:', connectionError);
   if (showSplash || !isAppReady) {
     return <CustomSplashScreen onFinish={() => { console.log('[App] Splash finished'); setShowSplash(false); }} />;
+  }
+
+  // Show connection error screen if there's a connection problem
+  if (connectionError) {
+    return <ConnectionErrorScreen />;
   }
 
   return (
@@ -189,6 +194,7 @@ function AppContent() {
 
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { OfflineNotice } from './components/OfflineNotice';
+import { ConnectionErrorScreen } from './components/ConnectionErrorScreen';
 
 // ... existing imports ...
 

@@ -6,7 +6,7 @@ export type RootStackParamList = {
   NativeLanguage: { detectedLevel?: string } | undefined;
   TargetLanguage: undefined;
   LevelSelection: undefined;
-  LevelTest: undefined;
+  LevelTest: { nativeLanguage: string; targetLanguage: string };
   MainTabs: undefined;
   Settings: undefined;
   Favorites: undefined;

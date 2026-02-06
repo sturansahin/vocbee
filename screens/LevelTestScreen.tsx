@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import {
     View,
     Text,
     TouchableOpacity,
     StyleSheet,
-    ScrollView
+    ScrollView,
+    ActivityIndicator
 } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -14,68 +15,157 @@ import { RootStackParamList } from '../types';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import { useTheme } from '../context/ThemeContext';
 import { FONT_FAMILY } from '../utils/typography';
-import { LEVEL_TEST_QUESTIONS, LANGUAGES } from '../constants';
 import { Button } from '../components/UIComponents';
-import { STORAGE_KEYS } from '../services/storageKeys';
 import { useTranslation } from 'react-i18next';
+import { mergeVocabulary, VocabularyWord, Level } from '../services/vocabularyService';
 
 type LevelTestNavProp = StackNavigationProp<RootStackParamList>;
+type LevelTestRouteProp = RouteProp<RootStackParamList, 'LevelTest'>;
+
+// Question structure for dynamic test
+interface TestQuestion {
+    id: number;
+    word: string;        // Target language word (question)
+    correct: string;     // Native language translation (correct answer)
+    options: string[];   // All 4 options including correct
+    level: Level;
+}
+
+// Number of questions per level for the test
+const QUESTIONS_PER_LEVEL: { level: Level; count: number }[] = [
+    { level: 'A1', count: 1 },
+    { level: 'A2', count: 1 },
+    { level: 'B1', count: 1 },
+    { level: 'B2', count: 2 },
+    { level: 'C1', count: 2 },
+];
+
+// Shuffle array helper
+function shuffleArray<T>(array: T[]): T[] {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+}
+
+// Generate test questions from vocabulary
+async function generateTestQuestions(
+    nativeLanguage: string,
+    targetLanguage: string
+): Promise<TestQuestion[]> {
+    const questions: TestQuestion[] = [];
+    let questionId = 1;
+
+    for (const { level, count } of QUESTIONS_PER_LEVEL) {
+        try {
+            const vocabulary = await mergeVocabulary(nativeLanguage, targetLanguage, level);
+
+            if (vocabulary.length < 4) {
+                console.warn(`Not enough words for level ${level}`);
+                continue;
+            }
+
+            // Shuffle and pick words for questions
+            const shuffledWords = shuffleArray(vocabulary);
+            const selectedWords = shuffledWords.slice(0, count);
+
+            for (const word of selectedWords) {
+                // Get 3 distractors from the same level (excluding current word)
+                const distractors = shuffleArray(
+                    vocabulary.filter(w => w.id !== word.id)
+                ).slice(0, 3).map(w => w.translation);
+
+                // Combine correct answer with distractors and shuffle
+                const allOptions = shuffleArray([word.translation, ...distractors]);
+
+                questions.push({
+                    id: questionId++,
+                    word: word.word,
+                    correct: word.translation,
+                    options: allOptions,
+                    level: level,
+                });
+            }
+        } catch (error) {
+            console.error(`Error loading vocabulary for level ${level}:`, error);
+        }
+    }
+
+    return questions;
+}
 
 export default function LevelTestScreen() {
     const navigation = useNavigation<LevelTestNavProp>();
+    const route = useRoute<LevelTestRouteProp>();
     const insets = useSafeAreaInsets();
     const { colors } = useTheme();
     const { t } = useTranslation();
 
+    const [questions, setQuestions] = useState<TestQuestion[]>([]);
+    const [isLoading, setIsLoading] = useState(true);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [correctAnswers, setCorrectAnswers] = useState(0);
     const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
     const [showResult, setShowResult] = useState(false);
-    const [options, setOptions] = useState<string[]>([]);
-    const [nativeLanguage, setNativeLanguage] = useState('tr');
 
-    const currentQuestion = LEVEL_TEST_QUESTIONS[currentQuestionIndex];
-    const totalQuestions = LEVEL_TEST_QUESTIONS.length;
-    const progressPercent = ((currentQuestionIndex + 1) / totalQuestions) * 100;
-
-    // Load native language from storage
+    // Load questions on mount
     useEffect(() => {
-        const loadNativeLanguage = async () => {
+        const loadQuestions = async () => {
             try {
-                const savedLang = await AsyncStorage.getItem(STORAGE_KEYS.NATIVE_LANGUAGE);
-                if (savedLang) {
-                    // Find the language code from the saved language name
-                    const lang = LANGUAGES.find(l => l.name === savedLang);
-                    if (lang) {
-                        setNativeLanguage(lang.code);
-                    }
+                setIsLoading(true);
+
+                // First try to get languages from route params (from SetupScreens)
+                let nativeLang: string | undefined = route.params?.nativeLanguage;
+                let targetLang: string | undefined = route.params?.targetLanguage;
+
+                // Fallback to AsyncStorage if not passed (for existing users re-taking test)
+                if (!nativeLang || !targetLang) {
+                    const storedNative = await AsyncStorage.getItem('@native_language');
+                    const storedTarget = await AsyncStorage.getItem('@target_language');
+                    nativeLang = storedNative ?? undefined;
+                    targetLang = storedTarget ?? undefined;
                 }
+
+                if (!nativeLang || !targetLang) {
+                    console.error('Languages not set');
+                    navigation.goBack();
+                    return;
+                }
+
+                const generatedQuestions = await generateTestQuestions(nativeLang, targetLang);
+
+                if (generatedQuestions.length === 0) {
+                    console.error('No questions generated');
+                    navigation.goBack();
+                    return;
+                }
+
+                setQuestions(generatedQuestions);
             } catch (error) {
-                console.error('Error loading native language:', error);
+                console.error('Error loading test questions:', error);
+                navigation.goBack();
+            } finally {
+                setIsLoading(false);
             }
         };
-        loadNativeLanguage();
-    }, []);
 
-    // Shuffle options whenever question changes or native language is loaded
-    useEffect(() => {
-        const translations = currentQuestion.translations as Record<string, { correct: string; options: string[] }>;
-        const translation = translations[nativeLanguage];
-        if (translation) {
-            const allOptions = [translation.correct, ...translation.options];
-            const shuffled = allOptions.sort(() => Math.random() - 0.5);
-            setOptions(shuffled);
-        }
-    }, [currentQuestionIndex, nativeLanguage]);
+        loadQuestions();
+    }, [navigation]);
+
+    const currentQuestion = questions[currentQuestionIndex];
+    const totalQuestions = questions.length;
+    const progressPercent = totalQuestions > 0 ? ((currentQuestionIndex + 1) / totalQuestions) * 100 : 0;
 
     const handleAnswerSelect = (answer: string) => {
         setSelectedAnswer(answer);
     };
 
     const handleNext = () => {
-        const translations = currentQuestion.translations as Record<string, { correct: string; options: string[] }>;
-        const translation = translations[nativeLanguage];
-        if (selectedAnswer === translation?.correct) {
+        if (!currentQuestion) return;
+
+        if (selectedAnswer === currentQuestion.correct) {
             setCorrectAnswers(prev => prev + 1);
         }
 
@@ -83,17 +173,23 @@ export default function LevelTestScreen() {
             setCurrentQuestionIndex(prev => prev + 1);
             setSelectedAnswer(null);
         } else {
-            const finalScore = selectedAnswer === translation?.correct ? correctAnswers + 1 : correctAnswers;
+            const finalScore = selectedAnswer === currentQuestion.correct ? correctAnswers + 1 : correctAnswers;
             setCorrectAnswers(finalScore);
             setShowResult(true);
         }
     };
 
-    const calculateLevel = () => {
-        if (correctAnswers >= 6) return 'advanced';
-        if (correctAnswers >= 4) return 'intermediate';
+    const calculateLevel = useCallback(() => {
+        // Scoring based on total questions (7 by default)
+        // 0-2 correct = beginner
+        // 3-5 correct = intermediate  
+        // 6-7 correct = advanced
+        const percentage = totalQuestions > 0 ? (correctAnswers / totalQuestions) * 100 : 0;
+
+        if (percentage >= 80) return 'advanced';
+        if (percentage >= 50) return 'intermediate';
         return 'beginner';
-    };
+    }, [correctAnswers, totalQuestions]);
 
     const handleContinue = () => {
         const detectedLevel = calculateLevel();
@@ -105,6 +201,18 @@ export default function LevelTestScreen() {
         : calculateLevel() === 'intermediate'
             ? { title: t('levelTest.intermediate'), range: 'B1-B2' }
             : { title: t('levelTest.beginner'), range: 'A1-A2' };
+
+    // Loading Screen
+    if (isLoading) {
+        return (
+            <View style={[styles.container, styles.loadingContainer, { backgroundColor: colors.background, paddingTop: insets.top }]}>
+                <ActivityIndicator size="large" color={colors.primary} />
+                <Text style={[styles.loadingText, { color: colors.textSecondary }]}>
+                    {t('common.loading')}
+                </Text>
+            </View>
+        );
+    }
 
     // Result Screen
     if (showResult) {
@@ -137,6 +245,10 @@ export default function LevelTestScreen() {
     }
 
     // Quiz Screen
+    if (!currentQuestion) {
+        return null;
+    }
+
     return (
         <View style={[styles.container, { backgroundColor: colors.background, paddingTop: insets.top }]}>
             <View style={styles.header}>
@@ -171,7 +283,7 @@ export default function LevelTestScreen() {
                 </View>
 
                 <View style={styles.optionsContainer}>
-                    {options.map((option, index) => {
+                    {currentQuestion.options.map((option, index) => {
                         const isSelected = selectedAnswer === option;
                         return (
                             <TouchableOpacity
@@ -213,6 +325,15 @@ export default function LevelTestScreen() {
 
 const styles = StyleSheet.create({
     container: { flex: 1 },
+    loadingContainer: {
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    loadingText: {
+        fontFamily: FONT_FAMILY,
+        fontSize: 16,
+        marginTop: 16,
+    },
     header: {
         flexDirection: 'row',
         alignItems: 'center',
@@ -234,12 +355,6 @@ const styles = StyleSheet.create({
     headerSpacer: {
         width: 44,
     },
-    questionCounter: {
-        fontFamily: FONT_FAMILY,
-        fontSize: 12,
-        marginBottom: 6,
-        textAlign: 'center',
-    },
     progressBg: {
         height: 6,
         borderRadius: 3,
@@ -257,13 +372,6 @@ const styles = StyleSheet.create({
     questionSection: {
         alignItems: 'center',
         paddingVertical: 24,
-    },
-    levelBadge: {
-        fontFamily: FONT_FAMILY,
-        fontSize: 12,
-        fontWeight: 'bold',
-        letterSpacing: 2,
-        marginBottom: 16,
     },
     questionText: {
         fontFamily: FONT_FAMILY,
@@ -331,10 +439,6 @@ const styles = StyleSheet.create({
     resultContent: {
         alignItems: 'center',
         gap: 20,
-    },
-    resultEmoji: {
-        fontSize: 80,
-        marginBottom: 10,
     },
     resultTitle: {
         fontFamily: FONT_FAMILY,

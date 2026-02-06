@@ -562,7 +562,7 @@ export const SetupScreen = () => {
 
       <TouchableOpacity
         style={styles.testLink}
-        onPress={() => navigation.navigate('LevelTest')}
+        onPress={() => navigation.navigate('LevelTest', { nativeLanguage, targetLanguage })}
       >
         <MaterialIcons name="quiz" size={20} color={colors.textSecondary} />
         <Text style={[styles.testLinkText, { color: colors.textSecondary }]}>{t('setup.takeTest')}</Text>

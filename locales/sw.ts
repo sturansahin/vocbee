@@ -223,6 +223,11 @@ export default {
         restart: 'Anza Upya Programu',
     },
     offline: { message: 'Hakuna Muunganisho wa Mtandao' },
+    connection: {
+        title: 'Tatizo la Muunganisho',
+        message: 'Haikuweza kuunganisha na seva. Tafadhali angalia muunganisho wako wa intaneti na ujaribu tena.',
+        retry: 'Jaribu Tena',
+    },
     help: {
         title: 'Msaada na Maswali',
         basics: {

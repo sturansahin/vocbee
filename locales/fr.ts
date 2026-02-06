@@ -261,6 +261,11 @@ export default
     {
         message: 'Aucune connexion Internet',
     },
+    connection: {
+        title: 'Problème de connexion',
+        message: 'Impossible de se connecter au serveur. Veuillez vérifier votre connexion Internet et réessayer.',
+        retry: 'Réessayer',
+    },
     help: 
     {
         title: 'Aide & FAQ',

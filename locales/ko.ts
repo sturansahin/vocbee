@@ -261,6 +261,11 @@ export default
     {
         message: '인터넷 연결 없음',
     },
+    connection: {
+        title: '연결 문제',
+        message: '서버에 연결할 수 없습니다. 인터넷 연결을 확인하고 다시 시도해 주세요.',
+        retry: '다시 시도',
+    },
     help: 
     {
         title: '도움말 및 FAQ',

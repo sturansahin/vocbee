@@ -261,6 +261,11 @@ export default
     {
         message: 'Không có kết nối Internet',
     },
+    connection: {
+        title: 'Lỗi kết nối',
+        message: 'Không thể kết nối đến máy chủ. Vui lòng kiểm tra kết nối internet của bạn và thử lại.',
+        retry: 'Thử lại',
+    },
     help: 
     {
         title: 'Trợ giúp & Câu hỏi thường gặp',

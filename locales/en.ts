@@ -315,6 +315,11 @@ export default {
     offline: {
         message: "No Internet Connection",
     },
+    connection: {
+        title: 'Connection Problem',
+        message: 'Could not connect to the server. Please check your internet connection and try again.',
+        retry: 'Retry',
+    },
     help: {
         title: "Help & FAQ",
         basics: {

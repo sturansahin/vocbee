@@ -1,0 +1,193 @@
+// file: services/__tests__/SyncService.test.ts
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+// Mock storage module first
+jest.mock('../storage', () => ({
+    needsSync: jest.fn(),
+    getLastSyncTime: jest.fn(),
+    setLastSyncTime: jest.fn(),
+    clearSyncFlag: jest.fn(),
+    getDeviceId: jest.fn(() => Promise.resolve('test-device-id')),
+    saveUserDataLocally: jest.fn(),
+}));
+
+// Mock Firebase
+jest.mock('firebase/firestore', () => ({
+    doc: jest.fn(),
+    setDoc: jest.fn(),
+    getDoc: jest.fn(),
+    serverTimestamp: jest.fn(() => 'mock-timestamp'),
+}));
+
+jest.mock('../../config/firebase', () => ({
+    db: {},
+}));
+
+// Mock progressService
+jest.mock('../progressService', () => ({
+    getUserProgress: jest.fn(),
+    getCurrentLevel: jest.fn(),
+    restoreProgressFromFirebase: jest.fn(),
+    getLastWordIndex: jest.fn(),
+}));
+
+// Mock favoritesService
+jest.mock('../favoritesService', () => ({
+    restoreFavoritesFromFirebase: jest.fn(),
+    syncFavoritesToFirebase: jest.fn(),
+}));
+
+// Mock vocabularyService
+jest.mock('../vocabularyService', () => ({
+    getLanguagePair: jest.fn(),
+    isVocabularyGenerated: jest.fn(),
+    generateVocabulary: jest.fn(),
+}));
+
+// Import after mocks
+import {
+    shouldSync,
+    createUserDocument,
+    getActiveDeviceIdFromFirebase,
+} from '../SyncService';
+import { doc, setDoc, getDoc } from 'firebase/firestore';
+import { needsSync, getLastSyncTime } from '../storage';
+
+describe('SyncService', () => {
+    beforeEach(async () => {
+        jest.clearAllMocks();
+        await AsyncStorage.clear();
+        // Reset storage mocks
+        (needsSync as jest.Mock).mockResolvedValue(false);
+        (getLastSyncTime as jest.Mock).mockResolvedValue(null);
+    });
+
+    describe('shouldSync', () => {
+        it('returns false when no changes need syncing', async () => {
+            (needsSync as jest.Mock).mockResolvedValue(false);
+
+            const result = await shouldSync();
+
+            expect(result).toBe(false);
+        });
+
+        it('returns true when changes exist and no last sync', async () => {
+            (needsSync as jest.Mock).mockResolvedValue(true);
+            (getLastSyncTime as jest.Mock).mockResolvedValue(null);
+
+            const result = await shouldSync();
+
+            expect(result).toBe(true);
+        });
+
+        it('returns true when last sync was more than 24 hours ago', async () => {
+            (needsSync as jest.Mock).mockResolvedValue(true);
+            const oldDate = new Date(Date.now() - 25 * 60 * 60 * 1000);
+            (getLastSyncTime as jest.Mock).mockResolvedValue(oldDate);
+
+            const result = await shouldSync();
+
+            expect(result).toBe(true);
+        });
+
+        it('returns false when last sync was within 24 hours', async () => {
+            (needsSync as jest.Mock).mockResolvedValue(true);
+            const recentDate = new Date(Date.now() - 1 * 60 * 60 * 1000);
+            (getLastSyncTime as jest.Mock).mockResolvedValue(recentDate);
+
+            const result = await shouldSync();
+
+            expect(result).toBe(false);
+        });
+    });
+
+    describe('createUserDocument', () => {
+        beforeEach(() => {
+            (setDoc as jest.Mock).mockResolvedValue(undefined);
+        });
+
+        it('creates new user document when not exists', async () => {
+            (getDoc as jest.Mock).mockResolvedValueOnce({ exists: () => false });
+
+            await createUserDocument('user123', 'test@example.com', 'Test User');
+
+            expect(setDoc).toHaveBeenCalled();
+            const callArgs = (setDoc as jest.Mock).mock.calls[0][1];
+            expect(callArgs).toMatchObject({
+                email: 'test@example.com',
+                displayName: 'Test User',
+                setupCompleted: false,
+                preferences: null,
+                progress: null,
+            });
+        });
+
+        it('does not create document when already exists', async () => {
+            (getDoc as jest.Mock).mockResolvedValueOnce({ exists: () => true });
+
+            await createUserDocument('user123', 'test@example.com');
+
+            expect(setDoc).not.toHaveBeenCalled();
+        });
+
+        it('handles empty display name', async () => {
+            (getDoc as jest.Mock).mockResolvedValueOnce({ exists: () => false });
+
+            await createUserDocument('user123', 'test@example.com');
+
+            expect(setDoc).toHaveBeenCalled();
+            const callArgs = (setDoc as jest.Mock).mock.calls[0][1];
+            expect(callArgs.displayName).toBe('');
+        });
+
+        it('throws error on Firestore failure', async () => {
+            (getDoc as jest.Mock).mockRejectedValueOnce(new Error('Firestore error'));
+
+            await expect(
+                createUserDocument('user123', 'test@example.com')
+            ).rejects.toThrow('Firestore error');
+        });
+    });
+
+    describe('getActiveDeviceIdFromFirebase', () => {
+        it('returns device ID when exists', async () => {
+            (getDoc as jest.Mock).mockResolvedValueOnce({
+                exists: () => true,
+                data: () => ({ lastActiveDeviceId: 'device_abc123' }),
+            });
+
+            const result = await getActiveDeviceIdFromFirebase('user123');
+
+            expect(result).toBe('device_abc123');
+        });
+
+        it('returns null when user doc does not exist', async () => {
+            (getDoc as jest.Mock).mockResolvedValueOnce({
+                exists: () => false,
+            });
+
+            const result = await getActiveDeviceIdFromFirebase('user123');
+
+            expect(result).toBeNull();
+        });
+
+        it('returns null when device ID not set', async () => {
+            (getDoc as jest.Mock).mockResolvedValueOnce({
+                exists: () => true,
+                data: () => ({}),
+            });
+
+            const result = await getActiveDeviceIdFromFirebase('user123');
+
+            expect(result).toBeNull();
+        });
+
+        it('returns null on error', async () => {
+            (getDoc as jest.Mock).mockRejectedValueOnce(new Error('Error'));
+
+            const result = await getActiveDeviceIdFromFirebase('user123');
+
+            expect(result).toBeNull();
+        });
+    });
+});

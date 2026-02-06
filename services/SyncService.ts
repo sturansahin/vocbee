@@ -49,7 +49,6 @@ export const syncToFirestore = async (userId: string): Promise<boolean> => {
         const storedProfile = await AsyncStorage.getItem(`profile_${userId}`);
         const profileData = storedProfile ? JSON.parse(storedProfile) : {};
         const profileName = profileData.name;
-        const profileImage = profileData.image;
 
         // Get language preferences
         const languagePair = await getLanguagePair();
@@ -80,7 +79,6 @@ export const syncToFirestore = async (userId: string): Promise<boolean> => {
             lastActiveDeviceId: deviceId,
             // Update profile info
             ...(profileName && { displayName: profileName }),
-            ...(profileImage && { photoURL: profileImage }),
         };
 
         // If we have valid preferences locally, force update them in Firestore

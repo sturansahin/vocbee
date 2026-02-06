@@ -246,6 +246,11 @@ export default {
     offline: {
         message: 'Nema internet konekcije',
     },
+    connection: {
+        title: 'Проблем са везом',
+        message: 'Није могуће повезати се са сервером. Молимо проверите интернет везу и покушајте поново.',
+        retry: 'Покушај поново',
+    },
     help: {
         title: 'Pomoć i FAQ',
         basics: {

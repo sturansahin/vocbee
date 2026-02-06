@@ -261,6 +261,11 @@ export default
     {
         message: 'インターネット接続がありません',
     },
+    connection: {
+        title: '接続の問題',
+        message: 'サーバーに接続できませんでした。インターネット接続を確認して、もう一度お試しください。',
+        retry: '再試行',
+    },
     help: 
     {
         title: 'ヘルプとよくある質問',

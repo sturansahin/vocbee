@@ -51,12 +51,14 @@ interface AuthContextType {
     userData: UserData | null;
     isLoading: boolean;
     isAuthenticated: boolean;
+    connectionError: boolean;
     signUp: (email: string, password: string, displayName?: string) => Promise<void>;
     signIn: (email: string, password: string) => Promise<{ setupCompleted: boolean }>;
     signOut: () => Promise<void>;
     signInWithGoogle: () => Promise<void>;
     resetPassword: (email: string) => Promise<void>;
     refreshUserData: () => Promise<void>;
+    retryConnection: () => Promise<void>;
     profile: ProfileData;
     updateProfileData: (data: Partial<ProfileData>) => Promise<void>;
     notificationSettings: NotificationSettings;
@@ -84,6 +86,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     });
     const [notificationSettings, setNotificationSettings] = useState<NotificationSettings>(DEFAULT_NOTIFICATION_SETTINGS);
     const [isLoading, setIsLoading] = useState(true);
+    const [connectionError, setConnectionError] = useState(false);
 
     // Listen to auth state changes
     useEffect(() => {
@@ -114,6 +117,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
                 if (shouldUseCache) {
                     // Use cached data - same device, faster startup
                     setUserData(localData);
+                    setConnectionError(false);
                     console.log('[AuthContext] Using cached user data (same device)');
                 } else {
                     // Different device or no valid cache - fetch from Firebase
@@ -122,10 +126,22 @@ export function AuthProvider({ children }: AuthProviderProps) {
                             !localData.setupCompleted ? 'setup not completed' :
                                 currentDeviceId !== firebaseDeviceId ? 'different device' : 'unknown';
                     console.log(`[AuthContext] Fetching from Firebase (reason: ${reason})`);
-                    const fetchedData = await fetchAndSaveUserData(firebaseUser.uid);
-                    if (fetchedData) {
-                        setUserData(fetchedData);
-                        console.log('[AuthContext] Loaded user data from Firebase');
+
+                    try {
+                        const fetchedData = await fetchAndSaveUserData(firebaseUser.uid);
+                        if (fetchedData) {
+                            setUserData(fetchedData);
+                            setConnectionError(false);
+                            console.log('[AuthContext] Loaded user data from Firebase');
+                        } else {
+                            // No data returned - could be connection issue
+                            console.log('[AuthContext] No user data returned from Firebase');
+                            setConnectionError(true);
+                        }
+                    } catch (error: any) {
+                        // Connection error - show error screen
+                        console.error('[AuthContext] Error fetching user data:', error);
+                        setConnectionError(true);
                     }
                 }
 
@@ -380,17 +396,43 @@ export function AuthProvider({ children }: AuthProviderProps) {
         }
     };
 
+    // Retry connection when user taps retry button
+    const retryConnection = async () => {
+        if (!user) return;
+
+        setIsLoading(true);
+        setConnectionError(false);
+
+        try {
+            const fetchedData = await fetchAndSaveUserData(user.uid);
+            if (fetchedData) {
+                setUserData(fetchedData);
+                console.log('[AuthContext] Retry successful - loaded user data');
+            } else {
+                console.log('[AuthContext] Retry failed - no data returned');
+                setConnectionError(true);
+            }
+        } catch (error: any) {
+            console.error('[AuthContext] Retry failed with error:', error);
+            setConnectionError(true);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
     const value: AuthContextType = {
         user,
         userData,
         isLoading,
         isAuthenticated: !!user,
+        connectionError,
         signUp,
         signIn,
         signOut,
         signInWithGoogle,
         resetPassword,
         refreshUserData,
+        retryConnection,
         profile,
         updateProfileData,
         notificationSettings,

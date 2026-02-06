@@ -261,6 +261,11 @@ export default
     {
         message: 'Tidak ada koneksi internet',
     },
+    connection: {
+        title: 'Masalah Koneksi',
+        message: 'Tidak dapat terhubung ke server. Silakan periksa koneksi internet Anda dan coba lagi.',
+        retry: 'Coba Lagi',
+    },
     help: 
     {
         title: 'Bantuan & FAQ',

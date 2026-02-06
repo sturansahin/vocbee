@@ -627,7 +627,7 @@
     {
       "id": 105,
       "word": "badge",
-      "sentence1": "\"She wore a badge that said \"\"Volunteer.\"\" \"",
+      "sentence1": "She wore a badge that said \"Volunteer.\"",
       "sentence2": "The police officer showed his badge."
     },
     {
@@ -2116,7 +2116,7 @@
       "id": 353,
       "word": "derive",
       "sentence1": "Many English words derive from Latin.",
-      "sentence2": "\"The word \"\"happiness\"\" is derived from \"\"happy.\"\" \""
+      "sentence2": "The word \"happiness\" is derived from \"happy.\""
     },
     {
       "id": 354,

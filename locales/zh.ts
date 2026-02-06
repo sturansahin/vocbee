@@ -261,6 +261,11 @@ export default
     {
         message: '没有网络连接',
     },
+    connection: {
+        title: '连接问题',
+        message: '无法连接到服务器。请检查您的网络连接并重试。',
+        retry: '重试',
+    },
     help: 
     {
         title: '帮助与常见问题',
