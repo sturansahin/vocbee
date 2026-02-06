@@ -16,6 +16,7 @@
     },
     "android": {
       "package": "com.vocbee.app",
+      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/icons/vocicon.png",
         "backgroundColor": "#ffffff"

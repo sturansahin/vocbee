@@ -247,12 +247,13 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
     // Google OAuth Client IDs
     const GOOGLE_WEB_CLIENT_ID = '540292978044-pjka45r8ej0k63564hicngf1prip5ctu.apps.googleusercontent.com';
+    const GOOGLE_ANDROID_CLIENT_ID = '540292978044-2c8urh00ip44furlns58hq4ieil3bfno.apps.googleusercontent.com';
 
     // Google Sign-In request
     const [request, response, promptAsync] = Google.useAuthRequest({
         clientId: GOOGLE_WEB_CLIENT_ID,
         iosClientId: GOOGLE_WEB_CLIENT_ID,
-        androidClientId: GOOGLE_WEB_CLIENT_ID,
+        androidClientId: GOOGLE_ANDROID_CLIENT_ID,
         webClientId: GOOGLE_WEB_CLIENT_ID,
     });
 
