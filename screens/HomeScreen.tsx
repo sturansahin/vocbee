@@ -525,7 +525,7 @@ export default function HomeScreen() {
                 // Check for pending notification word first
                 const pendingWordId = await getPendingNotificationWord();
                 if (pendingWordId !== null) {
-                    // Find the word and move it to front
+                    // Find the word - must validate level/language match
                     const level = await getCurrentLevel();
                     const vocabulary = await getStoredVocabulary(level);
                     const pendingWord = vocabulary.find(w => w.id === pendingWordId);
@@ -536,6 +536,8 @@ export default function HomeScreen() {
                         setWords([pendingWord, ...otherWords]);
                         setCurrentWordIndex(0);
                         console.log(`Showing word from notification: ${pendingWord.word}`);
+                    } else {
+                        console.log(`[HomeScreen] Pending word ${pendingWordId} not found in current level - likely due to level/language change`);
                     }
                     return;
                 }

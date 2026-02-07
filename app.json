@@ -5,6 +5,11 @@
     "scheme": "vocbee",
     "version": "1.0.0",
     "icon": "./assets/icons/vocicon.png",
+    "splash": {
+      "image": "./assets/icons/vocicon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
     "assetBundlePatterns": [

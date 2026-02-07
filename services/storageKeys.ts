@@ -1,27 +1,45 @@
 // Central storage key management for AsyncStorage
-// All storage keys should be defined here for consistency
+// Single source of truth for all storage keys used across services
+// IMPORTANT: Do NOT change string values — existing user data depends on them
 
 export const STORAGE_KEYS = {
-    // Onboarding
+    // ─── Onboarding ───────────────────────────────────────────────
     HAS_SEEN_ONBOARDING: '@VocBee:hasSeenOnboarding',
 
-    // User Data
-    USER_DATA: '@VocBee:userData',
+    // ─── User Data (storage.ts) ───────────────────────────────────
+    USER_DATA: '@vocbee_user_data',
+    USER_PROGRESS_LEGACY: '@vocbee_user_progress',
+    SYNC_FLAG: '@vocbee_needs_sync',
+    LAST_SYNC: '@vocbee_last_sync',
+    DEVICE_ID: '@vocbee_device_id',
 
-    // Language Settings
+    // ─── Progress (progressService.ts) ────────────────────────────
+    PROGRESS: '@user_progress',
+    SKIPPED: '@user_skipped',
+    CURRENT_LEVEL: '@current_level',
+    LAST_WORD_ID: '@last_word_id',
+    USER_LEVEL: '@user_level',
+
+    // ─── Vocabulary (vocabularyService.ts) ────────────────────────
+    VOCABULARY: '@vocabulary',
     NATIVE_LANGUAGE: '@native_language',
+    TARGET_LANGUAGE: '@target_language',
 
-    // Progress
-    LEARNED_WORDS: '@VocBee:learnedWords',
-    SKIPPED_WORDS: '@VocBee:skippedWords',
-    LAST_WORD_ID: '@VocBee:lastWordId',
+    // ─── Notifications (notificationService.ts) ──────────────────
+    NOTIFICATION_SETTINGS: '@notification_settings',
+    PENDING_NOTIFICATION_WORD: '@pending_notification_word',
+    TRACKED_NOTIFICATIONS: '@tracked_notifications',
+    LAST_FOREGROUND_TIME: '@last_foreground_time',
 
-    // Favorites
-    FAVORITE_WORDS: '@VocBee:favoriteWords',
+    // ─── Favorites (favoritesService.ts) ──────────────────────────
+    // Dynamic: `@favorites_${userId}` or `@favorites` (legacy)
+    FAVORITES_PREFIX: '@favorites',
 
-    // Notifications
-    NOTIFICATION_SETTINGS: '@VocBee:notificationSettings',
-
-    // Profile (user-specific, append uid)
+    // ─── Profile (AuthContext) ────────────────────────────────────
+    // Dynamic: `profile_${userId}`
     PROFILE_PREFIX: 'profile_',
+
+    // ─── Shuffle Order Cache (HomeScreen) ─────────────────────────
+    // Dynamic: `@shuffle_order_${level}`
+    SHUFFLE_ORDER_PREFIX: '@shuffle_order_',
 } as const;

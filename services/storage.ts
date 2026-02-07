@@ -2,14 +2,15 @@
 // Handles all local progress management with AsyncStorage
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { STORAGE_KEYS } from './storageKeys';
 
-// Storage keys
-const STORAGE_KEYS = {
-    USER_PROGRESS: '@vocbee_user_progress',
-    SYNC_FLAG: '@vocbee_needs_sync',
-    LAST_SYNC: '@vocbee_last_sync',
-    USER_DATA: '@vocbee_user_data',
-    DEVICE_ID: '@vocbee_device_id',
+// Local keys (referencing centralized keys)
+const LOCAL_KEYS = {
+    USER_PROGRESS: STORAGE_KEYS.USER_PROGRESS_LEGACY,
+    SYNC_FLAG: STORAGE_KEYS.SYNC_FLAG,
+    LAST_SYNC: STORAGE_KEYS.LAST_SYNC,
+    USER_DATA: STORAGE_KEYS.USER_DATA,
+    DEVICE_ID: STORAGE_KEYS.DEVICE_ID,
 };
 
 // Types
@@ -41,7 +42,7 @@ export const saveLocalProgress = async (progress: Partial<UserProgress>): Promis
             ...progress,
             lastUpdated: new Date().toISOString(),
         };
-        await AsyncStorage.setItem(STORAGE_KEYS.USER_PROGRESS, JSON.stringify(updated));
+        await AsyncStorage.setItem(LOCAL_KEYS.USER_PROGRESS, JSON.stringify(updated));
         await markAsUnsynced();
     } catch (error) {
         console.error('Error saving local progress:', error);
@@ -52,7 +53,7 @@ export const saveLocalProgress = async (progress: Partial<UserProgress>): Promis
 // Get local progress
 export const getLocalProgress = async (): Promise<UserProgress> => {
     try {
-        const data = await AsyncStorage.getItem(STORAGE_KEYS.USER_PROGRESS);
+        const data = await AsyncStorage.getItem(LOCAL_KEYS.USER_PROGRESS);
         if (data) {
             return JSON.parse(data);
         }
@@ -77,7 +78,7 @@ export const getLocalProgress = async (): Promise<UserProgress> => {
 // Mark as needing sync
 export const markAsUnsynced = async (): Promise<void> => {
     try {
-        await AsyncStorage.setItem(STORAGE_KEYS.SYNC_FLAG, 'true');
+        await AsyncStorage.setItem(LOCAL_KEYS.SYNC_FLAG, 'true');
     } catch (error) {
         console.error('Error marking as unsynced:', error);
     }
@@ -86,7 +87,7 @@ export const markAsUnsynced = async (): Promise<void> => {
 // Check if needs sync
 export const needsSync = async (): Promise<boolean> => {
     try {
-        const flag = await AsyncStorage.getItem(STORAGE_KEYS.SYNC_FLAG);
+        const flag = await AsyncStorage.getItem(LOCAL_KEYS.SYNC_FLAG);
         return flag === 'true';
     } catch (error) {
         return false;
@@ -96,7 +97,7 @@ export const needsSync = async (): Promise<boolean> => {
 // Clear sync flag
 export const clearSyncFlag = async (): Promise<void> => {
     try {
-        await AsyncStorage.setItem(STORAGE_KEYS.SYNC_FLAG, 'false');
+        await AsyncStorage.setItem(LOCAL_KEYS.SYNC_FLAG, 'false');
     } catch (error) {
         console.error('Error clearing sync flag:', error);
     }
@@ -105,7 +106,7 @@ export const clearSyncFlag = async (): Promise<void> => {
 // Get last sync time
 export const getLastSyncTime = async (): Promise<Date | null> => {
     try {
-        const data = await AsyncStorage.getItem(STORAGE_KEYS.LAST_SYNC);
+        const data = await AsyncStorage.getItem(LOCAL_KEYS.LAST_SYNC);
         return data ? new Date(data) : null;
     } catch (error) {
         return null;
@@ -115,7 +116,7 @@ export const getLastSyncTime = async (): Promise<Date | null> => {
 // Set last sync time
 export const setLastSyncTime = async (): Promise<void> => {
     try {
-        await AsyncStorage.setItem(STORAGE_KEYS.LAST_SYNC, new Date().toISOString());
+        await AsyncStorage.setItem(LOCAL_KEYS.LAST_SYNC, new Date().toISOString());
     } catch (error) {
         console.error('Error setting last sync time:', error);
     }
@@ -124,7 +125,7 @@ export const setLastSyncTime = async (): Promise<void> => {
 // Save user data locally
 export const saveUserDataLocally = async (userData: UserData): Promise<void> => {
     try {
-        await AsyncStorage.setItem(STORAGE_KEYS.USER_DATA, JSON.stringify(userData));
+        await AsyncStorage.setItem(LOCAL_KEYS.USER_DATA, JSON.stringify(userData));
     } catch (error) {
         console.error('Error saving user data locally:', error);
     }
@@ -133,7 +134,7 @@ export const saveUserDataLocally = async (userData: UserData): Promise<void> => 
 // Get local user data
 export const getLocalUserData = async (): Promise<UserData | null> => {
     try {
-        const data = await AsyncStorage.getItem(STORAGE_KEYS.USER_DATA);
+        const data = await AsyncStorage.getItem(LOCAL_KEYS.USER_DATA);
         return data ? JSON.parse(data) : null;
     } catch (error) {
         return null;
@@ -146,28 +147,32 @@ export const clearAllLocalData = async (): Promise<void> => {
         // Get all keys to find shuffle order caches
         const allKeys = await AsyncStorage.getAllKeys();
 
-        // Keys to remove: storage keys + shuffle order caches + progress keys
+        // Keys to remove: all known storage keys (from centralized storageKeys)
         const keysToRemove = [
-            STORAGE_KEYS.USER_PROGRESS,
-            STORAGE_KEYS.SYNC_FLAG,
-            STORAGE_KEYS.LAST_SYNC,
-            STORAGE_KEYS.USER_DATA,
+            LOCAL_KEYS.USER_PROGRESS,
+            LOCAL_KEYS.SYNC_FLAG,
+            LOCAL_KEYS.LAST_SYNC,
+            LOCAL_KEYS.USER_DATA,
             // Progress service keys
-            '@user_progress',
-            '@user_skipped',
-            '@current_level',
-            '@last_word_id',
+            STORAGE_KEYS.PROGRESS,
+            STORAGE_KEYS.SKIPPED,
+            STORAGE_KEYS.CURRENT_LEVEL,
+            STORAGE_KEYS.LAST_WORD_ID,
             // Vocabulary and Language keys
-            '@vocabulary',
-            '@native_language',
-            '@target_language',
-            '@user_level',
+            STORAGE_KEYS.VOCABULARY,
+            STORAGE_KEYS.NATIVE_LANGUAGE,
+            STORAGE_KEYS.TARGET_LANGUAGE,
+            STORAGE_KEYS.USER_LEVEL,
+            // Notification keys
+            STORAGE_KEYS.NOTIFICATION_SETTINGS,
+            STORAGE_KEYS.PENDING_NOTIFICATION_WORD,
+            STORAGE_KEYS.TRACKED_NOTIFICATIONS,
+            STORAGE_KEYS.LAST_FOREGROUND_TIME,
             // Add all shuffle order keys
-            ...allKeys.filter(key => key.startsWith('@shuffle_order_')),
+            ...allKeys.filter(key => key.startsWith(STORAGE_KEYS.SHUFFLE_ORDER_PREFIX)),
             // Add all favorites keys (generic and user-specific)
-            ...allKeys.filter(key => key.startsWith('@favorites')),
+            ...allKeys.filter(key => key.startsWith(STORAGE_KEYS.FAVORITES_PREFIX)),
         ];
-
         await AsyncStorage.multiRemove(keysToRemove);
         console.log('Cleared all local data including shuffle order caches');
     } catch (error) {
@@ -178,11 +183,11 @@ export const clearAllLocalData = async (): Promise<void> => {
 // Get or create a unique device ID for this installation
 export const getDeviceId = async (): Promise<string> => {
     try {
-        let deviceId = await AsyncStorage.getItem(STORAGE_KEYS.DEVICE_ID);
+        let deviceId = await AsyncStorage.getItem(LOCAL_KEYS.DEVICE_ID);
         if (!deviceId) {
             // Generate a new device ID (simple UUID-like string)
             deviceId = 'device_' + Date.now() + '_' + Math.random().toString(36).substring(2, 15);
-            await AsyncStorage.setItem(STORAGE_KEYS.DEVICE_ID, deviceId);
+            await AsyncStorage.setItem(LOCAL_KEYS.DEVICE_ID, deviceId);
             console.log('[Storage] Generated new device ID:', deviceId);
         }
         return deviceId;

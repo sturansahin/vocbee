@@ -137,15 +137,15 @@ function AppContent() {
   useEffect(() => {
     const subscription = AppState.addEventListener('change', (nextAppState: AppStateStatus) => {
       if (appState.current.match(/inactive|background/) && nextAppState === 'active') {
-        // Record foreground time to detect notifications that arrive while app is open
-        setLastForegroundTime();
-
         // App has come to foreground - trigger sync if user is logged in
         if (user) {
           autoSync(user.uid);
           // Process delivered notifications first (marks words as learned/skipped)
           // Notifications delivered while app was open will be skipped
           processDeliveredNotifications().then(() => {
+            // CRITICAL: Record foreground time AFTER processing delivered notifications
+            // This ensures we have a proper baseline for next cycle
+            setLastForegroundTime();
             // Then refill notifications to maintain 64 scheduled
             refillNotifications();
           });
@@ -165,8 +165,9 @@ function AppContent() {
     return <CustomSplashScreen onFinish={() => { console.log('[App] Splash finished'); setShowSplash(false); }} />;
   }
 
-  // Show connection error screen if there's a connection problem
-  if (connectionError) {
+  // Show connection error screen ONLY if there's a connection problem AND no cached user data
+  // If we have cached data, show OfflineNotice banner instead (allows offline usage)
+  if (connectionError && !userData) {
     return <ConnectionErrorScreen />;
   }
 

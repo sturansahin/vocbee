@@ -4,8 +4,6 @@ export type RootStackParamList = {
   SignUp: undefined;
   ForgotPassword: undefined;
   NativeLanguage: { detectedLevel?: string } | undefined;
-  TargetLanguage: undefined;
-  LevelSelection: undefined;
   LevelTest: { nativeLanguage: string; targetLanguage: string };
   MainTabs: undefined;
   Settings: undefined;

@@ -49,6 +49,8 @@ export interface TrackedNotification {
     scheduledTime: number;      // timestamp when notification will fire
     autoMarkLearned: boolean;   // setting at time of scheduling
     processed: boolean;         // true if notification has been processed
+    level: string;              // CEFR level at time of scheduling (A1, A2, etc.)
+    targetLanguage: string;     // target language at time of scheduling
 }
 
 export const DEFAULT_NOTIFICATION_SETTINGS: NotificationSettings = {
@@ -64,9 +66,11 @@ export const DEFAULT_NOTIFICATION_SETTINGS: NotificationSettings = {
 // ─────────────────────────────────────────────────────────────────────────────
 // Notification Content Templates (Patterns)
 // ─────────────────────────────────────────────────────────────────────────────
+import i18n from './i18n';
+
 export const getNotificationContent = (word: VocabularyWord) => ({
     title: `VocBee`,
-    body: `${word.word} - ${word.translation}, Tap to see example sentences`,
+    body: `${word.word} - ${word.translation}, ${i18n.t('home.tapToSeeExamples')}`,
 });
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -157,18 +161,29 @@ export async function getNotificationSettings(): Promise<NotificationSettings> {
 
 /**
  * Save notification settings and reschedule if needed
+ * @param skipScheduling - If true, only saves settings without rescheduling (useful during setup)
  */
-export async function saveNotificationSettings(settings: Partial<NotificationSettings>): Promise<void> {
+export async function saveNotificationSettings(
+    settings: Partial<NotificationSettings>, 
+    skipScheduling: boolean = false
+): Promise<void> {
     try {
         const current = await getNotificationSettings();
         const updated = { ...current, ...settings };
         await AsyncStorage.setItem(NOTIFICATION_SETTINGS_KEY, JSON.stringify(updated));
+
+        // Skip rescheduling if requested (e.g., during setup before vocabulary exists)
+        if (skipScheduling) {
+            console.log('[Notifications] Settings saved without scheduling (skipScheduling=true)');
+            return;
+        }
 
         // Reschedule notifications when settings change
         if (updated.enabled) {
             await scheduleVocabularyNotifications();
         } else {
             await cancelAllNotifications();
+            await clearTrackedNotifications(); // Clear tracking when disabled
         }
     } catch (error) {
         console.error('Error saving notification settings:', error);
@@ -241,8 +256,9 @@ async function addTrackedNotification(notification: TrackedNotification): Promis
 
 /**
  * Clear all tracked notifications
+ * Used when disabling notifications or during logout/account deletion
  */
-async function clearTrackedNotifications(): Promise<void> {
+export async function clearTrackedNotifications(): Promise<void> {
     await AsyncStorage.removeItem(TRACKED_NOTIFICATIONS_KEY);
 }
 
@@ -252,12 +268,21 @@ async function clearTrackedNotifications(): Promise<void> {
  * This function is called when the app opens. It:
  * 1. Finds notifications that have been delivered (scheduledTime < now)
  * 2. Checks if notification was delivered while app was in foreground (skip these)
- * 3. Marks words as learned based on autoMarkLearned setting (only for background deliveries)
- * 4. Removes processed notifications from tracking
- * 5. Returns count of processed notifications for refill
+ * 3. Validates level+language match (skip if user changed settings)
+ * 4. Marks words as learned based on autoMarkLearned setting (only for background deliveries)
+ * 5. Removes processed notifications from tracking
+ * 6. Returns count of processed notifications for refill
  */
 export async function processDeliveredNotifications(): Promise<number> {
     try {
+        const settings = await getNotificationSettings();
+        
+        // Don't process if notifications are disabled
+        if (!settings.enabled) {
+            console.log('[Notifications] Processing skipped - notifications disabled');
+            return 0;
+        }
+
         const tracked = await getTrackedNotifications();
         const now = Date.now();
         const lastForegroundTime = await getLastForegroundTime();
@@ -273,7 +298,8 @@ export async function processDeliveredNotifications(): Promise<number> {
         console.log(`[Notifications] Processing ${delivered.length} delivered notifications`);
         console.log(`[Notifications] Last foreground time: ${new Date(lastForegroundTime).toISOString()}`);
 
-        const level = await getCurrentLevel();
+        const currentLevel = await getCurrentLevel();
+        const currentTargetLanguage = await AsyncStorage.getItem('@target_language');
         let processedCount = 0;
         let skippedCount = 0;
 
@@ -288,10 +314,23 @@ export async function processDeliveredNotifications(): Promise<number> {
                 continue;
             }
 
+            // CRITICAL: Validate level and language match
+            // If user changed level or language, wordId may refer to a different word
+            if (notification.level && notification.level !== currentLevel) {
+                console.log(`[Notifications] SKIPPED "${notification.word}" - level changed (${notification.level} -> ${currentLevel})`);
+                skippedCount++;
+                continue;
+            }
+            if (notification.targetLanguage && notification.targetLanguage !== currentTargetLanguage) {
+                console.log(`[Notifications] SKIPPED "${notification.word}" - language changed (${notification.targetLanguage} -> ${currentTargetLanguage})`);
+                skippedCount++;
+                continue;
+            }
+
             // Notification was delivered while app was in background
             if (notification.autoMarkLearned) {
                 // Mark word as learned
-                await markWordAsLearned(level, notification.wordId);
+                await markWordAsLearned(currentLevel, notification.wordId);
                 console.log(`[Notifications] Word "${notification.word}" marked as LEARNED`);
             } else {
                 // Word was shown but not auto-marked - it stays in the pool
@@ -304,9 +343,9 @@ export async function processDeliveredNotifications(): Promise<number> {
         const remaining = tracked.filter(n => n.processed || n.scheduledTime >= now);
         await saveTrackedNotifications(remaining);
 
-        console.log(`[Notifications] Processed ${delivered.length} notifications, ${remaining.length} remaining`);
+        console.log(`[Notifications] Processed ${processedCount} notifications, skipped ${skippedCount}, ${remaining.length} remaining`);
 
-        return delivered.length;
+        return processedCount;
     } catch (error) {
         console.error('[Notifications] Error processing delivered notifications:', error);
         return 0;
@@ -318,22 +357,34 @@ export async function processDeliveredNotifications(): Promise<number> {
 // ─────────────────────────────────────────────────────────────────────────────
 
 /**
- * Get a random unlearned word for notification
+ * Get a random unlearned word for notification, avoiding duplicates
+ * in the current scheduling batch.
  */
+const _scheduledWordIds = new Set<number>();
+
 async function getRandomUnlearnedWord(): Promise<VocabularyWord | null> {
     try {
         const level = await getCurrentLevel();
         const vocabulary = await getStoredVocabulary(level);
         const learnedIds = await getLearnedWords(level);
 
-        const unlearnedWords = vocabulary.filter(word => !learnedIds.includes(word.id));
+        // Filter out learned words AND words already picked in this batch
+        const unlearnedWords = vocabulary.filter(
+            word => !learnedIds.includes(word.id) && !_scheduledWordIds.has(word.id)
+        );
 
         if (unlearnedWords.length === 0) {
-            return null;
+            // If all unlearned words exhausted, allow repeats
+            const fallback = vocabulary.filter(word => !learnedIds.includes(word.id));
+            if (fallback.length === 0) return null;
+            const randomIndex = Math.floor(Math.random() * fallback.length);
+            return fallback[randomIndex];
         }
 
         const randomIndex = Math.floor(Math.random() * unlearnedWords.length);
-        return unlearnedWords[randomIndex];
+        const word = unlearnedWords[randomIndex];
+        _scheduledWordIds.add(word.id);
+        return word;
     } catch (error) {
         console.error('Error getting random word:', error);
         return null;
@@ -362,12 +413,30 @@ export async function scheduleVocabularyNotifications(): Promise<void> {
         await cancelAllNotifications();
         await clearTrackedNotifications();
 
+        // Reset dedup set for fresh scheduling batch
+        _scheduledWordIds.clear();
+
         const MAX_NOTIFICATIONS = 64;
         const now = new Date();
+
+        // Get current level and target language for tracking
+        const currentLevel = await getCurrentLevel();
+        const currentTargetLanguage = await AsyncStorage.getItem('@target_language');
+        if (!currentLevel || !currentTargetLanguage) {
+            console.warn('[Notifications] Cannot schedule - level or language not set');
+            return;
+        }
 
         // Calculate notifications per day based on user settings
         const dailyStartMinutes = settings.startHour * 60 + settings.startMinute;
         const dailyEndMinutes = settings.endHour * 60 + settings.endMinute;
+
+        // Guard: end time must be after start time
+        if (dailyEndMinutes <= dailyStartMinutes) {
+            console.warn('[Notifications] Invalid time range: end time must be after start time. Skipping scheduling.');
+            return;
+        }
+
         const dailyTimeRangeMinutes = dailyEndMinutes - dailyStartMinutes;
         const notificationsPerDay = Math.floor(dailyTimeRangeMinutes / settings.frequencyMinutes) + 1;
 
@@ -417,10 +486,11 @@ export async function scheduleVocabularyNotifications(): Promise<void> {
                         type: Notifications.SchedulableTriggerInputTypes.TIME_INTERVAL,
                         seconds: Math.max(1, Math.floor((notificationTime.getTime() - now.getTime()) / 1000)),
                         repeats: false,
+                        channelId: Platform.OS === 'android' ? 'vocabulary' : undefined,
                     },
                 });
 
-                // Track this notification instead of marking word immediately
+                // Track this notification with level and language info
                 trackedNotifications.push({
                     notificationId,
                     wordId: word.id,
@@ -429,6 +499,8 @@ export async function scheduleVocabularyNotifications(): Promise<void> {
                     scheduledTime: notificationTime.getTime(),
                     autoMarkLearned: settings.autoMarkLearned,
                     processed: false,
+                    level: currentLevel,
+                    targetLanguage: currentTargetLanguage,
                 });
 
                 scheduledCount++;
@@ -517,9 +589,18 @@ export async function refillNotifications(): Promise<void> {
         const dailyStartMinutes = settings.startHour * 60 + settings.startMinute;
         const dailyEndMinutes = settings.endHour * 60 + settings.endMinute;
 
+        // Guard: end time must be after start time
+        if (dailyEndMinutes <= dailyStartMinutes) {
+            console.warn('[Notifications] Refill skipped - invalid time range');
+            return;
+        }
+
         let scheduledCount = 0;
         let currentTime = new Date(lastScheduledTime);
         const newTrackedNotifications: TrackedNotification[] = [];
+
+        // Reset dedup set for this refill batch
+        _scheduledWordIds.clear();
 
         // Schedule new notifications after the last one
         while (scheduledCount < availableSlots) {
@@ -549,6 +630,10 @@ export async function refillNotifications(): Promise<void> {
             const secondsUntilNotification = Math.max(1, Math.floor((currentTime.getTime() - now.getTime()) / 1000));
             const notificationId = `vocbee-refill-${word.id}-${currentTime.getTime()}`;
 
+            // Get current level and target language for tracking
+            const currentLevel = await getCurrentLevel();
+            const currentTargetLanguage = await AsyncStorage.getItem('@target_language');
+
             await Notifications.scheduleNotificationAsync({
                 identifier: notificationId,
                 content: {
@@ -566,10 +651,11 @@ export async function refillNotifications(): Promise<void> {
                     type: Notifications.SchedulableTriggerInputTypes.TIME_INTERVAL,
                     seconds: secondsUntilNotification,
                     repeats: false,
+                    channelId: Platform.OS === 'android' ? 'vocabulary' : undefined,
                 },
             });
 
-            // Track this notification
+            // Track this notification with level and language info
             newTrackedNotifications.push({
                 notificationId,
                 wordId: word.id,
@@ -578,6 +664,8 @@ export async function refillNotifications(): Promise<void> {
                 scheduledTime: currentTime.getTime(),
                 autoMarkLearned: settings.autoMarkLearned,
                 processed: false,
+                level: currentLevel || 'A1',
+                targetLanguage: currentTargetLanguage || 'english',
             });
 
             scheduledCount++;
@@ -637,6 +725,7 @@ export async function getPendingNotificationWord(): Promise<number | null> {
  * In the new tracking system:
  * - If word was already marked as learned (by processDeliveredNotifications),
  *   unmark it so user can review
+ * - Mark notification as processed to prevent race condition
  * - Store word ID for HomeScreen to display
  */
 export async function handleNotificationResponse(
@@ -653,6 +742,17 @@ export async function handleNotificationResponse(
         if (data.autoMark) {
             await unmarkWord(level, wordId);
             console.log(`[Notifications] Word ${wordId} unmarked for review (user tapped notification)`);
+        }
+
+        // Mark notification as processed to prevent race condition with processDeliveredNotifications
+        // This ensures processDeliveredNotifications won't re-mark the word as learned
+        const notificationId = response.notification.request.identifier;
+        const tracked = await getTrackedNotifications();
+        const notification = tracked.find(n => n.notificationId === notificationId);
+        if (notification) {
+            notification.processed = true;
+            await saveTrackedNotifications(tracked);
+            console.log(`[Notifications] Marked notification ${notificationId} as processed to prevent race condition`);
         }
 
         // Store word ID for HomeScreen

@@ -1,7 +1,5 @@
-export default 
-{
-    common: 
-    {
+﻿export default {
+    common: {
         loading: 'Laden...',
         error: 'Fehler',
         success: 'Erfolg',
@@ -20,41 +18,40 @@ export default
         search: 'Suche',
         warning: 'Warnung',
     },
-    auth: 
-    {
-        loginTitle: 'Anmelden',
-        signupTitle: 'Registrieren',
-        loginButton: 'Anmelden',
-        signupButton: 'Registrieren',
+    auth: {
+        subtitle: 'Meistere neue Wörter mühelos.',
+        email: 'E-Mail',
+        emailPlaceholder: 'E-Mail oder Benutzername',
+        password: 'Passwort',
+        passwordPlaceholder: 'Passwort',
+        logIn: 'Anmelden',
         loggingIn: 'Anmelden...',
-        signingUp: 'Konto wird erstellt...',
+        signUp: 'Registrieren',
+        signUpFailed: 'Registrierung fehlgeschlagen',
+        creatingAccount: 'Konto wird erstellt...',
         forgotPassword: 'Passwort vergessen?',
-        cantLogin: 'Probleme beim Anmelden?',
-        dontHaveAccount: 'Kein Konto?',
-        haveAccount: 'Bereits ein Konto?',
         orContinueWith: 'Oder weiter mit',
-        googleLogin: 'Google',
-        masterWords: 'Meistere neue Wörter mühelos.',
-        startJourney: 'Beginne deine Sprachreise heute.',
+        google: 'Google',
+        noAccount: 'Kein Konto?',
         accountCreated: 'Konto erstellt!',
         accountCreatedDesc: 'Dein Konto wurde erfolgreich erstellt. Bitte melde dich an, um fortzufahren.',
         loginFailed: 'Anmeldung fehlgeschlagen',
-        signupFailed: 'Registrierung fehlgeschlagen',
+        error: 'Fehler',
         fillAllFields: 'Bitte alle Felder ausfüllen',
-        passwordsNoMatch: 'Passwörter stimmen nicht überein',
+        passwordsMismatch: 'Passwörter stimmen nicht überein',
         passwordTooShort: 'Passwort muss mindestens 6 Zeichen lang sein',
-        emailPlaceholder: 'E-Mail oder Benutzername',
-        namePlaceholder: 'Dein Name',
-        passwordPlaceholder: 'Passwort',
-        confirmPasswordPlaceholder: 'Passwort bestätigen',
+        namePlaceholder: 'Gib deinen Namen ein',
         enterEmail: 'E-Mail eingeben',
         createPassword: 'Passwort erstellen',
+        confirmPasswordPlaceholder: 'Passwort bestätigen',
         fullName: 'Vollständiger Name',
+        confirmPassword: 'Passwort bestätigen',
+        startYourLanguage: 'Starte deine',
+        journeyToday: 'Sprachreise heute.',
     },
-    home: 
-    {
+    home: {
         welcome: 'Willkommen',
-        levelComplete: '🎉 Level abgeschlossen!',
+        levelComplete: '\uD83C\uDF89 Level abgeschlossen!',
         levelCompleteDesc: 'Du hast alle {{count}} Wörter in {{level}} gelernt!',
         noVocabulary: 'Kein Vokabular',
         setupRequired: 'Bitte schließe die Einrichtung ab, um zu lernen.',
@@ -63,10 +60,8 @@ export default
         settings: 'Einstellungen',
         words: 'Wörter',
         learned: 'GELERNT',
-        skip: 'ÜBERSPRINGEN',
-    },
-    settings: 
-    {
+        skip: 'ÜBERSPRINGEN',        tapToSeeExamples: 'Tippen, um Beispielsätze zu sehen',    },
+    settings: {
         title: 'Einstellungen',
         profile: 'Profil',
         editProfile: 'Profil bearbeiten',
@@ -76,10 +71,11 @@ export default
         notificationAction: 'Bei Benachrichtigung',
         markasLearned: 'Als gelernt markieren',
         doNotMark: 'Nicht markieren',
-        dailyReminder: 'Tägliche Erinnerung',
+        dailyReminder: 'Erinnerungen',
         enableReminders: 'Erinnerungen aktivieren',
         startTime: 'Startzeit',
         endTime: 'Endzeit',
+        endTimeBeforeStart: 'Die Endzeit muss nach der Startzeit liegen.',
         frequency: 'Häufigkeit',
         progress: 'Fortschritt',
         changeLevel: 'Level ändern',
@@ -107,6 +103,7 @@ export default
         every1hour: 'Jede Stunde',
         every2hours: 'Alle 2 Stunden',
         selectLanguage: 'Sprache auswählen',
+        systemDefault: 'Systemstandard',
         selectLevel: 'Wähle dein Level',
         changePhotoTitle: 'Profilfoto ändern',
         takePhoto: 'Foto aufnehmen',
@@ -118,9 +115,31 @@ export default
         namePlaceholder: 'Gib deinen Namen ein',
         autoMarkDesc1: 'Das Wort wird als gelernt markiert, sobald die Benachrichtigung gesendet wird',
         autoMarkDesc2: 'Das Wort bleibt in deiner Lernwarteschlange',
+        deleteAccount: 'Konto löschen',
+        deleteAccountConfirmTitle: 'Konto löschen',
+        deleteAccountConfirmDesc: 'Bist du sicher, dass du dein Konto löschen möchtest? Diese Aktion kann nicht rückgängig gemacht werden und alle deine Daten werden dauerhaft gelöscht.',
+        deleteAccountSuccess: 'Dein Konto wurde erfolgreich gelöscht',
+        deleteAccountError: 'Beim Löschen deines Kontos ist ein Fehler aufgetreten',
+        permissionRequired: 'Berechtigung erforderlich',
+        enableNotificationsInSettings: 'Bitte aktiviere Benachrichtigungen in deinen Geräteeinstellungen.',
+        grantPhotoLibraryAccess: 'Bitte gewähre Zugriff auf deine Fotobibliothek.',
+        grantCameraAccess: 'Bitte gewähre Zugriff auf deine Kamera.',
+        invalidName: 'Ungültiger Name',
+        nameEmpty: 'Name darf nicht leer sein.',
+        nameTooShort: 'Name muss mindestens 2 Zeichen lang sein.',
+        profileUpdated: 'Profil erfolgreich aktualisiert!',
+        profileSaveFailed: 'Profil konnte nicht gespeichert werden.',
+        defaultUsername: 'Benutzer',
+        privacyLastUpdated: 'Zuletzt aktualisiert: Dezember 2024',
+        privacyDataCollection: '1. Datenerhebung',
+        privacyDataCollectionDesc: 'VocBee speichert alle Daten lokal auf deinem Gerät.',
+        privacyDataUsage: '2. Datennutzung',
+        privacyDataUsageDesc: 'Wird nur zur Fortschrittsverfolgung und zum Senden von Erinnerungen verwendet.',
+        privacyYourRights: '3. Deine Rechte',
+        privacyYourRightsDesc: 'Lösche Daten über Fortschritt zurücksetzen oder deinstalliere die App.',
+        privacyContact: '4. Kontakt',
     },
-    level: 
-    {
+    level: {
         beginner: 'Anfänger',
         intermediate: 'Mittelstufe',
         advanced: 'Fortgeschritten',
@@ -128,8 +147,7 @@ export default
         intermediateDesc: 'Ich kann über vertraute Themen sprechen und die Hauptpunkte verstehen.',
         advancedDesc: 'Ich kann mich fließend ausdrücken und komplexe Texte verstehen.',
     },
-    languages: 
-    {
+    languages: {
         english: 'Englisch',
         turkish: 'Türkisch',
         german: 'Deutsch',
@@ -144,65 +162,65 @@ export default
         korean: 'Koreanisch',
         hindi: 'Hindi',
         indonesian: 'Indonesisch',
-        dutch: 'Niederländisch',
-        polish: 'Polnisch',
         vietnamese: 'Vietnamesisch',
         thai: 'Thailändisch',
-        ukrainian: 'Ukrainisch',
-        malay: 'Malaiisch',
-        bengali: 'Bengalisch',
+        amharic: 'Amharisch',
+        persian: 'Persisch',
+        serbian: 'Serbisch',
+        swahili: 'Swahili',
+        urdu: 'Urdu',
     },
-    setup: 
-    {
-        nativeLanguageTitleWhite: 'Was ist deine',
-        nativeLanguageTitleGreen: 'Muttersprache?',
-        nativeLanguageSubtitle: 'Wir nutzen das, um Wörter für dich zu übersetzen.',
-        targetLanguageTitleWhite: 'Ich möchte',
-        targetLanguageTitleGreen: 'diese Sprache lernen...',
-        targetLanguageSubtitle: 'Wähle die Sprache, die du meistern möchtest.',
-        levelTitleWhite: 'Was ist dein',
-        levelTitleGreen: 'aktuelles Niveau?',
-        levelSubtitle: 'Wähle das Niveau, das am besten zu dir passt.',
-        notificationTitleWhite: 'Bleib dran mit',
-        notificationTitleGreen: 'täglichen Erinnerungen',
-        notificationSubtitle: 'Erhalte den ganzen Tag neue Wörter als Benachrichtigung.',
-        startTimeTitleWhite: 'Wann sollen wir',
-        startTimeTitleGreen: 'mit Erinnerungen beginnen?',
-        startTimeSubtitle: 'Ab dieser Uhrzeit senden wir dir Wörter.',
-        endTimeTitleWhite: 'Wann sollen wir',
-        endTimeTitleGreen: 'aufhören zu erinnern?',
-        endTimeSubtitle: 'Nach dieser Uhrzeit senden wir keine Wörter mehr.',
-        frequencyTitleWhite: 'Wie oft sollen wir',
-        frequencyTitleGreen: 'Erinnerungen senden?',
-        frequencySubtitle: 'Wähle, wie oft du neue Wörter erhalten möchtest.',
+    setup: {
+        step1TitleWhite: 'Was ist deine',
+        step1TitleGreen: 'Muttersprache?',
+        step1Subtitle: 'Wir nutzen das, um Wörter für dich zu übersetzen.',
+        step2TitleWhite: 'Ich möchte',
+        step2TitleGreen: 'diese Sprache lernen...',
+        step2Subtitle: 'Wähle die Sprache, die du meistern möchtest.',
+        step3TitleWhite: 'Was ist dein',
+        step3TitleGreen: 'aktuelles Niveau?',
+        step3Subtitle: 'Wähle das Niveau, das am besten zu dir passt.',
+        step4TitleWhite: 'Bleib dran mit',
+        step4TitleGreen: 'täglichen Erinnerungen',
+        step4Subtitle: 'Erhalte den ganzen Tag neue Wörter als Benachrichtigung.',
+        step5TitleWhite: 'Wann sollen wir',
+        step5TitleGreen: 'mit Erinnerungen beginnen?',
+        step5Subtitle: 'Ab dieser Uhrzeit senden wir dir Wörter.',
+        step6TitleWhite: 'Wann sollen wir',
+        step6TitleGreen: 'aufhören zu erinnern?',
+        step6Subtitle: 'Nach dieser Uhrzeit senden wir keine Wörter mehr.',
+        step7TitleWhite: 'Wie oft sollen wir',
+        step7TitleGreen: 'Erinnerungen senden?',
+        step7Subtitle: 'Wähle, wie oft du neue Wörter erhalten möchtest.',
         continue: 'Weiter',
         enableNotifications: 'Benachrichtigungen aktivieren',
         startLearning: 'Loslegen',
         notificationsDisabled: 'Benachrichtigungen deaktiviert',
-        notificationsDisabledMsg: 'Ohne Benachrichtigungen erhältst du keine täglichen Wort-Erinnerungen. Möchtest du sie in den Einstellungen aktivieren?',
+        notificationsDisabledDesc: 'Ohne Benachrichtigungen erhältst du keine täglichen Wort-Erinnerungen. Möchtest du sie in den Einstellungen aktivieren?',
         openSettings: 'Einstellungen öffnen',
         continueWithout: 'Ohne fortfahren',
         takeTest: 'Kennst du dein Niveau nicht? Mach einen kurzen Test',
         learnWithReminders: 'Mit Erinnerungen lernen',
-        remindersDesc: 'Wir senden dir täglich Vokabeln, damit du regelmäßig lernst. Die Zeiten kannst du im nächsten Schritt anpassen.',
-        featureDaily: 'Täglich neue Wörter',
-        featureSchedule: 'Zeitplan anpassbar',
-        featureNoApp: 'Lernen ohne die App zu öffnen',
+        notificationBenefits: 'Wir senden dir täglich Vokabeln, damit du regelmäßig lernst. Die Zeiten kannst du im nächsten Schritt anpassen.',
+        feature1: 'Täglich neue Wörter',
+        feature2: 'Zeitplan anpassbar',
+        feature3: 'Lernen ohne die App zu öffnen',
+        startTime: 'Startzeit',
+        endTime: 'Endzeit',
+        frequency: 'Häufigkeit',
     },
-    onboarding: 
-    {
-        step1Title: 'Täglich neue Wörter lernen',
-        step1Subtitle: 'Entdecke und lerne täglich neue Vokabeln – passend zu deinem Niveau.',
-        step2Title: 'Mit Karteikarten üben',
-        step2Subtitle: 'Festige dein Wissen mit interaktiven Karten. Wische, um Wörter als gelernt zu markieren.',
-        step3Title: 'Fortschritt verfolgen',
-        step3Subtitle: 'Behalte deinen Lernfortschritt im Blick und feiere deine Erfolge.',
+    onboarding: {
+        title1: 'Täglich neue Wörter lernen',
+        subtitle1: 'Entdecke und lerne täglich neue Vokabeln – passend zu deinem Niveau.',
+        title2: 'Mit Karteikarten üben',
+        subtitle2: 'Festige dein Wissen mit interaktiven Karten. Wische, um Wörter als gelernt zu markieren.',
+        title3: 'Fortschritt verfolgen',
+        subtitle3: 'Behalte deinen Lernfortschritt im Blick und feiere deine Erfolge.',
         start: 'Start',
         skip: 'Überspringen',
         next: 'Weiter',
     },
-    example: 
-    {
+    example: {
         title: 'Beispielsätze',
         explainGrammarBtn: 'Grammatik mit KI erklären',
         grammarExplanationTitle: 'Grammatikerklärung',
@@ -216,61 +234,49 @@ export default
         explanationError: 'Erklärung konnte nicht geladen werden. Bitte versuche es erneut.',
         retry: 'Erneut versuchen',
     },
-    favorites: 
-    {
+    favorites: {
         title: 'Favoriten',
         noFavoritesTitle: 'Noch keine Favoriten',
         noFavoritesMsg: 'Tippe beim Lernen auf den Stern, um deine Lieblingswörter hier zu speichern.',
     },
-    forgotPassword: 
-    {
+    forgotPassword: {
         title: 'Passwort vergessen?',
         subtitle: 'Kein Problem! Gib deine E-Mail ein und wir senden dir einen Link zum Zurücksetzen.',
-        emailLabel: 'E-Mail',
-        emailPlaceholder: 'E-Mail eingeben',
-        sendResetLinkBtn: 'Link senden',
-        backToLoginBtn: 'Zurück zum Login',
-        error: 'Fehler',
-        enterEmailError: 'Bitte gib deine E-Mail-Adresse ein',
-        invalidEmailError: 'Bitte gib eine gültige E-Mail-Adresse ein',
-        emailSentTitle: 'E-Mail gesendet!',
-        emailSentMsg: 'Prüfe deinen Posteingang für Anweisungen zum Zurücksetzen.',
-        ok: 'OK',
+        enterEmail: 'Bitte gib deine E-Mail-Adresse ein',
+        invalidEmail: 'Bitte gib eine gültige E-Mail-Adresse ein',
+        emailSent: 'E-Mail gesendet!',
+        checkInbox: 'Prüfe deinen Posteingang für Anweisungen zum Zurücksetzen.',
+        sendResetLink: 'Link senden',
+        backToLogin: 'Zurück zum Login',
     },
-    levelTest: 
-    {
+    levelTest: {
         advanced: 'Fortgeschritten',
         intermediate: 'Mittelstufe',
         beginner: 'Anfänger',
-        testCompleteTitle: 'Test abgeschlossen!',
-        testResultMsg: 'Du hast {{correct}} von {{total}} Fragen richtig beantwortet',
-        yourLevelLabel: 'DEIN NIVEAU',
-        levelCustomizationMsg: 'Wir passen dein Lernerlebnis an dieses Niveau an.',
-        questionTitle: 'Was bedeutet dieses Wort?',
-        seeResultsBtn: 'Ergebnisse ansehen',
-        nextBtn: 'Weiter',
-        continueBtn: 'Weiter',
+        testComplete: 'Test abgeschlossen!',
+        resultDesc: 'Du hast {{correct}} von {{total}} Fragen richtig beantwortet',
+        yourLevel: 'DEIN NIVEAU',
+        customizeMessage: 'Wir passen dein Lernerlebnis an dieses Niveau an.',
+        questionPrompt: 'Was bedeutet dieses Wort?',
+        seeResults: 'Ergebnisse ansehen',
+        next: 'Weiter',
     },
-    errorBoundary: 
-    {
+    errorBoundary: {
         title: 'Ups! Etwas ist schiefgelaufen',
         message: 'Entschuldigung, die App ist auf einen unerwarteten Fehler gestoßen.',
         restart: 'App neu starten',
     },
-    offline: 
-    {
+    offline: {
         message: 'Keine Internetverbindung',
     },
     connection: {
         title: 'Verbindungsproblem',
-        message: 'Verbindung zum Server nicht möglich. Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.',
+        message: 'Verbindung zum Server nicht möglich. Bitte überprüfe deine Internetverbindung und versuche es erneut.',
         retry: 'Erneut versuchen',
     },
-    help: 
-    {
+    help: {
         title: 'Hilfe & FAQ',
-        basics: 
-        {
+        basics: {
             q1: 'Wie lerne ich neue Wörter?',
             a1: 'Wische die Wortkarte nach rechts, um sie als gelernt zu markieren, oder nach links, um sie zu überspringen und später erneut zu sehen. Du kannst auch die Schaltflächen unter der Karte antippen.',
             q2: 'Wie höre ich die Aussprache?',
@@ -282,8 +288,7 @@ export default
             q5: 'Was ist die "Grammatik erklären"-Funktion?',
             a5: 'Tippe im Beispielsatz-Bildschirm auf "Grammatik erklären", um eine KI-gestützte Erklärung der Grammatik, Verwendungsmuster und Tipps zum Merken zu erhalten.',
         },
-        levels: 
-        {
+        levels: {
             q1: 'Was sind die Sprachniveaus?',
             a1: 'VocBee verwendet CEFR-Stufen: Anfänger (A1-A2) für Grundwortschatz, Mittelstufe (B1-B2) für Alltagsvokabular und Fortgeschritten (C1) für anspruchsvolles Vokabular. Wähle basierend auf deinem aktuellen Niveau.',
             q2: 'Wie ändere ich mein Niveau?',
@@ -291,15 +296,13 @@ export default
             q3: 'Wie wird mein Fortschritt verfolgt?',
             a3: 'Dein Fortschritt wird auf dem Startbildschirm mit gelernten/gesamten Wörtern und einem Fortschrittsbalken angezeigt. Wenn du Level abschließt, bringt dich VocBee automatisch zu schwierererem Vokabular.',
         },
-        reminders: 
-        {
+        reminders: {
             q1: 'Wie funktionieren Erinnerungen?',
             a1: 'Aktiviere tägliche Erinnerungen in den Einstellungen. Stelle deinen bevorzugten Zeitraum und die Häufigkeit ein (alle 15 Min bis 2 Stunden). Du erhältst Vokabel-Benachrichtigungen zum Üben über den Tag verteilt.',
             q2: 'Was bedeutet "Bei Benachrichtigung"?',
             a2: 'Wähle, ob Wörter in Benachrichtigungen automatisch als gelernt markiert werden oder in deiner Warteschlange zur späteren manuellen Überprüfung bleiben.',
         },
-        data: 
-        {
+        data: {
             q1: 'Wird mein Fortschritt in der Cloud gespeichert?',
             a1: 'Ja! Dein Fortschritt und deine Favoriten werden täglich automatisch mit unserer Cloud synchronisiert. Melde dich auf jedem Gerät an, um dort weiterzumachen, wo du aufgehört hast.',
             q2: 'Kann ich eine andere Sprache lernen?',
@@ -307,8 +310,7 @@ export default
             q3: 'Wie setze ich meinen Fortschritt zurück?',
             a3: 'Gehe zu Einstellungen → Fortschritt → Fortschritt zurücksetzen. Dies löscht alle gelernten Wörter und startet neu. Warnung: Diese Aktion kann nicht rückgängig gemacht werden!',
         },
-        support: 
-        {
+        support: {
             title: 'Brauchst du mehr Hilfe?',
             desc: 'Bei Fragen, Vorschlägen oder Problemen kontaktiere uns bitte unter support@vocbee.com. Wir freuen uns von dir zu hören!',
         },

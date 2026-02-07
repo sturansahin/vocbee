@@ -13,6 +13,7 @@ import {
     sendPasswordResetEmail,
     GoogleAuthProvider,
     signInWithCredential,
+    deleteUser,
 } from 'firebase/auth';
 import * as Google from 'expo-auth-session/providers/google';
 import * as WebBrowser from 'expo-web-browser';
@@ -31,12 +32,16 @@ import {
     forceSync,
     getActiveDeviceIdFromFirebase,
 } from '../services/SyncService';
+import { doc, deleteDoc } from 'firebase/firestore';
+import { db } from '../config/firebase';
 import { resetProgress } from '../services/progressService';
 import {
     NotificationSettings,
     DEFAULT_NOTIFICATION_SETTINGS,
     getNotificationSettings,
-    saveNotificationSettings
+    saveNotificationSettings,
+    cancelAllNotifications,
+    clearTrackedNotifications,
 } from '../services/notificationService';
 
 interface ProfileData {
@@ -59,6 +64,7 @@ interface AuthContextType {
     resetPassword: (email: string) => Promise<void>;
     refreshUserData: () => Promise<void>;
     retryConnection: () => Promise<void>;
+    deleteAccount: () => Promise<void>;
     profile: ProfileData;
     updateProfileData: (data: Partial<ProfileData>) => Promise<void>;
     notificationSettings: NotificationSettings;
@@ -112,13 +118,14 @@ export function AuthProvider({ children }: AuthProviderProps) {
                 const shouldUseCache = localData &&
                     localData.uid === firebaseUser.uid &&
                     localData.setupCompleted &&
-                    currentDeviceId === firebaseDeviceId;
+                    // If Firebase device ID is null (offline), trust local cache if user matches
+                    (firebaseDeviceId === null || currentDeviceId === firebaseDeviceId);
 
                 if (shouldUseCache) {
-                    // Use cached data - same device, faster startup
+                    // Use cached data - same device or offline, faster startup
                     setUserData(localData);
-                    setConnectionError(false);
-                    console.log('[AuthContext] Using cached user data (same device)');
+                    setConnectionError(firebaseDeviceId === null); // Mark as offline if device ID check failed
+                    console.log('[AuthContext] Using cached user data', firebaseDeviceId === null ? '(offline)' : '(same device)');
                 } else {
                     // Different device or no valid cache - fetch from Firebase
                     const reason = !localData ? 'no cache' :
@@ -150,9 +157,19 @@ export function AuthProvider({ children }: AuthProviderProps) {
                             setConnectionError(false);
                         }
                     } catch (error: any) {
-                        // Connection error - show error screen
+                        // Connection error during fetch
                         console.error('[AuthContext] Error fetching user data:', error);
-                        setConnectionError(true);
+                        
+                        // Fallback to local cache if available and setup was completed
+                        if (localData && localData.setupCompleted) {
+                            console.log('[AuthContext] Using cached data as offline fallback');
+                            setUserData(localData);
+                            setConnectionError(true); // Show offline banner but allow app usage
+                        } else {
+                            // No valid cache - must show connection error screen
+                            console.log('[AuthContext] No valid cache, showing connection error');
+                            setConnectionError(true);
+                        }
                     }
                 }
 
@@ -199,6 +216,11 @@ export function AuthProvider({ children }: AuthProviderProps) {
     const signUp = async (email: string, password: string, displayName?: string) => {
         try {
             setIsLoading(true);
+            
+            // Cancel any existing notifications (in case of previous user on device)
+            await cancelAllNotifications();
+            await clearTrackedNotifications();
+            
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
 
             // Update display name if provided
@@ -209,16 +231,11 @@ export function AuthProvider({ children }: AuthProviderProps) {
             // Create user document in Firestore
             await createUserDocument(userCredential.user.uid, email, displayName);
 
-            // Save locally
+            // Save locally (no preferences yet — user goes through setup)
             const newUserData: UserData = {
                 uid: userCredential.user.uid,
                 email,
                 displayName,
-                preferences: {
-                    nativeLanguage: 'turkish',
-                    targetLanguage: 'english',
-                    level: 'A1',
-                },
             };
             await saveUserDataLocally(newUserData);
             setUserData(newUserData);
@@ -236,10 +253,14 @@ export function AuthProvider({ children }: AuthProviderProps) {
         try {
             setIsLoading(true);
 
-            // Clear local storage first to prevent old data from persisting
-            await clearAllLocalData();
-
             const userCredential = await signInWithEmailAndPassword(auth, email, password);
+
+            // Clear local storage AFTER successful sign-in (not before, to avoid data loss on failure)
+            await clearAllLocalData();
+            
+            // Cancel all scheduled notifications for previous user
+            await cancelAllNotifications();
+            await clearTrackedNotifications();
 
             // Fetch user data from Firestore and save locally
             const fetchedData = await fetchAndSaveUserData(userCredential.user.uid);
@@ -277,23 +298,28 @@ export function AuthProvider({ children }: AuthProviderProps) {
                 try {
                     setIsLoading(true);
 
-                    // Clear local storage first
-                    await clearAllLocalData();
-
                     // Create Firebase credential with Google ID token
                     const credential = GoogleAuthProvider.credential(id_token);
                     const userCredential = await signInWithCredential(auth, credential);
 
+                    // Clear local storage AFTER successful sign-in
+                    await clearAllLocalData();
+                    
+                    // Cancel all scheduled notifications for previous user
+                    await cancelAllNotifications();
+                    await clearTrackedNotifications();
+
                     // Check if user exists in Firestore, if not create document
-                    const fetchedData = await fetchAndSaveUserData(userCredential.user.uid);
+                    let fetchedData = await fetchAndSaveUserData(userCredential.user.uid);
 
                     if (!fetchedData) {
-                        // New user - create document
+                        // New user - create document then re-fetch to populate local data
                         await createUserDocument(
                             userCredential.user.uid,
                             userCredential.user.email || '',
                             userCredential.user.displayName || undefined
                         );
+                        fetchedData = await fetchAndSaveUserData(userCredential.user.uid);
                     }
 
                     setUserData(fetchedData);
@@ -334,6 +360,10 @@ export function AuthProvider({ children }: AuthProviderProps) {
             if (user) {
                 await forceSync(user.uid);
             }
+
+            // Cancel all scheduled notifications
+            await cancelAllNotifications();
+            await clearTrackedNotifications();
 
             // Clear local data
             await clearAllLocalData();
@@ -432,6 +462,49 @@ export function AuthProvider({ children }: AuthProviderProps) {
         }
     };
 
+    // Delete Account
+    const deleteAccount = async () => {
+        try {
+            if (!user) {
+                throw new Error('No user is currently signed in');
+            }
+
+            setIsLoading(true);
+
+            // 1. Delete user document from Firestore
+            const userDocRef = doc(db, 'users', user.uid);
+            await deleteDoc(userDocRef);
+
+            // 2. Cancel all scheduled notifications
+            await cancelAllNotifications();
+            await clearTrackedNotifications();
+
+            // 3. Clear local data
+            await clearAllLocalData();
+            await resetProgress();
+
+            // 4. Delete Firebase Auth user
+            await deleteUser(user);
+
+            // 5. Clear state
+            setUserData(null);
+            setProfile({
+                name: '',
+                image: null,
+                email: ''
+            });
+        } catch (error: any) {
+            console.error('Delete account error:', error);
+            // Handle requires-recent-login: user must re-authenticate before deleting
+            if (error.code === 'auth/requires-recent-login') {
+                throw new Error('Please log out and log in again before deleting your account.');
+            }
+            throw error;
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
     const value: AuthContextType = {
         user,
         userData,
@@ -445,6 +518,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
         resetPassword,
         refreshUserData,
         retryConnection,
+        deleteAccount,
         profile,
         updateProfileData,
         notificationSettings,

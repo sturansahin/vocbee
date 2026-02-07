@@ -23,6 +23,7 @@ import {
    getNotificationSettings,
    requestNotificationPermissions,
    scheduleVocabularyNotifications,
+   cancelAllNotifications,
    sendTestNotification,
 } from '../services/notificationService';
 import { doc, setDoc } from 'firebase/firestore';
@@ -48,7 +49,7 @@ const HOURS_LIST = Array.from({ length: 24 }, (_, i) => i.toString().padStart(2,
 const MINUTES_LIST = Array.from({ length: 60 }, (_, i) => i.toString().padStart(2, '0'));
 const HOURS_EXTENDED = [...HOURS_LIST, ...HOURS_LIST, ...HOURS_LIST];
 const MINUTES_EXTENDED = [...MINUTES_LIST, ...MINUTES_LIST, ...MINUTES_LIST];
-const FREQUENCIES = ['Every hour', 'Every 2 hours'];
+const FREQUENCY_KEYS = ['every1hour', 'every2hours'] as const;
 
 // ─────────────────────────────────────────────────────────────────────────────
 // AnimatedSwitch Component - Unified toggle with variants
@@ -114,6 +115,7 @@ export default function SettingsScreen() {
    const { isDarkMode, colors } = useTheme();
    const {
       signOut,
+      deleteAccount,
       user,
       profile,
       updateProfileData,
@@ -132,13 +134,13 @@ export default function SettingsScreen() {
    const [endHour, setEndHour] = useState(notificationSettings.endHour.toString().padStart(2, '0'));
    const [endMinute, setEndMinute] = useState(notificationSettings.endMinute.toString().padStart(2, '0'));
    // Helper to get freq string
-   const getFreqString = (min: number) => {
+   const getFreqKey = (min: number) => {
       switch (min) {
-         case 60: return 'Every hour';
-         default: return 'Every 2 hours';
+         case 60: return 'every1hour';
+         default: return 'every2hours';
       }
    };
-   const [frequency, setFrequency] = useState(getFreqString(notificationSettings.frequencyMinutes));
+   const [frequency, setFrequency] = useState(getFreqKey(notificationSettings.frequencyMinutes));
 
    const [showTimePicker, setShowTimePicker] = useState<'start' | 'end' | null>(null);
    const [tempHour, setTempHour] = useState('09');
@@ -171,7 +173,7 @@ export default function SettingsScreen() {
       setStartMinute(notificationSettings.startMinute.toString().padStart(2, '0'));
       setEndHour(notificationSettings.endHour.toString().padStart(2, '0'));
       setEndMinute(notificationSettings.endMinute.toString().padStart(2, '0'));
-      setFrequency(getFreqString(notificationSettings.frequencyMinutes));
+      setFrequency(getFreqKey(notificationSettings.frequencyMinutes));
    }, [notificationSettings]);
 
    // Load current level from AsyncStorage on mount
@@ -201,7 +203,7 @@ export default function SettingsScreen() {
    // Helper to convert frequency string to minutes
    const getFrequencyMinutes = (freq: string): number => {
       switch (freq) {
-         case 'Every hour': return 60;
+         case 'every1hour': return 60;
          default: return 120;
       }
    };
@@ -212,7 +214,7 @@ export default function SettingsScreen() {
       if (newValue) {
          const granted = await requestNotificationPermissions();
          if (!granted) {
-            showAlert({ title: 'Permission Required', message: 'Please enable notifications in your device settings.' });
+            showAlert({ title: t('settings.permissionRequired'), message: t('settings.enableNotificationsInSettings') });
             return;
          }
       }
@@ -233,6 +235,18 @@ export default function SettingsScreen() {
 
    // Save time settings
    const saveTimeSettings = async (type: 'start' | 'end', hour: string, minute: string) => {
+      const newStartMinutes = type === 'start'
+         ? parseInt(hour) * 60 + parseInt(minute)
+         : parseInt(startHour) * 60 + parseInt(startMinute);
+      const newEndMinutes = type === 'end'
+         ? parseInt(hour) * 60 + parseInt(minute)
+         : parseInt(endHour) * 60 + parseInt(endMinute);
+
+      if (newEndMinutes <= newStartMinutes) {
+         showAlert({ title: t('common.warning'), message: t('settings.endTimeBeforeStart') });
+         return;
+      }
+
       if (type === 'start') {
          await updateNotificationSettings({
             startHour: parseInt(hour),
@@ -277,7 +291,7 @@ export default function SettingsScreen() {
    const pickImageFromGallery = async () => {
       const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
       if (status !== 'granted') {
-         showAlert({ title: 'Permission Required', message: 'Please grant access to your photo library.' });
+         showAlert({ title: t('settings.permissionRequired'), message: t('settings.grantPhotoLibraryAccess') });
          return;
       }
 
@@ -299,7 +313,7 @@ export default function SettingsScreen() {
    const takePhotoWithCamera = async () => {
       const { status } = await ImagePicker.requestCameraPermissionsAsync();
       if (status !== 'granted') {
-         showAlert({ title: 'Permission Required', message: 'Please grant access to your camera.' });
+         showAlert({ title: t('settings.permissionRequired'), message: t('settings.grantCameraAccess') });
          return;
       }
 
@@ -327,22 +341,22 @@ export default function SettingsScreen() {
       try {
          // Validation
          if (!tempName.trim()) {
-            showAlert({ title: 'Invalid Name', message: 'Name cannot be empty.' });
+            showAlert({ title: t('settings.invalidName'), message: t('settings.nameEmpty') });
             return;
          }
 
          if (tempName.trim().length < 2) {
-            showAlert({ title: 'Invalid Name', message: 'Name must be at least 2 characters long.' });
+            showAlert({ title: t('settings.invalidName'), message: t('settings.nameTooShort') });
             return;
          }
 
          await updateProfileData({ name: tempName.trim() });
 
          setShowEditProfileModal(false);
-         showAlert({ title: 'Success', message: 'Profile updated successfully!' });
+         showAlert({ title: t('common.success'), message: t('settings.profileUpdated') });
       } catch (error) {
          console.error('Error saving profile:', error);
-         showAlert({ title: 'Error', message: 'Failed to save profile.' });
+         showAlert({ title: t('common.error'), message: t('settings.profileSaveFailed') });
       }
    };
 
@@ -399,7 +413,7 @@ export default function SettingsScreen() {
                      <MaterialIcons name="camera-alt" size={16} color={isDarkMode ? '#000' : '#fff'} />
                   </View>
                </TouchableOpacity>
-               <Text style={[styles.profileName, dynamicStyles.text]}>{profile.name || 'User'}</Text>
+               <Text style={[styles.profileName, dynamicStyles.text]}>{profile.name || t('settings.defaultUsername')}</Text>
                <Text style={[styles.profileEmail, dynamicStyles.textSecondary]}>{profile.email}</Text>
 
                <TouchableOpacity
@@ -534,7 +548,7 @@ export default function SettingsScreen() {
                            </View>
                            <View>
                               <Text style={[styles.settingTitle, dynamicStyles.text]}>{t('settings.frequency')}</Text>
-                              <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>{frequency}</Text>
+                              <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>{t(`settings.${frequency}`)}</Text>
                            </View>
                         </View>
                         <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
@@ -557,7 +571,7 @@ export default function SettingsScreen() {
                      <View>
                         <Text style={[styles.settingTitle, dynamicStyles.text]}>{t('settings.changeLevel')}</Text>
                         <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>
-                           {LEVELS.find(l => l.id === currentLevel)?.title} ({LEVELS.find(l => l.id === currentLevel)?.range})
+                           {t(`level.${currentLevel}`)} ({LEVELS.find(l => l.id === currentLevel)?.range})
                         </Text>
                      </View>
                   </View>
@@ -579,13 +593,15 @@ export default function SettingsScreen() {
                                  if (user?.uid) {
                                     await clearFavoritesOnFirebase(user.uid);
                                  }
+                                 // Cancel all scheduled notifications (old language words)
+                                 await cancelAllNotifications();
                                  // Clear userData cache so AuthContext fetches fresh data after setup
                                  await clearAllLocalData();
                                  await resetProgress();
                                  await forceSync(user?.uid || '');
                                  navigation.reset({
                                     index: 0,
-                                    routes: [{ name: 'NativeLanguage' as any }],
+                                    routes: [{ name: 'NativeLanguage' }],
                                  });
                               }
                            }
@@ -621,6 +637,9 @@ export default function SettingsScreen() {
                                     await clearFavoritesOnFirebase(user.uid);
                                  }
                                  await resetProgress();
+                                 // Cancel stale notifications and reschedule with reset vocabulary
+                                 await cancelAllNotifications();
+                                 await scheduleVocabularyNotifications();
                                  // Sync empty progress to Firebase
                                  await forceSync(user?.uid || '');
                                  showAlert({ title: t('common.success'), message: t('settings.resetProgressSuccess') });
@@ -637,6 +656,48 @@ export default function SettingsScreen() {
                      <View>
                         <Text style={[styles.settingTitle, { color: colors.error }]}>{t('settings.resetProgress')}</Text>
                         <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>{t('settings.resetProgressDesc')}</Text>
+                     </View>
+                  </View>
+                  <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
+               </TouchableOpacity>
+               <TouchableOpacity
+                  style={[styles.settingItem, { borderBottomWidth: 0 }]}
+                  onPress={() => {
+                     showAlert({
+                        title: t('settings.deleteAccountConfirmTitle'),
+                        message: t('settings.deleteAccountConfirmDesc'),
+                        buttons: [
+                           { text: t('common.cancel'), style: 'cancel' },
+                           {
+                              text: t('settings.deleteAccount'),
+                              style: 'destructive',
+                              onPress: async () => {
+                                 try {
+                                    await deleteAccount();
+                                    // Navigate to login screen after successful deletion
+                                    navigation.reset({
+                                       index: 0,
+                                       routes: [{ name: 'Login' }],
+                                    });
+                                 } catch (error) {
+                                    console.error('Delete account error:', error);
+                                    showAlert({
+                                       title: t('common.error'),
+                                       message: t('settings.deleteAccountError')
+                                    });
+                                 }
+                              }
+                           }
+                        ]
+                     });
+                  }}
+               >
+                  <View style={styles.settingLeft}>
+                     <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
+                        <MaterialIcons name="delete-outline" size={24} color={colors.error} />
+                     </View>
+                     <View>
+                        <Text style={[styles.settingTitle, { color: colors.error }]}>{t('settings.deleteAccount')}</Text>
                      </View>
                   </View>
                   <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
@@ -683,7 +744,7 @@ export default function SettingsScreen() {
                                  await signOut();
                                  navigation.reset({
                                     index: 0,
-                                    routes: [{ name: 'Login' as any }],
+                                    routes: [{ name: 'Login' }],
                                  });
                               } catch (error) {
                                  console.error('Logout error:', error);
@@ -832,24 +893,24 @@ export default function SettingsScreen() {
             >
                <View style={[styles.modalContent, dynamicStyles.modalContent]}>
                   <Text style={[styles.modalTitle, dynamicStyles.text]}>{t('settings.selectFrequency')}</Text>
-                  {FREQUENCIES.map((freq) => (
+                  {FREQUENCY_KEYS.map((freqKey) => (
                      <TouchableOpacity
-                        key={freq}
+                        key={freqKey}
                         style={[
                            styles.pickerItem,
                            { borderBottomColor: colors.border },
-                           frequency === freq && { backgroundColor: `${colors.primary}20` }
+                           frequency === freqKey && { backgroundColor: `${colors.primary}20` }
                         ]}
                         onPress={() => {
-                           setFrequency(freq);
+                           setFrequency(freqKey);
                            setShowFrequencyPicker(false);
                         }}
                      >
                         <Text style={[
                            styles.pickerItemText,
                            { color: colors.text },
-                           frequency === freq && { color: colors.primary }
-                        ]}>{freq}</Text>
+                           frequency === freqKey && { color: colors.primary }
+                        ]}>{t(`settings.${freqKey}`)}</Text>
                      </TouchableOpacity>
                   ))}
                </View>
@@ -968,6 +1029,14 @@ export default function SettingsScreen() {
                                  // Update the CEFR level for vocabulary service
                                  const cefrLevel = getFirstLevelForUserLevel(level.id);
                                  await setCurrentLevel(cefrLevel);
+                                 
+                                 // Reschedule notifications with new level  
+                                 // This ensures all tracked notifications have correct level metadata
+                                 const settings = await getNotificationSettings();
+                                 if (settings.enabled) {
+                                    await scheduleVocabularyNotifications();
+                                    console.log('[Settings] Notifications rescheduled after level change');
+                                 }
                               } catch (error) {
                                  console.error('Error saving level:', error);
                               }
@@ -981,7 +1050,7 @@ export default function SettingsScreen() {
                                        styles.levelPickerTitle,
                                        { color: colors.text },
                                        currentLevel === level.id && { color: colors.primary }
-                                    ]}>{level.title}</Text>
+                                    ]}>{t(`level.${level.id}`)}</Text>
                                     <View style={[styles.levelBadge, { backgroundColor: `${colors.primary}33` }]}>
                                        <Text style={[styles.levelRange, { color: colors.primary }]}>{level.range}</Text>
                                     </View>
@@ -990,7 +1059,7 @@ export default function SettingsScreen() {
                                     styles.levelPickerDesc,
                                     { color: colors.textSecondary },
                                     currentLevel === level.id && { color: colors.primary }
-                                 ]}>{level.description}</Text>
+                                 ]}>{t(`level.${level.id}Desc`)}</Text>
                               </View>
                               {currentLevel === level.id && (
                                  <MaterialIcons name="check" size={24} color={colors.primary} />
@@ -1352,27 +1421,27 @@ export default function SettingsScreen() {
                   onStartShouldSetResponder={() => true}
                >
                   <View style={styles.modalHeader}>
-                     <Text style={[styles.modalTitle, dynamicStyles.text]}>Privacy Policy</Text>
+                     <Text style={[styles.modalTitle, dynamicStyles.text]}>{t('settings.privacyPolicy')}</Text>
                      <TouchableOpacity onPress={() => setShowPrivacyModal(false)}>
                         <MaterialIcons name="close" size={24} color={colors.textSecondary} />
                      </TouchableOpacity>
                   </View>
                   <ScrollView showsVerticalScrollIndicator={false} style={styles.modalScroll}>
-                     <Text style={[styles.policyDate, dynamicStyles.textSecondary]}>Last updated: December 2024</Text>
+                     <Text style={[styles.policyDate, dynamicStyles.textSecondary]}>{t('settings.privacyLastUpdated')}</Text>
                      <View style={styles.policySection}>
-                        <Text style={[styles.policyHeading, dynamicStyles.text]}>1. Data Collection</Text>
-                        <Text style={[styles.policyText, dynamicStyles.textSecondary]}>VocBee stores all data locally on your device.</Text>
+                        <Text style={[styles.policyHeading, dynamicStyles.text]}>{t('settings.privacyDataCollection')}</Text>
+                        <Text style={[styles.policyText, dynamicStyles.textSecondary]}>{t('settings.privacyDataCollectionDesc')}</Text>
                      </View>
                      <View style={styles.policySection}>
-                        <Text style={[styles.policyHeading, dynamicStyles.text]}>2. Data Usage</Text>
-                        <Text style={[styles.policyText, dynamicStyles.textSecondary]}>Used only for tracking progress and sending reminders.</Text>
+                        <Text style={[styles.policyHeading, dynamicStyles.text]}>{t('settings.privacyDataUsage')}</Text>
+                        <Text style={[styles.policyText, dynamicStyles.textSecondary]}>{t('settings.privacyDataUsageDesc')}</Text>
                      </View>
                      <View style={styles.policySection}>
-                        <Text style={[styles.policyHeading, dynamicStyles.text]}>3. Your Rights</Text>
-                        <Text style={[styles.policyText, dynamicStyles.textSecondary]}>Delete data via Reset Progress or uninstall.</Text>
+                        <Text style={[styles.policyHeading, dynamicStyles.text]}>{t('settings.privacyYourRights')}</Text>
+                        <Text style={[styles.policyText, dynamicStyles.textSecondary]}>{t('settings.privacyYourRightsDesc')}</Text>
                      </View>
                      <View style={[styles.policySection, { marginBottom: 0 }]}>
-                        <Text style={[styles.policyHeading, dynamicStyles.text]}>4. Contact</Text>
+                        <Text style={[styles.policyHeading, dynamicStyles.text]}>{t('settings.privacyContact')}</Text>
                         <Text style={[styles.policyText, dynamicStyles.textSecondary]}>privacy@vocbee.com</Text>
                      </View>
                   </ScrollView>

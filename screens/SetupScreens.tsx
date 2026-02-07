@@ -49,7 +49,7 @@ const HOURS_LIST = Array.from({ length: 24 }, (_, i) => i.toString().padStart(2,
 const MINUTES_LIST = Array.from({ length: 60 }, (_, i) => i.toString().padStart(2, '0'));
 const HOURS_EXTENDED = [...HOURS_LIST, ...HOURS_LIST, ...HOURS_LIST];
 const MINUTES_EXTENDED = [...MINUTES_LIST, ...MINUTES_LIST, ...MINUTES_LIST];
-const FREQUENCIES = ['Every hour', 'Every 2 hours'];
+const FREQUENCY_KEYS = ['every1hour', 'every2hours'] as const;
 const ITEM_HEIGHT = 44;
 
 // Unified Setup Screen with Steps (5 steps: language -> language -> level -> notifications -> schedule)
@@ -69,7 +69,7 @@ export const SetupScreen = () => {
   const [startMinute, setStartMinute] = useState('00');
   const [endHour, setEndHour] = useState('21');
   const [endMinute, setEndMinute] = useState('00');
-  const [frequency, setFrequency] = useState('Every 2 hours');
+  const [frequency, setFrequency] = useState('every2hours');
   const [isGenerating, setIsGenerating] = useState(false);
   const [waitingForSettings, setWaitingForSettings] = useState(false);
 
@@ -239,7 +239,7 @@ export const SetupScreen = () => {
 
   const getFrequencyMinutes = (freq: string): number => {
     switch (freq) {
-      case 'Every hour': return 60;
+      case 'every1hour': return 60;
       default: return 120;
     }
   };
@@ -332,6 +332,8 @@ export const SetupScreen = () => {
 
       // Save notification settings locally
       if (notificationPermissionGranted) {
+        // Save settings WITHOUT scheduling (vocabulary doesn't exist yet)
+        // Scheduling will be done after vocabulary generation
         await saveNotificationSettings({
           enabled: true,
           startHour: parseInt(startHour),
@@ -340,19 +342,18 @@ export const SetupScreen = () => {
           endMinute: parseInt(endMinute),
           frequencyMinutes: getFrequencyMinutes(frequency),
           autoMarkLearned: true,
-        });
-        await scheduleVocabularyNotifications();
+        }, true); // skipScheduling = true
       } else {
         // Save disabled state so Settings screen shows correct toggle
         await saveNotificationSettings({
           enabled: false,
-        });
+        }, true); // skipScheduling = true
       }
 
       // Refresh AuthContext notification settings to ensure sync
       await refreshNotificationSettings();
 
-      // Generate vocabulary for selected language pair
+      // Generate vocabulary for selected language pair FIRST
       await generateVocabulary(nativeLanguage, targetLanguage);
 
       // Reset local progress to ensure clean slate for new language
@@ -362,12 +363,22 @@ export const SetupScreen = () => {
       await setCurrentLevel(initialLevel);
 
       console.log(`Vocabulary generated: ${nativeLanguage} -> ${targetLanguage}, starting at ${initialLevel}`);
+
+      // NOW schedule notifications AFTER vocabulary exists
+      if (notificationPermissionGranted) {
+        await scheduleVocabularyNotifications();
+        console.log('Notifications scheduled after vocabulary generation');
+      }
+
     } catch (error) {
       console.error('Error saving settings:', error);
     } finally {
       setIsGenerating(false);
     }
-    navigation.navigate('MainTabs');
+    navigation.reset({
+      index: 0,
+      routes: [{ name: 'MainTabs' }],
+    });
   };
 
   const handleNext = async () => {
@@ -384,6 +395,15 @@ export const SetupScreen = () => {
       } else if (currentStep === 4) {
         // Request notification permission
         await handleNotificationPermission();
+      } else if (currentStep === 6) {
+        // Validate end time > start time before proceeding
+        const startMinutes = parseInt(startHour) * 60 + parseInt(startMinute);
+        const endMinutes = parseInt(endHour) * 60 + parseInt(endMinute);
+        if (endMinutes <= startMinutes) {
+          showAlert({ title: t('common.warning'), message: t('settings.endTimeBeforeStart') });
+          return;
+        }
+        goToStep(currentStep + 1);
       } else {
         goToStep(currentStep + 1);
       }
@@ -548,12 +568,12 @@ export const SetupScreen = () => {
               </View>
               <View style={styles.levelContent}>
                 <View style={styles.levelHeader}>
-                  <Text style={[styles.levelTitle, { color: colors.text }]}>{lvl.title}</Text>
+                  <Text style={[styles.levelTitle, { color: colors.text }]}>{t(`level.${lvl.id}`)}</Text>
                   <View style={[styles.levelBadge, { backgroundColor: `${colors.primary}33` }]}>
                     <Text style={[styles.levelRange, { color: colors.primary }]}>{lvl.range}</Text>
                   </View>
                 </View>
-                <Text style={[styles.levelDesc, { color: colors.textSecondary }]}>{lvl.description}</Text>
+                <Text style={[styles.levelDesc, { color: colors.textSecondary }]}>{t(`level.${lvl.id}Desc`)}</Text>
               </View>
             </View>
           </TouchableOpacity>
@@ -768,21 +788,21 @@ export const SetupScreen = () => {
             <Text style={[styles.scheduleLabel, { color: colors.text }]}>{t('setup.frequency')}</Text>
           </View>
           <View style={styles.frequencyList}>
-            {FREQUENCIES.map((freq) => (
+            {FREQUENCY_KEYS.map((freqKey) => (
               <TouchableOpacity
-                key={freq}
+                key={freqKey}
                 style={[
                   styles.frequencyItem,
                   { borderColor: colors.border },
-                  frequency === freq && { borderColor: colors.primary, backgroundColor: `${colors.primary}15` }
+                  frequency === freqKey && { borderColor: colors.primary, backgroundColor: `${colors.primary}15` }
                 ]}
-                onPress={() => setFrequency(freq)}
+                onPress={() => setFrequency(freqKey)}
               >
                 <Text style={[
                   styles.frequencyText,
-                  { color: frequency === freq ? colors.primary : colors.text }
-                ]}>{freq}</Text>
-                {frequency === freq && (
+                  { color: frequency === freqKey ? colors.primary : colors.text }
+                ]}>{t(`settings.${freqKey}`)}</Text>
+                {frequency === freqKey && (
                   <MaterialIcons name="check" size={18} color={colors.primary} />
                 )}
               </TouchableOpacity>
@@ -862,8 +882,7 @@ export const SetupScreen = () => {
 
 // Export individual screens for backward compatibility
 export const NativeLanguageScreen = SetupScreen;
-export const TargetLanguageScreen = SetupScreen;
-export const LevelSelectionScreen = SetupScreen;
+// Legacy aliases removed — SetupScreen handles all setup steps internally
 
 const styles = StyleSheet.create({
   container: {

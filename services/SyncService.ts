@@ -16,6 +16,32 @@ import { getUserProgress, getCurrentLevel, restoreProgressFromFirebase, getLastW
 import { restoreFavoritesFromFirebase, syncFavoritesToFirebase } from './favoritesService';
 import { getLanguagePair } from './vocabularyService';
 
+// ─── Retry Helper with Exponential Backoff ───────────────────────────────────
+const MAX_RETRIES = 3;
+const BASE_DELAY_MS = 1000;
+
+async function withRetry<T>(
+    fn: () => Promise<T>,
+    label: string,
+    retries = MAX_RETRIES
+): Promise<T> {
+    let lastError: any;
+    for (let attempt = 0; attempt <= retries; attempt++) {
+        try {
+            return await fn();
+        } catch (error) {
+            lastError = error;
+            if (attempt < retries) {
+                const delay = BASE_DELAY_MS * Math.pow(2, attempt);
+                console.warn(`[SyncService] ${label} failed (attempt ${attempt + 1}/${retries + 1}), retrying in ${delay}ms...`);
+                await new Promise<void>(resolve => setTimeout(resolve, delay));
+            }
+        }
+    }
+    throw lastError;
+}
+// ─────────────────────────────────────────────────────────────────────────────
+
 // Check if sync should happen (once per day)
 export const shouldSync = async (): Promise<boolean> => {
     try {
@@ -36,9 +62,10 @@ export const shouldSync = async (): Promise<boolean> => {
     }
 };
 
-// Sync local progress, favorites, and profile to Firestore
+// Sync local progress, favorites, and profile to Firestore (with retry)
 export const syncToFirestore = async (userId: string): Promise<boolean> => {
     try {
+        return await withRetry(async () => {
         // Get progress from progressService (actual learning data)
         const userProgress = await getUserProgress();
         const currentLevel = await getCurrentLevel();
@@ -102,8 +129,9 @@ export const syncToFirestore = async (userId: string): Promise<boolean> => {
 
         console.log('Successfully synced progress, profile and favorites to Firestore');
         return true;
+        }, 'syncToFirestore');
     } catch (error) {
-        console.error('Error syncing to Firestore:', error);
+        console.error('Error syncing to Firestore after retries:', error);
         return false;
     }
 };

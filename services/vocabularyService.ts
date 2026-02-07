@@ -270,20 +270,25 @@ export async function mergeVocabulary(
         }));
     }
 
+    // Build a lookup map by word ID for O(1) matching (instead of index-based merge)
+    const nativeById = new Map<number, VocabularyWord>();
+    for (const nw of nativeWords) {
+        nativeById.set(nw.id, nw);
+    }
+
     const mergedWords: VocabularyWord[] = [];
 
-    for (let i = 0; i < targetWords.length && i < nativeWords.length; i++) {
-        const targetWord = targetWords[i];
-        const nativeWord = nativeWords[i];
+    for (const targetWord of targetWords) {
+        const nativeWord = nativeById.get(targetWord.id);
 
         mergedWords.push({
             id: targetWord.id,
             word: targetWord.word,
-            translation: nativeWord.word,
+            translation: nativeWord ? nativeWord.word : targetWord.word,
             sentence1: targetWord.sentence1,
             sentence2: targetWord.sentence2,
-            nativeSentence1: nativeWord.sentence1,
-            nativeSentence2: nativeWord.sentence2,
+            nativeSentence1: nativeWord ? nativeWord.sentence1 : targetWord.sentence1,
+            nativeSentence2: nativeWord ? nativeWord.sentence2 : targetWord.sentence2,
         });
     }
 
