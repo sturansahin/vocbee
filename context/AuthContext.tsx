@@ -134,9 +134,20 @@ export function AuthProvider({ children }: AuthProviderProps) {
                             setConnectionError(false);
                             console.log('[AuthContext] Loaded user data from Firebase');
                         } else {
-                            // No data returned - could be connection issue
-                            console.log('[AuthContext] No user data returned from Firebase');
-                            setConnectionError(true);
+                            // No data returned - could be new user (no preferences yet) or connection issue
+                            // For new users after signup, this is expected - treat as new user, not error
+                            console.log('[AuthContext] No user data from Firebase - treating as new user');
+
+                            // Create minimal user data for new user
+                            const newUserData: UserData = {
+                                uid: firebaseUser.uid,
+                                email: firebaseUser.email || '',
+                                displayName: firebaseUser.displayName || undefined,
+                                // No preferences means setupCompleted will be false
+                            };
+                            await saveUserDataLocally(newUserData);
+                            setUserData(newUserData);
+                            setConnectionError(false);
                         }
                     } catch (error: any) {
                         // Connection error - show error screen

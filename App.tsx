@@ -20,6 +20,9 @@ import { autoSync } from './services/SyncService';
 import {
   configureNotifications,
   handleNotificationResponse,
+  refillNotifications,
+  processDeliveredNotifications,
+  setLastForegroundTime,
 } from './services/notificationService';
 import { STORAGE_KEYS } from './services/storageKeys';
 import { initializeAdMob, checkAndShowAppOpenAd } from './services/adMobService';
@@ -130,13 +133,22 @@ function AppContent() {
     return () => subscription.remove();
   }, []);
 
-  // Handle app state changes for background sync
+  // Handle app state changes for background sync and notification refill
   useEffect(() => {
     const subscription = AppState.addEventListener('change', (nextAppState: AppStateStatus) => {
       if (appState.current.match(/inactive|background/) && nextAppState === 'active') {
+        // Record foreground time to detect notifications that arrive while app is open
+        setLastForegroundTime();
+
         // App has come to foreground - trigger sync if user is logged in
         if (user) {
           autoSync(user.uid);
+          // Process delivered notifications first (marks words as learned/skipped)
+          // Notifications delivered while app was open will be skipped
+          processDeliveredNotifications().then(() => {
+            // Then refill notifications to maintain 64 scheduled
+            refillNotifications();
+          });
         }
       }
       appState.current = nextAppState;
