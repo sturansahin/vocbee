@@ -8,11 +8,11 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Level, LEVELS, getStoredVocabulary } from './vocabularyService';
 import { markAsUnsynced } from './storage';
+import { STORAGE_KEYS } from './storageKeys';
 
-const PROGRESS_KEY = '@user_progress';
-const SKIPPED_KEY = '@user_skipped';
-const CURRENT_LEVEL_KEY = '@current_level';
-const LAST_WORD_ID_KEY = '@last_word_id';
+const PROGRESS_KEY = STORAGE_KEYS.PROGRESS;
+const CURRENT_LEVEL_KEY = STORAGE_KEYS.CURRENT_LEVEL;
+const LAST_WORD_ID_KEY = STORAGE_KEYS.LAST_WORD_ID;
 
 export interface UserProgress {
     [level: string]: number[]; // Array of learned word IDs per level
@@ -170,10 +170,9 @@ export async function checkAndAdvanceLevel(): Promise<Level> {
 export async function resetProgress(): Promise<void> {
     try {
         await AsyncStorage.removeItem(PROGRESS_KEY);
-        await AsyncStorage.removeItem(SKIPPED_KEY);
         await AsyncStorage.removeItem(CURRENT_LEVEL_KEY);
         await AsyncStorage.removeItem(LAST_WORD_ID_KEY);
-        console.log('Progress reset successfully (including skipped and last word)');
+        console.log('Progress reset successfully (including last word)');
     } catch (error) {
         console.error('Error resetting progress:', error);
     }
@@ -233,7 +232,6 @@ export async function getOverallStats(): Promise<{
 export async function restoreProgressFromFirebase(
     learnedWords: { [level: string]: number[] } | null,
     currentLevel: string | null,
-    skippedWords?: { [level: string]: number[] } | null,
     lastWordIndex?: number | null
 ): Promise<void> {
     try {
@@ -241,12 +239,6 @@ export async function restoreProgressFromFirebase(
         if (learnedWords && typeof learnedWords === 'object') {
             await AsyncStorage.setItem(PROGRESS_KEY, JSON.stringify(learnedWords));
             console.log('Restored learned words from Firebase:', Object.keys(learnedWords).length, 'levels');
-        }
-
-        // Restore skipped words
-        if (skippedWords && typeof skippedWords === 'object') {
-            await AsyncStorage.setItem(SKIPPED_KEY, JSON.stringify(skippedWords));
-            console.log('Restored skipped words from Firebase');
         }
 
         // Restore current level
@@ -262,49 +254,6 @@ export async function restoreProgressFromFirebase(
         }
     } catch (error) {
         console.error('Error restoring progress from Firebase:', error);
-    }
-}
-
-// ============ SKIPPED WORDS ============
-
-/**
- * Get skipped words for all levels
- */
-export async function getSkippedProgress(): Promise<UserProgress> {
-    try {
-        const data = await AsyncStorage.getItem(SKIPPED_KEY);
-        if (data) {
-            return JSON.parse(data);
-        }
-        return {};
-    } catch (error) {
-        console.error('Error loading skipped progress:', error);
-        return {};
-    }
-}
-
-/**
- * Get skipped word IDs for a specific level
- */
-export async function getSkippedWords(level: Level): Promise<number[]> {
-    const progress = await getSkippedProgress();
-    return progress[level] || [];
-}
-
-/**
- * Mark a word as skipped
- */
-export async function markWordAsSkipped(level: Level, wordId: number): Promise<void> {
-    const progress = await getSkippedProgress();
-
-    if (!progress[level]) {
-        progress[level] = [];
-    }
-
-    if (!progress[level].includes(wordId)) {
-        progress[level].push(wordId);
-        await AsyncStorage.setItem(SKIPPED_KEY, JSON.stringify(progress));
-        await markAsUnsynced();
     }
 }
 

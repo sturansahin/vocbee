@@ -3,6 +3,7 @@
 
 import { doc, setDoc, getDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../config/firebase';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
     getLastSyncTime,
     setLastSyncTime,
@@ -12,9 +13,10 @@ import {
     saveUserDataLocally,
     getDeviceId,
 } from './storage';
-import { getUserProgress, getCurrentLevel, restoreProgressFromFirebase, getLastWordIndex } from './progressService';
+import { getUserProgress, getCurrentLevel, restoreProgressFromFirebase, getLastWordId } from './progressService';
 import { restoreFavoritesFromFirebase, syncFavoritesToFirebase } from './favoritesService';
-import { getLanguagePair } from './vocabularyService';
+import { getLanguagePair, isVocabularyGenerated, generateVocabulary } from './vocabularyService';
+import { STORAGE_KEYS } from './storageKeys';
 
 // ─── Retry Helper with Exponential Backoff ───────────────────────────────────
 const MAX_RETRIES = 3;
@@ -69,11 +71,10 @@ export const syncToFirestore = async (userId: string): Promise<boolean> => {
         // Get progress from progressService (actual learning data)
         const userProgress = await getUserProgress();
         const currentLevel = await getCurrentLevel();
-        const lastWordIndex = await getLastWordIndex();
+        const lastWordId = await getLastWordId();
 
         // Get profile data from AsyncStorage
-        const AsyncStorage = require('@react-native-async-storage/async-storage').default;
-        const storedProfile = await AsyncStorage.getItem(`profile_${userId}`);
+        const storedProfile = await AsyncStorage.getItem(`${STORAGE_KEYS.PROFILE_PREFIX}${userId}`);
         const profileData = storedProfile ? JSON.parse(storedProfile) : {};
         const profileName = profileData.name;
 
@@ -84,7 +85,7 @@ export const syncToFirestore = async (userId: string): Promise<boolean> => {
 
         console.log('Syncing progress, profile and preferences to Firestore:', {
             currentLevel,
-            lastWordIndex,
+            lastWordId,
             hasProfileName: !!profileName,
             hasPreferences
         });
@@ -99,7 +100,7 @@ export const syncToFirestore = async (userId: string): Promise<boolean> => {
             progress: {
                 currentLevel: currentLevel,
                 learnedWords: userProgress,
-                lastWordIndex: lastWordIndex,
+                lastWordIndex: lastWordId ?? 0,
                 lastSync: serverTimestamp(),
             },
             // Track which device last synced
@@ -220,20 +221,18 @@ export const fetchAndSaveUserData = async (userId: string): Promise<UserData | n
             await saveUserDataLocally(userData);
 
             // Restore profile data from Firebase to AsyncStorage
-            const AsyncStorage = require('@react-native-async-storage/async-storage').default;
             const newProfile = {
                 name: data.displayName || '',
                 image: data.photoURL || null,
                 email: data.email || ''
             };
-            await AsyncStorage.setItem(`profile_${userId}`, JSON.stringify(newProfile));
+            await AsyncStorage.setItem(`${STORAGE_KEYS.PROFILE_PREFIX}${userId}`, JSON.stringify(newProfile));
 
             // Restore language preferences from Firebase to AsyncStorage
             if (data.preferences) {
                 const { nativeLanguage, targetLanguage } = data.preferences;
                 if (nativeLanguage && targetLanguage) {
                     // Get CURRENT language pair BEFORE overwriting with new values
-                    const { isVocabularyGenerated, generateVocabulary, getLanguagePair } = require('./vocabularyService');
                     const currentPair = await getLanguagePair();
                     const hasVocab = await isVocabularyGenerated();
 
@@ -242,8 +241,8 @@ export const fetchAndSaveUserData = async (userId: string): Promise<UserData | n
                         (currentPair.native !== nativeLanguage || currentPair.target !== targetLanguage);
 
                     // Now write the new language preferences
-                    await AsyncStorage.setItem('@native_language', nativeLanguage);
-                    await AsyncStorage.setItem('@target_language', targetLanguage);
+                    await AsyncStorage.setItem(STORAGE_KEYS.NATIVE_LANGUAGE, nativeLanguage);
+                    await AsyncStorage.setItem(STORAGE_KEYS.TARGET_LANGUAGE, targetLanguage);
                     console.log(`Restored language preferences: ${nativeLanguage} -> ${targetLanguage}`);
 
                     // Regenerate if no vocabulary OR if language pair changed
@@ -262,7 +261,6 @@ export const fetchAndSaveUserData = async (userId: string): Promise<UserData | n
                 await restoreProgressFromFirebase(
                     data.progress.learnedWords,
                     data.progress.currentLevel,
-                    data.progress.skippedWords,
                     data.progress.lastWordIndex
                 );
             }

@@ -191,14 +191,15 @@ export default function LevelTestScreen() {
         return 'beginner';
     }, [correctAnswers, totalQuestions]);
 
+    const detectedLevel = calculateLevel();
+
     const handleContinue = () => {
-        const detectedLevel = calculateLevel();
         navigation.navigate('NativeLanguage', { detectedLevel });
     };
 
-    const levelInfo = calculateLevel() === 'advanced'
+    const levelInfo = detectedLevel === 'advanced'
         ? { title: t('levelTest.advanced'), range: 'C1' }
-        : calculateLevel() === 'intermediate'
+        : detectedLevel === 'intermediate'
             ? { title: t('levelTest.intermediate'), range: 'B1-B2' }
             : { title: t('levelTest.beginner'), range: 'A1-A2' };
 

@@ -15,6 +15,7 @@ export const STORAGE_KEYS = {
 
     // ─── Progress (progressService.ts) ────────────────────────────
     PROGRESS: '@user_progress',
+    // Legacy (skip feature removed, kept for cleanup)
     SKIPPED: '@user_skipped',
     CURRENT_LEVEL: '@current_level',
     LAST_WORD_ID: '@last_word_id',
@@ -30,6 +31,7 @@ export const STORAGE_KEYS = {
     PENDING_NOTIFICATION_WORD: '@pending_notification_word',
     TRACKED_NOTIFICATIONS: '@tracked_notifications',
     LAST_FOREGROUND_TIME: '@last_foreground_time',
+    LAST_BACKGROUND_TIME: '@last_background_time',
 
     // ─── Favorites (favoritesService.ts) ──────────────────────────
     // Dynamic: `@favorites_${userId}` or `@favorites` (legacy)
@@ -42,4 +44,10 @@ export const STORAGE_KEYS = {
     // ─── Shuffle Order Cache (HomeScreen) ─────────────────────────
     // Dynamic: `@shuffle_order_${level}`
     SHUFFLE_ORDER_PREFIX: '@shuffle_order_',
+
+    // ─── Grammar Cache (groqService.ts) ──────────────────────────
+    GRAMMAR_CACHE: '@grammar_cache',
+
+    // ─── i18n (i18n.ts) ──────────────────────────────────────────
+    USER_LANGUAGE: '@user_language',
 } as const;

@@ -16,6 +16,7 @@ jest.mock('../../components/SafeBannerAd', () => ({
 
 // Mock additional services for Home
 jest.mock('../../services/vocabularyService', () => ({
+    LEVELS: ['A1', 'A2', 'B1', 'B2', 'C1'],
     getStoredVocabulary: jest.fn(() => Promise.resolve([
         {
             id: 1,
@@ -42,7 +43,6 @@ jest.mock('../../services/progressService', () => ({
     getLearnedWords: jest.fn(() => Promise.resolve([])),
     getCurrentLevel: jest.fn(() => Promise.resolve('A1')),
     markWordAsLearned: jest.fn(() => Promise.resolve()),
-    markWordAsSkipped: jest.fn(() => Promise.resolve()),
     checkAndAdvanceLevel: jest.fn(() => Promise.resolve('A1')),
     saveLastWordId: jest.fn(() => Promise.resolve()),
     getLastWordId: jest.fn(() => Promise.resolve(null)),

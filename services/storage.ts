@@ -17,7 +17,6 @@ const LOCAL_KEYS = {
 export interface UserProgress {
     currentLevel: string;
     learnedWords: { [level: string]: number[] };
-    skippedWords: { [level: string]: number[] };
     lastUpdated: string;
 }
 
@@ -33,47 +32,9 @@ export interface UserData {
     } | null;
 }
 
-// Save local progress
-export const saveLocalProgress = async (progress: Partial<UserProgress>): Promise<void> => {
-    try {
-        const existing = await getLocalProgress();
-        const updated: UserProgress = {
-            ...existing,
-            ...progress,
-            lastUpdated: new Date().toISOString(),
-        };
-        await AsyncStorage.setItem(LOCAL_KEYS.USER_PROGRESS, JSON.stringify(updated));
-        await markAsUnsynced();
-    } catch (error) {
-        console.error('Error saving local progress:', error);
-        throw error;
-    }
-};
-
-// Get local progress
-export const getLocalProgress = async (): Promise<UserProgress> => {
-    try {
-        const data = await AsyncStorage.getItem(LOCAL_KEYS.USER_PROGRESS);
-        if (data) {
-            return JSON.parse(data);
-        }
-        // Return default progress
-        return {
-            currentLevel: 'A1',
-            learnedWords: {},
-            skippedWords: {},
-            lastUpdated: new Date().toISOString(),
-        };
-    } catch (error) {
-        console.error('Error getting local progress:', error);
-        return {
-            currentLevel: 'A1',
-            learnedWords: {},
-            skippedWords: {},
-            lastUpdated: new Date().toISOString(),
-        };
-    }
-};
+// Save local progress — DEPRECATED: Progress is managed by progressService.ts
+// Kept only for type export compatibility.
+// export const saveLocalProgress = ...
 
 // Mark as needing sync
 export const markAsUnsynced = async (): Promise<void> => {
@@ -168,6 +129,11 @@ export const clearAllLocalData = async (): Promise<void> => {
             STORAGE_KEYS.PENDING_NOTIFICATION_WORD,
             STORAGE_KEYS.TRACKED_NOTIFICATIONS,
             STORAGE_KEYS.LAST_FOREGROUND_TIME,
+            STORAGE_KEYS.LAST_BACKGROUND_TIME,
+            // Grammar cache
+            STORAGE_KEYS.GRAMMAR_CACHE,
+            // i18n language preference
+            STORAGE_KEYS.USER_LANGUAGE,
             // Add all shuffle order keys
             ...allKeys.filter(key => key.startsWith(STORAGE_KEYS.SHUFFLE_ORDER_PREFIX)),
             // Add all favorites keys (generic and user-specific)

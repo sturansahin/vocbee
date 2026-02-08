@@ -23,6 +23,7 @@ import {
   refillNotifications,
   processDeliveredNotifications,
   setLastForegroundTime,
+  setLastBackgroundTime,
 } from './services/notificationService';
 import { STORAGE_KEYS } from './services/storageKeys';
 import { initializeAdMob, checkAndShowAppOpenAd } from './services/adMobService';
@@ -47,8 +48,9 @@ SplashScreen.preventAutoHideAsync();
 
 const Stack = createStackNavigator<RootStackParamList>();
 
-// Export font family name for use throughout the app
-export const FONT_FAMILY = 'SpecialGothicExpandedOne_400Regular';
+// Font family re-exported from typography for backward compat
+import { FONT_FAMILY } from './utils/typography';
+export { FONT_FAMILY };
 
 // AppContent component to access auth context
 function AppContent() {
@@ -136,11 +138,14 @@ function AppContent() {
   // Handle app state changes for background sync and notification refill
   useEffect(() => {
     const subscription = AppState.addEventListener('change', (nextAppState: AppStateStatus) => {
+      if (appState.current === 'active' && nextAppState.match(/inactive|background/)) {
+        setLastBackgroundTime();
+      }
       if (appState.current.match(/inactive|background/) && nextAppState === 'active') {
         // App has come to foreground - trigger sync if user is logged in
         if (user) {
           autoSync(user.uid);
-          // Process delivered notifications first (marks words as learned/skipped)
+          // Process delivered notifications first (marks words as learned/ignored)
           // Notifications delivered while app was open will be skipped
           processDeliveredNotifications().then(() => {
             // CRITICAL: Record foreground time AFTER processing delivered notifications

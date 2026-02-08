@@ -19,8 +19,8 @@ type AuthNavProp = StackNavigationProp<RootStackParamList>;
 
 export const LoginScreen = () => {
   const navigation = useNavigation<AuthNavProp>();
-  const { colors, isDarkMode } = useTheme();
-  const { signIn, signInWithGoogle, isLoading } = useAuth();
+  const { colors } = useTheme();
+  const { signIn, signInWithGoogle } = useAuth();
   const { showAlert } = useAlert();
   const { width: screenWidth, height: screenHeight } = useWindowDimensions();
   const { t } = useTranslation();
@@ -422,8 +422,8 @@ export const LoginScreen = () => {
 
 export const SignUpScreen = () => {
   const navigation = useNavigation<AuthNavProp>();
-  const { colors, isDarkMode } = useTheme();
-  const { signUp, signInWithGoogle, signOut, isLoading } = useAuth();
+  const { colors } = useTheme();
+  const { signUp, signInWithGoogle, signOut } = useAuth();
   const { showAlert } = useAlert();
   const { width: screenWidth, height: screenHeight } = useWindowDimensions();
   const { t } = useTranslation();
@@ -449,6 +449,11 @@ export const SignUpScreen = () => {
   const handleSignUp = async () => {
     if (!name || !email || !password || !confirmPassword) {
       showAlert({ title: t('auth.error'), message: t('auth.fillAllFields') });
+      return;
+    }
+
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      showAlert({ title: t('auth.error'), message: t('auth.invalidEmail') });
       return;
     }
 

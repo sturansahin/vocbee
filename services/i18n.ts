@@ -3,6 +3,9 @@ import { initReactI18next } from 'react-i18next';
 import { getLocales } from 'expo-localization';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import resources from '../locales';
+import { STORAGE_KEYS } from './storageKeys';
+
+const USER_LANGUAGE_KEY = STORAGE_KEYS.USER_LANGUAGE;
 
 const LANGUAGE_DETECTOR = {
     type: 'languageDetector' as const,
@@ -10,7 +13,7 @@ const LANGUAGE_DETECTOR = {
     detect: async (callback: (lang: string) => void) => {
         try {
             // 1. Check for manually selected language
-            const savedLanguage = await AsyncStorage.getItem('@user_language');
+            const savedLanguage = await AsyncStorage.getItem(USER_LANGUAGE_KEY);
             if (savedLanguage) {
                 return callback(savedLanguage);
             }
@@ -35,7 +38,7 @@ const LANGUAGE_DETECTOR = {
     init: () => { },
     cacheUserLanguage: async (language: string) => {
         try {
-            await AsyncStorage.setItem('@user_language', language);
+            await AsyncStorage.setItem(USER_LANGUAGE_KEY, language);
         } catch (error) {
             console.log('Error saving language', error);
         }
@@ -71,7 +74,7 @@ export const getDeviceLanguage = (): string => {
 export const setToDeviceLanguage = async (): Promise<string> => {
     try {
         // Remove saved preference so app uses device language
-        await AsyncStorage.removeItem('@user_language');
+        await AsyncStorage.removeItem(USER_LANGUAGE_KEY);
         const deviceLang = getDeviceLanguage();
         await i18n.changeLanguage(deviceLang);
         return deviceLang;
@@ -84,7 +87,7 @@ export const setToDeviceLanguage = async (): Promise<string> => {
 // Check if using system default (no saved preference)
 export const isUsingSystemLanguage = async (): Promise<boolean> => {
     try {
-        const savedLanguage = await AsyncStorage.getItem('@user_language');
+        const savedLanguage = await AsyncStorage.getItem(USER_LANGUAGE_KEY);
         return savedLanguage === null;
     } catch (error) {
         return true;

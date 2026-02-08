@@ -315,7 +315,6 @@ export const SetupScreen = () => {
           progress: {
             currentLevel: initialLevel,
             learnedWords: {},
-            skippedWords: {},
             lastSync: serverTimestamp(),
           },
           notificationSettings: notificationPermissionGranted ? {
@@ -370,15 +369,21 @@ export const SetupScreen = () => {
         console.log('Notifications scheduled after vocabulary generation');
       }
 
+      // Navigate ONLY on success — inside try block
+      navigation.reset({
+        index: 0,
+        routes: [{ name: 'MainTabs' }],
+      });
+
     } catch (error) {
       console.error('Error saving settings:', error);
+      showAlert({
+        title: t('common.error'),
+        message: t('setup.errorSavingSettings'),
+      });
     } finally {
       setIsGenerating(false);
     }
-    navigation.reset({
-      index: 0,
-      routes: [{ name: 'MainTabs' }],
-    });
   };
 
   const handleNext = async () => {
@@ -396,13 +401,7 @@ export const SetupScreen = () => {
         // Request notification permission
         await handleNotificationPermission();
       } else if (currentStep === 6) {
-        // Validate end time > start time before proceeding
-        const startMinutes = parseInt(startHour) * 60 + parseInt(startMinute);
-        const endMinutes = parseInt(endHour) * 60 + parseInt(endMinute);
-        if (endMinutes <= startMinutes) {
-          showAlert({ title: t('common.warning'), message: t('settings.endTimeBeforeStart') });
-          return;
-        }
+        // Time range is always valid (overnight ranges like 22:00-06:00 are allowed)
         goToStep(currentStep + 1);
       } else {
         goToStep(currentStep + 1);

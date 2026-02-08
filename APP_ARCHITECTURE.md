@@ -117,7 +117,7 @@ vocbee/
 │
 ├── services/                # Business logic and data access
 │   ├── vocabularyService.ts     # Load/merge/store vocabulary from bundled assets
-│   ├── progressService.ts       # Track learned/skipped words, level progression
+│   ├── progressService.ts       # Track learned words, level progression
 │   ├── notificationService.ts   # Schedule, track, process local notifications
 │   ├── SyncService.ts           # Firestore read/write, daily auto-sync
 │   ├── favoritesService.ts      # Manage favorite words (local + Firebase)
@@ -237,7 +237,7 @@ App Launch
 ```
 HomeScreen
   ├── Swipe right → Mark word as learned → Next card
-  ├── Swipe left → Mark word as skipped → Next card
+  ├── Swipe left → Next card (no progress change)
   ├── Tap "More Examples" → ExampleSentencesScreen
   │     └── Tap "Explain Grammar" → AI explanation from Groq API
   ├── Tap heart icon → Toggle favorite
@@ -295,19 +295,17 @@ interface VocabularyWord {
 
 ### 4.2 progressService.ts
 
-**Role:** Tracks which words have been learned or skipped per CEFR level, manages the current level, and handles level advancement.
+**Role:** Tracks which words have been learned per CEFR level, manages the current level, and handles level advancement.
 
 **Storage Keys:**
 - `@user_progress` — JSON object mapping levels to arrays of learned word IDs
-- `@user_skipped` — JSON object mapping levels to arrays of skipped word IDs
 - `@current_level` — Current CEFR level string (e.g., `'A1'`)
 - `@last_word_id` — Last viewed word ID for resume
 
 **Key Operations:**
 - `markWordAsLearned(level, wordId)` — Adds word ID to learned array, marks sync needed
-- `markWordAsSkipped(level, wordId)` — Adds word ID to skipped array, marks sync needed
 - `checkAndAdvanceLevel()` — If all words in current level are learned, advances to next level
-- `resetProgress()` — Clears all progress, skipped words, current level, and last word ID
+- `resetProgress()` — Clears all progress, current level, and last word ID
 - `restoreProgressFromFirebase(...)` — Writes Firebase-fetched data to AsyncStorage
 
 ### 4.3 notificationService.ts
@@ -328,7 +326,7 @@ interface VocabularyWord {
 **Device Tracking:** A unique `deviceId` is generated per installation and stored. When syncing, the ID is written to Firestore as `lastActiveDeviceId`. On startup, AuthContext compares local and Firebase device IDs to decide if a full re-fetch is needed (supports multi-device scenarios).
 
 **Data Synced:**
-- Progress: `learnedWords`, `currentLevel`, `lastWordIndex`, `skippedWords`
+- Progress: `learnedWords`, `currentLevel`, `lastWordIndex`
 - Preferences: `nativeLanguage`, `targetLanguage`, `level`
 - Favorites: Array of `{id, level}` objects
 - Profile: `displayName`
@@ -546,7 +544,7 @@ onAuthStateChanged fires
 ```
 useEffect on mount
   → getStoredVocabulary(currentLevel)
-  → getLearnedWords() + getSkippedWords()
+  → getLearnedWords()
   → Filter to unlearned words
   → Shuffle with Fisher-Yates
   → Check for pendingNotificationWord (from tapped notification)

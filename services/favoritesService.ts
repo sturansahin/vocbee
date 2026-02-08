@@ -11,6 +11,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { doc, setDoc, getDoc } from 'firebase/firestore';
 import { db, auth } from '../config/firebase';
 import { VocabularyWord, getStoredVocabulary, LEVELS, Level } from './vocabularyService';
+import { markAsUnsynced } from './storage';
 
 export interface FavoriteItem {
     id: number;
@@ -128,6 +129,7 @@ export async function addToFavorites(word: VocabularyWord, level: Level): Promis
 
         const key = getFavoritesKey();
         await AsyncStorage.setItem(key, JSON.stringify(favoriteItems));
+        await markAsUnsynced();
 
         console.log('Added to favorites:', word.word, `(${level})`);
     } catch (error) {
@@ -155,6 +157,7 @@ export async function removeFromFavorites(wordId: number, level?: Level): Promis
 
         const key = getFavoritesKey();
         await AsyncStorage.setItem(key, JSON.stringify(filtered));
+        await markAsUnsynced();
 
         console.log('Removed from favorites');
     } catch (error) {
@@ -183,6 +186,7 @@ export async function clearFavorites(): Promise<void> {
     try {
         const key = getFavoritesKey();
         await AsyncStorage.removeItem(key);
+        await markAsUnsynced();
 
         console.log('Cleared all favorites');
     } catch (error) {

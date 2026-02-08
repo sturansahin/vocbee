@@ -75,7 +75,6 @@ describe('Storage Service', () => {
             const progress = {
                 currentLevel: 'B2',
                 learnedWords: { B1: [1, 2] },
-                skippedWords: {},
                 lastUpdated: '2024-01-01T00:00:00.000Z',
             };
             await AsyncStorage.setItem('@vocbee_user_progress', JSON.stringify(progress));
@@ -91,7 +90,6 @@ describe('Storage Service', () => {
 
             expect(result.currentLevel).toBe('A1');
             expect(result.learnedWords).toEqual({});
-            expect(result.skippedWords).toEqual({});
         });
 
         it('returns default progress on parse error', async () => {

@@ -20,6 +20,8 @@ import * as Speech from 'expo-speech';
 import { explainGrammar, GrammarResponse } from '../services/groqService';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useTranslation } from 'react-i18next';
+import { getTTSLanguageCode } from '../constants';
+import { STORAGE_KEYS } from '../services/storageKeys';
 
 // =============================================================================
 // RESPONSIVE UTILITIES
@@ -81,9 +83,12 @@ export default function ExampleSentencesScreen() {
      */
     const speakText = useCallback(async (text: string) => {
         try {
+            // Resolve TTS language from stored target language
+            const targetLang = await AsyncStorage.getItem(STORAGE_KEYS.TARGET_LANGUAGE);
+            const ttsLang = getTTSLanguageCode(targetLang || 'english');
             await Speech.stop();
             await Speech.speak(text, {
-                language: 'en-US',
+                language: ttsLang,
                 pitch: 1.0,
                 rate: 0.85,
             });
@@ -106,7 +111,7 @@ export default function ExampleSentencesScreen() {
         setShowAiModal(true);
 
         try {
-            const nativeLanguage = await AsyncStorage.getItem('@native_language') || 'Turkish';
+            const nativeLanguage = await AsyncStorage.getItem(STORAGE_KEYS.NATIVE_LANGUAGE) || 'English';
             const result = await explainGrammar(sentence1, sentence2, nativeLanguage);
             setAiExplanation(result);
         } catch (error) {

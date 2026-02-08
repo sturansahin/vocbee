@@ -13,10 +13,10 @@ export default function SplashScreen({ onFinish }: SplashScreenProps) {
     const lottieRef = useRef<LottieView>(null);
     const fadeAnim = useRef(new Animated.Value(0)).current;
 
-    // Yellow bee color (same as LoginScreen)
-    const beeColor: [number, number, number, number] = [1, 0.78, 0.08, 1]; // #FFC814
+    // Yellow bee color (same as LoginScreen) — hoisted as constant to avoid referential inequality
+    const beeColor = useMemo<[number, number, number, number]>(() => [1, 0.78, 0.08, 1], []);
 
-    // Animated version (wings flapping) - beeColor is constant so empty deps is safe
+    // Animated version (wings flapping) - beeColor is stable via useMemo
     const animatedAnimation = useMemo(() => createSwarmAnimation(beeColor, false), [beeColor]);
 
     useEffect(() => {

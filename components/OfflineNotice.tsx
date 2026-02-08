@@ -1,17 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, Dimensions, Animated } from 'react-native';
+import React, { useState, useEffect, useRef } from 'react';
+import { View, Text, StyleSheet, Animated } from 'react-native';
 import * as Network from 'expo-network';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
 
-const { width } = Dimensions.get('window');
-
 export const OfflineNotice = () => {
     const insets = useSafeAreaInsets();
     const { t } = useTranslation();
     const [isConnected, setIsConnected] = useState(true);
-    const [animation] = useState(new Animated.Value(0));
+    // Use useRef for Animated.Value to avoid re-creation on re-render
+    const animation = useRef(new Animated.Value(0)).current;
 
     useEffect(() => {
         const checkConnection = async () => {
@@ -30,22 +29,28 @@ export const OfflineNotice = () => {
             duration: 300,
             useNativeDriver: true,
         }).start();
-    }, [isConnected]);
+    }, [isConnected, animation]);
 
-    if (isConnected) return null;
-
+    // Always render to allow slide-up animation; use opacity + translateY to hide
     const translateY = animation.interpolate({
         inputRange: [0, 1],
         outputRange: [-100, 0],
     });
 
+    const opacity = animation.interpolate({
+        inputRange: [0, 1],
+        outputRange: [0, 1],
+    });
+
     return (
         <Animated.View
+            pointerEvents={isConnected ? 'none' : 'auto'}
             style={[
                 styles.container,
                 {
                     top: insets.top,
-                    transform: [{ translateY }]
+                    transform: [{ translateY }],
+                    opacity,
                 }
             ]}
         >

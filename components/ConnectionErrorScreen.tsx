@@ -4,7 +4,6 @@ import {
     Text,
     TouchableOpacity,
     StyleSheet,
-    Image,
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '../context/ThemeContext';
@@ -43,7 +42,7 @@ export function ConnectionErrorScreen() {
                         <Text style={styles.retryButtonText}>{t('common.loading')}</Text>
                     ) : (
                         <>
-                            <MaterialIcons name="refresh" size={20} color="#FFFFFF" />
+                            <MaterialIcons name="refresh" size={20} color="#000000" />
                             <Text style={styles.retryButtonText}>{t('connection.retry')}</Text>
                         </>
                     )}
@@ -94,7 +93,7 @@ const styles = StyleSheet.create({
         gap: 8,
     },
     retryButtonText: {
-        color: '#FFFFFF',
+        color: '#000000',
         fontSize: 16,
         fontWeight: '600',
     },

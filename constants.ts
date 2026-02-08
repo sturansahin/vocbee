@@ -86,5 +86,39 @@ export const LEVELS = [
   },
 ];
 
+// ─── TTS Language Code Mapping ────────────────────────────────────────────
+// Maps internal language IDs to BCP-47 language tags for Text-to-Speech
+export const TTS_LANGUAGE_MAP: Record<string, string> = {
+  amharic: 'am-ET',
+  arabic: 'ar-SA',
+  chinese: 'zh-CN',
+  english: 'en-US',
+  french: 'fr-FR',
+  german: 'de-DE',
+  hindi: 'hi-IN',
+  indonesian: 'id-ID',
+  italian: 'it-IT',
+  japanese: 'ja-JP',
+  korean: 'ko-KR',
+  persian: 'fa-IR',
+  portuguese: 'pt-BR',
+  russian: 'ru-RU',
+  serbian: 'sr-RS',
+  spanish: 'es-ES',
+  swahili: 'sw-KE',
+  thai: 'th-TH',
+  turkish: 'tr-TR',
+  urdu: 'ur-PK',
+  vietnamese: 'vi-VN',
+};
+
+/**
+ * Get BCP-47 TTS language code from internal language ID.
+ * Falls back to 'en-US' if language is not mapped.
+ */
+export function getTTSLanguageCode(languageId: string): string {
+  return TTS_LANGUAGE_MAP[languageId?.toLowerCase()] || 'en-US';
+}
+
 // Level Test: Questions are now dynamically generated from vocabulary files
 // via generateTestQuestions() in LevelTestScreen.tsx — supports all 21 languages.

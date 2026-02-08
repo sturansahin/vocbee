@@ -2,11 +2,13 @@
 // Create a .env file with EXPO_PUBLIC_GROQ_API_KEY=your_key
 const GROQ_API_KEY = process.env.EXPO_PUBLIC_GROQ_API_KEY || '';
 const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
+const FETCH_TIMEOUT_MS = 30_000; // 30 second timeout for API calls
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { STORAGE_KEYS } from './storageKeys';
 
 // Persistent + in-memory grammar cache
-const GRAMMAR_CACHE_KEY = '@grammar_cache';
+const GRAMMAR_CACHE_KEY = STORAGE_KEYS.GRAMMAR_CACHE;
 const grammarCache = new Map<string, GrammarResponse>();
 const MAX_CACHE_ENTRIES = 100;
 
@@ -30,10 +32,18 @@ async function ensureCacheLoaded(): Promise<void> {
 
 async function persistCache(): Promise<void> {
     try {
-        // Keep only the last MAX_CACHE_ENTRIES
+        // Keep only the last MAX_CACHE_ENTRIES in both memory and disk
         const entries = Array.from(grammarCache.entries());
-        const trimmed = entries.slice(-MAX_CACHE_ENTRIES);
-        await AsyncStorage.setItem(GRAMMAR_CACHE_KEY, JSON.stringify(trimmed));
+        if (entries.length > MAX_CACHE_ENTRIES) {
+            const trimmed = entries.slice(-MAX_CACHE_ENTRIES);
+            grammarCache.clear();
+            for (const [key, value] of trimmed) {
+                grammarCache.set(key, value);
+            }
+            await AsyncStorage.setItem(GRAMMAR_CACHE_KEY, JSON.stringify(trimmed));
+        } else {
+            await AsyncStorage.setItem(GRAMMAR_CACHE_KEY, JSON.stringify(entries));
+        }
     } catch (e) {
         console.error('Error persisting grammar cache:', e);
     }
@@ -57,11 +67,12 @@ function isRateLimited(): boolean {
     rateLimitState.timestamps = rateLimitState.timestamps.filter(
         (ts) => now - ts < RATE_LIMIT_WINDOW_MS
     );
-    if (rateLimitState.timestamps.length >= RATE_LIMIT_MAX_REQUESTS) {
-        return true;
-    }
-    rateLimitState.timestamps.push(now);
-    return false;
+    return rateLimitState.timestamps.length >= RATE_LIMIT_MAX_REQUESTS;
+}
+
+/** Record a rate limit slot. Call ONLY when actually making a request. */
+function recordRateLimitHit(): void {
+    rateLimitState.timestamps.push(Date.now());
 }
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -99,6 +110,9 @@ export const explainGrammar = async (
             throw new Error('Too many requests. Please wait a moment and try again.');
         }
 
+        // Record rate limit hit only when actually making the request
+        recordRateLimitHit();
+
         const prompt = `Analyze the grammar of the following two sentences.
 
 Explain everything in ${outputLanguage}.
@@ -130,18 +144,25 @@ JSON format:
 Sentence 1: "${sentence1}"
 Sentence 2: "${sentence2}"`;
 
-        const response = await fetch(GROQ_API_URL, {
-            method: 'POST',
-            headers: {
-                'Authorization': `Bearer ${GROQ_API_KEY}`,
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                model: 'llama-3.3-70b-versatile',
-                messages: [
-                    {
-                        role: 'system',
-                        content: `You are an excellent language teacher.
+        // Fetch with timeout to prevent indefinite hangs
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
+
+        let response: Response;
+        try {
+            response = await fetch(GROQ_API_URL, {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${GROQ_API_KEY}`,
+                    'Content-Type': 'application/json'
+                },
+                signal: controller.signal,
+                body: JSON.stringify({
+                    model: 'llama-3.3-70b-versatile',
+                    messages: [
+                        {
+                            role: 'system',
+                            content: `You are an excellent language teacher.
 Your goal is not only to explain grammar, but to help the learner understand how to recognize and use it.
 
 Teach in a practical and intuitive way.
@@ -153,17 +174,20 @@ Focus on:
 - when this structure is commonly used
 
 Follow the output format exactly.`
-                    },
-                    {
-                        role: 'user',
-                        content: prompt
-                    }
-                ],
-                temperature: 0.3,
-                max_tokens: 1024,
-                response_format: { type: "json_object" }
-            })
-        });
+                        },
+                        {
+                            role: 'user',
+                            content: prompt
+                        }
+                    ],
+                    temperature: 0.3,
+                    max_tokens: 1024,
+                    response_format: { type: "json_object" }
+                })
+            });
+        } finally {
+            clearTimeout(timeoutId);
+        }
 
         const data = await response.json();
 

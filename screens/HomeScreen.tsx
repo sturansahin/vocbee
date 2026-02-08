@@ -27,6 +27,7 @@ import { SwarmLogo } from '../components/SwarmLogo';
 import {
     VocabularyWord,
     Level,
+    LEVELS,
     getStoredVocabulary,
     shuffleArray,
     isVocabularyGenerated,
@@ -41,7 +42,6 @@ import {
     checkAndAdvanceLevel,
     getLearnedCount,
     getTotalWords,
-    markWordAsSkipped,
     saveLastWordId,
     getLastWordId
 } from '../services/progressService';
@@ -51,6 +51,8 @@ import { useAlert } from '../components/CustomAlert';
 import { SafeBannerAd } from '../components/SafeBannerAd';
 import { loadInterstitial, showInterstitial, AD_IDS, getBannerAdSize } from '../services/adMobService';
 import { useTranslation } from 'react-i18next';
+import { getTTSLanguageCode } from '../constants';
+import { STORAGE_KEYS } from '../services/storageKeys';
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;
@@ -77,6 +79,9 @@ export default function HomeScreen() {
     const [learnedCount, setLearnedCount] = useState(0);
     const [totalCount, setTotalCount] = useState(0);
     const [isCurrentWordFavorite, setIsCurrentWordFavorite] = useState(false);
+
+    // TTS language code for target language pronunciation
+    const [ttsLanguage, setTtsLanguage] = useState('en-US');
 
     // Ref to track if initial load has been done
     const hasInitiallyLoaded = useRef(false);
@@ -297,7 +302,9 @@ export default function HomeScreen() {
             ]),
         ]);
 
-        beeAnimationRef.current = animation.start(() => {
+        beeAnimationRef.current?.stop();
+        beeAnimationRef.current = animation;
+        animation.start(() => {
             setBeesAnimating(false);
         });
     }, []);
@@ -348,7 +355,10 @@ export default function HomeScreen() {
             ]);
         });
 
-        beeAnimationRef.current = Animated.stagger(50, animations).start(() => {
+        beeAnimationRef.current?.stop();
+        const staggerAnim = Animated.stagger(50, animations);
+        beeAnimationRef.current = staggerAnim;
+        staggerAnim.start(() => {
             setBeesAnimating(false);
             callback?.();
         });
@@ -437,6 +447,7 @@ export default function HomeScreen() {
             // Check if we have a saved shuffle order for this language pair and level
             const nativeLang = await AsyncStorage.getItem('@native_language') || 'unknown';
             const targetLang = await AsyncStorage.getItem('@target_language') || 'unknown';
+            setTtsLanguage(getTTSLanguageCode(targetLang));
             const shuffleOrderKey = `@shuffle_order_${nativeLang}_${targetLang}_${level}`;
             const savedOrderJson = await AsyncStorage.getItem(shuffleOrderKey);
 
@@ -523,23 +534,37 @@ export default function HomeScreen() {
         useCallback(() => {
             const checkAndUpdate = async () => {
                 // Check for pending notification word first
-                const pendingWordId = await getPendingNotificationWord();
-                if (pendingWordId !== null) {
-                    // Find the word - must validate level/language match
-                    const level = await getCurrentLevel();
-                    const vocabulary = await getStoredVocabulary(level);
-                    const pendingWord = vocabulary.find(w => w.id === pendingWordId);
+                const pending = await getPendingNotificationWord();
+                if (pending !== null) {
+                    const { wordId, level: pendingLevel, targetLanguage } = pending;
 
-                    if (pendingWord) {
-                        // Put the pending word at the front
-                        const otherWords = words.filter(w => w.id !== pendingWordId);
-                        setWords([pendingWord, ...otherWords]);
-                        setCurrentWordIndex(0);
-                        console.log(`Showing word from notification: ${pendingWord.word}`);
+                    // Validate level and language match before showing
+                    const currentLevelValue = await getCurrentLevel();
+                    if (pendingLevel && pendingLevel !== currentLevelValue) {
+                        console.log(`[HomeScreen] Pending word ${wordId} ignored - level changed (${pendingLevel} -> ${currentLevelValue})`);
                     } else {
-                        console.log(`[HomeScreen] Pending word ${pendingWordId} not found in current level - likely due to level/language change`);
+                        const currentTargetLanguage = await AsyncStorage.getItem('@target_language');
+                        if (targetLanguage && currentTargetLanguage && targetLanguage !== currentTargetLanguage) {
+                            console.log(`[HomeScreen] Pending word ${wordId} ignored - language changed (${targetLanguage} -> ${currentTargetLanguage})`);
+                        } else {
+                            const level = pendingLevel && LEVELS.includes(pendingLevel as Level)
+                                ? (pendingLevel as Level)
+                                : currentLevelValue;
+                            const vocabulary = await getStoredVocabulary(level);
+                            const pendingWord = vocabulary.find(w => w.id === wordId);
+
+                            if (pendingWord) {
+                                // Put the pending word at the front
+                                const otherWords = words.filter(w => w.id !== wordId);
+                                setWords([pendingWord, ...otherWords]);
+                                setCurrentWordIndex(0);
+                                console.log(`Showing word from notification: ${pendingWord.word}`);
+                                return;
+                            }
+
+                            console.log(`[HomeScreen] Pending word ${wordId} not found in current level - likely due to level/language change`);
+                        }
                     }
-                    return;
                 }
 
                 if (hasInitiallyLoaded.current) {
@@ -657,9 +682,6 @@ export default function HomeScreen() {
                     await loadData(true);
                     return;
                 }
-            } else if (direction === 'left' && swipedWord) {
-                // Mark word as skipped
-                await markWordAsSkipped(currentLevel, swipedWord.id);
             }
 
             // Save current word ID for resuming later (next word's ID)
@@ -1032,7 +1054,7 @@ export default function HomeScreen() {
                                                 try {
                                                     await Speech.stop(); // Stop any ongoing speech
                                                     await Speech.speak(currentWord.word, {
-                                                        language: 'en-US',
+                                                        language: ttsLanguage,
                                                         pitch: 1.0,
                                                         rate: 0.75,
                                                     });
@@ -1083,7 +1105,7 @@ export default function HomeScreen() {
                                                     try {
                                                         await Speech.stop(); // Stop any ongoing speech
                                                         await Speech.speak(currentWord.sentence1, {
-                                                            language: 'en-US',
+                                                            language: ttsLanguage,
                                                             pitch: 1.0,
                                                             rate: 0.75,
                                                         });

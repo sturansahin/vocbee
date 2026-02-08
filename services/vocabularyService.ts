@@ -9,6 +9,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Asset } from 'expo-asset';
 // @ts-ignore - expo-file-system/legacy is valid in SDK 54 but typescript might not know it yet
 import * as FileSystem from 'expo-file-system/legacy';
+import { STORAGE_KEYS } from './storageKeys';
 
 // Vocabulary assets organized by language.
 // NOTE: Vocabulary files are stored as text assets (JSON content) to avoid Metro bundling/parsing
@@ -295,10 +296,10 @@ export async function mergeVocabulary(
     return mergedWords;
 }
 
-// Storage keys
-const VOCABULARY_KEY = '@vocabulary';
-const NATIVE_LANGUAGE_KEY = '@native_language';
-const TARGET_LANGUAGE_KEY = '@target_language';
+// Storage keys (centralized via storageKeys.ts)
+const VOCABULARY_KEY = STORAGE_KEYS.VOCABULARY;
+const NATIVE_LANGUAGE_KEY = STORAGE_KEYS.NATIVE_LANGUAGE;
+const TARGET_LANGUAGE_KEY = STORAGE_KEYS.TARGET_LANGUAGE;
 
 /**
  * Generate and store vocabulary for a user's language pair

@@ -218,35 +218,19 @@ export default function SettingsScreen() {
             return;
          }
       }
-      // setReminderEnabled(newValue); // Handled by effect
-      await updateNotificationSettings({
-         enabled: newValue,
-         // Pass other current values to ensure consistency or just partial? Partial is enough.
-         // updateNotificationSettings handles merging.
-      });
+      setReminderEnabled(newValue);
+      updateNotificationSettings({ enabled: newValue }).catch(console.error);
    };
 
    // Handle auto-mark toggle
-   const handleAutoMarkToggle = async () => {
+   const handleAutoMarkToggle = () => {
       const newValue = !autoMarkLearned;
-      // setAutoMarkLearned(newValue); // Handled by effect
-      await updateNotificationSettings({ autoMarkLearned: newValue });
+      setAutoMarkLearned(newValue);
+      updateNotificationSettings({ autoMarkLearned: newValue }).catch(console.error);
    };
 
    // Save time settings
    const saveTimeSettings = async (type: 'start' | 'end', hour: string, minute: string) => {
-      const newStartMinutes = type === 'start'
-         ? parseInt(hour) * 60 + parseInt(minute)
-         : parseInt(startHour) * 60 + parseInt(startMinute);
-      const newEndMinutes = type === 'end'
-         ? parseInt(hour) * 60 + parseInt(minute)
-         : parseInt(endHour) * 60 + parseInt(endMinute);
-
-      if (newEndMinutes <= newStartMinutes) {
-         showAlert({ title: t('common.warning'), message: t('settings.endTimeBeforeStart') });
-         return;
-      }
-
       if (type === 'start') {
          await updateNotificationSettings({
             startHour: parseInt(hour),
@@ -639,7 +623,7 @@ export default function SettingsScreen() {
                                  await resetProgress();
                                  // Cancel stale notifications and reschedule with reset vocabulary
                                  await cancelAllNotifications();
-                                 await scheduleVocabularyNotifications();
+                                 scheduleVocabularyNotifications().catch(console.error);
                                  // Sync empty progress to Firebase
                                  await forceSync(user?.uid || '');
                                  showAlert({ title: t('common.success'), message: t('settings.resetProgressSuccess') });
@@ -863,14 +847,20 @@ export default function SettingsScreen() {
                   <TouchableOpacity
                      style={[styles.confirmButton, { backgroundColor: colors.primary }]}
                      onPress={() => {
-                        if (showTimePicker === 'start') {
-                           setStartHour(tempHour);
-                           setStartMinute(tempMinute);
-                        } else {
-                           setEndHour(tempHour);
-                           setEndMinute(tempMinute);
-                        }
+                        const type = showTimePicker as 'start' | 'end';
+                        const h = tempHour;
+                        const m = tempMinute;
+                        // Close modal FIRST to unmount heavy ScrollViews
                         setShowTimePicker(null);
+                        if (type === 'start') {
+                           setStartHour(h);
+                           setStartMinute(m);
+                        } else {
+                           setEndHour(h);
+                           setEndMinute(m);
+                        }
+                        // Fire-and-forget — scheduling already runs in background
+                        saveTimeSettings(type, h, m).catch(console.error);
                      }}
                   >
                      <Text style={styles.confirmButtonText}>{t('common.confirm')}</Text>
@@ -904,6 +894,8 @@ export default function SettingsScreen() {
                         onPress={() => {
                            setFrequency(freqKey);
                            setShowFrequencyPicker(false);
+                           // Fire-and-forget — scheduling already runs in background
+                           handleFrequencyChange(freqKey).catch(console.error);
                         }}
                      >
                         <Text style={[
@@ -1034,7 +1026,7 @@ export default function SettingsScreen() {
                                  // This ensures all tracked notifications have correct level metadata
                                  const settings = await getNotificationSettings();
                                  if (settings.enabled) {
-                                    await scheduleVocabularyNotifications();
+                                    scheduleVocabularyNotifications().catch(console.error);
                                     console.log('[Settings] Notifications rescheduled after level change');
                                  }
                               } catch (error) {
@@ -1093,10 +1085,10 @@ export default function SettingsScreen() {
                         { borderBottomColor: colors.border },
                         autoMarkLearned && { backgroundColor: `${colors.primary}20` }
                      ]}
-                     onPress={async () => {
-                        // setAutoMarkLearned(true); // Handled by effect
-                        await updateNotificationSettings({ autoMarkLearned: true });
+                     onPress={() => {
+                        setAutoMarkLearned(true);
                         setShowAutoMarkPicker(false);
+                        updateNotificationSettings({ autoMarkLearned: true }).catch(console.error);
                      }}
                   >
                      <View style={styles.autoMarkOptionContent}>
@@ -1125,10 +1117,10 @@ export default function SettingsScreen() {
                         { borderBottomWidth: 0 },
                         !autoMarkLearned && { backgroundColor: `${colors.primary}20` }
                      ]}
-                     onPress={async () => {
-                        // setAutoMarkLearned(false); // Handled by effect
-                        await updateNotificationSettings({ autoMarkLearned: false });
+                     onPress={() => {
+                        setAutoMarkLearned(false);
                         setShowAutoMarkPicker(false);
+                        updateNotificationSettings({ autoMarkLearned: false }).catch(console.error);
                      }}
                   >
                      <View style={styles.autoMarkOptionContent}>

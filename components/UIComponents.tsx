@@ -29,6 +29,8 @@ export const Button: React.FC<ButtonProps> = ({
     switch (variant) {
       case 'primary':
         return [styles.buttonPrimary, { backgroundColor: colors.primary }];
+      case 'secondary':
+        return [styles.buttonPrimary, { backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.border }];
       case 'outline':
         return [styles.buttonOutline, { borderColor: colors.border }];
       case 'ghost':
@@ -42,10 +44,24 @@ export const Button: React.FC<ButtonProps> = ({
     switch (variant) {
       case 'primary':
         return [styles.textPrimary, { color: '#000000' }];
+      case 'secondary':
+        return [styles.textDefault, { color: colors.text }];
+      case 'outline':
+        return [styles.textDefault, { color: colors.text }];
       case 'ghost':
         return [styles.textGhost, { color: colors.textSecondary }];
       default:
-        return [styles.textDefault, { color: '#fff' }]; // Default usually white on primary? Wait. textDefault was #fff.
+        return [styles.textPrimary, { color: '#000000' }];
+    }
+  };
+
+  const getIconColor = () => {
+    switch (variant) {
+      case 'primary': return '#000000';
+      case 'secondary': return colors.text;
+      case 'outline': return colors.text;
+      case 'ghost': return colors.textSecondary;
+      default: return '#000000';
     }
   };
 
@@ -56,7 +72,7 @@ export const Button: React.FC<ButtonProps> = ({
       disabled={disabled}
       style={[styles.buttonBase, getButtonStyle(), fullWidth && styles.fullWidth, disabled && styles.buttonDisabled]}
     >
-      {icon && <MaterialIcons name={icon} size={20} color={variant === 'primary' ? '#000000' : 'white'} />}
+      {icon && <MaterialIcons name={icon} size={20} color={getIconColor()} />}
       <Text style={[styles.buttonText, getTextStyle()]}>{title}</Text>
       {variant === 'primary' && !icon && (
         <MaterialIcons name="arrow-forward" size={20} color={'#000000'} />
