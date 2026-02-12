@@ -4,6 +4,7 @@ import { getLocales } from 'expo-localization';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import resources from '../locales';
 import { STORAGE_KEYS } from './storageKeys';
+import { applyRTLLayout } from '../utils/rtl';
 
 const USER_LANGUAGE_KEY = STORAGE_KEYS.USER_LANGUAGE;
 
@@ -58,6 +59,11 @@ i18n
             useSuspense: false, // helpful for React Native
         },
     });
+
+// Apply RTL layout when language changes (e.g. user switches to Arabic/Persian/Urdu)
+i18n.on('languageChanged', (lng: string) => {
+    applyRTLLayout(lng);
+});
 
 // Get device language code
 export const getDeviceLanguage = (): string => {

@@ -214,7 +214,17 @@ export default function SettingsScreen() {
       if (newValue) {
          const granted = await requestNotificationPermissions();
          if (!granted) {
-            showAlert({ title: t('settings.permissionRequired'), message: t('settings.enableNotificationsInSettings') });
+            showAlert({
+               title: t('settings.permissionRequired'),
+               message: t('settings.enableNotificationsInSettings'),
+               buttons: [
+                  { text: t('common.cancel'), style: 'cancel' },
+                  {
+                     text: t('settings.openSettings'),
+                     onPress: () => Linking.openSettings(),
+                  },
+               ],
+            });
             return;
          }
       }
@@ -935,6 +945,16 @@ export default function SettingsScreen() {
                            const deviceLang = await setToDeviceLanguage();
                            setSelectedLanguage(deviceLang);
                            setIsSystemLanguage(true);
+                           
+                           // Reschedule notifications with new language (system default)
+                           const settings = await getNotificationSettings();
+                           if (settings.enabled) {
+                              scheduleVocabularyNotifications().catch(err =>
+                                 console.error('[Settings] Failed to reschedule notifications after system language change:', err)
+                              );
+                              console.log('[Settings] Notifications rescheduled after switching to system language');
+                           }
+                           
                            setShowLanguagePicker(false);
                         }}
                      >
@@ -965,6 +985,17 @@ export default function SettingsScreen() {
                               setSelectedLanguage(langCode);
                               setIsSystemLanguage(false);
                               await i18n.changeLanguage(langCode);
+                              
+                              // Reschedule notifications with new language
+                              // This ensures notification content (i18n.t strings) uses the new language
+                              const settings = await getNotificationSettings();
+                              if (settings.enabled) {
+                                 scheduleVocabularyNotifications().catch(err =>
+                                    console.error('[Settings] Failed to reschedule notifications after language change:', err)
+                                 );
+                                 console.log('[Settings] Notifications rescheduled after UI language change');
+                              }
+                              
                               setShowLanguagePicker(false);
                            }}
                         >

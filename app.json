@@ -17,11 +17,17 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.vocbee.app"
+      "bundleIdentifier": "com.vocbee.app",
+      "infoPlist": {
+        "NSUserTrackingUsageDescription": "This identifier will be used to deliver personalized ads to you.",
+        "NSCameraUsageDescription": "VocBee needs camera access to take a profile photo.",
+        "NSPhotoLibraryUsageDescription": "VocBee needs photo library access to choose a profile photo."
+      }
     },
     "android": {
       "package": "com.vocbee.app",
       "googleServicesFile": "./google-services.json",
+      "permissions": ["POST_NOTIFICATIONS"],
       "adaptiveIcon": {
         "foregroundImage": "./assets/icons/vocicon.png",
         "backgroundColor": "#ffffff"
@@ -35,12 +41,21 @@
         "react-native-google-mobile-ads",
         {
           "androidAppId": "ca-app-pub-3149431742550187~5197491242",
-          "iosAppId": "ca-app-pub-3149431742550187~5197491242"
+          "iosAppId": "ca-app-pub-3149431742550187~5197491242",
+          "userTrackingUsageDescription": "This identifier will be used to deliver personalized ads to you."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "VocBee needs photo library access to choose a profile photo.",
+          "cameraPermission": "VocBee needs camera access to take a profile photo."
         }
       ],
       "expo-localization"
     ],
     "extra": {
+      "supportsRTL": true,
       "eas": {
         "projectId": "66067389-3a15-46ea-ade9-ed9a56f5d08b"
       }

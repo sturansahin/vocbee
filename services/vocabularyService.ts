@@ -298,11 +298,19 @@ export async function mergeVocabulary(
 
 // Storage keys (centralized via storageKeys.ts)
 const VOCABULARY_KEY = STORAGE_KEYS.VOCABULARY;
+const VOCABULARY_LEVEL_PREFIX = STORAGE_KEYS.VOCABULARY_LEVEL_PREFIX;
 const NATIVE_LANGUAGE_KEY = STORAGE_KEYS.NATIVE_LANGUAGE;
 const TARGET_LANGUAGE_KEY = STORAGE_KEYS.TARGET_LANGUAGE;
 
+/** Get the per-level storage key */
+function vocabularyLevelKey(level: Level): string {
+    return `${VOCABULARY_LEVEL_PREFIX}${level}`;
+}
+
 /**
- * Generate and store vocabulary for a user's language pair
+ * Generate and store vocabulary for a user's language pair.
+ * Saves each level to its own AsyncStorage key to avoid loading
+ * all ~3 000+ words into memory when only one level is needed.
  */
 export async function generateVocabulary(
     nativeLanguage: string,
@@ -314,16 +322,21 @@ export async function generateVocabulary(
         await AsyncStorage.setItem(NATIVE_LANGUAGE_KEY, nativeLanguage);
         await AsyncStorage.setItem(TARGET_LANGUAGE_KEY, targetLanguage);
 
-        const allVocabulary: { [level: string]: VocabularyWord[] } = {};
+        const pairs: [string, string][] = [];
 
         for (const level of LEVELS) {
             const merged = await mergeVocabulary(nativeLanguage, targetLanguage, level);
-            allVocabulary[level] = merged;
+            pairs.push([vocabularyLevelKey(level), JSON.stringify(merged)]);
             console.log(`  ${level}: ${merged.length} words`);
         }
 
-        await AsyncStorage.setItem(VOCABULARY_KEY, JSON.stringify(allVocabulary));
-        console.log('Vocabulary saved to storage');
+        // Write all levels in one batch
+        await AsyncStorage.multiSet(pairs);
+
+        // Remove legacy monolith key if present (one-time migration cleanup)
+        await AsyncStorage.removeItem(VOCABULARY_KEY).catch(() => {});
+
+        console.log('Vocabulary saved to per-level storage');
     } catch (error) {
         console.error('Error generating vocabulary:', error);
         throw error;
@@ -331,18 +344,38 @@ export async function generateVocabulary(
 }
 
 /**
- * Get stored vocabulary for a specific level
+ * Get stored vocabulary for a specific level.
+ * Checks per-level key first, falls back to legacy monolith key
+ * for backward compatibility (auto-migrates on first read).
  */
 export async function getStoredVocabulary(level: Level): Promise<VocabularyWord[]> {
     try {
-        const data = await AsyncStorage.getItem(VOCABULARY_KEY);
-        if (!data) {
-            console.warn('No stored vocabulary found');
-            return [];
+        // 1) Try per-level key
+        const perLevelData = await AsyncStorage.getItem(vocabularyLevelKey(level));
+        if (perLevelData) {
+            return JSON.parse(perLevelData) as VocabularyWord[];
         }
 
-        const vocabulary = JSON.parse(data);
-        return vocabulary[level] || [];
+        // 2) Fallback: check legacy monolith key and auto-migrate
+        const legacyData = await AsyncStorage.getItem(VOCABULARY_KEY);
+        if (legacyData) {
+            console.log('Migrating vocabulary from legacy monolith key to per-level keys');
+            const allVocabulary = JSON.parse(legacyData) as { [level: string]: VocabularyWord[] };
+
+            // Write each level into its own key
+            const pairs: [string, string][] = Object.entries(allVocabulary).map(
+                ([lvl, words]) => [vocabularyLevelKey(lvl as Level), JSON.stringify(words)]
+            );
+            await AsyncStorage.multiSet(pairs);
+
+            // Remove the legacy key
+            await AsyncStorage.removeItem(VOCABULARY_KEY).catch(() => {});
+
+            return allVocabulary[level] ?? [];
+        }
+
+        console.warn('No stored vocabulary found');
+        return [];
     } catch (error) {
         console.error('Error getting stored vocabulary:', error);
         return [];
@@ -350,12 +383,19 @@ export async function getStoredVocabulary(level: Level): Promise<VocabularyWord[
 }
 
 /**
- * Check if vocabulary has been generated
+ * Check if vocabulary has been generated.
+ * Returns true if any per-level key or the legacy key exists.
  */
 export async function isVocabularyGenerated(): Promise<boolean> {
     try {
-        const data = await AsyncStorage.getItem(VOCABULARY_KEY);
-        return data !== null;
+        // Check per-level keys first (fast path — only need one to exist)
+        for (const level of LEVELS) {
+            const data = await AsyncStorage.getItem(vocabularyLevelKey(level));
+            if (data !== null) return true;
+        }
+        // Fallback to legacy key
+        const legacy = await AsyncStorage.getItem(VOCABULARY_KEY);
+        return legacy !== null;
     } catch (error) {
         console.error('Error checking vocabulary:', error);
         return false;
@@ -393,14 +433,18 @@ export function shuffleArray<T>(array: T[]): T[] {
 }
 
 /**
- * Clear all vocabulary data
+ * Clear all vocabulary data (per-level keys + legacy monolith key)
  */
 export async function clearVocabulary(): Promise<void> {
     try {
-        await AsyncStorage.removeItem(VOCABULARY_KEY);
-        await AsyncStorage.removeItem(NATIVE_LANGUAGE_KEY);
-        await AsyncStorage.removeItem(TARGET_LANGUAGE_KEY);
-        console.log('Vocabulary cleared');
+        const perLevelKeys = LEVELS.map(level => vocabularyLevelKey(level));
+        await AsyncStorage.multiRemove([
+            VOCABULARY_KEY,       // legacy monolith
+            ...perLevelKeys,      // per-level keys
+            NATIVE_LANGUAGE_KEY,
+            TARGET_LANGUAGE_KEY,
+        ]);
+        console.log('Vocabulary cleared (per-level + legacy)');
     } catch (error) {
         console.error('Error clearing vocabulary:', error);
     }

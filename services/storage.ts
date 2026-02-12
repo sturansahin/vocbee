@@ -119,10 +119,11 @@ export const clearAllLocalData = async (): Promise<void> => {
             STORAGE_KEYS.SKIPPED,
             STORAGE_KEYS.CURRENT_LEVEL,
             STORAGE_KEYS.LAST_WORD_ID,
-            // Vocabulary and Language keys
+            // Vocabulary and Language keys (legacy monolith + per-level)
             STORAGE_KEYS.VOCABULARY,
             STORAGE_KEYS.NATIVE_LANGUAGE,
             STORAGE_KEYS.TARGET_LANGUAGE,
+            ...allKeys.filter(key => key.startsWith(STORAGE_KEYS.VOCABULARY_LEVEL_PREFIX)),
             STORAGE_KEYS.USER_LEVEL,
             // Notification keys
             STORAGE_KEYS.NOTIFICATION_SETTINGS,

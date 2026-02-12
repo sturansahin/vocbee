@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Constants, { ExecutionEnvironment } from 'expo-constants';
-import { Alert } from 'react-native';
+import { Alert, Platform } from 'react-native';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Constants & IDs
@@ -23,7 +23,11 @@ let AdEventType: any = null;
 let BannerAd: any = null;
 let BannerAdSize: any = null;
 
+let AdsConsent: any = null;
+let AdsConsentStatus: any = null;
+
 let isModuleLoaded = false;
+let consentObtained = false;
 
 // Helper to safely load the module
 function loadAdMobModule() {
@@ -55,6 +59,13 @@ function loadAdMobModule() {
             AdEventType = adMob.AdEventType;
             BannerAd = adMob.BannerAd;
             BannerAdSize = adMob.BannerAdSize;
+            // UMP Consent
+            if (adMob.AdsConsent) {
+                AdsConsent = adMob.AdsConsent;
+            }
+            if (adMob.AdsConsentStatus) {
+                AdsConsentStatus = adMob.AdsConsentStatus;
+            }
             AdMobModule = true;
         } else {
             throw new Error('AdMob module loaded but exports are missing');
@@ -68,6 +79,58 @@ function loadAdMobModule() {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
+// UMP / GDPR Consent
+// ─────────────────────────────────────────────────────────────────────────────
+
+/**
+ * Request user consent via Google UMP (User Messaging Platform).
+ * MUST be called BEFORE initializeAdMob() to comply with EU User Consent Policy.
+ *
+ * On iOS 14.5+ this also triggers the ATT (App Tracking Transparency) prompt
+ * when the react-native-google-mobile-ads plugin has userTrackingUsageDescription
+ * configured in app.json.
+ *
+ * Safe to call in Expo Go — gracefully skips.
+ */
+export const requestAdConsent = async (): Promise<void> => {
+    loadAdMobModule();
+    if (!AdMobModule) {
+        console.log('[AdMob] Consent skipped — module not available');
+        consentObtained = true; // Allow mock ads in Expo Go
+        return;
+    }
+
+    if (!AdsConsent) {
+        // Older module version without UMP support — skip gracefully
+        console.log('[AdMob] AdsConsent not available — skipping UMP flow');
+        consentObtained = true;
+        return;
+    }
+
+    try {
+        // 1. Request the latest consent information
+        const consentInfo = await AdsConsent.requestInfoUpdate();
+        console.log('[AdMob] Consent info:', JSON.stringify(consentInfo));
+
+        // 2. Show consent form if required & available
+        if (
+            consentInfo.isConsentFormAvailable &&
+            consentInfo.status === (AdsConsentStatus?.REQUIRED ?? 'REQUIRED')
+        ) {
+            const formResult = await AdsConsent.showForm();
+            console.log('[AdMob] Consent form result:', JSON.stringify(formResult));
+        }
+
+        consentObtained = true;
+        console.log('[AdMob] Consent flow completed');
+    } catch (error) {
+        // Consent errors should not block the app — fallback to non-personalized ads
+        console.warn('[AdMob] Consent request failed (non-blocking):', error);
+        consentObtained = true;
+    }
+};
+
+// ─────────────────────────────────────────────────────────────────────────────
 // Initialization
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -77,6 +140,12 @@ export const initializeAdMob = async () => {
     loadAdMobModule(); // Try to load
 
     if (!AdMobModule || isInitialized) return;
+
+    // Ensure consent has been requested before initializing
+    if (!consentObtained) {
+        console.warn('[AdMob] initializeAdMob called before requestAdConsent — requesting now');
+        await requestAdConsent();
+    }
 
     try {
         await MobileAds().initialize();

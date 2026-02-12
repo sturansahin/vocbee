@@ -1,7 +1,12 @@
-// API key is loaded from environment variables for security
-// Create a .env file with EXPO_PUBLIC_GROQ_API_KEY=your_key
-const GROQ_API_KEY = process.env.EXPO_PUBLIC_GROQ_API_KEY || '';
-const GROQ_API_URL = 'https://api.groq.com/openai/v1/chat/completions';
+// ─── Groq Grammar Explanation Service ─────────────────────────────────────────
+// API calls are routed through a backend proxy to keep the API key server-side.
+// The proxy URL is set via EXPO_PUBLIC_GRAMMAR_PROXY_URL env variable.
+// Fallback: direct Groq API call (only for local development with EXPO_PUBLIC_GROQ_API_KEY).
+// In production builds, ONLY the proxy should be used — never ship the raw API key.
+// ──────────────────────────────────────────────────────────────────────────────
+
+const GRAMMAR_PROXY_URL = process.env.EXPO_PUBLIC_GRAMMAR_PROXY_URL || '';
+const GROQ_API_KEY_DEV = __DEV__ ? (process.env.EXPO_PUBLIC_GROQ_API_KEY || '') : '';
 const FETCH_TIMEOUT_MS = 30_000; // 30 second timeout for API calls
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -150,19 +155,35 @@ Sentence 2: "${sentence2}"`;
 
         let response: Response;
         try {
-            response = await fetch(GROQ_API_URL, {
-                method: 'POST',
-                headers: {
-                    'Authorization': `Bearer ${GROQ_API_KEY}`,
-                    'Content-Type': 'application/json'
-                },
-                signal: controller.signal,
-                body: JSON.stringify({
-                    model: 'llama-3.3-70b-versatile',
-                    messages: [
-                        {
-                            role: 'system',
-                            content: `You are an excellent language teacher.
+            // ── Route decision: proxy (production) vs direct Groq (dev-only) ──
+            if (GRAMMAR_PROXY_URL) {
+                // Production path: call backend proxy (API key stays server-side)
+                response = await fetch(GRAMMAR_PROXY_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    signal: controller.signal,
+                    body: JSON.stringify({
+                        sentence1,
+                        sentence2,
+                        outputLanguage,
+                    }),
+                });
+            } else if (GROQ_API_KEY_DEV) {
+                // Dev-only fallback: direct Groq call (NEVER in production builds)
+                console.warn('[groqService] Using direct Groq API — dev only, do NOT ship this key');
+                response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${GROQ_API_KEY_DEV}`,
+                        'Content-Type': 'application/json'
+                    },
+                    signal: controller.signal,
+                    body: JSON.stringify({
+                        model: 'llama-3.3-70b-versatile',
+                        messages: [
+                            {
+                                role: 'system',
+                                content: `You are an excellent language teacher.
 Your goal is not only to explain grammar, but to help the learner understand how to recognize and use it.
 
 Teach in a practical and intuitive way.
@@ -174,17 +195,20 @@ Focus on:
 - when this structure is commonly used
 
 Follow the output format exactly.`
-                        },
-                        {
-                            role: 'user',
-                            content: prompt
-                        }
-                    ],
-                    temperature: 0.3,
-                    max_tokens: 1024,
-                    response_format: { type: "json_object" }
-                })
-            });
+                            },
+                            {
+                                role: 'user',
+                                content: prompt
+                            }
+                        ],
+                        temperature: 0.3,
+                        max_tokens: 1024,
+                        response_format: { type: "json_object" }
+                    })
+                });
+            } else {
+                throw new Error('Grammar service is not configured. Please set EXPO_PUBLIC_GRAMMAR_PROXY_URL.');
+            }
         } finally {
             clearTimeout(timeoutId);
         }
@@ -195,11 +219,16 @@ Follow the output format exactly.`
             throw new Error(data.error?.message || 'Failed to fetch explanation');
         }
 
-        const content = data.choices[0].message.content;
+        // Proxy returns the parsed result directly; direct Groq returns choices array
+        const content = data.choices
+            ? data.choices[0].message.content
+            : (data.sentence1 ? JSON.stringify(data) : data);
 
         // Parse JSON content
         try {
-            const parsedData: GrammarResponse = JSON.parse(content);
+            const parsedData: GrammarResponse = typeof content === 'string'
+                ? JSON.parse(content)
+                : content;
 
             // Cache the successful result (memory + disk)
             grammarCache.set(cacheKey, parsedData);

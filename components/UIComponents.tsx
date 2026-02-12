@@ -185,7 +185,8 @@ export const Header: React.FC<HeaderProps> = ({
 const styles = StyleSheet.create({
   // Button styles
   buttonBase: {
-    height: 56,
+    minHeight: 56,
+    paddingVertical: 12,
     borderRadius: 28,
     flexDirection: 'row',
     alignItems: 'center',
@@ -242,7 +243,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: COLORS.border,
     borderRadius: 12,
-    height: 56,
+    minHeight: 56,
+    paddingVertical: 10,
     paddingHorizontal: 16,
   },
   textInput: {

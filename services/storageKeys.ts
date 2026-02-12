@@ -23,6 +23,8 @@ export const STORAGE_KEYS = {
 
     // ─── Vocabulary (vocabularyService.ts) ────────────────────────
     VOCABULARY: '@vocabulary',
+    // Per-level vocabulary keys: `@vocabulary_A1`, `@vocabulary_A2`, etc.
+    VOCABULARY_LEVEL_PREFIX: '@vocabulary_',
     NATIVE_LANGUAGE: '@native_language',
     TARGET_LANGUAGE: '@target_language',
 

@@ -297,11 +297,12 @@ export async function clearTrackedNotifications(): Promise<void> {
  * 
  * This function is called when the app opens. It:
  * 1. Finds notifications that have been delivered (scheduledTime < now)
- * 2. Checks if notification was delivered while app was in foreground (skip these)
- * 3. Validates level+language match (skip if user changed settings)
- * 4. Marks words as learned based on autoMarkLearned setting (only for background deliveries)
- * 5. Removes processed notifications from tracking
- * 6. Returns count of processed notifications for refill
+ * 2. Cross-checks with OS notification tray to verify actual delivery
+ * 3. Checks if notification was delivered while app was in foreground (skip these)
+ * 4. Validates level+language match (skip if user changed settings)
+ * 5. Marks words as learned based on autoMarkLearned setting (only for verified deliveries)
+ * 6. Removes processed notifications from tracking
+ * 7. Returns count of processed notifications for refill
  */
 export async function processDeliveredNotifications(): Promise<number> {
     try {
@@ -334,6 +335,22 @@ export async function processDeliveredNotifications(): Promise<number> {
             console.log(`[Notifications] Last background time: ${new Date(lastBackgroundTime).toISOString()}`);
         }
 
+        // ── OS-level delivery verification ──────────────────────────────────
+        // Query the OS notification tray for actually-delivered notifications.
+        // If a notification was suppressed by DND, battery saver, or the user
+        // revoked permission, it won't appear here → we skip the "learned" mark.
+        let osDeliveredIds: Set<string> | null = null;
+        try {
+            const presentedNotifications = await Notifications.getPresentedNotificationsAsync();
+            osDeliveredIds = new Set(presentedNotifications.map(n => n.request.identifier));
+            console.log(`[Notifications] OS tray contains ${osDeliveredIds.size} notifications`);
+        } catch (e) {
+            // getPresentedNotificationsAsync may not be available on all platforms
+            // Fall back to time-based heuristic (current behavior)
+            console.warn('[Notifications] Could not query OS tray, using time-based heuristic:', e);
+        }
+        // ─────────────────────────────────────────────────────────────────────
+
         const currentLevel = await getCurrentLevel();
         const currentTargetLanguage = await AsyncStorage.getItem('@target_language');
         let processedCount = 0;
@@ -357,6 +374,22 @@ export async function processDeliveredNotifications(): Promise<number> {
                 skippedCount++;
                 continue;
             }
+
+            // ── OS delivery check ───────────────────────────────────────────
+            // If we successfully queried the OS tray AND this notification is
+            // NOT present, it was likely suppressed (DND / permission revoked /
+            // battery restrictions). Don't mark the word as learned.
+            if (osDeliveredIds !== null && !osDeliveredIds.has(notification.notificationId)) {
+                // Grace period: notifications fired very recently (< 2 min) may
+                // not yet appear in the tray query on some devices.
+                const ageMs = now - notification.scheduledTime;
+                if (ageMs > 2 * 60 * 1000) {
+                    console.log(`[Notifications] SKIPPED "${notification.word}" - not confirmed by OS (likely suppressed)`);
+                    skippedCount++;
+                    continue;
+                }
+            }
+            // ─────────────────────────────────────────────────────────────────
 
             // CRITICAL: Validate level and language match
             // If user changed level or language, wordId may refer to a different word

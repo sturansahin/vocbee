@@ -26,7 +26,7 @@ import {
   setLastBackgroundTime,
 } from './services/notificationService';
 import { STORAGE_KEYS } from './services/storageKeys';
-import { initializeAdMob, checkAndShowAppOpenAd } from './services/adMobService';
+import { requestAdConsent, initializeAdMob, checkAndShowAppOpenAd } from './services/adMobService';
 
 // Screens
 import CustomSplashScreen from './screens/SplashScreen';
@@ -248,10 +248,11 @@ export default function App() {
 
     loadIconFonts();
 
-    // Initialize AdMob and Check for App Open Ad
-    initializeAdMob().then(() => {
-      checkAndShowAppOpenAd();
-    });
+    // Initialize AdMob: consent first (UMP/ATT), then SDK, then app-open ad
+    requestAdConsent()
+      .then(() => initializeAdMob())
+      .then(() => checkAndShowAppOpenAd())
+      .catch(err => console.error('[App] AdMob init chain error:', err));
   }, []);
 
   // Set Android navigation bar to transparent
