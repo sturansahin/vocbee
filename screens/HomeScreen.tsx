@@ -896,7 +896,7 @@ export default function HomeScreen() {
             <View style={styles.header}>
                 <View style={styles.headerTitleContainer}>
                     <View style={styles.logoContainer}>
-                        <SwarmLogo size={28} color={colors.text} />
+                        <SwarmLogo size={30} color={colors.text} />
                     </View>
                     <Text style={[styles.headerTitle, { color: colors.text }]}>VOCBEE</Text>
                 </View>
@@ -1367,8 +1367,8 @@ const styles = StyleSheet.create({
         fontSize: 16,
     },
     loadingLottie: {
-        width: 100,
-        height: 92,
+        width: 120,
+        height: 120,
     },
     emptyContainer: {
         flex: 1,
@@ -1466,12 +1466,12 @@ const styles = StyleSheet.create({
     },
     bee: {
         position: 'absolute',
-        width: 35,
-        height: 35,
+        width: 50,
+        height: 50,
         zIndex: 300,
     },
     beeAnim: {
-        width: 35,
-        height: 35,
+        width: 50,
+        height: 50,
     },
 });

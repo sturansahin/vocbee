@@ -66,15 +66,15 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     logoContainer: {
-        width: 120,
-        height: 112,
+        width: 200,
+        height: 200,
         alignItems: 'center',
         justifyContent: 'center',
         overflow: 'visible',
     },
     lottieAnimation: {
-        width: 120,
-        height: 112,
+        width: 200,
+        height: 200,
         marginLeft: 12,  // Compensate for off-center bee in Lottie canvas
     },
 });

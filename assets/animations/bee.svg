@@ -1,0 +1,62 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+  width="1024.000000pt" height="1024.000000pt"
+  viewBox="0 0 1024 1024" preserveAspectRatio="xMidYMid meet">
+
+  <style>
+    /* Lottie timing: 12 frame @60fps => 0.2s loop */
+    #wingL, #wingR {
+      transform-box: fill-box;
+      animation-duration: 0.2s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      will-change: transform;
+    }
+
+    /* Sol kanat (m12): -26 -> 28 -> -26 */
+    #wingL {
+      transform-origin: -5% 10%;
+      animation-name: flapL;
+    }
+
+    /* Sağ kanat (m17): 40 -> -42 -> 40 */
+    #wingR {
+      transform-origin: 80% 5%;
+      animation-name: flapR;
+    }
+
+    @keyframes flapL {
+      0%   { transform: rotate(0deg); }
+      50%  { transform: rotate(-40deg); }
+      100% { transform: rotate(0deg); }
+    }
+    @keyframes flapR {
+      0%   { transform: rotate(0deg); }
+      50%  { transform: rotate(50deg); }
+      100% { transform: rotate(0deg); }
+    }
+  </style>
+
+  <g transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+    <!-- TÜM ÇİZİMİ YATAYDA AYNALA (0..10240 koordinat alanı için) -->
+    <g transform="translate(10240,0) scale(-1,1)">
+
+      <!-- SOL KANAT -->
+      <g id="wingL">
+        <path d="M6723 8072 c-73 -26 -116 -57 -271 -195 -267 -237 -623 -606 -806 -836 -203 -254 -366 -574 -354 -693 4 -44 35 -58 133 -58 248 0 661 120 996 291 331 169 554 372 674 614 143 287 138 620 -10 784 -84 93 -246 135 -362 93z"/>
+      </g>
+
+      <!-- SAĞ KANAT -->
+      <g id="wingR">
+        <path d="M4749 8037 c-68 -19 -127 -58 -190 -123 -130 -138 -179 -302 -150 -504 17 -115 58 -227 156 -425 90 -181 175 -323 271 -451 114 -153 167 -190 207 -146 39 43 123 340 153 542 22 148 29 461 15 589 -30 255 -123 438 -256 500 -55 26 -148 34 -206 18z"/>
+      </g>
+
+      <!-- GÖVDE / DİĞER PATH'LER -->
+      <path d="M4025 6166 c-181 -30 -314 -74 -482 -160 -310 -159 -549 -387 -682 -653 -75 -150 -107 -351 -81 -510 43 -276 252 -529 520 -633 120 -46 192 -60 336 -67 263 -12 494 54 727 210 110 73 281 241 353 347 110 161 188 349 220 530 25 143 15 364 -20 485 -74 248 -199 375 -431 436 -103 27 -342 35 -460 15z"/>
+      <path d="M4856 6141 c-27 -5 -22 -8 45 -30 129 -41 222 -95 318 -186 357 -335 398 -995 94 -1520 -246 -426 -663 -719 -1198 -840 -60 -14 -122 -25 -137 -25 -16 0 -28 -4 -28 -8 0 -9 164 -128 270 -195 104 -66 274 -152 339 -171 140 -41 354 2 600 121 490 238 858 699 970 1217 45 204 47 482 6 682 -114 551 -485 899 -1016 954 -109 11 -216 11 -263 1z"/>
+      <path d="M5940 5967 c3 -3 37 -22 75 -42 239 -126 454 -350 588 -613 102 -198 156 -391 177 -633 25 -275 -36 -593 -162 -844 -193 -386 -501 -676 -891 -839 -100 -42 -277 -97 -362 -112 l-40 -7 38 -13 c21 -7 108 -26 195 -41 140 -24 182 -27 387 -28 240 0 297 6 475 51 264 66 515 205 717 397 221 212 351 442 415 740 32 149 32 434 0 595 -106 529 -428 945 -927 1194 -143 72 -276 121 -424 157 -111 27 -273 51 -261 38z"/>
+
+    </g>
+  </g>
+</svg>
