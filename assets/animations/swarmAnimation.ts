@@ -15,7 +15,7 @@ export const createSwarmAnimation = (
     op: 12,
     w: 1024,
     h: 1024,
-    nm: "Bird Wing Flap",
+    nm: "VocBee",
     ddd: 0,
     assets: [],
     layers: [
