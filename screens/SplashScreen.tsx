@@ -74,7 +74,6 @@ const styles = StyleSheet.create({
     },
     lottieAnimation: {
         width: 200,
-        height: 200,
-        marginLeft: 12,  // Compensate for off-center bee in Lottie canvas
+        height: 200,  // Compensate for off-center bee in Lottie canvas
     },
 });

@@ -807,7 +807,13 @@ export default function HomeScreen() {
                                 <View style={{ position: 'absolute', left: scale(36) - 35 }}>
                                     <MaterialIcons name="translate" size={22} color={colors.primary} />
                                 </View>
-                                <Text style={[styles.translationText, { color: colors.primary }]}>{nextWord.translation}</Text>
+                                <Text
+                                    style={[styles.translationText, { color: colors.primary }]}
+                                    adjustsFontSizeToFit
+                                    numberOfLines={1}
+                                >
+                                    {nextWord.translation}
+                                </Text>
                             </View>
                         </View>
 
@@ -1077,7 +1083,13 @@ export default function HomeScreen() {
                                             <View style={{ position: 'absolute', left: scale(36) - 35 }}>
                                                 <MaterialIcons name="translate" size={22} color={colors.primary} />
                                             </View>
-                                            <Text style={[styles.translationText, { color: colors.primary }]}>{currentWord.translation}</Text>
+                                            <Text
+                                                style={[styles.translationText, { color: colors.primary }]}
+                                                adjustsFontSizeToFit
+                                                numberOfLines={1}
+                                            >
+                                                {currentWord.translation}
+                                            </Text>
                                         </View>
                                     </View>
 

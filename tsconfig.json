@@ -28,7 +28,7 @@
     "**/*.tsx",
     "nativewind-env.d.ts",
     "types/**/*.d.ts"
-  ],
+, "api/grammarProxy.js"  ],
   "exclude": [
     "node_modules"
   ],

@@ -4,10 +4,12 @@
  */
 
 // Helper function to create animation data with custom color
-// isStatic: if true, wings don't animate (for initial display)
+// offsetX ve offsetY ile animasyonun tam merkezini dosya içinden ayarlayabilirsin.
 export const createSwarmAnimation = (
     color: [number, number, number, number] = [0, 0, 0, 1],
-    isStatic: boolean = false
+    isStatic: boolean = false,
+    offsetX: number = 0, // Sağa kaydırmak için pozitif, sola kaydırmak için negatif değer gir (Örn: 50)
+    offsetY: number = -100  // Yukarı kaydırmak için negatif, aşağı kaydırmak için pozitif değer gir (Örn: -40)
 ) => ({
     v: "5.9.6",
     fr: 60,
@@ -15,15 +17,34 @@ export const createSwarmAnimation = (
     op: 12,
     w: 1024,
     h: 1024,
-    nm: "VocBee",
+    nm: "Bird Wing Flap",
     ddd: 0,
     assets: [],
     layers: [
+        // LAYER 6: EKLENEN ANA KONTROLCÜ (GÖRÜNMEZ). Diğer tüm katmanlar buraya bağlı.
+        {
+            ty: 3, // Null Object (Görünmez Katman)
+            nm: "Master Controller",
+            ind: 6,
+            st: 0,
+            ip: 0,
+            op: 12,
+            ks: {
+                o: { a: 0, k: 100 },
+                r: { a: 0, k: 0 },
+                // Animasyonun genel pozisyonu buradan kontrol ediliyor. (Tuvalin tam ortası 512, 512'dir)
+                p: { a: 0, k: [512 + offsetX, 512 + offsetY, 0] },
+                a: { a: 0, k: [512, 512, 0] },
+                s: { a: 0, k: [100, 100, 100] }
+            }
+        },
+
         // Layer 1: Body 3
         {
             ty: 4,
             nm: "Body 3",
             ind: 1,
+            parent: 6, // Ana kontrolcüye bağlandı
             st: 0,
             ip: 0,
             op: 12,
@@ -100,6 +121,7 @@ export const createSwarmAnimation = (
             ty: 4,
             nm: "Body 2",
             ind: 2,
+            parent: 6, // Ana kontrolcüye bağlandı
             st: 0,
             ip: 0,
             op: 12,
@@ -176,6 +198,7 @@ export const createSwarmAnimation = (
             ty: 4,
             nm: "Body 1",
             ind: 3,
+            parent: 6, // Ana kontrolcüye bağlandı
             st: 0,
             ip: 0,
             op: 12,
@@ -244,11 +267,12 @@ export const createSwarmAnimation = (
             ]
         },
 
-        // Layer 4: Wing Right (animated rotation)
+        // Layer 4: Wing Right
         {
             ty: 4,
             nm: "Wing Right",
             ind: 4,
+            parent: 6, // Ana kontrolcüye bağlandı
             st: 0,
             ip: 0,
             op: 12,
@@ -323,11 +347,12 @@ export const createSwarmAnimation = (
             ]
         },
 
-        // Layer 5: Wing Left (animated rotation)
+        // Layer 5: Wing Left
         {
             ty: 4,
             nm: "Wing Left",
             ind: 5,
+            parent: 6, // Ana kontrolcüye bağlandı
             st: 0,
             ip: 0,
             op: 12,
@@ -404,17 +429,9 @@ export const createSwarmAnimation = (
     ]
 });
 
-// createBeeAnimation → createSwarmAnimation ile aynı imzayı koruyor
-// Projenin bee referansları varsa bunları da kullanabilirsin
-export const createBeeAnimation = createSwarmAnimation;
-
-// ─── Pre-built Swarm variants (orijinal isimler korundu) ─────────────
+// Artık fonksiyon çağırırken ortalama ayarlarını verebilirsin:
+export const beeAnimationGreen = createSwarmAnimation([0.29, 0.87, 0.5, 1]);
 export const swarmAnimationGreen = createSwarmAnimation([0.29, 0.87, 0.5, 1]);
 export const swarmAnimationWhite = createSwarmAnimation([1, 1, 1, 1]);
 
-// ─── Pre-built Bee variants (orijinal isimler korundu) ───────────────
-export const beeAnimationGreen = createSwarmAnimation([0.29, 0.87, 0.5, 1]);
-export const beeAnimationWhite = createSwarmAnimation([1, 1, 1, 1]);
-
-// Default export
 export default swarmAnimationGreen;
