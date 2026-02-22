@@ -36,8 +36,9 @@ export const LoginScreen = () => {
   const isLargeScreen = screenHeight > 900;
 
   // Dynamic sizing
-  const lottieSize = isSmallScreen ? 100 : isLargeScreen ? 150 : 130;
-  const lottieContainerWidth = lottieSize * 1.5;
+  const lottieSize = isSmallScreen ? 150 : isLargeScreen ? 150 : 130;
+  // Container genisligini boyutla birebir yapiyoruz ki fazladan sagdan soldan bosluk kalmasin ve tam dolsun
+  const lottieContainerWidth = lottieSize;
   const lottieContainerHeight = lottieSize;
   const titleFontSize = isSmallScreen ? 28 : isLargeScreen ? 40 : 36;
   const subtitleFontSize = isSmallScreen ? 14 : isLargeScreen ? 18 : 16;
@@ -326,7 +327,7 @@ export const LoginScreen = () => {
             <LottieView
               ref={lottieRef}
               source={isAnimating ? animatedAnimation : staticAnimation}
-              style={{ width: lottieSize, height: lottieSize * 0.92 }}
+              style={{ width: '100%', height: '100%', transform: [{ scale: 1.15 }] }}
               autoPlay={isAnimating}
               loop={true}
               speed={1.5}
@@ -619,7 +620,7 @@ const styles = StyleSheet.create({
   appTitle: {
     fontFamily: FONT_FAMILY,
     marginBottom: 8,
-    marginTop: 0,
+    marginTop: -35, // Negatif değer vererek yazıyı logoya doğru iyice çektik.
   },
   appSubtitle: {
     fontFamily: FONT_FAMILY,
