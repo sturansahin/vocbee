@@ -15,7 +15,7 @@ import {
 } from './storage';
 import { getUserProgress, getCurrentLevel, restoreProgressFromFirebase, getLastWordId } from './progressService';
 import { restoreFavoritesFromFirebase, syncFavoritesToFirebase } from './favoritesService';
-import { getLanguagePair, isVocabularyGenerated, generateVocabulary } from './vocabularyService';
+import { getLanguagePair, isVocabularyGenerated, generateVocabulary, getUserLevelFromCefrLevel, isUserLevel } from './vocabularyService';
 import { STORAGE_KEYS } from './storageKeys';
 
 // ─── Retry Helper with Exponential Backoff ───────────────────────────────────
@@ -72,6 +72,10 @@ export const syncToFirestore = async (userId: string): Promise<boolean> => {
         const userProgress = await getUserProgress();
         const currentLevel = await getCurrentLevel();
         const lastWordId = await getLastWordId();
+        const storedUserLevel = await AsyncStorage.getItem(STORAGE_KEYS.USER_LEVEL);
+        const userLevel = isUserLevel(storedUserLevel)
+            ? storedUserLevel
+            : getUserLevelFromCefrLevel(currentLevel);
 
         // Get profile data from AsyncStorage
         const storedProfile = await AsyncStorage.getItem(`${STORAGE_KEYS.PROFILE_PREFIX}${userId}`);
@@ -85,6 +89,7 @@ export const syncToFirestore = async (userId: string): Promise<boolean> => {
 
         console.log('Syncing progress, profile and preferences to Firestore:', {
             currentLevel,
+            userLevel,
             lastWordId,
             hasProfileName: !!profileName,
             hasPreferences
@@ -115,7 +120,7 @@ export const syncToFirestore = async (userId: string): Promise<boolean> => {
             syncData.preferences = {
                 nativeLanguage: languagePair.native,
                 targetLanguage: languagePair.target,
-                level: currentLevel,
+                level: userLevel,
             };
             syncData.setupCompleted = true;
         }
@@ -227,6 +232,20 @@ export const fetchAndSaveUserData = async (userId: string): Promise<UserData | n
                 email: data.email || ''
             };
             await AsyncStorage.setItem(`${STORAGE_KEYS.PROFILE_PREFIX}${userId}`, JSON.stringify(newProfile));
+
+            // Restore user-level preference (beginner/intermediate/advanced).
+            // Handles both current schema and older builds that may have stored CEFR here.
+            const preferenceLevel = data.preferences?.level;
+            const progressLevel = data.progress?.currentLevel;
+            if (typeof preferenceLevel === 'string' || typeof progressLevel === 'string') {
+                const restoredUserLevel = isUserLevel(preferenceLevel)
+                    ? preferenceLevel
+                    : getUserLevelFromCefrLevel(
+                        typeof preferenceLevel === 'string' ? preferenceLevel : progressLevel
+                    );
+                await AsyncStorage.setItem(STORAGE_KEYS.USER_LEVEL, restoredUserLevel);
+                console.log(`Restored user level preference: ${restoredUserLevel}`);
+            }
 
             // Restore language preferences from Firebase to AsyncStorage
             if (data.preferences) {

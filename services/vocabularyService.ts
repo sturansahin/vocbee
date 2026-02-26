@@ -178,8 +178,28 @@ export interface VocabularyWord {
 }
 
 export type Level = 'A1' | 'A2' | 'B1' | 'B2' | 'C1';
+export type UserLevel = 'beginner' | 'intermediate' | 'advanced';
 
 export const LEVELS: Level[] = ['A1', 'A2', 'B1', 'B2', 'C1'];
+
+export function isUserLevel(value: unknown): value is UserLevel {
+    return value === 'beginner' || value === 'intermediate' || value === 'advanced';
+}
+
+export function getUserLevelFromCefrLevel(level: string | null | undefined): UserLevel {
+    switch (level) {
+        case 'A1':
+        case 'A2':
+            return 'beginner';
+        case 'B1':
+        case 'B2':
+            return 'intermediate';
+        case 'C1':
+            return 'advanced';
+        default:
+            return 'beginner';
+    }
+}
 
 // Map user level selection to actual CEFR levels
 export function getLevelsForUserLevel(userLevel: string): Level[] {

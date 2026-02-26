@@ -13,10 +13,11 @@ import { useAuth } from '../context/AuthContext';
 import { FONT_FAMILY } from '../utils/typography';
 import { RootStackParamList } from '../types';
 import { resetProgress, setCurrentLevel, getCurrentLevel } from '../services/progressService';
-import { getFirstLevelForUserLevel } from '../services/vocabularyService';
+import { getFirstLevelForUserLevel, getUserLevelFromCefrLevel, isUserLevel, UserLevel } from '../services/vocabularyService';
 import { forceSync } from '../services/SyncService';
 import { clearFavoritesOnFirebase } from '../services/favoritesService';
 import { clearAllLocalData } from '../services/storage';
+import { STORAGE_KEYS } from '../services/storageKeys';
 import { useAlert } from '../components/CustomAlert';
 import * as ImagePicker from 'expo-image-picker';
 import {
@@ -152,7 +153,7 @@ export default function SettingsScreen() {
    const [showHelpModal, setShowHelpModal] = useState(false);
    const [showPrivacyModal, setShowPrivacyModal] = useState(false);
    const [showLevelPicker, setShowLevelPicker] = useState(false);
-   const [currentLevel, setCurrentLevelState] = useState('A1');
+   const [currentLevel, setCurrentLevelState] = useState<UserLevel>('beginner');
    const [showAutoMarkPicker, setShowAutoMarkPicker] = useState(false);
 
    // Profile states
@@ -180,10 +181,17 @@ export default function SettingsScreen() {
    useEffect(() => {
       const loadLevel = async () => {
          try {
-            const savedLevel = await AsyncStorage.getItem('@user_level');
-            if (savedLevel) {
-               setCurrentLevelState(savedLevel);
+            const savedUserLevel = await AsyncStorage.getItem(STORAGE_KEYS.USER_LEVEL);
+            if (isUserLevel(savedUserLevel)) {
+               setCurrentLevelState(savedUserLevel);
+               return;
             }
+
+            // Fallback for older installs / fresh login where only CEFR level exists locally.
+            const currentCefrLevel = await getCurrentLevel();
+            const derivedUserLevel = getUserLevelFromCefrLevel(currentCefrLevel);
+            setCurrentLevelState(derivedUserLevel);
+            await AsyncStorage.setItem(STORAGE_KEYS.USER_LEVEL, derivedUserLevel);
          } catch (error) {
             console.error('Error loading level:', error);
          }
@@ -1046,12 +1054,23 @@ export default function SettingsScreen() {
                               currentLevel === level.id && { backgroundColor: `${colors.primary}20` }
                            ]}
                            onPress={async () => {
-                              setCurrentLevelState(level.id);
+                              if (!isUserLevel(level.id)) {
+                                 console.error('Invalid user level selected:', level.id);
+                                 return;
+                              }
+
+                              if (level.id === currentLevel) {
+                                 setShowLevelPicker(false);
+                                 return;
+                              }
+
                               try {
-                                 await AsyncStorage.setItem('@user_level', level.id);
+                                 await AsyncStorage.setItem(STORAGE_KEYS.USER_LEVEL, level.id);
                                  // Update the CEFR level for vocabulary service
                                  const cefrLevel = getFirstLevelForUserLevel(level.id);
                                  await setCurrentLevel(cefrLevel);
+                                 setCurrentLevelState(level.id);
+                                 setShowLevelPicker(false);
                                  
                                  // Reschedule notifications with new level  
                                  // This ensures all tracked notifications have correct level metadata
@@ -1062,8 +1081,13 @@ export default function SettingsScreen() {
                                  }
                               } catch (error) {
                                  console.error('Error saving level:', error);
+                                 showAlert({
+                                    title: t('common.error'),
+                                    message: t('settings.changeLevelFailed', {
+                                       defaultValue: 'Failed to update level. Please try again.',
+                                    }),
+                                 });
                               }
-                              setShowLevelPicker(false);
                            }}
                         >
                            <View style={styles.levelPickerRow}>
