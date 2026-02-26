@@ -1,5 +1,5 @@
 import React, { useState, useRef, useMemo } from 'react';
-import { View, Text, TouchableOpacity, ScrollView, StyleSheet, ActivityIndicator, Animated, Easing, useWindowDimensions } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView, StyleSheet, ActivityIndicator, Animated, Easing, useWindowDimensions, Platform } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
@@ -20,7 +20,7 @@ type AuthNavProp = StackNavigationProp<RootStackParamList>;
 export const LoginScreen = () => {
   const navigation = useNavigation<AuthNavProp>();
   const { colors } = useTheme();
-  const { signIn, signInWithGoogle } = useAuth();
+  const { signIn, signInWithGoogle, signInWithApple } = useAuth();
   const { showAlert } = useAlert();
   const { width: screenWidth, height: screenHeight } = useWindowDimensions();
   const { t } = useTranslation();
@@ -407,6 +407,24 @@ export const LoginScreen = () => {
               fontSize: isSmallScreen ? 13 : isLargeScreen ? 16 : 14,
             }]}>{t('auth.google')}</Text>
           </TouchableOpacity>
+
+          {Platform.OS === 'ios' && (
+            <TouchableOpacity
+              style={[styles.socialButton, {
+                backgroundColor: colors.surface,
+                borderColor: colors.border,
+                height: isSmallScreen ? 44 : isLargeScreen ? 56 : 48,
+              }]}
+              onPress={signInWithApple}
+              disabled={isSubmitting}
+            >
+              <AntDesign name="apple" size={isSmallScreen ? 14 : isLargeScreen ? 20 : 16} color={colors.text} />
+              <Text style={[styles.socialButtonText, {
+                color: colors.text,
+                fontSize: isSmallScreen ? 13 : isLargeScreen ? 16 : 14,
+              }]}>{t('auth.apple')}</Text>
+            </TouchableOpacity>
+          )}
         </View>
 
         <View style={styles.signupRow}>
@@ -424,7 +442,7 @@ export const LoginScreen = () => {
 export const SignUpScreen = () => {
   const navigation = useNavigation<AuthNavProp>();
   const { colors } = useTheme();
-  const { signUp, signInWithGoogle, signOut } = useAuth();
+  const { signUp, signInWithGoogle, signInWithApple, signOut } = useAuth();
   const { showAlert } = useAlert();
   const { width: screenWidth, height: screenHeight } = useWindowDimensions();
   const { t } = useTranslation();
@@ -590,6 +608,24 @@ export const SignUpScreen = () => {
               fontSize: isSmallScreen ? 13 : isLargeScreen ? 16 : 14,
             }]}>{t('auth.google')}</Text>
           </TouchableOpacity>
+
+          {Platform.OS === 'ios' && (
+            <TouchableOpacity
+              style={[styles.socialButton, {
+                backgroundColor: colors.surface,
+                borderColor: colors.border,
+                height: isSmallScreen ? 44 : isLargeScreen ? 56 : 48,
+              }]}
+              onPress={signInWithApple}
+              disabled={isSubmitting}
+            >
+              <AntDesign name="apple" size={isSmallScreen ? 14 : isLargeScreen ? 20 : 16} color={colors.text} />
+              <Text style={[styles.socialButtonText, {
+                color: colors.text,
+                fontSize: isSmallScreen ? 13 : isLargeScreen ? 16 : 14,
+              }]}>{t('auth.apple')}</Text>
+            </TouchableOpacity>
+          )}
         </View>
 
       </ScrollView>

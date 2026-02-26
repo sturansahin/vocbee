@@ -32,6 +32,7 @@ export default {
         forgotPassword: 'رمز عبور را فراموش کردید؟',
         orContinueWith: 'یا ادامه با',
         google: 'Google',
+        apple: 'Apple',
         noAccount: 'حساب کاربری ندارید؟',
         accountCreated: 'حساب ایجاد شد!',
         accountCreatedDesc: 'حساب شما با موفقیت ایجاد شد. لطفاً برای ادامه وارد شوید.',

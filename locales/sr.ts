@@ -32,6 +32,7 @@ export default {
         forgotPassword: 'Заборавили сте лозинку?',
         orContinueWith: 'Или наставите са',
         google: 'Google',
+        apple: 'Apple',
         noAccount: 'Немате налог?',
         accountCreated: 'Налог је креиран!',
         accountCreatedDesc: 'Ваш налог је успешно креиран. Пријавите се да наставите.',

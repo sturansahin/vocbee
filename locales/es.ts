@@ -32,6 +32,7 @@ export default {
         forgotPassword: '¿Olvidaste tu contraseña?',
         orContinueWith: 'O continuar con',
         google: 'Google',
+        apple: 'Apple',
         noAccount: '¿No tienes cuenta?',
         accountCreated: '¡Cuenta creada!',
         accountCreatedDesc: 'Tu cuenta ha sido creada exitosamente. Por favor inicia sesión para continuar.',

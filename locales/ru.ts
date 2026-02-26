@@ -32,6 +32,7 @@ export default {
         forgotPassword: 'Забыли пароль?',
         orContinueWith: 'Или войти через',
         google: 'Google',
+        apple: 'Apple',
         noAccount: 'Нет аккаунта?',
         accountCreated: 'Аккаунт создан!',
         accountCreatedDesc: 'Ваш аккаунт успешно создан. Пожалуйста, войдите, чтобы продолжить.',

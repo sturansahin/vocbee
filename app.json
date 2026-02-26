@@ -27,7 +27,9 @@
     "android": {
       "package": "com.vocbee.app",
       "googleServicesFile": "./google-services.json",
-      "permissions": ["POST_NOTIFICATIONS"],
+      "permissions": [
+        "POST_NOTIFICATIONS"
+      ],
       "adaptiveIcon": {
         "foregroundImage": "./assets/icons/vocicon.png",
         "backgroundColor": "#ffffff"
@@ -52,7 +54,8 @@
           "cameraPermission": "VocBee needs camera access to take a profile photo."
         }
       ],
-      "expo-localization"
+      "expo-localization",
+      "expo-apple-authentication"
     ],
     "extra": {
       "supportsRTL": true,

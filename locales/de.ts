@@ -32,6 +32,7 @@
         forgotPassword: 'Passwort vergessen?',
         orContinueWith: 'Oder weiter mit',
         google: 'Google',
+        apple: 'Apple',
         noAccount: 'Kein Konto?',
         accountCreated: 'Konto erstellt!',
         accountCreatedDesc: 'Dein Konto wurde erfolgreich erstellt. Bitte melde dich an, um fortzufahren.',

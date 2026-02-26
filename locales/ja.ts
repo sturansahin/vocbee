@@ -32,6 +32,7 @@
         forgotPassword: 'パスワードをお忘れですか？',
         orContinueWith: 'または以下で続行',
         google: 'Google',
+        apple: 'Apple',
         noAccount: 'アカウントをお持ちでないですか？',
         accountCreated: 'アカウント作成完了！',
         accountCreatedDesc: 'アカウントが正常に作成されました。続行するにはログインしてください。',

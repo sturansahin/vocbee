@@ -32,6 +32,7 @@
         forgotPassword: 'Umesahau nenosiri?',
         orContinueWith: 'Au endelea na',
         google: 'Google',
+        apple: 'Apple',
         noAccount: 'Huna akaunti?',
         accountCreated: 'Akaunti Imeundwa!',
         accountCreatedDesc: 'Akaunti yako imeundwa. Tafadhali ingia kuendelea.',

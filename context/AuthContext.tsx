@@ -12,9 +12,11 @@ import {
     updateProfile,
     sendPasswordResetEmail,
     GoogleAuthProvider,
+    OAuthProvider,
     signInWithCredential,
     deleteUser,
 } from 'firebase/auth';
+import * as AppleAuthentication from 'expo-apple-authentication';
 import * as Google from 'expo-auth-session/providers/google';
 import * as WebBrowser from 'expo-web-browser';
 import { makeRedirectUri } from 'expo-auth-session';
@@ -61,6 +63,7 @@ interface AuthContextType {
     signIn: (email: string, password: string) => Promise<{ setupCompleted: boolean }>;
     signOut: () => Promise<void>;
     signInWithGoogle: () => Promise<void>;
+    signInWithApple: () => Promise<void>;
     resetPassword: (email: string) => Promise<void>;
     refreshUserData: () => Promise<void>;
     retryConnection: () => Promise<void>;
@@ -159,7 +162,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
                     } catch (error: any) {
                         // Connection error during fetch
                         console.error('[AuthContext] Error fetching user data:', error);
-                        
+
                         // Fallback to local cache if available and setup was completed
                         if (localData && localData.setupCompleted) {
                             console.log('[AuthContext] Using cached data as offline fallback');
@@ -216,11 +219,11 @@ export function AuthProvider({ children }: AuthProviderProps) {
     const signUp = async (email: string, password: string, displayName?: string) => {
         try {
             setIsLoading(true);
-            
+
             // Cancel any existing notifications (in case of previous user on device)
             await cancelAllNotifications();
             await clearTrackedNotifications();
-            
+
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
 
             // Update display name if provided
@@ -257,7 +260,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
             // Clear local storage AFTER successful sign-in (not before, to avoid data loss on failure)
             await clearAllLocalData();
-            
+
             // Cancel all scheduled notifications for previous user
             await cancelAllNotifications();
             await clearTrackedNotifications();
@@ -304,7 +307,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
                     // Clear local storage AFTER successful sign-in
                     await clearAllLocalData();
-                    
+
                     // Cancel all scheduled notifications for previous user
                     await cancelAllNotifications();
                     await clearTrackedNotifications();
@@ -348,6 +351,62 @@ export function AuthProvider({ children }: AuthProviderProps) {
         } catch (error: any) {
             console.error('Google Sign-In error:', error);
             throw new Error('Failed to start Google Sign-In. Please try again.');
+        }
+    };
+
+    // Sign In with Apple
+    const signInWithApple = async () => {
+        try {
+            setIsLoading(true);
+            const credential = await AppleAuthentication.signInAsync({
+                requestedScopes: [
+                    AppleAuthentication.AppleAuthenticationScope.FULL_NAME,
+                    AppleAuthentication.AppleAuthenticationScope.EMAIL,
+                ],
+            });
+
+            if (credential.identityToken) {
+                const provider = new OAuthProvider('apple.com');
+                const authCredential = provider.credential({
+                    idToken: credential.identityToken,
+                });
+                const userCredential = await signInWithCredential(auth, authCredential);
+
+                // Clear local storage AFTER successful sign-in
+                await clearAllLocalData();
+                await cancelAllNotifications();
+                await clearTrackedNotifications();
+
+                // Check if user exists in Firestore, if not create document
+                let fetchedData = await fetchAndSaveUserData(userCredential.user.uid);
+
+                if (!fetchedData) {
+                    // Assemble reasonable display name from Apple's fullName if available
+                    let displayName = userCredential.user.displayName;
+                    if (!displayName && credential.fullName?.givenName) {
+                        displayName = `${credential.fullName.givenName} ${credential.fullName.familyName || ''}`.trim();
+                    }
+
+                    await createUserDocument(
+                        userCredential.user.uid,
+                        userCredential.user.email || credential.email || '',
+                        displayName || undefined
+                    );
+                    fetchedData = await fetchAndSaveUserData(userCredential.user.uid);
+                }
+
+                setUserData(fetchedData);
+            } else {
+                throw new Error('No identity token.');
+            }
+        } catch (error: any) {
+            if (error.code === 'ERR_REQUEST_CANCELED') {
+                return;
+            }
+            console.error('Apple Sign-In error:', error);
+            throw new Error('Failed to sign in with Apple. Please try again.');
+        } finally {
+            setIsLoading(false);
         }
     };
 
@@ -515,6 +574,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
         signIn,
         signOut,
         signInWithGoogle,
+        signInWithApple,
         resetPassword,
         refreshUserData,
         retryConnection,

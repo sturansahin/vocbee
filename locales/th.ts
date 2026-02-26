@@ -32,6 +32,7 @@ export default {
         forgotPassword: 'ลืมรหัสผ่าน?',
         orContinueWith: 'หรือดำเนินการต่อด้วย',
         google: 'Google',
+        apple: 'Apple',
         noAccount: 'ไม่มีบัญชีใช่ไหม?',
         accountCreated: 'สร้างบัญชีแล้ว!',
         accountCreatedDesc: 'บัญชีของคุณถูกสร้างเรียบร้อยแล้ว โปรดเข้าสู่ระบบเพื่อดำเนินการต่อ',

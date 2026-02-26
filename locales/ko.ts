@@ -32,6 +32,7 @@
         forgotPassword: '비밀번호를 잊으셨나요?',
         orContinueWith: '또는 다음으로 계속',
         google: 'Google',
+        apple: 'Apple',
         noAccount: '계정이 없으신가요?',
         accountCreated: '계정 생성됨!',
         accountCreatedDesc: '계정이 성공적으로 생성되었습니다. 계속하려면 로그인하세요.',

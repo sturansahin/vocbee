@@ -32,6 +32,7 @@ export default {
         forgotPassword: 'የይለፍ ቃል ረሳህ?',
         orContinueWith: 'ወይም በዚህ ቀጥል',
         google: 'Google',
+        apple: 'Apple',
         noAccount: 'መለያ የለህም?',
         accountCreated: 'መለያ ተፈጥሯል!',
         accountCreatedDesc: 'መለያህ በተሳካ ሁኔታ ተፈጥሯል። ለመቀጠል እባክህ ግባ።',

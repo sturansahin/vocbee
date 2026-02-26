@@ -52,7 +52,7 @@ export default function SplashScreen({ onFinish }: SplashScreenProps) {
                     style={styles.lottieAnimation}
                     resizeMode="contain"
                     loop={true}
-                    speed={1.5}
+                    speed={1.1}
                 />
             </View>
         </Animated.View>

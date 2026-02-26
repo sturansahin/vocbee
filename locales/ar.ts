@@ -32,6 +32,7 @@ export default {
         forgotPassword: 'هل نسيت كلمة المرور؟',
         orContinueWith: 'أو المتابعة باستخدام',
         google: 'Google',
+        apple: 'Apple',
         noAccount: 'ليس لديك حساب؟',
         accountCreated: 'تم إنشاء الحساب!',
         accountCreatedDesc: 'تم إنشاء حسابك بنجاح. يرجى تسجيل الدخول للمتابعة.',

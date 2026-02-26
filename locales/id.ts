@@ -32,6 +32,7 @@ export default {
         forgotPassword: 'Lupa Kata Sandi?',
         orContinueWith: 'Atau lanjutkan dengan',
         google: 'Google',
+        apple: 'Apple',
         noAccount: 'Belum punya akun?',
         accountCreated: 'Akun Dibuat!',
         accountCreatedDesc: 'Akun Anda telah berhasil dibuat. Silakan masuk untuk melanjutkan.',

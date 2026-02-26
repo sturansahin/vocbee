@@ -32,6 +32,7 @@ export default {
         forgotPassword: 'पासवर्ड भूल गए?',
         orContinueWith: 'या इससे जारी रखें',
         google: 'Google',
+        apple: 'Apple',
         noAccount: 'खाता नहीं है?',
         accountCreated: 'खाता बन गया!',
         accountCreatedDesc: 'आपका खाता सफलतापूर्वक बन गया है। जारी रखने के लिए लॉगिन करें।',

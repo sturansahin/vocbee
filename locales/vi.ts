@@ -32,6 +32,7 @@ export default {
         forgotPassword: 'Quên mật khẩu?',
         orContinueWith: 'Hoặc tiếp tục với',
         google: 'Google',
+        apple: 'Apple',
         noAccount: 'Chưa có tài khoản?',
         accountCreated: 'Tài khoản đã được tạo!',
         accountCreatedDesc: 'Tài khoản của bạn đã được tạo thành công. Vui lòng đăng nhập để tiếp tục.',

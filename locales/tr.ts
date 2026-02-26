@@ -32,6 +32,7 @@
         forgotPassword: 'Şifreni mi unuttun?',
         orContinueWith: 'Veya şununla devam et',
         google: 'Google',
+        apple: 'Apple',
         noAccount: 'Hesabın yok mu?',
         accountCreated: 'Hesap Oluşturuldu!',
         accountCreatedDesc: 'Hesabın başarıyla oluşturuldu. Lütfen devam etmek için giriş yap.',

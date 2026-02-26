@@ -116,7 +116,7 @@ export default function HomeScreen() {
         const beePosition: BeePosition = {
             id: 0,
             x: cardWidth - 60, // 60px from right edge
-            y: 20,              // 20px from top
+            y: 10,              // 20px from top
             translateX: new Animated.Value(0),
             translateY: new Animated.Value(0),
             opacity: new Animated.Value(0),

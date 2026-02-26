@@ -32,6 +32,7 @@
         forgotPassword: '忘记密码？',
         orContinueWith: '或通过以下方式继续',
         google: 'Google',
+        apple: 'Apple',
         noAccount: '还没有账号？',
         accountCreated: '账户已创建！',
         accountCreatedDesc: '您的账户已成功创建。请登录以继续。',
