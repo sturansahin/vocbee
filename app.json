@@ -35,6 +35,10 @@
         "backgroundColor": "#ffffff"
       }
     },
+    "notification": {
+      "icon": "./assets/icons/notification-icon.png",
+      "color": "#ffffff"
+    },
     "plugins": [
       "expo-font",
       "expo-asset",
