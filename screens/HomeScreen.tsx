@@ -924,9 +924,21 @@ export default function HomeScreen() {
 
             {/* Stats Section */}
             <BlurView
-                intensity={20}
+                intensity={isDarkMode ? 20 : 32}
                 tint={isDarkMode ? "dark" : "light"}
-                style={styles.statsBlurContainer}
+                style={[
+                    styles.statsBlurContainer,
+                    {
+                        backgroundColor: isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0.72)',
+                        borderWidth: isDarkMode ? 0 : 1,
+                        borderColor: isDarkMode ? 'transparent' : colors.border,
+                        shadowColor: '#000',
+                        shadowOffset: { width: 0, height: 2 },
+                        shadowOpacity: isDarkMode ? 0 : 0.04,
+                        shadowRadius: 8,
+                        elevation: isDarkMode ? 0 : 2,
+                    }
+                ]}
             >
                 <View style={styles.statsSection}>
                     {/* Level and Progress */}
@@ -938,7 +950,16 @@ export default function HomeScreen() {
                                 {learnedCount}/{totalCount} {t('home.words')}
                             </Text>
                         </View>
-                        <View style={[styles.progressBg, { backgroundColor: isDarkMode ? '#2c2c2e' : '#f0f0f0' }]}>
+                        <View
+                            style={[
+                                styles.progressBg,
+                                {
+                                    backgroundColor: isDarkMode ? '#2c2c2e' : colors.surfaceLight,
+                                    borderWidth: isDarkMode ? 0 : 1,
+                                    borderColor: isDarkMode ? 'transparent' : colors.border,
+                                }
+                            ]}
+                        >
                             <View
                                 style={[
                                     styles.progressFill,

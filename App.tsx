@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Platform, View, Text, AppState, AppStateStatus } from 'react-native';
 import { NavigationContainer, NavigationContainerRef } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -57,11 +57,49 @@ function AppContent() {
   const { user, userData, isLoading, connectionError } = useAuth();
   const { isDarkMode } = useTheme();
   const appState = useRef(AppState.currentState);
+  const notificationMaintenanceInFlight = useRef(false);
   const navigationRef = useRef<NavigationContainerRef<RootStackParamList>>(null);
 
   const [isAppReady, setIsAppReady] = useState(false);
   const [initialRoute, setInitialRoute] = useState<keyof RootStackParamList>('Onboarding');
   const [showSplash, setShowSplash] = useState(true);
+
+  const runNotificationMaintenance = useCallback(async (reason: 'startup' | 'resume') => {
+    if (!user) return;
+
+    if (notificationMaintenanceInFlight.current) {
+      console.log(`[Notifications] Maintenance skipped (${reason}) - already running`);
+      return;
+    }
+
+    notificationMaintenanceInFlight.current = true;
+    console.log(`[Notifications] Maintenance started (${reason})`);
+
+    try {
+      try {
+        await processDeliveredNotifications();
+      } catch (error) {
+        console.error(`[Notifications] processDeliveredNotifications failed (${reason})`, error);
+      }
+
+      // Record foreground baseline after processing delivered notifications so
+      // next cycle can correctly identify "arrived while app was open" events.
+      try {
+        await setLastForegroundTime();
+      } catch (error) {
+        console.error(`[Notifications] setLastForegroundTime failed (${reason})`, error);
+      }
+
+      try {
+        await refillNotifications();
+      } catch (error) {
+        console.error(`[Notifications] refillNotifications failed (${reason})`, error);
+      }
+    } finally {
+      notificationMaintenanceInFlight.current = false;
+      console.log(`[Notifications] Maintenance finished (${reason})`);
+    }
+  }, [user]);
 
   // Determine initial route based on app state
   useEffect(() => {
@@ -126,6 +164,15 @@ function AppContent() {
     autoSync(user.uid);
   }, [user]);
 
+  // Run notification maintenance on cold start / login while app is active.
+  // Without this, delivered notifications are only processed after a future
+  // background->foreground transition.
+  useEffect(() => {
+    if (!user) return;
+    if (appState.current !== 'active') return;
+    runNotificationMaintenance('startup');
+  }, [user, runNotificationMaintenance]);
+
   // Handle notification responses
   useEffect(() => {
     const subscription = Notifications.addNotificationResponseReceivedListener((response) => {
@@ -145,15 +192,7 @@ function AppContent() {
         // App has come to foreground - trigger sync if user is logged in
         if (user) {
           autoSync(user.uid);
-          // Process delivered notifications first (marks words as learned/ignored)
-          // Notifications delivered while app was open will be skipped
-          processDeliveredNotifications().then(() => {
-            // CRITICAL: Record foreground time AFTER processing delivered notifications
-            // This ensures we have a proper baseline for next cycle
-            setLastForegroundTime();
-            // Then refill notifications to maintain 64 scheduled
-            refillNotifications();
-          });
+          runNotificationMaintenance('resume');
         }
       }
       appState.current = nextAppState;
@@ -162,7 +201,7 @@ function AppContent() {
     return () => {
       subscription.remove();
     };
-  }, [user]);
+  }, [user, runNotificationMaintenance]);
 
   // Show splash screen while app is not ready
   console.log('[App] Render - showSplash:', showSplash, 'isAppReady:', isAppReady, 'connectionError:', connectionError);

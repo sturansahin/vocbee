@@ -71,6 +71,25 @@ export const DEFAULT_NOTIFICATION_SETTINGS: NotificationSettings = {
     autoMarkLearned: true,
 };
 
+function getDailyNotificationSlotCount(
+    startMinutes: number,
+    endMinutes: number,
+    frequencyMinutes: number
+): number {
+    const isFullDay = startMinutes === endMinutes;
+    if (isFullDay) {
+        // Full 24h mode is modeled as an inclusive range, but we must avoid
+        // duplicating the next day's start timestamp in the same batch.
+        return Math.floor((1440 - 1) / frequencyMinutes) + 1;
+    }
+
+    const rangeMinutes = endMinutes > startMinutes
+        ? endMinutes - startMinutes
+        : (1440 - startMinutes) + endMinutes;
+
+    return Math.floor(rangeMinutes / frequencyMinutes) + 1;
+}
+
 // ─────────────────────────────────────────────────────────────────────────────
 // Notification Content Templates (Patterns)
 // ─────────────────────────────────────────────────────────────────────────────
@@ -416,8 +435,9 @@ export async function processDeliveredNotifications(): Promise<number> {
             processedCount++;
         }
 
-        // Remove delivered notifications from tracking
-        const remaining = tracked.filter(n => n.processed || n.scheduledTime >= now);
+        // Remove all due notifications from tracking (processed or skipped).
+        // Keeping tapped/processed items causes unbounded tracking growth.
+        const remaining = tracked.filter(n => n.scheduledTime >= now);
         await saveTrackedNotifications(remaining);
 
         console.log(`[Notifications] Processed ${processedCount} notifications, skipped ${skippedCount}, ${remaining.length} remaining`);
@@ -524,13 +544,12 @@ export async function scheduleVocabularyNotifications(): Promise<void> {
         const dailyStartMinutes = settings.startHour * 60 + settings.startMinute;
         const dailyEndMinutes = settings.endHour * 60 + settings.endMinute;
 
-        // Support overnight ranges (e.g. 22:00→06:00): if end <= start, range wraps midnight
-        const dailyTimeRangeMinutes = dailyEndMinutes > dailyStartMinutes
-            ? dailyEndMinutes - dailyStartMinutes
-            : (1440 - dailyStartMinutes) + dailyEndMinutes; // wrap around midnight
-        // Same start & end = full 24h
-        const effectiveRange = dailyTimeRangeMinutes === 0 ? 1440 : dailyTimeRangeMinutes;
-        const notificationsPerDay = Math.floor(effectiveRange / settings.frequencyMinutes) + 1;
+        const isFullDayRange = dailyStartMinutes === dailyEndMinutes;
+        const notificationsPerDay = getDailyNotificationSlotCount(
+            dailyStartMinutes,
+            dailyEndMinutes,
+            settings.frequencyMinutes
+        );
 
         // Calculate how many days we can schedule
         const daysToSchedule = Math.ceil(MAX_NOTIFICATIONS / notificationsPerDay);
@@ -555,10 +574,11 @@ export async function scheduleVocabularyNotifications(): Promise<void> {
                 const notificationTime = new Date(startTime.getTime() + i * settings.frequencyMinutes * 60 * 1000);
 
                 // For overnight ranges, check the notification hasn't passed the end time the next day
-                if (isOvernight) {
+                if (isOvernight && !isFullDayRange) {
                     const ntMinutes = notificationTime.getHours() * 60 + notificationTime.getMinutes();
-                    // After midnight but past end time → stop for this day
-                    if (notificationTime > startTime && ntMinutes >= dailyEndMinutes && ntMinutes < dailyStartMinutes) {
+                    // After midnight and strictly past end time → stop for this day.
+                    // End time is inclusive (e.g. 22:00→06:00 includes 06:00).
+                    if (notificationTime > startTime && ntMinutes > dailyEndMinutes && ntMinutes < dailyStartMinutes) {
                         break;
                     }
                 }
@@ -697,6 +717,7 @@ export async function refillNotifications(): Promise<void> {
         const dailyStartMinutes = settings.startHour * 60 + settings.startMinute;
         const dailyEndMinutes = settings.endHour * 60 + settings.endMinute;
         const isOvernight = dailyEndMinutes <= dailyStartMinutes;
+        const isFullDayRange = dailyStartMinutes === dailyEndMinutes;
 
         let scheduledCount = 0;
         let currentTime = new Date(lastScheduledTime);
@@ -719,9 +740,9 @@ export async function refillNotifications(): Promise<void> {
 
             // Check if we're outside the allowed time window
             const currentMinutes = currentTime.getHours() * 60 + currentTime.getMinutes();
-            if (isOvernight) {
+            if (isOvernight && !isFullDayRange) {
                 // Overnight range (e.g. 22:00→06:00): gap is endMinutes..startMinutes
-                if (currentMinutes >= dailyEndMinutes && currentMinutes < dailyStartMinutes) {
+                if (currentMinutes > dailyEndMinutes && currentMinutes < dailyStartMinutes) {
                     // In the gap → jump to today's start time (which is later today)
                     currentTime.setHours(settings.startHour, settings.startMinute, 0, 0);
                 }
