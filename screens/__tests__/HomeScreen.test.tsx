@@ -56,6 +56,7 @@ jest.mock('../../services/favoritesService', () => ({
 
 jest.mock('../../services/notificationService', () => ({
     getPendingNotificationWord: jest.fn(() => Promise.resolve(null)),
+    clearPendingNotificationWord: jest.fn(() => Promise.resolve()),
 }));
 
 jest.mock('../../services/adMobService', () => ({

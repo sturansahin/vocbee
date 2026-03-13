@@ -3,10 +3,10 @@
     "name": "VocBee",
     "slug": "vocbee",
     "scheme": "vocbee",
-    "version": "1.0.0",
+    "version": "1.0.3",
     "icon": "./assets/icons/vocicon.png",
     "splash": {
-      "image": "./assets/icons/vocicon.png",
+      "image": "./assets/transparent-splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -18,7 +18,17 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.vocbee.app",
+      "buildNumber": "2",
       "googleServicesFile": "./GoogleService-Info.plist",
+      "splash": {
+        "image": "./assets/transparent-splash.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#ffffff",
+        "dark": {
+          "image": "./assets/transparent-splash.png",
+          "backgroundColor": "#000000"
+        }
+      },
       "infoPlist": {
         "NSUserTrackingUsageDescription": "This identifier will be used to deliver personalized ads to you.",
         "NSCameraUsageDescription": "VocBee needs camera access to take a profile photo.",
@@ -30,6 +40,15 @@
     "android": {
       "package": "com.vocbee.app",
       "googleServicesFile": "./google-services.json",
+      "splash": {
+        "image": "./assets/transparent-splash.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#ffffff",
+        "dark": {
+          "image": "./assets/transparent-splash.png",
+          "backgroundColor": "#000000"
+        }
+      },
       "permissions": [
         "android.permission.POST_NOTIFICATIONS",
         "android.permission.RECORD_AUDIO"
@@ -46,6 +65,37 @@
     "plugins": [
       "expo-font",
       "expo-asset",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#ffffff",
+          "image": "./assets/transparent-splash.png",
+          "resizeMode": "contain",
+          "imageWidth": 200,
+          "dark": {
+            "backgroundColor": "#000000",
+            "image": "./assets/transparent-splash.png"
+          },
+          "ios": {
+            "backgroundColor": "#ffffff",
+            "image": "./assets/transparent-splash.png",
+            "resizeMode": "contain",
+            "dark": {
+              "backgroundColor": "#000000",
+              "image": "./assets/transparent-splash.png"
+            }
+          },
+          "android": {
+            "backgroundColor": "#ffffff",
+            "image": "./assets/transparent-splash.png",
+            "resizeMode": "contain",
+            "dark": {
+              "backgroundColor": "#000000",
+              "image": "./assets/transparent-splash.png"
+            }
+          }
+        }
+      ],
       "expo-notifications",
       [
         "react-native-google-mobile-ads",

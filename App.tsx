@@ -58,11 +58,52 @@ function AppContent() {
   const { isDarkMode } = useTheme();
   const appState = useRef(AppState.currentState);
   const notificationMaintenanceInFlight = useRef(false);
+  const handledNotificationResponses = useRef<Set<string>>(new Set());
   const navigationRef = useRef<NavigationContainerRef<RootStackParamList>>(null);
 
   const [isAppReady, setIsAppReady] = useState(false);
   const [initialRoute, setInitialRoute] = useState<keyof RootStackParamList>('Onboarding');
   const [showSplash, setShowSplash] = useState(true);
+
+  const consumeNotificationResponse = useCallback(
+    async (
+      response: Notifications.NotificationResponse | null,
+      source: 'startup' | 'listener' | 'resume'
+    ) => {
+      if (!response) return;
+
+      const notificationId = response.notification.request.identifier;
+      const actionIdentifier = response.actionIdentifier || 'default';
+      const responseKey = `${notificationId}:${actionIdentifier}`;
+
+      if (handledNotificationResponses.current.has(responseKey)) {
+        console.log(`[Notifications] Response ${responseKey} skipped (${source}) - already handled`);
+        return;
+      }
+
+      handledNotificationResponses.current.add(responseKey);
+      // Keep dedupe storage bounded.
+      if (handledNotificationResponses.current.size > 50) {
+        const firstEntry = handledNotificationResponses.current.values().next();
+        if (!firstEntry.done) {
+          handledNotificationResponses.current.delete(firstEntry.value);
+        }
+      }
+
+      try {
+        await handleNotificationResponse(response);
+        try {
+          await Notifications.clearLastNotificationResponseAsync();
+        } catch (clearError) {
+          console.warn(`[Notifications] Failed to clear last response (${source})`, clearError);
+        }
+      } catch (error) {
+        handledNotificationResponses.current.delete(responseKey);
+        console.error(`[Notifications] Failed to handle response (${source})`, error);
+      }
+    },
+    []
+  );
 
   const runNotificationMaintenance = useCallback(async (reason: 'startup' | 'resume') => {
     if (!user) return;
@@ -173,14 +214,49 @@ function AppContent() {
     runNotificationMaintenance('startup');
   }, [user, runNotificationMaintenance]);
 
-  // Handle notification responses
+  // Handle notification response from cold start (app opened by tapping a notification)
+  useEffect(() => {
+    let cancelled = false;
+
+    const processStartupResponse = async () => {
+      const retryDelaysMs = [0, 300, 1000];
+
+      for (const delayMs of retryDelaysMs) {
+        if (cancelled) return;
+
+        if (delayMs > 0) {
+          await new Promise(resolve => setTimeout(resolve, delayMs));
+        }
+
+        try {
+          const lastResponse = await Notifications.getLastNotificationResponseAsync();
+          if (lastResponse) {
+            await consumeNotificationResponse(lastResponse, 'startup');
+            return;
+          }
+        } catch (error) {
+          console.error('[Notifications] Failed to process startup response', error);
+        }
+      }
+    };
+
+    processStartupResponse();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [consumeNotificationResponse]);
+
+  // Handle live notification responses while app is running
   useEffect(() => {
     const subscription = Notifications.addNotificationResponseReceivedListener((response) => {
-      handleNotificationResponse(response);
+      consumeNotificationResponse(response, 'listener').catch(error => {
+        console.error('[Notifications] Listener response handling failed', error);
+      });
     });
 
     return () => subscription.remove();
-  }, []);
+  }, [consumeNotificationResponse]);
 
   // Handle app state changes for background sync and notification refill
   useEffect(() => {
@@ -189,6 +265,12 @@ function AppContent() {
         setLastBackgroundTime();
       }
       if (appState.current.match(/inactive|background/) && nextAppState === 'active') {
+        Notifications.getLastNotificationResponseAsync()
+          .then(lastResponse => consumeNotificationResponse(lastResponse, 'resume'))
+          .catch(error => {
+            console.error('[Notifications] Resume response handling failed', error);
+          });
+
         // App has come to foreground - trigger sync if user is logged in
         if (user) {
           autoSync(user.uid);
@@ -201,7 +283,7 @@ function AppContent() {
     return () => {
       subscription.remove();
     };
-  }, [user, runNotificationMaintenance]);
+  }, [user, runNotificationMaintenance, consumeNotificationResponse]);
 
   // Show splash screen while app is not ready
   console.log('[App] Render - showSplash:', showSplash, 'isAppReady:', isAppReady, 'connectionError:', connectionError);

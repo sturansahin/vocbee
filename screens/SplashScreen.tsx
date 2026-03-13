@@ -11,7 +11,8 @@ interface SplashScreenProps {
 export default function SplashScreen({ onFinish }: SplashScreenProps) {
     const { colors } = useTheme();
     const lottieRef = useRef<LottieView>(null);
-    const fadeAnim = useRef(new Animated.Value(0)).current;
+    const logoOpacity = useRef(new Animated.Value(0)).current;
+    const logoScale = useRef(new Animated.Value(0.96)).current;
 
     // Yellow bee color (same as LoginScreen) — hoisted as constant to avoid referential inequality
     const beeColor = useMemo<[number, number, number, number]>(() => [1, 0.78, 0.08, 1], []);
@@ -20,12 +21,22 @@ export default function SplashScreen({ onFinish }: SplashScreenProps) {
     const animatedAnimation = useMemo(() => createSwarmAnimation(beeColor, false), [beeColor]);
 
     useEffect(() => {
-        // Fade in animation
-        Animated.timing(fadeAnim, {
-            toValue: 1,
-            duration: 400,
-            useNativeDriver: true,
-        }).start();
+        // Keep the splash background opaque immediately to avoid showing the
+        // root view between native splash hide and JS splash mount.
+        Animated.parallel([
+            Animated.timing(logoOpacity, {
+                toValue: 1,
+                duration: 240,
+                useNativeDriver: true,
+            }),
+            Animated.spring(logoScale, {
+                toValue: 1,
+                damping: 18,
+                stiffness: 170,
+                mass: 0.9,
+                useNativeDriver: true,
+            }),
+        ]).start();
 
         // Start Lottie animation
         lottieRef.current?.play();
@@ -36,16 +47,24 @@ export default function SplashScreen({ onFinish }: SplashScreenProps) {
         }, 2500);
 
         return () => clearTimeout(timer);
-    }, [onFinish, fadeAnim]);
+    }, [onFinish, logoOpacity, logoScale]);
 
     return (
-        <Animated.View
+        <View
             style={[
                 styles.container,
-                { backgroundColor: colors.background, opacity: fadeAnim }
+                { backgroundColor: colors.background }
             ]}
         >
-            <View style={styles.logoContainer}>
+            <Animated.View
+                style={[
+                    styles.logoContainer,
+                    {
+                        opacity: logoOpacity,
+                        transform: [{ scale: logoScale }],
+                    },
+                ]}
+            >
                 <LottieView
                     ref={lottieRef}
                     source={animatedAnimation}
@@ -54,8 +73,8 @@ export default function SplashScreen({ onFinish }: SplashScreenProps) {
                     loop={true}
                     speed={1.1}
                 />
-            </View>
-        </Animated.View>
+            </Animated.View>
+        </View>
     );
 }
 

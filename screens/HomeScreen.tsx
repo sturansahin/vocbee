@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import {
     View,
     Text,
@@ -8,6 +8,8 @@ import {
     Animated,
     PanResponder,
     Easing,
+    AppState,
+    AppStateStatus,
 } from 'react-native';
 import LottieView from 'lottie-react-native';
 import { createSwarmAnimation } from '../assets/animations/swarmAnimation';
@@ -46,7 +48,7 @@ import {
     getLastWordId
 } from '../services/progressService';
 import { addToFavorites, removeFromFavorites, isFavorite } from '../services/favoritesService';
-import { getPendingNotificationWord } from '../services/notificationService';
+import { clearPendingNotificationWord, getPendingNotificationWord } from '../services/notificationService';
 import { useAlert } from '../components/CustomAlert';
 import { SafeBannerAd } from '../components/SafeBannerAd';
 import { loadInterstitial, showInterstitial, AD_IDS, getBannerAdSize } from '../services/adMobService';
@@ -56,6 +58,9 @@ import { STORAGE_KEYS } from '../services/storageKeys';
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;
+const BEE_COLOR: [number, number, number, number] = [1, 0.78, 0.08, 1];
+const BEE_STATIC_ANIMATION = createSwarmAnimation(BEE_COLOR, true);
+const BEE_ACTIVE_ANIMATION = createSwarmAnimation(BEE_COLOR, false);
 
 // Responsive utilities
 const BASE_WIDTH = 393; // iPhone 14 Pro base width
@@ -104,9 +109,8 @@ export default function HomeScreen() {
     const [beePositions, setBeePositions] = useState<BeePosition[]>([]);
     const [beesAnimating, setBeesAnimating] = useState(false);
     const beeAnimationRef = useRef<any>(null);
-
-    // Yellow bee color (same as login screen)
-    const beeColor: [number, number, number, number] = [1, 0.78, 0.08, 1];
+    const beeFlightTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+    const loadRequestIdRef = useRef(0);
 
     // Generate position for single bee in top-right corner
     const generateBeePositions = useCallback((): BeePosition[] => {
@@ -364,18 +368,14 @@ export default function HomeScreen() {
         });
     }, []);
 
-
-    // Memoize bee animation to prevent recreation on each render (fixes white flash)
-    const beeAnimation = useMemo(() => {
-        return createSwarmAnimation(beeColor, !beesAnimating);
-    }, [beesAnimating, beeColor]);
-
-
     const loadData = useCallback(async (forceReload = false) => {
         // Skip if already loaded and not forcing reload
         if (hasInitiallyLoaded.current && !forceReload) {
             return;
         }
+
+        const requestId = ++loadRequestIdRef.current;
+        const isStaleRequest = () => requestId !== loadRequestIdRef.current;
 
         setIsLoading(true);
         try {
@@ -398,32 +398,30 @@ export default function HomeScreen() {
                     const testVocab = await getStoredVocabulary(level);
                     if (testVocab.length === 0) {
                         console.error('Vocabulary generation failed - no words loaded');
-                        setLearnedCount(0);
-                        setTotalCount(0);
-                        setWords([]);
-                        setIsLoading(false);
+                        if (!isStaleRequest()) {
+                            setLearnedCount(0);
+                            setTotalCount(0);
+                            setWords([]);
+                        }
                         return;
                     }
                     console.log(`Verified: ${testVocab.length} words generated for level ${level}`);
                 } else {
                     console.log('No stored language preferences found');
-                    setLearnedCount(0);
-                    setTotalCount(0);
-                    setWords([]);
-                    setIsLoading(false);
+                    if (!isStaleRequest()) {
+                        setLearnedCount(0);
+                        setTotalCount(0);
+                        setWords([]);
+                    }
                     return;
                 }
             }
 
             // Get current level
             const level = await getCurrentLevel();
-            setCurrentLevel(level);
 
             // Get user level display
             const savedUserLevel = await AsyncStorage.getItem('@user_level');
-            if (savedUserLevel) {
-                setUserLevel(savedUserLevel);
-            }
 
             // Get vocabulary for current level
             const vocabulary = await getStoredVocabulary(level);
@@ -431,10 +429,11 @@ export default function HomeScreen() {
             // Validate vocabulary is not empty
             if (vocabulary.length === 0) {
                 console.warn(`No vocabulary available for level ${level}`);
-                setLearnedCount(0);
-                setTotalCount(0);
-                setWords([]);
-                setIsLoading(false);
+                if (!isStaleRequest()) {
+                    setLearnedCount(0);
+                    setTotalCount(0);
+                    setWords([]);
+                }
                 return;
             }
 
@@ -447,7 +446,6 @@ export default function HomeScreen() {
             // Check if we have a saved shuffle order for this language pair and level
             const nativeLang = await AsyncStorage.getItem('@native_language') || 'unknown';
             const targetLang = await AsyncStorage.getItem('@target_language') || 'unknown';
-            setTtsLanguage(getTTSLanguageCode(targetLang));
             const shuffleOrderKey = `@shuffle_order_${nativeLang}_${targetLang}_${level}`;
             const savedOrderJson = await AsyncStorage.getItem(shuffleOrderKey);
 
@@ -478,25 +476,49 @@ export default function HomeScreen() {
                 console.log(`Created new shuffle order for level ${level}`);
             }
 
-            setWords(orderedWords);
-
             // Resume from last saved word ID (find its position in ordered array)
             const lastWordId = await getLastWordId();
+            const pending = await getPendingNotificationWord();
+            const matchingPendingWordId =
+                pending &&
+                (!pending.level || pending.level === level) &&
+                (!pending.targetLanguage || pending.targetLanguage === targetLang) &&
+                orderedWords.some(word => word.id === pending.wordId)
+                    ? pending.wordId
+                    : null;
+            const resumeWordId = matchingPendingWordId ?? lastWordId;
             let resumeIndex = 0;
-            if (lastWordId !== null) {
-                const foundIndex = orderedWords.findIndex(w => w.id === lastWordId);
+            if (resumeWordId !== null) {
+                const foundIndex = orderedWords.findIndex(w => w.id === resumeWordId);
                 if (foundIndex !== -1) {
                     resumeIndex = foundIndex;
-                    console.log(`Resuming from word ID ${lastWordId} at position ${foundIndex}`);
+                    console.log(`Resuming from word ID ${resumeWordId} at position ${foundIndex}`);
                 }
             }
-            setCurrentWordIndex(resumeIndex);
 
             // Update counts - these should now be guaranteed correct
             const learned = await getLearnedCount(level);
             const total = await getTotalWords(level);
+
+            if (isStaleRequest()) {
+                return;
+            }
+
+            setCurrentLevel(level);
+            if (savedUserLevel) {
+                setUserLevel(savedUserLevel);
+            }
+            setTtsLanguage(getTTSLanguageCode(targetLang));
+            setWords(orderedWords);
+            setCurrentWordIndex(resumeIndex);
             setLearnedCount(learned);
             setTotalCount(total);
+
+            if (matchingPendingWordId !== null) {
+                await saveLastWordId(matchingPendingWordId);
+                await clearPendingNotificationWord();
+                console.log(`[HomeScreen] Applied pending word ${matchingPendingWordId} during load`);
+            }
 
             hasInitiallyLoaded.current = true;
 
@@ -504,11 +526,15 @@ export default function HomeScreen() {
         } catch (error) {
             console.error('Error loading data:', error);
             // Set safe defaults on error
-            setLearnedCount(0);
-            setTotalCount(0);
-            setWords([]);
+            if (!isStaleRequest()) {
+                setLearnedCount(0);
+                setTotalCount(0);
+                setWords([]);
+            }
         } finally {
-            setIsLoading(false);
+            if (!isStaleRequest()) {
+                setIsLoading(false);
+            }
         }
     }, []);
 
@@ -529,59 +555,119 @@ export default function HomeScreen() {
         loadData();
     }, [loadData]);
 
+    const consumePendingNotificationWord = useCallback(async (): Promise<boolean> => {
+        const pending = await getPendingNotificationWord();
+        if (pending === null) return false;
+
+        if (isLoading) {
+            console.log('[HomeScreen] Pending word deferred - initial data still loading');
+            return false;
+        }
+
+        const { wordId, level: pendingLevel, targetLanguage } = pending;
+
+        // Validate level and language match before showing
+        const currentLevelValue = await getCurrentLevel();
+        if (pendingLevel && pendingLevel !== currentLevelValue) {
+            console.log(`[HomeScreen] Pending word ${wordId} ignored - level changed (${pendingLevel} -> ${currentLevelValue})`);
+            await clearPendingNotificationWord();
+            return false;
+        }
+
+        const currentTargetLanguage = await AsyncStorage.getItem(STORAGE_KEYS.TARGET_LANGUAGE);
+        if (targetLanguage && currentTargetLanguage && targetLanguage !== currentTargetLanguage) {
+            console.log(`[HomeScreen] Pending word ${wordId} ignored - language changed (${targetLanguage} -> ${currentTargetLanguage})`);
+            await clearPendingNotificationWord();
+            return false;
+        }
+
+        const level = pendingLevel && LEVELS.includes(pendingLevel as Level)
+            ? (pendingLevel as Level)
+            : currentLevelValue;
+        const existingWordIndex = words.findIndex(w => w.id === wordId);
+        if (existingWordIndex !== -1) {
+            await saveLastWordId(wordId);
+            setCurrentWordIndex(existingWordIndex);
+            await clearPendingNotificationWord();
+            console.log(`Showing word from notification: ${words[existingWordIndex].word}`);
+            return true;
+        }
+
+        const vocabulary = await getStoredVocabulary(level);
+        const pendingWord = vocabulary.find(w => w.id === wordId);
+
+        if (!pendingWord) {
+            console.log(`[HomeScreen] Pending word ${wordId} not found yet - will retry after data sync`);
+            return false;
+        }
+
+        await saveLastWordId(wordId);
+        setWords(prevWords => {
+            const otherWords = prevWords.filter(w => w.id !== wordId);
+            return [pendingWord, ...otherWords];
+        });
+        setCurrentWordIndex(0);
+        await clearPendingNotificationWord();
+        console.log(`Showing word from notification: ${pendingWord.word}`);
+        return true;
+    }, [isLoading, words]);
+
+    const checkAndUpdate = useCallback(async (retryPending: boolean = false) => {
+        let handledPending = await consumePendingNotificationWord();
+
+        if (!handledPending && retryPending) {
+            // Response listener can write pending word slightly after Home resumes.
+            await new Promise(resolve => setTimeout(resolve, 250));
+            handledPending = await consumePendingNotificationWord();
+        }
+
+        if (handledPending) {
+            return;
+        }
+
+        if (hasInitiallyLoaded.current) {
+            // Check if level has changed
+            const newLevel = await getCurrentLevel();
+            if (newLevel !== currentLevel) {
+                // Level changed, reload everything
+                hasInitiallyLoaded.current = false;
+                loadData(true);
+            } else {
+                updateCounts();
+            }
+        }
+    }, [consumePendingNotificationWord, currentLevel, loadData, updateCounts]);
+
     // Update counts on focus and check if level changed or pending notification word
     useFocusEffect(
         useCallback(() => {
-            const checkAndUpdate = async () => {
-                // Check for pending notification word first
-                const pending = await getPendingNotificationWord();
-                if (pending !== null) {
-                    const { wordId, level: pendingLevel, targetLanguage } = pending;
-
-                    // Validate level and language match before showing
-                    const currentLevelValue = await getCurrentLevel();
-                    if (pendingLevel && pendingLevel !== currentLevelValue) {
-                        console.log(`[HomeScreen] Pending word ${wordId} ignored - level changed (${pendingLevel} -> ${currentLevelValue})`);
-                    } else {
-                        const currentTargetLanguage = await AsyncStorage.getItem('@target_language');
-                        if (targetLanguage && currentTargetLanguage && targetLanguage !== currentTargetLanguage) {
-                            console.log(`[HomeScreen] Pending word ${wordId} ignored - language changed (${targetLanguage} -> ${currentTargetLanguage})`);
-                        } else {
-                            const level = pendingLevel && LEVELS.includes(pendingLevel as Level)
-                                ? (pendingLevel as Level)
-                                : currentLevelValue;
-                            const vocabulary = await getStoredVocabulary(level);
-                            const pendingWord = vocabulary.find(w => w.id === wordId);
-
-                            if (pendingWord) {
-                                // Put the pending word at the front
-                                const otherWords = words.filter(w => w.id !== wordId);
-                                setWords([pendingWord, ...otherWords]);
-                                setCurrentWordIndex(0);
-                                console.log(`Showing word from notification: ${pendingWord.word}`);
-                                return;
-                            }
-
-                            console.log(`[HomeScreen] Pending word ${wordId} not found in current level - likely due to level/language change`);
-                        }
-                    }
-                }
-
-                if (hasInitiallyLoaded.current) {
-                    // Check if level has changed
-                    const newLevel = await getCurrentLevel();
-                    if (newLevel !== currentLevel) {
-                        // Level changed, reload everything
-                        hasInitiallyLoaded.current = false;
-                        loadData(true);
-                    } else {
-                        updateCounts();
-                    }
-                }
-            };
-            checkAndUpdate();
-        }, [currentLevel, loadData, updateCounts, words])
+            checkAndUpdate(true).catch(error => {
+                console.error('[HomeScreen] Focus update failed:', error);
+            });
+        }, [checkAndUpdate])
     );
+
+    // Also check on app resume because Home can stay mounted without getting a new focus event.
+    useEffect(() => {
+        const subscription = AppState.addEventListener('change', (nextAppState: AppStateStatus) => {
+            if (nextAppState === 'active') {
+                checkAndUpdate(true).catch(error => {
+                    console.error('[HomeScreen] Resume update failed:', error);
+                });
+            }
+        });
+
+        return () => subscription.remove();
+    }, [checkAndUpdate]);
+
+    // When initial data load completes, retry pending notification consumption once more.
+    useEffect(() => {
+        if (!isLoading) {
+            checkAndUpdate(true).catch(error => {
+                console.error('[HomeScreen] Post-load update failed:', error);
+            });
+        }
+    }, [isLoading, checkAndUpdate]);
 
     // Get level display
     const getLevelDisplay = () => {
@@ -617,11 +703,32 @@ export default function HomeScreen() {
             setBeePositions(newPositions);
 
             // Animate them in after a short delay
-            setTimeout(() => {
+            if (beeFlightTimeoutRef.current) {
+                clearTimeout(beeFlightTimeoutRef.current);
+            }
+
+            beeFlightTimeoutRef.current = setTimeout(() => {
+                beeFlightTimeoutRef.current = null;
                 animateBeesIn(newPositions);
             }, 300);
         }
+
+        return () => {
+            if (beeFlightTimeoutRef.current) {
+                clearTimeout(beeFlightTimeoutRef.current);
+                beeFlightTimeoutRef.current = null;
+            }
+        };
     }, [currentWordIndex, currentWord, isLoading, words.length, generateBeePositions, animateBeesIn, currentLevel]);
+
+    useEffect(() => {
+        return () => {
+            if (beeFlightTimeoutRef.current) {
+                clearTimeout(beeFlightTimeoutRef.current);
+            }
+            beeAnimationRef.current?.stop?.();
+        };
+    }, []);
 
     // Swipe animation setup
     const position = useRef(new Animated.ValueXY()).current;
@@ -1196,7 +1303,8 @@ export default function HomeScreen() {
                                     ]}
                                 >
                                     <LottieView
-                                        source={beeAnimation}
+                                        key={`${bee.id}-${beesAnimating ? 'animated' : 'static'}`}
+                                        source={beesAnimating ? BEE_ACTIVE_ANIMATION : BEE_STATIC_ANIMATION}
                                         style={styles.beeAnim}
                                         autoPlay={beesAnimating}
                                         loop={true}

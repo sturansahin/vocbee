@@ -844,31 +844,64 @@ export async function setPendingNotificationWord(
 }
 
 /**
- * Get and clear pending notification word
+ * Parse pending notification word payload
+ */
+function parsePendingNotificationWord(raw: string): PendingNotificationWord | null {
+    try {
+        const parsed = JSON.parse(raw);
+        if (parsed) {
+            const parsedWordId =
+                typeof parsed.wordId === 'number'
+                    ? parsed.wordId
+                    : typeof parsed.wordId === 'string'
+                        ? parseInt(parsed.wordId, 10)
+                        : NaN;
+
+            if (Number.isFinite(parsedWordId)) {
+                return {
+                    wordId: parsedWordId,
+                    ...(typeof parsed.level === 'string' ? { level: parsed.level } : {}),
+                    ...(typeof parsed.targetLanguage === 'string' ? { targetLanguage: parsed.targetLanguage } : {}),
+                };
+            }
+        }
+    } catch {
+        // fall back to legacy string format
+    }
+
+    const legacyId = parseInt(raw, 10);
+    if (!Number.isNaN(legacyId)) {
+        return { wordId: legacyId };
+    }
+
+    return null;
+}
+
+/**
+ * Get pending notification word without clearing it.
+ * Caller decides when it is safe to clear.
  */
 export async function getPendingNotificationWord(): Promise<PendingNotificationWord | null> {
     try {
         const raw = await AsyncStorage.getItem(PENDING_NOTIFICATION_WORD_KEY);
         if (raw) {
-            await AsyncStorage.removeItem(PENDING_NOTIFICATION_WORD_KEY);
-            try {
-                const parsed = JSON.parse(raw);
-                if (parsed && typeof parsed.wordId === 'number') {
-                    return parsed as PendingNotificationWord;
-                }
-            } catch {
-                // fall back to legacy string format
-            }
-
-            const legacyId = parseInt(raw, 10);
-            if (!Number.isNaN(legacyId)) {
-                return { wordId: legacyId };
-            }
+            return parsePendingNotificationWord(raw);
         }
         return null;
     } catch (error) {
         console.error('Error getting pending word:', error);
         return null;
+    }
+}
+
+/**
+ * Clear pending notification word after successful consumption.
+ */
+export async function clearPendingNotificationWord(): Promise<void> {
+    try {
+        await AsyncStorage.removeItem(PENDING_NOTIFICATION_WORD_KEY);
+    } catch (error) {
+        console.error('Error clearing pending word:', error);
     }
 }
 
@@ -885,17 +918,34 @@ export async function handleNotificationResponse(
     response: Notifications.NotificationResponse
 ): Promise<void> {
     const data = response.notification.request.content.data;
+    const rawWordId = data?.wordId;
+    const wordId =
+        typeof rawWordId === 'number'
+            ? rawWordId
+            : typeof rawWordId === 'string'
+                ? parseInt(rawWordId, 10)
+                : NaN;
 
-    if (data?.wordId) {
-        const wordId = data.wordId as number;
+    if (!Number.isFinite(wordId)) {
+        console.log('[Notifications] Ignored notification response - invalid wordId payload');
+        return;
+    }
+
+    if (data) {
+        const autoMarkEnabled = data.autoMark === true || data.autoMark === 'true';
         const dataLevel = typeof data.level === 'string' && LEVELS.includes(data.level as Level)
             ? (data.level as Level)
             : null;
-        const currentLevel = await getCurrentLevel();
-        const currentTargetLanguage = await AsyncStorage.getItem('@target_language');
+        const storedLevel = await AsyncStorage.getItem(STORAGE_KEYS.CURRENT_LEVEL);
+        const currentLevel = storedLevel && LEVELS.includes(storedLevel as Level)
+            ? (storedLevel as Level)
+            : null;
+        const currentTargetLanguage = await AsyncStorage.getItem(STORAGE_KEYS.TARGET_LANGUAGE);
         const dataTargetLanguage = typeof data.targetLanguage === 'string' ? data.targetLanguage : null;
 
-        const levelMismatch = dataLevel !== null && dataLevel !== currentLevel;
+        // Only enforce mismatch checks when we have current local values loaded.
+        // On cold starts, storage restore can still be in progress.
+        const levelMismatch = dataLevel !== null && currentLevel !== null && dataLevel !== currentLevel;
         const languageMismatch =
             dataTargetLanguage !== null &&
             currentTargetLanguage !== null &&
@@ -906,12 +956,19 @@ export async function handleNotificationResponse(
             return;
         }
 
-        const level = dataLevel || currentLevel;
+        const levelForUnmark: Level = dataLevel || currentLevel || (await getCurrentLevel());
+
+        // Store pending word first so HomeScreen can consume it immediately.
+        await setPendingNotificationWord({
+            wordId,
+            level: dataLevel || currentLevel || undefined,
+            ...(dataTargetLanguage ? { targetLanguage: dataTargetLanguage } : {}),
+        });
 
         // If autoMark was enabled and word might have been marked by processDeliveredNotifications,
         // unmark it so user can review (since they clicked to see it)
-        if (data.autoMark) {
-            await unmarkWord(level, wordId);
+        if (autoMarkEnabled) {
+            await unmarkWord(levelForUnmark, wordId);
             console.log(`[Notifications] Word ${wordId} unmarked for review (user tapped notification)`);
         }
 
@@ -925,13 +982,6 @@ export async function handleNotificationResponse(
             await saveTrackedNotifications(tracked);
             console.log(`[Notifications] Marked notification ${notificationId} as processed to prevent race condition`);
         }
-
-        // Store word info for HomeScreen
-        await setPendingNotificationWord({
-            wordId,
-            level: dataLevel || undefined,
-            ...(dataTargetLanguage ? { targetLanguage: dataTargetLanguage } : {}),
-        });
     }
 }
 
