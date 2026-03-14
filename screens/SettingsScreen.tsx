@@ -761,7 +761,7 @@ export default function SettingsScreen() {
                <Text style={[styles.logoutButtonText, { color: colors.error }]}>{t('settings.logout')}</Text>
             </TouchableOpacity>
 
-            <Text style={[styles.versionText, dynamicStyles.textSecondary, { marginTop: 12, marginBottom: 0 }]}>VocBee v1.0.0</Text>
+            <Text style={[styles.versionText, dynamicStyles.textSecondary, { marginTop: 12, marginBottom: 0 }]}>VocBee v1.0.4</Text>
          </ScrollView>
 
          {/* Time Picker Modal - Wheel Style */}

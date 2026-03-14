@@ -49,6 +49,8 @@
         confirmPassword: 'Passwort bestätigen',
         startYourLanguage: 'Starte deine',
         journeyToday: 'Sprachreise heute.',
+        acceptPrivacyPrefix: 'Ich habe Folgendes gelesen und akzeptiere es:',
+        acceptPrivacyRequired: 'Sie müssen der Datenschutzerklärung zustimmen, um ein Konto zu erstellen.',
     },
     home: {
         welcome: 'Willkommen',

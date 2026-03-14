@@ -3,7 +3,7 @@
     "name": "VocBee",
     "slug": "vocbee",
     "scheme": "vocbee",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "icon": "./assets/icons/vocicon.png",
     "splash": {
       "image": "./assets/transparent-splash.png",
@@ -101,7 +101,7 @@
         "react-native-google-mobile-ads",
         {
           "androidAppId": "ca-app-pub-3149431742550187~5197491242",
-          "iosAppId": "ca-app-pub-3149431742550187~5197491242",
+          "iosAppId": "ca-app-pub-3149431742550187~9940490920",
           "userTrackingUsageDescription": "This identifier will be used to deliver personalized ads to you."
         }
       ],

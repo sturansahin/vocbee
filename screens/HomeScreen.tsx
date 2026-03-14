@@ -51,7 +51,7 @@ import { addToFavorites, removeFromFavorites, isFavorite } from '../services/fav
 import { clearPendingNotificationWord, getPendingNotificationWord } from '../services/notificationService';
 import { useAlert } from '../components/CustomAlert';
 import { SafeBannerAd } from '../components/SafeBannerAd';
-import { loadInterstitial, showInterstitial, AD_IDS, getBannerAdSize } from '../services/adMobService';
+import { loadInterstitial, showInterstitial, AD_IDS } from '../services/adMobService';
 import { useTranslation } from 'react-i18next';
 import { getTTSLanguageCode } from '../constants';
 import { STORAGE_KEYS } from '../services/storageKeys';
@@ -815,7 +815,7 @@ export default function HomeScreen() {
 
     // Load interstitial on mount
     useEffect(() => {
-        loadInterstitial();
+        void loadInterstitial();
     }, []);
 
     // Update refs when functions change
@@ -1322,12 +1322,7 @@ export default function HomeScreen() {
 
             {/* Banner Ad */}
             <View style={{ alignItems: 'center', justifyContent: 'center', paddingBottom: insets.bottom > 0 ? 0 : 10, backgroundColor: colors.background }}>
-                <SafeBannerAd
-                    unitId={AD_IDS.BANNER}
-                    requestOptions={{
-                        requestNonPersonalizedAdsOnly: true,
-                    }}
-                />
+                <SafeBannerAd unitId={AD_IDS.BANNER} />
             </View>
         </View >
     );

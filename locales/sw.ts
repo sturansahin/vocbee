@@ -49,6 +49,8 @@
         confirmPassword: 'Thibitisha Nenosiri',
         startYourLanguage: 'Anza safari yako ya',
         journeyToday: 'lugha leo.',
+        acceptPrivacyPrefix: 'Nimesoma na ninakubali',
+        acceptPrivacyRequired: 'Lazima ukubali Sera ya Faragha ili kuunda akaunti.',
     },
     home: {
         welcome: 'Karibu',

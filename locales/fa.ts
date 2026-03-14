@@ -49,6 +49,8 @@ export default {
         confirmPassword: 'تایید رمز عبور',
         startYourLanguage: 'سفر یادگیری زبان',
         journeyToday: 'خود را امروز شروع کنید.',
+        acceptPrivacyPrefix: 'این مورد را خوانده‌ام و می‌پذیرم:',
+        acceptPrivacyRequired: 'برای ایجاد حساب باید سیاست حفظ حریم خصوصی را بپذیرید.',
     },
     home: {
         welcome: 'خوش آمدید',

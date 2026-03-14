@@ -49,6 +49,8 @@ export default {
         confirmPassword: 'Confirmar Senha',
         startYourLanguage: 'Comece sua jornada',
         journeyToday: 'linguística hoje.',
+        acceptPrivacyPrefix: 'Li e concordo com a',
+        acceptPrivacyRequired: 'Você deve aceitar a Política de Privacidade para criar uma conta.',
     },
     home: {
         welcome: 'Bem-vindo',

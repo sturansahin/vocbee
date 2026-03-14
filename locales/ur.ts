@@ -49,6 +49,8 @@ export default {
         confirmPassword: 'پاس ورڈ کی تصدیق',
         startYourLanguage: 'اپنا زبان سیکھنے کا',
         journeyToday: 'سفر آج شروع کریں۔',
+        acceptPrivacyPrefix: 'میں نے یہ پڑھ لیا ہے اور قبول کرتا/کرتی ہوں:',
+        acceptPrivacyRequired: 'اکاؤنٹ بنانے کے لیے آپ کو رازداری کی پالیسی قبول کرنا ہوگی۔',
     },
     home: {
         welcome: 'خوش آمدید',

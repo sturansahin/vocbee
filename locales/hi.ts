@@ -49,6 +49,8 @@ export default {
         confirmPassword: 'पासवर्ड की पुष्टि करें',
         startYourLanguage: 'अपनी भाषा यात्रा',
         journeyToday: 'आज ही शुरू करें।',
+        acceptPrivacyPrefix: 'मैंने इसे पढ़ लिया है और स्वीकार करता/करती हूँ:',
+        acceptPrivacyRequired: 'खाता बनाने के लिए आपको गोपनीयता नीति स्वीकार करनी होगी।',
     },
     home: {
         welcome: 'स्वागत है',

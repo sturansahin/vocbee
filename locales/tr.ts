@@ -49,6 +49,8 @@
         confirmPassword: 'Şifreyi Onayla',
         startYourLanguage: 'Dil öğrenme yolculuğuna',
         journeyToday: 'bugün başla.',
+        acceptPrivacyPrefix: 'Şunu okudum ve kabul ediyorum:',
+        acceptPrivacyRequired: 'Hesap oluşturmak için Gizlilik Politikası’nı kabul etmelisiniz.',
     },
     home: {
         welcome: 'Hoşgeldin',

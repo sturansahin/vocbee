@@ -49,6 +49,8 @@
         confirmPassword: '비밀번호 확인',
         startYourLanguage: '언어 여행을',
         journeyToday: '오늘 시작하세요.',
+        acceptPrivacyPrefix: '다음을 읽고 동의합니다:',
+        acceptPrivacyRequired: '계정을 만들려면 개인정보 처리방침에 동의해야 합니다.',
     },
     home: {
         welcome: '환영합니다',

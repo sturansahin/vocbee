@@ -49,6 +49,8 @@
         confirmPassword: '确认密码',
         startYourLanguage: '开始你的语言',
         journeyToday: '学习之旅。',
+        acceptPrivacyPrefix: '我已阅读并同意',
+        acceptPrivacyRequired: '您必须接受隐私政策才能创建账户。',
     },
     home: {
         welcome: '欢迎',

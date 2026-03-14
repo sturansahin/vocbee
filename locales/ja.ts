@@ -49,6 +49,8 @@
         confirmPassword: 'パスワード確認',
         startYourLanguage: '今日から言語の',
         journeyToday: '旅を始めましょう。',
+        acceptPrivacyPrefix: '私はこれを読み、同意します:',
+        acceptPrivacyRequired: 'アカウントを作成するには、プライバシーポリシーに同意する必要があります。',
     },
     home: {
         welcome: 'ようこそ',

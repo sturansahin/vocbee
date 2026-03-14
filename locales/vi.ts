@@ -49,6 +49,8 @@ export default {
         confirmPassword: 'Xác nhận mật khẩu',
         startYourLanguage: 'Bắt đầu hành trình',
         journeyToday: 'ngôn ngữ của bạn ngay hôm nay.',
+        acceptPrivacyPrefix: 'Tôi đã đọc và đồng ý với',
+        acceptPrivacyRequired: 'Bạn phải chấp nhận Chính sách bảo mật để tạo tài khoản.',
     },
     home: {
         welcome: 'Chào mừng',

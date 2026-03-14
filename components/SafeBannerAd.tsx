@@ -1,23 +1,59 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { getBannerAdComponent, getBannerAdSize, areAdsSupported } from '../services/adMobService';
+import {
+    areAdsSupported,
+    ensureAdMobReady,
+    getBannerAdComponent,
+    getBannerAdSize,
+    getDefaultAdRequestOptions,
+} from '../services/adMobService';
 
 interface SafeBannerAdProps {
     unitId: string;
-    size?: any; // BannerAdSize type
+    size?: any;
     requestOptions?: any;
 }
 
 export const SafeBannerAd: React.FC<SafeBannerAdProps> = ({
     unitId,
     size,
-    requestOptions
+    requestOptions,
 }) => {
     const [hasError, setHasError] = useState(false);
+    const [isReady, setIsReady] = useState(!areAdsSupported());
 
-    // If ads are not supported (e.g. Expo Go) or we caught an error, render placeholder
-    if (!areAdsSupported() || hasError) {
-        // In production you might return null, but for dev seeing a placeholder is helpful
+    useEffect(() => {
+        let isMounted = true;
+
+        if (!areAdsSupported()) {
+            setIsReady(false);
+            return undefined;
+        }
+
+        ensureAdMobReady()
+            .then(ready => {
+                if (isMounted) {
+                    setIsReady(ready);
+                }
+            })
+            .catch(error => {
+                console.error('[AdMob] Banner init failed', error);
+                if (isMounted) {
+                    setHasError(true);
+                }
+            });
+
+        return () => {
+            isMounted = false;
+        };
+    }, []);
+
+    const mergedRequestOptions = {
+        ...getDefaultAdRequestOptions(),
+        ...(requestOptions ?? {}),
+    };
+
+    if (!areAdsSupported()) {
         if (__DEV__) {
             return (
                 <View style={styles.placeholder}>
@@ -26,21 +62,36 @@ export const SafeBannerAd: React.FC<SafeBannerAdProps> = ({
                 </View>
             );
         }
+
+        return null;
+    }
+
+    if (!isReady || hasError) {
+        if (__DEV__ && !hasError) {
+            return (
+                <View style={styles.placeholder}>
+                    <Text style={styles.text}>AdMob Banner is preparing</Text>
+                </View>
+            );
+        }
+
         return null;
     }
 
     const BannerAd = getBannerAdComponent();
     const BannerAdSize = getBannerAdSize();
 
-    if (!BannerAd) return null;
+    if (!BannerAd) {
+        return null;
+    }
 
     return (
         <BannerAd
             unitId={unitId}
             size={size || BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
-            requestOptions={requestOptions}
+            requestOptions={mergedRequestOptions}
             onAdFailedToLoad={(error: any) => {
-                console.log('Banner failed to load', error);
+                console.log('[AdMob] Banner failed to load', error);
                 setHasError(true);
             }}
         />
@@ -65,5 +116,5 @@ const styles = StyleSheet.create({
     subtext: {
         fontSize: 10,
         color: '#888',
-    }
+    },
 });

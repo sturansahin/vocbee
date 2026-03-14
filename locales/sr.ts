@@ -49,6 +49,8 @@ export default {
         confirmPassword: 'Потврди лозинку',
         startYourLanguage: 'Започните своје језичко',
         journeyToday: 'путовање данас.',
+        acceptPrivacyPrefix: 'Прочитао/прочитала сам и прихватам',
+        acceptPrivacyRequired: 'Морате прихватити Политику приватности да бисте направили налог.',
     },
     home: {
         welcome: 'Добродошли',

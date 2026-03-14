@@ -49,6 +49,8 @@
         confirmPassword: 'Confirm Password',
         startYourLanguage: 'Start your language',
         journeyToday: 'journey today.',
+        acceptPrivacyPrefix: 'I have read and agree to the',
+        acceptPrivacyRequired: 'You must accept the Privacy Policy to create an account.',
     },
     home: {
         welcome: 'Welcome',

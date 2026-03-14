@@ -49,6 +49,8 @@ export default {
         confirmPassword: 'Konfirmasi Kata Sandi',
         startYourLanguage: 'Mulai perjalanan bahasa',
         journeyToday: 'Anda hari ini.',
+        acceptPrivacyPrefix: 'Saya telah membaca dan menyetujui',
+        acceptPrivacyRequired: 'Anda harus menyetujui Kebijakan Privasi untuk membuat akun.',
     },
     home: {
         welcome: 'Selamat Datang',

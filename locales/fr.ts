@@ -49,6 +49,8 @@
         confirmPassword: 'Confirmer le mot de passe',
         startYourLanguage: 'Commencez votre aventure',
         journeyToday: 'linguistique aujourd\'hui.',
+        acceptPrivacyPrefix: 'J\'ai lu et j\'accepte la',
+        acceptPrivacyRequired: 'Vous devez accepter la Politique de confidentialité pour créer un compte.',
     },
     home: {
         welcome: 'Bienvenue',

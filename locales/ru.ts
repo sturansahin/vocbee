@@ -49,6 +49,8 @@ export default {
         confirmPassword: 'Подтвердите пароль',
         startYourLanguage: 'Начните своё языковое',
         journeyToday: 'путешествие сегодня.',
+        acceptPrivacyPrefix: 'Я прочитал(а) и принимаю',
+        acceptPrivacyRequired: 'Чтобы создать аккаунт, необходимо принять Политику конфиденциальности.',
     },
     home: {
         welcome: 'Добро пожаловать',

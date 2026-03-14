@@ -2,306 +2,475 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import Constants, { ExecutionEnvironment } from 'expo-constants';
 import { Alert, Platform } from 'react-native';
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Constants & IDs
-// ─────────────────────────────────────────────────────────────────────────────
+type AdRequestOptions = {
+    requestNonPersonalizedAdsOnly?: boolean;
+};
 
-// Unit IDs (provided by user, currently Test IDs)
-const BANNER_ID = 'ca-app-pub-3940256099942544/2934735716';
-const INTERSTITIAL_ID = 'ca-app-pub-3940256099942544/4411468910';
-const APP_OPEN_ID = 'ca-app-pub-3940256099942544/5662855259';
+type ConsentInfoLike = {
+    status?: string;
+    canRequestAds?: boolean;
+    isConsentFormAvailable?: boolean;
+};
 
-// Storage Keys
+const IS_IOS = Platform.OS === 'ios';
+
+const PRODUCTION_AD_IDS = {
+    BANNER: IS_IOS
+        ? 'ca-app-pub-3149431742550187/7394218632'
+        : 'ca-app-pub-3149431742550187/9284732452',
+    INTERSTITIAL: IS_IOS
+        ? 'ca-app-pub-3149431742550187/3271140796'
+        : 'ca-app-pub-3149431742550187/8813959164',
+    APP_OPEN: IS_IOS
+        ? 'ca-app-pub-3149431742550187/2904309285'
+        : 'ca-app-pub-3149431742550187/3501266196',
+};
+
+const TEST_AD_IDS = {
+    BANNER: IS_IOS
+        ? 'ca-app-pub-3940256099942544/2934735716'
+        : 'ca-app-pub-3940256099942544/6300978111',
+    INTERSTITIAL: IS_IOS
+        ? 'ca-app-pub-3940256099942544/4411468910'
+        : 'ca-app-pub-3940256099942544/1033173712',
+    APP_OPEN: IS_IOS
+        ? 'ca-app-pub-3940256099942544/5575463023'
+        : 'ca-app-pub-3940256099942544/9257395921',
+};
+
 const APP_LAUNCH_COUNT_KEY = '@app_launch_count';
+const APP_OPEN_TIMEOUT_MS = 5000;
 
-// Check if running in Expo Go or if native module is missing
-let AdMobModule: any = null;
-let MobileAds: any = null;
+let mobileAdsFactory: any = null;
 let InterstitialAd: any = null;
 let AppOpenAd: any = null;
 let AdEventType: any = null;
 let BannerAd: any = null;
 let BannerAdSize: any = null;
-
 let AdsConsent: any = null;
 let AdsConsentStatus: any = null;
 
 let isModuleLoaded = false;
-let consentObtained = false;
+let isInitialized = false;
+let isConsentResolved = false;
+let canRequestAds = false;
+let defaultAdRequestOptions: AdRequestOptions = {
+    requestNonPersonalizedAdsOnly: true,
+};
 
-// Helper to safely load the module
+let consentPromise: Promise<void> | null = null;
+let initializePromise: Promise<boolean> | null = null;
+
+let interstitial: any = null;
+let isInterstitialLoaded = false;
+let isInterstitialLoading = false;
+let interstitialListeners: Array<() => void> = [];
+
+export const AD_IDS = __DEV__ ? TEST_AD_IDS : PRODUCTION_AD_IDS;
+
+function isExpoGoEnvironment() {
+    const executionEnvironment = (Constants as any)?.executionEnvironment;
+    const appOwnership = (Constants as any)?.appOwnership;
+
+    return (
+        executionEnvironment === (ExecutionEnvironment?.StoreClient ?? 'storeClient') ||
+        appOwnership === 'expo' ||
+        appOwnership === 'guest'
+    );
+}
+
 function loadAdMobModule() {
-    if (isModuleLoaded) return;
+    if (isModuleLoaded) {
+        return;
+    }
 
-    // Robust Expo Go detection
-    const isExpoGo =
-        Constants.executionEnvironment === 'storeClient' ||
-        Constants.appOwnership === 'expo' ||
-        Constants.appOwnership === 'guest'; // 'guest' is sometimes used in Expo Go
-
-    if (isExpoGo) {
-        console.log('Running in Expo Go - AdMob skipped to prevent crash');
+    if (isExpoGoEnvironment()) {
+        console.log('[AdMob] Expo Go detected, native ads disabled');
         isModuleLoaded = true;
-        AdMobModule = null; // Ensure null
         return;
     }
 
     try {
-        // Attempt to require the module
-        // We strictly catch ANY error here, including Invariant Violation
         const adMob = require('react-native-google-mobile-ads');
 
-        // Quick check if the module actually exported what we need
-        if (adMob && adMob.MobileAds) {
-            MobileAds = adMob.MobileAds;
-            InterstitialAd = adMob.InterstitialAd;
-            AppOpenAd = adMob.AppOpenAd;
-            AdEventType = adMob.AdEventType;
-            BannerAd = adMob.BannerAd;
-            BannerAdSize = adMob.BannerAdSize;
-            // UMP Consent
-            if (adMob.AdsConsent) {
-                AdsConsent = adMob.AdsConsent;
-            }
-            if (adMob.AdsConsentStatus) {
-                AdsConsentStatus = adMob.AdsConsentStatus;
-            }
-            AdMobModule = true;
-        } else {
-            throw new Error('AdMob module loaded but exports are missing');
+        mobileAdsFactory = adMob.MobileAds ?? adMob.default ?? null;
+        InterstitialAd = adMob.InterstitialAd ?? null;
+        AppOpenAd = adMob.AppOpenAd ?? null;
+        AdEventType = adMob.AdEventType ?? null;
+        BannerAd = adMob.BannerAd ?? null;
+        BannerAdSize = adMob.BannerAdSize ?? null;
+        AdsConsent = adMob.AdsConsent ?? null;
+        AdsConsentStatus = adMob.AdsConsentStatus ?? null;
+
+        if (!mobileAdsFactory || !InterstitialAd || !AppOpenAd || !AdEventType || !BannerAd) {
+            throw new Error('AdMob module is missing required exports');
         }
     } catch (error) {
-        console.log('AdMob native module could not be loaded (safely caught):', error);
-        AdMobModule = null;
+        console.log('[AdMob] Native module unavailable:', error);
+        mobileAdsFactory = null;
+        InterstitialAd = null;
+        AppOpenAd = null;
+        AdEventType = null;
+        BannerAd = null;
+        BannerAdSize = null;
+        AdsConsent = null;
+        AdsConsentStatus = null;
     } finally {
         isModuleLoaded = true;
     }
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// UMP / GDPR Consent
-// ─────────────────────────────────────────────────────────────────────────────
+function cleanupInterstitialListeners() {
+    interstitialListeners.forEach(unsubscribe => {
+        try {
+            unsubscribe();
+        } catch (error) {
+            console.warn('[AdMob] Failed to remove interstitial listener', error);
+        }
+    });
 
-/**
- * Request user consent via Google UMP (User Messaging Platform).
- * MUST be called BEFORE initializeAdMob() to comply with EU User Consent Policy.
- *
- * On iOS 14.5+ this also triggers the ATT (App Tracking Transparency) prompt
- * when the react-native-google-mobile-ads plugin has userTrackingUsageDescription
- * configured in app.json.
- *
- * Safe to call in Expo Go — gracefully skips.
- */
+    interstitialListeners = [];
+}
+
+function buildAdRequestOptions(consentInfo?: ConsentInfoLike | null, userChoices?: any): AdRequestOptions {
+    const consentStatus = consentInfo?.status;
+    const personalizedAdsAllowed =
+        consentStatus === (AdsConsentStatus?.NOT_REQUIRED ?? 'NOT_REQUIRED') ||
+        Boolean(
+            userChoices?.selectPersonalisedAds &&
+            userChoices?.storeAndAccessInformationOnDevice
+        );
+
+    return {
+        requestNonPersonalizedAdsOnly: !personalizedAdsAllowed,
+    };
+}
+
+async function refreshConsentState(consentInfo?: ConsentInfoLike | null) {
+    let resolvedConsentInfo = consentInfo ?? null;
+
+    if (!resolvedConsentInfo && AdsConsent?.getConsentInfo) {
+        try {
+            resolvedConsentInfo = await AdsConsent.getConsentInfo();
+        } catch (error) {
+            console.warn('[AdMob] Failed to read consent info', error);
+        }
+    }
+
+    let userChoices: any = null;
+    if (AdsConsent?.getUserChoices) {
+        try {
+            userChoices = await AdsConsent.getUserChoices();
+        } catch (error) {
+            console.log('[AdMob] User choices unavailable, falling back to non-personalized ads');
+        }
+    }
+
+    canRequestAds = Boolean(resolvedConsentInfo?.canRequestAds ?? !AdsConsent);
+    defaultAdRequestOptions = buildAdRequestOptions(resolvedConsentInfo, userChoices);
+    isConsentResolved = true;
+
+    console.log('[AdMob] Consent resolved', {
+        status: resolvedConsentInfo?.status ?? 'unknown',
+        canRequestAds,
+        requestNonPersonalizedAdsOnly: defaultAdRequestOptions.requestNonPersonalizedAdsOnly,
+    });
+}
+
+export const getDefaultAdRequestOptions = (): AdRequestOptions => ({
+    ...defaultAdRequestOptions,
+});
+
 export const requestAdConsent = async (): Promise<void> => {
     loadAdMobModule();
-    if (!AdMobModule) {
-        console.log('[AdMob] Consent skipped — module not available');
-        consentObtained = true; // Allow mock ads in Expo Go
+
+    if (!mobileAdsFactory) {
+        isConsentResolved = true;
+        canRequestAds = false;
         return;
     }
 
-    if (!AdsConsent) {
-        // Older module version without UMP support — skip gracefully
-        console.log('[AdMob] AdsConsent not available — skipping UMP flow');
-        consentObtained = true;
+    if (isConsentResolved) {
         return;
     }
 
-    try {
-        // 1. Request the latest consent information
-        const consentInfo = await AdsConsent.requestInfoUpdate();
-        console.log('[AdMob] Consent info:', JSON.stringify(consentInfo));
+    if (!consentPromise) {
+        consentPromise = (async () => {
+            if (!AdsConsent) {
+                console.log('[AdMob] AdsConsent helper unavailable, defaulting to non-personalized ads');
+                canRequestAds = true;
+                isConsentResolved = true;
+                defaultAdRequestOptions = {
+                    requestNonPersonalizedAdsOnly: true,
+                };
+                return;
+            }
 
-        // 2. Show consent form if required & available
-        if (
-            consentInfo.isConsentFormAvailable &&
-            consentInfo.status === (AdsConsentStatus?.REQUIRED ?? 'REQUIRED')
-        ) {
-            const formResult = await AdsConsent.showForm();
-            console.log('[AdMob] Consent form result:', JSON.stringify(formResult));
-        }
+            let latestConsentInfo: ConsentInfoLike | null = null;
 
-        consentObtained = true;
-        console.log('[AdMob] Consent flow completed');
-    } catch (error) {
-        // Consent errors should not block the app — fallback to non-personalized ads
-        console.warn('[AdMob] Consent request failed (non-blocking):', error);
-        consentObtained = true;
+            try {
+                if (typeof AdsConsent.gatherConsent === 'function') {
+                    latestConsentInfo = await AdsConsent.gatherConsent();
+                } else {
+                    latestConsentInfo = await AdsConsent.requestInfoUpdate();
+
+                    if (
+                        latestConsentInfo?.isConsentFormAvailable &&
+                        latestConsentInfo?.status === (AdsConsentStatus?.REQUIRED ?? 'REQUIRED') &&
+                        typeof AdsConsent.showForm === 'function'
+                    ) {
+                        latestConsentInfo = await AdsConsent.showForm();
+                    }
+                }
+            } catch (error) {
+                console.warn('[AdMob] Consent flow failed, continuing safely with fallback options', error);
+            }
+
+            await refreshConsentState(latestConsentInfo);
+        })();
     }
+
+    await consentPromise;
 };
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Initialization
-// ─────────────────────────────────────────────────────────────────────────────
-
-let isInitialized = false;
-
-export const initializeAdMob = async () => {
-    loadAdMobModule(); // Try to load
-
-    if (!AdMobModule || isInitialized) return;
-
-    // Ensure consent has been requested before initializing
-    if (!consentObtained) {
-        console.warn('[AdMob] initializeAdMob called before requestAdConsent — requesting now');
-        await requestAdConsent();
-    }
-
-    try {
-        await MobileAds().initialize();
-        isInitialized = true;
-        console.log('AdMob initialized');
-    } catch (error) {
-        console.error('Failed to initialize AdMob', error);
-    }
-};
-
-// ─────────────────────────────────────────────────────────────────────────────
-// Interstitial Ad (Transition Ad)
-// ─────────────────────────────────────────────────────────────────────────────
-
-let interstitial: any = null;
-let isInterstitialLoaded = false;
-
-export const loadInterstitial = () => {
+export const initializeAdMob = async (): Promise<boolean> => {
     loadAdMobModule();
-    if (!AdMobModule) return;
+
+    if (!mobileAdsFactory) {
+        return false;
+    }
+
+    if (isInitialized) {
+        return true;
+    }
+
+    if (!initializePromise) {
+        initializePromise = (async () => {
+            await requestAdConsent();
+
+            if (!canRequestAds) {
+                console.log('[AdMob] SDK init skipped because ads cannot be requested yet');
+                return false;
+            }
+
+            try {
+                await mobileAdsFactory().initialize();
+                isInitialized = true;
+                console.log('[AdMob] SDK initialized');
+                return true;
+            } catch (error) {
+                console.error('[AdMob] Failed to initialize SDK', error);
+                return false;
+            }
+        })();
+    }
+
+    const ready = await initializePromise;
+
+    if (!ready && !isInitialized) {
+        initializePromise = null;
+    }
+
+    return ready;
+};
+
+export const ensureAdMobReady = async (): Promise<boolean> => initializeAdMob();
+
+export const loadInterstitial = async (): Promise<boolean> => {
+    loadAdMobModule();
+
+    if (!mobileAdsFactory) {
+        return false;
+    }
+
+    const isReady = await ensureAdMobReady();
+    if (!isReady) {
+        return false;
+    }
+
+    if (isInterstitialLoaded) {
+        return true;
+    }
+
+    if (isInterstitialLoading) {
+        return false;
+    }
 
     try {
-        // Unsubscribe old events if any (simplified here by just creating new)
-        interstitial = InterstitialAd.createForAdRequest(INTERSTITIAL_ID, {
-            requestNonPersonalizedAdsOnly: true,
-        });
+        cleanupInterstitialListeners();
+        isInterstitialLoading = true;
+        interstitial = InterstitialAd.createForAdRequest(
+            AD_IDS.INTERSTITIAL,
+            getDefaultAdRequestOptions()
+        );
 
-        interstitial.addAdEventListener(AdEventType.LOADED, () => {
-            isInterstitialLoaded = true;
-            console.log('Interstitial Ad Loaded');
-        });
-
-        interstitial.addAdEventListener(AdEventType.CLOSED, () => {
-            console.log('Interstitial Ad Closed');
-            isInterstitialLoaded = false;
-            // Load the next one immediately
-            loadInterstitial();
-        });
-
-        interstitial.addAdEventListener(AdEventType.ERROR, (error: any) => {
-            console.error('Interstitial Ad Error:', error);
-            isInterstitialLoaded = false;
-        });
+        interstitialListeners = [
+            interstitial.addAdEventListener(AdEventType.LOADED, () => {
+                isInterstitialLoaded = true;
+                isInterstitialLoading = false;
+                console.log('[AdMob] Interstitial loaded');
+            }),
+            interstitial.addAdEventListener(AdEventType.CLOSED, () => {
+                console.log('[AdMob] Interstitial closed');
+                isInterstitialLoaded = false;
+                isInterstitialLoading = false;
+                void loadInterstitial();
+            }),
+            interstitial.addAdEventListener(AdEventType.ERROR, (error: any) => {
+                console.error('[AdMob] Interstitial failed', error);
+                isInterstitialLoaded = false;
+                isInterstitialLoading = false;
+            }),
+        ];
 
         interstitial.load();
-    } catch (e) {
-        console.error('Error loading interstitial', e);
+        return true;
+    } catch (error) {
+        console.error('[AdMob] Failed to load interstitial', error);
+        isInterstitialLoaded = false;
+        isInterstitialLoading = false;
+        cleanupInterstitialListeners();
+        return false;
     }
 };
 
-export const showInterstitial = async () => {
+export const showInterstitial = async (): Promise<boolean> => {
     loadAdMobModule();
-    if (!AdMobModule) {
-        console.log('Show Interstitial (Mock) - AdMob not enabled');
-        Alert.alert(
-            "AdMob (Development Mode)",
-            "Geçiş Reklamı (Interstitial) burada gösterilecek.\n(Expo Go'da native reklamlar desteklenmez)",
-            [{ text: "Tamam" }]
-        );
-        return;
+
+    if (!mobileAdsFactory) {
+        console.log('[AdMob] Interstitial skipped because native module is unavailable');
+        if (__DEV__) {
+            Alert.alert(
+                'AdMob (Development Mode)',
+                "Gecis reklami burada gosterilecek.\n(Expo Go'da native reklamlar desteklenmez)",
+                [{ text: 'Tamam' }]
+            );
+        }
+        return false;
     }
 
-    if (isInterstitialLoaded && interstitial) {
+    const isReady = await ensureAdMobReady();
+    if (!isReady) {
+        return false;
+    }
+
+    if (!isInterstitialLoaded || !interstitial) {
+        console.log('[AdMob] Interstitial not ready, requesting preload');
+        void loadInterstitial();
+        return false;
+    }
+
+    try {
+        isInterstitialLoaded = false;
         await interstitial.show();
-        isInterstitialLoaded = false; // Reset immediately
-    } else {
-        console.log('Interstitial not ready yet, reloading...');
-        loadInterstitial();
+        return true;
+    } catch (error) {
+        console.error('[AdMob] Failed to show interstitial', error);
+        isInterstitialLoaded = false;
+        isInterstitialLoading = false;
+        void loadInterstitial();
+        return false;
     }
 };
 
-// ─────────────────────────────────────────────────────────────────────────────
-// App Open Ad
-// ─────────────────────────────────────────────────────────────────────────────
-
-let appOpenAd: any = null;
-
-/**
- * Checks the launch count and shows App Open Ad if it's the 3rd launch (modulo 3).
- * Must be called on app startup.
- */
-export const checkAndShowAppOpenAd = async () => {
+export const checkAndShowAppOpenAd = async (): Promise<void> => {
     try {
-        // 1. Load, increment, and save launch count
         const countStr = await AsyncStorage.getItem(APP_LAUNCH_COUNT_KEY);
         let count = countStr ? parseInt(countStr, 10) : 0;
 
         count += 1;
         await AsyncStorage.setItem(APP_LAUNCH_COUNT_KEY, count.toString());
 
-        console.log(`App Launch Count: ${count}`);
+        console.log(`[AdMob] App launch count: ${count}`);
+
+        if (count % 3 !== 0) {
+            return;
+        }
 
         loadAdMobModule();
-        if (!AdMobModule) {
-            console.log('App Open Ad Check (Mock) - AdMob not enabled');
-            if (count % 3 === 0) {
+
+        if (!mobileAdsFactory) {
+            console.log('[AdMob] App open ad skipped because native module is unavailable');
+            if (__DEV__) {
                 Alert.alert(
-                    "AdMob (Development Mode)",
-                    "Uygulama Açılış Reklamı (App Open) burada gösterilecek.\n(Expo Go'da native reklamlar desteklenmez)",
-                    [{ text: "Tamam" }]
+                    'AdMob (Development Mode)',
+                    "Uygulama acilis reklami burada gosterilecek.\n(Expo Go'da native reklamlar desteklenmez)",
+                    [{ text: 'Tamam' }]
                 );
             }
             return;
         }
 
-        // 2. Check overlap condition (Every 3rd launch: 3, 6, 9...)
-        if (count % 3 === 0) {
-            console.log('Condition met for App Open Ad. Attempting to show...');
+        const isReady = await ensureAdMobReady();
+        if (!isReady) {
+            return;
+        }
 
-            appOpenAd = AppOpenAd.createForAdRequest(APP_OPEN_ID, {
-                requestNonPersonalizedAdsOnly: true,
-            });
+        const appOpenAd = AppOpenAd.createForAdRequest(
+            AD_IDS.APP_OPEN,
+            getDefaultAdRequestOptions()
+        );
 
-            // Return a promise that resolves when ad is closed or fails, 
-            // so the app splash screen can wait if desired (optional)
-            return new Promise<void>((resolve) => {
-                const showTimeout = setTimeout(() => {
-                    console.log('App Open Ad load timeout - proceeding');
-                    resolve();
-                }, 5000); // 5 sec timeout to not block app start too long
+        await new Promise<void>(resolve => {
+            let settled = false;
+            const listeners: Array<() => void> = [];
 
-                appOpenAd?.addAdEventListener(AdEventType.LOADED, () => {
-                    if (appOpenAd) {
-                        try {
-                            appOpenAd.show();
-                        } catch (e) {
-                            console.error('Error showing App Open Ad:', e);
-                            resolve();
-                        }
+            const finish = () => {
+                if (settled) {
+                    return;
+                }
+
+                settled = true;
+                clearTimeout(timeoutId);
+                listeners.forEach(unsubscribe => {
+                    try {
+                        unsubscribe();
+                    } catch (error) {
+                        console.warn('[AdMob] Failed to remove app open listener', error);
                     }
                 });
+                resolve();
+            };
 
-                appOpenAd?.addAdEventListener(AdEventType.CLOSED, () => {
-                    clearTimeout(showTimeout);
-                    resolve();
-                });
+            const timeoutId = setTimeout(() => {
+                console.log('[AdMob] App open ad timed out, continuing app launch');
+                finish();
+            }, APP_OPEN_TIMEOUT_MS);
 
-                appOpenAd?.addAdEventListener(AdEventType.ERROR, (e: any) => {
-                    console.error('App Open Ad failed to load:', e);
-                    clearTimeout(showTimeout);
-                    resolve();
-                });
+            listeners.push(
+                appOpenAd.addAdEventListener(AdEventType.LOADED, async () => {
+                    if (settled) {
+                        return;
+                    }
 
-                appOpenAd?.load();
-            });
-        }
+                    try {
+                        await appOpenAd.show();
+                    } catch (error) {
+                        console.error('[AdMob] Failed to show app open ad', error);
+                        finish();
+                    }
+                })
+            );
+
+            listeners.push(
+                appOpenAd.addAdEventListener(AdEventType.CLOSED, () => {
+                    console.log('[AdMob] App open ad closed');
+                    finish();
+                })
+            );
+
+            listeners.push(
+                appOpenAd.addAdEventListener(AdEventType.ERROR, (error: any) => {
+                    console.error('[AdMob] App open ad failed', error);
+                    finish();
+                })
+            );
+
+            appOpenAd.load();
+        });
     } catch (error) {
-        console.error('Error in App Open Ad logic:', error);
+        console.error('[AdMob] App open flow failed', error);
     }
-};
-
-// Export IDs and Types for usage
-export const AD_IDS = {
-    BANNER: BANNER_ID,
-    INTERSTITIAL: INTERSTITIAL_ID,
-    APP_OPEN: APP_OPEN_ID
 };
 
 export const getBannerAdComponent = () => {
@@ -314,8 +483,7 @@ export const getBannerAdSize = () => {
     return BannerAdSize || {};
 };
 
-// Export boolean to let components know if ads are supported
 export const areAdsSupported = () => {
     loadAdMobModule();
-    return !!AdMobModule;
+    return Boolean(mobileAdsFactory);
 };

@@ -49,6 +49,8 @@ export default {
         confirmPassword: 'ยืนยันรหัสผ่าน',
         startYourLanguage: 'เริ่มต้นการเรียนรู้ภาษา',
         journeyToday: 'ของคุณวันนี้',
+        acceptPrivacyPrefix: 'ฉันได้อ่านและยอมรับ',
+        acceptPrivacyRequired: 'คุณต้องยอมรับนโยบายความเป็นส่วนตัวเพื่อสร้างบัญชี',
     },
     home: {
         welcome: 'ยินดีต้อนรับ',

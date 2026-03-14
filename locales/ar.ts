@@ -49,6 +49,8 @@ export default {
         confirmPassword: 'تأكيد كلمة المرور',
         startYourLanguage: 'ابدأ رحلة تعلم',
         journeyToday: 'اللغة اليوم.',
+        acceptPrivacyPrefix: 'لقد قرأت وأوافق على',
+        acceptPrivacyRequired: 'يجب عليك قبول سياسة الخصوصية لإنشاء حساب.',
     },
     home: {
         welcome: 'أهلاً بك',

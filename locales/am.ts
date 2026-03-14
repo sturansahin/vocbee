@@ -49,6 +49,8 @@ export default {
         confirmPassword: 'የይለፍ ቃል አረጋግጥ',
         startYourLanguage: 'የቋንቋ ጉዞህን',
         journeyToday: 'ዛሬ ጀምር።',
+        acceptPrivacyPrefix: 'ይህን አንብቤ እቀበላለሁ:',
+        acceptPrivacyRequired: 'መለያ ለመፍጠር የግላዊነት ፖሊሲን መቀበል አለብዎት።',
     },
     home: {
         welcome: 'እንኳን ደህና መጣህ',

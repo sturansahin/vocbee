@@ -92,16 +92,30 @@ describe('AuthScreens', () => {
             expect(getByPlaceholderText('auth.enterEmail')).toBeTruthy(); // Adjusted to placeholder from component
         });
 
+        it('does not call signUp before privacy policy is accepted', async () => {
+            const { getByText, getByPlaceholderText } = render(<SignUpScreen />);
+
+            fireEvent.changeText(getByPlaceholderText('auth.namePlaceholder'), 'John Doe');
+            fireEvent.changeText(getByPlaceholderText('auth.enterEmail'), 'new@example.com');
+            fireEvent.changeText(getByPlaceholderText('auth.createPassword'), 'pass123456');
+            fireEvent.changeText(getByPlaceholderText('auth.confirmPasswordPlaceholder'), 'pass123456');
+
+            fireEvent.press(getByText('auth.signUp'));
+
+            await waitFor(() => {
+                expect(mockSignUp).not.toHaveBeenCalled();
+            });
+        });
+
         it('calls signUp with valid data', async () => {
-            const { getByText, getByPlaceholderText, getAllByPlaceholderText } = render(<SignUpScreen />);
+            const { getByText, getByPlaceholderText, getByTestId } = render(<SignUpScreen />);
 
             fireEvent.changeText(getByPlaceholderText('auth.namePlaceholder'), 'John Doe');
             fireEvent.changeText(getByPlaceholderText('auth.enterEmail'), 'new@example.com');
 
-            // Handle potentially duplicate placeholders for password if any
-            // Assuming unique placeholders:
             fireEvent.changeText(getByPlaceholderText('auth.createPassword'), 'pass123456');
             fireEvent.changeText(getByPlaceholderText('auth.confirmPasswordPlaceholder'), 'pass123456');
+            fireEvent.press(getByTestId('privacy-consent-checkbox'));
 
             fireEvent.press(getByText('auth.signUp'));
 

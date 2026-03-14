@@ -1,5 +1,5 @@
 import React, { useState, useRef, useMemo } from 'react';
-import { View, Text, TouchableOpacity, ScrollView, StyleSheet, ActivityIndicator, Animated, Easing, useWindowDimensions, Platform } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView, StyleSheet, ActivityIndicator, Animated, Easing, useWindowDimensions, Platform, Linking } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
@@ -16,6 +16,7 @@ import { createSwarmAnimation } from '../assets/animations/swarmAnimation';
 import { useTranslation } from 'react-i18next';
 
 type AuthNavProp = StackNavigationProp<RootStackParamList>;
+const PRIVACY_POLICY_URL = 'https://sturansahin.github.io/privacypolicy/';
 
 export const LoginScreen = () => {
   const navigation = useNavigation<AuthNavProp>();
@@ -380,10 +381,6 @@ export const LoginScreen = () => {
           variant="primary"
         />
 
-        {isSubmitting && (
-          <ActivityIndicator size="small" color={colors.primary} style={{ marginTop: 16 }} />
-        )}
-
         {/* Social Login Buttons */}
         <View style={[styles.divider, { marginVertical: isSmallScreen ? 20 : 32 }]}>
           <View style={[styles.dividerLine, { backgroundColor: colors.border }]} />
@@ -453,6 +450,7 @@ export const SignUpScreen = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [hasAcceptedPrivacyPolicy, setHasAcceptedPrivacyPolicy] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Responsive calculations
@@ -483,6 +481,11 @@ export const SignUpScreen = () => {
 
     if (password.length < 6) {
       showAlert({ title: t('auth.error'), message: t('auth.passwordTooShort') });
+      return;
+    }
+
+    if (!hasAcceptedPrivacyPolicy) {
+      showAlert({ title: t('auth.error'), message: t('auth.acceptPrivacyRequired') });
       return;
     }
 
@@ -575,10 +578,38 @@ export const SignUpScreen = () => {
           iconColor={colors.textSecondary}
         />
 
+        <View style={styles.privacyConsentRow}>
+          <TouchableOpacity
+            testID="privacy-consent-checkbox"
+            onPress={() => setHasAcceptedPrivacyPolicy(prev => !prev)}
+            style={styles.privacyCheckboxButton}
+            accessibilityRole="checkbox"
+            accessibilityState={{ checked: hasAcceptedPrivacyPolicy }}
+          >
+            <MaterialIcons
+              name={hasAcceptedPrivacyPolicy ? 'check-box' : 'check-box-outline-blank'}
+              size={24}
+              color={hasAcceptedPrivacyPolicy ? colors.primary : colors.textSecondary}
+            />
+          </TouchableOpacity>
+
+          <Text style={[styles.privacyConsentText, { color: colors.textSecondary }]}>
+            {t('auth.acceptPrivacyPrefix')}{' '}
+            <Text
+              testID="privacy-policy-link"
+              style={[styles.privacyConsentLink, { color: colors.primary }]}
+              onPress={() => Linking.openURL(PRIVACY_POLICY_URL)}
+            >
+              {t('settings.privacyPolicy')}
+            </Text>
+            .
+          </Text>
+        </View>
+
         <Button
           title={isSubmitting ? t('auth.creatingAccount') : t('auth.signUp')}
           onPress={handleSignUp}
-          disabled={isSubmitting}
+          disabled={isSubmitting || !hasAcceptedPrivacyPolicy}
         />
 
         {isSubmitting && (
@@ -730,5 +761,25 @@ const styles = StyleSheet.create({
   titleGreen: {
     fontFamily: FONT_FAMILY,
     color: COLORS.primary,
+  },
+  privacyConsentRow: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    gap: 12,
+    marginTop: 4,
+    marginBottom: 20,
+  },
+  privacyCheckboxButton: {
+    paddingTop: 1,
+  },
+  privacyConsentText: {
+    flex: 1,
+    fontFamily: FONT_FAMILY,
+    fontSize: 13,
+    lineHeight: 20,
+  },
+  privacyConsentLink: {
+    fontFamily: FONT_FAMILY,
+    textDecorationLine: 'underline',
   },
 });
