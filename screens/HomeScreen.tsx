@@ -55,6 +55,7 @@ import { loadInterstitial, showInterstitial, AD_IDS } from '../services/adMobSer
 import { useTranslation } from 'react-i18next';
 import { getTTSLanguageCode } from '../constants';
 import { STORAGE_KEYS } from '../services/storageKeys';
+import HomeTutorialOverlay, { LayoutRect } from '../components/HomeTutorialOverlay';
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;
@@ -66,6 +67,16 @@ const BEE_ACTIVE_ANIMATION = createSwarmAnimation(BEE_COLOR, false);
 const BASE_WIDTH = 393; // iPhone 14 Pro base width
 const scale = (size: number) => (SCREEN_WIDTH / BASE_WIDTH) * size;
 const moderateScale = (size: number, factor = 0.5) => size + (scale(size) - size) * factor;
+
+type TutorialLayoutKey = 'card' | 'favoriteButton' | 'word' | 'exampleSentence' | 'moreExample';
+type TutorialLayouts = Record<TutorialLayoutKey, LayoutRect>;
+
+const EMPTY_TUTORIAL_LAYOUT: LayoutRect = {
+    x: 0,
+    y: 0,
+    width: 0,
+    height: 0,
+};
 
 
 export default function HomeScreen() {
@@ -87,6 +98,21 @@ export default function HomeScreen() {
 
     // TTS language code for target language pronunciation
     const [ttsLanguage, setTtsLanguage] = useState('en-US');
+
+    // Tutorial state
+    const [showTutorial, setShowTutorial] = useState(false);
+    const [tutorialLayouts, setTutorialLayouts] = useState<TutorialLayouts | null>(null);
+    const showTutorialRef = useRef(false);
+    const [tutorialStep, setTutorialStep] = useState(1);
+    const tutorialStepRef = useRef(1);
+
+    // Tutorial Element Refs
+    const cardRef = useRef<any>(null);
+    const favoriteRef = useRef<any>(null);
+    const wordRef = useRef<View>(null);
+    const exampleSentenceRef = useRef<View>(null);
+    const moreExampleRef = useRef<any>(null);
+    const tutorialMeasureTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     // Ref to track if initial load has been done
     const hasInitiallyLoaded = useRef(false);
@@ -111,6 +137,64 @@ export default function HomeScreen() {
     const beeAnimationRef = useRef<any>(null);
     const beeFlightTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
     const loadRequestIdRef = useRef(0);
+
+    const measureTutorialLayouts = useCallback(({ show = false, delay = 80 }: { show?: boolean; delay?: number } = {}) => {
+        if (tutorialMeasureTimeoutRef.current) {
+            clearTimeout(tutorialMeasureTimeoutRef.current);
+        }
+
+        tutorialMeasureTimeoutRef.current = setTimeout(() => {
+            tutorialMeasureTimeoutRef.current = null;
+
+            const layoutRefs: Array<[TutorialLayoutKey, any]> = [
+                ['card', cardRef],
+                ['favoriteButton', favoriteRef],
+                ['word', wordRef],
+                ['exampleSentence', exampleSentenceRef],
+                ['moreExample', moreExampleRef],
+            ];
+
+            const layouts = {} as TutorialLayouts;
+            let measuredCount = 0;
+
+            const finishMeasurement = () => {
+                measuredCount += 1;
+
+                if (measuredCount === layoutRefs.length) {
+                    console.log('[HomeScreen] Measurements complete:', layouts);
+                    setTutorialLayouts(layouts);
+
+                    if (show) {
+                        setShowTutorial(true);
+                        showTutorialRef.current = true;
+                    }
+                }
+            };
+
+            layoutRefs.forEach(([key, ref]) => {
+                const measureTarget = ref.current?.getNode ? ref.current.getNode() : ref.current;
+
+                if (measureTarget?.measureInWindow) {
+                    measureTarget.measureInWindow((x: number, y: number, width: number, height: number) => {
+                        layouts[key] = { x, y, width, height };
+                        finishMeasurement();
+                    });
+                    return;
+                }
+
+                if (measureTarget?.measure) {
+                    measureTarget.measure((x: number, y: number, width: number, height: number, pageX: number, pageY: number) => {
+                        layouts[key] = { x: pageX ?? x, y: pageY ?? y, width, height };
+                        finishMeasurement();
+                    });
+                    return;
+                }
+
+                layouts[key] = { ...EMPTY_TUTORIAL_LAYOUT };
+                finishMeasurement();
+            });
+        }, delay);
+    }, []);
 
     // Generate position for single bee in top-right corner
     const generateBeePositions = useCallback((): BeePosition[] => {
@@ -669,6 +753,33 @@ export default function HomeScreen() {
         }
     }, [isLoading, checkAndUpdate]);
 
+    // Check for Home screen tutorial
+    useEffect(() => {
+        if (!isLoading && words.length > 0) {
+            console.log('[HomeScreen] Checking tutorial flag... words.length:', words.length);
+            AsyncStorage.getItem(STORAGE_KEYS.HAS_SEEN_HOME_TUTORIAL).then(val => {
+                console.log(`[HomeScreen] HAS_SEEN_HOME_TUTORIAL value in storage is:`, val);
+                if (val !== 'true') {
+                    console.log('[HomeScreen] Will trigger tutorial in 500ms...');
+                    measureTutorialLayouts({ show: true, delay: 500 });
+                }
+            });
+        }
+    }, [isLoading, words.length, measureTutorialLayouts]);
+
+    useEffect(() => {
+        if (!showTutorial || tutorialStep <= 2) return;
+        measureTutorialLayouts({ delay: 60 });
+    }, [showTutorial, tutorialStep, currentWordIndex, measureTutorialLayouts]);
+
+    const handleTutorialComplete = async () => {
+        setShowTutorial(false);
+        showTutorialRef.current = false;
+        setTutorialStep(1);
+        tutorialStepRef.current = 1;
+        await AsyncStorage.setItem(STORAGE_KEYS.HAS_SEEN_HOME_TUTORIAL, 'true');
+    };
+
     // Get level display
     const getLevelDisplay = () => {
         switch (userLevel) {
@@ -726,12 +837,77 @@ export default function HomeScreen() {
             if (beeFlightTimeoutRef.current) {
                 clearTimeout(beeFlightTimeoutRef.current);
             }
+            if (tutorialMeasureTimeoutRef.current) {
+                clearTimeout(tutorialMeasureTimeoutRef.current);
+            }
             beeAnimationRef.current?.stop?.();
         };
     }, []);
 
     // Swipe animation setup
     const position = useRef(new Animated.ValueXY()).current;
+    
+    // Tutorial Card Animation
+    const tutorialAnimRef = useRef<Animated.CompositeAnimation | null>(null);
+
+    useEffect(() => {
+        if (!showTutorial) {
+            tutorialAnimRef.current?.stop();
+            return;
+        }
+
+        if (tutorialStep === 1) {
+            tutorialAnimRef.current?.stop();
+            tutorialAnimRef.current = Animated.loop(
+                Animated.sequence([
+                    Animated.timing(position, {
+                        toValue: { x: 30, y: 0 },
+                        duration: 800,
+                        easing: Easing.inOut(Easing.ease),
+                        useNativeDriver: false, // Position depends on PanResponder layout setup
+                    }),
+                    Animated.timing(position, {
+                        toValue: { x: 0, y: 0 },
+                        duration: 800,
+                        easing: Easing.inOut(Easing.ease),
+                        useNativeDriver: false,
+                    }),
+                ])
+            );
+            tutorialAnimRef.current.start();
+        } else if (tutorialStep === 2) {
+            tutorialAnimRef.current?.stop();
+            tutorialAnimRef.current = Animated.loop(
+                Animated.sequence([
+                    Animated.timing(position, {
+                        toValue: { x: -30, y: 0 },
+                        duration: 800,
+                        easing: Easing.inOut(Easing.ease),
+                        useNativeDriver: false,
+                    }),
+                    Animated.timing(position, {
+                        toValue: { x: 0, y: 0 },
+                        duration: 800,
+                        easing: Easing.inOut(Easing.ease),
+                        useNativeDriver: false,
+                    }),
+                ])
+            );
+            tutorialAnimRef.current.start();
+        } else {
+            tutorialAnimRef.current?.stop();
+            Animated.spring(position, {
+                toValue: { x: 0, y: 0 },
+                useNativeDriver: false,
+                friction: 5,
+            }).start();
+        }
+
+        return () => {
+            tutorialAnimRef.current?.stop();
+        };
+    }, [showTutorial, tutorialStep, position]);
+
     const rotate = position.x.interpolate({
         inputRange: [-SCREEN_WIDTH / 2, 0, SCREEN_WIDTH / 2],
         outputRange: ['-15deg', '0deg', '15deg'],
@@ -766,6 +942,17 @@ export default function HomeScreen() {
             // Reset card position on the next frame so the new word renders first
             requestAnimationFrame(() => {
                 position.setValue({ x: 0, y: 0 });
+                
+                // Advance tutorial step after card has reset, to prevent animation conflicts
+                if (showTutorialRef.current) {
+                    if (tutorialStepRef.current === 1 && direction === 'right') {
+                        setTutorialStep(2);
+                        tutorialStepRef.current = 2;
+                    } else if (tutorialStepRef.current === 2 && direction === 'left') {
+                        setTutorialStep(3);
+                        tutorialStepRef.current = 3;
+                    }
+                }
             });
 
             // Side effects (storage/progress) can run after UI has advanced
@@ -828,14 +1015,33 @@ export default function HomeScreen() {
         PanResponder.create({
             onStartShouldSetPanResponder: () => false,
             onMoveShouldSetPanResponder: (_, gesture) => {
+                if (showTutorialRef.current && tutorialStepRef.current > 2) return false;
                 // Allow TouchableOpacity children to handle taps by not using Capture
                 // Only take over for swipe gestures (larger movement threshold)
                 return Math.abs(gesture.dx) > 15 || Math.abs(gesture.dy) > 15;
+            },
+            onPanResponderGrant: () => {
+                tutorialAnimRef.current?.stop();
             },
             onPanResponderMove: (_, gesture) => {
                 position.setValue({ x: gesture.dx, y: gesture.dy * 0.3 });
             },
             onPanResponderRelease: (_, gesture) => {
+                if (showTutorialRef.current) {
+                    if (tutorialStepRef.current === 1 && gesture.dx <= SWIPE_THRESHOLD) {
+                        resetPositionRef.current?.();
+                        return;
+                    }
+                    if (tutorialStepRef.current === 2 && gesture.dx >= -SWIPE_THRESHOLD) {
+                        resetPositionRef.current?.();
+                        return;
+                    }
+                    if (tutorialStepRef.current > 2) {
+                        resetPositionRef.current?.();
+                        return;
+                    }
+                }
+
                 if (gesture.dx > SWIPE_THRESHOLD) {
                     swipeCardRef.current?.('right');
                 } else if (gesture.dx < -SWIPE_THRESHOLD) {
@@ -856,6 +1062,11 @@ export default function HomeScreen() {
     };
 
     const handleToggleFavorite = async () => {
+        if (showTutorialRef.current && tutorialStepRef.current === 3) {
+            setTutorialStep(4);
+            tutorialStepRef.current = 4;
+        }
+        
         if (currentWord) {
             if (isCurrentWordFavorite) {
                 await removeFromFavorites(currentWord.id, currentLevel);
@@ -867,6 +1078,147 @@ export default function HomeScreen() {
                 console.log('Added to favorites:', currentWord.word, `(${currentLevel})`);
             }
         }
+    };
+
+    const handleWordPress = async () => {
+        if (!currentWord) return;
+
+        if (showTutorialRef.current && tutorialStepRef.current === 4) {
+            setTutorialStep(5);
+            tutorialStepRef.current = 5;
+        }
+
+        console.log('Word button pressed:', currentWord.word);
+        try {
+            await Speech.stop();
+            await Speech.speak(currentWord.word, {
+                language: ttsLanguage,
+                pitch: 1.0,
+                rate: 0.75,
+            });
+            console.log('Speech started successfully');
+        } catch (error) {
+            console.error('Speech error:', error);
+        }
+    };
+
+    const handleExampleSentencePress = async () => {
+        if (!currentWord) return;
+
+        if (showTutorialRef.current && tutorialStepRef.current === 5) {
+            setTutorialStep(6);
+            tutorialStepRef.current = 6;
+        }
+
+        console.log('Example sentence pressed:', currentWord.sentence1);
+        try {
+            await Speech.stop();
+            await Speech.speak(currentWord.sentence1, {
+                language: ttsLanguage,
+                pitch: 1.0,
+                rate: 0.75,
+            });
+            console.log('Speech started successfully');
+        } catch (error) {
+            console.error('Speech error:', error);
+        }
+    };
+
+    const handleMoreExamplePress = () => {
+        if (!currentWord) return;
+
+        if (showTutorialRef.current && tutorialStepRef.current === 6) {
+            handleTutorialComplete();
+        }
+
+        navigation.navigate('ExampleSentences', {
+            word: currentWord.word,
+            translation: currentWord.translation,
+            sentence1: currentWord.sentence1,
+            sentence2: currentWord.sentence2,
+            nativeSentence1: currentWord.nativeSentence1,
+            nativeSentence2: currentWord.nativeSentence2
+        });
+    };
+
+    const renderTutorialHighlight = (targetLayout: LayoutRect, step: number) => {
+        if (!currentWord) return null;
+
+        const absoluteHighlightStyle = {
+            position: 'absolute' as const,
+            left: targetLayout.x,
+            top: targetLayout.y,
+            width: targetLayout.width,
+            height: targetLayout.height,
+            zIndex: 9101,
+        };
+
+        if (step === 3) {
+            return (
+                <TouchableOpacity
+                    style={[absoluteHighlightStyle, styles.tutorialIconHighlight]}
+                    onPress={handleToggleFavorite}
+                    activeOpacity={0.7}
+                    hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
+                >
+                    <View style={{ width: 26, height: 26, justifyContent: 'center', alignItems: 'center' }}>
+                        {isCurrentWordFavorite && (
+                            <View style={{ position: 'absolute' }}>
+                                <Ionicons name="star" size={22} color={colors.primary} style={styles.tutorialIconGlow} />
+                            </View>
+                        )}
+                        <Feather name="star" size={24} color={colors.primary} style={styles.tutorialIconGlow} />
+                    </View>
+                </TouchableOpacity>
+            );
+        }
+
+        if (step === 4) {
+            return (
+                <View style={[absoluteHighlightStyle, styles.tutorialWordHighlight]}>
+                    <TouchableOpacity onPress={handleWordPress} activeOpacity={0.7} style={styles.tutorialWordTouchable}>
+                        <Text
+                            style={[styles.wordTitle, { color: colors.text }, styles.tutorialWordText]}
+                            adjustsFontSizeToFit
+                            numberOfLines={1}
+                        >
+                            {currentWord.word}
+                        </Text>
+                    </TouchableOpacity>
+                </View>
+            );
+        }
+
+        if (step === 5) {
+            return (
+                <View style={[absoluteHighlightStyle, styles.tutorialSentenceHighlight]}>
+                    <TouchableOpacity onPress={handleExampleSentencePress} activeOpacity={0.7} style={styles.tutorialSentenceTouchable}>
+                        <Text style={[styles.cardExampleText, { color: colors.text }, styles.tutorialSentenceText]}>
+                            {currentWord.sentence1}
+                        </Text>
+                    </TouchableOpacity>
+                </View>
+            );
+        }
+
+        if (step === 6) {
+            return (
+                <TouchableOpacity
+                    style={[
+                        absoluteHighlightStyle,
+                        styles.tutorialRaisedButton,
+                        styles.tutorialMoreExampleButton,
+                        { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)' }
+                    ]}
+                    onPress={handleMoreExamplePress}
+                    activeOpacity={0.85}
+                >
+                    <Text style={[styles.fullWidthButtonText, { color: colors.text }]}>{t('home.moreExample')}</Text>
+                </TouchableOpacity>
+            );
+        }
+
+        return null;
     };
 
     // Render background card
@@ -925,20 +1277,27 @@ export default function HomeScreen() {
                         </View>
 
                         {/* Lower Section - Example Sentences with Gray Background */}
-                        <View style={[styles.cardLowerSection, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.04)' }]}>
+                        <View style={[styles.cardLowerSectionStruct, { zIndex: 1 }]}>
+                            {/* Background extracted */}
+                            <View style={[
+                                StyleSheet.absoluteFillObject,
+                                {
+                                    backgroundColor: isDarkMode ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.04)',
+                                    borderBottomLeftRadius: 32,
+                                    borderBottomRightRadius: 32,
+                                }
+                            ]} />
+
                             <View style={styles.exampleSentencesContainer}>
-                                <Text style={[styles.cardExampleText, { color: colors.text }]}>
-                                    {nextWord.sentence1}
-                                </Text>
+                                <View style={styles.exampleSentenceTouchable}>
+                                    <Text style={[styles.cardExampleText, { color: colors.text }]}>
+                                        {nextWord.sentence1}
+                                    </Text>
+                                </View>
                                 <View style={[styles.thinDivider, { backgroundColor: colors.border }]} />
                                 <Text style={[styles.cardTranslationText, { color: colors.textSecondary }]}>
                                     {nextWord.nativeSentence1}
                                 </Text>
-
-                                {/* Audio button - positioned in corner */}
-                                <View style={[styles.cardAudioButton]}>
-                                    <MaterialIcons name="volume-up" size={18} color={colors.primary} />
-                                </View>
                             </View>
 
                             {/* More Example Button placeholder */}
@@ -1097,6 +1456,8 @@ export default function HomeScreen() {
                     {currentWord && (
                         <Animated.View
                             key={currentWord.id}
+                            ref={cardRef}
+                            collapsable={false}
                             style={[
                                 styles.cardContainer,
                                 {
@@ -1105,7 +1466,9 @@ export default function HomeScreen() {
                                         { translateY: position.y },
                                         { rotate },
                                     ],
-                                    zIndex: 10,
+                                    // Steps 1 & 2 keep the card above the dim layer so swipe guidance stays interactive.
+                                    // Steps 3-6 move the card below the overlay; only cloned focus targets render above it.
+                                    zIndex: (showTutorial && tutorialStep <= 2) ? 10000 : 10,
                                 },
                             ]}
                             {...panResponder.panHandlers}
@@ -1164,7 +1527,8 @@ export default function HomeScreen() {
                                 <View style={styles.cardContentAbove} pointerEvents="box-none">
                                     {/* Favorite Button - Moved to root of content to ensure clickability */}
                                     <TouchableOpacity
-                                        style={styles.favoriteButton}
+                                        ref={favoriteRef}
+                                        style={[styles.favoriteButton, { zIndex: (showTutorial && tutorialStep === 3) ? 100 : 1 }]}
                                         onPress={handleToggleFavorite}
                                         activeOpacity={0.7}
                                         hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
@@ -1182,31 +1546,20 @@ export default function HomeScreen() {
                                     {/* Upper Section - Word and Translation */}
                                     <View style={styles.cardUpperSection}>
 
-                                        <TouchableOpacity
-                                            onPress={async () => {
-                                                console.log('Word button pressed:', currentWord.word);
-                                                try {
-                                                    await Speech.stop(); // Stop any ongoing speech
-                                                    await Speech.speak(currentWord.word, {
-                                                        language: ttsLanguage,
-                                                        pitch: 1.0,
-                                                        rate: 0.75,
-                                                    });
-                                                    console.log('Speech started successfully');
-                                                } catch (error) {
-                                                    console.error('Speech error:', error);
-                                                }
-                                            }}
-                                            activeOpacity={0.7}
-                                        >
-                                            <Text
-                                                style={[styles.wordTitle, { color: colors.text }]}
-                                                adjustsFontSizeToFit
-                                                numberOfLines={1}
+                                        <View ref={wordRef} collapsable={false} style={{ zIndex: (showTutorial && tutorialStep === 4) ? 100 : 1 }}>
+                                            <TouchableOpacity
+                                                onPress={handleWordPress}
+                                                activeOpacity={0.7}
                                             >
-                                                {currentWord.word}
-                                            </Text>
-                                        </TouchableOpacity>
+                                                <Text
+                                                    style={[styles.wordTitle, { color: colors.text }]}
+                                                    adjustsFontSizeToFit
+                                                    numberOfLines={1}
+                                                >
+                                                    {currentWord.word}
+                                                </Text>
+                                            </TouchableOpacity>
+                                        </View>
                                         <View style={styles.translationRow}>
                                             <View style={{ position: 'absolute', left: scale(36) - 35 }}>
                                                 <MaterialIcons name="translate" size={22} color={colors.primary} />
@@ -1222,12 +1575,34 @@ export default function HomeScreen() {
                                     </View>
 
                                     {/* Lower Section - Example Sentences with Gray Background */}
-                                    <View style={[styles.cardLowerSection, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.04)' }]}>
+                                    <View style={[styles.cardLowerSectionStruct, { zIndex: (showTutorial && tutorialStep >= 5) ? 100 : 1 }]}>
+                                        {/* Background extracted so elements can escape zIndex context */}
+                                        <View style={[
+                                            StyleSheet.absoluteFillObject,
+                                            {
+                                                backgroundColor: isDarkMode ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.04)',
+                                                borderBottomLeftRadius: 32,
+                                                borderBottomRightRadius: 32,
+                                            }
+                                        ]} />
+
                                         <View style={styles.exampleSentencesContainer}>
                                             {/* Example Sentence */}
-                                            <Text style={[styles.cardExampleText, { color: colors.text }]}>
-                                                {currentWord.sentence1}
-                                            </Text>
+                                            <View
+                                                ref={exampleSentenceRef}
+                                                collapsable={false}
+                                                style={{ width: '100%', zIndex: (showTutorial && tutorialStep === 5) ? 100 : 1 }}
+                                            >
+                                                <TouchableOpacity
+                                                    onPress={handleExampleSentencePress}
+                                                    activeOpacity={0.75}
+                                                    style={styles.exampleSentenceTouchable}
+                                                >
+                                                    <Text style={[styles.cardExampleText, { color: colors.text }]}>
+                                                        {currentWord.sentence1}
+                                                    </Text>
+                                                </TouchableOpacity>
+                                            </View>
 
                                             {/* Thin Divider Line */}
                                             <View style={[styles.thinDivider, { backgroundColor: colors.border }]} />
@@ -1236,41 +1611,13 @@ export default function HomeScreen() {
                                             <Text style={[styles.cardTranslationText, { color: colors.textSecondary }]}>
                                                 {currentWord.nativeSentence1}
                                             </Text>
-
-                                            {/* Audio button - positioned in corner */}
-                                            <TouchableOpacity
-                                                style={[styles.cardAudioButton]}
-                                                onPress={async () => {
-                                                    console.log('Sentence button pressed:', currentWord.sentence1);
-                                                    try {
-                                                        await Speech.stop(); // Stop any ongoing speech
-                                                        await Speech.speak(currentWord.sentence1, {
-                                                            language: ttsLanguage,
-                                                            pitch: 1.0,
-                                                            rate: 0.75,
-                                                        });
-                                                        console.log('Speech started successfully');
-                                                    } catch (error) {
-                                                        console.error('Speech error:', error);
-                                                    }
-                                                }}
-                                                activeOpacity={0.7}
-                                            >
-                                                <MaterialIcons name="volume-up" size={18} color={colors.primary} />
-                                            </TouchableOpacity>
                                         </View>
 
                                         {/* More Example Button - Full Width at Bottom */}
                                         <TouchableOpacity
-                                            style={[styles.fullWidthButton, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)' }]}
-                                            onPress={() => navigation.navigate('ExampleSentences', {
-                                                word: currentWord.word,
-                                                translation: currentWord.translation,
-                                                sentence1: currentWord.sentence1,
-                                                sentence2: currentWord.sentence2,
-                                                nativeSentence1: currentWord.nativeSentence1,
-                                                nativeSentence2: currentWord.nativeSentence2
-                                            })}
+                                            ref={moreExampleRef}
+                                            style={[styles.fullWidthButton, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)', zIndex: (showTutorial && tutorialStep === 6) ? 100 : 1 }]}
+                                            onPress={handleMoreExamplePress}
                                         >
                                             <Text style={[styles.fullWidthButtonText, { color: colors.text }]}>{t('home.moreExample')}</Text>
                                         </TouchableOpacity>
@@ -1324,6 +1671,30 @@ export default function HomeScreen() {
             <View style={{ alignItems: 'center', justifyContent: 'center', paddingBottom: insets.bottom > 0 ? 0 : 10, backgroundColor: colors.background }}>
                 <SafeBannerAd unitId={AD_IDS.BANNER} />
             </View>
+
+            {/* Tutorial Overlay */}
+            {showTutorial && tutorialLayouts && (
+                <View style={[StyleSheet.absoluteFill, { zIndex: 9000 }]} pointerEvents="box-none">
+                    <HomeTutorialOverlay
+                        visible={showTutorial}
+                        onComplete={handleTutorialComplete}
+                        currentStep={tutorialStep}
+                        renderHighlight={renderTutorialHighlight}
+                        onNext={() => {
+                            if (tutorialStep < 6) {
+                                setTutorialStep(prev => {
+                                    const next = prev + 1;
+                                    tutorialStepRef.current = next;
+                                    return next;
+                                });
+                            } else {
+                                handleTutorialComplete();
+                            }
+                        }}
+                        layouts={tutorialLayouts}
+                    />
+                </View>
+            )}
         </View >
     );
 }
@@ -1537,21 +1908,22 @@ const styles = StyleSheet.create({
         paddingTop: 10,
         paddingBottom: 10,
     },
-    cardLowerSection: {
+    cardLowerSectionStruct: {
         width: '100%',
         paddingTop: 20,
         paddingHorizontal: 0,
-        backgroundColor: 'rgba(0,0,0,0.05)',
         alignItems: 'center',
-        borderBottomLeftRadius: 32,
-        borderBottomRightRadius: 32,
-        overflow: 'hidden',
     },
     exampleSentencesContainer: {
         width: '100%',
         paddingHorizontal: 20,
         paddingBottom: 12,
         alignItems: 'center',
+    },
+    exampleSentenceTouchable: {
+        width: '100%',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     cardExampleText: {
         fontFamily: FONT_FAMILY,
@@ -1574,16 +1946,6 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         paddingHorizontal: 40,
     },
-    cardAudioButton: {
-        position: 'absolute',
-        bottom: 12,
-        right: 12,
-        width: 32,
-        height: 18,
-        borderRadius: 16,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
     fullWidthButton: {
         width: '100%',
         paddingVertical: 18,
@@ -1599,6 +1961,56 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontWeight: '600',
         letterSpacing: 0.5,
+    },
+    tutorialIconHighlight: {
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    tutorialIconGlow: {
+        textShadowColor: 'rgba(255, 215, 0, 0.45)',
+        textShadowOffset: { width: 0, height: 0 },
+        textShadowRadius: 12,
+    },
+    tutorialWordHighlight: {
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    tutorialWordTouchable: {
+        width: '100%',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    tutorialWordText: {
+        textShadowColor: 'rgba(0, 0, 0, 0.35)',
+        textShadowOffset: { width: 0, height: 2 },
+        textShadowRadius: 8,
+    },
+    tutorialSentenceHighlight: {
+        justifyContent: 'center',
+    },
+    tutorialSentenceTouchable: {
+        width: '100%',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    tutorialSentenceText: {
+        textShadowColor: 'rgba(0, 0, 0, 0.35)',
+        textShadowOffset: { width: 0, height: 2 },
+        textShadowRadius: 8,
+    },
+    tutorialRaisedButton: {
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 6 },
+        shadowOpacity: 0.18,
+        shadowRadius: 12,
+        elevation: 12,
+    },
+    tutorialMoreExampleButton: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingHorizontal: 12,
+        borderBottomLeftRadius: 32,
+        borderBottomRightRadius: 32,
     },
     bee: {
         position: 'absolute',

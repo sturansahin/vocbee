@@ -1,4 +1,4 @@
-﻿export default {
+export default {
     common: {
         loading: 'Inapakia...',
         error: 'Hitilafu',
@@ -283,7 +283,7 @@
             q1: 'Ninajifunzaje maneno mapya?',
             a1: 'Telezesha kadi ya neno kulia kuiweka alama imejifunzwa, au telezesha kushoto kuruka na kuiona tena baadaye. Unaweza pia kugusa vitufe vilivyo chini ya kadi.',
             q2: 'Ninasikiaje matamshi?',
-            a2: 'Gusa ikoni ya spika kwenye kadi ya neno kusikia matamshi sahihi. Hakikisha sauti ya kifaa chako imewashwa.',
+            a2: 'Gusa sentensi ya mfano kwenye kadi ya neno kusikia matamshi sahihi. Hakikisha sauti ya kifaa chako imewashwa.',
             q3: 'Ninahifadhije maneno ninayopenda?',
             a3: 'Gusa ikoni ya nyota kwenye kadi yoyote ya neno kuiongeza kwenye vipendwa. Fikia maneno yako yaliyohifadhiwa wakati wowote kutoka skrini ya Vipendwa kupitia kitufe cha nyota kwenye skrini ya nyumbani.',
             q4: 'Sentensi za mfano ni nini?',
@@ -317,5 +317,17 @@
             title: 'Unahitaji msaada zaidi?',
             desc: 'Kwa maswali yoyote, mapendekezo, au matatizo, tafadhali wasiliana nasi kwa support@vocbee.com. Tungependa kusikia kutoka kwako!',
         },
+    },
+	homeTutorial: {
+        step1: "Telezesha kulia kuweka alama kwenye maneno uliyojifunza",
+        step2: "Telezesha kushoto kupitia neno tena baadaye",
+        step3: "Gusa nyota ili kuhifadhi maneno kwa vipendwa vyako",
+        step4: "Gusa neno kusikia matamshi yake",
+        step5: "Gusa sentensi ili kuisikia",
+        step6: "Gusa hapa kuona sentensi zaidi za mfano",
+        skip: "Ruka",
+        next: "Ifuatayo",
+        done: "Nimeelewa!",
+        stepOf: "{{current}} ya {{total}}",
     },
 };

@@ -5,6 +5,7 @@
 export const STORAGE_KEYS = {
     // ─── Onboarding ───────────────────────────────────────────────
     HAS_SEEN_ONBOARDING: '@VocBee:hasSeenOnboarding',
+    HAS_SEEN_HOME_TUTORIAL: '@VocBee:hasSeenHomeTutorial',
 
     // ─── User Data (storage.ts) ───────────────────────────────────
     USER_DATA: '@vocbee_user_data',

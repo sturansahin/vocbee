@@ -1,4 +1,4 @@
-﻿export default {
+export default {
     common: {
         loading: 'Chargement...',
         error: 'Erreur',
@@ -283,7 +283,7 @@
             q1: 'Comment apprendre de nouveaux mots ?',
             a1: 'Faites glisser la carte de mot vers la droite pour la marquer comme apprise, ou vers la gauche pour la sauter et la revoir plus tard. Vous pouvez aussi utiliser les boutons sous la carte.',
             q2: 'Comment écouter la prononciation ?',
-            a2: 'Appuyez sur l\'icône du haut-parleur sur la carte pour entendre la prononciation correcte. Assurez-vous que le volume de votre appareil est activé.',
+            a2: 'Appuyez sur la phrase d\'exemple sur la carte pour entendre la bonne prononciation. Assurez-vous que le volume de votre appareil est activé.\'icône du haut-parleur sur la carte pour entendre la prononciation correcte. Assurez-vous que le volume de votre appareil est activé.',
             q3: 'Comment sauvegarder mes mots favoris ?',
             a3: 'Appuyez sur l\'icône étoile sur n\'importe quelle carte pour l\'ajouter à vos favoris. Accédez à vos mots sauvegardés à tout moment depuis l\'écran Favoris via le bouton étoile sur l\'écran d\'accueil.',
             q4: 'Que sont les phrases d\'exemple ?',
@@ -317,5 +317,17 @@
             title: 'Besoin d\'aide supplémentaire ?',
             desc: 'Pour toute question, suggestion ou problème, veuillez nous contacter à support@vocbee.com. Nous serions ravis de vous entendre !',
         },
+    },
+	homeTutorial: {
+        step1: "Balayez vers la droite pour marquer les mots que vous avez appris",
+        step2: "Balayez vers la gauche pour revoir le mot plus tard",
+        step3: "Appuyez sur l'étoile pour enregistrer des mots dans vos favoris",
+        step4: "Appuyez sur le mot pour entendre sa prononciation",
+        step5: "Appuyez sur la phrase pour l'écouter",
+        step6: "Appuyez ici pour voir d'autres exemples de phrases",
+        skip: "Passer",
+        next: "Suivant",
+        done: "Compris !",
+        stepOf: "{{current}} sur {{total}}",
     },
 };

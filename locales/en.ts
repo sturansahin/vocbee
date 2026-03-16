@@ -1,4 +1,4 @@
-﻿export default {
+export default {
     common: {
         loading: 'Loading...',
         error: 'Error',
@@ -283,7 +283,7 @@
             q1: "How do I learn new words?",
             a1: "Swipe the word card right to mark it as learned, or swipe left to skip and see it again later. You can also tap the buttons below the card.",
             q2: "How do I hear the pronunciation?",
-            a2: "Tap the speaker icon on the word card to hear the correct pronunciation. Make sure your device volume is turned up.",
+            a2: "Tap the example sentence on the word card to hear the correct pronunciation. Make sure your device volume is turned up.",
             q3: "How do I save favorite words?",
             a3: "Tap the star icon on any word card to add it to your favorites. Access your saved words anytime from the Favorites screen via the star button on the home screen.",
             q4: "What are example sentences?",
@@ -317,5 +317,17 @@
             title: "Need more help?",
             desc: "For any questions, suggestions, or issues, please contact us at support@vocbee.com. We'd love to hear from you!",
         },
+    },
+	homeTutorial: {
+        step1: "Swipe right to mark words you've learned",
+        step2: "Swipe left to review the word again later",
+        step3: "Tap the star to save words to your favorites",
+        step4: "Tap the word to hear its pronunciation",
+        step5: "Tap the sentence to listen to it",
+        step6: "Tap here to see more example sentences",
+        skip: "Skip",
+        next: "Next",
+        done: "Got it!",
+        stepOf: "{{current}} of {{total}}",
     },
 };

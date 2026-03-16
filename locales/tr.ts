@@ -1,4 +1,4 @@
-﻿export default {
+export default {
     common: {
         loading: 'Yükleniyor...',
         error: 'Hata',
@@ -283,7 +283,7 @@
             q1: 'Yeni kelimeleri nasıl öğrenirim?',
             a1: 'Kartı sağa kaydırarak öğrenildi olarak işaretleyin, sola kaydırarak atlayın ve daha sonra tekrar görün. Ayrıca kartın altındaki butonları da kullanabilirsiniz.',
             q2: 'Telaffuzu nasıl dinlerim?',
-            a2: 'Doğru telaffuzu duymak için kelime kartındaki hoparlör simgesine dokunun. Cihazınızın sesinin açık olduğundan emin olun.',
+            a2: 'Doğru telaffuzu duymak için kelime kartındaki örnek cümleye dokunun. Cihazınızın sesinin açık olduğundan emin olun.',
             q3: 'Kelimeyi favorilere nasıl eklerim?',
             a3: 'Herhangi bir kelime kartındaki yıldız simgesine dokunarak favorilerinize ekleyin. Kaydettiğiniz kelimelere ana ekrandaki yıldız butonu ile Favoriler ekranından ulaşabilirsiniz.',
             q4: 'Örnek cümleler nedir?',
@@ -317,5 +317,17 @@
             title: 'Daha fazla yardıma mı ihtiyacınız var?',
             desc: 'Her türlü soru, öneri veya sorun için lütfen support@vocbee.com adresinden bizimle iletişime geçin. Sizden haber almaktan memnuniyet duyarız!',
         },
+    },
+	homeTutorial: {
+        step1: "Öğrendiğiniz kelimeleri sağa kaydırın",
+        step2: "Kelimeyi daha sonra tekrar görmek için sola kaydırın",
+        step3: "Kelimeleri favorilerinize eklemek için yıldıza dokunun",
+        step4: "Telaffuzunu duymak için kelimenin üzerine dokunun",
+        step5: "Cümleyi dinlemek için üzerine dokunun",
+        step6: "Daha fazla örnek cümle görmek için buraya dokunun",
+        skip: "Geç",
+        next: "İleri",
+        done: "Anladım!",
+        stepOf: "{{current}} / {{total}}",
     },
 };

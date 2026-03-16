@@ -1,4 +1,4 @@
-﻿export default {
+export default {
     common: {
         loading: 'Caricamento...',
         error: 'Errore',
@@ -285,7 +285,7 @@
             q1: 'Come imparo nuove parole?',
             a1: 'Scorri la carta verso destra per segnarla come appresa, o verso sinistra per saltarla e rivederla più tardi. Puoi anche toccare i pulsanti sotto la carta.',
             q2: 'Come ascolto la pronuncia?',
-            a2: 'Tocca l\'icona dell\'altoparlante sulla carta per sentire la pronuncia corretta. Assicurati che il volume del dispositivo sia attivo.',
+            a2: 'Tocca la frase di esempio sulla carta per sentire la pronuncia corretta. Assicurati che il volume del dispositivo sia attivo.\'icona dell\'altoparlante sulla carta per sentire la pronuncia corretta. Assicurati che il volume del dispositivo sia attivo.',
             q3: 'Come salvo le parole preferite?',
             a3: 'Tocca l\'icona della stella su qualsiasi carta per aggiungerla ai preferiti. Accedi alle parole salvate dalla schermata Preferiti tramite il pulsante stella nella schermata home.',
             q4: 'Cosa sono le frasi di esempio?',
@@ -319,5 +319,17 @@
             title: 'Hai bisogno di ulteriore aiuto?',
             desc: 'Per qualsiasi domanda, suggerimento o problema, contattaci a support@vocbee.com. Saremo felici di sentirti!',
         },
+    },
+	homeTutorial: {
+        step1: "Scorri verso destra per contrassegnare le parole imparate",
+        step2: "Scorri verso sinistra per ripassare la parola in seguito",
+        step3: "Tocca la stella per salvare le parole nei preferiti",
+        step4: "Tocca la parola per ascoltare la sua pronuncia",
+        step5: "Tocca la frase per ascoltarla",
+        step6: "Tocca qui per vedere altre frasi di esempio",
+        skip: "Salta",
+        next: "Avanti",
+        done: "Capito!",
+        stepOf: "{{current}} di {{total}}",
     },
 };

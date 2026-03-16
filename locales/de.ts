@@ -1,4 +1,4 @@
-﻿export default {
+export default {
     common: {
         loading: 'Laden...',
         error: 'Fehler',
@@ -283,7 +283,7 @@
             q1: 'Wie lerne ich neue Wörter?',
             a1: 'Wische die Wortkarte nach rechts, um sie als gelernt zu markieren, oder nach links, um sie zu überspringen und später erneut zu sehen. Du kannst auch die Schaltflächen unter der Karte antippen.',
             q2: 'Wie höre ich die Aussprache?',
-            a2: 'Tippe auf das Lautsprecher-Symbol auf der Wortkarte, um die korrekte Aussprache zu hören. Stelle sicher, dass die Lautstärke deines Geräts aufgedreht ist.',
+            a2: 'Tippe auf den Beispielsatz auf der Wortkarte, um die korrekte Aussprache zu hören. Stelle sicher, dass die Lautstärke deines Geräts aufgedreht ist.',
             q3: 'Wie speichere ich Lieblingswörter?',
             a3: 'Tippe auf das Stern-Symbol auf einer Wortkarte, um sie zu deinen Favoriten hinzuzufügen. Greife jederzeit auf deine gespeicherten Wörter über die Favoritenseite zu.',
             q4: 'Was sind Beispielsätze?',
@@ -317,5 +317,17 @@
             title: 'Brauchst du mehr Hilfe?',
             desc: 'Bei Fragen, Vorschlägen oder Problemen kontaktiere uns bitte unter support@vocbee.com. Wir freuen uns von dir zu hören!',
         },
+    },
+	homeTutorial: {
+        step1: "Nach rechts wischen, um Wörter als gelernt zu markieren",
+        step2: "Nach links wischen, um das Wort später noch einmal zu sehen",
+        step3: "Tippen Sie auf den Stern, um Wörter als Favoriten zu speichern",
+        step4: "Tippen Sie auf das Wort, um die Aussprache zu hören",
+        step5: "Tippen Sie auf den Satz, um ihn anzuhören",
+        step6: "Tippen Sie hier, um weitere Beispielsätze zu sehen",
+        skip: "Überspringen",
+        next: "Weiter",
+        done: "Verstanden!",
+        stepOf: "{{current}} von {{total}}",
     },
 };
