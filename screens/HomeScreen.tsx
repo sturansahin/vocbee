@@ -20,8 +20,8 @@ import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../types';
 import Feather from '@expo/vector-icons/Feather';
-import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
-import { MaterialIcons, Ionicons } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
+import Svg, { Polygon } from 'react-native-svg';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '../context/ThemeContext';
 import { FONT_FAMILY, HEADER_FONT_FAMILY } from '../utils/typography';
@@ -77,6 +77,33 @@ const EMPTY_TUTORIAL_LAYOUT: LayoutRect = {
     width: 0,
     height: 0,
 };
+
+const FEATHER_STAR_POINTS = '12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2';
+
+function FavoriteStarIcon({
+    color,
+    filled = false,
+    size = 24,
+    style,
+}: {
+    color: string;
+    filled?: boolean;
+    size?: number;
+    style?: any;
+}) {
+    return (
+        <Svg width={size} height={size} viewBox="0 0 24 24" style={style}>
+            <Polygon
+                points={FEATHER_STAR_POINTS}
+                fill={filled ? color : 'none'}
+                stroke={color}
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </Svg>
+    );
+}
 
 
 export default function HomeScreen() {
@@ -1162,12 +1189,12 @@ export default function HomeScreen() {
                     hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
                 >
                     <View style={{ width: 26, height: 26, justifyContent: 'center', alignItems: 'center' }}>
-                        {isCurrentWordFavorite && (
-                            <View style={{ position: 'absolute' }}>
-                                <Ionicons name="star" size={22} color={colors.primary} style={styles.tutorialIconGlow} />
-                            </View>
-                        )}
-                        <Feather name="star" size={24} color={colors.primary} style={styles.tutorialIconGlow} />
+                        <FavoriteStarIcon
+                            color={colors.primary}
+                            filled={isCurrentWordFavorite}
+                            size={24}
+                            style={styles.tutorialIconGlow}
+                        />
                     </View>
                 </TouchableOpacity>
             );
@@ -1251,7 +1278,7 @@ export default function HomeScreen() {
                         {/* Upper Section - Word and Translation */}
                         <View style={styles.favoriteButton}>
                             <View style={{ width: 26, height: 26, justifyContent: 'center', alignItems: 'center' }}>
-                                <Feather name="star" size={24} color={colors.primary} />
+                                <FavoriteStarIcon color={colors.primary} size={24} />
                             </View>
                         </View>
                         <View style={styles.cardUpperSection}>
@@ -1534,12 +1561,11 @@ export default function HomeScreen() {
                                         hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
                                     >
                                         <View style={{ width: 26, height: 26, justifyContent: 'center', alignItems: 'center' }}>
-                                            {isCurrentWordFavorite && (
-                                                <View style={{ position: 'absolute' }}>
-                                                    <Ionicons name="star" size={22} color={colors.primary} />
-                                                </View>
-                                            )}
-                                            <Feather name="star" size={24} color={colors.primary} />
+                                            <FavoriteStarIcon
+                                                color={colors.primary}
+                                                filled={isCurrentWordFavorite}
+                                                size={24}
+                                            />
                                         </View>
                                     </TouchableOpacity>
 

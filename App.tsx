@@ -26,7 +26,7 @@ import {
   setLastBackgroundTime,
 } from './services/notificationService';
 import { STORAGE_KEYS } from './services/storageKeys';
-import { requestAdConsent, initializeAdMob, checkAndShowAppOpenAd } from './services/adMobService';
+import { initializeAdMob, checkAndShowAppOpenAd } from './services/adMobService';
 
 // Screens
 import CustomSplashScreen from './screens/SplashScreen';
@@ -369,9 +369,8 @@ export default function App() {
 
     loadIconFonts();
 
-    // Initialize AdMob: consent first (UMP/ATT), then SDK, then app-open ad
-    requestAdConsent()
-      .then(() => initializeAdMob())
+    // Initialize AdMob after consent and ATT are resolved inside the service.
+    initializeAdMob()
       .then(() => checkAndShowAppOpenAd())
       .catch(err => console.error('[App] AdMob init chain error:', err));
   }, []);

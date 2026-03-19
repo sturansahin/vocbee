@@ -1,5 +1,11 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Constants, { ExecutionEnvironment } from 'expo-constants';
+import {
+    getTrackingPermissionsAsync,
+    isAvailable as isTrackingTransparencyAvailable,
+    PermissionStatus,
+    requestTrackingPermissionsAsync,
+} from 'expo-tracking-transparency';
 import { Alert, Platform } from 'react-native';
 
 type AdRequestOptions = {
@@ -54,9 +60,14 @@ let isModuleLoaded = false;
 let isInitialized = false;
 let isConsentResolved = false;
 let canRequestAds = false;
+let trackingPermissionStatus: PermissionStatus = IS_IOS
+    ? PermissionStatus.UNDETERMINED
+    : PermissionStatus.GRANTED;
 let defaultAdRequestOptions: AdRequestOptions = {
     requestNonPersonalizedAdsOnly: true,
 };
+let latestConsentInfo: ConsentInfoLike | null = null;
+let latestUserChoices: any = null;
 
 let consentPromise: Promise<void> | null = null;
 let initializePromise: Promise<boolean> | null = null;
@@ -134,9 +145,11 @@ function cleanupInterstitialListeners() {
 
 function buildAdRequestOptions(consentInfo?: ConsentInfoLike | null, userChoices?: any): AdRequestOptions {
     const consentStatus = consentInfo?.status;
+    const trackingAuthorized = !IS_IOS || trackingPermissionStatus === PermissionStatus.GRANTED;
     const personalizedAdsAllowed =
-        consentStatus === (AdsConsentStatus?.NOT_REQUIRED ?? 'NOT_REQUIRED') ||
+        (trackingAuthorized && consentStatus === (AdsConsentStatus?.NOT_REQUIRED ?? 'NOT_REQUIRED')) ||
         Boolean(
+            trackingAuthorized &&
             userChoices?.selectPersonalisedAds &&
             userChoices?.storeAndAccessInformationOnDevice
         );
@@ -166,6 +179,8 @@ async function refreshConsentState(consentInfo?: ConsentInfoLike | null) {
         }
     }
 
+    latestConsentInfo = resolvedConsentInfo;
+    latestUserChoices = userChoices;
     canRequestAds = Boolean(resolvedConsentInfo?.canRequestAds ?? !AdsConsent);
     defaultAdRequestOptions = buildAdRequestOptions(resolvedConsentInfo, userChoices);
     isConsentResolved = true;
@@ -175,6 +190,40 @@ async function refreshConsentState(consentInfo?: ConsentInfoLike | null) {
         canRequestAds,
         requestNonPersonalizedAdsOnly: defaultAdRequestOptions.requestNonPersonalizedAdsOnly,
     });
+}
+
+async function requestTrackingPermissionIfNeeded(): Promise<void> {
+    if (!IS_IOS) {
+        trackingPermissionStatus = PermissionStatus.GRANTED;
+        return;
+    }
+
+    try {
+        if (!isTrackingTransparencyAvailable()) {
+            trackingPermissionStatus = PermissionStatus.GRANTED;
+            defaultAdRequestOptions = buildAdRequestOptions(latestConsentInfo, latestUserChoices);
+            return;
+        }
+
+        const currentPermission = await getTrackingPermissionsAsync();
+        trackingPermissionStatus = currentPermission.status;
+
+        if (currentPermission.status === PermissionStatus.UNDETERMINED) {
+            console.log('[AdMob] Requesting ATT permission');
+            const requestedPermission = await requestTrackingPermissionsAsync();
+            trackingPermissionStatus = requestedPermission.status;
+        }
+
+        defaultAdRequestOptions = buildAdRequestOptions(latestConsentInfo, latestUserChoices);
+        console.log('[AdMob] ATT status resolved', {
+            status: trackingPermissionStatus,
+            requestNonPersonalizedAdsOnly: defaultAdRequestOptions.requestNonPersonalizedAdsOnly,
+        });
+    } catch (error) {
+        trackingPermissionStatus = PermissionStatus.DENIED;
+        defaultAdRequestOptions = buildAdRequestOptions(latestConsentInfo, latestUserChoices);
+        console.warn('[AdMob] ATT request failed, defaulting to non-personalized ads', error);
+    }
 }
 
 export const getDefaultAdRequestOptions = (): AdRequestOptions => ({
@@ -247,6 +296,10 @@ export const initializeAdMob = async (): Promise<boolean> => {
     if (!initializePromise) {
         initializePromise = (async () => {
             await requestAdConsent();
+
+            if (canRequestAds) {
+                await requestTrackingPermissionIfNeeded();
+            }
 
             if (!canRequestAds) {
                 console.log('[AdMob] SDK init skipped because ads cannot be requested yet');

@@ -3,7 +3,7 @@
     "name": "VocBee",
     "slug": "vocbee",
     "scheme": "vocbee",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "icon": "./assets/icons/vocicon.png",
     "splash": {
       "image": "./assets/transparent-splash.png",
@@ -102,6 +102,7 @@
         {
           "androidAppId": "ca-app-pub-3149431742550187~5197491242",
           "iosAppId": "ca-app-pub-3149431742550187~9940490920",
+          "delayAppMeasurementInit": true,
           "userTrackingUsageDescription": "This identifier will be used to deliver personalized ads to you."
         }
       ],
@@ -113,7 +114,8 @@
         }
       ],
       "expo-localization",
-      "expo-apple-authentication"
+      "expo-apple-authentication",
+      "expo-tracking-transparency"
     ],
     "extra": {
       "supportsRTL": true,

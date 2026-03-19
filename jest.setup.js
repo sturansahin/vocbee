@@ -30,6 +30,27 @@ jest.mock('expo-speech', () => ({
     stop: jest.fn(),
 }));
 
+jest.mock('expo-tracking-transparency', () => ({
+    PermissionStatus: {
+        GRANTED: 'granted',
+        UNDETERMINED: 'undetermined',
+        DENIED: 'denied',
+    },
+    getTrackingPermissionsAsync: jest.fn(async () => ({
+        status: 'granted',
+        granted: true,
+        canAskAgain: true,
+        expires: 'never',
+    })),
+    requestTrackingPermissionsAsync: jest.fn(async () => ({
+        status: 'granted',
+        granted: true,
+        canAskAgain: true,
+        expires: 'never',
+    })),
+    isAvailable: jest.fn(() => true),
+}));
+
 
 jest.mock('expo-linear-gradient', () => ({
     LinearGradient: 'LinearGradient'
