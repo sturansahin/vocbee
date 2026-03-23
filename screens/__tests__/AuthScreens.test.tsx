@@ -5,6 +5,21 @@ import { LoginScreen, SignUpScreen } from '../AuthScreens';
 import { ThemeProvider } from '../../context/ThemeContext';
 import { AuthProvider } from '../../context/AuthContext';
 
+const mockNavigate = jest.fn();
+const mockShowAlert = jest.fn();
+
+jest.mock('@react-navigation/native', () => {
+    const actualNav = jest.requireActual('@react-navigation/native');
+    return {
+        ...actualNav,
+        useNavigation: () => ({
+            navigate: mockNavigate,
+            goBack: jest.fn(),
+            setOptions: jest.fn(),
+        }),
+    };
+});
+
 // Mock contexts
 jest.mock('../../context/ThemeContext', () => ({
     useTheme: () => ({
@@ -24,13 +39,17 @@ jest.mock('../../context/ThemeContext', () => ({
 // Mock AuthContext values
 const mockSignIn = jest.fn();
 const mockSignUp = jest.fn();
+const mockSignInWithGoogle = jest.fn();
+const mockSignInWithApple = jest.fn();
+const mockSignOut = jest.fn();
 
 jest.mock('../../context/AuthContext', () => ({
     useAuth: () => ({
         signIn: mockSignIn,
         signUp: mockSignUp,
-        signInWithGoogle: jest.fn(),
-        signOut: jest.fn(),
+        signInWithGoogle: mockSignInWithGoogle,
+        signInWithApple: mockSignInWithApple,
+        signOut: mockSignOut,
         isLoading: false,
     }),
     AuthProvider: ({ children }) => children,
@@ -39,7 +58,7 @@ jest.mock('../../context/AuthContext', () => ({
 // Mock Alert
 jest.mock('../../components/CustomAlert', () => ({
     useAlert: () => ({
-        showAlert: jest.fn(),
+        showAlert: mockShowAlert,
     }),
 }));
 
@@ -80,6 +99,19 @@ describe('AuthScreens', () => {
             // The component starts animation then calls login.
             await waitFor(() => {
                 expect(mockSignIn).toHaveBeenCalledWith('test@example.com', 'password123');
+            });
+        });
+
+        it('navigates to main app after successful social login', async () => {
+            mockSignInWithGoogle.mockResolvedValue({ setupCompleted: true });
+
+            const { getByText } = render(<LoginScreen />);
+
+            fireEvent.press(getByText('auth.google'));
+
+            await waitFor(() => {
+                expect(mockSignInWithGoogle).toHaveBeenCalled();
+                expect(mockNavigate).toHaveBeenCalledWith('MainTabs');
             });
         });
     });

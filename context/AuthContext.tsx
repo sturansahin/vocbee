@@ -3,6 +3,7 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Platform } from 'react-native';
 import {
     User,
     createUserWithEmailAndPassword,
@@ -21,6 +22,13 @@ import * as Google from 'expo-auth-session/providers/google';
 import * as WebBrowser from 'expo-web-browser';
 import { makeRedirectUri } from 'expo-auth-session';
 import { auth } from '../config/firebase';
+import {
+    GOOGLE_ANDROID_CLIENT_ID,
+    GOOGLE_ANDROID_REDIRECT_URI,
+    GOOGLE_IOS_CLIENT_ID,
+    GOOGLE_IOS_REDIRECT_URI,
+    GOOGLE_WEB_CLIENT_ID,
+} from '../services/googleAuthConfig';
 import {
     getLocalUserData,
     saveUserDataLocally,
@@ -63,8 +71,8 @@ interface AuthContextType {
     signUp: (email: string, password: string, displayName?: string) => Promise<void>;
     signIn: (email: string, password: string) => Promise<{ setupCompleted: boolean }>;
     signOut: () => Promise<void>;
-    signInWithGoogle: () => Promise<void>;
-    signInWithApple: () => Promise<void>;
+    signInWithGoogle: () => Promise<{ setupCompleted: boolean }>;
+    signInWithApple: () => Promise<{ setupCompleted: boolean }>;
     resetPassword: (email: string) => Promise<void>;
     refreshUserData: () => Promise<void>;
     retryConnection: () => Promise<void>;
@@ -79,6 +87,8 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 WebBrowser.maybeCompleteAuthSession();
+
+const SOCIAL_AUTH_CANCELLED_ERROR = 'AUTH_CANCELLED';
 
 // Provider Props
 interface AuthProviderProps {
@@ -294,80 +304,86 @@ export function AuthProvider({ children }: AuthProviderProps) {
         }
     };
 
-    // Google OAuth Client IDs
-    const GOOGLE_WEB_CLIENT_ID = '540292978044-pjka45r8ej0k63564hicngf1prip5ctu.apps.googleusercontent.com';
-    const GOOGLE_ANDROID_CLIENT_ID = '540292978044-2c8urh00ip44furlns58hq4ieil3bfno.apps.googleusercontent.com';
-
-    // Google Sign-In request
-    const [request, response, promptAsync] = Google.useAuthRequest({
-        clientId: GOOGLE_WEB_CLIENT_ID,
-        iosClientId: GOOGLE_WEB_CLIENT_ID,
-        androidClientId: GOOGLE_ANDROID_CLIENT_ID,
-        webClientId: GOOGLE_WEB_CLIENT_ID,
+    const googleRedirectUri = makeRedirectUri({
+        native: Platform.select({
+            ios: GOOGLE_IOS_REDIRECT_URI,
+            android: GOOGLE_ANDROID_REDIRECT_URI,
+            default: undefined,
+        }),
     });
 
-    // Handle Google Sign-In response
-    useEffect(() => {
-        const handleGoogleResponse = async () => {
-            if (response?.type === 'success') {
-                const { id_token } = response.params;
-
-                try {
-                    setIsLoading(true);
-
-                    // Create Firebase credential with Google ID token
-                    const credential = GoogleAuthProvider.credential(id_token);
-                    const userCredential = await signInWithCredential(auth, credential);
-
-                    // Clear local storage AFTER successful sign-in
-                    await clearAllLocalData();
-
-                    // Cancel all scheduled notifications for previous user
-                    await cancelAllNotifications();
-                    await clearTrackedNotifications();
-
-                    // Check if user exists in Firestore, if not create document
-                    let fetchedData = await applyFetchedUserData(userCredential.user.uid);
-
-                    if (!fetchedData) {
-                        // New user - create document then re-fetch to populate local data
-                        await createUserDocument(
-                            userCredential.user.uid,
-                            userCredential.user.email || '',
-                            userCredential.user.displayName || undefined
-                        );
-                        fetchedData = await applyFetchedUserData(userCredential.user.uid);
-                    }
-
-                } catch (error: any) {
-                    console.error('Google Sign-In error:', error);
-                    throw new Error('Failed to sign in with Google. Please try again.');
-                } finally {
-                    setIsLoading(false);
-                }
-            }
-        };
-
-        handleGoogleResponse();
-    }, [response]);
+    // Google Sign-In request
+    const [request, , promptAsync] = Google.useAuthRequest({
+        clientId: GOOGLE_WEB_CLIENT_ID,
+        iosClientId: GOOGLE_IOS_CLIENT_ID,
+        androidClientId: GOOGLE_ANDROID_CLIENT_ID,
+        webClientId: GOOGLE_WEB_CLIENT_ID,
+        redirectUri: googleRedirectUri,
+    });
 
     // Sign In with Google
-    const signInWithGoogle = async () => {
+    const signInWithGoogle = async (): Promise<{ setupCompleted: boolean }> => {
         if (!request) {
             console.error('Google Auth request not ready');
             throw new Error('Google Sign-In is not available right now. Please try again.');
         }
 
         try {
-            await promptAsync();
+            const result = await promptAsync();
+
+            if (result.type === 'cancel' || result.type === 'dismiss') {
+                throw new Error(SOCIAL_AUTH_CANCELLED_ERROR);
+            }
+
+            if (result.type !== 'success') {
+                throw new Error('Google Sign-In did not complete successfully.');
+            }
+
+            const idToken = result.params?.id_token;
+            if (!idToken) {
+                throw new Error('No Google ID token received.');
+            }
+
+            setIsLoading(true);
+
+            // Create Firebase credential with Google ID token
+            const credential = GoogleAuthProvider.credential(idToken);
+            const userCredential = await signInWithCredential(auth, credential);
+
+            // Clear local storage AFTER successful sign-in
+            await clearAllLocalData();
+
+            // Cancel all scheduled notifications for previous user
+            await cancelAllNotifications();
+            await clearTrackedNotifications();
+
+            // Check if user exists in Firestore, if not create document
+            let fetchedData = await applyFetchedUserData(userCredential.user.uid);
+
+            if (!fetchedData) {
+                // New user - create document then re-fetch to populate local data
+                await createUserDocument(
+                    userCredential.user.uid,
+                    userCredential.user.email || '',
+                    userCredential.user.displayName || undefined
+                );
+                fetchedData = await applyFetchedUserData(userCredential.user.uid);
+            }
+
+            return { setupCompleted: hasCompletedSetup(fetchedData) };
         } catch (error: any) {
+            if (error.message === SOCIAL_AUTH_CANCELLED_ERROR) {
+                throw error;
+            }
             console.error('Google Sign-In error:', error);
-            throw new Error('Failed to start Google Sign-In. Please try again.');
+            throw new Error('Failed to sign in with Google. Please try again.');
+        } finally {
+            setIsLoading(false);
         }
     };
 
     // Sign In with Apple
-    const signInWithApple = async () => {
+    const signInWithApple = async (): Promise<{ setupCompleted: boolean }> => {
         try {
             setIsLoading(true);
             const credential = await AppleAuthentication.signInAsync({
@@ -407,12 +423,16 @@ export function AuthProvider({ children }: AuthProviderProps) {
                     fetchedData = await applyFetchedUserData(userCredential.user.uid);
                 }
 
+                return { setupCompleted: hasCompletedSetup(fetchedData) };
             } else {
                 throw new Error('No identity token.');
             }
         } catch (error: any) {
             if (error.code === 'ERR_REQUEST_CANCELED') {
-                return;
+                throw new Error(SOCIAL_AUTH_CANCELLED_ERROR);
+            }
+            if (error.message === SOCIAL_AUTH_CANCELLED_ERROR) {
+                throw error;
             }
             console.error('Apple Sign-In error:', error);
             throw new Error('Failed to sign in with Apple. Please try again.');

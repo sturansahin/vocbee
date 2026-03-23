@@ -17,6 +17,7 @@ import { useTranslation } from 'react-i18next';
 
 type AuthNavProp = StackNavigationProp<RootStackParamList>;
 const PRIVACY_POLICY_URL = 'https://vocbee.online/privacypolicy';
+const SOCIAL_AUTH_CANCELLED_ERROR = 'AUTH_CANCELLED';
 
 export const LoginScreen = () => {
   const navigation = useNavigation<AuthNavProp>();
@@ -105,6 +106,14 @@ export const LoginScreen = () => {
     }
   };
 
+  const navigateAfterAuth = (setupCompleted: boolean) => {
+    if (setupCompleted) {
+      navigation.navigate('MainTabs');
+    } else {
+      navigation.navigate('NativeLanguage');
+    }
+  };
+
   // Start Firebase login (runs in parallel with animation)
   const startFirebaseLogin = async () => {
     try {
@@ -117,6 +126,29 @@ export const LoginScreen = () => {
     } finally {
       loginCompleteRef.current = true;
       checkAndNavigate();
+    }
+  };
+
+  const handleSocialSignIn = async (
+    socialSignIn: () => Promise<{ setupCompleted: boolean }>
+  ) => {
+    if (isSubmitting || isAnimating) {
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const result = await socialSignIn();
+      navigateAfterAuth(result.setupCompleted);
+    } catch (error: any) {
+      if (error?.message === SOCIAL_AUTH_CANCELLED_ERROR) {
+        return;
+      }
+
+      showAlert({ title: t('auth.loginFailed'), message: error.message });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -395,7 +427,7 @@ export const LoginScreen = () => {
               borderColor: colors.border,
               height: isSmallScreen ? 44 : isLargeScreen ? 56 : 48,
             }]}
-            onPress={signInWithGoogle}
+            onPress={() => handleSocialSignIn(signInWithGoogle)}
             disabled={isSubmitting}
           >
             <AntDesign name="google" size={isSmallScreen ? 14 : isLargeScreen ? 20 : 16} color={colors.text} />
@@ -412,7 +444,7 @@ export const LoginScreen = () => {
                 borderColor: colors.border,
                 height: isSmallScreen ? 44 : isLargeScreen ? 56 : 48,
               }]}
-              onPress={signInWithApple}
+              onPress={() => handleSocialSignIn(signInWithApple)}
               disabled={isSubmitting}
             >
               <AntDesign name="apple" size={isSmallScreen ? 14 : isLargeScreen ? 20 : 16} color={colors.text} />
@@ -501,6 +533,34 @@ export const SignUpScreen = () => {
       });
     } catch (error: any) {
       showAlert({ title: t('auth.signUpFailed'), message: error.message });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleSocialSignIn = async (
+    socialSignIn: () => Promise<{ setupCompleted: boolean }>
+  ) => {
+    if (isSubmitting) {
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const result = await socialSignIn();
+
+      if (result.setupCompleted) {
+        navigation.navigate('MainTabs');
+      } else {
+        navigation.navigate('NativeLanguage');
+      }
+    } catch (error: any) {
+      if (error?.message === SOCIAL_AUTH_CANCELLED_ERROR) {
+        return;
+      }
+
+      showAlert({ title: t('auth.error'), message: error.message });
     } finally {
       setIsSubmitting(false);
     }
@@ -630,7 +690,7 @@ export const SignUpScreen = () => {
               borderColor: colors.border,
               height: isSmallScreen ? 44 : isLargeScreen ? 56 : 48,
             }]}
-            onPress={signInWithGoogle}
+            onPress={() => handleSocialSignIn(signInWithGoogle)}
             disabled={isSubmitting}
           >
             <AntDesign name="google" size={isSmallScreen ? 14 : isLargeScreen ? 20 : 16} color={colors.text} />
@@ -647,7 +707,7 @@ export const SignUpScreen = () => {
                 borderColor: colors.border,
                 height: isSmallScreen ? 44 : isLargeScreen ? 56 : 48,
               }]}
-              onPress={signInWithApple}
+              onPress={() => handleSocialSignIn(signInWithApple)}
               disabled={isSubmitting}
             >
               <AntDesign name="apple" size={isSmallScreen ? 14 : isLargeScreen ? 20 : 16} color={colors.text} />

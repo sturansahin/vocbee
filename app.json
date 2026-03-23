@@ -2,8 +2,12 @@
   "expo": {
     "name": "VocBee",
     "slug": "vocbee",
-    "scheme": "vocbee",
-    "version": "1.0.5",
+    "scheme": [
+      "vocbee",
+      "com.vocbee.app",
+      "com.googleusercontent.apps.540292978044-695plkaeec13scn3p2s76h302sieti4g"
+    ],
+    "version": "1.0.6",
     "icon": "./assets/icons/vocicon.png",
     "splash": {
       "image": "./assets/transparent-splash.png",
@@ -18,7 +22,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.vocbee.app",
-      "buildNumber": "3",
+      "buildNumber": "4",
       "googleServicesFile": "./GoogleService-Info.plist",
       "splash": {
         "image": "./assets/transparent-splash.png",
