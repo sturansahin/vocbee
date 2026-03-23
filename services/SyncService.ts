@@ -16,6 +16,7 @@ import {
 import { getUserProgress, getCurrentLevel, restoreProgressFromFirebase, getLastWordId } from './progressService';
 import { restoreFavoritesFromFirebase, syncFavoritesToFirebase } from './favoritesService';
 import { getLanguagePair, isVocabularyGenerated, generateVocabulary, getUserLevelFromCefrLevel, isUserLevel } from './vocabularyService';
+import { getNotificationSettings, saveNotificationSettings, NotificationSettings } from './notificationService';
 import { STORAGE_KEYS } from './storageKeys';
 
 // ─── Retry Helper with Exponential Backoff ───────────────────────────────────
@@ -81,6 +82,10 @@ export const syncToFirestore = async (userId: string): Promise<boolean> => {
         const storedProfile = await AsyncStorage.getItem(`${STORAGE_KEYS.PROFILE_PREFIX}${userId}`);
         const profileData = storedProfile ? JSON.parse(storedProfile) : {};
         const profileName = profileData.name;
+        const rawNotificationSettings = await AsyncStorage.getItem(STORAGE_KEYS.NOTIFICATION_SETTINGS);
+        const notificationSettings = rawNotificationSettings
+            ? await getNotificationSettings()
+            : null;
 
         // Get language preferences
         const languagePair = await getLanguagePair();
@@ -113,6 +118,10 @@ export const syncToFirestore = async (userId: string): Promise<boolean> => {
             // Update profile info
             ...(profileName && { displayName: profileName }),
         };
+
+        if (notificationSettings) {
+            syncData.notificationSettings = notificationSettings;
+        }
 
         // If we have valid preferences locally, force update them in Firestore
         // This ensures the user is marked as "Setup Completed"
@@ -212,7 +221,8 @@ export const fetchAndSaveUserData = async (userId: string): Promise<UserData | n
                 setupCompleted: data.setupCompleted,
                 hasPreferences: !!data.preferences,
                 preferences: data.preferences,
-                hasProgress: !!data.progress
+                hasProgress: !!data.progress,
+                hasNotificationSettings: !!data.notificationSettings,
             }, null, 2));
 
             const userData: UserData = {
@@ -232,6 +242,11 @@ export const fetchAndSaveUserData = async (userId: string): Promise<UserData | n
                 email: data.email || ''
             };
             await AsyncStorage.setItem(`${STORAGE_KEYS.PROFILE_PREFIX}${userId}`, JSON.stringify(newProfile));
+
+            if (data.notificationSettings && typeof data.notificationSettings === 'object') {
+                await saveNotificationSettings(data.notificationSettings, true);
+                console.log('Restored notification settings from Firebase');
+            }
 
             // Restore user-level preference (beginner/intermediate/advanced).
             // Handles both current schema and older builds that may have stored CEFR here.
@@ -296,6 +311,16 @@ export const fetchAndSaveUserData = async (userId: string): Promise<UserData | n
         console.error('Error fetching user data:', error);
         return null;
     }
+};
+
+export const syncNotificationSettingsToFirestore = async (
+    userId: string,
+    settings: NotificationSettings
+): Promise<void> => {
+    await withRetry(async () => {
+        const userRef = doc(db, 'users', userId);
+        await setDoc(userRef, { notificationSettings: settings }, { merge: true });
+    }, 'syncNotificationSettingsToFirestore');
 };
 
 // Auto sync on app background (called from AppState listener)

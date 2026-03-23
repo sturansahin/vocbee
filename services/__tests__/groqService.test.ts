@@ -1,15 +1,19 @@
 // file: services/__tests__/groqService.test.ts
-import { explainGrammar, GrammarResponse } from '../groqService';
+import type { GrammarResponse } from '../groqService';
 
 // Mock global fetch
 const mockFetch = jest.fn();
 global.fetch = mockFetch;
 
 describe('groqService', () => {
-    beforeEach(() => {
+    let explainGrammar: typeof import('../groqService').explainGrammar;
+
+    beforeEach(async () => {
         jest.clearAllMocks();
         // Clear the module cache to reset the internal grammarCache
         jest.resetModules();
+        process.env.EXPO_PUBLIC_GRAMMAR_PROXY_URL = 'https://vocbee-proxy.vercel.app/api/grammarProxy';
+        explainGrammar = require('../groqService').explainGrammar;
     });
 
     describe('explainGrammar', () => {
@@ -29,13 +33,7 @@ describe('groqService', () => {
         it('returns grammar explanation for valid input', async () => {
             mockFetch.mockResolvedValueOnce({
                 ok: true,
-                json: async () => ({
-                    choices: [{
-                        message: {
-                            content: JSON.stringify(mockSuccessResponse),
-                        },
-                    }],
-                }),
+                json: async () => mockSuccessResponse,
             });
 
             const result = await explainGrammar(
@@ -51,13 +49,7 @@ describe('groqService', () => {
         it('caches responses for same input', async () => {
             mockFetch.mockResolvedValue({
                 ok: true,
-                json: async () => ({
-                    choices: [{
-                        message: {
-                            content: JSON.stringify(mockSuccessResponse),
-                        },
-                    }],
-                }),
+                json: async () => mockSuccessResponse,
             });
 
             // First call
@@ -73,13 +65,7 @@ describe('groqService', () => {
         it('makes different API calls for different inputs', async () => {
             mockFetch.mockResolvedValue({
                 ok: true,
-                json: async () => ({
-                    choices: [{
-                        message: {
-                            content: JSON.stringify(mockSuccessResponse),
-                        },
-                    }],
-                }),
+                json: async () => mockSuccessResponse,
             });
 
             await explainGrammar('Sentence A', 'Sentence B', 'Turkish');
@@ -129,19 +115,13 @@ describe('groqService', () => {
         it('uses correct API endpoint', async () => {
             mockFetch.mockResolvedValueOnce({
                 ok: true,
-                json: async () => ({
-                    choices: [{
-                        message: {
-                            content: JSON.stringify(mockSuccessResponse),
-                        },
-                    }],
-                }),
+                json: async () => mockSuccessResponse,
             });
 
             await explainGrammar('Test 1', 'Test 2', 'Turkish');
 
             expect(mockFetch).toHaveBeenCalledWith(
-                'https://api.groq.com/openai/v1/chat/completions',
+                'https://vocbee-proxy.vercel.app/api/grammarProxy',
                 expect.any(Object)
             );
         });
@@ -149,60 +129,39 @@ describe('groqService', () => {
         it('sends correct request body', async () => {
             mockFetch.mockResolvedValueOnce({
                 ok: true,
-                json: async () => ({
-                    choices: [{
-                        message: {
-                            content: JSON.stringify(mockSuccessResponse),
-                        },
-                    }],
-                }),
+                json: async () => mockSuccessResponse,
             });
 
             await explainGrammar('Hello world', 'Goodbye world', 'German');
 
             const callBody = JSON.parse(mockFetch.mock.calls[0][1].body);
-            expect(callBody.model).toBe('llama-3.3-70b-versatile');
-            expect(callBody.temperature).toBe(0.3);
-            expect(callBody.max_tokens).toBe(1024);
-            expect(callBody.response_format.type).toBe('json_object');
+            expect(callBody.sentence1).toBe('Hello world');
+            expect(callBody.sentence2).toBe('Goodbye world');
+            expect(callBody.outputLanguage).toBe('German');
         });
 
         it('includes output language in prompt', async () => {
             mockFetch.mockResolvedValueOnce({
                 ok: true,
-                json: async () => ({
-                    choices: [{
-                        message: {
-                            content: JSON.stringify(mockSuccessResponse),
-                        },
-                    }],
-                }),
+                json: async () => mockSuccessResponse,
             });
 
             await explainGrammar('Spanish Test 1', 'Spanish Test 2', 'Spanish');
 
             const callBody = JSON.parse(mockFetch.mock.calls[0][1].body);
-            const userMessage = callBody.messages.find((m: any) => m.role === 'user');
-            expect(userMessage.content).toContain('Spanish');
+            expect(callBody.outputLanguage).toBe('Spanish');
         });
 
         it('defaults to Turkish output language', async () => {
             mockFetch.mockResolvedValueOnce({
                 ok: true,
-                json: async () => ({
-                    choices: [{
-                        message: {
-                            content: JSON.stringify(mockSuccessResponse),
-                        },
-                    }],
-                }),
+                json: async () => mockSuccessResponse,
             });
 
             await explainGrammar('Turkish Default 1', 'Turkish Default 2');
 
             const callBody = JSON.parse(mockFetch.mock.calls[0][1].body);
-            const userMessage = callBody.messages.find((m: any) => m.role === 'user');
-            expect(userMessage.content).toContain('Turkish');
+            expect(callBody.outputLanguage).toBe('Turkish');
         });
     });
 });

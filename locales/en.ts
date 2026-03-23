@@ -105,6 +105,9 @@ export default {
         every30min: 'Every 30 minutes',
         every1hour: 'Every hour',
         every2hours: 'Every 2 hours',
+        every3hours: 'Every 3 hours',
+        every6hours: 'Every 6 hours',
+        onceDaily: 'Once daily',
         selectLanguage: 'Select Language',
         systemDefault: 'System Default',
         selectLevel: 'Select Your Level',
@@ -301,7 +304,7 @@ export default {
         },
         reminders: {
             q1: "How do reminders work?",
-            a1: "Enable Daily Reminders in Settings. Set your preferred time range and frequency (every 15min to 2 hours). You'll receive vocabulary notifications to practice throughout the day.",
+            a1: "Enable Daily Reminders in Settings. Set your preferred time range and frequency from hourly to once daily. You'll receive vocabulary notifications to practice throughout the day.",
             q2: 'What does "When Notification Arrives" mean?',
             a2: "Choose whether words shown in notifications are automatically marked as learned or remain in your queue for manual review later.",
         },

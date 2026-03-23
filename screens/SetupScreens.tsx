@@ -31,6 +31,12 @@ import {
   saveNotificationSettings,
   scheduleVocabularyNotifications,
 } from '../services/notificationService';
+import {
+  DEFAULT_NOTIFICATION_FREQUENCY_KEY,
+  getNotificationFrequencyMinutes,
+  NOTIFICATION_FREQUENCY_KEYS,
+  NotificationFrequencyKey,
+} from '../services/notificationFrequency';
 import { useAlert } from '../components/CustomAlert';
 import { useAuth } from '../context/AuthContext';
 import { SwarmLogo } from '../components/SwarmLogo';
@@ -49,7 +55,6 @@ const HOURS_LIST = Array.from({ length: 24 }, (_, i) => i.toString().padStart(2,
 const MINUTES_LIST = Array.from({ length: 60 }, (_, i) => i.toString().padStart(2, '0'));
 const HOURS_EXTENDED = [...HOURS_LIST, ...HOURS_LIST, ...HOURS_LIST];
 const MINUTES_EXTENDED = [...MINUTES_LIST, ...MINUTES_LIST, ...MINUTES_LIST];
-const FREQUENCY_KEYS = ['every1hour', 'every2hours'] as const;
 const ITEM_HEIGHT = 44;
 
 // Unified Setup Screen with Steps (5 steps: language -> language -> level -> notifications -> schedule)
@@ -69,7 +74,7 @@ export const SetupScreen = () => {
   const [startMinute, setStartMinute] = useState('00');
   const [endHour, setEndHour] = useState('21');
   const [endMinute, setEndMinute] = useState('00');
-  const [frequency, setFrequency] = useState('every2hours');
+  const [frequency, setFrequency] = useState<NotificationFrequencyKey>(DEFAULT_NOTIFICATION_FREQUENCY_KEY);
   const [isGenerating, setIsGenerating] = useState(false);
   const [waitingForSettings, setWaitingForSettings] = useState(false);
 
@@ -237,13 +242,6 @@ export const SetupScreen = () => {
     });
   };
 
-  const getFrequencyMinutes = (freq: string): number => {
-    switch (freq) {
-      case 'every1hour': return 60;
-      default: return 120;
-    }
-  };
-
   const handleNotificationPermission = async () => {
     try {
       const granted = await requestNotificationPermissions();
@@ -323,7 +321,8 @@ export const SetupScreen = () => {
             startMinute: parseInt(startMinute),
             endHour: parseInt(endHour),
             endMinute: parseInt(endMinute),
-            frequencyMinutes: getFrequencyMinutes(frequency),
+            frequencyMinutes: getNotificationFrequencyMinutes(frequency),
+            autoMarkLearned: true,
           } : { enabled: false },
         }, { merge: true });
         console.log('Saved preferences to Firestore');
@@ -339,7 +338,7 @@ export const SetupScreen = () => {
           startMinute: parseInt(startMinute),
           endHour: parseInt(endHour),
           endMinute: parseInt(endMinute),
-          frequencyMinutes: getFrequencyMinutes(frequency),
+          frequencyMinutes: getNotificationFrequencyMinutes(frequency),
           autoMarkLearned: true,
         }, true); // skipScheduling = true
       } else {
@@ -787,7 +786,7 @@ export const SetupScreen = () => {
             <Text style={[styles.scheduleLabel, { color: colors.text }]}>{t('setup.frequency')}</Text>
           </View>
           <View style={styles.frequencyList}>
-            {FREQUENCY_KEYS.map((freqKey) => (
+            {NOTIFICATION_FREQUENCY_KEYS.map((freqKey) => (
               <TouchableOpacity
                 key={freqKey}
                 style={[

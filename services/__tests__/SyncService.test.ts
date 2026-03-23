@@ -28,7 +28,7 @@ jest.mock('../progressService', () => ({
     getUserProgress: jest.fn(),
     getCurrentLevel: jest.fn(),
     restoreProgressFromFirebase: jest.fn(),
-    getLastWordIndex: jest.fn(),
+    getLastWordId: jest.fn(),
 }));
 
 // Mock favoritesService
@@ -42,6 +42,13 @@ jest.mock('../vocabularyService', () => ({
     getLanguagePair: jest.fn(),
     isVocabularyGenerated: jest.fn(),
     generateVocabulary: jest.fn(),
+    getUserLevelFromCefrLevel: jest.fn(() => 'beginner'),
+    isUserLevel: jest.fn(() => true),
+}));
+
+jest.mock('../notificationService', () => ({
+    getNotificationSettings: jest.fn(),
+    saveNotificationSettings: jest.fn(),
 }));
 
 // Import after mocks
@@ -49,14 +56,18 @@ import {
     shouldSync,
     createUserDocument,
     getActiveDeviceIdFromFirebase,
+    fetchAndSaveUserData,
+    syncNotificationSettingsToFirestore,
 } from '../SyncService';
 import { doc, setDoc, getDoc } from 'firebase/firestore';
 import { needsSync, getLastSyncTime } from '../storage';
+import { saveNotificationSettings } from '../notificationService';
 
 describe('SyncService', () => {
     beforeEach(async () => {
         jest.clearAllMocks();
         await AsyncStorage.clear();
+        (doc as jest.Mock).mockReturnValue('doc-ref');
         // Reset storage mocks
         (needsSync as jest.Mock).mockResolvedValue(false);
         (getLastSyncTime as jest.Mock).mockResolvedValue(null);
@@ -188,6 +199,87 @@ describe('SyncService', () => {
             const result = await getActiveDeviceIdFromFirebase('user123');
 
             expect(result).toBeNull();
+        });
+    });
+
+    describe('fetchAndSaveUserData', () => {
+        it('restores notification settings from Firebase when present', async () => {
+            (getDoc as jest.Mock).mockResolvedValueOnce({
+                exists: () => true,
+                data: () => ({
+                    email: 'test@example.com',
+                    displayName: 'Test User',
+                    setupCompleted: true,
+                    preferences: {
+                        nativeLanguage: 'tr',
+                        targetLanguage: 'en',
+                        level: 'beginner',
+                    },
+                    progress: {
+                        learnedWords: {},
+                        currentLevel: 'A1',
+                        lastWordIndex: 0,
+                    },
+                    notificationSettings: {
+                        enabled: true,
+                        startHour: 8,
+                        startMinute: 30,
+                        endHour: 20,
+                        endMinute: 0,
+                        frequencyMinutes: 120,
+                        autoMarkLearned: false,
+                    },
+                }),
+            });
+
+            const result = await fetchAndSaveUserData('user123');
+
+            expect(result).toMatchObject({
+                uid: 'user123',
+                email: 'test@example.com',
+                setupCompleted: true,
+            });
+            expect(saveNotificationSettings).toHaveBeenCalledWith({
+                enabled: true,
+                startHour: 8,
+                startMinute: 30,
+                endHour: 20,
+                endMinute: 0,
+                frequencyMinutes: 120,
+                autoMarkLearned: false,
+            }, true);
+        });
+    });
+
+    describe('syncNotificationSettingsToFirestore', () => {
+        it('persists notification settings with merge semantics', async () => {
+            (setDoc as jest.Mock).mockResolvedValue(undefined);
+
+            await syncNotificationSettingsToFirestore('user123', {
+                enabled: true,
+                startHour: 9,
+                startMinute: 0,
+                endHour: 21,
+                endMinute: 0,
+                frequencyMinutes: 120,
+                autoMarkLearned: true,
+            });
+
+            expect(setDoc).toHaveBeenCalledWith(
+                expect.anything(),
+                {
+                    notificationSettings: {
+                        enabled: true,
+                        startHour: 9,
+                        startMinute: 0,
+                        endHour: 21,
+                        endMinute: 0,
+                        frequencyMinutes: 120,
+                        autoMarkLearned: true,
+                    },
+                },
+                { merge: true }
+            );
         });
     });
 });

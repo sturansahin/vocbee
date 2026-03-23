@@ -1,6 +1,6 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Platform, View, Text, AppState, AppStateStatus } from 'react-native';
-import { NavigationContainer, NavigationContainerRef } from '@react-navigation/native';
+import { DefaultTheme, DarkTheme, NavigationContainer, NavigationContainerRef } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from 'expo-status-bar';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
@@ -19,9 +19,14 @@ import { AlertProvider } from './components/CustomAlert';
 import { autoSync } from './services/SyncService';
 import {
   configureNotifications,
+  getNotificationPermissionState,
   handleNotificationResponse,
+  hasSeenNotificationPermissionPrompt,
+  markNotificationPermissionPromptSeen,
   refillNotifications,
   processDeliveredNotifications,
+  requestNotificationPermissions,
+  scheduleVocabularyNotifications,
   setLastForegroundTime,
   setLastBackgroundTime,
 } from './services/notificationService';
@@ -54,16 +59,37 @@ export { FONT_FAMILY };
 
 // AppContent component to access auth context
 function AppContent() {
-  const { user, userData, isLoading, connectionError } = useAuth();
-  const { isDarkMode } = useTheme();
+  const { user, userData, isLoading, connectionError, notificationSettings } = useAuth();
+  const { isDarkMode, colors } = useTheme();
   const appState = useRef(AppState.currentState);
   const notificationMaintenanceInFlight = useRef(false);
+  const notificationPermissionGateInFlight = useRef(false);
   const handledNotificationResponses = useRef<Set<string>>(new Set());
+  const checkedNotificationPermissionUsers = useRef<Set<string>>(new Set());
   const navigationRef = useRef<NavigationContainerRef<RootStackParamList>>(null);
 
   const [isAppReady, setIsAppReady] = useState(false);
   const [initialRoute, setInitialRoute] = useState<keyof RootStackParamList>('Onboarding');
   const [showSplash, setShowSplash] = useState(true);
+  const hasCompletedSetup = (userData as any)?.setupCompleted === true ||
+    !!(userData?.preferences?.nativeLanguage && userData?.preferences?.targetLanguage);
+  const navigationTheme = useMemo(() => {
+    const baseTheme = isDarkMode ? DarkTheme : DefaultTheme;
+
+    return {
+      ...baseTheme,
+      dark: isDarkMode,
+      colors: {
+        ...baseTheme.colors,
+        primary: colors.primary,
+        background: colors.background,
+        card: colors.background,
+        text: colors.text,
+        border: colors.border,
+        notification: colors.primary,
+      },
+    };
+  }, [isDarkMode, colors.background, colors.border, colors.primary, colors.text]);
 
   const consumeNotificationResponse = useCallback(
     async (
@@ -142,6 +168,59 @@ function AppContent() {
     }
   }, [user]);
 
+  const ensureAuthenticatedUserNotificationPermission = useCallback(async () => {
+    if (!user || !hasCompletedSetup) return;
+    if (appState.current !== 'active') return;
+
+    if (notificationPermissionGateInFlight.current) {
+      console.log('[Notifications] Permission gate skipped - already running');
+      return;
+    }
+
+    if (checkedNotificationPermissionUsers.current.has(user.uid)) {
+      return;
+    }
+
+    notificationPermissionGateInFlight.current = true;
+
+    try {
+      const alreadyPromptedOnThisInstall = await hasSeenNotificationPermissionPrompt(user.uid);
+      const permissionState = await getNotificationPermissionState();
+
+      if (permissionState.granted) {
+        checkedNotificationPermissionUsers.current.add(user.uid);
+        return;
+      }
+
+      if (!permissionState.canAskAgain || permissionState.status !== 'undetermined') {
+        if (!alreadyPromptedOnThisInstall) {
+          await markNotificationPermissionPromptSeen(user.uid);
+        }
+        checkedNotificationPermissionUsers.current.add(user.uid);
+        console.log('[Notifications] Permission gate completed - system prompt unavailable');
+        return;
+      }
+
+      if (alreadyPromptedOnThisInstall) {
+        checkedNotificationPermissionUsers.current.add(user.uid);
+        console.log('[Notifications] Permission gate skipped - already prompted on this install');
+        return;
+      }
+
+      const granted = await requestNotificationPermissions();
+      await markNotificationPermissionPromptSeen(user.uid);
+      checkedNotificationPermissionUsers.current.add(user.uid);
+
+      if (granted && notificationSettings.enabled) {
+        await scheduleVocabularyNotifications();
+      }
+    } catch (error) {
+      console.error('[Notifications] Auth permission gate failed', error);
+    } finally {
+      notificationPermissionGateInFlight.current = false;
+    }
+  }, [user, hasCompletedSetup, notificationSettings.enabled]);
+
   // Determine initial route based on app state
   useEffect(() => {
     const determineInitialRoute = async () => {
@@ -210,9 +289,19 @@ function AppContent() {
   // background->foreground transition.
   useEffect(() => {
     if (!user) return;
+    if (isLoading) return;
+    if (!hasCompletedSetup) return;
     if (appState.current !== 'active') return;
     runNotificationMaintenance('startup');
-  }, [user, runNotificationMaintenance]);
+  }, [user, isLoading, hasCompletedSetup, runNotificationMaintenance]);
+
+  useEffect(() => {
+    if (!user) return;
+    if (isLoading) return;
+    if (!hasCompletedSetup) return;
+
+    ensureAuthenticatedUserNotificationPermission();
+  }, [user, isLoading, hasCompletedSetup, ensureAuthenticatedUserNotificationPermission]);
 
   // Handle notification response from cold start (app opened by tapping a notification)
   useEffect(() => {
@@ -272,7 +361,7 @@ function AppContent() {
           });
 
         // App has come to foreground - trigger sync if user is logged in
-        if (user) {
+        if (user && hasCompletedSetup) {
           autoSync(user.uid);
           runNotificationMaintenance('resume');
         }
@@ -283,7 +372,7 @@ function AppContent() {
     return () => {
       subscription.remove();
     };
-  }, [user, runNotificationMaintenance, consumeNotificationResponse]);
+  }, [user, hasCompletedSetup, runNotificationMaintenance, consumeNotificationResponse]);
 
   // Show splash screen while app is not ready
   console.log('[App] Render - showSplash:', showSplash, 'isAppReady:', isAppReady, 'connectionError:', connectionError);
@@ -298,7 +387,7 @@ function AppContent() {
   }
 
   return (
-    <NavigationContainer ref={navigationRef}>
+    <NavigationContainer ref={navigationRef} theme={navigationTheme}>
       <StatusBar style={isDarkMode ? "light" : "dark"} />
       <Stack.Navigator
         screenOptions={{ headerShown: false }}

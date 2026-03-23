@@ -6,15 +6,24 @@
   "build": {
     "development": {
       "developmentClient": true,
-      "distribution": "internal"
+      "distribution": "internal",
+      "env": {
+        "EXPO_PUBLIC_GRAMMAR_PROXY_URL": "https://vocbee-proxy.vercel.app/api/grammarProxy"
+      }
     },
     "preview": {
       "distribution": "internal",
+      "env": {
+        "EXPO_PUBLIC_GRAMMAR_PROXY_URL": "https://vocbee-proxy.vercel.app/api/grammarProxy"
+      },
       "android": {
         "buildType": "apk"
       }
     },
     "production": {
+      "env": {
+        "EXPO_PUBLIC_GRAMMAR_PROXY_URL": "https://vocbee-proxy.vercel.app/api/grammarProxy"
+      },
       "android": {
         "buildType": "app-bundle"
       }

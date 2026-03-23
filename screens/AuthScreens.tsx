@@ -16,7 +16,7 @@ import { createSwarmAnimation } from '../assets/animations/swarmAnimation';
 import { useTranslation } from 'react-i18next';
 
 type AuthNavProp = StackNavigationProp<RootStackParamList>;
-const PRIVACY_POLICY_URL = 'https://sturansahin.github.io/privacypolicy/';
+const PRIVACY_POLICY_URL = 'https://vocbee.online/privacypolicy';
 
 export const LoginScreen = () => {
   const navigation = useNavigation<AuthNavProp>();

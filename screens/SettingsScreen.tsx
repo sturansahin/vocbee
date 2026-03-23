@@ -3,6 +3,7 @@ import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, Image, StyleShe
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
+import Constants from 'expo-constants';
 import { COLORS, LANGUAGES, LEVELS } from '../constants';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import Feather from '@expo/vector-icons/Feather';
@@ -27,12 +28,19 @@ import {
    cancelAllNotifications,
    sendTestNotification,
 } from '../services/notificationService';
+import {
+   getNotificationFrequencyKey,
+   getNotificationFrequencyMinutes,
+   NOTIFICATION_FREQUENCY_KEYS,
+   NotificationFrequencyKey,
+} from '../services/notificationFrequency';
 import { doc, setDoc } from 'firebase/firestore';
 import { db, auth } from '../config/firebase';
 import { updateProfile } from 'firebase/auth';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
 import i18n, { getDeviceLanguage, setToDeviceLanguage, isUsingSystemLanguage } from '../services/i18n';
+import appConfig from '../app.json';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Responsive Utilities
@@ -50,7 +58,7 @@ const HOURS_LIST = Array.from({ length: 24 }, (_, i) => i.toString().padStart(2,
 const MINUTES_LIST = Array.from({ length: 60 }, (_, i) => i.toString().padStart(2, '0'));
 const HOURS_EXTENDED = [...HOURS_LIST, ...HOURS_LIST, ...HOURS_LIST];
 const MINUTES_EXTENDED = [...MINUTES_LIST, ...MINUTES_LIST, ...MINUTES_LIST];
-const FREQUENCY_KEYS = ['every1hour', 'every2hours'] as const;
+const APP_VERSION = Constants.expoConfig?.version ?? appConfig.expo.version;
 
 // ─────────────────────────────────────────────────────────────────────────────
 // AnimatedSwitch Component - Unified toggle with variants
@@ -134,14 +142,9 @@ export default function SettingsScreen() {
    const [startMinute, setStartMinute] = useState(notificationSettings.startMinute.toString().padStart(2, '0'));
    const [endHour, setEndHour] = useState(notificationSettings.endHour.toString().padStart(2, '0'));
    const [endMinute, setEndMinute] = useState(notificationSettings.endMinute.toString().padStart(2, '0'));
-   // Helper to get freq string
-   const getFreqKey = (min: number) => {
-      switch (min) {
-         case 60: return 'every1hour';
-         default: return 'every2hours';
-      }
-   };
-   const [frequency, setFrequency] = useState(getFreqKey(notificationSettings.frequencyMinutes));
+   const [frequency, setFrequency] = useState<NotificationFrequencyKey>(
+      getNotificationFrequencyKey(notificationSettings.frequencyMinutes)
+   );
 
    const [showTimePicker, setShowTimePicker] = useState<'start' | 'end' | null>(null);
    const [tempHour, setTempHour] = useState('09');
@@ -174,7 +177,7 @@ export default function SettingsScreen() {
       setStartMinute(notificationSettings.startMinute.toString().padStart(2, '0'));
       setEndHour(notificationSettings.endHour.toString().padStart(2, '0'));
       setEndMinute(notificationSettings.endMinute.toString().padStart(2, '0'));
-      setFrequency(getFreqKey(notificationSettings.frequencyMinutes));
+      setFrequency(getNotificationFrequencyKey(notificationSettings.frequencyMinutes));
    }, [notificationSettings]);
 
    // Load current level from AsyncStorage on mount
@@ -207,14 +210,6 @@ export default function SettingsScreen() {
       };
       checkSystemLanguage();
    }, []);
-
-   // Helper to convert frequency string to minutes
-   const getFrequencyMinutes = (freq: string): number => {
-      switch (freq) {
-         case 'every1hour': return 60;
-         default: return 120;
-      }
-   };
 
    // Handle reminder toggle with permission request
    const handleReminderToggle = async () => {
@@ -263,9 +258,9 @@ export default function SettingsScreen() {
    };
 
    // Save frequency
-   const handleFrequencyChange = async (freq: string) => {
+   const handleFrequencyChange = async (freq: NotificationFrequencyKey) => {
       // setFrequency(freq); // Handled by effect
-      await updateNotificationSettings({ frequencyMinutes: getFrequencyMinutes(freq) });
+      await updateNotificationSettings({ frequencyMinutes: getNotificationFrequencyMinutes(freq) });
    };
 
    // Refs for wheel picker scroll
@@ -718,7 +713,7 @@ export default function SettingsScreen() {
                   </View>
                   <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
                </TouchableOpacity>
-               <TouchableOpacity style={[styles.settingItem, { borderBottomWidth: 0 }]} onPress={() => Linking.openURL('https://sturansahin.github.io/privacypolicy/')}>
+               <TouchableOpacity style={[styles.settingItem, { borderBottomWidth: 0 }]} onPress={() => Linking.openURL('https://vocbee.online/privacypolicy')}>
                   <View style={styles.settingLeft}>
                      <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
                         <MaterialCommunityIcons name="security" size={24} color={colors.primary} />
@@ -761,7 +756,7 @@ export default function SettingsScreen() {
                <Text style={[styles.logoutButtonText, { color: colors.error }]}>{t('settings.logout')}</Text>
             </TouchableOpacity>
 
-            <Text style={[styles.versionText, dynamicStyles.textSecondary, { marginTop: 12, marginBottom: 0 }]}>VocBee v1.0.4</Text>
+            <Text style={[styles.versionText, dynamicStyles.textSecondary, { marginTop: 12, marginBottom: 0 }]}>VocBee v{APP_VERSION}</Text>
          </ScrollView>
 
          {/* Time Picker Modal - Wheel Style */}
@@ -901,7 +896,7 @@ export default function SettingsScreen() {
             >
                <View style={[styles.modalContent, dynamicStyles.modalContent]}>
                   <Text style={[styles.modalTitle, dynamicStyles.text]}>{t('settings.selectFrequency')}</Text>
-                  {FREQUENCY_KEYS.map((freqKey) => (
+                  {NOTIFICATION_FREQUENCY_KEYS.map((freqKey) => (
                      <TouchableOpacity
                         key={freqKey}
                         style={[

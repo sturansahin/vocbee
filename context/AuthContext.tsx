@@ -33,6 +33,7 @@ import {
     fetchAndSaveUserData,
     forceSync,
     getActiveDeviceIdFromFirebase,
+    syncNotificationSettingsToFirestore,
 } from '../services/SyncService';
 import { doc, deleteDoc } from 'firebase/firestore';
 import { db } from '../config/firebase';
@@ -97,6 +98,22 @@ export function AuthProvider({ children }: AuthProviderProps) {
     const [isLoading, setIsLoading] = useState(true);
     const [connectionError, setConnectionError] = useState(false);
 
+    const loadNotificationSettingsIntoState = async (): Promise<NotificationSettings> => {
+        const settings = await getNotificationSettings();
+        setNotificationSettings(settings);
+        return settings;
+    };
+
+    const applyFetchedUserData = async (uid: string): Promise<UserData | null> => {
+        const fetchedData = await fetchAndSaveUserData(uid);
+        setUserData(fetchedData);
+        await loadNotificationSettingsIntoState();
+        return fetchedData;
+    };
+
+    const hasCompletedSetup = (data: UserData | null): boolean =>
+        !!(data?.setupCompleted || (data?.preferences?.nativeLanguage && data?.preferences?.targetLanguage));
+
     // Listen to auth state changes
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
@@ -105,8 +122,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
             // Load Global Settings (Notifications) immediately
             // This ensures they are ready for SettingsScreen without extra loading state
             try {
-                const settings = await getNotificationSettings();
-                setNotificationSettings(settings);
+                await loadNotificationSettingsIntoState();
             } catch (e) {
                 console.error('Error loading initial notification settings:', e);
             }
@@ -138,9 +154,8 @@ export function AuthProvider({ children }: AuthProviderProps) {
                     console.log(`[AuthContext] Fetching from Firebase (reason: ${reason})`);
 
                     try {
-                        const fetchedData = await fetchAndSaveUserData(firebaseUser.uid);
+                        const fetchedData = await applyFetchedUserData(firebaseUser.uid);
                         if (fetchedData) {
-                            setUserData(fetchedData);
                             setConnectionError(false);
                             console.log('[AuthContext] Loaded user data from Firebase');
                         } else {
@@ -266,11 +281,10 @@ export function AuthProvider({ children }: AuthProviderProps) {
             await clearTrackedNotifications();
 
             // Fetch user data from Firestore and save locally
-            const fetchedData = await fetchAndSaveUserData(userCredential.user.uid);
-            setUserData(fetchedData);
+            const fetchedData = await applyFetchedUserData(userCredential.user.uid);
 
             // Return setup status
-            return { setupCompleted: !!fetchedData?.preferences };
+            return { setupCompleted: hasCompletedSetup(fetchedData) };
 
         } catch (error: any) {
             console.error('Sign in error:', error);
@@ -313,7 +327,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
                     await clearTrackedNotifications();
 
                     // Check if user exists in Firestore, if not create document
-                    let fetchedData = await fetchAndSaveUserData(userCredential.user.uid);
+                    let fetchedData = await applyFetchedUserData(userCredential.user.uid);
 
                     if (!fetchedData) {
                         // New user - create document then re-fetch to populate local data
@@ -322,10 +336,8 @@ export function AuthProvider({ children }: AuthProviderProps) {
                             userCredential.user.email || '',
                             userCredential.user.displayName || undefined
                         );
-                        fetchedData = await fetchAndSaveUserData(userCredential.user.uid);
+                        fetchedData = await applyFetchedUserData(userCredential.user.uid);
                     }
-
-                    setUserData(fetchedData);
 
                 } catch (error: any) {
                     console.error('Google Sign-In error:', error);
@@ -378,7 +390,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
                 await clearTrackedNotifications();
 
                 // Check if user exists in Firestore, if not create document
-                let fetchedData = await fetchAndSaveUserData(userCredential.user.uid);
+                let fetchedData = await applyFetchedUserData(userCredential.user.uid);
 
                 if (!fetchedData) {
                     // Assemble reasonable display name from Apple's fullName if available
@@ -392,10 +404,9 @@ export function AuthProvider({ children }: AuthProviderProps) {
                         userCredential.user.email || credential.email || '',
                         displayName || undefined
                     );
-                    fetchedData = await fetchAndSaveUserData(userCredential.user.uid);
+                    fetchedData = await applyFetchedUserData(userCredential.user.uid);
                 }
 
-                setUserData(fetchedData);
             } else {
                 throw new Error('No identity token.');
             }
@@ -460,8 +471,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     // Refresh user data from Firestore
     const refreshUserData = async () => {
         if (user) {
-            const fetchedData = await fetchAndSaveUserData(user.uid);
-            setUserData(fetchedData);
+            await applyFetchedUserData(user.uid);
         }
     };
 
@@ -485,13 +495,20 @@ export function AuthProvider({ children }: AuthProviderProps) {
         const newSettings = { ...notificationSettings, ...settings };
         setNotificationSettings(newSettings); // Optimistic update
         await saveNotificationSettings(settings);
+        const persistedSettings = await getNotificationSettings();
+        setNotificationSettings(persistedSettings);
+
+        if (user) {
+            syncNotificationSettingsToFirestore(user.uid, persistedSettings).catch(error => {
+                console.error('Error syncing notification settings to Firestore:', error);
+            });
+        }
     };
 
     // Refresh notification settings from storage
     const refreshNotificationSettings = async () => {
         try {
-            const settings = await getNotificationSettings();
-            setNotificationSettings(settings);
+            await loadNotificationSettingsIntoState();
         } catch (e) {
             console.error('Error refreshing notification settings:', e);
         }
@@ -505,9 +522,8 @@ export function AuthProvider({ children }: AuthProviderProps) {
         setConnectionError(false);
 
         try {
-            const fetchedData = await fetchAndSaveUserData(user.uid);
+            const fetchedData = await applyFetchedUserData(user.uid);
             if (fetchedData) {
-                setUserData(fetchedData);
                 console.log('[AuthContext] Retry successful - loaded user data');
             } else {
                 console.log('[AuthContext] Retry failed - no data returned');

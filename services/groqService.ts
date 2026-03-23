@@ -5,12 +5,17 @@
 // In production builds, ONLY the proxy should be used — never ship the raw API key.
 // ──────────────────────────────────────────────────────────────────────────────
 
-const GRAMMAR_PROXY_URL = process.env.EXPO_PUBLIC_GRAMMAR_PROXY_URL || '';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import appConfig from '../app.json';
+import { STORAGE_KEYS } from './storageKeys';
+
+const APP_CONFIG_GRAMMAR_PROXY_URL = appConfig.expo.extra?.grammarProxyUrl ?? '';
+const GRAMMAR_PROXY_URL = (
+    process.env.EXPO_PUBLIC_GRAMMAR_PROXY_URL
+    || (!__DEV__ ? APP_CONFIG_GRAMMAR_PROXY_URL : '')
+).trim();
 const GROQ_API_KEY_DEV = __DEV__ ? (process.env.EXPO_PUBLIC_GROQ_API_KEY || '') : '';
 const FETCH_TIMEOUT_MS = 30_000; // 30 second timeout for API calls
-
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { STORAGE_KEYS } from './storageKeys';
 
 // Persistent + in-memory grammar cache
 const GRAMMAR_CACHE_KEY = STORAGE_KEYS.GRAMMAR_CACHE;
@@ -92,6 +97,13 @@ export interface GrammarResponse {
     sentence2: SentenceAnalysis;
 }
 
+interface GrammarApiResponse {
+    error?: { message?: string };
+    choices?: Array<{ message: { content: string } }>;
+    sentence1?: SentenceAnalysis;
+    sentence2?: SentenceAnalysis;
+}
+
 export const explainGrammar = async (
     sentence1: string,
     sentence2: string,
@@ -167,7 +179,7 @@ Sentence 2: "${sentence2}"`;
                         sentence2,
                         outputLanguage,
                     }),
-                });
+                } as RequestInit);
             } else if (GROQ_API_KEY_DEV) {
                 // Dev-only fallback: direct Groq call (NEVER in production builds)
                 console.warn('[groqService] Using direct Groq API — dev only, do NOT ship this key');
@@ -205,7 +217,7 @@ Follow the output format exactly.`
                         max_tokens: 1024,
                         response_format: { type: "json_object" }
                     })
-                });
+                } as RequestInit);
             } else {
                 throw new Error('Grammar service is not configured. Please set EXPO_PUBLIC_GRAMMAR_PROXY_URL.');
             }
@@ -213,15 +225,15 @@ Follow the output format exactly.`
             clearTimeout(timeoutId);
         }
 
-        const data = await response.json();
+        const data = await response.json() as GrammarApiResponse;
 
         if (!response.ok) {
             throw new Error(data.error?.message || 'Failed to fetch explanation');
         }
 
         // Proxy returns the parsed result directly; direct Groq returns choices array
-        const content = data.choices
-            ? data.choices[0].message.content
+        const content: unknown = data.choices
+            ? data.choices[0]?.message?.content
             : (data.sentence1 ? JSON.stringify(data) : data);
 
         // Parse JSON content

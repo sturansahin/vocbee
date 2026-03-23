@@ -143,6 +143,7 @@ export default function HomeScreen() {
 
     // Ref to track if initial load has been done
     const hasInitiallyLoaded = useRef(false);
+    const isInitialHydrationRef = useRef(true);
 
     // Track session learned words for Interstitial Ad
     const sessionLearnedCount = useRef(0);
@@ -488,7 +489,10 @@ export default function HomeScreen() {
         const requestId = ++loadRequestIdRef.current;
         const isStaleRequest = () => requestId !== loadRequestIdRef.current;
 
-        setIsLoading(true);
+        const shouldBlockScreen = !hasInitiallyLoaded.current;
+        if (shouldBlockScreen) {
+            setIsLoading(true);
+        }
         try {
             // Check if vocabulary is generated
             const hasVocab = await isVocabularyGenerated();
@@ -643,7 +647,8 @@ export default function HomeScreen() {
                 setWords([]);
             }
         } finally {
-            if (!isStaleRequest()) {
+            if (!isStaleRequest() && shouldBlockScreen) {
+                isInitialHydrationRef.current = false;
                 setIsLoading(false);
             }
         }
@@ -825,6 +830,8 @@ export default function HomeScreen() {
 
     const currentWord = words[currentWordIndex];
     const nextWord = words[(currentWordIndex + 1) % Math.max(words.length, 1)];
+    const initialLoadingPlaceholderColor = isDarkMode ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.08)';
+    const initialLoadingAccentColor = isDarkMode ? 'rgba(255,200,20,0.22)' : 'rgba(255,200,20,0.28)';
 
     // Initialize bees when component mounts or word changes
     useEffect(() => {
@@ -1338,9 +1345,152 @@ export default function HomeScreen() {
         );
     };
 
-    // Loading state - return null to let splash screen handle it
-    if (isLoading) {
-        return null;
+    // Keep a themed home skeleton visible only during the very first hydration
+    // so launch stays stable without showing a second splash-like screen.
+    if (isLoading && isInitialHydrationRef.current) {
+        return (
+            <View style={[styles.container, { backgroundColor: colors.background, paddingTop: insets.top }]}>
+                <View style={styles.header}>
+                    <View style={styles.headerTitleContainer}>
+                        <View style={styles.logoContainer}>
+                            <SwarmLogo size={30} color={colors.text} />
+                        </View>
+                        <Text style={[styles.headerTitle, { color: colors.text }]}>VOCBEE</Text>
+                    </View>
+                    <View style={styles.headerButtons}>
+                        <View style={[styles.headerButtonPlaceholder, styles.loadingIconPlaceholder, { backgroundColor: initialLoadingPlaceholderColor }]} />
+                        <View style={[styles.headerButtonPlaceholder, styles.loadingIconPlaceholder, { backgroundColor: initialLoadingPlaceholderColor }]} />
+                    </View>
+                </View>
+
+                <BlurView
+                    intensity={isDarkMode ? 20 : 32}
+                    tint={isDarkMode ? "dark" : "light"}
+                    style={[
+                        styles.statsBlurContainer,
+                        {
+                            backgroundColor: isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0.72)',
+                            borderWidth: isDarkMode ? 0 : 1,
+                            borderColor: isDarkMode ? 'transparent' : colors.border,
+                            shadowColor: '#000',
+                            shadowOffset: { width: 0, height: 2 },
+                            shadowOpacity: isDarkMode ? 0 : 0.04,
+                            shadowRadius: 8,
+                            elevation: isDarkMode ? 0 : 2,
+                        }
+                    ]}
+                >
+                    <View style={styles.statsSection}>
+                        <View style={styles.levelRow}>
+                            <View style={[styles.loadingLine, styles.loadingLevelBadge, { backgroundColor: initialLoadingAccentColor }]} />
+                            <View style={[styles.loadingLine, styles.loadingLevelText, { backgroundColor: initialLoadingPlaceholderColor }]} />
+                            <View style={[styles.loadingLine, styles.loadingGoalText, { backgroundColor: initialLoadingPlaceholderColor }]} />
+                        </View>
+                        <View
+                            style={[
+                                styles.progressBg,
+                                {
+                                    backgroundColor: isDarkMode ? '#2c2c2e' : colors.surfaceLight,
+                                    borderWidth: isDarkMode ? 0 : 1,
+                                    borderColor: isDarkMode ? 'transparent' : colors.border,
+                                }
+                            ]}
+                        >
+                            <View
+                                style={[
+                                    styles.progressFill,
+                                    {
+                                        backgroundColor: initialLoadingAccentColor,
+                                        width: '38%',
+                                        shadowOpacity: 0,
+                                        shadowRadius: 0,
+                                        elevation: 0,
+                                    }
+                                ]}
+                            />
+                        </View>
+                    </View>
+                </BlurView>
+
+                <View style={styles.cardArea}>
+                    <View style={styles.cardStackContainer}>
+                        <View
+                            style={[
+                                styles.cardContainer,
+                                {
+                                    transform: [
+                                        { scale: 0.95 },
+                                        { translateY: 12 },
+                                    ],
+                                    zIndex: 5,
+                                    opacity: 0.55,
+                                },
+                            ]}
+                        >
+                            <View
+                                style={[
+                                    styles.heroCard,
+                                    {
+                                        backgroundColor: colors.surface,
+                                        borderColor: colors.border,
+                                        borderWidth: 1,
+                                    }
+                                ]}
+                            />
+                        </View>
+
+                        <View style={[styles.cardContainer, { zIndex: 10 }]}>
+                            <View
+                                style={[
+                                    styles.heroCard,
+                                    {
+                                        backgroundColor: colors.surface,
+                                        borderColor: colors.border,
+                                        borderWidth: 0.5,
+                                    }
+                                ]}
+                            >
+                                <View style={styles.cardContentAbove}>
+                                    <View style={styles.favoriteButton}>
+                                        <View style={[styles.loadingFavoritePlaceholder, { backgroundColor: initialLoadingPlaceholderColor }]} />
+                                    </View>
+
+                                    <View style={styles.cardUpperSection}>
+                                        <View style={[styles.loadingLine, styles.loadingWordPlaceholder, { backgroundColor: initialLoadingPlaceholderColor }]} />
+                                        <View style={[styles.loadingLine, styles.loadingTranslationPlaceholder, { backgroundColor: initialLoadingAccentColor }]} />
+                                    </View>
+
+                                    <View style={[styles.cardLowerSectionStruct, { zIndex: 1 }]}>
+                                        <View style={[
+                                            StyleSheet.absoluteFillObject,
+                                            {
+                                                backgroundColor: isDarkMode ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.04)',
+                                                borderBottomLeftRadius: 32,
+                                                borderBottomRightRadius: 32,
+                                            }
+                                        ]} />
+
+                                        <View style={styles.exampleSentencesContainer}>
+                                            <View style={[styles.loadingLine, styles.loadingSentencePlaceholder, { backgroundColor: initialLoadingPlaceholderColor }]} />
+                                            <View style={[styles.thinDivider, { backgroundColor: colors.border }]} />
+                                            <View style={[styles.loadingLine, styles.loadingSentenceTranslationPlaceholder, { backgroundColor: initialLoadingPlaceholderColor }]} />
+                                        </View>
+
+                                        <View style={[styles.fullWidthButton, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)' }]}>
+                                            <View style={[styles.loadingLine, styles.loadingButtonPlaceholder, { backgroundColor: initialLoadingPlaceholderColor }]} />
+                                        </View>
+                                    </View>
+                                </View>
+                            </View>
+                        </View>
+                    </View>
+                </View>
+
+                <View style={{ alignItems: 'center', justifyContent: 'center', paddingBottom: insets.bottom > 0 ? 0 : 10, backgroundColor: colors.background }}>
+                    <View style={[styles.loadingBannerPlaceholder, { backgroundColor: initialLoadingPlaceholderColor }]} />
+                </View>
+            </View>
+        );
     }
 
     // No words state
@@ -1761,6 +1911,13 @@ const styles = StyleSheet.create({
     headerButton: {
         padding: 4,
     },
+    headerButtonPlaceholder: {
+        width: 32,
+        height: 32,
+    },
+    loadingIconPlaceholder: {
+        borderRadius: 16,
+    },
     statsBlurContainer: {
         marginHorizontal: 20,
         borderRadius: 20,
@@ -1889,19 +2046,56 @@ const styles = StyleSheet.create({
         fontSize: 20,
         letterSpacing: 4,
     },
-    loadingContainer: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: 16,
+    loadingLine: {
+        borderRadius: 999,
     },
-    loadingText: {
-        fontFamily: FONT_FAMILY,
-        fontSize: 16,
+    loadingLevelBadge: {
+        width: 48,
+        height: 18,
     },
-    loadingLottie: {
-        width: 120,
-        height: 120,
+    loadingLevelText: {
+        width: 112,
+        height: 14,
+    },
+    loadingGoalText: {
+        width: 92,
+        height: 14,
+        marginLeft: 'auto',
+    },
+    loadingFavoritePlaceholder: {
+        width: 24,
+        height: 24,
+        borderRadius: 12,
+    },
+    loadingWordPlaceholder: {
+        width: '62%',
+        maxWidth: 220,
+        height: moderateScale(34),
+        marginBottom: scale(18),
+    },
+    loadingTranslationPlaceholder: {
+        width: '42%',
+        maxWidth: 150,
+        height: moderateScale(22),
+        marginBottom: 24,
+    },
+    loadingSentencePlaceholder: {
+        width: '78%',
+        height: 16,
+    },
+    loadingSentenceTranslationPlaceholder: {
+        width: '68%',
+        height: 14,
+    },
+    loadingButtonPlaceholder: {
+        width: 148,
+        height: 14,
+    },
+    loadingBannerPlaceholder: {
+        width: SCREEN_WIDTH - 48,
+        maxWidth: 360,
+        height: 52,
+        borderRadius: 16,
     },
     emptyContainer: {
         flex: 1,

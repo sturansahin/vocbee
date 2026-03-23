@@ -11,7 +11,6 @@
  */
 
 import * as Notifications from 'expo-notifications';
-import * as Device from 'expo-device';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Platform } from 'react-native';
 import { VocabularyWord, Level, LEVELS, getStoredVocabulary } from './vocabularyService';
@@ -26,6 +25,7 @@ const PENDING_NOTIFICATION_WORD_KEY = STORAGE_KEYS.PENDING_NOTIFICATION_WORD;
 const TRACKED_NOTIFICATIONS_KEY = STORAGE_KEYS.TRACKED_NOTIFICATIONS;
 const LAST_FOREGROUND_TIME_KEY = STORAGE_KEYS.LAST_FOREGROUND_TIME;
 const LAST_BACKGROUND_TIME_KEY = STORAGE_KEYS.LAST_BACKGROUND_TIME;
+const NOTIFICATION_PERMISSION_PROMPT_PREFIX = STORAGE_KEYS.NOTIFICATION_PERMISSION_PROMPT_PREFIX;
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Types
@@ -36,7 +36,7 @@ export interface NotificationSettings {
     startMinute: number;
     endHour: number;
     endMinute: number;
-    frequencyMinutes: number; // 15, 30, 60, 120
+    frequencyMinutes: number; // 60, 120, 180, 360, 1440
     autoMarkLearned: boolean;
 }
 
@@ -61,6 +61,13 @@ export interface PendingNotificationWord {
     targetLanguage?: string;
 }
 
+export interface NotificationPermissionState {
+    status: string;
+    granted: boolean;
+    canAskAgain: boolean;
+    expires: string | number;
+}
+
 export const DEFAULT_NOTIFICATION_SETTINGS: NotificationSettings = {
     enabled: true,
     startHour: 9,
@@ -70,6 +77,38 @@ export const DEFAULT_NOTIFICATION_SETTINGS: NotificationSettings = {
     frequencyMinutes: 120, // Every 2 hours
     autoMarkLearned: true,
 };
+
+function normalizeNotificationSettings(
+    settings?: Partial<NotificationSettings> | null
+): NotificationSettings {
+    const normalized = {
+        ...DEFAULT_NOTIFICATION_SETTINGS,
+        ...(settings ?? {}),
+    };
+
+    if (normalized.frequencyMinutes < 60) {
+        normalized.frequencyMinutes = 60;
+    }
+
+    normalized.startHour = Number.isFinite(normalized.startHour)
+        ? normalized.startHour
+        : DEFAULT_NOTIFICATION_SETTINGS.startHour;
+    normalized.startMinute = Number.isFinite(normalized.startMinute)
+        ? normalized.startMinute
+        : DEFAULT_NOTIFICATION_SETTINGS.startMinute;
+    normalized.endHour = Number.isFinite(normalized.endHour)
+        ? normalized.endHour
+        : DEFAULT_NOTIFICATION_SETTINGS.endHour;
+    normalized.endMinute = Number.isFinite(normalized.endMinute)
+        ? normalized.endMinute
+        : DEFAULT_NOTIFICATION_SETTINGS.endMinute;
+
+    return normalized;
+}
+
+function getNotificationPermissionPromptKey(userId: string): string {
+    return `${NOTIFICATION_PERMISSION_PROMPT_PREFIX}${userId}`;
+}
 
 function getDailyNotificationSlotCount(
     startMinutes: number,
@@ -119,21 +158,80 @@ export function configureNotifications(): void {
     });
 }
 
+export async function ensureNotificationChannelConfigured(): Promise<void> {
+    if (Platform.OS !== 'android') return;
+
+    await Notifications.setNotificationChannelAsync('vocabulary', {
+        name: 'Vocabulary Reminders',
+        importance: Notifications.AndroidImportance.HIGH,
+        vibrationPattern: [0, 250, 250, 250],
+        lightColor: '#FFD700',
+    });
+}
+
+export async function getNotificationPermissionState(): Promise<NotificationPermissionState> {
+    const permissions = await Notifications.getPermissionsAsync();
+
+    return {
+        status: permissions.status,
+        granted: permissions.granted,
+        canAskAgain: permissions.canAskAgain,
+        expires: permissions.expires,
+    };
+}
+
+export async function hasNotificationPermission(): Promise<boolean> {
+    const permissionState = await getNotificationPermissionState();
+    return permissionState.granted;
+}
+
+export async function hasSeenNotificationPermissionPrompt(userId: string): Promise<boolean> {
+    try {
+        const value = await AsyncStorage.getItem(getNotificationPermissionPromptKey(userId));
+        return value === 'true';
+    } catch (error) {
+        console.error('[Notifications] Failed to read permission prompt flag:', error);
+        return false;
+    }
+}
+
+export async function markNotificationPermissionPromptSeen(userId: string): Promise<void> {
+    try {
+        await AsyncStorage.setItem(getNotificationPermissionPromptKey(userId), 'true');
+    } catch (error) {
+        console.error('[Notifications] Failed to persist permission prompt flag:', error);
+    }
+}
+
 /**
  * Request notification permissions
  */
 export async function requestNotificationPermissions(): Promise<boolean> {
-    // Note: We removed Device.isDevice check as it can return false in Expo Go
-    // even on physical devices. The permission request itself will handle errors.
-
     try {
-        const { status: existingStatus } = await Notifications.getPermissionsAsync();
-        let finalStatus = existingStatus;
+        const existingPermissionState = await getNotificationPermissionState();
+        let finalStatus = existingPermissionState.status;
 
-        console.log('Current notification permission status:', existingStatus);
+        console.log('Current notification permission status:', existingPermissionState.status);
 
-        if (existingStatus !== 'granted') {
-            const { status } = await Notifications.requestPermissionsAsync();
+        if (existingPermissionState.granted) {
+            await ensureNotificationChannelConfigured();
+            console.log('Notification permissions already granted');
+            return true;
+        }
+
+        if (!existingPermissionState.canAskAgain) {
+            console.log('Notification permissions cannot be requested again from the system prompt');
+            return false;
+        }
+
+        if (existingPermissionState.status !== 'granted') {
+            const { status } = await Notifications.requestPermissionsAsync({
+                ios: {
+                    allowAlert: true,
+                    allowBadge: true,
+                    allowSound: true,
+                },
+            });
             finalStatus = status;
             console.log('Requested notification permission, new status:', status);
         }
@@ -143,15 +241,7 @@ export async function requestNotificationPermissions(): Promise<boolean> {
             return false;
         }
 
-        // Android specific channel
-        if (Platform.OS === 'android') {
-            await Notifications.setNotificationChannelAsync('vocabulary', {
-                name: 'Vocabulary Reminders',
-                importance: Notifications.AndroidImportance.HIGH,
-                vibrationPattern: [0, 250, 250, 250],
-                lightColor: '#FFD700',
-            });
-        }
+        await ensureNotificationChannelConfigured();
 
         console.log('Notification permissions granted successfully');
         return true;
@@ -172,17 +262,12 @@ export async function getNotificationSettings(): Promise<NotificationSettings> {
     try {
         const data = await AsyncStorage.getItem(NOTIFICATION_SETTINGS_KEY);
         if (data) {
-            const settings = { ...DEFAULT_NOTIFICATION_SETTINGS, ...JSON.parse(data) };
-            // Enforce minimum 60 minutes (migration for legacy 30-min settings)
-            if (settings.frequencyMinutes < 60) {
-                settings.frequencyMinutes = 60;
-            }
-            return settings;
+            return normalizeNotificationSettings(JSON.parse(data));
         }
-        return DEFAULT_NOTIFICATION_SETTINGS;
+        return normalizeNotificationSettings();
     } catch (error) {
         console.error('Error loading notification settings:', error);
-        return DEFAULT_NOTIFICATION_SETTINGS;
+        return normalizeNotificationSettings();
     }
 }
 
@@ -196,7 +281,7 @@ export async function saveNotificationSettings(
 ): Promise<void> {
     try {
         const current = await getNotificationSettings();
-        const updated = { ...current, ...settings };
+        const updated = normalizeNotificationSettings({ ...current, ...settings });
         await AsyncStorage.setItem(NOTIFICATION_SETTINGS_KEY, JSON.stringify(updated));
 
         // Skip rescheduling if requested (e.g., during setup before vocabulary exists)
@@ -518,6 +603,16 @@ export async function scheduleVocabularyNotifications(): Promise<void> {
             return;
         }
 
+        const permissionGranted = await hasNotificationPermission();
+        if (!permissionGranted) {
+            console.log('[Notifications] Scheduling skipped - notification permission not granted');
+            await cancelAllNotifications();
+            await clearTrackedNotifications();
+            return;
+        }
+
+        await ensureNotificationChannelConfigured();
+
         // Cancel existing notifications and clear tracking
         await cancelAllNotifications();
         await clearTrackedNotifications();
@@ -672,6 +767,16 @@ export async function refillNotifications(): Promise<void> {
             console.log('[Notifications] Refill skipped - notifications disabled');
             return;
         }
+
+        const permissionGranted = await hasNotificationPermission();
+        if (!permissionGranted) {
+            console.log('[Notifications] Refill skipped - notification permission not granted');
+            await cancelAllNotifications();
+            await clearTrackedNotifications();
+            return;
+        }
+
+        await ensureNotificationChannelConfigured();
 
         // Get currently scheduled notifications
         const scheduled = await Notifications.getAllScheduledNotificationsAsync();
@@ -989,6 +1094,14 @@ export async function handleNotificationResponse(
  * Send an immediate test notification
  */
 export async function sendTestNotification(): Promise<void> {
+    const permissionGranted = await hasNotificationPermission();
+    if (!permissionGranted) {
+        console.log('Test notification skipped - permission not granted');
+        return;
+    }
+
+    await ensureNotificationChannelConfigured();
+
     const word = await getRandomUnlearnedWord();
 
     if (!word) {

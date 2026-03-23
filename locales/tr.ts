@@ -105,6 +105,9 @@ export default {
         every30min: 'Her 30 dakikada bir',
         every1hour: 'Her saat başı',
         every2hours: 'Her 2 saatte bir',
+        every3hours: 'Her 3 saatte bir',
+        every6hours: 'Her 6 saatte bir',
+        onceDaily: 'Günde 1 kez',
         selectLanguage: 'Dil Seçin',
         systemDefault: 'Sistem Varsayılanı',
         selectLevel: 'Seviyenizi Seçin',
@@ -301,7 +304,7 @@ export default {
         },
         reminders: {
             q1: 'Hatırlatıcılar nasıl çalışır?',
-            a1: 'Ayarlardan Günlük Hatırlatıcıları etkinleştirin. Tercih ettiğiniz zaman aralığını ve sıklığı (15dk - 2 saat arası) ayarlayın. Gün boyunca pratik yapmanız için kelime bildirimleri alacaksınız.',
+            a1: 'Ayarlardan Günlük Hatırlatıcıları etkinleştirin. Tercih ettiğiniz zaman aralığını ve sıklığı saatlikten günde bire kadar ayarlayın. Gün boyunca pratik yapmanız için kelime bildirimleri alacaksınız.',
             q2: '"Bildirim Geldiğinde" ne anlama gelir?',
             a2: 'Bildirimlerde gösterilen kelimelerin otomatik olarak öğrenildi işaretlenmesini veya daha sonra manuel inceleme için sıranızda kalmasını seçin.',
         },

@@ -35,6 +35,7 @@ export const STORAGE_KEYS = {
     TRACKED_NOTIFICATIONS: '@tracked_notifications',
     LAST_FOREGROUND_TIME: '@last_foreground_time',
     LAST_BACKGROUND_TIME: '@last_background_time',
+    NOTIFICATION_PERMISSION_PROMPT_PREFIX: '@notification_permission_prompted_',
 
     // ─── Favorites (favoritesService.ts) ──────────────────────────
     // Dynamic: `@favorites_${userId}` or `@favorites` (legacy)

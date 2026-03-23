@@ -119,6 +119,7 @@
     ],
     "extra": {
       "supportsRTL": true,
+      "grammarProxyUrl": "https://vocbee-proxy.vercel.app/api/grammarProxy",
       "eas": {
         "projectId": "66067389-3a15-46ea-ade9-ed9a56f5d08b"
       }
