@@ -57,11 +57,13 @@ import {
     createUserDocument,
     getActiveDeviceIdFromFirebase,
     fetchAndSaveUserData,
+    syncAuthProfileToFirestore,
     syncNotificationSettingsToFirestore,
 } from '../SyncService';
 import { doc, setDoc, getDoc } from 'firebase/firestore';
 import { needsSync, getLastSyncTime } from '../storage';
 import { saveNotificationSettings } from '../notificationService';
+import { STORAGE_KEYS } from '../storageKeys';
 
 describe('SyncService', () => {
     beforeEach(async () => {
@@ -120,13 +122,14 @@ describe('SyncService', () => {
         it('creates new user document when not exists', async () => {
             (getDoc as jest.Mock).mockResolvedValueOnce({ exists: () => false });
 
-            await createUserDocument('user123', 'test@example.com', 'Test User');
+            await createUserDocument('user123', 'test@example.com', 'Test User', 'https://image.example/test.png');
 
             expect(setDoc).toHaveBeenCalled();
             const callArgs = (setDoc as jest.Mock).mock.calls[0][1];
             expect(callArgs).toMatchObject({
                 email: 'test@example.com',
                 displayName: 'Test User',
+                photoURL: 'https://image.example/test.png',
                 setupCompleted: false,
                 preferences: null,
                 progress: null,
@@ -249,6 +252,37 @@ describe('SyncService', () => {
                 autoMarkLearned: false,
             }, true);
         });
+
+        it('preserves existing profile values when firestore profile fields are empty', async () => {
+            await AsyncStorage.setItem(
+                `${STORAGE_KEYS.PROFILE_PREFIX}user123`,
+                JSON.stringify({
+                    name: 'Existing User',
+                    image: 'https://image.example/existing.png',
+                    email: 'test@example.com',
+                })
+            );
+
+            (getDoc as jest.Mock).mockResolvedValueOnce({
+                exists: () => true,
+                data: () => ({
+                    email: 'test@example.com',
+                    displayName: '',
+                    setupCompleted: false,
+                    preferences: null,
+                    progress: null,
+                }),
+            });
+
+            await fetchAndSaveUserData('user123');
+
+            const storedProfile = await AsyncStorage.getItem(`${STORAGE_KEYS.PROFILE_PREFIX}user123`);
+            expect(JSON.parse(storedProfile || '{}')).toMatchObject({
+                name: 'Existing User',
+                image: 'https://image.example/existing.png',
+                email: 'test@example.com',
+            });
+        });
     });
 
     describe('syncNotificationSettingsToFirestore', () => {
@@ -277,6 +311,28 @@ describe('SyncService', () => {
                         frequencyMinutes: 120,
                         autoMarkLearned: true,
                     },
+                },
+                { merge: true }
+            );
+        });
+    });
+
+    describe('syncAuthProfileToFirestore', () => {
+        it('merges provider profile fields into firestore without blanking display name', async () => {
+            (setDoc as jest.Mock).mockResolvedValue(undefined);
+
+            await syncAuthProfileToFirestore('user123', {
+                email: 'test@example.com',
+                displayName: 'VocBee User',
+                photoURL: 'https://image.example/provider.png',
+            });
+
+            expect(setDoc).toHaveBeenCalledWith(
+                expect.anything(),
+                {
+                    email: 'test@example.com',
+                    displayName: 'VocBee User',
+                    photoURL: 'https://image.example/provider.png',
                 },
                 { merge: true }
             );

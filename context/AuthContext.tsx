@@ -1,7 +1,7 @@
 // Authentication Context for VocBee
 // Handles user authentication state and Firebase Auth operations
 
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode, useRef } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Platform } from 'react-native';
 import {
@@ -41,6 +41,7 @@ import {
     fetchAndSaveUserData,
     forceSync,
     getActiveDeviceIdFromFirebase,
+    syncAuthProfileToFirestore,
     syncNotificationSettingsToFirestore,
 } from '../services/SyncService';
 import { doc, deleteDoc } from 'firebase/firestore';
@@ -54,6 +55,12 @@ import {
     cancelAllNotifications,
     clearTrackedNotifications,
 } from '../services/notificationService';
+import {
+    buildStoredProfileFromAuth,
+    resolveGoogleAuthResponse,
+    StoredProfile,
+} from '../services/socialAuthProfile';
+import { STORAGE_KEYS } from '../services/storageKeys';
 
 interface ProfileData {
     name: string;
@@ -107,6 +114,127 @@ export function AuthProvider({ children }: AuthProviderProps) {
     const [notificationSettings, setNotificationSettings] = useState<NotificationSettings>(DEFAULT_NOTIFICATION_SETTINGS);
     const [isLoading, setIsLoading] = useState(true);
     const [connectionError, setConnectionError] = useState(false);
+    const pendingGoogleSignInRef = useRef<{
+        resolve: (value: { setupCompleted: boolean }) => void;
+        reject: (error: Error) => void;
+    } | null>(null);
+
+    const loadStoredProfile = async (uid: string): Promise<StoredProfile | null> => {
+        try {
+            const storedProfile = await AsyncStorage.getItem(`${STORAGE_KEYS.PROFILE_PREFIX}${uid}`);
+            return storedProfile ? JSON.parse(storedProfile) : null;
+        } catch (error) {
+            console.error('Error loading stored profile:', error);
+            return null;
+        }
+    };
+
+    const persistProfileState = async (uid: string, nextProfile: StoredProfile): Promise<void> => {
+        setProfile(nextProfile);
+        await AsyncStorage.setItem(`${STORAGE_KEYS.PROFILE_PREFIX}${uid}`, JSON.stringify(nextProfile));
+    };
+
+    const hydrateProfileFromAuthState = async (
+        firebaseUser: User
+    ): Promise<StoredProfile> => {
+        const storedProfile = await loadStoredProfile(firebaseUser.uid);
+        const nextProfile = buildStoredProfileFromAuth({
+            existingProfile: storedProfile,
+            email: firebaseUser.email,
+            authDisplayName: firebaseUser.displayName,
+            authPhotoURL: firebaseUser.photoURL,
+        });
+        await persistProfileState(firebaseUser.uid, nextProfile);
+        return nextProfile;
+    };
+
+    const finalizeFetchedUserData = async (
+        firebaseUser: User,
+        fallbackProfile: StoredProfile
+    ): Promise<{ setupCompleted: boolean }> => {
+        const fetchedData = await applyFetchedUserData(firebaseUser.uid);
+
+        if (fetchedData) {
+            const refreshedProfile = await loadStoredProfile(firebaseUser.uid);
+            if (refreshedProfile) {
+                setProfile(refreshedProfile);
+            } else {
+                setProfile(fallbackProfile);
+            }
+
+            return { setupCompleted: hasCompletedSetup(fetchedData) };
+        }
+
+        const fallbackUserData: UserData = {
+            uid: firebaseUser.uid,
+            email: fallbackProfile.email,
+            displayName: fallbackProfile.name || undefined,
+        };
+        await saveUserDataLocally(fallbackUserData);
+        setUserData(fallbackUserData);
+        await persistProfileState(firebaseUser.uid, fallbackProfile);
+
+        return { setupCompleted: false };
+    };
+
+    const completeSocialSignIn = async (
+        firebaseUser: User,
+        profileInput: {
+            email?: string | null;
+            displayName?: string | null;
+            photoURL?: string | null;
+        }
+    ): Promise<{ setupCompleted: boolean }> => {
+        const storedProfile = await loadStoredProfile(firebaseUser.uid);
+        const nextProfile = buildStoredProfileFromAuth({
+            existingProfile: storedProfile,
+            email: profileInput.email ?? firebaseUser.email,
+            authDisplayName: firebaseUser.displayName,
+            authPhotoURL: firebaseUser.photoURL,
+            preferredDisplayName: profileInput.displayName,
+            preferredPhotoURL: profileInput.photoURL,
+        });
+
+        const normalizedProviderDisplayName =
+            typeof profileInput.displayName === 'string' && profileInput.displayName.trim()
+                ? profileInput.displayName.trim()
+                : null;
+        const normalizedProviderPhoto =
+            typeof profileInput.photoURL === 'string' && profileInput.photoURL.trim()
+                ? profileInput.photoURL.trim()
+                : null;
+
+        const authProfileUpdate: { displayName?: string; photoURL?: string } = {};
+        if (normalizedProviderDisplayName && normalizedProviderDisplayName !== firebaseUser.displayName) {
+            authProfileUpdate.displayName = normalizedProviderDisplayName;
+        }
+        if (normalizedProviderPhoto && normalizedProviderPhoto !== firebaseUser.photoURL) {
+            authProfileUpdate.photoURL = normalizedProviderPhoto;
+        }
+        if (Object.keys(authProfileUpdate).length > 0) {
+            await updateProfile(firebaseUser, authProfileUpdate);
+        }
+
+        // Clear local storage AFTER successful sign-in
+        await clearAllLocalData();
+        await cancelAllNotifications();
+        await clearTrackedNotifications();
+
+        await createUserDocument(
+            firebaseUser.uid,
+            nextProfile.email,
+            nextProfile.name,
+            nextProfile.image
+        );
+        await syncAuthProfileToFirestore(firebaseUser.uid, {
+            email: nextProfile.email,
+            displayName: nextProfile.name,
+            photoURL: nextProfile.image,
+        });
+        await persistProfileState(firebaseUser.uid, nextProfile);
+
+        return finalizeFetchedUserData(firebaseUser, nextProfile);
+    };
 
     const loadNotificationSettingsIntoState = async (): Promise<NotificationSettings> => {
         const settings = await getNotificationSettings();
@@ -203,25 +331,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
                 // Load profile data (after fetchAndSaveUserData may have updated it)
                 try {
-                    const storedProfile = await AsyncStorage.getItem(`profile_${firebaseUser.uid}`);
-                    if (storedProfile) {
-                        const parsedProfile = JSON.parse(storedProfile);
-                        // Ensure email is always set from Firebase Auth if missing
-                        if (!parsedProfile.email && firebaseUser.email) {
-                            parsedProfile.email = firebaseUser.email;
-                            await AsyncStorage.setItem(`profile_${firebaseUser.uid}`, JSON.stringify(parsedProfile));
-                        }
-                        setProfile(parsedProfile);
-                    } else {
-                        // Initialize profile from Firebase Auth data
-                        const initialProfile = {
-                            name: firebaseUser.displayName || firebaseUser.email?.split('@')[0] || 'User',
-                            image: firebaseUser.photoURL,
-                            email: firebaseUser.email || ''
-                        };
-                        setProfile(initialProfile);
-                        await AsyncStorage.setItem(`profile_${firebaseUser.uid}`, JSON.stringify(initialProfile));
-                    }
+                    await hydrateProfileFromAuthState(firebaseUser);
                 } catch (e) {
                     console.error('Error loading profile:', e);
                 }
@@ -313,13 +423,68 @@ export function AuthProvider({ children }: AuthProviderProps) {
     });
 
     // Google Sign-In request
-    const [request, , promptAsync] = Google.useAuthRequest({
+    const [request, response, promptAsync] = Google.useAuthRequest({
         clientId: GOOGLE_WEB_CLIENT_ID,
         iosClientId: GOOGLE_IOS_CLIENT_ID,
         androidClientId: GOOGLE_ANDROID_CLIENT_ID,
         webClientId: GOOGLE_WEB_CLIENT_ID,
         redirectUri: googleRedirectUri,
     });
+
+    useEffect(() => {
+        const pendingGoogleSignIn = pendingGoogleSignInRef.current;
+        if (!pendingGoogleSignIn) {
+            return;
+        }
+
+        const resolution = resolveGoogleAuthResponse(response);
+        if (resolution.type === 'pending') {
+            return;
+        }
+
+        const settlePendingGoogleSignIn = async () => {
+            try {
+                if (resolution.type === 'cancelled') {
+                    throw new Error(SOCIAL_AUTH_CANCELLED_ERROR);
+                }
+
+                if (resolution.type === 'error') {
+                    throw new Error(resolution.message);
+                }
+
+                setIsLoading(true);
+
+                // Create Firebase credential with Google ID token after the native code exchange finishes.
+                const credential = GoogleAuthProvider.credential(resolution.idToken);
+                const userCredential = await signInWithCredential(auth, credential);
+
+                const result = await completeSocialSignIn(userCredential.user, {
+                    email: userCredential.user.email,
+                    displayName: userCredential.user.displayName,
+                    photoURL: userCredential.user.photoURL,
+                });
+
+                pendingGoogleSignIn.resolve(result);
+            } catch (error: any) {
+                if (error.message === SOCIAL_AUTH_CANCELLED_ERROR) {
+                    pendingGoogleSignIn.reject(error);
+                    return;
+                }
+
+                console.error('Google Sign-In error:', error);
+                pendingGoogleSignIn.reject(
+                    new Error('Failed to sign in with Google. Please try again.')
+                );
+            } finally {
+                if (pendingGoogleSignInRef.current === pendingGoogleSignIn) {
+                    pendingGoogleSignInRef.current = null;
+                }
+                setIsLoading(false);
+            }
+        };
+
+        settlePendingGoogleSignIn();
+    }, [response]);
 
     // Sign In with Google
     const signInWithGoogle = async (): Promise<{ setupCompleted: boolean }> => {
@@ -328,58 +493,32 @@ export function AuthProvider({ children }: AuthProviderProps) {
             throw new Error('Google Sign-In is not available right now. Please try again.');
         }
 
-        try {
-            const result = await promptAsync();
-
-            if (result.type === 'cancel' || result.type === 'dismiss') {
-                throw new Error(SOCIAL_AUTH_CANCELLED_ERROR);
-            }
-
-            if (result.type !== 'success') {
-                throw new Error('Google Sign-In did not complete successfully.');
-            }
-
-            const idToken = result.params?.id_token;
-            if (!idToken) {
-                throw new Error('No Google ID token received.');
-            }
-
-            setIsLoading(true);
-
-            // Create Firebase credential with Google ID token
-            const credential = GoogleAuthProvider.credential(idToken);
-            const userCredential = await signInWithCredential(auth, credential);
-
-            // Clear local storage AFTER successful sign-in
-            await clearAllLocalData();
-
-            // Cancel all scheduled notifications for previous user
-            await cancelAllNotifications();
-            await clearTrackedNotifications();
-
-            // Check if user exists in Firestore, if not create document
-            let fetchedData = await applyFetchedUserData(userCredential.user.uid);
-
-            if (!fetchedData) {
-                // New user - create document then re-fetch to populate local data
-                await createUserDocument(
-                    userCredential.user.uid,
-                    userCredential.user.email || '',
-                    userCredential.user.displayName || undefined
-                );
-                fetchedData = await applyFetchedUserData(userCredential.user.uid);
-            }
-
-            return { setupCompleted: hasCompletedSetup(fetchedData) };
-        } catch (error: any) {
-            if (error.message === SOCIAL_AUTH_CANCELLED_ERROR) {
-                throw error;
-            }
-            console.error('Google Sign-In error:', error);
-            throw new Error('Failed to sign in with Google. Please try again.');
-        } finally {
-            setIsLoading(false);
+        if (pendingGoogleSignInRef.current) {
+            throw new Error('Google Sign-In is already in progress.');
         }
+
+        return new Promise((resolve, reject) => {
+            pendingGoogleSignInRef.current = { resolve, reject };
+
+            promptAsync()
+                .then(promptResult => {
+                    if (promptResult.type === 'cancel' || promptResult.type === 'dismiss') {
+                        pendingGoogleSignInRef.current = null;
+                        reject(new Error(SOCIAL_AUTH_CANCELLED_ERROR));
+                        return;
+                    }
+
+                    if (promptResult.type !== 'success') {
+                        pendingGoogleSignInRef.current = null;
+                        reject(new Error('Google Sign-In did not complete successfully.'));
+                    }
+                })
+                .catch((error: any) => {
+                    pendingGoogleSignInRef.current = null;
+                    console.error('Google Sign-In error:', error);
+                    reject(new Error('Failed to start Google Sign-In. Please try again.'));
+                });
+        });
     };
 
     // Sign In with Apple
@@ -400,30 +539,16 @@ export function AuthProvider({ children }: AuthProviderProps) {
                 });
                 const userCredential = await signInWithCredential(auth, authCredential);
 
-                // Clear local storage AFTER successful sign-in
-                await clearAllLocalData();
-                await cancelAllNotifications();
-                await clearTrackedNotifications();
-
-                // Check if user exists in Firestore, if not create document
-                let fetchedData = await applyFetchedUserData(userCredential.user.uid);
-
-                if (!fetchedData) {
-                    // Assemble reasonable display name from Apple's fullName if available
-                    let displayName = userCredential.user.displayName;
-                    if (!displayName && credential.fullName?.givenName) {
-                        displayName = `${credential.fullName.givenName} ${credential.fullName.familyName || ''}`.trim();
-                    }
-
-                    await createUserDocument(
-                        userCredential.user.uid,
-                        userCredential.user.email || credential.email || '',
-                        displayName || undefined
-                    );
-                    fetchedData = await applyFetchedUserData(userCredential.user.uid);
+                let displayName = userCredential.user.displayName;
+                if (!displayName && credential.fullName?.givenName) {
+                    displayName = `${credential.fullName.givenName} ${credential.fullName.familyName || ''}`.trim();
                 }
 
-                return { setupCompleted: hasCompletedSetup(fetchedData) };
+                return await completeSocialSignIn(userCredential.user, {
+                    email: userCredential.user.email || credential.email || '',
+                    displayName: displayName || undefined,
+                    photoURL: userCredential.user.photoURL,
+                });
             } else {
                 throw new Error('No identity token.');
             }
@@ -503,7 +628,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
         setProfile(newProfile);
 
         try {
-            await AsyncStorage.setItem(`profile_${user.uid}`, JSON.stringify(newProfile));
+            await AsyncStorage.setItem(`${STORAGE_KEYS.PROFILE_PREFIX}${user.uid}`, JSON.stringify(newProfile));
         } catch (error) {
             console.error('Error updating profile data:', error);
             throw error;

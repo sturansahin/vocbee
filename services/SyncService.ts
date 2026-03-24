@@ -17,6 +17,7 @@ import { getUserProgress, getCurrentLevel, restoreProgressFromFirebase, getLastW
 import { restoreFavoritesFromFirebase, syncFavoritesToFirebase } from './favoritesService';
 import { getLanguagePair, isVocabularyGenerated, generateVocabulary, getUserLevelFromCefrLevel, isUserLevel } from './vocabularyService';
 import { getNotificationSettings, saveNotificationSettings, NotificationSettings } from './notificationService';
+import { buildStoredProfileFromFirestore } from './socialAuthProfile';
 import { STORAGE_KEYS } from './storageKeys';
 
 // ─── Retry Helper with Exponential Backoff ───────────────────────────────────
@@ -82,6 +83,8 @@ export const syncToFirestore = async (userId: string): Promise<boolean> => {
         const storedProfile = await AsyncStorage.getItem(`${STORAGE_KEYS.PROFILE_PREFIX}${userId}`);
         const profileData = storedProfile ? JSON.parse(storedProfile) : {};
         const profileName = profileData.name;
+        const hasProfileImage = Object.prototype.hasOwnProperty.call(profileData, 'image');
+        const profileImage = hasProfileImage ? profileData.image ?? null : undefined;
         const rawNotificationSettings = await AsyncStorage.getItem(STORAGE_KEYS.NOTIFICATION_SETTINGS);
         const notificationSettings = rawNotificationSettings
             ? await getNotificationSettings()
@@ -118,6 +121,10 @@ export const syncToFirestore = async (userId: string): Promise<boolean> => {
             // Update profile info
             ...(profileName && { displayName: profileName }),
         };
+
+        if (profileImage !== undefined) {
+            syncData.photoURL = profileImage;
+        }
 
         if (notificationSettings) {
             syncData.notificationSettings = notificationSettings;
@@ -186,7 +193,8 @@ export const getActiveDeviceIdFromFirebase = async (userId: string): Promise<str
 export const createUserDocument = async (
     userId: string,
     email: string,
-    displayName?: string
+    displayName?: string,
+    photoURL?: string | null
 ): Promise<void> => {
     try {
         const userRef = doc(db, 'users', userId);
@@ -196,6 +204,7 @@ export const createUserDocument = async (
             await setDoc(userRef, {
                 email,
                 displayName: displayName || '',
+                photoURL: photoURL ?? null,
                 createdAt: serverTimestamp(),
                 setupCompleted: false,
                 preferences: null,
@@ -235,12 +244,19 @@ export const fetchAndSaveUserData = async (userId: string): Promise<UserData | n
 
             await saveUserDataLocally(userData);
 
-            // Restore profile data from Firebase to AsyncStorage
-            const newProfile = {
-                name: data.displayName || '',
-                image: data.photoURL || null,
-                email: data.email || ''
-            };
+            const storedProfile = await AsyncStorage.getItem(`${STORAGE_KEYS.PROFILE_PREFIX}${userId}`);
+            const existingProfile = storedProfile ? JSON.parse(storedProfile) : null;
+            const hasFirestorePhotoURL = Object.prototype.hasOwnProperty.call(data, 'photoURL');
+
+            // Restore profile data from Firebase to AsyncStorage while preserving
+            // auth/provider fallbacks when Firestore fields are still sparse.
+            const newProfile = buildStoredProfileFromFirestore({
+                existingProfile,
+                email: data.email,
+                firestoreDisplayName: data.displayName,
+                firestorePhotoURL: hasFirestorePhotoURL ? data.photoURL : undefined,
+                hasFirestorePhotoURL,
+            });
             await AsyncStorage.setItem(`${STORAGE_KEYS.PROFILE_PREFIX}${userId}`, JSON.stringify(newProfile));
 
             if (data.notificationSettings && typeof data.notificationSettings === 'object') {
@@ -321,6 +337,35 @@ export const syncNotificationSettingsToFirestore = async (
         const userRef = doc(db, 'users', userId);
         await setDoc(userRef, { notificationSettings: settings }, { merge: true });
     }, 'syncNotificationSettingsToFirestore');
+};
+
+export const syncAuthProfileToFirestore = async (
+    userId: string,
+    profile: {
+        email: string;
+        displayName?: string | null;
+        photoURL?: string | null;
+    }
+): Promise<void> => {
+    await withRetry(async () => {
+        const userRef = doc(db, 'users', userId);
+        const syncData: Record<string, string | null> = {
+            email: profile.email,
+        };
+
+        if (typeof profile.displayName === 'string' && profile.displayName.trim()) {
+            syncData.displayName = profile.displayName.trim();
+        }
+
+        if (profile.photoURL !== undefined) {
+            syncData.photoURL =
+                typeof profile.photoURL === 'string' && profile.photoURL.trim()
+                    ? profile.photoURL.trim()
+                    : null;
+        }
+
+        await setDoc(userRef, syncData, { merge: true });
+    }, 'syncAuthProfileToFirestore');
 };
 
 // Auto sync on app background (called from AppState listener)

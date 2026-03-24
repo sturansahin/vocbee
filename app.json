@@ -7,7 +7,7 @@
       "com.vocbee.app",
       "com.googleusercontent.apps.540292978044-695plkaeec13scn3p2s76h302sieti4g"
     ],
-    "version": "1.0.6",
+    "version": "1.0.7",
     "icon": "./assets/icons/vocicon.png",
     "splash": {
       "image": "./assets/transparent-splash.png",
