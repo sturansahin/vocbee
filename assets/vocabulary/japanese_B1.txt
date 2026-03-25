@@ -4,4831 +4,5636 @@
       "id": 1,
       "word": "絶対に",
       "sentence1": "私はこの本が大好きです。",
-      "sentence2": "彼女は自分の決断に絶対的な確信を持っていました。"
+      "sentence2": "彼女は自分の決断に絶対的な確信を持っていました。",
+      "pronunciation": "/zetːaini/"
     },
     {
       "id": 2,
       "word": "学問的な",
       "sentence1": "彼は物理学の学術的背景を持っています。",
-      "sentence2": "学年は9月に始まります。"
+      "sentence2": "学年は9月に始まります。",
+      "pronunciation": "/ɡakɯmoɴtekina/"
     },
     {
       "id": 3,
       "word": "アクセス",
       "sentence1": "システムにアクセスするにはパスワードが必要です。",
-      "sentence2": "情報へのアクセスは非常に重要です。"
+      "sentence2": "情報へのアクセスは非常に重要です。",
+      "pronunciation": "/akɯsesɯ/"
     },
     {
       "id": 4,
       "word": "宿泊施設",
       "sentence1": "今夜の宿泊施設を見つける必要があります。",
-      "sentence2": "このホテルは素晴らしい宿泊施設を提供しています。"
+      "sentence2": "このホテルは素晴らしい宿泊施設を提供しています。",
+      "pronunciation": "/ɕɯkɯhakɯɕisetsɯ/"
     },
     {
       "id": 5,
       "word": "口座",
       "sentence1": "先週銀行口座を開設しました。",
-      "sentence2": "口座残高を確認してください。"
+      "sentence2": "口座残高を確認してください。",
+      "pronunciation": "/koːza/"
     },
     {
       "id": 6,
       "word": "達成",
       "sentence1": "彼女の最大の達成は優勝することでした。",
-      "sentence2": "彼は学業の成果を誇りに思っていました。"
+      "sentence2": "彼は学業の成果を誇りに思っていました。",
+      "pronunciation": "/tasːeː/"
     },
     {
       "id": 7,
       "word": "行動する",
       "sentence1": "この状況では迅速に行動する必要があります。",
-      "sentence2": "彼女は直感に従って行動することにしました。"
+      "sentence2": "彼女は直感に従って行動することにしました。",
+      "pronunciation": "/koːdoːsɯɾɯ/"
     },
     {
       "id": 8,
       "word": "追加する",
       "sentence1": "リストにあなたの名前を追加してください。",
-      "sentence2": "仕上げを加えるのを忘れないでください。"
+      "sentence2": "仕上げを加えるのを忘れないでください。",
+      "pronunciation": "/tsɯikasɯɾɯ/"
     },
     {
       "id": 9,
       "word": "追加",
       "sentence1": "新機能の追加でソフトウェアが改善されました。",
-      "sentence2": "給料に加えて、彼はボーナスを受け取っています。"
+      "sentence2": "給料に加えて、彼はボーナスを受け取っています。",
+      "pronunciation": "/tsɯika/"
     },
     {
       "id": 10,
       "word": "感心する",
       "sentence1": "彼女の仕事への献身に感心します。",
-      "sentence2": "多くの人が彼の芸術的才能を称賛しています。"
+      "sentence2": "多くの人が彼の芸術的才能を称賛しています。",
+      "pronunciation": "/kaɴɕiɴsɯɾɯ/"
     },
     {
       "id": 11,
       "word": "認める",
       "sentence1": "彼女は間違いを認めて謝罪しました。",
-      "sentence2": "彼は自分が間違っていたと認めたくありませんでした。"
+      "sentence2": "彼は自分が間違っていたと認めたくありませんでした。",
+      "pronunciation": "/mitomeɾɯ/"
     },
     {
       "id": 12,
       "word": "上級の",
       "sentence1": "彼女は数学の上級コースを受講しました。",
-      "sentence2": "この技術は先進的で効率的です。"
+      "sentence2": "この技術は先進的で効率的です。",
+      "pronunciation": "/dʑoːkjɯːno/"
     },
     {
       "id": 13,
       "word": "助言する",
       "sentence1": "その仕事のオファーを受けることをお勧めします。",
-      "sentence2": "彼女は医者に診てもらうよう勧められました。"
+      "sentence2": "彼女は医者に診てもらうよう勧められました。",
+      "pronunciation": "/dʑoɡeɴsɯɾɯ/"
     },
     {
       "id": 14,
       "word": "余裕がある",
       "sentence1": "新しい車を買う余裕がありません。",
-      "sentence2": "彼らは贅沢な生活を送る余裕があります。"
+      "sentence2": "彼らは贅沢な生活を送る余裕があります。",
+      "pronunciation": "/jojɯːɡaːɾɯ/"
     },
     {
       "id": 15,
       "word": "年齢",
       "sentence1": "あなたの年齢は何歳ですか？",
-      "sentence2": "彼女は学齢期です。"
+      "sentence2": "彼女は学齢期です。",
+      "pronunciation": "/neɴɾeː/"
     },
     {
       "id": 16,
       "word": "高齢の/熟成した",
       "sentence1": "その高齢の男性はベンチに座っていました。",
-      "sentence2": "熟成したチーズはより強い風味があります。"
+      "sentence2": "熟成したチーズはより強い風味があります。",
+      "pronunciation": "/koːɾeːno/; /dʑɯkɯseːɕita/"
     },
     {
       "id": 17,
       "word": "代理人",
       "sentence1": "彼は秘密諜報員として働いています。",
-      "sentence2": "旅行代理店が旅行の計画を手伝ってくれました。"
+      "sentence2": "旅行代理店が旅行の計画を手伝ってくれました。",
+      "pronunciation": "/daiɾiniɴ/"
     },
     {
       "id": 18,
       "word": "合意",
       "sentence1": "長い交渉の末、彼らは合意に達しました。",
-      "sentence2": "合意書は両当事者によって署名されました。"
+      "sentence2": "合意書は両当事者によって署名されました。",
+      "pronunciation": "/ɡoːi/"
     },
     {
       "id": 19,
       "word": "前方に",
       "sentence1": "前方の道路は工事のため閉鎖されています。",
-      "sentence2": "プロジェクトのために前もって計画を立てる必要があります。"
+      "sentence2": "プロジェクトのために前もって計画を立てる必要があります。",
+      "pronunciation": "/zeɴpoːni/"
     },
     {
       "id": 20,
       "word": "目標",
       "sentence1": "私の目標は英語力を向上させることです。",
-      "sentence2": "彼女はキャリアに明確な目標を持っています。"
+      "sentence2": "彼女はキャリアに明確な目標を持っています。",
+      "pronunciation": "/mokɯçoː/"
     },
     {
       "id": 21,
       "word": "アラーム",
       "sentence1": "午前7時にアラームをセットしました。",
-      "sentence2": "火災報知器が予期せず鳴りました。"
+      "sentence2": "火災報知器が予期せず鳴りました。",
+      "pronunciation": "/aɾaːmɯ/"
     },
     {
       "id": 22,
       "word": "アルバム",
       "sentence1": "お気に入りのバンドの新しいアルバムを買いました。",
-      "sentence2": "写真アルバムには旅行の思い出が詰まっています。"
+      "sentence2": "写真アルバムには旅行の思い出が詰まっています。",
+      "pronunciation": "/aɾɯbamɯ/"
     },
     {
       "id": 23,
       "word": "アルコール",
       "sentence1": "彼はアルコールを飲みません。",
-      "sentence2": "大量のアルコールは有害になる可能性があります。"
+      "sentence2": "大量のアルコールは有害になる可能性があります。",
+      "pronunciation": "/aɾɯkoːɾɯ/"
     },
     {
       "id": 24,
       "word": "アルコール依存症の",
       "sentence1": "彼は回復中のアルコール依存症者です。",
-      "sentence2": "ここではアルコール飲料は許可されていません。"
+      "sentence2": "ここではアルコール飲料は許可されていません。",
+      "pronunciation": "/aɾɯkoːɾɯizoɴɕoːno/"
     },
     {
       "id": 25,
       "word": "代替の",
       "sentence1": "代替の解決策を見つける必要があります。",
-      "sentence2": "多くの代替エネルギー源があります。"
+      "sentence2": "多くの代替エネルギー源があります。",
+      "pronunciation": "/daitaino/"
     },
     {
       "id": 26,
       "word": "驚いた",
       "sentence1": "私はその演技に驚きました。",
-      "sentence2": "彼女は景色の美しさに驚きました。"
+      "sentence2": "彼女は景色の美しさに驚きました。",
+      "pronunciation": "/odoɾoita/"
     },
     {
       "id": 27,
       "word": "野望",
       "sentence1": "彼女の野望は成功した起業家になることです。",
-      "sentence2": "彼は成功への強い野心を持っています。"
+      "sentence2": "彼は成功への強い野心を持っています。",
+      "pronunciation": "/jaboː/"
     },
     {
       "id": 28,
       "word": "野心的な",
       "sentence1": "彼女は野心的な若い女性です。",
-      "sentence2": "彼の野心的な計画は皆を感心させました。"
+      "sentence2": "彼の野心的な計画は皆を感心させました。",
+      "pronunciation": "/jaɕiɴtekina/"
     },
     {
       "id": 29,
       "word": "分析する",
       "sentence1": "データを慎重に分析する必要があります。",
-      "sentence2": "報告書は政策の影響を分析します。"
+      "sentence2": "報告書は政策の影響を分析します。",
+      "pronunciation": "/bɯɴsekisɯɾɯ/"
     },
     {
       "id": 30,
       "word": "分析",
       "sentence1": "分析により重要な傾向が明らかになりました。",
-      "sentence2": "徹底的な分析は意思決定に不可欠です。"
+      "sentence2": "徹底的な分析は意思決定に不可欠です。",
+      "pronunciation": "/bɯɴseki/"
     },
     {
       "id": 31,
       "word": "発表する",
       "sentence1": "彼らは明日結果を発表します。",
-      "sentence2": "彼女は家族に婚約を発表しました。"
+      "sentence2": "彼女は家族に婚約を発表しました。",
+      "pronunciation": "/hapːjoːsɯɾɯ/"
     },
     {
       "id": 32,
       "word": "発表",
       "sentence1": "発表は会議中に行われました。",
-      "sentence2": "新しい方針についての発表を受け取りました。"
+      "sentence2": "新しい方針についての発表を受け取りました。",
+      "pronunciation": "/hapːjoː/"
     },
     {
       "id": 33,
       "word": "いらいらさせる",
       "sentence1": "彼の絶え間ない不平が私をいらいらさせます。",
-      "sentence2": "弟をいらいらさせないで。"
+      "sentence2": "弟をいらいらさせないで。",
+      "pronunciation": "/iɾaiɾasaseɾɯ/"
     },
     {
       "id": 34,
       "word": "いらいらした",
       "sentence1": "彼女は大きな音にいらいらしました。",
-      "sentence2": "彼は遅延にいらいらしました。"
+      "sentence2": "彼は遅延にいらいらしました。",
+      "pronunciation": "/iɾaiɾaɕita/"
     },
     {
       "id": 35,
       "word": "うっとうしい",
       "sentence1": "ハエのブンブンという音はうっとうしいです。",
-      "sentence2": "人が話を遮るのはうっとうしいです。"
+      "sentence2": "人が話を遮るのはうっとうしいです。",
+      "pronunciation": "/ɯtːoːɕiː/"
     },
     {
       "id": 36,
       "word": "離れて",
       "sentence1": "その2つの建物は互いに離れています。",
-      "sentence2": "彼らは年月とともに疎遠になりました。"
+      "sentence2": "彼らは年月とともに疎遠になりました。",
+      "pronunciation": "/hanaɾete/"
     },
     {
       "id": 37,
       "word": "謝罪する",
       "sentence1": "私の間違いを謝罪しなければなりません。",
-      "sentence2": "彼女は遅刻したことを謝罪しました。"
+      "sentence2": "彼女は遅刻したことを謝罪しました。",
+      "pronunciation": "/ɕazaisɯɾɯ/"
     },
     {
       "id": 38,
       "word": "申請",
       "sentence1": "私はその仕事の申請書を提出しました。",
-      "sentence2": "申請手続きはとても簡単です。"
+      "sentence2": "申請手続きはとても簡単です。",
+      "pronunciation": "/ɕiɴseː/"
     },
     {
       "id": 39,
       "word": "予約",
       "sentence1": "午後3時に医者の予約があります。",
-      "sentence2": "彼女は予約を逃し、予定を変更しなければなりませんでした。"
+      "sentence2": "彼女は予約を逃し、予定を変更しなければなりませんでした。",
+      "pronunciation": "/jojakɯ/"
     },
     {
       "id": 40,
       "word": "感謝する",
       "sentence1": "あなたの助けに本当に感謝しています。",
-      "sentence2": "彼女は自然の美しさを鑑賞しています。"
+      "sentence2": "彼女は自然の美しさを鑑賞しています。",
+      "pronunciation": "/kaɴɕasɯɾɯ/"
     },
     {
       "id": 41,
       "word": "およそ",
       "sentence1": "会議はおよそ2時間続きます。",
-      "sentence2": "イベントにはおよそ100人がいました。"
+      "sentence2": "イベントにはおよそ100人がいました。",
+      "pronunciation": "/ojoso/"
     },
     {
       "id": 42,
       "word": "逮捕する",
       "sentence1": "警察は昨夜容疑者を逮捕しました。",
-      "sentence2": "彼は飲酒運転で逮捕されました。"
+      "sentence2": "彼は飲酒運転で逮捕されました。",
+      "pronunciation": "/taihosɯɾɯ/"
     },
     {
       "id": 43,
       "word": "到着",
       "sentence1": "電車の到着が遅れました。",
-      "sentence2": "私たちはゲストの到着を楽しみにしていました。"
+      "sentence2": "私たちはゲストの到着を楽しみにしていました。",
+      "pronunciation": "/toːtɕakɯ/"
     },
     {
       "id": 44,
       "word": "課題",
       "sentence1": "明日締め切りの数学の課題があります。",
-      "sentence2": "先生は私たちに難しい課題を出しました。"
+      "sentence2": "先生は私たちに難しい課題を出しました。",
+      "pronunciation": "/kadai/"
     },
     {
       "id": 45,
       "word": "手伝う",
       "sentence1": "この作業を手伝ってもらえますか？",
-      "sentence2": "彼女はマネージャーを補佐するために雇われました。"
+      "sentence2": "彼女はマネージャーを補佐するために雇われました。",
+      "pronunciation": "/tetsɯdaɯ/"
     },
     {
       "id": 46,
       "word": "雰囲気",
       "sentence1": "部屋の雰囲気は緊張していました。",
-      "sentence2": "学習のための良い雰囲気を作る必要があります。"
+      "sentence2": "学習のための良い雰囲気を作る必要があります。",
+      "pronunciation": "/ɸɯɴiki/"
     },
     {
       "id": 47,
       "word": "添付する",
       "sentence1": "メールにファイルを添付してください。",
-      "sentence2": "書類を添付するのを忘れました。"
+      "sentence2": "書類を添付するのを忘れました。",
+      "pronunciation": "/teɴpɯsɯɾɯ/"
     },
     {
       "id": 48,
       "word": "態度",
       "sentence1": "プロジェクトに対する彼女の態度は前向きでした。",
-      "sentence2": "仕事で良い態度を持つことは重要です。"
+      "sentence2": "仕事で良い態度を持つことは重要です。",
+      "pronunciation": "/taido/"
     },
     {
       "id": 49,
       "word": "引きつける",
       "sentence1": "その広告は顧客を引きつけるように設計されています。",
-      "sentence2": "花はミツバチや他の花粉媒介者を引きつけます。"
+      "sentence2": "花はミツバチや他の花粉媒介者を引きつけます。",
+      "pronunciation": "/hikitsɯkeɾɯ/"
     },
     {
       "id": 50,
       "word": "魅力",
       "sentence1": "2人のキャラクターの間には強い引力があります。",
-      "sentence2": "その遊園地は家族連れに人気の観光スポットです。"
+      "sentence2": "その遊園地は家族連れに人気の観光スポットです。",
+      "pronunciation": "/miɾjokɯ/"
     },
     {
       "id": 51,
       "word": "権威",
       "sentence1": "彼は古代史の権威です。",
-      "sentence2": "先生の権威を尊重する必要があります。"
+      "sentence2": "先生の権威を尊重する必要があります。",
+      "pronunciation": "/keɴi/"
     },
     {
       "id": 52,
       "word": "平均",
       "sentence1": "7月の平均気温は30度です。",
-      "sentence2": "彼女の数学の成績は平均的です。"
+      "sentence2": "彼女の数学の成績は平均的です。",
+      "pronunciation": "/heːkiɴ/"
     },
     {
       "id": 53,
       "word": "賞",
       "sentence1": "彼女は優れた業績で賞を受けました。",
-      "sentence2": "ノーベル賞は権威ある賞です。"
+      "sentence2": "ノーベル賞は権威ある賞です。",
+      "pronunciation": "/ɕoː/"
     },
     {
       "id": 54,
       "word": "気づいている",
       "sentence1": "スケジュールの変更を知っていますか？",
-      "sentence2": "彼は潜在的なリスクに気づいていませんでした。"
+      "sentence2": "彼は潜在的なリスクに気づいていませんでした。",
+      "pronunciation": "/kizɯiteːɾɯ/"
     },
     {
       "id": 55,
       "word": "後ろ向きに",
       "sentence1": "車は丘を後ろ向きに転がりました。",
-      "sentence2": "彼女は数歩後ずさりしました。"
+      "sentence2": "彼女は数歩後ずさりしました。",
+      "pronunciation": "/ɯɕiɾomɯkini/"
     },
     {
       "id": 56,
       "word": "焼く",
       "sentence1": "週末にクッキーを焼くのが大好きです。",
-      "sentence2": "彼女はパーティーのためにおいしいケーキを焼きました。"
+      "sentence2": "彼女はパーティーのためにおいしいケーキを焼きました。",
+      "pronunciation": "/jakɯ/"
     },
     {
       "id": 57,
       "word": "バランス",
       "sentence1": "仕事と生活のバランスを保つことは重要です。",
-      "sentence2": "彼女は責任のバランスがとれています。"
+      "sentence2": "彼女は責任のバランスがとれています。",
+      "pronunciation": "/baɾaɴsɯ/"
     },
     {
       "id": 58,
       "word": "禁止する",
       "sentence1": "学校は授業中の携帯電話を禁止することにしました。",
-      "sentence2": "彼は不適切な行動でクラブから締め出されました。"
+      "sentence2": "彼は不適切な行動でクラブから締め出されました。",
+      "pronunciation": "/kiɴɕisɯɾɯ/"
     },
     {
       "id": 59,
       "word": "川岸",
       "sentence1": "私たちは川岸でピクニックをしました。",
-      "sentence2": "子供たちは川岸で遊びました。"
+      "sentence2": "子供たちは川岸で遊びました。",
+      "pronunciation": "/kawaɡiɕi/"
     },
     {
       "id": 60,
       "word": "基盤",
       "sentence1": "像の台座は大理石でできています。",
-      "sentence2": "プロジェクトのしっかりした基盤を見つける必要があります。"
+      "sentence2": "プロジェクトのしっかりした基盤を見つける必要があります。",
+      "pronunciation": "/kibaɴ/"
     },
     {
       "id": 61,
       "word": "基本的な",
       "sentence1": "このコースは経済学の基本原則をカバーしています。",
-      "sentence2": "数学の基本的な理解を持つことは重要です。"
+      "sentence2": "数学の基本的な理解を持つことは重要です。",
+      "pronunciation": "/kihoɴtekina/"
     },
     {
       "id": 62,
       "word": "基礎",
       "sentence1": "彼の議論の基礎には欠陥があります。",
-      "sentence2": "研究のためのしっかりした基礎を確立する必要があります。"
+      "sentence2": "研究のためのしっかりした基礎を確立する必要があります。",
+      "pronunciation": "/kiso/"
     },
     {
       "id": 63,
       "word": "電池",
       "sentence1": "リモコンの電池を交換する必要があります。",
-      "sentence2": "携帯電話のバッテリー寿命が短くなっています。"
+      "sentence2": "携帯電話のバッテリー寿命が短くなっています。",
+      "pronunciation": "/deɴtɕi/"
     },
     {
       "id": 64,
       "word": "戦い",
       "sentence1": "戦いは数日間続きました。",
-      "sentence2": "彼らは戦いで勇敢に戦いました。"
+      "sentence2": "彼らは戦いで勇敢に戦いました。",
+      "pronunciation": "/tatakai/"
     },
     {
       "id": 65,
       "word": "美しさ",
       "sentence1": "夕日の美しさに息を呑みました。",
-      "sentence2": "彼女は自然な美しさで知られています。"
+      "sentence2": "彼女は自然な美しさで知られています。",
+      "pronunciation": "/ɯtsɯkɯɕisa/"
     },
     {
       "id": 66,
       "word": "ミツバチ",
       "sentence1": "ミツバチは重要な花粉媒介者です。",
-      "sentence2": "養蜂は魅力的な趣味です。"
+      "sentence2": "養蜂は魅力的な趣味です。",
+      "pronunciation": "/mitsɯbatɕi/"
     },
     {
       "id": 67,
       "word": "信念",
       "sentence1": "正義への彼女の信念は揺るぎません。",
-      "sentence2": "多くの人が教育は重要だという信念を共有しています。"
+      "sentence2": "多くの人が教育は重要だという信念を共有しています。",
+      "pronunciation": "/ɕiɴneɴ/"
     },
     {
       "id": 68,
       "word": "ベル",
       "sentence1": "学校のベルは午前8時に鳴ります。",
-      "sentence2": "彼女の庭には美しい鈴があります。"
+      "sentence2": "彼女の庭には美しい鈴があります。",
+      "pronunciation": "/beɾɯ/"
     },
     {
       "id": 69,
       "word": "曲げる",
       "sentence1": "紙を曲げないように気をつけてください。",
-      "sentence2": "彼は靴ひもを結ぶためにかがまなければなりませんでした。"
+      "sentence2": "彼は靴ひもを結ぶためにかがまなければなりませんでした。",
+      "pronunciation": "/maɡeɾɯ/"
     },
     {
       "id": 70,
       "word": "利益",
       "sentence1": "新しい政策は多くの人々に利益をもたらします。",
-      "sentence2": "彼女は健康的なライフスタイルの恩恵を享受しています。"
+      "sentence2": "彼女は健康的なライフスタイルの恩恵を享受しています。",
+      "pronunciation": "/ɾieki/"
     },
     {
       "id": 71,
       "word": "より良い",
       "sentence1": "ぐっすり眠った後、気分が良くなりました。",
-      "sentence2": "この解決策は前のものよりも良いです。"
+      "sentence2": "この解決策は前のものよりも良いです。",
+      "pronunciation": "/joɾijoi/"
     },
     {
       "id": 72,
       "word": "噛む",
       "sentence1": "舌を噛まないように気をつけてください。",
-      "sentence2": "その犬はおもちゃを噛むのが好きです。"
+      "sentence2": "その犬はおもちゃを噛むのが好きです。",
+      "pronunciation": "/kamɯ/"
     },
     {
       "id": 73,
       "word": "ブロックする",
       "sentence1": "彼らは車で道路を塞ごうとしました。",
-      "sentence2": "新しい法律は不公正な慣行を阻止します。"
+      "sentence2": "新しい法律は不公正な慣行を阻止します。",
+      "pronunciation": "/bɯɾokːɯsɯɾɯ/"
     },
     {
       "id": 74,
       "word": "黒板",
       "sentence1": "先生は黒板に授業内容を書きました。",
-      "sentence2": "このプロジェクトにはもっと大きなボードが必要です。"
+      "sentence2": "このプロジェクトにはもっと大きなボードが必要です。",
+      "pronunciation": "/kokɯbaɴ/"
     },
     {
       "id": 75,
       "word": "爆弾",
       "sentence1": "爆弾は市の中心部で爆発しました。",
-      "sentence2": "彼らは廃墟の建物で爆弾を発見しました。"
+      "sentence2": "彼らは廃墟の建物で爆弾を発見しました。",
+      "pronunciation": "/bakɯdaɴ/"
     },
     {
       "id": 76,
       "word": "国境",
       "sentence1": "川は2国間の自然な国境を形成しています。",
-      "sentence2": "彼らは問題なく国境を越えました。"
+      "sentence2": "彼らは問題なく国境を越えました。",
+      "pronunciation": "/kokːjoː/"
     },
     {
       "id": 77,
       "word": "悩ませる",
       "sentence1": "仕事中に邪魔しないでください。",
-      "sentence2": "人が遅刻すると困ります。"
+      "sentence2": "人が遅刻すると困ります。",
+      "pronunciation": "/najamaseɾɯ/"
     },
     {
       "id": 78,
       "word": "枝",
       "sentence1": "その木には丈夫な枝があります。",
-      "sentence2": "彼女は枝に座って本を読みました。"
+      "sentence2": "彼女は枝に座って本を読みました。",
+      "pronunciation": "/eda/"
     },
     {
       "id": 79,
       "word": "ブランド",
       "sentence1": "ナイキは人気のスポーツブランドです。",
-      "sentence2": "私はこのブランドのコーヒーが好きです。"
+      "sentence2": "私はこのブランドのコーヒーが好きです。",
+      "pronunciation": "/bɯɾaɴdo/"
     },
     {
       "id": 80,
       "word": "勇敢な",
       "sentence1": "勇敢な兵士がその子供を救いました。",
-      "sentence2": "正しいことのために立ち上がるには勇敢な人が必要です。"
+      "sentence2": "正しいことのために立ち上がるには勇敢な人が必要です。",
+      "pronunciation": "/jɯːkaɴna/"
     },
     {
       "id": 81,
       "word": "息",
       "sentence1": "深呼吸してリラックスしてください。",
-      "sentence2": "彼の息はニンニクの匂いがしました。"
+      "sentence2": "彼の息はニンニクの匂いがしました。",
+      "pronunciation": "/iki/"
     },
     {
       "id": 82,
       "word": "呼吸する",
       "sentence1": "深く呼吸することを忘れないでください。",
-      "sentence2": "彼女は泳いでいる間、呼吸するのを忘れました。"
+      "sentence2": "彼女は泳いでいる間、呼吸するのを忘れました。",
+      "pronunciation": "/kokjɯːsɯɾɯ/"
     },
     {
       "id": 83,
       "word": "呼吸",
       "sentence1": "呼吸エクササイズはストレスを軽減できます。",
-      "sentence2": "彼には呼吸の問題があります。"
+      "sentence2": "彼には呼吸の問題があります。",
+      "pronunciation": "/kokjɯː/"
     },
     {
       "id": 84,
       "word": "花嫁",
       "sentence1": "花嫁は結婚式の日にとても美しく見えました。",
-      "sentence2": "彼女は花嫁の友人です。"
+      "sentence2": "彼女は花嫁の友人です。",
+      "pronunciation": "/hanajome/"
     },
     {
       "id": 85,
       "word": "泡",
       "sentence1": "子供たちは公園でシャボン玉を吹きました。",
-      "sentence2": "泡が空中で弾けました。"
+      "sentence2": "泡が空中で弾けました。",
+      "pronunciation": "/awa/"
     },
     {
       "id": 86,
       "word": "埋める",
       "sentence1": "彼らはタイムカプセルを埋めることにしました。",
-      "sentence2": "彼は過去を葬りたいと思っています。"
+      "sentence2": "彼は過去を葬りたいと思っています。",
+      "pronunciation": "/ɯmeɾɯ/"
     },
     {
       "id": 87,
       "word": "〜によって",
       "sentence1": "この本は有名な作家によって書かれました。",
-      "sentence2": "彼女は電車で旅行しました。"
+      "sentence2": "彼女は電車で旅行しました。",
+      "pronunciation": "/~nijotːe/"
     },
     {
       "id": 88,
       "word": "穏やかな",
       "sentence1": "緊急時には落ち着いてください。",
-      "sentence2": "彼女は穏やかな声で話しました。"
+      "sentence2": "彼女は穏やかな声で話しました。",
+      "pronunciation": "/odajakana/"
     },
     {
       "id": 89,
       "word": "キャンペーン",
       "sentence1": "そのキャンペーンは成功しました。",
-      "sentence2": "彼らは新しい広告キャンペーンを開始しました。"
+      "sentence2": "彼らは新しい広告キャンペーンを開始しました。",
+      "pronunciation": "/kjaɴpeːɴ/"
     },
     {
       "id": 90,
       "word": "キャンパス",
       "sentence1": "大学のキャンパスは美しいです。",
-      "sentence2": "キャンパスには多くの木があります。"
+      "sentence2": "キャンパスには多くの木があります。",
+      "pronunciation": "/kjaɴpasɯ/"
     },
     {
       "id": 91,
       "word": "候補者",
       "sentence1": "彼女はその職位の候補者です。",
-      "sentence2": "候補者は明日面接を受けます。"
+      "sentence2": "候補者は明日面接を受けます。",
+      "pronunciation": "/koːhoɕa/"
     },
     {
       "id": 92,
       "word": "帽子",
       "sentence1": "彼は野球帽をかぶっていました。",
-      "sentence2": "帽子は太陽から目を保護します。"
+      "sentence2": "帽子は太陽から目を保護します。",
+      "pronunciation": "/boːɕi/"
     },
     {
       "id": 93,
       "word": "キャプテン",
       "sentence1": "チームのキャプテンは非常に経験豊富です。",
-      "sentence2": "彼女は去年キャプテンに任命されました。"
+      "sentence2": "彼女は去年キャプテンに任命されました。",
+      "pronunciation": "/kjapɯteɴ/"
     },
     {
       "id": 94,
       "word": "不注意な",
       "sentence1": "彼の不注意なミスで会社は損失を被りました。",
-      "sentence2": "もっと気をつけて、そんなに不注意にならないで。"
+      "sentence2": "もっと気をつけて、そんなに不注意にならないで。",
+      "pronunciation": "/ɸɯtɕɯːina/"
     },
     {
       "id": 95,
       "word": "カテゴリー",
       "sentence1": "この本はフィクションのカテゴリーに属します。",
-      "sentence2": "音楽には多くのカテゴリーがあります。"
+      "sentence2": "音楽には多くのカテゴリーがあります。",
+      "pronunciation": "/kateɡoɾiː/"
     },
     {
       "id": 96,
       "word": "天井",
       "sentence1": "天井は白く塗られています。",
-      "sentence2": "シャンデリアは天井から吊り下げられています。"
+      "sentence2": "シャンデリアは天井から吊り下げられています。",
+      "pronunciation": "/teɴdʑoː/"
     },
     {
       "id": 97,
       "word": "お祝い",
       "sentence1": "彼女の誕生日に盛大なお祝いをしました。",
-      "sentence2": "お祝いは一晩中続きました。"
+      "sentence2": "お祝いは一晩中続きました。",
+      "pronunciation": "/oiwai/"
     },
     {
       "id": 98,
       "word": "中央の",
       "sentence1": "セントラルパークはリラックスするのに最適な場所です。",
-      "sentence2": "中心的な問題はまだ解決されていません。"
+      "sentence2": "中心的な問題はまだ解決されていません。",
+      "pronunciation": "/tɕɯːoːno/"
     },
     {
       "id": 99,
       "word": "中心",
       "sentence1": "ショッピングセンターは週末にとても混雑します。",
-      "sentence2": "彼女は市の中心部に住んでいます。"
+      "sentence2": "彼女は市の中心部に住んでいます。",
+      "pronunciation": "/tɕɯːɕiɴ/"
     },
     {
       "id": 100,
       "word": "式",
       "sentence1": "卒業式は6月に行われます。",
-      "sentence2": "彼らは伝統的な結婚式を挙げました。"
+      "sentence2": "彼らは伝統的な結婚式を挙げました。",
+      "pronunciation": "/ɕiki/"
     },
     {
       "id": 101,
       "word": "鎖",
       "sentence1": "自転車はチェーンで施錠されています。",
-      "sentence2": "彼は首にチェーンをしていました。"
+      "sentence2": "彼は首にチェーンをしていました。",
+      "pronunciation": "/kɯsaɾi/"
     },
     {
       "id": 102,
       "word": "挑戦",
       "sentence1": "その山を登るのは大きな挑戦でした。",
-      "sentence2": "彼女は良い挑戦が好きです。"
+      "sentence2": "彼女は良い挑戦が好きです。",
+      "pronunciation": "/tɕoːseɴ/"
     },
     {
       "id": 103,
       "word": "チャンピオン",
       "sentence1": "彼はトーナメントのチャンピオンです。",
-      "sentence2": "彼女は決勝戦に勝ってチャンピオンになりました。"
+      "sentence2": "彼女は決勝戦に勝ってチャンピオンになりました。",
+      "pronunciation": "/tɕaɴpioɴ/"
     },
     {
       "id": 104,
       "word": "チャンネル",
       "sentence1": "このチャンネルでお気に入りの番組を見ています。",
-      "sentence2": "このチャンネルは24時間ニュースを放送しています。"
+      "sentence2": "このチャンネルは24時間ニュースを放送しています。",
+      "pronunciation": "/tɕaɴneɾɯ/"
     },
     {
       "id": 105,
       "word": "章",
       "sentence1": "これは本の第1章です。",
-      "sentence2": "各章の最後に要約があります。"
+      "sentence2": "各章の最後に要約があります。",
+      "pronunciation": "/ɕoː/"
     },
     {
       "id": 106,
       "word": "料金",
       "sentence1": "ここでは駐車料金がかかります。",
-      "sentence2": "追加サービスには料金がかかります。"
+      "sentence2": "追加サービスには料金がかかります。",
+      "pronunciation": "/ɾjoːkiɴ/"
     },
     {
       "id": 107,
       "word": "安い",
       "sentence1": "このシャツはとても安いです。",
-      "sentence2": "休暇のために安いホテルを見つけました。"
+      "sentence2": "休暇のために安いホテルを見つけました。",
+      "pronunciation": "/jasɯi/"
     },
     {
       "id": 108,
       "word": "不正をする",
       "sentence1": "試験でカンニングしないでください。",
-      "sentence2": "彼は不正行為がばれました。"
+      "sentence2": "彼は不正行為がばれました。",
+      "pronunciation": "/ɸɯseːwosɯɾɯ/"
     },
     {
       "id": 109,
       "word": "陽気な",
       "sentence1": "彼女は陽気な性格です。",
-      "sentence2": "陽気な音楽で気分が上がりました。"
+      "sentence2": "陽気な音楽で気分が上がりました。",
+      "pronunciation": "/joːkina/"
     },
     {
       "id": 110,
       "word": "化学的な",
       "sentence1": "水は化学化合物です。",
-      "sentence2": "化学反応で熱が発生しました。"
+      "sentence2": "化学反応で熱が発生しました。",
+      "pronunciation": "/kaɡakɯtekina/"
     },
     {
       "id": 111,
       "word": "胸",
       "sentence1": "彼は胸にタトゥーがあります。",
-      "sentence2": "宝箱は金でいっぱいでした。"
+      "sentence2": "宝箱は金でいっぱいでした。",
+      "pronunciation": "/mɯne/"
     },
     {
       "id": 112,
       "word": "子供時代",
       "sentence1": "私は幸せな子供時代を過ごしました。",
-      "sentence2": "子供時代の思い出は貴重です。"
+      "sentence2": "子供時代の思い出は貴重です。",
+      "pronunciation": "/kodomodʑidai/"
     },
     {
       "id": 113,
       "word": "主張",
       "sentence1": "彼女は製品について主張をしました。",
-      "sentence2": "彼の主張は証拠によって裏付けられました。"
+      "sentence2": "彼の主張は証拠によって裏付けられました。",
+      "pronunciation": "/ɕɯtɕoː/"
     },
     {
       "id": 114,
       "word": "条項",
       "sentence1": "これは法的条項です。",
-      "sentence2": "契約には機密保持条項があります。"
+      "sentence2": "契約には機密保持条項があります。",
+      "pronunciation": "/dʑoːkoː/"
     },
     {
       "id": 115,
       "word": "明確な",
       "sentence1": "説明は明確です。",
-      "sentence2": "彼女は将来の明確な目標を持っています。"
+      "sentence2": "彼女は将来の明確な目標を持っています。",
+      "pronunciation": "/meːkakɯna/"
     },
     {
       "id": 116,
       "word": "クリック",
       "sentence1": "リンクをクリックしてください。",
-      "sentence2": "カチッという音が聞こえました。"
+      "sentence2": "カチッという音が聞こえました。",
+      "pronunciation": "/kɯɾikːɯ/"
     },
     {
       "id": 117,
       "word": "顧客",
       "sentence1": "お客様は常に正しい。",
-      "sentence2": "クライアントと会う必要があります。"
+      "sentence2": "クライアントと会う必要があります。",
+      "pronunciation": "/kokjakɯ/"
     },
     {
       "id": 118,
       "word": "登る",
       "sentence1": "彼らは山に登る予定です。",
-      "sentence2": "彼女は木に登るのが大好きです。"
+      "sentence2": "彼女は木に登るのが大好きです。",
+      "pronunciation": "/noboɾɯ/"
     },
     {
       "id": 119,
       "word": "閉める",
       "sentence1": "ドアを閉めてください。",
-      "sentence2": "その店は私の家の近くにあります。"
+      "sentence2": "その店は私の家の近くにあります。",
+      "pronunciation": "/ɕimeɾɯ/"
     },
     {
       "id": 120,
       "word": "布",
       "sentence1": "この布は綿でできています。",
-      "sentence2": "このプロジェクトに布が必要です。"
+      "sentence2": "このプロジェクトに布が必要です。",
+      "pronunciation": "/nɯno/"
     },
     {
       "id": 121,
       "word": "手がかり",
       "sentence1": "私はその謎の手がかりを持っています。",
-      "sentence2": "探偵は重要な手がかりを見つけました。"
+      "sentence2": "探偵は重要な手がかりを見つけました。",
+      "pronunciation": "/teɡakaɾi/"
     },
     {
       "id": 122,
       "word": "コーチ",
       "sentence1": "彼はサッカーのコーチです。",
-      "sentence2": "コーチは私たちに貴重なアドバイスをくれました。"
+      "sentence2": "コーチは私たちに貴重なアドバイスをくれました。",
+      "pronunciation": "/koːtɕi/"
     },
     {
       "id": 123,
       "word": "石炭",
       "sentence1": "その列車は石炭で動きます。",
-      "sentence2": "彼らは炭鉱を発見しました。"
+      "sentence2": "彼らは炭鉱を発見しました。",
+      "pronunciation": "/sekitaɴ/"
     },
     {
       "id": 124,
       "word": "コイン",
       "sentence1": "道でコインを見つけました。",
-      "sentence2": "彼は珍しいコインを集めています。"
+      "sentence2": "彼は珍しいコインを集めています。",
+      "pronunciation": "/koiɴ/"
     },
     {
       "id": 125,
       "word": "コレクション",
       "sentence1": "彼女は切手のコレクションを持っています。",
-      "sentence2": "美術館には新しいアートコレクションがあります。"
+      "sentence2": "美術館には新しいアートコレクションがあります。",
+      "pronunciation": "/koɾekɯɕoɴ/"
     },
     {
       "id": 126,
       "word": "色付きの",
       "sentence1": "色鉛筆が好きです。",
-      "sentence2": "壁は明るい色で塗られています。"
+      "sentence2": "壁は明るい色で塗られています。",
+      "pronunciation": "/iɾozɯkekino/"
     },
     {
       "id": 127,
       "word": "組み合わせる",
       "sentence1": "私たちの努力を合わせましょう。",
-      "sentence2": "このレシピは甘酸っぱい味を組み合わせています。"
+      "sentence2": "このレシピは甘酸っぱい味を組み合わせています。",
+      "pronunciation": "/kɯmiawaseɾɯ/"
     },
     {
       "id": 128,
       "word": "コメント",
       "sentence1": "コメントを残してもいいですか？",
-      "sentence2": "彼のコメントはとても洞察力がありました。"
+      "sentence2": "彼のコメントはとても洞察力がありました。",
+      "pronunciation": "/komeɴto/"
     },
     {
       "id": 129,
       "word": "商業的な",
       "sentence1": "これは商業製品です。",
-      "sentence2": "そのCMはとても面白かったです。"
+      "sentence2": "そのCMはとても面白かったです。",
+      "pronunciation": "/ɕoːɡjoːtekina/"
     },
     {
       "id": 130,
       "word": "約束する",
       "sentence1": "プロジェクトを完成させることを約束します。",
-      "sentence2": "彼女はその大義に身を捧げました。"
+      "sentence2": "彼女はその大義に身を捧げました。",
+      "pronunciation": "/jakɯsokɯsɯɾɯ/"
     },
     {
       "id": 131,
       "word": "コミュニケーション",
       "sentence1": "良いコミュニケーションが鍵です。",
-      "sentence2": "コミュニケーションを改善する必要があります。"
+      "sentence2": "コミュニケーションを改善する必要があります。",
+      "pronunciation": "/komjɯnikeːɕoɴ/"
     },
     {
       "id": 132,
       "word": "比較",
       "sentence1": "これは価格の比較です。",
-      "sentence2": "昨年と比較して、売上は増加しました。"
+      "sentence2": "昨年と比較して、売上は増加しました。",
+      "pronunciation": "/hikakɯ/"
     },
     {
       "id": 133,
       "word": "競争相手",
       "sentence1": "私たちの主な競争相手は非常に強いです。",
-      "sentence2": "競合他社を分析する必要があります。"
+      "sentence2": "競合他社を分析する必要があります。",
+      "pronunciation": "/kjoːsoːaite/"
     },
     {
       "id": 134,
       "word": "競争的な",
       "sentence1": "これは競争の激しい市場です。",
-      "sentence2": "彼女はスポーツでとても負けず嫌いです。"
+      "sentence2": "彼女はスポーツでとても負けず嫌いです。",
+      "pronunciation": "/kjoːsoːtekina/"
     },
     {
       "id": 135,
       "word": "苦情",
       "sentence1": "サービスについて苦情があります。",
-      "sentence2": "苦情はすぐに解決されました。"
+      "sentence2": "苦情はすぐに解決されました。",
+      "pronunciation": "/kɯdʑoː/"
     },
     {
       "id": 136,
       "word": "複雑な",
       "sentence1": "これは複雑な問題です。",
-      "sentence2": "説明が複雑すぎます。"
+      "sentence2": "説明が複雑すぎます。",
+      "pronunciation": "/ɸɯkɯzatsɯna/"
     },
     {
       "id": 137,
       "word": "集中する",
       "sentence1": "仕事に集中する必要があります。",
-      "sentence2": "彼女は集中するのが難しいと感じています。"
+      "sentence2": "彼女は集中するのが難しいと感じています。",
+      "pronunciation": "/ɕɯːtɕɯːsɯɾɯ/"
     },
     {
       "id": 138,
       "word": "結論づける",
       "sentence1": "今、会議を終了できます。",
-      "sentence2": "彼女は引用でスピーチを締めくくりました。"
+      "sentence2": "彼女は引用でスピーチを締めくくりました。",
+      "pronunciation": "/ketsɯɾoɴzɯkeɾɯ/"
     },
     {
       "id": 139,
       "word": "結論",
       "sentence1": "あなたの結論は何ですか？",
-      "sentence2": "結論は証拠に基づいています。"
+      "sentence2": "結論は証拠に基づいています。",
+      "pronunciation": "/ketsɯɾoɴ/"
     },
     {
       "id": 140,
       "word": "自信のある",
       "sentence1": "彼女は自分の能力に自信を持っています。",
-      "sentence2": "彼は自信を持って話しました。"
+      "sentence2": "彼は自信を持って話しました。",
+      "pronunciation": "/dʑiɕiɴnoaɾɯ/"
     },
     {
       "id": 141,
       "word": "確認する",
       "sentence1": "予約を確認していただけますか？",
-      "sentence2": "確認メールを受け取りました。"
+      "sentence2": "確認メールを受け取りました。",
+      "pronunciation": "/kakɯniɴsɯɾɯ/"
     },
     {
       "id": 142,
       "word": "混乱させる",
       "sentence1": "この質問は一部の人を混乱させるかもしれません。",
-      "sentence2": "問題を混同しないでください。"
+      "sentence2": "問題を混同しないでください。",
+      "pronunciation": "/koɴɾaɴsaseɾɯ/"
     },
     {
       "id": 143,
       "word": "混乱した",
       "sentence1": "彼女は説明に混乱しました。",
-      "sentence2": "会議中、彼は困惑しているように見えました。"
+      "sentence2": "会議中、彼は困惑しているように見えました。",
+      "pronunciation": "/koɴɾaɴɕita/"
     },
     {
       "id": 144,
       "word": "接続",
       "sentence1": "彼らの間には強いつながりがあります。",
-      "sentence2": "インターネット接続が遅いです。"
+      "sentence2": "インターネット接続が遅いです。",
+      "pronunciation": "/setsɯzokɯ/"
     },
     {
       "id": 145,
       "word": "結果",
       "sentence1": "すべての行動には結果があります。",
-      "sentence2": "その決定の結果は深刻でした。"
+      "sentence2": "その決定の結果は深刻でした。",
+      "pronunciation": "/kekːa/"
     },
     {
       "id": 146,
       "word": "構成される",
       "sentence1": "チームは5人のメンバーで構成されています。",
-      "sentence2": "委員会はその分野の専門家で構成されています。"
+      "sentence2": "委員会はその分野の専門家で構成されています。",
+      "pronunciation": "/koːseːsaɾeɾɯ/"
     },
     {
       "id": 147,
       "word": "消費する",
       "sentence1": "エネルギー消費を減らす必要があります。",
-      "sentence2": "火災で建物全体が焼失しました。"
+      "sentence2": "火災で建物全体が焼失しました。",
+      "pronunciation": "/ɕoːhisɯɾɯ/"
     },
     {
       "id": 148,
       "word": "消費者",
       "sentence1": "消費者は常に正しい。",
-      "sentence2": "消費者行動を理解する必要があります。"
+      "sentence2": "消費者行動を理解する必要があります。",
+      "pronunciation": "/ɕoːhiɕa/"
     },
     {
       "id": 149,
       "word": "連絡",
       "sentence1": "私と連絡を取り続けてください。",
-      "sentence2": "昔の友人と連絡が取れなくなりました。"
+      "sentence2": "昔の友人と連絡が取れなくなりました。",
+      "pronunciation": "/ɾeɴɾakɯ/"
     },
     {
       "id": 150,
       "word": "容器",
       "sentence1": "輸送コンテナは満杯です。",
-      "sentence2": "保管用にもっと容器が必要です。"
+      "sentence2": "保管用にもっと容器が必要です。",
+      "pronunciation": "/joːki/"
     },
     {
       "id": 151,
       "word": "内容",
       "sentence1": "この本の内容は興味深いです。",
-      "sentence2": "内容を慎重に確認してください。"
+      "sentence2": "内容を慎重に確認してください。",
+      "pronunciation": "/naijoː/"
     },
     {
       "id": 152,
       "word": "継続的な",
       "sentence1": "継続的な騒音は迷惑です。",
-      "sentence2": "彼女は家族から継続的なサポートを受けています。"
+      "sentence2": "彼女は家族から継続的なサポートを受けています。",
+      "pronunciation": "/keːzokɯtekina/"
     },
     {
       "id": 153,
       "word": "対照",
       "sentence1": "2つの絵画には対照があります。",
-      "sentence2": "昨年とは対照的に、売上は増加しました。"
+      "sentence2": "昨年とは対照的に、売上は増加しました。",
+      "pronunciation": "/taiɕoː/"
     },
     {
       "id": 154,
       "word": "便利な",
       "sentence1": "この場所はとても便利です。",
-      "sentence2": "ご都合の良い時間はありますか？"
+      "sentence2": "ご都合の良い時間はありますか？",
+      "pronunciation": "/beɴɾina/"
     },
     {
       "id": 155,
       "word": "納得させる",
       "sentence1": "彼を説得して私たちを助けてもらう必要があります。",
-      "sentence2": "彼女は私に新しいレストランを試すよう説得しました。"
+      "sentence2": "彼女は私に新しいレストランを試すよう説得しました。",
+      "pronunciation": "/natːokɯsaseɾɯ/"
     },
     {
       "id": 156,
       "word": "かっこいい",
       "sentence1": "そのジャケットは本当にかっこいいです。",
-      "sentence2": "彼女はクールなスタイルを持っています。"
+      "sentence2": "彼女はクールなスタイルを持っています。",
+      "pronunciation": "/kakːoiː/"
     },
     {
       "id": 157,
       "word": "衣装",
       "sentence1": "彼はスーパーヒーローのコスチュームを着ていました。",
-      "sentence2": "仮装パーティーはとても楽しかったです。"
+      "sentence2": "仮装パーティーはとても楽しかったです。",
+      "pronunciation": "/iɕoː/"
     },
     {
       "id": 158,
       "word": "コテージ",
       "sentence1": "彼らは山にコテージを持っています。",
-      "sentence2": "そのコテージはとても居心地が良いです。"
+      "sentence2": "そのコテージはとても居心地が良いです。",
+      "pronunciation": "/koteːdʑi/"
     },
     {
       "id": 159,
       "word": "綿",
       "sentence1": "このシャツは綿でできています。",
-      "sentence2": "綿は柔らかい素材です。"
+      "sentence2": "綿は柔らかい素材です。",
+      "pronunciation": "/meɴ/"
     },
     {
       "id": 160,
       "word": "数える",
       "sentence1": "10まで数えられますか？",
-      "sentence2": "お金を数えられます。"
+      "sentence2": "お金を数えられます。",
+      "pronunciation": "/kazoeɾɯ/"
     },
     {
       "id": 161,
       "word": "田舎",
       "sentence1": "彼らは田舎に住んでいます。",
-      "sentence2": "春の田舎は美しいです。"
+      "sentence2": "春の田舎は美しいです。",
+      "pronunciation": "/inaka/"
     },
     {
       "id": 162,
       "word": "裁判所",
       "sentence1": "法廷は開廷中です。",
-      "sentence2": "彼は犯罪で裁判所に連れて行かれました。"
+      "sentence2": "彼は犯罪で裁判所に連れて行かれました。",
+      "pronunciation": "/saibaɴɕo/"
     },
     {
       "id": 163,
       "word": "覆う",
       "sentence1": "テーブルを布で覆ってください。",
-      "sentence2": "雪が地面を覆いました。"
+      "sentence2": "雪が地面を覆いました。",
+      "pronunciation": "/oːː/"
     },
     {
       "id": 164,
       "word": "覆われた",
       "sentence1": "本はほこりをかぶっています。",
-      "sentence2": "車は雪に覆われています。"
+      "sentence2": "車は雪に覆われています。",
+      "pronunciation": "/oːwaɾeta/"
     },
     {
       "id": 165,
       "word": "クリーム",
       "sentence1": "コーヒーにクリームを入れるのが好きです。",
-      "sentence2": "彼女は肌にクリームを塗りました。"
+      "sentence2": "彼女は肌にクリームを塗りました。",
+      "pronunciation": "/kɯɾiːmɯ/"
     },
     {
       "id": 166,
       "word": "犯罪者",
       "sentence1": "犯人は警察に捕まりました。",
-      "sentence2": "彼には犯罪歴があります。"
+      "sentence2": "彼には犯罪歴があります。",
+      "pronunciation": "/haɴzaiɕa/"
     },
     {
       "id": 167,
       "word": "残酷な",
       "sentence1": "彼をそのように扱うのは残酷でした。",
-      "sentence2": "残酷な罰は皆を驚かせました。"
+      "sentence2": "残酷な罰は皆を驚かせました。",
+      "pronunciation": "/zaɴkokɯna/"
     },
     {
       "id": 168,
       "word": "文化的な",
       "sentence1": "文化の違いは難しい場合があります。",
-      "sentence2": "彼女は文化人類学を勉強しています。"
+      "sentence2": "彼女は文化人類学を勉強しています。",
+      "pronunciation": "/bɯɴkatekina/"
     },
     {
       "id": 169,
       "word": "通貨",
       "sentence1": "日本の通貨は円です。",
-      "sentence2": "通貨を両替する必要があります。"
+      "sentence2": "通貨を両替する必要があります。",
+      "pronunciation": "/tsɯːka/"
     },
     {
       "id": 170,
       "word": "現在の",
       "sentence1": "現在の状況は困難です。",
-      "sentence2": "現在のお仕事は何ですか？"
+      "sentence2": "現在のお仕事は何ですか？",
+      "pronunciation": "/ɡeɴzaino/"
     },
     {
       "id": 171,
       "word": "現在",
       "sentence1": "私は現在プロジェクトに取り組んでいます。",
-      "sentence2": "彼女は現在海外で勉強しています。"
+      "sentence2": "彼女は現在海外で勉強しています。",
+      "pronunciation": "/ɡeɴzai/"
     },
     {
       "id": 172,
       "word": "カーテン",
       "sentence1": "カーテンは青いです。",
-      "sentence2": "カーテンを閉めてください。"
+      "sentence2": "カーテンを閉めてください。",
+      "pronunciation": "/kaːteɴ/"
     },
     {
       "id": 173,
       "word": "カスタム",
       "sentence1": "これはカスタムデザインです。",
-      "sentence2": "彼らはカスタムソリューションを提供しています。"
+      "sentence2": "彼らはカスタムソリューションを提供しています。",
+      "pronunciation": "/kasɯtamɯ/"
     },
     {
       "id": 174,
       "word": "切る",
       "sentence1": "紙を切ってください。",
-      "sentence2": "彼はケーキを切り分けました。"
+      "sentence2": "彼はケーキを切り分けました。",
+      "pronunciation": "/kiɾɯ/"
     },
     {
       "id": 175,
       "word": "毎日の",
       "sentence1": "私は毎日ニュースを読みます。",
-      "sentence2": "彼女には日課があります。"
+      "sentence2": "彼女には日課があります。",
+      "pronunciation": "/mainitɕino/"
     },
     {
       "id": 176,
       "word": "損害",
       "sentence1": "嵐で屋根が損傷しました。",
-      "sentence2": "損害を評価する必要があります。"
+      "sentence2": "損害を評価する必要があります。",
+      "pronunciation": "/soɴɡai/"
     },
     {
       "id": 177,
       "word": "取引",
       "sentence1": "彼らは協力する取引をしました。",
-      "sentence2": "その取引は双方に有益でした。"
+      "sentence2": "その取引は双方に有益でした。",
+      "pronunciation": "/toɾihiki/"
     },
     {
       "id": 178,
       "word": "10年",
       "sentence1": "10年は10年間です。",
-      "sentence2": "この10年間で大きな変化がありました。"
+      "sentence2": "この10年間で大きな変化がありました。",
+      "pronunciation": "/10neɴ/"
     },
     {
       "id": 179,
       "word": "飾る",
       "sentence1": "パーティーのために部屋を飾ります。",
-      "sentence2": "彼女は家を飾るのが大好きです。"
+      "sentence2": "彼女は家を飾るのが大好きです。",
+      "pronunciation": "/kazaɾɯ/"
     },
     {
       "id": 180,
       "word": "深い",
       "sentence1": "その湖はとても深いです。",
-      "sentence2": "彼は潜る前に深呼吸しました。"
+      "sentence2": "彼は潜る前に深呼吸しました。",
+      "pronunciation": "/ɸɯkai/"
     },
     {
       "id": 181,
       "word": "定義する",
       "sentence1": "その言葉を定義できますか？",
-      "sentence2": "幸せを定義するのは難しいです。"
+      "sentence2": "幸せを定義するのは難しいです。",
+      "pronunciation": "/teːɡisɯɾɯ/"
     },
     {
       "id": 182,
       "word": "明確な",
       "sentence1": "その質問には明確な答えがあります。",
-      "sentence2": "明確な計画が必要です。"
+      "sentence2": "明確な計画が必要です。",
+      "pronunciation": "/meːkakɯna/"
     },
     {
       "id": 183,
       "word": "定義",
       "sentence1": "この言葉の定義は何ですか？",
-      "sentence2": "定義が明確ではありません。"
+      "sentence2": "定義が明確ではありません。",
+      "pronunciation": "/teːɡi/"
     },
     {
       "id": 184,
       "word": "配達する",
       "sentence1": "明日荷物を届けます。",
-      "sentence2": "彼らは食べ物の配達を提供しています。"
+      "sentence2": "彼らは食べ物の配達を提供しています。",
+      "pronunciation": "/haitatsɯsɯɾɯ/"
     },
     {
       "id": 185,
       "word": "出発",
       "sentence1": "出発時間は午前10時です。",
-      "sentence2": "彼女の出発を悲しんでいます。"
+      "sentence2": "彼女の出発を悲しんでいます。",
+      "pronunciation": "/ɕɯpːatsɯ/"
     },
     {
       "id": 186,
       "word": "にもかかわらず",
       "sentence1": "雨にもかかわらず、私たちはハイキングに行きました。",
-      "sentence2": "困難にもかかわらず、彼女は成功しました。"
+      "sentence2": "困難にもかかわらず、彼女は成功しました。",
+      "pronunciation": "/nimokakawaɾazɯ/"
     },
     {
       "id": 187,
       "word": "目的地",
       "sentence1": "パリは人気の観光地です。",
-      "sentence2": "あなたの夢の旅行先はどこですか？"
+      "sentence2": "あなたの夢の旅行先はどこですか？",
+      "pronunciation": "/mokɯtekitɕi/"
     },
     {
       "id": 188,
       "word": "決定する",
       "sentence1": "問題の原因を特定する必要があります。",
-      "sentence2": "テストはあなたのレベルを判断するのに役立ちます。"
+      "sentence2": "テストはあなたのレベルを判断するのに役立ちます。",
+      "pronunciation": "/ketːeːsɯɾɯ/"
     },
     {
       "id": 189,
       "word": "決心した",
       "sentence1": "彼女は成功する決意をしています。",
-      "sentence2": "困難にもかかわらず、彼は決意を持ち続けました。"
+      "sentence2": "困難にもかかわらず、彼は決意を持ち続けました。",
+      "pronunciation": "/keɕːiɴɕita/"
     },
     {
       "id": 190,
       "word": "開発",
       "sentence1": "技術の発展は急速です。",
-      "sentence2": "私たちは個人の成長に焦点を当てています。"
+      "sentence2": "私たちは個人の成長に焦点を当てています。",
+      "pronunciation": "/kaihatsɯ/"
     },
     {
       "id": 191,
       "word": "図",
       "sentence1": "説明のために図を参照してください。",
-      "sentence2": "図はプロセスを説明しています。"
+      "sentence2": "図はプロセスを説明しています。",
+      "pronunciation": "/zɯ/"
     },
     {
       "id": 192,
       "word": "ダイヤモンド",
       "sentence1": "そのダイヤモンドはとても価値があります。",
-      "sentence2": "彼女はダイヤモンドの指輪を受け取りました。"
+      "sentence2": "彼女はダイヤモンドの指輪を受け取りました。",
+      "pronunciation": "/daijamoɴdo/"
     },
     {
       "id": 193,
       "word": "困難",
       "sentence1": "彼は多くの困難に直面しました。",
-      "sentence2": "課題の難しさは予想外でした。"
+      "sentence2": "課題の難しさは予想外でした。",
+      "pronunciation": "/koɴnaɴ/"
     },
     {
       "id": 194,
       "word": "直接の",
       "sentence1": "直接的な答えをください。",
-      "sentence2": "この道は市への直通ルートです。"
+      "sentence2": "この道は市への直通ルートです。",
+      "pronunciation": "/tɕokɯsetsɯno/"
     },
     {
       "id": 195,
       "word": "直接",
       "sentence1": "私は彼に直接話しました。",
-      "sentence2": "情報は彼女に直接送られました。"
+      "sentence2": "情報は彼女に直接送られました。",
+      "pronunciation": "/tɕokɯsetsɯ/"
     },
     {
       "id": 196,
       "word": "汚れ",
       "sentence1": "靴の汚れが目立ちます。",
-      "sentence2": "床の汚れを掃除してください。"
+      "sentence2": "床の汚れを掃除してください。",
+      "pronunciation": "/joɡoɾe/"
     },
     {
       "id": 197,
       "word": "欠点",
       "sentence1": "主な欠点はコストです。",
-      "sentence2": "このアプローチには長所と短所があります。"
+      "sentence2": "このアプローチには長所と短所があります。",
+      "pronunciation": "/ketːeɴ/"
     },
     {
       "id": 198,
       "word": "失望した",
       "sentence1": "彼女は結果に失望しました。",
-      "sentence2": "映画の後、失望しました。"
+      "sentence2": "映画の後、失望しました。",
+      "pronunciation": "/ɕitsɯboːɕita/"
     },
     {
       "id": 199,
       "word": "がっかりする",
       "sentence1": "パフォーマンスは期待外れでした。",
-      "sentence2": "進歩が見られないのは残念です。"
+      "sentence2": "進歩が見られないのは残念です。",
+      "pronunciation": "/ɡakːaɾisɯɾɯ/"
     },
     {
       "id": 200,
       "word": "割引",
       "sentence1": "彼らは製品の割引を提供しました。",
-      "sentence2": "ホリデーセールの時期に買い物するのが大好きです。"
+      "sentence2": "ホリデーセールの時期に買い物するのが大好きです。",
+      "pronunciation": "/waɾibiki/"
     },
     {
       "id": 201,
       "word": "嫌い",
       "sentence1": "大きな音が嫌いです。",
-      "sentence2": "彼女は辛い食べ物が嫌いです。"
+      "sentence2": "彼女は辛い食べ物が嫌いです。",
+      "pronunciation": "/kiɾai/"
     },
     {
       "id": 202,
       "word": "分ける",
       "sentence1": "チームでタスクを分担する必要があります。",
-      "sentence2": "ケーキは等分に分けられました。"
+      "sentence2": "ケーキは等分に分けられました。",
+      "pronunciation": "/wakeɾɯ/"
     },
     {
       "id": 203,
       "word": "ドキュメンタリー",
       "sentence1": "魅力的なドキュメンタリーを見ました。",
-      "sentence2": "そのドキュメンタリーは気候変動を探っています。"
+      "sentence2": "そのドキュメンタリーは気候変動を探っています。",
+      "pronunciation": "/dokjɯmeɴtaɾiː/"
     },
     {
       "id": 204,
       "word": "寄付する",
       "sentence1": "慈善団体に寄付したいです。",
-      "sentence2": "彼らは人々に献血を勧めています。"
+      "sentence2": "彼らは人々に献血を勧めています。",
+      "pronunciation": "/kiɸɯsɯɾɯ/"
     },
     {
       "id": 205,
       "word": "二倍",
       "sentence1": "ダブルエスプレッソをもらえますか？",
-      "sentence2": "価格は昨年の2倍になりました。"
+      "sentence2": "価格は昨年の2倍になりました。",
+      "pronunciation": "/nibai/"
     },
     {
       "id": 206,
       "word": "疑い",
       "sentence1": "彼の誠実さに疑いがあります。",
-      "sentence2": "彼女が才能があることは間違いありません。"
+      "sentence2": "彼女が才能があることは間違いありません。",
+      "pronunciation": "/ɯtaɡai/"
     },
     {
       "id": 207,
       "word": "服を着た",
       "sentence1": "彼女は美しいガウンを着ていました。",
-      "sentence2": "彼はその機会にふさわしい服装でした。"
+      "sentence2": "彼はその機会にふさわしい服装でした。",
+      "pronunciation": "/ɸɯkɯwokita/"
     },
     {
       "id": 208,
       "word": "落とす",
       "sentence1": "グラスを落とさないように気をつけてください。",
-      "sentence2": "気温は夜間に下がります。"
+      "sentence2": "気温は夜間に下がります。",
+      "pronunciation": "/otosɯ/"
     },
     {
       "id": 209,
       "word": "ドラム",
       "sentence1": "彼はバンドでドラムを演奏しています。",
-      "sentence2": "ドラムの音は大きかったです。"
+      "sentence2": "ドラムの音は大きかったです。",
+      "pronunciation": "/doɾamɯ/"
     },
     {
       "id": 210,
       "word": "酔った",
       "sentence1": "パーティーの後、彼は酔っていました。",
-      "sentence2": "酔っているときは飲酒運転しないでください。"
+      "sentence2": "酔っているときは飲酒運転しないでください。",
+      "pronunciation": "/jotsɯta/"
     },
     {
       "id": 211,
       "word": "期限",
       "sentence1": "支払いは来週が期限です。",
-      "sentence2": "彼女は5月に出産予定です。"
+      "sentence2": "彼女は5月に出産予定です。",
+      "pronunciation": "/kiɡeɴ/"
     },
     {
       "id": 212,
       "word": "ほこり",
       "sentence1": "棚のほこりは厚いです。",
-      "sentence2": "テーブルのほこりを拭いてください。"
+      "sentence2": "テーブルのほこりを拭いてください。",
+      "pronunciation": "/hokoɾi/"
     },
     {
       "id": 213,
       "word": "義務",
       "sentence1": "他人を助けるのはあなたの義務です。",
-      "sentence2": "彼女は自分の義務を真剣に受け止めています。"
+      "sentence2": "彼女は自分の義務を真剣に受け止めています。",
+      "pronunciation": "/ɡimɯ/"
     },
     {
       "id": 214,
       "word": "地震",
       "sentence1": "地震は大きな被害をもたらしました。",
-      "sentence2": "何マイルも離れた場所から地震を感じました。"
+      "sentence2": "何マイルも離れた場所から地震を感じました。",
+      "pronunciation": "/dʑiɕiɴ/"
     },
     {
       "id": 215,
       "word": "東部の",
       "sentence1": "この国の東部は山岳地帯です。",
-      "sentence2": "彼らは東海岸へ旅行しました。"
+      "sentence2": "彼らは東海岸へ旅行しました。",
+      "pronunciation": "/toːbɯno/"
     },
     {
       "id": 216,
       "word": "経済的な",
       "sentence1": "経済状況は改善しています。",
-      "sentence2": "彼らは経済政策について議論しました。"
+      "sentence2": "彼らは経済政策について議論しました。",
+      "pronunciation": "/keːzaitekina/"
     },
     {
       "id": 217,
       "word": "経済",
       "sentence1": "経済は着実に成長しています。",
-      "sentence2": "強い経済は皆に利益をもたらします。"
+      "sentence2": "強い経済は皆に利益をもたらします。",
+      "pronunciation": "/keːzai/"
     },
     {
       "id": 218,
       "word": "端",
       "sentence1": "崖の端の近くでは気をつけてください。",
-      "sentence2": "ナイフには鋭い刃があります。"
+      "sentence2": "ナイフには鋭い刃があります。",
+      "pronunciation": "/hadʑi/"
     },
     {
       "id": 219,
       "word": "編集者",
       "sentence1": "編集者は出版前に記事をレビューしました。",
-      "sentence2": "彼女は雑誌の編集者として働いています。"
+      "sentence2": "彼女は雑誌の編集者として働いています。",
+      "pronunciation": "/heɴɕɯːɕa/"
     },
     {
       "id": 220,
       "word": "教育する",
       "sentence1": "学校は生徒を効果的に教育することを目指しています。",
-      "sentence2": "健康問題について公衆を教育することは重要です。"
+      "sentence2": "健康問題について公衆を教育することは重要です。",
+      "pronunciation": "/kjoːikɯsɯɾɯ/"
     },
     {
       "id": 221,
       "word": "教育を受けた",
       "sentence1": "彼女は学位を持つ教育を受けた女性です。",
-      "sentence2": "教育を受けた人は、より良い就職機会があることが多いです。"
+      "sentence2": "教育を受けた人は、より良い就職機会があることが多いです。",
+      "pronunciation": "/kjoːikɯwoːketa/"
     },
     {
       "id": 222,
       "word": "教育的な",
       "sentence1": "そのドキュメンタリーは娯楽的で教育的でした。",
-      "sentence2": "教育プログラムは子供の発達に不可欠です。"
+      "sentence2": "教育プログラムは子供の発達に不可欠です。",
+      "pronunciation": "/kjoːikɯtekina/"
     },
     {
       "id": 223,
       "word": "効果的な",
       "sentence1": "新しいマーケティング戦略は効果的であることが証明されました。",
-      "sentence2": "効果的なコミュニケーションは成功する関係の鍵です。"
+      "sentence2": "効果的なコミュニケーションは成功する関係の鍵です。",
+      "pronunciation": "/koːkatekina/"
     },
     {
       "id": 224,
       "word": "効果的に",
       "sentence1": "彼女は締め切りに間に合うように時間を効果的に管理しました。",
-      "sentence2": "チームは問題を解決するために効果的に協力しました。"
+      "sentence2": "チームは問題を解決するために効果的に協力しました。",
+      "pronunciation": "/koːkatekini/"
     },
     {
       "id": 225,
       "word": "努力",
       "sentence1": "プロジェクトを完成させるには多くの努力が必要でした。",
-      "sentence2": "スキルを向上させる彼女の努力は報われました。"
+      "sentence2": "スキルを向上させる彼女の努力は報われました。",
+      "pronunciation": "/doɾjokɯ/"
     },
     {
       "id": 226,
       "word": "選挙",
       "sentence1": "選挙は来月行われます。",
-      "sentence2": "前回の選挙では投票率が高かったです。"
+      "sentence2": "前回の選挙では投票率が高かったです。",
+      "pronunciation": "/seɴkjo/"
     },
     {
       "id": 227,
       "word": "要素",
       "sentence1": "水はすべての生き物にとって重要な要素です。",
-      "sentence2": "計画の重要な要素はチームワークです。"
+      "sentence2": "計画の重要な要素はチームワークです。",
+      "pronunciation": "/joːso/"
     },
     {
       "id": 228,
       "word": "恥ずかしい",
       "sentence1": "彼の名前を忘れて恥ずかしく思いました。",
-      "sentence2": "彼はその間違いに恥ずかしく思いました。"
+      "sentence2": "彼はその間違いに恥ずかしく思いました。",
+      "pronunciation": "/hazɯkaɕiː/"
     },
     {
       "id": 229,
       "word": "恥ずかしい",
       "sentence1": "関係者全員にとって恥ずかしい瞬間でした。",
-      "sentence2": "その恥ずかしい状況はすぐに忘れられました。"
+      "sentence2": "その恥ずかしい状況はすぐに忘れられました。",
+      "pronunciation": "/hazɯkaɕiː/"
     },
     {
       "id": 230,
       "word": "緊急事態",
       "sentence1": "緊急時には911に電話してください。",
-      "sentence2": "緊急サービスはすぐに到着しました。"
+      "sentence2": "緊急サービスはすぐに到着しました。",
+      "pronunciation": "/kiɴkjɯːdʑitai/"
     },
     {
       "id": 231,
       "word": "感情",
       "sentence1": "彼女は芸術を通じて感情を表現しました。",
-      "sentence2": "自分の感情を理解することは重要です。"
+      "sentence2": "自分の感情を理解することは重要です。",
+      "pronunciation": "/kaɴdʑoː/"
     },
     {
       "id": 232,
       "word": "雇用",
       "sentence1": "今年は雇用率が上昇しました。",
-      "sentence2": "彼女は自分の分野で仕事を探しています。"
+      "sentence2": "彼女は自分の分野で仕事を探しています。",
+      "pronunciation": "/kojoː/"
     },
     {
       "id": 233,
       "word": "空の",
       "sentence1": "部屋は空っぽで静かでした。",
-      "sentence2": "喪失の後、彼は心が空っぽに感じました。"
+      "sentence2": "喪失の後、彼は心が空っぽに感じました。",
+      "pronunciation": "/soɾano/"
     },
     {
       "id": 234,
       "word": "励ます",
       "sentence1": "先生は生徒に質問するよう励ましています。",
-      "sentence2": "親は子供に読書を励ますべきです。"
+      "sentence2": "親は子供に読書を励ますべきです。",
+      "pronunciation": "/haɡemasɯ/"
     },
     {
       "id": 235,
       "word": "敵",
       "sentence1": "彼らはかつて友達でしたが、今は敵です。",
-      "sentence2": "敵軍は戦いで敗北しました。"
+      "sentence2": "敵軍は戦いで敗北しました。",
+      "pronunciation": "/teki/"
     },
     {
       "id": 236,
       "word": "婚約した",
       "sentence1": "彼らは来年結婚する予定で婚約しています。",
-      "sentence2": "彼女は友人と会話に夢中でした。"
+      "sentence2": "彼女は友人と会話に夢中でした。",
+      "pronunciation": "/koɲakɯɕita/"
     },
     {
       "id": 237,
       "word": "工学",
       "sentence1": "彼は大学で工学を学びました。",
-      "sentence2": "工学は挑戦的な分野です。"
+      "sentence2": "工学は挑戦的な分野です。",
+      "pronunciation": "/koːɡakɯ/"
     },
     {
       "id": 238,
       "word": "楽しませる",
       "sentence1": "ピエロの仕事は子供たちを楽しませることです。",
-      "sentence2": "お客様を楽しませる方法を見つける必要があります。"
+      "sentence2": "お客様を楽しませる方法を見つける必要があります。",
+      "pronunciation": "/tanoɕimaseɾɯ/"
     },
     {
       "id": 239,
       "word": "エンターテイメント",
       "sentence1": "この都市は幅広いエンターテイメントオプションを提供しています。",
-      "sentence2": "彼女はエンターテイメント業界で働いています。"
+      "sentence2": "彼女はエンターテイメント業界で働いています。",
+      "pronunciation": "/eɴtaːteːmeɴto/"
     },
     {
       "id": 240,
       "word": "入口",
       "sentence1": "博物館の入口は左側にあります。",
-      "sentence2": "彼はパーティーで華々しく登場しました。"
+      "sentence2": "彼はパーティーで華々しく登場しました。",
+      "pronunciation": "/iɾiɡɯtɕi/"
     },
     {
       "id": 241,
       "word": "入場",
       "sentence1": "イベントへの入場は無料です。",
-      "sentence2": "入場券は大切に保管してください。"
+      "sentence2": "入場券は大切に保管してください。",
+      "pronunciation": "/ɲɯːdʑoː/"
     },
     {
       "id": 242,
       "word": "環境の",
       "sentence1": "環境問題はますます重要になっています。",
-      "sentence2": "その組織は環境保護に焦点を当てています。"
+      "sentence2": "その組織は環境保護に焦点を当てています。",
+      "pronunciation": "/kaɴkjoːno/"
     },
     {
       "id": 243,
       "word": "エピソード",
       "sentence1": "シリーズの最新エピソードはスリリングでした。",
-      "sentence2": "各エピソードは異なるテーマを探求しています。"
+      "sentence2": "各エピソードは異なるテーマを探求しています。",
+      "pronunciation": "/episoːdo/"
     },
     {
       "id": 244,
       "word": "平等な",
       "sentence1": "すべての人は平等に扱われるべきです。",
-      "sentence2": "法律はすべての市民に平等な権利を保障しています。"
+      "sentence2": "法律はすべての市民に平等な権利を保障しています。",
+      "pronunciation": "/bjoːdoːna/"
     },
     {
       "id": 245,
       "word": "平等に",
       "sentence1": "賞はすべての受賞者に平等に授与されます。",
-      "sentence2": "背景に関係なく、彼らは平等に扱われるべきです。"
+      "sentence2": "背景に関係なく、彼らは平等に扱われるべきです。",
+      "pronunciation": "/bjoːdoːni/"
     },
     {
       "id": 246,
       "word": "逃げる、脱出",
       "sentence1": "現実から逃れる唯一の方法は想像力です。",
-      "sentence2": "彼は脱出を慎重に計画しました。"
+      "sentence2": "彼は脱出を慎重に計画しました。",
+      "pronunciation": "/niɡeɾɯ,daɕːɯtsɯ/"
     },
     {
       "id": 247,
       "word": "必須の",
       "sentence1": "水は生命に必要不可欠です。",
-      "sentence2": "指示に従うことは必須です。"
+      "sentence2": "指示に従うことは必須です。",
+      "pronunciation": "/hisːɯno/"
     },
     {
       "id": 248,
       "word": "最終的に",
       "sentence1": "最終的に、彼らは問題の解決策を見つけました。",
-      "sentence2": "彼女は最終的にそのオファーを受け入れることにしました。"
+      "sentence2": "彼女は最終的にそのオファーを受け入れることにしました。",
+      "pronunciation": "/saiɕɯːtekini/"
     },
     {
       "id": 249,
       "word": "調べる",
       "sentence1": "医師が今から診察します。",
-      "sentence2": "すべての証拠を調べることは重要です。"
+      "sentence2": "すべての証拠を調べることは重要です。",
+      "pronunciation": "/ɕiɾabeɾɯ/"
     },
     {
       "id": 250,
       "word": "〜を除いて",
       "sentence1": "ジョン以外の全員が招待されました。",
-      "sentence2": "バナナ以外のすべての果物が好きです。"
+      "sentence2": "バナナ以外のすべての果物が好きです。",
+      "pronunciation": "/~wonozoite/"
     },
     {
       "id": 251,
       "word": "交換",
       "sentence1": "彼らはパーティーでプレゼント交換をしました。",
-      "sentence2": "アイデアの交換は進歩にとって重要です。"
+      "sentence2": "アイデアの交換は進歩にとって重要です。",
+      "pronunciation": "/koːkaɴ/"
     },
     {
       "id": 252,
       "word": "興奮",
       "sentence1": "空気中の興奮は感じられました。",
-      "sentence2": "彼女は旅行への興奮を隠せませんでした。"
+      "sentence2": "彼女は旅行への興奮を隠せませんでした。",
+      "pronunciation": "/koːɸɯɴ/"
     },
     {
       "id": 253,
       "word": "展覧会",
       "sentence1": "アート展覧会は多くの訪問者を集めました。",
-      "sentence2": "彼女は初めての個展の準備をしています。"
+      "sentence2": "彼女は初めての個展の準備をしています。",
+      "pronunciation": "/teɴɾaɴkai/"
     },
     {
       "id": 254,
       "word": "拡大する",
       "sentence1": "会社は海外での事業拡大を計画しています。",
-      "sentence2": "製品ラインを拡大する必要があります。"
+      "sentence2": "製品ラインを拡大する必要があります。",
+      "pronunciation": "/kakɯdaisɯɾɯ/"
     },
     {
       "id": 255,
       "word": "予想された",
       "sentence1": "結果は予想以上に良かったです。",
-      "sentence2": "彼女はコンテストの予想される勝者です。"
+      "sentence2": "彼女はコンテストの予想される勝者です。",
+      "pronunciation": "/josoːsaɾeta/"
     },
     {
       "id": 256,
       "word": "探検",
       "sentence1": "南極への探検は成功しました。",
-      "sentence2": "彼らは何ヶ月も探検の準備をしました。"
+      "sentence2": "彼らは何ヶ月も探検の準備をしました。",
+      "pronunciation": "/taɴkeɴ/"
     },
     {
       "id": 257,
       "word": "経験",
       "sentence1": "彼女はマーケティングの経験が豊富です。",
-      "sentence2": "海外旅行は彼にとって貴重な経験でした。"
+      "sentence2": "海外旅行は彼にとって貴重な経験でした。",
+      "pronunciation": "/keːkeɴ/"
     },
     {
       "id": 258,
       "word": "経験豊富な",
       "sentence1": "彼は経験豊富な先生です。",
-      "sentence2": "チームには経験豊富な選手が必要です。"
+      "sentence2": "チームには経験豊富な選手が必要です。",
+      "pronunciation": "/keːkeɴhoːɸɯna/"
     },
     {
       "id": 259,
       "word": "実験",
       "sentence1": "科学者たちは実験を行いました。",
-      "sentence2": "実験は興味深い結果をもたらしました。"
+      "sentence2": "実験は興味深い結果をもたらしました。",
+      "pronunciation": "/dʑikːeɴ/"
     },
     {
       "id": 260,
       "word": "爆発する",
       "sentence1": "花火は真夜中に爆発します。",
-      "sentence2": "膨らませすぎると風船が爆発するかもしれません。"
+      "sentence2": "膨らませすぎると風船が爆発するかもしれません。",
+      "pronunciation": "/bakɯhatsɯsɯɾɯ/"
     },
     {
       "id": 261,
       "word": "探検する",
       "sentence1": "彼らは洞窟を探検する予定です。",
-      "sentence2": "彼女は新しい場所を探検するのが大好きです。"
+      "sentence2": "彼女は新しい場所を探検するのが大好きです。",
+      "pronunciation": "/taɴkeɴsɯɾɯ/"
     },
     {
       "id": 262,
       "word": "爆発",
       "sentence1": "爆発音は何マイルも離れた場所で聞こえました。",
-      "sentence2": "彼らは爆発の原因を調査しました。"
+      "sentence2": "彼らは爆発の原因を調査しました。",
+      "pronunciation": "/bakɯhatsɯ/"
     },
     {
       "id": 263,
       "word": "輸出する",
       "sentence1": "その国は他の国に石油を輸出しています。",
-      "sentence2": "製品を輸出するための新しい市場を見つける必要があります。"
+      "sentence2": "製品を輸出するための新しい市場を見つける必要があります。",
+      "pronunciation": "/jɯɕɯtsɯsɯɾɯ/"
     },
     {
       "id": 264,
       "word": "追加の",
       "sentence1": "プロジェクトを完了するには追加の時間が必要です。",
-      "sentence2": "彼女は旅行のために追加のスナックを持ってきました。"
+      "sentence2": "彼女は旅行のために追加のスナックを持ってきました。",
+      "pronunciation": "/tsɯikano/"
     },
     {
       "id": 265,
       "word": "向き合う",
       "sentence1": "彼は群衆に向き合うために振り返りました。",
-      "sentence2": "起こったことの後、彼女は彼に向き合うことができませんでした。"
+      "sentence2": "起こったことの後、彼女は彼に向き合うことができませんでした。",
+      "pronunciation": "/mɯkiaɯ/"
     },
     {
       "id": 266,
       "word": "かなり",
       "sentence1": "テストはかなり簡単でした。",
-      "sentence2": "彼女は自分の決定についてかなり確信しています。"
+      "sentence2": "彼女は自分の決定についてかなり確信しています。",
+      "pronunciation": "/kanaɾi/"
     },
     {
       "id": 267,
       "word": "馴染みのある",
       "sentence1": "この場所は見覚えがあります。",
-      "sentence2": "その概念には馴染みがありません。"
+      "sentence2": "その概念には馴染みがありません。",
+      "pronunciation": "/nadʑiminoaɾɯ/"
     },
     {
       "id": 268,
       "word": "豪華な",
       "sentence1": "彼女はパーティーに豪華なドレスを着ていきました。",
-      "sentence2": "彼らは高級ホテルに泊まりました。"
+      "sentence2": "彼らは高級ホテルに泊まりました。",
+      "pronunciation": "/ɡoːkana/"
     },
     {
       "id": 269,
       "word": "遠い",
       "sentence1": "店はここから遠いです。",
-      "sentence2": "彼女は田舎の遠くに住んでいます。"
+      "sentence2": "彼女は田舎の遠くに住んでいます。",
+      "pronunciation": "/toːi/"
     },
     {
       "id": 270,
       "word": "魅力的な",
       "sentence1": "そのドキュメンタリーは魅力的でした。",
-      "sentence2": "彼女には語る魅力的な話があります。"
+      "sentence2": "彼女には語る魅力的な話があります。",
+      "pronunciation": "/miɾjokɯtekina/"
     },
     {
       "id": 271,
       "word": "ファッショナブルな",
       "sentence1": "彼はいつもファッショナブルな服を着ています。",
-      "sentence2": "今シーズンの色はとてもファッショナブルです。"
+      "sentence2": "今シーズンの色はとてもファッショナブルです。",
+      "pronunciation": "/ɸaɕːonabɯɾɯna/"
     },
     {
       "id": 272,
       "word": "留める",
       "sentence1": "シートベルトを締めてください。",
-      "sentence2": "彼女はクリップを使って書類を留めました。"
+      "sentence2": "彼女はクリップを使って書類を留めました。",
+      "pronunciation": "/todomeɾɯ/"
     },
     {
       "id": 273,
       "word": "お願い",
       "sentence1": "お願いがあるのですが？",
-      "sentence2": "彼女は新しい政策に賛成です。"
+      "sentence2": "彼女は新しい政策に賛成です。",
+      "pronunciation": "/oneɡai/"
     },
     {
       "id": 274,
       "word": "恐れ",
       "sentence1": "彼は高所恐怖症です。",
-      "sentence2": "失敗への恐れは人を無力にすることがあります。"
+      "sentence2": "失敗への恐れは人を無力にすることがあります。",
+      "pronunciation": "/osoɾe/"
     },
     {
       "id": 275,
       "word": "機能",
       "sentence1": "新しい電話にはいくつかの興味深い機能があります。",
-      "sentence2": "主な特徴の1つはカメラです。"
+      "sentence2": "主な特徴の1つはカメラです。",
+      "pronunciation": "/kinoː/"
     },
     {
       "id": 276,
       "word": "フェンス",
       "sentence1": "彼らは庭の周りにフェンスを建てました。",
-      "sentence2": "フェンスはペンキを塗る必要があります。"
+      "sentence2": "フェンスはペンキを塗る必要があります。",
+      "pronunciation": "/ɸeɴsɯ/"
     },
     {
       "id": 277,
       "word": "戦い",
       "sentence1": "その地域での戦闘が増加しました。",
-      "sentence2": "彼らは自分たちの権利のために戦っていました。"
+      "sentence2": "彼らは自分たちの権利のために戦っていました。",
+      "pronunciation": "/tatakai/"
     },
     {
       "id": 278,
       "word": "ファイル",
       "sentence1": "閉じる前にファイルを保存してください。",
-      "sentence2": "ファイルを整理する必要があります。"
+      "sentence2": "ファイルを整理する必要があります。",
+      "pronunciation": "/ɸaiɾɯ/"
     },
     {
       "id": 279,
       "word": "財政的な",
       "sentence1": "会社は強い財政状態にあります。",
-      "sentence2": "彼らは学生に財政援助を提供しています。"
+      "sentence2": "彼らは学生に財政援助を提供しています。",
+      "pronunciation": "/zaiseːtekina/"
     },
     {
       "id": 280,
       "word": "火",
       "sentence1": "火は森の中を急速に広がりました。",
-      "sentence2": "消防士は火を制御するために働きました。"
+      "sentence2": "消防士は火を制御するために働きました。",
+      "pronunciation": "/hi/"
     },
     {
       "id": 281,
       "word": "フィットネス",
       "sentence1": "彼女はフィットネスの目標に集中しています。",
-      "sentence2": "定期的な運動はフィットネスに重要です。"
+      "sentence2": "定期的な運動はフィットネスに重要です。",
+      "pronunciation": "/ɸitːonesɯ/"
     },
     {
       "id": 282,
       "word": "固定された",
       "sentence1": "固定価格は交渉不可です。",
-      "sentence2": "彼は毎週固定のスケジュールを持っています。"
+      "sentence2": "彼は毎週固定のスケジュールを持っています。",
+      "pronunciation": "/koteːsaɾeta/"
     },
     {
       "id": 283,
       "word": "旗",
       "sentence1": "旗が風になびいていました。",
-      "sentence2": "彼らは祝うために旗を掲げました。"
+      "sentence2": "彼らは祝うために旗を掲げました。",
+      "pronunciation": "/hata/"
     },
     {
       "id": 284,
       "word": "洪水",
       "sentence1": "洪水は大きな被害をもたらしました。",
-      "sentence2": "彼らは将来の洪水を防ぐために取り組んでいます。"
+      "sentence2": "彼らは将来の洪水を防ぐために取り組んでいます。",
+      "pronunciation": "/koːzɯi/"
     },
     {
       "id": 285,
       "word": "小麦粉",
       "sentence1": "彼女はパンを焼くために小麦粉が必要です。",
-      "sentence2": "レシピには2カップの小麦粉が必要です。"
+      "sentence2": "レシピには2カップの小麦粉が必要です。",
+      "pronunciation": "/komɯɡiko/"
     },
     {
       "id": 286,
       "word": "流れ",
       "sentence1": "川の流れは強いです。",
-      "sentence2": "情報の流れを改善する必要があります。"
+      "sentence2": "情報の流れを改善する必要があります。",
+      "pronunciation": "/naɡaɾe/"
     },
     {
       "id": 287,
       "word": "折る",
       "sentence1": "紙を半分に折ってください。",
-      "sentence2": "彼女はフィットシーツの折り方を知っています。"
+      "sentence2": "彼女はフィットシーツの折り方を知っています。",
+      "pronunciation": "/oɾɯ/"
     },
     {
       "id": 288,
       "word": "民俗の",
       "sentence1": "フォークミュージックはこの地域で人気があります。",
-      "sentence2": "この祭りは民俗の伝統を祝います。"
+      "sentence2": "この祭りは民俗の伝統を祝います。",
+      "pronunciation": "/miɴzokɯno/"
     },
     {
       "id": 289,
       "word": "次の",
       "sentence1": "翌日は晴れでした。",
-      "sentence2": "彼女は忠実なファン層を築きました。"
+      "sentence2": "彼女は忠実なファン層を築きました。",
+      "pronunciation": "/tsɯɡino/"
     },
     {
       "id": 290,
       "word": "力",
       "sentence1": "爆発の力は巨大でした。",
-      "sentence2": "彼らは車を押すために全力を使いました。"
+      "sentence2": "彼らは車を押すために全力を使いました。",
+      "pronunciation": "/tɕikaɾa/"
     },
     {
       "id": 291,
       "word": "永遠に",
       "sentence1": "あなたを永遠に愛します。",
-      "sentence2": "この瞬間は私の記憶に永遠に刻まれるでしょう。"
+      "sentence2": "この瞬間は私の記憶に永遠に刻まれるでしょう。",
+      "pronunciation": "/eːeɴni/"
     },
     {
       "id": 292,
       "word": "フレーム",
       "sentence1": "彼女は絵のために新しいフレームを買いました。",
-      "sentence2": "フレームは無垢材でできていました。"
+      "sentence2": "フレームは無垢材でできていました。",
+      "pronunciation": "/ɸɯɾeːmɯ/"
     },
     {
       "id": 293,
       "word": "凍る",
       "sentence1": "気温が下がると水は凍ります。",
-      "sentence2": "残り物を冷凍するのを忘れました。"
+      "sentence2": "残り物を冷凍するのを忘れました。",
+      "pronunciation": "/koːɾɯ/"
     },
     {
       "id": 294,
       "word": "頻繁に",
       "sentence1": "彼女は仕事で頻繁に旅行します。",
-      "sentence2": "バスは日中頻繁に運行しています。"
+      "sentence2": "バスは日中頻繁に運行しています。",
+      "pronunciation": "/hiɴpaɴni/"
     },
     {
       "id": 295,
       "word": "友情",
       "sentence1": "彼らの友情は何年も続いています。",
-      "sentence2": "彼女は彼との友情を大切にしています。"
+      "sentence2": "彼女は彼との友情を大切にしています。",
+      "pronunciation": "/jɯːdʑoː/"
     },
     {
       "id": 296,
       "word": "怖がらせる",
       "sentence1": "大きな音は子供たちを怖がらせるかもしれません。",
-      "sentence2": "彼はあなたを怖がらせるつもりはありませんでした。"
+      "sentence2": "彼はあなたを怖がらせるつもりはありませんでした。",
+      "pronunciation": "/kowaɡaɾaseɾɯ/"
     },
     {
       "id": 297,
       "word": "怖がった",
       "sentence1": "彼女は突然の音に怖がりました。",
-      "sentence2": "怖がった猫はベッドの下に隠れました。"
+      "sentence2": "怖がった猫はベッドの下に隠れました。",
+      "pronunciation": "/kowaɡatːa/"
     },
     {
       "id": 298,
       "word": "恐ろしい",
       "sentence1": "その映画はとても怖くて眠れませんでした。",
-      "sentence2": "彼は未来を予測する恐ろしい能力を持っています。"
+      "sentence2": "彼は未来を予測する恐ろしい能力を持っています。",
+      "pronunciation": "/osoɾoɕiː/"
     },
     {
       "id": 299,
       "word": "冷凍された",
       "sentence1": "冬には湖が凍りつきます。",
-      "sentence2": "彼女は冷凍庫で冷凍ピザを見つけました。"
+      "sentence2": "彼女は冷凍庫で冷凍ピザを見つけました。",
+      "pronunciation": "/ɾeːtoːsaɾeta/"
     },
     {
       "id": 300,
       "word": "揚げる",
       "sentence1": "オリーブオイルで野菜を炒めるのが好きです。",
-      "sentence2": "ポテトを黄金色になるまで揚げてください。"
+      "sentence2": "ポテトを黄金色になるまで揚げてください。",
+      "pronunciation": "/aɡeɾɯ/"
     },
     {
       "id": 301,
       "word": "燃料",
       "sentence1": "この車はディーゼル燃料で走ります。",
-      "sentence2": "発電機の燃料源を見つける必要があります。"
+      "sentence2": "発電機の燃料源を見つける必要があります。",
+      "pronunciation": "/neɴɾjoː/"
     },
     {
       "id": 302,
       "word": "機能",
       "sentence1": "心臓の主な機能は血液を送り出すことです。",
-      "sentence2": "このボタンはソフトウェアで特定の機能を持っています。"
+      "sentence2": "このボタンはソフトウェアで特定の機能を持っています。",
+      "pronunciation": "/kinoː/"
     },
     {
       "id": 303,
       "word": "毛皮",
       "sentence1": "このコートは本物の毛皮で作られています。",
-      "sentence2": "一部の動物は暖かく保つために厚い毛皮を持っています。"
+      "sentence2": "一部の動物は暖かく保つために厚い毛皮を持っています。",
+      "pronunciation": "/keɡawa/"
     },
     {
       "id": 304,
       "word": "さらに",
       "sentence1": "この件についてさらに調査する必要があります。",
-      "sentence2": "プロジェクトについてさらに詳しい情報を提供できますか？"
+      "sentence2": "プロジェクトについてさらに詳しい情報を提供できますか？",
+      "pronunciation": "/saɾani/"
     },
     {
       "id": 305,
       "word": "ガレージ",
       "sentence1": "彼は車をガレージに停めました。",
-      "sentence2": "ガレージは古い工具でいっぱいです。"
+      "sentence2": "ガレージは古い工具でいっぱいです。",
+      "pronunciation": "/ɡaɾeːdʑi/"
     },
     {
       "id": 306,
       "word": "集める",
       "sentence1": "必要なすべての材料を集めましょう。",
-      "sentence2": "彼女は春に花を集めるのが好きです。"
+      "sentence2": "彼女は春に花を集めるのが好きです。",
+      "pronunciation": "/atsɯmeɾɯ/"
     },
     {
       "id": 307,
       "word": "一般的に",
       "sentence1": "私は一般的に早起きです。",
-      "sentence2": "秋の天気は一般的に穏やかです。"
+      "sentence2": "秋の天気は一般的に穏やかです。",
+      "pronunciation": "/ipːaɴtekini/"
     },
     {
       "id": 308,
       "word": "世代",
       "sentence1": "この世代はよりテクノロジーに精通しています。",
-      "sentence2": "各世代にはそれぞれの課題があります。"
+      "sentence2": "各世代にはそれぞれの課題があります。",
+      "pronunciation": "/sedai/"
     },
     {
       "id": 309,
       "word": "寛大な",
       "sentence1": "彼女は時間に対してとても寛大です。",
-      "sentence2": "彼の寛大な寄付は多くの人々を助けました。"
+      "sentence2": "彼の寛大な寄付は多くの人々を助けました。",
+      "pronunciation": "/kaɴdaina/"
     },
     {
       "id": 310,
       "word": "優しい",
       "sentence1": "彼は穏やかな態度を持っています。",
-      "sentence2": "そよ風は爽やかでした。"
+      "sentence2": "そよ風は爽やかでした。",
+      "pronunciation": "/jasaɕiː/"
     },
     {
       "id": 311,
       "word": "紳士",
       "sentence1": "彼は本当の紳士です。",
-      "sentence2": "その紳士は彼女のためにドアを開けて待っていました。"
+      "sentence2": "その紳士は彼女のためにドアを開けて待っていました。",
+      "pronunciation": "/ɕiɴɕi/"
     },
     {
       "id": 312,
       "word": "幽霊",
       "sentence1": "幽霊は真夜中に現れました。",
-      "sentence2": "彼女は幽霊と霊を信じています。"
+      "sentence2": "彼女は幽霊と霊を信じています。",
+      "pronunciation": "/jɯːɾeː/"
     },
     {
       "id": 313,
       "word": "巨大な",
       "sentence1": "その巨大な木は森の上にそびえ立っていました。",
-      "sentence2": "彼は膨大な切手コレクションを持っています。"
+      "sentence2": "彼は膨大な切手コレクションを持っています。",
+      "pronunciation": "/kjodaina/"
     },
     {
       "id": 314,
       "word": "嬉しい",
       "sentence1": "また会えて嬉しいです。",
-      "sentence2": "彼女は良いニュースを聞いて嬉しかったです。"
+      "sentence2": "彼女は良いニュースを聞いて嬉しかったです。",
+      "pronunciation": "/ɯɾeɕiː/"
     },
     {
       "id": 315,
       "word": "世界的な",
       "sentence1": "気候変動は世界的な問題です。",
-      "sentence2": "この問題には世界的な解決策が必要です。"
+      "sentence2": "この問題には世界的な解決策が必要です。",
+      "pronunciation": "/sekaitekina/"
     },
     {
       "id": 316,
       "word": "手袋",
       "sentence1": "彼は外出前に手袋をはめました。",
-      "sentence2": "これらの手袋は暖かいウールで作られています。"
+      "sentence2": "これらの手袋は暖かいウールで作られています。",
+      "pronunciation": "/tebɯkɯɾo/"
     },
     {
       "id": 317,
       "word": "行く",
       "sentence1": "店に行く必要があります。",
-      "sentence2": "散歩に行きましょう。"
+      "sentence2": "散歩に行きましょう。",
+      "pronunciation": "/ikɯ/"
     },
     {
       "id": 318,
       "word": "商品",
       "sentence1": "この店は様々な商品を販売しています。",
-      "sentence2": "これらの商品を倉庫に運ぶ必要があります。"
+      "sentence2": "これらの商品を倉庫に運ぶ必要があります。",
+      "pronunciation": "/ɕoːhiɴ/"
     },
     {
       "id": 319,
       "word": "成績",
       "sentence1": "彼女は試験で高い成績を取りました。",
-      "sentence2": "先生は今週末に試験を採点します。"
+      "sentence2": "先生は今週末に試験を採点します。",
+      "pronunciation": "/seːseki/"
     },
     {
       "id": 320,
       "word": "卒業する",
       "sentence1": "来年大学を卒業します。",
-      "sentence2": "彼女は優秀な成績で卒業することを誇りに思っています。"
+      "sentence2": "彼女は優秀な成績で卒業することを誇りに思っています。",
+      "pronunciation": "/sotsɯɡjoːsɯɾɯ/"
     },
     {
       "id": 321,
       "word": "穀物",
       "sentence1": "小麦はパンに使われる一般的な穀物です。",
-      "sentence2": "農家は今シーズン新しい穀物を植えました。"
+      "sentence2": "農家は今シーズン新しい穀物を植えました。",
+      "pronunciation": "/kokɯmotsɯ/"
     },
     {
       "id": 322,
       "word": "感謝している",
       "sentence1": "ご協力に感謝しています。",
-      "sentence2": "彼女は友人たちのサポートに感謝していました。"
+      "sentence2": "彼女は友人たちのサポートに感謝していました。",
+      "pronunciation": "/kaɴɕaɕiteːɾɯ/"
     },
     {
       "id": 323,
       "word": "成長",
       "sentence1": "この植物は今年の春に顕著な成長を示しています。",
-      "sentence2": "経済成長は発展に不可欠です。"
+      "sentence2": "経済成長は発展に不可欠です。",
+      "pronunciation": "/seːtɕoː/"
     },
     {
       "id": 324,
       "word": "警備員、守る",
       "sentence1": "警備員が入口を見張っています。",
-      "sentence2": "オンラインでプライバシーを守る必要があります。"
+      "sentence2": "オンラインでプライバシーを守る必要があります。",
+      "pronunciation": "/keːbiːɴ,mamoɾɯ/"
     },
     {
       "id": 325,
       "word": "有罪の",
       "sentence1": "彼は手伝わなかったことに罪悪感を感じました。",
-      "sentence2": "有罪判決が発表されました。"
+      "sentence2": "有罪判決が発表されました。",
+      "pronunciation": "/jɯːzaino/"
     },
     {
       "id": 326,
       "word": "手",
       "sentence1": "彼女は質問するために手を挙げました。",
-      "sentence2": "彼は皆と握手しました。"
+      "sentence2": "彼は皆と握手しました。",
+      "pronunciation": "/te/"
     },
     {
       "id": 327,
       "word": "掛ける",
       "sentence1": "彼らは絵を壁に掛けることにしました。",
-      "sentence2": "コートを掛けるのを忘れないでください。"
+      "sentence2": "コートを掛けるのを忘れないでください。",
+      "pronunciation": "/kakeɾɯ/"
     },
     {
       "id": 328,
       "word": "幸福",
       "sentence1": "幸福は充実した人生への鍵です。",
-      "sentence2": "彼女はどこへ行っても幸せを放っています。"
+      "sentence2": "彼女はどこへ行っても幸せを放っています。",
+      "pronunciation": "/koːɸɯkɯ/"
     },
     {
       "id": 329,
       "word": "ほとんど〜ない",
       "sentence1": "ほとんど聞こえません。",
-      "sentence2": "彼女はほとんど外出しません。"
+      "sentence2": "彼女はほとんど外出しません。",
+      "pronunciation": "/hotoɴdo~nai/"
     },
     {
       "id": 330,
       "word": "嫌う",
       "sentence1": "列に並んで待つのが嫌いです。",
-      "sentence2": "彼は不正を憎んでいます。"
+      "sentence2": "彼は不正を憎んでいます。",
+      "pronunciation": "/kiɾaɯ/"
     },
     {
       "id": 331,
       "word": "頭",
       "sentence1": "彼女は同意してうなずきました。",
-      "sentence2": "彼は頭を高く上げていました。"
+      "sentence2": "彼は頭を高く上げていました。",
+      "pronunciation": "/atama/"
     },
     {
       "id": 332,
       "word": "見出し",
       "sentence1": "その見出しが私の注意を引きました。",
-      "sentence2": "彼女は新聞の見出しを書いています。"
+      "sentence2": "彼女は新聞の見出しを書いています。",
+      "pronunciation": "/midaɕi/"
     },
     {
       "id": 333,
       "word": "暖房",
       "sentence1": "暖房システムが動いていません。",
-      "sentence2": "冬の前に暖房を直す必要があります。"
+      "sentence2": "冬の前に暖房を直す必要があります。",
+      "pronunciation": "/daɴboː/"
     },
     {
       "id": 334,
       "word": "激しく",
       "sentence1": "一晩中激しく雨が降っていました。",
-      "sentence2": "運動の後、彼女は激しく呼吸していました。"
+      "sentence2": "運動の後、彼女は激しく呼吸していました。",
+      "pronunciation": "/haɡeɕikɯ/"
     },
     {
       "id": 335,
       "word": "ヘリコプター",
       "sentence1": "ヘリコプターが街の上を飛んでいきました。",
-      "sentence2": "私たちは島のヘリコプターツアーに参加しました。"
+      "sentence2": "私たちは島のヘリコプターツアーに参加しました。",
+      "pronunciation": "/heɾikopɯtaː/"
     },
     {
       "id": 336,
       "word": "強調する",
       "sentence1": "重要なポイントを強調してください。",
-      "sentence2": "先生はマーカーでテキストを強調しました。"
+      "sentence2": "先生はマーカーでテキストを強調しました。",
+      "pronunciation": "/kjoːtɕoːsɯɾɯ/"
     },
     {
       "id": 337,
       "word": "非常に",
       "sentence1": "彼女は職業において非常に熟練しています。",
-      "sentence2": "その映画は批評家から高く評価されました。"
+      "sentence2": "その映画は批評家から高く評価されました。",
+      "pronunciation": "/hidʑoːni/"
     },
     {
       "id": 338,
       "word": "雇う",
       "sentence1": "より多くのスタッフを雇う必要があります。",
-      "sentence2": "彼女はプロジェクトマネージャーとして雇われました。"
+      "sentence2": "彼女はプロジェクトマネージャーとして雇われました。",
+      "pronunciation": "/jatoː/"
     },
     {
       "id": 339,
       "word": "歴史的な",
       "sentence1": "条約の調印は歴史的な出来事でした。",
-      "sentence2": "彼女は市内の多くの歴史的な場所を訪れました。"
+      "sentence2": "彼女は市内の多くの歴史的な場所を訪れました。",
+      "pronunciation": "/ɾekiɕitekina/"
     },
     {
       "id": 340,
       "word": "歴史の",
       "sentence1": "博物館には歴史的な遺物のコレクションがあります。",
-      "sentence2": "彼らは小説の歴史的な背景を研究しました。"
+      "sentence2": "彼らは小説の歴史的な背景を研究しました。",
+      "pronunciation": "/ɾekiɕino/"
     },
     {
       "id": 341,
       "word": "正直な",
       "sentence1": "人間関係では正直であることが重要です。",
-      "sentence2": "彼女は質問に正直に答えました。"
+      "sentence2": "彼女は質問に正直に答えました。",
+      "pronunciation": "/ɕoːdʑikina/"
     },
     {
       "id": 342,
       "word": "ひどい",
       "sentence1": "その映画はとてもひどかったので見られませんでした。",
-      "sentence2": "彼は旅行中にひどい経験をしました。"
+      "sentence2": "彼は旅行中にひどい経験をしました。",
+      "pronunciation": "/hidoi/"
     },
     {
       "id": 343,
       "word": "ホラー",
       "sentence1": "そのホラー映画は私をハラハラさせました。",
-      "sentence2": "彼女はホラー物語を読むのが大好きです。"
+      "sentence2": "彼女はホラー物語を読むのが大好きです。",
+      "pronunciation": "/hoɾaː/"
     },
     {
       "id": 344,
       "word": "主催者",
       "sentence1": "彼らは自宅でイベントを主催します。",
-      "sentence2": "彼女はディナーパーティーの素晴らしいホストです。"
+      "sentence2": "彼女はディナーパーティーの素晴らしいホストです。",
+      "pronunciation": "/ɕɯsaiɕa/"
     },
     {
       "id": 345,
       "word": "狩りをする",
       "sentence1": "彼らは鹿を狩りに出かけました。",
-      "sentence2": "彼は山で狩りをするのが大好きです。"
+      "sentence2": "彼は山で狩りをするのが大好きです。",
+      "pronunciation": "/kaɾiwosɯɾɯ/"
     },
     {
       "id": 346,
       "word": "ハリケーン",
       "sentence1": "ハリケーンは海岸に深刻な被害をもたらしました。",
-      "sentence2": "彼らはハリケーンが上陸する前にその地域を避難しました。"
+      "sentence2": "彼らはハリケーンが上陸する前にその地域を避難しました。",
+      "pronunciation": "/haɾikeːɴ/"
     },
     {
       "id": 347,
       "word": "急ぐ",
       "sentence1": "バスに乗りたいなら急ぐ必要があります。",
-      "sentence2": "彼女は朝いつも急いでいます。"
+      "sentence2": "彼女は朝いつも急いでいます。",
+      "pronunciation": "/isoɡɯ/"
     },
     {
       "id": 348,
       "word": "アイデンティティ",
       "sentence1": "あなたのアイデンティティは経験によって形作られます。",
-      "sentence2": "彼女は文化的アイデンティティに苦しみました。"
+      "sentence2": "彼女は文化的アイデンティティに苦しみました。",
+      "pronunciation": "/aideɴteːteː/"
     },
     {
       "id": 349,
       "word": "無視する",
       "sentence1": "問題を無視するのは簡単です。",
-      "sentence2": "彼は警告のサインを無視することを選びました。"
+      "sentence2": "彼は警告のサインを無視することを選びました。",
+      "pronunciation": "/mɯɕisɯɾɯ/"
     },
     {
       "id": 350,
       "word": "違法な",
       "sentence1": "ここに駐車するのは違法です。",
-      "sentence2": "彼らは違法な商品を密輸しているところを捕まりました。"
+      "sentence2": "彼らは違法な商品を密輸しているところを捕まりました。",
+      "pronunciation": "/ihoːna/"
     },
     {
       "id": 351,
       "word": "架空の",
       "sentence1": "彼女には架空の友達がいます。",
-      "sentence2": "彼らは物語の中で架空の世界を作りました。"
+      "sentence2": "彼らは物語の中で架空の世界を作りました。",
+      "pronunciation": "/kakɯːno/"
     },
     {
       "id": 352,
       "word": "即座の",
       "sentence1": "即座に行動を起こす必要があります。",
-      "sentence2": "状況には即座の注意が必要です。"
+      "sentence2": "状況には即座の注意が必要です。",
+      "pronunciation": "/sokɯzano/"
     },
     {
       "id": 353,
       "word": "移民",
       "sentence1": "この街には多くの移民が住んでいます。",
-      "sentence2": "多くの移民がより良い機会を求めてやって来ます。"
+      "sentence2": "多くの移民がより良い機会を求めてやって来ます。",
+      "pronunciation": "/imiɴ/"
     },
     {
       "id": 354,
       "word": "影響",
       "sentence1": "新しい政策の影響はまだ不明です。",
-      "sentence2": "プロジェクトの環境への影響が評価されました。"
+      "sentence2": "プロジェクトの環境への影響が評価されました。",
+      "pronunciation": "/eːkjoː/"
     },
     {
       "id": 355,
       "word": "輸入、輸入する",
       "sentence1": "この国は石油の輸入に依存しています。",
-      "sentence2": "彼らは海外から商品を輸入することを決めました。"
+      "sentence2": "彼らは海外から商品を輸入することを決めました。",
+      "pronunciation": "/jɯɲɯː,jɯɲɯːsɯɾɯ/"
     },
     {
       "id": 356,
       "word": "重要性",
       "sentence1": "教育の重要性はいくら強調してもしすぎることはありません。",
-      "sentence2": "彼女は努力の重要性を理解しています。"
+      "sentence2": "彼女は努力の重要性を理解しています。",
+      "pronunciation": "/dʑɯːjoːseː/"
     },
     {
       "id": 357,
       "word": "印象",
       "sentence1": "彼は面接で強い印象を残しました。",
-      "sentence2": "彼女のその街への第一印象は好意的でした。"
+      "sentence2": "彼女のその街への第一印象は好意的でした。",
+      "pronunciation": "/iɴɕoː/"
     },
     {
       "id": 358,
       "word": "印象的な",
       "sentence1": "そのパフォーマンスは本当に印象的でした。",
-      "sentence2": "彼女は印象的な履歴書を持っています。"
+      "sentence2": "彼女は印象的な履歴書を持っています。",
+      "pronunciation": "/iɴɕoːtekina/"
     },
     {
       "id": 359,
       "word": "改善",
       "sentence1": "彼の成績には顕著な改善がありました。",
-      "sentence2": "会社は改善の方法を探しています。"
+      "sentence2": "会社は改善の方法を探しています。",
+      "pronunciation": "/kaizeɴ/"
     },
     {
       "id": 360,
       "word": "信じられないほど",
       "sentence1": "彼女は信じられないほど才能があります。",
-      "sentence2": "頂上からの景色は信じられないほど美しいです。"
+      "sentence2": "頂上からの景色は信じられないほど美しいです。",
+      "pronunciation": "/ɕiɴdʑiɾaɾenaihodo/"
     },
     {
       "id": 361,
       "word": "確かに",
       "sentence1": "それは確かに注目すべき成果でした。",
-      "sentence2": "彼女は確かにこの仕事に最適な候補者です。"
+      "sentence2": "彼女は確かにこの仕事に最適な候補者です。",
+      "pronunciation": "/taɕikani/"
     },
     {
       "id": 362,
       "word": "示す",
       "sentence1": "結果はさらなる研究の必要性を示しています。",
-      "sentence2": "フォームにご希望を記入してください。"
+      "sentence2": "フォームにご希望を記入してください。",
+      "pronunciation": "/ɕimesɯ/"
     },
     {
       "id": 363,
       "word": "間接的な",
       "sentence1": "彼の間接的なコメントは解釈が難しかったです。",
-      "sentence2": "彼女は渋滞を避けるために遠回りしました。"
+      "sentence2": "彼女は渋滞を避けるために遠回りしました。",
+      "pronunciation": "/kaɴsetsɯtekina/"
     },
     {
       "id": 364,
       "word": "屋内の",
       "sentence1": "室内植物は空気の質を改善できます。",
-      "sentence2": "私たちは屋内でパーティーを開くことにしました。"
+      "sentence2": "私たちは屋内でパーティーを開くことにしました。",
+      "pronunciation": "/okɯnaino/"
     },
     {
       "id": 365,
       "word": "屋内で",
       "sentence1": "外で遊ぶには寒すぎるので、屋内にいましょう。",
-      "sentence2": "子供たちは今日屋内で遊んでいます。"
+      "sentence2": "子供たちは今日屋内で遊んでいます。",
+      "pronunciation": "/okɯnaide/"
     },
     {
       "id": 366,
       "word": "影響",
       "sentence1": "彼女のスピーチは聴衆に深い影響を与えました。",
-      "sentence2": "ソーシャルメディアは世論に影響を与えることができます。"
+      "sentence2": "ソーシャルメディアは世論に影響を与えることができます。",
+      "pronunciation": "/eːkjoː/"
     },
     {
       "id": 367,
       "word": "材料",
       "sentence1": "このレシピの主な材料は鶏肉です。",
-      "sentence2": "アレルギー物質について材料リストを確認してください。"
+      "sentence2": "アレルギー物質について材料リストを確認してください。",
+      "pronunciation": "/zaiɾjoː/"
     },
     {
       "id": 368,
       "word": "傷つける",
       "sentence1": "彼は試合中に誰かを傷つけるつもりはありませんでした。",
-      "sentence2": "彼女は交通事故で怪我をしました。"
+      "sentence2": "彼女は交通事故で怪我をしました。",
+      "pronunciation": "/kizɯtsɯkeɾɯ/"
     },
     {
       "id": 369,
       "word": "負傷した",
       "sentence1": "負傷者は病院に運ばれました。",
-      "sentence2": "彼はまだ怪我から回復中です。"
+      "sentence2": "彼はまだ怪我から回復中です。",
+      "pronunciation": "/ɸɯɕoːɕita/"
     },
     {
       "id": 370,
       "word": "無実の、無邪気な",
       "sentence1": "無実の男性は刑務所から釈放されました。",
-      "sentence2": "彼女は無邪気な表情をしています。"
+      "sentence2": "彼女は無邪気な表情をしています。",
+      "pronunciation": "/mɯdʑitsɯno,mɯdʑakina/"
     },
     {
       "id": 371,
       "word": "知性",
       "sentence1": "人工知能は急速に成長している分野です。",
-      "sentence2": "彼女は高い感情的知性を持っています。"
+      "sentence2": "彼女は高い感情的知性を持っています。",
+      "pronunciation": "/tɕiseː/"
     },
     {
       "id": 372,
       "word": "意図する",
       "sentence1": "夕食前に宿題を終わらせるつもりです。",
-      "sentence2": "彼らは害を与えるつもりはありませんでした。"
+      "sentence2": "彼らは害を与えるつもりはありませんでした。",
+      "pronunciation": "/itosɯɾɯ/"
     },
     {
       "id": 373,
       "word": "意図",
       "sentence1": "私の意図はあなたの成功を助けることです。",
-      "sentence2": "彼女は善意で行動しました。"
+      "sentence2": "彼女は善意で行動しました。",
+      "pronunciation": "/ito/"
     },
     {
       "id": 374,
       "word": "投資する",
       "sentence1": "彼らは新しい技術に投資する予定です。",
-      "sentence2": "彼女は教育に多くの時間を投資してきました。"
+      "sentence2": "彼女は教育に多くの時間を投資してきました。",
+      "pronunciation": "/toːɕisɯɾɯ/"
     },
     {
       "id": 375,
       "word": "調査する",
       "sentence1": "警察はその犯罪を調査します。",
-      "sentence2": "問題の原因を調査する必要があります。"
+      "sentence2": "問題の原因を調査する必要があります。",
+      "pronunciation": "/tɕoːsasɯɾɯ/"
     },
     {
       "id": 376,
       "word": "関与した",
       "sentence1": "彼は最初からプロジェクトに関わっていました。",
-      "sentence2": "意思決定プロセスには多くの人が関わっています。"
+      "sentence2": "意思決定プロセスには多くの人が関わっています。",
+      "pronunciation": "/kaɲoɕita/"
     },
     {
       "id": 377,
       "word": "鉄",
       "sentence1": "鉄は体に必要不可欠なミネラルです。",
-      "sentence2": "門は鉄でできています。"
+      "sentence2": "門は鉄でできています。",
+      "pronunciation": "/tetsɯ/"
     },
     {
       "id": 378,
       "word": "問題",
       "sentence1": "主な問題は資金不足です。",
-      "sentence2": "できるだけ早くこの問題に対処する必要があります。"
+      "sentence2": "できるだけ早くこの問題に対処する必要があります。",
+      "pronunciation": "/moɴdai/"
     },
     {
       "id": 379,
       "word": "雑誌",
       "sentence1": "彼女は科学雑誌に寄稿しています。",
-      "sentence2": "その雑誌は毎月新しい研究を発表しています。"
+      "sentence2": "その雑誌は毎月新しい研究を発表しています。",
+      "pronunciation": "/zaɕːi/"
     },
     {
       "id": 380,
       "word": "裁判官、判断する",
       "sentence1": "事実を知らずに人を判断するのは公平ではありません。",
-      "sentence2": "裁判官は明日判決を発表します。"
+      "sentence2": "裁判官は明日判決を発表します。",
+      "pronunciation": "/saibaɴkaɴ,haɴdaɴsɯɾɯ/"
     },
     {
       "id": 381,
       "word": "熱心な、鋭い",
       "sentence1": "彼女は芸術に熱心な関心を持っています。",
-      "sentence2": "彼は人間の行動の鋭い観察者です。"
+      "sentence2": "彼は人間の行動の鋭い観察者です。",
+      "pronunciation": "/neɕːiɴna,sɯɾɯdoi/"
     },
     {
       "id": 382,
       "word": "鍵",
       "sentence1": "鍵を渡してもらえますか？",
-      "sentence2": "成功の鍵は努力です。"
+      "sentence2": "成功の鍵は努力です。",
+      "pronunciation": "/kaɡi/"
     },
     {
       "id": 383,
       "word": "キーボード",
       "sentence1": "彼女はキーボードを使って文書を入力しました。",
-      "sentence2": "キーボードが正常に動作していません。"
+      "sentence2": "キーボードが正常に動作していません。",
+      "pronunciation": "/kiːboːdo/"
     },
     {
       "id": 384,
       "word": "蹴る",
       "sentence1": "彼はボールをゴールに蹴り込もうとしました。",
-      "sentence2": "彼女は彼の足を軽く蹴りました。"
+      "sentence2": "彼女は彼の足を軽く蹴りました。",
+      "pronunciation": "/keɾɯ/"
     },
     {
       "id": 385,
       "word": "殺害",
       "sentence1": "無実の男性の殺害は怒りを引き起こしました。",
-      "sentence2": "彼は妻を殺害した罪で起訴されました。"
+      "sentence2": "彼は妻を殺害した罪で起訴されました。",
+      "pronunciation": "/satsɯɡai/"
     },
     {
       "id": 386,
       "word": "親切な",
       "sentence1": "彼女は動物にいつも親切です。",
-      "sentence2": "手伝ってくださってありがとうございます。"
+      "sentence2": "手伝ってくださってありがとうございます。",
+      "pronunciation": "/ɕiɴsetsɯna/"
     },
     {
       "id": 387,
       "word": "キス",
       "sentence1": "彼らは星空の下でキスを交わしました。",
-      "sentence2": "彼女は部屋の向こうから彼に投げキスをしました。"
+      "sentence2": "彼女は部屋の向こうから彼に投げキスをしました。",
+      "pronunciation": "/kisɯ/"
     },
     {
       "id": 388,
       "word": "ノックする",
       "sentence1": "入る前にノックしてください。",
-      "sentence2": "ドアをノックする音が聞こえました。"
+      "sentence2": "ドアをノックする音が聞こえました。",
+      "pronunciation": "/nokːɯsɯɾɯ/"
     },
     {
       "id": 389,
       "word": "ラベル",
       "sentence1": "すべての箱にラベルを付けてください。",
-      "sentence2": "ボトルのラベルは読みにくいです。"
+      "sentence2": "ボトルのラベルは読みにくいです。",
+      "pronunciation": "/ɾabeɾɯ/"
     },
     {
       "id": 390,
       "word": "研究室",
       "sentence1": "研究室は最新の技術を備えています。",
-      "sentence2": "彼女は化学研究室で働いています。"
+      "sentence2": "彼女は化学研究室で働いています。",
+      "pronunciation": "/keɴkjɯːɕitsɯ/"
     },
     {
       "id": 391,
       "word": "不足",
       "sentence1": "この事件には証拠が不足しています。",
-      "sentence2": "資金不足は大きな問題です。"
+      "sentence2": "資金不足は大きな問題です。",
+      "pronunciation": "/ɸɯsokɯ/"
     },
     {
       "id": 392,
       "word": "最新の",
       "sentence1": "最新のニュースはあまり心強くありません。",
-      "sentence2": "彼女はいつも最新のファッションを着ています。"
+      "sentence2": "彼女はいつも最新のファッションを着ています。",
+      "pronunciation": "/saiɕiɴno/"
     },
     {
       "id": 393,
       "word": "置く、横になる",
       "sentence1": "本をテーブルに置いてください。",
-      "sentence2": "彼は草の上に横になって雲を見るのが好きです。"
+      "sentence2": "彼は草の上に横になって雲を見るのが好きです。",
+      "pronunciation": "/okɯ,jokoninaɾɯ/"
     },
     {
       "id": 394,
       "word": "層",
       "sentence1": "ケーキには3層のチョコレートがあります。",
-      "sentence2": "棚にはほこりの層があります。"
+      "sentence2": "棚にはほこりの層があります。",
+      "pronunciation": "/soː/"
     },
     {
       "id": 395,
       "word": "導く",
       "sentence1": "彼女はプロジェクトでチームを率います。",
-      "sentence2": "彼は議論を主導するために選ばれました。"
+      "sentence2": "彼は議論を主導するために選ばれました。",
+      "pronunciation": "/mitɕibikɯ/"
     },
     {
       "id": 396,
       "word": "主要な",
       "sentence1": "彼女はその分野の第一人者です。",
-      "sentence2": "死因の主なものは心臓病です。"
+      "sentence2": "死因の主なものは心臓病です。",
+      "pronunciation": "/ɕɯjoːna/"
     },
     {
       "id": 397,
       "word": "葉",
       "sentence1": "葉が木から落ちました。",
-      "sentence2": "秋には葉の色が変わります。"
+      "sentence2": "秋には葉の色が変わります。",
+      "pronunciation": "/ha/"
     },
     {
       "id": 398,
       "word": "革",
       "sentence1": "彼は新しい革のジャケットを買いました。",
-      "sentence2": "ソファは高品質の革で作られています。"
+      "sentence2": "ソファは高品質の革で作られています。",
+      "pronunciation": "/kawa/"
     },
     {
       "id": 399,
       "word": "法的な",
       "sentence1": "彼らは法的なアドバイスを求めています。",
-      "sentence2": "法制度は複雑です。"
+      "sentence2": "法制度は複雑です。",
+      "pronunciation": "/hoːtekina/"
     },
     {
       "id": 400,
       "word": "余暇",
       "sentence1": "彼女は余暇に読書を楽しんでいます。",
-      "sentence2": "余暇活動は心の健康に重要です。"
+      "sentence2": "余暇活動は心の健康に重要です。",
+      "pronunciation": "/joka/"
     },
     {
       "id": 401,
       "word": "長さ",
       "sentence1": "テーブルの長さは6フィートです。",
-      "sentence2": "部屋の長さを測る必要があります。"
+      "sentence2": "部屋の長さを測る必要があります。",
+      "pronunciation": "/naɡasa/"
     },
     {
       "id": 402,
       "word": "レベル",
       "sentence1": "彼女はスペイン語の初級レベルです。",
-      "sentence2": "雨のため水位が上昇しています。"
+      "sentence2": "雨のため水位が上昇しています。",
+      "pronunciation": "/ɾebeɾɯ/"
     },
     {
       "id": 403,
       "word": "嘘をつく",
       "sentence1": "友達に嘘をつくのは正しくありません。",
-      "sentence2": "彼は居場所について嘘をついているのを見つかりました。"
+      "sentence2": "彼は居場所について嘘をついているのを見つかりました。",
+      "pronunciation": "/ɯsowotsɯkɯ/"
     },
     {
       "id": 404,
       "word": "制限",
       "sentence1": "借りられる金額には制限があります。",
-      "sentence2": "支出に制限を設ける必要があります。"
+      "sentence2": "支出に制限を設ける必要があります。",
+      "pronunciation": "/seːɡeɴ/"
     },
     {
       "id": 405,
       "word": "唇",
       "sentence1": "彼女は唇に口紅を塗りました。",
-      "sentence2": "彼は彼女の唇にキスしました。"
+      "sentence2": "彼は彼女の唇にキスしました。",
+      "pronunciation": "/kɯtɕibiɾɯ/"
     },
     {
       "id": 406,
       "word": "液体",
       "sentence1": "水は室温では液体です。",
-      "sentence2": "液体がテーブル中にこぼれました。"
+      "sentence2": "液体がテーブル中にこぼれました。",
+      "pronunciation": "/ekitai/"
     },
     {
       "id": 407,
       "word": "文学",
       "sentence1": "彼女は古典文学を読むのが大好きです。",
-      "sentence2": "このコースは現代文学を扱っています。"
+      "sentence2": "このコースは現代文学を扱っています。",
+      "pronunciation": "/bɯɴɡakɯ/"
     },
     {
       "id": 408,
       "word": "住む、ライブの",
       "sentence1": "コンサートはライブで放送されます。",
-      "sentence2": "彼らは大都市に住みたいと思っています。"
+      "sentence2": "彼らは大都市に住みたいと思っています。",
+      "pronunciation": "/sɯmɯ,ɾaibɯno/"
     },
     {
       "id": 409,
       "word": "生活",
       "sentence1": "この街の生活費は高いです。",
-      "sentence2": "彼女は生活環境の改善に焦点を当てています。"
+      "sentence2": "彼女は生活環境の改善に焦点を当てています。",
+      "pronunciation": "/seːkatsɯ/"
     },
     {
       "id": 410,
       "word": "地元の",
       "sentence1": "地元の市場は毎週日曜日に開いています。",
-      "sentence2": "彼女は地元の農産物を買うことを好みます。"
+      "sentence2": "彼女は地元の農産物を買うことを好みます。",
+      "pronunciation": "/dʑimotono/"
     },
     {
       "id": 411,
       "word": "見つける",
       "sentence1": "鍵を見つけるのを手伝ってもらえますか？",
-      "sentence2": "地図があればレストランを見つけられます。"
+      "sentence2": "地図があればレストランを見つけられます。",
+      "pronunciation": "/mitsɯkeɾɯ/"
     },
     {
       "id": 412,
       "word": "位置している",
       "sentence1": "ホテルはビーチの近くに位置しています。",
-      "sentence2": "オフィスは最上階に位置しています。"
+      "sentence2": "オフィスは最上階に位置しています。",
+      "pronunciation": "/itɕiɕiteːɾɯ/"
     },
     {
       "id": 413,
       "word": "場所",
       "sentence1": "現在の場所はどこですか？",
-      "sentence2": "イベントの場所が変更されました。"
+      "sentence2": "イベントの場所が変更されました。",
+      "pronunciation": "/baɕo/"
     },
     {
       "id": 414,
       "word": "寂しい",
       "sentence1": "彼女は新しい街で寂しく感じました。",
-      "sentence2": "時々寂しく感じるのは普通のことです。"
+      "sentence2": "時々寂しく感じるのは普通のことです。",
+      "pronunciation": "/sabiɕiː/"
     },
     {
       "id": 415,
       "word": "喪失",
       "sentence1": "ペットを失ったことは彼女にとって壊滅的でした。",
-      "sentence2": "彼はまだ父親を失った悲しみの中にいます。"
+      "sentence2": "彼はまだ父親を失った悲しみの中にいます。",
+      "pronunciation": "/soːɕitsɯ/"
     },
     {
       "id": 416,
       "word": "贅沢",
       "sentence1": "彼らは贅沢な生活を送っています。",
-      "sentence2": "このホテルは豪華な宿泊施設を提供しています。"
+      "sentence2": "このホテルは豪華な宿泊施設を提供しています。",
+      "pronunciation": "/zeːtakɯ/"
     },
     {
       "id": 417,
       "word": "怒った、クレイジーな",
       "sentence1": "彼は遅刻した友人に怒っていました。",
-      "sentence2": "彼女には新しいプロジェクトのクレイジーなアイデアがあります。"
+      "sentence2": "彼女には新しいプロジェクトのクレイジーなアイデアがあります。",
+      "pronunciation": "/ikatsɯta,kɯɾeːdʑiːna/"
     },
     {
       "id": 418,
       "word": "魔法",
       "sentence1": "マジシャンは手品を披露しました。",
-      "sentence2": "彼女は愛の魔法を信じています。"
+      "sentence2": "彼女は愛の魔法を信じています。",
+      "pronunciation": "/mahoː/"
     },
     {
       "id": 419,
       "word": "主に",
       "sentence1": "この本は主に歴史についてです。",
-      "sentence2": "彼女は主に科学に興味があります。"
+      "sentence2": "彼女は主に科学に興味があります。",
+      "pronunciation": "/omoni/"
     },
     {
       "id": 420,
       "word": "ショッピングモール",
       "sentence1": "彼らは買い物にモールへ行きました。",
-      "sentence2": "モールには様々な店があります。"
+      "sentence2": "モールには様々な店があります。",
+      "pronunciation": "/ɕopːiɴɡɯmoːɾɯ/"
     },
     {
       "id": 421,
       "word": "経営",
       "sentence1": "彼女は大企業で経営に携わっています。",
-      "sentence2": "効果的な経営は成功の鍵です。"
+      "sentence2": "効果的な経営は成功の鍵です。",
+      "pronunciation": "/keːeː/"
     },
     {
       "id": 422,
       "word": "市場",
       "sentence1": "市場は毎週土曜日に開いています。",
-      "sentence2": "彼女は市場で新鮮な野菜を買いました。"
+      "sentence2": "彼女は市場で新鮮な野菜を買いました。",
+      "pronunciation": "/ɕidʑoː/"
     },
     {
       "id": 423,
       "word": "マーケティング",
       "sentence1": "彼は大学でマーケティングを学びました。",
-      "sentence2": "マーケティングキャンペーンは成功でした。"
+      "sentence2": "マーケティングキャンペーンは成功でした。",
+      "pronunciation": "/maːketeːɴɡɯ/"
     },
     {
       "id": 424,
       "word": "結婚",
       "sentence1": "彼らは結婚式を計画しています。",
-      "sentence2": "結婚にはコミットメントと努力が必要です。"
+      "sentence2": "結婚にはコミットメントと努力が必要です。",
+      "pronunciation": "/kekːoɴ/"
     },
     {
       "id": 425,
       "word": "その間",
       "sentence1": "その間、子供たちは外で遊んでいました。",
-      "sentence2": "彼女は勉強していました。その間、友達はパーティーをしていました。"
+      "sentence2": "彼女は勉強していました。その間、友達はパーティーをしていました。",
+      "pronunciation": "/sonokaɴ/"
     },
     {
       "id": 426,
       "word": "測る",
       "sentence1": "進捗を測ることは重要です。",
-      "sentence2": "家具を買う前に部屋を測る必要があります。"
+      "sentence2": "家具を買う前に部屋を測る必要があります。",
+      "pronunciation": "/hakaɾɯ/"
     },
     {
       "id": 427,
       "word": "中程度の、媒体",
       "sentence1": "この絵は中程度のスタイルで描かれました。",
-      "sentence2": "彼女は細部を表現できる媒体で作業することを好みます。"
+      "sentence2": "彼女は細部を表現できる媒体で作業することを好みます。",
+      "pronunciation": "/tɕɯːteːdono,baitai/"
     },
     {
       "id": 428,
       "word": "精神的な",
       "sentence1": "精神的な健康は身体的な健康と同じくらい重要です。",
-      "sentence2": "彼は精神的な健康を改善するための措置を講じています。"
+      "sentence2": "彼は精神的な健康を改善するための措置を講じています。",
+      "pronunciation": "/seːɕiɴtekina/"
     },
     {
       "id": 429,
       "word": "言及する",
       "sentence1": "アレルギーがあれば教えてください。",
-      "sentence2": "遅れることを言い忘れました。"
+      "sentence2": "遅れることを言い忘れました。",
+      "pronunciation": "/ɡeɴkjɯːsɯɾɯ/"
     },
     {
       "id": 430,
       "word": "散らかり",
       "sentence1": "パーティーの後、部屋は散らかっていました。",
-      "sentence2": "彼女は机をきれいに整頓しておくのが好きです。"
+      "sentence2": "彼女は机をきれいに整頓しておくのが好きです。",
+      "pronunciation": "/tɕiɾakaɾi/"
     },
     {
       "id": 431,
       "word": "穏やかな",
       "sentence1": "春の天気は穏やかです。",
-      "sentence2": "彼女は食べ物のマイルドな味を好みます。"
+      "sentence2": "彼女は食べ物のマイルドな味を好みます。",
+      "pronunciation": "/odajakana/"
     },
     {
       "id": 432,
       "word": "鉱山",
       "sentence1": "彼らは鉱山で金を見つけました。",
-      "sentence2": "安全上の懸念から鉱山は閉鎖されました。"
+      "sentence2": "安全上の懸念から鉱山は閉鎖されました。",
+      "pronunciation": "/koːzaɴ/"
     },
     {
       "id": 433,
       "word": "混ぜる",
       "sentence1": "材料をよく混ぜてください。",
-      "sentence2": "彼女は絵に異なる色を混ぜるのが好きです。"
+      "sentence2": "彼女は絵に異なる色を混ぜるのが好きです。",
+      "pronunciation": "/mazeɾɯ/"
     },
     {
       "id": 434,
       "word": "混合物",
       "sentence1": "ケーキの生地は小麦粉と卵の混合物です。",
-      "sentence2": "彼は音楽の中で独特の音の混合を作り出しました。"
+      "sentence2": "彼は音楽の中で独特の音の混合を作り出しました。",
+      "pronunciation": "/koɴɡoːbɯtsɯ/"
     },
     {
       "id": 435,
       "word": "気分",
       "sentence1": "彼女は一日中幸せな気分でした。",
-      "sentence2": "音楽がパーティーの雰囲気を変えました。"
+      "sentence2": "音楽がパーティーの雰囲気を変えました。",
+      "pronunciation": "/kibɯɴ/"
     },
     {
       "id": 436,
       "word": "動かす、引っ越す",
       "sentence1": "椅子をテーブルに近づけてください。",
-      "sentence2": "彼らは新しい街に引っ越すことにしました。"
+      "sentence2": "彼らは新しい街に引っ越すことにしました。",
+      "pronunciation": "/ɯɡokasɯ,hikːosɯ/"
     },
     {
       "id": 437,
       "word": "泥",
       "sentence1": "子供たちは雨の後泥の中で遊びました。",
-      "sentence2": "彼女は泥で滑って転びました。"
+      "sentence2": "彼女は泥で滑って転びました。",
+      "pronunciation": "/doɾo/"
     },
     {
       "id": 438,
       "word": "殺人",
       "sentence1": "刑事は殺人事件を調査しました。",
-      "sentence2": "彼は殺人で告発されましたが、無実を主張しました。"
+      "sentence2": "彼は殺人で告発されましたが、無実を主張しました。",
+      "pronunciation": "/satsɯdʑiɴ/"
     },
     {
       "id": 439,
       "word": "筋肉",
       "sentence1": "彼はウェイトリフティングで筋肉を痛めました。",
-      "sentence2": "定期的な運動は筋肉を鍛えるのに役立ちます。"
+      "sentence2": "定期的な運動は筋肉を鍛えるのに役立ちます。",
+      "pronunciation": "/kiɴnikɯ/"
     },
     {
       "id": 440,
       "word": "ミュージカル、音楽の",
       "sentence1": "そのミュージカルは大成功でした。",
-      "sentence2": "彼女は音楽作曲の才能があります。"
+      "sentence2": "彼女は音楽作曲の才能があります。",
+      "pronunciation": "/mjɯːdʑikaɾɯ,oɴɡakɯno/"
     },
     {
       "id": 441,
       "word": "ミステリー",
       "sentence1": "この本はミステリー小説です。",
-      "sentence2": "彼らは一緒にその謎を解こうとしました。"
+      "sentence2": "彼らは一緒にその謎を解こうとしました。",
+      "pronunciation": "/misɯteɾiː/"
     },
     {
       "id": 442,
       "word": "釘",
       "sentence1": "彼は壁に釘を打ち込みました。",
-      "sentence2": "釘が緩んで落ちました。"
+      "sentence2": "釘が緩んで落ちました。",
+      "pronunciation": "/kɯɡi/"
     },
     {
       "id": 443,
       "word": "物語",
       "sentence1": "物語は魅力的でよく書かれていました。",
-      "sentence2": "彼女は他の形式よりも物語詩を好みます。"
+      "sentence2": "彼女は他の形式よりも物語詩を好みます。",
+      "pronunciation": "/monoɡataɾi/"
     },
     {
       "id": 444,
       "word": "国",
       "sentence1": "この国は独立記念日を祝いました。",
-      "sentence2": "彼女は自分の国の歴史を誇りに思っています。"
+      "sentence2": "彼女は自分の国の歴史を誇りに思っています。",
+      "pronunciation": "/kɯni/"
     },
     {
       "id": 445,
       "word": "先住民の、母国の",
       "sentence1": "先住民は豊かな文化遺産を持っています。",
-      "sentence2": "彼は母国語を流暢に話します。"
+      "sentence2": "彼は母国語を流暢に話します。",
+      "pronunciation": "/seɴdʑɯːmiɴno,bokokɯno/"
     },
     {
       "id": 446,
       "word": "自然に、当然",
       "sentence1": "当然、彼女は旅行にわくわくしていました。",
-      "sentence2": "この地域では花が自然に育ちます。"
+      "sentence2": "この地域では花が自然に育ちます。",
+      "pronunciation": "/ɕizeɴni,toːzeɴ/"
     },
     {
       "id": 447,
       "word": "必ずしも",
       "sentence1": "これは必ずしも成功するという意味ではありません。",
-      "sentence2": "必ずしもルールに従う必要はありません。"
+      "sentence2": "必ずしもルールに従う必要はありません。",
+      "pronunciation": "/kanaɾazɯɕimo/"
     },
     {
       "id": 448,
       "word": "必要とする、必要",
       "sentence1": "この問題の解決策を見つける必要があります。",
-      "sentence2": "彼女には仲間が必要です。"
+      "sentence2": "彼女には仲間が必要です。",
+      "pronunciation": "/hitsɯjoːtosɯɾɯ,hitsɯjoː/"
     },
     {
       "id": 449,
       "word": "針",
       "sentence1": "彼は針と糸でシャツを直しました。",
-      "sentence2": "その針は生地に対して太すぎました。"
+      "sentence2": "その針は生地に対して太すぎました。",
+      "pronunciation": "/haɾi/"
     },
     {
       "id": 450,
       "word": "近所",
       "sentence1": "彼らは静かな近所に住んでいます。",
-      "sentence2": "その地域には多くの公園や学校があります。"
+      "sentence2": "その地域には多くの公園や学校があります。",
+      "pronunciation": "/kiɴdʑo/"
     },
     {
       "id": 451,
       "word": "どちらも〜ない",
       "sentence1": "どちらの選択肢も理想的ではないようです。",
-      "sentence2": "彼女はコーヒーも紅茶も好きではありません。"
+      "sentence2": "彼女はコーヒーも紅茶も好きではありません。",
+      "pronunciation": "/dotɕiɾamo~nai/"
     },
     {
       "id": 452,
       "word": "網",
       "sentence1": "網で数匹の魚が捕れました。",
-      "sentence2": "彼はネット業界で働いています。"
+      "sentence2": "彼はネット業界で働いています。",
+      "pronunciation": "/ami/"
     },
     {
       "id": 453,
       "word": "次の",
       "sentence1": "次の電車は午後5時に到着します。",
-      "sentence2": "彼女は次に昇進する人です。"
+      "sentence2": "彼女は次に昇進する人です。",
+      "pronunciation": "/tsɯɡino/"
     },
     {
       "id": 454,
       "word": "〜もまた〜ない",
       "sentence1": "彼はリンゴもオレンジも好きではありません。",
-      "sentence2": "彼女は医者でも弁護士でもありません。"
+      "sentence2": "彼女は医者でも弁護士でもありません。",
+      "pronunciation": "/~momata~nai/"
     },
     {
       "id": 455,
       "word": "普通の",
       "sentence1": "テスト前に緊張するのは普通です。",
-      "sentence2": "彼女の血圧は正常です。"
+      "sentence2": "彼女の血圧は正常です。",
+      "pronunciation": "/ɸɯtsɯːno/"
     },
     {
       "id": 456,
       "word": "北部の",
       "sentence1": "北部地域は冬がより寒いです。",
-      "sentence2": "彼女は北部の都市出身です。"
+      "sentence2": "彼女は北部の都市出身です。",
+      "pronunciation": "/hokɯbɯno/"
     },
     {
       "id": 457,
       "word": "メモ",
       "sentence1": "重要なポイントをメモしてください。",
-      "sentence2": "あなたの机にメモを残しました。"
+      "sentence2": "あなたの机にメモを残しました。",
+      "pronunciation": "/memo/"
     },
     {
       "id": 458,
       "word": "核の、原子力の",
       "sentence1": "この国は核エネルギーを開発しています。",
-      "sentence2": "原子力にはメリットとデメリットがあります。"
+      "sentence2": "原子力にはメリットとデメリットがあります。",
+      "pronunciation": "/kakɯno,ɡeɴɕiɾjokɯno/"
     },
     {
       "id": 459,
       "word": "明らかな",
       "sentence1": "彼女が怒っていることは明らかでした。",
-      "sentence2": "問題を理解すれば解決策は明らかです。"
+      "sentence2": "問題を理解すれば解決策は明らかです。",
+      "pronunciation": "/akiɾakana/"
     },
     {
       "id": 460,
       "word": "明らかに",
       "sentence1": "明らかに、彼は指示を理解していませんでした。",
-      "sentence2": "彼女は明らかに音楽の才能があります。"
+      "sentence2": "彼女は明らかに音楽の才能があります。",
+      "pronunciation": "/akiɾakani/"
     },
     {
       "id": 461,
       "word": "機会",
       "sentence1": "これはお祝いする特別な機会です。",
-      "sentence2": "この機会に、私たちの成果を振り返るべきです。"
+      "sentence2": "この機会に、私たちの成果を振り返るべきです。",
+      "pronunciation": "/kikai/"
     },
     {
       "id": 462,
       "word": "起こる",
       "sentence1": "事故は夜遅くに起こりました。",
-      "sentence2": "新しい政策を実施すれば変化が起こるかもしれません。"
+      "sentence2": "新しい政策を実施すれば変化が起こるかもしれません。",
+      "pronunciation": "/okoɾɯ/"
     },
     {
       "id": 463,
       "word": "奇妙な",
       "sentence1": "それは問題を解決する奇妙な方法です。",
-      "sentence2": "彼女は変わったユーモアのセンスを持っています。"
+      "sentence2": "彼女は変わったユーモアのセンスを持っています。",
+      "pronunciation": "/kimjoːna/"
     },
     {
       "id": 464,
       "word": "公式の",
       "sentence1": "公式報告書は明日発表されます。",
-      "sentence2": "彼は会社の公式代表です。"
+      "sentence2": "彼は会社の公式代表です。",
+      "pronunciation": "/koːɕikino/"
     },
     {
       "id": 465,
       "word": "古風な",
       "sentence1": "彼女は古風な服を好みます。",
-      "sentence2": "彼の考えは少し古臭いようです。"
+      "sentence2": "彼の考えは少し古臭いようです。",
+      "pronunciation": "/koɸɯːna/"
     },
     {
       "id": 466,
       "word": "一度",
       "sentence1": "むかしむかし、勇敢な騎士がいました。",
-      "sentence2": "彼女には一度しか会ったことがありません。"
+      "sentence2": "彼女には一度しか会ったことがありません。",
+      "pronunciation": "/itɕido/"
     },
     {
       "id": 467,
       "word": "手術、作戦",
       "sentence1": "手術は成功でした。",
-      "sentence2": "彼らは軍事作戦を計画しています。"
+      "sentence2": "彼らは軍事作戦を計画しています。",
+      "pronunciation": "/ɕɯdʑɯtsɯ,sakɯseɴ/"
     },
     {
       "id": 468,
       "word": "組織された",
       "sentence1": "イベントはよく組織されていました。",
-      "sentence2": "彼女は仕事がとても整理されています。"
+      "sentence2": "彼女は仕事がとても整理されています。",
+      "pronunciation": "/soɕikisaɾeta/"
     },
     {
       "id": 469,
       "word": "主催者",
       "sentence1": "イベントの主催者は素晴らしい仕事をしました。",
-      "sentence2": "彼女はプロのイベントオーガナイザーです。"
+      "sentence2": "彼女はプロのイベントオーガナイザーです。",
+      "pronunciation": "/ɕɯsaiɕa/"
     },
     {
       "id": 470,
       "word": "オリジナルの",
       "sentence1": "原画は美術館にあります。",
-      "sentence2": "彼女にはプロジェクトのためのオリジナルのアイデアがあります。"
+      "sentence2": "彼女にはプロジェクトのためのオリジナルのアイデアがあります。",
+      "pronunciation": "/oɾidʑinaɾɯno/"
     },
     {
       "id": 471,
       "word": "もともと",
       "sentence1": "当初、計画は6月に開始する予定でした。",
-      "sentence2": "彼女はもともとスペイン出身です。"
+      "sentence2": "彼女はもともとスペイン出身です。",
+      "pronunciation": "/motomoto/"
     },
     {
       "id": 472,
       "word": "〜すべきだ",
       "sentence1": "医者に診てもらうべきです。",
-      "sentence2": "困っている人を助けるべきです。"
+      "sentence2": "困っている人を助けるべきです。",
+      "pronunciation": "/~sɯbekida/"
     },
     {
       "id": 473,
       "word": "私たちの",
       "sentence1": "この本は私たちのものです。",
-      "sentence2": "私たちは小さいけれど親密な家族です。"
+      "sentence2": "私たちは小さいけれど親密な家族です。",
+      "pronunciation": "/wataɕitatɕino/"
     },
     {
       "id": 474,
       "word": "屋外の",
       "sentence1": "私たちはハイキングなどの野外活動を楽しんでいます。",
-      "sentence2": "野外コンサートは大成功でした。"
+      "sentence2": "野外コンサートは大成功でした。",
+      "pronunciation": "/okɯɡaino/"
     },
     {
       "id": 475,
       "word": "屋外で",
       "sentence1": "屋外で時間を過ごすのが大好きです。",
-      "sentence2": "子供たちは外で遊んでいます。"
+      "sentence2": "子供たちは外で遊んでいます。",
+      "pronunciation": "/okɯɡaide/"
     },
     {
       "id": 476,
       "word": "荷造りする、一箱",
       "sentence1": "旅行のために荷物をまとめる必要があります。",
-      "sentence2": "彼女はガムを一箱買いました。"
+      "sentence2": "彼女はガムを一箱買いました。",
+      "pronunciation": "/nizɯkɯɾisɯɾɯ,hitohako/"
     },
     {
       "id": 477,
       "word": "小包",
       "sentence1": "郵便で小包を受け取りました。",
-      "sentence2": "小包は時間通りに届きました。"
+      "sentence2": "小包は時間通りに届きました。",
+      "pronunciation": "/kozɯtsɯmi/"
     },
     {
       "id": 478,
       "word": "痛い",
       "sentence1": "怪我は痛かったです。",
-      "sentence2": "それは辛い決断でした。"
+      "sentence2": "それは辛い決断でした。",
+      "pronunciation": "/itai/"
     },
     {
       "id": 479,
       "word": "青白い",
       "sentence1": "病気の後、彼女は青白く見えました。",
-      "sentence2": "日が沈むと空が薄くなりました。"
+      "sentence2": "日が沈むと空が薄くなりました。",
+      "pronunciation": "/aodʑiɾoi/"
     },
     {
       "id": 480,
       "word": "フライパン",
       "sentence1": "卵を調理するためにフライパンが必要です。",
-      "sentence2": "フライパンは熱すぎて触れません。"
+      "sentence2": "フライパンは熱すぎて触れません。",
+      "pronunciation": "/ɸɯɾaipaɴ/"
     },
     {
       "id": 481,
       "word": "参加する",
       "sentence1": "コンテストに参加したいです。",
-      "sentence2": "皆さんの参加をお勧めします。"
+      "sentence2": "皆さんの参加をお勧めします。",
+      "pronunciation": "/saɴkasɯɾɯ/"
     },
     {
       "id": 482,
       "word": "特に",
       "sentence1": "彼女は特に数学が得意です。",
-      "sentence2": "その本は特に面白いと思いました。"
+      "sentence2": "その本は特に面白いと思いました。",
+      "pronunciation": "/tokɯni/"
     },
     {
       "id": 483,
       "word": "合格する、パスする",
       "sentence1": "運転免許試験に合格する必要があります。",
-      "sentence2": "彼はチームメイトにボールをパスしました。"
+      "sentence2": "彼はチームメイトにボールをパスしました。",
+      "pronunciation": "/ɡoːkakɯsɯɾɯ,pasɯsɯɾɯ/"
     },
     {
       "id": 484,
       "word": "情熱",
       "sentence1": "彼女は絵を描くことに情熱を持っています。",
-      "sentence2": "彼の音楽への情熱は明らかです。"
+      "sentence2": "彼の音楽への情熱は明らかです。",
+      "pronunciation": "/dʑoːnetsɯ/"
     },
     {
       "id": 485,
       "word": "小道",
       "sentence1": "私たちは狭い小道を歩きました。",
-      "sentence2": "その道は古い城に続いています。"
+      "sentence2": "その道は古い城に続いています。",
+      "pronunciation": "/komitɕi/"
     },
     {
       "id": 486,
       "word": "支払い",
       "sentence1": "支払い期限は来週です。",
-      "sentence2": "仕事の報酬を受け取りました。"
+      "sentence2": "仕事の報酬を受け取りました。",
+      "pronunciation": "/ɕihaɾai/"
     },
     {
       "id": 487,
       "word": "平和な",
       "sentence1": "庭はリラックスできる平和な場所です。",
-      "sentence2": "彼女は穏やかな態度を持っています。"
+      "sentence2": "彼女は穏やかな態度を持っています。",
+      "pronunciation": "/heːwana/"
     },
     {
       "id": 488,
       "word": "割合",
       "sentence1": "人口の何パーセントが影響を受けていますか？",
-      "sentence2": "試験に合格した学生の割合が増加しました。"
+      "sentence2": "試験に合格した学生の割合が増加しました。",
+      "pronunciation": "/waɾiai/"
     },
     {
       "id": 489,
       "word": "完璧に",
       "sentence1": "彼女は完璧に歌います。",
-      "sentence2": "すべてが計画通り完璧に進みました。"
+      "sentence2": "すべてが計画通り完璧に進みました。",
+      "pronunciation": "/kaɴpekini/"
     },
     {
       "id": 490,
       "word": "パフォーマンス",
       "sentence1": "パフォーマンスは素晴らしかったです。",
-      "sentence2": "彼女は演技を称賛されました。"
+      "sentence2": "彼女は演技を称賛されました。",
+      "pronunciation": "/paɸoːmaɴsɯ/"
     },
     {
       "id": 491,
       "word": "個人的に",
       "sentence1": "私は個人的に彼の無実を信じています。",
-      "sentence2": "彼女は個人的にメッセージを届けました。"
+      "sentence2": "彼女は個人的にメッセージを届けました。",
+      "pronunciation": "/kodʑiɴtekini/"
     },
     {
       "id": 492,
       "word": "説得する",
       "sentence1": "私は彼に残るよう説得しようとしました。",
-      "sentence2": "彼女は彼らを説得して考えを変えさせることができました。"
+      "sentence2": "彼女は彼らを説得して考えを変えさせることができました。",
+      "pronunciation": "/setːokɯsɯɾɯ/"
     },
     {
       "id": 493,
       "word": "写真家",
       "sentence1": "写真家はその瞬間を完璧に捉えました。",
-      "sentence2": "彼女はフリーランスの写真家として働いています。"
+      "sentence2": "彼女はフリーランスの写真家として働いています。",
+      "pronunciation": "/ɕaɕiɴka/"
     },
     {
       "id": 494,
       "word": "写真撮影",
       "sentence1": "彼は写真撮影に情熱を持っています。",
-      "sentence2": "彼女は大学で写真を学びました。"
+      "sentence2": "彼女は大学で写真を学びました。",
+      "pronunciation": "/ɕaɕiɴsatsɯeː/"
     },
     {
       "id": 495,
       "word": "ピン",
       "sentence1": "この紙を留めるピンが必要です。",
-      "sentence2": "彼女はジャケットに装飾的なピンを付けていました。"
+      "sentence2": "彼女はジャケットに装飾的なピンを付けていました。",
+      "pronunciation": "/piɴ/"
     },
     {
       "id": 496,
       "word": "パイプ",
       "sentence1": "配管工が漏れているパイプを修理しました。",
-      "sentence2": "パイプから煙が立ち上っていました。"
+      "sentence2": "パイプから煙が立ち上っていました。",
+      "pronunciation": "/paipɯ/"
     },
     {
       "id": 497,
       "word": "場所",
       "sentence1": "ここは訪れるのに良い場所です。",
-      "sentence2": "その場所は観光客で混雑していました。"
+      "sentence2": "その場所は観光客で混雑していました。",
+      "pronunciation": "/baɕo/"
     },
     {
       "id": 498,
       "word": "計画",
       "sentence1": "計画は成功に不可欠です。",
-      "sentence2": "彼女はイベント企画を担当しています。"
+      "sentence2": "彼女はイベント企画を担当しています。",
+      "pronunciation": "/keːkakɯ/"
     },
     {
       "id": 499,
       "word": "快い",
       "sentence1": "今日の天気は快適です。",
-      "sentence2": "私たちは楽しい会話をしました。"
+      "sentence2": "私たちは楽しい会話をしました。",
+      "pronunciation": "/kokoɾojoi/"
     },
     {
       "id": 500,
       "word": "喜び",
       "sentence1": "お会いできて嬉しいです。",
-      "sentence2": "彼女は仕事に喜びを感じています。"
+      "sentence2": "彼女は仕事に喜びを感じています。",
+      "pronunciation": "/joɾokobi/"
     },
     {
       "id": 501,
       "word": "たくさんの",
       "sentence1": "みんなに十分な食べ物があります。",
-      "sentence2": "彼女にはプロジェクトを終える十分な時間があります。"
+      "sentence2": "彼女にはプロジェクトを終える十分な時間があります。",
+      "pronunciation": "/takɯsaɴno/"
     },
     {
       "id": 502,
       "word": "プロット",
       "sentence1": "映画のプロットは興味深かったです。",
-      "sentence2": "彼女は本の中のプロットのひねりを楽しみました。"
+      "sentence2": "彼女は本の中のプロットのひねりを楽しみました。",
+      "pronunciation": "/pɯɾotːo/"
     },
     {
       "id": 503,
       "word": "プラス",
       "sentence1": "2足す2は4です。",
-      "sentence2": "この仕事は良い給料に加えて福利厚生を提供しています。"
+      "sentence2": "この仕事は良い給料に加えて福利厚生を提供しています。",
+      "pronunciation": "/pɯɾasɯ/"
     },
     {
       "id": 504,
       "word": "詩",
       "sentence1": "彼女は美しい詩を書きました。",
-      "sentence2": "その詩は愛の本質を捉えています。"
+      "sentence2": "その詩は愛の本質を捉えています。",
+      "pronunciation": "/ɕi/"
     },
     {
       "id": 505,
       "word": "詩人",
       "sentence1": "彼は有名な詩人です。",
-      "sentence2": "詩人は作品の中で深い感情を表現しました。"
+      "sentence2": "詩人は作品の中で深い感情を表現しました。",
+      "pronunciation": "/ɕidʑiɴ/"
     },
     {
       "id": 506,
       "word": "詩",
       "sentence1": "彼女は詩を読むのが大好きです。",
-      "sentence2": "その時代の詩はその価値観を反映しています。"
+      "sentence2": "その時代の詩はその価値観を反映しています。",
+      "pronunciation": "/ɕi/"
     },
     {
       "id": 507,
       "word": "ポイント",
       "sentence1": "彼女は議論の中で有効な主張をしました。",
-      "sentence2": "この練習の目的はあなたのスキルを向上させることです。"
+      "sentence2": "この練習の目的はあなたのスキルを向上させることです。",
+      "pronunciation": "/poiɴto/"
     },
     {
       "id": 508,
       "word": "毒",
       "sentence1": "その毒は致命的でした。",
-      "sentence2": "彼はライバルを毒殺したことで告発されました。"
+      "sentence2": "彼はライバルを毒殺したことで告発されました。",
+      "pronunciation": "/dokɯ/"
     },
     {
       "id": 509,
       "word": "有毒な",
       "sentence1": "有毒な植物は手の届かない場所に保管すべきです。",
-      "sentence2": "一部のキノコは食べると有毒です。"
+      "sentence2": "一部のキノコは食べると有毒です。",
+      "pronunciation": "/jɯːdokɯna/"
     },
     {
       "id": 510,
       "word": "政策",
       "sentence1": "政府は新しい政策を発表しました。",
-      "sentence2": "この政策は汚染を減らすことを目指しています。"
+      "sentence2": "この政策は汚染を減らすことを目指しています。",
+      "pronunciation": "/seːsakɯ/"
     },
     {
       "id": 511,
       "word": "政治的な",
       "sentence1": "彼は政治活動に関わっています。",
-      "sentence2": "政治情勢は急速に変化しています。"
+      "sentence2": "政治情勢は急速に変化しています。",
+      "pronunciation": "/seːdʑitekina/"
     },
     {
       "id": 512,
       "word": "政治家",
       "sentence1": "彼女は有名な政治家です。",
-      "sentence2": "政治家は群衆に演説しました。"
+      "sentence2": "政治家は群衆に演説しました。",
+      "pronunciation": "/seːdʑika/"
     },
     {
       "id": 513,
       "word": "政治",
       "sentence1": "政治は非常に分裂を招くことがあります。",
-      "sentence2": "彼は大学で政治学を学んでいます。"
+      "sentence2": "彼は大学で政治学を学んでいます。",
+      "pronunciation": "/seːdʑi/"
     },
     {
       "id": 514,
       "word": "港",
       "sentence1": "船は港に停泊しました。",
-      "sentence2": "港は貨物の往来で忙しいです。"
+      "sentence2": "港は貨物の往来で忙しいです。",
+      "pronunciation": "/minato/"
     },
     {
       "id": 515,
       "word": "肖像画",
       "sentence1": "彼女は美しい肖像画を描きました。",
-      "sentence2": "その肖像画は彼の似姿を完璧に捉えています。"
+      "sentence2": "その肖像画は彼の似姿を完璧に捉えています。",
+      "pronunciation": "/ɕoːzoːɡa/"
     },
     {
       "id": 516,
       "word": "おそらく",
       "sentence1": "明日は雨が降るかもしれません。",
-      "sentence2": "彼女はおそらくその仕事に最適な候補者です。"
+      "sentence2": "彼女はおそらくその仕事に最適な候補者です。",
+      "pronunciation": "/osoɾakɯ/"
     },
     {
       "id": 517,
       "word": "鍋",
       "sentence1": "この鍋は粘土でできています。",
-      "sentence2": "彼女は大きな鍋でスープを作りました。"
+      "sentence2": "彼女は大きな鍋でスープを作りました。",
+      "pronunciation": "/nabe/"
     },
     {
       "id": 518,
       "word": "注ぐ",
       "sentence1": "グラスに牛乳を注いでください。",
-      "sentence2": "彼はゆっくりとコーヒーを注ぐのが好きです。"
+      "sentence2": "彼はゆっくりとコーヒーを注ぐのが好きです。",
+      "pronunciation": "/sosoɡɯ/"
     },
     {
       "id": 519,
       "word": "貧困",
       "sentence1": "貧困は深刻な問題です。",
-      "sentence2": "この組織は貧困を軽減することを目指しています。"
+      "sentence2": "この組織は貧困を軽減することを目指しています。",
+      "pronunciation": "/hiɴkoɴ/"
     },
     {
       "id": 520,
       "word": "粉",
       "sentence1": "この粉は製菓に使われます。",
-      "sentence2": "彼女はケーキに粉を振りかけました。"
+      "sentence2": "彼女はケーキに粉を振りかけました。",
+      "pronunciation": "/kona/"
     },
     {
       "id": 521,
       "word": "強力な",
       "sentence1": "エンジンは非常に強力です。",
-      "sentence2": "彼女は力強いスピーチをしました。"
+      "sentence2": "彼女は力強いスピーチをしました。",
+      "pronunciation": "/kjoːɾjokɯna/"
     },
     {
       "id": 522,
       "word": "実用的な",
       "sentence1": "これは実用的な解決策です。",
-      "sentence2": "彼は問題に対して実用的なアプローチをとります。"
+      "sentence2": "彼は問題に対して実用的なアプローチをとります。",
+      "pronunciation": "/dʑitsɯjoːtekina/"
     },
     {
       "id": 523,
       "word": "祈る",
       "sentence1": "彼らは毎週金曜日に祈るために集まります。",
-      "sentence2": "彼女は家族の安全を祈りました。"
+      "sentence2": "彼女は家族の安全を祈りました。",
+      "pronunciation": "/inoɾɯ/"
     },
     {
       "id": 524,
       "word": "祈り",
       "sentence1": "彼は食事の前に祈りを捧げました。",
-      "sentence2": "祈りは慰めの源となります。"
+      "sentence2": "祈りは慰めの源となります。",
+      "pronunciation": "/inoɾi/"
     },
     {
       "id": 525,
       "word": "予測",
       "sentence1": "天気予報は期待できません。",
-      "sentence2": "彼女は結果について正確な予測をしました。"
+      "sentence2": "彼女は結果について正確な予測をしました。",
+      "pronunciation": "/josokɯ/"
     },
     {
       "id": 526,
       "word": "準備された",
       "sentence1": "食事はよく準備されていました。",
-      "sentence2": "彼女は試験の準備ができていると感じました。"
+      "sentence2": "彼女は試験の準備ができていると感じました。",
+      "pronunciation": "/dʑɯɴbisaɾeta/"
     },
     {
       "id": 527,
       "word": "プレゼンテーション",
       "sentence1": "プレゼンテーションは有益でした。",
-      "sentence2": "彼は気候変動についてのプレゼンテーションを行いました。"
+      "sentence2": "彼は気候変動についてのプレゼンテーションを行いました。",
+      "pronunciation": "/pɯɾezeɴteːɕoɴ/"
     },
     {
       "id": 528,
       "word": "報道",
       "sentence1": "報道はこのイベントを広く取り上げました。",
-      "sentence2": "彼女は広報担当として働いています。"
+      "sentence2": "彼女は広報担当として働いています。",
+      "pronunciation": "/hoːdoː/"
     },
     {
       "id": 529,
       "word": "プレッシャー",
       "sentence1": "プレッシャーが高まっています。",
-      "sentence2": "彼女は仕事で大きなプレッシャーを受けています。"
+      "sentence2": "彼女は仕事で大きなプレッシャーを受けています。",
+      "pronunciation": "/pɯɾeɕːaː/"
     },
     {
       "id": 530,
       "word": "ふりをする",
       "sentence1": "彼らはスーパーヒーローのふりをするのが好きです。",
-      "sentence2": "私を見なかったふりをしないでください。"
+      "sentence2": "私を見なかったふりをしないでください。",
+      "pronunciation": "/ɸɯɾiwosɯɾɯ/"
     },
     {
       "id": 531,
       "word": "以前の",
       "sentence1": "前のオーナーは多くの改善を行いました。",
-      "sentence2": "前の章では...について議論しました。"
+      "sentence2": "前の章では...について議論しました。",
+      "pronunciation": "/izeɴno/"
     },
     {
       "id": 532,
       "word": "以前に",
       "sentence1": "私は以前ロンドンに住んでいました。",
-      "sentence2": "彼女は以前別の会社で働いていました。"
+      "sentence2": "彼女は以前別の会社で働いていました。",
+      "pronunciation": "/izeɴni/"
     },
     {
       "id": 533,
       "word": "司祭",
       "sentence1": "司祭は日曜日に説教をしました。",
-      "sentence2": "彼は司祭になりたいと思っています。"
+      "sentence2": "彼は司祭になりたいと思っています。",
+      "pronunciation": "/ɕisai/"
     },
     {
       "id": 534,
       "word": "主要な",
       "sentence1": "教育は主要な関心事です。",
-      "sentence2": "主な目標は識字率を向上させることです。"
+      "sentence2": "主な目標は識字率を向上させることです。",
+      "pronunciation": "/ɕɯjoːna/"
     },
     {
       "id": 535,
       "word": "王子",
       "sentence1": "王子は王位を継承します。",
-      "sentence2": "彼女は舞踏会で王子と踊りました。"
+      "sentence2": "彼女は舞踏会で王子と踊りました。",
+      "pronunciation": "/oːdʑi/"
     },
     {
       "id": 536,
       "word": "王女",
       "sentence1": "王女は美しいガウンを着ていました。",
-      "sentence2": "すべての子供はプリンセスになることを夢見ています。"
+      "sentence2": "すべての子供はプリンセスになることを夢見ています。",
+      "pronunciation": "/oːdʑo/"
     },
     {
       "id": 537,
       "word": "印刷",
       "sentence1": "印刷プロセスは複雑です。",
-      "sentence2": "彼女は印刷業界で働いています。"
+      "sentence2": "彼女は印刷業界で働いています。",
+      "pronunciation": "/iɴsatsɯ/"
     },
     {
       "id": 538,
       "word": "囚人",
       "sentence1": "囚人は早期に釈放されました。",
-      "sentence2": "彼は政治犯です。"
+      "sentence2": "彼は政治犯です。",
+      "pronunciation": "/ɕɯːdʑiɴ/"
     },
     {
       "id": 539,
       "word": "プライベートな",
       "sentence1": "彼女は今日プライベートな会議があります。",
-      "sentence2": "彼はプライベートを守ることを好みます。"
+      "sentence2": "彼はプライベートを守ることを好みます。",
+      "pronunciation": "/pɯɾaibeːtona/"
     },
     {
       "id": 540,
       "word": "プロデューサー",
       "sentence1": "プロデューサーは新しい映画に取り組んでいます。",
-      "sentence2": "彼女は有名な音楽プロデューサーです。"
+      "sentence2": "彼女は有名な音楽プロデューサーです。",
+      "pronunciation": "/pɯɾodejɯːsaː/"
     },
     {
       "id": 541,
       "word": "生産",
       "sentence1": "商品の生産が増加しました。",
-      "sentence2": "この工場は自動車生産を専門としています。"
+      "sentence2": "この工場は自動車生産を専門としています。",
+      "pronunciation": "/seːsaɴ/"
     },
     {
       "id": 542,
       "word": "職業",
       "sentence1": "教えることは高貴な職業です。",
-      "sentence2": "彼は医学の職業を選びました。"
+      "sentence2": "彼は医学の職業を選びました。",
+      "pronunciation": "/ɕokɯɡjoː/"
     },
     {
       "id": 543,
       "word": "利益",
       "sentence1": "会社は昨年大きな利益を上げました。",
-      "sentence2": "彼らは利益率を上げることを目指しています。"
+      "sentence2": "彼らは利益率を上げることを目指しています。",
+      "pronunciation": "/ɾieki/"
     },
     {
       "id": 544,
       "word": "プログラム",
       "sentence1": "このプログラムには様々な活動が含まれています。",
-      "sentence2": "彼女は研修プログラムに登録しています。"
+      "sentence2": "彼女は研修プログラムに登録しています。",
+      "pronunciation": "/pɯɾoɡɯɾamɯ/"
     },
     {
       "id": 545,
       "word": "促進する、宣伝する",
       "sentence1": "このキャンペーンは健康的な食事を促進することを目的としています。",
-      "sentence2": "彼らは新製品を宣伝したいと思っています。"
+      "sentence2": "彼らは新製品を宣伝したいと思っています。",
+      "pronunciation": "/sokɯɕiɴsɯɾɯ,seɴdeɴsɯɾɯ/"
     },
     {
       "id": 546,
       "word": "適切な",
       "sentence1": "適切な服を着ることは重要です。",
-      "sentence2": "彼は適切な手順に従いませんでした。"
+      "sentence2": "彼は適切な手順に従いませんでした。",
+      "pronunciation": "/tekisetsɯna/"
     },
     {
       "id": 547,
       "word": "適切に",
       "sentence1": "機器を適切に扱ってください。",
-      "sentence2": "タスクは適切に完了していませんでした。"
+      "sentence2": "タスクは適切に完了していませんでした。",
+      "pronunciation": "/tekisetsɯni/"
     },
     {
       "id": 548,
       "word": "不動産",
       "sentence1": "この物件は売りに出されています。",
-      "sentence2": "彼らは商業用不動産に投資しました。"
+      "sentence2": "彼らは商業用不動産に投資しました。",
+      "pronunciation": "/ɸɯdoːsaɴ/"
     },
     {
       "id": 549,
       "word": "抗議",
       "sentence1": "抗議は平和的でした。",
-      "sentence2": "彼らはその法律に反対する抗議を組織しました。"
+      "sentence2": "彼らはその法律に反対する抗議を組織しました。",
+      "pronunciation": "/koːɡi/"
     },
     {
       "id": 550,
       "word": "誇りに思う",
       "sentence1": "彼女は自分の成果を誇りに思っていました。",
-      "sentence2": "彼は誇り高い態度で歩いていました。"
+      "sentence2": "彼は誇り高い態度で歩いていました。",
+      "pronunciation": "/hokoɾiniomoː/"
     },
     {
       "id": 551,
       "word": "証明する",
       "sentence1": "身分を証明する必要があります。",
-      "sentence2": "証拠は彼の無実を証明するでしょう。"
+      "sentence2": "証拠は彼の無実を証明するでしょう。",
+      "pronunciation": "/ɕoːmeːsɯɾɯ/"
     },
     {
       "id": 552,
       "word": "引く",
       "sentence1": "ドアを引いて開けてください。",
-      "sentence2": "彼は重い箱を引こうとしました。"
+      "sentence2": "彼は重い箱を引こうとしました。",
+      "pronunciation": "/hikɯ/"
     },
     {
       "id": 553,
       "word": "罰する",
       "sentence1": "彼らは悪事を働いた者を罰することにしました。",
-      "sentence2": "彼女は遅刻したことで罰せられました。"
+      "sentence2": "彼女は遅刻したことで罰せられました。",
+      "pronunciation": "/batsɯsɯɾɯ/"
     },
     {
       "id": 554,
       "word": "罰",
       "sentence1": "罰は厳しかったです。",
-      "sentence2": "彼は自分の行動に対して罰を受けました。"
+      "sentence2": "彼は自分の行動に対して罰を受けました。",
+      "pronunciation": "/batsɯ/"
     },
     {
       "id": 555,
       "word": "押す",
       "sentence1": "スタートするにはボタンを押してください。",
-      "sentence2": "彼は車を始動させるために押さなければなりませんでした。"
+      "sentence2": "彼は車を始動させるために押さなければなりませんでした。",
+      "pronunciation": "/osɯ/"
     },
     {
       "id": 556,
       "word": "資格",
       "sentence1": "彼女は必要な資格を持っています。",
-      "sentence2": "彼の資格は彼を強力な候補者にしています。"
+      "sentence2": "彼の資格は彼を強力な候補者にしています。",
+      "pronunciation": "/ɕikakɯ/"
     },
     {
       "id": 557,
       "word": "資格のある",
       "sentence1": "彼女は資格のある教師です。",
-      "sentence2": "彼らは資格のある応募者を探しています。"
+      "sentence2": "彼らは資格のある応募者を探しています。",
+      "pronunciation": "/ɕikakɯnoaɾɯ/"
     },
     {
       "id": 558,
       "word": "資格を得る",
       "sentence1": "そのポジションに資格を得る必要があります。",
-      "sentence2": "彼女は決勝に進む資格を得られませんでした。"
+      "sentence2": "彼女は決勝に進む資格を得られませんでした。",
+      "pronunciation": "/ɕikakɯwoeɾɯ/"
     },
     {
       "id": 559,
       "word": "列",
       "sentence1": "チケットカウンターには長い列がありました。",
-      "sentence2": "彼らは1時間以上列で待ちました。"
+      "sentence2": "彼らは1時間以上列で待ちました。",
+      "pronunciation": "/ɾetsɯ/"
     },
     {
       "id": 560,
       "word": "やめる",
       "sentence1": "彼は仕事をやめることにしました。",
-      "sentence2": "彼女は禁煙したいと思っています。"
+      "sentence2": "彼女は禁煙したいと思っています。",
+      "pronunciation": "/jameɾɯ/"
     },
     {
       "id": 561,
       "word": "引用",
       "sentence1": "この本は有名な引用で始まります。",
-      "sentence2": "彼女はシェイクスピアからの引用を含めました。"
+      "sentence2": "彼女はシェイクスピアからの引用を含めました。",
+      "pronunciation": "/iɲoː/"
     },
     {
       "id": 562,
       "word": "引用する",
       "sentence1": "情報の出典を引用してください。",
-      "sentence2": "彼は有名な作家を引用するのが好きです。"
+      "sentence2": "彼は有名な作家を引用するのが好きです。",
+      "pronunciation": "/iɲoːsɯɾɯ/"
     },
     {
       "id": 563,
       "word": "人種",
       "sentence1": "レースは地元のアスリートが勝ちました。",
-      "sentence2": "異なる人種には独自の文化があります。"
+      "sentence2": "異なる人種には独自の文化があります。",
+      "pronunciation": "/dʑiɴɕɯ/"
     },
     {
       "id": 564,
       "word": "レース",
       "sentence1": "レースは人気のあるスポーツです。",
-      "sentence2": "彼は週末のカーレースを楽しんでいます。"
+      "sentence2": "彼は週末のカーレースを楽しんでいます。",
+      "pronunciation": "/ɾeːsɯ/"
     },
     {
       "id": 565,
       "word": "範囲",
       "sentence1": "気温の範囲は20度から30度です。",
-      "sentence2": "彼らは幅広い製品を提供しています。"
+      "sentence2": "彼らは幅広い製品を提供しています。",
+      "pronunciation": "/haɴi/"
     },
     {
       "id": 566,
       "word": "珍しい",
       "sentence1": "このような美しい夕日を見るのは珍しいです。",
-      "sentence2": "彼は音楽に対して珍しい才能を持っています。"
+      "sentence2": "彼は音楽に対して珍しい才能を持っています。",
+      "pronunciation": "/mezɯɾaɕiː/"
     },
     {
       "id": 567,
       "word": "めったに〜ない",
       "sentence1": "彼女は夜はめったに外出しません。",
-      "sentence2": "彼がカメラを持っていないのを見ることはめったにありません。"
+      "sentence2": "彼がカメラを持っていないのを見ることはめったにありません。",
+      "pronunciation": "/metːani~nai/"
     },
     {
       "id": 568,
       "word": "反応",
       "sentence1": "彼女の反応は予想外でした。",
-      "sentence2": "彼はそのニュースに強い反応を示しました。"
+      "sentence2": "彼はそのニュースに強い反応を示しました。",
+      "pronunciation": "/haɴnoː/"
     },
     {
       "id": 569,
       "word": "現実",
       "sentence1": "状況の現実は複雑です。",
-      "sentence2": "彼らは厳しい現実に直面しています。"
+      "sentence2": "彼らは厳しい現実に直面しています。",
+      "pronunciation": "/ɡeɴdʑitsɯ/"
     },
     {
       "id": 570,
       "word": "レシート",
       "sentence1": "レシートを保管してください。",
-      "sentence2": "購入のレシートが必要です。"
+      "sentence2": "購入のレシートが必要です。",
+      "pronunciation": "/ɾeɕiːto/"
     },
     {
       "id": 571,
       "word": "推薦",
       "sentence1": "あなたの推薦に感謝します。",
-      "sentence2": "彼女はプロジェクトについて推薦をしました。"
+      "sentence2": "彼女はプロジェクトについて推薦をしました。",
+      "pronunciation": "/sɯiseɴ/"
     },
     {
       "id": 572,
       "word": "参照、参考文献",
       "sentence1": "仕事の参照を提供できますか？",
-      "sentence2": "彼は報告書の中でいくつかの参考文献を引用しました。"
+      "sentence2": "彼は報告書の中でいくつかの参考文献を引用しました。",
+      "pronunciation": "/saɴɕoː,saɴkoːbɯɴkeɴ/"
     },
     {
       "id": 573,
       "word": "反映する、映す、振り返る",
       "sentence1": "鏡はあなたの姿を映します。",
-      "sentence2": "彼女は自分の選択を振り返る時間を取りました。"
+      "sentence2": "彼女は自分の選択を振り返る時間を取りました。",
+      "pronunciation": "/haɴeːsɯɾɯ,ɯtsɯsɯ,ɸɯɾikaeɾɯ/"
     },
     {
       "id": 574,
       "word": "定期的に",
       "sentence1": "彼は健康を維持するために定期的に運動しています。",
-      "sentence2": "会議は毎週月曜日に定期的に開催されます。"
+      "sentence2": "会議は毎週月曜日に定期的に開催されます。",
+      "pronunciation": "/teːkitekini/"
     },
     {
       "id": 575,
       "word": "拒否する",
       "sentence1": "彼らは提案を拒否することにしました。",
-      "sentence2": "彼が彼女の招待を断ったとき、彼女は傷つきました。"
+      "sentence2": "彼が彼女の招待を断ったとき、彼女は傷つきました。",
+      "pronunciation": "/kjohisɯɾɯ/"
     },
     {
       "id": 576,
       "word": "関連づける、共感する",
       "sentence1": "理論を実践に関連づけることは重要です。",
-      "sentence2": "彼女は本の登場人物に簡単に共感できます。"
+      "sentence2": "彼女は本の登場人物に簡単に共感できます。",
+      "pronunciation": "/kaɴɾeɴzɯkeɾɯ,kjoːkaɴsɯɾɯ/"
     },
     {
       "id": 577,
       "word": "関連した",
       "sentence1": "2つのトピックは密接に関連しています。",
-      "sentence2": "彼女は多くの関連経験を持っています。"
+      "sentence2": "彼女は多くの関連経験を持っています。",
+      "pronunciation": "/kaɴɾeɴɕita/"
     },
     {
       "id": 578,
       "word": "関係",
       "sentence1": "食事と健康には強い関係があります。",
-      "sentence2": "彼らは言語と文化の関係を研究しています。"
+      "sentence2": "彼らは言語と文化の関係を研究しています。",
+      "pronunciation": "/kaɴkeː/"
     },
     {
       "id": 579,
       "word": "親戚、相対的な",
       "sentence1": "彼は私の遠い親戚です。",
-      "sentence2": "その概念は状況によって相対的です。"
+      "sentence2": "その概念は状況によって相対的です。",
+      "pronunciation": "/ɕiɴseki,soːtaitekina/"
     },
     {
       "id": 580,
       "word": "リラックスした",
       "sentence1": "マッサージの後、彼女はリラックスしました。",
-      "sentence2": "雰囲気は穏やかでリラックスしていました。"
+      "sentence2": "雰囲気は穏やかでリラックスしていました。",
+      "pronunciation": "/ɾiɾakːɯsɯɕita/"
     },
     {
       "id": 581,
       "word": "リラックスできる",
       "sentence1": "音楽を聴くことはリラックスできます。",
-      "sentence2": "彼らはスパでリラックスした日を過ごしました。"
+      "sentence2": "彼らはスパでリラックスした日を過ごしました。",
+      "pronunciation": "/ɾiɾakːɯsɯdekiɾɯ/"
     },
     {
       "id": 582,
       "word": "解放する、発売する",
       "sentence1": "鳥は籠から解放されました。",
-      "sentence2": "彼らは来月新製品を発売する予定です。"
+      "sentence2": "彼らは来月新製品を発売する予定です。",
+      "pronunciation": "/kaihoːsɯɾɯ,hatsɯbaisɯɾɯ/"
     },
     {
       "id": 583,
       "word": "信頼できる",
       "sentence1": "彼女は信頼できる友人です。",
-      "sentence2": "信頼できる情報源が必要です。"
+      "sentence2": "信頼できる情報源が必要です。",
+      "pronunciation": "/ɕiɴɾaidekiɾɯ/"
     },
     {
       "id": 584,
       "word": "宗教",
       "sentence1": "彼は敬虔に宗教を実践しています。",
-      "sentence2": "宗教は彼らの生活において重要な役割を果たしています。"
+      "sentence2": "宗教は彼らの生活において重要な役割を果たしています。",
+      "pronunciation": "/ɕɯːkjoː/"
     },
     {
       "id": 585,
       "word": "宗教的な、信心深い",
       "sentence1": "彼女はとても信心深く、毎週日曜日に教会に通っています。",
-      "sentence2": "宗教的な信念は大きく異なることがあります。"
+      "sentence2": "宗教的な信念は大きく異なることがあります。",
+      "pronunciation": "/ɕɯːkjoːtekina,ɕiɴdʑiɴbɯkai/"
     },
     {
       "id": 586,
       "word": "残る",
       "sentence1": "彼らは友達のままでいることにしました。",
-      "sentence2": "ショーが終わるまで座ったままでいてください。"
+      "sentence2": "ショーが終わるまで座ったままでいてください。",
+      "pronunciation": "/nokoɾɯ/"
     },
     {
       "id": 587,
       "word": "思い出させる",
       "sentence1": "彼女に電話することを思い出させてください。",
-      "sentence2": "休憩を取ることを自分に思い出させる必要があります。"
+      "sentence2": "休憩を取ることを自分に思い出させる必要があります。",
+      "pronunciation": "/omoidasaseɾɯ/"
     },
     {
       "id": 588,
       "word": "リモートの",
       "sentence1": "彼は自宅からリモートで働いています。",
-      "sentence2": "リモコンはテーブルの上にあります。"
+      "sentence2": "リモコンはテーブルの上にあります。",
+      "pronunciation": "/ɾimoːtono/"
     },
     {
       "id": 589,
       "word": "借りる、家賃",
       "sentence1": "彼らは旅行のために車を借りることにしました。",
-      "sentence2": "家賃は月初めに支払う期限です。"
+      "sentence2": "家賃は月初めに支払う期限です。",
+      "pronunciation": "/kaɾiɾɯ,jatɕiɴ/"
     },
     {
       "id": 590,
       "word": "修理する",
       "sentence1": "自転車を修理する必要があります。",
-      "sentence2": "修理は予想以上に時間がかかりました。"
+      "sentence2": "修理は予想以上に時間がかかりました。",
+      "pronunciation": "/ɕɯːɾisɯɾɯ/"
     },
     {
       "id": 591,
       "word": "繰り返す",
       "sentence1": "もう一度言ってもらえますか？",
-      "sentence2": "各項目についてプロセスを繰り返す必要があります。"
+      "sentence2": "各項目についてプロセスを繰り返す必要があります。",
+      "pronunciation": "/kɯɾikaesɯ/"
     },
     {
       "id": 592,
       "word": "繰り返された",
       "sentence1": "繰り返しの試みは失敗に終わりました。",
-      "sentence2": "彼女は行動パターンを繰り返しています。"
+      "sentence2": "彼女は行動パターンを繰り返しています。",
+      "pronunciation": "/kɯɾikaesaɾeta/"
     },
     {
       "id": 593,
       "word": "代表する、表す",
       "sentence1": "彼はチームを代表するために選ばれました。",
-      "sentence2": "その絵は芸術家のビジョンを表しています。"
+      "sentence2": "その絵は芸術家のビジョンを表しています。",
+      "pronunciation": "/daiçoːsɯɾɯ,aɾawasɯ/"
     },
     {
       "id": 594,
       "word": "リクエスト",
       "sentence1": "会議を依頼したいと思います。",
-      "sentence2": "リクエストは経営陣によって承認されました。"
+      "sentence2": "リクエストは経営陣によって承認されました。",
+      "pronunciation": "/ɾikɯesɯto/"
     },
     {
       "id": 595,
       "word": "必要とする",
       "sentence1": "この仕事には多くの経験が必要です。",
-      "sentence2": "追加のリソースが必要になります。"
+      "sentence2": "追加のリソースが必要になります。",
+      "pronunciation": "/hitsɯjoːtosɯɾɯ/"
     },
     {
       "id": 596,
       "word": "予約",
       "sentence1": "レストランに予約を入れました。",
-      "sentence2": "予約はメールで確認されました。"
+      "sentence2": "予約はメールで確認されました。",
+      "pronunciation": "/jojakɯ/"
     },
     {
       "id": 597,
       "word": "リソース",
       "sentence1": "図書館は学生にとって貴重なリソースです。",
-      "sentence2": "このプロジェクトにより多くのリソースを割り当てる必要があります。"
+      "sentence2": "このプロジェクトにより多くのリソースを割り当てる必要があります。",
+      "pronunciation": "/ɾisoːsɯ/"
     },
     {
       "id": 598,
       "word": "尊敬",
       "sentence1": "他人への敬意を示すことは重要です。",
-      "sentence2": "彼女は同僚からの尊敬を得ました。"
+      "sentence2": "彼女は同僚からの尊敬を得ました。",
+      "pronunciation": "/soɴkeː/"
     },
     {
       "id": 599,
       "word": "責任",
       "sentence1": "彼は自分の責任を真剣に受け止めています。",
-      "sentence2": "環境を守ることは私たちの責任です。"
+      "sentence2": "環境を守ることは私たちの責任です。",
+      "pronunciation": "/sekiniɴ/"
     },
     {
       "id": 600,
       "word": "責任ある",
       "sentence1": "彼女は責任ある大人です。",
-      "sentence2": "私たちは資源を責任を持って使う必要があります。"
+      "sentence2": "私たちは資源を責任を持って使う必要があります。",
+      "pronunciation": "/sekininaɾɯ/"
     },
     {
       "id": 601,
       "word": "結果",
       "sentence1": "結果は予想より良かったです。",
-      "sentence2": "結果を慎重に分析する必要があります。"
+      "sentence2": "結果を慎重に分析する必要があります。",
+      "pronunciation": "/kekːa/"
     },
     {
       "id": 602,
       "word": "退職する",
       "sentence1": "彼は来年退職する予定です。",
-      "sentence2": "多くの人は60代で退職することを選びます。"
+      "sentence2": "多くの人は60代で退職することを選びます。",
+      "pronunciation": "/taiɕokɯsɯɾɯ/"
     },
     {
       "id": 603,
       "word": "退職した",
       "sentence1": "彼女は退職した教師です。",
-      "sentence2": "退職した人はコミュニティでボランティア活動をすることがよくあります。"
+      "sentence2": "退職した人はコミュニティでボランティア活動をすることがよくあります。",
+      "pronunciation": "/taiɕokɯɕita/"
     },
     {
       "id": 604,
       "word": "修正する",
       "sentence1": "提出前にエッセイを修正する必要があります。",
-      "sentence2": "先生は授業計画を修正します。"
+      "sentence2": "先生は授業計画を修正します。",
+      "pronunciation": "/ɕɯːseːsɯɾɯ/"
     },
     {
       "id": 605,
       "word": "指輪",
       "sentence1": "彼女は美しい指輪をプレゼントとして受け取りました。",
-      "sentence2": "その指輪は金でできています。"
+      "sentence2": "その指輪は金でできています。",
+      "pronunciation": "/jɯbiwa/"
     },
     {
       "id": 606,
       "word": "上がる",
       "sentence1": "太陽は午前6時に昇ります。",
-      "sentence2": "来年は価格が上昇すると予想されています。"
+      "sentence2": "来年は価格が上昇すると予想されています。",
+      "pronunciation": "/aɡaɾɯ/"
     },
     {
       "id": 607,
       "word": "リスク",
       "sentence1": "明日は雨の危険があります。",
-      "sentence2": "関連するリスクを評価する必要があります。"
+      "sentence2": "関連するリスクを評価する必要があります。",
+      "pronunciation": "/ɾisɯkɯ/"
     },
     {
       "id": 608,
       "word": "ロボット",
       "sentence1": "ロボットは多くのタスクを実行できます。",
-      "sentence2": "ロボットは産業でますます一般的になっています。"
+      "sentence2": "ロボットは産業でますます一般的になっています。",
+      "pronunciation": "/ɾobotːo/"
     },
     {
       "id": 609,
       "word": "転がす、伸ばす",
       "sentence1": "ボールをこちらに転がしてください。",
-      "sentence2": "生地を伸ばす必要があります。"
+      "sentence2": "生地を伸ばす必要があります。",
+      "pronunciation": "/koɾoɡasɯ,nobasɯ/"
     },
     {
       "id": 610,
       "word": "ロマンチックな",
       "sentence1": "彼らはキャンドルライトの下でロマンチックなディナーを楽しみました。",
-      "sentence2": "その映画にはロマンチックなストーリーがあります。"
+      "sentence2": "その映画にはロマンチックなストーリーがあります。",
+      "pronunciation": "/ɾomaɴtɕikːɯna/"
     },
     {
       "id": 611,
       "word": "ロープ",
       "sentence1": "彼はロープを登って頂上に達しました。",
-      "sentence2": "ロープは丈夫な素材で作られています。"
+      "sentence2": "ロープは丈夫な素材で作られています。",
+      "pronunciation": "/ɾoːpɯ/"
     },
     {
       "id": 612,
       "word": "荒い、大まかな",
       "sentence1": "表面は荒くてでこぼこしています。",
-      "sentence2": "彼は何を期待すべきか大まかなイメージを持っています。"
+      "sentence2": "彼は何を期待すべきか大まかなイメージを持っています。",
+      "pronunciation": "/aɾai,oːmakana/"
     },
     {
       "id": 613,
       "word": "列",
       "sentence1": "前の列に座ってください。",
-      "sentence2": "本はきれいに一列に並んでいます。"
+      "sentence2": "本はきれいに一列に並んでいます。",
+      "pronunciation": "/ɾetsɯ/"
     },
     {
       "id": 614,
       "word": "王室の",
       "sentence1": "王室がイベントに出席しました。",
-      "sentence2": "彼女は王室のような態度を持っています。"
+      "sentence2": "彼女は王室のような態度を持っています。",
+      "pronunciation": "/oːɕitsɯno/"
     },
     {
       "id": 615,
       "word": "ラグビー",
       "sentence1": "ラグビーは多くの国で人気のあるスポーツです。",
-      "sentence2": "彼は週末にラグビーをします。"
+      "sentence2": "彼は週末にラグビーをします。",
+      "pronunciation": "/ɾaɡɯbiː/"
     },
     {
       "id": 616,
       "word": "ルール",
       "sentence1": "ゲームには従うべきルールがあります。",
-      "sentence2": "彼女はルールを破ってペナルティを受けました。"
+      "sentence2": "彼女はルールを破ってペナルティを受けました。",
+      "pronunciation": "/ɾɯːɾɯ/"
     },
     {
       "id": 617,
       "word": "安全",
       "sentence1": "安全は私たちの最優先事項です。",
-      "sentence2": "安全対策は効果的でした。"
+      "sentence2": "安全対策は効果的でした。",
+      "pronunciation": "/aɴzeɴ/"
     },
     {
       "id": 618,
       "word": "航海する、帆",
       "sentence1": "彼らは世界一周の航海を計画しています。",
-      "sentence2": "帆は完璧に風を受けました。"
+      "sentence2": "帆は完璧に風を受けました。",
+      "pronunciation": "/koːkaisɯɾɯ,ho/"
     },
     {
       "id": 619,
       "word": "船乗り",
       "sentence1": "船乗りは嵐の中で船を操縦しました。",
-      "sentence2": "多くの船員は漁船で働いています。"
+      "sentence2": "多くの船員は漁船で働いています。",
+      "pronunciation": "/ɸɯnanoɾi/"
     },
     {
       "id": 620,
       "word": "サンプル",
       "sentence1": "あなたの仕事のサンプルを提供できますか？",
-      "sentence2": "先生は練習用にサンプル問題を出しました。"
+      "sentence2": "先生は練習用にサンプル問題を出しました。",
+      "pronunciation": "/saɴpɯɾɯ/"
     },
     {
       "id": 621,
       "word": "砂",
       "sentence1": "子供たちは浜辺の砂で遊びました。",
-      "sentence2": "砂は小さな岩の粒子でできています。"
+      "sentence2": "砂は小さな岩の粒子でできています。",
+      "pronunciation": "/sɯna/"
     },
     {
       "id": 622,
       "word": "スキャンする",
       "sentence1": "記録用にこれらの文書をスキャンする必要があります。",
-      "sentence2": "スキャナーは複数ページを素早くスキャンできます。"
+      "sentence2": "スキャナーは複数ページを素早くスキャンできます。",
+      "pronunciation": "/sɯkjaɴsɯɾɯ/"
     },
     {
       "id": 623,
       "word": "科学的な",
       "sentence1": "科学的方法は研究において重要です。",
-      "sentence2": "彼女は研究結果について科学論文を発表しました。"
+      "sentence2": "彼女は研究結果について科学論文を発表しました。",
+      "pronunciation": "/kaɡakɯtekina/"
     },
     {
       "id": 624,
       "word": "脚本",
       "sentence1": "その劇の脚本はよく書かれていました。",
-      "sentence2": "彼は映画の新しい脚本に取り組んでいます。"
+      "sentence2": "彼は映画の新しい脚本に取り組んでいます。",
+      "pronunciation": "/kjakɯhoɴ/"
     },
     {
       "id": 625,
       "word": "彫刻",
       "sentence1": "その彫刻は有名な芸術家によって作られました。",
-      "sentence2": "彼女は美術学校で彫刻を学びました。"
+      "sentence2": "彼女は美術学校で彫刻を学びました。",
+      "pronunciation": "/tɕoːkokɯ/"
     },
     {
       "id": 626,
       "word": "二次的な、中等の",
       "sentence1": "中等教育はキャリア形成に重要です。",
-      "sentence2": "その薬の副作用はまだ不明です。"
+      "sentence2": "その薬の副作用はまだ不明です。",
+      "pronunciation": "/nidʑitekina,tɕɯːtoːno/"
     },
     {
       "id": 627,
       "word": "セキュリティ",
       "sentence1": "建物を守るためにセキュリティ対策が講じられています。",
-      "sentence2": "警備員は入口ですべての訪問者を確認しました。"
+      "sentence2": "警備員は入口ですべての訪問者を確認しました。",
+      "pronunciation": "/sekjɯɾiteː/"
     },
     {
       "id": 628,
       "word": "種",
       "sentence1": "農家は春に種を植えました。",
-      "sentence2": "種が育つには水と日光が必要です。"
+      "sentence2": "種が育つには水と日光が必要です。",
+      "pronunciation": "/tane/"
     },
     {
       "id": 629,
       "word": "賢明な",
       "sentence1": "将来のためにお金を貯めるのは賢明です。",
-      "sentence2": "彼女は家にいるという賢明な決断をしました。"
+      "sentence2": "彼女は家にいるという賢明な決断をしました。",
+      "pronunciation": "/keɴmeːna/"
     },
     {
       "id": 630,
       "word": "分ける",
       "sentence1": "リサイクル可能な材料をゴミから分けてください。",
-      "sentence2": "彼らは離婚後に財政を分けることにしました。"
+      "sentence2": "彼らは離婚後に財政を分けることにしました。",
+      "pronunciation": "/wakeɾɯ/"
     },
     {
       "id": 631,
       "word": "真剣に",
       "sentence1": "彼はその問題を真剣に受け止め、さらに調査しました。",
-      "sentence2": "彼女は今後の課題について真剣に話しました。"
+      "sentence2": "彼女は今後の課題について真剣に話しました。",
+      "pronunciation": "/ɕiɴkeɴni/"
     },
     {
       "id": 632,
       "word": "使用人",
       "sentence1": "使用人は客のために食事を準備しました。",
-      "sentence2": "彼女は大きな家庭で使用人として働いていました。"
+      "sentence2": "彼女は大きな家庭で使用人として働いていました。",
+      "pronunciation": "/ɕijoːniɴ/"
     },
     {
       "id": 633,
       "word": "置く",
       "sentence1": "本をテーブルに置いてください。",
-      "sentence2": "彼は午前7時にアラームをセットしました。"
+      "sentence2": "彼は午前7時にアラームをセットしました。",
+      "pronunciation": "/okɯ/"
     },
     {
       "id": 634,
       "word": "セット",
       "sentence1": "食器セットは美しく配置されていました。",
-      "sentence2": "彼女は近所の読書クラブに参加しました。"
+      "sentence2": "彼女は近所の読書クラブに参加しました。",
+      "pronunciation": "/setːo/"
     },
     {
       "id": 635,
       "word": "設定、舞台",
       "sentence1": "物語の舞台は小さな村です。",
-      "sentence2": "アプリで設定を変更できます。"
+      "sentence2": "アプリで設定を変更できます。",
+      "pronunciation": "/setːeː,bɯtai/"
     },
     {
       "id": 636,
       "word": "性",
       "sentence1": "性教育は若者にとって重要です。",
-      "sentence2": "この本は性の生物学的側面について論じています。"
+      "sentence2": "この本は性の生物学的側面について論じています。",
+      "pronunciation": "/seː/"
     },
     {
       "id": 637,
       "word": "性的な",
       "sentence1": "性的指向はアイデンティティの個人的な側面です。",
-      "sentence2": "このキャンペーンは性的健康の意識を促進しています。"
+      "sentence2": "このキャンペーンは性的健康の意識を促進しています。",
+      "pronunciation": "/seːtekina/"
     },
     {
       "id": 638,
       "word": "振る、握る",
       "sentence1": "使用前にボトルを振ってください。",
-      "sentence2": "彼は彼女の手を優しく握りました。"
+      "sentence2": "彼は彼女の手を優しく握りました。",
+      "pronunciation": "/ɸɯɾɯ,niɡiɾɯ/"
     },
     {
       "id": 639,
       "word": "共有する、分担する",
       "sentence1": "おもちゃを他の人と共有するのは良いことです。",
-      "sentence2": "彼らは責任を平等に分担することにしました。"
+      "sentence2": "彼らは責任を平等に分担することにしました。",
+      "pronunciation": "/kjoːjɯːsɯɾɯ,bɯɴtaɴsɯɾɯ/"
     },
     {
       "id": 640,
       "word": "鋭い、急な",
       "sentence1": "その鋭いナイフに気をつけてください。",
-      "sentence2": "急カーブは彼を不意打ちしました。"
+      "sentence2": "急カーブは彼を不意打ちしました。",
+      "pronunciation": "/sɯɾɯdoi,kjɯːna/"
     },
     {
       "id": 641,
       "word": "棚",
       "sentence1": "棚は本でいっぱいです。",
-      "sentence2": "彼女は花瓶を棚に置きました。"
+      "sentence2": "彼女は花瓶を棚に置きました。",
+      "pronunciation": "/tana/"
     },
     {
       "id": 642,
       "word": "殻",
       "sentence1": "亀は殻の中に隠れました。",
-      "sentence2": "卵の殻は壊れやすいです。"
+      "sentence2": "卵の殻は壊れやすいです。",
+      "pronunciation": "/kaɾa/"
     },
     {
       "id": 643,
       "word": "シフトする、変更する",
       "sentence1": "主要な問題に焦点を移してください。",
-      "sentence2": "会社は戦略を変更する予定です。"
+      "sentence2": "会社は戦略を変更する予定です。",
+      "pronunciation": "/ɕiɸɯtosɯɾɯ,heɴkoːsɯɾɯ/"
     },
     {
       "id": 644,
       "word": "輝く、磨く",
       "sentence1": "星は夜空で明るく輝いています。",
-      "sentence2": "彼女は布を使って銀製品を磨きました。"
+      "sentence2": "彼女は布を使って銀製品を磨きました。",
+      "pronunciation": "/kaɡajakɯ,miɡakɯ/"
     },
     {
       "id": 645,
       "word": "光沢のある",
       "sentence1": "車には光沢のある新しいペンキが塗られています。",
-      "sentence2": "彼女はパーティーに光沢のある靴を履いていきました。"
+      "sentence2": "彼女はパーティーに光沢のある靴を履いていきました。",
+      "pronunciation": "/koːtakɯnoaɾɯ/"
     },
     {
       "id": 646,
       "word": "撃つ、撮影する",
       "sentence1": "ハンターは鹿を撃たなければなりませんでした。",
-      "sentence2": "彼らは明日そのシーンを撮影します。"
+      "sentence2": "彼らは明日そのシーンを撮影します。",
+      "pronunciation": "/ɯtsɯ,satsɯeːsɯɾɯ/"
     },
     {
       "id": 647,
       "word": "恥ずかしがりの",
       "sentence1": "彼女は恥ずかしがり屋で人前で話せません。",
-      "sentence2": "褒められると、彼は恥ずかしそうに微笑みました。"
+      "sentence2": "褒められると、彼は恥ずかしそうに微笑みました。",
+      "pronunciation": "/hazɯkaɕiɡaɾino/"
     },
     {
       "id": 648,
       "word": "視力、光景",
       "sentence1": "山々の景色は息を呑むほどでした。",
-      "sentence2": "彼女はメガネなしで完璧な視力を持っています。"
+      "sentence2": "彼女はメガネなしで完璧な視力を持っています。",
+      "pronunciation": "/ɕiɾjokɯ,koːkeː/"
     },
     {
       "id": 649,
       "word": "信号",
       "sentence1": "交通信号が赤になりました。",
-      "sentence2": "彼は手信号でコミュニケーションをとりました。"
+      "sentence2": "彼は手信号でコミュニケーションをとりました。",
+      "pronunciation": "/ɕiɴɡoː/"
     },
     {
       "id": 650,
       "word": "静かな",
       "sentence1": "静かな部屋は緊張で満ちていました。",
-      "sentence2": "彼女は会議中ずっと黙っていました。"
+      "sentence2": "彼女は会議中ずっと黙っていました。",
+      "pronunciation": "/ɕizɯkana/"
     },
     {
       "id": 651,
       "word": "ばかげた、おどけた",
       "sentence1": "コントロールできないことを心配するのはばかげています。",
-      "sentence2": "彼は彼女を笑わせるためにおどけた顔をしました。"
+      "sentence2": "彼は彼女を笑わせるためにおどけた顔をしました。",
+      "pronunciation": "/bakaɡeta,odoketa/"
     },
     {
       "id": 652,
       "word": "類似性",
       "sentence1": "2つの絵画には類似点があります。",
-      "sentence2": "彼らの物語の類似性は驚くべきものです。"
+      "sentence2": "彼らの物語の類似性は驚くべきものです。",
+      "pronunciation": "/ɾɯidʑiseː/"
     },
     {
       "id": 653,
       "word": "同様に",
       "sentence1": "彼女も同様に山でのハイキングを楽しんでいます。",
-      "sentence2": "2つの提案は同様の構造になっています。"
+      "sentence2": "2つの提案は同様の構造になっています。",
+      "pronunciation": "/doːjoːni/"
     },
     {
       "id": 654,
       "word": "単に、簡潔に",
       "sentence1": "解決策は単に助けを求めることです。",
-      "sentence2": "彼女は概念を簡潔明瞭に説明しました。"
+      "sentence2": "彼女は概念を簡潔明瞭に説明しました。",
+      "pronunciation": "/taɴni,kaɴketsɯni/"
     },
     {
       "id": 655,
       "word": "〜以来",
       "sentence1": "私は2010年からここに住んでいます。",
-      "sentence2": "その事故以来、彼はより注意深くなりました。"
+      "sentence2": "その事故以来、彼はより注意深くなりました。",
+      "pronunciation": "/~iɾai/"
     },
     {
       "id": 656,
       "word": "シンク、沈む",
       "sentence1": "タイタニック号は1912年に沈没しました。",
-      "sentence2": "皿はシンクに浸けておく必要があります。"
+      "sentence2": "皿はシンクに浸けておく必要があります。",
+      "pronunciation": "/ɕiɴkɯ,ɕizɯmɯ/"
     },
     {
       "id": 657,
       "word": "スライスする、一切れ",
       "sentence1": "提供前にパンをスライスしてください。",
-      "sentence2": "彼女はケーキを一切れ取りました。"
+      "sentence2": "彼女はケーキを一切れ取りました。",
+      "pronunciation": "/sɯɾaisɯsɯɾɯ,isːaiɾe/"
     },
     {
       "id": 658,
       "word": "わずかに",
       "sentence1": "気温はわずかに上昇しました。",
-      "sentence2": "彼女はそのコメントに少しイライラしました。"
+      "sentence2": "彼女はそのコメントに少しイライラしました。",
+      "pronunciation": "/wazɯkani/"
     },
     {
       "id": 659,
       "word": "遅い",
       "sentence1": "車は遅すぎます。",
-      "sentence2": "彼はゆっくりと明確な声で話しました。"
+      "sentence2": "彼はゆっくりと明確な声で話しました。",
+      "pronunciation": "/osoi/"
     },
     {
       "id": 660,
       "word": "賢い",
       "sentence1": "彼女はとても賢くて機転が利きます。",
-      "sentence2": "彼は早期投資という賢い決断をしました。"
+      "sentence2": "彼は早期投資という賢い決断をしました。",
+      "pronunciation": "/kaɕikoi/"
     },
     {
       "id": 661,
       "word": "滑らかな",
       "sentence1": "水面はガラスのように滑らかでした。",
-      "sentence2": "彼女は滑らかな歌声を持っています。"
+      "sentence2": "彼女は滑らかな歌声を持っています。",
+      "pronunciation": "/nameɾakana/"
     },
     {
       "id": 662,
       "word": "ソフトウェア",
       "sentence1": "ソフトウェアは定期的に更新する必要があります。",
-      "sentence2": "彼はソフトウェア開発者として働いています。"
+      "sentence2": "彼はソフトウェア開発者として働いています。",
+      "pronunciation": "/soɸɯtoːea/"
     },
     {
       "id": 663,
       "word": "土壌",
       "sentence1": "この地域の土壌はとても肥沃です。",
-      "sentence2": "彼らは土壌の汚染物質を検査しました。"
+      "sentence2": "彼らは土壌の汚染物質を検査しました。",
+      "pronunciation": "/dodʑoː/"
     },
     {
       "id": 664,
       "word": "固体の、無垢の",
       "sentence1": "水は凍ると固体になります。",
-      "sentence2": "このテーブルは無垢材で作られています。"
+      "sentence2": "このテーブルは無垢材で作られています。",
+      "pronunciation": "/kotaino,mɯkɯno/"
     },
     {
       "id": 665,
       "word": "分類する",
       "sentence1": "ファイルを日付順に分類してください。",
-      "sentence2": "彼はジャンル別に本を整理するのが好きです。"
+      "sentence2": "彼はジャンル別に本を整理するのが好きです。",
+      "pronunciation": "/bɯɴɾɯisɯɾɯ/"
     },
     {
       "id": 666,
       "word": "南部の",
       "sentence1": "南部地域は温暖な気候で知られています。",
-      "sentence2": "彼らは国の南部に旅行しました。"
+      "sentence2": "彼らは国の南部に旅行しました。",
+      "pronunciation": "/naɴbɯno/"
     },
     {
       "id": 667,
       "word": "具体的に",
       "sentence1": "彼女は報告書の中でその問題を具体的に述べました。",
-      "sentence2": "私は特に歴史に関する本を探しています。"
+      "sentence2": "私は特に歴史に関する本を探しています。",
+      "pronunciation": "/ɡɯtaitekini/"
     },
     {
       "id": 668,
       "word": "支出",
       "sentence1": "会社の支出は今年増加しました。",
-      "sentence2": "彼は自分の支出習慣に注意しています。"
+      "sentence2": "彼は自分の支出習慣に注意しています。",
+      "pronunciation": "/ɕiɕɯtsɯ/"
     },
     {
       "id": 669,
       "word": "辛い",
       "sentence1": "この料理は私の好みには辛すぎます。",
-      "sentence2": "彼女は異なる文化の辛い料理が大好きです。"
+      "sentence2": "彼女は異なる文化の辛い料理が大好きです。",
+      "pronunciation": "/tsɯɾai/"
     },
     {
       "id": 670,
       "word": "精神",
       "sentence1": "勝利後、チームの士気は高かったです。",
-      "sentence2": "彼女は強い闘争心を持っています。"
+      "sentence2": "彼女は強い闘争心を持っています。",
+      "pronunciation": "/seːɕiɴ/"
     },
     {
       "id": 671,
       "word": "話される",
       "sentence1": "英語は世界で最も広く話されている言語です。",
-      "sentence2": "彼はいくつかの言語を流暢に話します。"
+      "sentence2": "彼はいくつかの言語を流暢に話します。",
+      "pronunciation": "/hanasaɾeɾɯ/"
     },
     {
       "id": 672,
       "word": "見つける、場所",
       "sentence1": "この2つの写真の違いが分かりますか？",
-      "sentence2": "彼女は座ってリラックスできる良い場所を見つけました。"
+      "sentence2": "彼女は座ってリラックスできる良い場所を見つけました。",
+      "pronunciation": "/mitsɯkeɾɯ,baɕo/"
     },
     {
       "id": 673,
       "word": "広がる、塗る",
       "sentence1": "ニュースはソーシャルメディアを通じて急速に広まりました。",
-      "sentence2": "彼女はトーストにバターを塗るのが好きです。"
+      "sentence2": "彼女はトーストにバターを塗るのが好きです。",
+      "pronunciation": "/hiɾoɡaɾɯ,nɯɾɯ/"
     },
     {
       "id": 674,
       "word": "春",
       "sentence1": "春に花が咲きます。",
-      "sentence2": "春が近づくにつれて天気が暖かくなっています。"
+      "sentence2": "春が近づくにつれて天気が暖かくなっています。",
+      "pronunciation": "/haɾɯ/"
     },
     {
       "id": 675,
       "word": "スタジアム",
       "sentence1": "スタジアムは歓声を上げるファンで満たされていました。",
-      "sentence2": "彼らは今後の試合のために新しいスタジアムを建設しました。"
+      "sentence2": "彼らは今後の試合のために新しいスタジアムを建設しました。",
+      "pronunciation": "/sɯtadʑiamɯ/"
     },
     {
       "id": 676,
       "word": "スタッフ",
       "sentence1": "ホテルのスタッフはとても親切でした。",
-      "sentence2": "彼女は教職員の一員です。"
+      "sentence2": "彼女は教職員の一員です。",
+      "pronunciation": "/sɯtafːɯ/"
     },
     {
       "id": 677,
       "word": "基準",
       "sentence1": "この製品は国際品質基準を満たしています。",
-      "sentence2": "彼らは生活水準を向上させるために取り組んでいます。"
+      "sentence2": "彼らは生活水準を向上させるために取り組んでいます。",
+      "pronunciation": "/kidʑɯɴ/"
     },
     {
       "id": 678,
       "word": "状態",
       "sentence1": "経済の状態は大きな懸念事項です。",
-      "sentence2": "彼女はニュースを聞いてショック状態にあります。"
+      "sentence2": "彼女はニュースを聞いてショック状態にあります。",
+      "pronunciation": "/dʑoːtai/"
     },
     {
       "id": 679,
       "word": "統計",
       "sentence1": "統計は売上の大幅な増加を示しています。",
-      "sentence2": "彼はデータを分析し、主要な統計を提示しました。"
+      "sentence2": "彼はデータを分析し、主要な統計を提示しました。",
+      "pronunciation": "/toːkeː/"
     },
     {
       "id": 680,
       "word": "像",
       "sentence1": "自由の女神像は自由の象徴です。",
-      "sentence2": "彼らは公園の有名な像を訪れました。"
+      "sentence2": "彼らは公園の有名な像を訪れました。",
+      "pronunciation": "/zoː/"
     },
     {
       "id": 681,
       "word": "貼る",
       "sentence1": "箱にラベルを貼ってください。",
-      "sentence2": "彼女は接着剤を使ってピースを貼り合わせました。"
+      "sentence2": "彼女は接着剤を使ってピースを貼り合わせました。",
+      "pronunciation": "/haɾɯ/"
     },
     {
       "id": 682,
       "word": "棒",
       "sentence1": "彼は地面から棒を拾いました。",
-      "sentence2": "犬は棒を噛んでいました。"
+      "sentence2": "犬は棒を噛んでいました。",
+      "pronunciation": "/boː/"
     },
     {
       "id": 683,
       "word": "まだ、静かな",
       "sentence1": "彼女はまだバスを待っています。",
-      "sentence2": "水は静かで穏やかです。"
+      "sentence2": "水は静かで穏やかです。",
+      "pronunciation": "/mada,ɕizɯkana/"
     },
     {
       "id": 684,
       "word": "店",
       "sentence1": "食料品を買いに店に行く必要があります。",
-      "sentence2": "店は午前9時から午後9時まで営業しています。"
+      "sentence2": "店は午前9時から午後9時まで営業しています。",
+      "pronunciation": "/mise/"
     },
     {
       "id": 685,
       "word": "見知らぬ人",
       "sentence1": "彼女は新しい街で見知らぬ人のように感じました。",
-      "sentence2": "オンラインで見知らぬ人と話さないでください。"
+      "sentence2": "オンラインで見知らぬ人と話さないでください。",
+      "pronunciation": "/miɕiɾanɯniɴ/"
     },
     {
       "id": 686,
       "word": "強さ",
       "sentence1": "彼は重いものを持ち上げる力があります。",
-      "sentence2": "精神的な強さは肉体的な強さと同じくらい重要です。"
+      "sentence2": "精神的な強さは肉体的な強さと同じくらい重要です。",
+      "pronunciation": "/tsɯjosa/"
     },
     {
       "id": 687,
       "word": "ひも、弦",
       "sentence1": "彼女は荷物をひもで縛りました。",
-      "sentence2": "演奏中にギターの弦が切れました。"
+      "sentence2": "演奏中にギターの弦が切れました。",
+      "pronunciation": "/himo,ɡeɴ/"
     },
     {
       "id": 688,
       "word": "強く",
       "sentence1": "彼は教育の重要性を強く信じています。",
-      "sentence2": "彼女は討論中に自分の意見を強く表明しました。"
+      "sentence2": "彼女は討論中に自分の意見を強く表明しました。",
+      "pronunciation": "/tsɯjokɯ/"
     },
     {
       "id": 689,
       "word": "スタジオ",
       "sentence1": "その芸術家は小さなスタジオで働いています。",
-      "sentence2": "彼らは写真撮影のためにスタジオを借りました。"
+      "sentence2": "彼らは写真撮影のためにスタジオを借りました。",
+      "pronunciation": "/sɯtadʑio/"
     },
     {
       "id": 690,
       "word": "もの",
       "sentence1": "旅行のために荷物をまとめる必要があります。",
-      "sentence2": "彼女のコレクションには興味深いものがたくさんあります。"
+      "sentence2": "彼女のコレクションには興味深いものがたくさんあります。",
+      "pronunciation": "/mono/"
     },
     {
       "id": 691,
       "word": "物質",
       "sentence1": "水は生命に不可欠な物質です。",
-      "sentence2": "科学者は研究室で化学物質を研究しました。"
+      "sentence2": "科学者は研究室で化学物質を研究しました。",
+      "pronunciation": "/bɯɕːitsɯ/"
     },
     {
       "id": 692,
       "word": "成功裏に",
       "sentence1": "彼女はプロジェクトを成功裏に完了しました。",
-      "sentence2": "彼らは協力して目標を成功裏に達成しました。"
+      "sentence2": "彼らは協力して目標を成功裏に達成しました。",
+      "pronunciation": "/seːkoːɾini/"
     },
     {
       "id": 693,
       "word": "突然の",
       "sentence1": "気温が突然変化しました。",
-      "sentence2": "突然の騒音にみんなが驚きました。"
+      "sentence2": "突然の騒音にみんなが驚きました。",
+      "pronunciation": "/totsɯzeɴno/"
     },
     {
       "id": 694,
       "word": "苦しむ",
       "sentence1": "彼は長い回復過程を経なければなりませんでした。",
-      "sentence2": "多くの人が不安やうつ病に苦しんでいます。"
+      "sentence2": "多くの人が不安やうつ病に苦しんでいます。",
+      "pronunciation": "/kɯɾɯɕimɯ/"
     },
     {
       "id": 695,
       "word": "スーツ",
       "sentence1": "彼は就職面接にスーツを着ていきました。",
-      "sentence2": "弁護士はフォーマルなスーツを着ていました。"
+      "sentence2": "弁護士はフォーマルなスーツを着ていました。",
+      "pronunciation": "/sɯːtsɯ/"
     },
     {
       "id": 696,
       "word": "適した",
       "sentence1": "このドレスはその機会に適しています。",
-      "sentence2": "彼らはイベントに適した場所を見つける必要があります。"
+      "sentence2": "彼らはイベントに適した場所を見つける必要があります。",
+      "pronunciation": "/tekiɕita/"
     },
     {
       "id": 697,
       "word": "要約する",
       "sentence1": "要点を要約できますか？",
-      "sentence2": "彼女は数文で記事を要約しました。"
+      "sentence2": "彼女は数文で記事を要約しました。",
+      "pronunciation": "/joːjakɯsɯɾɯ/"
     },
     {
       "id": 698,
       "word": "要約",
       "sentence1": "要約はレポートの概要を素早く提供します。",
-      "sentence2": "会議の前に要約を読んでください。"
+      "sentence2": "会議の前に要約を読んでください。",
+      "pronunciation": "/joːjakɯ/"
     },
     {
       "id": 699,
       "word": "供給する",
       "sentence1": "会社は高品質の製品を供給することを目指しています。",
-      "sentence2": "彼らは新鮮な農産物の安定した供給を持っています。"
+      "sentence2": "彼らは新鮮な農産物の安定した供給を持っています。",
+      "pronunciation": "/kjoːkjɯːsɯɾɯ/"
     },
     {
       "id": 700,
       "word": "支持者",
       "sentence1": "彼女は環境問題の熱心な支持者です。",
-      "sentence2": "そのキャンペーンには多くの熱心な支持者がいます。"
+      "sentence2": "そのキャンペーンには多くの熱心な支持者がいます。",
+      "pronunciation": "/ɕidʑiɕa/"
     },
     {
       "id": 701,
       "word": "きっと",
       "sentence1": "まさか本気じゃないでしょう。",
-      "sentence2": "彼女はきっと競争に勝つでしょう。"
+      "sentence2": "彼女はきっと競争に勝つでしょう。",
+      "pronunciation": "/kitːo/"
     },
     {
       "id": 702,
       "word": "表面",
       "sentence1": "水面は穏やかでした。",
-      "sentence2": "彼はテーブルの表面を傷つけました。"
+      "sentence2": "彼はテーブルの表面を傷つけました。",
+      "pronunciation": "/çoːmeɴ/"
     },
     {
       "id": 703,
       "word": "生き残る",
       "sentence1": "多くの種が過酷な環境で生き残るのに苦労しています。",
-      "sentence2": "彼女は事故から生き残ることができました。"
+      "sentence2": "彼女は事故から生き残ることができました。",
+      "pronunciation": "/ikinokoɾɯ/"
     },
     {
       "id": 704,
       "word": "泳ぐ",
       "sentence1": "私は海で泳ぐのが好きです。",
-      "sentence2": "彼は幼い頃に泳ぐことを学びました。"
+      "sentence2": "彼は幼い頃に泳ぐことを学びました。",
+      "pronunciation": "/ojoɡɯ/"
     },
     {
       "id": 705,
       "word": "切り替える、変える",
       "sentence1": "電気を消してもらえますか？",
-      "sentence2": "彼はキャリアを変えることに決めました。"
+      "sentence2": "彼はキャリアを変えることに決めました。",
+      "pronunciation": "/kiɾikaeɾɯ,kaeɾɯ/"
     },
     {
       "id": 706,
       "word": "症状",
       "sentence1": "咳は風邪の一般的な症状です。",
-      "sentence2": "彼女は医師にいくつかの症状を報告しました。"
+      "sentence2": "彼女は医師にいくつかの症状を報告しました。",
+      "pronunciation": "/ɕoːdʑoː/"
     },
     {
       "id": 707,
       "word": "尻尾",
       "sentence1": "犬は嬉しそうに尻尾を振りました。",
-      "sentence2": "電車のテールライトが点滅していました。"
+      "sentence2": "電車のテールライトが点滅していました。",
+      "pronunciation": "/ɕipːo/"
     },
     {
       "id": 708,
       "word": "才能",
       "sentence1": "彼女は音楽の才能があります。",
-      "sentence2": "彼の才能は若い頃に認められました。"
+      "sentence2": "彼の才能は若い頃に認められました。",
+      "pronunciation": "/sainoː/"
     },
     {
       "id": 709,
       "word": "才能のある",
       "sentence1": "彼女は才能のあるアーティストです。",
-      "sentence2": "チームは才能のある人々で構成されています。"
+      "sentence2": "チームは才能のある人々で構成されています。",
+      "pronunciation": "/sainoːnoaɾɯ/"
     },
     {
       "id": 710,
       "word": "テープ",
       "sentence1": "このプレゼントを包むためにテープが必要です。",
-      "sentence2": "テープは簡単に剥がれました。"
+      "sentence2": "テープは簡単に剥がれました。",
+      "pronunciation": "/teːpɯ/"
     },
     {
       "id": 711,
       "word": "税金",
       "sentence1": "政府は高級品に新しい税金を課しました。",
-      "sentence2": "彼は税負担を減らそうとしています。"
+      "sentence2": "彼は税負担を減らそうとしています。",
+      "pronunciation": "/zeːkiɴ/"
     },
     {
       "id": 712,
       "word": "技術的な",
       "sentence1": "彼女は工学の強い技術的背景を持っています。",
-      "sentence2": "技術的な詳細はレポートに概説されています。"
+      "sentence2": "技術的な詳細はレポートに概説されています。",
+      "pronunciation": "/ɡidʑɯtsɯtekina/"
     },
     {
       "id": 713,
       "word": "技術、技法",
       "sentence1": "彼は新しい技術を使って問題を解決しました。",
-      "sentence2": "そのアーティストは独自の絵画技法で知られています。"
+      "sentence2": "そのアーティストは独自の絵画技法で知られています。",
+      "pronunciation": "/ɡidʑɯtsɯ,ɡihoː/"
     },
     {
       "id": 714,
       "word": "傾向がある",
       "sentence1": "人々は朝の方が生産的になる傾向があります。",
-      "sentence2": "彼女は物事を考えすぎる傾向があります。"
+      "sentence2": "彼女は物事を考えすぎる傾向があります。",
+      "pronunciation": "/keːkoːɡaːɾɯ/"
     },
     {
       "id": 715,
       "word": "テント",
       "sentence1": "私たちはキャンプ旅行のためにテントを設置しました。",
-      "sentence2": "テントは6人分の広さがありました。"
+      "sentence2": "テントは6人分の広さがありました。",
+      "pronunciation": "/teɴto/"
     },
     {
       "id": 716,
       "word": "あれ、その",
       "sentence1": "私はその考えが好きではありません。",
-      "sentence2": "あれは素晴らしい映画でした！"
+      "sentence2": "あれは素晴らしい映画でした！",
+      "pronunciation": "/aɾe,sono/"
     },
     {
       "id": 717,
       "word": "彼らのもの",
       "sentence1": "この本は彼らのものです。",
-      "sentence2": "私はテーブルの上で彼らの鍵を見つけました。"
+      "sentence2": "私はテーブルの上で彼らの鍵を見つけました。",
+      "pronunciation": "/kaɾeɾanomono/"
     },
     {
       "id": 718,
       "word": "テーマ",
       "sentence1": "パーティーのテーマはトロピカルです。",
-      "sentence2": "彼女は愛をテーマにしたエッセイを書きました。"
+      "sentence2": "彼女は愛をテーマにしたエッセイを書きました。",
+      "pronunciation": "/teːma/"
     },
     {
       "id": 719,
       "word": "理論",
       "sentence1": "彼は気候変動についての新しい理論を提唱しました。",
-      "sentence2": "その理論は科学者に広く受け入れられました。"
+      "sentence2": "その理論は科学者に広く受け入れられました。",
+      "pronunciation": "/ɾiɾoɴ/"
     },
     {
       "id": 720,
       "word": "したがって",
       "sentence1": "雨が降っていたので、試合は中止されました。",
-      "sentence2": "彼女は一生懸命勉強したので、試験に合格しました。"
+      "sentence2": "彼女は一生懸命勉強したので、試験に合格しました。",
+      "pronunciation": "/ɕitaɡatːe/"
     },
     {
       "id": 721,
       "word": "これ",
       "sentence1": "これは私のお気に入りの本です。",
-      "sentence2": "これが起こっているとは信じられません。"
+      "sentence2": "これが起こっているとは信じられません。",
+      "pronunciation": "/koɾe/"
     },
     {
       "id": 722,
       "word": "けれども",
       "sentence1": "雨が降っていたけれども、私たちは散歩に行きました。",
-      "sentence2": "彼女は経験が足りないけれども、とても才能があります。"
+      "sentence2": "彼女は経験が足りないけれども、とても才能があります。",
+      "pronunciation": "/keɾedomo/"
     },
     {
       "id": 723,
       "word": "喉",
       "sentence1": "彼は喉が痛いです。",
-      "sentence2": "彼女は話す前に喉を整えました。"
+      "sentence2": "彼女は話す前に喉を整えました。",
+      "pronunciation": "/nodo/"
     },
     {
       "id": 724,
       "word": "〜を通して",
       "sentence1": "博物館は一年中開いています。",
-      "sentence2": "彼女は昨年の夏、ヨーロッパ中を旅行しました。"
+      "sentence2": "彼女は昨年の夏、ヨーロッパ中を旅行しました。",
+      "pronunciation": "/~wotoːɕite/"
     },
     {
       "id": 725,
       "word": "きつい",
       "sentence1": "このドレスは私にはきつすぎます。",
-      "sentence2": "彼は今週、スケジュールがきついです。"
+      "sentence2": "彼は今週、スケジュールがきついです。",
+      "pronunciation": "/kitsɯi/"
     },
     {
       "id": 726,
       "word": "〜まで",
       "sentence1": "あなたが到着するまで待ちます。",
-      "sentence2": "彼女は真夜中まで働きました。"
+      "sentence2": "彼女は真夜中まで働きました。",
+      "pronunciation": "/~made/"
     },
     {
       "id": 727,
       "word": "缶",
       "sentence1": "食べ物は缶に保存されています。",
-      "sentence2": "彼は豆の缶を開けました。"
+      "sentence2": "彼は豆の缶を開けました。",
+      "pronunciation": "/kaɴ/"
     },
     {
       "id": 728,
       "word": "とても小さい",
       "sentence1": "子猫はとても小さくてかわいいです。",
-      "sentence2": "彼女の頬には小さな傷跡があります。"
+      "sentence2": "彼女の頬には小さな傷跡があります。",
+      "pronunciation": "/totemotɕiːsai/"
     },
     {
       "id": 729,
       "word": "ヒント/チップ",
       "sentence1": "試験のヒントをもらえますか？",
-      "sentence2": "彼はウェイターに気前よくチップを残しました。"
+      "sentence2": "彼はウェイターに気前よくチップを残しました。",
+      "pronunciation": "/hiɴto/; /tɕipːɯ/"
     },
     {
       "id": 730,
       "word": "つま先",
       "sentence1": "テーブルにつま先をぶつけました。",
-      "sentence2": "彼女は足の爪を赤く塗りました。"
+      "sentence2": "彼女は足の爪を赤く塗りました。",
+      "pronunciation": "/tsɯmasaki/"
     },
     {
       "id": 731,
       "word": "舌",
       "sentence1": "彼は私に舌を出しました。",
-      "sentence2": "彼女は舌にピアスをしています。"
+      "sentence2": "彼女は舌にピアスをしています。",
+      "pronunciation": "/ɕita/"
     },
     {
       "id": 732,
       "word": "合計",
       "sentence1": "合計費用は100ドルです。",
-      "sentence2": "彼女は合計3つの賞を獲得しました。"
+      "sentence2": "彼女は合計3つの賞を獲得しました。",
+      "pronunciation": "/ɡoːkeː/"
     },
     {
       "id": 733,
       "word": "完全に",
       "sentence1": "私はあなたに完全に同意します。",
-      "sentence2": "その映画は完全に退屈でした。"
+      "sentence2": "その映画は完全に退屈でした。",
+      "pronunciation": "/kaɴzeɴni/"
     },
     {
       "id": 734,
       "word": "触れる",
       "sentence1": "絵画に触れないでください。",
-      "sentence2": "彼女は優しい触れ方をします。"
+      "sentence2": "彼女は優しい触れ方をします。",
+      "pronunciation": "/ɸɯɾeɾɯ/"
     },
     {
       "id": 735,
       "word": "ツアー",
       "sentence1": "私たちは市内のガイドツアーに行きました。",
-      "sentence2": "ツアーは2時間続きます。"
+      "sentence2": "ツアーは2時間続きます。",
+      "pronunciation": "/tsɯaː/"
     },
     {
       "id": 736,
       "word": "貿易",
       "sentence1": "国際貿易は経済成長に不可欠です。",
-      "sentence2": "彼は貿易業界で働いています。"
+      "sentence2": "彼は貿易業界で働いています。",
+      "pronunciation": "/boːeki/"
     },
     {
       "id": 737,
       "word": "翻訳する",
       "sentence1": "この文書を英語に翻訳できますか？",
-      "sentence2": "彼女はテキストを翻訳することを学んでいます。"
+      "sentence2": "彼女はテキストを翻訳することを学んでいます。",
+      "pronunciation": "/hoɲakɯsɯɾɯ/"
     },
     {
       "id": 738,
       "word": "翻訳",
       "sentence1": "その本の翻訳は昨年出版されました。",
-      "sentence2": "彼女は文学翻訳を専門としています。"
+      "sentence2": "彼女は文学翻訳を専門としています。",
+      "pronunciation": "/hoɲakɯ/"
     },
     {
       "id": 739,
       "word": "輸送",
       "sentence1": "彼らは貨物を輸送するためにトラックを使用しています。",
-      "sentence2": "輸送システムは非常に効率的です。"
+      "sentence2": "輸送システムは非常に効率的です。",
+      "pronunciation": "/jɯsoː/"
     },
     {
       "id": 740,
       "word": "治療する、もてなす",
       "sentence1": "医師があなたの怪我を治療します。",
-      "sentence2": "彼女はスパの日で自分へのご褒美が好きです。"
+      "sentence2": "彼女はスパの日で自分へのご褒美が好きです。",
+      "pronunciation": "/tɕiɾjoːsɯɾɯ,motenasɯ/"
     },
     {
       "id": 741,
       "word": "治療",
       "sentence1": "その病気の治療は高価です。",
-      "sentence2": "彼女は状態の治療を受けています。"
+      "sentence2": "彼女は状態の治療を受けています。",
+      "pronunciation": "/tɕiɾjoː/"
     },
     {
       "id": 742,
       "word": "トレンド",
       "sentence1": "リモートワークへの傾向が高まっています。",
-      "sentence2": "ファッションのトレンドは急速に変化します。"
+      "sentence2": "ファッションのトレンドは急速に変化します。",
+      "pronunciation": "/toɾeɴdo/"
     },
     {
       "id": 743,
       "word": "トリック、いたずら",
       "sentence1": "彼はマジックを披露しました。",
-      "sentence2": "それは光のいたずらです。"
+      "sentence2": "それは光のいたずらです。",
+      "pronunciation": "/toɾikːɯ,itazɯɾa/"
     },
     {
       "id": 744,
       "word": "真実",
       "sentence1": "真実はしばしば受け入れがたいです。",
-      "sentence2": "彼女はついに私に真実を話しました。"
+      "sentence2": "彼女はついに私に真実を話しました。",
+      "pronunciation": "/ɕiɴdʑitsɯ/"
     },
     {
       "id": 745,
       "word": "チューブ、地下鉄",
       "sentence1": "歯磨き粉はチューブに入っています。",
-      "sentence2": "彼は地下鉄で移動しました。"
+      "sentence2": "彼は地下鉄で移動しました。",
+      "pronunciation": "/tɕɯːbɯ,tɕikatetsɯ/"
     },
     {
       "id": 746,
       "word": "タイプ",
       "sentence1": "どんなタイプの音楽が好きですか？",
-      "sentence2": "彼女は冒険が好きなタイプの人です。"
+      "sentence2": "彼女は冒険が好きなタイプの人です。",
+      "pronunciation": "/taipɯ/"
     },
     {
       "id": 747,
       "word": "通常",
       "sentence1": "春の天気は通常穏やかです。",
-      "sentence2": "彼女は通常早く寝ます。"
+      "sentence2": "彼女は通常早く寝ます。",
+      "pronunciation": "/tsɯːdʑoː/"
     },
     {
       "id": 748,
       "word": "タイヤ",
       "sentence1": "パンクしたタイヤを交換する必要があります。",
-      "sentence2": "車のトランクにはスペアタイヤがあります。"
+      "sentence2": "車のトランクにはスペアタイヤがあります。",
+      "pronunciation": "/taija/"
     },
     {
       "id": 749,
       "word": "醜い",
       "sentence1": "醜い真実は直面しがたいです。",
-      "sentence2": "彼女の腕には醜い傷跡があります。"
+      "sentence2": "彼女の腕には醜い傷跡があります。",
+      "pronunciation": "/minikɯi/"
     },
     {
       "id": 750,
       "word": "できない",
       "sentence1": "彼は会議に出席できませんでした。",
-      "sentence2": "彼女は状況に対処できないと感じました。"
+      "sentence2": "彼女は状況に対処できないと感じました。",
+      "pronunciation": "/dekinai/"
     },
     {
       "id": 751,
       "word": "不快な",
       "sentence1": "その椅子は座り心地が悪いです。",
-      "sentence2": "彼女はタイトなドレスで不快に感じました。"
+      "sentence2": "彼女はタイトなドレスで不快に感じました。",
+      "pronunciation": "/ɸɯkaina/"
     },
     {
       "id": 752,
       "word": "下着",
       "sentence1": "彼は新しい下着を買いました。",
-      "sentence2": "彼女は綿の下着を好みます。"
+      "sentence2": "彼女は綿の下着を好みます。",
+      "pronunciation": "/ɕitaɡi/"
     },
     {
       "id": 753,
       "word": "失業中の",
       "sentence1": "彼は6ヶ月間失業しています。",
-      "sentence2": "失業人口が増加しています。"
+      "sentence2": "失業人口が増加しています。",
+      "pronunciation": "/ɕitsɯɡjoːnakano/"
     },
     {
       "id": 754,
       "word": "失業",
       "sentence1": "失業はこの都市の主要な問題です。",
-      "sentence2": "政府は失業を減らすために取り組んでいます。"
+      "sentence2": "政府は失業を減らすために取り組んでいます。",
+      "pronunciation": "/ɕitsɯɡjoː/"
     },
     {
       "id": 755,
       "word": "不公平な",
       "sentence1": "その間違いを彼女のせいにするのは不公平です。",
-      "sentence2": "その決定は多くの人に不公平と見なされました。"
+      "sentence2": "その決定は多くの人に不公平と見なされました。",
+      "pronunciation": "/ɸɯkoːheːna/"
     },
     {
       "id": 756,
       "word": "組合",
       "sentence1": "労働者は権利を守るために組合を結成しました。",
-      "sentence2": "組合はより良い賃金のために交渉しています。"
+      "sentence2": "組合はより良い賃金のために交渉しています。",
+      "pronunciation": "/kɯmiai/"
     },
     {
       "id": 757,
       "word": "〜でない限り",
       "sentence1": "一生懸命働かない限り、成功しません。",
-      "sentence2": "雨が降らない限り、私は行きます。"
+      "sentence2": "雨が降らない限り、私は行きます。",
+      "pronunciation": "/~denaikaɡiɾi/"
     },
     {
       "id": 758,
       "word": "〜と違って",
       "sentence1": "姉と違って、彼女はとても社交的です。",
-      "sentence2": "この生地は私が今まで見たものとは違います。"
+      "sentence2": "この生地は私が今まで見たものとは違います。",
+      "pronunciation": "/~totɕiɡatsɯte/"
     },
     {
       "id": 759,
       "word": "ありそうもない",
       "sentence1": "4月に雪が降ることはありそうもありません。",
-      "sentence2": "彼女がその申し出を受け入れることはありそうもありません。"
+      "sentence2": "彼女がその申し出を受け入れることはありそうもありません。",
+      "pronunciation": "/aɾisoːmonai/"
     },
     {
       "id": 760,
       "word": "不必要な",
       "sentence1": "新しい服を買う必要はありません。",
-      "sentence2": "そのレポートは不必要と見なされました。"
+      "sentence2": "そのレポートは不必要と見なされました。",
+      "pronunciation": "/ɸɯhitsɯjoːna/"
     },
     {
       "id": 761,
       "word": "不快な",
       "sentence1": "その匂いは不快でした。",
-      "sentence2": "彼女はホテルで不快な経験をしました。"
+      "sentence2": "彼女はホテルで不快な経験をしました。",
+      "pronunciation": "/ɸɯkaina/"
     },
     {
       "id": 762,
       "word": "更新",
       "sentence1": "ソフトウェアを更新する必要があります。",
-      "sentence2": "更新によりパフォーマンスが向上します。"
+      "sentence2": "更新によりパフォーマンスが向上します。",
+      "pronunciation": "/koːɕiɴ/"
     },
     {
       "id": 763,
       "word": "〜の上に",
       "sentence1": "昔々、姫がいました。",
-      "sentence2": "その決定は慎重な検討に基づいています。"
+      "sentence2": "その決定は慎重な検討に基づいています。",
+      "pronunciation": "/~noːeni/"
     },
     {
       "id": 764,
       "word": "動揺した",
       "sentence1": "彼女はそのニュースに動揺しました。",
-      "sentence2": "動揺しないで、あなたのせいではありません。"
+      "sentence2": "動揺しないで、あなたのせいではありません。",
+      "pronunciation": "/doːjoːɕita/"
     },
     {
       "id": 765,
       "word": "中古の",
       "sentence1": "この本は中古ですが、良い状態です。",
-      "sentence2": "彼女は中古車を買いました。"
+      "sentence2": "彼女は中古車を買いました。",
+      "pronunciation": "/tɕɯːkono/"
     },
     {
       "id": 766,
       "word": "貴重な",
       "sentence1": "時間は貴重な資源です。",
-      "sentence2": "彼女は私に貴重なアドバイスをくれました。"
+      "sentence2": "彼女は私に貴重なアドバイスをくれました。",
+      "pronunciation": "/kitɕoːna/"
     },
     {
       "id": 767,
       "word": "価値",
       "sentence1": "この絵の価値は何ですか？",
-      "sentence2": "彼は一生懸命働くことの価値を知っています。"
+      "sentence2": "彼は一生懸命働くことの価値を知っています。",
+      "pronunciation": "/katɕi/"
     },
     {
       "id": 768,
       "word": "様々な",
       "sentence1": "選択できる様々な選択肢があります。",
-      "sentence2": "彼女は様々な国に住んでいました。"
+      "sentence2": "彼女は様々な国に住んでいました。",
+      "pronunciation": "/samazamana/"
     },
     {
       "id": 769,
       "word": "バージョン",
       "sentence1": "どのバージョンのソフトウェアを使用していますか？",
-      "sentence2": "最新バージョンには新機能が含まれています。"
+      "sentence2": "最新バージョンには新機能が含まれています。",
+      "pronunciation": "/baːdʑoɴ/"
     },
     {
       "id": 770,
       "word": "被害者",
       "sentence1": "被害者は意識不明の状態で発見されました。",
-      "sentence2": "災害の多くの被害者は支援を必要としています。"
+      "sentence2": "災害の多くの被害者は支援を必要としています。",
+      "pronunciation": "/hiɡaiɕa/"
     },
     {
       "id": 771,
       "word": "眺め/見解",
       "sentence1": "頂上からの眺めは素晴らしいです。",
-      "sentence2": "彼女はその問題について異なる見解を持っています。"
+      "sentence2": "彼女はその問題について異なる見解を持っています。",
+      "pronunciation": "/naɡame/; /keɴkai/"
     },
     {
       "id": 772,
       "word": "視聴者",
       "sentence1": "その映画は多くの視聴者を引き付けました。",
-      "sentence2": "視聴者として、あなたには自分の意見を持つ権利があります。"
+      "sentence2": "視聴者として、あなたには自分の意見を持つ権利があります。",
+      "pronunciation": "/ɕitɕoːɕa/"
     },
     {
       "id": 773,
       "word": "暴力的な",
       "sentence1": "その映画には暴力的なシーンが含まれています。",
-      "sentence2": "彼は暴力的な気性を持っています。"
+      "sentence2": "彼は暴力的な気性を持っています。",
+      "pronunciation": "/boːɾjokɯtekina/"
     },
     {
       "id": 774,
       "word": "ボランティア",
       "sentence1": "彼女は地元のシェルターでボランティアすることに決めました。",
-      "sentence2": "イベントにはボランティアが必要です。"
+      "sentence2": "イベントにはボランティアが必要です。",
+      "pronunciation": "/boɾaɴteːa/"
     },
     {
       "id": 775,
       "word": "投票",
       "sentence1": "選挙で投票することは重要です。",
-      "sentence2": "彼女は初めて投票する予定です。"
+      "sentence2": "彼女は初めて投票する予定です。",
+      "pronunciation": "/toːçoː/"
     },
     {
       "id": 776,
       "word": "暖かい",
       "sentence1": "スープは暖かくて心地よいです。",
-      "sentence2": "彼女は彼に暖かい笑顔を向けました。"
+      "sentence2": "彼女は彼に暖かい笑顔を向けました。",
+      "pronunciation": "/atatakai/"
     },
     {
       "id": 777,
       "word": "警告する",
       "sentence1": "危険について警告したいです。",
-      "sentence2": "彼はそこに行かないよう警告されました。"
+      "sentence2": "彼はそこに行かないよう警告されました。",
+      "pronunciation": "/keːkokɯsɯɾɯ/"
     },
     {
       "id": 778,
       "word": "警告",
       "sentence1": "警告は嵐の後に発令されました。",
-      "sentence2": "彼女は警告サインを無視しました。"
+      "sentence2": "彼女は警告サインを無視しました。",
+      "pronunciation": "/keːkokɯ/"
     },
     {
       "id": 779,
       "word": "無駄にする、廃棄物",
       "sentence1": "重要でない仕事に時間を無駄にしないでください。",
-      "sentence2": "廃棄物は適切に処分されました。"
+      "sentence2": "廃棄物は適切に処分されました。",
+      "pronunciation": "/mɯdanisɯɾɯ,haikibɯtsɯ/"
     },
     {
       "id": 780,
       "word": "水",
       "sentence1": "水は生命に不可欠です。",
-      "sentence2": "彼女はグラスに水を注ぎました。"
+      "sentence2": "彼女はグラスに水を注ぎました。",
+      "pronunciation": "/mizɯ/"
     },
     {
       "id": 781,
       "word": "波、手を振る",
       "sentence1": "波が海岸に打ち付けました。",
-      "sentence2": "彼女は友達に手を振って別れを告げました。"
+      "sentence2": "彼女は友達に手を振って別れを告げました。",
+      "pronunciation": "/nami,tewoɸɯɾɯ/"
     },
     {
       "id": 782,
       "word": "武器",
       "sentence1": "兵士は様々な武器を使う訓練を受けました。",
-      "sentence2": "武器は犯罪現場で発見されました。"
+      "sentence2": "武器は犯罪現場で発見されました。",
+      "pronunciation": "/bɯki/"
     },
     {
       "id": 783,
       "word": "重さを量る、比較検討する",
       "sentence1": "賛否両論を比較検討することが重要です。",
-      "sentence2": "彼女は毎朝体重を量ります。"
+      "sentence2": "彼女は毎朝体重を量ります。",
+      "pronunciation": "/omosawohakaɾɯ,hikakɯkeɴtoːsɯɾɯ/"
     },
     {
       "id": 784,
       "word": "西洋の、西部の",
       "sentence1": "西洋の国々には異なる文化があります。",
-      "sentence2": "その映画は西部の町を舞台にしています。"
+      "sentence2": "その映画は西部の町を舞台にしています。",
+      "pronunciation": "/seːjoːno,seːbɯno/"
     },
     {
       "id": 785,
       "word": "何でも",
       "sentence1": "あなたを幸せにするものは何でもしてください。",
-      "sentence2": "何が起こっても、彼女はあなたを支持します。"
+      "sentence2": "何が起こっても、彼女はあなたを支持します。",
+      "pronunciation": "/naɴdemo/"
     },
     {
       "id": 786,
       "word": "いつでも",
       "sentence1": "助けが必要な時はいつでも電話できます。",
-      "sentence2": "あなたが必要な時はいつでもそこにいます。"
+      "sentence2": "あなたが必要な時はいつでもそこにいます。",
+      "pronunciation": "/itsɯdemo/"
     },
     {
       "id": 787,
       "word": "〜かどうか",
       "sentence1": "行くか残るか分かりません。",
-      "sentence2": "彼女は雨が降るかどうか尋ねました。"
+      "sentence2": "彼女は雨が降るかどうか尋ねました。",
+      "pronunciation": "/~kadoːka/"
     },
     {
       "id": 788,
       "word": "〜する間",
       "sentence1": "私は仕事をしながら音楽を聴くのが好きです。",
-      "sentence2": "彼女はバスを待っている間、本を読みました。"
+      "sentence2": "彼女はバスを待っている間、本を読みました。",
+      "pronunciation": "/~sɯɾɯkaɴ/"
     },
     {
       "id": 789,
       "word": "全体の",
       "sentence1": "家族全員が再会のために集まりました。",
-      "sentence2": "彼は一人でピザを全部食べました。"
+      "sentence2": "彼は一人でピザを全部食べました。",
+      "pronunciation": "/zeɴtaino/"
     },
     {
       "id": 790,
       "word": "〜するつもり",
       "sentence1": "明日電話します。",
-      "sentence2": "彼女は後で宿題を終えます。"
+      "sentence2": "彼女は後で宿題を終えます。",
+      "pronunciation": "/~sɯɾɯtsɯmoɾi/"
     },
     {
       "id": 791,
       "word": "勝つ",
       "sentence1": "私は競争に勝ちたいです。",
-      "sentence2": "彼らは大差で試合に勝ちました。"
+      "sentence2": "彼らは大差で試合に勝ちました。",
+      "pronunciation": "/katsɯ/"
     },
     {
       "id": 792,
       "word": "翼",
       "sentence1": "鳥は翼を広げて飛び去りました。",
-      "sentence2": "飛行機の翼が損傷しました。"
+      "sentence2": "飛行機の翼が損傷しました。",
+      "pronunciation": "/tsɯbasa/"
     },
     {
       "id": 793,
       "word": "〜の中に",
       "sentence1": "答えはテキストの中にあります。",
-      "sentence2": "彼女は自分の中に平和を見つけました。"
+      "sentence2": "彼女は自分の中に平和を見つけました。",
+      "pronunciation": "/~nonakani/"
     },
     {
       "id": 794,
       "word": "不思議に思う",
       "sentence1": "次に何が起こるか不思議に思います。",
-      "sentence2": "彼女は彼が来るかどうか不思議に思いました。"
+      "sentence2": "彼女は彼が来るかどうか不思議に思いました。",
+      "pronunciation": "/ɸɯɕiɡiniomoː/"
     },
     {
       "id": 795,
       "word": "羊毛",
       "sentence1": "このセーターは柔らかい羊毛で作られています。",
-      "sentence2": "彼女は編み物用の羊毛を買いました。"
+      "sentence2": "彼女は編み物用の羊毛を買いました。",
+      "pronunciation": "/joːmoː/"
     },
     {
       "id": 796,
       "word": "世界中の",
       "sentence1": "そのキャンペーンは世界中で成功しました。",
-      "sentence2": "彼女には世界中に友達がいます。"
+      "sentence2": "彼女には世界中に友達がいます。",
+      "pronunciation": "/sekaidʑɯːno/"
     },
     {
       "id": 797,
       "word": "心配する",
       "sentence1": "小さなことは心配しないでください。",
-      "sentence2": "彼女は自分の将来を心配しています。"
+      "sentence2": "彼女は自分の将来を心配しています。",
+      "pronunciation": "/ɕiɴpaisɯɾɯ/"
     },
     {
       "id": 798,
       "word": "より悪い",
       "sentence1": "状況は悪化しています。",
-      "sentence2": "彼女はニュースを聞いてもっと悪く感じました。"
+      "sentence2": "彼女はニュースを聞いてもっと悪く感じました。",
+      "pronunciation": "/joɾiwaɾɯi/"
     },
     {
       "id": 799,
       "word": "最悪の",
       "sentence1": "これは今までで最悪の日です。",
-      "sentence2": "彼は試合で最悪の運を持っていました。"
+      "sentence2": "彼は試合で最悪の運を持っていました。",
+      "pronunciation": "/saiakɯno/"
     },
     {
       "id": 800,
       "word": "価値がある",
       "sentence1": "この絵はたくさんのお金の価値があります。",
-      "sentence2": "努力する価値はありません。"
+      "sentence2": "努力する価値はありません。",
+      "pronunciation": "/katɕiɡaːɾɯ/"
     },
     {
       "id": 801,
       "word": "書かれた",
       "sentence1": "ルールはハンドブックに書かれています。",
-      "sentence2": "彼女は書面の契約を持っています。"
+      "sentence2": "彼女は書面の契約を持っています。",
+      "pronunciation": "/kakaɾeta/"
     },
     {
       "id": 802,
       "word": "間違った",
       "sentence1": "電話番号が間違っていると思います。",
-      "sentence2": "嘘をつくのは間違っています。"
+      "sentence2": "嘘をつくのは間違っています。",
+      "pronunciation": "/matɕiɡatsɯta/"
     },
     {
       "id": 803,
       "word": "庭",
       "sentence1": "子供たちは庭で遊んでいます。",
-      "sentence2": "彼女の庭には美しい花園があります。"
+      "sentence2": "彼女の庭には美しい花園があります。",
+      "pronunciation": "/niwa/"
     },
     {
       "id": 804,
       "word": "若い",
       "sentence1": "若い女の子はピアノを弾くことを学んでいます。",
-      "sentence2": "彼はまだ若くて、明るい未来があります。"
+      "sentence2": "彼はまだ若くて、明るい未来があります。",
+      "pronunciation": "/wakai/"
     },
     {
       "id": 805,
       "word": "若者",
       "sentence1": "若さは探求と成長の時期です。",
-      "sentence2": "このプログラムは青少年の発展のために設計されています。"
+      "sentence2": "このプログラムは青少年の発展のために設計されています。",
+      "pronunciation": "/wakamono/"
     }
   ]
 }

@@ -49,6 +49,15 @@ const BACK_BUTTON_LEFT = scale(20);
 
 type ExampleSentencesRouteProp = RouteProp<RootStackParamList, 'ExampleSentences'>;
 
+function getDisplayPronunciation(pronunciation?: string | null): string | null {
+    if (typeof pronunciation !== 'string') {
+        return null;
+    }
+
+    const trimmed = pronunciation.trim();
+    return trimmed.length > 0 ? trimmed : null;
+}
+
 // =============================================================================
 // COMPONENT
 // =============================================================================
@@ -62,12 +71,14 @@ export default function ExampleSentencesScreen() {
     // Extract word data with defaults
     const {
         word = 'Word',
+        pronunciation = null,
         translation = 'Translation',
         sentence1 = 'Example sentence 1',
         sentence2 = 'Example sentence 2',
         nativeSentence1 = 'Native sentence 1',
         nativeSentence2 = 'Native sentence 2',
     } = route.params ?? {};
+    const displayPronunciation = getDisplayPronunciation(pronunciation);
 
     // AI State
     const [isAiLoading, setIsAiLoading] = useState(false);
@@ -187,6 +198,15 @@ export default function ExampleSentencesScreen() {
                             </Text>
                         </TouchableOpacity>
                     </View>
+
+                    {displayPronunciation ? (
+                        <Text
+                            style={[styles.pronunciationText, { color: colors.textSecondary }]}
+                            numberOfLines={2}
+                        >
+                            {displayPronunciation}
+                        </Text>
+                    ) : null}
 
                     {/* Translation Row - Translate Icon Aligned with Back Button */}
                     <View style={styles.translationContainer}>
@@ -613,6 +633,16 @@ const styles = StyleSheet.create({
         fontFamily: FONT_FAMILY,
         fontSize: moderateScale(32),
         textAlign: 'center',
+    },
+    pronunciationText: {
+        fontSize: moderateScale(18),
+        lineHeight: moderateScale(24),
+        fontStyle: 'italic',
+        fontWeight: '500',
+        letterSpacing: 0.2,
+        textAlign: 'center',
+        maxWidth: '75%',
+        marginBottom: scale(12),
     },
     translationContainer: {
         width: '100%',

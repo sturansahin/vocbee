@@ -4,5389 +4,6287 @@
       "id": 1,
       "word": "አንድ",
       "sentence1": "አንድ ድመት አለኝ።",
-      "sentence2": "እሷ መሐንዲስ ናት።"
+      "sentence2": "እሷ መሐንዲስ ናት።",
+      "pronunciation": "/ənɨd/"
     },
     {
       "id": 2,
       "word": "ስለ",
       "sentence1": "ይህ መጽሐፍ ስለ ታሪክ ነው።",
-      "sentence2": "ስለ ምን ታስባለህ?"
+      "sentence2": "ስለ ምን ታስባለህ?",
+      "pronunciation": "/sɨlə/"
     },
     {
       "id": 3,
       "word": "ከላይ",
       "sentence1": "ሥዕሉ ከሶፋው በላይ ነው።",
-      "sentence2": "አውሮፕላኑ ከደመናው በላይ እየበረረ ነው።"
+      "sentence2": "አውሮፕላኑ ከደመናው በላይ እየበረረ ነው።",
+      "pronunciation": "/kəlaj/"
     },
     {
       "id": 4,
       "word": "ማዶ",
       "sentence1": "ባንኩ ከመንገዱ ማዶ ነው።",
-      "sentence2": "እሷ ድልድዩን አቋርጣ ሄደች።"
+      "sentence2": "እሷ ድልድዩን አቋርጣ ሄደች።",
+      "pronunciation": "/mado/"
     },
     {
       "id": 5,
       "word": "እርምጃ",
       "sentence1": "አሁን እርምጃ ውሰድ።",
-      "sentence2": "የድርጊት ፊልሞችን እወዳለሁ።"
+      "sentence2": "የድርጊት ፊልሞችን እወዳለሁ።",
+      "pronunciation": "/ɨrɨmɨd͡ʒa/"
     },
     {
       "id": 6,
       "word": "እንቅስቃሴ",
       "sentence1": "ዋና የምወደው እንቅስቃሴ ነው።",
-      "sentence2": "የትኛውን እንቅስቃሴ ትመርጣለህ?"
+      "sentence2": "የትኛውን እንቅስቃሴ ትመርጣለህ?",
+      "pronunciation": "/ɨnɨkʼɨsɨkʼase/"
     },
     {
       "id": 7,
       "word": "ተዋናይ",
       "sentence1": "እሱ ታዋቂ ተዋናይ ነው።",
-      "sentence2": "ተዋናዩ ሚናውን በጥሩ ሁኔታ ተጫውቷል።"
+      "sentence2": "ተዋናዩ ሚናውን በጥሩ ሁኔታ ተጫውቷል።",
+      "pronunciation": "/təwanaj/"
     },
     {
       "id": 8,
       "word": "ተዋናይት",
       "sentence1": "እሷ ተሰጥኦ ያላት ተዋናይት ናት።",
-      "sentence2": "ተዋናይቷ ሽልማት አሸንፋለች።"
+      "sentence2": "ተዋናይቷ ሽልማት አሸንፋለች።",
+      "pronunciation": "/təwanajɨt/"
     },
     {
       "id": 9,
       "word": "መጨመር",
       "sentence1": "በሾርባው ላይ ጨው ጨምር።",
-      "sentence2": "ቁጥሬን መጨመር ትችላለህ?"
+      "sentence2": "ቁጥሬን መጨመር ትችላለህ?",
+      "pronunciation": "/mət͡ʃʼəmər/"
     },
     {
       "id": 10,
       "word": "አድራሻ",
       "sentence1": "አድራሻህ ምንድን ነው?",
-      "sentence2": "አድራሻህን እዚህ ጻፍ።"
+      "sentence2": "አድራሻህን እዚህ ጻፍ።",
+      "pronunciation": "/ədɨraʃa/"
     },
     {
       "id": 11,
       "word": "አዋቂ",
       "sentence1": "ይህ ፊልም ለአዋቂዎች ብቻ ነው።",
-      "sentence2": "አሁን አዋቂ ነኝ።"
+      "sentence2": "አሁን አዋቂ ነኝ።",
+      "pronunciation": "/əwakʼi/"
     },
     {
       "id": 12,
       "word": "ምክር",
       "sentence1": "ምክር ልትሰጠኝ ትችላለህ?",
-      "sentence2": "ምክሩ ጠቃሚ ነበር።"
+      "sentence2": "ምክሩ ጠቃሚ ነበር።",
+      "pronunciation": "/mɨkɨr/"
     },
     {
       "id": 13,
       "word": "መፍራት",
       "sentence1": "ሸረሪቶችን እፈራለሁ።",
-      "sentence2": "አትፍራ።"
+      "sentence2": "አትፍራ።",
+      "pronunciation": "/məfɨrat/"
     },
     {
       "id": 14,
       "word": "በኋላ",
       "sentence1": "ከስራ በኋላ እንገናኝ።",
-      "sentence2": "ከራት በኋላ ቴሌቪዥን አየን።"
+      "sentence2": "ከራት በኋላ ቴሌቪዥን አየን።",
+      "pronunciation": "/bəhwala/"
     },
     {
       "id": 15,
       "word": "ከሰዓት",
       "sentence1": "መልካም ከሰዓት!",
-      "sentence2": "ከሰዓት እተኛለሁ።"
+      "sentence2": "ከሰዓት እተኛለሁ።",
+      "pronunciation": "/kəsəat/"
     },
     {
       "id": 16,
       "word": "እንደገና",
       "sentence1": "እባክህ እንደገና ንገረኝ።",
-      "sentence2": "እንደገና ልያይህ እፈልጋለሁ።"
+      "sentence2": "እንደገና ልያይህ እፈልጋለሁ።",
+      "pronunciation": "/ɨnɨdəɡəna/"
     },
     {
       "id": 17,
       "word": "ዕድሜ",
       "sentence1": "ዕድሜህ ስንት ነው?",
-      "sentence2": "እሷ 25 ዓመት ነው።"
+      "sentence2": "እሷ 25 ዓመት ነው።",
+      "pronunciation": "/ɨdɨme/"
     },
     {
       "id": 18,
       "word": "በፊት",
       "sentence1": "ከሁለት ዓመት በፊት አገኘሁት።",
-      "sentence2": "ከአንድ ሰዓት በፊት ሄደች።"
+      "sentence2": "ከአንድ ሰዓት በፊት ሄደች።",
+      "pronunciation": "/bəfit/"
     },
     {
       "id": 19,
       "word": "መስማማት",
       "sentence1": "ከአንተ ጋር እስማማለሁ።",
-      "sentence2": "በዚህ ዕቅድ ትስማማለህ?"
+      "sentence2": "በዚህ ዕቅድ ትስማማለህ?",
+      "pronunciation": "/məsɨmamat/"
     },
     {
       "id": 20,
       "word": "አየር",
       "sentence1": "እዚህ አየሩ ንጹህ ነው።",
-      "sentence2": "ትንሽ ንጹህ አየር ያስፈልገኛል።"
+      "sentence2": "ትንሽ ንጹህ አየር ያስፈልገኛል።",
+      "pronunciation": "/əjər/"
     },
     {
       "id": 21,
       "word": "አውሮፕላን ማረፊያ",
       "sentence1": "በአውሮፕላን ማረፊያ እወስድሃለሁ።",
-      "sentence2": "አውሮፕላን ማረፊያው በጣም የተጨናነቀ ነው።"
+      "sentence2": "አውሮፕላን ማረፊያው በጣም የተጨናነቀ ነው።",
+      "pronunciation": "/əwɨropɨlan marəfija/"
     },
     {
       "id": 22,
       "word": "ሁሉም",
       "sentence1": "ሁሉም ተማሪዎች ፈተናውን አልፈዋል።",
-      "sentence2": "ሁሉንም ብስኩቶች በላሁ።"
+      "sentence2": "ሁሉንም ብስኩቶች በላሁ።",
+      "pronunciation": "/hulum/"
     },
     {
       "id": 23,
       "word": "ደግሞ",
       "sentence1": "እኔም ፒዛ እወዳለሁ።",
-      "sentence2": "እሷም ወደ ፓርቲው ትመጣለች።"
+      "sentence2": "እሷም ወደ ፓርቲው ትመጣለች።",
+      "pronunciation": "/dəɡɨmo/"
     },
     {
       "id": 24,
       "word": "ሁልጊዜ",
       "sentence1": "ሁልጊዜ ቀድሜ እነቃለሁ።",
-      "sentence2": "እሷ ሁልጊዜ ደስተኛ ናት።"
+      "sentence2": "እሷ ሁልጊዜ ደስተኛ ናት።",
+      "pronunciation": "/hulɨɡize/"
     },
     {
       "id": 25,
       "word": "አስደናቂ",
       "sentence1": "ከላይ ያለው እይታ አስደናቂ ነው።",
-      "sentence2": "አስደናቂ ስራ ሰርተሃል!"
+      "sentence2": "አስደናቂ ስራ ሰርተሃል!",
+      "pronunciation": "/əsɨdənakʼi/"
     },
     {
       "id": 26,
       "word": "እና",
       "sentence1": "ሻይ እና ቡና እወዳለሁ።",
-      "sentence2": "እሷ እያጠናች እና እየሰራች ነው።"
+      "sentence2": "እሷ እያጠናች እና እየሰራች ነው።",
+      "pronunciation": "/ɨna/"
     },
     {
       "id": 27,
       "word": "ተናዶ",
       "sentence1": "እሱ በጓደኛው ተናድዷል።",
-      "sentence2": "እባክህ አትናደድ።"
+      "sentence2": "እባክህ አትናደድ።",
+      "pronunciation": "/tənado/"
     },
     {
       "id": 28,
       "word": "እንስሳ",
       "sentence1": "ዝሆን ትልቅ እንስሳ ነው።",
-      "sentence2": "የቤት እንስሳ አለኝ።"
+      "sentence2": "የቤት እንስሳ አለኝ።",
+      "pronunciation": "/ɨnɨsɨsa/"
     },
     {
       "id": 29,
       "word": "ሌላ",
       "sentence1": "ሌላ ቁራጭ ኬክ ልበላ እችላለሁ?",
-      "sentence2": "እሷ ሌላ እድል ትፈልጋለች።"
+      "sentence2": "እሷ ሌላ እድል ትፈልጋለች።",
+      "pronunciation": "/lela/"
     },
     {
       "id": 30,
       "word": "መልስ",
       "sentence1": "መልስህ ምንድን ነው?",
-      "sentence2": "መልሱን አላውቅም።"
+      "sentence2": "መልሱን አላውቅም።",
+      "pronunciation": "/məlɨs/"
     },
     {
       "id": 31,
       "word": "ማንኛውም",
       "sentence1": "ማንኛውም ጥያቄ አለህ?",
-      "sentence2": "ምንም ገንዘብ የለኝም።"
+      "sentence2": "ምንም ገንዘብ የለኝም።",
+      "pronunciation": "/manɨɲawɨm/"
     },
     {
       "id": 32,
       "word": "ማንም",
       "sentence1": "ማንም አለ?",
-      "sentence2": "እዚህ ማንንም አላውቅም።"
+      "sentence2": "እዚህ ማንንም አላውቅም።",
+      "pronunciation": "/manɨm/"
     },
     {
       "id": 33,
       "word": "ምንም",
       "sentence1": "ምንም ያስፈልግሃል?",
-      "sentence2": "ምንም ማግኘት አልቻልኩም።"
+      "sentence2": "ምንም ማግኘት አልቻልኩም።",
+      "pronunciation": "/mɨnɨm/"
     },
     {
       "id": 34,
       "word": "አፓርትመንት",
       "sentence1": "በትንሽ አፓርትመንት ውስጥ እኖራለሁ።",
-      "sentence2": "አፓርትመንቱ በጣም ጥሩ ነው።"
+      "sentence2": "አፓርትመንቱ በጣም ጥሩ ነው።",
+      "pronunciation": "/əparɨtɨmənɨt/"
     },
     {
       "id": 35,
       "word": "ፖም",
       "sentence1": "በየቀኑ ፖም መብላት እወዳለሁ።",
-      "sentence2": "እሷ የፖም ፓይ ሰራች።"
+      "sentence2": "እሷ የፖም ፓይ ሰራች።",
+      "pronunciation": "/pom/"
     },
     {
       "id": 36,
       "word": "ሚያዝያ",
       "sentence1": "ሚያዝያ አራተኛው ወር ነው።",
-      "sentence2": "ልደቴ በሚያዝያ ነው።"
+      "sentence2": "ልደቴ በሚያዝያ ነው።",
+      "pronunciation": "/mijazɨja/"
     },
     {
       "id": 37,
       "word": "አካባቢ",
       "sentence1": "ይህ ትልቅ አካባቢ ነው።",
-      "sentence2": "ፓርኩ በዚህ አካባቢ ነው።"
+      "sentence2": "ፓርኩ በዚህ አካባቢ ነው።",
+      "pronunciation": "/əkababi/"
     },
     {
       "id": 38,
       "word": "ክንድ",
       "sentence1": "ክንዱ ተሰብሯል።",
-      "sentence2": "በክንዷ ላይ ንቅሳት አላት።"
+      "sentence2": "በክንዷ ላይ ንቅሳት አላት።",
+      "pronunciation": "/kɨnɨd/"
     },
     {
       "id": 39,
       "word": "ዙሪያ",
       "sentence1": "ድመቷ በጠረጴዛው ዙሪያ ተቀምጣለች።",
-      "sentence2": "በፓርኩ ዙሪያ እንራመድ።"
+      "sentence2": "በፓርኩ ዙሪያ እንራመድ።",
+      "pronunciation": "/zurija/"
     },
     {
       "id": 40,
       "word": "መድረስ",
       "sentence1": "በ5 ሰዓት እንደርሳለን።",
-      "sentence2": "እባክህ በሰዓቱ ድረስ።"
+      "sentence2": "እባክህ በሰዓቱ ድረስ።",
+      "pronunciation": "/mədɨrəs/"
     },
     {
       "id": 41,
       "word": "ጥበብ",
       "sentence1": "ዘመናዊ ጥበብን እወዳለሁ።",
-      "sentence2": "እሷ የጥበብ ታሪክ እያጠናች ነው።"
+      "sentence2": "እሷ የጥበብ ታሪክ እያጠናች ነው።",
+      "pronunciation": "/tʼɨbəb/"
     },
     {
       "id": 42,
       "word": "ጽሑፍ",
       "sentence1": "አስደሳች ጽሑፍ አነበብኩ።",
-      "sentence2": "ጽሑፉ በጥሩ ሁኔታ ተጽፏል።"
+      "sentence2": "ጽሑፉ በጥሩ ሁኔታ ተጽፏል።",
+      "pronunciation": "/t͡sʼɨhuf/"
     },
     {
       "id": 43,
       "word": "አርቲስት",
       "sentence1": "እሱ ታዋቂ አርቲስት ነው።",
-      "sentence2": "አርቲስቱ ቆንጆ ሥዕል ሣለ።"
+      "sentence2": "አርቲስቱ ቆንጆ ሥዕል ሣለ።",
+      "pronunciation": "/ərɨtisɨt/"
     },
     {
       "id": 44,
       "word": "እንደ",
       "sentence1": "እሷ እንደ መምህር ትሰራለች።",
-      "sentence2": "እሱ እንደ ታላቅ መሪ ይታወቃል።"
+      "sentence2": "እሱ እንደ ታላቅ መሪ ይታወቃል።",
+      "pronunciation": "/ɨnɨdə/"
     },
     {
       "id": 45,
       "word": "መጠየቅ",
       "sentence1": "ጥያቄ ልጠይቅህ እችላለሁ?",
-      "sentence2": "እሷ እርዳታ ጠየቀች።"
+      "sentence2": "እሷ እርዳታ ጠየቀች።",
+      "pronunciation": "/mətʼəjəkʼ/"
     },
     {
       "id": 46,
       "word": "በ",
       "sentence1": "በፓርኩ እገናኝሃለሁ።",
-      "sentence2": "መጽሐፉ በቤተ መጻሕፍት ነው።"
+      "sentence2": "መጽሐፉ በቤተ መጻሕፍት ነው።",
+      "pronunciation": "/bə/"
     },
     {
       "id": 47,
       "word": "ነሐሴ",
       "sentence1": "ነሐሴ ስምንተኛው ወር ነው።",
-      "sentence2": "ዕረፍቴ በነሐሴ ነው።"
+      "sentence2": "ዕረፍቴ በነሐሴ ነው።",
+      "pronunciation": "/nəhəse/"
     },
     {
       "id": 48,
       "word": "አክስት",
       "sentence1": "አክስቴ በሌላ ከተማ ትኖራለች።",
-      "sentence2": "ባለፈው ሳምንት መጨረሻ አክስቴን ጎበኘሁ።"
+      "sentence2": "ባለፈው ሳምንት መጨረሻ አክስቴን ጎበኘሁ።",
+      "pronunciation": "/əkɨsɨt/"
     },
     {
       "id": 49,
       "word": "መኸር",
       "sentence1": "መኸር የምወደው ወቅት ነው።",
-      "sentence2": "ቅጠሎች በመኸር ይወድቃሉ።"
+      "sentence2": "ቅጠሎች በመኸር ይወድቃሉ።",
+      "pronunciation": "/məxər/"
     },
     {
       "id": 50,
       "word": "ርቆ",
       "sentence1": "መደብሩ ርቆ ነው።",
-      "sentence2": "እሱ በዕረፍት ርቆ ሄዷል።"
+      "sentence2": "እሱ በዕረፍት ርቆ ሄዷል።",
+      "pronunciation": "/rɨkʼo/"
     },
     {
       "id": 51,
       "word": "ሕፃን",
       "sentence1": "ሕፃኑ እየተኛ ነው።",
-      "sentence2": "ትንሽ እህት አለኝ።"
+      "sentence2": "ትንሽ እህት አለኝ።",
+      "pronunciation": "/hɨt͡sʼan/"
     },
     {
       "id": 52,
       "word": "ጀርባ",
       "sentence1": "መጽሐፉ በኋላኛው መደርደሪያ ላይ ነው።",
-      "sentence2": "ሲያነሳ ጀርባው ተጎዳ።"
+      "sentence2": "ሲያነሳ ጀርባው ተጎዳ።",
+      "pronunciation": "/d͡ʒərɨba/"
     },
     {
       "id": 53,
       "word": "መጥፎ",
       "sentence1": "ይህ ምግብ መጥፎ ጣዕም አለው።",
-      "sentence2": "መጥፎ ቀን ነበረው።"
+      "sentence2": "መጥፎ ቀን ነበረው።",
+      "pronunciation": "/mətʼɨfo/"
     },
     {
       "id": 54,
       "word": "ቦርሳ",
       "sentence1": "አዲስ ቦርሳ ያስፈልገኛል።",
-      "sentence2": "ለጉዞው ቦርሳዋን ጠቅልላለች።"
+      "sentence2": "ለጉዞው ቦርሳዋን ጠቅልላለች።",
+      "pronunciation": "/borɨsa/"
     },
     {
       "id": 55,
       "word": "ኳስ",
       "sentence1": "ኳሱ ክብ ነው።",
-      "sentence2": "ኳሱን ረገጥኩት።"
+      "sentence2": "ኳሱን ረገጥኩት።",
+      "pronunciation": "/kwas/"
     },
     {
       "id": 56,
       "word": "ሙዝ",
       "sentence1": "ሙዝ መብላት እወዳለሁ።",
-      "sentence2": "እሷ የሙዝ ስሙዚ ሰራች።"
+      "sentence2": "እሷ የሙዝ ስሙዚ ሰራች።",
+      "pronunciation": "/muz/"
     },
     {
       "id": 57,
       "word": "ባንድ",
       "sentence1": "ባንዱ ሙዚቃ እየተጫወተ ነው።",
-      "sentence2": "ይህን ባንድ እወዳለሁ።"
+      "sentence2": "ይህን ባንድ እወዳለሁ።",
+      "pronunciation": "/banɨd/"
     },
     {
       "id": 58,
       "word": "ባንክ",
       "sentence1": "ወደ ባንክ መሄድ አለብኝ።",
-      "sentence2": "እሷ በባንክ ትሰራለች።"
+      "sentence2": "እሷ በባንክ ትሰራለች።",
+      "pronunciation": "/banɨk/"
     },
     {
       "id": 59,
       "word": "መታጠቢያ",
       "sentence1": "በየምሽቱ እታጠባለሁ።",
-      "sentence2": "መታጠቢያው የሚያስተኛ ነው።"
+      "sentence2": "መታጠቢያው የሚያስተኛ ነው።",
+      "pronunciation": "/mətatʼəbija/"
     },
     {
       "id": 60,
       "word": "መታጠቢያ ቤት",
       "sentence1": "መታጠቢያ ቤቱ ንጹህ ነው።",
-      "sentence2": "መታጠቢያ ቤት መጠቀም አለብኝ።"
+      "sentence2": "መታጠቢያ ቤት መጠቀም አለብኝ።",
+      "pronunciation": "/mətatʼəbija bet/"
     },
     {
       "id": 61,
       "word": "መሆን",
       "sentence1": "ዶክተር መሆን እፈልጋለሁ።",
-      "sentence2": "እሷ ደስተኛ ትሆናለች።"
+      "sentence2": "እሷ ደስተኛ ትሆናለች።",
+      "pronunciation": "/məhon/"
     },
     {
       "id": 62,
       "word": "ባህር ዳር",
       "sentence1": "ባህር ዳሩ የተጨናነቀ ነው።",
-      "sentence2": "ባህር ዳርን እወዳለሁ።"
+      "sentence2": "ባህር ዳርን እወዳለሁ።",
+      "pronunciation": "/bahɨr dar/"
     },
     {
       "id": 63,
       "word": "ቆንጆ",
       "sentence1": "ፀሐይ ስትጠልቅ ቆንጆ ነው።",
-      "sentence2": "እሷ ቆንጆ ሰው ናት።"
+      "sentence2": "እሷ ቆንጆ ሰው ናት።",
+      "pronunciation": "/kʼonɨd͡ʒo/"
     },
     {
       "id": 64,
       "word": "ምክንያቱም",
       "sentence1": "ፀሐያማ ስለሆነ ደስተኛ ነኝ።",
-      "sentence2": "ስለደከማት ሄደች።"
+      "sentence2": "ስለደከማት ሄደች።",
+      "pronunciation": "/mɨkɨnɨjatum/"
     },
     {
       "id": 65,
       "word": "መሆን",
       "sentence1": "ዶክተር መሆን እፈልጋለሁ።",
-      "sentence2": "እሷ ታላቅ መሪ ትሆናለች።"
+      "sentence2": "እሷ ታላቅ መሪ ትሆናለች።",
+      "pronunciation": "/məhon/"
     },
     {
       "id": 66,
       "word": "አልጋ",
       "sentence1": "በአልጋዬ እተኛለሁ።",
-      "sentence2": "አልጋው ምቹ ነው።"
+      "sentence2": "አልጋው ምቹ ነው።",
+      "pronunciation": "/əlɨɡa/"
     },
     {
       "id": 67,
       "word": "መኝታ ቤት",
       "sentence1": "መኝታ ቤቴ ትንሽ ነው።",
-      "sentence2": "መኝታ ቤቴን እወዳለሁ።"
+      "sentence2": "መኝታ ቤቴን እወዳለሁ።",
+      "pronunciation": "/məɲɨta bet/"
     },
     {
       "id": 68,
       "word": "ቢራ",
       "sentence1": "ቢራ መጠጣት እወዳለሁ።",
-      "sentence2": "ቢራ አዘዘ።"
+      "sentence2": "ቢራ አዘዘ።",
+      "pronunciation": "/bira/"
     },
     {
       "id": 69,
       "word": "በፊት",
       "sentence1": "ከመብላቴ በፊት እጄን እታጠባለሁ።",
-      "sentence2": "ከእኔ በፊት ደረሰች።"
+      "sentence2": "ከእኔ በፊት ደረሰች።",
+      "pronunciation": "/bəfit/"
     },
     {
       "id": 70,
       "word": "መጀመር",
       "sentence1": "የቤት ስራዬን እጀምራለሁ።",
-      "sentence2": "መዘመር ጀመረች።"
+      "sentence2": "መዘመር ጀመረች።",
+      "pronunciation": "/məd͡ʒəmər/"
     },
     {
       "id": 71,
       "word": "መጀመሪያ",
       "sentence1": "የፊልሙ መጀመሪያ አስደሳች ነበር።",
-      "sentence2": "የትርዒቱን መጀመሪያ አጥቼዋለሁ።"
+      "sentence2": "የትርዒቱን መጀመሪያ አጥቼዋለሁ።",
+      "pronunciation": "/məd͡ʒəmərija/"
     },
     {
       "id": 72,
       "word": "ከኋላ",
       "sentence1": "ድመቷ ከሶፋው ከኋላ ተደብቃለች።",
-      "sentence2": "ከኋላዋ ቆመ።"
+      "sentence2": "ከኋላዋ ቆመ።",
+      "pronunciation": "/kəhwala/"
     },
     {
       "id": 73,
       "word": "ማመን",
       "sentence1": "እኔ አምንሃለሁ።",
-      "sentence2": "መናፍስት ታምናለህ?"
+      "sentence2": "መናፍስት ታምናለህ?",
+      "pronunciation": "/mamən/"
     },
     {
       "id": 74,
       "word": "ከታች",
       "sentence1": "ሙቀቱ ከማቀዝቀዝ በታች ነው።",
-      "sentence2": "የመሬት ውስጥ ክፍሉ ከመሬት ደረጃ በታች ነው።"
+      "sentence2": "የመሬት ውስጥ ክፍሉ ከመሬት ደረጃ በታች ነው።",
+      "pronunciation": "/kətat͡ʃ/"
     },
     {
       "id": 75,
       "word": "ምርጥ",
       "sentence1": "ይህ ያነበብኩት ምርጥ መጽሐፍ ነው።",
-      "sentence2": "እሷ በክፍሉ ውስጥ ምርጥ ተማሪ ናት።"
+      "sentence2": "እሷ በክፍሉ ውስጥ ምርጥ ተማሪ ናት።",
+      "pronunciation": "/mɨrɨtʼ/"
     },
     {
       "id": 76,
       "word": "የተሻለ",
       "sentence1": "ዛሬ የተሻለ ይሰማኛል።",
-      "sentence2": "ይህ ፊልም ካለፈው የተሻለ ነው።"
+      "sentence2": "ይህ ፊልም ካለፈው የተሻለ ነው።",
+      "pronunciation": "/jətəʃalə/"
     },
     {
       "id": 77,
       "word": "መካከል",
       "sentence1": "ፓርኩ በትምህርት ቤት እና በቤተ መጻሕፍት መካከል ነው።",
-      "sentence2": "በክፍል ውስጥ በጓደኞቼ መካከል እቀመጣለሁ።"
+      "sentence2": "በክፍል ውስጥ በጓደኞቼ መካከል እቀመጣለሁ።",
+      "pronunciation": "/məkakəl/"
     },
     {
       "id": 78,
       "word": "ብስክሌት",
       "sentence1": "በብስክሌቴ ወደ ትምህርት ቤት እሄዳለሁ።",
-      "sentence2": "አዲስ ብስክሌት ገዛች።"
+      "sentence2": "አዲስ ብስክሌት ገዛች።",
+      "pronunciation": "/bɨsɨkɨlet/"
     },
     {
       "id": 79,
       "word": "ትልቅ",
       "sentence1": "ይህ ትልቅ ቤት ነው።",
-      "sentence2": "ትልቅ ውሻ አለው።"
+      "sentence2": "ትልቅ ውሻ አለው።",
+      "pronunciation": "/tɨlɨkʼ/"
     },
     {
       "id": 80,
       "word": "ብስክሌት",
       "sentence1": "ብስክሌቴን ማስተካከል አለብኝ።",
-      "sentence2": "በየቀኑ ብስክሌቷን ትጋልባለች።"
+      "sentence2": "በየቀኑ ብስክሌቷን ትጋልባለች።",
+      "pronunciation": "/bɨsɨkɨlet/"
     },
     {
       "id": 81,
       "word": "ሂሳብ",
       "sentence1": "ሂሳቡን ትናንት ተቀበልኩ።",
-      "sentence2": "እባክህ ሂሳቡን ክፈል።"
+      "sentence2": "እባክህ ሂሳቡን ክፈል።",
+      "pronunciation": "/hisab/"
     },
     {
       "id": 82,
       "word": "ወፍ",
       "sentence1": "ወፏ እየዘመረች ነው።",
-      "sentence2": "ቀለም ያለው ወፍ አየሁ።"
+      "sentence2": "ቀለም ያለው ወፍ አየሁ።",
+      "pronunciation": "/wəf/"
     },
     {
       "id": 83,
       "word": "ልደት",
       "sentence1": "ልደቴ በሐምሌ ነው።",
-      "sentence2": "የልደት ግብዣ አደረገች።"
+      "sentence2": "የልደት ግብዣ አደረገች።",
+      "pronunciation": "/lɨdət/"
     },
     {
       "id": 84,
       "word": "ጥቁር",
       "sentence1": "ጥቁር ድመት አለኝ።",
-      "sentence2": "ልብሱ ጥቁር ነው።"
+      "sentence2": "ልብሱ ጥቁር ነው።",
+      "pronunciation": "/tʼɨkʼur/"
     },
     {
       "id": 85,
       "word": "ብሎግ",
       "sentence1": "ስለ ጉዞ ብሎግ አነበብኩ።",
-      "sentence2": "ታዋቂ ብሎግ ትጽፋለች።"
+      "sentence2": "ታዋቂ ብሎግ ትጽፋለች።",
+      "pronunciation": "/bɨloɡ/"
     },
     {
       "id": 86,
       "word": "ብሎንድ",
       "sentence1": "ረጅም ብሎንድ ፀጉር አላት።",
-      "sentence2": "ብሎንድ ሴቶችን ይመርጣል።"
+      "sentence2": "ብሎንድ ሴቶችን ይመርጣል።",
+      "pronunciation": "/bɨlonɨd/"
     },
     {
       "id": 87,
       "word": "ሰማያዊ",
       "sentence1": "ሰማዩ ሰማያዊ ነው።",
-      "sentence2": "ሰማያዊ አበቦችን እወዳለሁ።"
+      "sentence2": "ሰማያዊ አበቦችን እወዳለሁ።",
+      "pronunciation": "/səmajawi/"
     },
     {
       "id": 88,
       "word": "ጀልባ",
       "sentence1": "ጀልባው በውሃ ላይ ነው።",
-      "sentence2": "በጀልባ ጉዞ ሄድን።"
+      "sentence2": "በጀልባ ጉዞ ሄድን።",
+      "pronunciation": "/d͡ʒəlɨba/"
     },
     {
       "id": 89,
       "word": "ሰውነት",
       "sentence1": "የሰው ሰውነት ውስብስብ ነው።",
-      "sentence2": "ጤናማ ለመሆን ትሰራለች።"
+      "sentence2": "ጤናማ ለመሆን ትሰራለች።",
+      "pronunciation": "/səwɨnət/"
     },
     {
       "id": 90,
       "word": "መጽሐፍ",
       "sentence1": "መጽሐፍ እያነበብኩ ነው።",
-      "sentence2": "ብዙ መጻሕፍት አሏት።"
+      "sentence2": "ብዙ መጻሕፍት አሏት።",
+      "pronunciation": "/mət͡sʼɨhəf/"
     },
     {
       "id": 91,
       "word": "ቦት ጫማ",
       "sentence1": "አዲስ ቦት ጫማ ገዛሁ።",
-      "sentence2": "እነዚህ ቦት ጫማዎች ምቹ ናቸው።"
+      "sentence2": "እነዚህ ቦት ጫማዎች ምቹ ናቸው።",
+      "pronunciation": "/bot t͡ʃʼama/"
     },
     {
       "id": 92,
       "word": "መሰልቸት",
       "sentence1": "በቤት ተሰልቻለሁ።",
-      "sentence2": "በክፍል ውስጥ ትሰለቻለች።"
+      "sentence2": "በክፍል ውስጥ ትሰለቻለች።",
+      "pronunciation": "/məsəlɨt͡ʃət/"
     },
     {
       "id": 93,
       "word": "አሰልቺ",
       "sentence1": "ይህ ፊልም አሰልቺ ነው።",
-      "sentence2": "ሂሳብ አሰልቺ ነው።"
+      "sentence2": "ሂሳብ አሰልቺ ነው።",
+      "pronunciation": "/əsəlɨt͡ʃi/"
     },
     {
       "id": 94,
       "word": "ተወለደ",
       "sentence1": "በ2000 ተወለድኩ።",
-      "sentence2": "በትንሽ ከተማ ተወለደች።"
+      "sentence2": "በትንሽ ከተማ ተወለደች።",
+      "pronunciation": "/təwələdə/"
     },
     {
       "id": 95,
       "word": "ሁለቱም",
       "sentence1": "ሁለቱም አማራጮች ጥሩ ናቸው።",
-      "sentence2": "ሁለቱንም ፊልሞች እወዳለሁ።"
+      "sentence2": "ሁለቱንም ፊልሞች እወዳለሁ።",
+      "pronunciation": "/hulətum/"
     },
     {
       "id": 96,
       "word": "ጠርሙስ",
       "sentence1": "ጠርሙስ ውሃ ያስፈልገኛል።",
-      "sentence2": "የመስታወት ጠርሙስ ገዛች።"
+      "sentence2": "የመስታወት ጠርሙስ ገዛች።",
+      "pronunciation": "/tʼərɨmus/"
     },
     {
       "id": 97,
       "word": "ሳጥን",
       "sentence1": "መጫወቻዎቹ በሳጥኑ ውስጥ ናቸው።",
-      "sentence2": "ለመጻሕፍቴ ሳጥን ያስፈልገኛል።"
+      "sentence2": "ለመጻሕፍቴ ሳጥን ያስፈልገኛል።",
+      "pronunciation": "/satʼɨn/"
     },
     {
       "id": 98,
       "word": "ልጅ",
       "sentence1": "ልጁ ውጭ እየተጫወተ ነው።",
-      "sentence2": "ካይት ያለው ልጅ አየሁ።"
+      "sentence2": "ካይት ያለው ልጅ አየሁ።",
+      "pronunciation": "/lɨd͡ʒ/"
     },
     {
       "id": 99,
       "word": "የወንድ ጓደኛ",
       "sentence1": "የወንድ ጓደኛዬ በጣም ደግ ነው።",
-      "sentence2": "ለወንድ ጓደኛዋ አስተዋወቀችኝ።"
+      "sentence2": "ለወንድ ጓደኛዋ አስተዋወቀችኝ።",
+      "pronunciation": "/jəwənɨd ɡwadəɲa/"
     },
     {
       "id": 100,
       "word": "ዳቦ",
       "sentence1": "አንድ ዳቦ ያስፈልገኛል።",
-      "sentence2": "ትኩስ ዳቦ ጋገረች።"
+      "sentence2": "ትኩስ ዳቦ ጋገረች።",
+      "pronunciation": "/dabo/"
     },
     {
       "id": 101,
       "word": "ዕረፍት",
       "sentence1": "ዕረፍት እንውሰድ።",
-      "sentence2": "ይህን ልምድ መስበር አለብኝ።"
+      "sentence2": "ይህን ልምድ መስበር አለብኝ።",
+      "pronunciation": "/ɨrəfɨt/"
     },
     {
       "id": 102,
       "word": "ቁርስ",
       "sentence1": "ለቁርስ ሲሪያል በላሁ።",
-      "sentence2": "ቁርስ በጣም አስፈላጊ ምግብ ነው።"
+      "sentence2": "ቁርስ በጣም አስፈላጊ ምግብ ነው።",
+      "pronunciation": "/kʼurɨs/"
     },
     {
       "id": 103,
       "word": "ማምጣት",
       "sentence1": "ውሃ ማምጣት ትችላለህ?",
-      "sentence2": "ነገ ሰነዶቹን አመጣለሁ።"
+      "sentence2": "ነገ ሰነዶቹን አመጣለሁ።",
+      "pronunciation": "/mamɨtʼat/"
     },
     {
       "id": 104,
       "word": "ወንድም",
       "sentence1": "ወንድሜ ውጭ አገር እያጠና ነው።",
-      "sentence2": "ታናሽ ወንድም አለው።"
+      "sentence2": "ታናሽ ወንድም አለው።",
+      "pronunciation": "/wənɨdɨm/"
     },
     {
       "id": 105,
       "word": "ቡናማ",
       "sentence1": "ቡናማው ውሻ ተግባቢ ነው።",
-      "sentence2": "ቡናማ ቸኮሌት እወዳለሁ።"
+      "sentence2": "ቡናማ ቸኮሌት እወዳለሁ።",
+      "pronunciation": "/bunama/"
     },
     {
       "id": 106,
       "word": "መገንባት",
       "sentence1": "አዲስ ቤት ይገነባሉ።",
-      "sentence2": "ሙያ መገንባት ይፈልጋል።"
+      "sentence2": "ሙያ መገንባት ይፈልጋል።",
+      "pronunciation": "/məɡənɨbat/"
     },
     {
       "id": 107,
       "word": "ሕንፃ",
       "sentence1": "ሕንፃው በጣም ረጅም ነው።",
-      "sentence2": "በዚያ ሕንፃ ውስጥ ይሰራሉ።"
+      "sentence2": "በዚያ ሕንፃ ውስጥ ይሰራሉ።",
+      "pronunciation": "/hɨnɨt͡sʼa/"
     },
     {
       "id": 108,
       "word": "አውቶቡስ",
       "sentence1": "በአውቶቡስ ወደ ትምህርት ቤት እሄዳለሁ።",
-      "sentence2": "አውቶቡሱ ዛሬ ዘግይቷል።"
+      "sentence2": "አውቶቡሱ ዛሬ ዘግይቷል።",
+      "pronunciation": "/əwɨtobus/"
     },
     {
       "id": 109,
       "word": "ንግድ",
       "sentence1": "የራሷን ንግድ ታስተዳድራለች።",
-      "sentence2": "ንግዱ በዚህ ዓመት እያደገ ነው።"
+      "sentence2": "ንግዱ በዚህ ዓመት እያደገ ነው።",
+      "pronunciation": "/nɨɡɨd/"
     },
     {
       "id": 110,
       "word": "ሥራ ብዙ",
       "sentence1": "አሁን ሥራ ብዙ ነኝ።",
-      "sentence2": "ጥብቅ መርሃ ግብር አላት።"
+      "sentence2": "ጥብቅ መርሃ ግብር አላት።",
+      "pronunciation": "/sɨra bɨzu/"
     },
     {
       "id": 111,
       "word": "ግን",
       "sentence1": "ሻይ እወዳለሁ፣ ግን ቡና እመርጣለሁ።",
-      "sentence2": "እሱ ረጅም ነው፣ ግን ወንድሙ አጭር ነው።"
+      "sentence2": "እሱ ረጅም ነው፣ ግን ወንድሙ አጭር ነው።",
+      "pronunciation": "/ɡɨn/"
     },
     {
       "id": 112,
       "word": "ቅቤ",
       "sentence1": "ለምግቡ ቅቤ ያስፈልገኛል።",
-      "sentence2": "በዳቦዋ ላይ ቅቤ ትወዳለች።"
+      "sentence2": "በዳቦዋ ላይ ቅቤ ትወዳለች።",
+      "pronunciation": "/kʼɨbe/"
     },
     {
       "id": 113,
       "word": "መግዛት",
       "sentence1": "አዲስ ስልክ መግዛት እፈልጋለሁ።",
-      "sentence2": "ትናንት ልብስ ገዛች።"
+      "sentence2": "ትናንት ልብስ ገዛች።",
+      "pronunciation": "/məɡɨzat/"
     },
     {
       "id": 114,
       "word": "በ",
       "sentence1": "መጽሐፉ በታዋቂ ደራሲ ተጽፏል።",
-      "sentence2": "በባቡር መጓዝ እመርጣለሁ።"
+      "sentence2": "በባቡር መጓዝ እመርጣለሁ።",
+      "pronunciation": "/bə/"
     },
     {
       "id": 115,
       "word": "ቻው",
       "sentence1": "ለጓደኞቼ ቻው አልኩ።",
-      "sentence2": "በአውሮፕላን ማረፊያ እጇን አወዛወዘች።"
+      "sentence2": "በአውሮፕላን ማረፊያ እጇን አወዛወዘች።",
+      "pronunciation": "/t͡ʃaw/"
     },
     {
       "id": 116,
       "word": "ካፌ",
       "sentence1": "በካፌ እንገናኝ።",
-      "sentence2": "በትንሽ ካፌ ውስጥ ትሰራለች።"
+      "sentence2": "በትንሽ ካፌ ውስጥ ትሰራለች።",
+      "pronunciation": "/kafe/"
     },
     {
       "id": 117,
       "word": "ኬክ",
       "sentence1": "የቸኮሌት ኬክ ጋገርኩ።",
-      "sentence2": "የስትሮቤሪ ኬክ ትወዳለች።"
+      "sentence2": "የስትሮቤሪ ኬክ ትወዳለች።",
+      "pronunciation": "/kek/"
     },
     {
       "id": 118,
       "word": "መደወል",
       "sentence1": "በኋላ እደውልልሃለሁ።",
-      "sentence2": "ከእናቷ ጥሪ ተቀበለች።"
+      "sentence2": "ከእናቷ ጥሪ ተቀበለች።",
+      "pronunciation": "/mədəwəl/"
     },
     {
       "id": 119,
       "word": "ካሜራ",
       "sentence1": "አዲስ ካሜራ ገዛሁ።",
-      "sentence2": "በካሜራዋ ፎቶ እያነሳች ነው።"
+      "sentence2": "በካሜራዋ ፎቶ እያነሳች ነው።",
+      "pronunciation": "/kamera/"
     },
     {
       "id": 120,
       "word": "መቻል",
       "sentence1": "ዋና መዋኘት እችላለሁ።",
-      "sentence2": "ሶስት ቋንቋዎች መናገር ትችላለች።"
+      "sentence2": "ሶስት ቋንቋዎች መናገር ትችላለች።",
+      "pronunciation": "/mət͡ʃal/"
     },
     {
       "id": 121,
       "word": "አልቻለም",
       "sentence1": "ቁልፎቼን ማግኘት አልቻልኩም።",
-      "sentence2": "ወደ ፓርቲው መምጣት አይችልም።"
+      "sentence2": "ወደ ፓርቲው መምጣት አይችልም።",
+      "pronunciation": "/əlɨt͡ʃaləm/"
     },
     {
       "id": 122,
       "word": "ዋና ከተማ",
       "sentence1": "አንካራ የቱርክ ዋና ከተማ ናት።",
-      "sentence2": "ዋና ከተማው በጣም የተጨናነቀ ነው።"
+      "sentence2": "ዋና ከተማው በጣም የተጨናነቀ ነው።",
+      "pronunciation": "/wana kətəma/"
     },
     {
       "id": 123,
       "word": "መኪና",
       "sentence1": "ቀይ መኪና እነዳለሁ።",
-      "sentence2": "አዲስ መኪና መግዛት ትፈልጋለች።"
+      "sentence2": "አዲስ መኪና መግዛት ትፈልጋለች።",
+      "pronunciation": "/məkina/"
     },
     {
       "id": 124,
       "word": "ካርድ",
       "sentence1": "አዲስ ክሬዲት ካርድ ያስፈልገኛል።",
-      "sentence2": "የልደት ካርድ ላከችልኝ።"
+      "sentence2": "የልደት ካርድ ላከችልኝ።",
+      "pronunciation": "/karɨd/"
     },
     {
       "id": 125,
       "word": "ሙያ",
       "sentence1": "ስኬታማ ሙያ እየገነባ ነው።",
-      "sentence2": "የሙያ ጎዳናዋን ቀየረች።"
+      "sentence2": "የሙያ ጎዳናዋን ቀየረች።",
+      "pronunciation": "/muja/"
     },
     {
       "id": 126,
       "word": "ካሮት",
       "sentence1": "ጥሬ ካሮት መብላት እወዳለሁ።",
-      "sentence2": "የካሮት ኬክ ሰራች።"
+      "sentence2": "የካሮት ኬክ ሰራች።",
+      "pronunciation": "/karot/"
     },
     {
       "id": 127,
       "word": "መሸከም",
       "sentence1": "ይህን ቦርሳ መሸከም ትችላለህ?",
-      "sentence2": "ላፕቶፑን ወደ ሁሉም ቦታ ይዞ ይሄዳል።"
+      "sentence2": "ላፕቶፑን ወደ ሁሉም ቦታ ይዞ ይሄዳል።",
+      "pronunciation": "/məʃəkəm/"
     },
     {
       "id": 128,
       "word": "ድመት",
       "sentence1": "ድመቴ በጣም ተጫዋች ናት።",
-      "sentence2": "የጎዳና ድመት ወሰደች።"
+      "sentence2": "የጎዳና ድመት ወሰደች።",
+      "pronunciation": "/dɨmət/"
     },
     {
       "id": 129,
       "word": "ሲዲ",
       "sentence1": "በመኪና ውስጥ ሲዲ አዳመጥኩ።",
-      "sentence2": "ትናንት አዲስ ሲዲ ገዛች።"
+      "sentence2": "ትናንት አዲስ ሲዲ ገዛች።",
+      "pronunciation": "/sidi/"
     },
     {
       "id": 130,
       "word": "ሳንቲም",
       "sentence1": "ዋጋው መቶ ሳንቲም ነው።",
-      "sentence2": "በመንገድ ላይ ሳንቲም አገኘሁ።"
+      "sentence2": "በመንገድ ላይ ሳንቲም አገኘሁ።",
+      "pronunciation": "/sanɨtim/"
     },
     {
       "id": 131,
       "word": "መሀል",
       "sentence1": "የከተማ መሀል በጣም የተጨናነቀ ነው።",
-      "sentence2": "በከተማ መሀል ፓርክ አለ።"
+      "sentence2": "በከተማ መሀል ፓርክ አለ።",
+      "pronunciation": "/məhəl/"
     },
     {
       "id": 132,
       "word": "ክፍለ ዘመን",
       "sentence1": "21ኛው ክፍለ ዘመን በ2001 ጀመረ።",
-      "sentence2": "በ20ኛው ክፍለ ዘመን ብዙ ለውጦች ተከሰቱ።"
+      "sentence2": "በ20ኛው ክፍለ ዘመን ብዙ ለውጦች ተከሰቱ።",
+      "pronunciation": "/kɨfɨlə zəmən/"
     },
     {
       "id": 133,
       "word": "ወንበር",
       "sentence1": "እባክህ በወንበሩ ላይ ተቀመጥ።",
-      "sentence2": "ለቢሮዋ አዲስ ወንበር ገዛች።"
+      "sentence2": "ለቢሮዋ አዲስ ወንበር ገዛች።",
+      "pronunciation": "/wənɨbər/"
     },
     {
       "id": 134,
       "word": "መለወጥ",
       "sentence1": "የፀጉር ስታይሌን መለወጥ እፈልጋለሁ።",
-      "sentence2": "ስለ ጉዞው ሃሳቧን ቀየረች።"
+      "sentence2": "ስለ ጉዞው ሃሳቧን ቀየረች።",
+      "pronunciation": "/mələwətʼ/"
     },
     {
       "id": 135,
       "word": "ሰንጠረዥ",
       "sentence1": "ሰንጠረዡ የሽያጭ መረጃ ያሳያል።",
-      "sentence2": "ለዝግጅቷ ሰንጠረዥ ፈጠረች።"
+      "sentence2": "ለዝግጅቷ ሰንጠረዥ ፈጠረች።",
+      "pronunciation": "/sənɨtʼərəʒ/"
     },
     {
       "id": 136,
       "word": "ርካሽ",
       "sentence1": "ይህ ሸሚዝ በጣም ርካሽ ነው።",
-      "sentence2": "ለእረፍቴ ርካሽ ሆቴል አገኘሁ።"
+      "sentence2": "ለእረፍቴ ርካሽ ሆቴል አገኘሁ።",
+      "pronunciation": "/rɨkaʃ/"
     },
     {
       "id": 137,
       "word": "ማረጋገጥ",
       "sentence1": "እባክህ ኢሜይልህን አረጋግጥ።",
-      "sentence2": "የአየር ትንበያውን ማረጋገጥ አለብኝ።"
+      "sentence2": "የአየር ትንበያውን ማረጋገጥ አለብኝ።",
+      "pronunciation": "/marəɡaɡətʼ/"
     },
     {
       "id": 138,
       "word": "አይብ",
       "sentence1": "ከዳቦ ጋር አይብ መብላት እወዳለሁ።",
-      "sentence2": "ከገበያ አይብ ገዛች።"
+      "sentence2": "ከገበያ አይብ ገዛች።",
+      "pronunciation": "/əjɨb/"
     },
     {
       "id": 139,
       "word": "ዶሮ",
       "sentence1": "ለእራት ዶሮ እፈልጋለሁ።",
-      "sentence2": "በማድቤት ውስጥ ዶሮ እያበሰለች ነው።"
+      "sentence2": "በማድቤት ውስጥ ዶሮ እያበሰለች ነው።",
+      "pronunciation": "/doro/"
     },
     {
       "id": 140,
       "word": "ልጅ",
       "sentence1": "ልጁ በፓርኩ ውስጥ እየተጫወተ ነው።",
-      "sentence2": "አንድ ልጅ እና ሁለት የቤት እንስሳት አሏት።"
+      "sentence2": "አንድ ልጅ እና ሁለት የቤት እንስሳት አሏት።",
+      "pronunciation": "/lɨd͡ʒ/"
     },
     {
       "id": 141,
       "word": "ቸኮሌት",
       "sentence1": "የቸኮሌት አይስ ክሬም እወዳለሁ።",
-      "sentence2": "ሳጥን ቸኮሌት ሰጠችኝ።"
+      "sentence2": "ሳጥን ቸኮሌት ሰጠችኝ።",
+      "pronunciation": "/t͡ʃəkolet/"
     },
     {
       "id": 142,
       "word": "መምረጥ",
       "sentence1": "ለፓርቲው ልብስ መምረጥ አለብኝ።",
-      "sentence2": "ሰማያዊውን መረጠች።"
+      "sentence2": "ሰማያዊውን መረጠች።",
+      "pronunciation": "/məmɨrətʼ/"
     },
     {
       "id": 143,
       "word": "ሲኒማ",
       "sentence1": "ዛሬ ማታ ሲኒማ እንሂድ።",
-      "sentence2": "በአካባቢው ሲኒማ ትሰራለች።"
+      "sentence2": "በአካባቢው ሲኒማ ትሰራለች።",
+      "pronunciation": "/sinima/"
     },
     {
       "id": 144,
       "word": "ከተማ",
       "sentence1": "ከተማው በጣም ትልቅ ነው።",
-      "sentence2": "በከተማ መሀል ትኖራለች።"
+      "sentence2": "በከተማ መሀል ትኖራለች።",
+      "pronunciation": "/kətəma/"
     },
     {
       "id": 145,
       "word": "ክፍል",
       "sentence1": "በአምስተኛ ክፍል ነኝ።",
-      "sentence2": "የሂሳብ ክፍል ታስተምራለች።"
+      "sentence2": "የሂሳብ ክፍል ታስተምራለች።",
+      "pronunciation": "/kɨfɨl/"
     },
     {
       "id": 146,
       "word": "ክፍል ቤት",
       "sentence1": "ክፍል ቤቱ ብሩህ እና ንጹህ ነው።",
-      "sentence2": "ለአዲስ ዓመት ክፍል ቤቱን አስጌጠች።"
+      "sentence2": "ለአዲስ ዓመት ክፍል ቤቱን አስጌጠች።",
+      "pronunciation": "/kɨfɨl bet/"
     },
     {
       "id": 147,
       "word": "ንጹህ",
       "sentence1": "እባክህ ክፍልህን ንጹህ አድርግ።",
-      "sentence2": "ትናንት ቤቱን አጸዳች።"
+      "sentence2": "ትናንት ቤቱን አጸዳች።",
+      "pronunciation": "/nɨt͡sʼuh/"
     },
     {
       "id": 148,
       "word": "መውጣት",
       "sentence1": "ተራራ መውጣት እወዳለሁ።",
-      "sentence2": "የተሻለ እይታ ለማግኘት ዛፍ ወጣች።"
+      "sentence2": "የተሻለ እይታ ለማግኘት ዛፍ ወጣች።",
+      "pronunciation": "/məwɨtʼat/"
     },
     {
       "id": 149,
       "word": "ሰዓት",
       "sentence1": "በሰዓቱ ላይ ስንት ሰዓት ነው?",
-      "sentence2": "ሰዓቱን ለማረጋገጥ ወደ ሰዓቱ ተመለከተች።"
+      "sentence2": "ሰዓቱን ለማረጋገጥ ወደ ሰዓቱ ተመለከተች።",
+      "pronunciation": "/səat/"
     },
     {
       "id": 150,
       "word": "መዝጋት",
       "sentence1": "እባክህ በሩን ዝጋ።",
-      "sentence2": "ቀዝቃዛ ስለሆነ መስኮቱን ዘጋች።"
+      "sentence2": "ቀዝቃዛ ስለሆነ መስኮቱን ዘጋች።",
+      "pronunciation": "/məzɨɡat/"
     },
     {
       "id": 151,
       "word": "ልብሶች",
       "sentence1": "አዲስ ልብሶች መግዛት አለብኝ።",
-      "sentence2": "የቆዩ ልብሶቿን ለበጎ አድራጎት ሰጠች።"
+      "sentence2": "የቆዩ ልብሶቿን ለበጎ አድራጎት ሰጠች።",
+      "pronunciation": "/lɨbɨsot͡ʃ/"
     },
     {
       "id": 152,
       "word": "ክለብ",
       "sentence1": "የቼዝ ክለብ አባል ነው።",
-      "sentence2": "በየአርብ ማታ ወደ ክለብ ትሄዳለች።"
+      "sentence2": "በየአርብ ማታ ወደ ክለብ ትሄዳለች።",
+      "pronunciation": "/kɨləb/"
     },
     {
       "id": 153,
       "word": "ኮት",
       "sentence1": "በክረምት ኮት እለብሳለሁ።",
-      "sentence2": "ለቅዝቃዜ አዲስ ኮት ገዛች።"
+      "sentence2": "ለቅዝቃዜ አዲስ ኮት ገዛች።",
+      "pronunciation": "/kot/"
     },
     {
       "id": 154,
       "word": "ቡና",
       "sentence1": "ጠዋት ቡና መጠጣት እወዳለሁ።",
-      "sentence2": "በካፌ አንድ ስኒ ቡና አዘዘች።"
+      "sentence2": "በካፌ አንድ ስኒ ቡና አዘዘች።",
+      "pronunciation": "/buna/"
     },
     {
       "id": 155,
       "word": "ቀዝቃዛ",
       "sentence1": "ውጭ በጣም ቀዝቃዛ ነው።",
-      "sentence2": "ቀዝቃዛ ስለነበር ጃኬት ለበሰች።"
+      "sentence2": "ቀዝቃዛ ስለነበር ጃኬት ለበሰች።",
+      "pronunciation": "/kʼəzɨkʼaza/"
     },
     {
       "id": 156,
       "word": "ኮሌጅ",
       "sentence1": "በለንደን ኮሌጅ እያጠና ነው።",
-      "sentence2": "ከሁለተኛ ደረጃ በኋላ ኮሌጅ መሄድ ትፈልጋለች።"
+      "sentence2": "ከሁለተኛ ደረጃ በኋላ ኮሌጅ መሄድ ትፈልጋለች።",
+      "pronunciation": "/koled͡ʒ/"
     },
     {
       "id": 157,
       "word": "ቀለም",
       "sentence1": "የምትወደው ቀለም ምንድን ነው?",
-      "sentence2": "ግድግዳዎቹን ሰማያዊ ቀለም ቀባች።"
+      "sentence2": "ግድግዳዎቹን ሰማያዊ ቀለም ቀባች።",
+      "pronunciation": "/kʼələm/"
     },
     {
       "id": 158,
       "word": "መምጣት",
       "sentence1": "እባክህ ወደ ፓርቲዬ ና።",
-      "sentence2": "ነገ ወደ ስብሰባው ትመጣለች።"
+      "sentence2": "ነገ ወደ ስብሰባው ትመጣለች።",
+      "pronunciation": "/məmɨtʼat/"
     },
     {
       "id": 159,
       "word": "የተለመደ",
       "sentence1": "እንግሊዝኛ የተለመደ ቋንቋ ነው።",
-      "sentence2": "በሙዚቃ የተለመደ ፍላጎት አላት።"
+      "sentence2": "በሙዚቃ የተለመደ ፍላጎት አላት።",
+      "pronunciation": "/jətələmədə/"
     },
     {
       "id": 160,
       "word": "ኩባንያ",
       "sentence1": "በትልቅ ኩባንያ ይሰራል።",
-      "sentence2": "ባለፈው ዓመት የራሷን ኩባንያ ጀመረች።"
+      "sentence2": "ባለፈው ዓመት የራሷን ኩባንያ ጀመረች።",
+      "pronunciation": "/kubanɨja/"
     },
     {
       "id": 161,
       "word": "ማወዳደር",
       "sentence1": "መልሶቻችንን እናወዳድር።",
-      "sentence2": "ከመግዛቷ በፊት ሁለቱን ምርቶች አወዳደረች።"
+      "sentence2": "ከመግዛቷ በፊት ሁለቱን ምርቶች አወዳደረች።",
+      "pronunciation": "/mawədadər/"
     },
     {
       "id": 162,
       "word": "ማጠናቀቅ",
       "sentence1": "እባክህ ቅጹን ሙላ።",
-      "sentence2": "ፕሮጀክቱን በሰዓቱ ጨረሰች።"
+      "sentence2": "ፕሮጀክቱን በሰዓቱ ጨረሰች።",
+      "pronunciation": "/matʼənakʼəkʼ/"
     },
     {
       "id": 163,
       "word": "ኮምፒውተር",
       "sentence1": "ለስራ ኮምፒውተር እጠቀማለሁ።",
-      "sentence2": "ባለፈው ሳምንት አዲስ ኮምፒውተር ገዛች።"
+      "sentence2": "ባለፈው ሳምንት አዲስ ኮምፒውተር ገዛች።",
+      "pronunciation": "/komɨpiwɨtər/"
     },
     {
       "id": 164,
       "word": "ኮንሰርት",
       "sentence1": "ዛሬ ማታ ኮንሰርት እሄዳለሁ።",
-      "sentence2": "የቀጥታ ኮንሰርት ቅጂዎችን ማዳመጥ ትወዳለች።"
+      "sentence2": "የቀጥታ ኮንሰርት ቅጂዎችን ማዳመጥ ትወዳለች።",
+      "pronunciation": "/konɨsərɨt/"
     },
     {
       "id": 165,
       "word": "ውይይት",
       "sentence1": "ጥሩ ውይይት አደረግን።",
-      "sentence2": "ከጓደኞቿ ጋር ጥልቅ ውይይት ማድረግ ትወዳለች።"
+      "sentence2": "ከጓደኞቿ ጋር ጥልቅ ውይይት ማድረግ ትወዳለች።",
+      "pronunciation": "/wɨjɨjɨt/"
     },
     {
       "id": 166,
       "word": "ማብሰል",
       "sentence1": "የጣሊያን ምግብ ማብሰል እወዳለሁ።",
-      "sentence2": "ለቤተሰቧ ጣፋጭ ምግብ አበሰለች።"
+      "sentence2": "ለቤተሰቧ ጣፋጭ ምግብ አበሰለች።",
+      "pronunciation": "/mabɨsəl/"
     },
     {
       "id": 167,
       "word": "ማብሰል",
       "sentence1": "ማብሰል የምወደው የትርፍ ጊዜ ስራ ነው።",
-      "sentence2": "ክህሎቷን ለማሻሻል የማብሰያ ክፍል ወሰደች።"
+      "sentence2": "ክህሎቷን ለማሻሻል የማብሰያ ክፍል ወሰደች።",
+      "pronunciation": "/mabɨsəl/"
     },
     {
       "id": 168,
       "word": "ቆንጆ",
       "sentence1": "ያ ጃኬት በጣም ቆንጆ ነው።",
-      "sentence2": "ቆንጆ የቆዩ ሪከርዶች ስብስብ አላት።"
+      "sentence2": "ቆንጆ የቆዩ ሪከርዶች ስብስብ አላት።",
+      "pronunciation": "/kʼonɨd͡ʒo/"
     },
     {
       "id": 169,
       "word": "ማስተካከል",
       "sentence1": "እባክህ ስህተቶችህን አስተካክል።",
-      "sentence2": "ሁልጊዜ ሰዋስው ስህተቶቿን ለማስተካከል ትሞክራለች።"
+      "sentence2": "ሁልጊዜ ሰዋስው ስህተቶቿን ለማስተካከል ትሞክራለች።",
+      "pronunciation": "/masɨtəkakəl/"
     },
     {
       "id": 170,
       "word": "ዋጋ",
       "sentence1": "የዚህ መጽሐፍ ዋጋ ስንት ነው?",
-      "sentence2": "በከተማው ውስጥ በከፍተኛ የኑሮ ዋጋ ተገረመች።"
+      "sentence2": "በከተማው ውስጥ በከፍተኛ የኑሮ ዋጋ ተገረመች።",
+      "pronunciation": "/waɡa/"
     },
     {
       "id": 171,
       "word": "ይችላል",
       "sentence1": "በዚያ ልረዳህ እችላለሁ።",
-      "sentence2": "ሥራዋን ቀድማ ከጨረሰች ወደ ፓርቲው መምጣት እችላለሁ አለች።"
+      "sentence2": "ሥራዋን ቀድማ ከጨረሰች ወደ ፓርቲው መምጣት እችላለሁ አለች።",
+      "pronunciation": "/jɨt͡ʃɨlal/"
     },
     {
       "id": 172,
       "word": "አገር",
       "sentence1": "በትንሽ አገር እኖራለሁ።",
-      "sentence2": "ወደ የተለያዩ አገሮች መጓዝ ትፈልጋለች።"
+      "sentence2": "ወደ የተለያዩ አገሮች መጓዝ ትፈልጋለች።",
+      "pronunciation": "/əɡər/"
     },
     {
       "id": 173,
       "word": "ኮርስ",
       "sentence1": "የባዮሎጂ ኮርስ እየወሰድኩ ነው።",
-      "sentence2": "ለማብሰያ ኮርስ ተመዝግባለች።"
+      "sentence2": "ለማብሰያ ኮርስ ተመዝግባለች።",
+      "pronunciation": "/korɨs/"
     },
     {
       "id": 174,
       "word": "የአጎት ልጅ",
       "sentence1": "የአጎቴ ልጅ በዚህ ሳምንት መጨረሻ ይጎበኛል።",
-      "sentence2": "ውጭ አገር የሚኖር የአጎት ልጅ አላት።"
+      "sentence2": "ውጭ አገር የሚኖር የአጎት ልጅ አላት።",
+      "pronunciation": "/jəəɡot lɨd͡ʒ/"
     },
     {
       "id": 175,
       "word": "ላም",
       "sentence1": "ላሟ በሜዳ ላይ እየግጣች ነው።",
-      "sentence2": "ከላሞች እና ዶሮዎች ጋር በእርሻ ቦታ አደገች።"
+      "sentence2": "ከላሞች እና ዶሮዎች ጋር በእርሻ ቦታ አደገች።",
+      "pronunciation": "/lam/"
     },
     {
       "id": 176,
       "word": "ክሬም",
       "sentence1": "በቡናዬ ውስጥ ክሬም እወዳለሁ።",
-      "sentence2": "ለተጨማሪ ጣዕም በሾርባው ውስጥ ክሬም ጨመረች።"
+      "sentence2": "ለተጨማሪ ጣዕም በሾርባው ውስጥ ክሬም ጨመረች።",
+      "pronunciation": "/kɨrem/"
     },
     {
       "id": 177,
       "word": "መፍጠር",
       "sentence1": "አዲስ ፕሮጀክት መፍጠር እፈልጋለሁ።",
-      "sentence2": "ቆንጆ ሥዕል ፈጠረች።"
+      "sentence2": "ቆንጆ ሥዕል ፈጠረች።",
+      "pronunciation": "/məfɨtʼər/"
     },
     {
       "id": 178,
       "word": "ባህል",
       "sentence1": "ስለ ተለያዩ ባህሎች መማር ይፈልጋል።",
-      "sentence2": "ስትጓዝ የአካባቢውን ባህል መመርመር ትወዳለች።"
+      "sentence2": "ስትጓዝ የአካባቢውን ባህል መመርመር ትወዳለች።",
+      "pronunciation": "/bahɨl/"
     },
     {
       "id": 179,
       "word": "ስኒ",
       "sentence1": "ከስኒ ሻይ እጠጣለሁ።",
-      "sentence2": "ቆንጆ ስኒዎች ስብስብ ገዛች።"
+      "sentence2": "ቆንጆ ስኒዎች ስብስብ ገዛች።",
+      "pronunciation": "/sɨni/"
     },
     {
       "id": 180,
       "word": "ደንበኛ",
       "sentence1": "ደንበኛው ሁልጊዜ ትክክል ነው።",
-      "sentence2": "በዚያ መደብር ታማኝ ደንበኛ ናት።"
+      "sentence2": "በዚያ መደብር ታማኝ ደንበኛ ናት።",
+      "pronunciation": "/dənɨbəɲa/"
     },
     {
       "id": 181,
       "word": "መቁረጥ",
       "sentence1": "እባክህ ወረቀቱን በመስመሩ ላይ ቁረጥ።",
-      "sentence2": "ኬኩን እኩል ቁራጮች አደረገች።"
+      "sentence2": "ኬኩን እኩል ቁራጮች አደረገች።",
+      "pronunciation": "/məkʼurətʼ/"
     },
     {
       "id": 182,
       "word": "አባት",
       "sentence1": "አባቴ ጥሩ አብሳይ ነው።",
-      "sentence2": "ከአባቷ ጋር ጊዜ ማሳለፍ ትወዳለች።"
+      "sentence2": "ከአባቷ ጋር ጊዜ ማሳለፍ ትወዳለች።",
+      "pronunciation": "/əbat/"
     },
     {
       "id": 183,
       "word": "ዳንስ",
       "sentence1": "በፓርቲዎች ላይ ዳንስ መጨፈር እወዳለሁ።",
-      "sentence2": "ለአንድ ዓመት የዳንስ ትምህርት ወሰደች።"
+      "sentence2": "ለአንድ ዓመት የዳንስ ትምህርት ወሰደች።",
+      "pronunciation": "/danɨs/"
     },
     {
       "id": 184,
       "word": "ዳንሰኛ",
       "sentence1": "ዳንሰኛው በሚያስደንቅ ሁኔታ ተጫወተ።",
-      "sentence2": "ሙያዊ ዳንሰኛ መሆን ትፈልጋለች።"
+      "sentence2": "ሙያዊ ዳንሰኛ መሆን ትፈልጋለች።",
+      "pronunciation": "/danɨsəɲa/"
     },
     {
       "id": 185,
       "word": "መደነስ",
       "sentence1": "መደነስ አዝናኝ የአካል ብቃት እንቅስቃሴ ነው።",
-      "sentence2": "በምትወደው ዘፈኖች ላይ መደነስ ትወዳለች።"
+      "sentence2": "በምትወደው ዘፈኖች ላይ መደነስ ትወዳለች።",
+      "pronunciation": "/mədənəs/"
     },
     {
       "id": 186,
       "word": "አደገኛ",
       "sentence1": "ያ እንስሳ አደገኛ ነው።",
-      "sentence2": "ሁኔታው አደገኛ መሆኑን ተረዳች።"
+      "sentence2": "ሁኔታው አደገኛ መሆኑን ተረዳች።",
+      "pronunciation": "/ədəɡəɲa/"
     },
     {
       "id": 187,
       "word": "ጨለማ",
       "sentence1": "ውጭ ጨለማ ነው።",
-      "sentence2": "ከወተት ቸኮሌት ይልቅ ጥቁር ቸኮሌት ትመርጣለች።"
+      "sentence2": "ከወተት ቸኮሌት ይልቅ ጥቁር ቸኮሌት ትመርጣለች።",
+      "pronunciation": "/t͡ʃʼələma/"
     },
     {
       "id": 188,
       "word": "ቀን",
       "sentence1": "ዛሬ ቀኑ ስንት ነው?",
-      "sentence2": "ቀኑን በወረቀቱ ላይ ጻፈች።"
+      "sentence2": "ቀኑን በወረቀቱ ላይ ጻፈች።",
+      "pronunciation": "/kʼən/"
     },
     {
       "id": 189,
       "word": "ልጅ",
       "sentence1": "ልጄ በጣም ተሰጥኦ አላት።",
-      "sentence2": "በልጇ ስኬት ኩራት ይሰማታል።"
+      "sentence2": "በልጇ ስኬት ኩራት ይሰማታል።",
+      "pronunciation": "/lɨd͡ʒ/"
     },
     {
       "id": 190,
       "word": "ቀን",
       "sentence1": "ዛሬ ቆንጆ ቀን ነው።",
-      "sentence2": "ቀኑን ሙሉ ለማረፍ አቅዳለች።"
+      "sentence2": "ቀኑን ሙሉ ለማረፍ አቅዳለች።",
+      "pronunciation": "/kʼən/"
     },
     {
       "id": 191,
       "word": "ውድ",
       "sentence1": "ውድ ጓደኛዬ ለጉብኝት ይመጣል።",
-      "sentence2": "ለውድ እናቷ ደብዳቤ ጻፈች።"
+      "sentence2": "ለውድ እናቷ ደብዳቤ ጻፈች።",
+      "pronunciation": "/wɨd/"
     },
     {
       "id": 192,
       "word": "ታኅሳስ",
       "sentence1": "ታኅሳስ የዓመቱ የመጨረሻ ወር ነው።",
-      "sentence2": "በታኅሳስ የበዓል ማስጌጫዎችን ትወዳለች።"
+      "sentence2": "በታኅሳስ የበዓል ማስጌጫዎችን ትወዳለች።",
+      "pronunciation": "/tahɨsas/"
     },
     {
       "id": 193,
       "word": "መወሰን",
       "sentence1": "ምን እንደምለብስ መወሰን አለብኝ።",
-      "sentence2": "ከስራ ዕረፍት ለመውሰድ ወሰነች።"
+      "sentence2": "ከስራ ዕረፍት ለመውሰድ ወሰነች።",
+      "pronunciation": "/məwəsən/"
     },
     {
       "id": 194,
       "word": "ጣፋጭ",
       "sentence1": "ይህ ኬክ ጣፋጭ ነው።",
-      "sentence2": "ለቤተሰቧ ጣፋጭ ምግቦች ማብሰል ትወዳለች።"
+      "sentence2": "ለቤተሰቧ ጣፋጭ ምግቦች ማብሰል ትወዳለች።",
+      "pronunciation": "/tʼafat͡ʃʼ/"
     },
     {
       "id": 195,
       "word": "መግለጽ",
       "sentence1": "ሥዕሉን መግለጽ ትችላለህ?",
-      "sentence2": "የህልም እረፍቷን በዝርዝር ገለጸች።"
+      "sentence2": "የህልም እረፍቷን በዝርዝር ገለጸች።",
+      "pronunciation": "/məɡɨlət͡sʼ/"
     },
     {
       "id": 196,
       "word": "መግለጫ",
       "sentence1": "የመጽሐፉ መግለጫ አስገራሚ ነበር።",
-      "sentence2": "ስለ ክስተቱ ዝርዝር መግለጫ ጻፈች።"
+      "sentence2": "ስለ ክስተቱ ዝርዝር መግለጫ ጻፈች።",
+      "pronunciation": "/məɡɨlət͡ʃʼa/"
     },
     {
       "id": 197,
       "word": "ንድፍ",
       "sentence1": "የሕንፃው ንድፍ ዘመናዊ ነው።",
-      "sentence2": "በኮሌጅ ግራፊክ ዲዛይን አጥንታለች።"
+      "sentence2": "በኮሌጅ ግራፊክ ዲዛይን አጥንታለች።",
+      "pronunciation": "/nɨdɨf/"
     },
     {
       "id": 198,
       "word": "ጠረጴዛ",
       "sentence1": "ጠረጴዛዬ በወረቀቶች ተጨናንቋል።",
-      "sentence2": "ጠረጴዛዋን የተደራጀ እና ንጹህ ታስቀምጣለች።"
+      "sentence2": "ጠረጴዛዋን የተደራጀ እና ንጹህ ታስቀምጣለች።",
+      "pronunciation": "/tʼərəpʼeza/"
     },
     {
       "id": 199,
       "word": "ዝርዝር",
       "sentence1": "እባክህ ስለ ፕሮጀክቱ ተጨማሪ ዝርዝር ስጥ።",
-      "sentence2": "በሥዕሉ ላይ ትንሽ ዝርዝር አስተዋለች።"
+      "sentence2": "በሥዕሉ ላይ ትንሽ ዝርዝር አስተዋለች።",
+      "pronunciation": "/zɨrɨzɨr/"
     },
     {
       "id": 200,
       "word": "ውይይት",
       "sentence1": "በፊልሙ ውስጥ ያለው ውይይት ተጨባጭ ነበር።",
-      "sentence2": "በሁለት ገጸ ባህሪያት መካከል ውይይት ጻፈች።"
+      "sentence2": "በሁለት ገጸ ባህሪያት መካከል ውይይት ጻፈች።",
+      "pronunciation": "/wɨjɨjɨt/"
     },
     {
       "id": 201,
       "word": "መዝገበ ቃላት",
       "sentence1": "ቃሉን ለመፈለግ መዝገበ ቃላት ያስፈልገኛል።",
-      "sentence2": "አዲስ እንግሊዝኛ-ቱርክኛ መዝገበ ቃላት ገዛች።"
+      "sentence2": "አዲስ እንግሊዝኛ-ቱርክኛ መዝገበ ቃላት ገዛች።",
+      "pronunciation": "/məzɨɡəbə kʼalat/"
     },
     {
       "id": 202,
       "word": "መሞት",
       "sentence1": "ለታዳጊነቴ መሞት አልፈልግም።",
-      "sentence2": "ብቻዋን እንደምትሞት ፈራች።"
+      "sentence2": "ብቻዋን እንደምትሞት ፈራች።",
+      "pronunciation": "/məmot/"
     },
     {
       "id": 203,
       "word": "አመጋገብ",
       "sentence1": "ጤናማ አመጋገብ ላይ ነኝ።",
-      "sentence2": "ጤናማ ለመሆን ጥብቅ አመጋገብ ትከተላለች።"
+      "sentence2": "ጤናማ ለመሆን ጥብቅ አመጋገብ ትከተላለች።",
+      "pronunciation": "/əməɡaɡəb/"
     },
     {
       "id": 204,
       "word": "ልዩነት",
       "sentence1": "በእነዚህ ሁለት ፎቶዎች መካከል ያለው ልዩነት ምንድን ነው?",
-      "sentence2": "መጀመሪያ ልዩነቱን ማየት አልቻለችም።"
+      "sentence2": "መጀመሪያ ልዩነቱን ማየት አልቻለችም።",
+      "pronunciation": "/lɨjunət/"
     },
     {
       "id": 205,
       "word": "የተለየ",
       "sentence1": "ይህ መጽሐፍ ከሌሎቹ የተለየ ነው።",
-      "sentence2": "በጉዳዩ ላይ የተለየ አመለካከት አላት።"
+      "sentence2": "በጉዳዩ ላይ የተለየ አመለካከት አላት።",
+      "pronunciation": "/jətələjə/"
     },
     {
       "id": 206,
       "word": "ከባድ",
       "sentence1": "ይህ መልመጃ ከባድ ነው።",
-      "sentence2": "የሂሳብ ችግሩን ለመፍታት ከባድ ሆኖ አገኘችው።"
+      "sentence2": "የሂሳብ ችግሩን ለመፍታት ከባድ ሆኖ አገኘችው።",
+      "pronunciation": "/kəbad/"
     },
     {
       "id": 207,
       "word": "እራት",
       "sentence1": "በ7 ሰዓት እራት እንበላለን።",
-      "sentence2": "ለቤተሰቧ ጣፋጭ እራት አዘጋጀች።"
+      "sentence2": "ለቤተሰቧ ጣፋጭ እራት አዘጋጀች።",
+      "pronunciation": "/ɨrat/"
     },
     {
       "id": 208,
       "word": "ቆሻሻ",
       "sentence1": "እጆቼ ከአትክልት ስራ ቆሻሻ ናቸው።",
-      "sentence2": "ቆሻሻ ልብሶች መልበስ አትወድም።"
+      "sentence2": "ቆሻሻ ልብሶች መልበስ አትወድም።",
+      "pronunciation": "/kʼoʃaʃa/"
     },
     {
       "id": 209,
       "word": "መወያየት",
       "sentence1": "ስለ ፕሮጀክቱ ዝርዝሮች እንወያይ።",
-      "sentence2": "ሃሳቦቿን ከቡድኑ ጋር መወያየት ትፈልጋለች።"
+      "sentence2": "ሃሳቦቿን ከቡድኑ ጋር መወያየት ትፈልጋለች።",
+      "pronunciation": "/məwəjajət/"
     },
     {
       "id": 210,
       "word": "ምግብ",
       "sentence1": "ይህ ምግብ የምወደው ነው።",
-      "sentence2": "ምግቡን በቆንጆ ሳህን ላይ አቀረበች።"
+      "sentence2": "ምግቡን በቆንጆ ሳህን ላይ አቀረበች።",
+      "pronunciation": "/mɨɡɨb/"
     },
     {
       "id": 211,
       "word": "ማድረግ",
       "sentence1": "ዛሬ ምን ማድረግ ትፈልጋለህ?",
-      "sentence2": "ጠዋት ዮጋ ማድረግ ትወዳለች።"
+      "sentence2": "ጠዋት ዮጋ ማድረግ ትወዳለች።",
+      "pronunciation": "/madɨrəɡ/"
     },
     {
       "id": 212,
       "word": "ሐኪም",
       "sentence1": "ሐኪሙ አሁን ያይዎታል።",
-      "sentence2": "ወደፊት ሐኪም መሆን ትፈልጋለች።"
+      "sentence2": "ወደፊት ሐኪም መሆን ትፈልጋለች።",
+      "pronunciation": "/həkim/"
     },
     {
       "id": 213,
       "word": "ውሻ",
       "sentence1": "ውሻዬ መጫወት ይወዳል።",
-      "sentence2": "ከመጠለያ የጎዳና ውሻ ወሰደች።"
+      "sentence2": "ከመጠለያ የጎዳና ውሻ ወሰደች።",
+      "pronunciation": "/wɨʃa/"
     },
     {
       "id": 214,
       "word": "ዶላር",
       "sentence1": "ዋጋው ሃያ ዶላር ነው።",
-      "sentence2": "አዲስ ስልክ ለመግዛት በቂ ዶላር ቆጠበች።"
+      "sentence2": "አዲስ ስልክ ለመግዛት በቂ ዶላር ቆጠበች።",
+      "pronunciation": "/dolar/"
     },
     {
       "id": 215,
       "word": "በር",
       "sentence1": "እባክህ በሩን ዘግተህ ውጣ።",
-      "sentence2": "በሩን አንኳኩታ ምላሽ ጠበቀች።"
+      "sentence2": "በሩን አንኳኩታ ምላሽ ጠበቀች።",
+      "pronunciation": "/bər/"
     },
     {
       "id": 216,
       "word": "ታች",
       "sentence1": "ድመቷ ከመደርደሪያው ላይ ወደ ታች ዘለለች።",
-      "sentence2": "መመሪያዎቹን በወረቀት ላይ ጻፈች።"
+      "sentence2": "መመሪያዎቹን በወረቀት ላይ ጻፈች።",
+      "pronunciation": "/tat͡ʃ/"
     },
     {
       "id": 217,
       "word": "ወደ ታች",
       "sentence1": "የልብስ ማጠቢያ ክፍል ታች ነው።",
-      "sentence2": "መክሰስ ለመውሰድ ወደ ታች ወረደች።"
+      "sentence2": "መክሰስ ለመውሰድ ወደ ታች ወረደች።",
+      "pronunciation": "/wədə tat͡ʃ/"
     },
     {
       "id": 218,
       "word": "መሳል",
       "sentence1": "በትርፍ ጊዜዬ መሳል እወዳለሁ።",
-      "sentence2": "ቆንጆ የመሬት ገጽታ ሳለች።"
+      "sentence2": "ቆንጆ የመሬት ገጽታ ሳለች።",
+      "pronunciation": "/məsal/"
     },
     {
       "id": 219,
       "word": "ልብስ",
       "sentence1": "ወደ ፓርቲው ቀይ ልብስ ለበሰች።",
-      "sentence2": "ልብሱ በሱቅ ውስጥ በቅናሽ ነበር።"
+      "sentence2": "ልብሱ በሱቅ ውስጥ በቅናሽ ነበር።",
+      "pronunciation": "/lɨbɨs/"
     },
     {
       "id": 220,
       "word": "መጠጥ",
       "sentence1": "ጠዋት ቡና መጠጣት እወዳለሁ።",
-      "sentence2": "ውሃ መጠጣት ሰጠችኝ።"
+      "sentence2": "ውሃ መጠጣት ሰጠችኝ።",
+      "pronunciation": "/mətʼətʼ/"
     },
     {
       "id": 221,
       "word": "ማሽከርከር",
       "sentence1": "18 ዓመት ሳለሁ ማሽከርከር ተማርኩ።",
-      "sentence2": "ረጅም የመንገድ ጉዞዎች ማሽከርከር ትወዳለች።"
+      "sentence2": "ረጅም የመንገድ ጉዞዎች ማሽከርከር ትወዳለች።",
+      "pronunciation": "/maʃɨkərɨkər/"
     },
     {
       "id": 222,
       "word": "ሹፌር",
       "sentence1": "ሹፌሩ ወደ አውሮፕላን ማረፊያ ወሰደን።",
-      "sentence2": "ሙያዊ የአውቶቡስ ሹፌር ናት።"
+      "sentence2": "ሙያዊ የአውቶቡስ ሹፌር ናት።",
+      "pronunciation": "/ʃufer/"
     },
     {
       "id": 223,
       "word": "በ...ጊዜ",
       "sentence1": "በምሄድበት ጊዜ ሙዚቃ ማዳመጥ እወዳለሁ።",
-      "sentence2": "በፊልሙ ጊዜ እንቅልፍ ወሰዳት።"
+      "sentence2": "በፊልሙ ጊዜ እንቅልፍ ወሰዳት።",
+      "pronunciation": "/bə...ɡize/"
     },
     {
       "id": 224,
       "word": "ዲቪዲ",
       "sentence1": "የምወደው ፊልም አዲስ ዲቪዲ ገዛሁ።",
-      "sentence2": "ፊልሞችን በዲቪዲ መመልከት ትመርጣለች።"
+      "sentence2": "ፊልሞችን በዲቪዲ መመልከት ትመርጣለች።",
+      "pronunciation": "/dividi/"
     },
     {
       "id": 225,
       "word": "እያንዳንዱ",
       "sentence1": "እያንዳንዱ ተማሪ ስራውን ማስገባት አለበት።",
-      "sentence2": "ለእያንዳንዱ ልጅ ስጦታ ሰጠች።"
+      "sentence2": "ለእያንዳንዱ ልጅ ስጦታ ሰጠች።",
+      "pronunciation": "/ɨjanɨdanɨdu/"
     },
     {
       "id": 226,
       "word": "ጆሮ",
       "sentence1": "ጆሮዬ ከጮክ ሙዚቃ ይጎዳል።",
-      "sentence2": "በጆሮዋ ላይ ቆንጆ ጆሮ ጌጥ አላት።"
+      "sentence2": "በጆሮዋ ላይ ቆንጆ ጆሮ ጌጥ አላት።",
+      "pronunciation": "/d͡ʒoro/"
     },
     {
       "id": 227,
       "word": "ቀደም",
       "sentence1": "ጠዋት ቀደም ብሎ መነሳት እወዳለሁ።",
-      "sentence2": "ለስብሰባው ለመዘጋጀት ቀደም ብላ መጣች።"
+      "sentence2": "ለስብሰባው ለመዘጋጀት ቀደም ብላ መጣች።",
+      "pronunciation": "/kʼədəm/"
     },
     {
       "id": 228,
       "word": "ምስራቅ",
       "sentence1": "ፀሐይ በምስራቅ ትወጣለች።",
-      "sentence2": "አዳዲስ ከተሞችን ለመመርመር ወደ ምስራቅ ተጓዘች።"
+      "sentence2": "አዳዲስ ከተሞችን ለመመርመር ወደ ምስራቅ ተጓዘች።",
+      "pronunciation": "/mɨsɨrakʼ/"
     },
     {
       "id": 229,
       "word": "ቀላል",
       "sentence1": "ይህ መልመጃ ለኔ ቀላል ነው።",
-      "sentence2": "ችግሩን ለመፍታት ቀላል መንገድ አገኘች።"
+      "sentence2": "ችግሩን ለመፍታት ቀላል መንገድ አገኘች።",
+      "pronunciation": "/kʼəlal/"
     },
     {
       "id": 230,
       "word": "መብላት",
       "sentence1": "ጤናማ ምግብ መብላት እወዳለሁ።",
-      "sentence2": "እንድንበላ ጣፋጭ ምግብ አዘጋጀች።"
+      "sentence2": "እንድንበላ ጣፋጭ ምግብ አዘጋጀች።",
+      "pronunciation": "/məbɨlat/"
     },
     {
       "id": 231,
       "word": "እንቁላል",
       "sentence1": "ለቁርስ እንቁላል በላሁ።",
-      "sentence2": "እንቁላሏን በማቀላቀል መብላት ትወዳለች።"
+      "sentence2": "እንቁላሏን በማቀላቀል መብላት ትወዳለች።",
+      "pronunciation": "/ɨnɨkʼulal/"
     },
     {
       "id": 232,
       "word": "ስምንት",
       "sentence1": "በቅርጫት ውስጥ ስምንት ፖም አሉ።",
-      "sentence2": "ስምንት ዓመቷ ነው።"
+      "sentence2": "ስምንት ዓመቷ ነው።",
+      "pronunciation": "/sɨmɨnɨt/"
     },
     {
       "id": 233,
       "word": "አስራ ስምንት",
       "sentence1": "በሚቀጥለው ወር አስራ ስምንት ዓመት እሞላለሁ።",
-      "sentence2": "ቀድሞውኑ አስራ ስምንት ናት እና መምረጥ ትችላለች።"
+      "sentence2": "ቀድሞውኑ አስራ ስምንት ናት እና መምረጥ ትችላለች።",
+      "pronunciation": "/əsɨra sɨmɨnɨt/"
     },
     {
       "id": 234,
       "word": "ሰማንያ",
       "sentence1": "መጽሐፉ ሰማንያ ዶላር ያስከፍላል።",
-      "sentence2": "ሰማንያ ዓመቷ ነው እና አሁንም በጣም ንቁ ናት።"
+      "sentence2": "ሰማንያ ዓመቷ ነው እና አሁንም በጣም ንቁ ናት።",
+      "pronunciation": "/səmanɨja/"
     },
     {
       "id": 235,
       "word": "ዝሆን",
       "sentence1": "ዝሆን ትልቁ የየብስ እንስሳ ነው።",
-      "sentence2": "በእንስሳት መካነ አራዊት ገንቦ ዝሆን አየች።"
+      "sentence2": "በእንስሳት መካነ አራዊት ገንቦ ዝሆን አየች።",
+      "pronunciation": "/zɨhon/"
     },
     {
       "id": 236,
       "word": "አስራ አንድ",
       "sentence1": "በእግር ኳስ ቡድን ውስጥ አስራ አንድ ተጫዋቾች አሉ።",
-      "sentence2": "በሚቀጥለው ሳምንት አስራ አንድ ትሆናለች።"
+      "sentence2": "በሚቀጥለው ሳምንት አስራ አንድ ትሆናለች።",
+      "pronunciation": "/əsɨra ənɨd/"
     },
     {
       "id": 237,
       "word": "ሌላ",
       "sentence1": "ሌላ የሚያስፈልግህ ነገር አለ?",
-      "sentence2": "ልብሱን አልወደደችውም፣ ስለዚህ ሌላ ነገር መረጠች።"
+      "sentence2": "ልብሱን አልወደደችውም፣ ስለዚህ ሌላ ነገር መረጠች።",
+      "pronunciation": "/lela/"
     },
     {
       "id": 238,
       "word": "ኢሜይል",
       "sentence1": "ዝርዝሮቹን ይዤ ኢሜይል ላኩልህ።",
-      "sentence2": "በየጠዋቱ ኢሜይሏን ታረጋግጣለች።"
+      "sentence2": "በየጠዋቱ ኢሜይሏን ታረጋግጣለች።",
+      "pronunciation": "/imejɨl/"
     },
     {
       "id": 239,
       "word": "መጨረሻ",
       "sentence1": "ፊልሙ አስገራሚ መጨረሻ ነበረው።",
-      "sentence2": "የትርኢቱን መጨረሻ ስታይ አዘነች።"
+      "sentence2": "የትርኢቱን መጨረሻ ስታይ አዘነች።",
+      "pronunciation": "/mət͡ʃʼərəʃa/"
     },
     {
       "id": 240,
       "word": "መደሰት",
       "sentence1": "በትርፍ ጊዜዬ መጽሐፍ ማንበብ እደሰታለሁ።",
-      "sentence2": "በፓርክ ውስጥ መራመድ ትደሰታለች።"
+      "sentence2": "በፓርክ ውስጥ መራመድ ትደሰታለች።",
+      "pronunciation": "/mədəsət/"
     },
     {
       "id": 241,
       "word": "በቂ",
       "sentence1": "ለሁሉም በቂ ምግብ አለን?",
-      "sentence2": "ልብሱን ለመግዛት በቂ ገንዘብ አልነበራትም።"
+      "sentence2": "ልብሱን ለመግዛት በቂ ገንዘብ አልነበራትም።",
+      "pronunciation": "/bəkʼi/"
     },
     {
       "id": 242,
       "word": "ዩሮ",
       "sentence1": "ዋጋው ሃምሳ ዩሮ ነው።",
-      "sentence2": "በባንኩ ዶላሮችን በዩሮ ቀየረች።"
+      "sentence2": "በባንኩ ዶላሮችን በዩሮ ቀየረች።",
+      "pronunciation": "/juro/"
     },
     {
       "id": 243,
       "word": "እንኳን",
       "sentence1": "ፈተናው ከገመትኩት እንኳን ቀላል ነበር።",
-      "sentence2": "ቻው እንኳን አላለችም።"
+      "sentence2": "ቻው እንኳን አላለችም።",
+      "pronunciation": "/ɨnɨkwan/"
     },
     {
       "id": 244,
       "word": "ምሽት",
       "sentence1": "ከስራ በኋላ በምሽት ማረፍ እወዳለሁ።",
-      "sentence2": "ለዛሬ ምሽት ስብሰባ ተይዟል።"
+      "sentence2": "ለዛሬ ምሽት ስብሰባ ተይዟል።",
+      "pronunciation": "/mɨʃɨt/"
     },
     {
       "id": 245,
       "word": "ዝግጅት",
       "sentence1": "ዓመታዊ ዝግጅቱ በሚቀጥለው ወር ይካሄዳል።",
-      "sentence2": "በዚህ ዓመት ዝግጅቱን እያደራጀች ነው።"
+      "sentence2": "በዚህ ዓመት ዝግጅቱን እያደራጀች ነው።",
+      "pronunciation": "/zɨɡɨd͡ʒɨt/"
     },
     {
       "id": 246,
       "word": "ከዚህ በፊት",
       "sentence1": "ፓሪስ ሄደህ ታውቃለህ?",
-      "sentence2": "ሱሺ ፈጽሞ ሞክራ አታውቅም።"
+      "sentence2": "ሱሺ ፈጽሞ ሞክራ አታውቅም።",
+      "pronunciation": "/kəzih bəfit/"
     },
     {
       "id": 247,
       "word": "ሁሉም",
       "sentence1": "ሁሉም ተማሪ ስራውን ማስገባት አለበት።",
-      "sentence2": "ከፈተናው በፊት ሁሉንም ሌሊት ታጠናለች።"
+      "sentence2": "ከፈተናው በፊት ሁሉንም ሌሊት ታጠናለች።",
+      "pronunciation": "/hulum/"
     },
     {
       "id": 248,
       "word": "ሁሉም ሰው",
       "sentence1": "ሁሉም ሰው ወደ ፓርቲው ተጋብዟል።",
-      "sentence2": "በሰፈሩ ውስጥ ያለውን ሁሉም ሰው ታውቃለች።"
+      "sentence2": "በሰፈሩ ውስጥ ያለውን ሁሉም ሰው ታውቃለች።",
+      "pronunciation": "/hulum səw/"
     },
     {
       "id": 249,
       "word": "ሁሉም",
       "sentence1": "ሁሉም አንዳንድ ጊዜ ዕረፍት መውሰድ አለበት።",
-      "sentence2": "ሁሉም ሰው ሁለተኛ ዕድል ይገባዋል ብላ ታምናለች።"
+      "sentence2": "ሁሉም ሰው ሁለተኛ ዕድል ይገባዋል ብላ ታምናለች።",
+      "pronunciation": "/hulum/"
     },
     {
       "id": 250,
       "word": "ሁሉም ነገር",
       "sentence1": "መጨረሻ ላይ ሁሉም ነገር ጥሩ ይሆናል።",
-      "sentence2": "ለጉዞው የሚያስፈልጋትን ሁሉ ሸከፈች።"
+      "sentence2": "ለጉዞው የሚያስፈልጋትን ሁሉ ሸከፈች።",
+      "pronunciation": "/hulum nəɡər/"
     },
     {
       "id": 251,
       "word": "ፈተና",
       "sentence1": "ነገ ፈተና አለኝ።",
-      "sentence2": "ለፈተናው በጣም አጠናች።"
+      "sentence2": "ለፈተናው በጣም አጠናች።",
+      "pronunciation": "/fətəna/"
     },
     {
       "id": 252,
       "word": "ምሳሌ",
       "sentence1": "ምሳሌ ልትሰጠኝ ትችላለህ?",
-      "sentence2": "የስኬታማ ሰው ታላቅ ምሳሌ ናት።"
+      "sentence2": "የስኬታማ ሰው ታላቅ ምሳሌ ናት።",
+      "pronunciation": "/mɨsale/"
     },
     {
       "id": 253,
       "word": "የተደሰተ",
       "sentence1": "ስለ ኮንሰርቱ ተደስቻለሁ።",
-      "sentence2": "የምትወደውን ደራሲ ለመገናኘት ተደስታለች።"
+      "sentence2": "የምትወደውን ደራሲ ለመገናኘት ተደስታለች።",
+      "pronunciation": "/jətədəsətə/"
     },
     {
       "id": 254,
       "word": "አስደሳች",
       "sentence1": "ፊልሙ በጣም አስደሳች ነበር።",
-      "sentence2": "የምትወደው አስደሳች ሥራ አላት።"
+      "sentence2": "የምትወደው አስደሳች ሥራ አላት።",
+      "pronunciation": "/əsɨdəsat͡ʃ/"
     },
     {
       "id": 255,
       "word": "ስፖርት",
       "sentence1": "በየቀኑ ትንሽ ስፖርት ለመስራት እሞክራለሁ።",
-      "sentence2": "ዮጋ እንደ ስፖርት ትወዳለች።"
+      "sentence2": "ዮጋ እንደ ስፖርት ትወዳለች።",
+      "pronunciation": "/sɨporɨt/"
     },
     {
       "id": 256,
       "word": "ውድ",
       "sentence1": "ያ ልብስ ለኔ በጣም ውድ ነው።",
-      "sentence2": "እንደ ስጦታ ውድ ሰዓት ገዛች።"
+      "sentence2": "እንደ ስጦታ ውድ ሰዓት ገዛች።",
+      "pronunciation": "/wɨd/"
     },
     {
       "id": 257,
       "word": "ማስረዳት",
       "sentence1": "ህጎቹን ልታስረዳኝ ትችላለህ?",
-      "sentence2": "አመለካከቷን ለማስረዳት ጊዜ ወሰደች።"
+      "sentence2": "አመለካከቷን ለማስረዳት ጊዜ ወሰደች።",
+      "pronunciation": "/masɨrədat/"
     },
     {
       "id": 258,
       "word": "ተጨማሪ",
       "sentence1": "ይህን ለመጨረስ ተጨማሪ ጊዜ ያስፈልገኛል።",
-      "sentence2": "ለጉዞው ተጨማሪ መክሰስ አመጣች።"
+      "sentence2": "ለጉዞው ተጨማሪ መክሰስ አመጣች።",
+      "pronunciation": "/tət͡ʃʼəmari/"
     },
     {
       "id": 259,
       "word": "ዓይን",
       "sentence1": "ቆንጆ ሰማያዊ ዓይኖች አሏት።",
-      "sentence2": "ዓይኖቼን ማስመርመር አለብኝ።"
+      "sentence2": "ዓይኖቼን ማስመርመር አለብኝ።",
+      "pronunciation": "/ajɨn/"
     },
     {
       "id": 260,
       "word": "ፊት",
       "sentence1": "ደግ ፊት አለው።",
-      "sentence2": "በፊቷ ላይ ያለውን ገጽታ መደበቅ አልቻለችም።"
+      "sentence2": "በፊቷ ላይ ያለውን ገጽታ መደበቅ አልቻለችም።",
+      "pronunciation": "/fit/"
     },
     {
       "id": 261,
       "word": "እውነታ",
       "sentence1": "ምድር ፀሐይን እንደምትዞር እውነታ ነው።",
-      "sentence2": "ብዙ አስደሳች እውነታዎችን ታውቃለች።"
+      "sentence2": "ብዙ አስደሳች እውነታዎችን ታውቃለች።",
+      "pronunciation": "/ɨwɨnəta/"
     },
     {
       "id": 262,
       "word": "መውደቅ",
       "sentence1": "እንዳትወድቅ ተጠንቀቅ።",
-      "sentence2": "ቅጠሎች በመኸር ከዛፎች ይወድቃሉ።"
+      "sentence2": "ቅጠሎች በመኸር ከዛፎች ይወድቃሉ።",
+      "pronunciation": "/məwɨdəkʼ/"
     },
     {
       "id": 263,
       "word": "ውሸት",
       "sentence1": "ያ ንግግር ውሸት ነው።",
-      "sentence2": "እምነቷ ውሸት መሆኑን ተረዳች።"
+      "sentence2": "እምነቷ ውሸት መሆኑን ተረዳች።",
+      "pronunciation": "/wɨʃət/"
     },
     {
       "id": 264,
       "word": "ቤተሰብ",
       "sentence1": "ቤተሰቤ ለኔ በጣም አስፈላጊ ነው።",
-      "sentence2": "ከትልቅ ቤተሰብ ትመጣለች።"
+      "sentence2": "ከትልቅ ቤተሰብ ትመጣለች።",
+      "pronunciation": "/betəsəb/"
     },
     {
       "id": 265,
       "word": "ታዋቂ",
       "sentence1": "ታዋቂ ተዋናይ ነው።",
-      "sentence2": "አንድ ቀን ታዋቂ መሆን ትፈልጋለች።"
+      "sentence2": "አንድ ቀን ታዋቂ መሆን ትፈልጋለች።",
+      "pronunciation": "/tawakʼi/"
     },
     {
       "id": 266,
       "word": "ድንቅ",
       "sentence1": "ከላይ ያለው እይታ ድንቅ ነው።",
-      "sentence2": "በፕሮጀክቱ ላይ ድንቅ ሥራ ሰራች።"
+      "sentence2": "በፕሮጀክቱ ላይ ድንቅ ሥራ ሰራች።",
+      "pronunciation": "/dɨnɨkʼ/"
     },
     {
       "id": 267,
       "word": "ሩቅ",
       "sentence1": "ሱቁ ከቤቴ ሩቅ ነው።",
-      "sentence2": "በሌላ ከተማ ሩቅ ትኖራለች።"
+      "sentence2": "በሌላ ከተማ ሩቅ ትኖራለች።",
+      "pronunciation": "/rukʼ/"
     },
     {
       "id": 268,
       "word": "እርሻ",
       "sentence1": "በገጠር ውስጥ እርሻ አላቸው።",
-      "sentence2": "በበጋ እርሻውን መጎብኘት ትወዳለች።"
+      "sentence2": "በበጋ እርሻውን መጎብኘት ትወዳለች።",
+      "pronunciation": "/ɨrɨʃa/"
     },
     {
       "id": 269,
       "word": "ገበሬ",
       "sentence1": "ገበሬው በሜዳ ላይ ጠንክሮ ይሰራል።",
-      "sentence2": "ገበሬን ማግባት ትፈልጋለች።"
+      "sentence2": "ገበሬን ማግባት ትፈልጋለች።",
+      "pronunciation": "/ɡəbəre/"
     },
     {
       "id": 270,
       "word": "ፈጣን",
       "sentence1": "ፈጣን ሯጭ ነው።",
-      "sentence2": "ፈጣን መኪና ታሽከረክራለች።"
+      "sentence2": "ፈጣን መኪና ታሽከረክራለች።",
+      "pronunciation": "/fətʼan/"
     },
     {
       "id": 271,
       "word": "ወፍራም",
       "sentence1": "ድመቷ ወፍራም እና ሰነፍ ናት።",
-      "sentence2": "ስብ ለመቀነስ አመጋገብ ላይ ናት።"
+      "sentence2": "ስብ ለመቀነስ አመጋገብ ላይ ናት።",
+      "pronunciation": "/wəfɨram/"
     },
     {
       "id": 272,
       "word": "አባት",
       "sentence1": "አባቴ ሐኪም ነው።",
-      "sentence2": "አባቷን በጣም ትወዳለች።"
+      "sentence2": "አባቷን በጣም ትወዳለች።",
+      "pronunciation": "/əbat/"
     },
     {
       "id": 273,
       "word": "ተወዳጅ",
       "sentence1": "የምወደው ቀለም ሰማያዊ ነው።",
-      "sentence2": "ብዙ ጊዜ የምታነባት ተወዳጅ መጽሐፍ አላት።"
+      "sentence2": "ብዙ ጊዜ የምታነባት ተወዳጅ መጽሐፍ አላት።",
+      "pronunciation": "/təwədad͡ʒ/"
     },
     {
       "id": 274,
       "word": "የካቲት",
       "sentence1": "የካቲት የዓመቱ ሁለተኛ ወር ነው።",
-      "sentence2": "የፍቅር ቀን በየካቲት ነው።"
+      "sentence2": "የፍቅር ቀን በየካቲት ነው።",
+      "pronunciation": "/jəkatit/"
     },
     {
       "id": 275,
       "word": "መሰማት",
       "sentence1": "ዛሬ ደስተኛ ይሰማኛል።",
-      "sentence2": "ትናንት ጥሩ አልተሰማትም።"
+      "sentence2": "ትናንት ጥሩ አልተሰማትም።",
+      "pronunciation": "/məsəmat/"
     },
     {
       "id": 276,
       "word": "ስሜት",
       "sentence1": "የሆነ ነገር ስህተት እንደሆነ ስሜት አለኝ።",
-      "sentence2": "ስሜቷን በደብዳቤ ገለጸች።"
+      "sentence2": "ስሜቷን በደብዳቤ ገለጸች።",
+      "pronunciation": "/sɨmet/"
     },
     {
       "id": 277,
       "word": "በዓል",
       "sentence1": "የሙዚቃ በዓሉ አስደናቂ ነበር።",
-      "sentence2": "ዓመታዊ በዓሉን በጉጉት ትጠብቃለች።"
+      "sentence2": "ዓመታዊ በዓሉን በጉጉት ትጠብቃለች።",
+      "pronunciation": "/bəal/"
     },
     {
       "id": 278,
       "word": "ጥቂት",
       "sentence1": "በዚህ ከተማ ጥቂት ጓደኞች አሉኝ።",
-      "sentence2": "በጉዞዋ ጊዜ ጥቂት ፎቶዎች አነሳች።"
+      "sentence2": "በጉዞዋ ጊዜ ጥቂት ፎቶዎች አነሳች።",
+      "pronunciation": "/tʼɨkʼit/"
     },
     {
       "id": 279,
       "word": "አስራ አምስት",
       "sentence1": "በክፍሌ ውስጥ አስራ አምስት ተማሪዎች አሉ።",
-      "sentence2": "በሚቀጥለው ወር አስራ አምስት ዓመት ትሞላለች።"
+      "sentence2": "በሚቀጥለው ወር አስራ አምስት ዓመት ትሞላለች።",
+      "pronunciation": "/əsɨra əmɨsɨt/"
     },
     {
       "id": 280,
       "word": "አምስተኛ",
       "sentence1": "በአምስተኛ ደረጃ ጨረሰ።",
-      "sentence2": "በተከታታዩ ውስጥ አምስተኛው መጽሐፍ የምወደው ነው።"
+      "sentence2": "በተከታታዩ ውስጥ አምስተኛው መጽሐፍ የምወደው ነው።",
+      "pronunciation": "/əmɨsɨtəɲa/"
     },
     {
       "id": 281,
       "word": "ሃምሳ",
       "sentence1": "በአሜሪካ ሃምሳ ግዛቶች አሉ።",
-      "sentence2": "ሃምሳ ዓመቷ ነው።"
+      "sentence2": "ሃምሳ ዓመቷ ነው።",
+      "pronunciation": "/hamɨsa/"
     },
     {
       "id": 282,
       "word": "መሙላት",
       "sentence1": "እባክህ ይህን ቅጽ ሙላ።",
-      "sentence2": "መኪናዋን በነዳጅ መሙላት አለባት።"
+      "sentence2": "መኪናዋን በነዳጅ መሙላት አለባት።",
+      "pronunciation": "/məmulat/"
     },
     {
       "id": 283,
       "word": "ፊልም",
       "sentence1": "ትናንት ማታ ጥሩ ፊልም አየሁ።",
-      "sentence2": "አንድ ቀን ፊልም መስራት ትፈልጋለች።"
+      "sentence2": "አንድ ቀን ፊልም መስራት ትፈልጋለች።",
+      "pronunciation": "/filɨm/"
     },
     {
       "id": 284,
       "word": "የመጨረሻ",
       "sentence1": "የመጨረሻው ፈተና በሚቀጥለው ሳምንት ነው።",
-      "sentence2": "ለመጨረሻው ፈተና በጣም አጠናች።"
+      "sentence2": "ለመጨረሻው ፈተና በጣም አጠናች።",
+      "pronunciation": "/jəmət͡ʃʼərəʃa/"
     },
     {
       "id": 285,
       "word": "ማግኘት",
       "sentence1": "ቁልፎቼን ማግኘት አልቻልኩም።",
-      "sentence2": "መንገዴን ለማግኘት ረዳችኝ።"
+      "sentence2": "መንገዴን ለማግኘት ረዳችኝ።",
+      "pronunciation": "/maɡɨɲət/"
     },
     {
       "id": 286,
       "word": "ጥሩ",
       "sentence1": "ጥሩ ይሰማኛል፣ አመሰግናለሁ።",
-      "sentence2": "ጥሩ የቴምብር ስብስብ አላት።"
+      "sentence2": "ጥሩ የቴምብር ስብስብ አላት።",
+      "pronunciation": "/tʼɨru/"
     },
     {
       "id": 287,
       "word": "መጨረስ",
       "sentence1": "እባክህ የቤት ስራህን ጨርስ።",
-      "sentence2": "ፕሮጀክቱን ነገ ትጨርሳለች።"
+      "sentence2": "ፕሮጀክቱን ነገ ትጨርሳለች።",
+      "pronunciation": "/mət͡ʃʼərəs/"
     },
     {
       "id": 288,
       "word": "እሳት",
       "sentence1": "እሳቱ በጣም ሞቃት ነው።",
-      "sentence2": "እሳቱን ፈራች።"
+      "sentence2": "እሳቱን ፈራች።",
+      "pronunciation": "/ɨsat/"
     },
     {
       "id": 289,
       "word": "የመጀመሪያ",
       "sentence1": "የመጀመሪያ መምጣቷ ናት።",
-      "sentence2": "የመጽሐፉ የመጀመሪያ ምዕራፍ አስደሳች ነው።"
+      "sentence2": "የመጽሐፉ የመጀመሪያ ምዕራፍ አስደሳች ነው።",
+      "pronunciation": "/jəməd͡ʒəmərija/"
     },
     {
       "id": 290,
       "word": "ዓሳ",
       "sentence1": "ትልቅ ዓሳ ያዝኩ።",
-      "sentence2": "ለእራት ዓሳ መብላት ትወዳለች።"
+      "sentence2": "ለእራት ዓሳ መብላት ትወዳለች።",
+      "pronunciation": "/asa/"
     },
     {
       "id": 291,
       "word": "አምስት",
       "sentence1": "አምስት ፖም አለኝ።",
-      "sentence2": "አምስት ዓመቷ ነው።"
+      "sentence2": "አምስት ዓመቷ ነው።",
+      "pronunciation": "/əmɨsɨt/"
     },
     {
       "id": 292,
       "word": "ጠፍጣፋ",
       "sentence1": "መንገዱ ጠፍጣፋ እና ቀጥ ያለ ነው።",
-      "sentence2": "በከተማ ውስጥ አፓርትመንት ትኖራለች።"
+      "sentence2": "በከተማ ውስጥ አፓርትመንት ትኖራለች።",
+      "pronunciation": "/tʼəfɨtʼafa/"
     },
     {
       "id": 293,
       "word": "በረራ",
       "sentence1": "በረራዬ በ6 ሰዓት ይወጣል።",
-      "sentence2": "ወደ ፓሪስ በረራ ላይ ናት።"
+      "sentence2": "ወደ ፓሪስ በረራ ላይ ናት።",
+      "pronunciation": "/bərəra/"
     },
     {
       "id": 294,
       "word": "ወለል",
       "sentence1": "መጽሐፉ በወለሉ ላይ ነው።",
-      "sentence2": "ትናንት ወለሉን አጸዳች።"
+      "sentence2": "ትናንት ወለሉን አጸዳች።",
+      "pronunciation": "/wələl/"
     },
     {
       "id": 295,
       "word": "አበባ",
       "sentence1": "ቆንጆ አበባ ገዛሁ።",
-      "sentence2": "በአትክልቷ ውስጥ አበባዎችን መትከል ትወዳለች።"
+      "sentence2": "በአትክልቷ ውስጥ አበባዎችን መትከል ትወዳለች።",
+      "pronunciation": "/əbəba/"
     },
     {
       "id": 296,
       "word": "መብረር",
       "sentence1": "ወደ ኒው ዮርክ መብረር እፈልጋለሁ።",
-      "sentence2": "ካይት ማብረር በጣም ትችላለች።"
+      "sentence2": "ካይት ማብረር በጣም ትችላለች።",
+      "pronunciation": "/məbɨrər/"
     },
     {
       "id": 297,
       "word": "መከተል",
       "sentence1": "እባክህ ወደ ጣቢያው ተከተለኝ።",
-      "sentence2": "ህልሟን ለመከተል ወሰነች።"
+      "sentence2": "ህልሟን ለመከተል ወሰነች።",
+      "pronunciation": "/məkətəl/"
     },
     {
       "id": 298,
       "word": "ምግብ",
       "sentence1": "የጣሊያን ምግብ እወዳለሁ።",
-      "sentence2": "ለእራት ጣፋጭ ምግብ አዘጋጀች።"
+      "sentence2": "ለእራት ጣፋጭ ምግብ አዘጋጀች።",
+      "pronunciation": "/mɨɡɨb/"
     },
     {
       "id": 299,
       "word": "እግር",
       "sentence1": "እግሬ ይጎዳል።",
-      "sentence2": "በአጋጣሚ እግሬን ረገጠችኝ።"
+      "sentence2": "በአጋጣሚ እግሬን ረገጠችኝ።",
+      "pronunciation": "/ɨɡɨr/"
     },
     {
       "id": 300,
       "word": "እግር ኳስ",
       "sentence1": "ቅዳሜና እሁድ እግር ኳስ እጫወታለሁ።",
-      "sentence2": "የእግር ኳስ ትልቅ ደጋፊ ናት።"
+      "sentence2": "የእግር ኳስ ትልቅ ደጋፊ ናት።",
+      "pronunciation": "/ɨɡɨr kwas/"
     },
     {
       "id": 301,
       "word": "ለ",
       "sentence1": "ይህ ስጦታ ለአንተ ነው።",
-      "sentence2": "ለቤተሰቧ ጠንክራ ትሰራለች።"
+      "sentence2": "ለቤተሰቧ ጠንክራ ትሰራለች።",
+      "pronunciation": "/lə/"
     },
     {
       "id": 302,
       "word": "መርሳት",
       "sentence1": "ልትደውልልኝ አትርሳ።",
-      "sentence2": "ቁልፎቿን የት እንዳስቀመጠች ሁልጊዜ ትረሳለች።"
+      "sentence2": "ቁልፎቿን የት እንዳስቀመጠች ሁልጊዜ ትረሳለች።",
+      "pronunciation": "/mərɨsat/"
     },
     {
       "id": 303,
       "word": "ቅጽ",
       "sentence1": "እባክህ ይህን ቅጽ ሙላ።",
-      "sentence2": "ቅጹን በኢንተርኔት አስገባች።"
+      "sentence2": "ቅጹን በኢንተርኔት አስገባች።",
+      "pronunciation": "/kʼɨt͡sʼ/"
     },
     {
       "id": 304,
       "word": "አርባ",
       "sentence1": "በትምህርት ቤቱ አርባ ተማሪዎች አሉ።",
-      "sentence2": "አርባ ዓመቷ ነው።"
+      "sentence2": "አርባ ዓመቷ ነው።",
+      "pronunciation": "/ərɨba/"
     },
     {
       "id": 305,
       "word": "አራት",
       "sentence1": "አራት ወንድሞች አሉኝ።",
-      "sentence2": "አራቱ ወቅቶች ቆንጆ ናቸው።"
+      "sentence2": "አራቱ ወቅቶች ቆንጆ ናቸው።",
+      "pronunciation": "/ərat/"
     },
     {
       "id": 306,
       "word": "አስራ አራት",
       "sentence1": "አስራ አራት ዓመቷ ነው።",
-      "sentence2": "አስራ አራት የምወደው ቁጥር ነው።"
+      "sentence2": "አስራ አራት የምወደው ቁጥር ነው።",
+      "pronunciation": "/əsɨra ərat/"
     },
     {
       "id": 307,
       "word": "አራተኛ",
       "sentence1": "በአራተኛ ደረጃ ጨረሰ።",
-      "sentence2": "ሐምሌ 4 የነፃነት ቀን ነው።"
+      "sentence2": "ሐምሌ 4 የነፃነት ቀን ነው።",
+      "pronunciation": "/əratəɲa/"
     },
     {
       "id": 308,
       "word": "ነፃ",
       "sentence1": "ሙዚየሙ እሁድ ነፃ ነው።",
-      "sentence2": "ነፃ ከሰዓት አላት።"
+      "sentence2": "ነፃ ከሰዓት አላት።",
+      "pronunciation": "/nət͡sʼa/"
     },
     {
       "id": 309,
       "word": "አርብ",
       "sentence1": "አርብ የምወደው ቀን ነው።",
-      "sentence2": "አርብ ስብሰባ አላት።"
+      "sentence2": "አርብ ስብሰባ አላት።",
+      "pronunciation": "/ərɨb/"
     },
     {
       "id": 310,
       "word": "ጓደኛ",
       "sentence1": "ምርጥ ጓደኛዬ ይመጣል።",
-      "sentence2": "ታማኝ ጓደኛ ናት።"
+      "sentence2": "ታማኝ ጓደኛ ናት።",
+      "pronunciation": "/ɡwadəɲa/"
     },
     {
       "id": 311,
       "word": "ተግባቢ",
       "sentence1": "ውሻው በጣም ተግባቢ ነው።",
-      "sentence2": "ተግባቢ ፈገግታ ሰጠችኝ።"
+      "sentence2": "ተግባቢ ፈገግታ ሰጠችኝ።",
+      "pronunciation": "/təɡɨbabi/"
     },
     {
       "id": 312,
       "word": "ከ",
       "sentence1": "ከቱርክ ነኝ።",
-      "sentence2": "ከጓደኛዋ ደብዳቤ ተቀበለች።"
+      "sentence2": "ከጓደኛዋ ደብዳቤ ተቀበለች።",
+      "pronunciation": "/kə/"
     },
     {
       "id": 313,
       "word": "ፊት",
       "sentence1": "መኪናው ከቤቱ ፊት ቆሟል።",
-      "sentence2": "በመስመሩ ፊት ቆመች።"
+      "sentence2": "በመስመሩ ፊት ቆመች።",
+      "pronunciation": "/fit/"
     },
     {
       "id": 314,
       "word": "ፍራፍሬ",
       "sentence1": "ለቁርስ ፍራፍሬ መብላት እወዳለሁ።",
-      "sentence2": "ከገበያ ትኩስ ፍራፍሬ ገዛች።"
+      "sentence2": "ከገበያ ትኩስ ፍራፍሬ ገዛች።",
+      "pronunciation": "/fɨrafɨre/"
     },
     {
       "id": 315,
       "word": "ሙሉ",
       "sentence1": "ብርጭቆው በውሃ ሞልቷል።",
-      "sentence2": "ዛሬ ሙሉ መርሃ ግብር አላት።"
+      "sentence2": "ዛሬ ሙሉ መርሃ ግብር አላት።",
+      "pronunciation": "/mulu/"
     },
     {
       "id": 316,
       "word": "መዝናናት",
       "sentence1": "በፓርቲው ላይ በጣም ተዝናናን።",
-      "sentence2": "የውጭ መዝናኛ እንቅስቃሴዎች ትደሰታለች።"
+      "sentence2": "የውጭ መዝናኛ እንቅስቃሴዎች ትደሰታለች።",
+      "pronunciation": "/məzɨnanat/"
     },
     {
       "id": 317,
       "word": "አስቂኝ",
       "sentence1": "ያ ፊልም በጣም አስቂኝ ነበር።",
-      "sentence2": "አስቂኝ የቀልድ ስሜት አላት።"
+      "sentence2": "አስቂኝ የቀልድ ስሜት አላት።",
+      "pronunciation": "/əsɨkʼiɲ/"
     },
     {
       "id": 318,
       "word": "ወደፊት",
       "sentence1": "ስለ ወደፊቱ ተደስቻለሁ።",
-      "sentence2": "ለወደፊቷ ትልቅ እቅዶች አሏት።"
+      "sentence2": "ለወደፊቷ ትልቅ እቅዶች አሏት።",
+      "pronunciation": "/wədəfit/"
     },
     {
       "id": 319,
       "word": "ጨዋታ",
       "sentence1": "ቪዲዮ ጨዋታዎች መጫወት እወዳለሁ።",
-      "sentence2": "ትናንት ማታ ጨዋታውን አሸነፈች።"
+      "sentence2": "ትናንት ማታ ጨዋታውን አሸነፈች።",
+      "pronunciation": "/t͡ʃʼəwata/"
     },
     {
       "id": 320,
       "word": "የአትክልት ስፍራ",
       "sentence1": "በበር ጀርባዋ ቆንጆ የአትክልት ስፍራ አላት።",
-      "sentence2": "በአትክልቷ ውስጥ አበባዎች መትከል ትወዳለች።"
+      "sentence2": "በአትክልቷ ውስጥ አበባዎች መትከል ትወዳለች።",
+      "pronunciation": "/jəətɨkɨlɨt sɨfɨra/"
     },
     {
       "id": 321,
       "word": "ጂኦግራፊ",
       "sentence1": "በትምህርት ቤት ጂኦግራፊ አጠናሁ።",
-      "sentence2": "በዓለም ጂኦግራፊ ፍላጎት አላት።"
+      "sentence2": "በዓለም ጂኦግራፊ ፍላጎት አላት።",
+      "pronunciation": "/d͡ʒioɡɨrafi/"
     },
     {
       "id": 322,
       "word": "ማግኘት",
       "sentence1": "ጥቂት ግዢዎች ማግኘት አለብኝ።",
-      "sentence2": "በቅርቡ አዲስ ሥራ ታገኛለች።"
+      "sentence2": "በቅርቡ አዲስ ሥራ ታገኛለች።",
+      "pronunciation": "/maɡɨɲət/"
     },
     {
       "id": 323,
       "word": "ልጅ",
       "sentence1": "ልጅቷ መጽሐፍ እያነበበች ነው።",
-      "sentence2": "ብልጥ ልጅ ናት።"
+      "sentence2": "ብልጥ ልጅ ናት።",
+      "pronunciation": "/lɨd͡ʒ/"
     },
     {
       "id": 324,
       "word": "የሴት ጓደኛ",
       "sentence1": "የሴት ጓደኛዬ ትመጣለች።",
-      "sentence2": "ደጋፊ የሴት ጓደኛ ናት።"
+      "sentence2": "ደጋፊ የሴት ጓደኛ ናት።",
+      "pronunciation": "/jəset ɡwadəɲa/"
     },
     {
       "id": 325,
       "word": "መስጠት",
       "sentence1": "ስጦታ ልሰጥህ እፈልጋለሁ።",
-      "sentence2": "ለልደቴ መጽሐፍ ሰጠችኝ።"
+      "sentence2": "ለልደቴ መጽሐፍ ሰጠችኝ።",
+      "pronunciation": "/məsɨtʼət/"
     },
     {
       "id": 326,
       "word": "ብርጭቆ",
       "sentence1": "ከዚያ ብርጭቆ ጋር ተጠንቀቅ።",
-      "sentence2": "ከብርጭቆ ውሃ ጠጣች።"
+      "sentence2": "ከብርጭቆ ውሃ ጠጣች።",
+      "pronunciation": "/bɨrɨt͡ʃʼɨkʼo/"
     },
     {
       "id": 327,
       "word": "መሄድ",
       "sentence1": "ወደ ሱቅ መሄድ አለብኝ።",
-      "sentence2": "በኋላ ወደ ፓርቲው ትሄዳለች።"
+      "sentence2": "በኋላ ወደ ፓርቲው ትሄዳለች።",
+      "pronunciation": "/məhed/"
     },
     {
       "id": 328,
       "word": "ጥሩ",
       "sentence1": "ይህ ጥሩ ሃሳብ ነው።",
-      "sentence2": "ጥሩ ተማሪ ናት።"
+      "sentence2": "ጥሩ ተማሪ ናት።",
+      "pronunciation": "/tʼɨru/"
     },
     {
       "id": 329,
       "word": "ቻው",
       "sentence1": "ለጓደኛዬ ቻው አልኩ።",
-      "sentence2": "ስትሄድ ቻው ብላ አወዛወዘች።"
+      "sentence2": "ስትሄድ ቻው ብላ አወዛወዘች።",
+      "pronunciation": "/t͡ʃaw/"
     },
     {
       "id": 330,
       "word": "አያት",
       "sentence1": "አያቴ በጣም ጥበበኛ ነው።",
-      "sentence2": "ስለ ቀድሞ ታላላቅ ታሪኮች ይነግረኛል።"
+      "sentence2": "ስለ ቀድሞ ታላላቅ ታሪኮች ይነግረኛል።",
+      "pronunciation": "/əjat/"
     },
     {
       "id": 331,
       "word": "አያት",
       "sentence1": "አያቴ ምርጥ ኩኪዎችን ትሰራለች።",
-      "sentence2": "ከልጅነቷ ታሪኮችን መንገር ትወዳለች።"
+      "sentence2": "ከልጅነቷ ታሪኮችን መንገር ትወዳለች።",
+      "pronunciation": "/əjat/"
     },
     {
       "id": 332,
       "word": "አያቶች",
       "sentence1": "አያቶች ብዙ ጊዜ የልጅ ልጆቻቸውን ያበላሻሉ።",
-      "sentence2": "ከልጅ ልጆቻቸው ጋር ልዩ ትስስር አላቸው።"
+      "sentence2": "ከልጅ ልጆቻቸው ጋር ልዩ ትስስር አላቸው።",
+      "pronunciation": "/əjatot͡ʃ/"
     },
     {
       "id": 333,
       "word": "ታላቅ",
       "sentence1": "በፕሮጀክቱ ላይ ታላቅ ሥራ ሰራህ።",
-      "sentence2": "ለወደፊት ታላላቅ ሃሳቦች አሏት።"
+      "sentence2": "ለወደፊት ታላላቅ ሃሳቦች አሏት።",
+      "pronunciation": "/talakʼ/"
     },
     {
       "id": 334,
       "word": "አረንጓዴ",
       "sentence1": "ሣሩ አረንጓዴ ነው።",
-      "sentence2": "አረንጓዴ ልብስ ለበሰች።"
+      "sentence2": "አረንጓዴ ልብስ ለበሰች።",
+      "pronunciation": "/ərənɨɡwade/"
     },
     {
       "id": 335,
       "word": "ግራጫ",
       "sentence1": "ዛሬ ሰማዩ ግራጫ ነው።",
-      "sentence2": "ግራጫ ድመት አላት።"
+      "sentence2": "ግራጫ ድመት አላት።",
+      "pronunciation": "/ɡɨrat͡ʃʼa/"
     },
     {
       "id": 336,
       "word": "ቡድን",
       "sentence1": "የጥናት ቡድን መሰረትን።",
-      "sentence2": "የቡድኑ መሪ ናት።"
+      "sentence2": "የቡድኑ መሪ ናት።",
+      "pronunciation": "/budɨn/"
     },
     {
       "id": 337,
       "word": "ማደግ",
       "sentence1": "ተክሎች ለማደግ ውሃ ያስፈልጋቸዋል።",
-      "sentence2": "ልጆቿ ሲያድጉ ተመልክታለች።"
+      "sentence2": "ልጆቿ ሲያድጉ ተመልክታለች።",
+      "pronunciation": "/madəɡ/"
     },
     {
       "id": 338,
       "word": "መገመት",
       "sentence1": "መልሱን ልትገምት ትችላለህ?",
-      "sentence2": "ጥሩ ግምት ገመተች።"
+      "sentence2": "ጥሩ ግምት ገመተች።",
+      "pronunciation": "/məɡəmət/"
     },
     {
       "id": 339,
       "word": "ጊታር",
       "sentence1": "ጊታር መጫወት እወዳለሁ።",
-      "sentence2": "ጊታር መጫወት እየተማረች ነው።"
+      "sentence2": "ጊታር መጫወት እየተማረች ነው።",
+      "pronunciation": "/ɡitar/"
     },
     {
       "id": 340,
       "word": "ጂም",
       "sentence1": "በየጠዋቱ ወደ ጂም እሄዳለሁ።",
-      "sentence2": "በጂም ውስጥ ትሰራለች።"
+      "sentence2": "በጂም ውስጥ ትሰራለች።",
+      "pronunciation": "/d͡ʒim/"
     },
     {
       "id": 341,
       "word": "ፀጉር",
       "sentence1": "ረጅም ፀጉር አላት።",
-      "sentence2": "ፀጉሬን መቁረጥ አለብኝ።"
+      "sentence2": "ፀጉሬን መቁረጥ አለብኝ።",
+      "pronunciation": "/t͡sʼəɡur/"
     },
     {
       "id": 342,
       "word": "ግማሽ",
       "sentence1": "ግማሹን ፒዛ በላሁ።",
-      "sentence2": "መጽሐፉን ግማሽ ላይ ናት።"
+      "sentence2": "መጽሐፉን ግማሽ ላይ ናት።",
+      "pronunciation": "/ɡɨmaʃ/"
     },
     {
       "id": 343,
       "word": "እጅ",
       "sentence1": "እጁን አወዛወዘ።",
-      "sentence2": "እጁን በጥብቅ ያዘች።"
+      "sentence2": "እጁን በጥብቅ ያዘች።",
+      "pronunciation": "/ɨd͡ʒ/"
     },
     {
       "id": 344,
       "word": "መከሰት",
       "sentence1": "ቀጥሎ ምን ይሆናል?",
-      "sentence2": "ያ ይሆናል ብዬ አልጠበቅሁም።"
+      "sentence2": "ያ ይሆናል ብዬ አልጠበቅሁም።",
+      "pronunciation": "/məkəsət/"
     },
     {
       "id": 345,
       "word": "ደስተኛ",
       "sentence1": "ደስተኛ ሰው ናት።",
-      "sentence2": "ዛሬ ደስተኛ ይሰማኛል።"
+      "sentence2": "ዛሬ ደስተኛ ይሰማኛል።",
+      "pronunciation": "/dəsɨtəɲa/"
     },
     {
       "id": 346,
       "word": "ከባድ",
       "sentence1": "ይህ መልመጃ ከባድ ነው።",
-      "sentence2": "በየቀኑ ጠንክራ ትሰራለች።"
+      "sentence2": "በየቀኑ ጠንክራ ትሰራለች።",
+      "pronunciation": "/kəbad/"
     },
     {
       "id": 347,
       "word": "ኮፍያ",
       "sentence1": "ወደ ፓርቲው ኮፍያ ለበሰ።",
-      "sentence2": "አዲስ ኮፍያ ገዛች።"
+      "sentence2": "አዲስ ኮፍያ ገዛች።",
+      "pronunciation": "/kofɨja/"
     },
     {
       "id": 348,
       "word": "መጥላት",
       "sentence1": "በመስመር መጠበቅ እጠላለሁ።",
-      "sentence2": "የቤት ስራ መስራት ትጠላለች።"
+      "sentence2": "የቤት ስራ መስራት ትጠላለች።",
+      "pronunciation": "/mətʼɨlat/"
     },
     {
       "id": 349,
       "word": "አለ",
       "sentence1": "ውሻ አለኝ።",
-      "sentence2": "ድመት አላት።"
+      "sentence2": "ድመት አላት።",
+      "pronunciation": "/ələ/"
     },
     {
       "id": 350,
       "word": "መሆን አለበት",
       "sentence1": "ለፈተናው ማጥናት አለብኝ።",
-      "sentence2": "ወደ ስራ መሄድ አለባት።"
+      "sentence2": "ወደ ስራ መሄድ አለባት።",
+      "pronunciation": "/məhon ələbət/"
     },
     {
       "id": 351,
       "word": "እሱ",
       "sentence1": "እሱ ወንድሜ ነው።",
-      "sentence2": "ትናንት አየሁት።"
+      "sentence2": "ትናንት አየሁት።",
+      "pronunciation": "/ɨsu/"
     },
     {
       "id": 352,
       "word": "ራስ",
       "sentence1": "ራስዋን ነቀነቀች።",
-      "sentence2": "ራስ ምታት አለው።"
+      "sentence2": "ራስ ምታት አለው።",
+      "pronunciation": "/ras/"
     },
     {
       "id": 353,
       "word": "ጤና",
       "sentence1": "ጤና በጣም አስፈላጊ ነው።",
-      "sentence2": "ስለ ጤናዋ ትጨነቃለች።"
+      "sentence2": "ስለ ጤናዋ ትጨነቃለች።",
+      "pronunciation": "/tʼena/"
     },
     {
       "id": 354,
       "word": "ጤናማ",
       "sentence1": "ፍራፍሬ እና አትክልት መብላት የጤናማ አመጋገብ አካል ነው።",
-      "sentence2": "ጤናማ እና ጥሩ ትመስላለች።"
+      "sentence2": "ጤናማ እና ጥሩ ትመስላለች።",
+      "pronunciation": "/tʼenama/"
     },
     {
       "id": 355,
       "word": "መስማት",
       "sentence1": "ሙዚቃውን መስማት እችላለሁ።",
-      "sentence2": "እንግዳ ድምጽ ሰማች።"
+      "sentence2": "እንግዳ ድምጽ ሰማች።",
+      "pronunciation": "/məsɨmat/"
     },
     {
       "id": 356,
       "word": "ሰላም",
       "sentence1": "ሰላም፣ እንዴት ነህ?",
-      "sentence2": "እጇን አወዛውዛ ሰላም አለች።"
+      "sentence2": "እጇን አወዛውዛ ሰላም አለች።",
+      "pronunciation": "/səlam/"
     },
     {
       "id": 357,
       "word": "እርዳታ",
       "sentence1": "በዚህ ልትረዳኝ ትችላለህ?",
-      "sentence2": "ሁልጊዜ ጓደኞቿን ትረዳለች።"
+      "sentence2": "ሁልጊዜ ጓደኞቿን ትረዳለች።",
+      "pronunciation": "/ɨrɨdata/"
     },
     {
       "id": 358,
       "word": "እሷ",
       "sentence1": "ይህ መጽሐፏ ነው።",
-      "sentence2": "በፓርኩ አየኋት።"
+      "sentence2": "በፓርኩ አየኋት።",
+      "pronunciation": "/ɨswa/"
     },
     {
       "id": 359,
       "word": "እዚህ",
       "sentence1": "እባክህ ወደዚህ ና።",
-      "sentence2": "አሁን እዚህ የለችም።"
+      "sentence2": "አሁን እዚህ የለችም።",
+      "pronunciation": "/ɨzih/"
     },
     {
       "id": 360,
       "word": "ሰላም",
       "sentence1": "ሰላም፣ ምን አዲስ ነገር አለ?",
-      "sentence2": "ሰላም ብላ ፈገገች።"
+      "sentence2": "ሰላም ብላ ፈገገች።",
+      "pronunciation": "/səlam/"
     },
     {
       "id": 361,
       "word": "ሀይ",
       "sentence1": "ሀይ፣ ለመተዋወቅ ደስ ብሎኛል!",
-      "sentence2": "እጇን አወዛውዛ ሀይ አለች።"
+      "sentence2": "እጇን አወዛውዛ ሀይ አለች።",
+      "pronunciation": "/həj/"
     },
     {
       "id": 362,
       "word": "ከፍተኛ",
       "sentence1": "ሕንፃው በጣም ከፍተኛ ነው።",
-      "sentence2": "ከፍተኛውን መደርደሪያ ለመድረስ ሞከረች።"
+      "sentence2": "ከፍተኛውን መደርደሪያ ለመድረስ ሞከረች።",
+      "pronunciation": "/kəfɨtəɲa/"
     },
     {
       "id": 363,
       "word": "እሱን",
       "sentence1": "በፓርኩ አየሁት።",
-      "sentence2": "ስጦታ ሰጠችው።"
+      "sentence2": "ስጦታ ሰጠችው።",
+      "pronunciation": "/ɨsun/"
     },
     {
       "id": 364,
       "word": "የእሱ",
       "sentence1": "ይህ መኪናው ነው።",
-      "sentence2": "እህቱን አገናኘሁ።"
+      "sentence2": "እህቱን አገናኘሁ።",
+      "pronunciation": "/jəɨsu/"
     },
     {
       "id": 365,
       "word": "ታሪክ",
       "sentence1": "ታሪክ አስደሳች ነው።",
-      "sentence2": "ታሪክ ማጥናት ትወዳለች።"
+      "sentence2": "ታሪክ ማጥናት ትወዳለች።",
+      "pronunciation": "/tarik/"
     },
     {
       "id": 366,
       "word": "የትርፍ ጊዜ ስራ",
       "sentence1": "የትርፍ ጊዜ ስራዬ መሳል ነው።",
-      "sentence2": "ብዙ የትርፍ ጊዜ ስራዎች አሏት።"
+      "sentence2": "ብዙ የትርፍ ጊዜ ስራዎች አሏት።",
+      "pronunciation": "/jətɨrɨf ɡize sɨra/"
     },
     {
       "id": 367,
       "word": "የበዓል ቀን",
       "sentence1": "ለበዓል እንሄዳለን።",
-      "sentence2": "የበጋ በዓል ትወዳለች።"
+      "sentence2": "የበጋ በዓል ትወዳለች።",
+      "pronunciation": "/jəbəal kʼən/"
     },
     {
       "id": 368,
       "word": "ቤት",
       "sentence1": "ወደ ቤት እንኳን ደህና መጣህ!",
-      "sentence2": "ቤቷን እያጸዳች ነው።"
+      "sentence2": "ቤቷን እያጸዳች ነው።",
+      "pronunciation": "/bet/"
     },
     {
       "id": 369,
       "word": "የቤት ስራ",
       "sentence1": "ብዙ የቤት ስራ አለኝ።",
-      "sentence2": "ወንድሟን በቤት ስራው ትረዳዋለች።"
+      "sentence2": "ወንድሟን በቤት ስራው ትረዳዋለች።",
+      "pronunciation": "/jəbet sɨra/"
     },
     {
       "id": 370,
       "word": "ተስፋ",
       "sentence1": "በቅርቡ ጥሩ ይሰማሃል ብዬ ተስፋ አደርጋለሁ።",
-      "sentence2": "ለወደፊት ተስፋ አላት።"
+      "sentence2": "ለወደፊት ተስፋ አላት።",
+      "pronunciation": "/təsɨfa/"
     },
     {
       "id": 371,
       "word": "ፈረስ",
       "sentence1": "ፈረሱ በፍጥነት እየሮጠ ነው።",
-      "sentence2": "ፈረሷን መጋለብ ትወዳለች።"
+      "sentence2": "ፈረሷን መጋለብ ትወዳለች።",
+      "pronunciation": "/fərəs/"
     },
     {
       "id": 372,
       "word": "ሆስፒታል",
       "sentence1": "ሆስፒታል ነው።",
-      "sentence2": "ሆስፒታል ውስጥ ትሰራለች።"
+      "sentence2": "ሆስፒታል ውስጥ ትሰራለች።",
+      "pronunciation": "/hosɨpital/"
     },
     {
       "id": 373,
       "word": "ሆቴል",
       "sentence1": "ጥሩ ሆቴል ተቀመጥን።",
-      "sentence2": "ለእረፍቷ ሆቴል አስያዘች።"
+      "sentence2": "ለእረፍቷ ሆቴል አስያዘች።",
+      "pronunciation": "/hotel/"
     },
     {
       "id": 374,
       "word": "ሰዓት",
       "sentence1": "እዚያ ለመድረስ አንድ ሰዓት ይወስዳል።",
-      "sentence2": "በአንድ ሰዓት ውስጥ ትመለሳለች።"
+      "sentence2": "በአንድ ሰዓት ውስጥ ትመለሳለች።",
+      "pronunciation": "/səat/"
     },
     {
       "id": 375,
       "word": "ሞቃት",
       "sentence1": "ቡናው ሞቃት ነው።",
-      "sentence2": "ሞቃት የአየር ሁኔታ ትወዳለች።"
+      "sentence2": "ሞቃት የአየር ሁኔታ ትወዳለች።",
+      "pronunciation": "/mokʼat/"
     },
     {
       "id": 376,
       "word": "ቤት",
       "sentence1": "ይህ ቤቴ ነው።",
-      "sentence2": "ቤት መግዛት ትፈልጋለች።"
+      "sentence2": "ቤት መግዛት ትፈልጋለች።",
+      "pronunciation": "/bet/"
     },
     {
       "id": 377,
       "word": "እንዴት",
       "sentence1": "እንዴት ነህ?",
-      "sentence2": "እንዴት እንደሚሰራ ጠየቀች።"
+      "sentence2": "እንዴት እንደሚሰራ ጠየቀች።",
+      "pronunciation": "/ɨnɨdet/"
     },
     {
       "id": 378,
       "word": "ሆኖም",
       "sentence1": "ዝናብ እየዘነበ ነበር፤ ሆኖም ወጣን።",
-      "sentence2": "በጣም ሥራ ብዙ ናት፤ ሆኖም ትረዳሃለች።"
+      "sentence2": "በጣም ሥራ ብዙ ናት፤ ሆኖም ትረዳሃለች።",
+      "pronunciation": "/honom/"
     },
     {
       "id": 379,
       "word": "መቶ",
       "sentence1": "በትምህርት ቤቱ መቶ ተማሪዎች አሉ።",
-      "sentence2": "መቶ ዶላር አላት።"
+      "sentence2": "መቶ ዶላር አላት።",
+      "pronunciation": "/məto/"
     },
     {
       "id": 380,
       "word": "የተራበ",
       "sentence1": "ርቧል።",
-      "sentence2": "ከአካል ብቃት እንቅስቃሴ በኋላ ሁልጊዜ ይራባታል።"
+      "sentence2": "ከአካል ብቃት እንቅስቃሴ በኋላ ሁልጊዜ ይራባታል።",
+      "pronunciation": "/jətərabə/"
     },
     {
       "id": 381,
       "word": "ባል",
       "sentence1": "ባሌ ሐኪም ነው።",
-      "sentence2": "ባሏን በጣም ትወዳለች።"
+      "sentence2": "ባሏን በጣም ትወዳለች።",
+      "pronunciation": "/bal/"
     },
     {
       "id": 382,
       "word": "በረዶ",
       "sentence1": "በረዶው እየቀለጠ ነው።",
-      "sentence2": "በመጠጧ ውስጥ በረዶ አስገባች።"
+      "sentence2": "በመጠጧ ውስጥ በረዶ አስገባች።",
+      "pronunciation": "/bərədo/"
     },
     {
       "id": 383,
       "word": "አይስ ክሬም",
       "sentence1": "አይስ ክሬም እወዳለሁ።",
-      "sentence2": "ለልጆቹ አይስ ክሬም ገዛች።"
+      "sentence2": "ለልጆቹ አይስ ክሬም ገዛች።",
+      "pronunciation": "/əjɨs kɨrem/"
     },
     {
       "id": 384,
       "word": "ሃሳብ",
       "sentence1": "ይሄ ታላቅ ሃሳብ ነው!",
-      "sentence2": "ለፕሮጀክቱ አስደሳች ሃሳብ አላት።"
+      "sentence2": "ለፕሮጀክቱ አስደሳች ሃሳብ አላት።",
+      "pronunciation": "/hasab/"
     },
     {
       "id": 385,
       "word": "ከ...ሆነ",
       "sentence1": "ዝናብ ከዘነበ፣ ውስጥ እንቆያለን።",
-      "sentence2": "መቀላቀል እንደምፈልግ ጠየቀችኝ።"
+      "sentence2": "መቀላቀል እንደምፈልግ ጠየቀችኝ።",
+      "pronunciation": "/kə...honə/"
     },
     {
       "id": 386,
       "word": "ማሰብ",
       "sentence1": "የተሻለ ዓለም ማሰብ እችላለሁ።",
-      "sentence2": "የተለያዩ ሁኔታዎችን ማሰብ ትወዳለች።"
+      "sentence2": "የተለያዩ ሁኔታዎችን ማሰብ ትወዳለች።",
+      "pronunciation": "/masəb/"
     },
     {
       "id": 387,
       "word": "አስፈላጊ",
       "sentence1": "ይህ አስፈላጊ ውሳኔ ነው።",
-      "sentence2": "አስፈላጊ ስራዎችን እንዴት ቅድሚያ እንደሚሰጥ ታውቃለች።"
+      "sentence2": "አስፈላጊ ስራዎችን እንዴት ቅድሚያ እንደሚሰጥ ታውቃለች።",
+      "pronunciation": "/əsɨfəlaɡi/"
     },
     {
       "id": 388,
       "word": "ማሻሻል",
       "sentence1": "የእንግሊዝኛ ክህሎቴን ማሻሻል እፈልጋለሁ።",
-      "sentence2": "ውጤቷን ለማሻሻል ጠንክራ እየሰራች ነው።"
+      "sentence2": "ውጤቷን ለማሻሻል ጠንክራ እየሰራች ነው።",
+      "pronunciation": "/maʃaʃal/"
     },
     {
       "id": 389,
       "word": "ውስጥ",
       "sentence1": "መጽሐፉ በቦርሳው ውስጥ ነው።",
-      "sentence2": "በትንሽ ከተማ ውስጥ ትኖራለች።"
+      "sentence2": "በትንሽ ከተማ ውስጥ ትኖራለች።",
+      "pronunciation": "/wɨsɨtʼ/"
     },
     {
       "id": 390,
       "word": "ማካተት",
       "sentence1": "እባክህ ስምህን በዝርዝሩ ላይ አካት።",
-      "sentence2": "ሁሉንም በውይይቱ ማካተት ትፈልጋለች።"
+      "sentence2": "ሁሉንም በውይይቱ ማካተት ትፈልጋለች።",
+      "pronunciation": "/makatət/"
     },
     {
       "id": 391,
       "word": "መረጃ",
       "sentence1": "ተጨማሪ መረጃ መስጠት ትችላለህ?",
-      "sentence2": "መረጃው ጠቃሚ መሆኑን አገኘች።"
+      "sentence2": "መረጃው ጠቃሚ መሆኑን አገኘች።",
+      "pronunciation": "/mərəd͡ʒa/"
     },
     {
       "id": 392,
       "word": "ፍላጎት",
       "sentence1": "በሥነ ጥበብ ጠንካራ ፍላጎት አለኝ።",
-      "sentence2": "በሙዚቃ ፍላጎቴን ትጋራለች።"
+      "sentence2": "በሙዚቃ ፍላጎቴን ትጋራለች።",
+      "pronunciation": "/fɨlaɡot/"
     },
     {
       "id": 393,
       "word": "ፍላጎት ያለው",
       "sentence1": "ስፓኒሽ መማር ፍላጎት አለኝ።",
-      "sentence2": "በጉዞ ፍላጎት አላት።"
+      "sentence2": "በጉዞ ፍላጎት አላት።",
+      "pronunciation": "/fɨlaɡot jaləw/"
     },
     {
       "id": 394,
       "word": "አስደሳች",
       "sentence1": "ይህ መጽሐፍ በጣም አስደሳች ነው።",
-      "sentence2": "አንዳንድ አስደሳች ሃሳቦች አሏት።"
+      "sentence2": "አንዳንድ አስደሳች ሃሳቦች አሏት።",
+      "pronunciation": "/əsɨdəsat͡ʃ/"
     },
     {
       "id": 395,
       "word": "ኢንተርኔት",
       "sentence1": "በኢንተርኔት ላይ አገኘሁት።",
-      "sentence2": "በኢንተርኔት ላይ ብዙ ጊዜ ታሳልፋለች።"
+      "sentence2": "በኢንተርኔት ላይ ብዙ ጊዜ ታሳልፋለች።",
+      "pronunciation": "/inɨtərɨnet/"
     },
     {
       "id": 396,
       "word": "ቃለ መጠይቅ",
       "sentence1": "ነገ የስራ ቃለ መጠይቅ አለኝ።",
-      "sentence2": "ለቃለ መጠይቁ ተዘጋጀች።"
+      "sentence2": "ለቃለ መጠይቁ ተዘጋጀች።",
+      "pronunciation": "/kʼalə mətʼəjɨkʼ/"
     },
     {
       "id": 397,
       "word": "ወደ ውስጥ",
       "sentence1": "ወደ ክፍሉ ገባ።",
-      "sentence2": "ወደ ገንዳው ዘለለች።"
+      "sentence2": "ወደ ገንዳው ዘለለች።",
+      "pronunciation": "/wədə wɨsɨtʼ/"
     },
     {
       "id": 398,
       "word": "ማስተዋወቅ",
       "sentence1": "ለጓደኛዬ ልታስተዋውቅህ ፍቀድ።",
-      "sentence2": "ተናጋሪውን ታስተዋውቃለች።"
+      "sentence2": "ተናጋሪውን ታስተዋውቃለች።",
+      "pronunciation": "/masɨtəwawəkʼ/"
     },
     {
       "id": 399,
       "word": "ደሴት",
       "sentence1": "ባሊ ቆንጆ ደሴት ናት።",
-      "sentence2": "ሞቃታማ ደሴት መጎብኘት ታልማለች።"
+      "sentence2": "ሞቃታማ ደሴት መጎብኘት ታልማለች።",
+      "pronunciation": "/dəset/"
     },
     {
       "id": 400,
       "word": "እሱ",
       "sentence1": "በጠረጴዛው ላይ አገኘሁት።",
-      "sentence2": "መጽሐፏ እንደሆነ ተናገረች።"
+      "sentence2": "መጽሐፏ እንደሆነ ተናገረች።",
+      "pronunciation": "/ɨsu/"
     },
     {
       "id": 401,
       "word": "የእሱ",
       "sentence1": "ውሻው ጅራቱን አወዛወዘ።",
-      "sentence2": "በስኬቶቹ ኩራት ይሰማታል።"
+      "sentence2": "በስኬቶቹ ኩራት ይሰማታል።",
+      "pronunciation": "/jəɨsu/"
     },
     {
       "id": 402,
       "word": "ጃኬት",
       "sentence1": "አዲስ ጃኬት ገዛሁ።",
-      "sentence2": "የቆዳ ጃኬት ለበሰች።"
+      "sentence2": "የቆዳ ጃኬት ለበሰች።",
+      "pronunciation": "/d͡ʒaket/"
     },
     {
       "id": 403,
       "word": "ጥር",
       "sentence1": "ጥር የመጀመሪያው ወር ነው።",
-      "sentence2": "በጥር ተወለደች።"
+      "sentence2": "በጥር ተወለደች።",
+      "pronunciation": "/tʼɨr/"
     },
     {
       "id": 404,
       "word": "ጂንስ",
       "sentence1": "አዲስ ጂንስ መግዛት አለብኝ።",
-      "sentence2": "ጂንስ መልበስ ትመርጣለች።"
+      "sentence2": "ጂንስ መልበስ ትመርጣለች።",
+      "pronunciation": "/d͡ʒinɨs/"
     },
     {
       "id": 405,
       "word": "ሥራ",
       "sentence1": "አዲስ ሥራ አለኝ።",
-      "sentence2": "ሥራዋን ትወዳለች።"
+      "sentence2": "ሥራዋን ትወዳለች።",
+      "pronunciation": "/sɨra/"
     },
     {
       "id": 406,
       "word": "መቀላቀል",
       "sentence1": "ክለቡን መቀላቀል እፈልጋለሁ።",
-      "sentence2": "ለመቀላቀላችን ወሰነች።"
+      "sentence2": "ለመቀላቀላችን ወሰነች።",
+      "pronunciation": "/məkʼəlakʼəl/"
     },
     {
       "id": 407,
       "word": "ጉዞ",
       "sentence1": "ጉዞው ረጅም እና አድካሚ ነበር።",
-      "sentence2": "ጉዞውን ወደደችው።"
+      "sentence2": "ጉዞውን ወደደችው።",
+      "pronunciation": "/ɡuzo/"
     },
     {
       "id": 408,
       "word": "ጭማቂ",
       "sentence1": "ትንሽ የብርቱካን ጭማቂ እፈልጋለሁ።",
-      "sentence2": "በየጠዋቱ ጭማቂ ትጠጣለች።"
+      "sentence2": "በየጠዋቱ ጭማቂ ትጠጣለች።",
+      "pronunciation": "/t͡ʃʼɨmakʼi/"
     },
     {
       "id": 409,
       "word": "ሐምሌ",
       "sentence1": "ሐምሌ ሰባተኛው ወር ነው።",
-      "sentence2": "በሐምሌ ወደ እረፍት መሄድ ትወዳለች።"
+      "sentence2": "በሐምሌ ወደ እረፍት መሄድ ትወዳለች።",
+      "pronunciation": "/həmɨle/"
     },
     {
       "id": 410,
       "word": "ሰኔ",
       "sentence1": "ሰኔ ስድስተኛው ወር ነው።",
-      "sentence2": "በሰኔ ተመረቀች።"
+      "sentence2": "በሰኔ ተመረቀች።",
+      "pronunciation": "/səne/"
     },
     {
       "id": 411,
       "word": "ብቻ",
       "sentence1": "ብቻ መርዳት እፈልጋለሁ።",
-      "sentence2": "ጓደኛ ብቻ ናት።"
+      "sentence2": "ጓደኛ ብቻ ናት።",
+      "pronunciation": "/bɨt͡ʃa/"
     },
     {
       "id": 412,
       "word": "መጠበቅ",
       "sentence1": "እባክህ በሩን ዝግ አድርግ።",
-      "sentence2": "ክፍሏን ንጹህ ማድረግ ትፈልጋለች።"
+      "sentence2": "ክፍሏን ንጹህ ማድረግ ትፈልጋለች።",
+      "pronunciation": "/mətʼəbəkʼ/"
     },
     {
       "id": 413,
       "word": "ቁልፍ",
       "sentence1": "የቤት ቁልፌን አጣሁ።",
-      "sentence2": "ቁልፉን ከምንጣፉ ስር አገኘች።"
+      "sentence2": "ቁልፉን ከምንጣፉ ስር አገኘች።",
+      "pronunciation": "/kʼulɨf/"
     },
     {
       "id": 414,
       "word": "ኪሎሜትር",
       "sentence1": "ሱቁ አምስት ኪሎሜትር ርቀት ላይ ነው።",
-      "sentence2": "ትናንት አስር ኪሎሜትር ሮጠች።"
+      "sentence2": "ትናንት አስር ኪሎሜትር ሮጠች።",
+      "pronunciation": "/kilometɨr/"
     },
     {
       "id": 415,
       "word": "ዓይነት",
       "sentence1": "ምን ዓይነት ሙዚቃ ትወዳለህ?",
-      "sentence2": "ደግ ሰው ናት።"
+      "sentence2": "ደግ ሰው ናት።",
+      "pronunciation": "/ajɨnət/"
     },
     {
       "id": 416,
       "word": "ማድቤት",
       "sentence1": "ማድቤቱ በጣም ሰፊ ነው።",
-      "sentence2": "በማድቤቷ ውስጥ ማብሰል ትወዳለች።"
+      "sentence2": "በማድቤቷ ውስጥ ማብሰል ትወዳለች።",
+      "pronunciation": "/madɨbet/"
     },
     {
       "id": 417,
       "word": "ማወቅ",
       "sentence1": "መልሱን አውቃለሁ።",
-      "sentence2": "ስሙን አታውቅም።"
+      "sentence2": "ስሙን አታውቅም።",
+      "pronunciation": "/mawəkʼ/"
     },
     {
       "id": 418,
       "word": "መሬት",
       "sentence1": "መሬቱ በጣም ለም ነው።",
-      "sentence2": "የመሬት ቁራጭ ገዛች።"
+      "sentence2": "የመሬት ቁራጭ ገዛች።",
+      "pronunciation": "/məret/"
     },
     {
       "id": 419,
       "word": "ቋንቋ",
       "sentence1": "እንግሊዝኛ ዓለም አቀፍ ቋንቋ ነው።",
-      "sentence2": "ሶስት ቋንቋዎች ትናገራለች።"
+      "sentence2": "ሶስት ቋንቋዎች ትናገራለች።",
+      "pronunciation": "/kʼwanɨkʼwa/"
     },
     {
       "id": 420,
       "word": "ትልቅ",
       "sentence1": "በትልቅ ቤት ውስጥ ይኖራሉ።",
-      "sentence2": "ትልቅ የቴምብር ስብስብ አላት።"
+      "sentence2": "ትልቅ የቴምብር ስብስብ አላት።",
+      "pronunciation": "/tɨlɨkʼ/"
     },
     {
       "id": 421,
       "word": "የመጨረሻ",
       "sentence1": "ይህ የመጨረሻው ዕድል ነው።",
-      "sentence2": "ለመውጣት የመጨረሻዋ ሰው ናት።"
+      "sentence2": "ለመውጣት የመጨረሻዋ ሰው ናት።",
+      "pronunciation": "/jəmət͡ʃʼərəʃa/"
     },
     {
       "id": 422,
       "word": "ዘግይቶ",
       "sentence1": "ለስብሰባው ዘግይቻለሁ።",
-      "sentence2": "ወደ ፓርቲው ዘግይታ መጣች።"
+      "sentence2": "ወደ ፓርቲው ዘግይታ መጣች።",
+      "pronunciation": "/zəɡɨjɨto/"
     },
     {
       "id": 423,
       "word": "በኋላ",
       "sentence1": "በኋላ ልንወያይበት እንችላለን።",
-      "sentence2": "በቀኑ በኋላ ደወለችልኝ።"
+      "sentence2": "በቀኑ በኋላ ደወለችልኝ።",
+      "pronunciation": "/bəhwala/"
     },
     {
       "id": 424,
       "word": "ሳቅ",
       "sentence1": "እንድትስቅ ማድረግ እወዳለሁ።",
-      "sentence2": "ከመሳቅ መቆጠብ አልቻለችም።"
+      "sentence2": "ከመሳቅ መቆጠብ አልቻለችም።",
+      "pronunciation": "/sakʼ/"
     },
     {
       "id": 425,
       "word": "መማር",
       "sentence1": "አዲስ ቋንቋ መማር እፈልጋለሁ።",
-      "sentence2": "በፍጥነት ትማራለች።"
+      "sentence2": "በፍጥነት ትማራለች።",
+      "pronunciation": "/məmar/"
     },
     {
       "id": 426,
       "word": "መውጣት",
       "sentence1": "ቀደም ብዬ መውጣት አለብኝ።",
-      "sentence2": "ቻው ሳትል ከፓርቲው ወጣች።"
+      "sentence2": "ቻው ሳትል ከፓርቲው ወጣች።",
+      "pronunciation": "/məwɨtʼat/"
     },
     {
       "id": 427,
       "word": "ግራ",
       "sentence1": "በትራፊክ መብራቱ ላይ ወደ ግራ ታጠፍ።",
-      "sentence2": "በግራ እጇ ትጽፋለች።"
+      "sentence2": "በግራ እጇ ትጽፋለች።",
+      "pronunciation": "/ɡɨra/"
     },
     {
       "id": 428,
       "word": "እግር",
       "sentence1": "እግሬ ይጎዳል።",
-      "sentence2": "እግሮቿን አቋረጠች።"
+      "sentence2": "እግሮቿን አቋረጠች።",
+      "pronunciation": "/ɨɡɨr/"
     },
     {
       "id": 429,
       "word": "ትምህርት",
       "sentence1": "ዛሬ የሂሳብ ትምህርት አለኝ።",
-      "sentence2": "ትምህርቱን ወደደችው።"
+      "sentence2": "ትምህርቱን ወደደችው።",
+      "pronunciation": "/tɨmɨhɨrɨt/"
     },
     {
       "id": 430,
       "word": "ፍቀድ",
       "sentence1": "ልረዳህ ፍቀድ።",
-      "sentence2": "መጽሐፏን እንዲበደር ፈቀደችለት።"
+      "sentence2": "መጽሐፏን እንዲበደር ፈቀደችለት።",
+      "pronunciation": "/fɨkʼəd/"
     },
     {
       "id": 431,
       "word": "ደብዳቤ",
       "sentence1": "ከጓደኛዬ ደብዳቤ ተቀበልኩ።",
-      "sentence2": "ለአያቷ ደብዳቤ ጻፈች።"
+      "sentence2": "ለአያቷ ደብዳቤ ጻፈች።",
+      "pronunciation": "/dəbɨdabe/"
     },
     {
       "id": 432,
       "word": "ቤተ መጻሕፍት",
       "sentence1": "ቤተ መጻሕፍቱ እስከ 8 ሰዓት ክፍት ነው።",
-      "sentence2": "ከቤተ መጻሕፍቱ መጽሐፍ ተበደረች።"
+      "sentence2": "ከቤተ መጻሕፍቱ መጽሐፍ ተበደረች።",
+      "pronunciation": "/betə mət͡sʼahɨfɨt/"
     },
     {
       "id": 433,
       "word": "ውሸት",
       "sentence1": "አትዋሽብኝ።",
-      "sentence2": "ስለ ዕድሜዋ ዋሸች።"
+      "sentence2": "ስለ ዕድሜዋ ዋሸች።",
+      "pronunciation": "/wɨʃət/"
     },
     {
       "id": 434,
       "word": "ሕይወት",
       "sentence1": "ሕይወት ቆንጆ ናት።",
-      "sentence2": "በሕይወቷ ዓለምን መጓዝ ትፈልጋለች።"
+      "sentence2": "በሕይወቷ ዓለምን መጓዝ ትፈልጋለች።",
+      "pronunciation": "/hɨjɨwət/"
     },
     {
       "id": 435,
       "word": "ብርሃን",
       "sentence1": "ብርሃኑ በጣም ደማቅ ነው።",
-      "sentence2": "ከመተኛቷ በፊት ብርሃኑን አጠፋች።"
+      "sentence2": "ከመተኛቷ በፊት ብርሃኑን አጠፋች።",
+      "pronunciation": "/bɨrɨhan/"
     },
     {
       "id": 436,
       "word": "እንደ",
       "sentence1": "ይህ ልብስ ትናንት ያየሁት ይመስላል።",
-      "sentence2": "ተመሳሳይ አስተሳሰብ ያላቸው ጓደኞች አሏት።"
+      "sentence2": "ተመሳሳይ አስተሳሰብ ያላቸው ጓደኞች አሏት።",
+      "pronunciation": "/ɨnɨdə/"
     },
     {
       "id": 437,
       "word": "መውደድ",
       "sentence1": "ይህን ዘፈን እወዳለሁ።",
-      "sentence2": "ከመተኛቷ በፊት ማንበብ ትወዳለች።"
+      "sentence2": "ከመተኛቷ በፊት ማንበብ ትወዳለች።",
+      "pronunciation": "/məwɨdəd/"
     },
     {
       "id": 438,
       "word": "መስመር",
       "sentence1": "ቀጥታ መስመር ስሳል።",
-      "sentence2": "ለቲኬት በመስመር ቆመች።"
+      "sentence2": "ለቲኬት በመስመር ቆመች።",
+      "pronunciation": "/məsɨmər/"
     },
     {
       "id": 439,
       "word": "አንበሳ",
       "sentence1": "አንበሳ የጫካው ንጉሥ ነው።",
-      "sentence2": "በእንስሳት መካነ አራዊት አንበሳ አየች።"
+      "sentence2": "በእንስሳት መካነ አራዊት አንበሳ አየች።",
+      "pronunciation": "/ənɨbəsa/"
     },
     {
       "id": 440,
       "word": "ዝርዝር",
       "sentence1": "የግዢ ዝርዝር አዘጋጀሁ።",
-      "sentence2": "በዝርዝሯ ላይ ያሉትን ነገሮች አረጋገጠች።"
+      "sentence2": "በዝርዝሯ ላይ ያሉትን ነገሮች አረጋገጠች።",
+      "pronunciation": "/zɨrɨzɨr/"
     },
     {
       "id": 441,
       "word": "ማዳመጥ",
       "sentence1": "ሙዚቃ ማዳመጥ እወዳለሁ።",
-      "sentence2": "መመሪያዎቹን በጥንቃቄ አዳመጠች።"
+      "sentence2": "መመሪያዎቹን በጥንቃቄ አዳመጠች።",
+      "pronunciation": "/madamətʼ/"
     },
     {
       "id": 442,
       "word": "ትንሽ",
       "sentence1": "ይህ ሳጥን በጣም ትንሽ ነው።",
-      "sentence2": "ትንሽ ውሻ አላት።"
+      "sentence2": "ትንሽ ውሻ አላት።",
+      "pronunciation": "/tɨnɨʃ/"
     },
     {
       "id": 443,
       "word": "መኖር",
       "sentence1": "በትንሽ ከተማ እኖራለሁ።",
-      "sentence2": "በከተማ መኖር ትፈልጋለች።"
+      "sentence2": "በከተማ መኖር ትፈልጋለች።",
+      "pronunciation": "/mənor/"
     },
     {
       "id": 444,
       "word": "የአካባቢ",
       "sentence1": "የአካባቢ ምግብ እወዳለሁ።",
-      "sentence2": "የአካባቢ ንግዶችን ትደግፋለች።"
+      "sentence2": "የአካባቢ ንግዶችን ትደግፋለች።",
+      "pronunciation": "/jəəkababi/"
     },
     {
       "id": 445,
       "word": "ረጅም",
       "sentence1": "ይህ ረጅም መጽሐፍ ነው።",
-      "sentence2": "በስራ ረጅም ቀን ነበራት።"
+      "sentence2": "በስራ ረጅም ቀን ነበራት።",
+      "pronunciation": "/rəd͡ʒɨm/"
     },
     {
       "id": 446,
       "word": "ተመልከት",
       "sentence1": "ሰማዩን ተመልከት!",
-      "sentence2": "ከመስኮቱ ወደ ውጭ ተመለከተች።"
+      "sentence2": "ከመስኮቱ ወደ ውጭ ተመለከተች።",
+      "pronunciation": "/təməlɨkət/"
     },
     {
       "id": 447,
       "word": "ማጣት",
       "sentence1": "ቁልፎቼን ማጣት አልፈልግም።",
-      "sentence2": "ስልኳን በገበያ ማእከል አጣች።"
+      "sentence2": "ስልኳን በገበያ ማእከል አጣች።",
+      "pronunciation": "/matʼat/"
     },
     {
       "id": 448,
       "word": "ብዙ",
       "sentence1": "እዚህ ብዙ ሰዎች አሉ።",
-      "sentence2": "ብዙ ጓደኞች አሏት።"
+      "sentence2": "ብዙ ጓደኞች አሏት።",
+      "pronunciation": "/bɨzu/"
     },
     {
       "id": 449,
       "word": "ፍቅር",
       "sentence1": "ፍቅር የሚያስፈልግህ ሁሉ ነው።",
-      "sentence2": "በማይጠበቅ ቦታ ፍቅር አገኘች።"
+      "sentence2": "በማይጠበቅ ቦታ ፍቅር አገኘች።",
+      "pronunciation": "/fɨkʼɨr/"
     },
     {
       "id": 450,
       "word": "ምሳ",
       "sentence1": "አብዛኛውን ጊዜ በቀትር ምሳ እበላለሁ።",
-      "sentence2": "ለፒክኒክ ምሳ አዘጋጀች።"
+      "sentence2": "ለፒክኒክ ምሳ አዘጋጀች።",
+      "pronunciation": "/mɨsa/"
     },
     {
       "id": 451,
       "word": "ማሽን",
       "sentence1": "ማሽኑ ተሰብሯል።",
-      "sentence2": "ማሽኑን በክህሎት ታስተዳድራለች።"
+      "sentence2": "ማሽኑን በክህሎት ታስተዳድራለች።",
+      "pronunciation": "/maʃɨn/"
     },
     {
       "id": 452,
       "word": "መጽሔት",
       "sentence1": "በመጽሔቱ ላይ አስደሳች ጽሑፍ አነበብኩ።",
-      "sentence2": "ለበርካታ መጽሔቶች ደንበኛ ናት።"
+      "sentence2": "ለበርካታ መጽሔቶች ደንበኛ ናት።",
+      "pronunciation": "/mət͡sʼɨhet/"
     },
     {
       "id": 453,
       "word": "ዋና",
       "sentence1": "ዋናው መግቢያ በማዕዘኑ ዙሪያ ነው።",
-      "sentence2": "በታሪኩ ውስጥ ዋና ገጸ ባህሪ ናት።"
+      "sentence2": "በታሪኩ ውስጥ ዋና ገጸ ባህሪ ናት።",
+      "pronunciation": "/wana/"
     },
     {
       "id": 454,
       "word": "መሥራት",
       "sentence1": "ኬክ መሥራት እፈልጋለሁ።",
-      "sentence2": "ውብ የሸክላ ስራዎችን ትሰራለች።"
+      "sentence2": "ውብ የሸክላ ስራዎችን ትሰራለች።",
+      "pronunciation": "/məsɨrat/"
     },
     {
       "id": 455,
       "word": "ሰው",
       "sentence1": "ሰውየው መጽሐፍ እያነበበ ነው።",
-      "sentence2": "ልብስ የለበሰ ሰው አየች።"
+      "sentence2": "ልብስ የለበሰ ሰው አየች።",
+      "pronunciation": "/səw/"
     },
     {
       "id": 456,
       "word": "ብዙ",
       "sentence1": "በመደርደሪያው ላይ ብዙ መጻሕፍት አሉ።",
-      "sentence2": "ብዙ ጓደኞች የሏትም።"
+      "sentence2": "ብዙ ጓደኞች የሏትም።",
+      "pronunciation": "/bɨzu/"
     },
     {
       "id": 457,
       "word": "ካርታ",
       "sentence1": "ቦታውን ለማግኘት ካርታ ያስፈልገኛል።",
-      "sentence2": "ካርታውን በጥንቃቄ አጠናች።"
+      "sentence2": "ካርታውን በጥንቃቄ አጠናች።",
+      "pronunciation": "/karɨta/"
     },
     {
       "id": 458,
       "word": "መጋቢት",
       "sentence1": "መጋቢት ሶስተኛው የዓመት ወር ነው።",
-      "sentence2": "በመጋቢት ተወለደች።"
+      "sentence2": "በመጋቢት ተወለደች።",
+      "pronunciation": "/məɡabit/"
     },
     {
       "id": 459,
       "word": "ገበያ",
       "sentence1": "በገበያ አትክልት ገዛሁ።",
-      "sentence2": "በአካባቢ ገበያ መግዛት ትወዳለች።"
+      "sentence2": "በአካባቢ ገበያ መግዛት ትወዳለች።",
+      "pronunciation": "/ɡəbəja/"
     },
     {
       "id": 460,
       "word": "ያገባ",
       "sentence1": "እነሱ ያገቡ ባልና ሚስት ናቸው።",
-      "sentence2": "ዶክተር አግብታለች።"
+      "sentence2": "ዶክተር አግብታለች።",
+      "pronunciation": "/jaɡəba/"
     },
     {
       "id": 461,
       "word": "ግጥሚያ",
       "sentence1": "ግጥሚያው ነገ ይካሄዳል።",
-      "sentence2": "ባለፈው ሳምንት ግጥሚያውን አሸነፈች።"
+      "sentence2": "ባለፈው ሳምንት ግጥሚያውን አሸነፈች።",
+      "pronunciation": "/ɡɨtʼɨmija/"
     },
     {
       "id": 462,
       "word": "ግንቦት",
       "sentence1": "ግንቦት ቆንጆ ወር ነው።",
-      "sentence2": "በግንቦት ያሉትን አበቦች ትወዳለች።"
+      "sentence2": "በግንቦት ያሉትን አበቦች ትወዳለች።",
+      "pronunciation": "/ɡɨnɨbot/"
     },
     {
       "id": 463,
       "word": "ምናልባት",
       "sentence1": "ምናልባት ወደ ፓርኩ መሄድ እንችላለን።",
-      "sentence2": "ምናልባት እንደምትቀላቀለን ተናገረች።"
+      "sentence2": "ምናልባት እንደምትቀላቀለን ተናገረች።",
+      "pronunciation": "/mɨnalɨbat/"
     },
     {
       "id": 464,
       "word": "እኔን",
       "sentence1": "ልትረዳኝ ትችላለህ?",
-      "sentence2": "ትናንት ደወለችልኝ።"
+      "sentence2": "ትናንት ደወለችልኝ።",
+      "pronunciation": "/ɨnen/"
     },
     {
       "id": 465,
       "word": "ምግብ",
       "sentence1": "ቁርስ ተወዳጅ ምግቤ ነው።",
-      "sentence2": "በየቀኑ ጤናማ ምግብ ታዘጋጃለች።"
+      "sentence2": "በየቀኑ ጤናማ ምግብ ታዘጋጃለች።",
+      "pronunciation": "/mɨɡɨb/"
     },
     {
       "id": 466,
       "word": "ማለት",
       "sentence1": "ይህ ቃል ምን ማለት ነው?",
-      "sentence2": "ልትጎዳህ አልፈለገችም።"
+      "sentence2": "ልትጎዳህ አልፈለገችም።",
+      "pronunciation": "/malət/"
     },
     {
       "id": 467,
       "word": "ትርጉም",
       "sentence1": "የሕይወት ትርጉም ፍልስፍናዊ ጥያቄ ነው።",
-      "sentence2": "የግጥሙን ትርጉም ፈለገች።"
+      "sentence2": "የግጥሙን ትርጉም ፈለገች።",
+      "pronunciation": "/tɨrɨɡum/"
     },
     {
       "id": 468,
       "word": "ስጋ",
       "sentence1": "ስጋ አልበላም።",
-      "sentence2": "ጣፋጭ የስጋ ምግብ አበሰለች።"
+      "sentence2": "ጣፋጭ የስጋ ምግብ አበሰለች።",
+      "pronunciation": "/sɨɡa/"
     },
     {
       "id": 469,
       "word": "መገናኘት",
       "sentence1": "በካፌ እንገናኝ።",
-      "sentence2": "በኋላ ጓደኞቿን ትገናኛለች።"
+      "sentence2": "በኋላ ጓደኞቿን ትገናኛለች።",
+      "pronunciation": "/məɡənaɲət/"
     },
     {
       "id": 470,
       "word": "ስብሰባ",
       "sentence1": "ስብሰባው ለ10 ሰዓት ታቅዷል።",
-      "sentence2": "ትናንት ስብሰባው ተገኝታለች።"
+      "sentence2": "ትናንት ስብሰባው ተገኝታለች።",
+      "pronunciation": "/sɨbɨsəba/"
     },
     {
       "id": 471,
       "word": "አባል",
       "sentence1": "እሱ የክለቡ አባል ነው።",
-      "sentence2": "አዲስ አባል ወደ ቡድኑ ጋበዘች።"
+      "sentence2": "አዲስ አባል ወደ ቡድኑ ጋበዘች።",
+      "pronunciation": "/əbal/"
     },
     {
       "id": 472,
       "word": "ምናሌ",
       "sentence1": "እባክህ ምናሌውን ላይ እችላለሁ?",
-      "sentence2": "ከአትክልተኛ ምናሌ አዘዘች።"
+      "sentence2": "ከአትክልተኛ ምናሌ አዘዘች።",
+      "pronunciation": "/mɨnale/"
     },
     {
       "id": 473,
       "word": "መልእክት",
       "sentence1": "ከእሷ መልእክት ተቀበልኩ።",
-      "sentence2": "በስልኬ ላይ መልእክት ተወች።"
+      "sentence2": "በስልኬ ላይ መልእክት ተወች።",
+      "pronunciation": "/məlɨɨkɨt/"
     },
     {
       "id": 474,
       "word": "ሜትር",
       "sentence1": "ጠረጴዛው ሁለት ሜትር ርዝመት አለው።",
-      "sentence2": "100 ሜትር ከ12 ሰከንድ በታች ሮጠች።"
+      "sentence2": "100 ሜትር ከ12 ሰከንድ በታች ሮጠች።",
+      "pronunciation": "/metɨr/"
     },
     {
       "id": 475,
       "word": "እኩለ ሌሊት",
       "sentence1": "ፓርቲው በእኩለ ሌሊት ይጠናቀቃል።",
-      "sentence2": "ሁልጊዜ ከእኩለ ሌሊት በፊት ትተኛለች።"
+      "sentence2": "ሁልጊዜ ከእኩለ ሌሊት በፊት ትተኛለች።",
+      "pronunciation": "/ɨkulə lelit/"
     },
     {
       "id": 476,
       "word": "ማይል",
       "sentence1": "ሱቁ አምስት ማይል ርቀት ላይ ነው።",
-      "sentence2": "በየጠዋቱ አንድ ማይል ትሄድ ነበር።"
+      "sentence2": "በየጠዋቱ አንድ ማይል ትሄድ ነበር።",
+      "pronunciation": "/majɨl/"
     },
     {
       "id": 477,
       "word": "ወተት",
       "sentence1": "በየቀኑ ወተት እጠጣለሁ።",
-      "sentence2": "የለውዝ ወተት ትመርጣለች።"
+      "sentence2": "የለውዝ ወተት ትመርጣለች።",
+      "pronunciation": "/wətət/"
     },
     {
       "id": 478,
       "word": "ሚሊዮን",
       "sentence1": "በሰማይ ላይ ሚሊዮን ኮከቦች አሉ።",
-      "sentence2": "በሎተሪ ሚሊዮን ዶላር አሸነፈች።"
+      "sentence2": "በሎተሪ ሚሊዮን ዶላር አሸነፈች።",
+      "pronunciation": "/milijon/"
     },
     {
       "id": 479,
       "word": "ደቂቃ",
       "sentence1": "ለማሰብ አንድ ደቂቃ ይፈልገኛል።",
-      "sentence2": "አንድ ደቂቃ ዘግይታ ደረሰች።"
+      "sentence2": "አንድ ደቂቃ ዘግይታ ደረሰች።",
+      "pronunciation": "/dəkʼikʼa/"
     },
     {
       "id": 480,
       "word": "ማጣት",
       "sentence1": "ቤተሰቤን ናፈቅኳቸው።",
-      "sentence2": "ዛሬ ጠዋት አውቶቡሱን አመለጣት።"
+      "sentence2": "ዛሬ ጠዋት አውቶቡሱን አመለጣት።",
+      "pronunciation": "/matʼat/"
     },
     {
       "id": 481,
       "word": "ስህተት",
       "sentence1": "በፈተናው ላይ ስህተት ሰራሁ።",
-      "sentence2": "ከስህተቶቿ ተማረች።"
+      "sentence2": "ከስህተቶቿ ተማረች።",
+      "pronunciation": "/sɨhɨtət/"
     },
     {
       "id": 482,
       "word": "ሞዴል",
       "sentence1": "መኪናው አዲስ ሞዴል ነው።",
-      "sentence2": "የቅርብ ጊዜውን ሞዴል ትመርጣለች።"
+      "sentence2": "የቅርብ ጊዜውን ሞዴል ትመርጣለች።",
+      "pronunciation": "/model/"
     },
     {
       "id": 483,
       "word": "ዘመናዊ",
       "sentence1": "ይህ ዘመናዊ ሕንፃ ነው።",
-      "sentence2": "ዘመናዊ ጥበብን ትወዳለች።"
+      "sentence2": "ዘመናዊ ጥበብን ትወዳለች።",
+      "pronunciation": "/zəmənawi/"
     },
     {
       "id": 484,
       "word": "ጊዜ",
       "sentence1": "እባክህ አንድ ጊዜ ጠብቅ።",
-      "sentence2": "ጊዜውን በፎቶ ያዘች።"
+      "sentence2": "ጊዜውን በፎቶ ያዘች።",
+      "pronunciation": "/ɡize/"
     },
     {
       "id": 485,
       "word": "ሰኞ",
       "sentence1": "ሰኞ የሳምንቱ የመጀመሪያ ቀን ነው።",
-      "sentence2": "በሰኞ ስብሰባ አላት።"
+      "sentence2": "በሰኞ ስብሰባ አላት።",
+      "pronunciation": "/səɲo/"
     },
     {
       "id": 486,
       "word": "ገንዘብ",
       "sentence1": "ተጨማሪ ገንዘብ ያስፈልገኛል።",
-      "sentence2": "ለእረፍት ገንዘብ ቆጠበች።"
+      "sentence2": "ለእረፍት ገንዘብ ቆጠበች።",
+      "pronunciation": "/ɡənɨzəb/"
     },
     {
       "id": 487,
       "word": "ወር",
       "sentence1": "የካቲት አጭሩ ወር ነው።",
-      "sentence2": "በግንቦት ወር ተወለደች።"
+      "sentence2": "በግንቦት ወር ተወለደች።",
+      "pronunciation": "/wər/"
     },
     {
       "id": 488,
       "word": "ተጨማሪ",
       "sentence1": "ተጨማሪ ጊዜ ያስፈልገኛል።",
-      "sentence2": "ስለ ርዕሱ ተጨማሪ መማር ትፈልጋለች።"
+      "sentence2": "ስለ ርዕሱ ተጨማሪ መማር ትፈልጋለች።",
+      "pronunciation": "/tət͡ʃʼəmari/"
     },
     {
       "id": 489,
       "word": "ጠዋት",
       "sentence1": "ጠዋት ቀድሜ እነሳለሁ።",
-      "sentence2": "ጠዋት ሩጫ መሄድ ትወዳለች።"
+      "sentence2": "ጠዋት ሩጫ መሄድ ትወዳለች።",
+      "pronunciation": "/tʼəwat/"
     },
     {
       "id": 490,
       "word": "በጣም",
       "sentence1": "ይህ ካነበብኳቸው መጻሕፍት በጣም አስደሳች ነው።",
-      "sentence2": "በቡድኑ ውስጥ በጣም ተሰጥኦ ያላት አርቲስት ናት።"
+      "sentence2": "በቡድኑ ውስጥ በጣም ተሰጥኦ ያላት አርቲስት ናት።",
+      "pronunciation": "/bətʼam/"
     },
     {
       "id": 491,
       "word": "እናት",
       "sentence1": "እናቴ መምህርት ናት።",
-      "sentence2": "እናቷን ትንከባከባለች።"
+      "sentence2": "እናቷን ትንከባከባለች።",
+      "pronunciation": "/ɨnat/"
     },
     {
       "id": 492,
       "word": "ተራራ",
       "sentence1": "ተራራው በበረዶ ተሸፍኗል።",
-      "sentence2": "ባለፈው በጋ ተራራውን ወጣች።"
+      "sentence2": "ባለፈው በጋ ተራራውን ወጣች።",
+      "pronunciation": "/tərara/"
     },
     {
       "id": 493,
       "word": "አይጥ",
       "sentence1": "አይጡ በወለሉ ላይ ሮጠ።",
-      "sentence2": "የቤት እንስሳ አይጥ አላት።"
+      "sentence2": "የቤት እንስሳ አይጥ አላት።",
+      "pronunciation": "/əjɨtʼ/"
     },
     {
       "id": 494,
       "word": "አፍ",
       "sentence1": "አፍህን ሰፋ አድርገህ ክፈት።",
-      "sentence2": "በአፏ ላይ ቆንጆ ፈገግታ አላት።"
+      "sentence2": "በአፏ ላይ ቆንጆ ፈገግታ አላት።",
+      "pronunciation": "/əf/"
     },
     {
       "id": 495,
       "word": "መንቀሳቀስ",
       "sentence1": "እባክህ ወንበርህን አዙር።",
-      "sentence2": "ወደ አዲስ ቤት መሄድ ትፈልጋለች።"
+      "sentence2": "ወደ አዲስ ቤት መሄድ ትፈልጋለች።",
+      "pronunciation": "/mənɨkʼəsakʼəs/"
     },
     {
       "id": 496,
       "word": "ፊልም",
       "sentence1": "ትናንት ምሽት ድንቅ ፊልም አየሁ።",
-      "sentence2": "ሮማንቲክ ፊልሞችን ማየት ትወዳለች።"
+      "sentence2": "ሮማንቲክ ፊልሞችን ማየት ትወዳለች።",
+      "pronunciation": "/filɨm/"
     },
     {
       "id": 497,
       "word": "ብዙ",
       "sentence1": "ብዙ ጊዜ የለኝም።",
-      "sentence2": "ብዙ አትበላም።"
+      "sentence2": "ብዙ አትበላም።",
+      "pronunciation": "/bɨzu/"
     },
     {
       "id": 498,
       "word": "እማማ",
       "sentence1": "እማማዬ ምርጥ ጓደኛዬ ናት።",
-      "sentence2": "እሷ ድንቅ እማማ ናት።"
+      "sentence2": "እሷ ድንቅ እማማ ናት።",
+      "pronunciation": "/ɨmama/"
     },
     {
       "id": 499,
       "word": "ሙዚየም",
       "sentence1": "የስዕል ሙዚየሙን ጎበኘሁ።",
-      "sentence2": "ወደ ሙዚየሞች መሄድ ትወዳለች።"
+      "sentence2": "ወደ ሙዚየሞች መሄድ ትወዳለች።",
+      "pronunciation": "/muzijəm/"
     },
     {
       "id": 500,
       "word": "ሙዚቃ",
       "sentence1": "በየቀኑ ሙዚቃ አዳምጣለሁ።",
-      "sentence2": "ማታ ማታ ሙዚቃ ትጫወታለች።"
+      "sentence2": "ማታ ማታ ሙዚቃ ትጫወታለች።",
+      "pronunciation": "/muzikʼa/"
     },
     {
       "id": 501,
       "word": "መገደድ",
       "sentence1": "የቤት ስራህን መጨረስ አለብህ።",
-      "sentence2": "በ9 ሰዓት ስራ ላይ መሆን አለባት።"
+      "sentence2": "በ9 ሰዓት ስራ ላይ መሆን አለባት።",
+      "pronunciation": "/məɡədəd/"
     },
     {
       "id": 502,
       "word": "የኔ",
       "sentence1": "ይህ የኔ መጽሐፍ ነው።",
-      "sentence2": "እሷ ምርጥ ጓደኛዬ ናት።"
+      "sentence2": "እሷ ምርጥ ጓደኛዬ ናት።",
+      "pronunciation": "/jəne/"
     },
     {
       "id": 503,
       "word": "ስም",
       "sentence1": "ስምህ ማን ነው?",
-      "sentence2": "ስሟን በወረቀት ላይ ጻፈች።"
+      "sentence2": "ስሟን በወረቀት ላይ ጻፈች።",
+      "pronunciation": "/sɨm/"
     },
     {
       "id": 504,
       "word": "ተፈጥሯዊ",
       "sentence1": "ይህ ተፈጥሯዊ ምርት ነው።",
-      "sentence2": "ተፈጥሯዊ ንጥረ ነገሮችን ትመርጣለች።"
+      "sentence2": "ተፈጥሯዊ ንጥረ ነገሮችን ትመርጣለች።",
+      "pronunciation": "/təfətʼɨrwawi/"
     },
     {
       "id": 505,
       "word": "ቅርብ",
       "sentence1": "ሱቁ ከቤቴ ቅርብ ነው።",
-      "sentence2": "ከፓርኩ ቅርብ ትኖራለች።"
+      "sentence2": "ከፓርኩ ቅርብ ትኖራለች።",
+      "pronunciation": "/kʼɨrɨb/"
     },
     {
       "id": 506,
       "word": "መፈለግ",
       "sentence1": "አንድ ብርጭቆ ውሃ እፈልጋለሁ።",
-      "sentence2": "በቤት ስራዋ እርዳታ ትፈልጋለች።"
+      "sentence2": "በቤት ስራዋ እርዳታ ትፈልጋለች።",
+      "pronunciation": "/məfələɡ/"
     },
     {
       "id": 507,
       "word": "አሉታዊ",
       "sentence1": "ይህ አሉታዊ ምላሽ ነው።",
-      "sentence2": "አሉታዊ አመለካከት አላት።"
+      "sentence2": "አሉታዊ አመለካከት አላት።",
+      "pronunciation": "/əlutawi/"
     },
     {
       "id": 508,
       "word": "ጎረቤት",
       "sentence1": "ጎረቤቴ በጣም ተግባቢ ነው።",
-      "sentence2": "ብዙ ጊዜ ከጎረቤቷ ጋር ታወራለች።"
+      "sentence2": "ብዙ ጊዜ ከጎረቤቷ ጋር ታወራለች።",
+      "pronunciation": "/ɡorəbet/"
     },
     {
       "id": 509,
       "word": "በፍጹም",
       "sentence1": "በፍጹም ቁርስ አልበላም።",
-      "sentence2": "ወደ ፓሪስ በፍጹም አልሄደችም።"
+      "sentence2": "ወደ ፓሪስ በፍጹም አልሄደችም።",
+      "pronunciation": "/bəfɨt͡sʼum/"
     },
     {
       "id": 510,
       "word": "አዲስ",
       "sentence1": "አዲስ መኪና ገዛሁ።",
-      "sentence2": "አዲስ ልብስ ለብሳለች።"
+      "sentence2": "አዲስ ልብስ ለብሳለች።",
+      "pronunciation": "/ədis/"
     },
     {
       "id": 511,
       "word": "ዜና",
       "sentence1": "በየጠዋቱ ዜና አነባለሁ።",
-      "sentence2": "ዜና ማየት ትወዳለች።"
+      "sentence2": "ዜና ማየት ትወዳለች።",
+      "pronunciation": "/zena/"
     },
     {
       "id": 512,
       "word": "ጋዜጣ",
       "sentence1": "ለዕለታዊ ጋዜጣ ደንበኛ ነኝ።",
-      "sentence2": "በቁርስ ጋዜጣ ታነባለች።"
+      "sentence2": "በቁርስ ጋዜጣ ታነባለች።",
+      "pronunciation": "/ɡazetʼa/"
     },
     {
       "id": 513,
       "word": "ቀጣይ",
       "sentence1": "ቀጣዩ ባቡር ምንድነው?",
-      "sentence2": "በቀጣዩ ክፍል ተቀምጣለች።"
+      "sentence2": "በቀጣዩ ክፍል ተቀምጣለች።",
+      "pronunciation": "/kʼətʼaj/"
     },
     {
       "id": 514,
       "word": "ቀጥሎ",
       "sentence1": "ባንኩ ከፖስታ ቤት ቀጥሎ ነው።",
-      "sentence2": "ከምርጥ ጓደኛዋ ቀጥሎ ትኖራለች።"
+      "sentence2": "ከምርጥ ጓደኛዋ ቀጥሎ ትኖራለች።",
+      "pronunciation": "/kʼətʼɨlo/"
     },
     {
       "id": 515,
       "word": "ጥሩ",
       "sentence1": "ይህ ለማረፍ ጥሩ ቦታ ነው።",
-      "sentence2": "ጥሩ ፈገግታ አላት።"
+      "sentence2": "ጥሩ ፈገግታ አላት።",
+      "pronunciation": "/tʼɨru/"
     },
     {
       "id": 516,
       "word": "ሌሊት",
       "sentence1": "ሌሊት ኮከቦችን ማየት እወዳለሁ።",
-      "sentence2": "የሌሊት ፈረቃ ትሰራለች።"
+      "sentence2": "የሌሊት ፈረቃ ትሰራለች።",
+      "pronunciation": "/lelit/"
     },
     {
       "id": 517,
       "word": "ዘጠኝ",
       "sentence1": "ዘጠኝ ፖም አለኝ።",
-      "sentence2": "በግንቦት ዘጠነኛ ቀን ተወለደች።"
+      "sentence2": "በግንቦት ዘጠነኛ ቀን ተወለደች።",
+      "pronunciation": "/zətʼəɲ/"
     },
     {
       "id": 518,
       "word": "አስራ ዘጠኝ",
       "sentence1": "እሷ አስራ ዘጠኝ ዓመቷ ነው።",
-      "sentence2": "አስራ ዘጠኝ ተወዳጅ ቁጥሬ ነው።"
+      "sentence2": "አስራ ዘጠኝ ተወዳጅ ቁጥሬ ነው።",
+      "pronunciation": "/əsɨra zətʼəɲ/"
     },
     {
       "id": 519,
       "word": "ዘጠና",
       "sentence1": "ዘጠና ዶላር አለኝ።",
-      "sentence2": "በ1990 ተወለደች።"
+      "sentence2": "በ1990 ተወለደች።",
+      "pronunciation": "/zətʼəna/"
     },
     {
       "id": 520,
       "word": "አይ",
       "sentence1": "አይ፣ መሄድ አልፈልግም።",
-      "sentence2": "ለሀሳቡ አይ አለች።"
+      "sentence2": "ለሀሳቡ አይ አለች።",
+      "pronunciation": "/əj/"
     },
     {
       "id": 521,
       "word": "ማንም",
       "sentence1": "ማንም መልሱን አያውቅም።",
-      "sentence2": "ማንም እንዳልተረዳት ተሰማት።"
+      "sentence2": "ማንም እንዳልተረዳት ተሰማት።",
+      "pronunciation": "/manɨm/"
     },
     {
       "id": 522,
       "word": "ማንም",
       "sentence1": "ማንም ፍጹም አይደለም።",
-      "sentence2": "ማንም እንዳልደወለላት ተናገረች።"
+      "sentence2": "ማንም እንዳልደወለላት ተናገረች።",
+      "pronunciation": "/manɨm/"
     },
     {
       "id": 523,
       "word": "ሰሜን",
       "sentence1": "የሰሜን ዋልታ በጣም ቀዝቃዛ ነው።",
-      "sentence2": "በከተማው ሰሜን ትኖራለች።"
+      "sentence2": "በከተማው ሰሜን ትኖራለች።",
+      "pronunciation": "/səmen/"
     },
     {
       "id": 524,
       "word": "አፍንጫ",
       "sentence1": "ትልቅ አፍንጫ አለው።",
-      "sentence2": "ሽታው አፍንጫዋን ጨመቀች።"
+      "sentence2": "ሽታው አፍንጫዋን ጨመቀች።",
+      "pronunciation": "/əfɨnɨt͡ʃʼa/"
     },
     {
       "id": 525,
       "word": "አይደለም",
       "sentence1": "ያ የኔ መጽሐፍ አይደለም።",
-      "sentence2": "በውጤቱ ደስተኛ አይደለችም።"
+      "sentence2": "በውጤቱ ደስተኛ አይደለችም።",
+      "pronunciation": "/əjɨdələm/"
     },
     {
       "id": 526,
       "word": "ማስታወሻ",
       "sentence1": "እባክህ ይህን አስተውል።",
-      "sentence2": "በጠረጴዛው ላይ ማስታወሻ ተወች።"
+      "sentence2": "በጠረጴዛው ላይ ማስታወሻ ተወች።",
+      "pronunciation": "/masɨtawəʃa/"
     },
     {
       "id": 527,
       "word": "ምንም",
       "sentence1": "ለመጨነቅ ምንም የለም።",
-      "sentence2": "በስብሰባው ወቅት ምንም አልተናገረችም።"
+      "sentence2": "በስብሰባው ወቅት ምንም አልተናገረችም።",
+      "pronunciation": "/mɨnɨm/"
     },
     {
       "id": 528,
       "word": "ኅዳር",
       "sentence1": "የልደት ቀኔ በኅዳር ነው።",
-      "sentence2": "በኅዳር ውስጥ ያለውን መኸር ትወዳለች።"
+      "sentence2": "በኅዳር ውስጥ ያለውን መኸር ትወዳለች።",
+      "pronunciation": "/hɨdar/"
     },
     {
       "id": 529,
       "word": "አሁን",
       "sentence1": "አሁን እሰራዋለሁ።",
-      "sentence2": "አሁን እዚህ አለች።"
+      "sentence2": "አሁን እዚህ አለች።",
+      "pronunciation": "/əhun/"
     },
     {
       "id": 530,
       "word": "ቁጥር",
       "sentence1": "የስልክ ቁጥርህ ስንት ነው?",
-      "sentence2": "የዕድል ቁጥር አላት።"
+      "sentence2": "የዕድል ቁጥር አላት።",
+      "pronunciation": "/kʼutʼɨr/"
     },
     {
       "id": 531,
       "word": "ነርስ",
       "sentence1": "ነርሷ ይረዳሃል።",
-      "sentence2": "ነርስ መሆን ትፈልጋለች።"
+      "sentence2": "ነርስ መሆን ትፈልጋለች።",
+      "pronunciation": "/nərɨs/"
     },
     {
       "id": 532,
       "word": "ነገር",
       "sentence1": "ይህ ነገር ከባድ ነው።",
-      "sentence2": "አስደሳች ነገር አገኘች።"
+      "sentence2": "አስደሳች ነገር አገኘች።",
+      "pronunciation": "/nəɡər/"
     },
     {
       "id": 533,
       "word": "ሰዓት",
       "sentence1": "ስብሰባው በሶስት ሰዓት ነው።",
-      "sentence2": "ሁልጊዜ በሰባት ሰዓት ትነሳለች።"
+      "sentence2": "ሁልጊዜ በሰባት ሰዓት ትነሳለች።",
+      "pronunciation": "/səat/"
     },
     {
       "id": 534,
       "word": "ጥቅምት",
       "sentence1": "የልደት ቀኔ በጥቅምት ነው።",
-      "sentence2": "የጥቅምት ቀለማትን ትወዳለች።"
+      "sentence2": "የጥቅምት ቀለማትን ትወዳለች።",
+      "pronunciation": "/tʼɨkʼɨmɨt/"
     },
     {
       "id": 535,
       "word": "የ",
       "sentence1": "የመጽሐፉ ሽፋን ሰማያዊ ነው።",
-      "sentence2": "እሷ የኔ ጓደኛ ናት።"
+      "sentence2": "እሷ የኔ ጓደኛ ናት።",
+      "pronunciation": "/jə/"
     },
     {
       "id": 536,
       "word": "ጠፍቷል",
       "sentence1": "መብራቶቹ ጠፍተዋል።",
-      "sentence2": "ቀኑን ዕረፍት ወሰደች።"
+      "sentence2": "ቀኑን ዕረፍት ወሰደች።",
+      "pronunciation": "/tʼəfɨtwal/"
     },
     {
       "id": 537,
       "word": "ቢሮ",
       "sentence1": "በቢሮ እሰራለሁ።",
-      "sentence2": "ትልቅ ቢሮ አላት።"
+      "sentence2": "ትልቅ ቢሮ አላት።",
+      "pronunciation": "/biro/"
     },
     {
       "id": 538,
       "word": "ብዙ ጊዜ",
       "sentence1": "ብዙ ጊዜ ወደ ጂም እሄዳለሁ።",
-      "sentence2": "ብዙ ጊዜ ከመተኛቷ በፊት ታነባለች።"
+      "sentence2": "ብዙ ጊዜ ከመተኛቷ በፊት ታነባለች።",
+      "pronunciation": "/bɨzu ɡize/"
     },
     {
       "id": 539,
       "word": "ኦ",
       "sentence1": "ኦ፣ እዚያ አላየሁህም።",
-      "sentence2": "ኦ፣ ያ አስደሳች ነው!"
+      "sentence2": "ኦ፣ ያ አስደሳች ነው!",
+      "pronunciation": "/o/"
     },
     {
       "id": 540,
       "word": "እሺ",
       "sentence1": "ይህ ወንበር ተይዟል? - አይ፣ እሺ ነው።",
-      "sentence2": "ቀድሞ መውጣት እሺ እንደሆነ ተናገረች።"
+      "sentence2": "ቀድሞ መውጣት እሺ እንደሆነ ተናገረች።",
+      "pronunciation": "/ɨʃi/"
     },
     {
       "id": 541,
       "word": "አሮጌ",
       "sentence1": "አያቴ በጣም አዛውንት ነው።",
-      "sentence2": "አሮጌ መኪና አላት።"
+      "sentence2": "አሮጌ መኪና አላት።",
+      "pronunciation": "/əroɡe/"
     },
     {
       "id": 542,
       "word": "ላይ",
       "sentence1": "መጽሐፉ በጠረጴዛው ላይ ነው።",
-      "sentence2": "በስልክ ላይ ናት።"
+      "sentence2": "በስልክ ላይ ናት።",
+      "pronunciation": "/laj/"
     },
     {
       "id": 543,
       "word": "አንድ ጊዜ",
       "sentence1": "እዚያ አንድ ጊዜ ሄጃለሁ።",
-      "sentence2": "ከዚህ በፊት አንድ ጊዜ ተናግራለች።"
+      "sentence2": "ከዚህ በፊት አንድ ጊዜ ተናግራለች።",
+      "pronunciation": "/ənɨd ɡize/"
     },
     {
       "id": 544,
       "word": "አንድ",
       "sentence1": "አንድ እህት አለኝ።",
-      "sentence2": "እሷ የነገርኩህ ናት።"
+      "sentence2": "እሷ የነገርኩህ ናት።",
+      "pronunciation": "/ənɨd/"
     },
     {
       "id": 545,
       "word": "ሽንኩርት",
       "sentence1": "ለምግብ አሰራሩ ሽንኩርት ያስፈልገኛል።",
-      "sentence2": "በሰላጣዋ ውስጥ ሽንኩርት አትወድም።"
+      "sentence2": "በሰላጣዋ ውስጥ ሽንኩርት አትወድም።",
+      "pronunciation": "/ʃɨnɨkurɨt/"
     },
     {
       "id": 546,
       "word": "በመስመር ላይ",
       "sentence1": "በመስመር ላይ አገኘሁት።",
-      "sentence2": "በመስመር ላይ መግዛት ትመርጣለች።"
+      "sentence2": "በመስመር ላይ መግዛት ትመርጣለች።",
+      "pronunciation": "/bəməsɨmər laj/"
     },
     {
       "id": 547,
       "word": "ብቻ",
       "sentence1": "አምስት ዶላር ብቻ አለኝ።",
-      "sentence2": "ልትረዳ የምትችለው እሷ ብቻ ናት።"
+      "sentence2": "ልትረዳ የምትችለው እሷ ብቻ ናት።",
+      "pronunciation": "/bɨt͡ʃa/"
     },
     {
       "id": 548,
       "word": "ክፈት",
       "sentence1": "እባክህ መስኮቱን ክፈት።",
-      "sentence2": "በሩን ክፍት ማስቀመጥ ትወዳለች።"
+      "sentence2": "በሩን ክፍት ማስቀመጥ ትወዳለች።",
+      "pronunciation": "/kɨfət/"
     },
     {
       "id": 549,
       "word": "አስተያየት",
       "sentence1": "በዚህ ጉዳይ ላይ አስተያየትህ ምንድነው?",
-      "sentence2": "ስለ ፖለቲካ ጠንካራ አስተያየት አላት።"
+      "sentence2": "ስለ ፖለቲካ ጠንካራ አስተያየት አላት።",
+      "pronunciation": "/əsɨtəjajət/"
     },
     {
       "id": 550,
       "word": "ተቃራኒ",
       "sentence1": "የፍቅር ተቃራኒ ጥላቻ ነው።",
-      "sentence2": "በመንገዱ ተቃራኒ ጎን ትኖራለች።"
+      "sentence2": "በመንገዱ ተቃራኒ ጎን ትኖራለች።",
+      "pronunciation": "/təkʼarani/"
     },
     {
       "id": 551,
       "word": "ወይም",
       "sentence1": "ሻይ ወይስ ቡና ትፈልጋለህ?",
-      "sentence2": "መዘመር ወይም መደነስ ትችላለች።"
+      "sentence2": "መዘመር ወይም መደነስ ትችላለች።",
+      "pronunciation": "/wəjɨm/"
     },
     {
       "id": 552,
       "word": "ብርቱካንማ",
       "sentence1": "የብርቱካን ጭማቂ እወዳለሁ።",
-      "sentence2": "ብርቱካንማ ልብስ ለበሰች።"
+      "sentence2": "ብርቱካንማ ልብስ ለበሰች።",
+      "pronunciation": "/bɨrɨtukanɨma/"
     },
     {
       "id": 553,
       "word": "ትዕዛዝ",
       "sentence1": "ትዕዛዝ ማስቀመጥ እፈልጋለሁ።",
-      "sentence2": "ትዕዛዟን ሰረዘች።"
+      "sentence2": "ትዕዛዟን ሰረዘች።",
+      "pronunciation": "/tɨɨzaz/"
     },
     {
       "id": 554,
       "word": "ሌላ",
       "sentence1": "ሌላ ሀሳብ አለኝ።",
-      "sentence2": "እሷ ግማሼ ናት።"
+      "sentence2": "እሷ ግማሼ ናት።",
+      "pronunciation": "/lela/"
     },
     {
       "id": 555,
       "word": "የኛ",
       "sentence1": "ይህ የኛ ቤት ነው።",
-      "sentence2": "እሷ የቡድናችን አባል ናት።"
+      "sentence2": "እሷ የቡድናችን አባል ናት።",
+      "pronunciation": "/jəɲa/"
     },
     {
       "id": 556,
       "word": "ውጭ",
       "sentence1": "ለእግር ጉዞ ውጭ እንውጣ።",
-      "sentence2": "ዛሬ ከቢሮ ውጭ ናት።"
+      "sentence2": "ዛሬ ከቢሮ ውጭ ናት።",
+      "pronunciation": "/wɨt͡ʃʼ/"
     },
     {
       "id": 557,
       "word": "ውጪ",
       "sentence1": "ልጆቹ ውጪ እየተጫወቱ ነው።",
-      "sentence2": "ውጪ መስራት ትመርጣለች።"
+      "sentence2": "ውጪ መስራት ትመርጣለች።",
+      "pronunciation": "/wɨt͡ʃʼi/"
     },
     {
       "id": 558,
       "word": "ከላይ",
       "sentence1": "ስዕሉ ከሶፋው ላይ ተሰቅሏል።",
-      "sentence2": "ሰነዶቹን ተመለከተች።"
+      "sentence2": "ሰነዶቹን ተመለከተች።",
+      "pronunciation": "/kəlaj/"
     },
     {
       "id": 559,
       "word": "የራስ",
       "sentence1": "የራሴ መኪና አለኝ።",
-      "sentence2": "በራስዋ ስራ ኩራት ትሰማታለች።"
+      "sentence2": "በራስዋ ስራ ኩራት ትሰማታለች።",
+      "pronunciation": "/jəras/"
     },
     {
       "id": 560,
       "word": "ገጽ",
       "sentence1": "ወደ ገጽ 10 ዙር።",
-      "sentence2": "ገጹን ምልክት አደረገችበት።"
+      "sentence2": "ገጹን ምልክት አደረገችበት።",
+      "pronunciation": "/ɡət͡sʼ/"
     },
     {
       "id": 561,
       "word": "ቀለም",
       "sentence1": "ቀለም መግዛት አለብኝ።",
-      "sentence2": "የመሬት ገጽታዎችን መቀባት ትወዳለች።"
+      "sentence2": "የመሬት ገጽታዎችን መቀባት ትወዳለች።",
+      "pronunciation": "/kʼələm/"
     },
     {
       "id": 562,
       "word": "ሥዕል",
       "sentence1": "በነጻ ጊዜዬ ስዕል መሳል ያስደስተኛል።",
-      "sentence2": "በመኖሪያ ክፍሏ ውስጥ ቆንጆ ሥዕል አላት።"
+      "sentence2": "በመኖሪያ ክፍሏ ውስጥ ቆንጆ ሥዕል አላት።",
+      "pronunciation": "/sɨɨl/"
     },
     {
       "id": 563,
       "word": "ጥንድ",
       "sentence1": "አዲስ ጥንድ ጫማ ገዛሁ።",
-      "sentence2": "ተመሳሳይ ጥንድ ጆሮ ጌጦች አላት።"
+      "sentence2": "ተመሳሳይ ጥንድ ጆሮ ጌጦች አላት።",
+      "pronunciation": "/tʼɨnɨd/"
     },
     {
       "id": 564,
       "word": "ወረቀት",
       "sentence1": "አንድ ወረቀት ያስፈልገኛል።",
-      "sentence2": "ማስታወሻዎቿን በወረቀት ላይ ጻፈች።"
+      "sentence2": "ማስታወሻዎቿን በወረቀት ላይ ጻፈች።",
+      "pronunciation": "/wərəkʼət/"
     },
     {
       "id": 565,
       "word": "አንቀጽ",
       "sentence1": "እባክህ የመጀመሪያውን አንቀጽ አንብብ።",
-      "sentence2": "ስለ እረፍቷ አንቀጽ ጻፈች።"
+      "sentence2": "ስለ እረፍቷ አንቀጽ ጻፈች።",
+      "pronunciation": "/ənɨkʼət͡sʼ/"
     },
     {
       "id": 566,
       "word": "ወላጅ",
       "sentence1": "ወላጆቼ በሌላ ከተማ ይኖራሉ።",
-      "sentence2": "ብቸኛ ወላጅ ናት።"
+      "sentence2": "ብቸኛ ወላጅ ናት።",
+      "pronunciation": "/wəlad͡ʒ/"
     },
     {
       "id": 567,
       "word": "ፓርክ",
       "sentence1": "በፓርኩ ውስጥ ለእግር ጉዞ እንሂድ።",
-      "sentence2": "በፓርኩ ውስጥ ፒክኒክ ማድረግ ትወዳለች።"
+      "sentence2": "በፓርኩ ውስጥ ፒክኒክ ማድረግ ትወዳለች።",
+      "pronunciation": "/parɨk/"
     },
     {
       "id": 568,
       "word": "ክፍል",
       "sentence1": "ለመኪናዬ ክፍል ያስፈልገኛል።",
-      "sentence2": "ለፕሮጀክቱ አዲስ ክፍል እየሰራች ነው።"
+      "sentence2": "ለፕሮጀክቱ አዲስ ክፍል እየሰራች ነው።",
+      "pronunciation": "/kɨfɨl/"
     },
     {
       "id": 569,
       "word": "አጋር",
       "sentence1": "እሱ የንግድ አጋሬ ነው።",
-      "sentence2": "ለመተባበር አጋር እየፈለገች ነው።"
+      "sentence2": "ለመተባበር አጋር እየፈለገች ነው።",
+      "pronunciation": "/əɡar/"
     },
     {
       "id": 570,
       "word": "ድግስ",
       "sentence1": "ቅዳሜ ድግስ እያዘጋጀን ነው።",
-      "sentence2": "ድንገተኛ ድግሶችን ማዘጋጀት ትወዳለች።"
+      "sentence2": "ድንገተኛ ድግሶችን ማዘጋጀት ትወዳለች።",
+      "pronunciation": "/dɨɡɨs/"
     },
     {
       "id": 571,
       "word": "ፓስፖርት",
       "sentence1": "ፓስፖርቴን ማደስ አለብኝ።",
-      "sentence2": "በጉዞ ወቅት ፓስፖርቷን አጣች።"
+      "sentence2": "በጉዞ ወቅት ፓስፖርቷን አጣች።",
+      "pronunciation": "/pasɨporɨt/"
     },
     {
       "id": 572,
       "word": "ያለፈ",
       "sentence1": "በያለፈው ላይ አናስብ።",
-      "sentence2": "ከያለፉ ስህተቶቿ ተማረች።"
+      "sentence2": "ከያለፉ ስህተቶቿ ተማረች።",
+      "pronunciation": "/jaləfə/"
     },
     {
       "id": 573,
       "word": "መክፈል",
       "sentence1": "ሂሳቦቹን መክፈል አለብኝ።",
-      "sentence2": "ሁልጊዜ ዕዳዎቿን በሰዓቱ ትከፍላለች።"
+      "sentence2": "ሁልጊዜ ዕዳዎቿን በሰዓቱ ትከፍላለች።",
+      "pronunciation": "/məkɨfəl/"
     },
     {
       "id": 574,
       "word": "እስክሪብቶ",
       "sentence1": "እስክሪብቶህን ልበደር እችላለሁ?",
-      "sentence2": "በሰማያዊ እስክሪብቶ ትጽፋለች።"
+      "sentence2": "በሰማያዊ እስክሪብቶ ትጽፋለች።",
+      "pronunciation": "/ɨsɨkɨribɨto/"
     },
     {
       "id": 575,
       "word": "እርሳስ",
       "sentence1": "እርሳስ መጠቀም እመርጣለሁ።",
-      "sentence2": "በእርሳስ ንድፍ ሳለች።"
+      "sentence2": "በእርሳስ ንድፍ ሳለች።",
+      "pronunciation": "/ɨrɨsas/"
     },
     {
       "id": 576,
       "word": "ሰዎች",
       "sentence1": "በዝግጅቱ ላይ ብዙ ሰዎች ነበሩ።",
-      "sentence2": "አዲስ ሰዎችን ማግኘት ታስደስታታለች።"
+      "sentence2": "አዲስ ሰዎችን ማግኘት ታስደስታታለች።",
+      "pronunciation": "/səwot͡ʃ/"
     },
     {
       "id": 577,
       "word": "በርበሬ",
       "sentence1": "ወደ ምግቤ በርበሬ ማከል እወዳለሁ።",
-      "sentence2": "በገበያ ቀይ በርበሬ ገዛች።"
+      "sentence2": "በገበያ ቀይ በርበሬ ገዛች።",
+      "pronunciation": "/bərɨbəre/"
     },
     {
       "id": 578,
       "word": "ፍጹም",
       "sentence1": "ይህ ፍጹም መፍትሔ ነው።",
-      "sentence2": "በፈተናው ላይ ፍጹም ውጤት አላት።"
+      "sentence2": "በፈተናው ላይ ፍጹም ውጤት አላት።",
+      "pronunciation": "/fɨt͡sʼum/"
     },
     {
       "id": 579,
       "word": "ጊዜ",
       "sentence1": "ይህ ለእኔ አስቸጋሪ ጊዜ ነው።",
-      "sentence2": "በፈተና ጊዜ አጠናች።"
+      "sentence2": "በፈተና ጊዜ አጠናች።",
+      "pronunciation": "/ɡize/"
     },
     {
       "id": 580,
       "word": "ሰው",
       "sentence1": "እሱ ደግ ሰው ነው።",
-      "sentence2": "ለመድረስ የመጀመሪያዋ ሰው ናት።"
+      "sentence2": "ለመድረስ የመጀመሪያዋ ሰው ናት።",
+      "pronunciation": "/səw/"
     },
     {
       "id": 581,
       "word": "የግል",
       "sentence1": "ይህ የግል ጉዳይ ነው።",
-      "sentence2": "የግል ተሞክሮዎቿን አጋራች።"
+      "sentence2": "የግል ተሞክሮዎቿን አጋራች።",
+      "pronunciation": "/jəɡɨl/"
     },
     {
       "id": 582,
       "word": "ስልክ",
       "sentence1": "ስልኬን መሙላት አለብኝ።",
-      "sentence2": "ስልኩን በፍጥነት መለሰች።"
+      "sentence2": "ስልኩን በፍጥነት መለሰች።",
+      "pronunciation": "/sɨlɨk/"
     },
     {
       "id": 583,
       "word": "ፎቶ",
       "sentence1": "የፀሐይ መጥለቅ ፎቶ አነሳሁ።",
-      "sentence2": "የአሮጌ ፎቶዎች ስብስብ አላት።"
+      "sentence2": "የአሮጌ ፎቶዎች ስብስብ አላት።",
+      "pronunciation": "/foto/"
     },
     {
       "id": 584,
       "word": "ፎቶግራፍ",
       "sentence1": "ይህ ፎቶግራፍ ባለፈው ዓመት ተነሳ።",
-      "sentence2": "ፎቶግራፎቿን ማሳየት ትወዳለች።"
+      "sentence2": "ፎቶግራፎቿን ማሳየት ትወዳለች።",
+      "pronunciation": "/fotoɡɨraf/"
     },
     {
       "id": 585,
       "word": "ሐረግ",
       "sentence1": "ያን ሐረግ ልታስረዳኝ ትችላለህ?",
-      "sentence2": "በንግግሯ ውስጥ የተለመደ ሐረግ ተጠቀመች።"
+      "sentence2": "በንግግሯ ውስጥ የተለመደ ሐረግ ተጠቀመች።",
+      "pronunciation": "/hərəɡ/"
     },
     {
       "id": 586,
       "word": "ፒያኖ",
       "sentence1": "ፒያኖ መጫወት መማር እፈልጋለሁ።",
-      "sentence2": "ፒያኖውን በቆንጆ ሁኔታ ትጫወታለች።"
+      "sentence2": "ፒያኖውን በቆንጆ ሁኔታ ትጫወታለች።",
+      "pronunciation": "/pijano/"
     },
     {
       "id": 587,
       "word": "ሥዕል",
       "sentence1": "ሥዕሉን ልታሳየኝ ትችላለህ?",
-      "sentence2": "ቆንጆ ሥዕል ሳለች።"
+      "sentence2": "ቆንጆ ሥዕል ሳለች።",
+      "pronunciation": "/sɨɨl/"
     },
     {
       "id": 588,
       "word": "ቁራጭ",
       "sentence1": "አንድ ቁራጭ ወረቀት ያስፈልገኛል።",
-      "sentence2": "አንድ ምክር ሰጠችኝ።"
+      "sentence2": "አንድ ምክር ሰጠችኝ።",
+      "pronunciation": "/kʼurat͡ʃʼ/"
     },
     {
       "id": 589,
       "word": "አሳማ",
       "sentence1": "አሳማው በጓሮ ውስጥ ነው።",
-      "sentence2": "በእርሻዋ ላይ አሳማ አሳደገች።"
+      "sentence2": "በእርሻዋ ላይ አሳማ አሳደገች።",
+      "pronunciation": "/əsama/"
     },
     {
       "id": 590,
       "word": "ሮዝ",
       "sentence1": "ተወዳጅ ቀለሜ ሮዝ ነው።",
-      "sentence2": "ለድግሱ ሮዝ ልብስ ለበሰች።"
+      "sentence2": "ለድግሱ ሮዝ ልብስ ለበሰች።",
+      "pronunciation": "/roz/"
     },
     {
       "id": 591,
       "word": "ቦታ",
       "sentence1": "ይህ ለማረፍ ጥሩ ቦታ ነው።",
-      "sentence2": "ለማንበብ ጸጥ ያለ ቦታ አገኘች።"
+      "sentence2": "ለማንበብ ጸጥ ያለ ቦታ አገኘች።",
+      "pronunciation": "/bota/"
     },
     {
       "id": 592,
       "word": "እቅድ",
       "sentence1": "ለሳምንቱ መጨረሻ እቅድ አለኝ።",
-      "sentence2": "ለፕሮጀክቱ ዝርዝር እቅድ አወጣች።"
+      "sentence2": "ለፕሮጀክቱ ዝርዝር እቅድ አወጣች።",
+      "pronunciation": "/ɨkʼɨd/"
     },
     {
       "id": 593,
       "word": "አውሮፕላን",
       "sentence1": "አውሮፕላኑ ከፍ ብሎ እየበረረ ነው።",
-      "sentence2": "ወደ ኒው ዮርክ በአውሮፕላን ላይ ናት።"
+      "sentence2": "ወደ ኒው ዮርክ በአውሮፕላን ላይ ናት።",
+      "pronunciation": "/əwɨropɨlan/"
     },
     {
       "id": 594,
       "word": "ተክል",
       "sentence1": "በክፍሌ ውስጥ ተክል አለኝ።",
-      "sentence2": "በየቀኑ ተክሉን ታጠጣለች።"
+      "sentence2": "በየቀኑ ተክሉን ታጠጣለች።",
+      "pronunciation": "/təkɨl/"
     },
     {
       "id": 595,
       "word": "መጫወት",
       "sentence1": "ልጆች ውጪ መጫወት ይወዳሉ።",
-      "sentence2": "በሳምንቱ መጨረሻ እግር ኳስ ትጫወታለች።"
+      "sentence2": "በሳምንቱ መጨረሻ እግር ኳስ ትጫወታለች።",
+      "pronunciation": "/mət͡ʃʼawət/"
     },
     {
       "id": 596,
       "word": "ተጫዋች",
       "sentence1": "እሱ ተሰጥኦ ያለው ተጫዋች ነው።",
-      "sentence2": "በቡድኑ ውስጥ ምርጥ ተጫዋች ናት።"
+      "sentence2": "በቡድኑ ውስጥ ምርጥ ተጫዋች ናት።",
+      "pronunciation": "/tət͡ʃʼawat͡ʃ/"
     },
     {
       "id": 597,
       "word": "እባክህ",
       "sentence1": "እባክህ ልትረዳኝ ትችላለህ?",
-      "sentence2": "እባክህ አዎ አለች።"
+      "sentence2": "እባክህ አዎ አለች።",
+      "pronunciation": "/ɨbakɨh/"
     },
     {
       "id": 598,
       "word": "ነጥብ",
       "sentence1": "በካርታው ላይ ያን ነጥብ ማየት ትችላለህ?",
-      "sentence2": "በውይይቱ ውስጥ አስፈላጊ ነጥብ አነሳች።"
+      "sentence2": "በውይይቱ ውስጥ አስፈላጊ ነጥብ አነሳች።",
+      "pronunciation": "/nətʼɨb/"
     },
     {
       "id": 599,
       "word": "ፖሊስ",
       "sentence1": "ፖሊሶች ጉዳዩን እየመረመሩ ነው።",
-      "sentence2": "የፖሊስ መኮንን መሆን ትፈልጋለች።"
+      "sentence2": "የፖሊስ መኮንን መሆን ትፈልጋለች።",
+      "pronunciation": "/polis/"
     },
     {
       "id": 600,
       "word": "ፖሊስ",
       "sentence1": "ፖሊሱ የጠፋውን ልጅ ረዳ።",
-      "sentence2": "ለእርዳታው ፖሊሱን አመሰገነችው።"
+      "sentence2": "ለእርዳታው ፖሊሱን አመሰገነችው።",
+      "pronunciation": "/polis/"
     },
     {
       "id": 601,
       "word": "ገንዳ",
       "sentence1": "ገንዳው በበጋ ክፍት ነው።",
-      "sentence2": "በገንዳው ውስጥ መዋኘት ታስደስታታለች።"
+      "sentence2": "በገንዳው ውስጥ መዋኘት ታስደስታታለች።",
+      "pronunciation": "/ɡənɨda/"
     },
     {
       "id": 602,
       "word": "ድሃ",
       "sentence1": "ድሃ ቤተሰብ እርዳታ ያስፈልገዋል።",
-      "sentence2": "ለድሆች ልብስ ለገሰች።"
+      "sentence2": "ለድሆች ልብስ ለገሰች።",
+      "pronunciation": "/dɨha/"
     },
     {
       "id": 603,
       "word": "ተወዳጅ",
       "sentence1": "ይህ ዘፈን በጣም ተወዳጅ ነው።",
-      "sentence2": "በማህበረሰቡ ውስጥ ተወዳጅ ሰው ናት።"
+      "sentence2": "በማህበረሰቡ ውስጥ ተወዳጅ ሰው ናት።",
+      "pronunciation": "/təwədad͡ʒ/"
     },
     {
       "id": 604,
       "word": "አዎንታዊ",
       "sentence1": "አዎንታዊ አመለካከት አላት።",
-      "sentence2": "ግብረ መልሱ በጣም አዎንታዊ ነበር።"
+      "sentence2": "ግብረ መልሱ በጣም አዎንታዊ ነበር።",
+      "pronunciation": "/əwonɨtawi/"
     },
     {
       "id": 605,
       "word": "ይቻላል",
       "sentence1": "ነገ መገናኘት ይቻላል?",
-      "sentence2": "በሰዓቱ ለመጨረስ አስችላለች።"
+      "sentence2": "በሰዓቱ ለመጨረስ አስችላለች።",
+      "pronunciation": "/jɨt͡ʃalal/"
     },
     {
       "id": 606,
       "word": "ፖስታ",
       "sentence1": "ይህን ደብዳቤ በፖስታ መላክ አለብኝ።",
-      "sentence2": "በፖስታ ቤት ትሰራለች።"
+      "sentence2": "በፖስታ ቤት ትሰራለች።",
+      "pronunciation": "/posɨta/"
     },
     {
       "id": 607,
       "word": "ድንች",
       "sentence1": "የተጠበሰ ድንች መብላት እፈልጋለሁ።",
-      "sentence2": "በአትክልት ቦታዋ ድንች ተከለች።"
+      "sentence2": "በአትክልት ቦታዋ ድንች ተከለች።",
+      "pronunciation": "/dɨnɨt͡ʃ/"
     },
     {
       "id": 608,
       "word": "ፓውንድ",
       "sentence1": "ፓውንድ የክብደት መለኪያ ነው።",
-      "sentence2": "አንድ ፓውንድ ድንች አነሳች።"
+      "sentence2": "አንድ ፓውንድ ድንች አነሳች።",
+      "pronunciation": "/pawɨnɨd/"
     },
     {
       "id": 609,
       "word": "ልምምድ",
       "sentence1": "ልምምድ ፍጹምነት ያመጣል።",
-      "sentence2": "ለማሻሻል ተጨማሪ ልምምድ ያስፈልጋታል።"
+      "sentence2": "ለማሻሻል ተጨማሪ ልምምድ ያስፈልጋታል።",
+      "pronunciation": "/lɨmɨmɨd/"
     },
     {
       "id": 610,
       "word": "መለማመድ",
       "sentence1": "እንግሊዝኛዬን መለማመድ አለብኝ።",
-      "sentence2": "በየቀኑ ፒያኖ ትለማመዳለች።"
+      "sentence2": "በየቀኑ ፒያኖ ትለማመዳለች።",
+      "pronunciation": "/mələmaməd/"
     },
     {
       "id": 611,
       "word": "መምረጥ",
       "sentence1": "ሻይን ከቡና እመርጣለሁ።",
-      "sentence2": "ማታ መጽሐፍ ማንበብ ትመርጣለች።"
+      "sentence2": "ማታ መጽሐፍ ማንበብ ትመርጣለች።",
+      "pronunciation": "/məmɨrətʼ/"
     },
     {
       "id": 612,
       "word": "ማዘጋጀት",
       "sentence1": "ለፈተና ማዘጋጀት አለብኝ።",
-      "sentence2": "ለእራት ጣፋጭ ምግብ አዘጋጀች።"
+      "sentence2": "ለእራት ጣፋጭ ምግብ አዘጋጀች።",
+      "pronunciation": "/mazəɡad͡ʒət/"
     },
     {
       "id": 613,
       "word": "ማቅረብ",
       "sentence1": "ፕሮጀክቴን ማቅረብ እፈልጋለሁ።",
-      "sentence2": "ግኝቶቿን በኮንፈረንሱ አቀረበች።"
+      "sentence2": "ግኝቶቿን በኮንፈረንሱ አቀረበች።",
+      "pronunciation": "/makʼɨrəb/"
     },
     {
       "id": 614,
       "word": "ቆንጆ",
       "sentence1": "ቆንጆ ፈገግታ አላት።",
-      "sentence2": "በጸደይ አትክልቱ ቦታ ቆንጆ ነው።"
+      "sentence2": "በጸደይ አትክልቱ ቦታ ቆንጆ ነው።",
+      "pronunciation": "/kʼonɨd͡ʒo/"
     },
     {
       "id": 615,
       "word": "ዋጋ",
       "sentence1": "የዚህ መጽሐፍ ዋጋ ስንት ነው?",
-      "sentence2": "በአዲስ መኪናዋ ላይ ጥሩ ዋጋ አገኘች።"
+      "sentence2": "በአዲስ መኪናዋ ላይ ጥሩ ዋጋ አገኘች።",
+      "pronunciation": "/waɡa/"
     },
     {
       "id": 616,
       "word": "ምናልባት",
       "sentence1": "ነገ ምናልባት ዝናብ ይጥላል።",
-      "sentence2": "አሁን ምናልባት ቤት ናት።"
+      "sentence2": "አሁን ምናልባት ቤት ናት።",
+      "pronunciation": "/mɨnalɨbat/"
     },
     {
       "id": 617,
       "word": "ችግር",
       "sentence1": "ይህን ችግር መፍታት አለብን።",
-      "sentence2": "ከኮምፒውተሯ ጋር ችግር ነበራት።"
+      "sentence2": "ከኮምፒውተሯ ጋር ችግር ነበራት።",
+      "pronunciation": "/t͡ʃɨɡɨr/"
     },
     {
       "id": 618,
       "word": "ምርት",
       "sentence1": "ይህ ምርት በጣም ተወዳጅ ነው።",
-      "sentence2": "ከሱቅ አዲስ ምርት ገዛች።"
+      "sentence2": "ከሱቅ አዲስ ምርት ገዛች።",
+      "pronunciation": "/mɨrɨt/"
     },
     {
       "id": 619,
       "word": "ፕሮግራም",
       "sentence1": "በቴሌቪዥን አዲስ ፕሮግራም እያየሁ ነው።",
-      "sentence2": "የሥልጠና ፕሮግራሙን ትመራለች።"
+      "sentence2": "የሥልጠና ፕሮግራሙን ትመራለች።",
+      "pronunciation": "/pɨroɡɨram/"
     },
     {
       "id": 620,
       "word": "ፕሮጀክት",
       "sentence1": "በትምህርት ቤት ፕሮጀክት ላይ እየሰራሁ ነው።",
-      "sentence2": "ፕሮጀክቷን ለክፍሉ አቀረበች።"
+      "sentence2": "ፕሮጀክቷን ለክፍሉ አቀረበች።",
+      "pronunciation": "/pɨrod͡ʒəkɨt/"
     },
     {
       "id": 621,
       "word": "ወይን ጠጅ",
       "sentence1": "ተወዳጅ ቀለሜ ወይን ጠጅ ነው።",
-      "sentence2": "ቆንጆ የወይን ጠጅ ልብስ ለበሰች።"
+      "sentence2": "ቆንጆ የወይን ጠጅ ልብስ ለበሰች።",
+      "pronunciation": "/wəjɨn tʼəd͡ʒ/"
     },
     {
       "id": 622,
       "word": "አስቀምጥ",
       "sentence1": "እባክህ መጽሐፉን በመደርደሪያው ላይ አስቀምጥ።",
-      "sentence2": "ስልኳን በቦርሳዋ ውስጥ አስቀመጠች።"
+      "sentence2": "ስልኳን በቦርሳዋ ውስጥ አስቀመጠች።",
+      "pronunciation": "/əsɨkʼəmɨtʼ/"
     },
     {
       "id": 623,
       "word": "ሩብ",
       "sentence1": "ከኬኩ ሩብ ቀርቷል።",
-      "sentence2": "ለአውቶቡስ ክፍያ ሩብ ከፈለች።"
+      "sentence2": "ለአውቶቡስ ክፍያ ሩብ ከፈለች።",
+      "pronunciation": "/rub/"
     },
     {
       "id": 624,
       "word": "ጥያቄ",
       "sentence1": "ጥያቄ ልጠይቅህ እችላለሁ?",
-      "sentence2": "ስለ ቤት ስራ ጥያቄ አላት።"
+      "sentence2": "ስለ ቤት ስራ ጥያቄ አላት።",
+      "pronunciation": "/tʼɨjakʼe/"
     },
     {
       "id": 625,
       "word": "ፈጣን",
       "sentence1": "እሱ ፈጣን ተማሪ ነው።",
-      "sentence2": "ለጥያቄው ፈጣን ምላሽ ሰጠች።"
+      "sentence2": "ለጥያቄው ፈጣን ምላሽ ሰጠች።",
+      "pronunciation": "/fətʼan/"
     },
     {
       "id": 626,
       "word": "በፍጥነት",
       "sentence1": "እባክህ የቤት ስራህን በፍጥነት ጨርስ።",
-      "sentence2": "ስህተቷን በፍጥነት ተገነዘበች።"
+      "sentence2": "ስህተቷን በፍጥነት ተገነዘበች።",
+      "pronunciation": "/bəfɨtʼɨnət/"
     },
     {
       "id": 627,
       "word": "ጸጥ",
       "sentence1": "እባክህ በቤተ መጻሕፍት ውስጥ ጸጥ በል።",
-      "sentence2": "የገጠሩን ጸጥታ ትወዳለች።"
+      "sentence2": "የገጠሩን ጸጥታ ትወዳለች።",
+      "pronunciation": "/t͡sʼətʼ/"
     },
     {
       "id": 628,
       "word": "በጣም",
       "sentence1": "ውጪ በጣም ቀዝቃዛ ነው።",
-      "sentence2": "በሂሳብ በጣም ጎበዝ ናት።"
+      "sentence2": "በሂሳብ በጣም ጎበዝ ናት።",
+      "pronunciation": "/bətʼam/"
     },
     {
       "id": 629,
       "word": "ሬድዮ",
       "sentence1": "በየጠዋቱ ሬድዮ አዳምጣለሁ።",
-      "sentence2": "በሬድዮ ጣቢያ ትሰራለች።"
+      "sentence2": "በሬድዮ ጣቢያ ትሰራለች።",
+      "pronunciation": "/redɨjo/"
     },
     {
       "id": 630,
       "word": "ዝናብ",
       "sentence1": "የዝናብ ድምጽ ማዳመጥ እወዳለሁ።",
-      "sentence2": "ያለ ጃንጥላ በዝናብ ውስጥ ተያዘች።"
+      "sentence2": "ያለ ጃንጥላ በዝናብ ውስጥ ተያዘች።",
+      "pronunciation": "/zɨnab/"
     },
     {
       "id": 631,
       "word": "ማንበብ",
       "sentence1": "ከመተኛቴ በፊት ማንበብ እወዳለሁ።",
-      "sentence2": "በየሳምንቱ መጽሐፍ ታነባለች።"
+      "sentence2": "በየሳምንቱ መጽሐፍ ታነባለች።",
+      "pronunciation": "/manɨbəb/"
     },
     {
       "id": 632,
       "word": "አንባቢ",
       "sentence1": "አንባቢው ሁልጊዜ በታሪኩ ውስጥ ተሰማርቷል።",
-      "sentence2": "ጥልቅ አንባቢ ናት።"
+      "sentence2": "ጥልቅ አንባቢ ናት።",
+      "pronunciation": "/ənɨbabi/"
     },
     {
       "id": 633,
       "word": "ማንበብ",
       "sentence1": "ማንበብ ለማረፍ ጥሩ መንገድ ነው።",
-      "sentence2": "የምስጢር ልቦለዶችን ማንበብ ታስደስታታለች።"
+      "sentence2": "የምስጢር ልቦለዶችን ማንበብ ታስደስታታለች።",
+      "pronunciation": "/manɨbəb/"
     },
     {
       "id": 634,
       "word": "ዝግጁ",
       "sentence1": "ለመሄድ ዝግጁ ነህ?",
-      "sentence2": "ለፈተናው ዝግጁ ናት።"
+      "sentence2": "ለፈተናው ዝግጁ ናት።",
+      "pronunciation": "/zɨɡɨd͡ʒu/"
     },
     {
       "id": 635,
       "word": "እውነተኛ",
       "sentence1": "ይህ እውነተኛ አልማዝ ነው።",
-      "sentence2": "በዓለም ውስጥ እውነተኛ ለውጥ ማየት ትፈልጋለች።"
+      "sentence2": "በዓለም ውስጥ እውነተኛ ለውጥ ማየት ትፈልጋለች።",
+      "pronunciation": "/ɨwɨnətəɲa/"
     },
     {
       "id": 636,
       "word": "በእውነት",
       "sentence1": "ይህን ዘፈን በእውነት እወዳለሁ።",
-      "sentence2": "በስራዋ በእውነት ጎበዝ ናት።"
+      "sentence2": "በስራዋ በእውነት ጎበዝ ናት።",
+      "pronunciation": "/bəɨwɨnət/"
     },
     {
       "id": 637,
       "word": "ምክንያት",
       "sentence1": "የጉብኝትህ ምክንያት ምንድነው?",
-      "sentence2": "ለመዘግየት ጥሩ ምክንያት አላት።"
+      "sentence2": "ለመዘግየት ጥሩ ምክንያት አላት።",
+      "pronunciation": "/mɨkɨnɨjat/"
     },
     {
       "id": 638,
       "word": "ቀይ",
       "sentence1": "ተወዳጅ ቀለሜ ቀይ ነው።",
-      "sentence2": "ለድግሱ ቀይ ልብስ ለበሰች።"
+      "sentence2": "ለድግሱ ቀይ ልብስ ለበሰች።",
+      "pronunciation": "/kʼəj/"
     },
     {
       "id": 639,
       "word": "ማረፍ",
       "sentence1": "በገንዳው አጠገብ ማረፍ እወዳለሁ።",
-      "sentence2": "ለማረፍ ገላዋን ትታጠባለች።"
+      "sentence2": "ለማረፍ ገላዋን ትታጠባለች።",
+      "pronunciation": "/marəf/"
     },
     {
       "id": 640,
       "word": "ማስታወስ",
       "sentence1": "እባክህ መብራቶቹን ለማጥፋት አስታውስ።",
-      "sentence2": "ቁልፎቿን የት እንዳስቀመጠች አታስታውስም።"
+      "sentence2": "ቁልፎቿን የት እንዳስቀመጠች አታስታውስም።",
+      "pronunciation": "/masɨtawəs/"
     },
     {
       "id": 641,
       "word": "መድገም",
       "sentence1": "እባክህ ልትደግመው ትችላለህ?",
-      "sentence2": "ልምምዱን ብዙ ጊዜ መድገም ነበረባት።"
+      "sentence2": "ልምምዱን ብዙ ጊዜ መድገም ነበረባት።",
+      "pronunciation": "/mədɨɡəm/"
     },
     {
       "id": 642,
       "word": "ሪፖርት",
       "sentence1": "ለስራ ሪፖርት መጻፍ አለብኝ።",
-      "sentence2": "ሪፖርቷን በሰዓቱ አስገባች።"
+      "sentence2": "ሪፖርቷን በሰዓቱ አስገባች።",
+      "pronunciation": "/riporɨt/"
     },
     {
       "id": 643,
       "word": "ምግብ ቤት",
       "sentence1": "ለእራት ወደ ምግብ ቤት እንሂድ።",
-      "sentence2": "በአስደናቂ ምግብ ቤት ትሰራለች።"
+      "sentence2": "በአስደናቂ ምግብ ቤት ትሰራለች።",
+      "pronunciation": "/mɨɡɨb bet/"
     },
     {
       "id": 644,
       "word": "ውጤት",
       "sentence1": "የሙከራው ውጤት ምን ነበር?",
-      "sentence2": "በውጤቱ ተደስታለች።"
+      "sentence2": "በውጤቱ ተደስታለች።",
+      "pronunciation": "/wɨtʼet/"
     },
     {
       "id": 645,
       "word": "መመለስ",
       "sentence1": "ነገ መጽሐፉን እመልሳለሁ።",
-      "sentence2": "ከጉዞው በኋላ ወደ ቤት ተመለሰች።"
+      "sentence2": "ከጉዞው በኋላ ወደ ቤት ተመለሰች።",
+      "pronunciation": "/məmələs/"
     },
     {
       "id": 646,
       "word": "ሩዝ",
       "sentence1": "ከምግቤ ጋር ሩዝ መብላት እወዳለሁ።",
-      "sentence2": "ለእራት ሩዝ አበሰለች።"
+      "sentence2": "ለእራት ሩዝ አበሰለች።",
+      "pronunciation": "/ruz/"
     },
     {
       "id": 647,
       "word": "ሀብታም",
       "sentence1": "እሱ ሀብታም ሰው ነው።",
-      "sentence2": "ሀብታም ባል ማግባት ትፈልጋለች።"
+      "sentence2": "ሀብታም ባል ማግባት ትፈልጋለች።",
+      "pronunciation": "/həbɨtam/"
     },
     {
       "id": 648,
       "word": "መንዳት",
       "sentence1": "በፓርኩ ውስጥ ብስክሌቴን መንዳት እወዳለሁ።",
-      "sentence2": "ለመጀመሪያ ጊዜ ፈረስ ተቀመጠች።"
+      "sentence2": "ለመጀመሪያ ጊዜ ፈረስ ተቀመጠች።",
+      "pronunciation": "/mənɨdat/"
     },
     {
       "id": 649,
       "word": "ቀኝ",
       "sentence1": "በትራፊክ መብራቱ ላይ ወደ ቀኝ ታጠፍ።",
-      "sentence2": "በቀኜ ላይ ተቀምጣለች።"
+      "sentence2": "በቀኜ ላይ ተቀምጣለች።",
+      "pronunciation": "/kʼəɲ/"
     },
     {
       "id": 650,
       "word": "ወንዝ",
       "sentence1": "ወንዙ በሸለቆው ውስጥ ይፈሳል።",
-      "sentence2": "በወንዙ ውስጥ ዓሳ ማጥመድ ትወዳለች።"
+      "sentence2": "በወንዙ ውስጥ ዓሳ ማጥመድ ትወዳለች።",
+      "pronunciation": "/wənɨz/"
     },
     {
       "id": 651,
       "word": "መንገድ",
       "sentence1": "መንገዱ ለግንባታ ተዘግቷል።",
-      "sentence2": "በጸጥታ መንገድ ላይ ትኖራለች።"
+      "sentence2": "በጸጥታ መንገድ ላይ ትኖራለች።",
+      "pronunciation": "/mənɨɡəd/"
     },
     {
       "id": 652,
       "word": "ክፍል",
       "sentence1": "ይህ የእኔ መኝታ ክፍል ነው።",
-      "sentence2": "ትናንት ክፍሏን አጸዳች።"
+      "sentence2": "ትናንት ክፍሏን አጸዳች።",
+      "pronunciation": "/kɨfɨl/"
     },
     {
       "id": 653,
       "word": "ዕለታዊ ተግባር",
       "sentence1": "የጠዋት ዕለታዊ ተግባር አለኝ።",
-      "sentence2": "ጥብቅ የአካል ብቃት ዕለታዊ ተግባር ትከተላለች።"
+      "sentence2": "ጥብቅ የአካል ብቃት ዕለታዊ ተግባር ትከተላለች።",
+      "pronunciation": "/ɨlətawi təɡɨbar/"
     },
     {
       "id": 654,
       "word": "ደንብ",
       "sentence1": "ደንቦቹን መከተል አለብህ።",
-      "sentence2": "ደንቡን ጥሳ ችግር ውስጥ ገባች።"
+      "sentence2": "ደንቡን ጥሳ ችግር ውስጥ ገባች።",
+      "pronunciation": "/dənɨb/"
     },
     {
       "id": 655,
       "word": "መሮጥ",
       "sentence1": "ጠዋት መሮጥ እወዳለሁ።",
-      "sentence2": "በየቀኑ አምስት ማይል ትሮጣለች።"
+      "sentence2": "በየቀኑ አምስት ማይል ትሮጣለች።",
+      "pronunciation": "/mərotʼ/"
     },
     {
       "id": 656,
       "word": "አሳዛኝ",
       "sentence1": "ዛሬ አሳዛኝ ትመስላለች።",
-      "sentence2": "ስለ ሁኔታው አዝናለሁ።"
+      "sentence2": "ስለ ሁኔታው አዝናለሁ።",
+      "pronunciation": "/əsazaɲ/"
     },
     {
       "id": 657,
       "word": "ሰላጣ",
       "sentence1": "ለምሳ ሰላጣ እፈልጋለሁ።",
-      "sentence2": "ጣፋጭ ሰላጣ አዘጋጀች።"
+      "sentence2": "ጣፋጭ ሰላጣ አዘጋጀች።",
+      "pronunciation": "/səlatʼa/"
     },
     {
       "id": 658,
       "word": "ጨው",
       "sentence1": "እባክህ ጨውን አቅርብ።",
-      "sentence2": "ወደ ሾርባው ጨው ጨመረች።"
+      "sentence2": "ወደ ሾርባው ጨው ጨመረች።",
+      "pronunciation": "/t͡ʃʼəw/"
     },
     {
       "id": 659,
       "word": "ተመሳሳይ",
       "sentence1": "ተመሳሳይ ችግር አለን።",
-      "sentence2": "ከእኔ ጋር ተመሳሳይ ልብስ ለበሰች።"
+      "sentence2": "ከእኔ ጋር ተመሳሳይ ልብስ ለበሰች።",
+      "pronunciation": "/təməsasaj/"
     },
     {
       "id": 660,
       "word": "ሳንድዊች",
       "sentence1": "ለምሳ ሳንድዊች እፈልጋለሁ።",
-      "sentence2": "የዶሮ ሳንድዊች ሰራች።"
+      "sentence2": "የዶሮ ሳንድዊች ሰራች።",
+      "pronunciation": "/sanɨdɨwit͡ʃ/"
     },
     {
       "id": 661,
       "word": "ቅዳሜ",
       "sentence1": "ቅዳሜ ተወዳጅ ቀኔ ነው።",
-      "sentence2": "ቅዳሜ ድግስ አላት።"
+      "sentence2": "ቅዳሜ ድግስ አላት።",
+      "pronunciation": "/kʼɨdame/"
     },
     {
       "id": 662,
       "word": "ማለት",
       "sentence1": "ምን አልክ?",
-      "sentence2": "ምንም አላለችም።"
+      "sentence2": "ምንም አላለችም።",
+      "pronunciation": "/malət/"
     },
     {
       "id": 663,
       "word": "ትምህርት ቤት",
       "sentence1": "በየቀኑ ትምህርት ቤት እሄዳለሁ።",
-      "sentence2": "በትምህርት ቤቱ ተማሪ ናት።"
+      "sentence2": "በትምህርት ቤቱ ተማሪ ናት።",
+      "pronunciation": "/tɨmɨhɨrɨt bet/"
     },
     {
       "id": 664,
       "word": "ሳይንስ",
       "sentence1": "ሳይንስ አስደናቂ ነው።",
-      "sentence2": "ሳይንስ መማር ትፈልጋለች።"
+      "sentence2": "ሳይንስ መማር ትፈልጋለች።",
+      "pronunciation": "/sajɨnɨs/"
     },
     {
       "id": 665,
       "word": "ሳይንቲስት",
       "sentence1": "እሱ ሳይንቲስት ነው።",
-      "sentence2": "ሳይንቲስት መሆን ትፈልጋለች።"
+      "sentence2": "ሳይንቲስት መሆን ትፈልጋለች።",
+      "pronunciation": "/sajɨnɨtisɨt/"
     },
     {
       "id": 666,
       "word": "ባሕር",
       "sentence1": "ዛሬ ባሕሩ ጸጥ ያለ ነው።",
-      "sentence2": "በባሕር ውስጥ መዋኘት ትወዳለች።"
+      "sentence2": "በባሕር ውስጥ መዋኘት ትወዳለች።",
+      "pronunciation": "/bahɨr/"
     },
     {
       "id": 667,
       "word": "ሁለተኛ",
       "sentence1": "ይህ ሁለተኛ ሙከራዬ ነው።",
-      "sentence2": "በሁለተኛ ደረጃ ጨረሰች።"
+      "sentence2": "በሁለተኛ ደረጃ ጨረሰች።",
+      "pronunciation": "/hulətəɲa/"
     },
     {
       "id": 668,
       "word": "ክፍል",
       "sentence1": "ይህ አስቸጋሪ ክፍል ነው።",
-      "sentence2": "ክፍሉን በጥንቃቄ አነበበች።"
+      "sentence2": "ክፍሉን በጥንቃቄ አነበበች።",
+      "pronunciation": "/kɨfɨl/"
     },
     {
       "id": 669,
       "word": "ማየት",
       "sentence1": "በዛፉ ላይ ወፍ አያለሁ።",
-      "sentence2": "ከመስኮቷ ተራራዎችን ማየት ትችላለች።"
+      "sentence2": "ከመስኮቷ ተራራዎችን ማየት ትችላለች።",
+      "pronunciation": "/majət/"
     },
     {
       "id": 670,
       "word": "መሸጥ",
       "sentence1": "አሮጌ መኪናዬን መሸጥ እፈልጋለሁ።",
-      "sentence2": "በእጅ የተሰሩ ጌጣጌጦችን በመስመር ላይ ትሸጣለች።"
+      "sentence2": "በእጅ የተሰሩ ጌጣጌጦችን በመስመር ላይ ትሸጣለች።",
+      "pronunciation": "/məʃətʼ/"
     },
     {
       "id": 671,
       "word": "መላክ",
       "sentence1": "እባክህ ዝርዝሮቹን ላክልኝ።",
-      "sentence2": "ለጓደኛዋ ደብዳቤ ላከች።"
+      "sentence2": "ለጓደኛዋ ደብዳቤ ላከች።",
+      "pronunciation": "/məlak/"
     },
     {
       "id": 672,
       "word": "ዓረፍተ ነገር",
       "sentence1": "ዓረፍተ ነገር መጻፍ ትችላለህ?",
-      "sentence2": "በተሟላ ዓረፍተ ነገሮች ተናገረች።"
+      "sentence2": "በተሟላ ዓረፍተ ነገሮች ተናገረች።",
+      "pronunciation": "/arəfɨtə nəɡər/"
     },
     {
       "id": 673,
       "word": "መስከረም",
       "sentence1": "መስከረም ዘጠነኛው ወር ነው።",
-      "sentence2": "በመስከረም ተወለደች።"
+      "sentence2": "በመስከረም ተወለደች።",
+      "pronunciation": "/məsɨkərəm/"
     },
     {
       "id": 674,
       "word": "ሰባት",
       "sentence1": "ሰባት ፖም አለኝ።",
-      "sentence2": "ሰባት ዓመቷ ነው።"
+      "sentence2": "ሰባት ዓመቷ ነው።",
+      "pronunciation": "/səbat/"
     },
     {
       "id": 675,
       "word": "አስራ ሰባት",
       "sentence1": "አስራ ሰባት ተወዳጅ ቁጥሬ ነው።",
-      "sentence2": "ባለፈው ሳምንት አስራ ሰባት ሆነች።"
+      "sentence2": "ባለፈው ሳምንት አስራ ሰባት ሆነች።",
+      "pronunciation": "/əsɨra səbat/"
     },
     {
       "id": 676,
       "word": "ሰባ",
       "sentence1": "ሰባ ትልቅ ቁጥር ነው።",
-      "sentence2": "ሰባ ዓመቷ ነው።"
+      "sentence2": "ሰባ ዓመቷ ነው።",
+      "pronunciation": "/səba/"
     },
     {
       "id": 677,
       "word": "ማጋራት",
       "sentence1": "መጫወቻዎችህን ማጋራት ትችላለህ?",
-      "sentence2": "ምግቧን ማጋራት ትወዳለች።"
+      "sentence2": "ምግቧን ማጋራት ትወዳለች።",
+      "pronunciation": "/maɡarat/"
     },
     {
       "id": 678,
       "word": "እሷ",
       "sentence1": "እሷ ምርጥ ጓደኛዬ ናት።",
-      "sentence2": "ትናንት አየኋት።"
+      "sentence2": "ትናንት አየኋት።",
+      "pronunciation": "/ɨswa/"
     },
     {
       "id": 679,
       "word": "በግ",
       "sentence1": "በጎቹ በሜዳው ላይ ናቸው።",
-      "sentence2": "የቤት እንስሳ በግ አላት።"
+      "sentence2": "የቤት እንስሳ በግ አላት።",
+      "pronunciation": "/bəɡ/"
     },
     {
       "id": 680,
       "word": "ሸሚዝ",
       "sentence1": "አዲስ ሸሚዝ ያስፈልገኛል።",
-      "sentence2": "ሰማያዊ ሸሚዝ ገዛች።"
+      "sentence2": "ሰማያዊ ሸሚዝ ገዛች።",
+      "pronunciation": "/ʃəmiz/"
     },
     {
       "id": 681,
       "word": "ጫማ",
       "sentence1": "አዲስ ጥንድ ጫማ ገዛሁ።",
-      "sentence2": "ቀይ ጫማዎቿን ትወዳለች።"
+      "sentence2": "ቀይ ጫማዎቿን ትወዳለች።",
+      "pronunciation": "/t͡ʃʼama/"
     },
     {
       "id": 682,
       "word": "ሱቅ",
       "sentence1": "ወደ ሱቅ መሄድ አለብኝ።",
-      "sentence2": "በልብስ ሱቅ ትሰራለች።"
+      "sentence2": "በልብስ ሱቅ ትሰራለች።",
+      "pronunciation": "/sukʼ/"
     },
     {
       "id": 683,
       "word": "ግዢ",
       "sentence1": "በሳምንቱ መጨረሻ ግዢ ማድረግ ያስደስተኛል።",
-      "sentence2": "ለግሮሰሪ ግዢ ሄደች።"
+      "sentence2": "ለግሮሰሪ ግዢ ሄደች።",
+      "pronunciation": "/ɡɨʒi/"
     },
     {
       "id": 684,
       "word": "አጭር",
       "sentence1": "ይህ አጭር ታሪክ ነው።",
-      "sentence2": "አጭር ልብስ ለበሰች።"
+      "sentence2": "አጭር ልብስ ለበሰች።",
+      "pronunciation": "/ət͡ʃʼɨr/"
     },
     {
       "id": 685,
       "word": "አለብህ",
       "sentence1": "ዶክተር ማየት አለብህ።",
-      "sentence2": "ይቅርታ መጠየቅ አለባት።"
+      "sentence2": "ይቅርታ መጠየቅ አለባት።",
+      "pronunciation": "/ələbɨh/"
     },
     {
       "id": 686,
       "word": "ማሳየት",
       "sentence1": "መንገዱን ልታሳየኝ ትችላለህ?",
-      "sentence2": "አዲሱን ልብሷን አሳየችኝ።"
+      "sentence2": "አዲሱን ልብሷን አሳየችኝ።",
+      "pronunciation": "/masajət/"
     },
     {
       "id": 687,
       "word": "ሻወር",
       "sentence1": "ጠዋት ሻወር መውሰድ እወዳለሁ።",
-      "sentence2": "ረጅም ሻወር ወሰደች።"
+      "sentence2": "ረጅም ሻወር ወሰደች።",
+      "pronunciation": "/ʃawər/"
     },
     {
       "id": 688,
       "word": "ታማሚ",
       "sentence1": "ዛሬ ታምሜ ይሰማኛል።",
-      "sentence2": "ባለፈው ሳምንት ታማለች።"
+      "sentence2": "ባለፈው ሳምንት ታማለች።",
+      "pronunciation": "/tamami/"
     },
     {
       "id": 689,
       "word": "ተመሳሳይ",
       "sentence1": "እነዚህ ሁለት ስዕሎች ተመሳሳይ ናቸው።",
-      "sentence2": "ተመሳሳይ ልብስ አላት።"
+      "sentence2": "ተመሳሳይ ልብስ አላት።",
+      "pronunciation": "/təməsasaj/"
     },
     {
       "id": 690,
       "word": "መዝፈን",
       "sentence1": "በሻወር ውስጥ መዝፈን እወዳለሁ።",
-      "sentence2": "በቆንጆ ሁኔታ ትዘፍናለች።"
+      "sentence2": "በቆንጆ ሁኔታ ትዘፍናለች።",
+      "pronunciation": "/məzɨfən/"
     },
     {
       "id": 691,
       "word": "ዘፋኝ",
       "sentence1": "እህቴ ዘፋኝ ናት።",
-      "sentence2": "ታዋቂ ዘፋኝ መሆን ትፈልጋለች።"
+      "sentence2": "ታዋቂ ዘፋኝ መሆን ትፈልጋለች።",
+      "pronunciation": "/zəfaɲ/"
     },
     {
       "id": 692,
       "word": "እህት",
       "sentence1": "አንድ እህት አለኝ።",
-      "sentence2": "እሷ ታናሽ እህቴ ናት።"
+      "sentence2": "እሷ ታናሽ እህቴ ናት።",
+      "pronunciation": "/ɨhɨt/"
     },
     {
       "id": 693,
       "word": "መቀመጥ",
       "sentence1": "እባክህ ተቀመጥ።",
-      "sentence2": "በመስኮቱ አጠገብ መቀመጥ ትወዳለች።"
+      "sentence2": "በመስኮቱ አጠገብ መቀመጥ ትወዳለች።",
+      "pronunciation": "/məkʼəmətʼ/"
     },
     {
       "id": 694,
       "word": "ሁኔታ",
       "sentence1": "ይህ አስቸጋሪ ሁኔታ ነው።",
-      "sentence2": "ሁኔታውን በጥሩ ሁኔታ ተቋቋመችው።"
+      "sentence2": "ሁኔታውን በጥሩ ሁኔታ ተቋቋመችው።",
+      "pronunciation": "/huneta/"
     },
     {
       "id": 695,
       "word": "ስድስት",
       "sentence1": "ስድስት መጻሕፍት አሉኝ።",
-      "sentence2": "ስድስት ዓመቷ ነው።"
+      "sentence2": "ስድስት ዓመቷ ነው።",
+      "pronunciation": "/sɨdɨsɨt/"
     },
     {
       "id": 696,
       "word": "አስራ ስድስት",
       "sentence1": "አስራ ስድስት ተወዳጅ ቁጥሬ ነው።",
-      "sentence2": "ባለፈው ወር አስራ ስድስት ሆነች።"
+      "sentence2": "ባለፈው ወር አስራ ስድስት ሆነች።",
+      "pronunciation": "/əsɨra sɨdɨsɨt/"
     },
     {
       "id": 697,
       "word": "ስልሳ",
       "sentence1": "ስልሳ ትልቅ ቁጥር ነው።",
-      "sentence2": "ስልሳ ዓመቷ ነው።"
+      "sentence2": "ስልሳ ዓመቷ ነው።",
+      "pronunciation": "/sɨlɨsa/"
     },
     {
       "id": 698,
       "word": "ክህሎት",
       "sentence1": "ልዩ ክህሎት አለው።",
-      "sentence2": "አዲስ ክህሎት እየተማረች ነው።"
+      "sentence2": "አዲስ ክህሎት እየተማረች ነው።",
+      "pronunciation": "/kɨhɨlot/"
     },
     {
       "id": 699,
       "word": "ቀሚስ",
       "sentence1": "ቀሚስሽን እወዳለሁ።",
-      "sentence2": "ረጅም ቀሚስ ለበሰች።"
+      "sentence2": "ረጅም ቀሚስ ለበሰች።",
+      "pronunciation": "/kʼəmis/"
     },
     {
       "id": 700,
       "word": "መተኛት",
       "sentence1": "ተጨማሪ እንቅልፍ ያስፈልገኛል።",
-      "sentence2": "በሌሊት ስምንት ሰዓት ትተኛለች።"
+      "sentence2": "በሌሊት ስምንት ሰዓት ትተኛለች።",
+      "pronunciation": "/mətəɲat/"
     },
     {
       "id": 701,
       "word": "ቀስ ያለ",
       "sentence1": "እባክህ ቀስ ብለህ ንዳ።",
-      "sentence2": "ቀስ ያለች አንባቢ ናት።"
+      "sentence2": "ቀስ ያለች አንባቢ ናት።",
+      "pronunciation": "/kʼəs jalə/"
     },
     {
       "id": 702,
       "word": "ትንሽ",
       "sentence1": "ይህ ትንሽ ሳጥን ነው።",
-      "sentence2": "ትንሽ ውሻ አላት።"
+      "sentence2": "ትንሽ ውሻ አላት።",
+      "pronunciation": "/tɨnɨʃ/"
     },
     {
       "id": 703,
       "word": "እባብ",
       "sentence1": "በአትክልቱ ውስጥ እባብ አየሁ።",
-      "sentence2": "እባቦችን ትፈራለች።"
+      "sentence2": "እባቦችን ትፈራለች።",
+      "pronunciation": "/ɨbab/"
     },
     {
       "id": 704,
       "word": "በረዶ",
       "sentence1": "በረዶ እየወደቀ ነው።",
-      "sentence2": "በበረዶ ውስጥ መጫወት ትወዳለች።"
+      "sentence2": "በበረዶ ውስጥ መጫወት ትወዳለች።",
+      "pronunciation": "/bərədo/"
     },
     {
       "id": 705,
       "word": "ስለዚህ",
       "sentence1": "ደክሜ ነበር፣ ስለዚህ ቀድሜ ተኛሁ።",
-      "sentence2": "ደስተኛ ነበረች፣ ስለዚህ ፈገገች።"
+      "sentence2": "ደስተኛ ነበረች፣ ስለዚህ ፈገገች።",
+      "pronunciation": "/sɨləzih/"
     },
     {
       "id": 706,
       "word": "አንዳንድ",
       "sentence1": "አንዳንድ ሀሳቦች አሉኝ።",
-      "sentence2": "አንዳንድ ፖም ገዛች።"
+      "sentence2": "አንዳንድ ፖም ገዛች።",
+      "pronunciation": "/ənɨdanɨd/"
     },
     {
       "id": 707,
       "word": "አንድ ሰው",
       "sentence1": "አንድ ሰው በሩ ላይ አለ።",
-      "sentence2": "ታዋቂ ሰው ታውቃለች።"
+      "sentence2": "ታዋቂ ሰው ታውቃለች።",
+      "pronunciation": "/ənɨd səw/"
     },
     {
       "id": 708,
       "word": "አንድ ሰው",
       "sentence1": "አንድ ሰው ቦርሳውን ተወ።",
-      "sentence2": "የሚረዳ ሰው እየፈለገች ነው።"
+      "sentence2": "የሚረዳ ሰው እየፈለገች ነው።",
+      "pronunciation": "/ənɨd səw/"
     },
     {
       "id": 709,
       "word": "የሆነ ነገር",
       "sentence1": "የምበላው ነገር ያስፈልገኛል።",
-      "sentence2": "የሆነ ነገር እየደበቀች ነው።"
+      "sentence2": "የሆነ ነገር እየደበቀች ነው።",
+      "pronunciation": "/jəhonə nəɡər/"
     },
     {
       "id": 710,
       "word": "አንዳንድ ጊዜ",
       "sentence1": "አንዳንድ ጊዜ ለእግር ጉዞ እሄዳለሁ።",
-      "sentence2": "አንዳንድ ጊዜ አያቶቿን ትጎበኛለች።"
+      "sentence2": "አንዳንድ ጊዜ አያቶቿን ትጎበኛለች።",
+      "pronunciation": "/ənɨdanɨd ɡize/"
     },
     {
       "id": 711,
       "word": "ልጅ",
       "sentence1": "ልጄ ውጪ እየተጫወተ ነው።",
-      "sentence2": "ልጅ እና ሴት ልጅ አላት።"
+      "sentence2": "ልጅ እና ሴት ልጅ አላት።",
+      "pronunciation": "/lɨd͡ʒ/"
     },
     {
       "id": 712,
       "word": "ዘፈን",
       "sentence1": "ይህን ዘፈን እወዳለሁ።",
-      "sentence2": "ቆንጆ ዘፈን ዘፈነች።"
+      "sentence2": "ቆንጆ ዘፈን ዘፈነች።",
+      "pronunciation": "/zəfən/"
     },
     {
       "id": 713,
       "word": "በቅርቡ",
       "sentence1": "በቅርቡ እደውልልሃለሁ።",
-      "sentence2": "በቅርቡ ትደርሳለች።"
+      "sentence2": "በቅርቡ ትደርሳለች።",
+      "pronunciation": "/bəkʼɨrɨbu/"
     },
     {
       "id": 714,
       "word": "ይቅርታ",
       "sentence1": "ለስህተቱ ይቅርታ።",
-      "sentence2": "ዜናውን ስትሰማ አዘነች።"
+      "sentence2": "ዜናውን ስትሰማ አዘነች።",
+      "pronunciation": "/jɨkʼɨrɨta/"
     },
     {
       "id": 715,
       "word": "ድምጽ",
       "sentence1": "ያ ድምጽ ምን ነበር?",
-      "sentence2": "ቆንጆ የዘፈን ድምጽ አላት።"
+      "sentence2": "ቆንጆ የዘፈን ድምጽ አላት።",
+      "pronunciation": "/dɨmɨt͡sʼ/"
     },
     {
       "id": 716,
       "word": "ሾርባ",
       "sentence1": "ሾርባ ሰራሁ።",
-      "sentence2": "የቲማቲም ሾርባ ትወዳለች።"
+      "sentence2": "የቲማቲም ሾርባ ትወዳለች።",
+      "pronunciation": "/ʃorɨba/"
     },
     {
       "id": 717,
       "word": "ደቡብ",
       "sentence1": "በደቡብ እንኖራለን።",
-      "sentence2": "ለክረምቱ ወደ ደቡብ ተጓዘች።"
+      "sentence2": "ለክረምቱ ወደ ደቡብ ተጓዘች።",
+      "pronunciation": "/dəbub/"
     },
     {
       "id": 718,
       "word": "ቦታ",
       "sentence1": "እዚህ ብዙ ቦታ አለ።",
-      "sentence2": "የውጪ ህዋ ማሰስ ትፈልጋለች።"
+      "sentence2": "የውጪ ህዋ ማሰስ ትፈልጋለች።",
+      "pronunciation": "/bota/"
     },
     {
       "id": 719,
       "word": "መናገር",
       "sentence1": "እንግሊዝኛ መናገር እችላለሁ።",
-      "sentence2": "ሶስት ቋንቋዎች ትናገራለች።"
+      "sentence2": "ሶስት ቋንቋዎች ትናገራለች።",
+      "pronunciation": "/mənaɡər/"
     },
     {
       "id": 720,
       "word": "ልዩ",
       "sentence1": "ይህ ልዩ ቀን ነው።",
-      "sentence2": "ልዩ ስጦታ ተቀበለች።"
+      "sentence2": "ልዩ ስጦታ ተቀበለች።",
+      "pronunciation": "/lɨju/"
     },
     {
       "id": 721,
       "word": "መፃፍ",
       "sentence1": "ስምህን መፃፍ ትችላለህ?",
-      "sentence2": "ቃሉን በትክክል ፃፈች።"
+      "sentence2": "ቃሉን በትክክል ፃፈች።",
+      "pronunciation": "/mət͡sʼaf/"
     },
     {
       "id": 722,
       "word": "ፊደል ማጣጣፍ",
       "sentence1": "ፊደል ማጣጣፍ በጽሑፍ አስፈላጊ ነው።",
-      "sentence2": "የፊደል ማጣጣፍ ውድድር አሸነፈች።"
+      "sentence2": "የፊደል ማጣጣፍ ውድድር አሸነፈች።",
+      "pronunciation": "/fidəl matʼatʼaf/"
     },
     {
       "id": 723,
       "word": "ማሳለፍ",
       "sentence1": "ከጓደኞች ጋር ጊዜ ማሳለፍ እወዳለሁ።",
-      "sentence2": "ሁሉንም ገንዘቧን አሳለፈች።"
+      "sentence2": "ሁሉንም ገንዘቧን አሳለፈች።",
+      "pronunciation": "/masaləf/"
     },
     {
       "id": 724,
       "word": "ስፖርት",
       "sentence1": "እግር ኳስ ተወዳጅ ስፖርቴ ነው።",
-      "sentence2": "ብዙ ስፖርቶችን ትጫወታለች።"
+      "sentence2": "ብዙ ስፖርቶችን ትጫወታለች።",
+      "pronunciation": "/sɨporɨt/"
     },
     {
       "id": 725,
       "word": "ጸደይ",
       "sentence1": "ጸደይ ተወዳጅ ወቅቴ ነው።",
-      "sentence2": "በጸደይ አበቦች ያብባሉ።"
+      "sentence2": "በጸደይ አበቦች ያብባሉ።",
+      "pronunciation": "/t͡sʼədəj/"
     },
     {
       "id": 726,
       "word": "መቆም",
       "sentence1": "እባክህ ቁም።",
-      "sentence2": "በመስኮቱ አጠገብ ቆመች።"
+      "sentence2": "በመስኮቱ አጠገብ ቆመች።",
+      "pronunciation": "/məkʼom/"
     },
     {
       "id": 727,
       "word": "ኮከብ",
       "sentence1": "ኮከቡ በብሩህ እያበራ ነው።",
-      "sentence2": "ኮከብ መሆን ትፈልጋለች።"
+      "sentence2": "ኮከብ መሆን ትፈልጋለች።",
+      "pronunciation": "/kokəb/"
     },
     {
       "id": 728,
       "word": "መጀመር",
       "sentence1": "የቤት ስራዬን እጀምራለሁ።",
-      "sentence2": "አዲስ ፕሮጀክት ጀመረች።"
+      "sentence2": "አዲስ ፕሮጀክት ጀመረች።",
+      "pronunciation": "/məd͡ʒəmər/"
     },
     {
       "id": 729,
       "word": "መግለጫ",
       "sentence1": "ይህ ግልጽ መግለጫ ነው።",
-      "sentence2": "ስለ ጉዳዩ መግለጫ ሰጠች።"
+      "sentence2": "ስለ ጉዳዩ መግለጫ ሰጠች።",
+      "pronunciation": "/məɡɨlət͡ʃʼa/"
     },
     {
       "id": 730,
       "word": "ጣቢያ",
       "sentence1": "ባቡሩ ወደ ጣቢያው ይደርሳል።",
-      "sentence2": "በጣቢያው ጠበቀች።"
+      "sentence2": "በጣቢያው ጠበቀች።",
+      "pronunciation": "/tʼabija/"
     },
     {
       "id": 731,
       "word": "መቆየት",
       "sentence1": "እዚህ እቆያለሁ።",
-      "sentence2": "በሆቴል ቆየች።"
+      "sentence2": "በሆቴል ቆየች።",
+      "pronunciation": "/məkʼojət/"
     },
     {
       "id": 732,
       "word": "አሁንም",
       "sentence1": "አሁንም እየጠበቅሁ ነው።",
-      "sentence2": "አሁንም እየሰራችበት ነው።"
+      "sentence2": "አሁንም እየሰራችበት ነው።",
+      "pronunciation": "/əhunɨm/"
     },
     {
       "id": 733,
       "word": "ማቆም",
       "sentence1": "እባክህ ማውራት አቁም።",
-      "sentence2": "መኪናውን አቆመች።"
+      "sentence2": "መኪናውን አቆመች።",
+      "pronunciation": "/makʼom/"
     },
     {
       "id": 734,
       "word": "ታሪክ",
       "sentence1": "ይህን ታሪክ እወዳለሁ።",
-      "sentence2": "አስቂኝ ታሪክ ተረከች።"
+      "sentence2": "አስቂኝ ታሪክ ተረከች።",
+      "pronunciation": "/tarik/"
     },
     {
       "id": 735,
       "word": "ጎዳና",
       "sentence1": "ሱቁ በጎዳናው ላይ ነው።",
-      "sentence2": "በጸጥታ ጎዳና ላይ ትኖራለች።"
+      "sentence2": "በጸጥታ ጎዳና ላይ ትኖራለች።",
+      "pronunciation": "/ɡodana/"
     },
     {
       "id": 736,
       "word": "ጠንካራ",
       "sentence1": "እሱ ጠንካራ ሰው ነው።",
-      "sentence2": "ጠንካራ አስተያየት አላት።"
+      "sentence2": "ጠንካራ አስተያየት አላት።",
+      "pronunciation": "/tʼənɨkara/"
     },
     {
       "id": 737,
       "word": "ተማሪ",
       "sentence1": "ተማሪው እያጠና ነው።",
-      "sentence2": "ጥሩ ተማሪ ናት።"
+      "sentence2": "ጥሩ ተማሪ ናት።",
+      "pronunciation": "/təmari/"
     },
     {
       "id": 738,
       "word": "ማጥናት",
       "sentence1": "ለፈተና ማጥናት አለብኝ።",
-      "sentence2": "በየምሽቱ ታጠናለች።"
+      "sentence2": "በየምሽቱ ታጠናለች።",
+      "pronunciation": "/matʼɨnat/"
     },
     {
       "id": 739,
       "word": "ዘይቤ",
       "sentence1": "ዘይቤህን እወዳለሁ።",
-      "sentence2": "ልዩ ዘይቤ አላት።"
+      "sentence2": "ልዩ ዘይቤ አላት።",
+      "pronunciation": "/zəjɨbe/"
     },
     {
       "id": 740,
       "word": "ርዕሰ ጉዳይ",
       "sentence1": "የትምህርቱ ርዕሰ ጉዳይ ምንድነው?",
-      "sentence2": "በርዕሰ ጉዳዩ ፍላጎት አላት።"
+      "sentence2": "በርዕሰ ጉዳዩ ፍላጎት አላት።",
+      "pronunciation": "/rɨɨsə ɡudaj/"
     },
     {
       "id": 741,
       "word": "ስኬት",
       "sentence1": "ስኬት ጠንካራ ስራ ይፈልጋል።",
-      "sentence2": "ታላቅ ስኬት አስመዘገበች።"
+      "sentence2": "ታላቅ ስኬት አስመዘገበች።",
+      "pronunciation": "/sɨket/"
     },
     {
       "id": 742,
       "word": "ስኳር",
       "sentence1": "ቡናዬን ከስኳር ጋር እጠጣለሁ።",
-      "sentence2": "በሻይዋ ውስጥ ስኳር ትወዳለች።"
+      "sentence2": "በሻይዋ ውስጥ ስኳር ትወዳለች።",
+      "pronunciation": "/sɨkwar/"
     },
     {
       "id": 743,
       "word": "በጋ",
       "sentence1": "በዚህ አካባቢ በጋ ሞቃት ነው።",
-      "sentence2": "የበጋ እረፍትን ትወዳለች።"
+      "sentence2": "የበጋ እረፍትን ትወዳለች።",
+      "pronunciation": "/bəɡa/"
     },
     {
       "id": 744,
       "word": "ፀሐይ",
       "sentence1": "ፀሐይ በብሩህ እያበራች ነው።",
-      "sentence2": "በፀሐይ ውስጥ ተቀመጠች።"
+      "sentence2": "በፀሐይ ውስጥ ተቀመጠች።",
+      "pronunciation": "/t͡sʼəhəj/"
     },
     {
       "id": 745,
       "word": "እሁድ",
       "sentence1": "እሁድ የእረፍት ቀን ነው።",
-      "sentence2": "እሁድ ወደ ቤተ ክርስቲያን ትሄዳለች።"
+      "sentence2": "እሁድ ወደ ቤተ ክርስቲያን ትሄዳለች።",
+      "pronunciation": "/ɨhud/"
     },
     {
       "id": 746,
       "word": "ሱፐርማርኬት",
       "sentence1": "ወደ ሱፐርማርኬት መሄድ አለብኝ።",
-      "sentence2": "በሱፐርማርኬት ግሮሰሪ ገዛች።"
+      "sentence2": "በሱፐርማርኬት ግሮሰሪ ገዛች።",
+      "pronunciation": "/supərɨmarɨket/"
     },
     {
       "id": 747,
       "word": "እርግጠኛ",
       "sentence1": "ስለዚያ እርግጠኛ ነህ?",
-      "sentence2": "በውሳኔዋ እርግጠኛ ናት።"
+      "sentence2": "በውሳኔዋ እርግጠኛ ናት።",
+      "pronunciation": "/ɨrɨɡɨtʼəɲa/"
     },
     {
       "id": 748,
       "word": "ሹራብ",
       "sentence1": "አዲስ ሹራብ ገዛሁ።",
-      "sentence2": "ሞቅ ያለ ሹራብ ለበሰች።"
+      "sentence2": "ሞቅ ያለ ሹራብ ለበሰች።",
+      "pronunciation": "/ʃurab/"
     },
     {
       "id": 749,
       "word": "መዋኘት",
       "sentence1": "በገንዳው ውስጥ መዋኘት እወዳለሁ።",
-      "sentence2": "በየጠዋቱ ትዋኛለች።"
+      "sentence2": "በየጠዋቱ ትዋኛለች።",
+      "pronunciation": "/məwaɲət/"
     },
     {
       "id": 750,
       "word": "መዋኘት",
       "sentence1": "መዋኘት ጥሩ የአካል ብቃት እንቅስቃሴ ነው።",
-      "sentence2": "በውቅያኖስ ውስጥ መዋኘት ታስደስታታለች።"
+      "sentence2": "በውቅያኖስ ውስጥ መዋኘት ታስደስታታለች።",
+      "pronunciation": "/məwaɲət/"
     },
     {
       "id": 751,
       "word": "ጠረጴዛ",
       "sentence1": "ጠረጴዛው ከእንጨት የተሰራ ነው።",
-      "sentence2": "ለእራት ጠረጴዛውን አዘጋጀች።"
+      "sentence2": "ለእራት ጠረጴዛውን አዘጋጀች።",
+      "pronunciation": "/tʼərəpʼeza/"
     },
     {
       "id": 752,
       "word": "መውሰድ",
       "sentence1": "አውቶቡስ እወስዳለሁ።",
-      "sentence2": "የፀሐይ መጥለቅ ፎቶ አነሳች።"
+      "sentence2": "የፀሐይ መጥለቅ ፎቶ አነሳች።",
+      "pronunciation": "/məwɨsəd/"
     },
     {
       "id": 753,
       "word": "ማውራት",
       "sentence1": "ማውራት አለብን።",
-      "sentence2": "ስለ እቅዶቿ ተናገረች።"
+      "sentence2": "ስለ እቅዶቿ ተናገረች።",
+      "pronunciation": "/mawɨrat/"
     },
     {
       "id": 754,
       "word": "ረጅም",
       "sentence1": "እሱ ረጅም እና አትሌቲክ ነው።",
-      "sentence2": "ረጅም ሕንፃዎችን ትመርጣለች።"
+      "sentence2": "ረጅም ሕንፃዎችን ትመርጣለች።",
+      "pronunciation": "/rəd͡ʒɨm/"
     },
     {
       "id": 755,
       "word": "ታክሲ",
       "sentence1": "ወደ አየር ማረፊያ ታክሲ ያስፈልገኛል።",
-      "sentence2": "ታክሲ ወደ ቤት ወሰደች።"
+      "sentence2": "ታክሲ ወደ ቤት ወሰደች።",
+      "pronunciation": "/takɨsi/"
     },
     {
       "id": 756,
       "word": "ሻይ",
       "sentence1": "ሻይ መጠጣት እወዳለሁ።",
-      "sentence2": "አረንጓዴ ሻይ ትመርጣለች።"
+      "sentence2": "አረንጓዴ ሻይ ትመርጣለች።",
+      "pronunciation": "/ʃaj/"
     },
     {
       "id": 757,
       "word": "ማስተማር",
       "sentence1": "እንግሊዝኛ ማስተማር እፈልጋለሁ።",
-      "sentence2": "በትምህርት ቤት ሂሳብ ታስተምራለች።"
+      "sentence2": "በትምህርት ቤት ሂሳብ ታስተምራለች።",
+      "pronunciation": "/masɨtəmar/"
     },
     {
       "id": 758,
       "word": "መምህር",
       "sentence1": "መምህሩ በጣም አጋዥ ነው።",
-      "sentence2": "እሷ ተወዳጅ መምህሬ ናት።"
+      "sentence2": "እሷ ተወዳጅ መምህሬ ናት።",
+      "pronunciation": "/məmɨhɨr/"
     },
     {
       "id": 759,
       "word": "ቡድን",
       "sentence1": "ቡድናችን ግጥሚያውን አሸነፈ።",
-      "sentence2": "ዋጋ ያላት የቡድን አባል ናት።"
+      "sentence2": "ዋጋ ያላት የቡድን አባል ናት።",
+      "pronunciation": "/budɨn/"
     },
     {
       "id": 760,
       "word": "ወጣት",
       "sentence1": "ወጣቶች ብዙ ፈተናዎች ያጋጥሟቸዋል።",
-      "sentence2": "እሷ ተለምዶ ወጣት ናት።"
+      "sentence2": "እሷ ተለምዶ ወጣት ናት።",
+      "pronunciation": "/wətʼat/"
     },
     {
       "id": 761,
       "word": "ስልክ",
       "sentence1": "በስልክ መደወል አለብኝ።",
-      "sentence2": "ስልኩን መለሰች።"
+      "sentence2": "ስልኩን መለሰች።",
+      "pronunciation": "/sɨlɨk/"
     },
     {
       "id": 762,
       "word": "ቴሌቪዥን",
       "sentence1": "ቴሌቪዥኑ በጠረጴዛው ላይ ነው።",
-      "sentence2": "በየምሽቱ ቴሌቪዥን ታያለች።"
+      "sentence2": "በየምሽቱ ቴሌቪዥን ታያለች።",
+      "pronunciation": "/televiʒɨn/"
     },
     {
       "id": 763,
       "word": "መንገር",
       "sentence1": "እባክህ ስምህን ንገረኝ።",
-      "sentence2": "ምስጢር ነገረችኝ።"
+      "sentence2": "ምስጢር ነገረችኝ።",
+      "pronunciation": "/mənɨɡər/"
     },
     {
       "id": 764,
       "word": "አስር",
       "sentence1": "አስር ፖም አለኝ።",
-      "sentence2": "አስር ዓመቷ ነው።"
+      "sentence2": "አስር ዓመቷ ነው።",
+      "pronunciation": "/əsɨr/"
     },
     {
       "id": 765,
       "word": "ቴኒስ",
       "sentence1": "ቴኒስ መጫወት እወዳለሁ።",
-      "sentence2": "በሳምንቱ መጨረሻ ቴኒስ ትጫወታለች።"
+      "sentence2": "በሳምንቱ መጨረሻ ቴኒስ ትጫወታለች።",
+      "pronunciation": "/tenis/"
     },
     {
       "id": 766,
       "word": "አስከፊ",
       "sentence1": "ፊልሙ አስከፊ ነበር።",
-      "sentence2": "አስከፊ ተሞክሮ ነበራት።"
+      "sentence2": "አስከፊ ተሞክሮ ነበራት።",
+      "pronunciation": "/əsɨkəfi/"
     },
     {
       "id": 767,
       "word": "ፈተና",
       "sentence1": "ነገ ፈተና አለኝ።",
-      "sentence2": "ፈተናውን አለፈች።"
+      "sentence2": "ፈተናውን አለፈች።",
+      "pronunciation": "/fətəna/"
     },
     {
       "id": 768,
       "word": "ጽሑፍ",
       "sentence1": "እባክህ ጽሑፉን አንብብ።",
-      "sentence2": "የጽሑፍ መልእክት ጻፈች።"
+      "sentence2": "የጽሑፍ መልእክት ጻፈች።",
+      "pronunciation": "/t͡sʼɨhuf/"
     },
     {
       "id": 769,
       "word": "ከ",
       "sentence1": "ከወንድሟ ረጅም ናት።",
-      "sentence2": "ይህ መጽሐፍ ከዚያ የተሻለ ነው።"
+      "sentence2": "ይህ መጽሐፍ ከዚያ የተሻለ ነው።",
+      "pronunciation": "/kə/"
     },
     {
       "id": 770,
       "word": "ማመስገን",
       "sentence1": "አመሰግንሃለሁ።",
-      "sentence2": "ለእርዳታዬ አመሰገነችኝ።"
+      "sentence2": "ለእርዳታዬ አመሰገነችኝ።",
+      "pronunciation": "/maməsɨɡən/"
     },
     {
       "id": 771,
       "word": "እናመሰግናለን",
       "sentence1": "ለእርዳታህ እናመሰግናለን።",
-      "sentence2": "እናመሰግናለን ብላ ሄደች።"
+      "sentence2": "እናመሰግናለን ብላ ሄደች።",
+      "pronunciation": "/ɨnaməsəɡɨnalən/"
     },
     {
       "id": 772,
       "word": "ያ",
       "sentence1": "ያ የኔ መጽሐፍ ነው።",
-      "sentence2": "እንደምትመጣ ተናገረች።"
+      "sentence2": "እንደምትመጣ ተናገረች።",
+      "pronunciation": "/ja/"
     },
     {
       "id": 773,
       "word": "ው/ዋ",
       "sentence1": "ድመቷ በጣራው ላይ ነች።",
-      "sentence2": "ሰማያዊ ልብሱን ትወዳለች።"
+      "sentence2": "ሰማያዊ ልብሱን ትወዳለች።",
+      "pronunciation": "/w/; /wa/"
     },
     {
       "id": 774,
       "word": "ቲያትር",
       "sentence1": "ወደ ቲያትር እየሄድን ነው።",
-      "sentence2": "በቲያትር ቤት ድራማዎችን ማየት ትወዳለች።"
+      "sentence2": "በቲያትር ቤት ድራማዎችን ማየት ትወዳለች።",
+      "pronunciation": "/tijatɨr/"
     },
     {
       "id": 775,
       "word": "የእነሱ",
       "sentence1": "ይህ የእነሱ ቤት ነው።",
-      "sentence2": "ፎቶአቸውን አነሳች።"
+      "sentence2": "ፎቶአቸውን አነሳች።",
+      "pronunciation": "/jəɨnəsu/"
     },
     {
       "id": 776,
       "word": "እነሱን",
       "sentence1": "በፓርኩ ውስጥ አየኋቸው።",
-      "sentence2": "ለድግሱ ጋበዘቻቸው።"
+      "sentence2": "ለድግሱ ጋበዘቻቸው።",
+      "pronunciation": "/ɨnəsun/"
     },
     {
       "id": 777,
       "word": "ከዚያ",
       "sentence1": "ከዚያ መሄድ እንችላለን።",
-      "sentence2": "ያን ጊዜ ደክማ ነበር።"
+      "sentence2": "ያን ጊዜ ደክማ ነበር።",
+      "pronunciation": "/kəzija/"
     },
     {
       "id": 778,
       "word": "እዚያ",
       "sentence1": "መጽሐፉ እዚያ ነው።",
-      "sentence2": "እዚያ ትኖራለች።"
+      "sentence2": "እዚያ ትኖራለች።",
+      "pronunciation": "/ɨzija/"
     },
     {
       "id": 779,
       "word": "እነሱ",
       "sentence1": "እነሱ ጓደኞቼ ናቸው።",
-      "sentence2": "እንደሚመጡ ተናገረች።"
+      "sentence2": "እንደሚመጡ ተናገረች።",
+      "pronunciation": "/ɨnəsu/"
     },
     {
       "id": 780,
       "word": "ነገር",
       "sentence1": "ያ ነገር ምንድነው?",
-      "sentence2": "ተወዳጅ ነገሯን አጣች።"
+      "sentence2": "ተወዳጅ ነገሯን አጣች።",
+      "pronunciation": "/nəɡər/"
     },
     {
       "id": 781,
       "word": "ማሰብ",
       "sentence1": "ስለዚያ ማሰብ አለብኝ።",
-      "sentence2": "ስለ አንተ በጣም ታስባለች።"
+      "sentence2": "ስለ አንተ በጣም ታስባለች።",
+      "pronunciation": "/masəb/"
     },
     {
       "id": 782,
       "word": "ሶስተኛ",
       "sentence1": "ይህ ሶስተኛ ሙከራዬ ነው።",
-      "sentence2": "በሶስተኛ ደረጃ ጨረሰች።"
+      "sentence2": "በሶስተኛ ደረጃ ጨረሰች።",
+      "pronunciation": "/sosɨtəɲa/"
     },
     {
       "id": 783,
       "word": "ጥማት",
       "sentence1": "ጥም ይዞኛል።",
-      "sentence2": "ከአካል ብቃት እንቅስቃሴ በኋላ ሁልጊዜ ጥም ይሰማታል።"
+      "sentence2": "ከአካል ብቃት እንቅስቃሴ በኋላ ሁልጊዜ ጥም ይሰማታል።",
+      "pronunciation": "/tʼɨmat/"
     },
     {
       "id": 784,
       "word": "አስራ ሶስት",
       "sentence1": "አስራ ሶስት ፖም አለኝ።",
-      "sentence2": "አስራ ሶስት ዓመቷ ነው።"
+      "sentence2": "አስራ ሶስት ዓመቷ ነው።",
+      "pronunciation": "/əsɨra sosɨt/"
     },
     {
       "id": 785,
       "word": "ሰላሳ",
       "sentence1": "በክፍሉ ውስጥ ሰላሳ ተማሪዎች አሉ።",
-      "sentence2": "በሚቀጥለው ዓመት ሰላሳ ትሆናለች።"
+      "sentence2": "በሚቀጥለው ዓመት ሰላሳ ትሆናለች።",
+      "pronunciation": "/səlasa/"
     },
     {
       "id": 786,
       "word": "ይህ",
       "sentence1": "ይህ የኔ መጽሐፍ ነው።",
-      "sentence2": "ይህ ተወዳጇ እንደሆነ ተናገረች።"
+      "sentence2": "ይህ ተወዳጇ እንደሆነ ተናገረች።",
+      "pronunciation": "/jɨh/"
     },
     {
       "id": 787,
       "word": "ሺ",
       "sentence1": "ሺ ሀሳቦች አሉኝ።",
-      "sentence2": "ሺ ዶላር አሸነፈች።"
+      "sentence2": "ሺ ዶላር አሸነፈች።",
+      "pronunciation": "/ʃi/"
     },
     {
       "id": 788,
       "word": "ሶስት",
       "sentence1": "ሶስት ወንድሞች አሉኝ።",
-      "sentence2": "ሶስት ዓመቷ ነው።"
+      "sentence2": "ሶስት ዓመቷ ነው።",
+      "pronunciation": "/sosɨt/"
     },
     {
       "id": 789,
       "word": "በኩል",
       "sentence1": "በፓርኩ ውስጥ ሄድን።",
-      "sentence2": "በመስኮቱ ውስጥ ተመለከተች።"
+      "sentence2": "በመስኮቱ ውስጥ ተመለከተች።",
+      "pronunciation": "/bəkul/"
     },
     {
       "id": 790,
       "word": "ሐሙስ",
       "sentence1": "ሐሙስ ተወዳጅ ቀኔ ነው።",
-      "sentence2": "ሐሙስ ስብሰባ አላት።"
+      "sentence2": "ሐሙስ ስብሰባ አላት።",
+      "pronunciation": "/həmus/"
     },
     {
       "id": 791,
       "word": "ቲኬት",
       "sentence1": "ቲኬት መግዛት አለብኝ።",
-      "sentence2": "በመግቢያው ላይ ቲኬቷን አሳየች።"
+      "sentence2": "በመግቢያው ላይ ቲኬቷን አሳየች።",
+      "pronunciation": "/tiket/"
     },
     {
       "id": 792,
       "word": "ጊዜ",
       "sentence1": "ስንት ሰዓት ነው?",
-      "sentence2": "ብዙ ጊዜ በማንበብ ታሳልፋለች።"
+      "sentence2": "ብዙ ጊዜ በማንበብ ታሳልፋለች።",
+      "pronunciation": "/ɡize/"
     },
     {
       "id": 793,
       "word": "ደክሞ",
       "sentence1": "ደክሞኛል።",
-      "sentence2": "ከረጅም ጉዞ በኋላ ደክማ ተሰማት።"
+      "sentence2": "ከረጅም ጉዞ በኋላ ደክማ ተሰማት።",
+      "pronunciation": "/dəkɨmo/"
     },
     {
       "id": 794,
       "word": "ርዕስ",
       "sentence1": "የመጽሐፉ ርዕስ ምንድነው?",
-      "sentence2": "ለታሪኳ ማራኪ ርዕስ ሰጠች።"
+      "sentence2": "ለታሪኳ ማራኪ ርዕስ ሰጠች።",
+      "pronunciation": "/rɨɨs/"
     },
     {
       "id": 795,
       "word": "ወደ",
       "sentence1": "ወደ ሱቅ እየሄድኩ ነው።",
-      "sentence2": "መጽሐፉን ለጓደኛዋ ሰጠች።"
+      "sentence2": "መጽሐፉን ለጓደኛዋ ሰጠች።",
+      "pronunciation": "/wədə/"
     },
     {
       "id": 796,
       "word": "ዛሬ",
       "sentence1": "ዛሬ ቆንጆ ቀን ነው።",
-      "sentence2": "ዛሬ አያቷን ትጎበኛለች።"
+      "sentence2": "ዛሬ አያቷን ትጎበኛለች።",
+      "pronunciation": "/zare/"
     },
     {
       "id": 797,
       "word": "አብሮ",
       "sentence1": "አብረን እንሰራለን።",
-      "sentence2": "ከጓደኞቿ ጋር አብሮ መጫወት ትወዳለች።"
+      "sentence2": "ከጓደኞቿ ጋር አብሮ መጫወት ትወዳለች።",
+      "pronunciation": "/əbɨro/"
     },
     {
       "id": 798,
       "word": "መጸዳጃ ቤት",
       "sentence1": "መጸዳጃ ቤቱ የት ነው?",
-      "sentence2": "ከፊልሙ በፊት ወደ መጸዳጃ ቤት ሄደች።"
+      "sentence2": "ከፊልሙ በፊት ወደ መጸዳጃ ቤት ሄደች።",
+      "pronunciation": "/mət͡sʼədad͡ʒa bet/"
     },
     {
       "id": 799,
       "word": "ቲማቲም",
       "sentence1": "ለሰላጣው ቲማቲም ያስፈልገኛል።",
-      "sentence2": "ከገበያ ቲማቲም ገዛች።"
+      "sentence2": "ከገበያ ቲማቲም ገዛች።",
+      "pronunciation": "/timatim/"
     },
     {
       "id": 800,
       "word": "ነገ",
       "sentence1": "ነገ እደውልልሃለሁ።",
-      "sentence2": "ነገ ስብሰባ አላት።"
+      "sentence2": "ነገ ስብሰባ አላት።",
+      "pronunciation": "/nəɡə/"
     },
     {
       "id": 801,
       "word": "ዛሬ ማታ",
       "sentence1": "ዛሬ ማታ እቅድ አለኝ።",
-      "sentence2": "ዛሬ ማታ ቤት ትቆያለች።"
+      "sentence2": "ዛሬ ማታ ቤት ትቆያለች።",
+      "pronunciation": "/zare mata/"
     },
     {
       "id": 802,
       "word": "ደግሞ",
       "sentence1": "እኔም መሄድ እፈልጋለሁ።",
-      "sentence2": "እሷም እየመጣች ነው።"
+      "sentence2": "እሷም እየመጣች ነው።",
+      "pronunciation": "/dəɡɨmo/"
     },
     {
       "id": 803,
       "word": "ጥርስ",
       "sentence1": "ጥርሴ ያመኛል።",
-      "sentence2": "በጥርሷ ላይ ቀዳዳ አለ።"
+      "sentence2": "በጥርሷ ላይ ቀዳዳ አለ።",
+      "pronunciation": "/tʼɨrɨs/"
     },
     {
       "id": 804,
       "word": "ርዕሰ ጉዳይ",
       "sentence1": "የውይይቱ ርዕሰ ጉዳይ ምንድነው?",
-      "sentence2": "አዲስ ርዕሰ ጉዳይ አስተዋወቀች።"
+      "sentence2": "አዲስ ርዕሰ ጉዳይ አስተዋወቀች።",
+      "pronunciation": "/rɨɨsə ɡudaj/"
     },
     {
       "id": 805,
       "word": "ቱሪስት",
       "sentence1": "ቱሪስቱ ብዙ ፎቶዎች አነሳ።",
-      "sentence2": "በከተማው ውስጥ ቱሪስት ናት።"
+      "sentence2": "በከተማው ውስጥ ቱሪስት ናት።",
+      "pronunciation": "/turisɨt/"
     },
     {
       "id": 806,
       "word": "ከተማ",
       "sentence1": "በትንሽ ከተማ እኖራለሁ።",
-      "sentence2": "በዚህ ከተማ አደገች።"
+      "sentence2": "በዚህ ከተማ አደገች።",
+      "pronunciation": "/kətəma/"
     },
     {
       "id": 807,
       "word": "ትራፊክ",
       "sentence1": "ዛሬ ትራፊኩ ከባድ ነው።",
-      "sentence2": "በትራፊክ ውስጥ ተጣብቃለች።"
+      "sentence2": "በትራፊክ ውስጥ ተጣብቃለች።",
+      "pronunciation": "/tɨrafik/"
     },
     {
       "id": 808,
       "word": "ባቡር",
       "sentence1": "ወደ ስራ ባቡር እወስዳለሁ።",
-      "sentence2": "ባቡሯን አመለጣት።"
+      "sentence2": "ባቡሯን አመለጣት።",
+      "pronunciation": "/babur/"
     },
     {
       "id": 809,
       "word": "መጓዝ",
       "sentence1": "መጓዝ እወዳለሁ።",
-      "sentence2": "የጉዞ መርሃ ግብር እያቀደች ነው።"
+      "sentence2": "የጉዞ መርሃ ግብር እያቀደች ነው።",
+      "pronunciation": "/məɡwaz/"
     },
     {
       "id": 810,
       "word": "ዛፍ",
       "sentence1": "ዛፉ በጣም ረጅም ነው።",
-      "sentence2": "ዛፉን ወጣች።"
+      "sentence2": "ዛፉን ወጣች።",
+      "pronunciation": "/zaf/"
     },
     {
       "id": 811,
       "word": "ጉዞ",
       "sentence1": "ወደ ጉዞ እየሄድኩ ነው።",
-      "sentence2": "ጉዞውን ወደደችው።"
+      "sentence2": "ጉዞውን ወደደችው።",
+      "pronunciation": "/ɡuzo/"
     },
     {
       "id": 812,
       "word": "ሱሪ",
       "sentence1": "አዲስ ሱሪ ገዛሁ።",
-      "sentence2": "ሰማያዊ ሱሪ ለብሳለች።"
+      "sentence2": "ሰማያዊ ሱሪ ለብሳለች።",
+      "pronunciation": "/suri/"
     },
     {
       "id": 813,
       "word": "እውነት",
       "sentence1": "ያ መግለጫ እውነት ነው።",
-      "sentence2": "ሁልጊዜ እውነት ትናገራለች።"
+      "sentence2": "ሁልጊዜ እውነት ትናገራለች።",
+      "pronunciation": "/ɨwɨnət/"
     },
     {
       "id": 814,
       "word": "መሞከር",
       "sentence1": "ምርጥ እሞክራለሁ።",
-      "sentence2": "ችግሩን ለመፍታት ሞከረች።"
+      "sentence2": "ችግሩን ለመፍታት ሞከረች።",
+      "pronunciation": "/məmokər/"
     },
     {
       "id": 815,
       "word": "ቲ-ሸርት",
       "sentence1": "አዲስ ቲ-ሸርት ያስፈልገኛል።",
-      "sentence2": "ከሱቅ ቲ-ሸርት ገዛች።"
+      "sentence2": "ከሱቅ ቲ-ሸርት ገዛች።",
+      "pronunciation": "/ti-ʃərɨt/"
     },
     {
       "id": 816,
       "word": "ማክሰኞ",
       "sentence1": "ማክሰኞ ተወዳጅ ቀኔ ነው።",
-      "sentence2": "ማክሰኞ ስብሰባ አላት።"
+      "sentence2": "ማክሰኞ ስብሰባ አላት።",
+      "pronunciation": "/makɨsəɲo/"
     },
     {
       "id": 817,
       "word": "ማዞር",
       "sentence1": "እባክህ መብራቶቹን አጥፋ።",
-      "sentence2": "ገጹን አዞረች።"
+      "sentence2": "ገጹን አዞረች።",
+      "pronunciation": "/mazor/"
     },
     {
       "id": 818,
       "word": "ቴሌቪዥን",
       "sentence1": "ማታ ቴሌቪዥን አያለሁ።",
-      "sentence2": "ቴሌቪዥኑን አበራች።"
+      "sentence2": "ቴሌቪዥኑን አበራች።",
+      "pronunciation": "/televiʒɨn/"
     },
     {
       "id": 819,
       "word": "አስራ ሁለት",
       "sentence1": "በዓመት ውስጥ አስራ ሁለት ወራት አሉ።",
-      "sentence2": "አስራ ሁለት ዓመቷ ነው።"
+      "sentence2": "አስራ ሁለት ዓመቷ ነው።",
+      "pronunciation": "/əsɨra hulət/"
     },
     {
       "id": 820,
       "word": "ሃያ",
       "sentence1": "ሃያ ዶላር አለኝ።",
-      "sentence2": "ሃያ ዓመቷ ነው።"
+      "sentence2": "ሃያ ዓመቷ ነው።",
+      "pronunciation": "/haja/"
     },
     {
       "id": 821,
       "word": "ሁለት ጊዜ",
       "sentence1": "ያን ፊልም ሁለት ጊዜ አይቻለሁ።",
-      "sentence2": "ወላጆቿን በወር ሁለት ጊዜ ትጎበኛለች።"
+      "sentence2": "ወላጆቿን በወር ሁለት ጊዜ ትጎበኛለች።",
+      "pronunciation": "/hulət ɡize/"
     },
     {
       "id": 822,
       "word": "ሁለት",
       "sentence1": "ሁለት ድመቶች አሉኝ።",
-      "sentence2": "ሁለት ቲኬቶች ትፈልጋለች።"
+      "sentence2": "ሁለት ቲኬቶች ትፈልጋለች።",
+      "pronunciation": "/hulət/"
     },
     {
       "id": 823,
       "word": "ዓይነት",
       "sentence1": "ምን ዓይነት ሙዚቃ ትወዳለህ?",
-      "sentence2": "የተለየ ዓይነት መጽሐፍ ትመርጣለች።"
+      "sentence2": "የተለየ ዓይነት መጽሐፍ ትመርጣለች።",
+      "pronunciation": "/ajɨnət/"
     },
     {
       "id": 824,
       "word": "ጃንጥላ",
       "sentence1": "ጃንጥላህን አትርሳ።",
-      "sentence2": "አዲስ ጃንጥላ ገዛች።"
+      "sentence2": "አዲስ ጃንጥላ ገዛች።",
+      "pronunciation": "/d͡ʒanɨtʼɨla/"
     },
     {
       "id": 825,
       "word": "አጎት",
       "sentence1": "አጎቴ በኒው ዮርክ ይኖራል።",
-      "sentence2": "ባለፈው በጋ አጎቷን ጎበኘች።"
+      "sentence2": "ባለፈው በጋ አጎቷን ጎበኘች።",
+      "pronunciation": "/əɡot/"
     },
     {
       "id": 826,
       "word": "ከ ታች",
       "sentence1": "ድመቷ ከጠረጴዛው ታች ነች።",
-      "sentence2": "ቁልፎቿን ከሶፋው ታች አገኘች።"
+      "sentence2": "ቁልፎቿን ከሶፋው ታች አገኘች።",
+      "pronunciation": "/kə tat͡ʃ/"
     },
     {
       "id": 827,
       "word": "መረዳት",
       "sentence1": "ጥያቄውን አልገባኝም።",
-      "sentence2": "ችግሩን ተረድታለች።"
+      "sentence2": "ችግሩን ተረድታለች።",
+      "pronunciation": "/mərədat/"
     },
     {
       "id": 828,
       "word": "ዩኒቨርሲቲ",
       "sentence1": "በዩኒቨርሲቲ ታጠናለች።",
-      "sentence2": "ከዩኒቨርሲቲ ተመረቀ።"
+      "sentence2": "ከዩኒቨርሲቲ ተመረቀ።",
+      "pronunciation": "/junivərɨsiti/"
     },
     {
       "id": 829,
       "word": "እስከ",
       "sentence1": "እስክትደርስ ድረስ እጠብቃለሁ።",
-      "sentence2": "እስከ ትርኢቱ መጨረሻ ድረስ ቆየች።"
+      "sentence2": "እስከ ትርኢቱ መጨረሻ ድረስ ቆየች።",
+      "pronunciation": "/ɨsɨkə/"
     },
     {
       "id": 830,
       "word": "ወደ ላይ",
       "sentence1": "ድመቷ ዛፉ ላይ ወጣች።",
-      "sentence2": "ወደ ሰማይ ተመለከተች።"
+      "sentence2": "ወደ ሰማይ ተመለከተች።",
+      "pronunciation": "/wədə laj/"
     },
     {
       "id": 831,
       "word": "ከላይ",
       "sentence1": "መኝታ ቤቱ ከላይ ነው።",
-      "sentence2": "ለማጥናት ወደ ላይ ሄደች።"
+      "sentence2": "ለማጥናት ወደ ላይ ሄደች።",
+      "pronunciation": "/kəlaj/"
     },
     {
       "id": 832,
       "word": "እኛን",
       "sentence1": "ልትረዳን ትችላለህ?",
-      "sentence2": "ለድግሷ ጋበዘችን።"
+      "sentence2": "ለድግሷ ጋበዘችን።",
+      "pronunciation": "/ɨɲan/"
     },
     {
       "id": 833,
       "word": "መጠቀም",
       "sentence1": "ኮምፒውተሩን መጠቀም አለብኝ።",
-      "sentence2": "በስልኳ ላይ ብዙ መተግበሪያዎች ትጠቀማለች።"
+      "sentence2": "በስልኳ ላይ ብዙ መተግበሪያዎች ትጠቀማለች።",
+      "pronunciation": "/mətʼəkʼəm/"
     },
     {
       "id": 834,
       "word": "ጠቃሚ",
       "sentence1": "ይህ መጽሐፍ በጣም ጠቃሚ ነው።",
-      "sentence2": "መረጃውን ጠቃሚ አግኝታዋለች።"
+      "sentence2": "መረጃውን ጠቃሚ አግኝታዋለች።",
+      "pronunciation": "/tʼəkʼami/"
     },
     {
       "id": 835,
       "word": "አብዛኛውን ጊዜ",
       "sentence1": "አብዛኛውን ጊዜ ቀድሜ እነሳለሁ።",
-      "sentence2": "አብዛኛውን ጊዜ ማታ ለእግር ጉዞ ትወጣለች።"
+      "sentence2": "አብዛኛውን ጊዜ ማታ ለእግር ጉዞ ትወጣለች።",
+      "pronunciation": "/əbɨzaɲawɨn ɡize/"
     },
     {
       "id": 836,
       "word": "እረፍት",
       "sentence1": "በሚቀጥለው ሳምንት ወደ እረፍት እሄዳለሁ።",
-      "sentence2": "በእረፍት ጊዜ መጓዝ ትወዳለች።"
+      "sentence2": "በእረፍት ጊዜ መጓዝ ትወዳለች።",
+      "pronunciation": "/ɨrəfɨt/"
     },
     {
       "id": 837,
       "word": "አትክልት",
       "sentence1": "ብዙ አትክልት እበላለሁ።",
-      "sentence2": "ፍራፍሬን ከአትክልት ትመርጣለች።"
+      "sentence2": "ፍራፍሬን ከአትክልት ትመርጣለች።",
+      "pronunciation": "/ətɨkɨlɨt/"
     },
     {
       "id": 838,
       "word": "በጣም",
       "sentence1": "ይህ በጣም አስደሳች መጽሐፍ ነው።",
-      "sentence2": "በጣም ተሰጥኦ ያላት ናት።"
+      "sentence2": "በጣም ተሰጥኦ ያላት ናት።",
+      "pronunciation": "/bətʼam/"
     },
     {
       "id": 839,
       "word": "ቪዲዮ",
       "sentence1": "በመስመር ላይ አስቂኝ ቪዲዮ አየሁ።",
-      "sentence2": "ቪዲዮ መስራት ትወዳለች።"
+      "sentence2": "ቪዲዮ መስራት ትወዳለች።",
+      "pronunciation": "/vidijo/"
     },
     {
       "id": 840,
       "word": "መንደር",
       "sentence1": "በትንሽ መንደር አደገ።",
-      "sentence2": "በመንደሩ ውስጥ አያቶቿን ጎበኘች።"
+      "sentence2": "በመንደሩ ውስጥ አያቶቿን ጎበኘች።",
+      "pronunciation": "/mənɨdər/"
     },
     {
       "id": 841,
       "word": "መጎብኘት",
       "sentence1": "ነገ ጓደኛዬን እጎበኛለሁ።",
-      "sentence2": "ባለፈው ሳምንት ሙዚየሙን ጎበኘች።"
+      "sentence2": "ባለፈው ሳምንት ሙዚየሙን ጎበኘች።",
+      "pronunciation": "/məɡobɨɲət/"
     },
     {
       "id": 842,
       "word": "ጎብኚ",
       "sentence1": "ጎብኚው ብዙ ጥያቄዎች ጠየቀ።",
-      "sentence2": "በሙዚየሙ ተደጋጋሚ ጎብኚ ናት።"
+      "sentence2": "በሙዚየሙ ተደጋጋሚ ጎብኚ ናት።",
+      "pronunciation": "/ɡobɨɲi/"
     },
     {
       "id": 843,
       "word": "መጠበቅ",
       "sentence1": "እጠብቅሃለሁ።",
-      "sentence2": "አንድ ሰዓት ጠበቀች።"
+      "sentence2": "አንድ ሰዓት ጠበቀች።",
+      "pronunciation": "/mətʼəbəkʼ/"
     },
     {
       "id": 844,
       "word": "አስተናጋጅ",
       "sentence1": "አስተናጋጁ ትዕዛዛችንን ወሰደ።",
-      "sentence2": "እንደ አስተናጋጅ ትሰራ ነበር።"
+      "sentence2": "እንደ አስተናጋጅ ትሰራ ነበር።",
+      "pronunciation": "/əsɨtənaɡad͡ʒ/"
     },
     {
       "id": 845,
       "word": "መንቃት",
       "sentence1": "በ7 ሰዓት እነሳለሁ።",
-      "sentence2": "ዛሬ ዘግይታ ነቃች።"
+      "sentence2": "ዛሬ ዘግይታ ነቃች።",
+      "pronunciation": "/mənɨkʼat/"
     },
     {
       "id": 846,
       "word": "መራመድ",
       "sentence1": "በፓርኩ ውስጥ መራመድ እወዳለሁ።",
-      "sentence2": "በየጠዋቱ ውሻዋን ታራምዳለች።"
+      "sentence2": "በየጠዋቱ ውሻዋን ታራምዳለች።",
+      "pronunciation": "/məraməd/"
     },
     {
       "id": 847,
       "word": "ግድግዳ",
       "sentence1": "ስዕሉ በግድግዳው ላይ ነው።",
-      "sentence2": "ግድግዳውን ሰማያዊ ቀባች።"
+      "sentence2": "ግድግዳውን ሰማያዊ ቀባች።",
+      "pronunciation": "/ɡɨdɨɡɨda/"
     },
     {
       "id": 848,
       "word": "መፈለግ",
       "sentence1": "እንግሊዝኛ መማር እፈልጋለሁ።",
-      "sentence2": "አዲስ ስልክ ትፈልጋለች።"
+      "sentence2": "አዲስ ስልክ ትፈልጋለች።",
+      "pronunciation": "/məfələɡ/"
     },
     {
       "id": 849,
       "word": "ሙቅ",
       "sentence1": "ሾርባው ሙቅ ነው።",
-      "sentence2": "ሙቅ የአየር ሁኔታ ትወዳለች።"
+      "sentence2": "ሙቅ የአየር ሁኔታ ትወዳለች።",
+      "pronunciation": "/mukʼ/"
     },
     {
       "id": 850,
       "word": "መታጠብ",
       "sentence1": "እጆቼን መታጠብ አለብኝ።",
-      "sentence2": "በየሳምንቱ መኪናዋን ትታጠባለች።"
+      "sentence2": "በየሳምንቱ መኪናዋን ትታጠባለች።",
+      "pronunciation": "/mətatʼəb/"
     },
     {
       "id": 851,
       "word": "መመልከት",
       "sentence1": "ፊልሞችን ማየት እወዳለሁ።",
-      "sentence2": "ትናንት ማታ ዶክመንተሪ ተመለከተች።"
+      "sentence2": "ትናንት ማታ ዶክመንተሪ ተመለከተች።",
+      "pronunciation": "/məməlɨkət/"
     },
     {
       "id": 852,
       "word": "ውሃ",
       "sentence1": "ብዙ ውሃ እጠጣለሁ።",
-      "sentence2": "ተክሎቹን አጠጣች።"
+      "sentence2": "ተክሎቹን አጠጣች።",
+      "pronunciation": "/wɨha/"
     },
     {
       "id": 853,
       "word": "መንገድ",
       "sentence1": "ይህ ለመማር ምርጥ መንገድ ነው።",
-      "sentence2": "ችግሩን ለመፍታት አዲስ መንገድ አገኘች።"
+      "sentence2": "ችግሩን ለመፍታት አዲስ መንገድ አገኘች።",
+      "pronunciation": "/mənɨɡəd/"
     },
     {
       "id": 854,
       "word": "እኛ",
       "sentence1": "ወደ ፓርክ እየሄድን ነው።",
-      "sentence2": "ወደ ሠርጋቸው ጋበዙን።"
+      "sentence2": "ወደ ሠርጋቸው ጋበዙን።",
+      "pronunciation": "/ɨɲa/"
     },
     {
       "id": 855,
       "word": "መልበስ",
       "sentence1": "ምቹ ልብስ መልበስ እወዳለሁ።",
-      "sentence2": "ለድግሱ ቆንጆ ቀሚስ ለበሰች።"
+      "sentence2": "ለድግሱ ቆንጆ ቀሚስ ለበሰች።",
+      "pronunciation": "/məlɨbəs/"
     },
     {
       "id": 856,
       "word": "የአየር ሁኔታ",
       "sentence1": "ዛሬ የአየር ሁኔታው ጥሩ ነው።",
-      "sentence2": "የአየር ሁኔታ ትንበያውን አረጋገጠች።"
+      "sentence2": "የአየር ሁኔታ ትንበያውን አረጋገጠች።",
+      "pronunciation": "/jəəjər huneta/"
     },
     {
       "id": 857,
       "word": "ድረ-ገጽ",
       "sentence1": "ጠቃሚ ድረ-ገጽ አገኘሁ።",
-      "sentence2": "ለንግድዋ ድረ-ገጽ ፈጠረች።"
+      "sentence2": "ለንግድዋ ድረ-ገጽ ፈጠረች።",
+      "pronunciation": "/dɨrə-ɡət͡sʼ/"
     },
     {
       "id": 858,
       "word": "እሮብ",
       "sentence1": "እሮብ የምወደው ቀን ነው።",
-      "sentence2": "በእሮብ ስብሰባ አላት።"
+      "sentence2": "በእሮብ ስብሰባ አላት።",
+      "pronunciation": "/ɨrob/"
     },
     {
       "id": 859,
       "word": "ሳምንት",
       "sentence1": "በሳምንት አምስት ቀን እሰራለሁ።",
-      "sentence2": "በሚቀጥለው ሳምንት ለእረፍት ትሄዳለች።"
+      "sentence2": "በሚቀጥለው ሳምንት ለእረፍት ትሄዳለች።",
+      "pronunciation": "/samɨnɨt/"
     },
     {
       "id": 860,
       "word": "ሳምንት መጨረሻ",
       "sentence1": "በሳምንት መጨረሻ ዘና ማለት እወዳለሁ።",
-      "sentence2": "ለሳምንት መጨረሻ እቅድ አላት።"
+      "sentence2": "ለሳምንት መጨረሻ እቅድ አላት።",
+      "pronunciation": "/samɨnɨt mət͡ʃʼərəʃa/"
     },
     {
       "id": 861,
       "word": "እንኳን ደህና መጣህ",
       "sentence1": "እንኳን ወደ ቤታችን በደህና መጣህ!",
-      "sentence2": "ለእንግዶቹ እንኳን ደህና መጣችሁ አለች።"
+      "sentence2": "ለእንግዶቹ እንኳን ደህና መጣችሁ አለች።",
+      "pronunciation": "/ɨnɨkwan dəhɨna mətʼah/"
     },
     {
       "id": 862,
       "word": "ጥሩ",
       "sentence1": "ጥሩ እንደሆንክ ተስፋ አደርጋለሁ።",
-      "sentence2": "ዛሬ ጥሩ ስሜት ይሰማታል።"
+      "sentence2": "ዛሬ ጥሩ ስሜት ይሰማታል።",
+      "pronunciation": "/tʼɨru/"
     },
     {
       "id": 863,
       "word": "ምዕራብ",
       "sentence1": "ፀሐይ በምዕራብ ትጠልቃለች።",
-      "sentence2": "ወደ ምዕራብ የባህር ዳርቻ ተጓዘች።"
+      "sentence2": "ወደ ምዕራብ የባህር ዳርቻ ተጓዘች።",
+      "pronunciation": "/mɨɨrab/"
     },
     {
       "id": 864,
       "word": "ምን",
       "sentence1": "ስምህ ማን ነው?",
-      "sentence2": "ስንት ሰዓት እንደሆነ ጠየቀች።"
+      "sentence2": "ስንት ሰዓት እንደሆነ ጠየቀች።",
+      "pronunciation": "/mɨn/"
     },
     {
       "id": 865,
       "word": "መቼ",
       "sentence1": "የልደት ቀንህ መቼ ነው?",
-      "sentence2": "መቼ እንደምትደርስ አልተናገረችም።"
+      "sentence2": "መቼ እንደምትደርስ አልተናገረችም።",
+      "pronunciation": "/mət͡ʃe/"
     },
     {
       "id": 866,
       "word": "የት",
       "sentence1": "የት ነው የምትኖረው?",
-      "sentence2": "ቅርብ ጣቢያ የት እንደሆነ ጠየቀች።"
+      "sentence2": "ቅርብ ጣቢያ የት እንደሆነ ጠየቀች።",
+      "pronunciation": "/jət/"
     },
     {
       "id": 867,
       "word": "የትኛው",
       "sentence1": "የትኛውን መጽሐፍ ትፈልጋለህ?",
-      "sentence2": "የትኛውን ቀሚስ እንደወደደች አልተናገረችም።"
+      "sentence2": "የትኛውን ቀሚስ እንደወደደች አልተናገረችም።",
+      "pronunciation": "/jətɨɲaw/"
     },
     {
       "id": 868,
       "word": "ነጭ",
       "sentence1": "ነጩ ድመት ተኝታለች።",
-      "sentence2": "ነጭ ቀሚስ ገዛች።"
+      "sentence2": "ነጭ ቀሚስ ገዛች።",
+      "pronunciation": "/nət͡ʃʼ/"
     },
     {
       "id": 869,
       "word": "ማን",
       "sentence1": "ምርጥ ጓደኛህ ማን ነው?",
-      "sentence2": "ከማን ጋር እንደነበረች አልተናገረችም።"
+      "sentence2": "ከማን ጋር እንደነበረች አልተናገረችም።",
+      "pronunciation": "/man/"
     },
     {
       "id": 870,
       "word": "ለምን",
       "sentence1": "ለምን አዘንክ?",
-      "sentence2": "ለምን እንደዘገየሁ ጠየቀችኝ።"
+      "sentence2": "ለምን እንደዘገየሁ ጠየቀችኝ።",
+      "pronunciation": "/ləmɨn/"
     },
     {
       "id": 871,
       "word": "ሚስት",
       "sentence1": "ሚስቴ ሐኪም ናት።",
-      "sentence2": "እሷ ሚስቱ ናት።"
+      "sentence2": "እሷ ሚስቱ ናት።",
+      "pronunciation": "/misɨt/"
     },
     {
       "id": 872,
       "word": "ይሆናል",
       "sentence1": "ነገ እደውልልሃለሁ።",
-      "sentence2": "እንደምትረዳን ተናገረች።"
+      "sentence2": "እንደምትረዳን ተናገረች።",
+      "pronunciation": "/jɨhonal/"
     },
     {
       "id": 873,
       "word": "ማሸነፍ",
       "sentence1": "ጨዋታውን ማሸነፍ ተስፋ አደርጋለሁ።",
-      "sentence2": "በውድድሩ ሽልማት አሸነፈች።"
+      "sentence2": "በውድድሩ ሽልማት አሸነፈች።",
+      "pronunciation": "/maʃənəf/"
     },
     {
       "id": 874,
       "word": "መስኮት",
       "sentence1": "መስኮቱ ክፍት ነው።",
-      "sentence2": "ከመስኮቱ ውጭ ተመለከተች።"
+      "sentence2": "ከመስኮቱ ውጭ ተመለከተች።",
+      "pronunciation": "/məsɨkot/"
     },
     {
       "id": 875,
       "word": "ወይን",
       "sentence1": "ቀይ ወይን መጠጣት እወዳለሁ።",
-      "sentence2": "ከእራት ጋር ወይን አቀረበች።"
+      "sentence2": "ከእራት ጋር ወይን አቀረበች።",
+      "pronunciation": "/wəjɨn/"
     },
     {
       "id": 876,
       "word": "ክረምት",
       "sentence1": "ክረምት የምወደው ወቅት ነው።",
-      "sentence2": "በክረምት ስኪ መንሸራተት ትወዳለች።"
+      "sentence2": "በክረምት ስኪ መንሸራተት ትወዳለች።",
+      "pronunciation": "/kɨrəmɨt/"
     },
     {
       "id": 877,
       "word": "ከ...ጋር",
       "sentence1": "ከጓደኛዬ ጋር ወደ ሱቅ ሄድኩ።",
-      "sentence2": "ከክፍል ጓደኞቿ ጋር እያጠናች ነው።"
+      "sentence2": "ከክፍል ጓደኞቿ ጋር እያጠናች ነው።",
+      "pronunciation": "/kə...ɡar/"
     },
     {
       "id": 878,
       "word": "ያለ",
       "sentence1": "ያለአንተ መኖር አልችልም።",
-      "sentence2": "ያለ እርዳታ ፕሮጀክቱን አጠናቀቀች።"
+      "sentence2": "ያለ እርዳታ ፕሮጀክቱን አጠናቀቀች።",
+      "pronunciation": "/jalə/"
     },
     {
       "id": 879,
       "word": "ሴት",
       "sentence1": "ሴቲቱ መጽሐፍ እያነበበች ነው።",
-      "sentence2": "እሷ ጠንካራ ሴት ናት።"
+      "sentence2": "እሷ ጠንካራ ሴት ናት።",
+      "pronunciation": "/set/"
     },
     {
       "id": 880,
       "word": "አስደናቂ",
       "sentence1": "አስደናቂ ስራ ሰራህ!",
-      "sentence2": "አስደናቂ ፈገግታ አላት።"
+      "sentence2": "አስደናቂ ፈገግታ አላት።",
+      "pronunciation": "/əsɨdənakʼi/"
     },
     {
       "id": 881,
       "word": "ቃል",
       "sentence1": "ያንን ቃል መጻፍ ትችላለህ?",
-      "sentence2": "ቃሉን በመዝገበ ቃላት ውስጥ ፈለገች።"
+      "sentence2": "ቃሉን በመዝገበ ቃላት ውስጥ ፈለገች።",
+      "pronunciation": "/kʼal/"
     },
     {
       "id": 882,
       "word": "መስራት",
       "sentence1": "ዛሬ ማታ ዘግይቼ መስራት አለብኝ።",
-      "sentence2": "አዲስ ስራ እየፈለገች ነው።"
+      "sentence2": "አዲስ ስራ እየፈለገች ነው።",
+      "pronunciation": "/məsɨrat/"
     },
     {
       "id": 883,
       "word": "ሰራተኛ",
       "sentence1": "ሰራተኛው መንገዱን እየጠገነ ነው።",
-      "sentence2": "እሷ ታታሪ ሰራተኛ ናት።"
+      "sentence2": "እሷ ታታሪ ሰራተኛ ናት።",
+      "pronunciation": "/səratəɲa/"
     },
     {
       "id": 884,
       "word": "ዓለም",
       "sentence1": "ዓለም ቆንጆ ቦታ ናት።",
-      "sentence2": "ዓለምን ለመጎብኘት ትፈልጋለች።"
+      "sentence2": "ዓለምን ለመጎብኘት ትፈልጋለች።",
+      "pronunciation": "/aləm/"
     },
     {
       "id": 885,
       "word": "ይሆናል",
       "sentence1": "ትንሽ ቡና እፈልጋለሁ።",
-      "sentence2": "ወደ ድግሱ እንደምትመጣ ተናገረች።"
+      "sentence2": "ወደ ድግሱ እንደምትመጣ ተናገረች።",
+      "pronunciation": "/jɨhonal/"
     },
     {
       "id": 886,
       "word": "መጻፍ",
       "sentence1": "ታሪኮችን መጻፍ እወዳለሁ።",
-      "sentence2": "ደብዳቤ እየጻፈች ነው።"
+      "sentence2": "ደብዳቤ እየጻፈች ነው።",
+      "pronunciation": "/mət͡sʼaf/"
     },
     {
       "id": 887,
       "word": "ጸሐፊ",
       "sentence1": "እሱ ታዋቂ ጸሐፊ ነው።",
-      "sentence2": "ጸሐፊ መሆን ትፈልጋለች።"
+      "sentence2": "ጸሐፊ መሆን ትፈልጋለች።",
+      "pronunciation": "/t͡sʼəhəfi/"
     },
     {
       "id": 888,
       "word": "መጻፍ",
       "sentence1": "መጻፍ የትርፍ ጊዜ ስራዬ ነው።",
-      "sentence2": "በትርፍ ጊዜዋ መጻፍ ትወዳለች።"
+      "sentence2": "በትርፍ ጊዜዋ መጻፍ ትወዳለች።",
+      "pronunciation": "/mət͡sʼaf/"
     },
     {
       "id": 889,
       "word": "ስህተት",
       "sentence1": "ያ ስህተት መልስ ነው።",
-      "sentence2": "ስህተት እንደሆነች ተገነዘበች።"
+      "sentence2": "ስህተት እንደሆነች ተገነዘበች።",
+      "pronunciation": "/sɨhɨtət/"
     },
     {
       "id": 890,
       "word": "አዎ",
       "sentence1": "አዎ፣ አንተን እስማማለሁ።",
-      "sentence2": "ለሃሳቡ አዎ አለች።"
+      "sentence2": "ለሃሳቡ አዎ አለች።",
+      "pronunciation": "/əwo/"
     },
     {
       "id": 891,
       "word": "ዓመት",
       "sentence1": "ዘንድሮ ፈታኝ ነበር።",
-      "sentence2": "ባለፈው ዓመት ተመረቀች።"
+      "sentence2": "ባለፈው ዓመት ተመረቀች።",
+      "pronunciation": "/amət/"
     },
     {
       "id": 892,
       "word": "ቢጫ",
       "sentence1": "ቢጫው አበባ ቆንጆ ነው።",
-      "sentence2": "ቢጫ ቀሚስ ለበሰች።"
+      "sentence2": "ቢጫ ቀሚስ ለበሰች።",
+      "pronunciation": "/bit͡ʃʼa/"
     },
     {
       "id": 893,
       "word": "አዎ",
       "sentence1": "አዎ፣ ገባኝ።",
-      "sentence2": "ለግብዣው አዎ አለች።"
+      "sentence2": "ለግብዣው አዎ አለች።",
+      "pronunciation": "/əwo/"
     },
     {
       "id": 894,
       "word": "ትናንት",
       "sentence1": "ትናንት አየኋት።",
-      "sentence2": "ትናንት ደወለችልኝ።"
+      "sentence2": "ትናንት ደወለችልኝ።",
+      "pronunciation": "/tɨnanɨt/"
     },
     {
       "id": 895,
       "word": "አንተ",
       "sentence1": "አንተ ምርጥ ጓደኛዬ ነህ።",
-      "sentence2": "እንደምትመጣ ተናገረች።"
+      "sentence2": "እንደምትመጣ ተናገረች።",
+      "pronunciation": "/ənɨtə/"
     },
     {
       "id": 896,
       "word": "ወጣት",
       "sentence1": "ወጣቱ ልጅ እየተጫወተ ነው።",
-      "sentence2": "እሷ ወጣት እና ተሰጥኦ ያላት ናት።"
+      "sentence2": "እሷ ወጣት እና ተሰጥኦ ያላት ናት።",
+      "pronunciation": "/wətʼat/"
     },
     {
       "id": 897,
       "word": "ያንተ",
       "sentence1": "መጽሐፍህ ጠረጴዛ ላይ ነው።",
-      "sentence2": "ሃሳብህ አስደሳች ነው አለች።"
+      "sentence2": "ሃሳብህ አስደሳች ነው አለች።",
+      "pronunciation": "/janɨtə/"
     },
     {
       "id": 898,
       "word": "ራስህ",
       "sentence1": "ራስህን ተንከባከብ።",
-      "sentence2": "ራሷ ሰራችው።"
+      "sentence2": "ራሷ ሰራችው።",
+      "pronunciation": "/rasɨh/"
     }
   ]
 }

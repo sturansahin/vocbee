@@ -5,7 +5,7 @@
  * Features:
  * - Request notification permissions
  * - Schedule notifications within time range (start to end)
- * - Send word + translation in notification
+ * - Send target word + pronunciation + translation in notification
  * - Auto-mark words as learned when notification is sent (if enabled)
  * - Unmark word when notification is clicked (for review)
  */
@@ -25,7 +25,9 @@ const PENDING_NOTIFICATION_WORD_KEY = STORAGE_KEYS.PENDING_NOTIFICATION_WORD;
 const TRACKED_NOTIFICATIONS_KEY = STORAGE_KEYS.TRACKED_NOTIFICATIONS;
 const LAST_FOREGROUND_TIME_KEY = STORAGE_KEYS.LAST_FOREGROUND_TIME;
 const LAST_BACKGROUND_TIME_KEY = STORAGE_KEYS.LAST_BACKGROUND_TIME;
+const NOTIFICATION_CONTENT_VERSION_KEY = STORAGE_KEYS.NOTIFICATION_CONTENT_VERSION;
 const NOTIFICATION_PERMISSION_PROMPT_PREFIX = STORAGE_KEYS.NOTIFICATION_PERMISSION_PROMPT_PREFIX;
+const NOTIFICATION_CONTENT_VERSION = 2;
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Types
@@ -47,6 +49,7 @@ export interface TrackedNotification {
     notificationId: string;
     wordId: number;
     word: string;
+    pronunciation?: string | null;
     translation: string;
     scheduledTime: number;      // timestamp when notification will fire
     autoMarkLearned: boolean;   // setting at time of scheduling
@@ -134,9 +137,32 @@ function getDailyNotificationSlotCount(
 // ─────────────────────────────────────────────────────────────────────────────
 import i18n from './i18n';
 
+type NotificationWordSnapshot = Pick<VocabularyWord, 'word' | 'translation' | 'pronunciation'>;
+
+function formatNotificationWord(word: NotificationWordSnapshot): string {
+    if (typeof word.pronunciation === 'string' && word.pronunciation.trim().length > 0) {
+        return `${word.word} ${word.pronunciation.trim()}`;
+    }
+
+    return word.word;
+}
+
+function formatNotificationBody(word: NotificationWordSnapshot): string {
+    return `${formatNotificationWord(word)} - ${word.translation}, ${i18n.t('home.tapToSeeExamples')}`;
+}
+
+async function isNotificationContentOutdated(): Promise<boolean> {
+    const storedVersion = await AsyncStorage.getItem(NOTIFICATION_CONTENT_VERSION_KEY);
+    return storedVersion !== String(NOTIFICATION_CONTENT_VERSION);
+}
+
+async function markNotificationContentCurrent(): Promise<void> {
+    await AsyncStorage.setItem(NOTIFICATION_CONTENT_VERSION_KEY, String(NOTIFICATION_CONTENT_VERSION));
+}
+
 export const getNotificationContent = (word: VocabularyWord) => ({
     title: `VocBee`,
-    body: `${word.word} - ${word.translation}, ${i18n.t('home.tapToSeeExamples')}`,
+    body: formatNotificationBody(word),
 });
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -684,7 +710,6 @@ export async function scheduleVocabularyNotifications(): Promise<void> {
                 const word = pickRandomUnlearnedWord(vocabulary, learnedIds);
                 if (!word) continue;
 
-                const { title, body } = getNotificationContent(word);
                 const notificationId = `vocbee-${word.id}-${notificationTime.getTime()}`;
 
                 // Track this notification (do NOT await schedule individually)
@@ -692,6 +717,7 @@ export async function scheduleVocabularyNotifications(): Promise<void> {
                     notificationId,
                     wordId: word.id,
                     word: word.word,
+                    pronunciation: word.pronunciation ?? null,
                     translation: word.translation,
                     scheduledTime: notificationTime.getTime(),
                     autoMarkLearned: settings.autoMarkLearned,
@@ -711,10 +737,11 @@ export async function scheduleVocabularyNotifications(): Promise<void> {
                     identifier: tracked.notificationId,
                     content: {
                         title: 'VocBee',
-                        body: `${tracked.word} - ${tracked.translation}, ${i18n.t('home.tapToSeeExamples')}`,
+                        body: formatNotificationBody(tracked),
                         data: {
                             wordId: tracked.wordId,
                             word: tracked.word,
+                            pronunciation: tracked.pronunciation ?? undefined,
                             translation: tracked.translation,
                             autoMark: tracked.autoMarkLearned,
                             level: tracked.level,
@@ -735,6 +762,7 @@ export async function scheduleVocabularyNotifications(): Promise<void> {
 
         // Save all tracked notifications at once
         await saveTrackedNotifications(trackedNotifications);
+        await markNotificationContentCurrent();
 
         console.log(`[Notifications] Scheduled ${scheduledCount} notifications for ${daysToSchedule} days`);
     } catch (error) {
@@ -777,6 +805,12 @@ export async function refillNotifications(): Promise<void> {
         }
 
         await ensureNotificationChannelConfigured();
+
+        if (await isNotificationContentOutdated()) {
+            console.log('[Notifications] Notification content changed, rebuilding schedule');
+            await scheduleVocabularyNotifications();
+            return;
+        }
 
         // Get currently scheduled notifications
         const scheduled = await Notifications.getAllScheduledNotificationsAsync();
@@ -874,6 +908,7 @@ export async function refillNotifications(): Promise<void> {
                 notificationId: `vocbee-refill-${word.id}-${currentTime.getTime()}`,
                 wordId: word.id,
                 word: word.word,
+                pronunciation: word.pronunciation ?? null,
                 translation: word.translation,
                 scheduledTime: currentTime.getTime(),
                 autoMarkLearned: settings.autoMarkLearned,
@@ -894,10 +929,11 @@ export async function refillNotifications(): Promise<void> {
                         identifier: tracked.notificationId,
                         content: {
                             title: 'VocBee',
-                            body: `${tracked.word} - ${tracked.translation}, ${i18n.t('home.tapToSeeExamples')}`,
+                            body: formatNotificationBody(tracked),
                             data: {
                                 wordId: tracked.wordId,
                                 word: tracked.word,
+                                pronunciation: tracked.pronunciation ?? undefined,
                                 translation: tracked.translation,
                                 autoMark: tracked.autoMarkLearned,
                                 level: tracked.level,
@@ -919,6 +955,7 @@ export async function refillNotifications(): Promise<void> {
             // Append new tracked notifications to existing ones
             const allTracked = [...trackedNotifications, ...newTrackedNotifications];
             await saveTrackedNotifications(allTracked);
+            await markNotificationContentCurrent();
         }
 
         console.log(`[Notifications] Refilled ${scheduledCount} notifications. New total: ${currentCount + scheduledCount}`);
@@ -1111,7 +1148,7 @@ export async function sendTestNotification(): Promise<void> {
 
     const { title, body } = getNotificationContent(word);
     const level = await getCurrentLevel();
-    const targetLanguage = await AsyncStorage.getItem('@target_language');
+    const targetLanguage = await AsyncStorage.getItem(STORAGE_KEYS.TARGET_LANGUAGE);
 
     await Notifications.scheduleNotificationAsync({
         content: {
@@ -1120,6 +1157,7 @@ export async function sendTestNotification(): Promise<void> {
             data: {
                 wordId: word.id,
                 word: word.word,
+                pronunciation: word.pronunciation ?? undefined,
                 translation: word.translation,
                 autoMark: false, // Don't auto-mark for test
                 level,

@@ -21,6 +21,7 @@ jest.mock('../../services/vocabularyService', () => ({
         {
             id: 1,
             word: 'Haus',
+            pronunciation: '/haʊs/',
             translation: 'House',
             sentence1: 'Das ist ein Haus',
             sentence2: 'This is a house',
@@ -118,6 +119,7 @@ describe('HomeScreen', () => {
         // Wait for word to appear
         await waitFor(() => {
             expect(getByText('Haus')).toBeTruthy();
+            expect(getByText('/haʊs/')).toBeTruthy();
             expect(getByText('House')).toBeTruthy();
         });
     });

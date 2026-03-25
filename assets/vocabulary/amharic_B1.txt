@@ -4,4831 +4,5636 @@
       "id": 1,
       "word": "ፍጹም",
       "sentence1": "ይህን መጽሐፍ ፍጹም እወዳለሁ።",
-      "sentence2": "ስለ ውሳኔዋ ፍጹም እርግጠኛ ነበረች።"
+      "sentence2": "ስለ ውሳኔዋ ፍጹም እርግጠኛ ነበረች።",
+      "pronunciation": "/fɨt͡sʼum/"
     },
     {
       "id": 2,
       "word": "የትምህርት",
       "sentence1": "በፊዚክስ የትምህርት ዳራ አለው።",
-      "sentence2": "የትምህርት ዓመቱ በሴፕቴምበር ይጀምራል።"
+      "sentence2": "የትምህርት ዓመቱ በሴፕቴምበር ይጀምራል።",
+      "pronunciation": "/jətɨmɨhɨrɨt/"
     },
     {
       "id": 3,
       "word": "መዳረሻ",
       "sentence1": "ስርዓቱን ለመድረስ የይለፍ ቃል ያስፈልግሃል።",
-      "sentence2": "የመረጃ መዳረሻ ወሳኝ ነው።"
+      "sentence2": "የመረጃ መዳረሻ ወሳኝ ነው።",
+      "pronunciation": "/mədarəʃa/"
     },
     {
       "id": 4,
       "word": "መኖሪያ",
       "sentence1": "ለሌሊቱ መኖሪያ ማግኘት አለብን።",
-      "sentence2": "ሆቴሉ ጥሩ መኖሪያ ያቀርባል።"
+      "sentence2": "ሆቴሉ ጥሩ መኖሪያ ያቀርባል።",
+      "pronunciation": "/mənorija/"
     },
     {
       "id": 5,
       "word": "ሂሳብ",
       "sentence1": "ባለፈው ሳምንት የባንክ ሂሳብ ከፈትኩ።",
-      "sentence2": "እባክህ የሂሳብህን ቀሪ ሂሳብ አረጋግጥ።"
+      "sentence2": "እባክህ የሂሳብህን ቀሪ ሂሳብ አረጋግጥ።",
+      "pronunciation": "/hisab/"
     },
     {
       "id": 6,
       "word": "ስኬት",
       "sentence1": "ትልቁ ስኬቷ ሻምፒዮናውን ማሸነፍ ነበር።",
-      "sentence2": "በአካዳሚክ ስኬቶቹ ኩራት ነበረው።"
+      "sentence2": "በአካዳሚክ ስኬቶቹ ኩራት ነበረው።",
+      "pronunciation": "/sɨket/"
     },
     {
       "id": 7,
       "word": "መተግበር",
       "sentence1": "በዚህ ሁኔታ በፍጥነት መተግበር አለብህ።",
-      "sentence2": "በስሜቷ መሰረት ለመተግበር ወሰነች።"
+      "sentence2": "በስሜቷ መሰረት ለመተግበር ወሰነች።",
+      "pronunciation": "/mətəɡɨbər/"
     },
     {
       "id": 8,
       "word": "መጨመር",
       "sentence1": "እባክህ ስምህን ወደ ዝርዝሩ ጨምር።",
-      "sentence2": "የመጨረሻዎቹን ንክኪዎች መጨመር አትርሳ።"
+      "sentence2": "የመጨረሻዎቹን ንክኪዎች መጨመር አትርሳ።",
+      "pronunciation": "/mət͡ʃʼəmər/"
     },
     {
       "id": 9,
       "word": "ጭማሪ",
       "sentence1": "አዳዲስ ባህሪያትን መጨመር ሶፍትዌሩን አሻሽሏል።",
-      "sentence2": "ከደመወዙ በተጨማሪ ጉርሻ ይቀበላል።"
+      "sentence2": "ከደመወዙ በተጨማሪ ጉርሻ ይቀበላል።",
+      "pronunciation": "/t͡ʃʼɨmari/"
     },
     {
       "id": 10,
       "word": "ማድነቅ",
       "sentence1": "ለስራዋ ያላትን ቁርጠኝነት አደንቃለሁ።",
-      "sentence2": "ብዙ ሰዎች ጥበባዊ ችሎታውን ያደንቃሉ።"
+      "sentence2": "ብዙ ሰዎች ጥበባዊ ችሎታውን ያደንቃሉ።",
+      "pronunciation": "/madɨnəkʼ/"
     },
     {
       "id": 11,
       "word": "መቀበል",
       "sentence1": "ስህተቷን ተቀብላ ይቅርታ ጠየቀች።",
-      "sentence2": "ስህተቱን መቀበል አልፈለገም።"
+      "sentence2": "ስህተቱን መቀበል አልፈለገም።",
+      "pronunciation": "/məkʼəbəl/"
     },
     {
       "id": 12,
       "word": "ከፍተኛ",
       "sentence1": "በሂሳብ ከፍተኛ ኮርስ ወስዳለች።",
-      "sentence2": "ቴክኖሎጂው ከፍተኛ እና ቀልጣፋ ነው።"
+      "sentence2": "ቴክኖሎጂው ከፍተኛ እና ቀልጣፋ ነው።",
+      "pronunciation": "/kəfɨtəɲa/"
     },
     {
       "id": 13,
       "word": "መምከር",
       "sentence1": "የስራ ቅጥሩን ትወስድ ዘንድ እመክርሃለሁ።",
-      "sentence2": "ሐኪም እንድትጎበኝ ተመክራለች።"
+      "sentence2": "ሐኪም እንድትጎበኝ ተመክራለች።",
+      "pronunciation": "/məmɨkər/"
     },
     {
       "id": 14,
       "word": "መቻል",
       "sentence1": "አዲስ መኪና መግዛት አልችልም።",
-      "sentence2": "የቅንጦት አኗኗር መመራት ይችላሉ።"
+      "sentence2": "የቅንጦት አኗኗር መመራት ይችላሉ።",
+      "pronunciation": "/mət͡ʃal/"
     },
     {
       "id": 15,
       "word": "ዕድሜ",
       "sentence1": "ዕድሜህ ስንት ነው?",
-      "sentence2": "እሷ የትምህርት ዕድሜ ላይ ናት።"
+      "sentence2": "እሷ የትምህርት ዕድሜ ላይ ናት።",
+      "pronunciation": "/ɨdɨme/"
     },
     {
       "id": 16,
       "word": "አዛውንት",
       "sentence1": "አዛውንቱ ሰው በወንበሩ ላይ ተቀመጠ።",
-      "sentence2": "የበሰለ አይብ ጠንካራ ጣዕም አለው።"
+      "sentence2": "የበሰለ አይብ ጠንካራ ጣዕም አለው።",
+      "pronunciation": "/əzawɨnɨt/"
     },
     {
       "id": 17,
       "word": "ወኪል",
       "sentence1": "እንደ ሚስጥራዊ ወኪል ይሰራል።",
-      "sentence2": "የጉዞ ወኪሉ ጉዞአችንን ለማቀድ ረድቶናል።"
+      "sentence2": "የጉዞ ወኪሉ ጉዞአችንን ለማቀድ ረድቶናል።",
+      "pronunciation": "/wəkil/"
     },
     {
       "id": 18,
       "word": "ስምምነት",
       "sentence1": "ረጅም ድርድር በኋላ ስምምነት ላይ ደረሱ።",
-      "sentence2": "ስምምነቱ በሁለቱም ወገኖች ተፈርሟል።"
+      "sentence2": "ስምምነቱ በሁለቱም ወገኖች ተፈርሟል።",
+      "pronunciation": "/sɨmɨmɨnət/"
     },
     {
       "id": 19,
       "word": "ወደፊት",
       "sentence1": "ከፊት ያለው መንገድ ለግንባታ ተዘግቷል።",
-      "sentence2": "ለፕሮጀክቱ ወደፊት ማቀድ አለብን።"
+      "sentence2": "ለፕሮጀክቱ ወደፊት ማቀድ አለብን።",
+      "pronunciation": "/wədəfit/"
     },
     {
       "id": 20,
       "word": "ዓላማ",
       "sentence1": "ዓላማዬ የእንግሊዝኛ ክህሎቴን ማሻሻል ነው።",
-      "sentence2": "ለስራዋ ግልጽ ዓላማ አላት።"
+      "sentence2": "ለስራዋ ግልጽ ዓላማ አላት።",
+      "pronunciation": "/alama/"
     },
     {
       "id": 21,
       "word": "ማንቂያ",
       "sentence1": "ማንቂያውን ለ7 ሰዓት አስቀምጫለሁ።",
-      "sentence2": "የእሳት ማንቂያው ባልተጠበቀ ሁኔታ ተሰማ።"
+      "sentence2": "የእሳት ማንቂያው ባልተጠበቀ ሁኔታ ተሰማ።",
+      "pronunciation": "/manɨkʼija/"
     },
     {
       "id": 22,
       "word": "አልበም",
       "sentence1": "የምወደው ባንድ አዲስ አልበም ገዝቻለሁ።",
-      "sentence2": "የፎቶ አልበሙ ከጉዞአችን ትዝታዎችን ይዟል።"
+      "sentence2": "የፎቶ አልበሙ ከጉዞአችን ትዝታዎችን ይዟል።",
+      "pronunciation": "/əlɨbəm/"
     },
     {
       "id": 23,
       "word": "አልኮል",
       "sentence1": "አልኮል አይጠጣም።",
-      "sentence2": "አልኮል በብዛት ጎጂ ሊሆን ይችላል።"
+      "sentence2": "አልኮል በብዛት ጎጂ ሊሆን ይችላል።",
+      "pronunciation": "/əlɨkol/"
     },
     {
       "id": 24,
       "word": "የአልኮል ሱሰኛ",
       "sentence1": "እሱ የሚድን የአልኮል ሱሰኛ ነው።",
-      "sentence2": "የአልኮል መጠጦች እዚህ አይፈቀዱም።"
+      "sentence2": "የአልኮል መጠጦች እዚህ አይፈቀዱም።",
+      "pronunciation": "/jəəlɨkol susəɲa/"
     },
     {
       "id": 25,
       "word": "አማራጭ",
       "sentence1": "አማራጭ መፍትሔ ማግኘት አለብን።",
-      "sentence2": "ብዙ አማራጭ የኃይል ምንጮች አሉ።"
+      "sentence2": "ብዙ አማራጭ የኃይል ምንጮች አሉ።",
+      "pronunciation": "/əmarat͡ʃʼ/"
     },
     {
       "id": 26,
       "word": "ተገርሟል",
       "sentence1": "በአፈጻጸሙ ተገርሜያለሁ።",
-      "sentence2": "በመልክአ ምድሩ ውበት ተገርማለች።"
+      "sentence2": "በመልክአ ምድሩ ውበት ተገርማለች።",
+      "pronunciation": "/təɡərɨmwal/"
     },
     {
       "id": 27,
       "word": "ምኞት",
       "sentence1": "ምኞቷ ስኬታማ ሥራ ፈጣሪ መሆን ነው።",
-      "sentence2": "ለመሳካት ጠንካራ ምኞት አለው።"
+      "sentence2": "ለመሳካት ጠንካራ ምኞት አለው።",
+      "pronunciation": "/mɨɲot/"
     },
     {
       "id": 28,
       "word": "ምኞተኛ",
       "sentence1": "እሷ ምኞተኛ ወጣት ሴት ናት።",
-      "sentence2": "ምኞተኛ ዕቅዶቹ ሁሉንም አስደንቀዋል።"
+      "sentence2": "ምኞተኛ ዕቅዶቹ ሁሉንም አስደንቀዋል።",
+      "pronunciation": "/mɨɲotəɲa/"
     },
     {
       "id": 29,
       "word": "መተንተን",
       "sentence1": "ውሂቡን በጥንቃቄ መተንተን አለብን።",
-      "sentence2": "ሪፖርቱ የፖሊሲውን ተፅዕኖ ይተነትናል።"
+      "sentence2": "ሪፖርቱ የፖሊሲውን ተፅዕኖ ይተነትናል።",
+      "pronunciation": "/mətənɨtən/"
     },
     {
       "id": 30,
       "word": "ትንተና",
       "sentence1": "ትንተናው አስፈላጊ አዝማሚያዎችን አሳይቷል።",
-      "sentence2": "ጥልቅ ትንተና ለውሳኔ አሰጣጥ አስፈላጊ ነው።"
+      "sentence2": "ጥልቅ ትንተና ለውሳኔ አሰጣጥ አስፈላጊ ነው።",
+      "pronunciation": "/tɨnɨtəna/"
     },
     {
       "id": 31,
       "word": "ማወጅ",
       "sentence1": "ነገ ውጤቶቹን ያስታውቃሉ።",
-      "sentence2": "ለቤተሰቧ ታጭነቷን አስታወቀች።"
+      "sentence2": "ለቤተሰቧ ታጭነቷን አስታወቀች።",
+      "pronunciation": "/mawəd͡ʒ/"
     },
     {
       "id": 32,
       "word": "ማስታወቂያ",
       "sentence1": "ማስታወቂያው በስብሰባው ወቅት ተሰጥቷል።",
-      "sentence2": "ስለ አዲሱ ፖሊሲ ማስታወቂያ ተቀበልን።"
+      "sentence2": "ስለ አዲሱ ፖሊሲ ማስታወቂያ ተቀበልን።",
+      "pronunciation": "/masɨtawəkʼija/"
     },
     {
       "id": 33,
       "word": "ማናደድ",
       "sentence1": "ያለማቋረጥ ማጉረምረሙ ያናድደኛል።",
-      "sentence2": "ታናሽ ወንድምህን አታናድድ።"
+      "sentence2": "ታናሽ ወንድምህን አታናድድ።",
+      "pronunciation": "/manadəd/"
     },
     {
       "id": 34,
       "word": "የተናደደ",
       "sentence1": "በጮክ ድምፅ ተናድዳለች።",
-      "sentence2": "በመዘግየቱ ተናድዷል።"
+      "sentence2": "በመዘግየቱ ተናድዷል።",
+      "pronunciation": "/jətənadədə/"
     },
     {
       "id": 35,
       "word": "የሚያናድድ",
       "sentence1": "የዝንቦቹ ድምጽ የሚያናድድ ነው።",
-      "sentence2": "ሰዎች ሲያቋርጡ የሚያናድድ ነው።"
+      "sentence2": "ሰዎች ሲያቋርጡ የሚያናድድ ነው።",
+      "pronunciation": "/jəmijanadɨd/"
     },
     {
       "id": 36,
       "word": "ተለያይተው",
       "sentence1": "ሁለቱ ሕንፃዎች እርስ በእርስ ተለያይተዋል።",
-      "sentence2": "በዓመታት ውስጥ ተለያይተዋል።"
+      "sentence2": "በዓመታት ውስጥ ተለያይተዋል።",
+      "pronunciation": "/tələjajɨtəw/"
     },
     {
       "id": 37,
       "word": "ይቅርታ መጠየቅ",
       "sentence1": "ለስህተቴ ይቅርታ መጠየቅ አለብኝ።",
-      "sentence2": "ስለ ዘገዩት ይቅርታ ጠይቃለች።"
+      "sentence2": "ስለ ዘገዩት ይቅርታ ጠይቃለች።",
+      "pronunciation": "/jɨkʼɨrɨta mətʼəjəkʼ/"
     },
     {
       "id": 38,
       "word": "ማመልከቻ",
       "sentence1": "ለስራው ማመልከቻዬን አስገብቻለሁ።",
-      "sentence2": "የማመልከቻ ሂደቱ በጣም ቀላል ነው።"
+      "sentence2": "የማመልከቻ ሂደቱ በጣም ቀላል ነው።",
+      "pronunciation": "/maməlɨkət͡ʃa/"
     },
     {
       "id": 39,
       "word": "ቀጠሮ",
       "sentence1": "በ3 ሰዓት የሐኪም ቀጠሮ አለኝ።",
-      "sentence2": "ቀጠሮዋን አምልጧት እንደገና ማስያዝ ነበረባት።"
+      "sentence2": "ቀጠሮዋን አምልጧት እንደገና ማስያዝ ነበረባት።",
+      "pronunciation": "/kʼətʼəro/"
     },
     {
       "id": 40,
       "word": "ማድነቅ",
       "sentence1": "እርዳታህን በጣም አደንቃለሁ።",
-      "sentence2": "የተፈጥሮን ውበት ታደንቃለች።"
+      "sentence2": "የተፈጥሮን ውበት ታደንቃለች።",
+      "pronunciation": "/madɨnəkʼ/"
     },
     {
       "id": 41,
       "word": "በግምት",
       "sentence1": "ስብሰባው በግምት ለሁለት ሰዓታት ይቆያል።",
-      "sentence2": "በዝግጅቱ ላይ በግምት 100 ሰዎች ነበሩ።"
+      "sentence2": "በዝግጅቱ ላይ በግምት 100 ሰዎች ነበሩ።",
+      "pronunciation": "/bəɡɨmɨt/"
     },
     {
       "id": 42,
       "word": "መያዝ",
       "sentence1": "ፖሊስ ባለፈው ሌሊት ተጠርጣሪውን ያዙ።",
-      "sentence2": "በአልኮል ተፅዕኖ ስር በመንዳት ተይዟል።"
+      "sentence2": "በአልኮል ተፅዕኖ ስር በመንዳት ተይዟል።",
+      "pronunciation": "/məjaz/"
     },
     {
       "id": 43,
       "word": "መምጣት",
       "sentence1": "የባቡሩ መምጣት ዘግይቷል።",
-      "sentence2": "ስለ እንግዶቻችን መምጣት ተደስተን ነበር።"
+      "sentence2": "ስለ እንግዶቻችን መምጣት ተደስተን ነበር።",
+      "pronunciation": "/məmɨtʼat/"
     },
     {
       "id": 44,
       "word": "የቤት ስራ",
       "sentence1": "ነገ የሚጠናቀቅ የሂሳብ የቤት ስራ አለኝ።",
-      "sentence2": "መምህሩ ፈታኝ የቤት ስራ ሰጥቶናል።"
+      "sentence2": "መምህሩ ፈታኝ የቤት ስራ ሰጥቶናል።",
+      "pronunciation": "/jəbet sɨra/"
     },
     {
       "id": 45,
       "word": "መርዳት",
       "sentence1": "በዚህ ተግባር ልትረዳኝ ትችላለህ?",
-      "sentence2": "ሥራ አስኪያጁን ለመርዳት ተቀጥራለች።"
+      "sentence2": "ሥራ አስኪያጁን ለመርዳት ተቀጥራለች።",
+      "pronunciation": "/mərɨdat/"
     },
     {
       "id": 46,
       "word": "ድባብ",
       "sentence1": "በክፍሉ ውስጥ ያለው ድባብ ውጥረት ነበር።",
-      "sentence2": "ለመማር አዎንታዊ ድባብ መፍጠር አለብን።"
+      "sentence2": "ለመማር አዎንታዊ ድባብ መፍጠር አለብን።",
+      "pronunciation": "/dɨbab/"
     },
     {
       "id": 47,
       "word": "ማያያዝ",
       "sentence1": "እባክህ ፋይሉን ወደ ኢሜይልህ አያይዝ።",
-      "sentence2": "ሰነዱን ማያያዝ ረስቼያለሁ።"
+      "sentence2": "ሰነዱን ማያያዝ ረስቼያለሁ።",
+      "pronunciation": "/majajaz/"
     },
     {
       "id": 48,
       "word": "አመለካከት",
       "sentence1": "ለፕሮጀክቱ ያላት አመለካከት አዎንታዊ ነበር።",
-      "sentence2": "በስራ ላይ ጥሩ አመለካከት መያዝ አስፈላጊ ነው።"
+      "sentence2": "በስራ ላይ ጥሩ አመለካከት መያዝ አስፈላጊ ነው።",
+      "pronunciation": "/əmələkakət/"
     },
     {
       "id": 49,
       "word": "መሳብ",
       "sentence1": "ማስታወቂያው ደንበኞችን ለመሳብ ነው የተቀረጸው።",
-      "sentence2": "አበቦች ንቦችን እና ሌሎች አበብ ዘሪዎችን ይስባሉ።"
+      "sentence2": "አበቦች ንቦችን እና ሌሎች አበብ ዘሪዎችን ይስባሉ።",
+      "pronunciation": "/məsab/"
     },
     {
       "id": 50,
       "word": "መሳብ",
       "sentence1": "በሁለቱ ገጸ ባህሪዎች መካከል ጠንካራ መሳብ አለ።",
-      "sentence2": "የመዝናኛ ፓርኩ ለቤተሰቦች ታዋቂ መስህብ ነው።"
+      "sentence2": "የመዝናኛ ፓርኩ ለቤተሰቦች ታዋቂ መስህብ ነው።",
+      "pronunciation": "/məsab/"
     },
     {
       "id": 51,
       "word": "ሥልጣን",
       "sentence1": "እሱ በጥንታዊ ታሪክ ባለሥልጣን ነው።",
-      "sentence2": "የመምህራንህን ሥልጣን ማክበር አለብህ።"
+      "sentence2": "የመምህራንህን ሥልጣን ማክበር አለብህ።",
+      "pronunciation": "/sɨlɨtʼan/"
     },
     {
       "id": 52,
       "word": "አማካይ",
       "sentence1": "በጁላይ አማካይ የሙቀት መጠን 30 ዲግሪ ነው።",
-      "sentence2": "በሂሳብ አማካይ ውጤት አላት።"
+      "sentence2": "በሂሳብ አማካይ ውጤት አላት።",
+      "pronunciation": "/əmakaj/"
     },
     {
       "id": 53,
       "word": "ሽልማት",
       "sentence1": "ለአስደናቂ አፈጻጸሟ ሽልማት ተቀብላለች።",
-      "sentence2": "የኖቤል ሽልማት ታዋቂ ሽልማት ነው።"
+      "sentence2": "የኖቤል ሽልማት ታዋቂ ሽልማት ነው።",
+      "pronunciation": "/ʃɨlɨmat/"
     },
     {
       "id": 54,
       "word": "ንቁ",
       "sentence1": "በመርሐ ግብሩ ላይ ስላሉት ለውጦች ንቁ ነህ?",
-      "sentence2": "ስለ ሊኖሩ የሚችሉ አደጋዎች ንቁ አልነበረም።"
+      "sentence2": "ስለ ሊኖሩ የሚችሉ አደጋዎች ንቁ አልነበረም።",
+      "pronunciation": "/nɨkʼu/"
     },
     {
       "id": 55,
       "word": "ወደኋላ",
       "sentence1": "መኪናው ወደ ኋላ ኮረብታውን ወረደ።",
-      "sentence2": "ጥቂት እርምጃዎች ወደኋላ ወሰደች።"
+      "sentence2": "ጥቂት እርምጃዎች ወደኋላ ወሰደች።",
+      "pronunciation": "/wədəhwala/"
     },
     {
       "id": 56,
       "word": "መጋገር",
       "sentence1": "በሳምንቱ መጨረሻ ኩኪዎችን መጋገር እወዳለሁ።",
-      "sentence2": "ለድግሱ ጣፋጭ ኬክ ጋገረች።"
+      "sentence2": "ለድግሱ ጣፋጭ ኬክ ጋገረች።",
+      "pronunciation": "/məɡaɡər/"
     },
     {
       "id": 57,
       "word": "ሚዛን",
       "sentence1": "በስራ እና ህይወት መካከል ሚዛን መጠበቅ አስፈላጊ ነው።",
-      "sentence2": "ጥሩ የኃላፊነት ሚዛን አላት።"
+      "sentence2": "ጥሩ የኃላፊነት ሚዛን አላት።",
+      "pronunciation": "/mizan/"
     },
     {
       "id": 58,
       "word": "መከልከል",
       "sentence1": "ትምህርት ቤቱ በክፍል ውስጥ ሞባይሎችን ለመከልከል ወሰነ።",
-      "sentence2": "ተገቢ ባልሆነ ባህሪ ከክለቡ ተከልክሏል።"
+      "sentence2": "ተገቢ ባልሆነ ባህሪ ከክለቡ ተከልክሏል።",
+      "pronunciation": "/məkəlɨkəl/"
     },
     {
       "id": 59,
       "word": "ዳርቻ",
       "sentence1": "በወንዙ ዳርቻ ላይ ፒክኒክ አድርገናል።",
-      "sentence2": "ልጆቹ በወንዙ ዳርቻ ተጫውተዋል።"
+      "sentence2": "ልጆቹ በወንዙ ዳርቻ ተጫውተዋል።",
+      "pronunciation": "/darɨt͡ʃa/"
     },
     {
       "id": 60,
       "word": "መሰረት",
       "sentence1": "የሐውልቱ መሰረት ከእብነ በረድ የተሰራ ነው።",
-      "sentence2": "ለፕሮጀክታችን ጠንካራ መሰረት ማግኘት አለብን።"
+      "sentence2": "ለፕሮጀክታችን ጠንካራ መሰረት ማግኘት አለብን።",
+      "pronunciation": "/məsərət/"
     },
     {
       "id": 61,
       "word": "መሰረታዊ",
       "sentence1": "ይህ ኮርስ የኢኮኖሚክስ መሰረታዊ መርሆችን ይሸፍናል።",
-      "sentence2": "መሰረታዊ የሂሳብ ግንዛቤ መያዝ አስፈላጊ ነው።"
+      "sentence2": "መሰረታዊ የሂሳብ ግንዛቤ መያዝ አስፈላጊ ነው።",
+      "pronunciation": "/məsərətawi/"
     },
     {
       "id": 62,
       "word": "መሰረት",
       "sentence1": "የክርክሩ መሰረት ጉድለት አለው።",
-      "sentence2": "ለምርምራችን ጠንካራ መሰረት ማቋቋም አለብን።"
+      "sentence2": "ለምርምራችን ጠንካራ መሰረት ማቋቋም አለብን።",
+      "pronunciation": "/məsərət/"
     },
     {
       "id": 63,
       "word": "ባትሪ",
       "sentence1": "በሪሞት ኮንትሮሌ ውስጥ ያለውን ባትሪ መቀየር አለብኝ።",
-      "sentence2": "በስልኬ ላይ ያለው የባትሪ ዕድሜ እየቀነሰ ነው።"
+      "sentence2": "በስልኬ ላይ ያለው የባትሪ ዕድሜ እየቀነሰ ነው።",
+      "pronunciation": "/batɨri/"
     },
     {
       "id": 64,
       "word": "ውጊያ",
       "sentence1": "ውጊያው ለብዙ ቀናት ቆይቷል።",
-      "sentence2": "በውጊያው በጀግንነት ተዋግተዋል።"
+      "sentence2": "በውጊያው በጀግንነት ተዋግተዋል።",
+      "pronunciation": "/wɨɡija/"
     },
     {
       "id": 65,
       "word": "ውበት",
       "sentence1": "የፀሐይ ስትጠልቅ ውበት እስትንፋሴን ወሰደው።",
-      "sentence2": "በተፈጥሮ ውበቷ ትታወቃለች።"
+      "sentence2": "በተፈጥሮ ውበቷ ትታወቃለች።",
+      "pronunciation": "/wɨbət/"
     },
     {
       "id": 66,
       "word": "ንብ",
       "sentence1": "ንቡ አስፈላጊ አበብ ዘሪ ነው።",
-      "sentence2": "የንብ እርባታ አስደሳች የትርፍ ጊዜ ስራ ነው።"
+      "sentence2": "የንብ እርባታ አስደሳች የትርፍ ጊዜ ስራ ነው።",
+      "pronunciation": "/nɨb/"
     },
     {
       "id": 67,
       "word": "እምነት",
       "sentence1": "በፍትህ ላይ ያላት እምነት የማይናወጥ ነው።",
-      "sentence2": "ብዙ ሰዎች ትምህርት አስፈላጊ ነው የሚል እምነት ይጋራሉ።"
+      "sentence2": "ብዙ ሰዎች ትምህርት አስፈላጊ ነው የሚል እምነት ይጋራሉ።",
+      "pronunciation": "/ɨmɨnət/"
     },
     {
       "id": 68,
       "word": "ደወል",
       "sentence1": "የትምህርት ቤት ደወል በ8 ሰዓት ይደውላል።",
-      "sentence2": "በአትክልቷ ውስጥ ቆንጆ ደወል አላት።"
+      "sentence2": "በአትክልቷ ውስጥ ቆንጆ ደወል አላት።",
+      "pronunciation": "/dəwəl/"
     },
     {
       "id": 69,
       "word": "ማጠፍ",
       "sentence1": "ወረቀቱን ላለማጠፍ ተጠንቀቅ።",
-      "sentence2": "ጫማውን ለማሰር ወደ ታች ማጠፍ ነበረበት።"
+      "sentence2": "ጫማውን ለማሰር ወደ ታች ማጠፍ ነበረበት።",
+      "pronunciation": "/matʼəf/"
     },
     {
       "id": 70,
       "word": "ጥቅም",
       "sentence1": "አዲሱ ፖሊሲ ብዙ ሰዎችን ይጠቅማል።",
-      "sentence2": "የጤናማ አኗኗር ጥቅሞችን ታስደስታለች።"
+      "sentence2": "የጤናማ አኗኗር ጥቅሞችን ታስደስታለች።",
+      "pronunciation": "/tʼɨkʼɨm/"
     },
     {
       "id": 71,
       "word": "የተሻለ",
       "sentence1": "ጥሩ ሌሊት ከተኛሁ በኋላ ተሻለኝ።",
-      "sentence2": "ይህ መፍትሔ ከቀድሞው የተሻለ ነው።"
+      "sentence2": "ይህ መፍትሔ ከቀድሞው የተሻለ ነው።",
+      "pronunciation": "/jətəʃalə/"
     },
     {
       "id": 72,
       "word": "መንከስ",
       "sentence1": "ምላስህን ላለመንከስ ተጠንቀቅ።",
-      "sentence2": "ውሻው መጫወቻዎቹን መንከስ ይወዳል።"
+      "sentence2": "ውሻው መጫወቻዎቹን መንከስ ይወዳል።",
+      "pronunciation": "/mənɨkəs/"
     },
     {
       "id": 73,
       "word": "ማገድ",
       "sentence1": "መንገዱን በመኪና ለማገድ ሞክረዋል።",
-      "sentence2": "አዲሱ ህግ ፍትሃዊ ያልሆኑ ልምዶችን ያግዳል።"
+      "sentence2": "አዲሱ ህግ ፍትሃዊ ያልሆኑ ልምዶችን ያግዳል።",
+      "pronunciation": "/maɡəd/"
     },
     {
       "id": 74,
       "word": "ሰሌዳ",
       "sentence1": "መምህሩ ትምህርቱን በሰሌዳ ላይ ጻፈ።",
-      "sentence2": "ለዚህ ፕሮጀክት ትልቅ ሰሌዳ ያስፈልገናል።"
+      "sentence2": "ለዚህ ፕሮጀክት ትልቅ ሰሌዳ ያስፈልገናል።",
+      "pronunciation": "/səleda/"
     },
     {
       "id": 75,
       "word": "ቦምብ",
       "sentence1": "ቦምቡ በከተማ ማዕከል ተፈነዳ።",
-      "sentence2": "በተተወ ህንፃ ውስጥ ቦምብ አግኝተዋል።"
+      "sentence2": "በተተወ ህንፃ ውስጥ ቦምብ አግኝተዋል።",
+      "pronunciation": "/bomɨb/"
     },
     {
       "id": 76,
       "word": "ድንበር",
       "sentence1": "ወንዙ በሁለቱ አገሮች መካከል ተፈጥሮአዊ ድንበር ይፈጥራል።",
-      "sentence2": "ያለ ምንም ችግር ድንበሩን ተሻገሩ።"
+      "sentence2": "ያለ ምንም ችግር ድንበሩን ተሻገሩ።",
+      "pronunciation": "/dɨnɨbər/"
     },
     {
       "id": 77,
       "word": "ማስቸገር",
       "sentence1": "እየሰራሁ ሳለ አትረብሸኝ።",
-      "sentence2": "ሰዎች ሲዘገዩ ይረብሸኛል።"
+      "sentence2": "ሰዎች ሲዘገዩ ይረብሸኛል።",
+      "pronunciation": "/masɨt͡ʃəɡər/"
     },
     {
       "id": 78,
       "word": "ቅርንጫፍ",
       "sentence1": "ዛፉ ጠንካራ ቅርንጫፍ አለው።",
-      "sentence2": "በቅርንጫፉ ላይ ተቀምጣ መጽሐፍ አነበበች።"
+      "sentence2": "በቅርንጫፉ ላይ ተቀምጣ መጽሐፍ አነበበች።",
+      "pronunciation": "/kʼɨrɨnɨt͡ʃʼaf/"
     },
     {
       "id": 79,
       "word": "ብራንድ",
       "sentence1": "ናይኪ ታዋቂ የስፖርት ብራንድ ነው።",
-      "sentence2": "ይህን ብራንድ ቡና እመርጣለሁ።"
+      "sentence2": "ይህን ብራንድ ቡና እመርጣለሁ።",
+      "pronunciation": "/bɨranɨd/"
     },
     {
       "id": 80,
       "word": "ደፋር",
       "sentence1": "ደፋሩ ወታደር ልጁን አዳነ።",
-      "sentence2": "ለትክክለኛው ነገር መቆም ደፋር ሰው ይጠይቃል።"
+      "sentence2": "ለትክክለኛው ነገር መቆም ደፋር ሰው ይጠይቃል።",
+      "pronunciation": "/dəfar/"
     },
     {
       "id": 81,
       "word": "እስትንፋስ",
       "sentence1": "ጥልቅ እስትንፋስ ውሰድ እና ዘና በል።",
-      "sentence2": "እስትንፋሱ የነጭ ሽንኩርት ሽታ ነበረው።"
+      "sentence2": "እስትንፋሱ የነጭ ሽንኩርት ሽታ ነበረው።",
+      "pronunciation": "/ɨsɨtɨnɨfas/"
     },
     {
       "id": 82,
       "word": "መተንፈስ",
       "sentence1": "በጥልቀት መተንፈስ አስታውስ።",
-      "sentence2": "በዋና ወቅት መተንፈስ ረሳች።"
+      "sentence2": "በዋና ወቅት መተንፈስ ረሳች።",
+      "pronunciation": "/mətənɨfəs/"
     },
     {
       "id": 83,
       "word": "መተንፈስ",
       "sentence1": "የመተንፈስ ልምምዶች ጭንቀትን ሊቀንሱ ይችላሉ።",
-      "sentence2": "የመተንፈስ ችግር አለው።"
+      "sentence2": "የመተንፈስ ችግር አለው።",
+      "pronunciation": "/mətənɨfəs/"
     },
     {
       "id": 84,
       "word": "ሙሽራ",
       "sentence1": "ሙሽራዋ በሰርጓ ቀን ቆንጆ ትመስላለች።",
-      "sentence2": "እሷ የሙሽራዋ ጓደኛ ናት።"
+      "sentence2": "እሷ የሙሽራዋ ጓደኛ ናት።",
+      "pronunciation": "/muʃɨra/"
     },
     {
       "id": 85,
       "word": "አረፋ",
       "sentence1": "ልጆቹ በፓርኩ ውስጥ አረፋ ነፉ።",
-      "sentence2": "አረፋ በአየር ላይ ፈነዳ።"
+      "sentence2": "አረፋ በአየር ላይ ፈነዳ።",
+      "pronunciation": "/ərəfa/"
     },
     {
       "id": 86,
       "word": "መቅበር",
       "sentence1": "የጊዜ ካፕሱልን ለመቅበር ወሰኑ።",
-      "sentence2": "ያለፈውን ታሪኩን መቅበር ይፈልጋል።"
+      "sentence2": "ያለፈውን ታሪኩን መቅበር ይፈልጋል።",
+      "pronunciation": "/məkʼɨbər/"
     },
     {
       "id": 87,
       "word": "በ",
       "sentence1": "መጽሐፉ በታዋቂ ደራሲ ተጽፏል።",
-      "sentence2": "በባቡር ተጓዘች።"
+      "sentence2": "በባቡር ተጓዘች።",
+      "pronunciation": "/bə/"
     },
     {
       "id": 88,
       "word": "ተረጋጋ",
       "sentence1": "በድንገተኛ አደጋ ወቅት ተረጋግተህ ቆይ።",
-      "sentence2": "በተረጋጋ ድምፅ ተናገረች።"
+      "sentence2": "በተረጋጋ ድምፅ ተናገረች።",
+      "pronunciation": "/tərəɡaɡa/"
     },
     {
       "id": 89,
       "word": "ዘመቻ",
       "sentence1": "ዘመቻው ስኬታማ ነበር።",
-      "sentence2": "አዲስ የማስታወቂያ ዘመቻ ጀመሩ።"
+      "sentence2": "አዲስ የማስታወቂያ ዘመቻ ጀመሩ።",
+      "pronunciation": "/zəmət͡ʃa/"
     },
     {
       "id": 90,
       "word": "ግቢ",
       "sentence1": "የዩኒቨርሲቲው ግቢ ቆንጆ ነው።",
-      "sentence2": "በግቢው ውስጥ ብዙ ዛፎች አሉ።"
+      "sentence2": "በግቢው ውስጥ ብዙ ዛፎች አሉ።",
+      "pronunciation": "/ɡɨbi/"
     },
     {
       "id": 91,
       "word": "እጩ",
       "sentence1": "እሷ ለቦታው እጩ ናት።",
-      "sentence2": "እጩዎች ነገ ቃለ መጠይቅ ይደረግላቸዋል።"
+      "sentence2": "እጩዎች ነገ ቃለ መጠይቅ ይደረግላቸዋል።",
+      "pronunciation": "/ɨt͡ʃʼu/"
     },
     {
       "id": 92,
       "word": "ኮፍያ",
       "sentence1": "የቤዝቦል ኮፍያ ለብሷል።",
-      "sentence2": "ኮፍያው ዓይኖችህን ከፀሐይ ይከላከላል።"
+      "sentence2": "ኮፍያው ዓይኖችህን ከፀሐይ ይከላከላል።",
+      "pronunciation": "/kofɨja/"
     },
     {
       "id": 93,
       "word": "ካፒቴን",
       "sentence1": "የቡድኑ ካፒቴን በጣም ልምድ አለው።",
-      "sentence2": "ባለፈው ዓመት ካፒቴን ሆና ተሾመች።"
+      "sentence2": "ባለፈው ዓመት ካፒቴን ሆና ተሾመች።",
+      "pronunciation": "/kapiten/"
     },
     {
       "id": 94,
       "word": "ግዴለሽ",
       "sentence1": "ግዴለሽ ስህተቶቹ ኩባንያውን ገንዘብ አስከፍለዋል።",
-      "sentence2": "የበለጠ ጥንቁቅ ሁን፤ ግዴለሽ አትሁን።"
+      "sentence2": "የበለጠ ጥንቁቅ ሁን፤ ግዴለሽ አትሁን።",
+      "pronunciation": "/ɡɨdeləʃ/"
     },
     {
       "id": 95,
       "word": "ምድብ",
       "sentence1": "ይህ መጽሐፍ የልብወለድ ምድብ ነው።",
-      "sentence2": "ብዙ የሙዚቃ ምድቦች አሉ።"
+      "sentence2": "ብዙ የሙዚቃ ምድቦች አሉ።",
+      "pronunciation": "/mɨdɨb/"
     },
     {
       "id": 96,
       "word": "ጣሪያ",
       "sentence1": "ጣሪያው ነጭ ተቀብቷል።",
-      "sentence2": "ሻንደሊየሩ ከጣሪያው ላይ ተንጠልጥሏል።"
+      "sentence2": "ሻንደሊየሩ ከጣሪያው ላይ ተንጠልጥሏል።",
+      "pronunciation": "/tʼarija/"
     },
     {
       "id": 97,
       "word": "ክብረ በዓል",
       "sentence1": "ለልደቷ ትልቅ ክብረ በዓል አድርገናል።",
-      "sentence2": "ክብረ በዓሉ ሌሊቱን ሙሉ ቆይቷል።"
+      "sentence2": "ክብረ በዓሉ ሌሊቱን ሙሉ ቆይቷል።",
+      "pronunciation": "/kɨbɨrə bəal/"
     },
     {
       "id": 98,
       "word": "ማዕከላዊ",
       "sentence1": "ማዕከላዊ ፓርኩ ለመዝናናት ጥሩ ቦታ ነው።",
-      "sentence2": "ማዕከላዊ ጉዳዩ አሁንም አልተፈታም።"
+      "sentence2": "ማዕከላዊ ጉዳዩ አሁንም አልተፈታም።",
+      "pronunciation": "/maɨkəlawi/"
     },
     {
       "id": 99,
       "word": "ማዕከል",
       "sentence1": "የግዢ ማዕከሉ በሳምንቱ መጨረሻ በጣም ስራ የበዛበት ነው።",
-      "sentence2": "በከተማ ማዕከል ውስጥ ትኖራለች።"
+      "sentence2": "በከተማ ማዕከል ውስጥ ትኖራለች።",
+      "pronunciation": "/maɨkəl/"
     },
     {
       "id": 100,
       "word": "ሥነ ሥርዓት",
       "sentence1": "የምርቃት ሥነ ሥርዓቱ በሰኔ ወር ይካሄዳል።",
-      "sentence2": "ባህላዊ የሰርግ ሥነ ሥርዓት አካሂደዋል።"
+      "sentence2": "ባህላዊ የሰርግ ሥነ ሥርዓት አካሂደዋል።",
+      "pronunciation": "/sɨnə sɨrɨat/"
     },
     {
       "id": 101,
       "word": "ሰንሰለት",
       "sentence1": "ብስክሌቱ በሰንሰለት ተቆልፏል።",
-      "sentence2": "ሰንሰለት በአንገቱ ላይ ለብሷል።"
+      "sentence2": "ሰንሰለት በአንገቱ ላይ ለብሷል።",
+      "pronunciation": "/sənɨsələt/"
     },
     {
       "id": 102,
       "word": "ፈተና",
       "sentence1": "ተራራውን መውጣት ትልቅ ፈተና ነበር።",
-      "sentence2": "ጥሩ ፈተና ትወዳለች።"
+      "sentence2": "ጥሩ ፈተና ትወዳለች።",
+      "pronunciation": "/fətəna/"
     },
     {
       "id": 103,
       "word": "ሻምፒዮን",
       "sentence1": "የውድድሩ ሻምፒዮን ነው።",
-      "sentence2": "የመጨረሻውን ጨዋታ ካሸነፈች በኋላ ሻምፒዮን ሆነች።"
+      "sentence2": "የመጨረሻውን ጨዋታ ካሸነፈች በኋላ ሻምፒዮን ሆነች።",
+      "pronunciation": "/ʃamɨpijon/"
     },
     {
       "id": 104,
       "word": "ቻናል",
       "sentence1": "የምወዳቸውን ፕሮግራሞች በዚህ ቻናል እመለከታለሁ።",
-      "sentence2": "ቻናሉ 24/7 ዜና ያስተላልፋል።"
+      "sentence2": "ቻናሉ 24/7 ዜና ያስተላልፋል።",
+      "pronunciation": "/t͡ʃanal/"
     },
     {
       "id": 105,
       "word": "ምዕራፍ",
       "sentence1": "ይህ የመጽሐፉ የመጀመሪያ ምዕራፍ ነው።",
-      "sentence2": "እያንዳንዱ ምዕራፍ መጨረሻ ላይ ማጠቃለያ አለው።"
+      "sentence2": "እያንዳንዱ ምዕራፍ መጨረሻ ላይ ማጠቃለያ አለው።",
+      "pronunciation": "/mɨɨraf/"
     },
     {
       "id": 106,
       "word": "ክፍያ",
       "sentence1": "እዚህ ለማቆም ክፍያ አለ።",
-      "sentence2": "ለተጨማሪ አገልግሎቶች ያስክፍሉሃል።"
+      "sentence2": "ለተጨማሪ አገልግሎቶች ያስክፍሉሃል።",
+      "pronunciation": "/kɨfɨja/"
     },
     {
       "id": 107,
       "word": "ርካሽ",
       "sentence1": "ይህ ሸሚዝ በጣም ርካሽ ነው።",
-      "sentence2": "ለእረፍቴ ርካሽ ሆቴል አግኝቻለሁ።"
+      "sentence2": "ለእረፍቴ ርካሽ ሆቴል አግኝቻለሁ።",
+      "pronunciation": "/rɨkaʃ/"
     },
     {
       "id": 108,
       "word": "ማጭበርበር",
       "sentence1": "በፈተናው ላይ አታጭበርብር።",
-      "sentence2": "ሲያጭበረብር ተያዘ።"
+      "sentence2": "ሲያጭበረብር ተያዘ።",
+      "pronunciation": "/mat͡ʃʼɨbərɨbər/"
     },
     {
       "id": 109,
       "word": "ደስተኛ",
       "sentence1": "ደስተኛ ስብዕና አላት።",
-      "sentence2": "ደስተኛው ሙዚቃ መንፈሴን አነቃቃው።"
+      "sentence2": "ደስተኛው ሙዚቃ መንፈሴን አነቃቃው።",
+      "pronunciation": "/dəsɨtəɲa/"
     },
     {
       "id": 110,
       "word": "ኬሚካል",
       "sentence1": "ውሃ ኬሚካላዊ ውህድ ነው።",
-      "sentence2": "ኬሚካላዊ ምላሹ ሙቀት አመነጨ።"
+      "sentence2": "ኬሚካላዊ ምላሹ ሙቀት አመነጨ።",
+      "pronunciation": "/kemikal/"
     },
     {
       "id": 111,
       "word": "ደረት",
       "sentence1": "በደረቱ ላይ ንቅሳት አለው።",
-      "sentence2": "የሀብት ሳጥኑ በወርቅ ተሞልቷል።"
+      "sentence2": "የሀብት ሳጥኑ በወርቅ ተሞልቷል።",
+      "pronunciation": "/dərət/"
     },
     {
       "id": 112,
       "word": "ልጅነት",
       "sentence1": "ደስተኛ ልጅነት ነበረኝ።",
-      "sentence2": "የልጅነት ትዝታዎች ውድ ናቸው።"
+      "sentence2": "የልጅነት ትዝታዎች ውድ ናቸው።",
+      "pronunciation": "/lɨd͡ʒɨnət/"
     },
     {
       "id": 113,
       "word": "ይገባኛል",
       "sentence1": "ስለ ምርቱ ይገባኛል ጠየቀች።",
-      "sentence2": "ይገባኛሉ በማስረጃ ተደግፏል።"
+      "sentence2": "ይገባኛሉ በማስረጃ ተደግፏል።",
+      "pronunciation": "/jɨɡəbaɲal/"
     },
     {
       "id": 114,
       "word": "አንቀጽ",
       "sentence1": "ይህ ህጋዊ አንቀጽ ነው።",
-      "sentence2": "ውሉ የምስጢራዊነት አንቀጽ አለው።"
+      "sentence2": "ውሉ የምስጢራዊነት አንቀጽ አለው።",
+      "pronunciation": "/ənɨkʼət͡sʼ/"
     },
     {
       "id": 115,
       "word": "ግልጽ",
       "sentence1": "መመሪያዎቹ ግልጽ ናቸው።",
-      "sentence2": "ለወደፊቱ ግልጽ ግቦች አላት።"
+      "sentence2": "ለወደፊቱ ግልጽ ግቦች አላት።",
+      "pronunciation": "/ɡɨlɨt͡sʼ/"
     },
     {
       "id": 116,
       "word": "ጠቅ",
       "sentence1": "እባክህ ማስፈንጠሪያውን ጠቅ አድርግ።",
-      "sentence2": "የጠቅ ድምፅ ሰምቻለሁ።"
+      "sentence2": "የጠቅ ድምፅ ሰምቻለሁ።",
+      "pronunciation": "/tʼəkʼ/"
     },
     {
       "id": 117,
       "word": "ደንበኛ",
       "sentence1": "ደንበኛው ሁልጊዜ ትክክል ነው።",
-      "sentence2": "ከደንበኛው ጋር መገናኘት አለብን።"
+      "sentence2": "ከደንበኛው ጋር መገናኘት አለብን።",
+      "pronunciation": "/dənɨbəɲa/"
     },
     {
       "id": 118,
       "word": "መውጣት",
       "sentence1": "ተራራውን ለመውጣት እቅድ አላቸው።",
-      "sentence2": "ዛፎችን መውጣት ትወዳለች።"
+      "sentence2": "ዛፎችን መውጣት ትወዳለች።",
+      "pronunciation": "/məwɨtʼat/"
     },
     {
       "id": 119,
       "word": "መዝጋት",
       "sentence1": "እባክህ በሩን ዝጋ።",
-      "sentence2": "ሱቁ ከቤቴ ቅርብ ነው።"
+      "sentence2": "ሱቁ ከቤቴ ቅርብ ነው።",
+      "pronunciation": "/məzɨɡat/"
     },
     {
       "id": 120,
       "word": "ጨርቅ",
       "sentence1": "ይህ ጨርቅ ከጥጥ የተሰራ ነው።",
-      "sentence2": "ለፕሮጀክቱ የጨርቅ ቁራጭ ያስፈልገኛል።"
+      "sentence2": "ለፕሮጀክቱ የጨርቅ ቁራጭ ያስፈልገኛል።",
+      "pronunciation": "/t͡ʃʼərɨkʼ/"
     },
     {
       "id": 121,
       "word": "ፍንጭ",
       "sentence1": "ስለ ምስጢሩ ፍንጭ አለኝ።",
-      "sentence2": "መርማሪው ወሳኝ ፍንጭ አግኝቷል።"
+      "sentence2": "መርማሪው ወሳኝ ፍንጭ አግኝቷል።",
+      "pronunciation": "/fɨnɨt͡ʃʼ/"
     },
     {
       "id": 122,
       "word": "አሰልጣኝ",
       "sentence1": "እሱ የእግር ኳስ አሰልጣኝ ነው።",
-      "sentence2": "አሰልጣኙ ጠቃሚ ምክር ሰጥቶናል።"
+      "sentence2": "አሰልጣኙ ጠቃሚ ምክር ሰጥቶናል።",
+      "pronunciation": "/əsəlɨtʼaɲ/"
     },
     {
       "id": 123,
       "word": "ከሰል",
       "sentence1": "ባቡሩ በከሰል ይሄዳል።",
-      "sentence2": "የከሰል ማዕድን አግኝተዋል።"
+      "sentence2": "የከሰል ማዕድን አግኝተዋል።",
+      "pronunciation": "/kəsəl/"
     },
     {
       "id": 124,
       "word": "ሳንቲም",
       "sentence1": "በመንገድ ላይ ሳንቲም አግኝቻለሁ።",
-      "sentence2": "ብርቅዬ ሳንቲሞችን ይሰበስባል።"
+      "sentence2": "ብርቅዬ ሳንቲሞችን ይሰበስባል።",
+      "pronunciation": "/sanɨtim/"
     },
     {
       "id": 125,
       "word": "ስብስብ",
       "sentence1": "የማህተሞች ስብስብ አላት።",
-      "sentence2": "ሙዚየሙ አዲስ የጥበብ ስብስብ አለው።"
+      "sentence2": "ሙዚየሙ አዲስ የጥበብ ስብስብ አለው።",
+      "pronunciation": "/sɨbɨsɨb/"
     },
     {
       "id": 126,
       "word": "ቀለም ያለው",
       "sentence1": "ቀለም ያላቸውን እርሳሶች እወዳለሁ።",
-      "sentence2": "ግድግዳዎቹ በደማቅ ቀለሞች ተቀብተዋል።"
+      "sentence2": "ግድግዳዎቹ በደማቅ ቀለሞች ተቀብተዋል።",
+      "pronunciation": "/kʼələm jaləw/"
     },
     {
       "id": 127,
       "word": "ማጣመር",
       "sentence1": "ጥረቶቻችንን እናጣምር።",
-      "sentence2": "የምግብ አሰራሩ ጣፋጭ እና መራራ ጣዕሞችን ያጣምራል።"
+      "sentence2": "የምግብ አሰራሩ ጣፋጭ እና መራራ ጣዕሞችን ያጣምራል።",
+      "pronunciation": "/matʼamər/"
     },
     {
       "id": 128,
       "word": "አስተያየት",
       "sentence1": "አስተያየት ልተው?",
-      "sentence2": "አስተያየቱ በጣም አስተዋይ ነበር።"
+      "sentence2": "አስተያየቱ በጣም አስተዋይ ነበር።",
+      "pronunciation": "/əsɨtəjajət/"
     },
     {
       "id": 129,
       "word": "ንግድ",
       "sentence1": "ይህ የንግድ ምርት ነው።",
-      "sentence2": "ማስታወቂያው በጣም አዝናኝ ነበር።"
+      "sentence2": "ማስታወቂያው በጣም አዝናኝ ነበር።",
+      "pronunciation": "/nɨɡɨd/"
     },
     {
       "id": 130,
       "word": "መወሰን",
       "sentence1": "ፕሮጀክቱን ለመጨረስ ቃል እገባለሁ።",
-      "sentence2": "ለዓላማው ራሷን ወስናለች።"
+      "sentence2": "ለዓላማው ራሷን ወስናለች።",
+      "pronunciation": "/məwəsən/"
     },
     {
       "id": 131,
       "word": "ግንኙነት",
       "sentence1": "ጥሩ ግንኙነት ቁልፍ ነው።",
-      "sentence2": "ግንኙነታችንን ማሻሻል አለብን።"
+      "sentence2": "ግንኙነታችንን ማሻሻል አለብን።",
+      "pronunciation": "/ɡɨnɨɲunət/"
     },
     {
       "id": 132,
       "word": "ንጽጽር",
       "sentence1": "ይህ የዋጋዎች ንጽጽር ነው።",
-      "sentence2": "ከባለፈው ዓመት ጋር ሲነጻጸር ሽያጮች ጨምረዋል።"
+      "sentence2": "ከባለፈው ዓመት ጋር ሲነጻጸር ሽያጮች ጨምረዋል።",
+      "pronunciation": "/nɨt͡sʼɨt͡sʼɨr/"
     },
     {
       "id": 133,
       "word": "ተፎካካሪ",
       "sentence1": "ዋናው ተፎካካሪያችን በጣም ጠንካራ ነው።",
-      "sentence2": "ተፎካካሪዎቻችንን መተንተን አለብን።"
+      "sentence2": "ተፎካካሪዎቻችንን መተንተን አለብን።",
+      "pronunciation": "/təfokakari/"
     },
     {
       "id": 134,
       "word": "ተፎካካሪ",
       "sentence1": "ይህ ተፎካካሪ ገበያ ነው።",
-      "sentence2": "በስፖርት ውስጥ በጣም ተፎካካሪ ናት።"
+      "sentence2": "በስፖርት ውስጥ በጣም ተፎካካሪ ናት።",
+      "pronunciation": "/təfokakari/"
     },
     {
       "id": 135,
       "word": "ቅሬታ",
       "sentence1": "ስለ አገልግሎቱ ቅሬታ አለኝ።",
-      "sentence2": "ቅሬታው በፍጥነት ተፈቷል።"
+      "sentence2": "ቅሬታው በፍጥነት ተፈቷል።",
+      "pronunciation": "/kʼɨreta/"
     },
     {
       "id": 136,
       "word": "ውስብስብ",
       "sentence1": "ይህ ውስብስብ ችግር ነው።",
-      "sentence2": "መመሪያዎቹ በጣም ውስብስብ ናቸው።"
+      "sentence2": "መመሪያዎቹ በጣም ውስብስብ ናቸው።",
+      "pronunciation": "/wɨsɨbɨsɨb/"
     },
     {
       "id": 137,
       "word": "ማተኮር",
       "sentence1": "በስራዬ ላይ ማተኮር አለብኝ።",
-      "sentence2": "ማተኮር ከባድ ሆኖ አግኝታዋለች።"
+      "sentence2": "ማተኮር ከባድ ሆኖ አግኝታዋለች።",
+      "pronunciation": "/matəkor/"
     },
     {
       "id": 138,
       "word": "መደምደም",
       "sentence1": "አሁን ስብሰባውን መደምደም እንችላለን።",
-      "sentence2": "ንግግሯን በጥቅስ ደምድማለች።"
+      "sentence2": "ንግግሯን በጥቅስ ደምድማለች።",
+      "pronunciation": "/mədəmɨdəm/"
     },
     {
       "id": 139,
       "word": "ድምዳሜ",
       "sentence1": "ድምዳሜህ ምንድን ነው?",
-      "sentence2": "ድምዳሜው በማስረጃው ላይ የተመሰረተ ነው።"
+      "sentence2": "ድምዳሜው በማስረጃው ላይ የተመሰረተ ነው።",
+      "pronunciation": "/dɨmɨdame/"
     },
     {
       "id": 140,
       "word": "ራስን የሚተማመን",
       "sentence1": "በችሎታዋ ራሷን ትተማመናለች።",
-      "sentence2": "በራስ መተማመን ተናግሯል።"
+      "sentence2": "በራስ መተማመን ተናግሯል።",
+      "pronunciation": "/rasɨn jəmitəmamən/"
     },
     {
       "id": 141,
       "word": "ማረጋገጥ",
       "sentence1": "ቀጠሮውን ማረጋገጥ ትችላለህ?",
-      "sentence2": "የማረጋገጫ ኢሜይል ተቀብያለሁ።"
+      "sentence2": "የማረጋገጫ ኢሜይል ተቀብያለሁ።",
+      "pronunciation": "/marəɡaɡətʼ/"
     },
     {
       "id": 142,
       "word": "ማምታታት",
       "sentence1": "ይህ ጥያቄ አንዳንድ ሰዎችን ሊያምታታ ይችላል።",
-      "sentence2": "ጉዳዩን አታምታታ።"
+      "sentence2": "ጉዳዩን አታምታታ።",
+      "pronunciation": "/mamɨtatat/"
     },
     {
       "id": 143,
       "word": "ግራ የገባ",
       "sentence1": "በመመሪያዎቹ ግራ ገብቷታል።",
-      "sentence2": "በስብሰባው ወቅት ግራ የገባው ይመስላል።"
+      "sentence2": "በስብሰባው ወቅት ግራ የገባው ይመስላል።",
+      "pronunciation": "/ɡɨra jəɡəba/"
     },
     {
       "id": 144,
       "word": "ግንኙነት",
       "sentence1": "በመካከላቸው ጠንካራ ግንኙነት አለ።",
-      "sentence2": "የኢንተርኔት ግንኙነቱ ቀርፋፋ ነው።"
+      "sentence2": "የኢንተርኔት ግንኙነቱ ቀርፋፋ ነው።",
+      "pronunciation": "/ɡɨnɨɲunət/"
     },
     {
       "id": 145,
       "word": "መዘዝ",
       "sentence1": "እያንዳንዱ ድርጊት መዘዝ አለው።",
-      "sentence2": "የውሳኔው መዘዞች ከባድ ነበሩ።"
+      "sentence2": "የውሳኔው መዘዞች ከባድ ነበሩ።",
+      "pronunciation": "/məzəz/"
     },
     {
       "id": 146,
       "word": "መያዝ",
       "sentence1": "ቡድኑ አምስት አባላት ይዟል።",
-      "sentence2": "ኮሚቴው በመስኩ የባለሙያዎችን ይዟል።"
+      "sentence2": "ኮሚቴው በመስኩ የባለሙያዎችን ይዟል።",
+      "pronunciation": "/məjaz/"
     },
     {
       "id": 147,
       "word": "መጠቀም",
       "sentence1": "ያነሰ ኃይል መጠቀም አለብን።",
-      "sentence2": "እሳቱ ሙሉውን ሕንፃ በላ።"
+      "sentence2": "እሳቱ ሙሉውን ሕንፃ በላ።",
+      "pronunciation": "/mətʼəkʼəm/"
     },
     {
       "id": 148,
       "word": "ተጠቃሚ",
       "sentence1": "ተጠቃሚው ሁልጊዜ ትክክል ነው።",
-      "sentence2": "የተጠቃሚን ባህሪ መረዳት አለብን።"
+      "sentence2": "የተጠቃሚን ባህሪ መረዳት አለብን።",
+      "pronunciation": "/tətʼəkʼami/"
     },
     {
       "id": 149,
       "word": "መገናኘት",
       "sentence1": "እባክህ ከኔ ጋር በመገናኘት ቆይ።",
-      "sentence2": "ከድሮ ጓደኞቼ ጋር ግንኙነት አጥቻለሁ።"
+      "sentence2": "ከድሮ ጓደኞቼ ጋር ግንኙነት አጥቻለሁ።",
+      "pronunciation": "/məɡənaɲət/"
     },
     {
       "id": 150,
       "word": "ኮንቴይነር",
       "sentence1": "የመርከብ ኮንቴይነሩ ሙሉ ነው።",
-      "sentence2": "ለማከማቸት ተጨማሪ ኮንቴይነሮች ያስፈልጉናል።"
+      "sentence2": "ለማከማቸት ተጨማሪ ኮንቴይነሮች ያስፈልጉናል።",
+      "pronunciation": "/konɨtejɨnər/"
     },
     {
       "id": 151,
       "word": "ይዘት",
       "sentence1": "የመጽሐፉ ይዘት አስደሳች ነው።",
-      "sentence2": "እባክህ ይዘቱን በጥንቃቄ ገምግም።"
+      "sentence2": "እባክህ ይዘቱን በጥንቃቄ ገምግም።",
+      "pronunciation": "/jɨzət/"
     },
     {
       "id": 152,
       "word": "ቀጣይ",
       "sentence1": "ቀጣይ ጫጫታው የሚያናድድ ነው።",
-      "sentence2": "ከቤተሰቧ ቀጣይ ድጋፍ አላት።"
+      "sentence2": "ከቤተሰቧ ቀጣይ ድጋፍ አላት።",
+      "pronunciation": "/kʼətʼaj/"
     },
     {
       "id": 153,
       "word": "ንጽጽር",
       "sentence1": "በሁለቱ ሥዕሎች መካከል ልዩነት አለ።",
-      "sentence2": "ከባለፈው ዓመት በተቃራኒ ሽያጮች ጨምረዋል።"
+      "sentence2": "ከባለፈው ዓመት በተቃራኒ ሽያጮች ጨምረዋል።",
+      "pronunciation": "/nɨt͡sʼɨt͡sʼɨr/"
     },
     {
       "id": 154,
       "word": "ምቹ",
       "sentence1": "ይህ ቦታ በጣም ምቹ ነው።",
-      "sentence2": "ለአንተ ምቹ ጊዜ አለ?"
+      "sentence2": "ለአንተ ምቹ ጊዜ አለ?",
+      "pronunciation": "/mɨt͡ʃu/"
     },
     {
       "id": 155,
       "word": "ማሳመን",
       "sentence1": "እንዲረዳን ማሳመን አለብኝ።",
-      "sentence2": "አዲሱን ምግብ ቤት እንድሞክር አሳመነችኝ።"
+      "sentence2": "አዲሱን ምግብ ቤት እንድሞክር አሳመነችኝ።",
+      "pronunciation": "/masamən/"
     },
     {
       "id": 156,
       "word": "አሪፍ",
       "sentence1": "ያ ጃኬት በጣም አሪፍ ነው።",
-      "sentence2": "አሪፍ ስታይል አላት።"
+      "sentence2": "አሪፍ ስታይል አላት።",
+      "pronunciation": "/ərif/"
     },
     {
       "id": 157,
       "word": "ልብስ",
       "sentence1": "የሱፐርሂሮ ልብስ ለብሷል።",
-      "sentence2": "የልብስ ድግሱ በጣም አዝናኝ ነበር።"
+      "sentence2": "የልብስ ድግሱ በጣም አዝናኝ ነበር።",
+      "pronunciation": "/lɨbɨs/"
     },
     {
       "id": 158,
       "word": "ጎጆ",
       "sentence1": "በተራሮች ላይ ጎጆ አላቸው።",
-      "sentence2": "ጎጆው በጣም ምቹ ነው።"
+      "sentence2": "ጎጆው በጣም ምቹ ነው።",
+      "pronunciation": "/ɡod͡ʒo/"
     },
     {
       "id": 159,
       "word": "ጥጥ",
       "sentence1": "ይህ ሸሚዝ ከጥጥ የተሰራ ነው።",
-      "sentence2": "ጥጥ ለስላሳ ቁሳቁስ ነው።"
+      "sentence2": "ጥጥ ለስላሳ ቁሳቁስ ነው።",
+      "pronunciation": "/tʼɨtʼ/"
     },
     {
       "id": 160,
       "word": "መቁጠር",
       "sentence1": "እስከ አስር መቁጠር ትችላለህ?",
-      "sentence2": "ገንዘቡን መቁጠር እችላለሁ።"
+      "sentence2": "ገንዘቡን መቁጠር እችላለሁ።",
+      "pronunciation": "/məkʼutʼər/"
     },
     {
       "id": 161,
       "word": "ገጠር",
       "sentence1": "በገጠር ይኖራሉ።",
-      "sentence2": "ገጠሩ በፀደይ ወቅት ቆንጆ ነው።"
+      "sentence2": "ገጠሩ በፀደይ ወቅት ቆንጆ ነው።",
+      "pronunciation": "/ɡətʼər/"
     },
     {
       "id": 162,
       "word": "ፍርድ ቤት",
       "sentence1": "ፍርድ ቤቱ እየተካሄደ ነው።",
-      "sentence2": "ለወንጀሉ ፍርድ ቤት ቀርቧል።"
+      "sentence2": "ለወንጀሉ ፍርድ ቤት ቀርቧል።",
+      "pronunciation": "/fɨrɨd bet/"
     },
     {
       "id": 163,
       "word": "መሸፈን",
       "sentence1": "እባክህ ጠረጴዛውን በጨርቅ ሸፍን።",
-      "sentence2": "በረዶው መሬቱን ሸፍኗል።"
+      "sentence2": "በረዶው መሬቱን ሸፍኗል።",
+      "pronunciation": "/məʃəfən/"
     },
     {
       "id": 164,
       "word": "የተሸፈነ",
       "sentence1": "መጽሐፉ በአቧራ ተሸፍኗል።",
-      "sentence2": "መኪናው በበረዶ ተሸፍኗል።"
+      "sentence2": "መኪናው በበረዶ ተሸፍኗል።",
+      "pronunciation": "/jətəʃəfənə/"
     },
     {
       "id": 165,
       "word": "ክሬም",
       "sentence1": "በቡናዬ ላይ ክሬም ማስገባት እወዳለሁ።",
-      "sentence2": "በቆዳዋ ላይ ክሬም ተጠቅማለች።"
+      "sentence2": "በቆዳዋ ላይ ክሬም ተጠቅማለች።",
+      "pronunciation": "/kɨrem/"
     },
     {
       "id": 166,
       "word": "ወንጀለኛ",
       "sentence1": "ወንጀለኛው በፖሊስ ተይዟል።",
-      "sentence2": "የወንጀል መዝገብ አለው።"
+      "sentence2": "የወንጀል መዝገብ አለው።",
+      "pronunciation": "/wənɨd͡ʒələɲa/"
     },
     {
       "id": 167,
       "word": "ጨካኝ",
       "sentence1": "በዚያ መንገድ መያዝ ጨካኝ ነበር።",
-      "sentence2": "ጨካኙ ቅጣት ሁሉንም አስደንቋል።"
+      "sentence2": "ጨካኙ ቅጣት ሁሉንም አስደንቋል።",
+      "pronunciation": "/t͡ʃʼəkaɲ/"
     },
     {
       "id": 168,
       "word": "ባህላዊ",
       "sentence1": "ባህላዊ ልዩነቶች ፈታኝ ሊሆኑ ይችላሉ።",
-      "sentence2": "ባህላዊ አንትሮፖሎጂ እያጠናች ነው።"
+      "sentence2": "ባህላዊ አንትሮፖሎጂ እያጠናች ነው።",
+      "pronunciation": "/bahɨlawi/"
     },
     {
       "id": 169,
       "word": "ምንዛሪ",
       "sentence1": "የጃፓን ምንዛሪ የን ነው።",
-      "sentence2": "ምንዛሪ መለወጥ አለብኝ።"
+      "sentence2": "ምንዛሪ መለወጥ አለብኝ።",
+      "pronunciation": "/mɨnɨzari/"
     },
     {
       "id": 170,
       "word": "አሁን ያለ",
       "sentence1": "አሁን ያለው ሁኔታ ከባድ ነው።",
-      "sentence2": "አሁን ያለህ ስራ ምንድን ነው?"
+      "sentence2": "አሁን ያለህ ስራ ምንድን ነው?",
+      "pronunciation": "/əhun jalə/"
     },
     {
       "id": 171,
       "word": "በአሁኑ ጊዜ",
       "sentence1": "በአሁኑ ጊዜ ፕሮጀክት እየሰራሁ ነው።",
-      "sentence2": "በአሁኑ ጊዜ በውጭ አገር እያጠናች ነው።"
+      "sentence2": "በአሁኑ ጊዜ በውጭ አገር እያጠናች ነው።",
+      "pronunciation": "/bəəhunu ɡize/"
     },
     {
       "id": 172,
       "word": "መጋረጃ",
       "sentence1": "መጋረጃው ሰማያዊ ነው።",
-      "sentence2": "እባክህ መጋረጃውን ዝጋ።"
+      "sentence2": "እባክህ መጋረጃውን ዝጋ።",
+      "pronunciation": "/məɡarəd͡ʒa/"
     },
     {
       "id": 173,
       "word": "ብጁ",
       "sentence1": "ይህ ብጁ ዲዛይን ነው።",
-      "sentence2": "ብጁ መፍትሔዎችን ያቀርባሉ።"
+      "sentence2": "ብጁ መፍትሔዎችን ያቀርባሉ።",
+      "pronunciation": "/bɨd͡ʒu/"
     },
     {
       "id": 174,
       "word": "መቁረጥ",
       "sentence1": "እባክህ ወረቀቱን ቁረጥ።",
-      "sentence2": "ኬኩን ቁርጥራጭ ቁርጥራጭ አድርጎ ቆርጦታል።"
+      "sentence2": "ኬኩን ቁርጥራጭ ቁርጥራጭ አድርጎ ቆርጦታል።",
+      "pronunciation": "/məkʼurətʼ/"
     },
     {
       "id": 175,
       "word": "ዕለታዊ",
       "sentence1": "ዜናውን በየቀኑ አነባለሁ።",
-      "sentence2": "ዕለታዊ የዕለት ተዕለት ተግባር አላት።"
+      "sentence2": "ዕለታዊ የዕለት ተዕለት ተግባር አላት።",
+      "pronunciation": "/ɨlətawi/"
     },
     {
       "id": 176,
       "word": "ጉዳት",
       "sentence1": "አውሎ ነፋሱ ለጣሪያው ጉዳት አድርሷል።",
-      "sentence2": "ጉዳቱን መገምገም አለብን።"
+      "sentence2": "ጉዳቱን መገምገም አለብን።",
+      "pronunciation": "/ɡudat/"
     },
     {
       "id": 177,
       "word": "ስምምነት",
       "sentence1": "ለመተባበር ስምምነት አድርገዋል።",
-      "sentence2": "ስምምነቱ ለሁለቱም ወገኖች ጠቃሚ ነበር።"
+      "sentence2": "ስምምነቱ ለሁለቱም ወገኖች ጠቃሚ ነበር።",
+      "pronunciation": "/sɨmɨmɨnət/"
     },
     {
       "id": 178,
       "word": "አስርት ዓመት",
       "sentence1": "አንድ አስርት ዓመት አስር ዓመት ነው።",
-      "sentence2": "ባለፉት አስርት ዓመታት ጉልህ ለውጦች ታይተዋል።"
+      "sentence2": "ባለፉት አስርት ዓመታት ጉልህ ለውጦች ታይተዋል።",
+      "pronunciation": "/əsɨrɨt amət/"
     },
     {
       "id": 179,
       "word": "ማስጌጥ",
       "sentence1": "ለድግሱ ክፍሉን እናስጌጣለን።",
-      "sentence2": "ቤቷን ማስጌጥ ትወዳለች።"
+      "sentence2": "ቤቷን ማስጌጥ ትወዳለች።",
+      "pronunciation": "/masɨɡetʼ/"
     },
     {
       "id": 180,
       "word": "ጥልቅ",
       "sentence1": "ሀይቁ በጣም ጥልቅ ነው።",
-      "sentence2": "ከመጥለቁ በፊት ጥልቅ እስትንፋስ ወሰደ።"
+      "sentence2": "ከመጥለቁ በፊት ጥልቅ እስትንፋስ ወሰደ።",
+      "pronunciation": "/tʼɨlɨkʼ/"
     },
     {
       "id": 181,
       "word": "መግለጽ",
       "sentence1": "ቃሉን መግለጽ ትችላለህ?",
-      "sentence2": "ደስታን መግለጽ ከባድ ነው።"
+      "sentence2": "ደስታን መግለጽ ከባድ ነው።",
+      "pronunciation": "/məɡɨlət͡sʼ/"
     },
     {
       "id": 182,
       "word": "የተወሰነ",
       "sentence1": "ለጥያቄው የተወሰነ መልስ አለ።",
-      "sentence2": "የተወሰነ ዕቅድ ያስፈልገናል።"
+      "sentence2": "የተወሰነ ዕቅድ ያስፈልገናል።",
+      "pronunciation": "/jətəwəsənə/"
     },
     {
       "id": 183,
       "word": "ትርጉም",
       "sentence1": "የዚህ ቃል ትርጉም ምንድን ነው?",
-      "sentence2": "ትርጉሙ ግልጽ አይደለም።"
+      "sentence2": "ትርጉሙ ግልጽ አይደለም።",
+      "pronunciation": "/tɨrɨɡum/"
     },
     {
       "id": 184,
       "word": "ማድረስ",
       "sentence1": "ጥቅሉን ነገ አደርሳለሁ።",
-      "sentence2": "ምግብ ማድረስ ያቀርባሉ።"
+      "sentence2": "ምግብ ማድረስ ያቀርባሉ።",
+      "pronunciation": "/madɨrəs/"
     },
     {
       "id": 185,
       "word": "መውጣት",
       "sentence1": "የመውጣት ሰዓት 10 ሰዓት ነው።",
-      "sentence2": "ስለ መውጣቷ አዝነናል።"
+      "sentence2": "ስለ መውጣቷ አዝነናል።",
+      "pronunciation": "/məwɨtʼat/"
     },
     {
       "id": 186,
       "word": "ቢሆንም",
       "sentence1": "ዝናብ ቢኖርም የእግር ጉዞ ሄድን።",
-      "sentence2": "ችግሮች ቢኖሩም ተሳክቷታል።"
+      "sentence2": "ችግሮች ቢኖሩም ተሳክቷታል።",
+      "pronunciation": "/bihonɨm/"
     },
     {
       "id": 187,
       "word": "መድረሻ",
       "sentence1": "ፓሪስ ታዋቂ የቱሪስት መድረሻ ናት።",
-      "sentence2": "የህልም ጉዞ መድረሻህ ምንድን ነው?"
+      "sentence2": "የህልም ጉዞ መድረሻህ ምንድን ነው?",
+      "pronunciation": "/mədɨrəʃa/"
     },
     {
       "id": 188,
       "word": "መወሰን",
       "sentence1": "የችግሩን መንስኤ መወሰን አለብን።",
-      "sentence2": "ፈተናው ደረጃህን ለመወሰን ይረዳል።"
+      "sentence2": "ፈተናው ደረጃህን ለመወሰን ይረዳል።",
+      "pronunciation": "/məwəsən/"
     },
     {
       "id": 189,
       "word": "ቆራጥ",
       "sentence1": "ለመሳካት ቆራጥ ናት።",
-      "sentence2": "ፈተናዎች ቢኖሩም ቆራጥ ሆኗል።"
+      "sentence2": "ፈተናዎች ቢኖሩም ቆራጥ ሆኗል።",
+      "pronunciation": "/kʼoratʼ/"
     },
     {
       "id": 190,
       "word": "ልማት",
       "sentence1": "የቴክኖሎጂ ልማት ፈጣን ነው።",
-      "sentence2": "በግል ልማት ላይ አተኩረናል።"
+      "sentence2": "በግል ልማት ላይ አተኩረናል።",
+      "pronunciation": "/lɨmat/"
     },
     {
       "id": 191,
       "word": "ዲያግራም",
       "sentence1": "ለማብራሪያ ዲያግራሙን ይመልከቱ።",
-      "sentence2": "ዲያግራሙ ሂደቱን ያሳያል።"
+      "sentence2": "ዲያግራሙ ሂደቱን ያሳያል።",
+      "pronunciation": "/dijaɡɨram/"
     },
     {
       "id": 192,
       "word": "አልማዝ",
       "sentence1": "አልማዙ በጣም ዋጋ ያለው ነው።",
-      "sentence2": "የአልማዝ ቀለበት ተቀብላለች።"
+      "sentence2": "የአልማዝ ቀለበት ተቀብላለች።",
+      "pronunciation": "/əlɨmaz/"
     },
     {
       "id": 193,
       "word": "ችግር",
       "sentence1": "ብዙ ችግሮች አጋጥመውታል።",
-      "sentence2": "የተግባሩ ችግር ያልተጠበቀ ነበር።"
+      "sentence2": "የተግባሩ ችግር ያልተጠበቀ ነበር።",
+      "pronunciation": "/t͡ʃɨɡɨr/"
     },
     {
       "id": 194,
       "word": "ቀጥተኛ",
       "sentence1": "እባክህ ቀጥተኛ መልስ ስጠኝ።",
-      "sentence2": "መንገዱ ወደ ከተማው ቀጥተኛ መንገድ ነው።"
+      "sentence2": "መንገዱ ወደ ከተማው ቀጥተኛ መንገድ ነው።",
+      "pronunciation": "/kʼətʼɨtəɲa/"
     },
     {
       "id": 195,
       "word": "በቀጥታ",
       "sentence1": "በቀጥታ ተናግሬዋለሁ።",
-      "sentence2": "መረጃው በቀጥታ ወደ እሷ ተልኳል።"
+      "sentence2": "መረጃው በቀጥታ ወደ እሷ ተልኳል።",
+      "pronunciation": "/bəkʼətʼɨta/"
     },
     {
       "id": 196,
       "word": "አፈር",
       "sentence1": "በጫማህ ላይ ያለው አፈር ይታያል።",
-      "sentence2": "እባክህ ከወለሉ ላይ አፈሩን አጽዳ።"
+      "sentence2": "እባክህ ከወለሉ ላይ አፈሩን አጽዳ።",
+      "pronunciation": "/əfər/"
     },
     {
       "id": 197,
       "word": "ጉዳት",
       "sentence1": "ዋናው ጉዳት ዋጋው ነው።",
-      "sentence2": "ለዚህ አቀራረብ ጥቅሞች እና ጉዳቶች አሉ።"
+      "sentence2": "ለዚህ አቀራረብ ጥቅሞች እና ጉዳቶች አሉ።",
+      "pronunciation": "/ɡudat/"
     },
     {
       "id": 198,
       "word": "ተስፋ የቆረጠ",
       "sentence1": "በውጤቶቹ ተስፋ ቆርጣለች።",
-      "sentence2": "ከፊልሙ በኋላ ተስፋ ቆርጬ ነበር።"
+      "sentence2": "ከፊልሙ በኋላ ተስፋ ቆርጬ ነበር።",
+      "pronunciation": "/təsɨfa jəkʼorətʼə/"
     },
     {
       "id": 199,
       "word": "አሳዛኝ",
       "sentence1": "አፈጻጸሙ አሳዛኝ ነበር።",
-      "sentence2": "ምንም እድገት አለማየት አሳዛኝ ነው።"
+      "sentence2": "ምንም እድገት አለማየት አሳዛኝ ነው።",
+      "pronunciation": "/əsazaɲ/"
     },
     {
       "id": 200,
       "word": "ቅናሽ",
       "sentence1": "በምርቱ ላይ ቅናሽ አድርገዋል።",
-      "sentence2": "በበዓል ቅናሽ ወቅት መግዛት እወዳለሁ።"
+      "sentence2": "በበዓል ቅናሽ ወቅት መግዛት እወዳለሁ።",
+      "pronunciation": "/kʼɨnaʃ/"
     },
     {
       "id": 201,
       "word": "መጥላት",
       "sentence1": "ጮክ ያሉ ድምጾችን እጠላለሁ።",
-      "sentence2": "ለቅመም ምግብ ጥላቻ አላት።"
+      "sentence2": "ለቅመም ምግብ ጥላቻ አላት።",
+      "pronunciation": "/mətʼɨlat/"
     },
     {
       "id": 202,
       "word": "መከፋፈል",
       "sentence1": "ተግባሮቹን በቡድኑ መካከል መከፋፈል አለብን።",
-      "sentence2": "ኬኩ እኩል ቁርጥራጮች ተከፋፍሏል።"
+      "sentence2": "ኬኩ እኩል ቁርጥራጮች ተከፋፍሏል።",
+      "pronunciation": "/məkəfafəl/"
     },
     {
       "id": 203,
       "word": "ዘጋቢ ፊልም",
       "sentence1": "አስደሳች ዘጋቢ ፊልም ተመልክቻለሁ።",
-      "sentence2": "ዘጋቢ ፊልሙ የአየር ንብረት ለውጥን ይዳስሳል።"
+      "sentence2": "ዘጋቢ ፊልሙ የአየር ንብረት ለውጥን ይዳስሳል።",
+      "pronunciation": "/zəɡabi filɨm/"
     },
     {
       "id": 204,
       "word": "መስጠት",
       "sentence1": "ለበጎ አድራጎት መስጠት እፈልጋለሁ።",
-      "sentence2": "ሰዎች ደም እንዲሰጡ ያበረታታሉ።"
+      "sentence2": "ሰዎች ደም እንዲሰጡ ያበረታታሉ።",
+      "pronunciation": "/məsɨtʼət/"
     },
     {
       "id": 205,
       "word": "ድርብ",
       "sentence1": "ድርብ ኤስፕሬሶ ልታዘዝ?",
-      "sentence2": "ዋጋው ባለፈው ዓመት በእጥፍ ጨምሯል።"
+      "sentence2": "ዋጋው ባለፈው ዓመት በእጥፍ ጨምሯል።",
+      "pronunciation": "/dɨrɨb/"
     },
     {
       "id": 206,
       "word": "ጥርጣሬ",
       "sentence1": "ስለ ታማኝነቱ ጥርጣሬ አለኝ።",
-      "sentence2": "ተሰጥኦ እንዳላት ምንም ጥርጣሬ የለም።"
+      "sentence2": "ተሰጥኦ እንዳላት ምንም ጥርጣሬ የለም።",
+      "pronunciation": "/tʼɨrɨtʼare/"
     },
     {
       "id": 207,
       "word": "የለበሰ",
       "sentence1": "ቆንጆ ቀሚስ ለብሳለች።",
-      "sentence2": "ለዝግጅቱ በደንብ ለብሷል።"
+      "sentence2": "ለዝግጅቱ በደንብ ለብሷል።",
+      "pronunciation": "/jələbəsə/"
     },
     {
       "id": 208,
       "word": "መጣል",
       "sentence1": "ብርጭቆውን ላለመጣል ተጠንቀቅ።",
-      "sentence2": "የሙቀት መጠኑ በሌሊት ይቀንሳል።"
+      "sentence2": "የሙቀት መጠኑ በሌሊት ይቀንሳል።",
+      "pronunciation": "/mətʼal/"
     },
     {
       "id": 209,
       "word": "ከበሮ",
       "sentence1": "በባንዱ ውስጥ ከበሮ ይጫወታል።",
-      "sentence2": "የከበሮው ድምፅ ጮክ ያለ ነበር።"
+      "sentence2": "የከበሮው ድምፅ ጮክ ያለ ነበር።",
+      "pronunciation": "/kəbəro/"
     },
     {
       "id": 210,
       "word": "ሰክሮ",
       "sentence1": "ከድግሱ በኋላ ሰክሯል።",
-      "sentence2": "ሰክረህ ሳለ አትጠጣና አትነዳ።"
+      "sentence2": "ሰክረህ ሳለ አትጠጣና አትነዳ።",
+      "pronunciation": "/səkɨro/"
     },
     {
       "id": 211,
       "word": "የሚጠበቅ",
       "sentence1": "ክፍያው በሚቀጥለው ሳምንት ይጠበቃል።",
-      "sentence2": "በግንቦት ወር መውለድ ይጠበቅባታል።"
+      "sentence2": "በግንቦት ወር መውለድ ይጠበቅባታል።",
+      "pronunciation": "/jəmitʼəbəkʼ/"
     },
     {
       "id": 212,
       "word": "አቧራ",
       "sentence1": "በመደርደሪያው ላይ ያለው አቧራ ወፍራም ነው።",
-      "sentence2": "እባክህ አቧራውን ከጠረጴዛው ላይ አጽዳ።"
+      "sentence2": "እባክህ አቧራውን ከጠረጴዛው ላይ አጽዳ።",
+      "pronunciation": "/əbwara/"
     },
     {
       "id": 213,
       "word": "ግዴታ",
       "sentence1": "ሌሎችን መርዳት ግዴታህ ነው።",
-      "sentence2": "ግዴታዎቿን በቁም ነገር ትወስዳለች።"
+      "sentence2": "ግዴታዎቿን በቁም ነገር ትወስዳለች።",
+      "pronunciation": "/ɡɨdeta/"
     },
     {
       "id": 214,
       "word": "የመሬት መንቀጥቀጥ",
       "sentence1": "የመሬት መንቀጥቀጡ ከፍተኛ ጉዳት አድርሷል።",
-      "sentence2": "የመሬት መንቀጥቀጡ ከማይሎች ርቀት ተሰማን።"
+      "sentence2": "የመሬት መንቀጥቀጡ ከማይሎች ርቀት ተሰማን።",
+      "pronunciation": "/jəməret mənɨkʼətʼɨkʼətʼ/"
     },
     {
       "id": 215,
       "word": "ምስራቃዊ",
       "sentence1": "የአገሪቱ ምስራቃዊ ክፍል ተራራማ ነው።",
-      "sentence2": "ወደ ምስራቃዊ ዳርቻ ተጓዙ።"
+      "sentence2": "ወደ ምስራቃዊ ዳርቻ ተጓዙ።",
+      "pronunciation": "/mɨsɨrakʼawi/"
     },
     {
       "id": 216,
       "word": "ኢኮኖሚያዊ",
       "sentence1": "ኢኮኖሚያዊ ሁኔታው እየተሻሻለ ነው።",
-      "sentence2": "ኢኮኖሚያዊ ፖሊሲዎችን ተወያይተዋል።"
+      "sentence2": "ኢኮኖሚያዊ ፖሊሲዎችን ተወያይተዋል።",
+      "pronunciation": "/ikonomijawi/"
     },
     {
       "id": 217,
       "word": "ኢኮኖሚ",
       "sentence1": "ኢኮኖሚው በቀጣይነት እያደገ ነው።",
-      "sentence2": "ጠንካራ ኢኮኖሚ ሁሉንም ይጠቅማል።"
+      "sentence2": "ጠንካራ ኢኮኖሚ ሁሉንም ይጠቅማል።",
+      "pronunciation": "/ikonomi/"
     },
     {
       "id": 218,
       "word": "ጠርዝ",
       "sentence1": "በገደሉ ጠርዝ አቅራቢያ ተጠንቀቅ።",
-      "sentence2": "ቢላዋው ስለት ያለው ጠርዝ አለው።"
+      "sentence2": "ቢላዋው ስለት ያለው ጠርዝ አለው።",
+      "pronunciation": "/tʼərɨz/"
     },
     {
       "id": 219,
       "word": "አርታኢ",
       "sentence1": "አርታኢው ከታተመ በፊት ጽሑፉን ገምግሟል።",
-      "sentence2": "እንደ መጽሔት አርታኢ ትሰራለች።"
+      "sentence2": "እንደ መጽሔት አርታኢ ትሰራለች።",
+      "pronunciation": "/ərɨtai/"
     },
     {
       "id": 220,
       "word": "ማስተማር",
       "sentence1": "ትምህርት ቤቶች ተማሪዎችን በውጤታማ ሁኔታ ለማስተማር ዓላማ አላቸው።",
-      "sentence2": "ህዝቡን ስለ ጤና ጉዳዮች ማስተማር አስፈላጊ ነው።"
+      "sentence2": "ህዝቡን ስለ ጤና ጉዳዮች ማስተማር አስፈላጊ ነው።",
+      "pronunciation": "/masɨtəmar/"
     },
     {
       "id": 221,
       "word": "የተማረ",
       "sentence1": "እሷ ዲግሪ ያላት የተማረች ሴት ናት።",
-      "sentence2": "የተማሩ ግለሰቦች ብዙ ጊዜ የተሻለ የስራ ዕድል አላቸው።"
+      "sentence2": "የተማሩ ግለሰቦች ብዙ ጊዜ የተሻለ የስራ ዕድል አላቸው።",
+      "pronunciation": "/jətəmarə/"
     },
     {
       "id": 222,
       "word": "ትምህርታዊ",
       "sentence1": "ዘጋቢ ፊልሙ አዝናኝ እና ትምህርታዊ ነበር።",
-      "sentence2": "ትምህርታዊ ፕሮግራሞች ለልጆች እድገት አስፈላጊ ናቸው።"
+      "sentence2": "ትምህርታዊ ፕሮግራሞች ለልጆች እድገት አስፈላጊ ናቸው።",
+      "pronunciation": "/tɨmɨhɨrɨtawi/"
     },
     {
       "id": 223,
       "word": "ውጤታማ",
       "sentence1": "አዲሱ የግብይት ስትራተጂ ውጤታማ መሆኑ ተረጋግጧል።",
-      "sentence2": "ውጤታማ ግንኙነት ለስኬታማ ግንኙነት ቁልፍ ነው።"
+      "sentence2": "ውጤታማ ግንኙነት ለስኬታማ ግንኙነት ቁልፍ ነው።",
+      "pronunciation": "/wɨtʼetama/"
     },
     {
       "id": 224,
       "word": "በውጤታማ ሁኔታ",
       "sentence1": "ጊዜዋን በውጤታማ ሁኔታ ተጠቅማለች ገደቡን ለማሟላት።",
-      "sentence2": "ቡድኑ ችግሩን ለመፍታት በውጤታማ ሁኔታ አብረው ሰርተዋል።"
+      "sentence2": "ቡድኑ ችግሩን ለመፍታት በውጤታማ ሁኔታ አብረው ሰርተዋል።",
+      "pronunciation": "/bəwɨtʼetama huneta/"
     },
     {
       "id": 225,
       "word": "ጥረት",
       "sentence1": "ፕሮጀክቱን ለማጠናቀቅ ብዙ ጥረት ወስዷል።",
-      "sentence2": "ክህሎቷን ለማሻሻል ያደረገችው ጥረት ተክፍሏል።"
+      "sentence2": "ክህሎቷን ለማሻሻል ያደረገችው ጥረት ተክፍሏል።",
+      "pronunciation": "/tʼɨrət/"
     },
     {
       "id": 226,
       "word": "ምርጫ",
       "sentence1": "ምርጫው በሚቀጥለው ወር ይካሄዳል።",
-      "sentence2": "ባለፈው ምርጫ የመራጮች ተሳትፎ ከፍተኛ ነበር።"
+      "sentence2": "ባለፈው ምርጫ የመራጮች ተሳትፎ ከፍተኛ ነበር።",
+      "pronunciation": "/mɨrɨt͡ʃʼa/"
     },
     {
       "id": 227,
       "word": "ንጥረ ነገር",
       "sentence1": "ውሃ ለሁሉም ህይወት ያላቸው ነገሮች ወሳኝ ንጥረ ነገር ነው።",
-      "sentence2": "የዕቅዱ ቁልፍ ንጥረ ነገር የቡድን ስራ ነው።"
+      "sentence2": "የዕቅዱ ቁልፍ ንጥረ ነገር የቡድን ስራ ነው።",
+      "pronunciation": "/nɨtʼɨrə nəɡər/"
     },
     {
       "id": 228,
       "word": "አፈረ",
       "sentence1": "ስሙን ከረሳች በኋላ አፈረች።",
-      "sentence2": "በስህተቱ አፍሯል።"
+      "sentence2": "በስህተቱ አፍሯል።",
+      "pronunciation": "/əfərə/"
     },
     {
       "id": 229,
       "word": "አሳፋሪ",
       "sentence1": "ለተሳተፉት ሁሉ አሳፋሪ ጊዜ ነበር።",
-      "sentence2": "አሳፋሪው ሁኔታ በፍጥነት ተረስቷል።"
+      "sentence2": "አሳፋሪው ሁኔታ በፍጥነት ተረስቷል።",
+      "pronunciation": "/əsafari/"
     },
     {
       "id": 230,
       "word": "ድንገተኛ አደጋ",
       "sentence1": "ድንገተኛ አደጋ ቢኖር 911 ደውል።",
-      "sentence2": "የድንገተኛ አደጋ አገልግሎቶች በፍጥነት ደርሰዋል።"
+      "sentence2": "የድንገተኛ አደጋ አገልግሎቶች በፍጥነት ደርሰዋል።",
+      "pronunciation": "/dɨnɨɡətəɲa ədəɡa/"
     },
     {
       "id": 231,
       "word": "ስሜት",
       "sentence1": "ስሜቷን በጥበብ ገልጻለች።",
-      "sentence2": "ስሜቶችህን መረዳት አስፈላጊ ነው።"
+      "sentence2": "ስሜቶችህን መረዳት አስፈላጊ ነው።",
+      "pronunciation": "/sɨmet/"
     },
     {
       "id": 232,
       "word": "ስራ",
       "sentence1": "የስራ ምጣኔዎች በዚህ ዓመት ጨምረዋል።",
-      "sentence2": "በመስኳ ስራ እየፈለገች ነው።"
+      "sentence2": "በመስኳ ስራ እየፈለገች ነው።",
+      "pronunciation": "/sɨra/"
     },
     {
       "id": 233,
       "word": "ባዶ",
       "sentence1": "ክፍሉ ባዶ እና ጸጥ ያለ ነበር።",
-      "sentence2": "ከኪሳራው በኋላ በውስጡ ባዶነት ተሰምቶታል።"
+      "sentence2": "ከኪሳራው በኋላ በውስጡ ባዶነት ተሰምቶታል።",
+      "pronunciation": "/bado/"
     },
     {
       "id": 234,
       "word": "ማበረታታት",
       "sentence1": "መምህራን ተማሪዎች ጥያቄ እንዲጠይቁ ያበረታታሉ።",
-      "sentence2": "ወላጆች ልጆቻቸውን ለማንበብ ማበረታታት አለባቸው።"
+      "sentence2": "ወላጆች ልጆቻቸውን ለማንበብ ማበረታታት አለባቸው።",
+      "pronunciation": "/mabərətatat/"
     },
     {
       "id": 235,
       "word": "ጠላት",
       "sentence1": "በአንድ ወቅት ጓደኛሞች ነበሩ፤ አሁን ግን ጠላቶች ናቸው።",
-      "sentence2": "የጠላት ሃይሎች በጦርነት ተሸንፈዋል።"
+      "sentence2": "የጠላት ሃይሎች በጦርነት ተሸንፈዋል።",
+      "pronunciation": "/tʼəlat/"
     },
     {
       "id": 236,
       "word": "ታጭተው",
       "sentence1": "በሚቀጥለው ዓመት ለመጋባት ታጭተዋል።",
-      "sentence2": "ከጓደኛዋ ጋር በውይይት ላይ ነበረች።"
+      "sentence2": "ከጓደኛዋ ጋር በውይይት ላይ ነበረች።",
+      "pronunciation": "/tat͡ʃʼɨtəw/"
     },
     {
       "id": 237,
       "word": "ምህንድስና",
       "sentence1": "በዩኒቨርሲቲ ምህንድስና ተምሯል።",
-      "sentence2": "ምህንድስና ፈታኝ መስክ ነው።"
+      "sentence2": "ምህንድስና ፈታኝ መስክ ነው።",
+      "pronunciation": "/mɨhɨnɨdɨsɨna/"
     },
     {
       "id": 238,
       "word": "ማዝናናት",
       "sentence1": "የክላውኑ ስራ ልጆቹን ማዝናናት ነው።",
-      "sentence2": "እንግዶቻችንን የሚያዝናና መንገድ ማግኘት አለብን።"
+      "sentence2": "እንግዶቻችንን የሚያዝናና መንገድ ማግኘት አለብን።",
+      "pronunciation": "/mazɨnanat/"
     },
     {
       "id": 239,
       "word": "መዝናኛ",
       "sentence1": "ከተማው ሰፊ የመዝናኛ አማራጮችን ያቀርባል።",
-      "sentence2": "በመዝናኛ ኢንዱስትሪ ውስጥ ትሰራለች።"
+      "sentence2": "በመዝናኛ ኢንዱስትሪ ውስጥ ትሰራለች።",
+      "pronunciation": "/məzɨnaɲa/"
     },
     {
       "id": 240,
       "word": "መግቢያ",
       "sentence1": "የሙዚየሙ መግቢያ በግራ በኩል ነው።",
-      "sentence2": "በድግሱ ላይ ታላቅ መግቢያ አድርጓል።"
+      "sentence2": "በድግሱ ላይ ታላቅ መግቢያ አድርጓል።",
+      "pronunciation": "/məɡɨbija/"
     },
     {
       "id": 241,
       "word": "መግባት",
       "sentence1": "ወደ ዝግጅቱ መግባት ነፃ ነው።",
-      "sentence2": "እባክህ የመግቢያ ቲኬትህን አስቀምጥ።"
+      "sentence2": "እባክህ የመግቢያ ቲኬትህን አስቀምጥ።",
+      "pronunciation": "/məɡɨbat/"
     },
     {
       "id": 242,
       "word": "አካባቢያዊ",
       "sentence1": "አካባቢያዊ ጉዳዮች እየጨመሩ ናቸው።",
-      "sentence2": "ድርጅቱ በአካባቢ ጥበቃ ላይ ያተኩራል።"
+      "sentence2": "ድርጅቱ በአካባቢ ጥበቃ ላይ ያተኩራል።",
+      "pronunciation": "/əkababijawi/"
     },
     {
       "id": 243,
       "word": "ክፍል",
       "sentence1": "የተከታታዩ የቅርብ ጊዜ ክፍል አስደሳች ነበር።",
-      "sentence2": "እያንዳንዱ ክፍል የተለየ ጭብጥ ያሰሳል።"
+      "sentence2": "እያንዳንዱ ክፍል የተለየ ጭብጥ ያሰሳል።",
+      "pronunciation": "/kɨfɨl/"
     },
     {
       "id": 244,
       "word": "እኩል",
       "sentence1": "ሁሉም ሰዎች እኩል መያዝ አለባቸው።",
-      "sentence2": "ህጉ ለሁሉም ዜጎች እኩል መብት ዋስትና ይሰጣል።"
+      "sentence2": "ህጉ ለሁሉም ዜጎች እኩል መብት ዋስትና ይሰጣል።",
+      "pronunciation": "/ɨkul/"
     },
     {
       "id": 245,
       "word": "በእኩል",
       "sentence1": "ሽልማቱ ለሁሉም አሸናፊዎች በእኩል ይሰጣል።",
-      "sentence2": "ዳራቸው ምንም ይሁን ምን በእኩል መያዝ አለባቸው።"
+      "sentence2": "ዳራቸው ምንም ይሁን ምን በእኩል መያዝ አለባቸው።",
+      "pronunciation": "/bəɨkul/"
     },
     {
       "id": 246,
       "word": "ማምለጥ",
       "sentence1": "ከእውነታው ብቸኛው ማምለጫ በምናብ ነው።",
-      "sentence2": "ማምለጫውን በጥንቃቄ አቅዶታል።"
+      "sentence2": "ማምለጫውን በጥንቃቄ አቅዶታል።",
+      "pronunciation": "/mamɨlətʼ/"
     },
     {
       "id": 247,
       "word": "አስፈላጊ",
       "sentence1": "ውሃ ለህይወት አስፈላጊ ነው።",
-      "sentence2": "መመሪያዎቹን መከተል አስፈላጊ ነው።"
+      "sentence2": "መመሪያዎቹን መከተል አስፈላጊ ነው።",
+      "pronunciation": "/əsɨfəlaɡi/"
     },
     {
       "id": 248,
       "word": "በመጨረሻ",
       "sentence1": "በመጨረሻ ለችግሩ መፍትሔ አግኝተዋል።",
-      "sentence2": "በመጨረሻ ቅናሹን ለመቀበል ወሰነች።"
+      "sentence2": "በመጨረሻ ቅናሹን ለመቀበል ወሰነች።",
+      "pronunciation": "/bəmət͡ʃʼərəʃa/"
     },
     {
       "id": 249,
       "word": "መመርመር",
       "sentence1": "ሐኪሙ አሁን ይመረምርሃል።",
-      "sentence2": "ሁሉንም ማስረጃዎች መመርመር አስፈላጊ ነው።"
+      "sentence2": "ሁሉንም ማስረጃዎች መመርመር አስፈላጊ ነው።",
+      "pronunciation": "/məmərɨmər/"
     },
     {
       "id": 250,
       "word": "ከ...በስተቀር",
       "sentence1": "ሁሉም ተጋብዟል ከጆን በስተቀር።",
-      "sentence2": "ከሙዝ በስተቀር ሁሉንም ፍራፍሬዎች እወዳለሁ።"
+      "sentence2": "ከሙዝ በስተቀር ሁሉንም ፍራፍሬዎች እወዳለሁ።",
+      "pronunciation": "/kə...bəsɨtəkʼər/"
     },
     {
       "id": 251,
       "word": "መለዋወጥ",
       "sentence1": "በድግሱ ላይ ስጦታዎችን ተለዋውጠዋል።",
-      "sentence2": "የሀሳቦች ልውውጥ ለእድገት አስፈላጊ ነው።"
+      "sentence2": "የሀሳቦች ልውውጥ ለእድገት አስፈላጊ ነው።",
+      "pronunciation": "/mələwawətʼ/"
     },
     {
       "id": 252,
       "word": "ደስታ",
       "sentence1": "በአየር ላይ ያለው ደስታ ግልጽ ነበር።",
-      "sentence2": "ስለ ጉዞው ያላትን ደስታ መደበቅ አልቻለችም።"
+      "sentence2": "ስለ ጉዞው ያላትን ደስታ መደበቅ አልቻለችም።",
+      "pronunciation": "/dəsɨta/"
     },
     {
       "id": 253,
       "word": "ኤግዚቢሽን",
       "sentence1": "የጥበብ ኤግዚቢሽኑ ብዙ ጎብኝዎችን ስቧል።",
-      "sentence2": "ለመጀመሪያ ብቸኛ ኤግዚቢሽኗ እያዘጋጀች ነው።"
+      "sentence2": "ለመጀመሪያ ብቸኛ ኤግዚቢሽኗ እያዘጋጀች ነው።",
+      "pronunciation": "/eɡɨzibiʃɨn/"
     },
     {
       "id": 254,
       "word": "ማስፋት",
       "sentence1": "ኩባንያው ስራዎቹን ወደ ውጭ አገር ለማስፋት እቅድ አለው።",
-      "sentence2": "የምርት መስመራችንን ማስፋት አለብን።"
+      "sentence2": "የምርት መስመራችንን ማስፋት አለብን።",
+      "pronunciation": "/masɨfat/"
     },
     {
       "id": 255,
       "word": "የተጠበቀ",
       "sentence1": "ውጤቶቹ ከተጠበቀው የተሻሉ ነበሩ።",
-      "sentence2": "የውድድሩ የተጠበቀ አሸናፊ ናት።"
+      "sentence2": "የውድድሩ የተጠበቀ አሸናፊ ናት።",
+      "pronunciation": "/jətətʼəbəkʼə/"
     },
     {
       "id": 256,
       "word": "ጉዞ",
       "sentence1": "ወደ ደቡብ ዋልታ ያደረጉት ጉዞ ስኬታማ ነበር።",
-      "sentence2": "ለወራት ለጉዞው ዝግጅት አድርገዋል።"
+      "sentence2": "ለወራት ለጉዞው ዝግጅት አድርገዋል።",
+      "pronunciation": "/ɡuzo/"
     },
     {
       "id": 257,
       "word": "ልምድ",
       "sentence1": "በግብይት ብዙ ልምድ አላት።",
-      "sentence2": "ወደ ውጭ አገር መጓዝ ለእሱ ጠቃሚ ልምድ ነበር።"
+      "sentence2": "ወደ ውጭ አገር መጓዝ ለእሱ ጠቃሚ ልምድ ነበር።",
+      "pronunciation": "/lɨmɨd/"
     },
     {
       "id": 258,
       "word": "ልምድ ያለው",
       "sentence1": "እሱ ልምድ ያለው መምህር ነው።",
-      "sentence2": "ቡድኑ ልምድ ያላቸው ተጫዋቾች ያስፈልጉታል።"
+      "sentence2": "ቡድኑ ልምድ ያላቸው ተጫዋቾች ያስፈልጉታል።",
+      "pronunciation": "/lɨmɨd jaləw/"
     },
     {
       "id": 259,
       "word": "ሙከራ",
       "sentence1": "ሳይንቲስቶቹ ሙከራ አድርገዋል።",
-      "sentence2": "ሙከራው አስደሳች ውጤቶችን ሰጥቷል።"
+      "sentence2": "ሙከራው አስደሳች ውጤቶችን ሰጥቷል።",
+      "pronunciation": "/mukəra/"
     },
     {
       "id": 260,
       "word": "መፈንዳት",
       "sentence1": "ርችቶች በእኩለ ሌሊት ይፈነዳሉ።",
-      "sentence2": "ብዙ ከነፋህበት ፊኛው ሊፈነዳ ይችላል።"
+      "sentence2": "ብዙ ከነፋህበት ፊኛው ሊፈነዳ ይችላል።",
+      "pronunciation": "/məfənɨdat/"
     },
     {
       "id": 261,
       "word": "ማሰስ",
       "sentence1": "ዋሻውን ለማሰስ እቅድ አላቸው።",
-      "sentence2": "አዳዲስ ቦታዎችን ማሰስ ትወዳለች።"
+      "sentence2": "አዳዲስ ቦታዎችን ማሰስ ትወዳለች።",
+      "pronunciation": "/masəs/"
     },
     {
       "id": 262,
       "word": "ፍንዳታ",
       "sentence1": "ፍንዳታው ከማይሎች ርቀት ተሰምቷል።",
-      "sentence2": "የፍንዳታውን መንስኤ መርምረዋል።"
+      "sentence2": "የፍንዳታውን መንስኤ መርምረዋል።",
+      "pronunciation": "/fɨnɨdata/"
     },
     {
       "id": 263,
       "word": "መላክ",
       "sentence1": "አገሪቱ ወደ ሌሎች አገሮች ዘይት ትልካለች።",
-      "sentence2": "ምርቶቻቸውን ለመላክ አዳዲስ ገበያዎች ማግኘት አለባቸው።"
+      "sentence2": "ምርቶቻቸውን ለመላክ አዳዲስ ገበያዎች ማግኘት አለባቸው።",
+      "pronunciation": "/məlak/"
     },
     {
       "id": 264,
       "word": "ተጨማሪ",
       "sentence1": "ፕሮጀክቱን ለማጠናቀቅ ተጨማሪ ጊዜ ያስፈልግሃል።",
-      "sentence2": "ለጉዞው ተጨማሪ መክሰስ አምጥታለች።"
+      "sentence2": "ለጉዞው ተጨማሪ መክሰስ አምጥታለች።",
+      "pronunciation": "/tət͡ʃʼəmari/"
     },
     {
       "id": 265,
       "word": "መጋፈጥ",
       "sentence1": "ህዝቡን ለመጋፈጥ ዞረ።",
-      "sentence2": "ከሆነው በኋላ እሱን መጋፈጥ አልቻለችም።"
+      "sentence2": "ከሆነው በኋላ እሱን መጋፈጥ አልቻለችም።",
+      "pronunciation": "/məɡafətʼ/"
     },
     {
       "id": 266,
       "word": "በመጠኑ",
       "sentence1": "ፈተናው በመጠኑ ቀላል ነበር።",
-      "sentence2": "ስለ ውሳኔዋ በመጠኑ እርግጠኛ ናት።"
+      "sentence2": "ስለ ውሳኔዋ በመጠኑ እርግጠኛ ናት።",
+      "pronunciation": "/bəmətʼənu/"
     },
     {
       "id": 267,
       "word": "የተለመደ",
       "sentence1": "ይህ ቦታ የተለመደ ይመስላል።",
-      "sentence2": "ከዚያ ፅንሰ-ሀሳብ ጋር አልለመድኩም።"
+      "sentence2": "ከዚያ ፅንሰ-ሀሳብ ጋር አልለመድኩም።",
+      "pronunciation": "/jətələmədə/"
     },
     {
       "id": 268,
       "word": "የቅንጦት",
       "sentence1": "ለድግሱ የቅንጦት ቀሚስ ለብሳለች።",
-      "sentence2": "በቅንጦት ሆቴል ቆይተዋል።"
+      "sentence2": "በቅንጦት ሆቴል ቆይተዋል።",
+      "pronunciation": "/jəkʼɨnɨtʼot/"
     },
     {
       "id": 269,
       "word": "ሩቅ",
       "sentence1": "ሱቁ ከዚህ ሩቅ ነው።",
-      "sentence2": "በገጠር ሩቅ ትኖራለች።"
+      "sentence2": "በገጠር ሩቅ ትኖራለች።",
+      "pronunciation": "/rukʼ/"
     },
     {
       "id": 270,
       "word": "አስደናቂ",
       "sentence1": "ዘጋቢ ፊልሙ አስደናቂ ነበር።",
-      "sentence2": "የሚናገረው አስደናቂ ታሪክ አላት።"
+      "sentence2": "የሚናገረው አስደናቂ ታሪክ አላት።",
+      "pronunciation": "/əsɨdənakʼi/"
     },
     {
       "id": 271,
       "word": "ፋሽን",
       "sentence1": "ሁልጊዜ ፋሽን የሆኑ ልብሶችን ይለብሳል።",
-      "sentence2": "የዚህ ወቅት ቀለሞች በጣም ፋሽን ናቸው።"
+      "sentence2": "የዚህ ወቅት ቀለሞች በጣም ፋሽን ናቸው።",
+      "pronunciation": "/faʃɨn/"
     },
     {
       "id": 272,
       "word": "ማሰር",
       "sentence1": "እባክህ ቀበቶህን አስር።",
-      "sentence2": "ወረቀቶቹን አንድ ላይ ለማሰር ክሊፕ ተጠቅማለች።"
+      "sentence2": "ወረቀቶቹን አንድ ላይ ለማሰር ክሊፕ ተጠቅማለች።",
+      "pronunciation": "/masər/"
     },
     {
       "id": 273,
       "word": "ውለታ",
       "sentence1": "ውለታ ልታደርግልኝ ትችላለህ?",
-      "sentence2": "አዲሱን ፖሊሲ ትደግፋለች።"
+      "sentence2": "አዲሱን ፖሊሲ ትደግፋለች።",
+      "pronunciation": "/wɨləta/"
     },
     {
       "id": 274,
       "word": "ፍርሃት",
       "sentence1": "ከፍታን ይፈራል።",
-      "sentence2": "የመውደቅ ፍርሃት አካል ጉዳተኛ ሊያደርግ ይችላል።"
+      "sentence2": "የመውደቅ ፍርሃት አካል ጉዳተኛ ሊያደርግ ይችላል።",
+      "pronunciation": "/fɨrɨhat/"
     },
     {
       "id": 275,
       "word": "ባህሪ",
       "sentence1": "አዲሱ ስልክ በርካታ አስደሳች ባህሪያት አሉት።",
-      "sentence2": "ቁልፍ ባህሪያት አንዱ ካሜራው ነው።"
+      "sentence2": "ቁልፍ ባህሪያት አንዱ ካሜራው ነው።",
+      "pronunciation": "/bahɨri/"
     },
     {
       "id": 276,
       "word": "አጥር",
       "sentence1": "በአትክልቱ ዙሪያ አጥር ሰርተዋል።",
-      "sentence2": "አጥሩ መቀባት አለበት።"
+      "sentence2": "አጥሩ መቀባት አለበት።",
+      "pronunciation": "/ətʼɨr/"
     },
     {
       "id": 277,
       "word": "መዋጋት",
       "sentence1": "በአካባቢው ያለው ጦርነት ጨምሯል።",
-      "sentence2": "ለመብታቸው እየተዋጉ ነበር።"
+      "sentence2": "ለመብታቸው እየተዋጉ ነበር።",
+      "pronunciation": "/məwaɡat/"
     },
     {
       "id": 278,
       "word": "ፋይል",
       "sentence1": "ከመዝጋትህ በፊት ፋይሉን አስቀምጥ።",
-      "sentence2": "ፋይሎቼን ማደራጀት አለብኝ።"
+      "sentence2": "ፋይሎቼን ማደራጀት አለብኝ።",
+      "pronunciation": "/fajɨl/"
     },
     {
       "id": 279,
       "word": "የገንዘብ",
       "sentence1": "ኩባንያው ጠንካራ የገንዘብ አቋም ላይ ነው።",
-      "sentence2": "ለተማሪዎች የገንዘብ ድጋፍ ያቀርባሉ።"
+      "sentence2": "ለተማሪዎች የገንዘብ ድጋፍ ያቀርባሉ።",
+      "pronunciation": "/jəɡənɨzəb/"
     },
     {
       "id": 280,
       "word": "እሳት",
       "sentence1": "እሳቱ በፍጥነት በጫካው ውስጥ ተሰራጨ።",
-      "sentence2": "እሳት አጥፊዎች እሳቱን ለመቆጣጠር ሰርተዋል።"
+      "sentence2": "እሳት አጥፊዎች እሳቱን ለመቆጣጠር ሰርተዋል።",
+      "pronunciation": "/ɨsat/"
     },
     {
       "id": 281,
       "word": "የአካል ብቃት",
       "sentence1": "በአካል ብቃት ግቦቿ ላይ አተኩራለች።",
-      "sentence2": "መደበኛ የአካል ብቃት እንቅስቃሴ ለጤና አስፈላጊ ነው።"
+      "sentence2": "መደበኛ የአካል ብቃት እንቅስቃሴ ለጤና አስፈላጊ ነው።",
+      "pronunciation": "/jəəkal bɨkʼat/"
     },
     {
       "id": 282,
       "word": "የተወሰነ",
       "sentence1": "የተወሰነው ዋጋ ሊደራደር አይችልም።",
-      "sentence2": "በየሳምንቱ የተወሰነ መርሐ ግብር አለው።"
+      "sentence2": "በየሳምንቱ የተወሰነ መርሐ ግብር አለው።",
+      "pronunciation": "/jətəwəsənə/"
     },
     {
       "id": 283,
       "word": "ባንዲራ",
       "sentence1": "ባንዲራው በነፋስ እየተወዛወዘ ነበር።",
-      "sentence2": "ለማክበር ባንዲራውን አውጠዋል።"
+      "sentence2": "ለማክበር ባንዲራውን አውጠዋል።",
+      "pronunciation": "/banɨdira/"
     },
     {
       "id": 284,
       "word": "ጎርፍ",
       "sentence1": "ጎርፉ ከፍተኛ ጉዳት አድርሷል።",
-      "sentence2": "ወደፊት ጎርፍ ለመከላከል እየሰሩ ነው።"
+      "sentence2": "ወደፊት ጎርፍ ለመከላከል እየሰሩ ነው።",
+      "pronunciation": "/ɡorɨf/"
     },
     {
       "id": 285,
       "word": "ዱቄት",
       "sentence1": "ዳቦውን ለመጋገር ዱቄት ያስፈልጋታል።",
-      "sentence2": "የምግብ አሰራሩ ሁለት ኩባያ ዱቄት ይፈልጋል።"
+      "sentence2": "የምግብ አሰራሩ ሁለት ኩባያ ዱቄት ይፈልጋል።",
+      "pronunciation": "/dukʼet/"
     },
     {
       "id": 286,
       "word": "ፍሰት",
       "sentence1": "የወንዙ ፍሰት ጠንካራ ነው።",
-      "sentence2": "የመረጃ ፍሰትን ማሻሻል አለብን።"
+      "sentence2": "የመረጃ ፍሰትን ማሻሻል አለብን።",
+      "pronunciation": "/fɨsət/"
     },
     {
       "id": 287,
       "word": "ማጠፍ",
       "sentence1": "እባክህ ወረቀቱን በግማሽ አጥፍ።",
-      "sentence2": "የታጠፈ ሉህ እንዴት መጠፍ እንደሚቻል ታውቃለች።"
+      "sentence2": "የታጠፈ ሉህ እንዴት መጠፍ እንደሚቻል ታውቃለች።",
+      "pronunciation": "/matʼəf/"
     },
     {
       "id": 288,
       "word": "ህዝባዊ",
       "sentence1": "ህዝባዊ ሙዚቃ በዚህ ክልል ታዋቂ ነው።",
-      "sentence2": "በዓሉ ህዝባዊ ወጎችን ያከብራል።"
+      "sentence2": "በዓሉ ህዝባዊ ወጎችን ያከብራል።",
+      "pronunciation": "/hɨzɨbawi/"
     },
     {
       "id": 289,
       "word": "የሚከተለው",
       "sentence1": "የሚከተለው ቀን ፀሐያማ ነበር።",
-      "sentence2": "ታማኝ አድናቂዎችን አፈራች።"
+      "sentence2": "ታማኝ አድናቂዎችን አፈራች።",
+      "pronunciation": "/jəmikətələw/"
     },
     {
       "id": 290,
       "word": "ኃይል",
       "sentence1": "የፍንዳታው ኃይል ግዙፍ ነበር።",
-      "sentence2": "መኪናውን ለመግፋት ሁሉንም ኃይላቸውን ተጠቅመዋል።"
+      "sentence2": "መኪናውን ለመግፋት ሁሉንም ኃይላቸውን ተጠቅመዋል።",
+      "pronunciation": "/hajɨl/"
     },
     {
       "id": 291,
       "word": "ለዘላለም",
       "sentence1": "ለዘላለም እወድሃለሁ።",
-      "sentence2": "ይህ ጊዜ ለዘላለም በትውስታዬ ውስጥ ይቀረጻል።"
+      "sentence2": "ይህ ጊዜ ለዘላለም በትውስታዬ ውስጥ ይቀረጻል።",
+      "pronunciation": "/ləzəlaləm/"
     },
     {
       "id": 292,
       "word": "ፍሬም",
       "sentence1": "ለስዕሉ አዲስ ፍሬም ገዝታለች።",
-      "sentence2": "ፍሬሙ ከጠንካራ እንጨት የተሰራ ነው።"
+      "sentence2": "ፍሬሙ ከጠንካራ እንጨት የተሰራ ነው።",
+      "pronunciation": "/fɨrem/"
     },
     {
       "id": 293,
       "word": "መቀዝቀዝ",
       "sentence1": "ሙቀቱ ከቀነሰ ውሃ ይቀዘቅዛል።",
-      "sentence2": "ቅሪቶቹን መቀዝቀዝ ረስቼያለሁ።"
+      "sentence2": "ቅሪቶቹን መቀዝቀዝ ረስቼያለሁ።",
+      "pronunciation": "/məkʼəzɨkʼəz/"
     },
     {
       "id": 294,
       "word": "በተደጋጋሚ",
       "sentence1": "ለስራ በተደጋጋሚ ትጓዛለች።",
-      "sentence2": "አውቶቡሱ በቀን ውስጥ በተደጋጋሚ ይሄዳል።"
+      "sentence2": "አውቶቡሱ በቀን ውስጥ በተደጋጋሚ ይሄዳል።",
+      "pronunciation": "/bətədəɡaɡami/"
     },
     {
       "id": 295,
       "word": "ወዳጅነት",
       "sentence1": "ወዳጅነታቸው ለዓመታት ቆይቷል።",
-      "sentence2": "ከእሱ ጋር ያላትን ወዳጅነት ታከብራለች።"
+      "sentence2": "ከእሱ ጋር ያላትን ወዳጅነት ታከብራለች።",
+      "pronunciation": "/wədad͡ʒɨnət/"
     },
     {
       "id": 296,
       "word": "ማስፈራት",
       "sentence1": "ጮክ ያለው ድምጽ ልጆቹን ሊያስፈራ ይችላል።",
-      "sentence2": "ሊያስፈራህ አልፈለገም።"
+      "sentence2": "ሊያስፈራህ አልፈለገም።",
+      "pronunciation": "/masɨfərat/"
     },
     {
       "id": 297,
       "word": "የፈራ",
       "sentence1": "በድንገተኛው ድምጽ ፈርታለች።",
-      "sentence2": "የፈራው ድመት ከአልጋ ስር ተደብቋል።"
+      "sentence2": "የፈራው ድመት ከአልጋ ስር ተደብቋል።",
+      "pronunciation": "/jəfəra/"
     },
     {
       "id": 298,
       "word": "አስፈሪ",
       "sentence1": "ፊልሙ በጣም አስፈሪ ስለነበር መተኛት አልቻልኩም።",
-      "sentence2": "የወደፊቱን ለመተንበይ አስፈሪ ችሎታ አለው።"
+      "sentence2": "የወደፊቱን ለመተንበይ አስፈሪ ችሎታ አለው።",
+      "pronunciation": "/əsɨfəri/"
     },
     {
       "id": 299,
       "word": "የቀዘቀዘ",
       "sentence1": "ሀይቁ በክረምት ይቀዘቅዛል።",
-      "sentence2": "በማቀዝቀዣ ውስጥ የቀዘቀዘ ፒዛ አግኝታለች።"
+      "sentence2": "በማቀዝቀዣ ውስጥ የቀዘቀዘ ፒዛ አግኝታለች።",
+      "pronunciation": "/jəkʼəzəkʼəzə/"
     },
     {
       "id": 300,
       "word": "መጥበስ",
       "sentence1": "አትክልቶችን በወይራ ዘይት መጥበስ እወዳለሁ።",
-      "sentence2": "ድንቹን እስኪወርቁ ድረስ መጥበስ አለብህ።"
+      "sentence2": "ድንቹን እስኪወርቁ ድረስ መጥበስ አለብህ።",
+      "pronunciation": "/mətʼɨbəs/"
     },
     {
       "id": 301,
       "word": "ነዳጅ",
       "sentence1": "መኪናው በዲዝል ነዳጅ ይሰራል።",
-      "sentence2": "ለጀነሬተሩ የነዳጅ ምንጭ ማግኘት አለብን።"
+      "sentence2": "ለጀነሬተሩ የነዳጅ ምንጭ ማግኘት አለብን።",
+      "pronunciation": "/nədad͡ʒ/"
     },
     {
       "id": 302,
       "word": "ተግባር",
       "sentence1": "የልብ ዋና ተግባር ደም መስጠት ነው።",
-      "sentence2": "ይህ ቁልፍ በሶፍትዌሩ ውስጥ ልዩ ተግባር አለው።"
+      "sentence2": "ይህ ቁልፍ በሶፍትዌሩ ውስጥ ልዩ ተግባር አለው።",
+      "pronunciation": "/təɡɨbar/"
     },
     {
       "id": 303,
       "word": "ፀጉር",
       "sentence1": "ካፖርቱ ከእውነተኛ ፀጉር የተሰራ ነው።",
-      "sentence2": "አንዳንድ እንስሳት ለሙቀት ወፍራም ፀጉር አላቸው።"
+      "sentence2": "አንዳንድ እንስሳት ለሙቀት ወፍራም ፀጉር አላቸው።",
+      "pronunciation": "/t͡sʼəɡur/"
     },
     {
       "id": 304,
       "word": "ተጨማሪ",
       "sentence1": "ይህን ጉዳይ ተጨማሪ መመርመር አለብን።",
-      "sentence2": "ስለ ፕሮጀክቱ ተጨማሪ ዝርዝሮችን መስጠት ትችላለህ?"
+      "sentence2": "ስለ ፕሮጀክቱ ተጨማሪ ዝርዝሮችን መስጠት ትችላለህ?",
+      "pronunciation": "/tət͡ʃʼəmari/"
     },
     {
       "id": 305,
       "word": "ጋራዥ",
       "sentence1": "መኪናውን በጋራዡ ውስጥ አቁሟል።",
-      "sentence2": "ጋራዡ በአሮጌ መሳሪያዎች ተሞልቷል።"
+      "sentence2": "ጋራዡ በአሮጌ መሳሪያዎች ተሞልቷል።",
+      "pronunciation": "/ɡaraʒ/"
     },
     {
       "id": 306,
       "word": "መሰብሰብ",
       "sentence1": "የሚያስፈልጉንን ሁሉንም ቁሳቁሶች እንሰብስብ።",
-      "sentence2": "በፀደይ ወቅት አበቦችን መሰብሰብ ትወዳለች።"
+      "sentence2": "በፀደይ ወቅት አበቦችን መሰብሰብ ትወዳለች።",
+      "pronunciation": "/məsəbɨsəb/"
     },
     {
       "id": 307,
       "word": "በአጠቃላይ",
       "sentence1": "በአጠቃላይ ማልዶ እነሳለሁ።",
-      "sentence2": "የአየር ሁኔታው በአጠቃላይ በመኸር ለስላሳ ነው።"
+      "sentence2": "የአየር ሁኔታው በአጠቃላይ በመኸር ለስላሳ ነው።",
+      "pronunciation": "/bəətʼəkʼalaj/"
     },
     {
       "id": 308,
       "word": "ትውልድ",
       "sentence1": "ይህ ትውልድ ተክኖሎጂ የተዋወቀ ነው።",
-      "sentence2": "እያንዳንዱ ትውልድ የራሱ ፈተናዎች አሉት።"
+      "sentence2": "እያንዳንዱ ትውልድ የራሱ ፈተናዎች አሉት።",
+      "pronunciation": "/tɨwɨlɨd/"
     },
     {
       "id": 309,
       "word": "ለጋስ",
       "sentence1": "ጊዜዋን በጣም ለጋስ ናት።",
-      "sentence2": "ለጋስ ስጦታው ብዙ ሰዎችን ረድቷል።"
+      "sentence2": "ለጋስ ስጦታው ብዙ ሰዎችን ረድቷል።",
+      "pronunciation": "/ləɡas/"
     },
     {
       "id": 310,
       "word": "ለስላሳ",
       "sentence1": "ለስላሳ ባህሪ አለው።",
-      "sentence2": "ለስላሳው ንፋስ አድስ አድርጓል።"
+      "sentence2": "ለስላሳው ንፋስ አድስ አድርጓል።",
+      "pronunciation": "/ləsɨlasa/"
     },
     {
       "id": 311,
       "word": "ጨዋ",
       "sentence1": "እሱ እውነተኛ ጨዋ ነው።",
-      "sentence2": "ጨዋው በሩን ለእሷ ከፍቶ ይዞታል።"
+      "sentence2": "ጨዋው በሩን ለእሷ ከፍቶ ይዞታል።",
+      "pronunciation": "/t͡ʃʼəwa/"
     },
     {
       "id": 312,
       "word": "መንፈስ",
       "sentence1": "መንፈሱ በእኩለ ሌሊት ታይቷል።",
-      "sentence2": "በመናፍስት እና በነፍሳት ታምናለች።"
+      "sentence2": "በመናፍስት እና በነፍሳት ታምናለች።",
+      "pronunciation": "/mənɨfəs/"
     },
     {
       "id": 313,
       "word": "ግዙፍ",
       "sentence1": "ግዙፉ ዛፍ ከጫካው በላይ ቆሟል።",
-      "sentence2": "ግዙፍ የቴምብር ስብስብ አለው።"
+      "sentence2": "ግዙፍ የቴምብር ስብስብ አለው።",
+      "pronunciation": "/ɡɨzuf/"
     },
     {
       "id": 314,
       "word": "ደስተኛ",
       "sentence1": "እንደገና ስላየሁህ ደስ ብሎኛል።",
-      "sentence2": "መልካም ዜናውን ስትሰማ ደስ ብሏታል።"
+      "sentence2": "መልካም ዜናውን ስትሰማ ደስ ብሏታል።",
+      "pronunciation": "/dəsɨtəɲa/"
     },
     {
       "id": 315,
       "word": "ዓለምአቀፍ",
       "sentence1": "የአየር ንብረት ለውጥ ዓለምአቀፍ ችግር ነው።",
-      "sentence2": "ለዚህ ችግር ዓለምአቀፍ መፍትሔ ያስፈልገናል።"
+      "sentence2": "ለዚህ ችግር ዓለምአቀፍ መፍትሔ ያስፈልገናል።",
+      "pronunciation": "/aləmɨəkʼəf/"
     },
     {
       "id": 316,
       "word": "ጓንት",
       "sentence1": "ወደ ውጭ ከመውጣቱ በፊት ጓንቶቹን ለብሷል።",
-      "sentence2": "እነዚህ ጓንቶች ከሞቃት ሱፍ የተሰሩ ናቸው።"
+      "sentence2": "እነዚህ ጓንቶች ከሞቃት ሱፍ የተሰሩ ናቸው።",
+      "pronunciation": "/ɡwanɨt/"
     },
     {
       "id": 317,
       "word": "መሄድ",
       "sentence1": "ወደ ሱቅ መሄድ አለብኝ።",
-      "sentence2": "እንንሸራሸር።"
+      "sentence2": "እንንሸራሸር።",
+      "pronunciation": "/məhed/"
     },
     {
       "id": 318,
       "word": "ሸቀጦች",
       "sentence1": "ሱቁ የተለያዩ ሸቀጦችን ይሸጣል።",
-      "sentence2": "እነዚህን ሸቀጦች ወደ መጋዘኑ ማጓጓዝ አለብን።"
+      "sentence2": "እነዚህን ሸቀጦች ወደ መጋዘኑ ማጓጓዝ አለብን።",
+      "pronunciation": "/ʃəkʼətʼot͡ʃ/"
     },
     {
       "id": 319,
       "word": "ደረጃ",
       "sentence1": "በፈተናዋ ከፍተኛ ደረጃ አግኝታለች።",
-      "sentence2": "መምህሩ በዚህ ሳምንት መጨረሻ ወረቀቶቹን ይሰጣል።"
+      "sentence2": "መምህሩ በዚህ ሳምንት መጨረሻ ወረቀቶቹን ይሰጣል።",
+      "pronunciation": "/dərəd͡ʒa/"
     },
     {
       "id": 320,
       "word": "መመረቅ",
       "sentence1": "በሚቀጥለው ዓመት ከዩኒቨርሲቲ እመረቃለሁ።",
-      "sentence2": "በክብር መመረቋ ይኮራል።"
+      "sentence2": "በክብር መመረቋ ይኮራል።",
+      "pronunciation": "/məmərəkʼ/"
     },
     {
       "id": 321,
       "word": "እህል",
       "sentence1": "ስንዴ ለዳቦ የሚውል የተለመደ እህል ነው።",
-      "sentence2": "ገበሬው በዚህ ወቅት አዲስ የእህል ሰብል ዘርቷል።"
+      "sentence2": "ገበሬው በዚህ ወቅት አዲስ የእህል ሰብል ዘርቷል።",
+      "pronunciation": "/ɨhɨl/"
     },
     {
       "id": 322,
       "word": "አመስጋኝ",
       "sentence1": "ለእርዳታህ አመስጋኝ ነኝ።",
-      "sentence2": "ለጓደኞቿ ድጋፍ አመስጋኝ ተሰማት።"
+      "sentence2": "ለጓደኞቿ ድጋፍ አመስጋኝ ተሰማት።",
+      "pronunciation": "/əməsɨɡaɲ/"
     },
     {
       "id": 323,
       "word": "እድገት",
       "sentence1": "ተክሉ በዚህ ጸደይ ከፍተኛ እድገት አሳይቷል።",
-      "sentence2": "ኢኮኖሚያዊ እድገት ለልማት አስፈላጊ ነው።"
+      "sentence2": "ኢኮኖሚያዊ እድገት ለልማት አስፈላጊ ነው።",
+      "pronunciation": "/ɨdɨɡət/"
     },
     {
       "id": 324,
       "word": "ጠባቂ",
       "sentence1": "የደህንነት ጠባቂው መግቢያውን እየተመለከተ ነው።",
-      "sentence2": "በመስመር ላይ ግላዊነታችንን መጠበቅ አለብን።"
+      "sentence2": "በመስመር ላይ ግላዊነታችንን መጠበቅ አለብን።",
+      "pronunciation": "/tʼəbakʼi/"
     },
     {
       "id": 325,
       "word": "ጥፋተኛ",
       "sentence1": "ባለመርዳቱ ጥፋተኝነት ተሰምቶታል።",
-      "sentence2": "የጥፋተኝነት ውሳኔ ተነግሯል።"
+      "sentence2": "የጥፋተኝነት ውሳኔ ተነግሯል።",
+      "pronunciation": "/tʼɨfatəɲa/"
     },
     {
       "id": 326,
       "word": "እጅ",
       "sentence1": "ጥያቄ ለመጠየቅ እጇን አንስታለች።",
-      "sentence2": "ከሁሉም ጋር እጅ ተጨባብጧል።"
+      "sentence2": "ከሁሉም ጋር እጅ ተጨባብጧል።",
+      "pronunciation": "/ɨd͡ʒ/"
     },
     {
       "id": 327,
       "word": "መስቀል",
       "sentence1": "ስዕሉን በግድግዳው ላይ ለመስቀል ወሰኑ።",
-      "sentence2": "ካፖቶህን መስቀል አትርሳ።"
+      "sentence2": "ካፖቶህን መስቀል አትርሳ።",
+      "pronunciation": "/məsɨkʼəl/"
     },
     {
       "id": 328,
       "word": "ደስታ",
       "sentence1": "ደስታ የሚያረካ ህይወት ቁልፍ ነው።",
-      "sentence2": "የትም ብትሄድ ደስታን ትፈነጥቃለች።"
+      "sentence2": "የትም ብትሄድ ደስታን ትፈነጥቃለች።",
+      "pronunciation": "/dəsɨta/"
     },
     {
       "id": 329,
       "word": "በጭራሽ",
       "sentence1": "በጭራሽ ልሰማህ አልችልም።",
-      "sentence2": "በጭራሽ ወደ ውጭ አትወጣም።"
+      "sentence2": "በጭራሽ ወደ ውጭ አትወጣም።",
+      "pronunciation": "/bət͡ʃʼɨraʃ/"
     },
     {
       "id": 330,
       "word": "መጥላት",
       "sentence1": "በመስመር ላይ መጠበቅ እጠላለሁ።",
-      "sentence2": "ለኢፍትሃዊነት ጥላቻ አለው።"
+      "sentence2": "ለኢፍትሃዊነት ጥላቻ አለው።",
+      "pronunciation": "/mətʼɨlat/"
     },
     {
       "id": 331,
       "word": "ራስ",
       "sentence1": "በስምምነት ራሷን ነቀነቀች።",
-      "sentence2": "ራሱን ከፍ አድርጎ ይዟል።"
+      "sentence2": "ራሱን ከፍ አድርጎ ይዟል።",
+      "pronunciation": "/ras/"
     },
     {
       "id": 332,
       "word": "ርዕስ",
       "sentence1": "ርዕሱ ትኩረቴን ሳበ።",
-      "sentence2": "ለጋዜጣ ርዕሶችን ትጽፋለች።"
+      "sentence2": "ለጋዜጣ ርዕሶችን ትጽፋለች።",
+      "pronunciation": "/rɨɨs/"
     },
     {
       "id": 333,
       "word": "ማሞቂያ",
       "sentence1": "የማሞቂያ ስርዓቱ አይሰራም።",
-      "sentence2": "ከክረምት በፊት ማሞቂያውን ማስተካከል አለብን።"
+      "sentence2": "ከክረምት በፊት ማሞቂያውን ማስተካከል አለብን።",
+      "pronunciation": "/mamokʼija/"
     },
     {
       "id": 334,
       "word": "በጣም",
       "sentence1": "ሌሊቱን ሙሉ በጣም ዝናብ ያዘንብ ነበር።",
-      "sentence2": "ከአካል ብቃት እንቅስቃሴ በኋላ በጣም ትተነፍስ ነበር።"
+      "sentence2": "ከአካል ብቃት እንቅስቃሴ በኋላ በጣም ትተነፍስ ነበር።",
+      "pronunciation": "/bətʼam/"
     },
     {
       "id": 335,
       "word": "ሄሊኮፕተር",
       "sentence1": "ሄሊኮፕተሩ በከተማው ላይ በረረ።",
-      "sentence2": "የደሴቱን የሄሊኮፕተር ጉብኝት አድርገናል።"
+      "sentence2": "የደሴቱን የሄሊኮፕተር ጉብኝት አድርገናል።",
+      "pronunciation": "/helikopɨtər/"
     },
     {
       "id": 336,
       "word": "ማጉላት",
       "sentence1": "እባክህ አስፈላጊ ነጥቦችን አጉላ።",
-      "sentence2": "መምህሩ ጽሁፉን ለማጉላት ማርከር ተጠቅሟል።"
+      "sentence2": "መምህሩ ጽሁፉን ለማጉላት ማርከር ተጠቅሟል።",
+      "pronunciation": "/maɡulat/"
     },
     {
       "id": 337,
       "word": "በጣም",
       "sentence1": "በሙያዋ በጣም የተካነች ናት።",
-      "sentence2": "ፊልሙ በበገምጋሚዎች በጣም ተወድሷል።"
+      "sentence2": "ፊልሙ በበገምጋሚዎች በጣም ተወድሷል።",
+      "pronunciation": "/bətʼam/"
     },
     {
       "id": 338,
       "word": "መቅጠር",
       "sentence1": "ተጨማሪ ሰራተኞችን መቅጠር አለብን።",
-      "sentence2": "እንደ ፕሮጀክት ሥራ አስኪያጅ ተቀጥራለች።"
+      "sentence2": "እንደ ፕሮጀክት ሥራ አስኪያጅ ተቀጥራለች።",
+      "pronunciation": "/məkʼɨtʼər/"
     },
     {
       "id": 339,
       "word": "ታሪካዊ",
       "sentence1": "የውሉ ፊርማ ታሪካዊ ክስተት ነበር።",
-      "sentence2": "በከተማው ውስጥ ብዙ ታሪካዊ ቦታዎችን ጎብኝታለች።"
+      "sentence2": "በከተማው ውስጥ ብዙ ታሪካዊ ቦታዎችን ጎብኝታለች።",
+      "pronunciation": "/tarikawi/"
     },
     {
       "id": 340,
       "word": "ታሪካዊ",
       "sentence1": "ሙዚየሙ የታሪካዊ ቅርሶች ስብስብ አለው።",
-      "sentence2": "የልቦለዱን ታሪካዊ አውድ ተምረዋል።"
+      "sentence2": "የልቦለዱን ታሪካዊ አውድ ተምረዋል።",
+      "pronunciation": "/tarikawi/"
     },
     {
       "id": 341,
       "word": "ታማኝ",
       "sentence1": "በግንኙነቶችህ ውስጥ ታማኝ መሆን አስፈላጊ ነው።",
-      "sentence2": "ለጥያቄው ታማኝ መልስ ሰጥታለች።"
+      "sentence2": "ለጥያቄው ታማኝ መልስ ሰጥታለች።",
+      "pronunciation": "/tamaɲ/"
     },
     {
       "id": 342,
       "word": "አስፈሪ",
       "sentence1": "ፊልሙ በጣም አስፈሪ ስለነበር መመልከት አልቻልኩም።",
-      "sentence2": "በጉዞው ወቅት አስፈሪ ልምድ ነበረው።"
+      "sentence2": "በጉዞው ወቅት አስፈሪ ልምድ ነበረው።",
+      "pronunciation": "/əsɨfəri/"
     },
     {
       "id": 343,
       "word": "አስፈሪ",
       "sentence1": "አስፈሪው ፊልም በወንበሬ ጫፍ ላይ ያደረገኝ ነበር።",
-      "sentence2": "አስፈሪ ታሪኮችን ማንበብ ትወዳለች።"
+      "sentence2": "አስፈሪ ታሪኮችን ማንበብ ትወዳለች።",
+      "pronunciation": "/əsɨfəri/"
     },
     {
       "id": 344,
       "word": "አስተናጋጅ",
       "sentence1": "ዝግጅቱን በቤታቸው ያስተናግዳሉ።",
-      "sentence2": "ለእራት ድግስ ታላቅ አስተናጋጅ ናት።"
+      "sentence2": "ለእራት ድግስ ታላቅ አስተናጋጅ ናት።",
+      "pronunciation": "/əsɨtənaɡad͡ʒ/"
     },
     {
       "id": 345,
       "word": "ማደን",
       "sentence1": "አጋዘን ለማደን ወጡ።",
-      "sentence2": "በተራራዎች ላይ ማደን ይወዳል።"
+      "sentence2": "በተራራዎች ላይ ማደን ይወዳል።",
+      "pronunciation": "/madən/"
     },
     {
       "id": 346,
       "word": "አውሎ ንፋስ",
       "sentence1": "አውሎ ንፋሱ በባህር ዳርቻው ላይ ከፍተኛ ጉዳት አድርሷል።",
-      "sentence2": "አውሎ ንፋሱ ከመምጣቱ በፊት አካባቢውን ለቀው ወጥተዋል።"
+      "sentence2": "አውሎ ንፋሱ ከመምጣቱ በፊት አካባቢውን ለቀው ወጥተዋል።",
+      "pronunciation": "/əwɨlo nɨfas/"
     },
     {
       "id": 347,
       "word": "መቸኮል",
       "sentence1": "አውቶቡሱን ለመያዝ ከፈለግክ መቸኮል አለብህ።",
-      "sentence2": "ጠዋት ሁልጊዜ ትቸኩላለች።"
+      "sentence2": "ጠዋት ሁልጊዜ ትቸኩላለች።",
+      "pronunciation": "/mət͡ʃəkol/"
     },
     {
       "id": 348,
       "word": "ማንነት",
       "sentence1": "ማንነትህ በልምዶችህ ይቀረጻል።",
-      "sentence2": "ከባህላዊ ማንነቷ ጋር ታገለች።"
+      "sentence2": "ከባህላዊ ማንነቷ ጋር ታገለች።",
+      "pronunciation": "/manɨnət/"
     },
     {
       "id": 349,
       "word": "ችላ ማለት",
       "sentence1": "ችግሩን ችላ ማለት ቀላል ነው።",
-      "sentence2": "የማስጠንቀቂያ ምልክቶችን ችላ ማለት መርጧል።"
+      "sentence2": "የማስጠንቀቂያ ምልክቶችን ችላ ማለት መርጧል።",
+      "pronunciation": "/t͡ʃɨla malət/"
     },
     {
       "id": 350,
       "word": "ሕገወጥ",
       "sentence1": "እዚህ ማቆም ሕገወጥ ነው።",
-      "sentence2": "ሕገወጥ ሸቀጦችን ሲያሸሹ ተያዙ።"
+      "sentence2": "ሕገወጥ ሸቀጦችን ሲያሸሹ ተያዙ።",
+      "pronunciation": "/hɨɡəwətʼ/"
     },
     {
       "id": 351,
       "word": "ምናባዊ",
       "sentence1": "ምናባዊ ጓደኛ አላት።",
-      "sentence2": "በታሪካቸው ውስጥ ምናባዊ ዓለም ፈጥረዋል።"
+      "sentence2": "በታሪካቸው ውስጥ ምናባዊ ዓለም ፈጥረዋል።",
+      "pronunciation": "/mɨnabawi/"
     },
     {
       "id": 352,
       "word": "ፈጣን",
       "sentence1": "ፈጣን እርምጃ መውሰድ አለብን።",
-      "sentence2": "ሁኔታው ፈጣን ትኩረት ይፈልጋል።"
+      "sentence2": "ሁኔታው ፈጣን ትኩረት ይፈልጋል።",
+      "pronunciation": "/fətʼan/"
     },
     {
       "id": 353,
       "word": "ስደተኛ",
       "sentence1": "ከተማው ትልቅ የስደተኛ ህዝብ አላት።",
-      "sentence2": "ብዙ ስደተኞች የተሻለ ዕድል ፍለጋ ይመጣሉ።"
+      "sentence2": "ብዙ ስደተኞች የተሻለ ዕድል ፍለጋ ይመጣሉ።",
+      "pronunciation": "/sɨdətəɲa/"
     },
     {
       "id": 354,
       "word": "ተፅዕኖ",
       "sentence1": "የአዲሱ ፖሊሲ ተፅዕኖ ገና አልታወቀም።",
-      "sentence2": "የፕሮጀክቱ የአካባቢ ተፅዕኖ ተገምግሟል።"
+      "sentence2": "የፕሮጀክቱ የአካባቢ ተፅዕኖ ተገምግሟል።",
+      "pronunciation": "/tət͡sʼɨɨno/"
     },
     {
       "id": 355,
       "word": "ማስመጣት",
       "sentence1": "አገሪቱ በዘይት ማስመጣት ላይ ትተማመናለች።",
-      "sentence2": "ሸቀጦችን ከውጭ ለማስመጣት ወሰኑ።"
+      "sentence2": "ሸቀጦችን ከውጭ ለማስመጣት ወሰኑ።",
+      "pronunciation": "/masɨmətʼat/"
     },
     {
       "id": 356,
       "word": "አስፈላጊነት",
       "sentence1": "የትምህርት አስፈላጊነት በቂ ሊገለጽ አይችልም።",
-      "sentence2": "የከባድ ስራን አስፈላጊነት ትረዳለች።"
+      "sentence2": "የከባድ ስራን አስፈላጊነት ትረዳለች።",
+      "pronunciation": "/əsɨfəlaɡinət/"
     },
     {
       "id": 357,
       "word": "ስሜት",
       "sentence1": "በቃለ መጠይቁ ወቅት ጠንካራ ስሜት ፈጥሯል።",
-      "sentence2": "ስለ ከተማው የመጀመሪያ ስሜቷ አዎንታዊ ነበር።"
+      "sentence2": "ስለ ከተማው የመጀመሪያ ስሜቷ አዎንታዊ ነበር።",
+      "pronunciation": "/sɨmet/"
     },
     {
       "id": 358,
       "word": "አስደናቂ",
       "sentence1": "አፈጻጸሙ በእርግጥ አስደናቂ ነበር።",
-      "sentence2": "አስደናቂ የስራ ልምድ አላት።"
+      "sentence2": "አስደናቂ የስራ ልምድ አላት።",
+      "pronunciation": "/əsɨdənakʼi/"
     },
     {
       "id": 359,
       "word": "መሻሻል",
       "sentence1": "በደረጃዎቹ ላይ ከፍተኛ መሻሻል ታይቷል።",
-      "sentence2": "ኩባንያው መሻሻሎችን ለማድረግ መንገዶችን እየፈለገ ነው።"
+      "sentence2": "ኩባንያው መሻሻሎችን ለማድረግ መንገዶችን እየፈለገ ነው።",
+      "pronunciation": "/məʃaʃal/"
     },
     {
       "id": 360,
       "word": "በሚገርም ሁኔታ",
       "sentence1": "በሚገርም ሁኔታ ተሰጥኦ አላት።",
-      "sentence2": "ከላይ ያለው እይታ በሚገርም ሁኔታ ቆንጆ ነው።"
+      "sentence2": "ከላይ ያለው እይታ በሚገርም ሁኔታ ቆንጆ ነው።",
+      "pronunciation": "/bəmiɡərɨm huneta/"
     },
     {
       "id": 361,
       "word": "በእርግጥ",
       "sentence1": "በእርግጥ አስደናቂ ስኬት ነበር።",
-      "sentence2": "ለስራው በእርግጥ ምርጥ እጩ ናት።"
+      "sentence2": "ለስራው በእርግጥ ምርጥ እጩ ናት።",
+      "pronunciation": "/bəɨrɨɡɨtʼ/"
     },
     {
       "id": 362,
       "word": "ማመልከት",
       "sentence1": "ውጤቶቹ ተጨማሪ ምርምር እንደሚያስፈልግ ያመለክታሉ።",
-      "sentence2": "እባክህ ምርጫዎችህን በቅጹ ላይ አመልክት።"
+      "sentence2": "እባክህ ምርጫዎችህን በቅጹ ላይ አመልክት።",
+      "pronunciation": "/maməlɨkət/"
     },
     {
       "id": 363,
       "word": "ቀጥተኛ ያልሆነ",
       "sentence1": "ቀጥተኛ ያልሆኑ አስተያየቶቹ ለመተርጎም ከባድ ነበሩ።",
-      "sentence2": "ትራፊክን ለማስወገድ ቀጥተኛ ያልሆነ መንገድ ወስዳለች።"
+      "sentence2": "ትራፊክን ለማስወገድ ቀጥተኛ ያልሆነ መንገድ ወስዳለች።",
+      "pronunciation": "/kʼətʼɨtəɲa jalɨhonə/"
     },
     {
       "id": 364,
       "word": "የቤት ውስጥ",
       "sentence1": "የቤት ውስጥ ተክሎች የአየር ጥራትን ሊያሻሽሉ ይችላሉ።",
-      "sentence2": "ድግሱን በቤት ውስጥ ለማድረግ ወስነናል።"
+      "sentence2": "ድግሱን በቤት ውስጥ ለማድረግ ወስነናል።",
+      "pronunciation": "/jəbet wɨsɨtʼ/"
     },
     {
       "id": 365,
       "word": "በቤት ውስጥ",
       "sentence1": "ውጭ ለመጫወት በጣም ቀዝቃዛ ነው፣ በቤት ውስጥ እንቆይ።",
-      "sentence2": "ልጆቹ ዛሬ በቤት ውስጥ እየተጫወቱ ነው።"
+      "sentence2": "ልጆቹ ዛሬ በቤት ውስጥ እየተጫወቱ ነው።",
+      "pronunciation": "/bəbet wɨsɨtʼ/"
     },
     {
       "id": 366,
       "word": "ተፅዕኖ",
       "sentence1": "ንግግሯ በአድማጮች ላይ ጥልቅ ተፅዕኖ አሳድሯል።",
-      "sentence2": "ማህበራዊ ሚዲያ የህዝብ አስተያየትን ሊጎዳ ይችላል።"
+      "sentence2": "ማህበራዊ ሚዲያ የህዝብ አስተያየትን ሊጎዳ ይችላል።",
+      "pronunciation": "/tət͡sʼɨɨno/"
     },
     {
       "id": 367,
       "word": "ንጥረ ነገር",
       "sentence1": "በዚህ የምግብ አሰራር ውስጥ ዋናው ንጥረ ነገር ዶሮ ነው።",
-      "sentence2": "አለርጂዎችን ለማግኘት የንጥረ ነገር ዝርዝሩን መፈተሽዎን አረጋግጥ።"
+      "sentence2": "አለርጂዎችን ለማግኘት የንጥረ ነገር ዝርዝሩን መፈተሽዎን አረጋግጥ።",
+      "pronunciation": "/nɨtʼɨrə nəɡər/"
     },
     {
       "id": 368,
       "word": "መጉዳት",
       "sentence1": "በጨዋታው ወቅት ማንንም ለመጉዳት አልፈለገም።",
-      "sentence2": "በመኪና አደጋ ተጎድታለች።"
+      "sentence2": "በመኪና አደጋ ተጎድታለች።",
+      "pronunciation": "/məɡudat/"
     },
     {
       "id": 369,
       "word": "የተጎዳ",
       "sentence1": "የተጎዱት ወደ ሆስፒታል ተወስደዋል።",
-      "sentence2": "አሁንም ከጉዳቱ እያገገመ ነው።"
+      "sentence2": "አሁንም ከጉዳቱ እያገገመ ነው።",
+      "pronunciation": "/jətəɡoda/"
     },
     {
       "id": 370,
       "word": "ንጹህ",
       "sentence1": "ንጹሁ ሰው ከእስር ተፈትቷል።",
-      "sentence2": "በፊቷ ላይ ንጹህ ገጽታ አላት።"
+      "sentence2": "በፊቷ ላይ ንጹህ ገጽታ አላት።",
+      "pronunciation": "/nɨt͡sʼuh/"
     },
     {
       "id": 371,
       "word": "ብልህነት",
       "sentence1": "ሰው ሰራሽ ብልህነት በፍጥነት እያደገ ያለ መስክ ነው።",
-      "sentence2": "ከፍተኛ የስሜታዊ ብልህነት ደረጃ አላት።"
+      "sentence2": "ከፍተኛ የስሜታዊ ብልህነት ደረጃ አላት።",
+      "pronunciation": "/bɨlɨhɨnət/"
     },
     {
       "id": 372,
       "word": "ማቀድ",
       "sentence1": "የቤት ስራዬን ከእራት በፊት ለማጠናቀቅ አቅጃለሁ።",
-      "sentence2": "ምንም ጉዳት ለማድረስ አላቀዱም።"
+      "sentence2": "ምንም ጉዳት ለማድረስ አላቀዱም።",
+      "pronunciation": "/makʼəd/"
     },
     {
       "id": 373,
       "word": "ዓላማ",
       "sentence1": "ዓላማዬ እንድትሳካ መርዳት ነው።",
-      "sentence2": "በመልካም ዓላማ እርምጃ ወስዳለች።"
+      "sentence2": "በመልካም ዓላማ እርምጃ ወስዳለች።",
+      "pronunciation": "/alama/"
     },
     {
       "id": 374,
       "word": "መዋዕለ ንዋይ ማፍሰስ",
       "sentence1": "በአዲስ ቴክኖሎጂ ላይ መዋዕለ ንዋይ ለማፍሰስ እቅድ አላቸው።",
-      "sentence2": "በትምህርቷ ብዙ ጊዜ ሰጥታለች።"
+      "sentence2": "በትምህርቷ ብዙ ጊዜ ሰጥታለች።",
+      "pronunciation": "/məwaɨlə nɨwaj mafɨsəs/"
     },
     {
       "id": 375,
       "word": "መመርመር",
       "sentence1": "ፖሊስ ወንጀሉን ይመረምራል።",
-      "sentence2": "የችግሩን መንስኤ መመርመር አለብን።"
+      "sentence2": "የችግሩን መንስኤ መመርመር አለብን።",
+      "pronunciation": "/məmərɨmər/"
     },
     {
       "id": 376,
       "word": "ተሳታፊ",
       "sentence1": "ከመጀመሪያው ጀምሮ በፕሮጀክቱ ውስጥ ተሳታፊ ነበር።",
-      "sentence2": "በውሳኔ አሰጣጥ ሂደት ውስጥ ብዙ ሰዎች ተሳታፊ ናቸው።"
+      "sentence2": "በውሳኔ አሰጣጥ ሂደት ውስጥ ብዙ ሰዎች ተሳታፊ ናቸው።",
+      "pronunciation": "/təsatafi/"
     },
     {
       "id": 377,
       "word": "ብረት",
       "sentence1": "ብረት ለሰውነት አስፈላጊ ማዕድን ነው።",
-      "sentence2": "በሩ ከብረት የተሰራ ነው።"
+      "sentence2": "በሩ ከብረት የተሰራ ነው።",
+      "pronunciation": "/bɨrət/"
     },
     {
       "id": 378,
       "word": "ጉዳይ",
       "sentence1": "ዋናው ጉዳይ የገንዘብ እጥረት ነው።",
-      "sentence2": "ይህን ጉዳይ በተቻለ ፍጥነት መፍታት አለብን።"
+      "sentence2": "ይህን ጉዳይ በተቻለ ፍጥነት መፍታት አለብን።",
+      "pronunciation": "/ɡudaj/"
     },
     {
       "id": 379,
       "word": "ጆርናል",
       "sentence1": "ለሳይንሳዊ ጆርናል ትጽፋለች።",
-      "sentence2": "ጆርናሉ በየወሩ አዲስ ምርምር ያሳትማል።"
+      "sentence2": "ጆርናሉ በየወሩ አዲስ ምርምር ያሳትማል።",
+      "pronunciation": "/d͡ʒorɨnal/"
     },
     {
       "id": 380,
       "word": "ዳኛ",
       "sentence1": "ሳያውቁ መፍረድ ትክክል አይደለም።",
-      "sentence2": "ዳኛው ነገ ውሳኔውን ያስታውቃል።"
+      "sentence2": "ዳኛው ነገ ውሳኔውን ያስታውቃል።",
+      "pronunciation": "/daɲa/"
     },
     {
       "id": 381,
       "word": "ጉጉ",
       "sentence1": "ለጥበብ ጉጉ ፍላጎት አላት።",
-      "sentence2": "የሰው ባህሪ ጉጉ ተመልካች ነው።"
+      "sentence2": "የሰው ባህሪ ጉጉ ተመልካች ነው።",
+      "pronunciation": "/ɡuɡu/"
     },
     {
       "id": 382,
       "word": "ቁልፍ",
       "sentence1": "እባክህ ቁልፉን አስተላልፈኝ?",
-      "sentence2": "የስኬት ቁልፍ ጠንካራ ስራ ነው።"
+      "sentence2": "የስኬት ቁልፍ ጠንካራ ስራ ነው።",
+      "pronunciation": "/kʼulɨf/"
     },
     {
       "id": 383,
       "word": "የቁልፍ ሰሌዳ",
       "sentence1": "ሰነዱን በቁልፍ ሰሌዳዋ ጽፋለች።",
-      "sentence2": "የቁልፍ ሰሌዳው በትክክል አይሰራም።"
+      "sentence2": "የቁልፍ ሰሌዳው በትክክል አይሰራም።",
+      "pronunciation": "/jəkʼulɨf səleda/"
     },
     {
       "id": 384,
       "word": "መምታት",
       "sentence1": "ኳሱን ወደ ግቡ ለመምታት ሞክሯል።",
-      "sentence2": "በእግሩ ላይ ጨዋታ መምታት ሰጥታዋለች።"
+      "sentence2": "በእግሩ ላይ ጨዋታ መምታት ሰጥታዋለች።",
+      "pronunciation": "/məmɨtat/"
     },
     {
       "id": 385,
       "word": "መግደል",
       "sentence1": "የንጹሁን ሰው መገደል ቁጣ አስነስቷል።",
-      "sentence2": "ሚስቱን በመግደል ተከሷል።"
+      "sentence2": "ሚስቱን በመግደል ተከሷል።",
+      "pronunciation": "/məɡɨdəl/"
     },
     {
       "id": 386,
       "word": "ደግ",
       "sentence1": "ሁልጊዜ ለእንስሳት ደግ ናት።",
-      "sentence2": "እርዳታህ ደግ ነው።"
+      "sentence2": "እርዳታህ ደግ ነው።",
+      "pronunciation": "/dəɡ/"
     },
     {
       "id": 387,
       "word": "መሳም",
       "sentence1": "ከከዋክብት ስር መሳም ተካፍለዋል።",
-      "sentence2": "ከክፍሉ ማዶ መሳም ልካለት።"
+      "sentence2": "ከክፍሉ ማዶ መሳም ልካለት።",
+      "pronunciation": "/məsam/"
     },
     {
       "id": 388,
       "word": "ማንኳኳት",
       "sentence1": "ከመግባትህ በፊት አንኳኳ።",
-      "sentence2": "በበሩ ላይ ማንኳኳት ሰምቻለሁ።"
+      "sentence2": "በበሩ ላይ ማንኳኳት ሰምቻለሁ።",
+      "pronunciation": "/manɨkwakwat/"
     },
     {
       "id": 389,
       "word": "መለያ",
       "sentence1": "ሁሉንም ሳጥኖችህን መለያ ማድረግህን አረጋግጥ።",
-      "sentence2": "በጠርሙሱ ላይ ያለው መለያ ለማንበብ ከባድ ነው።"
+      "sentence2": "በጠርሙሱ ላይ ያለው መለያ ለማንበብ ከባድ ነው።",
+      "pronunciation": "/mələja/"
     },
     {
       "id": 390,
       "word": "ላቦራቶሪ",
       "sentence1": "ላቦራቶሪው በዘመናዊ ቴክኖሎጂ የተገጠመ ነው።",
-      "sentence2": "በኬሚስትሪ ላቦራቶሪ ውስጥ ትሰራለች።"
+      "sentence2": "በኬሚስትሪ ላቦራቶሪ ውስጥ ትሰራለች።",
+      "pronunciation": "/laboratori/"
     },
     {
       "id": 391,
       "word": "እጥረት",
       "sentence1": "በዚህ ጉዳይ ላይ የማስረጃ እጥረት አለ።",
-      "sentence2": "የገንዘብ እጥረት ዋና ችግር ነው።"
+      "sentence2": "የገንዘብ እጥረት ዋና ችግር ነው።",
+      "pronunciation": "/ɨtʼɨrət/"
     },
     {
       "id": 392,
       "word": "የቅርብ ጊዜ",
       "sentence1": "የቅርብ ጊዜ ዜና በጣም አበረታች አይደለም።",
-      "sentence2": "ሁልጊዜ የቅርብ ጊዜ ፋሽን ትለብሳለች።"
+      "sentence2": "ሁልጊዜ የቅርብ ጊዜ ፋሽን ትለብሳለች።",
+      "pronunciation": "/jəkʼɨrɨb ɡize/"
     },
     {
       "id": 393,
       "word": "ማስቀመጥ",
       "sentence1": "እባክህ መጽሐፉን በጠረጴዛው ላይ አስቀምጥ።",
-      "sentence2": "በሳር ላይ ተኝቶ ደመናዎችን መመልከት ይወዳል።"
+      "sentence2": "በሳር ላይ ተኝቶ ደመናዎችን መመልከት ይወዳል።",
+      "pronunciation": "/masɨkʼəmətʼ/"
     },
     {
       "id": 394,
       "word": "ሽፋን",
       "sentence1": "ኬኩ ሶስት የቸኮሌት ሽፋኖች አሉት።",
-      "sentence2": "በመደርደሪያው ላይ የአቧራ ሽፋን አለ።"
+      "sentence2": "በመደርደሪያው ላይ የአቧራ ሽፋን አለ።",
+      "pronunciation": "/ʃɨfan/"
     },
     {
       "id": 395,
       "word": "መምራት",
       "sentence1": "በፕሮጀክቱ ቡድኑን ትመራለች።",
-      "sentence2": "ውይይቱን እንዲመራ ተመርጧል።"
+      "sentence2": "ውይይቱን እንዲመራ ተመርጧል።",
+      "pronunciation": "/məmɨrat/"
     },
     {
       "id": 396,
       "word": "መሪ",
       "sentence1": "በመስኳ መሪ ባለሙያ ናት።",
-      "sentence2": "መሪው የሞት መንስኤ የልብ በሽታ ነው።"
+      "sentence2": "መሪው የሞት መንስኤ የልብ በሽታ ነው።",
+      "pronunciation": "/məri/"
     },
     {
       "id": 397,
       "word": "ቅጠል",
       "sentence1": "ቅጠሉ ከዛፉ ላይ ወድቋል።",
-      "sentence2": "በመኸር ወቅት ቅጠሎች ቀለም እየቀየሩ ነው።"
+      "sentence2": "በመኸር ወቅት ቅጠሎች ቀለም እየቀየሩ ነው።",
+      "pronunciation": "/kʼɨtʼəl/"
     },
     {
       "id": 398,
       "word": "ቆዳ",
       "sentence1": "አዲስ የቆዳ ጃኬት ገዝቷል።",
-      "sentence2": "ሶፋው ከከፍተኛ ጥራት ቆዳ የተሰራ ነው።"
+      "sentence2": "ሶፋው ከከፍተኛ ጥራት ቆዳ የተሰራ ነው።",
+      "pronunciation": "/kʼoda/"
     },
     {
       "id": 399,
       "word": "ህጋዊ",
       "sentence1": "ህጋዊ ምክር እየፈለጉ ነው።",
-      "sentence2": "የህግ ስርዓቱ ውስብስብ ነው።"
+      "sentence2": "የህግ ስርዓቱ ውስብስብ ነው።",
+      "pronunciation": "/hɨɡawi/"
     },
     {
       "id": 400,
       "word": "መዝናኛ",
       "sentence1": "በመዝናኛ ጊዜዋ ማንበብ ትወዳለች።",
-      "sentence2": "የመዝናኛ እንቅስቃሴዎች ለአእምሮ ጤና አስፈላጊ ናቸው።"
+      "sentence2": "የመዝናኛ እንቅስቃሴዎች ለአእምሮ ጤና አስፈላጊ ናቸው።",
+      "pronunciation": "/məzɨnaɲa/"
     },
     {
       "id": 401,
       "word": "ርዝመት",
       "sentence1": "የጠረጴዛው ርዝመት ስድስት ጫማ ነው።",
-      "sentence2": "የክፍሉን ርዝመት መለካት አለብን።"
+      "sentence2": "የክፍሉን ርዝመት መለካት አለብን።",
+      "pronunciation": "/rɨzɨmət/"
     },
     {
       "id": 402,
       "word": "ደረጃ",
       "sentence1": "በስፓኒሽ ጀማሪ ደረጃ ላይ ናት።",
-      "sentence2": "በዝናብ ምክንያት የውሃ ደረጃ እየጨመረ ነው።"
+      "sentence2": "በዝናብ ምክንያት የውሃ ደረጃ እየጨመረ ነው።",
+      "pronunciation": "/dərəd͡ʒa/"
     },
     {
       "id": 403,
       "word": "መዋሸት",
       "sentence1": "ለጓደኞችህ መዋሸት ትክክል አይደለም።",
-      "sentence2": "ስለ መገኛው ሲዋሽ ተያዘ።"
+      "sentence2": "ስለ መገኛው ሲዋሽ ተያዘ።",
+      "pronunciation": "/məwaʃət/"
     },
     {
       "id": 404,
       "word": "ገደብ",
       "sentence1": "ምን ያህል መበደር እንደምትችል ገደብ አለ።",
-      "sentence2": "በወጪ ላይ ገደብ ማስቀመጥ አለብን።"
+      "sentence2": "በወጪ ላይ ገደብ ማስቀመጥ አለብን።",
+      "pronunciation": "/ɡədəb/"
     },
     {
       "id": 405,
       "word": "ከንፈር",
       "sentence1": "ልብስቲክ በከንፈሮቿ ላይ ቀባች።",
-      "sentence2": "በከንፈሮቿ ላይ ሳማት።"
+      "sentence2": "በከንፈሮቿ ላይ ሳማት።",
+      "pronunciation": "/kənɨfər/"
     },
     {
       "id": 406,
       "word": "ፈሳሽ",
       "sentence1": "ውሃ በክፍል ሙቀት ላይ ፈሳሽ ነው።",
-      "sentence2": "ፈሳሹ በጠረጴዛው ላይ ሁሉ ፈሰሰ።"
+      "sentence2": "ፈሳሹ በጠረጴዛው ላይ ሁሉ ፈሰሰ።",
+      "pronunciation": "/fəsaʃ/"
     },
     {
       "id": 407,
       "word": "ስነ-ጽሁፍ",
       "sentence1": "ክላሲክ ስነ-ጽሁፍ ማንበብ ትወዳለች።",
-      "sentence2": "ኮርሱ ዘመናዊ ስነ-ጽሁፍን ያካትታል።"
+      "sentence2": "ኮርሱ ዘመናዊ ስነ-ጽሁፍን ያካትታል።",
+      "pronunciation": "/sɨnə-t͡sʼɨhuf/"
     },
     {
       "id": 408,
       "word": "ቀጥታ",
       "sentence1": "ኮንሰርቱ በቀጥታ ይተላለፋል።",
-      "sentence2": "በትልቅ ከተማ መኖር ይፈልጋሉ።"
+      "sentence2": "በትልቅ ከተማ መኖር ይፈልጋሉ።",
+      "pronunciation": "/kʼətʼɨta/"
     },
     {
       "id": 409,
       "word": "መኖር",
       "sentence1": "በዚህ ከተማ ውስጥ የመኖር ወጪ ከፍተኛ ነው።",
-      "sentence2": "የመኖር ሁኔታዋን ለማሻሻል አተኩራለች።"
+      "sentence2": "የመኖር ሁኔታዋን ለማሻሻል አተኩራለች።",
+      "pronunciation": "/mənor/"
     },
     {
       "id": 410,
       "word": "የአካባቢ",
       "sentence1": "የአካባቢው ገበያ በየእሁድ ይከፈታል።",
-      "sentence2": "የአካባቢ ምርቶችን መግዛት ትመርጣለች።"
+      "sentence2": "የአካባቢ ምርቶችን መግዛት ትመርጣለች።",
+      "pronunciation": "/jəəkababi/"
     },
     {
       "id": 411,
       "word": "ማግኘት",
       "sentence1": "ቁልፎቼን ለማግኘት ልትረዳኝ ትችላለህ?",
-      "sentence2": "ካርታው ምግብ ቤቱን ለማግኘት ይረዳሃል።"
+      "sentence2": "ካርታው ምግብ ቤቱን ለማግኘት ይረዳሃል።",
+      "pronunciation": "/maɡɨɲət/"
     },
     {
       "id": 412,
       "word": "የሚገኝ",
       "sentence1": "ሆቴሉ ከባህር ዳርቻ አቅራቢያ ይገኛል።",
-      "sentence2": "ቢሮው በላይኛው ወለል ላይ ይገኛል።"
+      "sentence2": "ቢሮው በላይኛው ወለል ላይ ይገኛል።",
+      "pronunciation": "/jəmiɡəɲ/"
     },
     {
       "id": 413,
       "word": "ቦታ",
       "sentence1": "የአሁኑ ቦታህ የት ነው?",
-      "sentence2": "የዝግጅቱ ቦታ ተቀይሯል።"
+      "sentence2": "የዝግጅቱ ቦታ ተቀይሯል።",
+      "pronunciation": "/bota/"
     },
     {
       "id": 414,
       "word": "ብቸኛ",
       "sentence1": "በአዲሱ ከተማ ብቸኝነት ተሰማት።",
-      "sentence2": "አንዳንድ ጊዜ ብቸኝነት መሰማት ተፈጥሯዊ ነው።"
+      "sentence2": "አንዳንድ ጊዜ ብቸኝነት መሰማት ተፈጥሯዊ ነው።",
+      "pronunciation": "/bɨt͡ʃəɲa/"
     },
     {
       "id": 415,
       "word": "ኪሳራ",
       "sentence1": "የቤት እንስሳዋ መጥፋት አስደንጋጭ ነበር።",
-      "sentence2": "አሁንም አባቱን ማጣቱን እያዘነ ነው።"
+      "sentence2": "አሁንም አባቱን ማጣቱን እያዘነ ነው።",
+      "pronunciation": "/kisara/"
     },
     {
       "id": 416,
       "word": "ቅንጦት",
       "sentence1": "የቅንጦት ህይወት ይኖራሉ።",
-      "sentence2": "ሆቴሉ የቅንጦት ማረፊያዎችን ያቀርባል።"
+      "sentence2": "ሆቴሉ የቅንጦት ማረፊያዎችን ያቀርባል።",
+      "pronunciation": "/kʼɨnɨtʼot/"
     },
     {
       "id": 417,
       "word": "የተናደደ",
       "sentence1": "በጓደኛው ዘግይቶ በመምጣቱ ተናድዷል።",
-      "sentence2": "ለአዲስ ፕሮጀክት እብድ ሀሳብ አላት።"
+      "sentence2": "ለአዲስ ፕሮጀክት እብድ ሀሳብ አላት።",
+      "pronunciation": "/jətənadədə/"
     },
     {
       "id": 418,
       "word": "አስማት",
       "sentence1": "አስማተኛው የአስማት ዘዴ አሳይቷል።",
-      "sentence2": "በፍቅር አስማት ታምናለች።"
+      "sentence2": "በፍቅር አስማት ታምናለች።",
+      "pronunciation": "/əsɨmat/"
     },
     {
       "id": 419,
       "word": "በዋነኛነት",
       "sentence1": "መጽሐፉ በዋነኛነት ስለ ታሪክ ነው።",
-      "sentence2": "በዋነኛነት ሳይንስ ላይ ፍላጎት አላት።"
+      "sentence2": "በዋነኛነት ሳይንስ ላይ ፍላጎት አላት።",
+      "pronunciation": "/bəwanəɲanət/"
     },
     {
       "id": 420,
       "word": "ገበያ ማዕከል",
       "sentence1": "ለመግዛት ወደ ገበያ ማዕከል ሄዱ።",
-      "sentence2": "ገበያ ማዕከሉ የተለያዩ ሱቆች አሉት።"
+      "sentence2": "ገበያ ማዕከሉ የተለያዩ ሱቆች አሉት።",
+      "pronunciation": "/ɡəbəja maɨkəl/"
     },
     {
       "id": 421,
       "word": "አስተዳደር",
       "sentence1": "በትልቅ ኩባንያ ውስጥ በአስተዳደር ትሰራለች።",
-      "sentence2": "ውጤታማ አስተዳደር ለስኬት ቁልፍ ነው።"
+      "sentence2": "ውጤታማ አስተዳደር ለስኬት ቁልፍ ነው።",
+      "pronunciation": "/əsɨtədadər/"
     },
     {
       "id": 422,
       "word": "ገበያ",
       "sentence1": "ገበያው በየሳምንቱ ይከፈታል።",
-      "sentence2": "በገበያ ላይ ትኩስ አትክልቶች ገዝታለች።"
+      "sentence2": "በገበያ ላይ ትኩስ አትክልቶች ገዝታለች።",
+      "pronunciation": "/ɡəbəja/"
     },
     {
       "id": 423,
       "word": "ግብይት",
       "sentence1": "በኮሌጅ ግብይት ተምሯል።",
-      "sentence2": "የግብይት ዘመቻው ስኬታማ ነበር።"
+      "sentence2": "የግብይት ዘመቻው ስኬታማ ነበር።",
+      "pronunciation": "/ɡɨbɨjɨt/"
     },
     {
       "id": 424,
       "word": "ጋብቻ",
       "sentence1": "የጋብቻ ስነ-ስርዓት እያቀዱ ነው።",
-      "sentence2": "ጋብቻ ቁርጠኝነት እና ጥረት ይፈልጋል።"
+      "sentence2": "ጋብቻ ቁርጠኝነት እና ጥረት ይፈልጋል።",
+      "pronunciation": "/ɡabɨt͡ʃa/"
     },
     {
       "id": 425,
       "word": "ይህ በእንዲህ እንዳለ",
       "sentence1": "ይህ በእንዲህ እንዳለ ልጆቹ ውጭ ይጫወቱ ነበር።",
-      "sentence2": "እየተማረች ነበር፤ ይህ በእንዲህ እንዳለ ጓደኞቿ ይደሰቱ ነበር።"
+      "sentence2": "እየተማረች ነበር፤ ይህ በእንዲህ እንዳለ ጓደኞቿ ይደሰቱ ነበር።",
+      "pronunciation": "/jɨh bəɨnɨdih ɨnɨdalə/"
     },
     {
       "id": 426,
       "word": "መለካት",
       "sentence1": "እድገትህን መለካት አስፈላጊ ነው።",
-      "sentence2": "ቤት ዕቃ ከመግዛታችን በፊት ክፍሉን መለካት አለብን።"
+      "sentence2": "ቤት ዕቃ ከመግዛታችን በፊት ክፍሉን መለካት አለብን።",
+      "pronunciation": "/mələkat/"
     },
     {
       "id": 427,
       "word": "መካከለኛ",
       "sentence1": "ሥዕሉ በመካከለኛ ዘይቤ ተሰርቷል።",
-      "sentence2": "ዝርዝር የሚፈቅድ መካከለኛ ውስጥ መስራት ትመርጣለች።"
+      "sentence2": "ዝርዝር የሚፈቅድ መካከለኛ ውስጥ መስራት ትመርጣለች።",
+      "pronunciation": "/məkakələɲa/"
     },
     {
       "id": 428,
       "word": "የአእምሮ",
       "sentence1": "የአእምሮ ጤና ልክ እንደ አካላዊ ጤና አስፈላጊ ነው።",
-      "sentence2": "የአእምሮ ደህንነቱን ለማሻሻል እርምጃዎችን እየወሰደ ነው።"
+      "sentence2": "የአእምሮ ደህንነቱን ለማሻሻል እርምጃዎችን እየወሰደ ነው።",
+      "pronunciation": "/jəəɨmɨro/"
     },
     {
       "id": 429,
       "word": "መጥቀስ",
       "sentence1": "እባክህ ያለህን አለርጂ ጥቀስ።",
-      "sentence2": "እዘገያለሁ ብዬ መጥቀስ ረስቻለሁ።"
+      "sentence2": "እዘገያለሁ ብዬ መጥቀስ ረስቻለሁ።",
+      "pronunciation": "/mətʼɨkʼəs/"
     },
     {
       "id": 430,
       "word": "ዝርክርክ",
       "sentence1": "ከድግሱ በኋላ ክፍሉ ዝርክርክ ብሎ ነበር።",
-      "sentence2": "ጠረጴዛዋን ንጹህ እና ሳይዝረከረክ ማድረግ ትወዳለች።"
+      "sentence2": "ጠረጴዛዋን ንጹህ እና ሳይዝረከረክ ማድረግ ትወዳለች።",
+      "pronunciation": "/zɨrɨkɨrɨk/"
     },
     {
       "id": 431,
       "word": "ለስላሳ",
       "sentence1": "በጸደይ ወቅት የአየር ሁኔታው ለስላሳ ነው።",
-      "sentence2": "በምግቧ ውስጥ ለስላሳ ጣዕሞችን ትመርጣለች።"
+      "sentence2": "በምግቧ ውስጥ ለስላሳ ጣዕሞችን ትመርጣለች።",
+      "pronunciation": "/ləsɨlasa/"
     },
     {
       "id": 432,
       "word": "ማዕድን",
       "sentence1": "በማዕድኑ ውስጥ ወርቅ አግኝተዋል።",
-      "sentence2": "ማዕድኑ በደህንነት ስጋቶች ምክንያት ተዘግቷል።"
+      "sentence2": "ማዕድኑ በደህንነት ስጋቶች ምክንያት ተዘግቷል።",
+      "pronunciation": "/maɨdɨn/"
     },
     {
       "id": 433,
       "word": "መቀላቀል",
       "sentence1": "እባክህ ንጥረ ነገሮቹን በደንብ ቀላቅል።",
-      "sentence2": "በሥዕሎቿ ውስጥ የተለያዩ ቀለሞችን መቀላቀል ትወዳለች።"
+      "sentence2": "በሥዕሎቿ ውስጥ የተለያዩ ቀለሞችን መቀላቀል ትወዳለች።",
+      "pronunciation": "/məkʼəlakʼəl/"
     },
     {
       "id": 434,
       "word": "ድብልቅ",
       "sentence1": "የኬክ ሊጥ የዱቄት እና የእንቁላል ድብልቅ ነው።",
-      "sentence2": "በሙዚቃው ውስጥ ልዩ የድምጾች ድብልቅ ፈጥሯል።"
+      "sentence2": "በሙዚቃው ውስጥ ልዩ የድምጾች ድብልቅ ፈጥሯል።",
+      "pronunciation": "/dɨbɨlɨkʼ/"
     },
     {
       "id": 435,
       "word": "ስሜት",
       "sentence1": "ቀኑን ሙሉ በደስተኛ ስሜት ውስጥ ነበረች።",
-      "sentence2": "ሙዚቃው የድግሱን ስሜት ቀይሯል።"
+      "sentence2": "ሙዚቃው የድግሱን ስሜት ቀይሯል።",
+      "pronunciation": "/sɨmet/"
     },
     {
       "id": 436,
       "word": "መንቀሳቀስ",
       "sentence1": "እባክህ ወንበሩን ወደ ጠረጴዛው አስጠጋ።",
-      "sentence2": "ወደ አዲስ ከተማ ለመዛወር ወሰኑ።"
+      "sentence2": "ወደ አዲስ ከተማ ለመዛወር ወሰኑ።",
+      "pronunciation": "/mənɨkʼəsakʼəs/"
     },
     {
       "id": 437,
       "word": "ጭቃ",
       "sentence1": "ልጆቹ ከዝናብ በኋላ በጭቃ ውስጥ ተጫውተዋል።",
-      "sentence2": "በጭቃው ውስጥ ተንሸራተት እና ወደቀች።"
+      "sentence2": "በጭቃው ውስጥ ተንሸራተት እና ወደቀች።",
+      "pronunciation": "/t͡ʃʼɨkʼa/"
     },
     {
       "id": 438,
       "word": "ግድያ",
       "sentence1": "መርማሪው የግድያ ጉዳዩን መርምሯል።",
-      "sentence2": "በግድያ ተከስሷል ግን ንጹህ ነኝ ብሏል።"
+      "sentence2": "በግድያ ተከስሷል ግን ንጹህ ነኝ ብሏል።",
+      "pronunciation": "/ɡɨdɨja/"
     },
     {
       "id": 439,
       "word": "ጡንቻ",
       "sentence1": "ክብደት ከማንሳት የጡንቻ ውጥረት አለበት።",
-      "sentence2": "መደበኛ የአካል ብቃት እንቅስቃሴ ጡንቻን ይገነባል።"
+      "sentence2": "መደበኛ የአካል ብቃት እንቅስቃሴ ጡንቻን ይገነባል።",
+      "pronunciation": "/tʼunɨt͡ʃa/"
     },
     {
       "id": 440,
       "word": "ሙዚቃዊ",
       "sentence1": "ሙዚቃዊ ትርዒቱ ትልቅ ስኬት ነበር።",
-      "sentence2": "ለሙዚቃዊ ድርሰት ተሰጥኦ አላት።"
+      "sentence2": "ለሙዚቃዊ ድርሰት ተሰጥኦ አላት።",
+      "pronunciation": "/muzikʼawi/"
     },
     {
       "id": 441,
       "word": "ምስጢር",
       "sentence1": "መጽሐፉ የምስጢር ልቦለድ ነው።",
-      "sentence2": "ምስጢሩን አንድ ላይ ለመፍታት ሞክረዋል።"
+      "sentence2": "ምስጢሩን አንድ ላይ ለመፍታት ሞክረዋል።",
+      "pronunciation": "/mɨsɨtʼir/"
     },
     {
       "id": 442,
       "word": "ሚስማር",
       "sentence1": "በግድግዳው ላይ ሚስማር ቸነከረ።",
-      "sentence2": "ሚስማሩ ለቀቀ እና ወደቀ።"
+      "sentence2": "ሚስማሩ ለቀቀ እና ወደቀ።",
+      "pronunciation": "/misɨmar/"
     },
     {
       "id": 443,
       "word": "ትረካ",
       "sentence1": "ትረካው አሳታፊ እና በደንብ የተጻፈ ነበር።",
-      "sentence2": "ከሌሎች ቅርጾች ይልቅ ትረካ ግጥምን ትመርጣለች።"
+      "sentence2": "ከሌሎች ቅርጾች ይልቅ ትረካ ግጥምን ትመርጣለች።",
+      "pronunciation": "/tɨrəka/"
     },
     {
       "id": 444,
       "word": "ብሔር",
       "sentence1": "ብሔሩ የነፃነት ቀኑን አክብሯል።",
-      "sentence2": "በብሔሯ ታሪክ ኮራለች።"
+      "sentence2": "በብሔሯ ታሪክ ኮራለች።",
+      "pronunciation": "/bɨher/"
     },
     {
       "id": 445,
       "word": "ተወላጅ",
       "sentence1": "ተወላጅ ህዝቦች ሀብታም ባህላዊ ቅርስ አላቸው።",
-      "sentence2": "ተወላጅ ቋንቋውን በሚገባ ይናገራል።"
+      "sentence2": "ተወላጅ ቋንቋውን በሚገባ ይናገራል።",
+      "pronunciation": "/təwəlad͡ʒ/"
     },
     {
       "id": 446,
       "word": "በተፈጥሮ",
       "sentence1": "በተፈጥሮ ስለ ጉዞው ደስ ብሏታል።",
-      "sentence2": "አበቦቹ በዚህ ክልል በተፈጥሮ ያድጋሉ።"
+      "sentence2": "አበቦቹ በዚህ ክልል በተፈጥሮ ያድጋሉ።",
+      "pronunciation": "/bətəfətʼɨro/"
     },
     {
       "id": 447,
       "word": "በግድ",
       "sentence1": "ይህ በግድ ትሳካለህ ማለት አይደለም።",
-      "sentence2": "በግድ ደንቦቹን መከተል የለብህም።"
+      "sentence2": "በግድ ደንቦቹን መከተል የለብህም።",
+      "pronunciation": "/bəɡɨd/"
     },
     {
       "id": 448,
       "word": "ፍላጎት",
       "sentence1": "ለዚህ ችግር መፍትሔ ማግኘት አለብን።",
-      "sentence2": "የጓደኝነት ፍላጎት አላት።"
+      "sentence2": "የጓደኝነት ፍላጎት አላት።",
+      "pronunciation": "/fɨlaɡot/"
     },
     {
       "id": 449,
       "word": "መርፌ",
       "sentence1": "ሸሚዙን ለማስተካከል መርፌ እና ክር ተጠቅሟል።",
-      "sentence2": "መርፌው ለጨርቁ በጣም ወፍራም ነበር።"
+      "sentence2": "መርፌው ለጨርቁ በጣም ወፍራም ነበር።",
+      "pronunciation": "/mərɨfe/"
     },
     {
       "id": 450,
       "word": "ሰፈር",
       "sentence1": "በጸጥታ ሰፈር ውስጥ ይኖራሉ።",
-      "sentence2": "ሰፈሩ ብዙ ፓርኮች እና ትምህርት ቤቶች አሉት።"
+      "sentence2": "ሰፈሩ ብዙ ፓርኮች እና ትምህርት ቤቶች አሉት።",
+      "pronunciation": "/səfər/"
     },
     {
       "id": 451,
       "word": "ማንኛውም",
       "sentence1": "ማንኛውም አማራጭ ተስማሚ አይመስልም።",
-      "sentence2": "ቡና ወይም ሻይ አትወድም።"
+      "sentence2": "ቡና ወይም ሻይ አትወድም።",
+      "pronunciation": "/manɨɲawɨm/"
     },
     {
       "id": 452,
       "word": "መረብ",
       "sentence1": "መረቡ በርካታ ዓሳዎችን ይዟል።",
-      "sentence2": "በመረብ ኢንዱስትሪ ውስጥ ይሰራል።"
+      "sentence2": "በመረብ ኢንዱስትሪ ውስጥ ይሰራል።",
+      "pronunciation": "/mərəb/"
     },
     {
       "id": 453,
       "word": "ቀጣይ",
       "sentence1": "ቀጣዩ ባቡር በ5 ሰዓት ይደርሳል።",
-      "sentence2": "ለዕድገት በመስመር ቀጣይ ናት።"
+      "sentence2": "ለዕድገት በመስመር ቀጣይ ናት።",
+      "pronunciation": "/kʼətʼaj/"
     },
     {
       "id": 454,
       "word": "ወይም",
       "sentence1": "ፖም ወይም ብርቱካን አይወድም።",
-      "sentence2": "ሐኪም ወይም ጠበቃ አይደለችም።"
+      "sentence2": "ሐኪም ወይም ጠበቃ አይደለችም።",
+      "pronunciation": "/wəjɨm/"
     },
     {
       "id": 455,
       "word": "ተፈጥሯዊ",
       "sentence1": "ከፈተና በፊት መደናገጥ ተፈጥሯዊ ነው።",
-      "sentence2": "ተፈጥሯዊ የደም ግፊት አላት።"
+      "sentence2": "ተፈጥሯዊ የደም ግፊት አላት።",
+      "pronunciation": "/təfətʼɨrwawi/"
     },
     {
       "id": 456,
       "word": "ሰሜናዊ",
       "sentence1": "ሰሜናዊ ክልሎች በክረምት ይበልጥ ቀዝቃዛ ናቸው።",
-      "sentence2": "ከሰሜናዊ ከተማ ናት።"
+      "sentence2": "ከሰሜናዊ ከተማ ናት።",
+      "pronunciation": "/səmenawi/"
     },
     {
       "id": 457,
       "word": "ማስታወሻ",
       "sentence1": "እባክህ አስፈላጊ ነጥቦችን አስታውስ።",
-      "sentence2": "በጠረጴዛህ ላይ ማስታወሻ ትቼያለሁ።"
+      "sentence2": "በጠረጴዛህ ላይ ማስታወሻ ትቼያለሁ።",
+      "pronunciation": "/masɨtawəʃa/"
     },
     {
       "id": 458,
       "word": "የኒውክሌር",
       "sentence1": "አገሪቱ የኒውክሌር ሃይል እያሳደገች ነው።",
-      "sentence2": "የኒውክሌር ኃይል ጥቅሞች እና ጉዳቶች አሉት።"
+      "sentence2": "የኒውክሌር ኃይል ጥቅሞች እና ጉዳቶች አሉት።",
+      "pronunciation": "/jəniwɨkɨler/"
     },
     {
       "id": 459,
       "word": "ግልጽ",
       "sentence1": "ተበሳጭታ እንደነበር ግልጽ ነበር።",
-      "sentence2": "ችግሩን ከገባህ በኋላ መፍትሔው ግልጽ ነው።"
+      "sentence2": "ችግሩን ከገባህ በኋላ መፍትሔው ግልጽ ነው።",
+      "pronunciation": "/ɡɨlɨt͡sʼ/"
     },
     {
       "id": 460,
       "word": "በግልጽ",
       "sentence1": "በግልጽ መመሪያዎቹን አልገባውም።",
-      "sentence2": "በግልጽ በሙዚቃ ተሰጥኦ አላት።"
+      "sentence2": "በግልጽ በሙዚቃ ተሰጥኦ አላት።",
+      "pronunciation": "/bəɡɨlɨt͡sʼ/"
     },
     {
       "id": 461,
       "word": "አጋጣሚ",
       "sentence1": "ይህ ለማክበር ልዩ አጋጣሚ ነው።",
-      "sentence2": "በዚህ አጋጣሚ ስኬቶቻችንን ማሰብ አለብን።"
+      "sentence2": "በዚህ አጋጣሚ ስኬቶቻችንን ማሰብ አለብን።",
+      "pronunciation": "/əɡatʼami/"
     },
     {
       "id": 462,
       "word": "መከሰት",
       "sentence1": "አደጋው በሌሊት ዘግይቶ ተከስቷል።",
-      "sentence2": "አዲሱን ፖሊሲ ከተገበርን ለውጦች ሊከሰቱ ይችላሉ።"
+      "sentence2": "አዲሱን ፖሊሲ ከተገበርን ለውጦች ሊከሰቱ ይችላሉ።",
+      "pronunciation": "/məkəsət/"
     },
     {
       "id": 463,
       "word": "እንግዳ",
       "sentence1": "ችግሩን ለመፍታት እንግዳ መንገድ ነው።",
-      "sentence2": "እንግዳ የቀልድ ስሜት አላት።"
+      "sentence2": "እንግዳ የቀልድ ስሜት አላት።",
+      "pronunciation": "/ɨnɨɡɨda/"
     },
     {
       "id": 464,
       "word": "ኦፊሴላዊ",
       "sentence1": "ኦፊሴላዊ ሪፖርቱ ነገ ይወጣል።",
-      "sentence2": "የኩባንያው ኦፊሴላዊ ተወካይ ነው።"
+      "sentence2": "የኩባንያው ኦፊሴላዊ ተወካይ ነው።",
+      "pronunciation": "/ofiselawi/"
     },
     {
       "id": 465,
       "word": "ጊዜ ያለፈበት",
       "sentence1": "ጊዜ ያለፈበት ልብስ ትመርጣለች።",
-      "sentence2": "ሀሳቦቹ ትንሽ ጊዜ ያለፈባቸው ይመስላሉ።"
+      "sentence2": "ሀሳቦቹ ትንሽ ጊዜ ያለፈባቸው ይመስላሉ።",
+      "pronunciation": "/ɡize jaləfəbət/"
     },
     {
       "id": 466,
       "word": "አንድ ጊዜ",
       "sentence1": "ቀድሞ ቀድሞ ደፋር ባላባት ነበር።",
-      "sentence2": "አንድ ጊዜ ብቻ አግኝቻታለሁ።"
+      "sentence2": "አንድ ጊዜ ብቻ አግኝቻታለሁ።",
+      "pronunciation": "/ənɨd ɡize/"
     },
     {
       "id": 467,
       "word": "ቀዶ ጥገና",
       "sentence1": "ቀዶ ጥገናው ስኬታማ ነበር።",
-      "sentence2": "ወታደራዊ ዘመቻ እያቀዱ ነው።"
+      "sentence2": "ወታደራዊ ዘመቻ እያቀዱ ነው።",
+      "pronunciation": "/kʼədo tʼɨɡəna/"
     },
     {
       "id": 468,
       "word": "የተደራጀ",
       "sentence1": "ዝግጅቱ በደንብ የተደራጀ ነበር።",
-      "sentence2": "በስራዋ በጣም የተደራጀች ናት።"
+      "sentence2": "በስራዋ በጣም የተደራጀች ናት።",
+      "pronunciation": "/jətədərad͡ʒə/"
     },
     {
       "id": 469,
       "word": "አዘጋጅ",
       "sentence1": "የዝግጅቱ አዘጋጅ ታላቅ ስራ ሰርቷል።",
-      "sentence2": "ሙያዊ የዝግጅት አዘጋጅ ናት።"
+      "sentence2": "ሙያዊ የዝግጅት አዘጋጅ ናት።",
+      "pronunciation": "/əzəɡad͡ʒ/"
     },
     {
       "id": 470,
       "word": "ኦሪጅናል",
       "sentence1": "ኦሪጅናሉ ሥዕል በሙዚየም ውስጥ ነው።",
-      "sentence2": "ለፕሮጀክቱ አንዳንድ ኦሪጅናል ሀሳቦች አላት።"
+      "sentence2": "ለፕሮጀክቱ አንዳንድ ኦሪጅናል ሀሳቦች አላት።",
+      "pronunciation": "/orid͡ʒɨnal/"
     },
     {
       "id": 471,
       "word": "በመጀመሪያ",
       "sentence1": "በመጀመሪያ እቅዱ በሰኔ መጀመር ነበር።",
-      "sentence2": "በመጀመሪያ ከስፔን ናት።"
+      "sentence2": "በመጀመሪያ ከስፔን ናት።",
+      "pronunciation": "/bəməd͡ʒəmərija/"
     },
     {
       "id": 472,
       "word": "መሆን አለበት",
       "sentence1": "ሐኪም ማየት አለብህ።",
-      "sentence2": "ፍላጎት ያላቸውን መርዳት አለብን።"
+      "sentence2": "ፍላጎት ያላቸውን መርዳት አለብን።",
+      "pronunciation": "/məhon ələbət/"
     },
     {
       "id": 473,
       "word": "የኛ",
       "sentence1": "ይህ መጽሐፍ የኛ ነው።",
-      "sentence2": "የኛ ትንሽ ግን የቅርብ ቤተሰብ ነው።"
+      "sentence2": "የኛ ትንሽ ግን የቅርብ ቤተሰብ ነው።",
+      "pronunciation": "/jəɲa/"
     },
     {
       "id": 474,
       "word": "ውጭ",
       "sentence1": "እንደ መራመድ ያሉ የውጭ እንቅስቃሴዎችን እንወዳለን።",
-      "sentence2": "የውጭ ኮንሰርቱ ትልቅ ስኬት ነበር።"
+      "sentence2": "የውጭ ኮንሰርቱ ትልቅ ስኬት ነበር።",
+      "pronunciation": "/wɨt͡ʃʼ/"
     },
     {
       "id": 475,
       "word": "ውጭ",
       "sentence1": "ውጭ ጊዜ ማሳለፍ እወዳለሁ።",
-      "sentence2": "ልጆቹ ውጭ እየተጫወቱ ነው።"
+      "sentence2": "ልጆቹ ውጭ እየተጫወቱ ነው።",
+      "pronunciation": "/wɨt͡ʃʼ/"
     },
     {
       "id": 476,
       "word": "ማሸግ",
       "sentence1": "ለጉዞ ቦርሳዎቼን ማሸግ አለብኝ።",
-      "sentence2": "የማስቲካ ጥቅል ገዝታለች።"
+      "sentence2": "የማስቲካ ጥቅል ገዝታለች።",
+      "pronunciation": "/maʃəɡ/"
     },
     {
       "id": 477,
       "word": "ጥቅል",
       "sentence1": "በፖስታ ጥቅል ተቀብያለሁ።",
-      "sentence2": "ጥቅሉ በሰዓቱ ደርሷል።"
+      "sentence2": "ጥቅሉ በሰዓቱ ደርሷል።",
+      "pronunciation": "/tʼɨkʼɨl/"
     },
     {
       "id": 478,
       "word": "የሚያሳዝን",
       "sentence1": "ጉዳቱ የሚያሳዝን ነበር።",
-      "sentence2": "ለመወሰን የሚያሳዝን ውሳኔ ነበር።"
+      "sentence2": "ለመወሰን የሚያሳዝን ውሳኔ ነበር።",
+      "pronunciation": "/jəmijasazɨn/"
     },
     {
       "id": 479,
       "word": "ገርጣ",
       "sentence1": "ከህመሙ በኋላ ገርጣ ትመስል ነበር።",
-      "sentence2": "ፀሐይ ስትጠልቅ ሰማዩ ገርጥቷል።"
+      "sentence2": "ፀሐይ ስትጠልቅ ሰማዩ ገርጥቷል።",
+      "pronunciation": "/ɡərɨtʼa/"
     },
     {
       "id": 480,
       "word": "ድስት",
       "sentence1": "እንቁላሎቹን ለማብሰል የጥብስ ድስት ያስፈልገኛል።",
-      "sentence2": "ድስቱ ለመንካት በጣም ትኩስ ነው።"
+      "sentence2": "ድስቱ ለመንካት በጣም ትኩስ ነው።",
+      "pronunciation": "/dɨsɨt/"
     },
     {
       "id": 481,
       "word": "መሳተፍ",
       "sentence1": "በውድድሩ መሳተፍ እፈልጋለሁ።",
-      "sentence2": "ሁሉም እንዲሳተፉ ይበረታታሉ።"
+      "sentence2": "ሁሉም እንዲሳተፉ ይበረታታሉ።",
+      "pronunciation": "/məsatəf/"
     },
     {
       "id": 482,
       "word": "በተለይ",
       "sentence1": "በተለይ በሂሳብ ጎበዝ ናት።",
-      "sentence2": "መጽሐፉን በተለይ አስደሳች አድርጌ አግኝቼዋለሁ።"
+      "sentence2": "መጽሐፉን በተለይ አስደሳች አድርጌ አግኝቼዋለሁ።",
+      "pronunciation": "/bətələj/"
     },
     {
       "id": 483,
       "word": "ማለፍ",
       "sentence1": "የመንጃ ፈተናዬን ማለፍ አለብኝ።",
-      "sentence2": "ኳሱን ለቡድን አጋሩ አስተላልፏል።"
+      "sentence2": "ኳሱን ለቡድን አጋሩ አስተላልፏል።",
+      "pronunciation": "/maləf/"
     },
     {
       "id": 484,
       "word": "ፍቅር",
       "sentence1": "ለሥዕል ፍቅር አላት።",
-      "sentence2": "ለሙዚቃ ያለው ፍቅር ግልጽ ነው።"
+      "sentence2": "ለሙዚቃ ያለው ፍቅር ግልጽ ነው።",
+      "pronunciation": "/fɨkʼɨr/"
     },
     {
       "id": 485,
       "word": "መንገድ",
       "sentence1": "በጠባቡ መንገድ ላይ ተራመድን።",
-      "sentence2": "መንገዱ ወደ አሮጌው ቤተ መንግስት ይመራል።"
+      "sentence2": "መንገዱ ወደ አሮጌው ቤተ መንግስት ይመራል።",
+      "pronunciation": "/mənɨɡəd/"
     },
     {
       "id": 486,
       "word": "ክፍያ",
       "sentence1": "ክፍያው በሚቀጥለው ሳምንት ይጠበቃል።",
-      "sentence2": "ለስራዬ ክፍያውን ተቀብያለሁ።"
+      "sentence2": "ለስራዬ ክፍያውን ተቀብያለሁ።",
+      "pronunciation": "/kɨfɨja/"
     },
     {
       "id": 487,
       "word": "ሰላማዊ",
       "sentence1": "የአትክልቱ ቦታ ለመዝናናት ሰላማዊ ቦታ ነው።",
-      "sentence2": "ሰላማዊ ባህሪ አላት።"
+      "sentence2": "ሰላማዊ ባህሪ አላት።",
+      "pronunciation": "/səlamawi/"
     },
     {
       "id": 488,
       "word": "መቶኛ",
       "sentence1": "ከህዝቡ ምን ያህል መቶኛ ተጎድቷል?",
-      "sentence2": "ፈተናውን ያለፉ ተማሪዎች መቶኛ ጨምሯል።"
+      "sentence2": "ፈተናውን ያለፉ ተማሪዎች መቶኛ ጨምሯል።",
+      "pronunciation": "/mətoɲa/"
     },
     {
       "id": 489,
       "word": "በፍጹም",
       "sentence1": "በፍጹም ትዘምራለች።",
-      "sentence2": "ሁሉም ነገር እንደ እቅዱ በፍጹም ሄዷል።"
+      "sentence2": "ሁሉም ነገር እንደ እቅዱ በፍጹም ሄዷል።",
+      "pronunciation": "/bəfɨt͡sʼum/"
     },
     {
       "id": 490,
       "word": "አፈጻጸም",
       "sentence1": "አፈጻጸሙ አስደናቂ ነበር።",
-      "sentence2": "ለአፈጻጸሟ ምስጋና ተቀብላለች።"
+      "sentence2": "ለአፈጻጸሟ ምስጋና ተቀብላለች።",
+      "pronunciation": "/əfət͡sʼat͡sʼəm/"
     },
     {
       "id": 491,
       "word": "በግሌ",
       "sentence1": "በግሌ በንጹሕነቱ አምናለሁ።",
-      "sentence2": "መልእክቱን በግሏ አስተላልፋለች።"
+      "sentence2": "መልእክቱን በግሏ አስተላልፋለች።",
+      "pronunciation": "/bəɡɨle/"
     },
     {
       "id": 492,
       "word": "ማሳመን",
       "sentence1": "እንዲቆይ ለማሳመን ሞክሬያለሁ።",
-      "sentence2": "አስተያየታቸውን እንዲቀይሩ ማሳመን ችላለች።"
+      "sentence2": "አስተያየታቸውን እንዲቀይሩ ማሳመን ችላለች።",
+      "pronunciation": "/masamən/"
     },
     {
       "id": 493,
       "word": "ፎቶግራፈር",
       "sentence1": "ፎቶግራፈሩ ጊዜውን በፍጹም ይዟል።",
-      "sentence2": "እንደ ነፃ ፎቶግራፈር ትሰራለች።"
+      "sentence2": "እንደ ነፃ ፎቶግራፈር ትሰራለች።",
+      "pronunciation": "/fotoɡɨrafər/"
     },
     {
       "id": 494,
       "word": "ፎቶግራፊ",
       "sentence1": "ለፎቶግራፊ ፍቅር አለው።",
-      "sentence2": "በኮሌጅ ፎቶግራፊ ተምራለች።"
+      "sentence2": "በኮሌጅ ፎቶግራፊ ተምራለች።",
+      "pronunciation": "/fotoɡɨrafi/"
     },
     {
       "id": 495,
       "word": "ፒን",
       "sentence1": "ይህን ወረቀት ለማያያዝ ፒን ያስፈልገኛል።",
-      "sentence2": "በጃኬቷ ላይ የማስጌጥ ፒን ለብሳለች።"
+      "sentence2": "በጃኬቷ ላይ የማስጌጥ ፒን ለብሳለች።",
+      "pronunciation": "/pin/"
     },
     {
       "id": 496,
       "word": "ቧንቧ",
       "sentence1": "ቧንቧ ሰሪው የሚፈሰውን ቧንቧ አስተካክሏል።",
-      "sentence2": "ከቧንቧው ጭስ ተወጥቷል።"
+      "sentence2": "ከቧንቧው ጭስ ተወጥቷል።",
+      "pronunciation": "/bwanɨbwa/"
     },
     {
       "id": 497,
       "word": "ቦታ",
       "sentence1": "ይህ ለመጎብኘት ጥሩ ቦታ ነው።",
-      "sentence2": "ቦታው በቱሪስቶች ተጨናንቋል።"
+      "sentence2": "ቦታው በቱሪስቶች ተጨናንቋል።",
+      "pronunciation": "/bota/"
     },
     {
       "id": 498,
       "word": "እቅድ",
       "sentence1": "እቅድ ለስኬት አስፈላጊ ነው።",
-      "sentence2": "ለዝግጅት እቅድ ኃላፊ ናት።"
+      "sentence2": "ለዝግጅት እቅድ ኃላፊ ናት።",
+      "pronunciation": "/ɨkʼɨd/"
     },
     {
       "id": 499,
       "word": "ደስ የሚል",
       "sentence1": "የአየር ሁኔታው ዛሬ ደስ የሚል ነው።",
-      "sentence2": "ደስ የሚል ውይይት አድርገናል።"
+      "sentence2": "ደስ የሚል ውይይት አድርገናል።",
+      "pronunciation": "/dəs jəmil/"
     },
     {
       "id": 500,
       "word": "ደስታ",
       "sentence1": "ማግኘቴ ደስታ ነበር።",
-      "sentence2": "በስራዋ ደስታ ታገኛለች።"
+      "sentence2": "በስራዋ ደስታ ታገኛለች።",
+      "pronunciation": "/dəsɨta/"
     },
     {
       "id": 501,
       "word": "ብዙ",
       "sentence1": "ለሁሉም ሰው በቂ ምግብ አለ።",
-      "sentence2": "ፕሮጀክቱን ለማጠናቀቅ ብዙ ጊዜ አላት።"
+      "sentence2": "ፕሮጀክቱን ለማጠናቀቅ ብዙ ጊዜ አላት።",
+      "pronunciation": "/bɨzu/"
     },
     {
       "id": 502,
       "word": "ጭብጥ",
       "sentence1": "የፊልሙ ጭብጥ አስደሳች ነበር።",
-      "sentence2": "በመጽሐፉ ውስጥ ያሉትን ጭብጥ ለውጦች ወድዳለች።"
+      "sentence2": "በመጽሐፉ ውስጥ ያሉትን ጭብጥ ለውጦች ወድዳለች።",
+      "pronunciation": "/t͡ʃʼɨbɨtʼ/"
     },
     {
       "id": 503,
       "word": "ቢደመር",
       "sentence1": "ሁለት ቢደመር ሁለት አራት ይሆናል።",
-      "sentence2": "ስራው ጥሩ ደመወዝ ከጥቅማጥቅሞች ጋር ያቀርባል።"
+      "sentence2": "ስራው ጥሩ ደመወዝ ከጥቅማጥቅሞች ጋር ያቀርባል።",
+      "pronunciation": "/bidəmər/"
     },
     {
       "id": 504,
       "word": "ግጥም",
       "sentence1": "ቆንጆ ግጥም ጽፋለች።",
-      "sentence2": "ግጥሙ የፍቅርን ማንነት ይዟል።"
+      "sentence2": "ግጥሙ የፍቅርን ማንነት ይዟል።",
+      "pronunciation": "/ɡɨtʼɨm/"
     },
     {
       "id": 505,
       "word": "ገጣሚ",
       "sentence1": "እሱ ታዋቂ ገጣሚ ነው።",
-      "sentence2": "ገጣሚው በስራው ውስጥ ጥልቅ ስሜቶችን ገልጿል።"
+      "sentence2": "ገጣሚው በስራው ውስጥ ጥልቅ ስሜቶችን ገልጿል።",
+      "pronunciation": "/ɡətʼami/"
     },
     {
       "id": 506,
       "word": "ግጥም",
       "sentence1": "ግጥም ማንበብ ትወዳለች።",
-      "sentence2": "የዘመኑ ግጥም እሴቶቹን ያንፀባርቃል።"
+      "sentence2": "የዘመኑ ግጥም እሴቶቹን ያንፀባርቃል።",
+      "pronunciation": "/ɡɨtʼɨm/"
     },
     {
       "id": 507,
       "word": "ነጥብ",
       "sentence1": "በውይይቱ ወቅት ትክክለኛ ነጥብ አንስታለች።",
-      "sentence2": "የልምምዱ ነጥብ ክህሎቶችህን ማሻሻል ነው።"
+      "sentence2": "የልምምዱ ነጥብ ክህሎቶችህን ማሻሻል ነው።",
+      "pronunciation": "/nətʼɨb/"
     },
     {
       "id": 508,
       "word": "መርዝ",
       "sentence1": "መርዙ ገዳይ ነበር።",
-      "sentence2": "ተቀናቃኙን በመመረዝ ተከሷል።"
+      "sentence2": "ተቀናቃኙን በመመረዝ ተከሷል።",
+      "pronunciation": "/mərɨz/"
     },
     {
       "id": 509,
       "word": "መርዛማ",
       "sentence1": "መርዛማው ተክል ከእጅ መድረስ ውጭ መቀመጥ አለበት።",
-      "sentence2": "አንዳንድ እንጉዳዮች ከተበሉ መርዛማ ናቸው።"
+      "sentence2": "አንዳንድ እንጉዳዮች ከተበሉ መርዛማ ናቸው።",
+      "pronunciation": "/mərɨzama/"
     },
     {
       "id": 510,
       "word": "ፖሊሲ",
       "sentence1": "መንግስት አዲስ ፖሊሲ አስታውቋል።",
-      "sentence2": "ፖሊሲው ብክለትን ለመቀነስ ያለመ ነው።"
+      "sentence2": "ፖሊሲው ብክለትን ለመቀነስ ያለመ ነው።",
+      "pronunciation": "/polisi/"
     },
     {
       "id": 511,
       "word": "ፖለቲካዊ",
       "sentence1": "በፖለቲካ እንቅስቃሴ ውስጥ ተሳታፊ ነው።",
-      "sentence2": "ፖለቲካዊ ሁኔታው በፍጥነት እየተቀየረ ነው።"
+      "sentence2": "ፖለቲካዊ ሁኔታው በፍጥነት እየተቀየረ ነው።",
+      "pronunciation": "/polətikawi/"
     },
     {
       "id": 512,
       "word": "ፖለቲከኛ",
       "sentence1": "እሷ ታዋቂ ፖለቲከኛ ናት።",
-      "sentence2": "ፖለቲከኛው ህዝቡን አነጋግሯል።"
+      "sentence2": "ፖለቲከኛው ህዝቡን አነጋግሯል።",
+      "pronunciation": "/polətikəɲa/"
     },
     {
       "id": 513,
       "word": "ፖለቲካ",
       "sentence1": "ፖለቲካ በጣም አከፋፋይ ሊሆን ይችላል።",
-      "sentence2": "በዩኒቨርሲቲ ፖለቲካ እየተማረ ነው።"
+      "sentence2": "በዩኒቨርሲቲ ፖለቲካ እየተማረ ነው።",
+      "pronunciation": "/polətika/"
     },
     {
       "id": 514,
       "word": "ወደብ",
       "sentence1": "መርከቧ በወደቡ ላይ ቆማለች።",
-      "sentence2": "ወደቡ በጭነት ትራፊክ ተጨናንቋል።"
+      "sentence2": "ወደቡ በጭነት ትራፊክ ተጨናንቋል።",
+      "pronunciation": "/wədəb/"
     },
     {
       "id": 515,
       "word": "ምስል",
       "sentence1": "ቆንጆ ምስል ስዕል ሥራለች።",
-      "sentence2": "ምስሉ ምስሉን በፍጹም ይዟል።"
+      "sentence2": "ምስሉ ምስሉን በፍጹም ይዟል።",
+      "pronunciation": "/mɨsɨl/"
     },
     {
       "id": 516,
       "word": "ምናልባት",
       "sentence1": "ምናልባት ነገ ዝናብ ይዘንባል።",
-      "sentence2": "ምናልባት ለስራው ምርጥ እጩ ናት።"
+      "sentence2": "ምናልባት ለስራው ምርጥ እጩ ናት።",
+      "pronunciation": "/mɨnalɨbat/"
     },
     {
       "id": 517,
       "word": "ድስት",
       "sentence1": "ድስቱ ከሸክላ የተሰራ ነው።",
-      "sentence2": "ሾርባውን በትልቅ ድስት ውስጥ አብስላለች።"
+      "sentence2": "ሾርባውን በትልቅ ድስት ውስጥ አብስላለች።",
+      "pronunciation": "/dɨsɨt/"
     },
     {
       "id": 518,
       "word": "ማፍሰስ",
       "sentence1": "እባክህ ወተቱን ወደ ብርጭቆው አፍስስ።",
-      "sentence2": "ቡናውን ቀስ ብሎ ማፍሰስ ይወዳል።"
+      "sentence2": "ቡናውን ቀስ ብሎ ማፍሰስ ይወዳል።",
+      "pronunciation": "/mafɨsəs/"
     },
     {
       "id": 519,
       "word": "ድህነት",
       "sentence1": "ድህነት ከባድ ችግር ነው።",
-      "sentence2": "ድርጅቱ ድህነትን ለማስወገድ ያለመ ነው።"
+      "sentence2": "ድርጅቱ ድህነትን ለማስወገድ ያለመ ነው።",
+      "pronunciation": "/dɨhɨnət/"
     },
     {
       "id": 520,
       "word": "ዱቄት",
       "sentence1": "ዱቄቱ ለመጋገር ያገለግላል።",
-      "sentence2": "ዱቄቱን በኬኩ ላይ ረጭታለች።"
+      "sentence2": "ዱቄቱን በኬኩ ላይ ረጭታለች።",
+      "pronunciation": "/dukʼet/"
     },
     {
       "id": 521,
       "word": "ኃይለኛ",
       "sentence1": "ሞተሩ በጣም ኃይለኛ ነው።",
-      "sentence2": "ኃይለኛ ንግግር አድርጋለች።"
+      "sentence2": "ኃይለኛ ንግግር አድርጋለች።",
+      "pronunciation": "/hajɨləɲa/"
     },
     {
       "id": 522,
       "word": "ተግባራዊ",
       "sentence1": "ይህ ተግባራዊ መፍትሔ ነው።",
-      "sentence2": "ለችግሮች ተግባራዊ አቀራረብ አለው።"
+      "sentence2": "ለችግሮች ተግባራዊ አቀራረብ አለው።",
+      "pronunciation": "/təɡɨbarawi/"
     },
     {
       "id": 523,
       "word": "መጸለይ",
       "sentence1": "በየአርብ ለመጸለይ ይሰበሰባሉ።",
-      "sentence2": "ለቤተሰቧ ደህንነት ጸልያለች።"
+      "sentence2": "ለቤተሰቧ ደህንነት ጸልያለች።",
+      "pronunciation": "/mət͡sʼələj/"
     },
     {
       "id": 524,
       "word": "ጸሎት",
       "sentence1": "ከምግብ በፊት ጸሎት አድርጓል።",
-      "sentence2": "ጸሎት የማጽናኛ ምንጭ ሊሆን ይችላል።"
+      "sentence2": "ጸሎት የማጽናኛ ምንጭ ሊሆን ይችላል።",
+      "pronunciation": "/t͡sʼəlot/"
     },
     {
       "id": 525,
       "word": "ትንበያ",
       "sentence1": "የአየር ሁኔታ ትንበያ ተስፋ ሰጪ አይደለም።",
-      "sentence2": "ስለ ውጤቱ ትክክለኛ ትንበያ አድርጋለች።"
+      "sentence2": "ስለ ውጤቱ ትክክለኛ ትንበያ አድርጋለች።",
+      "pronunciation": "/tɨnɨbəja/"
     },
     {
       "id": 526,
       "word": "የተዘጋጀ",
       "sentence1": "ምግቡ በደንብ የተዘጋጀ ነበር።",
-      "sentence2": "ለፈተናው ዝግጁ ተሰምቷታል።"
+      "sentence2": "ለፈተናው ዝግጁ ተሰምቷታል።",
+      "pronunciation": "/jətəzəɡad͡ʒə/"
     },
     {
       "id": 527,
       "word": "ዝግጅት",
       "sentence1": "ዝግጅቱ መረጃ ሰጪ ነበር።",
-      "sentence2": "ስለ አየር ንብረት ለውጥ ዝግጅት አቅርቧል።"
+      "sentence2": "ስለ አየር ንብረት ለውጥ ዝግጅት አቅርቧል።",
+      "pronunciation": "/zɨɡɨd͡ʒɨt/"
     },
     {
       "id": 528,
       "word": "ፕሬስ",
       "sentence1": "ፕሬሱ ዝግጅቱን በስፋት ሸፍኗል።",
-      "sentence2": "እንደ ፕሬስ ኦፊሰር ትሰራለች።"
+      "sentence2": "እንደ ፕሬስ ኦፊሰር ትሰራለች።",
+      "pronunciation": "/pɨres/"
     },
     {
       "id": 529,
       "word": "ግፊት",
       "sentence1": "ግፊቱ እየጨመረ ነው።",
-      "sentence2": "በስራ ላይ ብዙ ግፊት ላይ ናት።"
+      "sentence2": "በስራ ላይ ብዙ ግፊት ላይ ናት።",
+      "pronunciation": "/ɡɨfit/"
     },
     {
       "id": 530,
       "word": "ማስመሰል",
       "sentence1": "ልዕለ ጀግኖች እንደሆኑ ማስመሰል ይወዳሉ።",
-      "sentence2": "አላየኸኝም ብለህ አታስመስል።"
+      "sentence2": "አላየኸኝም ብለህ አታስመስል።",
+      "pronunciation": "/masɨməsəl/"
     },
     {
       "id": 531,
       "word": "ቀድሞ",
       "sentence1": "ቀድሞ ባለቤቱ ብዙ ማሻሻያዎች አድርጓል።",
-      "sentence2": "ባለፈው ምዕራፍ ተወያይተናል..."
+      "sentence2": "ባለፈው ምዕራፍ ተወያይተናል...",
+      "pronunciation": "/kʼədɨmo/"
     },
     {
       "id": 532,
       "word": "ከዚህ በፊት",
       "sentence1": "ከዚህ በፊት በለንደን ኖሬያለሁ።",
-      "sentence2": "ከዚህ በፊት በሌላ ኩባንያ ሰርታለች።"
+      "sentence2": "ከዚህ በፊት በሌላ ኩባንያ ሰርታለች።",
+      "pronunciation": "/kəzih bəfit/"
     },
     {
       "id": 533,
       "word": "ካህን",
       "sentence1": "ካህኑ በእሁድ ስብከት ሰጥቷል።",
-      "sentence2": "ካህን መሆን ይፈልጋል።"
+      "sentence2": "ካህን መሆን ይፈልጋል።",
+      "pronunciation": "/kahɨn/"
     },
     {
       "id": 534,
       "word": "ዋና",
       "sentence1": "ትምህርት ዋና ስጋት ነው።",
-      "sentence2": "ዋናው ግብ ማንበብ ማሻሻል ነው።"
+      "sentence2": "ዋናው ግብ ማንበብ ማሻሻል ነው።",
+      "pronunciation": "/wana/"
     },
     {
       "id": 535,
       "word": "ልዑል",
       "sentence1": "ልዑሉ ዙፋኑን ይወርሳል።",
-      "sentence2": "በድግሱ ላይ ከልዑሉ ጋር ጨፍራለች።"
+      "sentence2": "በድግሱ ላይ ከልዑሉ ጋር ጨፍራለች።",
+      "pronunciation": "/lɨul/"
     },
     {
       "id": 536,
       "word": "ልዕልት",
       "sentence1": "ልዕልቲቱ ቆንጆ ቀሚስ ለብሳለች።",
-      "sentence2": "እያንዳንዱ ልጅ ልዕልት መሆን ያልማል።"
+      "sentence2": "እያንዳንዱ ልጅ ልዕልት መሆን ያልማል።",
+      "pronunciation": "/lɨɨlɨt/"
     },
     {
       "id": 537,
       "word": "ህትመት",
       "sentence1": "የህትመት ሂደቱ ውስብስብ ነው።",
-      "sentence2": "በህትመት ኢንዱስትሪ ውስጥ ትሰራለች።"
+      "sentence2": "በህትመት ኢንዱስትሪ ውስጥ ትሰራለች።",
+      "pronunciation": "/hɨtɨmət/"
     },
     {
       "id": 538,
       "word": "እስረኛ",
       "sentence1": "እስረኛው ቀደም ብሎ ተፈትቷል።",
-      "sentence2": "እሱ የፖለቲካ እስረኛ ነው።"
+      "sentence2": "እሱ የፖለቲካ እስረኛ ነው።",
+      "pronunciation": "/ɨsɨrəɲa/"
     },
     {
       "id": 539,
       "word": "የግል",
       "sentence1": "ዛሬ የግል ስብሰባ አላት።",
-      "sentence2": "ህይወቱን የግል ማድረግ ይመርጣል።"
+      "sentence2": "ህይወቱን የግል ማድረግ ይመርጣል።",
+      "pronunciation": "/jəɡɨl/"
     },
     {
       "id": 540,
       "word": "ፕሮዲዩሰር",
       "sentence1": "ፕሮዲዩሰሩ በአዲስ ፊልም ላይ እየሰራ ነው።",
-      "sentence2": "እሷ ታዋቂ የሙዚቃ ፕሮዲዩሰር ናት።"
+      "sentence2": "እሷ ታዋቂ የሙዚቃ ፕሮዲዩሰር ናት።",
+      "pronunciation": "/pɨrodijusər/"
     },
     {
       "id": 541,
       "word": "ምርት",
       "sentence1": "የሸቀጦች ምርት ጨምሯል።",
-      "sentence2": "ይህ ፋብሪካ በመኪና ምርት ላይ ያተኩራል።"
+      "sentence2": "ይህ ፋብሪካ በመኪና ምርት ላይ ያተኩራል።",
+      "pronunciation": "/mɨrɨt/"
     },
     {
       "id": 542,
       "word": "ሙያ",
       "sentence1": "ማስተማር ክቡር ሙያ ነው።",
-      "sentence2": "በህክምና ሙያ መርጧል።"
+      "sentence2": "በህክምና ሙያ መርጧል።",
+      "pronunciation": "/muja/"
     },
     {
       "id": 543,
       "word": "ትርፍ",
       "sentence1": "ኩባንያው ባለፈው ዓመት ትልቅ ትርፍ አግኝቷል።",
-      "sentence2": "የትርፍ ማርጂናቸውን ለመጨመር ያለማሉ።"
+      "sentence2": "የትርፍ ማርጂናቸውን ለመጨመር ያለማሉ።",
+      "pronunciation": "/tɨrɨf/"
     },
     {
       "id": 544,
       "word": "ፕሮግራም",
       "sentence1": "ፕሮግራሙ የተለያዩ እንቅስቃሴዎችን ያካትታል።",
-      "sentence2": "በሥልጠና ፕሮግራም ውስጥ ተመዝግባለች።"
+      "sentence2": "በሥልጠና ፕሮግራም ውስጥ ተመዝግባለች።",
+      "pronunciation": "/pɨroɡɨram/"
     },
     {
       "id": 545,
       "word": "ማስተዋወቅ",
       "sentence1": "ዘመቻው ጤናማ አመጋገብን ለማስተዋወቅ ያለመ ነው።",
-      "sentence2": "አዲሱን ምርታቸውን ለማስተዋወቅ ይፈልጋሉ።"
+      "sentence2": "አዲሱን ምርታቸውን ለማስተዋወቅ ይፈልጋሉ።",
+      "pronunciation": "/masɨtəwawəkʼ/"
     },
     {
       "id": 546,
       "word": "ትክክለኛ",
       "sentence1": "ትክክለኛ ልብስ መልበስ አስፈላጊ ነው።",
-      "sentence2": "ትክክለኛ ሂደቶችን አልተከተለም።"
+      "sentence2": "ትክክለኛ ሂደቶችን አልተከተለም።",
+      "pronunciation": "/tɨkɨkɨləɲa/"
     },
     {
       "id": 547,
       "word": "በትክክል",
       "sentence1": "እባክህ መሳሪያውን በትክክል ያዝ።",
-      "sentence2": "ተግባሩ በትክክል አልተጠናቀቀም።"
+      "sentence2": "ተግባሩ በትክክል አልተጠናቀቀም።",
+      "pronunciation": "/bətɨkɨkɨl/"
     },
     {
       "id": 548,
       "word": "ንብረት",
       "sentence1": "ንብረቱ ለሽያጭ ቀርቧል።",
-      "sentence2": "በንግድ ንብረት ላይ መዋዕለ ንዋይ አፍስሰዋል።"
+      "sentence2": "በንግድ ንብረት ላይ መዋዕለ ንዋይ አፍስሰዋል።",
+      "pronunciation": "/nɨbɨrət/"
     },
     {
       "id": 549,
       "word": "ተቃውሞ",
       "sentence1": "ተቃውሞው ሰላማዊ ነበር።",
-      "sentence2": "በህጉ ላይ ተቃውሞ አዘጋጅተዋል።"
+      "sentence2": "በህጉ ላይ ተቃውሞ አዘጋጅተዋል።",
+      "pronunciation": "/təkʼawɨmo/"
     },
     {
       "id": 550,
       "word": "ኩሩ",
       "sentence1": "በስኬቶቿ ኮርታለች።",
-      "sentence2": "በኩራት ባህሪ ተራምዷል።"
+      "sentence2": "በኩራት ባህሪ ተራምዷል።",
+      "pronunciation": "/kuru/"
     },
     {
       "id": 551,
       "word": "ማረጋገጥ",
       "sentence1": "ማንነትህን ማረጋገጥ አለብህ።",
-      "sentence2": "ማስረጃው ንጹህነቱን ያረጋግጣል።"
+      "sentence2": "ማስረጃው ንጹህነቱን ያረጋግጣል።",
+      "pronunciation": "/marəɡaɡətʼ/"
     },
     {
       "id": 552,
       "word": "መጎተት",
       "sentence1": "እባክህ በሩን ለመክፈት ጎትተው።",
-      "sentence2": "ከባዱን ሳጥን ለመጎተት ሞክሯል።"
+      "sentence2": "ከባዱን ሳጥን ለመጎተት ሞክሯል።",
+      "pronunciation": "/məɡotət/"
     },
     {
       "id": 553,
       "word": "መቅጣት",
       "sentence1": "ወንጀለኞቹን ለመቅጣት ወሰኑ።",
-      "sentence2": "ዘግይታ በመምጣቷ ተቀጥታለች።"
+      "sentence2": "ዘግይታ በመምጣቷ ተቀጥታለች።",
+      "pronunciation": "/məkʼɨtʼat/"
     },
     {
       "id": 554,
       "word": "ቅጣት",
       "sentence1": "ቅጣቱ ከባድ ነበር።",
-      "sentence2": "ለድርጊቱ ቅጣት ተቀብሏል።"
+      "sentence2": "ለድርጊቱ ቅጣት ተቀብሏል።",
+      "pronunciation": "/kʼɨtʼat/"
     },
     {
       "id": 555,
       "word": "መግፋት",
       "sentence1": "ለመጀመር እባክህ ቁልፉን ግፋ።",
-      "sentence2": "መኪናውን ለማስነሳት መግፋት ነበረበት።"
+      "sentence2": "መኪናውን ለማስነሳት መግፋት ነበረበት።",
+      "pronunciation": "/məɡɨfat/"
     },
     {
       "id": 556,
       "word": "ብቃት",
       "sentence1": "አስፈላጊ ብቃቶች አሏት።",
-      "sentence2": "ብቃቶቹ ጠንካራ እጩ አድርገውታል።"
+      "sentence2": "ብቃቶቹ ጠንካራ እጩ አድርገውታል።",
+      "pronunciation": "/bɨkʼat/"
     },
     {
       "id": 557,
       "word": "ብቁ",
       "sentence1": "እሷ ብቃት ያላት መምህር ናት።",
-      "sentence2": "ብቁ አመልካቾችን እየፈለጉ ነው።"
+      "sentence2": "ብቁ አመልካቾችን እየፈለጉ ነው።",
+      "pronunciation": "/bɨkʼu/"
     },
     {
       "id": 558,
       "word": "ማለፍ",
       "sentence1": "ለቦታው ማለፍ አለብህ።",
-      "sentence2": "ለመጨረሻው ዙር አላለፈችም።"
+      "sentence2": "ለመጨረሻው ዙር አላለፈችም።",
+      "pronunciation": "/maləf/"
     },
     {
       "id": 559,
       "word": "ወረፋ",
       "sentence1": "በትኬት መቁጠሪያው ላይ ረጅም ወረፋ ነበር።",
-      "sentence2": "ከአንድ ሰዓት በላይ በወረፋ ጠብቀዋል።"
+      "sentence2": "ከአንድ ሰዓት በላይ በወረፋ ጠብቀዋል።",
+      "pronunciation": "/wərəfa/"
     },
     {
       "id": 560,
       "word": "መተው",
       "sentence1": "ስራውን ለመተው ወስኗል።",
-      "sentence2": "ሲጋራ ማጨስ ትፈልጋለች።"
+      "sentence2": "ሲጋራ ማጨስ ትፈልጋለች።",
+      "pronunciation": "/mətəw/"
     },
     {
       "id": 561,
       "word": "ጥቅስ",
       "sentence1": "መጽሐፉ በታዋቂ ጥቅስ ይጀምራል።",
-      "sentence2": "ከሼክስፒር ጥቅስ አካትታለች።"
+      "sentence2": "ከሼክስፒር ጥቅስ አካትታለች።",
+      "pronunciation": "/tʼɨkʼɨs/"
     },
     {
       "id": 562,
       "word": "መጥቀስ",
       "sentence1": "እባክህ የመረጃህን ምንጭ ጥቀስ።",
-      "sentence2": "ታዋቂ ደራሲዎችን መጥቀስ ይወዳል።"
+      "sentence2": "ታዋቂ ደራሲዎችን መጥቀስ ይወዳል።",
+      "pronunciation": "/mətʼɨkʼəs/"
     },
     {
       "id": 563,
       "word": "ዘር",
       "sentence1": "ውድድሩ በአካባቢው አትሌት አሸንፏል።",
-      "sentence2": "የተለያዩ ዘሮች ልዩ ባህሎች አሏቸው።"
+      "sentence2": "የተለያዩ ዘሮች ልዩ ባህሎች አሏቸው።",
+      "pronunciation": "/zər/"
     },
     {
       "id": 564,
       "word": "ውድድር",
       "sentence1": "ውድድር ታዋቂ ስፖርት ነው።",
-      "sentence2": "በሳምንት መጨረሻዎች የመኪና ውድድር ይወዳል።"
+      "sentence2": "በሳምንት መጨረሻዎች የመኪና ውድድር ይወዳል።",
+      "pronunciation": "/wɨdɨdɨr/"
     },
     {
       "id": 565,
       "word": "ክልል",
       "sentence1": "የሙቀት ክልሉ ከ20 እስከ 30 ዲግሪ ነው።",
-      "sentence2": "ሰፊ የምርት ክልል ያቀርባሉ።"
+      "sentence2": "ሰፊ የምርት ክልል ያቀርባሉ።",
+      "pronunciation": "/kɨlɨl/"
     },
     {
       "id": 566,
       "word": "ያልተለመደ",
       "sentence1": "እንዲህ ያለ ቆንጆ ፀሐይ ስትጠልቅ ማየት ያልተለመደ ነው።",
-      "sentence2": "ለሙዚቃ ያልተለመደ ተሰጥኦ አለው።"
+      "sentence2": "ለሙዚቃ ያልተለመደ ተሰጥኦ አለው።",
+      "pronunciation": "/jalɨtələmədə/"
     },
     {
       "id": 567,
       "word": "በጭራሽ",
       "sentence1": "ምሽቶች በጭራሽ አትወጣም።",
-      "sentence2": "ያለ ካሜራው በጭራሽ አይታይም።"
+      "sentence2": "ያለ ካሜራው በጭራሽ አይታይም።",
+      "pronunciation": "/bət͡ʃʼɨraʃ/"
     },
     {
       "id": 568,
       "word": "ምላሽ",
       "sentence1": "ምላሷ ያልተጠበቀ ነበር።",
-      "sentence2": "ለዜናው ጠንካራ ምላሽ ነበረው።"
+      "sentence2": "ለዜናው ጠንካራ ምላሽ ነበረው።",
+      "pronunciation": "/mɨlaʃ/"
     },
     {
       "id": 569,
       "word": "እውነታ",
       "sentence1": "የሁኔታው እውነታ ውስብስብ ነው።",
-      "sentence2": "ከባድ እውነታ እያጋጠማቸው ነው።"
+      "sentence2": "ከባድ እውነታ እያጋጠማቸው ነው።",
+      "pronunciation": "/ɨwɨnəta/"
     },
     {
       "id": 570,
       "word": "ደረሰኝ",
       "sentence1": "እባክህ ደረሰኝህን አስቀምጥ።",
-      "sentence2": "ለግዢዬ ደረሰኝ ያስፈልገኛል።"
+      "sentence2": "ለግዢዬ ደረሰኝ ያስፈልገኛል።",
+      "pronunciation": "/dərəsəɲ/"
     },
     {
       "id": 571,
       "word": "ምክር",
       "sentence1": "ምክርህን አደንቃለሁ።",
-      "sentence2": "ለፕሮጀክቱ ምክር ሰጥታለች።"
+      "sentence2": "ለፕሮጀክቱ ምክር ሰጥታለች።",
+      "pronunciation": "/mɨkɨr/"
     },
     {
       "id": 572,
       "word": "ማጣቀሻ",
       "sentence1": "ለስራህ ማጣቀሻ መስጠት ትችላለህ?",
-      "sentence2": "በሪፖርቱ ውስጥ በርካታ ማጣቀሻዎችን ጠቅሷል።"
+      "sentence2": "በሪፖርቱ ውስጥ በርካታ ማጣቀሻዎችን ጠቅሷል።",
+      "pronunciation": "/matʼakʼəʃa/"
     },
     {
       "id": 573,
       "word": "ማንፀባረቅ",
       "sentence1": "መስታወቱ ምስልህን ያንፀባርቃል።",
-      "sentence2": "ስለ ምርጫዎቿ ለማሰብ ጊዜ ወስዳለች።"
+      "sentence2": "ስለ ምርጫዎቿ ለማሰብ ጊዜ ወስዳለች።",
+      "pronunciation": "/manɨt͡sʼəbarəkʼ/"
     },
     {
       "id": 574,
       "word": "በመደበኛነት",
       "sentence1": "ለጤና በመደበኛነት ያንቀሳቅሳል።",
-      "sentence2": "ስብሰባዎች በየሰኞ በመደበኛነት ይካሄዳሉ።"
+      "sentence2": "ስብሰባዎች በየሰኞ በመደበኛነት ይካሄዳሉ።",
+      "pronunciation": "/bəmədəbəɲanət/"
     },
     {
       "id": 575,
       "word": "ውድቅ ማድረግ",
       "sentence1": "ሀሳቡን ውድቅ ለማድረግ ወስነዋል።",
-      "sentence2": "ግብዣዋን ውድቅ ሲያደርግ ተጎድታለች።"
+      "sentence2": "ግብዣዋን ውድቅ ሲያደርግ ተጎድታለች።",
+      "pronunciation": "/wɨdɨkʼ madɨrəɡ/"
     },
     {
       "id": 576,
       "word": "ማገናኘት",
       "sentence1": "ንድፈ ሀሳቡን ከተግባር ጋር ማገናኘት አስፈላጊ ነው።",
-      "sentence2": "በመጽሐፉ ውስጥ ካሉ ገጸ-ባህሪያት ጋር በቀላሉ ትገናኛለች።"
+      "sentence2": "በመጽሐፉ ውስጥ ካሉ ገጸ-ባህሪያት ጋር በቀላሉ ትገናኛለች።",
+      "pronunciation": "/maɡənaɲət/"
     },
     {
       "id": 577,
       "word": "የተዛመደ",
       "sentence1": "ሁለቱ ርዕሶች በጣም የተዛመዱ ናቸው።",
-      "sentence2": "ብዙ የተዛመደ ልምድ አላት።"
+      "sentence2": "ብዙ የተዛመደ ልምድ አላት።",
+      "pronunciation": "/jətəzamədə/"
     },
     {
       "id": 578,
       "word": "ግንኙነት",
       "sentence1": "በአመጋገብ እና በጤና መካከል ጠንካራ ግንኙነት አለ።",
-      "sentence2": "የቋንቋ እና የባህል ግንኙነትን ያጠናሉ።"
+      "sentence2": "የቋንቋ እና የባህል ግንኙነትን ያጠናሉ።",
+      "pronunciation": "/ɡɨnɨɲunət/"
     },
     {
       "id": 579,
       "word": "ዘመድ",
       "sentence1": "እሱ የሩቅ ዘመዴ ነው።",
-      "sentence2": "ጽንሰ-ሀሳቡ ከሁኔታው ጋር አንፃራዊ ነው።"
+      "sentence2": "ጽንሰ-ሀሳቡ ከሁኔታው ጋር አንፃራዊ ነው።",
+      "pronunciation": "/zəməd/"
     },
     {
       "id": 580,
       "word": "የዘና",
       "sentence1": "ከማሳጅ በኋላ ዘና ብሏታል።",
-      "sentence2": "ከባቢው ጸጥ ያለ እና የዘና ያለ ነበር።"
+      "sentence2": "ከባቢው ጸጥ ያለ እና የዘና ያለ ነበር።",
+      "pronunciation": "/jəzəna/"
     },
     {
       "id": 581,
       "word": "አዝናኝ",
       "sentence1": "ሙዚቃ ማዳመጥ አዝናኝ ነው።",
-      "sentence2": "በስፓ ውስጥ አዝናኝ ቀን ነበራቸው።"
+      "sentence2": "በስፓ ውስጥ አዝናኝ ቀን ነበራቸው።",
+      "pronunciation": "/əzɨnaɲ/"
     },
     {
       "id": 582,
       "word": "መልቀቅ",
       "sentence1": "ወፉ ከጎጆዋ ተለቋል።",
-      "sentence2": "በሚቀጥለው ወር አዲሱን ምርት ለመልቀቅ እቅድ አላቸው።"
+      "sentence2": "በሚቀጥለው ወር አዲሱን ምርት ለመልቀቅ እቅድ አላቸው።",
+      "pronunciation": "/məlɨkʼəkʼ/"
     },
     {
       "id": 583,
       "word": "አስተማማኝ",
       "sentence1": "እሷ አስተማማኝ ጓደኛ ናት።",
-      "sentence2": "አስተማማኝ የመረጃ ምንጭ ያስፈልገናል።"
+      "sentence2": "አስተማማኝ የመረጃ ምንጭ ያስፈልገናል።",
+      "pronunciation": "/əsɨtəmamaɲ/"
     },
     {
       "id": 584,
       "word": "ሃይማኖት",
       "sentence1": "ሃይማኖቱን በታማኝነት ይተገብራል።",
-      "sentence2": "ሃይማኖት በህይወታቸው ውስጥ ጉልህ ሚና ይጫወታል።"
+      "sentence2": "ሃይማኖት በህይወታቸው ውስጥ ጉልህ ሚና ይጫወታል።",
+      "pronunciation": "/hajɨmanot/"
     },
     {
       "id": 585,
       "word": "ሃይማኖታዊ",
       "sentence1": "በጣም ሃይማኖታዊ ናት እና በየእሁድ ቤተክርስቲያን ትሄዳለች።",
-      "sentence2": "ሃይማኖታዊ እምነቶች በስፋት ሊለያዩ ይችላሉ።"
+      "sentence2": "ሃይማኖታዊ እምነቶች በስፋት ሊለያዩ ይችላሉ።",
+      "pronunciation": "/hajɨmanotawi/"
     },
     {
       "id": 586,
       "word": "መቆየት",
       "sentence1": "ጓደኛሞች ሆነው ለመቆየት ወሰኑ።",
-      "sentence2": "እባክህ ትርዒቱ እስኪያልቅ ድረስ ተቀመጥ።"
+      "sentence2": "እባክህ ትርዒቱ እስኪያልቅ ድረስ ተቀመጥ።",
+      "pronunciation": "/məkʼojət/"
     },
     {
       "id": 587,
       "word": "ማስታወስ",
       "sentence1": "እባክህ ልደውልላት እንድታስታውሰኝ።",
-      "sentence2": "እረፍት ለመውሰድ ራሴን ማስታወስ አለብኝ።"
+      "sentence2": "እረፍት ለመውሰድ ራሴን ማስታወስ አለብኝ።",
+      "pronunciation": "/masɨtawəs/"
     },
     {
       "id": 588,
       "word": "ሩቅ",
       "sentence1": "ከቤቱ በሩቅ ይሰራል።",
-      "sentence2": "የርቀት መቆጣጠሪያው በጠረጴዛው ላይ ነው።"
+      "sentence2": "የርቀት መቆጣጠሪያው በጠረጴዛው ላይ ነው።",
+      "pronunciation": "/rukʼ/"
     },
     {
       "id": 589,
       "word": "መከራየት",
       "sentence1": "ለጉዞ መኪና ለመከራየት ወሰኑ።",
-      "sentence2": "ኪራዩ በወሩ መጀመሪያ ላይ ይጠበቃል።"
+      "sentence2": "ኪራዩ በወሩ መጀመሪያ ላይ ይጠበቃል።",
+      "pronunciation": "/məkərajət/"
     },
     {
       "id": 590,
       "word": "ማስተካከል",
       "sentence1": "ብስክሌቴን ማስተካከል አለብኝ።",
-      "sentence2": "ጥገናው ከተጠበቀው በላይ ወስዷል።"
+      "sentence2": "ጥገናው ከተጠበቀው በላይ ወስዷል።",
+      "pronunciation": "/masɨtəkakəl/"
     },
     {
       "id": 591,
       "word": "መድገም",
       "sentence1": "እባክህ ድገመው?",
-      "sentence2": "ለእያንዳንዱ ንጥል ሂደቱን መድገም አለብኝ።"
+      "sentence2": "ለእያንዳንዱ ንጥል ሂደቱን መድገም አለብኝ።",
+      "pronunciation": "/mədɨɡəm/"
     },
     {
       "id": 592,
       "word": "ተደጋጋሚ",
       "sentence1": "ተደጋጋሚ ሙከራዎች አልተሳኩም።",
-      "sentence2": "ተደጋጋሚ የባህሪ ቅጥ አላት።"
+      "sentence2": "ተደጋጋሚ የባህሪ ቅጥ አላት።",
+      "pronunciation": "/tədəɡaɡami/"
     },
     {
       "id": 593,
       "word": "መወከል",
       "sentence1": "ቡድኑን ለመወከል ተመርጧል።",
-      "sentence2": "ሥዕሉ የአርቲስቱን ራዕይ ይወክላል።"
+      "sentence2": "ሥዕሉ የአርቲስቱን ራዕይ ይወክላል።",
+      "pronunciation": "/məwəkəl/"
     },
     {
       "id": 594,
       "word": "ጥያቄ",
       "sentence1": "ስብሰባ መጠየቅ እፈልጋለሁ።",
-      "sentence2": "ጥያቄው በአስተዳደር ጸድቋል።"
+      "sentence2": "ጥያቄው በአስተዳደር ጸድቋል።",
+      "pronunciation": "/tʼɨjakʼe/"
     },
     {
       "id": 595,
       "word": "መፈለግ",
       "sentence1": "ይህ ስራ ብዙ ልምድ ይፈልጋል።",
-      "sentence2": "ተጨማሪ ሃብቶች መፈለግ ይኖርብሃል።"
+      "sentence2": "ተጨማሪ ሃብቶች መፈለግ ይኖርብሃል።",
+      "pronunciation": "/məfələɡ/"
     },
     {
       "id": 596,
       "word": "ቦታ ማስያዝ",
       "sentence1": "በምግብ ቤቱ ቦታ አስይዣለሁ።",
-      "sentence2": "ቦታ ማስያዙ በኢሜይል ተረጋግጧል።"
+      "sentence2": "ቦታ ማስያዙ በኢሜይል ተረጋግጧል።",
+      "pronunciation": "/bota masɨjaz/"
     },
     {
       "id": 597,
       "word": "ሃብት",
       "sentence1": "ቤተ-መጽሐፍት ለተማሪዎች ጠቃሚ ሃብት ነው።",
-      "sentence2": "ለዚህ ፕሮጀክት ተጨማሪ ሃብቶች መመደብ አለብን።"
+      "sentence2": "ለዚህ ፕሮጀክት ተጨማሪ ሃብቶች መመደብ አለብን።",
+      "pronunciation": "/habɨt/"
     },
     {
       "id": 598,
       "word": "ክብር",
       "sentence1": "ለሌሎች ክብር ማሳየት አስፈላጊ ነው።",
-      "sentence2": "የባልደረቦቿን ክብር አግኝታለች።"
+      "sentence2": "የባልደረቦቿን ክብር አግኝታለች።",
+      "pronunciation": "/kɨbɨr/"
     },
     {
       "id": 599,
       "word": "ኃላፊነት",
       "sentence1": "ኃላፊነቶቹን በቁም ነገር ይወስዳል።",
-      "sentence2": "አካባቢን መጠበቅ ኃላፊነታችን ነው።"
+      "sentence2": "አካባቢን መጠበቅ ኃላፊነታችን ነው።",
+      "pronunciation": "/halafinət/"
     },
     {
       "id": 600,
       "word": "ኃላፊነት ያለው",
       "sentence1": "እሷ ኃላፊነት ያለው አዋቂ ናት።",
-      "sentence2": "ከሃብታችን ጋር ኃላፊነት ያለው መሆን አለብን።"
+      "sentence2": "ከሃብታችን ጋር ኃላፊነት ያለው መሆን አለብን።",
+      "pronunciation": "/halafinət jaləw/"
     },
     {
       "id": 601,
       "word": "ውጤት",
       "sentence1": "ውጤቱ ከተጠበቀው የተሻለ ነበር።",
-      "sentence2": "ውጤቶቹን በጥንቃቄ መተንተን አለብን።"
+      "sentence2": "ውጤቶቹን በጥንቃቄ መተንተን አለብን።",
+      "pronunciation": "/wɨtʼet/"
     },
     {
       "id": 602,
       "word": "ጡረታ መውጣት",
       "sentence1": "በሚቀጥለው ዓመት ጡረታ ለመውጣት አቅዷል።",
-      "sentence2": "ብዙ ሰዎች በ60ዎቹ ውስጥ ጡረታ ለመውጣት ይመርጣሉ።"
+      "sentence2": "ብዙ ሰዎች በ60ዎቹ ውስጥ ጡረታ ለመውጣት ይመርጣሉ።",
+      "pronunciation": "/tʼurəta məwɨtʼat/"
     },
     {
       "id": 603,
       "word": "ጡረተኛ",
       "sentence1": "እሷ ጡረተኛ መምህር ናት።",
-      "sentence2": "ጡረተኞች ብዙ ጊዜ በማህበረሰባቸው ውስጥ በፈቃደኝነት ይሰራሉ።"
+      "sentence2": "ጡረተኞች ብዙ ጊዜ በማህበረሰባቸው ውስጥ በፈቃደኝነት ይሰራሉ።",
+      "pronunciation": "/tʼurətəɲa/"
     },
     {
       "id": 604,
       "word": "ማሻሻል",
       "sentence1": "ከማቅረቤ በፊት ድርሰቴን ማሻሻል አለብኝ።",
-      "sentence2": "መምህሩ የትምህርት ዕቅዱን ያሻሽላል።"
+      "sentence2": "መምህሩ የትምህርት ዕቅዱን ያሻሽላል።",
+      "pronunciation": "/maʃaʃal/"
     },
     {
       "id": 605,
       "word": "ቀለበት",
       "sentence1": "ቆንጆ ቀለበት በስጦታ ተቀብላለች።",
-      "sentence2": "ቀለበቱ ከወርቅ የተሰራ ነው።"
+      "sentence2": "ቀለበቱ ከወርቅ የተሰራ ነው።",
+      "pronunciation": "/kʼələbət/"
     },
     {
       "id": 606,
       "word": "መውጣት",
       "sentence1": "ፀሐይ በ6 ሰዓት ትወጣለች።",
-      "sentence2": "በሚቀጥለው ዓመት ዋጋዎች ይጨምራሉ ተብሎ ይጠበቃል።"
+      "sentence2": "በሚቀጥለው ዓመት ዋጋዎች ይጨምራሉ ተብሎ ይጠበቃል።",
+      "pronunciation": "/məwɨtʼat/"
     },
     {
       "id": 607,
       "word": "አደጋ",
       "sentence1": "ነገ ዝናብ የመዝነብ አደጋ አለ።",
-      "sentence2": "የተሳተፉትን አደጋዎች መገምገም አለብን።"
+      "sentence2": "የተሳተፉትን አደጋዎች መገምገም አለብን።",
+      "pronunciation": "/ədəɡa/"
     },
     {
       "id": 608,
       "word": "ሮቦት",
       "sentence1": "ሮቦቱ ብዙ ስራዎችን ማከናወን ይችላል።",
-      "sentence2": "ሮቦቶች በኢንዱስትሪዎች ውስጥ እየተለመዱ ነው።"
+      "sentence2": "ሮቦቶች በኢንዱስትሪዎች ውስጥ እየተለመዱ ነው።",
+      "pronunciation": "/robot/"
     },
     {
       "id": 609,
       "word": "ማንከባለል",
       "sentence1": "እባክህ ኳሱን ወደኔ አንከባለል።",
-      "sentence2": "ሊጡ መዘርጋት አለበት።"
+      "sentence2": "ሊጡ መዘርጋት አለበት።",
+      "pronunciation": "/manɨkəbaləl/"
     },
     {
       "id": 610,
       "word": "ሮማንቲክ",
       "sentence1": "በሻማ ብርሃን ሮማንቲክ እራት አድርገዋል።",
-      "sentence2": "ፊልሙ ሮማንቲክ ታሪክ አለው።"
+      "sentence2": "ፊልሙ ሮማንቲክ ታሪክ አለው።",
+      "pronunciation": "/romanɨtik/"
     },
     {
       "id": 611,
       "word": "ገመድ",
       "sentence1": "ወደ ላይ ለመድረስ ገመዱን ወጥቷል።",
-      "sentence2": "ገመዱ ከጠንካራ ቁሳቁስ የተሰራ ነው።"
+      "sentence2": "ገመዱ ከጠንካራ ቁሳቁስ የተሰራ ነው።",
+      "pronunciation": "/ɡəməd/"
     },
     {
       "id": 612,
       "word": "ሻካራ",
       "sentence1": "ወለሉ ሻካራ እና ያልተስተካከለ ነው።",
-      "sentence2": "ምን ይጠበቃል ስለሚለው ሻካራ ሀሳብ አለው።"
+      "sentence2": "ምን ይጠበቃል ስለሚለው ሻካራ ሀሳብ አለው።",
+      "pronunciation": "/ʃakara/"
     },
     {
       "id": 613,
       "word": "ረድፍ",
       "sentence1": "እባክህ በፊት ረድፍ ተቀመጥ።",
-      "sentence2": "መጽሐፍቶቹ በንጹህ ረድፍ ተደርድረዋል።"
+      "sentence2": "መጽሐፍቶቹ በንጹህ ረድፍ ተደርድረዋል።",
+      "pronunciation": "/rədɨf/"
     },
     {
       "id": 614,
       "word": "ንጉሳዊ",
       "sentence1": "ንጉሳዊ ቤተሰቡ በዝግጅቱ ተገኝተዋል።",
-      "sentence2": "ንጉሳዊ ባህሪ አላት።"
+      "sentence2": "ንጉሳዊ ባህሪ አላት።",
+      "pronunciation": "/nɨɡusawi/"
     },
     {
       "id": 615,
       "word": "ራግቢ",
       "sentence1": "ራግቢ በብዙ አገሮች ውስጥ ታዋቂ ስፖርት ነው።",
-      "sentence2": "በሳምንት መጨረሻዎች ራግቢ ይጫወታል።"
+      "sentence2": "በሳምንት መጨረሻዎች ራግቢ ይጫወታል።",
+      "pronunciation": "/raɡɨbi/"
     },
     {
       "id": 616,
       "word": "ህግ",
       "sentence1": "በጨዋታው ውስጥ የሚከተሏቸው ህጎች አሉ።",
-      "sentence2": "ህጉን ጥሳ ተቀጣች።"
+      "sentence2": "ህጉን ጥሳ ተቀጣች።",
+      "pronunciation": "/hɨɡ/"
     },
     {
       "id": 617,
       "word": "ደህንነት",
       "sentence1": "ደህንነት ቀዳሚ ቅድሚያችን ነው።",
-      "sentence2": "የደህንነት እርምጃዎች ውጤታማ ነበሩ።"
+      "sentence2": "የደህንነት እርምጃዎች ውጤታማ ነበሩ።",
+      "pronunciation": "/dəhɨnɨnət/"
     },
     {
       "id": 618,
       "word": "መርከብ መንዳት",
       "sentence1": "በዓለም ዙሪያ በመርከብ ለመዞር አቅደዋል።",
-      "sentence2": "ሸራው ነፋሱን በትክክል ይዟል።"
+      "sentence2": "ሸራው ነፋሱን በትክክል ይዟል።",
+      "pronunciation": "/mərɨkəb mənɨdat/"
     },
     {
       "id": 619,
       "word": "መርከበኛ",
       "sentence1": "መርከበኛው በአውሎ ንፋሱ ውስጥ መርከቧን ዘዟል።",
-      "sentence2": "ብዙ መርከበኞች በማጥመድ ጀልባዎች ላይ ይሰራሉ።"
+      "sentence2": "ብዙ መርከበኞች በማጥመድ ጀልባዎች ላይ ይሰራሉ።",
+      "pronunciation": "/mərɨkəbəɲa/"
     },
     {
       "id": 620,
       "word": "ናሙና",
       "sentence1": "የስራህን ናሙና መስጠት ትችላለህ?",
-      "sentence2": "መምህሩ ለልምምድ ናሙና ጥያቄ ሰጥቷል።"
+      "sentence2": "መምህሩ ለልምምድ ናሙና ጥያቄ ሰጥቷል።",
+      "pronunciation": "/namuna/"
     },
     {
       "id": 621,
       "word": "አሸዋ",
       "sentence1": "ልጆቹ በባህር ዳርቻ ላይ በአሸዋ ተጫውተዋል።",
-      "sentence2": "አሸዋ ከትንንሽ የድንጋይ ቅንጣቶች የተሰራ ነው።"
+      "sentence2": "አሸዋ ከትንንሽ የድንጋይ ቅንጣቶች የተሰራ ነው።",
+      "pronunciation": "/əʃəwa/"
     },
     {
       "id": 622,
       "word": "ማስካን",
       "sentence1": "ለመዝገቤ እነዚህን ሰነዶች ማስካን አለብኝ።",
-      "sentence2": "ስካነሩ በፍጥነት ብዙ ገጾችን ማስካን ይችላል።"
+      "sentence2": "ስካነሩ በፍጥነት ብዙ ገጾችን ማስካን ይችላል።",
+      "pronunciation": "/masɨkan/"
     },
     {
       "id": 623,
       "word": "ሳይንሳዊ",
       "sentence1": "ሳይንሳዊ ዘዴ በምርምር ውስጥ አስፈላጊ ነው።",
-      "sentence2": "በግኝቶቿ ላይ ሳይንሳዊ ወረቀት አሳትማለች።"
+      "sentence2": "በግኝቶቿ ላይ ሳይንሳዊ ወረቀት አሳትማለች።",
+      "pronunciation": "/sajɨnɨsawi/"
     },
     {
       "id": 624,
       "word": "ስክሪፕት",
       "sentence1": "የተውኔቱ ስክሪፕት በደንብ ተጽፏል።",
-      "sentence2": "ለፊልም በአዲስ ስክሪፕት ላይ እየሰራ ነው።"
+      "sentence2": "ለፊልም በአዲስ ስክሪፕት ላይ እየሰራ ነው።",
+      "pronunciation": "/sɨkɨripɨt/"
     },
     {
       "id": 625,
       "word": "ቅርጽ",
       "sentence1": "ቅርጹ በታዋቂ አርቲስት ተፈጥሯል።",
-      "sentence2": "በስነ ጥበብ ትምህርት ቤት ቅርጽ ተምራለች።"
+      "sentence2": "በስነ ጥበብ ትምህርት ቤት ቅርጽ ተምራለች።",
+      "pronunciation": "/kʼɨrɨt͡sʼ/"
     },
     {
       "id": 626,
       "word": "ሁለተኛ ደረጃ",
       "sentence1": "ሁለተኛ ደረጃ ትምህርት ለሙያ ልማት አስፈላጊ ነው።",
-      "sentence2": "የመድሃኒቱ ሁለተኛ ደረጃ ተፅእኖዎች አሁንም አይታወቁም።"
+      "sentence2": "የመድሃኒቱ ሁለተኛ ደረጃ ተፅእኖዎች አሁንም አይታወቁም።",
+      "pronunciation": "/hulətəɲa dərəd͡ʒa/"
     },
     {
       "id": 627,
       "word": "ፀጥታ",
       "sentence1": "ህንፃውን ለመጠበቅ የፀጥታ እርምጃዎች አሉ።",
-      "sentence2": "የፀጥታ ጠባቂ ሁሉንም ጎብኝዎች በመግቢያው ላይ ፈትሿል።"
+      "sentence2": "የፀጥታ ጠባቂ ሁሉንም ጎብኝዎች በመግቢያው ላይ ፈትሿል።",
+      "pronunciation": "/t͡sʼətʼɨta/"
     },
     {
       "id": 628,
       "word": "ዘር",
       "sentence1": "ገበሬው በፀደይ ዘሮቹን ተክሏል።",
-      "sentence2": "ዘሮች ለማደግ ውሃ እና የፀሐይ ብርሃን ያስፈልጋቸዋል።"
+      "sentence2": "ዘሮች ለማደግ ውሃ እና የፀሐይ ብርሃን ያስፈልጋቸዋል።",
+      "pronunciation": "/zər/"
     },
     {
       "id": 629,
       "word": "ምክንያታዊ",
       "sentence1": "ለወደፊቱ ገንዘብ ማጠራቀም ምክንያታዊ ነው።",
-      "sentence2": "ቤት ለመቆየት ምክንያታዊ ውሳኔ ወስናለች።"
+      "sentence2": "ቤት ለመቆየት ምክንያታዊ ውሳኔ ወስናለች።",
+      "pronunciation": "/mɨkɨnɨjatawi/"
     },
     {
       "id": 630,
       "word": "መለየት",
       "sentence1": "እባክህ ሊታደሱ የሚችሉ ቁሳቁሶችን ከቆሻሻ ለይ።",
-      "sentence2": "ከፍቺ በኋላ ገንዘባቸውን ለመለየት ወሰኑ።"
+      "sentence2": "ከፍቺ በኋላ ገንዘባቸውን ለመለየት ወሰኑ።",
+      "pronunciation": "/mələjət/"
     },
     {
       "id": 631,
       "word": "በቁም ነገር",
       "sentence1": "ጉዳዩን በቁም ነገር ወስዶ ተጨማሪ መርምሯል።",
-      "sentence2": "ስለሚመጡ ተግዳሮቶች በቁም ነገር ተናግራለች።"
+      "sentence2": "ስለሚመጡ ተግዳሮቶች በቁም ነገር ተናግራለች።",
+      "pronunciation": "/bəkʼum nəɡər/"
     },
     {
       "id": 632,
       "word": "አገልጋይ",
       "sentence1": "አገልጋዩ ለእንግዶች ምግብ አዘጋጅቷል።",
-      "sentence2": "በትልቅ ቤተሰብ ውስጥ እንደ አገልጋይ ሰርታለች።"
+      "sentence2": "በትልቅ ቤተሰብ ውስጥ እንደ አገልጋይ ሰርታለች።",
+      "pronunciation": "/əɡəlɨɡaj/"
     },
     {
       "id": 633,
       "word": "ማስቀመጥ",
       "sentence1": "እባክህ መጽሐፉን በጠረጴዛው ላይ አስቀምጥ።",
-      "sentence2": "ማንቂያውን ለ7 ሰዓት አስቀምጧል።"
+      "sentence2": "ማንቂያውን ለ7 ሰዓት አስቀምጧል።",
+      "pronunciation": "/masɨkʼəmətʼ/"
     },
     {
       "id": 634,
       "word": "ስብስብ",
       "sentence1": "የእቃዎቹ ስብስብ በቆንጆ ተደረድሯል።",
-      "sentence2": "በሰፈሯ ውስጥ ያለ የመጽሐፍ ክለብ ተቀላቅላለች።"
+      "sentence2": "በሰፈሯ ውስጥ ያለ የመጽሐፍ ክለብ ተቀላቅላለች።",
+      "pronunciation": "/sɨbɨsɨb/"
     },
     {
       "id": 635,
       "word": "ቅንብር",
       "sentence1": "የታሪኩ ቅንብር በትንሽ መንደር ውስጥ ነው።",
-      "sentence2": "በመተግበሪያው ውስጥ ቅንብሮችን መለወጥ ትችላለህ።"
+      "sentence2": "በመተግበሪያው ውስጥ ቅንብሮችን መለወጥ ትችላለህ።",
+      "pronunciation": "/kʼɨnɨbɨr/"
     },
     {
       "id": 636,
       "word": "ጾታ",
       "sentence1": "የጾታ ትምህርት ለወጣቶች አስፈላጊ ነው።",
-      "sentence2": "መጽሐፉ የጾታ ባዮሎጂያዊ ገጽታዎችን ይወያያል።"
+      "sentence2": "መጽሐፉ የጾታ ባዮሎጂያዊ ገጽታዎችን ይወያያል።",
+      "pronunciation": "/t͡sʼota/"
     },
     {
       "id": 637,
       "word": "የጾታ",
       "sentence1": "የጾታ አቅጣጫ የማንነት የግል ገጽታ ነው።",
-      "sentence2": "ዘመቻው የጾታ ጤና ግንዛቤን ያስተዋውቃል።"
+      "sentence2": "ዘመቻው የጾታ ጤና ግንዛቤን ያስተዋውቃል።",
+      "pronunciation": "/jət͡sʼota/"
     },
     {
       "id": 638,
       "word": "መንቀንቀስ",
       "sentence1": "ከመጠቀም በፊት እባክህ ጠርሙሱን ንቀንቀው።",
-      "sentence2": "እጇን በቀስታ ነቀነቃት።"
+      "sentence2": "እጇን በቀስታ ነቀነቃት።",
+      "pronunciation": "/mənɨkʼənɨkʼəs/"
     },
     {
       "id": 639,
       "word": "ማካፈል",
       "sentence1": "መጫወቻዎችህን ከሌሎች ጋር ማካፈል ጥሩ ነው።",
-      "sentence2": "ኃላፊነትን በእኩል ለመካፈል ወሰኑ።"
+      "sentence2": "ኃላፊነትን በእኩል ለመካፈል ወሰኑ።",
+      "pronunciation": "/makafəl/"
     },
     {
       "id": 640,
       "word": "ስለታም/አደገኛ",
       "sentence1": "በዚያ ስለታም ቢላዋ ተጠንቀቅ።",
-      "sentence2": "አደገኛው መታጠፍ ያልተጠበቀ ነበር።"
+      "sentence2": "አደገኛው መታጠፍ ያልተጠበቀ ነበር።",
+      "pronunciation": "/sɨlətam/; /ədəɡəɲa/"
     },
     {
       "id": 641,
       "word": "መደርደሪያ",
       "sentence1": "መደርደሪያው በመጻሕፍት ተሞልቷል።",
-      "sentence2": "የአበባ ማስቀመጫውን በመደርደሪያው ላይ አስቀምጣለች።"
+      "sentence2": "የአበባ ማስቀመጫውን በመደርደሪያው ላይ አስቀምጣለች።",
+      "pronunciation": "/mədərɨdərija/"
     },
     {
       "id": 642,
       "word": "ቅርፊት",
       "sentence1": "ኤሊው በቅርፊቱ ውስጥ ተደብቋል።",
-      "sentence2": "የእንቁላሉ ቅርፊት ደካማ ነው።"
+      "sentence2": "የእንቁላሉ ቅርፊት ደካማ ነው።",
+      "pronunciation": "/kʼɨrɨfit/"
     },
     {
       "id": 643,
       "word": "መቀየር",
       "sentence1": "እባክህ ትኩረትህን ወደ ዋናው ጉዳይ ቀይር።",
-      "sentence2": "ኩባንያው ስትራቴጂውን ለመቀየር አቅዷል።"
+      "sentence2": "ኩባንያው ስትራቴጂውን ለመቀየር አቅዷል።",
+      "pronunciation": "/məkʼəjər/"
     },
     {
       "id": 644,
       "word": "ማንፀባረቅ",
       "sentence1": "ከዋክብት በሌሊት ሰማይ በብርሃን ያንፀባርቃሉ።",
-      "sentence2": "የብር እቃዎቹን ለማንፀባረቅ ጨርቅ ተጠቅማለች።"
+      "sentence2": "የብር እቃዎቹን ለማንፀባረቅ ጨርቅ ተጠቅማለች።",
+      "pronunciation": "/manɨt͡sʼəbarəkʼ/"
     },
     {
       "id": 645,
       "word": "አንፀባራቂ",
       "sentence1": "መኪናው አንፀባራቂ አዲስ የቀለም ሽፋን አለው።",
-      "sentence2": "ወደ ድግሱ አንፀባራቂ ጫማዎች ለብሳለች።"
+      "sentence2": "ወደ ድግሱ አንፀባራቂ ጫማዎች ለብሳለች።",
+      "pronunciation": "/ənɨt͡sʼəbarakʼi/"
     },
     {
       "id": 646,
       "word": "መተኮስ",
       "sentence1": "አዳኙ ሚዳቋን መተኮስ ነበረበት።",
-      "sentence2": "ነገ ትዕይንቱን ይቀርጻሉ።"
+      "sentence2": "ነገ ትዕይንቱን ይቀርጻሉ።",
+      "pronunciation": "/mətəkos/"
     },
     {
       "id": 647,
       "word": "አፍራ",
       "sentence1": "በሕዝብ ፊት ለመናገር በጣም አፍራ ናት።",
-      "sentence2": "ሲመሰገን አፍራ ፈገግ አለ።"
+      "sentence2": "ሲመሰገን አፍራ ፈገግ አለ።",
+      "pronunciation": "/əfɨra/"
     },
     {
       "id": 648,
       "word": "እይታ",
       "sentence1": "የተራሮቹ እይታ አስደናቂ ነበር።",
-      "sentence2": "ያለ መነጽር ፍጹም እይታ አላት።"
+      "sentence2": "ያለ መነጽር ፍጹም እይታ አላት።",
+      "pronunciation": "/ɨjɨta/"
     },
     {
       "id": 649,
       "word": "ምልክት",
       "sentence1": "የትራፊክ ምልክቱ ቀይ ሆኗል።",
-      "sentence2": "ለመግባባት የእጅ ምልክት ተጠቅሟል።"
+      "sentence2": "ለመግባባት የእጅ ምልክት ተጠቅሟል።",
+      "pronunciation": "/mɨlɨkɨt/"
     },
     {
       "id": 650,
       "word": "ጸጥ ያለ",
       "sentence1": "ጸጥ ያለው ክፍል በውጥረት ተሞልቷል።",
-      "sentence2": "በስብሰባው ወቅት ጸጥ ብላ ቆየች።"
+      "sentence2": "በስብሰባው ወቅት ጸጥ ብላ ቆየች።",
+      "pronunciation": "/t͡sʼətʼ jalə/"
     },
     {
       "id": 651,
       "word": "ሞኝ",
       "sentence1": "ስለማትችሏቸው ነገሮች መጨነቅ ሞኝነት ነው።",
-      "sentence2": "እንድትስቅ ሞኝ ፊት አድርጓል።"
+      "sentence2": "እንድትስቅ ሞኝ ፊት አድርጓል።",
+      "pronunciation": "/moɲ/"
     },
     {
       "id": 652,
       "word": "ተመሳሳይነት",
       "sentence1": "በሁለቱ ሥዕሎች መካከል ተመሳሳይነት አለ።",
-      "sentence2": "በታሪኮቻቸው ውስጥ ያለው ተመሳሳይነት አስደናቂ ነው።"
+      "sentence2": "በታሪኮቻቸው ውስጥ ያለው ተመሳሳይነት አስደናቂ ነው።",
+      "pronunciation": "/təməsasajɨnət/"
     },
     {
       "id": 653,
       "word": "በተመሳሳይ",
       "sentence1": "በተመሳሳይ በተራራ ላይ መራመድ ትወዳለች።",
-      "sentence2": "ሁለቱ ሀሳቦች በተመሳሳይ ተዋቅረዋል።"
+      "sentence2": "ሁለቱ ሀሳቦች በተመሳሳይ ተዋቅረዋል።",
+      "pronunciation": "/bətəməsasaj/"
     },
     {
       "id": 654,
       "word": "በቀላሉ",
       "sentence1": "መፍትሔው በቀላሉ እርዳታ መጠየቅ ነው።",
-      "sentence2": "ፅንሰ-ሀሳቡን በቀላሉ እና በግልጽ አብራራች።"
+      "sentence2": "ፅንሰ-ሀሳቡን በቀላሉ እና በግልጽ አብራራች።",
+      "pronunciation": "/bəkʼəlalu/"
     },
     {
       "id": 655,
       "word": "ከ",
       "sentence1": "ከ2010 ጀምሮ እዚህ ኖሬያለሁ።",
-      "sentence2": "ከአደጋው ጀምሮ የበለጠ ጥንቃቄ አድርጓል።"
+      "sentence2": "ከአደጋው ጀምሮ የበለጠ ጥንቃቄ አድርጓል።",
+      "pronunciation": "/kə/"
     },
     {
       "id": 656,
       "word": "መስጠም",
       "sentence1": "ታይታኒክ በ1912 ሰጥሟል።",
-      "sentence2": "እቃዎቹ በመታጠቢያው ውስጥ መዘፈዘፍ አለባቸው።"
+      "sentence2": "እቃዎቹ በመታጠቢያው ውስጥ መዘፈዘፍ አለባቸው።",
+      "pronunciation": "/məsɨtʼəm/"
     },
     {
       "id": 657,
       "word": "መቁረጥ",
       "sentence1": "ከማቅረብ በፊት እባክህ ዳቦውን ቁረጥ።",
-      "sentence2": "የኬክ ቁራጭ ወስዳለች።"
+      "sentence2": "የኬክ ቁራጭ ወስዳለች።",
+      "pronunciation": "/məkʼurətʼ/"
     },
     {
       "id": 658,
       "word": "በትንሹ",
       "sentence1": "የሙቀት መጠኑ በትንሹ ጨምሯል።",
-      "sentence2": "በአስተያየቱ በትንሹ ተናድዳለች።"
+      "sentence2": "በአስተያየቱ በትንሹ ተናድዳለች።",
+      "pronunciation": "/bətɨnɨʃu/"
     },
     {
       "id": 659,
       "word": "ቀስ ያለ",
       "sentence1": "መኪናው በጣም ቀስ ብሎ እየተንቀሳቀሰ ነው።",
-      "sentence2": "በቀስ ያለ እና ግልጽ ድምጽ ተናግሯል።"
+      "sentence2": "በቀስ ያለ እና ግልጽ ድምጽ ተናግሯል።",
+      "pronunciation": "/kʼəs jalə/"
     },
     {
       "id": 660,
       "word": "ብልህ",
       "sentence1": "እሷ በጣም ብልህ እና ቀልጣፋ ናት።",
-      "sentence2": "ቀደም ብሎ ለመዋዕለ ንዋይ ብልህ ውሳኔ አድርጓል።"
+      "sentence2": "ቀደም ብሎ ለመዋዕለ ንዋይ ብልህ ውሳኔ አድርጓል።",
+      "pronunciation": "/bɨlɨh/"
     },
     {
       "id": 661,
       "word": "ለስላሳ",
       "sentence1": "የውሃው ወለል እንደ መስታወት ለስላሳ ነበር።",
-      "sentence2": "ለስላሳ የዘፈን ድምጽ አላት።"
+      "sentence2": "ለስላሳ የዘፈን ድምጽ አላት።",
+      "pronunciation": "/ləsɨlasa/"
     },
     {
       "id": 662,
       "word": "ሶፍትዌር",
       "sentence1": "ሶፍትዌሩ በመደበኛነት መዘመን አለበት።",
-      "sentence2": "እንደ ሶፍትዌር ገንቢ ይሰራል።"
+      "sentence2": "እንደ ሶፍትዌር ገንቢ ይሰራል።",
+      "pronunciation": "/sofɨtɨwer/"
     },
     {
       "id": 663,
       "word": "አፈር",
       "sentence1": "በዚህ አካባቢ ያለው አፈር በጣም ለምለም ነው።",
-      "sentence2": "አፈሩን ለብክለት ፈትሸዋል።"
+      "sentence2": "አፈሩን ለብክለት ፈትሸዋል።",
+      "pronunciation": "/əfər/"
     },
     {
       "id": 664,
       "word": "ጠንካራ",
       "sentence1": "ውሃ ሲቀዘቅዝ ጠንካራ ይሆናል።",
-      "sentence2": "ጠረጴዛው ከጠንካራ እንጨት የተሰራ ነው።"
+      "sentence2": "ጠረጴዛው ከጠንካራ እንጨት የተሰራ ነው።",
+      "pronunciation": "/tʼənɨkara/"
     },
     {
       "id": 665,
       "word": "መደርደር",
       "sentence1": "እባክህ ፋይሎችን በቀን ደርድር።",
-      "sentence2": "መጻሕፍቶቹን በዘውግ መደርደር ይወዳል።"
+      "sentence2": "መጻሕፍቶቹን በዘውግ መደርደር ይወዳል።",
+      "pronunciation": "/mədərɨdər/"
     },
     {
       "id": 666,
       "word": "ደቡባዊ",
       "sentence1": "ደቡባዊ ክልል በሞቃት የአየር ንብረቱ ይታወቃል።",
-      "sentence2": "ወደ አገሪቱ ደቡባዊ ክፍል ተጓዙ።"
+      "sentence2": "ወደ አገሪቱ ደቡባዊ ክፍል ተጓዙ።",
+      "pronunciation": "/dəbubawi/"
     },
     {
       "id": 667,
       "word": "በተለይ",
       "sentence1": "ጉዳዩን በሪፖርቷ ውስጥ በተለይ ጠቅሳለች።",
-      "sentence2": "በተለይ ስለ ታሪክ መጽሐፍ እየፈለግሁ ነው።"
+      "sentence2": "በተለይ ስለ ታሪክ መጽሐፍ እየፈለግሁ ነው።",
+      "pronunciation": "/bətələj/"
     },
     {
       "id": 668,
       "word": "ወጪ",
       "sentence1": "የኩባንያው ወጪ በዚህ ዓመት ጨምሯል።",
-      "sentence2": "ስለ ወጪ ልማዶቹ ጥንቃቄ ያደርጋል።"
+      "sentence2": "ስለ ወጪ ልማዶቹ ጥንቃቄ ያደርጋል።",
+      "pronunciation": "/wət͡ʃʼi/"
     },
     {
       "id": 669,
       "word": "ቅመም ያለው",
       "sentence1": "ይህ ምግብ ለጣዕሜ በጣም ቅመም ያለው ነው።",
-      "sentence2": "ከተለያዩ ባህሎች ቅመም ያለው ምግብ ትወዳለች።"
+      "sentence2": "ከተለያዩ ባህሎች ቅመም ያለው ምግብ ትወዳለች።",
+      "pronunciation": "/kʼɨməm jaləw/"
     },
     {
       "id": 670,
       "word": "መንፈስ",
       "sentence1": "ከድል በኋላ የቡድኑ መንፈስ ከፍ ያለ ነበር።",
-      "sentence2": "ጠንካራ የውጊያ መንፈስ አላት።"
+      "sentence2": "ጠንካራ የውጊያ መንፈስ አላት።",
+      "pronunciation": "/mənɨfəs/"
     },
     {
       "id": 671,
       "word": "የሚነገር",
       "sentence1": "እንግሊዝኛ በዓለም ላይ በስፋት የሚነገር ቋንቋ ነው።",
-      "sentence2": "በበርካታ የመናገሪያ ቋንቋዎች የተዋጣለት ነው።"
+      "sentence2": "በበርካታ የመናገሪያ ቋንቋዎች የተዋጣለት ነው።",
+      "pronunciation": "/jəminəɡər/"
     },
     {
       "id": 672,
       "word": "ቦታ",
       "sentence1": "በእነዚህ ሁለት ምስሎች መካከል ያለውን ልዩነት ማየት ትችላለህ?",
-      "sentence2": "ለመቀመጥ እና ለማረፍ ጥሩ ቦታ አግኝታለች።"
+      "sentence2": "ለመቀመጥ እና ለማረፍ ጥሩ ቦታ አግኝታለች።",
+      "pronunciation": "/bota/"
     },
     {
       "id": 673,
       "word": "መስፋፋት/መቀባት",
       "sentence1": "ዜናው በማህበራዊ ሚዲያ በፍጥነት ተሰራጭቷል።",
-      "sentence2": "ቂጣዋ ላይ ቅቤ መቀባት ትወዳለች።"
+      "sentence2": "ቂጣዋ ላይ ቅቤ መቀባት ትወዳለች።",
+      "pronunciation": "/məsɨfafat/; /məkʼəbat/"
     },
     {
       "id": 674,
       "word": "ጸደይ",
       "sentence1": "አበቦች በጸደይ ያብባሉ።",
-      "sentence2": "ጸደይ ሲቃረብ የአየር ሁኔታ እየሞቀ ነው።"
+      "sentence2": "ጸደይ ሲቃረብ የአየር ሁኔታ እየሞቀ ነው።",
+      "pronunciation": "/t͡sʼədəj/"
     },
     {
       "id": 675,
       "word": "ስታዲየም",
       "sentence1": "ስታዲየሙ በደስተኛ አድናቂዎች ተሞልቷል።",
-      "sentence2": "ለሚመጡ ጨዋታዎች አዲስ ስታዲየም ገንብተዋል።"
+      "sentence2": "ለሚመጡ ጨዋታዎች አዲስ ስታዲየም ገንብተዋል።",
+      "pronunciation": "/sɨtadijəm/"
     },
     {
       "id": 676,
       "word": "ሰራተኞች",
       "sentence1": "በሆቴሉ ያሉ ሰራተኞች በጣም ረዳት ነበሩ።",
-      "sentence2": "የማስተማር ሰራተኞች አባል ናት።"
+      "sentence2": "የማስተማር ሰራተኞች አባል ናት።",
+      "pronunciation": "/səratəɲot͡ʃ/"
     },
     {
       "id": 677,
       "word": "መስፈርት",
       "sentence1": "ምርቱ ዓለም አቀፍ የጥራት መስፈርቶችን ያሟላል።",
-      "sentence2": "የኑሮ ደረጃን ለማሻሻል እየሰሩ ነው።"
+      "sentence2": "የኑሮ ደረጃን ለማሻሻል እየሰሩ ነው።",
+      "pronunciation": "/məsɨfərɨt/"
     },
     {
       "id": 678,
       "word": "ሁኔታ",
       "sentence1": "የኢኮኖሚው ሁኔታ ዋና ስጋት ነው።",
-      "sentence2": "ከዜናው በኋላ በድንጋጤ ውስጥ ናት።"
+      "sentence2": "ከዜናው በኋላ በድንጋጤ ውስጥ ናት።",
+      "pronunciation": "/huneta/"
     },
     {
       "id": 679,
       "word": "ስታቲስቲክስ",
       "sentence1": "ስታቲስቲክሱ በሽያጭ ላይ ጉልህ ጭማሪ ያሳያል።",
-      "sentence2": "መረጃውን ተንትኖ ቁልፍ ስታቲስቲክስ አቅርቧል።"
+      "sentence2": "መረጃውን ተንትኖ ቁልፍ ስታቲስቲክስ አቅርቧል።",
+      "pronunciation": "/sɨtatisɨtikɨs/"
     },
     {
       "id": 680,
       "word": "ሐውልት",
       "sentence1": "የነጻነት ሐውልት የነጻነት ምልክት ነው።",
-      "sentence2": "በፓርኩ ውስጥ ያለውን ታዋቂ ሐውልት ጎብኝተዋል።"
+      "sentence2": "በፓርኩ ውስጥ ያለውን ታዋቂ ሐውልት ጎብኝተዋል።",
+      "pronunciation": "/həwɨlɨt/"
     },
     {
       "id": 681,
       "word": "መለጠፍ",
       "sentence1": "እባክህ መለያውን በሳጥኑ ላይ ለጥፍ።",
-      "sentence2": "ቁርጥራጮቹን አንድ ላይ ለመለጠፍ ሙጫ ተጠቅማለች።"
+      "sentence2": "ቁርጥራጮቹን አንድ ላይ ለመለጠፍ ሙጫ ተጠቅማለች።",
+      "pronunciation": "/mələtʼəf/"
     },
     {
       "id": 682,
       "word": "በትር",
       "sentence1": "ከመሬት ላይ በትር አንስቷል።",
-      "sentence2": "ውሻው በትሩን ጫኗል።"
+      "sentence2": "ውሻው በትሩን ጫኗል።",
+      "pronunciation": "/bətɨr/"
     },
     {
       "id": 683,
       "word": "አሁንም",
       "sentence1": "አሁንም አውቶቡስ እየጠበቀች ነው።",
-      "sentence2": "ውሃው ጸጥ ያለ ነው።"
+      "sentence2": "ውሃው ጸጥ ያለ ነው።",
+      "pronunciation": "/əhunɨm/"
     },
     {
       "id": 684,
       "word": "ሱቅ",
       "sentence1": "ሸቀጣ ሸቀጥ ለመግዛት ወደ ሱቅ መሄድ አለብኝ።",
-      "sentence2": "ሱቁ ከጥዋቱ 3 ሰዓት እስከ ምሽቱ 3 ሰዓት ክፍት ነው።"
+      "sentence2": "ሱቁ ከጥዋቱ 3 ሰዓት እስከ ምሽቱ 3 ሰዓት ክፍት ነው።",
+      "pronunciation": "/sukʼ/"
     },
     {
       "id": 685,
       "word": "እንግዳ",
       "sentence1": "በአዲስ ከተማ ውስጥ እንደ እንግዳ ተሰማት።",
-      "sentence2": "በመስመር ላይ ከእንግዶች ጋር አትነጋገር።"
+      "sentence2": "በመስመር ላይ ከእንግዶች ጋር አትነጋገር።",
+      "pronunciation": "/ɨnɨɡɨda/"
     },
     {
       "id": 686,
       "word": "ጥንካሬ",
       "sentence1": "ከባድ ክብደቶችን ለማንሳት ጥንካሬ አለው።",
-      "sentence2": "የአዕምሮ ጥንካሬ ልክ እንደ አካላዊ ጥንካሬ አስፈላጊ ነው።"
+      "sentence2": "የአዕምሮ ጥንካሬ ልክ እንደ አካላዊ ጥንካሬ አስፈላጊ ነው።",
+      "pronunciation": "/tʼɨnɨkare/"
     },
     {
       "id": 687,
       "word": "ገመድ",
       "sentence1": "ጥቅሉን በገመድ አስራለች።",
-      "sentence2": "የጊታር ገመዱ በትርኢቱ ወቅት ተሰብሯል።"
+      "sentence2": "የጊታር ገመዱ በትርኢቱ ወቅት ተሰብሯል።",
+      "pronunciation": "/ɡəməd/"
     },
     {
       "id": 688,
       "word": "በጥብቅ",
       "sentence1": "የትምህርትን አስፈላጊነት በጥብቅ ያምናል።",
-      "sentence2": "በክርክሩ ወቅት አስተያየቷን በጥብቅ ገልጻለች።"
+      "sentence2": "በክርክሩ ወቅት አስተያየቷን በጥብቅ ገልጻለች።",
+      "pronunciation": "/bətʼɨbɨkʼ/"
     },
     {
       "id": 689,
       "word": "ስቱዲዮ",
       "sentence1": "አርቲስቱ በትንሽ ስቱዲዮ ውስጥ ይሰራል።",
-      "sentence2": "ለፎቶ ቀረጻ ስቱዲዮ ተከራይተዋል።"
+      "sentence2": "ለፎቶ ቀረጻ ስቱዲዮ ተከራይተዋል።",
+      "pronunciation": "/sɨtudijo/"
     },
     {
       "id": 690,
       "word": "ነገሮች",
       "sentence1": "ለጉዞ ነገሮቼን ማሸግ አለብኝ።",
-      "sentence2": "በስብስቧ ውስጥ ብዙ አስደሳች ነገሮች አሏት።"
+      "sentence2": "በስብስቧ ውስጥ ብዙ አስደሳች ነገሮች አሏት።",
+      "pronunciation": "/nəɡərot͡ʃ/"
     },
     {
       "id": 691,
       "word": "ንጥረ ነገር",
       "sentence1": "ውሃ ለሕይወት አስፈላጊ ንጥረ ነገር ነው።",
-      "sentence2": "ሳይንቲስቱ በላብራቶሪ ውስጥ የኬሚካል ንጥረ ነገሩን አጥንቷል።"
+      "sentence2": "ሳይንቲስቱ በላብራቶሪ ውስጥ የኬሚካል ንጥረ ነገሩን አጥንቷል።",
+      "pronunciation": "/nɨtʼɨrə nəɡər/"
     },
     {
       "id": 692,
       "word": "በተሳካ ሁኔታ",
       "sentence1": "ፕሮጀክቱን በተሳካ ሁኔታ አጠናቅቃለች።",
-      "sentence2": "አብረው ሰርተው ግባቸውን በተሳካ ሁኔታ አሳክተዋል።"
+      "sentence2": "አብረው ሰርተው ግባቸውን በተሳካ ሁኔታ አሳክተዋል።",
+      "pronunciation": "/bətəsaka huneta/"
     },
     {
       "id": 693,
       "word": "ድንገተኛ",
       "sentence1": "ድንገተኛ የሙቀት ለውጥ ነበር።",
-      "sentence2": "ድንገተኛው ድምጽ ሁሉንም አስደንግጧል።"
+      "sentence2": "ድንገተኛው ድምጽ ሁሉንም አስደንግጧል።",
+      "pronunciation": "/dɨnɨɡətəɲa/"
     },
     {
       "id": 694,
       "word": "መሳቀቅ/መሰቃየት",
       "sentence1": "በረጅም የማገገሚያ ሂደት ውስጥ መሰቃየት ነበረበት።",
-      "sentence2": "ብዙ ሰዎች በጭንቀት እና በድብርት ይሰቃያሉ።"
+      "sentence2": "ብዙ ሰዎች በጭንቀት እና በድብርት ይሰቃያሉ።",
+      "pronunciation": "/məsakʼəkʼ/; /məsəkʼajət/"
     },
     {
       "id": 695,
       "word": "ሱት",
       "sentence1": "ለስራ ቃለ መጠይቅ ሱት ለብሷል።",
-      "sentence2": "ጠበቃው መደበኛ ሱት ለብሷል።"
+      "sentence2": "ጠበቃው መደበኛ ሱት ለብሷል።",
+      "pronunciation": "/sut/"
     },
     {
       "id": 696,
       "word": "ተስማሚ",
       "sentence1": "ይህ ቀሚስ ለዝግጅቱ ተስማሚ ነው።",
-      "sentence2": "ለዝግጅቱ ተስማሚ ቦታ ማግኘት አለባቸው።"
+      "sentence2": "ለዝግጅቱ ተስማሚ ቦታ ማግኘት አለባቸው።",
+      "pronunciation": "/təsɨmami/"
     },
     {
       "id": 697,
       "word": "ማጠቃለል",
       "sentence1": "ዋና ነጥቦችን ማጠቃለል ትችላለህ?",
-      "sentence2": "መጣጥፉን በጥቂት ዓረፍተ ነገሮች አጠቃላ።"
+      "sentence2": "መጣጥፉን በጥቂት ዓረፍተ ነገሮች አጠቃላ።",
+      "pronunciation": "/matʼəkʼaləl/"
     },
     {
       "id": 698,
       "word": "ማጠቃለያ",
       "sentence1": "ማጠቃለያው የሪፖርቱን አጭር እይታ ይሰጣል።",
-      "sentence2": "እባክህ ከስብሰባው በፊት ማጠቃለያውን አንብብ።"
+      "sentence2": "እባክህ ከስብሰባው በፊት ማጠቃለያውን አንብብ።",
+      "pronunciation": "/matʼəkʼaləja/"
     },
     {
       "id": 699,
       "word": "አቅርቦት",
       "sentence1": "ኩባንያው ከፍተኛ ጥራት ያላቸውን ምርቶች ለማቅረብ ያለመ ነው።",
-      "sentence2": "ቋሚ የትኩስ ምርት አቅርቦት አላቸው።"
+      "sentence2": "ቋሚ የትኩስ ምርት አቅርቦት አላቸው።",
+      "pronunciation": "/əkʼɨrɨbot/"
     },
     {
       "id": 700,
       "word": "ደጋፊ",
       "sentence1": "እሷ ለአካባቢ ጉዳዮች ጠንካራ ደጋፊ ናት።",
-      "sentence2": "ዘመቻው ብዙ ቅንዓተኛ ደጋፊዎች አሉት።"
+      "sentence2": "ዘመቻው ብዙ ቅንዓተኛ ደጋፊዎች አሉት።",
+      "pronunciation": "/dəɡafi/"
     },
     {
       "id": 701,
       "word": "በእርግጥ",
       "sentence1": "በእርግጥ፣ ስለዚያ ቁም ነገር ማለት አትችልም።",
-      "sentence2": "በእርግጥ ውድድሩን ታሸንፋለች።"
+      "sentence2": "በእርግጥ ውድድሩን ታሸንፋለች።",
+      "pronunciation": "/bəɨrɨɡɨtʼ/"
     },
     {
       "id": 702,
       "word": "ወለል",
       "sentence1": "የውሃው ወለል ጸጥ ያለ ነበር።",
-      "sentence2": "የጠረጴዛውን ወለል ጭምራል።"
+      "sentence2": "የጠረጴዛውን ወለል ጭምራል።",
+      "pronunciation": "/wələl/"
     },
     {
       "id": 703,
       "word": "መትረፍ",
       "sentence1": "ብዙ ዝርያዎች በከባድ አካባቢዎች ለመትረፍ ይታገላሉ።",
-      "sentence2": "ከአደጋው ለመትረፍ ችላለች።"
+      "sentence2": "ከአደጋው ለመትረፍ ችላለች።",
+      "pronunciation": "/mətɨrəf/"
     },
     {
       "id": 704,
       "word": "መዋኘት",
       "sentence1": "በውቅያኖስ ውስጥ መዋኘት እወዳለሁ።",
-      "sentence2": "በለጋ እድሜ መዋኘት ተምሯል።"
+      "sentence2": "በለጋ እድሜ መዋኘት ተምሯል።",
+      "pronunciation": "/məwaɲət/"
     },
     {
       "id": 705,
       "word": "ማጥፋት/መቀየር",
       "sentence1": "እባክህ መብራቶቹን ማጥፋት ትችላለህ?",
-      "sentence2": "ሙያውን ለመቀየር ወሰነ።"
+      "sentence2": "ሙያውን ለመቀየር ወሰነ።",
+      "pronunciation": "/matʼɨfat/; /məkʼəjər/"
     },
     {
       "id": 706,
       "word": "ምልክት",
       "sentence1": "ሳል የጉንፋን የተለመደ ምልክት ነው።",
-      "sentence2": "ለሐኪሙ በርካታ ምልክቶችን ሪፖርት አድርጋለች።"
+      "sentence2": "ለሐኪሙ በርካታ ምልክቶችን ሪፖርት አድርጋለች።",
+      "pronunciation": "/mɨlɨkɨt/"
     },
     {
       "id": 707,
       "word": "ጅራት",
       "sentence1": "ውሻው ጅራቱን በደስታ ወዛወዘ።",
-      "sentence2": "የባቡሩ ጅራት መብራቶች ያብረቀርቁ ነበር።"
+      "sentence2": "የባቡሩ ጅራት መብራቶች ያብረቀርቁ ነበር።",
+      "pronunciation": "/d͡ʒɨrat/"
     },
     {
       "id": 708,
       "word": "ተሰጥኦ",
       "sentence1": "ለሙዚቃ ተፈጥሯዊ ተሰጥኦ አላት።",
-      "sentence2": "ተሰጥኦው በለጋ እድሜ ታውቋል።"
+      "sentence2": "ተሰጥኦው በለጋ እድሜ ታውቋል።",
+      "pronunciation": "/təsətʼɨo/"
     },
     {
       "id": 709,
       "word": "ተሰጥኦ ያለው",
       "sentence1": "እሷ ተሰጥኦ ያላት አርቲስት ናት።",
-      "sentence2": "ቡድኑ ከተሰጥኦ ያላቸው ግለሰቦች የተዋቀረ ነው።"
+      "sentence2": "ቡድኑ ከተሰጥኦ ያላቸው ግለሰቦች የተዋቀረ ነው።",
+      "pronunciation": "/təsətʼɨo jaləw/"
     },
     {
       "id": 710,
       "word": "ቴፕ",
       "sentence1": "ይህን ስጦታ ለማሸግ ቴፕ ያስፈልገኛል።",
-      "sentence2": "ቴፑ በቀላሉ ተነስቷል።"
+      "sentence2": "ቴፑ በቀላሉ ተነስቷል።",
+      "pronunciation": "/tep/"
     },
     {
       "id": 711,
       "word": "ግብር",
       "sentence1": "መንግስት በቅንጦት እቃዎች ላይ አዲስ ግብር ጥሏል።",
-      "sentence2": "የግብር ግዴታውን ለመቀነስ እየሞከረ ነው።"
+      "sentence2": "የግብር ግዴታውን ለመቀነስ እየሞከረ ነው።",
+      "pronunciation": "/ɡɨbɨr/"
     },
     {
       "id": 712,
       "word": "ቴክኒካዊ",
       "sentence1": "በምህንድስና ጠንካራ ቴክኒካዊ ዳራ አላት።",
-      "sentence2": "ቴክኒካዊ ዝርዝሮች በሪፖርቱ ውስጥ ተዘርዝረዋል።"
+      "sentence2": "ቴክኒካዊ ዝርዝሮች በሪፖርቱ ውስጥ ተዘርዝረዋል።",
+      "pronunciation": "/tekɨnikawi/"
     },
     {
       "id": 713,
       "word": "ቴክኒክ",
       "sentence1": "ችግሩን ለመፍታት አዲስ ቴክኒክ ተጠቅሟል።",
-      "sentence2": "አርቲስቷ በልዩ የሥዕል ቴክኒኳ ትታወቃለች።"
+      "sentence2": "አርቲስቷ በልዩ የሥዕል ቴክኒኳ ትታወቃለች።",
+      "pronunciation": "/tekɨnik/"
     },
     {
       "id": 714,
       "word": "ዝንባሌ ማሳየት",
       "sentence1": "ሰዎች ጥዋት ላይ የበለጠ ውጤታማ የመሆን ዝንባሌ አላቸው።",
-      "sentence2": "ነገሮችን ከመጠን በላይ የማሰብ ዝንባሌ አላት።"
+      "sentence2": "ነገሮችን ከመጠን በላይ የማሰብ ዝንባሌ አላት።",
+      "pronunciation": "/zɨnɨbale masajət/"
     },
     {
       "id": 715,
       "word": "ድንኳን",
       "sentence1": "ለካምፕ ጉዞ ድንኳን ተክለናል።",
-      "sentence2": "ድንኳኑ ለስድስት ሰዎች በቂ ሰፊ ነበር።"
+      "sentence2": "ድንኳኑ ለስድስት ሰዎች በቂ ሰፊ ነበር።",
+      "pronunciation": "/dɨnɨkwan/"
     },
     {
       "id": 716,
       "word": "ያ",
       "sentence1": "ያ ሀሳብ አልወደውም።",
-      "sentence2": "ያ ታላቅ ፊልም ነበር!"
+      "sentence2": "ያ ታላቅ ፊልም ነበር!",
+      "pronunciation": "/ja/"
     },
     {
       "id": 717,
       "word": "የእነሱ",
       "sentence1": "ይህ መጽሐፍ የእነሱ ነው።",
-      "sentence2": "ቁልፎቻቸውን በጠረጴዛ ላይ አግኝቻለሁ።"
+      "sentence2": "ቁልፎቻቸውን በጠረጴዛ ላይ አግኝቻለሁ።",
+      "pronunciation": "/jəɨnəsu/"
     },
     {
       "id": 718,
       "word": "ጭብጥ",
       "sentence1": "የድግሱ ጭብጥ ትሮፒካል ነው።",
-      "sentence2": "ስለ ፍቅር ጭብጥ ድርሰት ጽፋለች።"
+      "sentence2": "ስለ ፍቅር ጭብጥ ድርሰት ጽፋለች።",
+      "pronunciation": "/t͡ʃʼɨbɨtʼ/"
     },
     {
       "id": 719,
       "word": "ንድፈ ሀሳብ",
       "sentence1": "ስለ አየር ንብረት ለውጥ አዲስ ንድፈ ሀሳብ አቅርቧል።",
-      "sentence2": "ንድፈ ሀሳቡ በሳይንቲስቶች በስፋት ተቀባይነት አግኝቷል።"
+      "sentence2": "ንድፈ ሀሳቡ በሳይንቲስቶች በስፋት ተቀባይነት አግኝቷል።",
+      "pronunciation": "/nɨdɨfə həsab/"
     },
     {
       "id": 720,
       "word": "ስለዚህ",
       "sentence1": "ዝናብ እየዘነበ ነበር፤ ስለዚህ ግጥሚያው ተሰረዘ።",
-      "sentence2": "በትጋት አጥንታለች፤ ስለዚህ ፈተናውን አልፋለች።"
+      "sentence2": "በትጋት አጥንታለች፤ ስለዚህ ፈተናውን አልፋለች።",
+      "pronunciation": "/sɨləzih/"
     },
     {
       "id": 721,
       "word": "ይህ",
       "sentence1": "ይህ ተወዳጅ መጽሐፌ ነው።",
-      "sentence2": "ይህ እየሆነ መሆኑን ማመን አልችልም።"
+      "sentence2": "ይህ እየሆነ መሆኑን ማመን አልችልም።",
+      "pronunciation": "/jɨh/"
     },
     {
       "id": 722,
       "word": "ምንም እንኳን",
       "sentence1": "ምንም እንኳን ዝናብ እየዘነበ ቢሆንም ለእግር ጉዞ ሄድን።",
-      "sentence2": "ምንም እንኳን ልምድ ባይኖራትም በጣም ተሰጥኦ አላት።"
+      "sentence2": "ምንም እንኳን ልምድ ባይኖራትም በጣም ተሰጥኦ አላት።",
+      "pronunciation": "/mɨnɨm ɨnɨkwan/"
     },
     {
       "id": 723,
       "word": "ጉሮሮ",
       "sentence1": "ጉሮሮው ያመዋል።",
-      "sentence2": "ከመናገሯ በፊት ጉሮሮዋን አፅዳለች።"
+      "sentence2": "ከመናገሯ በፊት ጉሮሮዋን አፅዳለች።",
+      "pronunciation": "/ɡuroro/"
     },
     {
       "id": 724,
       "word": "በሁሉም",
       "sentence1": "ሙዚየሙ ዓመቱን በሙሉ ክፍት ነው።",
-      "sentence2": "ባለፈው ክረምት በመላ አውሮፓ ተጉዛለች።"
+      "sentence2": "ባለፈው ክረምት በመላ አውሮፓ ተጉዛለች።",
+      "pronunciation": "/bəhulum/"
     },
     {
       "id": 725,
       "word": "ጠባብ",
       "sentence1": "ቀሚሱ ለኔ በጣም ጠባብ ነው።",
-      "sentence2": "በዚህ ሳምንት ጠባብ የጊዜ ሰሌዳ አለው።"
+      "sentence2": "በዚህ ሳምንት ጠባብ የጊዜ ሰሌዳ አለው።",
+      "pronunciation": "/tʼəbab/"
     },
     {
       "id": 726,
       "word": "እስከ",
       "sentence1": "እስክትመጣ ድረስ እጠብቃለሁ።",
-      "sentence2": "እስከ እኩለ ሌሊት ድረስ ሰርታለች።"
+      "sentence2": "እስከ እኩለ ሌሊት ድረስ ሰርታለች።",
+      "pronunciation": "/ɨsɨkə/"
     },
     {
       "id": 727,
       "word": "ቆርቆሮ",
       "sentence1": "ምግቡ በቆርቆሮ ውስጥ ተቀምጧል።",
-      "sentence2": "የባቄላ ቆርቆሮ ከፍቷል።"
+      "sentence2": "የባቄላ ቆርቆሮ ከፍቷል።",
+      "pronunciation": "/kʼorɨkʼoro/"
     },
     {
       "id": 728,
       "word": "ትንሽ",
       "sentence1": "ድመትየው ትንሽ እና ቆንጆ ነው።",
-      "sentence2": "በጉንጮዋ ላይ ትንሽ ጠባሳ አላት።"
+      "sentence2": "በጉንጮዋ ላይ ትንሽ ጠባሳ አላት።",
+      "pronunciation": "/tɨnɨʃ/"
     },
     {
       "id": 729,
       "word": "ምክር",
       "sentence1": "ለፈተና ምክር መስጠት ትችላለህ?",
-      "sentence2": "ለአስተናጋጁ ሰፊ ጉርሻ ትቷል።"
+      "sentence2": "ለአስተናጋጁ ሰፊ ጉርሻ ትቷል።",
+      "pronunciation": "/mɨkɨr/"
     },
     {
       "id": 730,
       "word": "ጣት",
       "sentence1": "ጣቴን በጠረጴዛ ላይ ጎዳሁት።",
-      "sentence2": "የእግር ጥፍሮቿን ቀይ ቀባች።"
+      "sentence2": "የእግር ጥፍሮቿን ቀይ ቀባች።",
+      "pronunciation": "/tʼat/"
     },
     {
       "id": 731,
       "word": "ምላስ",
       "sentence1": "ምላሱን ወደኔ አውጥቷል።",
-      "sentence2": "በምላሷ ላይ ቀዳዳ አለው።"
+      "sentence2": "በምላሷ ላይ ቀዳዳ አለው።",
+      "pronunciation": "/mɨlas/"
     },
     {
       "id": 732,
       "word": "ጠቅላላ",
       "sentence1": "ጠቅላላ ዋጋው $100 ነው።",
-      "sentence2": "በጠቅላላ ሶስት ሽልማቶች አሸንፋለች።"
+      "sentence2": "በጠቅላላ ሶስት ሽልማቶች አሸንፋለች።",
+      "pronunciation": "/tʼəkʼɨlala/"
     },
     {
       "id": 733,
       "word": "ሙሉ በሙሉ",
       "sentence1": "ሙሉ በሙሉ እስማማለሁ።",
-      "sentence2": "ፊልሙ ሙሉ በሙሉ አሰልቺ ነበር።"
+      "sentence2": "ፊልሙ ሙሉ በሙሉ አሰልቺ ነበር።",
+      "pronunciation": "/mulu bəmulu/"
     },
     {
       "id": 734,
       "word": "መንካት",
       "sentence1": "እባክህ ሥዕሎቹን አትንካ።",
-      "sentence2": "ለስላሳ ንክኪ አላት።"
+      "sentence2": "ለስላሳ ንክኪ አላት።",
+      "pronunciation": "/mənɨkat/"
     },
     {
       "id": 735,
       "word": "ጉብኝት",
       "sentence1": "የከተማውን መመሪያ ጉብኝት አድርገናል።",
-      "sentence2": "ጉብኝቱ ለሁለት ሰዓት ይቆያል።"
+      "sentence2": "ጉብኝቱ ለሁለት ሰዓት ይቆያል።",
+      "pronunciation": "/ɡubɨɲɨt/"
     },
     {
       "id": 736,
       "word": "ንግድ",
       "sentence1": "ዓለም አቀፍ ንግድ ለኢኮኖሚ እድገት አስፈላጊ ነው።",
-      "sentence2": "በንግድ ኢንዱስትሪ ውስጥ ይሰራል።"
+      "sentence2": "በንግድ ኢንዱስትሪ ውስጥ ይሰራል።",
+      "pronunciation": "/nɨɡɨd/"
     },
     {
       "id": 737,
       "word": "መተርጎም",
       "sentence1": "ይህን ሰነድ ወደ እንግሊዝኛ መተርጎም ትችላለህ?",
-      "sentence2": "ጽሑፎችን መተርጎም እየተማረች ነው።"
+      "sentence2": "ጽሑፎችን መተርጎም እየተማረች ነው።",
+      "pronunciation": "/mətərɨɡom/"
     },
     {
       "id": 738,
       "word": "ትርጉም",
       "sentence1": "የመጽሐፉ ትርጉም ባለፈው ዓመት ታትሟል።",
-      "sentence2": "በስነ-ጽሁፍ ትርጉም ላይ ትሰራለች።"
+      "sentence2": "በስነ-ጽሁፍ ትርጉም ላይ ትሰራለች።",
+      "pronunciation": "/tɨrɨɡum/"
     },
     {
       "id": 739,
       "word": "መጓጓዣ",
       "sentence1": "እቃዎችን ለማጓጓዝ የጭነት መኪኖች ይጠቀማሉ።",
-      "sentence2": "የመጓጓዣ ስርዓቱ በጣም ውጤታማ ነው።"
+      "sentence2": "የመጓጓዣ ስርዓቱ በጣም ውጤታማ ነው።",
+      "pronunciation": "/məɡwaɡwaʒa/"
     },
     {
       "id": 740,
       "word": "ማከም",
       "sentence1": "ሐኪሙ ቁስልህን ያክማል።",
-      "sentence2": "ለራሷ የስፓ ቀን ማድረግ ትወዳለች።"
+      "sentence2": "ለራሷ የስፓ ቀን ማድረግ ትወዳለች።",
+      "pronunciation": "/makəm/"
     },
     {
       "id": 741,
       "word": "ህክምና",
       "sentence1": "የበሽታው ህክምና ውድ ነው።",
-      "sentence2": "ለሁኔታዋ ህክምና እየተደረገላት ነው።"
+      "sentence2": "ለሁኔታዋ ህክምና እየተደረገላት ነው።",
+      "pronunciation": "/hɨkɨmɨna/"
     },
     {
       "id": 742,
       "word": "አዝማሚያ",
       "sentence1": "ወደ ርቀት ስራ የሚያድግ አዝማሚያ አለ።",
-      "sentence2": "የፋሽን አዝማሚያዎች በፍጥነት ይቀየራሉ።"
+      "sentence2": "የፋሽን አዝማሚያዎች በፍጥነት ይቀየራሉ።",
+      "pronunciation": "/əzɨmamija/"
     },
     {
       "id": 743,
       "word": "ዘዴ",
       "sentence1": "የአስማት ዘዴ አሳይቷል።",
-      "sentence2": "የብርሃን ዘዴ ብቻ ነው።"
+      "sentence2": "የብርሃን ዘዴ ብቻ ነው።",
+      "pronunciation": "/zəde/"
     },
     {
       "id": 744,
       "word": "እውነት",
       "sentence1": "እውነትን መቀበል ብዙ ጊዜ ከባድ ነው።",
-      "sentence2": "በመጨረሻ እውነቱን ነገረችኝ።"
+      "sentence2": "በመጨረሻ እውነቱን ነገረችኝ።",
+      "pronunciation": "/ɨwɨnət/"
     },
     {
       "id": 745,
       "word": "ቱቦ",
       "sentence1": "የጥርስ ሳሙና በቱቦ ውስጥ ነው።",
-      "sentence2": "በመሬት ውስጥ ቱቦ ተጉዟል።"
+      "sentence2": "በመሬት ውስጥ ቱቦ ተጉዟል።",
+      "pronunciation": "/tubo/"
     },
     {
       "id": 746,
       "word": "ዓይነት",
       "sentence1": "ምን ዓይነት ሙዚቃ ትወዳለህ?",
-      "sentence2": "ጀብዱን የምትወድ ዓይነት ሰው ናት።"
+      "sentence2": "ጀብዱን የምትወድ ዓይነት ሰው ናት።",
+      "pronunciation": "/ajɨnət/"
     },
     {
       "id": 747,
       "word": "በተለምዶ",
       "sentence1": "የአየር ሁኔታው በጸደይ በተለምዶ መጠነኛ ነው።",
-      "sentence2": "በተለምዶ ቀደም ብላ ትተኛለች።"
+      "sentence2": "በተለምዶ ቀደም ብላ ትተኛለች።",
+      "pronunciation": "/bətələmɨdo/"
     },
     {
       "id": 748,
       "word": "ጎማ",
       "sentence1": "ጠፍጣፋውን ጎማ መቀየር አለብኝ።",
-      "sentence2": "መኪናው በጀርባው ውስጥ ተጠባባቂ ጎማ አለው።"
+      "sentence2": "መኪናው በጀርባው ውስጥ ተጠባባቂ ጎማ አለው።",
+      "pronunciation": "/ɡoma/"
     },
     {
       "id": 749,
       "word": "አስቀያሚ",
       "sentence1": "አስቀያሚውን እውነት መጋፈጥ ከባድ ነው።",
-      "sentence2": "በክንድዋ ላይ አስቀያሚ ጠባሳ አላት።"
+      "sentence2": "በክንድዋ ላይ አስቀያሚ ጠባሳ አላት።",
+      "pronunciation": "/əsɨkʼəjami/"
     },
     {
       "id": 750,
       "word": "ያልቻለ",
       "sentence1": "በስብሰባው ላይ መገኘት አልቻለም።",
-      "sentence2": "ሁኔታውን መቋቋም እንደማትችል ተሰማት።"
+      "sentence2": "ሁኔታውን መቋቋም እንደማትችል ተሰማት።",
+      "pronunciation": "/jalɨt͡ʃalə/"
     },
     {
       "id": 751,
       "word": "ምቾት የሌለው",
       "sentence1": "ወንበሩ ተቀምጦ ምቾት የሌለው ነው።",
-      "sentence2": "በጠባቡ ቀሚስ ምቾት አልነበራትም።"
+      "sentence2": "በጠባቡ ቀሚስ ምቾት አልነበራትም።",
+      "pronunciation": "/mɨt͡ʃot jəleləw/"
     },
     {
       "id": 752,
       "word": "የውስጥ ልብስ",
       "sentence1": "አዲስ የውስጥ ልብስ ገዝቷል።",
-      "sentence2": "የጥጥ የውስጥ ልብስ ትመርጣለች።"
+      "sentence2": "የጥጥ የውስጥ ልብስ ትመርጣለች።",
+      "pronunciation": "/jəwɨsɨtʼ lɨbɨs/"
     },
     {
       "id": 753,
       "word": "ሥራ አጥ",
       "sentence1": "ለስድስት ወራት ሥራ አጥ ነው።",
-      "sentence2": "ሥራ አጡ ህዝብ እየጨመረ ነው።"
+      "sentence2": "ሥራ አጡ ህዝብ እየጨመረ ነው።",
+      "pronunciation": "/sɨra ətʼ/"
     },
     {
       "id": 754,
       "word": "ስራ አጥነት",
       "sentence1": "ስራ አጥነት በከተማ ውስጥ ዋና ጉዳይ ነው።",
-      "sentence2": "መንግስት ስራ አጥነትን ለመቀነስ እየሰራ ነው።"
+      "sentence2": "መንግስት ስራ አጥነትን ለመቀነስ እየሰራ ነው።",
+      "pronunciation": "/sɨra ətʼɨnət/"
     },
     {
       "id": 755,
       "word": "ፍትሃዊ ያልሆነ",
       "sentence1": "ለስህተቱ እሷን መወንጀል ፍትሃዊ አይደለም።",
-      "sentence2": "ውሳኔው በብዙዎች ፍትሃዊ ያልሆነ ተደርጎ ታይቷል።"
+      "sentence2": "ውሳኔው በብዙዎች ፍትሃዊ ያልሆነ ተደርጎ ታይቷል።",
+      "pronunciation": "/fɨtɨhawi jalɨhonə/"
     },
     {
       "id": 756,
       "word": "ማህበር",
       "sentence1": "ሠራተኞች መብቶቻቸውን ለመጠበቅ ማህበር አቋቁመዋል።",
-      "sentence2": "ማህበሩ ለተሻለ ደመወዝ እየተደራደረ ነው።"
+      "sentence2": "ማህበሩ ለተሻለ ደመወዝ እየተደራደረ ነው።",
+      "pronunciation": "/mahɨbər/"
     },
     {
       "id": 757,
       "word": "ካልሆነ",
       "sentence1": "በትጋት ካልሰራህ አታሳካም።",
-      "sentence2": "ዝናብ ካልዘነበ እሄዳለሁ።"
+      "sentence2": "ዝናብ ካልዘነበ እሄዳለሁ።",
+      "pronunciation": "/kalɨhonə/"
     },
     {
       "id": 758,
       "word": "እንደ ያልሆነ",
       "sentence1": "እንደ እህቷ ባልሆነ መንገድ በጣም ማህበራዊ ናት።",
-      "sentence2": "ይህ ጨርቅ ከዚህ በፊት ካየሁት ነገር የተለየ ነው።"
+      "sentence2": "ይህ ጨርቅ ከዚህ በፊት ካየሁት ነገር የተለየ ነው።",
+      "pronunciation": "/ɨnɨdə jalɨhonə/"
     },
     {
       "id": 759,
       "word": "ሊሆን የማይችል",
       "sentence1": "በኤፕሪል ውስጥ በረዶ ይዘንባል ማለት ሊሆን የማይችል ነው።",
-      "sentence2": "ቅናሹን ትቀበላለች ማለት ሊሆን የማይችል ነው።"
+      "sentence2": "ቅናሹን ትቀበላለች ማለት ሊሆን የማይችል ነው።",
+      "pronunciation": "/lihon jəmajɨt͡ʃɨl/"
     },
     {
       "id": 760,
       "word": "አላስፈላጊ",
       "sentence1": "አዲስ ልብስ መግዛት አላስፈላጊ ነው።",
-      "sentence2": "ሪፖርቱ አላስፈላጊ ተደርጎ ተወስዷል።"
+      "sentence2": "ሪፖርቱ አላስፈላጊ ተደርጎ ተወስዷል።",
+      "pronunciation": "/əlasɨfəlaɡi/"
     },
     {
       "id": 761,
       "word": "ደስ የማይል",
       "sentence1": "ሽታው ደስ የማይል ነበር።",
-      "sentence2": "በሆቴሉ ደስ የማይል ልምድ ነበራት።"
+      "sentence2": "በሆቴሉ ደስ የማይል ልምድ ነበራት።",
+      "pronunciation": "/dəs jəmajɨl/"
     },
     {
       "id": 762,
       "word": "ማዘመን",
       "sentence1": "ሶፍትዌሬን ማዘመን አለብኝ።",
-      "sentence2": "ማዘመኑ አፈጻጸምን ያሻሽላል።"
+      "sentence2": "ማዘመኑ አፈጻጸምን ያሻሽላል።",
+      "pronunciation": "/mazəmən/"
     },
     {
       "id": 763,
       "word": "ላይ",
       "sentence1": "በድሮ ጊዜ፣ አንዲት ልዕልት ነበረች።",
-      "sentence2": "ውሳኔው በጥንቃቄ ግምት ላይ የተመሰረተ ነው።"
+      "sentence2": "ውሳኔው በጥንቃቄ ግምት ላይ የተመሰረተ ነው።",
+      "pronunciation": "/laj/"
     },
     {
       "id": 764,
       "word": "የተናደደ",
       "sentence1": "በዜናው ተናድዳለች።",
-      "sentence2": "አትናደድ፤ ያንተ ጥፋት አይደለም።"
+      "sentence2": "አትናደድ፤ ያንተ ጥፋት አይደለም።",
+      "pronunciation": "/jətənadədə/"
     },
     {
       "id": 765,
       "word": "ያገለገለ",
       "sentence1": "መጽሐፉ ያገለገለ ነው ግን በጥሩ ሁኔታ ላይ ነው።",
-      "sentence2": "ያገለገለ መኪና ገዝታለች።"
+      "sentence2": "ያገለገለ መኪና ገዝታለች።",
+      "pronunciation": "/jaɡələɡələ/"
     },
     {
       "id": 766,
       "word": "ዋጋ ያለው",
       "sentence1": "ጊዜ ዋጋ ያለው ሃብት ነው።",
-      "sentence2": "ዋጋ ያለው ምክር ሰጥታኛለች።"
+      "sentence2": "ዋጋ ያለው ምክር ሰጥታኛለች።",
+      "pronunciation": "/waɡa jaləw/"
     },
     {
       "id": 767,
       "word": "ዋጋ",
       "sentence1": "የዚህ ሥዕል ዋጋ ምንድን ነው?",
-      "sentence2": "የጠንካራ ስራ ዋጋ ያውቃል።"
+      "sentence2": "የጠንካራ ስራ ዋጋ ያውቃል።",
+      "pronunciation": "/waɡa/"
     },
     {
       "id": 768,
       "word": "የተለያዩ",
       "sentence1": "ለመምረጥ የተለያዩ አማራጮች አሉ።",
-      "sentence2": "በተለያዩ አገሮች ኖራለች።"
+      "sentence2": "በተለያዩ አገሮች ኖራለች።",
+      "pronunciation": "/jətələjaju/"
     },
     {
       "id": 769,
       "word": "ስሪት",
       "sentence1": "የየትኛውን ስሪት ሶፍትዌር እየተጠቀምክ ነው?",
-      "sentence2": "የቅርብ ጊዜው ስሪት አዳዲስ ባህሪያት ያካትታል።"
+      "sentence2": "የቅርብ ጊዜው ስሪት አዳዲስ ባህሪያት ያካትታል።",
+      "pronunciation": "/sɨrit/"
     },
     {
       "id": 770,
       "word": "ሰለባ",
       "sentence1": "ሰለባው ሳያውቅ ተገኝቷል።",
-      "sentence2": "ብዙ የአደጋ ሰለባዎች እርዳታ ያስፈልጋቸዋል።"
+      "sentence2": "ብዙ የአደጋ ሰለባዎች እርዳታ ያስፈልጋቸዋል።",
+      "pronunciation": "/sələba/"
     },
     {
       "id": 771,
       "word": "እይታ",
       "sentence1": "ከላይ ያለው እይታ አስደናቂ ነው።",
-      "sentence2": "በጉዳዩ ላይ የተለየ አመለካከት አላት።"
+      "sentence2": "በጉዳዩ ላይ የተለየ አመለካከት አላት።",
+      "pronunciation": "/ɨjɨta/"
     },
     {
       "id": 772,
       "word": "ተመልካች",
       "sentence1": "ፊልሙ ብዙ ተመልካቾችን ስቧል።",
-      "sentence2": "እንደ ተመልካች የራስህ አስተያየት መብት አለህ።"
+      "sentence2": "እንደ ተመልካች የራስህ አስተያየት መብት አለህ።",
+      "pronunciation": "/təməlɨkat͡ʃ/"
     },
     {
       "id": 773,
       "word": "ጥቃተኛ",
       "sentence1": "ፊልሙ ጥቃተኛ ትዕይንቶች ይዟል።",
-      "sentence2": "ጥቃተኛ ባህሪ አለው።"
+      "sentence2": "ጥቃተኛ ባህሪ አለው።",
+      "pronunciation": "/tʼɨkʼatəɲa/"
     },
     {
       "id": 774,
       "word": "በፈቃደኝነት",
       "sentence1": "በአካባቢው መጠለያ በፈቃደኝነት ለመስራት ወስናለች።",
-      "sentence2": "ለዝግጅቱ በፈቃደኝነት የሚሰሩ ሰዎች ያስፈልጋሉ።"
+      "sentence2": "ለዝግጅቱ በፈቃደኝነት የሚሰሩ ሰዎች ያስፈልጋሉ።",
+      "pronunciation": "/bəfəkʼadəɲɨnət/"
     },
     {
       "id": 775,
       "word": "መምረጥ",
       "sentence1": "በምርጫ ላይ መምረጥ አስፈላጊ ነው።",
-      "sentence2": "ለመጀመሪያ ጊዜ ለመምረጥ አቅዳለች።"
+      "sentence2": "ለመጀመሪያ ጊዜ ለመምረጥ አቅዳለች።",
+      "pronunciation": "/məmɨrətʼ/"
     },
     {
       "id": 776,
       "word": "ሞቅ ያለ",
       "sentence1": "ሾርባው ሞቅ ያለ እና አጽናኝ ነው።",
-      "sentence2": "ሞቅ ያለ ፈገግታ ሰጥታዋለች።"
+      "sentence2": "ሞቅ ያለ ፈገግታ ሰጥታዋለች።",
+      "pronunciation": "/mokʼ jalə/"
     },
     {
       "id": 777,
       "word": "ማስጠንቀቅ",
       "sentence1": "ስለ አደጋዎች ላስጠነቅቅህ እፈልጋለሁ።",
-      "sentence2": "ወደዚያ እንዳይሄድ ተስጠንቅቋል።"
+      "sentence2": "ወደዚያ እንዳይሄድ ተስጠንቅቋል።",
+      "pronunciation": "/masɨtʼənɨkʼəkʼ/"
     },
     {
       "id": 778,
       "word": "ማስጠንቀቂያ",
       "sentence1": "ማስጠንቀቂያው ከአውሎ ነፋስ በኋላ ተሰጥቷል።",
-      "sentence2": "የማስጠንቀቂያ ምልክቶችን ችላ ብላለች።"
+      "sentence2": "የማስጠንቀቂያ ምልክቶችን ችላ ብላለች።",
+      "pronunciation": "/masɨtʼənɨkʼəkʼija/"
     },
     {
       "id": 779,
       "word": "ማባከን",
       "sentence1": "ጊዜህን በማይረቡ ስራዎች አታባክን።",
-      "sentence2": "ቆሻሻው በትክክል ተወግዷል።"
+      "sentence2": "ቆሻሻው በትክክል ተወግዷል።",
+      "pronunciation": "/mabakən/"
     },
     {
       "id": 780,
       "word": "ውሃ",
       "sentence1": "ውሃ ለሕይወት አስፈላጊ ነው።",
-      "sentence2": "ውሃ ወደ ብርጭቆ አፍስሳለች።"
+      "sentence2": "ውሃ ወደ ብርጭቆ አፍስሳለች።",
+      "pronunciation": "/wɨha/"
     },
     {
       "id": 781,
       "word": "ማዕበል",
       "sentence1": "ማዕበሉ በባህር ዳር ላይ ተከሰከሰ።",
-      "sentence2": "ለጓደኞቿ እጇን በማወዛወዝ ተሰናበተች።"
+      "sentence2": "ለጓደኞቿ እጇን በማወዛወዝ ተሰናበተች።",
+      "pronunciation": "/maɨbəl/"
     },
     {
       "id": 782,
       "word": "መሳሪያ",
       "sentence1": "ወታደሩ የተለያዩ መሳሪያዎችን ለመጠቀም ሰልጥኗል።",
-      "sentence2": "መሳሪያው በወንጀል ቦታ ላይ ተገኝቷል።"
+      "sentence2": "መሳሪያው በወንጀል ቦታ ላይ ተገኝቷል።",
+      "pronunciation": "/məsarija/"
     },
     {
       "id": 783,
       "word": "መመዘን",
       "sentence1": "ጥቅሞችን እና ጉዳቶችን መመዘን አስፈላጊ ነው።",
-      "sentence2": "በየጥዋቱ ራሷን ትመዝናለች።"
+      "sentence2": "በየጥዋቱ ራሷን ትመዝናለች።",
+      "pronunciation": "/məməzən/"
     },
     {
       "id": 784,
       "word": "ምዕራባዊ",
       "sentence1": "ምዕራባዊ አገሮች የተለያዩ ባህሎች አላቸው።",
-      "sentence2": "ፊልሙ በምዕራባዊ ከተማ ውስጥ ተቀምጧል።"
+      "sentence2": "ፊልሙ በምዕራባዊ ከተማ ውስጥ ተቀምጧል።",
+      "pronunciation": "/mɨɨrabawi/"
     },
     {
       "id": 785,
       "word": "የፈለከውን",
       "sentence1": "ደስ የሚልህን ማንኛውንም ነገር አድርግ።",
-      "sentence2": "ምንም ቢፈጠር ትደግፋሃለች።"
+      "sentence2": "ምንም ቢፈጠር ትደግፋሃለች።",
+      "pronunciation": "/jəfələkəwɨn/"
     },
     {
       "id": 786,
       "word": "በማንኛውም ጊዜ",
       "sentence1": "እርዳታ በሚያስፈልግህ ጊዜ በማንኛውም ጊዜ ደውል።",
-      "sentence2": "በሚያስፈልግህ ጊዜ ሁሉ እዛ እሆናለሁ።"
+      "sentence2": "በሚያስፈልግህ ጊዜ ሁሉ እዛ እሆናለሁ።",
+      "pronunciation": "/bəmanɨɲawɨm ɡize/"
     },
     {
       "id": 787,
       "word": "መሆን አለመሆኑን",
       "sentence1": "መሄድ ወይም መቆየት ይኖርብኝ እንደሆነ አላውቅም።",
-      "sentence2": "ዝናብ ይዘንባል እንደሆነ ጠይቃለች።"
+      "sentence2": "ዝናብ ይዘንባል እንደሆነ ጠይቃለች።",
+      "pronunciation": "/məhon ələməhonun/"
     },
     {
       "id": 788,
       "word": "እየ",
       "sentence1": "እየሰራሁ ሙዚቃ ማዳመጥ እወዳለሁ።",
-      "sentence2": "አውቶቡስ እየጠበቀች መጽሐፍ አንብባለች።"
+      "sentence2": "አውቶቡስ እየጠበቀች መጽሐፍ አንብባለች።",
+      "pronunciation": "/ɨjə/"
     },
     {
       "id": 789,
       "word": "ጠቅላላ",
       "sentence1": "ጠቅላላ ቤተሰቡ ለመገናኘት ተሰባስቧል።",
-      "sentence2": "ጠቅላላ ፒዛውን ብቻውን በልቷል።"
+      "sentence2": "ጠቅላላ ፒዛውን ብቻውን በልቷል።",
+      "pronunciation": "/tʼəkʼɨlala/"
     },
     {
       "id": 790,
       "word": "ወደፊት የሚሆን",
       "sentence1": "ነገ እደውላለሁ።",
-      "sentence2": "የቤት ስራዋን በኋላ ትጨርሳለች።"
+      "sentence2": "የቤት ስራዋን በኋላ ትጨርሳለች።",
+      "pronunciation": "/wədəfit jəmihon/"
     },
     {
       "id": 791,
       "word": "ማሸነፍ",
       "sentence1": "ውድድሩን ለማሸነፍ ተስፋ አደርጋለሁ።",
-      "sentence2": "ጨዋታውን በትልቅ ልዩነት አሸነፉ።"
+      "sentence2": "ጨዋታውን በትልቅ ልዩነት አሸነፉ።",
+      "pronunciation": "/maʃənəf/"
     },
     {
       "id": 792,
       "word": "ክንፍ",
       "sentence1": "ወፉ ክንፎቹን ዘርግቶ በረረ።",
-      "sentence2": "የአውሮፕላኑ ክንፍ ተጎድቷል።"
+      "sentence2": "የአውሮፕላኑ ክንፍ ተጎድቷል።",
+      "pronunciation": "/kɨnɨf/"
     },
     {
       "id": 793,
       "word": "በውስጥ",
       "sentence1": "መልሱ በጽሁፉ ውስጥ አለ።",
-      "sentence2": "በራሷ ውስጥ ሰላም አግኝታለች።"
+      "sentence2": "በራሷ ውስጥ ሰላም አግኝታለች።",
+      "pronunciation": "/bəwɨsɨtʼ/"
     },
     {
       "id": 794,
       "word": "ማስደነቅ",
       "sentence1": "ቀጥሎ ምን እንደሚሆን አስበዋለሁ።",
-      "sentence2": "ይመጣል እንደሆነ አሰበች።"
+      "sentence2": "ይመጣል እንደሆነ አሰበች።",
+      "pronunciation": "/masɨdənəkʼ/"
     },
     {
       "id": 795,
       "word": "ሱፍ",
       "sentence1": "ይህ ስዌተር ከለስላሳ ሱፍ የተሰራ ነው።",
-      "sentence2": "ለሹሩብ ኳስ ሱፍ ገዝታለች።"
+      "sentence2": "ለሹሩብ ኳስ ሱፍ ገዝታለች።",
+      "pronunciation": "/suf/"
     },
     {
       "id": 796,
       "word": "በዓለም ዙሪያ",
       "sentence1": "ዘመቻው በዓለም ዙሪያ ስኬታማ ነበር።",
-      "sentence2": "በዓለም ዙሪያ ጓደኞች አሏት።"
+      "sentence2": "በዓለም ዙሪያ ጓደኞች አሏት።",
+      "pronunciation": "/bəaləm zurija/"
     },
     {
       "id": 797,
       "word": "መጨነቅ",
       "sentence1": "ስለ ትናንሽ ነገሮች አትጨነቅ።",
-      "sentence2": "ስለ ወደፊቷ ትጨነቃለች።"
+      "sentence2": "ስለ ወደፊቷ ትጨነቃለች።",
+      "pronunciation": "/mət͡ʃʼənəkʼ/"
     },
     {
       "id": 798,
       "word": "የከፋ",
       "sentence1": "ሁኔታው እየከፋ ነው።",
-      "sentence2": "ዜናውን ከሰማች በኋላ የከፋ ተሰማት።"
+      "sentence2": "ዜናውን ከሰማች በኋላ የከፋ ተሰማት።",
+      "pronunciation": "/jəkəfa/"
     },
     {
       "id": 799,
       "word": "እጅግ የከፋ",
       "sentence1": "ይህ እጅግ የከፋ ቀን ነው።",
-      "sentence2": "በጨዋታው ውስጥ እጅግ የከፋ ዕድል ነበረው።"
+      "sentence2": "በጨዋታው ውስጥ እጅግ የከፋ ዕድል ነበረው።",
+      "pronunciation": "/ɨd͡ʒɨɡ jəkəfa/"
     },
     {
       "id": 800,
       "word": "ዋጋ ያለው",
       "sentence1": "ይህ ሥዕል ብዙ ገንዘብ ዋጋ ያለው ነው።",
-      "sentence2": "ጥረቱ ዋጋ የለውም።"
+      "sentence2": "ጥረቱ ዋጋ የለውም።",
+      "pronunciation": "/waɡa jaləw/"
     },
     {
       "id": 801,
       "word": "የተጻፈ",
       "sentence1": "ህጎቹ በመመሪያው ውስጥ ተጽፈዋል።",
-      "sentence2": "የተጻፈ ስምምነት አላት።"
+      "sentence2": "የተጻፈ ስምምነት አላት።",
+      "pronunciation": "/jətət͡sʼafə/"
     },
     {
       "id": 802,
       "word": "የተሳሳተ",
       "sentence1": "የተሳሳተ ቁጥር አለህ ይመስለኛል።",
-      "sentence2": "መዋሸት የተሳሳተ ነው።"
+      "sentence2": "መዋሸት የተሳሳተ ነው።",
+      "pronunciation": "/jətəsasatə/"
     },
     {
       "id": 803,
       "word": "ግቢ",
       "sentence1": "ልጆቹ በግቢው ውስጥ እየተጫወቱ ነው።",
-      "sentence2": "በግቢዋ ውስጥ ቆንጆ አትክልት አላት።"
+      "sentence2": "በግቢዋ ውስጥ ቆንጆ አትክልት አላት።",
+      "pronunciation": "/ɡɨbi/"
     },
     {
       "id": 804,
       "word": "ወጣት",
       "sentence1": "ወጣቷ ልጅ ፒያኖ መጫወት እየተማረች ነች።",
-      "sentence2": "አሁንም ወጣት ነው እና ብሩህ የወደፊት ጊዜ አለው።"
+      "sentence2": "አሁንም ወጣት ነው እና ብሩህ የወደፊት ጊዜ አለው።",
+      "pronunciation": "/wətʼat/"
     },
     {
       "id": 805,
       "word": "ወጣትነት",
       "sentence1": "ወጣትነት የመመርመር እና የእድገት ጊዜ ነው።",
-      "sentence2": "ፕሮግራሙ ለወጣቶች ልማት የተቀየሰ ነው።"
+      "sentence2": "ፕሮግራሙ ለወጣቶች ልማት የተቀየሰ ነው።",
+      "pronunciation": "/wətʼatɨnət/"
     }
   ]
 }

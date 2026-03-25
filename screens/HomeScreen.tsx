@@ -105,6 +105,15 @@ function FavoriteStarIcon({
     );
 }
 
+function getDisplayPronunciation(pronunciation?: string | null): string | null {
+    if (typeof pronunciation !== 'string') {
+        return null;
+    }
+
+    const trimmed = pronunciation.trim();
+    return trimmed.length > 0 ? trimmed : null;
+}
+
 
 export default function HomeScreen() {
     const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
@@ -830,6 +839,8 @@ export default function HomeScreen() {
 
     const currentWord = words[currentWordIndex];
     const nextWord = words[(currentWordIndex + 1) % Math.max(words.length, 1)];
+    const currentWordPronunciation = getDisplayPronunciation(currentWord?.pronunciation);
+    const nextWordPronunciation = getDisplayPronunciation(nextWord?.pronunciation);
     const initialLoadingPlaceholderColor = isDarkMode ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.08)';
     const initialLoadingAccentColor = isDarkMode ? 'rgba(255,200,20,0.22)' : 'rgba(255,200,20,0.28)';
 
@@ -1167,6 +1178,7 @@ export default function HomeScreen() {
 
         navigation.navigate('ExampleSentences', {
             word: currentWord.word,
+            pronunciation: currentWord.pronunciation ?? null,
             translation: currentWord.translation,
             sentence1: currentWord.sentence1,
             sentence2: currentWord.sentence2,
@@ -1296,6 +1308,14 @@ export default function HomeScreen() {
                             >
                                 {nextWord.word}
                             </Text>
+                            {nextWordPronunciation ? (
+                                <Text
+                                    style={[styles.pronunciationText, { color: colors.textSecondary }]}
+                                    numberOfLines={2}
+                                >
+                                    {nextWordPronunciation}
+                                </Text>
+                            ) : null}
                             <View style={styles.translationRow}>
                                 <View style={{ position: 'absolute', left: scale(36) - 35 }}>
                                     <MaterialIcons name="translate" size={22} color={colors.primary} />
@@ -1457,6 +1477,7 @@ export default function HomeScreen() {
 
                                     <View style={styles.cardUpperSection}>
                                         <View style={[styles.loadingLine, styles.loadingWordPlaceholder, { backgroundColor: initialLoadingPlaceholderColor }]} />
+                                        <View style={[styles.loadingLine, styles.loadingPronunciationPlaceholder, { backgroundColor: initialLoadingPlaceholderColor }]} />
                                         <View style={[styles.loadingLine, styles.loadingTranslationPlaceholder, { backgroundColor: initialLoadingAccentColor }]} />
                                     </View>
 
@@ -1736,6 +1757,14 @@ export default function HomeScreen() {
                                                 </Text>
                                             </TouchableOpacity>
                                         </View>
+                                        {currentWordPronunciation ? (
+                                            <Text
+                                                style={[styles.pronunciationText, { color: colors.textSecondary }]}
+                                                numberOfLines={2}
+                                            >
+                                                {currentWordPronunciation}
+                                            </Text>
+                                        ) : null}
                                         <View style={styles.translationRow}>
                                             <View style={{ position: 'absolute', left: scale(36) - 35 }}>
                                                 <MaterialIcons name="translate" size={22} color={colors.primary} />
@@ -1992,6 +2021,17 @@ const styles = StyleSheet.create({
         paddingHorizontal: 40,
         maxWidth: '100%',
     },
+    pronunciationText: {
+        fontSize: moderateScale(18),
+        lineHeight: moderateScale(24),
+        fontStyle: 'italic',
+        fontWeight: '500',
+        letterSpacing: 0.2,
+        textAlign: 'center',
+        paddingHorizontal: 40,
+        maxWidth: '100%',
+        marginBottom: 12,
+    },
     translationRow: {
         width: '100%',
         flexDirection: 'row',
@@ -2071,7 +2111,13 @@ const styles = StyleSheet.create({
         width: '62%',
         maxWidth: 220,
         height: moderateScale(34),
-        marginBottom: scale(18),
+        marginBottom: scale(8),
+    },
+    loadingPronunciationPlaceholder: {
+        width: '48%',
+        maxWidth: 180,
+        height: moderateScale(16),
+        marginBottom: 12,
     },
     loadingTranslationPlaceholder: {
         width: '42%',

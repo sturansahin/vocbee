@@ -26,6 +26,7 @@ export const STORAGE_KEYS = {
     VOCABULARY: '@vocabulary',
     // Per-level vocabulary keys: `@vocabulary_A1`, `@vocabulary_A2`, etc.
     VOCABULARY_LEVEL_PREFIX: '@vocabulary_',
+    VOCABULARY_SCHEMA_VERSION: '@vocabulary_schema_version',
     NATIVE_LANGUAGE: '@native_language',
     TARGET_LANGUAGE: '@target_language',
 
@@ -35,6 +36,7 @@ export const STORAGE_KEYS = {
     TRACKED_NOTIFICATIONS: '@tracked_notifications',
     LAST_FOREGROUND_TIME: '@last_foreground_time',
     LAST_BACKGROUND_TIME: '@last_background_time',
+    NOTIFICATION_CONTENT_VERSION: '@notification_content_version',
     NOTIFICATION_PERMISSION_PROMPT_PREFIX: '@notification_permission_prompted_',
 
     // ─── Favorites (favoritesService.ts) ──────────────────────────

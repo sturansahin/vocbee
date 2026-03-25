@@ -4,5389 +4,6287 @@
       "id": 1,
       "word": "一/一个",
       "sentence1": "我有一只猫。",
-      "sentence2": "她是一名工程师。"
+      "sentence2": "她是一名工程师。",
+      "pronunciation": "/i˥/; /i˧˥ kɤ˥˩/"
     },
     {
       "id": 2,
       "word": "关于",
       "sentence1": "这本书是关于历史的。",
-      "sentence2": "你觉得怎么样？"
+      "sentence2": "你觉得怎么样？",
+      "pronunciation": "/kwan˥ y˧˥/"
     },
     {
       "id": 3,
       "word": "在...上面",
       "sentence1": "这幅画在沙发上方。",
-      "sentence2": "飞机在云层上方飞行。"
+      "sentence2": "飞机在云层上方飞行。",
+      "pronunciation": "/tsaɪ˥˩ ... ʂɑŋ˥˩ mjɛn˥˩/"
     },
     {
       "id": 4,
       "word": "穿过",
       "sentence1": "银行在街对面。",
-      "sentence2": "她走过了桥。"
+      "sentence2": "她走过了桥。",
+      "pronunciation": "/ʈʂhwan˥ kwɔ˥˩/"
     },
     {
       "id": 5,
       "word": "行动",
       "sentence1": "现在采取行动。",
-      "sentence2": "我喜欢动作片。"
+      "sentence2": "我喜欢动作片。",
+      "pronunciation": "/ɕiŋ˧˥ tʊŋ˥˩/"
     },
     {
       "id": 6,
       "word": "活动",
       "sentence1": "游泳是我最喜欢的活动。",
-      "sentence2": "你喜欢什么活动？"
+      "sentence2": "你喜欢什么活动？",
+      "pronunciation": "/xwɔ˧˥ tʊŋ˥˩/"
     },
     {
       "id": 7,
       "word": "演员",
       "sentence1": "他是一位著名的演员。",
-      "sentence2": "这位演员演得很好。"
+      "sentence2": "这位演员演得很好。",
+      "pronunciation": "/jɛn˧˩˧ ɥœn˧˥/"
     },
     {
       "id": 8,
       "word": "女演员",
       "sentence1": "她是一位有才华的女演员。",
-      "sentence2": "这位女演员获得了一个奖项。"
+      "sentence2": "这位女演员获得了一个奖项。",
+      "pronunciation": "/ny˧˩˧ jɛn˧˩˧ ɥœn˧˥/"
     },
     {
       "id": 9,
       "word": "添加",
       "sentence1": "在汤里加点盐。",
-      "sentence2": "你能加我的号码吗？"
+      "sentence2": "你能加我的号码吗？",
+      "pronunciation": "/thjɛn˥ tɕja˥/"
     },
     {
       "id": 10,
       "word": "地址",
       "sentence1": "你的地址是什么？",
-      "sentence2": "在这里写下你的地址。"
+      "sentence2": "在这里写下你的地址。",
+      "pronunciation": "/ti˥˩ ʈʂɨ˧˩˧/"
     },
     {
       "id": 11,
       "word": "成年人",
       "sentence1": "这部电影仅限成人观看。",
-      "sentence2": "我现在是成年人了。"
+      "sentence2": "我现在是成年人了。",
+      "pronunciation": "/ʈʂhɤŋ˧˥ njɛn˧˥ ʐən˧˥/"
     },
     {
       "id": 12,
       "word": "建议",
       "sentence1": "你能给我一些建议吗？",
-      "sentence2": "他的建议很有帮助。"
+      "sentence2": "他的建议很有帮助。",
+      "pronunciation": "/tɕjɛn˥˩ i˥˩/"
     },
     {
       "id": 13,
       "word": "害怕",
       "sentence1": "我怕蜘蛛。",
-      "sentence2": "别害怕。"
+      "sentence2": "别害怕。",
+      "pronunciation": "/xaɪ˥˩ pha˥˩/"
     },
     {
       "id": 14,
       "word": "在...之后",
       "sentence1": "下班后见面吧。",
-      "sentence2": "晚饭后，我们看了电视。"
+      "sentence2": "晚饭后，我们看了电视。",
+      "pronunciation": "/tsaɪ˥˩ ... ʈʂɨ˥ xoʊ˥˩/"
     },
     {
       "id": 15,
       "word": "下午",
       "sentence1": "下午好！",
-      "sentence2": "我下午睡觉。"
+      "sentence2": "我下午睡觉。",
+      "pronunciation": "/ɕja˥˩ u˧˩˧/"
     },
     {
       "id": 16,
       "word": "再次",
       "sentence1": "请再说一遍。",
-      "sentence2": "我想再见到你。"
+      "sentence2": "我想再见到你。",
+      "pronunciation": "/tsaɪ˥˩ tshɯ˥˩/"
     },
     {
       "id": 17,
       "word": "年龄",
       "sentence1": "你多大了？",
-      "sentence2": "她25岁。"
+      "sentence2": "她25岁。",
+      "pronunciation": "/njɛn˧˥ liŋ˧˥/"
     },
     {
       "id": 18,
       "word": "以前",
       "sentence1": "我两年前见过他。",
-      "sentence2": "她一小时前离开了。"
+      "sentence2": "她一小时前离开了。",
+      "pronunciation": "/i˧˩˧ tɕhjɛn˧˥/"
     },
     {
       "id": 19,
       "word": "同意",
       "sentence1": "我同意你的看法。",
-      "sentence2": "你同意这个计划吗？"
+      "sentence2": "你同意这个计划吗？",
+      "pronunciation": "/thʊŋ˧˥ i˥˩/"
     },
     {
       "id": 20,
       "word": "空气",
       "sentence1": "这里的空气很新鲜。",
-      "sentence2": "我需要一些新鲜空气。"
+      "sentence2": "我需要一些新鲜空气。",
+      "pronunciation": "/khʊŋ˥ tɕhi˥˩/"
     },
     {
       "id": 21,
       "word": "机场",
       "sentence1": "我会去机场接你。",
-      "sentence2": "机场很繁忙。"
+      "sentence2": "机场很繁忙。",
+      "pronunciation": "/tɕi˥ ʈʂhɑŋ˧˩˧/"
     },
     {
       "id": 22,
       "word": "所有",
       "sentence1": "所有学生都通过了考试。",
-      "sentence2": "我吃了所有的饼干。"
+      "sentence2": "我吃了所有的饼干。",
+      "pronunciation": "/swɔ˧˩˧ joʊ˧˩˧/"
     },
     {
       "id": 23,
       "word": "也",
       "sentence1": "我也喜欢披萨。",
-      "sentence2": "她也会来参加派对。"
+      "sentence2": "她也会来参加派对。",
+      "pronunciation": "/jɛ˧˩˧/"
     },
     {
       "id": 24,
       "word": "总是",
       "sentence1": "我总是早起。",
-      "sentence2": "她总是很开心。"
+      "sentence2": "她总是很开心。",
+      "pronunciation": "/tsʊŋ˧˩˧ ʂɨ˥˩/"
     },
     {
       "id": 25,
       "word": "惊人的",
       "sentence1": "从顶部看到的风景太棒了。",
-      "sentence2": "你做得太棒了！"
+      "sentence2": "你做得太棒了！",
+      "pronunciation": "/tɕiŋ˥ ʐən˧˥ tɤ/"
     },
     {
       "id": 26,
       "word": "和",
       "sentence1": "我喜欢茶和咖啡。",
-      "sentence2": "她边学习边工作。"
+      "sentence2": "她边学习边工作。",
+      "pronunciation": "/xɤ˧˥/"
     },
     {
       "id": 27,
       "word": "生气的",
       "sentence1": "他对他的朋友很生气。",
-      "sentence2": "请不要生气。"
+      "sentence2": "请不要生气。",
+      "pronunciation": "/ʂɤŋ˥ tɕhi˥˩ tɤ/"
     },
     {
       "id": 28,
       "word": "动物",
       "sentence1": "大象是一种大型动物。",
-      "sentence2": "我有一只宠物。"
+      "sentence2": "我有一只宠物。",
+      "pronunciation": "/tʊŋ˥˩ u˥˩/"
     },
     {
       "id": 29,
       "word": "另一个",
       "sentence1": "我可以再来一块蛋糕吗？",
-      "sentence2": "她想要另一个机会。"
+      "sentence2": "她想要另一个机会。",
+      "pronunciation": "/liŋ˥˩ i˧˥ kɤ˥˩/"
     },
     {
       "id": 30,
       "word": "回答",
       "sentence1": "你的答案是什么？",
-      "sentence2": "我不知道答案。"
+      "sentence2": "我不知道答案。",
+      "pronunciation": "/xweɪ˧˥ ta˧˥/"
     },
     {
       "id": 31,
       "word": "任何",
       "sentence1": "你有任何问题吗？",
-      "sentence2": "我没有钱。"
+      "sentence2": "我没有钱。",
+      "pronunciation": "/ʐən˥˩ xɤ˧˥/"
     },
     {
       "id": 32,
       "word": "任何人",
       "sentence1": "有人在吗？",
-      "sentence2": "我在这里不认识任何人。"
+      "sentence2": "我在这里不认识任何人。",
+      "pronunciation": "/ʐən˥˩ xɤ˧˥ ʐən˧˥/"
     },
     {
       "id": 33,
       "word": "任何事物",
       "sentence1": "你需要什么吗？",
-      "sentence2": "我什么也找不到。"
+      "sentence2": "我什么也找不到。",
+      "pronunciation": "/ʐən˥˩ xɤ˧˥ ʂɨ˥˩ u˥˩/"
     },
     {
       "id": 34,
       "word": "公寓",
       "sentence1": "我住在一间小公寓里。",
-      "sentence2": "这间公寓很漂亮。"
+      "sentence2": "这间公寓很漂亮。",
+      "pronunciation": "/kʊŋ˥ y˥˩/"
     },
     {
       "id": 35,
       "word": "苹果",
       "sentence1": "我喜欢每天吃一个苹果。",
-      "sentence2": "她做了一个苹果派。"
+      "sentence2": "她做了一个苹果派。",
+      "pronunciation": "/phiŋ˧˥ kwɔ˧˩˧/"
     },
     {
       "id": 36,
       "word": "四月",
       "sentence1": "四月是第四个月。",
-      "sentence2": "我的生日在四月。"
+      "sentence2": "我的生日在四月。",
+      "pronunciation": "/sɯ˥˩ ɥœ˥˩/"
     },
     {
       "id": 37,
       "word": "地区",
       "sentence1": "这是一个很大的地区。",
-      "sentence2": "公园在这个地区。"
+      "sentence2": "公园在这个地区。",
+      "pronunciation": "/ti˥˩ tɕhy˥/"
     },
     {
       "id": 38,
       "word": "手臂",
       "sentence1": "他摔断了手臂。",
-      "sentence2": "她手臂上有一个纹身。"
+      "sentence2": "她手臂上有一个纹身。",
+      "pronunciation": "/ʂoʊ˧˩˧ pi˥˩/"
     },
     {
       "id": 39,
       "word": "周围",
       "sentence1": "猫坐在桌子旁边。",
-      "sentence2": "让我们在公园里散步吧。"
+      "sentence2": "让我们在公园里散步吧。",
+      "pronunciation": "/ʈʂoʊ˥ weɪ˧˥/"
     },
     {
       "id": 40,
       "word": "到达",
       "sentence1": "我们将在下午5点到达。",
-      "sentence2": "请准时到达。"
+      "sentence2": "请准时到达。",
+      "pronunciation": "/tɑʊ˥˩ ta˧˥/"
     },
     {
       "id": 41,
       "word": "艺术",
       "sentence1": "我喜欢现代艺术。",
-      "sentence2": "她在学习艺术史。"
+      "sentence2": "她在学习艺术史。",
+      "pronunciation": "/i˥˩ ʂu˥˩/"
     },
     {
       "id": 42,
       "word": "文章",
       "sentence1": "我读了一篇有趣的文章。",
-      "sentence2": "这篇文章写得很好。"
+      "sentence2": "这篇文章写得很好。",
+      "pronunciation": "/wən˧˥ ʈʂɑŋ˥/"
     },
     {
       "id": 43,
       "word": "艺术家",
       "sentence1": "他是一位著名的艺术家。",
-      "sentence2": "这位艺术家画了一幅美丽的画。"
+      "sentence2": "这位艺术家画了一幅美丽的画。",
+      "pronunciation": "/i˥˩ ʂu˥˩ tɕja˥/"
     },
     {
       "id": 44,
       "word": "作为",
       "sentence1": "她当老师。",
-      "sentence2": "他被称为伟大的领导者。"
+      "sentence2": "他被称为伟大的领导者。",
+      "pronunciation": "/tswɔ˥˩ weɪ˧˥/"
     },
     {
       "id": 45,
       "word": "问",
       "sentence1": "我可以问你一个问题吗？",
-      "sentence2": "她寻求帮助。"
+      "sentence2": "她寻求帮助。",
+      "pronunciation": "/wən˥˩/"
     },
     {
       "id": 46,
       "word": "在",
       "sentence1": "我会在公园见你。",
-      "sentence2": "这本书在图书馆。"
+      "sentence2": "这本书在图书馆。",
+      "pronunciation": "/tsaɪ˥˩/"
     },
     {
       "id": 47,
       "word": "八月",
       "sentence1": "八月是第八个月。",
-      "sentence2": "我的假期在八月。"
+      "sentence2": "我的假期在八月。",
+      "pronunciation": "/pa˥ ɥœ˥˩/"
     },
     {
       "id": 48,
       "word": "阿姨",
       "sentence1": "我阿姨住在另一个城市。",
-      "sentence2": "我上周末拜访了我阿姨。"
+      "sentence2": "我上周末拜访了我阿姨。",
+      "pronunciation": "/a˥ i˧˥/"
     },
     {
       "id": 49,
       "word": "秋天",
       "sentence1": "秋天是我最喜欢的季节。",
-      "sentence2": "秋天树叶落下。"
+      "sentence2": "秋天树叶落下。",
+      "pronunciation": "/tɕhjoʊ˥ thjɛn˥/"
     },
     {
       "id": 50,
       "word": "离开",
       "sentence1": "商店很远。",
-      "sentence2": "他正在度假。"
+      "sentence2": "他正在度假。",
+      "pronunciation": "/li˧˥ khaɪ˥/"
     },
     {
       "id": 51,
       "word": "婴儿",
       "sentence1": "婴儿正在睡觉。",
-      "sentence2": "我有一个小妹妹。"
+      "sentence2": "我有一个小妹妹。",
+      "pronunciation": "/iŋ˥ ɑɻ˧˥/"
     },
     {
       "id": 52,
       "word": "后面/背部",
       "sentence1": "书在后面的架子上。",
-      "sentence2": "他搬东西时伤了背。"
+      "sentence2": "他搬东西时伤了背。",
+      "pronunciation": "/xoʊ˥˩ mjɛn˥˩/; /peɪ˥˩ pu˥˩/"
     },
     {
       "id": 53,
       "word": "坏的",
       "sentence1": "这食物味道不好。",
-      "sentence2": "他今天过得很糟糕。"
+      "sentence2": "他今天过得很糟糕。",
+      "pronunciation": "/xwaɪ˥˩ tɤ/"
     },
     {
       "id": 54,
       "word": "包",
       "sentence1": "我需要一个新包。",
-      "sentence2": "她为旅行收拾了包。"
+      "sentence2": "她为旅行收拾了包。",
+      "pronunciation": "/pɑʊ˥/"
     },
     {
       "id": 55,
       "word": "球",
       "sentence1": "球是圆的。",
-      "sentence2": "我踢了球。"
+      "sentence2": "我踢了球。",
+      "pronunciation": "/tɕhjoʊ˧˥/"
     },
     {
       "id": 56,
       "word": "香蕉",
       "sentence1": "我喜欢吃香蕉。",
-      "sentence2": "她做了一杯香蕉奶昔。"
+      "sentence2": "她做了一杯香蕉奶昔。",
+      "pronunciation": "/ɕjɑŋ˥ tɕjɑʊ˥/"
     },
     {
       "id": 57,
       "word": "乐队",
       "sentence1": "乐队正在演奏音乐。",
-      "sentence2": "我喜欢这个乐队。"
+      "sentence2": "我喜欢这个乐队。",
+      "pronunciation": "/ɥœ˥˩ tweɪ˥˩/"
     },
     {
       "id": 58,
       "word": "银行",
       "sentence1": "我需要去银行。",
-      "sentence2": "她在银行工作。"
+      "sentence2": "她在银行工作。",
+      "pronunciation": "/in˧˥ xɑŋ˧˥/"
     },
     {
       "id": 59,
       "word": "洗澡",
       "sentence1": "我每天晚上洗澡。",
-      "sentence2": "洗澡很放松。"
+      "sentence2": "洗澡很放松。",
+      "pronunciation": "/ɕi˧˩˧ tsɑʊ˧˩˧/"
     },
     {
       "id": 60,
       "word": "浴室",
       "sentence1": "浴室很干净。",
-      "sentence2": "我需要用一下浴室。"
+      "sentence2": "我需要用一下浴室。",
+      "pronunciation": "/y˥˩ ʂɨ˥˩/"
     },
     {
       "id": 61,
       "word": "是",
       "sentence1": "我想成为一名医生。",
-      "sentence2": "她会很开心的。"
+      "sentence2": "她会很开心的。",
+      "pronunciation": "/ʂɨ˥˩/"
     },
     {
       "id": 62,
       "word": "海滩",
       "sentence1": "海滩很拥挤。",
-      "sentence2": "我喜欢海滩。"
+      "sentence2": "我喜欢海滩。",
+      "pronunciation": "/xaɪ˧˩˧ than˥/"
     },
     {
       "id": 63,
       "word": "美丽的",
       "sentence1": "日落很美丽。",
-      "sentence2": "她是一个美丽的人。"
+      "sentence2": "她是一个美丽的人。",
+      "pronunciation": "/meɪ˧˩˧ li˥˩ tɤ/"
     },
     {
       "id": 64,
       "word": "因为",
       "sentence1": "我很高兴因为天气晴朗。",
-      "sentence2": "她离开了因为她累了。"
+      "sentence2": "她离开了因为她累了。",
+      "pronunciation": "/in˥ weɪ˧˥/"
     },
     {
       "id": 65,
       "word": "成为",
       "sentence1": "我想成为一名医生。",
-      "sentence2": "她将成为一位伟大的领导者。"
+      "sentence2": "她将成为一位伟大的领导者。",
+      "pronunciation": "/ʈʂhɤŋ˧˥ weɪ˧˥/"
     },
     {
       "id": 66,
       "word": "床",
       "sentence1": "我睡在我的床上。",
-      "sentence2": "这张床很舒服。"
+      "sentence2": "这张床很舒服。",
+      "pronunciation": "/ʈʂhwɑŋ˧˥/"
     },
     {
       "id": 67,
       "word": "卧室",
       "sentence1": "我的卧室很小。",
-      "sentence2": "我喜欢我的卧室。"
+      "sentence2": "我喜欢我的卧室。",
+      "pronunciation": "/wɔ˥˩ ʂɨ˥˩/"
     },
     {
       "id": 68,
       "word": "啤酒",
       "sentence1": "我喜欢喝啤酒。",
-      "sentence2": "他点了一杯啤酒。"
+      "sentence2": "他点了一杯啤酒。",
+      "pronunciation": "/phi˧˥ tɕjoʊ˧˩˧/"
     },
     {
       "id": 69,
       "word": "在...之前",
       "sentence1": "我吃饭前洗手。",
-      "sentence2": "她比我先到。"
+      "sentence2": "她比我先到。",
+      "pronunciation": "/tsaɪ˥˩ ... ʈʂɨ˥ tɕhjɛn˧˥/"
     },
     {
       "id": 70,
       "word": "开始",
       "sentence1": "我将开始做作业。",
-      "sentence2": "她开始唱歌。"
+      "sentence2": "她开始唱歌。",
+      "pronunciation": "/khaɪ˥ ʂɨ˧˩˧/"
     },
     {
       "id": 71,
       "word": "开始",
       "sentence1": "电影的开头很精彩。",
-      "sentence2": "我错过了节目的开头。"
+      "sentence2": "我错过了节目的开头。",
+      "pronunciation": "/khaɪ˥ ʂɨ˧˩˧/"
     },
     {
       "id": 72,
       "word": "在...后面",
       "sentence1": "猫躲在沙发后面。",
-      "sentence2": "他站在她身后。"
+      "sentence2": "他站在她身后。",
+      "pronunciation": "/tsaɪ˥˩ ... xoʊ˥˩ mjɛn˥˩/"
     },
     {
       "id": 73,
       "word": "相信",
       "sentence1": "我相信你。",
-      "sentence2": "你相信鬼吗？"
+      "sentence2": "你相信鬼吗？",
+      "pronunciation": "/ɕjɑŋ˥ ɕin˥˩/"
     },
     {
       "id": 74,
       "word": "在...下面",
       "sentence1": "温度在冰点以下。",
-      "sentence2": "地下室在地面以下。"
+      "sentence2": "地下室在地面以下。",
+      "pronunciation": "/tsaɪ˥˩ ... ɕja˥˩ mjɛn˥˩/"
     },
     {
       "id": 75,
       "word": "最好的",
       "sentence1": "这是我读过的最好的书。",
-      "sentence2": "她是班上最好的学生。"
+      "sentence2": "她是班上最好的学生。",
+      "pronunciation": "/tsweɪ˥˩ xɑʊ˧˩˧ tɤ/"
     },
     {
       "id": 76,
       "word": "更好的",
       "sentence1": "我今天感觉好多了。",
-      "sentence2": "这部电影比上一部好。"
+      "sentence2": "这部电影比上一部好。",
+      "pronunciation": "/kɤŋ˥˩ xɑʊ˧˩˧ tɤ/"
     },
     {
       "id": 77,
       "word": "在...之间",
       "sentence1": "公园在学校和图书馆之间。",
-      "sentence2": "我在班上坐在朋友们中间。"
+      "sentence2": "我在班上坐在朋友们中间。",
+      "pronunciation": "/tsaɪ˥˩ ... ʈʂɨ˥ tɕjɛn˥/"
     },
     {
       "id": 78,
       "word": "自行车",
       "sentence1": "我骑自行车去上学。",
-      "sentence2": "她买了一辆新自行车。"
+      "sentence2": "她买了一辆新自行车。",
+      "pronunciation": "/tsɯ˥˩ ɕiŋ˧˥ ʈʂhɤ˥/"
     },
     {
       "id": 79,
       "word": "大的",
       "sentence1": "这是一栋大房子。",
-      "sentence2": "他有一只大狗。"
+      "sentence2": "他有一只大狗。",
+      "pronunciation": "/ta˥˩ tɤ/"
     },
     {
       "id": 80,
       "word": "自行车",
       "sentence1": "我需要修理我的自行车。",
-      "sentence2": "她每天骑自行车。"
+      "sentence2": "她每天骑自行车。",
+      "pronunciation": "/tsɯ˥˩ ɕiŋ˧˥ ʈʂhɤ˥/"
     },
     {
       "id": 81,
       "word": "账单",
       "sentence1": "我昨天收到了账单。",
-      "sentence2": "请付账。"
+      "sentence2": "请付账。",
+      "pronunciation": "/ʈʂɑŋ˥˩ tan˥/"
     },
     {
       "id": 82,
       "word": "鸟",
       "sentence1": "鸟在唱歌。",
-      "sentence2": "我看到了一只彩色的鸟。"
+      "sentence2": "我看到了一只彩色的鸟。",
+      "pronunciation": "/njɑʊ˧˩˧/"
     },
     {
       "id": 83,
       "word": "生日",
       "sentence1": "我的生日在七月。",
-      "sentence2": "她举办了一个生日派对。"
+      "sentence2": "她举办了一个生日派对。",
+      "pronunciation": "/ʂɤŋ˥ ʐɨ˥˩/"
     },
     {
       "id": 84,
       "word": "黑色的",
       "sentence1": "我有一只黑猫。",
-      "sentence2": "这条裙子是黑色的。"
+      "sentence2": "这条裙子是黑色的。",
+      "pronunciation": "/xeɪ˥ sɤ˥˩ tɤ/"
     },
     {
       "id": 85,
       "word": "博客",
       "sentence1": "我读了一篇关于旅行的博客。",
-      "sentence2": "她写了一个很受欢迎的博客。"
+      "sentence2": "她写了一个很受欢迎的博客。",
+      "pronunciation": "/pwɔ˧˥ khɤ˥˩/"
     },
     {
       "id": 86,
       "word": "金发的",
       "sentence1": "她有一头金色的长发。",
-      "sentence2": "他喜欢金发女郎。"
+      "sentence2": "他喜欢金发女郎。",
+      "pronunciation": "/tɕin˥ fa˥ tɤ/"
     },
     {
       "id": 87,
       "word": "蓝色的",
       "sentence1": "天空是蓝色的。",
-      "sentence2": "我喜欢蓝色的花。"
+      "sentence2": "我喜欢蓝色的花。",
+      "pronunciation": "/lan˧˥ sɤ˥˩ tɤ/"
     },
     {
       "id": 88,
       "word": "船",
       "sentence1": "船在水上。",
-      "sentence2": "我们去划船了。"
+      "sentence2": "我们去划船了。",
+      "pronunciation": "/ʈʂhwan˧˥/"
     },
     {
       "id": 89,
       "word": "身体",
       "sentence1": "人体很复杂。",
-      "sentence2": "她锻炼身体保持健康。"
+      "sentence2": "她锻炼身体保持健康。",
+      "pronunciation": "/ʂən˥ thi˧˩˧/"
     },
     {
       "id": 90,
       "word": "书",
       "sentence1": "我正在读一本书。",
-      "sentence2": "她有很多书。"
+      "sentence2": "她有很多书。",
+      "pronunciation": "/ʂu˥/"
     },
     {
       "id": 91,
       "word": "靴子",
       "sentence1": "我买了新靴子。",
-      "sentence2": "这些靴子很舒服。"
+      "sentence2": "这些靴子很舒服。",
+      "pronunciation": "/ɕɥœ˥ tsɯ˧˩˧/"
     },
     {
       "id": 92,
       "word": "无聊的",
       "sentence1": "我在家很无聊。",
-      "sentence2": "她在课堂上感到无聊。"
+      "sentence2": "她在课堂上感到无聊。",
+      "pronunciation": "/u˧˥ ljɑʊ˧˥ tɤ/"
     },
     {
       "id": 93,
       "word": "无聊的",
       "sentence1": "这部电影很无聊。",
-      "sentence2": "我觉得数学很无聊。"
+      "sentence2": "我觉得数学很无聊。",
+      "pronunciation": "/u˧˥ ljɑʊ˧˥ tɤ/"
     },
     {
       "id": 94,
       "word": "出生",
       "sentence1": "我出生于2000年。",
-      "sentence2": "她出生在一个小镇。"
+      "sentence2": "她出生在一个小镇。",
+      "pronunciation": "/ʈʂhu˥ ʂɤŋ˥/"
     },
     {
       "id": 95,
       "word": "两者都",
       "sentence1": "两个选择都不错。",
-      "sentence2": "我两部电影都喜欢。"
+      "sentence2": "我两部电影都喜欢。",
+      "pronunciation": "/ljɑŋ˧˩˧ ʈʂɤ˧˩˧ toʊ˥/"
     },
     {
       "id": 96,
       "word": "瓶子",
       "sentence1": "我需要一瓶水。",
-      "sentence2": "她买了一个玻璃瓶。"
+      "sentence2": "她买了一个玻璃瓶。",
+      "pronunciation": "/phiŋ˧˥ tsɯ˧˩˧/"
     },
     {
       "id": 97,
       "word": "盒子",
       "sentence1": "玩具在盒子里。",
-      "sentence2": "我需要一个盒子装书。"
+      "sentence2": "我需要一个盒子装书。",
+      "pronunciation": "/xɤ˧˥ tsɯ˧˩˧/"
     },
     {
       "id": 98,
       "word": "男孩",
       "sentence1": "男孩在外面玩。",
-      "sentence2": "我看到一个放风筝的男孩。"
+      "sentence2": "我看到一个放风筝的男孩。",
+      "pronunciation": "/nan˧˥ xaɪ˧˥/"
     },
     {
       "id": 99,
       "word": "男朋友",
       "sentence1": "我的男朋友很善良。",
-      "sentence2": "她把她的男朋友介绍给我。"
+      "sentence2": "她把她的男朋友介绍给我。",
+      "pronunciation": "/nan˧˥ phɤŋ˧˥ joʊ˧˩˧/"
     },
     {
       "id": 100,
       "word": "面包",
       "sentence1": "我需要一条面包。",
-      "sentence2": "她烤了新鲜的面包。"
+      "sentence2": "她烤了新鲜的面包。",
+      "pronunciation": "/mjɛn˥˩ pɑʊ˥/"
     },
     {
       "id": 101,
       "word": "休息/打破",
       "sentence1": "让我们休息一下。",
-      "sentence2": "我需要改掉这个习惯。"
+      "sentence2": "我需要改掉这个习惯。",
+      "pronunciation": "/ɕjoʊ˥ ɕi˥/; /ta˧˩˧ phwɔ˥˩/"
     },
     {
       "id": 102,
       "word": "早餐",
       "sentence1": "我早餐吃了麦片。",
-      "sentence2": "早餐是最重要的一餐。"
+      "sentence2": "早餐是最重要的一餐。",
+      "pronunciation": "/tsɑʊ˧˩˧ tshan˥/"
     },
     {
       "id": 103,
       "word": "带来",
       "sentence1": "你能给我带杯水吗？",
-      "sentence2": "我明天会带文件来。"
+      "sentence2": "我明天会带文件来。",
+      "pronunciation": "/taɪ˥˩ laɪ˧˥/"
     },
     {
       "id": 104,
       "word": "兄弟",
       "sentence1": "我哥哥在国外留学。",
-      "sentence2": "他有一个弟弟。"
+      "sentence2": "他有一个弟弟。",
+      "pronunciation": "/ɕjʊŋ˥ ti˥˩/"
     },
     {
       "id": 105,
       "word": "棕色的",
       "sentence1": "那只棕色的狗很友好。",
-      "sentence2": "我喜欢棕色巧克力。"
+      "sentence2": "我喜欢棕色巧克力。",
+      "pronunciation": "/tsʊŋ˥ sɤ˥˩ tɤ/"
     },
     {
       "id": 106,
       "word": "建造",
       "sentence1": "他们将建造一座新房子。",
-      "sentence2": "他想建立事业。"
+      "sentence2": "他想建立事业。",
+      "pronunciation": "/tɕjɛn˥˩ tsɑʊ˥˩/"
     },
     {
       "id": 107,
       "word": "建筑物",
       "sentence1": "这座建筑很高。",
-      "sentence2": "他们在那栋楼工作。"
+      "sentence2": "他们在那栋楼工作。",
+      "pronunciation": "/tɕjɛn˥˩ ʈʂu˥˩ u˥˩/"
     },
     {
       "id": 108,
       "word": "公共汽车",
       "sentence1": "我坐公共汽车去上学。",
-      "sentence2": "今天公共汽车晚点了。"
+      "sentence2": "今天公共汽车晚点了。",
+      "pronunciation": "/kʊŋ˥ kʊŋ˥˩ tɕhi˥˩ ʈʂhɤ˥/"
     },
     {
       "id": 109,
       "word": "生意",
       "sentence1": "她经营自己的生意。",
-      "sentence2": "今年生意兴隆。"
+      "sentence2": "今年生意兴隆。",
+      "pronunciation": "/ʂɤŋ˥ i˥˩/"
     },
     {
       "id": 110,
       "word": "忙碌的",
       "sentence1": "我现在很忙。",
-      "sentence2": "她的日程很忙。"
+      "sentence2": "她的日程很忙。",
+      "pronunciation": "/mɑŋ˧˥ lu˥˩ tɤ/"
     },
     {
       "id": 111,
       "word": "但是",
       "sentence1": "我喜欢茶，但我更喜欢咖啡。",
-      "sentence2": "他很高，但他的兄弟很矮。"
+      "sentence2": "他很高，但他的兄弟很矮。",
+      "pronunciation": "/tan˥˩ ʂɨ˥˩/"
     },
     {
       "id": 112,
       "word": "黄油",
       "sentence1": "我做这道菜需要黄油。",
-      "sentence2": "她喜欢在面包上涂黄油。"
+      "sentence2": "她喜欢在面包上涂黄油。",
+      "pronunciation": "/xwɑŋ˧˥ joʊ˧˥/"
     },
     {
       "id": 113,
       "word": "买",
       "sentence1": "我想买一部新手机。",
-      "sentence2": "她昨天买了一条裙子。"
+      "sentence2": "她昨天买了一条裙子。",
+      "pronunciation": "/maɪ˧˩˧/"
     },
     {
       "id": 114,
       "word": "被/通过",
       "sentence1": "这本书是由一位著名作家写的。",
-      "sentence2": "我更喜欢坐火车旅行。"
+      "sentence2": "我更喜欢坐火车旅行。",
+      "pronunciation": "/peɪ˥˩/; /thʊŋ˥ kwɔ˥˩/"
     },
     {
       "id": 115,
       "word": "再见",
       "sentence1": "我向朋友们道别。",
-      "sentence2": "她在机场挥手告别。"
+      "sentence2": "她在机场挥手告别。",
+      "pronunciation": "/tsaɪ˥˩ tɕjɛn˥˩/"
     },
     {
       "id": 116,
       "word": "咖啡馆",
       "sentence1": "让我们在咖啡馆见面。",
-      "sentence2": "她在一家小咖啡馆工作。"
+      "sentence2": "她在一家小咖啡馆工作。",
+      "pronunciation": "/kha˥ feɪ˥ kwan˧˩˧/"
     },
     {
       "id": 117,
       "word": "蛋糕",
       "sentence1": "我烤了一个巧克力蛋糕。",
-      "sentence2": "她喜欢草莓蛋糕。"
+      "sentence2": "她喜欢草莓蛋糕。",
+      "pronunciation": "/tan˥˩ kɑʊ˥/"
     },
     {
       "id": 118,
       "word": "打电话",
       "sentence1": "我稍后给你打电话。",
-      "sentence2": "她接到了妈妈的电话。"
+      "sentence2": "她接到了妈妈的电话。",
+      "pronunciation": "/ta˧˩˧ tjɛn˥˩ xwa˥˩/"
     },
     {
       "id": 119,
       "word": "相机",
       "sentence1": "我买了一台新相机。",
-      "sentence2": "她正在用相机拍照。"
+      "sentence2": "她正在用相机拍照。",
+      "pronunciation": "/ɕjɑŋ˥ tɕi˥/"
     },
     {
       "id": 120,
       "word": "能够",
       "sentence1": "我游泳游得很好。",
-      "sentence2": "她会说三种语言。"
+      "sentence2": "她会说三种语言。",
+      "pronunciation": "/nɤŋ˧˥ koʊ˥˩/"
     },
     {
       "id": 121,
       "word": "不能",
       "sentence1": "我找不到我的钥匙。",
-      "sentence2": "他不能来参加派对。"
+      "sentence2": "他不能来参加派对。",
+      "pronunciation": "/pu˥˩ nɤŋ˧˥/"
     },
     {
       "id": 122,
       "word": "首都",
       "sentence1": "安卡拉是土耳其的首都。",
-      "sentence2": "首都非常繁忙。"
+      "sentence2": "首都非常繁忙。",
+      "pronunciation": "/ʂoʊ˧˩˧ tu˥/"
     },
     {
       "id": 123,
       "word": "汽车",
       "sentence1": "我开一辆红色的车。",
-      "sentence2": "她想买一辆新车。"
+      "sentence2": "她想买一辆新车。",
+      "pronunciation": "/tɕhi˥˩ ʈʂhɤ˥/"
     },
     {
       "id": 124,
       "word": "卡片",
       "sentence1": "我需要一张新的信用卡。",
-      "sentence2": "她给我寄了一张生日贺卡。"
+      "sentence2": "她给我寄了一张生日贺卡。",
+      "pronunciation": "/kha˧˩˧ phjɛn˥˩/"
     },
     {
       "id": 125,
       "word": "职业",
       "sentence1": "他正在建立成功的职业生涯。",
-      "sentence2": "她改变了职业道路。"
+      "sentence2": "她改变了职业道路。",
+      "pronunciation": "/ʈʂɨ˧˥ jɛ˥˩/"
     },
     {
       "id": 126,
       "word": "胡萝卜",
       "sentence1": "我喜欢吃生胡萝卜。",
-      "sentence2": "她做了一个胡萝卜蛋糕。"
+      "sentence2": "她做了一个胡萝卜蛋糕。",
+      "pronunciation": "/xu˧˥ lwɔ˧˥ pwɔ/"
     },
     {
       "id": 127,
       "word": "携带",
       "sentence1": "你能拿这个包吗？",
-      "sentence2": "他随身携带笔记本电脑。"
+      "sentence2": "他随身携带笔记本电脑。",
+      "pronunciation": "/ɕjɛ˧˥ taɪ˥˩/"
     },
     {
       "id": 128,
       "word": "猫",
       "sentence1": "我的猫很爱玩。",
-      "sentence2": "她收养了一只流浪猫。"
+      "sentence2": "她收养了一只流浪猫。",
+      "pronunciation": "/mɑʊ˥/"
     },
     {
       "id": 129,
       "word": "光盘",
       "sentence1": "我在车里听了一张光盘。",
-      "sentence2": "她昨天买了一张新光盘。"
+      "sentence2": "她昨天买了一张新光盘。",
+      "pronunciation": "/kwɑŋ˥ phan˧˥/"
     },
     {
       "id": 130,
       "word": "分",
       "sentence1": "价格是一百分。",
-      "sentence2": "我在街上捡到一分钱。"
+      "sentence2": "我在街上捡到一分钱。",
+      "pronunciation": "/fən˥/"
     },
     {
       "id": 131,
       "word": "中心",
       "sentence1": "市中心非常繁忙。",
-      "sentence2": "市中心有一个公园。"
+      "sentence2": "市中心有一个公园。",
+      "pronunciation": "/ʈʂʊŋ˥ ɕin˥/"
     },
     {
       "id": 132,
       "word": "世纪",
       "sentence1": "21世纪始于2001年。",
-      "sentence2": "20世纪发生了许多变化。"
+      "sentence2": "20世纪发生了许多变化。",
+      "pronunciation": "/ʂɨ˥˩ tɕi˥˩/"
     },
     {
       "id": 133,
       "word": "椅子",
       "sentence1": "请坐在椅子上。",
-      "sentence2": "她为办公室买了一把新椅子。"
+      "sentence2": "她为办公室买了一把新椅子。",
+      "pronunciation": "/i˧˩˧ tsɯ˧˩˧/"
     },
     {
       "id": 134,
       "word": "改变",
       "sentence1": "我想换个发型。",
-      "sentence2": "她改变了对旅行的想法。"
+      "sentence2": "她改变了对旅行的想法。",
+      "pronunciation": "/kaɪ˧˩˧ pjɛn˥˩/"
     },
     {
       "id": 135,
       "word": "图表",
       "sentence1": "图表显示了销售数据。",
-      "sentence2": "她为演示文稿创建了一个图表。"
+      "sentence2": "她为演示文稿创建了一个图表。",
+      "pronunciation": "/thu˧˥ pjɑʊ˧˩˧/"
     },
     {
       "id": 136,
       "word": "便宜的",
       "sentence1": "这件衬衫很便宜。",
-      "sentence2": "我为假期找到了一家便宜的酒店。"
+      "sentence2": "我为假期找到了一家便宜的酒店。",
+      "pronunciation": "/phjɛn˧˥ i˧˥ tɤ/"
     },
     {
       "id": 137,
       "word": "检查",
       "sentence1": "请检查你的电子邮件。",
-      "sentence2": "我需要查看天气预报。"
+      "sentence2": "我需要查看天气预报。",
+      "pronunciation": "/tɕjɛn˧˩˧ ʈʂha˧˥/"
     },
     {
       "id": 138,
       "word": "奶酪",
       "sentence1": "我喜欢用面包配奶酪吃。",
-      "sentence2": "她从市场买了一些奶酪。"
+      "sentence2": "她从市场买了一些奶酪。",
+      "pronunciation": "/naɪ˧˩˧ lɑʊ˥˩/"
     },
     {
       "id": 139,
       "word": "鸡肉",
       "sentence1": "我晚餐想吃鸡肉。",
-      "sentence2": "她在厨房做鸡肉。"
+      "sentence2": "她在厨房做鸡肉。",
+      "pronunciation": "/tɕi˥ ʐoʊ˥˩/"
     },
     {
       "id": 140,
       "word": "孩子",
       "sentence1": "孩子在公园里玩耍。",
-      "sentence2": "她有一个孩子和两只宠物。"
+      "sentence2": "她有一个孩子和两只宠物。",
+      "pronunciation": "/xaɪ˧˥ tsɯ/"
     },
     {
       "id": 141,
       "word": "巧克力",
       "sentence1": "我喜欢巧克力冰淇淋。",
-      "sentence2": "她给了我一盒巧克力。"
+      "sentence2": "她给了我一盒巧克力。",
+      "pronunciation": "/tɕhjɑʊ˧˩˧ khɤ˥˩ li˥˩/"
     },
     {
       "id": 142,
       "word": "选择",
       "sentence1": "我需要为派对选一条裙子。",
-      "sentence2": "她选了蓝色的那条。"
+      "sentence2": "她选了蓝色的那条。",
+      "pronunciation": "/ɕɥœn˧˩˧ tsɤ˧˥/"
     },
     {
       "id": 143,
       "word": "电影院",
       "sentence1": "今晚我们去电影院吧。",
-      "sentence2": "她在当地电影院工作。"
+      "sentence2": "她在当地电影院工作。",
+      "pronunciation": "/tjɛn˥˩ iŋ˧˩˧ ɥœn˥˩/"
     },
     {
       "id": 144,
       "word": "城市",
       "sentence1": "这座城市很大。",
-      "sentence2": "她住在市中心。"
+      "sentence2": "她住在市中心。",
+      "pronunciation": "/ʈʂhɤŋ˧˥ ʂɨ˥˩/"
     },
     {
       "id": 145,
       "word": "班级",
       "sentence1": "我在五年级。",
-      "sentence2": "她教数学课。"
+      "sentence2": "她教数学课。",
+      "pronunciation": "/pan˥ tɕi˧˥/"
     },
     {
       "id": 146,
       "word": "教室",
       "sentence1": "教室明亮又干净。",
-      "sentence2": "她为新年装饰了教室。"
+      "sentence2": "她为新年装饰了教室。",
+      "pronunciation": "/tɕjɑʊ˥˩ ʂɨ˥˩/"
     },
     {
       "id": 147,
       "word": "干净的",
       "sentence1": "请保持房间整洁。",
-      "sentence2": "她昨天打扫了房子。"
+      "sentence2": "她昨天打扫了房子。",
+      "pronunciation": "/kan˥ tɕiŋ˥˩ tɤ/"
     },
     {
       "id": 148,
       "word": "爬",
       "sentence1": "我喜欢爬山。",
-      "sentence2": "她爬上树以获得更好的视野。"
+      "sentence2": "她爬上树以获得更好的视野。",
+      "pronunciation": "/pha˧˥/"
     },
     {
       "id": 149,
       "word": "时钟",
       "sentence1": "时钟上几点了？",
-      "sentence2": "她看了看时钟确认时间。"
+      "sentence2": "她看了看时钟确认时间。",
+      "pronunciation": "/ʂɨ˧˥ ʈʂʊŋ˥/"
     },
     {
       "id": 150,
       "word": "关闭",
       "sentence1": "请关上门。",
-      "sentence2": "她关上窗户因为很冷。"
+      "sentence2": "她关上窗户因为很冷。",
+      "pronunciation": "/kwan˥ pi˥˩/"
     },
     {
       "id": 151,
       "word": "衣服",
       "sentence1": "我需要买新衣服。",
-      "sentence2": "她把旧衣服捐给了慈善机构。"
+      "sentence2": "她把旧衣服捐给了慈善机构。",
+      "pronunciation": "/i˥˩ fu˧˥/"
     },
     {
       "id": 152,
       "word": "俱乐部",
       "sentence1": "他是国际象棋俱乐部的成员。",
-      "sentence2": "她每周五晚上去俱乐部。"
+      "sentence2": "她每周五晚上去俱乐部。",
+      "pronunciation": "/tɕy˥˩ lɤ˥˩ pu˥˩/"
     },
     {
       "id": 153,
       "word": "外套",
       "sentence1": "我冬天穿外套。",
-      "sentence2": "她为寒冷的天气买了一件新外套。"
+      "sentence2": "她为寒冷的天气买了一件新外套。",
+      "pronunciation": "/waɪ˥˩ thɑʊ˥˩/"
     },
     {
       "id": 154,
       "word": "咖啡",
       "sentence1": "我喜欢早上喝咖啡。",
-      "sentence2": "她在咖啡馆点了一杯咖啡。"
+      "sentence2": "她在咖啡馆点了一杯咖啡。",
+      "pronunciation": "/kha˥ feɪ˥/"
     },
     {
       "id": 155,
       "word": "冷的",
       "sentence1": "外面很冷。",
-      "sentence2": "她穿了一件夹克因为很冷。"
+      "sentence2": "她穿了一件夹克因为很冷。",
+      "pronunciation": "/lɤŋ˧˩˧ tɤ/"
     },
     {
       "id": 156,
       "word": "大学",
       "sentence1": "他在伦敦的一所大学学习。",
-      "sentence2": "她想高中毕业后上大学。"
+      "sentence2": "她想高中毕业后上大学。",
+      "pronunciation": "/ta˥˩ ɕɥœ˧˥/"
     },
     {
       "id": 157,
       "word": "颜色",
       "sentence1": "你最喜欢什么颜色？",
-      "sentence2": "她把墙壁涂成了浅蓝色。"
+      "sentence2": "她把墙壁涂成了浅蓝色。",
+      "pronunciation": "/jɛn˧˥ sɤ˥˩/"
     },
     {
       "id": 158,
       "word": "来",
       "sentence1": "请来参加我的派对。",
-      "sentence2": "她明天会来参加会议。"
+      "sentence2": "她明天会来参加会议。",
+      "pronunciation": "/laɪ˧˥/"
     },
     {
       "id": 159,
       "word": "通用的/共同的",
       "sentence1": "英语是一种通用语言。",
-      "sentence2": "她对音乐有共同的兴趣。"
+      "sentence2": "她对音乐有共同的兴趣。",
+      "pronunciation": "/thʊŋ˥ jʊŋ˥˩ tɤ/; /kʊŋ˥˩ thʊŋ˧˥ tɤ/"
     },
     {
       "id": 160,
       "word": "公司",
       "sentence1": "他在一家大公司工作。",
-      "sentence2": "她去年创办了自己的公司。"
+      "sentence2": "她去年创办了自己的公司。",
+      "pronunciation": "/kʊŋ˥ sɯ˥/"
     },
     {
       "id": 161,
       "word": "比较",
       "sentence1": "让我们比较一下答案。",
-      "sentence2": "她在购买前比较了两种产品。"
+      "sentence2": "她在购买前比较了两种产品。",
+      "pronunciation": "/pi˧˩˧ tɕjɑʊ˥˩/"
     },
     {
       "id": 162,
       "word": "完成",
       "sentence1": "请填写表格。",
-      "sentence2": "她按时完成了项目。"
+      "sentence2": "她按时完成了项目。",
+      "pronunciation": "/wan˧˥ ʈʂhɤŋ˧˥/"
     },
     {
       "id": 163,
       "word": "电脑",
       "sentence1": "我用电脑工作。",
-      "sentence2": "她上周买了一台新电脑。"
+      "sentence2": "她上周买了一台新电脑。",
+      "pronunciation": "/tjɛn˥˩ nɑʊ˧˩˧/"
     },
     {
       "id": 164,
       "word": "音乐会",
       "sentence1": "我今晚要去听音乐会。",
-      "sentence2": "她喜欢听现场音乐会录音。"
+      "sentence2": "她喜欢听现场音乐会录音。",
+      "pronunciation": "/in˥ ɥœ˥˩ xweɪ˥˩/"
     },
     {
       "id": 165,
       "word": "对话",
       "sentence1": "我们进行了一次很好的对话。",
-      "sentence2": "她喜欢和朋友进行深入的交谈。"
+      "sentence2": "她喜欢和朋友进行深入的交谈。",
+      "pronunciation": "/tweɪ˥˩ xwa˥˩/"
     },
     {
       "id": 166,
       "word": "做饭",
       "sentence1": "我喜欢做意大利菜。",
-      "sentence2": "她为家人做了一顿美味的饭菜。"
+      "sentence2": "她为家人做了一顿美味的饭菜。",
+      "pronunciation": "/tswɔ˥˩ fan˥˩/"
     },
     {
       "id": 167,
       "word": "烹饪",
       "sentence1": "烹饪是我最喜欢的爱好。",
-      "sentence2": "她参加了烹饪课程以提高技能。"
+      "sentence2": "她参加了烹饪课程以提高技能。",
+      "pronunciation": "/phɤŋ˥ ʐən˥˩/"
     },
     {
       "id": 168,
       "word": "酷的",
       "sentence1": "那件夹克真的很酷。",
-      "sentence2": "她有一套很酷的复古唱片收藏。"
+      "sentence2": "她有一套很酷的复古唱片收藏。",
+      "pronunciation": "/khu˥˩ tɤ/"
     },
     {
       "id": 169,
       "word": "正确的",
       "sentence1": "请改正你的错误。",
-      "sentence2": "她总是努力纠正语法错误。"
+      "sentence2": "她总是努力纠正语法错误。",
+      "pronunciation": "/ʈʂɤŋ˥˩ tɕhɥœ˥˩ tɤ/"
     },
     {
       "id": 170,
       "word": "费用",
       "sentence1": "这本书多少钱？",
-      "sentence2": "她对城市生活的高成本感到惊讶。"
+      "sentence2": "她对城市生活的高成本感到惊讶。",
+      "pronunciation": "/feɪ˥˩ jʊŋ˥˩/"
     },
     {
       "id": 171,
       "word": "能够",
       "sentence1": "我可以帮你。",
-      "sentence2": "她说如果早点下班她可以来参加派对。"
+      "sentence2": "她说如果早点下班她可以来参加派对。",
+      "pronunciation": "/nɤŋ˧˥ koʊ˥˩/"
     },
     {
       "id": 172,
       "word": "国家",
       "sentence1": "我住在一个小国家。",
-      "sentence2": "她想去不同的国家旅行。"
+      "sentence2": "她想去不同的国家旅行。",
+      "pronunciation": "/kwɔ˧˥ tɕja˥/"
     },
     {
       "id": 173,
       "word": "课程",
       "sentence1": "我正在上生物课。",
-      "sentence2": "她报名参加了烹饪课程。"
+      "sentence2": "她报名参加了烹饪课程。",
+      "pronunciation": "/khɤ˥˩ ʈʂhɤŋ˧˥/"
     },
     {
       "id": 174,
       "word": "表亲",
       "sentence1": "我表弟这个周末来拜访。",
-      "sentence2": "她有一个住在国外的表亲。"
+      "sentence2": "她有一个住在国外的表亲。",
+      "pronunciation": "/pjɑʊ˧˩˧ tɕhin˥/"
     },
     {
       "id": 175,
       "word": "牛",
       "sentence1": "牛在田里吃草。",
-      "sentence2": "她在一个有牛和鸡的农场长大。"
+      "sentence2": "她在一个有牛和鸡的农场长大。",
+      "pronunciation": "/njoʊ˧˥/"
     },
     {
       "id": 176,
       "word": "奶油",
       "sentence1": "我喜欢咖啡里加奶油。",
-      "sentence2": "她在汤里加了奶油增加风味。"
+      "sentence2": "她在汤里加了奶油增加风味。",
+      "pronunciation": "/naɪ˧˩˧ joʊ˧˥/"
     },
     {
       "id": 177,
       "word": "创造",
       "sentence1": "我想创建一个新项目。",
-      "sentence2": "她创作了一幅美丽的画。"
+      "sentence2": "她创作了一幅美丽的画。",
+      "pronunciation": "/ʈʂhwɑŋ˥˩ tsɑʊ˥˩/"
     },
     {
       "id": 178,
       "word": "文化",
       "sentence1": "我对了解不同的文化很感兴趣。",
-      "sentence2": "她旅行时喜欢探索当地文化。"
+      "sentence2": "她旅行时喜欢探索当地文化。",
+      "pronunciation": "/wən˧˥ xwa˥˩/"
     },
     {
       "id": 179,
       "word": "杯子",
       "sentence1": "我用杯子喝茶。",
-      "sentence2": "她买了一套漂亮的杯子。"
+      "sentence2": "她买了一套漂亮的杯子。",
+      "pronunciation": "/peɪ˥ tsɯ˧˩˧/"
     },
     {
       "id": 180,
       "word": "顾客",
       "sentence1": "顾客永远是对的。",
-      "sentence2": "她是那家店的忠实顾客。"
+      "sentence2": "她是那家店的忠实顾客。",
+      "pronunciation": "/ku˥˩ khɤ˥˩/"
     },
     {
       "id": 181,
       "word": "切",
       "sentence1": "请沿着线剪纸。",
-      "sentence2": "她把蛋糕切成相等的块。"
+      "sentence2": "她把蛋糕切成相等的块。",
+      "pronunciation": "/tɕhjɛ˥/"
     },
     {
       "id": 182,
       "word": "爸爸",
       "sentence1": "我爸爸是个很棒的厨师。",
-      "sentence2": "她喜欢和爸爸在一起。"
+      "sentence2": "她喜欢和爸爸在一起。",
+      "pronunciation": "/pa˥˩ pa˥˩/"
     },
     {
       "id": 183,
       "word": "跳舞",
       "sentence1": "我喜欢在派对上跳舞。",
-      "sentence2": "她学了一年舞蹈。"
+      "sentence2": "她学了一年舞蹈。",
+      "pronunciation": "/thjɑʊ˥˩ u˧˩˧/"
     },
     {
       "id": 184,
       "word": "舞者",
       "sentence1": "舞者表演得很漂亮。",
-      "sentence2": "她想成为一名专业舞者。"
+      "sentence2": "她想成为一名专业舞者。",
+      "pronunciation": "/u˧˩˧ ʈʂɤ˧˩˧/"
     },
     {
       "id": 185,
       "word": "跳舞",
       "sentence1": "跳舞是一种有趣的锻炼方式。",
-      "sentence2": "她喜欢跟着喜欢的歌曲跳舞。"
+      "sentence2": "她喜欢跟着喜欢的歌曲跳舞。",
+      "pronunciation": "/thjɑʊ˥˩ u˧˩˧/"
     },
     {
       "id": 186,
       "word": "危险的",
       "sentence1": "那只动物很危险。",
-      "sentence2": "她意识到情况很危险。"
+      "sentence2": "她意识到情况很危险。",
+      "pronunciation": "/weɪ˥ ɕjɛn˧˩˧ tɤ/"
     },
     {
       "id": 187,
       "word": "黑暗的/深色的",
       "sentence1": "外面很黑。",
-      "sentence2": "比起牛奶巧克力，她更喜欢黑巧克力。"
+      "sentence2": "比起牛奶巧克力，她更喜欢黑巧克力。",
+      "pronunciation": "/xeɪ˥ an˥˩ tɤ/; /ʂən˥ sɤ˥˩ tɤ/"
     },
     {
       "id": 188,
       "word": "日期",
       "sentence1": "今天几号？",
-      "sentence2": "她在纸上写了日期。"
+      "sentence2": "她在纸上写了日期。",
+      "pronunciation": "/ʐɨ˥˩ tɕhi˥/"
     },
     {
       "id": 189,
       "word": "女儿",
       "sentence1": "我女儿很有才华。",
-      "sentence2": "她为女儿的成就感到骄傲。"
+      "sentence2": "她为女儿的成就感到骄傲。",
+      "pronunciation": "/ny˧˩˧ ɑɻ˧˥/"
     },
     {
       "id": 190,
       "word": "天",
       "sentence1": "今天是美好的一天。",
-      "sentence2": "她打算整天放松。"
+      "sentence2": "她打算整天放松。",
+      "pronunciation": "/thjɛn˥/"
     },
     {
       "id": 191,
       "word": "亲爱的",
       "sentence1": "我亲爱的朋友要来拜访。",
-      "sentence2": "她给亲爱的母亲写了一封信。"
+      "sentence2": "她给亲爱的母亲写了一封信。",
+      "pronunciation": "/tɕhin˥ aɪ˥˩ tɤ/"
     },
     {
       "id": 192,
       "word": "十二月",
       "sentence1": "十二月是一年的最后一个月。",
-      "sentence2": "她喜欢十二月的节日装饰。"
+      "sentence2": "她喜欢十二月的节日装饰。",
+      "pronunciation": "/ʂɨ˧˥ ɑɻ˥˩ ɥœ˥˩/"
     },
     {
       "id": 193,
       "word": "决定",
       "sentence1": "我需要决定穿什么。",
-      "sentence2": "她决定休息一下。"
+      "sentence2": "她决定休息一下。",
+      "pronunciation": "/tɕɥœ˧˥ tiŋ˥˩/"
     },
     {
       "id": 194,
       "word": "美味的",
       "sentence1": "这个蛋糕很好吃。",
-      "sentence2": "她喜欢为家人做美味的饭菜。"
+      "sentence2": "她喜欢为家人做美味的饭菜。",
+      "pronunciation": "/meɪ˧˩˧ weɪ˥˩ tɤ/"
     },
     {
       "id": 195,
       "word": "描述",
       "sentence1": "你能描述一下这幅画吗？",
-      "sentence2": "她详细描述了她梦想中的假期。"
+      "sentence2": "她详细描述了她梦想中的假期。",
+      "pronunciation": "/mjɑʊ˧˥ ʂu˥˩/"
     },
     {
       "id": 196,
       "word": "描述",
       "sentence1": "这本书的描述很吸引人。",
-      "sentence2": "她写了活动的详细描述。"
+      "sentence2": "她写了活动的详细描述。",
+      "pronunciation": "/mjɑʊ˧˥ ʂu˥˩/"
     },
     {
       "id": 197,
       "word": "设计",
       "sentence1": "这座建筑的设计很现代。",
-      "sentence2": "她在大学学习平面设计。"
+      "sentence2": "她在大学学习平面设计。",
+      "pronunciation": "/ʂɤ˥˩ tɕi˥˩/"
     },
     {
       "id": 198,
       "word": "书桌",
       "sentence1": "我的书桌上堆满了纸。",
-      "sentence2": "她保持书桌整洁有序。"
+      "sentence2": "她保持书桌整洁有序。",
+      "pronunciation": "/ʂu˥ ʈʂwɔ˥/"
     },
     {
       "id": 199,
       "word": "细节",
       "sentence1": "请提供更多关于项目的细节。",
-      "sentence2": "她注意到画中的一个小细节。"
+      "sentence2": "她注意到画中的一个小细节。",
+      "pronunciation": "/ɕi˥˩ tɕjɛ˧˥/"
     },
     {
       "id": 200,
       "word": "对话",
       "sentence1": "电影中的对话很逼真。",
-      "sentence2": "她写了两个角色之间的对话。"
+      "sentence2": "她写了两个角色之间的对话。",
+      "pronunciation": "/tweɪ˥˩ xwa˥˩/"
     },
     {
       "id": 201,
       "word": "字典",
       "sentence1": "我需要一本字典来查这个词。",
-      "sentence2": "她买了一本新的英土字典。"
+      "sentence2": "她买了一本新的英土字典。",
+      "pronunciation": "/tsɯ˥˩ tjɛn˧˩˧/"
     },
     {
       "id": 202,
       "word": "死",
       "sentence1": "我不想年纪轻轻就死。",
-      "sentence2": "她害怕自己会孤独地死去。"
+      "sentence2": "她害怕自己会孤独地死去。",
+      "pronunciation": "/sɯ˧˩˧/"
     },
     {
       "id": 203,
       "word": "饮食",
       "sentence1": "我正在进行健康饮食。",
-      "sentence2": "她遵循严格的饮食来保持身材。"
+      "sentence2": "她遵循严格的饮食来保持身材。",
+      "pronunciation": "/in˧˩˧ ʂɨ˧˥/"
     },
     {
       "id": 204,
       "word": "区别",
       "sentence1": "这两张图片有什么区别？",
-      "sentence2": "她一开始看不出区别。"
+      "sentence2": "她一开始看不出区别。",
+      "pronunciation": "/tɕhy˥ pjɛ˧˥/"
     },
     {
       "id": 205,
       "word": "不同的",
       "sentence1": "这本书与其他的不同。",
-      "sentence2": "她对这个问题有不同的看法。"
+      "sentence2": "她对这个问题有不同的看法。",
+      "pronunciation": "/pu˥˩ thʊŋ˧˥ tɤ/"
     },
     {
       "id": 206,
       "word": "困难的",
       "sentence1": "这个练习很难。",
-      "sentence2": "她觉得这道数学题很难解决。"
+      "sentence2": "她觉得这道数学题很难解决。",
+      "pronunciation": "/khwən˥˩ nan˧˥ tɤ/"
     },
     {
       "id": 207,
       "word": "晚餐",
       "sentence1": "我们晚上7点吃晚餐。",
-      "sentence2": "她为家人准备了一顿美味的晚餐。"
+      "sentence2": "她为家人准备了一顿美味的晚餐。",
+      "pronunciation": "/wan˧˩˧ tshan˥/"
     },
     {
       "id": 208,
       "word": "脏的",
       "sentence1": "我的手因为园艺工作变脏了。",
-      "sentence2": "她不喜欢穿脏衣服。"
+      "sentence2": "她不喜欢穿脏衣服。",
+      "pronunciation": "/tsɑŋ˥˩ tɤ/"
     },
     {
       "id": 209,
       "word": "讨论",
       "sentence1": "让我们讨论一下项目细节。",
-      "sentence2": "她想和团队讨论她的想法。"
+      "sentence2": "她想和团队讨论她的想法。",
+      "pronunciation": "/thɑʊ˧˩˧ lwən˥˩/"
     },
     {
       "id": 210,
       "word": "菜肴/盘子",
       "sentence1": "这道菜是我的最爱。",
-      "sentence2": "她把食物放在一个漂亮的盘子里端上来。"
+      "sentence2": "她把食物放在一个漂亮的盘子里端上来。",
+      "pronunciation": "/tshaɪ˥˩ jɑʊ˧˥/; /phan˧˥ tsɯ˧˩˧/"
     },
     {
       "id": 211,
       "word": "做",
       "sentence1": "你今天想做什么？",
-      "sentence2": "她喜欢早上做瑜伽。"
+      "sentence2": "她喜欢早上做瑜伽。",
+      "pronunciation": "/tswɔ˥˩/"
     },
     {
       "id": 212,
       "word": "医生",
       "sentence1": "医生现在可以见你了。",
-      "sentence2": "她将来想成为一名医生。"
+      "sentence2": "她将来想成为一名医生。",
+      "pronunciation": "/i˥˩ ʂɤŋ˥/"
     },
     {
       "id": 213,
       "word": "狗",
       "sentence1": "我的狗喜欢玩捡球游戏。",
-      "sentence2": "她从收容所收养了一只流浪狗。"
+      "sentence2": "她从收容所收养了一只流浪狗。",
+      "pronunciation": "/koʊ˧˩˧/"
     },
     {
       "id": 214,
       "word": "美元",
       "sentence1": "价格是二十美元。",
-      "sentence2": "她存够了钱买一部新手机。"
+      "sentence2": "她存够了钱买一部新手机。",
+      "pronunciation": "/meɪ˧˩˧ ɥœn˧˥/"
     },
     {
       "id": 215,
       "word": "门",
       "sentence1": "请随手关门。",
-      "sentence2": "她敲了敲门等待回应。"
+      "sentence2": "她敲了敲门等待回应。",
+      "pronunciation": "/mən˧˥/"
     },
     {
       "id": 216,
       "word": "向下/记下",
       "sentence1": "猫从架子上跳了下来。",
-      "sentence2": "她把说明写在纸上。"
+      "sentence2": "她把说明写在纸上。",
+      "pronunciation": "/ɕjɑŋ˥˩ ɕja˥˩/; /tɕi˥˩ ɕja˥˩/"
     },
     {
       "id": 217,
       "word": "楼下",
       "sentence1": "洗衣房在楼下。",
-      "sentence2": "她下楼去拿零食。"
+      "sentence2": "她下楼去拿零食。",
+      "pronunciation": "/loʊ˧˥ ɕja˥˩/"
     },
     {
       "id": 218,
       "word": "画",
       "sentence1": "我喜欢在空闲时间画画。",
-      "sentence2": "她画了一幅美丽的风景画。"
+      "sentence2": "她画了一幅美丽的风景画。",
+      "pronunciation": "/xwa˥˩/"
     },
     {
       "id": 219,
       "word": "连衣裙",
       "sentence1": "她穿了一条红裙子去参加派对。",
-      "sentence2": "这条裙子在店里打折。"
+      "sentence2": "这条裙子在店里打折。",
+      "pronunciation": "/ljɛn˧˥ i˥˩ tɕhyn˧˥/"
     },
     {
       "id": 220,
       "word": "喝",
       "sentence1": "我喜欢早上喝咖啡。",
-      "sentence2": "她给我倒了一杯水。"
+      "sentence2": "她给我倒了一杯水。",
+      "pronunciation": "/xɤ˥/"
     },
     {
       "id": 221,
       "word": "开车",
       "sentence1": "我18岁时学会了开车。",
-      "sentence2": "她喜欢在长途旅行中开车。"
+      "sentence2": "她喜欢在长途旅行中开车。",
+      "pronunciation": "/khaɪ˥ ʈʂhɤ˥/"
     },
     {
       "id": 222,
       "word": "司机",
       "sentence1": "司机把我们送到了机场。",
-      "sentence2": "她是一名专业的公共汽车司机。"
+      "sentence2": "她是一名专业的公共汽车司机。",
+      "pronunciation": "/sɯ˥ tɕi˥/"
     },
     {
       "id": 223,
       "word": "在...期间",
       "sentence1": "我喜欢在通勤时听音乐。",
-      "sentence2": "她在看电影时睡着了。"
+      "sentence2": "她在看电影时睡着了。",
+      "pronunciation": "/tsaɪ˥˩ ... tɕhi˥ tɕjɛn˥/"
     },
     {
       "id": 224,
       "word": "DVD",
       "sentence1": "我买了一张我最喜欢的电影的DVD。",
-      "sentence2": "她更喜欢看DVD电影。"
+      "sentence2": "她更喜欢看DVD电影。",
+      "pronunciation": "/d ü d/"
     },
     {
       "id": 225,
       "word": "每个",
       "sentence1": "每个学生都必须提交作业。",
-      "sentence2": "她给每个孩子一份礼物。"
+      "sentence2": "她给每个孩子一份礼物。",
+      "pronunciation": "/meɪ˧˩˧ kɤ˥˩/"
     },
     {
       "id": 226,
       "word": "耳朵",
       "sentence1": "我的耳朵因为大声的音乐而疼。",
-      "sentence2": "她耳朵上戴着一个漂亮的耳环。"
+      "sentence2": "她耳朵上戴着一个漂亮的耳环。",
+      "pronunciation": "/ɑɻ˧˩˧ twɔ˧˩˧/"
     },
     {
       "id": 227,
       "word": "早的",
       "sentence1": "我喜欢早上早起。",
-      "sentence2": "她提前到达准备会议。"
+      "sentence2": "她提前到达准备会议。",
+      "pronunciation": "/tsɑʊ˧˩˧ tɤ/"
     },
     {
       "id": 228,
       "word": "东方",
       "sentence1": "太阳从东方升起。",
-      "sentence2": "她向东旅行探索新城市。"
+      "sentence2": "她向东旅行探索新城市。",
+      "pronunciation": "/tʊŋ˥ fɑŋ˥/"
     },
     {
       "id": 229,
       "word": "容易的",
       "sentence1": "这个练习对我来说很容易。",
-      "sentence2": "她找到了解决问题的简单方法。"
+      "sentence2": "她找到了解决问题的简单方法。",
+      "pronunciation": "/ʐʊŋ˧˥ i˥˩ tɤ/"
     },
     {
       "id": 230,
       "word": "吃",
       "sentence1": "我喜欢吃健康食品。",
-      "sentence2": "她为我们准备了一顿美味的饭菜。"
+      "sentence2": "她为我们准备了一顿美味的饭菜。",
+      "pronunciation": "/ʈʂhɨ˥/"
     },
     {
       "id": 231,
       "word": "鸡蛋",
       "sentence1": "我早餐吃了一个鸡蛋。",
-      "sentence2": "她喜欢吃炒鸡蛋。"
+      "sentence2": "她喜欢吃炒鸡蛋。",
+      "pronunciation": "/tɕi˥ tan˥˩/"
     },
     {
       "id": 232,
       "word": "八",
       "sentence1": "篮子里有八个苹果。",
-      "sentence2": "她八岁了。"
+      "sentence2": "她八岁了。",
+      "pronunciation": "/pa˥/"
     },
     {
       "id": 233,
       "word": "十八",
       "sentence1": "我下个月就十八岁了。",
-      "sentence2": "她已经十八岁可以投票了。"
+      "sentence2": "她已经十八岁可以投票了。",
+      "pronunciation": "/ʂɨ˧˥ pa˥/"
     },
     {
       "id": 234,
       "word": "八十",
       "sentence1": "这本书要八十美元。",
-      "sentence2": "她八十岁了仍然非常活跃。"
+      "sentence2": "她八十岁了仍然非常活跃。",
+      "pronunciation": "/pa˥ ʂɨ˧˥/"
     },
     {
       "id": 235,
       "word": "大象",
       "sentence1": "大象是最大的陆地动物。",
-      "sentence2": "她在动物园看到了一只小象。"
+      "sentence2": "她在动物园看到了一只小象。",
+      "pronunciation": "/ta˥˩ ɕjɑŋ˥˩/"
     },
     {
       "id": 236,
       "word": "十一",
       "sentence1": "一支足球队有十一名球员。",
-      "sentence2": "她下周就十一岁了。"
+      "sentence2": "她下周就十一岁了。",
+      "pronunciation": "/ʂɨ˧˥ i˥/"
     },
     {
       "id": 237,
       "word": "其他",
       "sentence1": "你还需要什么吗？",
-      "sentence2": "她不喜欢那条裙子，所以选了别的。"
+      "sentence2": "她不喜欢那条裙子，所以选了别的。",
+      "pronunciation": "/tɕhi˧˥ tha˥/"
     },
     {
       "id": 238,
       "word": "电子邮件",
       "sentence1": "我给你发了一封包含详细信息的电子邮件。",
-      "sentence2": "她每天早上查看电子邮件。"
+      "sentence2": "她每天早上查看电子邮件。",
+      "pronunciation": "/tjɛn˥˩ tsɯ˧˩˧ joʊ˧˥ tɕjɛn˥˩/"
     },
     {
       "id": 239,
       "word": "结束",
       "sentence1": "电影有一个令人惊讶的结局。",
-      "sentence2": "她很难过看到节目结束。"
+      "sentence2": "她很难过看到节目结束。",
+      "pronunciation": "/tɕjɛ˧˥ ʂu˥˩/"
     },
     {
       "id": 240,
       "word": "享受",
       "sentence1": "我喜欢在空闲时间读书。",
-      "sentence2": "她喜欢在公园里散步。"
+      "sentence2": "她喜欢在公园里散步。",
+      "pronunciation": "/ɕjɑŋ˧˩˧ ʂoʊ˥˩/"
     },
     {
       "id": 241,
       "word": "足够的",
       "sentence1": "我们有足够的食物给每个人吗？",
-      "sentence2": "她没有足够的钱买那条裙子。"
+      "sentence2": "她没有足够的钱买那条裙子。",
+      "pronunciation": "/tsu˧˥ koʊ˥˩ tɤ/"
     },
     {
       "id": 242,
       "word": "欧元",
       "sentence1": "价格是五十欧元。",
-      "sentence2": "她在银行把美元换成了欧元。"
+      "sentence2": "她在银行把美元换成了欧元。",
+      "pronunciation": "/oʊ˥ ɥœn˧˥/"
     },
     {
       "id": 243,
       "word": "甚至",
       "sentence1": "考试比我预期的还要容易。",
-      "sentence2": "她甚至没有说再见。"
+      "sentence2": "她甚至没有说再见。",
+      "pronunciation": "/ʂən˥˩ ʈʂɨ˥˩/"
     },
     {
       "id": 244,
       "word": "晚上",
       "sentence1": "我喜欢下班后在晚上放松。",
-      "sentence2": "她今晚有一个会议安排。"
+      "sentence2": "她今晚有一个会议安排。",
+      "pronunciation": "/wan˧˩˧ ʂɑŋ˥˩/"
     },
     {
       "id": 245,
       "word": "活动",
       "sentence1": "年度活动将于下个月举行。",
-      "sentence2": "她今年负责组织这个活动。"
+      "sentence2": "她今年负责组织这个活动。",
+      "pronunciation": "/xwɔ˧˥ tʊŋ˥˩/"
     },
     {
       "id": 246,
       "word": "曾经",
       "sentence1": "你去过巴黎吗？",
-      "sentence2": "她从来没有吃过寿司。"
+      "sentence2": "她从来没有吃过寿司。",
+      "pronunciation": "/tshɤŋ˧˥ tɕiŋ˥/"
     },
     {
       "id": 247,
       "word": "每个",
       "sentence1": "每个学生都必须提交作业。",
-      "sentence2": "她考试前每晚都学习。"
+      "sentence2": "她考试前每晚都学习。",
+      "pronunciation": "/meɪ˧˩˧ kɤ˥˩/"
     },
     {
       "id": 248,
       "word": "每个人",
       "sentence1": "每个人都被邀请参加派对。",
-      "sentence2": "她认识邻里的每个人。"
+      "sentence2": "她认识邻里的每个人。",
+      "pronunciation": "/meɪ˧˩˧ kɤ˥˩ ʐən˧˥/"
     },
     {
       "id": 249,
       "word": "每个人",
       "sentence1": "每个人有时都应该休息一下。",
-      "sentence2": "她相信每个人都应该有第二次机会。"
+      "sentence2": "她相信每个人都应该有第二次机会。",
+      "pronunciation": "/meɪ˧˩˧ kɤ˥˩ ʐən˧˥/"
     },
     {
       "id": 250,
       "word": "一切",
       "sentence1": "最后一切都会好起来的。",
-      "sentence2": "她打包了旅行所需的一切。"
+      "sentence2": "她打包了旅行所需的一切。",
+      "pronunciation": "/i˧˥ tɕhjɛ˥˩/"
     },
     {
       "id": 251,
       "word": "考试",
       "sentence1": "我明天有考试。",
-      "sentence2": "她为考试努力学习。"
+      "sentence2": "她为考试努力学习。",
+      "pronunciation": "/khɑʊ˧˩˧ ʂɨ˥˩/"
     },
     {
       "id": 252,
       "word": "例子",
       "sentence1": "你能给我举个例子吗？",
-      "sentence2": "她是成功人士的一个很好的例子。"
+      "sentence2": "她是成功人士的一个很好的例子。",
+      "pronunciation": "/li˥˩ tsɯ/"
     },
     {
       "id": 253,
       "word": "兴奋的",
       "sentence1": "我对这场音乐会很兴奋。",
-      "sentence2": "她很兴奋能见到她最喜欢的作家。"
+      "sentence2": "她很兴奋能见到她最喜欢的作家。",
+      "pronunciation": "/ɕiŋ˥ fən˥˩ tɤ/"
     },
     {
       "id": 254,
       "word": "令人兴奋的",
       "sentence1": "这部电影真的很刺激。",
-      "sentence2": "她有一份她热爱的令人兴奋的工作。"
+      "sentence2": "她有一份她热爱的令人兴奋的工作。",
+      "pronunciation": "/liŋ˥˩ ʐən˧˥ ɕiŋ˥ fən˥˩ tɤ/"
     },
     {
       "id": 255,
       "word": "锻炼",
       "sentence1": "我每天都尝试做一些锻炼。",
-      "sentence2": "她喜欢瑜伽作为一种锻炼方式。"
+      "sentence2": "她喜欢瑜伽作为一种锻炼方式。",
+      "pronunciation": "/twan˥˩ ljɛn˥˩/"
     },
     {
       "id": 256,
       "word": "昂贵的",
       "sentence1": "那条裙子对我来说太贵了。",
-      "sentence2": "她买了一块昂贵的手表作为礼物。"
+      "sentence2": "她买了一块昂贵的手表作为礼物。",
+      "pronunciation": "/ɑŋ˧˥ kweɪ˥˩ tɤ/"
     },
     {
       "id": 257,
       "word": "解释",
       "sentence1": "你能给我解释一下规则吗？",
-      "sentence2": "她花时间解释了她的观点。"
+      "sentence2": "她花时间解释了她的观点。",
+      "pronunciation": "/tɕjɛ˧˩˧ ʂɨ˥˩/"
     },
     {
       "id": 258,
       "word": "额外的",
       "sentence1": "我需要一些额外的时间来完成这个。",
-      "sentence2": "她为旅行带了额外的零食。"
+      "sentence2": "她为旅行带了额外的零食。",
+      "pronunciation": "/ɤ˧˥ waɪ˥˩ tɤ/"
     },
     {
       "id": 259,
       "word": "眼睛",
       "sentence1": "她有美丽的蓝眼睛。",
-      "sentence2": "我需要检查我的眼睛。"
+      "sentence2": "我需要检查我的眼睛。",
+      "pronunciation": "/jɛn˧˩˧ tɕiŋ˥/"
     },
     {
       "id": 260,
       "word": "脸",
       "sentence1": "他有一张和蔼的脸。",
-      "sentence2": "她无法掩饰脸上的表情。"
+      "sentence2": "她无法掩饰脸上的表情。",
+      "pronunciation": "/ljɛn˧˩˧/"
     },
     {
       "id": 261,
       "word": "事实",
       "sentence1": "地球围绕太阳运行是一个事实。",
-      "sentence2": "她知道很多有趣的事实。"
+      "sentence2": "她知道很多有趣的事实。",
+      "pronunciation": "/ʂɨ˥˩ ʂɨ˧˥/"
     },
     {
       "id": 262,
       "word": "摔倒/落下",
       "sentence1": "小心不要摔倒。",
-      "sentence2": "秋天树叶从树上落下。"
+      "sentence2": "秋天树叶从树上落下。",
+      "pronunciation": "/ʂwaɪ˥ tɑʊ˧˩˧/; /lwɔ˥˩ ɕja˥˩/"
     },
     {
       "id": 263,
       "word": "错误的",
       "sentence1": "那个陈述是错误的。",
-      "sentence2": "她意识到自己的信念是错误的。"
+      "sentence2": "她意识到自己的信念是错误的。",
+      "pronunciation": "/tshwɔ˥˩ u˥˩ tɤ/"
     },
     {
       "id": 264,
       "word": "家庭",
       "sentence1": "我的家庭对我非常重要。",
-      "sentence2": "她来自一个大家庭。"
+      "sentence2": "她来自一个大家庭。",
+      "pronunciation": "/tɕja˥ thiŋ˧˥/"
     },
     {
       "id": 265,
       "word": "著名的",
       "sentence1": "他是一位著名的演员。",
-      "sentence2": "她想有一天成名。"
+      "sentence2": "她想有一天成名。",
+      "pronunciation": "/ʈʂu˥˩ miŋ˧˥ tɤ/"
     },
     {
       "id": 266,
       "word": "极好的",
       "sentence1": "从顶部看到的景色太棒了。",
-      "sentence2": "她在这个项目上做得非常出色。"
+      "sentence2": "她在这个项目上做得非常出色。",
+      "pronunciation": "/tɕi˧˥ xɑʊ˧˩˧ tɤ/"
     },
     {
       "id": 267,
       "word": "远的",
       "sentence1": "商店离我家很远。",
-      "sentence2": "她住在另一个城市很远的地方。"
+      "sentence2": "她住在另一个城市很远的地方。",
+      "pronunciation": "/ɥœn˧˩˧ tɤ/"
     },
     {
       "id": 268,
       "word": "农场",
       "sentence1": "他们在乡下有一个农场。",
-      "sentence2": "她喜欢夏天去农场。"
+      "sentence2": "她喜欢夏天去农场。",
+      "pronunciation": "/nʊŋ˧˥ ʈʂhɑŋ˧˩˧/"
     },
     {
       "id": 269,
       "word": "农民",
       "sentence1": "农民在田里辛勤劳动。",
-      "sentence2": "她想嫁给一个农民。"
+      "sentence2": "她想嫁给一个农民。",
+      "pronunciation": "/nʊŋ˧˥ min˧˥/"
     },
     {
       "id": 270,
       "word": "快的",
       "sentence1": "他是一个跑得快的人。",
-      "sentence2": "她开着一辆快车。"
+      "sentence2": "她开着一辆快车。",
+      "pronunciation": "/khwaɪ˥˩ tɤ/"
     },
     {
       "id": 271,
       "word": "胖的",
       "sentence1": "那只猫又胖又懒。",
-      "sentence2": "她正在节食减肥。"
+      "sentence2": "她正在节食减肥。",
+      "pronunciation": "/phɑŋ˥˩ tɤ/"
     },
     {
       "id": 272,
       "word": "父亲",
       "sentence1": "我父亲是一名医生。",
-      "sentence2": "她非常爱她的父亲。"
+      "sentence2": "她非常爱她的父亲。",
+      "pronunciation": "/fu˥˩ tɕhin˥/"
     },
     {
       "id": 273,
       "word": "最喜欢的",
       "sentence1": "我最喜欢的颜色是蓝色。",
-      "sentence2": "她有一本经常读的最喜欢的书。"
+      "sentence2": "她有一本经常读的最喜欢的书。",
+      "pronunciation": "/tsweɪ˥˩ ɕi˧˩˧ xwan˥ tɤ/"
     },
     {
       "id": 274,
       "word": "二月",
       "sentence1": "二月是一年中的第二个月。",
-      "sentence2": "情人节在二月。"
+      "sentence2": "情人节在二月。",
+      "pronunciation": "/ɑɻ˥˩ ɥœ˥˩/"
     },
     {
       "id": 275,
       "word": "感觉",
       "sentence1": "我今天感到很高兴。",
-      "sentence2": "她昨天感觉不舒服。"
+      "sentence2": "她昨天感觉不舒服。",
+      "pronunciation": "/kan˧˩˧ tɕɥœ˧˥/"
     },
     {
       "id": 276,
       "word": "感觉",
       "sentence1": "我有一种感觉有些不对劲。",
-      "sentence2": "她在信中表达了她的感受。"
+      "sentence2": "她在信中表达了她的感受。",
+      "pronunciation": "/kan˧˩˧ tɕɥœ˧˥/"
     },
     {
       "id": 277,
       "word": "节日",
       "sentence1": "音乐节太棒了。",
-      "sentence2": "她期待着一年一度的节日。"
+      "sentence2": "她期待着一年一度的节日。",
+      "pronunciation": "/tɕjɛ˧˥ ʐɨ˥˩/"
     },
     {
       "id": 278,
       "word": "几个",
       "sentence1": "我在这个城市有几个朋友。",
-      "sentence2": "她在旅途中拍了几张照片。"
+      "sentence2": "她在旅途中拍了几张照片。",
+      "pronunciation": "/tɕi˧˩˧ kɤ˥˩/"
     },
     {
       "id": 279,
       "word": "十五",
       "sentence1": "我班上有十五个学生。",
-      "sentence2": "她下个月就十五岁了。"
+      "sentence2": "她下个月就十五岁了。",
+      "pronunciation": "/ʂɨ˧˥ u˧˩˧/"
     },
     {
       "id": 280,
       "word": "第五",
       "sentence1": "他获得了第五名。",
-      "sentence2": "系列中的第五本书是我的最爱。"
+      "sentence2": "系列中的第五本书是我的最爱。",
+      "pronunciation": "/ti˥˩ u˧˩˧/"
     },
     {
       "id": 281,
       "word": "五十",
       "sentence1": "美国有五十个州。",
-      "sentence2": "她五十岁了。"
+      "sentence2": "她五十岁了。",
+      "pronunciation": "/u˧˩˧ ʂɨ˧˥/"
     },
     {
       "id": 282,
       "word": "填充",
       "sentence1": "请填写这张表格。",
-      "sentence2": "她需要给车加油。"
+      "sentence2": "她需要给车加油。",
+      "pronunciation": "/thjɛn˧˥ ʈʂhʊŋ˥/"
     },
     {
       "id": 283,
       "word": "电影",
       "sentence1": "我昨晚看了一部很棒的电影。",
-      "sentence2": "她想有一天拍一部电影。"
+      "sentence2": "她想有一天拍一部电影。",
+      "pronunciation": "/tjɛn˥˩ iŋ˧˩˧/"
     },
     {
       "id": 284,
       "word": "最终的",
       "sentence1": "期末考试是下周。",
-      "sentence2": "她为期末考试努力学习。"
+      "sentence2": "她为期末考试努力学习。",
+      "pronunciation": "/tsweɪ˥˩ ʈʂʊŋ˥ tɤ/"
     },
     {
       "id": 285,
       "word": "找到",
       "sentence1": "我找不到我的钥匙。",
-      "sentence2": "她帮我找到了路。"
+      "sentence2": "她帮我找到了路。",
+      "pronunciation": "/ʈʂɑʊ˧˩˧ tɑʊ˥˩/"
     },
     {
       "id": 286,
       "word": "好的",
       "sentence1": "我感觉很好，谢谢。",
-      "sentence2": "她有一套精美的邮票收藏。"
+      "sentence2": "她有一套精美的邮票收藏。",
+      "pronunciation": "/xɑʊ˧˩˧ tɤ/"
     },
     {
       "id": 287,
       "word": "完成",
       "sentence1": "请完成你的作业。",
-      "sentence2": "她明天会完成这个项目。"
+      "sentence2": "她明天会完成这个项目。",
+      "pronunciation": "/wan˧˥ ʈʂhɤŋ˧˥/"
     },
     {
       "id": 288,
       "word": "火",
       "sentence1": "火很热。",
-      "sentence2": "她害怕火。"
+      "sentence2": "她害怕火。",
+      "pronunciation": "/xwɔ˧˩˧/"
     },
     {
       "id": 289,
       "word": "第一",
       "sentence1": "她是第一个到达的。",
-      "sentence2": "书的第一章很有趣。"
+      "sentence2": "书的第一章很有趣。",
+      "pronunciation": "/ti˥˩ i˥/"
     },
     {
       "id": 290,
       "word": "鱼",
       "sentence1": "我钓到了一条大鱼。",
-      "sentence2": "她喜欢晚餐吃鱼。"
+      "sentence2": "她喜欢晚餐吃鱼。",
+      "pronunciation": "/y˧˥/"
     },
     {
       "id": 291,
       "word": "五",
       "sentence1": "我有五个苹果。",
-      "sentence2": "她五岁了。"
+      "sentence2": "她五岁了。",
+      "pronunciation": "/u˧˩˧/"
     },
     {
       "id": 292,
       "word": "平坦的/公寓",
       "sentence1": "道路平坦且笔直。",
-      "sentence2": "她住在城里的一套公寓里。"
+      "sentence2": "她住在城里的一套公寓里。",
+      "pronunciation": "/phiŋ˧˥ than˧˩˧ tɤ/; /kʊŋ˥ y˥˩/"
     },
     {
       "id": 293,
       "word": "航班",
       "sentence1": "我的航班下午6点起飞。",
-      "sentence2": "她在飞往巴黎的航班上。"
+      "sentence2": "她在飞往巴黎的航班上。",
+      "pronunciation": "/xɑŋ˧˥ pan˥/"
     },
     {
       "id": 294,
       "word": "地板",
       "sentence1": "书在地板上。",
-      "sentence2": "她昨天打扫了地板。"
+      "sentence2": "她昨天打扫了地板。",
+      "pronunciation": "/ti˥˩ pan˧˩˧/"
     },
     {
       "id": 295,
       "word": "花",
       "sentence1": "我买了一朵漂亮的花。",
-      "sentence2": "她喜欢在花园里种花。"
+      "sentence2": "她喜欢在花园里种花。",
+      "pronunciation": "/xwa˥/"
     },
     {
       "id": 296,
       "word": "飞",
       "sentence1": "我想飞到纽约。",
-      "sentence2": "她放风筝放得很好。"
+      "sentence2": "她放风筝放得很好。",
+      "pronunciation": "/feɪ˥/"
     },
     {
       "id": 297,
       "word": "跟随",
       "sentence1": "请跟我到车站。",
-      "sentence2": "她决定追随自己的梦想。"
+      "sentence2": "她决定追随自己的梦想。",
+      "pronunciation": "/kən˥ sweɪ˧˥/"
     },
     {
       "id": 298,
       "word": "食物",
       "sentence1": "我喜欢意大利菜。",
-      "sentence2": "她准备了一顿美味的晚餐。"
+      "sentence2": "她准备了一顿美味的晚餐。",
+      "pronunciation": "/ʂɨ˧˥ u˥˩/"
     },
     {
       "id": 299,
       "word": "脚",
       "sentence1": "我的脚疼。",
-      "sentence2": "她不小心踩到了我的脚。"
+      "sentence2": "她不小心踩到了我的脚。",
+      "pronunciation": "/tɕjɑʊ˧˩˧/"
     },
     {
       "id": 300,
       "word": "足球",
       "sentence1": "我周末踢足球。",
-      "sentence2": "她是足球的忠实粉丝。"
+      "sentence2": "她是足球的忠实粉丝。",
+      "pronunciation": "/tsu˧˥ tɕhjoʊ˧˥/"
     },
     {
       "id": 301,
       "word": "给/为了",
       "sentence1": "这份礼物是给你的。",
-      "sentence2": "她为家人努力工作。"
+      "sentence2": "她为家人努力工作。",
+      "pronunciation": "/keɪ˧˩˧/; /weɪ˧˥ lɤ/"
     },
     {
       "id": 302,
       "word": "忘记",
       "sentence1": "别忘了给我打电话。",
-      "sentence2": "她总是忘记把钥匙放在哪里。"
+      "sentence2": "她总是忘记把钥匙放在哪里。",
+      "pronunciation": "/wɑŋ˥˩ tɕi˥˩/"
     },
     {
       "id": 303,
       "word": "表格",
       "sentence1": "请填写这张表格。",
-      "sentence2": "她在网上提交了表格。"
+      "sentence2": "她在网上提交了表格。",
+      "pronunciation": "/pjɑʊ˧˩˧ kɤ˧˥/"
     },
     {
       "id": 304,
       "word": "四十",
       "sentence1": "学校里有四十名学生。",
-      "sentence2": "她四十岁了。"
+      "sentence2": "她四十岁了。",
+      "pronunciation": "/sɯ˥˩ ʂɨ˧˥/"
     },
     {
       "id": 305,
       "word": "四",
       "sentence1": "我有四个兄弟。",
-      "sentence2": "四季都很美丽。"
+      "sentence2": "四季都很美丽。",
+      "pronunciation": "/sɯ˥˩/"
     },
     {
       "id": 306,
       "word": "十四",
       "sentence1": "她十四岁了。",
-      "sentence2": "十四是我最喜欢的数字。"
+      "sentence2": "十四是我最喜欢的数字。",
+      "pronunciation": "/ʂɨ˧˥ sɯ˥˩/"
     },
     {
       "id": 307,
       "word": "第四",
       "sentence1": "他获得了第四名。",
-      "sentence2": "七月四日是独立日。"
+      "sentence2": "七月四日是独立日。",
+      "pronunciation": "/ti˥˩ sɯ˥˩/"
     },
     {
       "id": 308,
       "word": "免费的/空闲的",
       "sentence1": "博物馆周日免费。",
-      "sentence2": "她下午有空。"
+      "sentence2": "她下午有空。",
+      "pronunciation": "/mjɛn˧˩˧ feɪ˥˩ tɤ/; /khʊŋ˥ ɕjɛn˧˥ tɤ/"
     },
     {
       "id": 309,
       "word": "星期五",
       "sentence1": "星期五是我最喜欢的一天。",
-      "sentence2": "她周五有一个会议。"
+      "sentence2": "她周五有一个会议。",
+      "pronunciation": "/ɕiŋ˥ tɕhi˥ u˧˩˧/"
     },
     {
       "id": 310,
       "word": "朋友",
       "sentence1": "我最好的朋友要来了。",
-      "sentence2": "她是一个忠诚的朋友。"
+      "sentence2": "她是一个忠诚的朋友。",
+      "pronunciation": "/phɤŋ˧˥ joʊ˧˩˧/"
     },
     {
       "id": 311,
       "word": "友好的",
       "sentence1": "这只狗很友好。",
-      "sentence2": "她给了我一个友好的微笑。"
+      "sentence2": "她给了我一个友好的微笑。",
+      "pronunciation": "/joʊ˧˩˧ xɑʊ˧˩˧ tɤ/"
     },
     {
       "id": 312,
       "word": "来自",
       "sentence1": "我来自土耳其。",
-      "sentence2": "她收到了朋友的一封信。"
+      "sentence2": "她收到了朋友的一封信。",
+      "pronunciation": "/laɪ˧˥ tsɯ˥˩/"
     },
     {
       "id": 313,
       "word": "前面",
       "sentence1": "车停在房子前面。",
-      "sentence2": "她站在队伍的前面。"
+      "sentence2": "她站在队伍的前面。",
+      "pronunciation": "/tɕhjɛn˧˥ mjɛn˥˩/"
     },
     {
       "id": 314,
       "word": "水果",
       "sentence1": "我喜欢早餐吃水果。",
-      "sentence2": "她在市场上买了一些新鲜水果。"
+      "sentence2": "她在市场上买了一些新鲜水果。",
+      "pronunciation": "/ʂweɪ˧˩˧ kwɔ˧˩˧/"
     },
     {
       "id": 315,
       "word": "满的",
       "sentence1": "杯子里装满了水。",
-      "sentence2": "她今天的日程安排很满。"
+      "sentence2": "她今天的日程安排很满。",
+      "pronunciation": "/man˧˩˧ tɤ/"
     },
     {
       "id": 316,
       "word": "有趣",
       "sentence1": "我们在派对上玩得很开心。",
-      "sentence2": "她喜欢户外有趣的活动。"
+      "sentence2": "她喜欢户外有趣的活动。",
+      "pronunciation": "/joʊ˧˩˧ tɕhy˥˩/"
     },
     {
       "id": 317,
       "word": "有趣的",
       "sentence1": "那部电影真的很有趣。",
-      "sentence2": "她有一种有趣的幽默感。"
+      "sentence2": "她有一种有趣的幽默感。",
+      "pronunciation": "/joʊ˧˩˧ tɕhy˥˩ tɤ/"
     },
     {
       "id": 318,
       "word": "未来",
       "sentence1": "我对未来感到兴奋。",
-      "sentence2": "她对未来有很大的计划。"
+      "sentence2": "她对未来有很大的计划。",
+      "pronunciation": "/weɪ˥˩ laɪ˧˥/"
     },
     {
       "id": 319,
       "word": "游戏",
       "sentence1": "我喜欢玩电子游戏。",
-      "sentence2": "她昨晚赢得了比赛。"
+      "sentence2": "她昨晚赢得了比赛。",
+      "pronunciation": "/joʊ˧˥ ɕi˥˩/"
     },
     {
       "id": 320,
       "word": "花园",
       "sentence1": "她后院有一个美丽的花园。",
-      "sentence2": "她喜欢在花园里种花。"
+      "sentence2": "她喜欢在花园里种花。",
+      "pronunciation": "/xwa˥ ɥœn˧˥/"
     },
     {
       "id": 321,
       "word": "地理",
       "sentence1": "我在学校学习了地理。",
-      "sentence2": "她对世界地理很感兴趣。"
+      "sentence2": "她对世界地理很感兴趣。",
+      "pronunciation": "/ti˥˩ li˧˩˧/"
     },
     {
       "id": 322,
       "word": "买/得到",
       "sentence1": "我需要买一些杂货。",
-      "sentence2": "她很快会找到一份新工作。"
+      "sentence2": "她很快会找到一份新工作。",
+      "pronunciation": "/maɪ˧˩˧/; /tɤ˧˥ tɑʊ˥˩/"
     },
     {
       "id": 323,
       "word": "女孩",
       "sentence1": "这个女孩正在读书。",
-      "sentence2": "她是一个聪明的女孩。"
+      "sentence2": "她是一个聪明的女孩。",
+      "pronunciation": "/ny˧˩˧ xaɪ˧˥/"
     },
     {
       "id": 324,
       "word": "女朋友",
       "sentence1": "我的女朋友要来了。",
-      "sentence2": "她是一个支持人的女朋友。"
+      "sentence2": "她是一个支持人的女朋友。",
+      "pronunciation": "/ny˧˩˧ phɤŋ˧˥ joʊ˧˩˧/"
     },
     {
       "id": 325,
       "word": "给",
       "sentence1": "我想给你一份礼物。",
-      "sentence2": "她送给我一本书作为生日礼物。"
+      "sentence2": "她送给我一本书作为生日礼物。",
+      "pronunciation": "/keɪ˧˩˧/"
     },
     {
       "id": 326,
       "word": "玻璃杯",
       "sentence1": "小心那个玻璃杯。",
-      "sentence2": "她从玻璃杯里喝水。"
+      "sentence2": "她从玻璃杯里喝水。",
+      "pronunciation": "/pwɔ˥ li˧˥ peɪ˥/"
     },
     {
       "id": 327,
       "word": "去",
       "sentence1": "我需要去商店。",
-      "sentence2": "她稍后会去参加派对。"
+      "sentence2": "她稍后会去参加派对。",
+      "pronunciation": "/tɕhy˥˩/"
     },
     {
       "id": 328,
       "word": "好的",
       "sentence1": "这是一个好主意。",
-      "sentence2": "她是一个好学生。"
+      "sentence2": "她是一个好学生。",
+      "pronunciation": "/xɑʊ˧˩˧ tɤ/"
     },
     {
       "id": 329,
       "word": "再见",
       "sentence1": "我向朋友道别。",
-      "sentence2": "她离开时挥手告别。"
+      "sentence2": "她离开时挥手告别。",
+      "pronunciation": "/tsaɪ˥˩ tɕjɛn˥˩/"
     },
     {
       "id": 330,
       "word": "祖父",
       "sentence1": "我的祖父非常睿智。",
-      "sentence2": "他讲述关于过去的精彩故事。"
+      "sentence2": "他讲述关于过去的精彩故事。",
+      "pronunciation": "/tsu˧˩˧ fu˥˩/"
     },
     {
       "id": 331,
       "word": "祖母",
       "sentence1": "我的祖母做最好吃的饼干。",
-      "sentence2": "她喜欢讲述童年的故事。"
+      "sentence2": "她喜欢讲述童年的故事。",
+      "pronunciation": "/tsu˧˩˧ mu˧˩˧/"
     },
     {
       "id": 332,
       "word": "祖父母",
       "sentence1": "祖父母经常宠坏他们的孙子孙女。",
-      "sentence2": "他们与孙辈有特殊的联系。"
+      "sentence2": "他们与孙辈有特殊的联系。",
+      "pronunciation": "/tsu˧˩˧ fu˥˩ mu˧˩˧/"
     },
     {
       "id": 333,
       "word": "伟大的/棒的",
       "sentence1": "你在这个项目上做得很棒。",
-      "sentence2": "她对未来有很好的想法。"
+      "sentence2": "她对未来有很好的想法。",
+      "pronunciation": "/weɪ˧˩˧ ta˥˩ tɤ/; /pɑŋ˥˩ tɤ/"
     },
     {
       "id": 334,
       "word": "绿色的",
       "sentence1": "草是绿色的。",
-      "sentence2": "她穿了一条绿色的裙子。"
+      "sentence2": "她穿了一条绿色的裙子。",
+      "pronunciation": "/ly˥˩ sɤ˥˩ tɤ/"
     },
     {
       "id": 335,
       "word": "灰色的",
       "sentence1": "今天天空是灰色的。",
-      "sentence2": "她有一只灰色的猫。"
+      "sentence2": "她有一只灰色的猫。",
+      "pronunciation": "/xweɪ˥ sɤ˥˩ tɤ/"
     },
     {
       "id": 336,
       "word": "组",
       "sentence1": "我们组成了一个学习小组。",
-      "sentence2": "她是小组的负责人。"
+      "sentence2": "她是小组的负责人。",
+      "pronunciation": "/tsu˧˩˧/"
     },
     {
       "id": 337,
       "word": "成长",
       "sentence1": "植物需要水来生长。",
-      "sentence2": "她看着孩子们成长。"
+      "sentence2": "她看着孩子们成长。",
+      "pronunciation": "/ʈʂhɤŋ˧˥ ʈʂɑŋ˧˩˧/"
     },
     {
       "id": 338,
       "word": "猜测",
       "sentence1": "你能猜出答案吗？",
-      "sentence2": "她猜得很好。"
+      "sentence2": "她猜得很好。",
+      "pronunciation": "/tshaɪ˥ tshɤ˥˩/"
     },
     {
       "id": 339,
       "word": "吉他",
       "sentence1": "我喜欢弹吉他。",
-      "sentence2": "她正在学习弹吉他。"
+      "sentence2": "她正在学习弹吉他。",
+      "pronunciation": "/tɕi˧˥ tha˥/"
     },
     {
       "id": 340,
       "word": "健身房",
       "sentence1": "我每天早上去健身房。",
-      "sentence2": "她在健身房锻炼。"
+      "sentence2": "她在健身房锻炼。",
+      "pronunciation": "/tɕjɛn˥˩ ʂən˥ fɑŋ˧˥/"
     },
     {
       "id": 341,
       "word": "头发",
       "sentence1": "她有一头长发。",
-      "sentence2": "我需要剪头发。"
+      "sentence2": "我需要剪头发。",
+      "pronunciation": "/thoʊ˧˥ fa˥/"
     },
     {
       "id": 342,
       "word": "一半",
       "sentence1": "我吃了一半披萨。",
-      "sentence2": "她读了一半的书。"
+      "sentence2": "她读了一半的书。",
+      "pronunciation": "/i˧˥ pan˥˩/"
     },
     {
       "id": 343,
       "word": "手",
       "sentence1": "他挥了挥手。",
-      "sentence2": "她紧紧握住他的手。"
+      "sentence2": "她紧紧握住他的手。",
+      "pronunciation": "/ʂoʊ˧˩˧/"
     },
     {
       "id": 344,
       "word": "发生",
       "sentence1": "接下来会发生什么？",
-      "sentence2": "我没想到会发生这种事。"
+      "sentence2": "我没想到会发生这种事。",
+      "pronunciation": "/fa˥ ʂɤŋ˥/"
     },
     {
       "id": 345,
       "word": "快乐的",
       "sentence1": "她是一个快乐的人。",
-      "sentence2": "我今天感到很快乐。"
+      "sentence2": "我今天感到很快乐。",
+      "pronunciation": "/khwaɪ˥˩ lɤ˥˩ tɤ/"
     },
     {
       "id": 346,
       "word": "困难的/努力的",
       "sentence1": "这个练习很难。",
-      "sentence2": "她每天都努力工作。"
+      "sentence2": "她每天都努力工作。",
+      "pronunciation": "/khwən˥˩ nan˧˥ tɤ/; /nu˧˩˧ li˥˩ tɤ/"
     },
     {
       "id": 347,
       "word": "帽子",
       "sentence1": "他戴着帽子去参加派对。",
-      "sentence2": "她买了一顶新帽子。"
+      "sentence2": "她买了一顶新帽子。",
+      "pronunciation": "/mɑʊ˥˩ tsɯ˧˩˧/"
     },
     {
       "id": 348,
       "word": "讨厌",
       "sentence1": "我讨厌排队等候。",
-      "sentence2": "她讨厌做作业。"
+      "sentence2": "她讨厌做作业。",
+      "pronunciation": "/thɑʊ˧˩˧ jɛn˥˩/"
     },
     {
       "id": 349,
       "word": "有",
       "sentence1": "我有一只狗。",
-      "sentence2": "她有一只猫。"
+      "sentence2": "她有一只猫。",
+      "pronunciation": "/joʊ˧˩˧/"
     },
     {
       "id": 350,
       "word": "必须",
       "sentence1": "我必须为考试学习。",
-      "sentence2": "她必须去上班。"
+      "sentence2": "她必须去上班。",
+      "pronunciation": "/pi˥˩ ɕy˥/"
     },
     {
       "id": 351,
       "word": "他",
       "sentence1": "他是我的兄弟。",
-      "sentence2": "我昨天看到他了。"
+      "sentence2": "我昨天看到他了。",
+      "pronunciation": "/tha˥/"
     },
     {
       "id": 352,
       "word": "头",
       "sentence1": "她点了点头。",
-      "sentence2": "他头疼。"
+      "sentence2": "他头疼。",
+      "pronunciation": "/thoʊ˧˥/"
     },
     {
       "id": 353,
       "word": "健康",
       "sentence1": "健康非常重要。",
-      "sentence2": "她很关心自己的健康。"
+      "sentence2": "她很关心自己的健康。",
+      "pronunciation": "/tɕjɛn˥˩ khɑŋ˥/"
     },
     {
       "id": 354,
       "word": "健康的",
       "sentence1": "吃水果和蔬菜是健康饮食的一部分。",
-      "sentence2": "她看起来健康又健美。"
+      "sentence2": "她看起来健康又健美。",
+      "pronunciation": "/tɕjɛn˥˩ khɑŋ˥ tɤ/"
     },
     {
       "id": 355,
       "word": "听到",
       "sentence1": "我能听到音乐。",
-      "sentence2": "她听到了一个奇怪的声音。"
+      "sentence2": "她听到了一个奇怪的声音。",
+      "pronunciation": "/thiŋ˥ tɑʊ˥˩/"
     },
     {
       "id": 356,
       "word": "你好",
       "sentence1": "你好，你怎么样？",
-      "sentence2": "她挥手说你好。"
+      "sentence2": "她挥手说你好。",
+      "pronunciation": "/ni˧˩˧ xɑʊ˧˩˧/"
     },
     {
       "id": 357,
       "word": "帮助",
       "sentence1": "你能帮我吗？",
-      "sentence2": "她总是帮助她的朋友。"
+      "sentence2": "她总是帮助她的朋友。",
+      "pronunciation": "/pɑŋ˥ ʈʂu˥˩/"
     },
     {
       "id": 358,
       "word": "她的",
       "sentence1": "这是她的书。",
-      "sentence2": "我在公园看到了她。"
+      "sentence2": "我在公园看到了她。",
+      "pronunciation": "/tha˥ tɤ/"
     },
     {
       "id": 359,
       "word": "这里",
       "sentence1": "请过来。",
-      "sentence2": "她现在不在这里。"
+      "sentence2": "她现在不在这里。",
+      "pronunciation": "/ʈʂɤ˥˩ li˧˩˧/"
     },
     {
       "id": 360,
       "word": "嘿",
       "sentence1": "嘿，怎么了？",
-      "sentence2": "她说了声嘿，笑了笑。"
+      "sentence2": "她说了声嘿，笑了笑。",
+      "pronunciation": "/xeɪ˥/"
     },
     {
       "id": 361,
       "word": "嗨",
       "sentence1": "嗨，很高兴见到你！",
-      "sentence2": "她挥手说嗨。"
+      "sentence2": "她挥手说嗨。",
+      "pronunciation": "/xaɪ˥/"
     },
     {
       "id": 362,
       "word": "高的",
       "sentence1": "这座建筑非常高。",
-      "sentence2": "她够着高架子。"
+      "sentence2": "她够着高架子。",
+      "pronunciation": "/kɑʊ˥ tɤ/"
     },
     {
       "id": 363,
       "word": "他",
       "sentence1": "我在公园看到了他。",
-      "sentence2": "她给了他一份礼物。"
+      "sentence2": "她给了他一份礼物。",
+      "pronunciation": "/tha˥/"
     },
     {
       "id": 364,
       "word": "他的",
       "sentence1": "这是他的车。",
-      "sentence2": "我见到了他的姐姐。"
+      "sentence2": "我见到了他的姐姐。",
+      "pronunciation": "/tha˥ tɤ/"
     },
     {
       "id": 365,
       "word": "历史",
       "sentence1": "历史很迷人。",
-      "sentence2": "她喜欢学习历史。"
+      "sentence2": "她喜欢学习历史。",
+      "pronunciation": "/li˥˩ ʂɨ˧˩˧/"
     },
     {
       "id": 366,
       "word": "爱好",
       "sentence1": "我的爱好是绘画。",
-      "sentence2": "她有很多爱好。"
+      "sentence2": "她有很多爱好。",
+      "pronunciation": "/aɪ˥˩ xɑʊ˧˩˧/"
     },
     {
       "id": 367,
       "word": "假日",
       "sentence1": "我们要去度假。",
-      "sentence2": "她喜欢暑假。"
+      "sentence2": "她喜欢暑假。",
+      "pronunciation": "/tɕja˧˩˧ ʐɨ˥˩/"
     },
     {
       "id": 368,
       "word": "家",
       "sentence1": "欢迎回家！",
-      "sentence2": "她正在打扫她的家。"
+      "sentence2": "她正在打扫她的家。",
+      "pronunciation": "/tɕja˥/"
     },
     {
       "id": 369,
       "word": "家庭作业",
       "sentence1": "我有很多家庭作业。",
-      "sentence2": "她帮她弟弟做作业。"
+      "sentence2": "她帮她弟弟做作业。",
+      "pronunciation": "/tɕja˥ thiŋ˧˥ tswɔ˥˩ jɛ˥˩/"
     },
     {
       "id": 370,
       "word": "希望",
       "sentence1": "我希望你早日康复。",
-      "sentence2": "她对未来充满希望。"
+      "sentence2": "她对未来充满希望。",
+      "pronunciation": "/ɕi˥ wɑŋ˥˩/"
     },
     {
       "id": 371,
       "word": "马",
       "sentence1": "马跑得很快。",
-      "sentence2": "她喜欢骑马。"
+      "sentence2": "她喜欢骑马。",
+      "pronunciation": "/ma˧˩˧/"
     },
     {
       "id": 372,
       "word": "医院",
       "sentence1": "他在医院里。",
-      "sentence2": "她在医院工作。"
+      "sentence2": "她在医院工作。",
+      "pronunciation": "/i˧˥ ɥœn˥˩/"
     },
     {
       "id": 373,
       "word": "酒店",
       "sentence1": "我们住在一家不错的酒店。",
-      "sentence2": "她为假期预订了一家酒店。"
+      "sentence2": "她为假期预订了一家酒店。",
+      "pronunciation": "/tɕjoʊ˧˩˧ tjɛn˥˩/"
     },
     {
       "id": 374,
       "word": "小时",
       "sentence1": "到那里需要一个小时。",
-      "sentence2": "她一小时后回来。"
+      "sentence2": "她一小时后回来。",
+      "pronunciation": "/ɕjɑʊ˧˩˧ ʂɨ˧˥/"
     },
     {
       "id": 375,
       "word": "热的",
       "sentence1": "咖啡是热的。",
-      "sentence2": "她喜欢炎热的天气。"
+      "sentence2": "她喜欢炎热的天气。",
+      "pronunciation": "/ʐɤ˥˩ tɤ/"
     },
     {
       "id": 376,
       "word": "房子",
       "sentence1": "这是我的房子。",
-      "sentence2": "她想买一栋房子。"
+      "sentence2": "她想买一栋房子。",
+      "pronunciation": "/fɑŋ˧˥ tsɯ˧˩˧/"
     },
     {
       "id": 377,
       "word": "如何",
       "sentence1": "你好吗？",
-      "sentence2": "她问怎么做。"
+      "sentence2": "她问怎么做。",
+      "pronunciation": "/ʐu˧˥ xɤ˧˥/"
     },
     {
       "id": 378,
       "word": "然而",
       "sentence1": "下着雨，然而我们还是出去了。",
-      "sentence2": "她很忙，然而她会帮助你。"
+      "sentence2": "她很忙，然而她会帮助你。",
+      "pronunciation": "/ʐan˧˥ ɑɻ˧˥/"
     },
     {
       "id": 379,
       "word": "一百",
       "sentence1": "学校里有一百名学生。",
-      "sentence2": "她有一百美元。"
+      "sentence2": "她有一百美元。",
+      "pronunciation": "/i˥˩ paɪ˧˩˧/"
     },
     {
       "id": 380,
       "word": "饿的",
       "sentence1": "我饿了。",
-      "sentence2": "她运动后总是感到饿。"
+      "sentence2": "她运动后总是感到饿。",
+      "pronunciation": "/ɤ˥˩ tɤ/"
     },
     {
       "id": 381,
       "word": "丈夫",
       "sentence1": "我丈夫是一名医生。",
-      "sentence2": "她非常爱她的丈夫。"
+      "sentence2": "她非常爱她的丈夫。",
+      "pronunciation": "/ʈʂɑŋ˥˩ fu˥/"
     },
     {
       "id": 382,
       "word": "冰",
       "sentence1": "冰在融化。",
-      "sentence2": "她在饮料里加了冰。"
+      "sentence2": "她在饮料里加了冰。",
+      "pronunciation": "/piŋ˥/"
     },
     {
       "id": 383,
       "word": "冰淇淋",
       "sentence1": "我喜欢冰淇淋。",
-      "sentence2": "她给孩子们买了冰淇淋。"
+      "sentence2": "她给孩子们买了冰淇淋。",
+      "pronunciation": "/piŋ˥ tɕhi˧˥ lin˧˥/"
     },
     {
       "id": 384,
       "word": "主意",
       "sentence1": "那是一个好主意！",
-      "sentence2": "她对这个项目有一个有趣的想法。"
+      "sentence2": "她对这个项目有一个有趣的想法。",
+      "pronunciation": "/ʈʂu˧˩˧ i˥˩/"
     },
     {
       "id": 385,
       "word": "如果",
       "sentence1": "如果下雨，我们就待在里面。",
-      "sentence2": "她问我是否想加入。"
+      "sentence2": "她问我是否想加入。",
+      "pronunciation": "/ʐu˧˥ kwɔ˧˩˧/"
     },
     {
       "id": 386,
       "word": "想象",
       "sentence1": "我可以想象一个更美好的世界。",
-      "sentence2": "她喜欢想象不同的场景。"
+      "sentence2": "她喜欢想象不同的场景。",
+      "pronunciation": "/ɕjɑŋ˧˩˧ ɕjɑŋ˥˩/"
     },
     {
       "id": 387,
       "word": "重要的",
       "sentence1": "这是一个重要的决定。",
-      "sentence2": "她知道如何优先处理重要任务。"
+      "sentence2": "她知道如何优先处理重要任务。",
+      "pronunciation": "/ʈʂʊŋ˥˩ jɑʊ˥˩ tɤ/"
     },
     {
       "id": 388,
       "word": "改善",
       "sentence1": "我想提高我的英语技能。",
-      "sentence2": "她正在努力提高成绩。"
+      "sentence2": "她正在努力提高成绩。",
+      "pronunciation": "/kaɪ˧˩˧ ʂan˥˩/"
     },
     {
       "id": 389,
       "word": "在...里",
       "sentence1": "书在包里。",
-      "sentence2": "她住在一个小镇。"
+      "sentence2": "她住在一个小镇。",
+      "pronunciation": "/tsaɪ˥˩ ... li˧˩˧/"
     },
     {
       "id": 390,
       "word": "包括",
       "sentence1": "请在名单上写上你的名字。",
-      "sentence2": "她想让每个人都参与讨论。"
+      "sentence2": "她想让每个人都参与讨论。",
+      "pronunciation": "/pɑʊ˥ khwɔ˥˩/"
     },
     {
       "id": 391,
       "word": "信息",
       "sentence1": "你能提供更多信息吗？",
-      "sentence2": "她发现这些信息很有帮助。"
+      "sentence2": "她发现这些信息很有帮助。",
+      "pronunciation": "/ɕin˥˩ ɕi˥/"
     },
     {
       "id": 392,
       "word": "兴趣",
       "sentence1": "我对艺术有浓厚的兴趣。",
-      "sentence2": "她和我一样对音乐感兴趣。"
+      "sentence2": "她和我一样对音乐感兴趣。",
+      "pronunciation": "/ɕiŋ˥˩ tɕhy˥˩/"
     },
     {
       "id": 393,
       "word": "感兴趣的",
       "sentence1": "我对学习西班牙语感兴趣。",
-      "sentence2": "她对旅行感兴趣。"
+      "sentence2": "她对旅行感兴趣。",
+      "pronunciation": "/kan˧˩˧ ɕiŋ˥˩ tɕhy˥˩ tɤ/"
     },
     {
       "id": 394,
       "word": "有趣的",
       "sentence1": "这本书非常有趣。",
-      "sentence2": "她有一些有趣的想法。"
+      "sentence2": "她有一些有趣的想法。",
+      "pronunciation": "/joʊ˧˩˧ tɕhy˥˩ tɤ/"
     },
     {
       "id": 395,
       "word": "互联网",
       "sentence1": "我在网上找到了它。",
-      "sentence2": "她在网上花了很多时间。"
+      "sentence2": "她在网上花了很多时间。",
+      "pronunciation": "/xu˥˩ ljɛn˧˥ wɑŋ˧˩˧/"
     },
     {
       "id": 396,
       "word": "面试",
       "sentence1": "我明天有一个工作面试。",
-      "sentence2": "她为面试做了准备。"
+      "sentence2": "她为面试做了准备。",
+      "pronunciation": "/mjɛn˥˩ ʂɨ˥˩/"
     },
     {
       "id": 397,
       "word": "进入",
       "sentence1": "他走进房间。",
-      "sentence2": "她跳进游泳池。"
+      "sentence2": "她跳进游泳池。",
+      "pronunciation": "/tɕin˥˩ ʐu˥˩/"
     },
     {
       "id": 398,
       "word": "介绍",
       "sentence1": "让我向你介绍我的朋友。",
-      "sentence2": "她将介绍演讲者。"
+      "sentence2": "她将介绍演讲者。",
+      "pronunciation": "/tɕjɛ˥˩ ʂɑʊ˥˩/"
     },
     {
       "id": 399,
       "word": "岛屿",
       "sentence1": "巴厘岛是一个美丽的岛屿。",
-      "sentence2": "她梦想去一个热带岛屿。"
+      "sentence2": "她梦想去一个热带岛屿。",
+      "pronunciation": "/tɑʊ˧˩˧ y˧˩˧/"
     },
     {
       "id": 400,
       "word": "它",
       "sentence1": "我在桌子上找到了它。",
-      "sentence2": "她说那是她的书。"
+      "sentence2": "她说那是她的书。",
+      "pronunciation": "/tha˥/"
     },
     {
       "id": 401,
       "word": "它的",
       "sentence1": "狗摇着尾巴。",
-      "sentence2": "她为它的成就感到骄傲。"
+      "sentence2": "她为它的成就感到骄傲。",
+      "pronunciation": "/tha˥ tɤ/"
     },
     {
       "id": 402,
       "word": "夹克",
       "sentence1": "我买了一件新夹克。",
-      "sentence2": "她穿了一件皮夹克。"
+      "sentence2": "她穿了一件皮夹克。",
+      "pronunciation": "/tɕja˥ khɤ˥˩/"
     },
     {
       "id": 403,
       "word": "一月",
       "sentence1": "一月是第一个月。",
-      "sentence2": "她出生于一月。"
+      "sentence2": "她出生于一月。",
+      "pronunciation": "/i˧˥ ɥœ˥˩/"
     },
     {
       "id": 404,
       "word": "牛仔裤",
       "sentence1": "我需要买新牛仔裤。",
-      "sentence2": "她更喜欢穿牛仔裤。"
+      "sentence2": "她更喜欢穿牛仔裤。",
+      "pronunciation": "/njoʊ˧˥ tsaɪ˧˩˧ khu˥˩/"
     },
     {
       "id": 405,
       "word": "工作",
       "sentence1": "我有一份新工作。",
-      "sentence2": "她热爱她的工作。"
+      "sentence2": "她热爱她的工作。",
+      "pronunciation": "/kʊŋ˥ tswɔ˥˩/"
     },
     {
       "id": 406,
       "word": "加入",
       "sentence1": "我想加入俱乐部。",
-      "sentence2": "她决定加入我们。"
+      "sentence2": "她决定加入我们。",
+      "pronunciation": "/tɕja˥ ʐu˥˩/"
     },
     {
       "id": 407,
       "word": "旅程",
       "sentence1": "旅程漫长而疲惫。",
-      "sentence2": "她享受了这次旅程。"
+      "sentence2": "她享受了这次旅程。",
+      "pronunciation": "/ly˧˩˧ ʈʂhɤŋ˧˥/"
     },
     {
       "id": 408,
       "word": "果汁",
       "sentence1": "我想要一些橙汁。",
-      "sentence2": "她每天早上喝果汁。"
+      "sentence2": "她每天早上喝果汁。",
+      "pronunciation": "/kwɔ˧˩˧ ʈʂɨ˥/"
     },
     {
       "id": 409,
       "word": "七月",
       "sentence1": "七月是第七个月。",
-      "sentence2": "她喜欢在七月去度假。"
+      "sentence2": "她喜欢在七月去度假。",
+      "pronunciation": "/tɕhi˥ ɥœ˥˩/"
     },
     {
       "id": 410,
       "word": "六月",
       "sentence1": "六月是第六个月。",
-      "sentence2": "她在六月毕业了。"
+      "sentence2": "她在六月毕业了。",
+      "pronunciation": "/ljoʊ˥˩ ɥœ˥˩/"
     },
     {
       "id": 411,
       "word": "只是",
       "sentence1": "我只是想帮忙。",
-      "sentence2": "她只是一个朋友。"
+      "sentence2": "她只是一个朋友。",
+      "pronunciation": "/ʈʂɨ˧˩˧ ʂɨ˥˩/"
     },
     {
       "id": 412,
       "word": "保持",
       "sentence1": "请保持门关着。",
-      "sentence2": "她想保持房间干净。"
+      "sentence2": "她想保持房间干净。",
+      "pronunciation": "/pɑʊ˧˩˧ ʈʂhɨ˧˥/"
     },
     {
       "id": 413,
       "word": "钥匙",
       "sentence1": "我丢了房门钥匙。",
-      "sentence2": "她在垫子下面找到了钥匙。"
+      "sentence2": "她在垫子下面找到了钥匙。",
+      "pronunciation": "/ɥœ˥˩ ʈʂhɨ˧˥/"
     },
     {
       "id": 414,
       "word": "公里",
       "sentence1": "商店在五公里外。",
-      "sentence2": "她昨天跑了十公里。"
+      "sentence2": "她昨天跑了十公里。",
+      "pronunciation": "/kʊŋ˥ li˧˩˧/"
     },
     {
       "id": 415,
       "word": "种类/善良",
       "sentence1": "你喜欢什么类型的音乐？",
-      "sentence2": "她是一个善良的人。"
+      "sentence2": "她是一个善良的人。",
+      "pronunciation": "/ʈʂʊŋ˧˩˧ leɪ˥˩/; /ʂan˥˩ ljɑŋ˧˥/"
     },
     {
       "id": 416,
       "word": "厨房",
       "sentence1": "厨房非常宽敞。",
-      "sentence2": "她喜欢在厨房里做饭。"
+      "sentence2": "她喜欢在厨房里做饭。",
+      "pronunciation": "/ʈʂhu˧˥ fɑŋ˧˥/"
     },
     {
       "id": 417,
       "word": "知道",
       "sentence1": "我知道答案。",
-      "sentence2": "她不知道他的名字。"
+      "sentence2": "她不知道他的名字。",
+      "pronunciation": "/ʈʂɨ˥ tɑʊ˥˩/"
     },
     {
       "id": 418,
       "word": "土地",
       "sentence1": "这块土地非常肥沃。",
-      "sentence2": "她买了一块地。"
+      "sentence2": "她买了一块地。",
+      "pronunciation": "/thu˧˩˧ ti˥˩/"
     },
     {
       "id": 419,
       "word": "语言",
       "sentence1": "英语是一门全球性语言。",
-      "sentence2": "她会说三种语言。"
+      "sentence2": "她会说三种语言。",
+      "pronunciation": "/y˧˩˧ jɛn˧˥/"
     },
     {
       "id": 420,
       "word": "大的",
       "sentence1": "他们住在一栋大房子里。",
-      "sentence2": "她有大量的邮票收藏。"
+      "sentence2": "她有大量的邮票收藏。",
+      "pronunciation": "/ta˥˩ tɤ/"
     },
     {
       "id": 421,
       "word": "最后的",
       "sentence1": "这是最后一次机会。",
-      "sentence2": "她是最后一个离开的人。"
+      "sentence2": "她是最后一个离开的人。",
+      "pronunciation": "/tsweɪ˥˩ xoʊ˥˩ tɤ/"
     },
     {
       "id": 422,
       "word": "迟的",
       "sentence1": "我开会迟到了。",
-      "sentence2": "她派对迟到了。"
+      "sentence2": "她派对迟到了。",
+      "pronunciation": "/ʈʂhɨ˧˥ tɤ/"
     },
     {
       "id": 423,
       "word": "之后",
       "sentence1": "我们可以稍后讨论。",
-      "sentence2": "她当天晚些时候给我打了电话。"
+      "sentence2": "她当天晚些时候给我打了电话。",
+      "pronunciation": "/ʈʂɨ˥ xoʊ˥˩/"
     },
     {
       "id": 424,
       "word": "笑",
       "sentence1": "我喜欢逗你笑。",
-      "sentence2": "她忍不住笑了。"
+      "sentence2": "她忍不住笑了。",
+      "pronunciation": "/ɕjɑʊ˥˩/"
     },
     {
       "id": 425,
       "word": "学习",
       "sentence1": "我想学一门新语言。",
-      "sentence2": "她学得很快。"
+      "sentence2": "她学得很快。",
+      "pronunciation": "/ɕɥœ˧˥ ɕi˧˥/"
     },
     {
       "id": 426,
       "word": "离开",
       "sentence1": "我必须早点离开。",
-      "sentence2": "她没说再见就离开了派对。"
+      "sentence2": "她没说再见就离开了派对。",
+      "pronunciation": "/li˧˥ khaɪ˥/"
     },
     {
       "id": 427,
       "word": "左边",
       "sentence1": "在红绿灯处左转。",
-      "sentence2": "她是左撇子。"
+      "sentence2": "她是左撇子。",
+      "pronunciation": "/tswɔ˧˩˧ pjɛn˥/"
     },
     {
       "id": 428,
       "word": "腿",
       "sentence1": "我的腿疼。",
-      "sentence2": "她交叉双腿。"
+      "sentence2": "她交叉双腿。",
+      "pronunciation": "/thweɪ˧˩˧/"
     },
     {
       "id": 429,
       "word": "课",
       "sentence1": "我今天有数学课。",
-      "sentence2": "她喜欢这堂课。"
+      "sentence2": "她喜欢这堂课。",
+      "pronunciation": "/khɤ˥˩/"
     },
     {
       "id": 430,
       "word": "让",
       "sentence1": "让我帮你。",
-      "sentence2": "她让他借了她的书。"
+      "sentence2": "她让他借了她的书。",
+      "pronunciation": "/ʐɑŋ˥˩/"
     },
     {
       "id": 431,
       "word": "信",
       "sentence1": "我收到了朋友的一封信。",
-      "sentence2": "她给奶奶写了一封信。"
+      "sentence2": "她给奶奶写了一封信。",
+      "pronunciation": "/ɕin˥˩/"
     },
     {
       "id": 432,
       "word": "图书馆",
       "sentence1": "图书馆开放到晚上8点。",
-      "sentence2": "她从图书馆借了一本书。"
+      "sentence2": "她从图书馆借了一本书。",
+      "pronunciation": "/thu˧˥ ʂu˥ kwan˧˩˧/"
     },
     {
       "id": 433,
       "word": "说谎",
       "sentence1": "不要对我说谎。",
-      "sentence2": "她谎报了年龄。"
+      "sentence2": "她谎报了年龄。",
+      "pronunciation": "/ʂwɔ˥ xwɑŋ˧˩˧/"
     },
     {
       "id": 434,
       "word": "生活",
       "sentence1": "生活是美好的。",
-      "sentence2": "她想在有生之年环游世界。"
+      "sentence2": "她想在有生之年环游世界。",
+      "pronunciation": "/ʂɤŋ˥ xwɔ˧˥/"
     },
     {
       "id": 435,
       "word": "光",
       "sentence1": "光线太亮了。",
-      "sentence2": "她睡前关了灯。"
+      "sentence2": "她睡前关了灯。",
+      "pronunciation": "/kwɑŋ˥/"
     },
     {
       "id": 436,
       "word": "像",
       "sentence1": "这条裙子像我昨天看到的那条。",
-      "sentence2": "她有一群志同道合的朋友。"
+      "sentence2": "她有一群志同道合的朋友。",
+      "pronunciation": "/ɕjɑŋ˥˩/"
     },
     {
       "id": 437,
       "word": "喜欢",
       "sentence1": "我喜欢这首歌。",
-      "sentence2": "她喜欢睡前阅读。"
+      "sentence2": "她喜欢睡前阅读。",
+      "pronunciation": "/ɕi˧˩˧ xwan˥/"
     },
     {
       "id": 438,
       "word": "线",
       "sentence1": "画一条直线。",
-      "sentence2": "她排队买票。"
+      "sentence2": "她排队买票。",
+      "pronunciation": "/ɕjɛn˥˩/"
     },
     {
       "id": 439,
       "word": "狮子",
       "sentence1": "狮子是丛林之王。",
-      "sentence2": "她在动物园看到了一只狮子。"
+      "sentence2": "她在动物园看到了一只狮子。",
+      "pronunciation": "/ʂɨ˥ tsɯ˧˩˧/"
     },
     {
       "id": 440,
       "word": "清单",
       "sentence1": "我列了一个购物清单。",
-      "sentence2": "她在清单上勾掉了项目。"
+      "sentence2": "她在清单上勾掉了项目。",
+      "pronunciation": "/tɕhiŋ˥ tan˥/"
     },
     {
       "id": 441,
       "word": "听",
       "sentence1": "我喜欢听音乐。",
-      "sentence2": "她仔细听了说明。"
+      "sentence2": "她仔细听了说明。",
+      "pronunciation": "/thiŋ˥/"
     },
     {
       "id": 442,
       "word": "小的",
       "sentence1": "这个盒子太小了。",
-      "sentence2": "她有一只小狗。"
+      "sentence2": "她有一只小狗。",
+      "pronunciation": "/ɕjɑʊ˧˩˧ tɤ/"
     },
     {
       "id": 443,
       "word": "住",
       "sentence1": "我住在一个小镇上。",
-      "sentence2": "她想住在城市里。"
+      "sentence2": "她想住在城市里。",
+      "pronunciation": "/ʈʂu˥˩/"
     },
     {
       "id": 444,
       "word": "当地的",
       "sentence1": "我喜欢当地食物。",
-      "sentence2": "她支持当地企业。"
+      "sentence2": "她支持当地企业。",
+      "pronunciation": "/tɑŋ˥ ti˥˩ tɤ/"
     },
     {
       "id": 445,
       "word": "长的",
       "sentence1": "这是一本很长的书。",
-      "sentence2": "她工作了一整天很累。"
+      "sentence2": "她工作了一整天很累。",
+      "pronunciation": "/ʈʂɑŋ˧˩˧ tɤ/"
     },
     {
       "id": 446,
       "word": "看",
       "sentence1": "看天空！",
-      "sentence2": "她望向窗外。"
+      "sentence2": "她望向窗外。",
+      "pronunciation": "/khan˥˩/"
     },
     {
       "id": 447,
       "word": "丢失",
       "sentence1": "我不想丢钥匙。",
-      "sentence2": "她在商场丢了手机。"
+      "sentence2": "她在商场丢了手机。",
+      "pronunciation": "/tjoʊ˥ ʂɨ˥/"
     },
     {
       "id": 448,
       "word": "许多",
       "sentence1": "这里有很多人。",
-      "sentence2": "她有很多朋友。"
+      "sentence2": "她有很多朋友。",
+      "pronunciation": "/ɕy˧˩˧ twɔ˥/"
     },
     {
       "id": 449,
       "word": "爱",
       "sentence1": "爱是你所需要的一切。",
-      "sentence2": "她在意想不到的地方找到了爱。"
+      "sentence2": "她在意想不到的地方找到了爱。",
+      "pronunciation": "/aɪ˥˩/"
     },
     {
       "id": 450,
       "word": "午餐",
       "sentence1": "我通常中午吃午餐。",
-      "sentence2": "她为野餐准备了午餐。"
+      "sentence2": "她为野餐准备了午餐。",
+      "pronunciation": "/u˧˩˧ tshan˥/"
     },
     {
       "id": 451,
       "word": "机器",
       "sentence1": "机器坏了。",
-      "sentence2": "她熟练地操作机器。"
+      "sentence2": "她熟练地操作机器。",
+      "pronunciation": "/tɕi˥ tɕhi˥˩/"
     },
     {
       "id": 452,
       "word": "杂志",
       "sentence1": "我在杂志上读了一篇有趣的文章。",
-      "sentence2": "她订阅了几本杂志。"
+      "sentence2": "她订阅了几本杂志。",
+      "pronunciation": "/tsa˧˥ ʈʂɨ˥˩/"
     },
     {
       "id": 453,
       "word": "主要的",
       "sentence1": "正门在拐角处。",
-      "sentence2": "她是故事的主角。"
+      "sentence2": "她是故事的主角。",
+      "pronunciation": "/ʈʂu˧˩˧ jɑʊ˥˩ tɤ/"
     },
     {
       "id": 454,
       "word": "制作",
       "sentence1": "我想做一个蛋糕。",
-      "sentence2": "她制作漂亮的陶器。"
+      "sentence2": "她制作漂亮的陶器。",
+      "pronunciation": "/ʈʂɨ˥˩ tswɔ˥˩/"
     },
     {
       "id": 455,
       "word": "男人",
       "sentence1": "那个男人正在看书。",
-      "sentence2": "她看到一个穿西装的男人。"
+      "sentence2": "她看到一个穿西装的男人。",
+      "pronunciation": "/nan˧˥ ʐən˧˥/"
     },
     {
       "id": 456,
       "word": "许多",
       "sentence1": "书架上有很多书。",
-      "sentence2": "她没有很多朋友。"
+      "sentence2": "她没有很多朋友。",
+      "pronunciation": "/ɕy˧˩˧ twɔ˥/"
     },
     {
       "id": 457,
       "word": "地图",
       "sentence1": "我需要一张地图来找到位置。",
-      "sentence2": "她仔细研究了地图。"
+      "sentence2": "她仔细研究了地图。",
+      "pronunciation": "/ti˥˩ thu˧˥/"
     },
     {
       "id": 458,
       "word": "三月",
       "sentence1": "三月是一年中的第三个月。",
-      "sentence2": "她出生于三月。"
+      "sentence2": "她出生于三月。",
+      "pronunciation": "/san˥ ɥœ˥˩/"
     },
     {
       "id": 459,
       "word": "市场",
       "sentence1": "我在市场上买了蔬菜。",
-      "sentence2": "她喜欢在当地市场购物。"
+      "sentence2": "她喜欢在当地市场购物。",
+      "pronunciation": "/ʂɨ˥˩ ʈʂhɑŋ˧˩˧/"
     },
     {
       "id": 460,
       "word": "已婚的",
       "sentence1": "他们是一对已婚夫妇。",
-      "sentence2": "她嫁给了一位医生。"
+      "sentence2": "她嫁给了一位医生。",
+      "pronunciation": "/i˧˩˧ xwən˥ tɤ/"
     },
     {
       "id": 461,
       "word": "比赛",
       "sentence1": "比赛将于明天举行。",
-      "sentence2": "她上周赢得了比赛。"
+      "sentence2": "她上周赢得了比赛。",
+      "pronunciation": "/pi˧˩˧ saɪ˥˩/"
     },
     {
       "id": 462,
       "word": "五月",
       "sentence1": "五月是一个美丽的月份。",
-      "sentence2": "她喜欢五月的花朵。"
+      "sentence2": "她喜欢五月的花朵。",
+      "pronunciation": "/u˧˩˧ ɥœ˥˩/"
     },
     {
       "id": 463,
       "word": "也许",
       "sentence1": "也许我们可以去公园。",
-      "sentence2": "她说也许她会加入我们。"
+      "sentence2": "她说也许她会加入我们。",
+      "pronunciation": "/jɛ˧˩˧ ɕy˧˩˧/"
     },
     {
       "id": 464,
       "word": "我",
       "sentence1": "你能帮我吗？",
-      "sentence2": "她昨天给我打电话了。"
+      "sentence2": "她昨天给我打电话了。",
+      "pronunciation": "/wɔ˧˩˧/"
     },
     {
       "id": 465,
       "word": "餐",
       "sentence1": "早餐是我最喜欢的一餐。",
-      "sentence2": "她每天准备健康的饭菜。"
+      "sentence2": "她每天准备健康的饭菜。",
+      "pronunciation": "/tshan˥/"
     },
     {
       "id": 466,
       "word": "意思/有意",
       "sentence1": "这个词是什么意思？",
-      "sentence2": "她不是故意伤害你的。"
+      "sentence2": "她不是故意伤害你的。",
+      "pronunciation": "/i˥˩ sɯ˥/; /joʊ˧˩˧ i˥˩/"
     },
     {
       "id": 467,
       "word": "意义",
       "sentence1": "生命的意义是一个哲学问题。",
-      "sentence2": "她寻找这首诗的意义。"
+      "sentence2": "她寻找这首诗的意义。",
+      "pronunciation": "/i˥˩ i˥˩/"
     },
     {
       "id": 468,
       "word": "肉",
       "sentence1": "我不吃肉。",
-      "sentence2": "她做了一道美味的肉菜。"
+      "sentence2": "她做了一道美味的肉菜。",
+      "pronunciation": "/ʐoʊ˥˩/"
     },
     {
       "id": 469,
       "word": "见面",
       "sentence1": "我们在咖啡馆见面吧。",
-      "sentence2": "她稍后会和朋友见面。"
+      "sentence2": "她稍后会和朋友见面。",
+      "pronunciation": "/tɕjɛn˥˩ mjɛn˥˩/"
     },
     {
       "id": 470,
       "word": "会议",
       "sentence1": "会议定于上午10点。",
-      "sentence2": "她昨天参加了会议。"
+      "sentence2": "她昨天参加了会议。",
+      "pronunciation": "/xweɪ˥˩ i˥˩/"
     },
     {
       "id": 471,
       "word": "成员",
       "sentence1": "他是俱乐部的成员。",
-      "sentence2": "她邀请了一位新成员加入小组。"
+      "sentence2": "她邀请了一位新成员加入小组。",
+      "pronunciation": "/ʈʂhɤŋ˧˥ ɥœn˧˥/"
     },
     {
       "id": 472,
       "word": "菜单",
       "sentence1": "我可以看一下菜单吗？",
-      "sentence2": "她从素食菜单上点了菜。"
+      "sentence2": "她从素食菜单上点了菜。",
+      "pronunciation": "/tshaɪ˥˩ tan˥/"
     },
     {
       "id": 473,
       "word": "消息",
       "sentence1": "我收到了她的消息。",
-      "sentence2": "她在我手机上留了言。"
+      "sentence2": "她在我手机上留了言。",
+      "pronunciation": "/ɕjɑʊ˥ ɕi˥/"
     },
     {
       "id": 474,
       "word": "米",
       "sentence1": "这张桌子两米长。",
-      "sentence2": "她在12秒内跑完了100米。"
+      "sentence2": "她在12秒内跑完了100米。",
+      "pronunciation": "/mi˧˩˧/"
     },
     {
       "id": 475,
       "word": "午夜",
       "sentence1": "派对将在午夜结束。",
-      "sentence2": "她总是在午夜前睡觉。"
+      "sentence2": "她总是在午夜前睡觉。",
+      "pronunciation": "/u˧˩˧ jɛ˥˩/"
     },
     {
       "id": 476,
       "word": "英里",
       "sentence1": "商店在五英里外。",
-      "sentence2": "她每天早上走一英里。"
+      "sentence2": "她每天早上走一英里。",
+      "pronunciation": "/iŋ˥ li˧˩˧/"
     },
     {
       "id": 477,
       "word": "牛奶",
       "sentence1": "我每天喝牛奶。",
-      "sentence2": "她更喜欢杏仁奶。"
+      "sentence2": "她更喜欢杏仁奶。",
+      "pronunciation": "/njoʊ˧˥ naɪ˧˩˧/"
     },
     {
       "id": 478,
       "word": "百万",
       "sentence1": "天空中有一百万颗星星。",
-      "sentence2": "她中了一百万美元的彩票。"
+      "sentence2": "她中了一百万美元的彩票。",
+      "pronunciation": "/paɪ˧˩˧ wan˥˩/"
     },
     {
       "id": 479,
       "word": "分钟",
       "sentence1": "我需要一分钟思考。",
-      "sentence2": "她迟到了一分钟。"
+      "sentence2": "她迟到了一分钟。",
+      "pronunciation": "/fən˥ ʈʂʊŋ˥/"
     },
     {
       "id": 480,
       "word": "想念/错过",
       "sentence1": "我想念我的家人。",
-      "sentence2": "她今天早上错过了公交车。"
+      "sentence2": "她今天早上错过了公交车。",
+      "pronunciation": "/ɕjɑŋ˧˩˧ njɛn˥˩/; /tshwɔ˥˩ kwɔ˥˩/"
     },
     {
       "id": 481,
       "word": "错误",
       "sentence1": "我在考试中犯了一个错误。",
-      "sentence2": "她从错误中学习。"
+      "sentence2": "她从错误中学习。",
+      "pronunciation": "/tshwɔ˥˩ u˥˩/"
     },
     {
       "id": 482,
       "word": "型号",
       "sentence1": "这辆车是新型号。",
-      "sentence2": "她更喜欢最新型号。"
+      "sentence2": "她更喜欢最新型号。",
+      "pronunciation": "/ɕiŋ˧˥ xɑʊ˥˩/"
     },
     {
       "id": 483,
       "word": "现代的",
       "sentence1": "这是一座现代建筑。",
-      "sentence2": "她喜欢现代艺术。"
+      "sentence2": "她喜欢现代艺术。",
+      "pronunciation": "/ɕjɛn˥˩ taɪ˥˩ tɤ/"
     },
     {
       "id": 484,
       "word": "片刻",
       "sentence1": "请等一下。",
-      "sentence2": "她用照片捕捉了那一刻。"
+      "sentence2": "她用照片捕捉了那一刻。",
+      "pronunciation": "/phjɛn˥˩ khɤ˥˩/"
     },
     {
       "id": 485,
       "word": "星期一",
       "sentence1": "星期一是一周的第一天。",
-      "sentence2": "她星期一有一个会议。"
+      "sentence2": "她星期一有一个会议。",
+      "pronunciation": "/ɕiŋ˥ tɕhi˥ i˥/"
     },
     {
       "id": 486,
       "word": "钱",
       "sentence1": "我需要更多的钱。",
-      "sentence2": "她为假期存了钱。"
+      "sentence2": "她为假期存了钱。",
+      "pronunciation": "/tɕhjɛn˧˥/"
     },
     {
       "id": 487,
       "word": "月",
       "sentence1": "二月是最短的月份。",
-      "sentence2": "她出生于五月。"
+      "sentence2": "她出生于五月。",
+      "pronunciation": "/ɥœ˥˩/"
     },
     {
       "id": 488,
       "word": "更多",
       "sentence1": "我需要更多的时间。",
-      "sentence2": "她想更多地了解这个话题。"
+      "sentence2": "她想更多地了解这个话题。",
+      "pronunciation": "/kɤŋ˥˩ twɔ˥/"
     },
     {
       "id": 489,
       "word": "早上",
       "sentence1": "我早上起得很早。",
-      "sentence2": "她喜欢早上跑步。"
+      "sentence2": "她喜欢早上跑步。",
+      "pronunciation": "/tsɑʊ˧˩˧ ʂɑŋ˥˩/"
     },
     {
       "id": 490,
       "word": "最",
       "sentence1": "这是我读过的最有趣的书。",
-      "sentence2": "她是小组中最有才华的艺术家。"
+      "sentence2": "她是小组中最有才华的艺术家。",
+      "pronunciation": "/tsweɪ˥˩/"
     },
     {
       "id": 491,
       "word": "母亲",
       "sentence1": "我母亲是一名教师。",
-      "sentence2": "她照顾她的母亲。"
+      "sentence2": "她照顾她的母亲。",
+      "pronunciation": "/mu˧˩˧ tɕhin˥/"
     },
     {
       "id": 492,
       "word": "山",
       "sentence1": "山上覆盖着雪。",
-      "sentence2": "她去年夏天爬了这座山。"
+      "sentence2": "她去年夏天爬了这座山。",
+      "pronunciation": "/ʂan˥/"
     },
     {
       "id": 493,
       "word": "老鼠",
       "sentence1": "老鼠跑过地板。",
-      "sentence2": "她养了一只宠物老鼠。"
+      "sentence2": "她养了一只宠物老鼠。",
+      "pronunciation": "/lɑʊ˧˩˧ ʂu˧˩˧/"
     },
     {
       "id": 494,
       "word": "嘴",
       "sentence1": "张大嘴巴。",
-      "sentence2": "她嘴角挂着美丽的微笑。"
+      "sentence2": "她嘴角挂着美丽的微笑。",
+      "pronunciation": "/tsweɪ˧˩˧/"
     },
     {
       "id": 495,
       "word": "移动",
       "sentence1": "请移动你的椅子。",
-      "sentence2": "她想搬到新房子。"
+      "sentence2": "她想搬到新房子。",
+      "pronunciation": "/i˧˥ tʊŋ˥˩/"
     },
     {
       "id": 496,
       "word": "电影",
       "sentence1": "我昨晚看了一部很棒的电影。",
-      "sentence2": "她喜欢看浪漫电影。"
+      "sentence2": "她喜欢看浪漫电影。",
+      "pronunciation": "/tjɛn˥˩ iŋ˧˩˧/"
     },
     {
       "id": 497,
       "word": "很多",
       "sentence1": "我没有太多时间。",
-      "sentence2": "她吃得不多。"
+      "sentence2": "她吃得不多。",
+      "pronunciation": "/xən˧˩˧ twɔ˥/"
     },
     {
       "id": 498,
       "word": "妈妈",
       "sentence1": "我妈妈是我最好的朋友。",
-      "sentence2": "她是一位伟大的妈妈。"
+      "sentence2": "她是一位伟大的妈妈。",
+      "pronunciation": "/ma˥ ma˥/"
     },
     {
       "id": 499,
       "word": "博物馆",
       "sentence1": "我参观了艺术博物馆。",
-      "sentence2": "她喜欢去博物馆。"
+      "sentence2": "她喜欢去博物馆。",
+      "pronunciation": "/pwɔ˧˥ u˥˩ kwan˧˩˧/"
     },
     {
       "id": 500,
       "word": "音乐",
       "sentence1": "我每天听音乐。",
-      "sentence2": "她晚上演奏音乐。"
+      "sentence2": "她晚上演奏音乐。",
+      "pronunciation": "/in˥ ɥœ˥˩/"
     },
     {
       "id": 501,
       "word": "必须",
       "sentence1": "你必须完成作业。",
-      "sentence2": "她必须在上午9点前上班。"
+      "sentence2": "她必须在上午9点前上班。",
+      "pronunciation": "/pi˥˩ ɕy˥/"
     },
     {
       "id": 502,
       "word": "我的",
       "sentence1": "这是我的书。",
-      "sentence2": "她是我最好的朋友。"
+      "sentence2": "她是我最好的朋友。",
+      "pronunciation": "/wɔ˧˩˧ tɤ/"
     },
     {
       "id": 503,
       "word": "名字",
       "sentence1": "你叫什么名字？",
-      "sentence2": "她在纸上写了她的名字。"
+      "sentence2": "她在纸上写了她的名字。",
+      "pronunciation": "/miŋ˧˥ tsɯ˥˩/"
     },
     {
       "id": 504,
       "word": "自然的",
       "sentence1": "这是一种天然产品。",
-      "sentence2": "她更喜欢天然成分。"
+      "sentence2": "她更喜欢天然成分。",
+      "pronunciation": "/tsɯ˥˩ ʐan˧˥ tɤ/"
     },
     {
       "id": 505,
       "word": "附近",
       "sentence1": "商店在我家附近。",
-      "sentence2": "她住在公园附近。"
+      "sentence2": "她住在公园附近。",
+      "pronunciation": "/fu˥˩ tɕin˥˩/"
     },
     {
       "id": 506,
       "word": "需要",
       "sentence1": "我需要一杯水。",
-      "sentence2": "她需要帮助做作业。"
+      "sentence2": "她需要帮助做作业。",
+      "pronunciation": "/ɕy˥ jɑʊ˥˩/"
     },
     {
       "id": 507,
       "word": "消极的",
       "sentence1": "这是一个消极的回应。",
-      "sentence2": "她有消极的态度。"
+      "sentence2": "她有消极的态度。",
+      "pronunciation": "/ɕjɑʊ˥ tɕi˧˥ tɤ/"
     },
     {
       "id": 508,
       "word": "邻居",
       "sentence1": "我的邻居很友好。",
-      "sentence2": "她经常和邻居聊天。"
+      "sentence2": "她经常和邻居聊天。",
+      "pronunciation": "/lin˧˥ tɕy˥/"
     },
     {
       "id": 509,
       "word": "从不",
       "sentence1": "我从不吃早餐。",
-      "sentence2": "她从未去过巴黎。"
+      "sentence2": "她从未去过巴黎。",
+      "pronunciation": "/tshʊŋ˧˥ pu˥˩/"
     },
     {
       "id": 510,
       "word": "新的",
       "sentence1": "我买了一辆新车。",
-      "sentence2": "她穿着一条新裙子。"
+      "sentence2": "她穿着一条新裙子。",
+      "pronunciation": "/ɕin˥ tɤ/"
     },
     {
       "id": 511,
       "word": "新闻",
       "sentence1": "我每天早上看新闻。",
-      "sentence2": "她喜欢看新闻。"
+      "sentence2": "她喜欢看新闻。",
+      "pronunciation": "/ɕin˥ wən˧˥/"
     },
     {
       "id": 512,
       "word": "报纸",
       "sentence1": "我订阅了一份日报。",
-      "sentence2": "她在早餐时读报纸。"
+      "sentence2": "她在早餐时读报纸。",
+      "pronunciation": "/pɑʊ˥˩ ʈʂɨ˧˩˧/"
     },
     {
       "id": 513,
       "word": "下一个",
       "sentence1": "下一班火车是什么时候？",
-      "sentence2": "她坐在隔壁房间。"
+      "sentence2": "她坐在隔壁房间。",
+      "pronunciation": "/ɕja˥˩ i˧˥ kɤ˥˩/"
     },
     {
       "id": 514,
       "word": "在...旁边",
       "sentence1": "银行在邮局旁边。",
-      "sentence2": "她住在她最好的朋友旁边。"
+      "sentence2": "她住在她最好的朋友旁边。",
+      "pronunciation": "/tsaɪ˥˩ ... phɑŋ˧˥ pjɛn˥/"
     },
     {
       "id": 515,
       "word": "好的",
       "sentence1": "这是一个放松的好地方。",
-      "sentence2": "她有一个很好的微笑。"
+      "sentence2": "她有一个很好的微笑。",
+      "pronunciation": "/xɑʊ˧˩˧ tɤ/"
     },
     {
       "id": 516,
       "word": "夜晚",
       "sentence1": "我喜欢在夜晚看星星。",
-      "sentence2": "她上夜班。"
+      "sentence2": "她上夜班。",
+      "pronunciation": "/jɛ˥˩ wan˧˩˧/"
     },
     {
       "id": 517,
       "word": "九",
       "sentence1": "我有九个苹果。",
-      "sentence2": "她出生于五月九日。"
+      "sentence2": "她出生于五月九日。",
+      "pronunciation": "/tɕjoʊ˧˩˧/"
     },
     {
       "id": 518,
       "word": "十九",
       "sentence1": "她十九岁。",
-      "sentence2": "十九是我最喜欢的数字。"
+      "sentence2": "十九是我最喜欢的数字。",
+      "pronunciation": "/ʂɨ˧˥ tɕjoʊ˧˩˧/"
     },
     {
       "id": 519,
       "word": "九十",
       "sentence1": "我有九十美元。",
-      "sentence2": "她出生于一九九零年。"
+      "sentence2": "她出生于一九九零年。",
+      "pronunciation": "/tɕjoʊ˧˩˧ ʂɨ˧˥/"
     },
     {
       "id": 520,
       "word": "不",
       "sentence1": "不，我不想去。",
-      "sentence2": "她拒绝了这个提议。"
+      "sentence2": "她拒绝了这个提议。",
+      "pronunciation": "/pu˥˩/"
     },
     {
       "id": 521,
       "word": "没有人",
       "sentence1": "没有人知道答案。",
-      "sentence2": "她觉得没有人理解她。"
+      "sentence2": "她觉得没有人理解她。",
+      "pronunciation": "/meɪ˧˥ joʊ˧˩˧ ʐən˧˥/"
     },
     {
       "id": 522,
       "word": "没有人",
       "sentence1": "没有人是完美的。",
-      "sentence2": "她说没有人给她打电话。"
+      "sentence2": "她说没有人给她打电话。",
+      "pronunciation": "/meɪ˧˥ joʊ˧˩˧ ʐən˧˥/"
     },
     {
       "id": 523,
       "word": "北方",
       "sentence1": "北极非常寒冷。",
-      "sentence2": "她住在城市的北部。"
+      "sentence2": "她住在城市的北部。",
+      "pronunciation": "/peɪ˧˩˧ fɑŋ˥/"
     },
     {
       "id": 524,
       "word": "鼻子",
       "sentence1": "他有一个大鼻子。",
-      "sentence2": "她闻到味道捏住了鼻子。"
+      "sentence2": "她闻到味道捏住了鼻子。",
+      "pronunciation": "/pi˧˥ tsɯ˧˩˧/"
     },
     {
       "id": 525,
       "word": "不",
       "sentence1": "那不是我的书。",
-      "sentence2": "她对结果不满意。"
+      "sentence2": "她对结果不满意。",
+      "pronunciation": "/pu˥˩/"
     },
     {
       "id": 526,
       "word": "笔记/便条",
       "sentence1": "请记下这一点。",
-      "sentence2": "她在桌上留了一张便条。"
+      "sentence2": "她在桌上留了一张便条。",
+      "pronunciation": "/pi˧˩˧ tɕi˥˩/; /pjɛn˥˩ thjɑʊ˧˥/"
     },
     {
       "id": 527,
       "word": "没有什么",
       "sentence1": "没有什么可担心的。",
-      "sentence2": "她在会议期间什么也没说。"
+      "sentence2": "她在会议期间什么也没说。",
+      "pronunciation": "/meɪ˧˥ joʊ˧˩˧ ʂən˧˥ mɤ/"
     },
     {
       "id": 528,
       "word": "十一月",
       "sentence1": "我的生日在十一月。",
-      "sentence2": "她喜欢十一月的秋天。"
+      "sentence2": "她喜欢十一月的秋天。",
+      "pronunciation": "/ʂɨ˧˥ i˧˥ ɥœ˥˩/"
     },
     {
       "id": 529,
       "word": "现在",
       "sentence1": "我现在就做。",
-      "sentence2": "她现在在这里。"
+      "sentence2": "她现在在这里。",
+      "pronunciation": "/ɕjɛn˥˩ tsaɪ˥˩/"
     },
     {
       "id": 530,
       "word": "数字",
       "sentence1": "你的电话号码是什么？",
-      "sentence2": "她有一个幸运数字。"
+      "sentence2": "她有一个幸运数字。",
+      "pronunciation": "/ʂu˥˩ tsɯ˥˩/"
     },
     {
       "id": 531,
       "word": "护士",
       "sentence1": "护士会帮助你。",
-      "sentence2": "她想成为一名护士。"
+      "sentence2": "她想成为一名护士。",
+      "pronunciation": "/xu˥˩ ʂɨ˥˩/"
     },
     {
       "id": 532,
       "word": "物体",
       "sentence1": "这个物体很重。",
-      "sentence2": "她发现了一个有趣的物体。"
+      "sentence2": "她发现了一个有趣的物体。",
+      "pronunciation": "/u˥˩ thi˧˩˧/"
     },
     {
       "id": 533,
       "word": "点钟",
       "sentence1": "会议在三点钟。",
-      "sentence2": "她总是七点钟醒来。"
+      "sentence2": "她总是七点钟醒来。",
+      "pronunciation": "/tjɛn˧˩˧ ʈʂʊŋ˥/"
     },
     {
       "id": 534,
       "word": "十月",
       "sentence1": "我的生日在十月。",
-      "sentence2": "她喜欢十月的色彩。"
+      "sentence2": "她喜欢十月的色彩。",
+      "pronunciation": "/ʂɨ˧˥ ɥœ˥˩/"
     },
     {
       "id": 535,
       "word": "的",
       "sentence1": "书的封面是蓝色的。",
-      "sentence2": "她是我的一个朋友。"
+      "sentence2": "她是我的一个朋友。",
+      "pronunciation": "/tɤ/"
     },
     {
       "id": 536,
       "word": "关掉/休假",
       "sentence1": "灯关了。",
-      "sentence2": "她休了一天假。"
+      "sentence2": "她休了一天假。",
+      "pronunciation": "/kwan˥ tjɑʊ˥˩/; /ɕjoʊ˥ tɕja˧˩˧/"
     },
     {
       "id": 537,
       "word": "办公室",
       "sentence1": "我在办公室工作。",
-      "sentence2": "她有一个大办公室。"
+      "sentence2": "她有一个大办公室。",
+      "pronunciation": "/pan˥˩ kʊŋ˥ ʂɨ˥˩/"
     },
     {
       "id": 538,
       "word": "经常",
       "sentence1": "我经常去健身房。",
-      "sentence2": "她经常睡前阅读。"
+      "sentence2": "她经常睡前阅读。",
+      "pronunciation": "/tɕiŋ˥ ʈʂhɑŋ˧˥/"
     },
     {
       "id": 539,
       "word": "哦",
       "sentence1": "哦，我没看到你在那里。",
-      "sentence2": "哦，那很有趣！"
+      "sentence2": "哦，那很有趣！",
+      "pronunciation": "/ɔ˥˩/"
     },
     {
       "id": 540,
       "word": "好的",
       "sentence1": "这个座位有人吗？-没有，可以坐。",
-      "sentence2": "她说可以早点离开。"
+      "sentence2": "她说可以早点离开。",
+      "pronunciation": "/xɑʊ˧˩˧ tɤ/"
     },
     {
       "id": 541,
       "word": "老的",
       "sentence1": "我爷爷很老了。",
-      "sentence2": "她有一辆旧车。"
+      "sentence2": "她有一辆旧车。",
+      "pronunciation": "/lɑʊ˧˩˧ tɤ/"
     },
     {
       "id": 542,
       "word": "在...上",
       "sentence1": "书在桌子上。",
-      "sentence2": "她在打电话。"
+      "sentence2": "她在打电话。",
+      "pronunciation": "/tsaɪ˥˩ ... ʂɑŋ˥˩/"
     },
     {
       "id": 543,
       "word": "一次",
       "sentence1": "我去过一次。",
-      "sentence2": "她之前说过一次。"
+      "sentence2": "她之前说过一次。",
+      "pronunciation": "/i˧˥ tshɯ˥˩/"
     },
     {
       "id": 544,
       "word": "一",
       "sentence1": "我有一个姐姐。",
-      "sentence2": "她就是我告诉你的那个人。"
+      "sentence2": "她就是我告诉你的那个人。",
+      "pronunciation": "/i˥/"
     },
     {
       "id": 545,
       "word": "洋葱",
       "sentence1": "我需要一个洋葱做这道菜。",
-      "sentence2": "她不喜欢沙拉里放洋葱。"
+      "sentence2": "她不喜欢沙拉里放洋葱。",
+      "pronunciation": "/jɑŋ˧˥ tshʊŋ˥/"
     },
     {
       "id": 546,
       "word": "在线",
       "sentence1": "我在网上找到的。",
-      "sentence2": "她更喜欢网上购物。"
+      "sentence2": "她更喜欢网上购物。",
+      "pronunciation": "/tsaɪ˥˩ ɕjɛn˥˩/"
     },
     {
       "id": 547,
       "word": "只有",
       "sentence1": "我只有五美元。",
-      "sentence2": "她是唯一能帮忙的人。"
+      "sentence2": "她是唯一能帮忙的人。",
+      "pronunciation": "/ʈʂɨ˧˩˧ joʊ˧˩˧/"
     },
     {
       "id": 548,
       "word": "打开",
       "sentence1": "请打开窗户。",
-      "sentence2": "她喜欢让门开着。"
+      "sentence2": "她喜欢让门开着。",
+      "pronunciation": "/ta˧˩˧ khaɪ˥/"
     },
     {
       "id": 549,
       "word": "意见",
       "sentence1": "你对这件事有什么看法？",
-      "sentence2": "她对政治有强烈的看法。"
+      "sentence2": "她对政治有强烈的看法。",
+      "pronunciation": "/i˥˩ tɕjɛn˥˩/"
     },
     {
       "id": 550,
       "word": "相反",
       "sentence1": "爱的反面是恨。",
-      "sentence2": "她住在街道的对面。"
+      "sentence2": "她住在街道的对面。",
+      "pronunciation": "/ɕjɑŋ˥ fan˧˩˧/"
     },
     {
       "id": 551,
       "word": "或者",
       "sentence1": "你想要茶还是咖啡？",
-      "sentence2": "她会唱歌或跳舞。"
+      "sentence2": "她会唱歌或跳舞。",
+      "pronunciation": "/xwɔ˥˩ ʈʂɤ˧˩˧/"
     },
     {
       "id": 552,
       "word": "橙子/橙色",
       "sentence1": "我喜欢橙汁。",
-      "sentence2": "她穿了一条橙色的裙子。"
+      "sentence2": "她穿了一条橙色的裙子。",
+      "pronunciation": "/ʈʂhɤŋ˧˥ tsɯ˧˩˧/; /ʈʂhɤŋ˧˥ sɤ˥˩/"
     },
     {
       "id": 553,
       "word": "订单",
       "sentence1": "我想下一个订单。",
-      "sentence2": "她取消了订单。"
+      "sentence2": "她取消了订单。",
+      "pronunciation": "/tiŋ˥˩ tan˥/"
     },
     {
       "id": 554,
       "word": "其他",
       "sentence1": "我有另一个想法。",
-      "sentence2": "她是我的另一半。"
+      "sentence2": "她是我的另一半。",
+      "pronunciation": "/tɕhi˧˥ tha˥/"
     },
     {
       "id": 555,
       "word": "我们的",
       "sentence1": "这是我们的房子。",
-      "sentence2": "她是我们团队的成员。"
+      "sentence2": "她是我们团队的成员。",
+      "pronunciation": "/wɔ˧˩˧ mən tɤ/"
     },
     {
       "id": 556,
       "word": "外面",
       "sentence1": "我们出去散步吧。",
-      "sentence2": "她今天不在办公室。"
+      "sentence2": "她今天不在办公室。",
+      "pronunciation": "/waɪ˥˩ mjɛn˥˩/"
     },
     {
       "id": 557,
       "word": "外面",
       "sentence1": "孩子们在外面玩。",
-      "sentence2": "她更喜欢在室外工作。"
+      "sentence2": "她更喜欢在室外工作。",
+      "pronunciation": "/waɪ˥˩ mjɛn˥˩/"
     },
     {
       "id": 558,
       "word": "在...上方",
       "sentence1": "照片挂在沙发上方。",
-      "sentence2": "她查看了文件。"
+      "sentence2": "她查看了文件。",
+      "pronunciation": "/tsaɪ˥˩ ... ʂɑŋ˥˩ fɑŋ˥/"
     },
     {
       "id": 559,
       "word": "自己的",
       "sentence1": "我有自己的车。",
-      "sentence2": "她为自己的工作感到自豪。"
+      "sentence2": "她为自己的工作感到自豪。",
+      "pronunciation": "/tsɯ˥˩ tɕi˧˩˧ tɤ/"
     },
     {
       "id": 560,
       "word": "页",
       "sentence1": "翻到第10页。",
-      "sentence2": "她在那一页做了书签。"
+      "sentence2": "她在那一页做了书签。",
+      "pronunciation": "/jɛ˥˩/"
     },
     {
       "id": 561,
       "word": "油漆/绘画",
       "sentence1": "我需要买一些油漆。",
-      "sentence2": "她喜欢画风景画。"
+      "sentence2": "她喜欢画风景画。",
+      "pronunciation": "/joʊ˧˥ tɕhi˥/; /xweɪ˥˩ xwa˥˩/"
     },
     {
       "id": 562,
       "word": "绘画",
       "sentence1": "我喜欢在空闲时间画画。",
-      "sentence2": "她客厅里有一幅美丽的画。"
+      "sentence2": "她客厅里有一幅美丽的画。",
+      "pronunciation": "/xweɪ˥˩ xwa˥˩/"
     },
     {
       "id": 563,
       "word": "对",
       "sentence1": "我买了一双新鞋。",
-      "sentence2": "她有一对配套的耳环。"
+      "sentence2": "她有一对配套的耳环。",
+      "pronunciation": "/tweɪ˥˩/"
     },
     {
       "id": 564,
       "word": "纸",
       "sentence1": "我需要一张纸。",
-      "sentence2": "她把笔记写在纸上。"
+      "sentence2": "她把笔记写在纸上。",
+      "pronunciation": "/ʈʂɨ˧˩˧/"
     },
     {
       "id": 565,
       "word": "段落",
       "sentence1": "请读第一段。",
-      "sentence2": "她写了一段关于她假期的文字。"
+      "sentence2": "她写了一段关于她假期的文字。",
+      "pronunciation": "/twan˥˩ lwɔ˥˩/"
     },
     {
       "id": 566,
       "word": "父母",
       "sentence1": "我父母住在另一个城市。",
-      "sentence2": "她是单亲妈妈。"
+      "sentence2": "她是单亲妈妈。",
+      "pronunciation": "/fu˥˩ mu˧˩˧/"
     },
     {
       "id": 567,
       "word": "公园",
       "sentence1": "我们去公园散步吧。",
-      "sentence2": "她喜欢在公园野餐。"
+      "sentence2": "她喜欢在公园野餐。",
+      "pronunciation": "/kʊŋ˥ ɥœn˧˥/"
     },
     {
       "id": 568,
       "word": "零件/部分",
       "sentence1": "我需要一个汽车零件。",
-      "sentence2": "她正在为项目做一个新的部分。"
+      "sentence2": "她正在为项目做一个新的部分。",
+      "pronunciation": "/liŋ˧˥ tɕjɛn˥˩/; /pu˥˩ fən˥/"
     },
     {
       "id": 569,
       "word": "伙伴",
       "sentence1": "他是我的商业伙伴。",
-      "sentence2": "她正在寻找合作伙伴。"
+      "sentence2": "她正在寻找合作伙伴。",
+      "pronunciation": "/xwɔ˧˩˧ pan˥˩/"
     },
     {
       "id": 570,
       "word": "派对",
       "sentence1": "我们星期六要开派对。",
-      "sentence2": "她喜欢举办惊喜派对。"
+      "sentence2": "她喜欢举办惊喜派对。",
+      "pronunciation": "/phaɪ˥˩ tweɪ˥˩/"
     },
     {
       "id": 571,
       "word": "护照",
       "sentence1": "我需要更新护照。",
-      "sentence2": "她在旅行时丢了护照。"
+      "sentence2": "她在旅行时丢了护照。",
+      "pronunciation": "/xu˥˩ ʈʂɑʊ˥˩/"
     },
     {
       "id": 572,
       "word": "过去",
       "sentence1": "我们不要纠结于过去。",
-      "sentence2": "她从过去的错误中学习。"
+      "sentence2": "她从过去的错误中学习。",
+      "pronunciation": "/kwɔ˥˩ tɕhy˥˩/"
     },
     {
       "id": 573,
       "word": "支付",
       "sentence1": "我需要付账单。",
-      "sentence2": "她总是按时还债。"
+      "sentence2": "她总是按时还债。",
+      "pronunciation": "/ʈʂɨ˥ fu˥˩/"
     },
     {
       "id": 574,
       "word": "钢笔",
       "sentence1": "我可以借你的笔吗？",
-      "sentence2": "她用蓝色的笔写字。"
+      "sentence2": "她用蓝色的笔写字。",
+      "pronunciation": "/kɑŋ˥ pi˧˩˧/"
     },
     {
       "id": 575,
       "word": "铅笔",
       "sentence1": "我更喜欢用铅笔。",
-      "sentence2": "她用铅笔画了一幅素描。"
+      "sentence2": "她用铅笔画了一幅素描。",
+      "pronunciation": "/tɕhjɛn˥ pi˧˩˧/"
     },
     {
       "id": 576,
       "word": "人们",
       "sentence1": "活动上有很多人。",
-      "sentence2": "她喜欢认识新朋友。"
+      "sentence2": "她喜欢认识新朋友。",
+      "pronunciation": "/ʐən˧˥ mən/"
     },
     {
       "id": 577,
       "word": "胡椒/辣椒",
       "sentence1": "我喜欢在食物里加胡椒。",
-      "sentence2": "她在市场上买了一个红辣椒。"
+      "sentence2": "她在市场上买了一个红辣椒。",
+      "pronunciation": "/xu˧˥ tɕjɑʊ˥/; /la˥˩ tɕjɑʊ˥/"
     },
     {
       "id": 578,
       "word": "完美的",
       "sentence1": "这是完美的解决方案。",
-      "sentence2": "她在考试中得了满分。"
+      "sentence2": "她在考试中得了满分。",
+      "pronunciation": "/wan˧˥ meɪ˧˩˧ tɤ/"
     },
     {
       "id": 579,
       "word": "时期",
       "sentence1": "这对我来说是一个困难时期。",
-      "sentence2": "她在考试期间学习。"
+      "sentence2": "她在考试期间学习。",
+      "pronunciation": "/ʂɨ˧˥ tɕhi˥/"
     },
     {
       "id": 580,
       "word": "人",
       "sentence1": "他是一个善良的人。",
-      "sentence2": "她是第一个到达的人。"
+      "sentence2": "她是第一个到达的人。",
+      "pronunciation": "/ʐən˧˥/"
     },
     {
       "id": 581,
       "word": "个人的",
       "sentence1": "这是私人事务。",
-      "sentence2": "她分享了她的个人经历。"
+      "sentence2": "她分享了她的个人经历。",
+      "pronunciation": "/kɤ˥˩ ʐən˧˥ tɤ/"
     },
     {
       "id": 582,
       "word": "电话",
       "sentence1": "我需要给手机充电。",
-      "sentence2": "她很快接了电话。"
+      "sentence2": "她很快接了电话。",
+      "pronunciation": "/tjɛn˥˩ xwa˥˩/"
     },
     {
       "id": 583,
       "word": "照片",
       "sentence1": "我拍了一张日落的照片。",
-      "sentence2": "她收藏了很多老照片。"
+      "sentence2": "她收藏了很多老照片。",
+      "pronunciation": "/ʈʂɑʊ˥˩ phjɛn˥˩/"
     },
     {
       "id": 584,
       "word": "照片",
       "sentence1": "这张照片是去年拍的。",
-      "sentence2": "她喜欢展示她的照片。"
+      "sentence2": "她喜欢展示她的照片。",
+      "pronunciation": "/ʈʂɑʊ˥˩ phjɛn˥˩/"
     },
     {
       "id": 585,
       "word": "短语",
       "sentence1": "你能解释一下那个短语吗？",
-      "sentence2": "她在演讲中使用了一个常见的短语。"
+      "sentence2": "她在演讲中使用了一个常见的短语。",
+      "pronunciation": "/twan˧˩˧ y˧˩˧/"
     },
     {
       "id": 586,
       "word": "钢琴",
       "sentence1": "我想学弹钢琴。",
-      "sentence2": "她钢琴弹得很美。"
+      "sentence2": "她钢琴弹得很美。",
+      "pronunciation": "/kɑŋ˥ tɕhin˧˥/"
     },
     {
       "id": 587,
       "word": "图片",
       "sentence1": "你能给我看那张照片吗？",
-      "sentence2": "她画了一幅美丽的画。"
+      "sentence2": "她画了一幅美丽的画。",
+      "pronunciation": "/thu˧˥ phjɛn˥˩/"
     },
     {
       "id": 588,
       "word": "片",
       "sentence1": "我需要一张纸。",
-      "sentence2": "她给了我一条建议。"
+      "sentence2": "她给了我一条建议。",
+      "pronunciation": "/phjɛn˥˩/"
     },
     {
       "id": 589,
       "word": "猪",
       "sentence1": "猪在猪圈里。",
-      "sentence2": "她在农场养了一头猪。"
+      "sentence2": "她在农场养了一头猪。",
+      "pronunciation": "/ʈʂu˥/"
     },
     {
       "id": 590,
       "word": "粉色",
       "sentence1": "我最喜欢的颜色是粉色。",
-      "sentence2": "她穿了一条粉色的裙子去参加派对。"
+      "sentence2": "她穿了一条粉色的裙子去参加派对。",
+      "pronunciation": "/fən˧˩˧ sɤ˥˩/"
     },
     {
       "id": 591,
       "word": "地方",
       "sentence1": "这是一个放松的好地方。",
-      "sentence2": "她找到了一个安静的地方阅读。"
+      "sentence2": "她找到了一个安静的地方阅读。",
+      "pronunciation": "/ti˥˩ fɑŋ˥/"
     },
     {
       "id": 592,
       "word": "计划",
       "sentence1": "我有一个周末计划。",
-      "sentence2": "她为项目制定了详细的计划。"
+      "sentence2": "她为项目制定了详细的计划。",
+      "pronunciation": "/tɕi˥˩ xwa˥˩/"
     },
     {
       "id": 593,
       "word": "飞机",
       "sentence1": "飞机飞得很高。",
-      "sentence2": "她在飞往纽约的飞机上。"
+      "sentence2": "她在飞往纽约的飞机上。",
+      "pronunciation": "/feɪ˥ tɕi˥/"
     },
     {
       "id": 594,
       "word": "植物",
       "sentence1": "我房间里有一株植物。",
-      "sentence2": "她每天给植物浇水。"
+      "sentence2": "她每天给植物浇水。",
+      "pronunciation": "/ʈʂɨ˧˥ u˥˩/"
     },
     {
       "id": 595,
       "word": "玩",
       "sentence1": "孩子们喜欢在外面玩。",
-      "sentence2": "她周末踢足球。"
+      "sentence2": "她周末踢足球。",
+      "pronunciation": "/wan˧˥/"
     },
     {
       "id": 596,
       "word": "球员",
       "sentence1": "他是一个有才华的球员。",
-      "sentence2": "她是队里最好的球员。"
+      "sentence2": "她是队里最好的球员。",
+      "pronunciation": "/tɕhjoʊ˧˥ ɥœn˧˥/"
     },
     {
       "id": 597,
       "word": "请",
       "sentence1": "请你帮帮我好吗？",
-      "sentence2": "她说好的，请。"
+      "sentence2": "她说好的，请。",
+      "pronunciation": "/tɕhiŋ˧˩˧/"
     },
     {
       "id": 598,
       "word": "点",
       "sentence1": "你能看到地图上那个点吗？",
-      "sentence2": "她在讨论中提出了一个重要观点。"
+      "sentence2": "她在讨论中提出了一个重要观点。",
+      "pronunciation": "/tjɛn˧˩˧/"
     },
     {
       "id": 599,
       "word": "警察",
       "sentence1": "警方正在调查此案。",
-      "sentence2": "她想成为一名警察。"
+      "sentence2": "她想成为一名警察。",
+      "pronunciation": "/tɕiŋ˧˩˧ ʈʂha˧˥/"
     },
     {
       "id": 600,
       "word": "警察",
       "sentence1": "警察帮助了走失的孩子。",
-      "sentence2": "她感谢警察的帮助。"
+      "sentence2": "她感谢警察的帮助。",
+      "pronunciation": "/tɕiŋ˧˩˧ ʈʂha˧˥/"
     },
     {
       "id": 601,
       "word": "游泳池",
       "sentence1": "游泳池在夏天开放。",
-      "sentence2": "她喜欢在游泳池里游泳。"
+      "sentence2": "她喜欢在游泳池里游泳。",
+      "pronunciation": "/joʊ˧˥ jʊŋ˧˩˧ ʈʂhɨ˧˥/"
     },
     {
       "id": 602,
       "word": "贫穷的",
       "sentence1": "这个贫困家庭需要帮助。",
-      "sentence2": "她把衣服捐给了穷人。"
+      "sentence2": "她把衣服捐给了穷人。",
+      "pronunciation": "/phin˧˥ tɕhjʊŋ˧˥ tɤ/"
     },
     {
       "id": 603,
       "word": "受欢迎的",
       "sentence1": "这首歌很受欢迎。",
-      "sentence2": "她在社区里是个受欢迎的人物。"
+      "sentence2": "她在社区里是个受欢迎的人物。",
+      "pronunciation": "/ʂoʊ˥˩ xwan˥ iŋ˧˥ tɤ/"
     },
     {
       "id": 604,
       "word": "积极的",
       "sentence1": "她有积极的态度。",
-      "sentence2": "反馈非常积极。"
+      "sentence2": "反馈非常积极。",
+      "pronunciation": "/tɕi˥ tɕi˧˥ tɤ/"
     },
     {
       "id": 605,
       "word": "可能的",
       "sentence1": "明天见面可能吗？",
-      "sentence2": "她使按时完成成为可能。"
+      "sentence2": "她使按时完成成为可能。",
+      "pronunciation": "/khɤ˧˩˧ nɤŋ˧˥ tɤ/"
     },
     {
       "id": 606,
       "word": "邮寄",
       "sentence1": "我需要用邮寄方式寄这封信。",
-      "sentence2": "她在邮局工作。"
+      "sentence2": "她在邮局工作。",
+      "pronunciation": "/joʊ˧˥ tɕi˥˩/"
     },
     {
       "id": 607,
       "word": "土豆",
       "sentence1": "我想吃一个烤土豆。",
-      "sentence2": "她在花园里种了土豆。"
+      "sentence2": "她在花园里种了土豆。",
+      "pronunciation": "/thu˧˩˧ toʊ˥˩/"
     },
     {
       "id": 608,
       "word": "磅",
       "sentence1": "磅是一种重量单位。",
-      "sentence2": "她提起了一磅土豆。"
+      "sentence2": "她提起了一磅土豆。",
+      "pronunciation": "/pɑŋ˥˩/"
     },
     {
       "id": 609,
       "word": "练习",
       "sentence1": "熟能生巧。",
-      "sentence2": "她需要更多练习来提高。"
+      "sentence2": "她需要更多练习来提高。",
+      "pronunciation": "/ljɛn˥˩ ɕi˧˥/"
     },
     {
       "id": 610,
       "word": "练习",
       "sentence1": "我需要练习英语。",
-      "sentence2": "她每天练习钢琴。"
+      "sentence2": "她每天练习钢琴。",
+      "pronunciation": "/ljɛn˥˩ ɕi˧˥/"
     },
     {
       "id": 611,
       "word": "更喜欢",
       "sentence1": "比起咖啡我更喜欢茶。",
-      "sentence2": "她更喜欢晚上看书。"
+      "sentence2": "她更喜欢晚上看书。",
+      "pronunciation": "/kɤŋ˥˩ ɕi˧˩˧ xwan˥/"
     },
     {
       "id": 612,
       "word": "准备",
       "sentence1": "我需要为考试做准备。",
-      "sentence2": "她准备了一顿美味的晚餐。"
+      "sentence2": "她准备了一顿美味的晚餐。",
+      "pronunciation": "/ʈʂwən˧˩˧ peɪ˥˩/"
     },
     {
       "id": 613,
       "word": "展示",
       "sentence1": "我想展示我的项目。",
-      "sentence2": "她在会议上展示了她的发现。"
+      "sentence2": "她在会议上展示了她的发现。",
+      "pronunciation": "/ʈʂan˧˩˧ ʂɨ˥˩/"
     },
     {
       "id": 614,
       "word": "漂亮的",
       "sentence1": "她有一个漂亮的微笑。",
-      "sentence2": "花园在春天很漂亮。"
+      "sentence2": "花园在春天很漂亮。",
+      "pronunciation": "/phjɑʊ˥˩ ljɑŋ˥˩ tɤ/"
     },
     {
       "id": 615,
       "word": "价格",
       "sentence1": "这本书的价格是多少？",
-      "sentence2": "她买新车时得到了一个好价格。"
+      "sentence2": "她买新车时得到了一个好价格。",
+      "pronunciation": "/tɕja˥˩ kɤ˧˥/"
     },
     {
       "id": 616,
       "word": "可能",
       "sentence1": "明天可能会下雨。",
-      "sentence2": "她现在可能在家。"
+      "sentence2": "她现在可能在家。",
+      "pronunciation": "/khɤ˧˩˧ nɤŋ˧˥/"
     },
     {
       "id": 617,
       "word": "问题",
       "sentence1": "我们需要解决这个问题。",
-      "sentence2": "她的电脑出了问题。"
+      "sentence2": "她的电脑出了问题。",
+      "pronunciation": "/wən˥˩ thi˧˥/"
     },
     {
       "id": 618,
       "word": "产品",
       "sentence1": "这个产品很受欢迎。",
-      "sentence2": "她从商店买了一个新产品。"
+      "sentence2": "她从商店买了一个新产品。",
+      "pronunciation": "/ʈʂhan˧˩˧ phin˧˩˧/"
     },
     {
       "id": 619,
       "word": "节目/计划",
       "sentence1": "我正在看一个新的电视节目。",
-      "sentence2": "她负责培训计划。"
+      "sentence2": "她负责培训计划。",
+      "pronunciation": "/tɕjɛ˧˥ mu˥˩/; /tɕi˥˩ xwa˥˩/"
     },
     {
       "id": 620,
       "word": "项目",
       "sentence1": "我正在做一个学校项目。",
-      "sentence2": "她向班级展示了她的项目。"
+      "sentence2": "她向班级展示了她的项目。",
+      "pronunciation": "/ɕjɑŋ˥˩ mu˥˩/"
     },
     {
       "id": 621,
       "word": "紫色",
       "sentence1": "我最喜欢的颜色是紫色。",
-      "sentence2": "她穿了一条漂亮的紫色裙子。"
+      "sentence2": "她穿了一条漂亮的紫色裙子。",
+      "pronunciation": "/tsɯ˧˩˧ sɤ˥˩/"
     },
     {
       "id": 622,
       "word": "放",
       "sentence1": "请把书放在架子上。",
-      "sentence2": "她把手机放进包里。"
+      "sentence2": "她把手机放进包里。",
+      "pronunciation": "/fɑŋ˥˩/"
     },
     {
       "id": 623,
       "word": "四分之一/25美分",
       "sentence1": "蛋糕还剩四分之一。",
-      "sentence2": "她付了25美分的公交车费。"
+      "sentence2": "她付了25美分的公交车费。",
+      "pronunciation": "/sɯ˥˩ fən˥ ʈʂɨ˥ i˥/; /25 meɪ˧˩˧ fən˥/"
     },
     {
       "id": 624,
       "word": "问题",
       "sentence1": "我可以问你一个问题吗？",
-      "sentence2": "她有一个关于作业的问题。"
+      "sentence2": "她有一个关于作业的问题。",
+      "pronunciation": "/wən˥˩ thi˧˥/"
     },
     {
       "id": 625,
       "word": "快的",
       "sentence1": "他学东西很快。",
-      "sentence2": "她对问题做出了快速回应。"
+      "sentence2": "她对问题做出了快速回应。",
+      "pronunciation": "/khwaɪ˥˩ tɤ/"
     },
     {
       "id": 626,
       "word": "快速地",
       "sentence1": "请快点完成作业。",
-      "sentence2": "她很快意识到了自己的错误。"
+      "sentence2": "她很快意识到了自己的错误。",
+      "pronunciation": "/khwaɪ˥˩ su˥˩ ti˥˩/"
     },
     {
       "id": 627,
       "word": "安静的",
       "sentence1": "请在图书馆保持安静。",
-      "sentence2": "她享受乡村的宁静。"
+      "sentence2": "她享受乡村的宁静。",
+      "pronunciation": "/an˥ tɕiŋ˥˩ tɤ/"
     },
     {
       "id": 628,
       "word": "相当",
       "sentence1": "外面相当冷。",
-      "sentence2": "她数学相当好。"
+      "sentence2": "她数学相当好。",
+      "pronunciation": "/ɕjɑŋ˥ tɑŋ˥/"
     },
     {
       "id": 629,
       "word": "收音机",
       "sentence1": "我每天早上听收音机。",
-      "sentence2": "她在一家广播电台工作。"
+      "sentence2": "她在一家广播电台工作。",
+      "pronunciation": "/ʂoʊ˥ in˥ tɕi˥/"
     },
     {
       "id": 630,
       "word": "雨",
       "sentence1": "我喜欢听雨声。",
-      "sentence2": "她没带伞被雨淋了。"
+      "sentence2": "她没带伞被雨淋了。",
+      "pronunciation": "/y˧˩˧/"
     },
     {
       "id": 631,
       "word": "阅读",
       "sentence1": "我喜欢睡前阅读。",
-      "sentence2": "她每周读一本书。"
+      "sentence2": "她每周读一本书。",
+      "pronunciation": "/ɥœ˥˩ tu˧˥/"
     },
     {
       "id": 632,
       "word": "读者",
       "sentence1": "读者总是沉浸在故事中。",
-      "sentence2": "她是一个如饥似渴的读者。"
+      "sentence2": "她是一个如饥似渴的读者。",
+      "pronunciation": "/tu˧˥ ʈʂɤ˧˩˧/"
     },
     {
       "id": 633,
       "word": "阅读",
       "sentence1": "阅读是放松的好方法。",
-      "sentence2": "她喜欢读悬疑小说。"
+      "sentence2": "她喜欢读悬疑小说。",
+      "pronunciation": "/ɥœ˥˩ tu˧˥/"
     },
     {
       "id": 634,
       "word": "准备好的",
       "sentence1": "你准备好走了吗？",
-      "sentence2": "她准备好考试了。"
+      "sentence2": "她准备好考试了。",
+      "pronunciation": "/ʈʂwən˧˩˧ peɪ˥˩ xɑʊ˧˩˧ tɤ/"
     },
     {
       "id": 635,
       "word": "真实的",
       "sentence1": "这是一颗真钻石。",
-      "sentence2": "她想看到世界上真正的改变。"
+      "sentence2": "她想看到世界上真正的改变。",
+      "pronunciation": "/ʈʂən˥ ʂɨ˧˥ tɤ/"
     },
     {
       "id": 636,
       "word": "真的",
       "sentence1": "我真的很喜欢这首歌。",
-      "sentence2": "她工作真的很出色。"
+      "sentence2": "她工作真的很出色。",
+      "pronunciation": "/ʈʂən˥ tɤ/"
     },
     {
       "id": 637,
       "word": "原因",
       "sentence1": "你来访的原因是什么？",
-      "sentence2": "她迟到有一个好理由。"
+      "sentence2": "她迟到有一个好理由。",
+      "pronunciation": "/ɥœn˧˥ in˥/"
     },
     {
       "id": 638,
       "word": "红色",
       "sentence1": "我最喜欢的颜色是红色。",
-      "sentence2": "她穿了一条红裙子去参加派对。"
+      "sentence2": "她穿了一条红裙子去参加派对。",
+      "pronunciation": "/xʊŋ˧˥ sɤ˥˩/"
     },
     {
       "id": 639,
       "word": "放松",
       "sentence1": "我喜欢在泳池边放松。",
-      "sentence2": "她泡澡来放松。"
+      "sentence2": "她泡澡来放松。",
+      "pronunciation": "/fɑŋ˥˩ sʊŋ˥/"
     },
     {
       "id": 640,
       "word": "记住",
       "sentence1": "请记得关灯。",
-      "sentence2": "她不记得把钥匙放哪儿了。"
+      "sentence2": "她不记得把钥匙放哪儿了。",
+      "pronunciation": "/tɕi˥˩ ʈʂu˥˩/"
     },
     {
       "id": 641,
       "word": "重复",
       "sentence1": "你能重复一下吗？",
-      "sentence2": "她不得不重复做这个练习好几次。"
+      "sentence2": "她不得不重复做这个练习好几次。",
+      "pronunciation": "/ʈʂhʊŋ˧˥ fu˥˩/"
     },
     {
       "id": 642,
       "word": "报告",
       "sentence1": "我需要为工作写一份报告。",
-      "sentence2": "她按时提交了报告。"
+      "sentence2": "她按时提交了报告。",
+      "pronunciation": "/pɑʊ˥˩ kɑʊ˥˩/"
     },
     {
       "id": 643,
       "word": "餐厅",
       "sentence1": "我们去餐厅吃晚饭吧。",
-      "sentence2": "她在一家高档餐厅工作。"
+      "sentence2": "她在一家高档餐厅工作。",
+      "pronunciation": "/tshan˥ thiŋ˥/"
     },
     {
       "id": 644,
       "word": "结果",
       "sentence1": "实验的结果是什么？",
-      "sentence2": "她对结果很满意。"
+      "sentence2": "她对结果很满意。",
+      "pronunciation": "/tɕjɛ˧˥ kwɔ˧˩˧/"
     },
     {
       "id": 645,
       "word": "返回",
       "sentence1": "我明天会还书。",
-      "sentence2": "她旅行后回到了家。"
+      "sentence2": "她旅行后回到了家。",
+      "pronunciation": "/fan˧˩˧ xweɪ˧˥/"
     },
     {
       "id": 646,
       "word": "米饭",
       "sentence1": "我喜欢吃饭配米饭。",
-      "sentence2": "她做了米饭当晚餐。"
+      "sentence2": "她做了米饭当晚餐。",
+      "pronunciation": "/mi˧˩˧ fan˥˩/"
     },
     {
       "id": 647,
       "word": "富有的",
       "sentence1": "他是一个富人。",
-      "sentence2": "她想嫁给一个有钱的丈夫。"
+      "sentence2": "她想嫁给一个有钱的丈夫。",
+      "pronunciation": "/fu˥˩ joʊ˧˩˧ tɤ/"
     },
     {
       "id": 648,
       "word": "骑",
       "sentence1": "我喜欢在公园里骑自行车。",
-      "sentence2": "她第一次骑马。"
+      "sentence2": "她第一次骑马。",
+      "pronunciation": "/tɕhi˧˥/"
     },
     {
       "id": 649,
       "word": "右边",
       "sentence1": "在红绿灯处右转。",
-      "sentence2": "她坐在我的右边。"
+      "sentence2": "她坐在我的右边。",
+      "pronunciation": "/joʊ˥˩ pjɛn˥/"
     },
     {
       "id": 650,
       "word": "河",
       "sentence1": "河流穿过山谷。",
-      "sentence2": "她喜欢在河里钓鱼。"
+      "sentence2": "她喜欢在河里钓鱼。",
+      "pronunciation": "/xɤ˧˥/"
     },
     {
       "id": 651,
       "word": "路",
       "sentence1": "道路因施工而关闭。",
-      "sentence2": "她住在一条安静的路上。"
+      "sentence2": "她住在一条安静的路上。",
+      "pronunciation": "/lu˥˩/"
     },
     {
       "id": 652,
       "word": "房间",
       "sentence1": "这是我的卧室。",
-      "sentence2": "她昨天打扫了房间。"
+      "sentence2": "她昨天打扫了房间。",
+      "pronunciation": "/fɑŋ˧˥ tɕjɛn˥/"
     },
     {
       "id": 653,
       "word": "日常",
       "sentence1": "我有一个早晨的日常。",
-      "sentence2": "她遵循严格的锻炼日程。"
+      "sentence2": "她遵循严格的锻炼日程。",
+      "pronunciation": "/ʐɨ˥˩ ʈʂhɑŋ˧˥/"
     },
     {
       "id": 654,
       "word": "规则",
       "sentence1": "你必须遵守规则。",
-      "sentence2": "她违反了规则惹了麻烦。"
+      "sentence2": "她违反了规则惹了麻烦。",
+      "pronunciation": "/kweɪ˥ tsɤ˧˥/"
     },
     {
       "id": 655,
       "word": "跑",
       "sentence1": "我喜欢早上跑步。",
-      "sentence2": "她每天跑五英里。"
+      "sentence2": "她每天跑五英里。",
+      "pronunciation": "/phɑʊ˧˩˧/"
     },
     {
       "id": 656,
       "word": "悲伤的",
       "sentence1": "她今天看起来很伤心。",
-      "sentence2": "我对这个情况感到难过。"
+      "sentence2": "我对这个情况感到难过。",
+      "pronunciation": "/peɪ˥ ʂɑŋ˥ tɤ/"
     },
     {
       "id": 657,
       "word": "沙拉",
       "sentence1": "我午餐想要一份沙拉。",
-      "sentence2": "她做了一份美味的沙拉。"
+      "sentence2": "她做了一份美味的沙拉。",
+      "pronunciation": "/ʂa˥ la˥/"
     },
     {
       "id": 658,
       "word": "盐",
       "sentence1": "请把盐递给我。",
-      "sentence2": "她在汤里加了盐。"
+      "sentence2": "她在汤里加了盐。",
+      "pronunciation": "/jɛn˧˥/"
     },
     {
       "id": 659,
       "word": "同样的",
       "sentence1": "我们有同样的问题。",
-      "sentence2": "她穿了和我一样的裙子。"
+      "sentence2": "她穿了和我一样的裙子。",
+      "pronunciation": "/thʊŋ˧˥ jɑŋ˥˩ tɤ/"
     },
     {
       "id": 660,
       "word": "三明治",
       "sentence1": "我午餐想要一个三明治。",
-      "sentence2": "她做了一个火鸡三明治。"
+      "sentence2": "她做了一个火鸡三明治。",
+      "pronunciation": "/san˥ miŋ˧˥ ʈʂɨ˥˩/"
     },
     {
       "id": 661,
       "word": "星期六",
       "sentence1": "星期六是我最喜欢的日子。",
-      "sentence2": "她星期六有一个派对。"
+      "sentence2": "她星期六有一个派对。",
+      "pronunciation": "/ɕiŋ˥ tɕhi˥ ljoʊ˥˩/"
     },
     {
       "id": 662,
       "word": "说",
       "sentence1": "你说什么？",
-      "sentence2": "她什么也没说。"
+      "sentence2": "她什么也没说。",
+      "pronunciation": "/ʂwɔ˥/"
     },
     {
       "id": 663,
       "word": "学校",
       "sentence1": "我每天去上学。",
-      "sentence2": "她是这所学校的学生。"
+      "sentence2": "她是这所学校的学生。",
+      "pronunciation": "/ɕɥœ˧˥ ɕjɑʊ˥˩/"
     },
     {
       "id": 664,
       "word": "科学",
       "sentence1": "科学很迷人。",
-      "sentence2": "她想学科学。"
+      "sentence2": "她想学科学。",
+      "pronunciation": "/khɤ˥ ɕɥœ˧˥/"
     },
     {
       "id": 665,
       "word": "科学家",
       "sentence1": "他是一名科学家。",
-      "sentence2": "她想成为一名科学家。"
+      "sentence2": "她想成为一名科学家。",
+      "pronunciation": "/khɤ˥ ɕɥœ˧˥ tɕja˥/"
     },
     {
       "id": 666,
       "word": "海",
       "sentence1": "今天海很平静。",
-      "sentence2": "她喜欢在海里游泳。"
+      "sentence2": "她喜欢在海里游泳。",
+      "pronunciation": "/xaɪ˧˩˧/"
     },
     {
       "id": 667,
       "word": "第二",
       "sentence1": "这是我第二次尝试。",
-      "sentence2": "她获得了第二名。"
+      "sentence2": "她获得了第二名。",
+      "pronunciation": "/ti˥˩ ɑɻ˥˩/"
     },
     {
       "id": 668,
       "word": "部分",
       "sentence1": "这是一个困难的部分。",
-      "sentence2": "她仔细阅读了这个部分。"
+      "sentence2": "她仔细阅读了这个部分。",
+      "pronunciation": "/pu˥˩ fən˥/"
     },
     {
       "id": 669,
       "word": "看见",
       "sentence1": "我看见树上有一只鸟。",
-      "sentence2": "她从窗户可以看到山。"
+      "sentence2": "她从窗户可以看到山。",
+      "pronunciation": "/khan˥˩ tɕjɛn˥˩/"
     },
     {
       "id": 670,
       "word": "卖",
       "sentence1": "我想卖掉我的旧车。",
-      "sentence2": "她在网上卖手工珠宝。"
+      "sentence2": "她在网上卖手工珠宝。",
+      "pronunciation": "/maɪ˥˩/"
     },
     {
       "id": 671,
       "word": "发送",
       "sentence1": "请把详情发给我。",
-      "sentence2": "她给朋友寄了一封信。"
+      "sentence2": "她给朋友寄了一封信。",
+      "pronunciation": "/fa˥ sʊŋ˥˩/"
     },
     {
       "id": 672,
       "word": "句子",
       "sentence1": "你能写一个句子吗？",
-      "sentence2": "她用完整的句子说话。"
+      "sentence2": "她用完整的句子说话。",
+      "pronunciation": "/tɕy˥˩ tsɯ˧˩˧/"
     },
     {
       "id": 673,
       "word": "九月",
       "sentence1": "九月是第九个月。",
-      "sentence2": "她出生于九月。"
+      "sentence2": "她出生于九月。",
+      "pronunciation": "/tɕjoʊ˧˩˧ ɥœ˥˩/"
     },
     {
       "id": 674,
       "word": "七",
       "sentence1": "我有七个苹果。",
-      "sentence2": "她七岁了。"
+      "sentence2": "她七岁了。",
+      "pronunciation": "/tɕhi˥/"
     },
     {
       "id": 675,
       "word": "十七",
       "sentence1": "十七是我最喜欢的数字。",
-      "sentence2": "她上周满十七岁了。"
+      "sentence2": "她上周满十七岁了。",
+      "pronunciation": "/ʂɨ˧˥ tɕhi˥/"
     },
     {
       "id": 676,
       "word": "七十",
       "sentence1": "七十是一个大数字。",
-      "sentence2": "她七十岁了。"
+      "sentence2": "她七十岁了。",
+      "pronunciation": "/tɕhi˥ ʂɨ˧˥/"
     },
     {
       "id": 677,
       "word": "分享",
       "sentence1": "你能分享你的玩具吗？",
-      "sentence2": "她喜欢分享她的食物。"
+      "sentence2": "她喜欢分享她的食物。",
+      "pronunciation": "/fən˥ ɕjɑŋ˧˩˧/"
     },
     {
       "id": 678,
       "word": "她",
       "sentence1": "她是我最好的朋友。",
-      "sentence2": "我昨天见到了她。"
+      "sentence2": "我昨天见到了她。",
+      "pronunciation": "/tha˥/"
     },
     {
       "id": 679,
       "word": "羊",
       "sentence1": "羊在田里。",
-      "sentence2": "她养了一只宠物羊。"
+      "sentence2": "她养了一只宠物羊。",
+      "pronunciation": "/jɑŋ˧˥/"
     },
     {
       "id": 680,
       "word": "衬衫",
       "sentence1": "我需要一件新衬衫。",
-      "sentence2": "她买了一件蓝色衬衫。"
+      "sentence2": "她买了一件蓝色衬衫。",
+      "pronunciation": "/ʈʂhən˥˩ ʂan˥/"
     },
     {
       "id": 681,
       "word": "鞋",
       "sentence1": "我买了一双新鞋。",
-      "sentence2": "她喜欢她的红鞋。"
+      "sentence2": "她喜欢她的红鞋。",
+      "pronunciation": "/ɕjɛ˧˥/"
     },
     {
       "id": 682,
       "word": "商店",
       "sentence1": "我需要去商店。",
-      "sentence2": "她在一家服装店工作。"
+      "sentence2": "她在一家服装店工作。",
+      "pronunciation": "/ʂɑŋ˥ tjɛn˥˩/"
     },
     {
       "id": 683,
       "word": "购物",
       "sentence1": "我喜欢周末购物。",
-      "sentence2": "她去买杂货了。"
+      "sentence2": "她去买杂货了。",
+      "pronunciation": "/koʊ˥˩ u˥˩/"
     },
     {
       "id": 684,
       "word": "短的",
       "sentence1": "这是一个短篇故事。",
-      "sentence2": "她穿了一条短裙。"
+      "sentence2": "她穿了一条短裙。",
+      "pronunciation": "/twan˧˩˧ tɤ/"
     },
     {
       "id": 685,
       "word": "应该",
       "sentence1": "你应该去看医生。",
-      "sentence2": "她应该道歉。"
+      "sentence2": "她应该道歉。",
+      "pronunciation": "/iŋ˥ kaɪ˥/"
     },
     {
       "id": 686,
       "word": "展示",
       "sentence1": "你能给我指路吗？",
-      "sentence2": "她给我看了她的新裙子。"
+      "sentence2": "她给我看了她的新裙子。",
+      "pronunciation": "/ʈʂan˧˩˧ ʂɨ˥˩/"
     },
     {
       "id": 687,
       "word": "淋浴",
       "sentence1": "我喜欢早上淋浴。",
-      "sentence2": "她洗了很长时间的澡。"
+      "sentence2": "她洗了很长时间的澡。",
+      "pronunciation": "/lin˧˥ y˥˩/"
     },
     {
       "id": 688,
       "word": "生病的",
       "sentence1": "我今天感觉不舒服。",
-      "sentence2": "她上周生病了。"
+      "sentence2": "她上周生病了。",
+      "pronunciation": "/ʂɤŋ˥ piŋ˥˩ tɤ/"
     },
     {
       "id": 689,
       "word": "相似的",
       "sentence1": "这两张图片很相似。",
-      "sentence2": "她有一条类似的裙子。"
+      "sentence2": "她有一条类似的裙子。",
+      "pronunciation": "/ɕjɑŋ˥ sɯ˥˩ tɤ/"
     },
     {
       "id": 690,
       "word": "唱歌",
       "sentence1": "我喜欢在淋浴时唱歌。",
-      "sentence2": "她唱歌很好听。"
+      "sentence2": "她唱歌很好听。",
+      "pronunciation": "/ʈʂhɑŋ˥˩ kɤ˥/"
     },
     {
       "id": 691,
       "word": "歌手",
       "sentence1": "我姐姐是一名歌手。",
-      "sentence2": "她想成为一名著名的歌手。"
+      "sentence2": "她想成为一名著名的歌手。",
+      "pronunciation": "/kɤ˥ ʂoʊ˧˩˧/"
     },
     {
       "id": 692,
       "word": "姐妹",
       "sentence1": "我有一个姐姐。",
-      "sentence2": "她是我的妹妹。"
+      "sentence2": "她是我的妹妹。",
+      "pronunciation": "/tɕjɛ˧˩˧ meɪ˥˩/"
     },
     {
       "id": 693,
       "word": "坐",
       "sentence1": "请坐下。",
-      "sentence2": "她喜欢坐在窗边。"
+      "sentence2": "她喜欢坐在窗边。",
+      "pronunciation": "/tswɔ˥˩/"
     },
     {
       "id": 694,
       "word": "情况",
       "sentence1": "这是一个困难的情况。",
-      "sentence2": "她处理这个情况很好。"
+      "sentence2": "她处理这个情况很好。",
+      "pronunciation": "/tɕhiŋ˧˥ khwɑŋ˥˩/"
     },
     {
       "id": 695,
       "word": "六",
       "sentence1": "我有六本书。",
-      "sentence2": "她六岁了。"
+      "sentence2": "她六岁了。",
+      "pronunciation": "/ljoʊ˥˩/"
     },
     {
       "id": 696,
       "word": "十六",
       "sentence1": "十六是我最喜欢的数字。",
-      "sentence2": "她上个月满十六岁了。"
+      "sentence2": "她上个月满十六岁了。",
+      "pronunciation": "/ʂɨ˧˥ ljoʊ˥˩/"
     },
     {
       "id": 697,
       "word": "六十",
       "sentence1": "六十是一个大数字。",
-      "sentence2": "她六十岁了。"
+      "sentence2": "她六十岁了。",
+      "pronunciation": "/ljoʊ˥˩ ʂɨ˧˥/"
     },
     {
       "id": 698,
       "word": "技能",
       "sentence1": "他有一项特殊技能。",
-      "sentence2": "她正在学习一项新技能。"
+      "sentence2": "她正在学习一项新技能。",
+      "pronunciation": "/tɕi˥˩ nɤŋ˧˥/"
     },
     {
       "id": 699,
       "word": "裙子",
       "sentence1": "我喜欢你的裙子。",
-      "sentence2": "她穿了一条长裙。"
+      "sentence2": "她穿了一条长裙。",
+      "pronunciation": "/tɕhyn˧˥ tsɯ˧˩˧/"
     },
     {
       "id": 700,
       "word": "睡觉",
       "sentence1": "我需要更多睡眠。",
-      "sentence2": "她每晚睡八个小时。"
+      "sentence2": "她每晚睡八个小时。",
+      "pronunciation": "/ʂweɪ˥˩ tɕjɑʊ˥˩/"
     },
     {
       "id": 701,
       "word": "慢的",
       "sentence1": "请开慢点。",
-      "sentence2": "她阅读速度很慢。"
+      "sentence2": "她阅读速度很慢。",
+      "pronunciation": "/man˥˩ tɤ/"
     },
     {
       "id": 702,
       "word": "小的",
       "sentence1": "这是一个小盒子。",
-      "sentence2": "她有一只小狗。"
+      "sentence2": "她有一只小狗。",
+      "pronunciation": "/ɕjɑʊ˧˩˧ tɤ/"
     },
     {
       "id": 703,
       "word": "蛇",
       "sentence1": "我在花园里看到一条蛇。",
-      "sentence2": "她害怕蛇。"
+      "sentence2": "她害怕蛇。",
+      "pronunciation": "/ʂɤ˧˥/"
     },
     {
       "id": 704,
       "word": "雪",
       "sentence1": "雪正在下。",
-      "sentence2": "她喜欢在雪中玩耍。"
+      "sentence2": "她喜欢在雪中玩耍。",
+      "pronunciation": "/ɕɥœ˧˩˧/"
     },
     {
       "id": 705,
       "word": "所以",
       "sentence1": "我累了，所以早早上床睡觉。",
-      "sentence2": "她很高兴，所以笑了。"
+      "sentence2": "她很高兴，所以笑了。",
+      "pronunciation": "/swɔ˧˩˧ i˧˩˧/"
     },
     {
       "id": 706,
       "word": "一些",
       "sentence1": "我有一些想法。",
-      "sentence2": "她买了一些苹果。"
+      "sentence2": "她买了一些苹果。",
+      "pronunciation": "/i˥˩ ɕjɛ˥/"
     },
     {
       "id": 707,
       "word": "某人",
       "sentence1": "有人在门口。",
-      "sentence2": "她认识某个名人。"
+      "sentence2": "她认识某个名人。",
+      "pronunciation": "/moʊ˧˩˧ ʐən˧˥/"
     },
     {
       "id": 708,
       "word": "某人",
       "sentence1": "有人落下了他们的包。",
-      "sentence2": "她正在找人帮忙。"
+      "sentence2": "她正在找人帮忙。",
+      "pronunciation": "/moʊ˧˩˧ ʐən˧˥/"
     },
     {
       "id": 709,
       "word": "某事",
       "sentence1": "我需要吃点东西。",
-      "sentence2": "她在隐瞒某事。"
+      "sentence2": "她在隐瞒某事。",
+      "pronunciation": "/moʊ˧˩˧ ʂɨ˥˩/"
     },
     {
       "id": 710,
       "word": "有时",
       "sentence1": "我有时去散步。",
-      "sentence2": "她有时去看望祖父母。"
+      "sentence2": "她有时去看望祖父母。",
+      "pronunciation": "/joʊ˧˩˧ ʂɨ˧˥/"
     },
     {
       "id": 711,
       "word": "儿子",
       "sentence1": "我的儿子在外面玩。",
-      "sentence2": "她有一个儿子和一个女儿。"
+      "sentence2": "她有一个儿子和一个女儿。",
+      "pronunciation": "/ɑɻ˧˥ tsɯ/"
     },
     {
       "id": 712,
       "word": "歌曲",
       "sentence1": "我喜欢这首歌。",
-      "sentence2": "她唱了一首美丽的歌。"
+      "sentence2": "她唱了一首美丽的歌。",
+      "pronunciation": "/kɤ˥ tɕhy˧˩˧/"
     },
     {
       "id": 713,
       "word": "很快",
       "sentence1": "我很快会打电话给你。",
-      "sentence2": "她很快就会到达。"
+      "sentence2": "她很快就会到达。",
+      "pronunciation": "/xən˧˩˧ khwaɪ˥˩/"
     },
     {
       "id": 714,
       "word": "抱歉",
       "sentence1": "我为这个错误感到抱歉。",
-      "sentence2": "她听到这个消息很难过。"
+      "sentence2": "她听到这个消息很难过。",
+      "pronunciation": "/pɑʊ˥˩ tɕhjɛn˥˩/"
     },
     {
       "id": 715,
       "word": "声音",
       "sentence1": "那是什么声音？",
-      "sentence2": "她有美丽的歌声。"
+      "sentence2": "她有美丽的歌声。",
+      "pronunciation": "/ʂɤŋ˥ in˥/"
     },
     {
       "id": 716,
       "word": "汤",
       "sentence1": "我做了一些汤。",
-      "sentence2": "她喜欢番茄汤。"
+      "sentence2": "她喜欢番茄汤。",
+      "pronunciation": "/thɑŋ˥/"
     },
     {
       "id": 717,
       "word": "南方",
       "sentence1": "我们住在南方。",
-      "sentence2": "她冬天去南方旅行。"
+      "sentence2": "她冬天去南方旅行。",
+      "pronunciation": "/nan˧˥ fɑŋ˥/"
     },
     {
       "id": 718,
       "word": "空间/太空",
       "sentence1": "这里有很多空间。",
-      "sentence2": "她想探索外太空。"
+      "sentence2": "她想探索外太空。",
+      "pronunciation": "/khʊŋ˥ tɕjɛn˥/; /thaɪ˥˩ khʊŋ˥/"
     },
     {
       "id": 719,
       "word": "说",
       "sentence1": "我会说英语。",
-      "sentence2": "她会说三种语言。"
+      "sentence2": "她会说三种语言。",
+      "pronunciation": "/ʂwɔ˥/"
     },
     {
       "id": 720,
       "word": "特别的",
       "sentence1": "这是特别的一天。",
-      "sentence2": "她收到了一份特别的礼物。"
+      "sentence2": "她收到了一份特别的礼物。",
+      "pronunciation": "/thɤ˥˩ pjɛ˧˥ tɤ/"
     },
     {
       "id": 721,
       "word": "拼写",
       "sentence1": "你能拼写你的名字吗？",
-      "sentence2": "她正确地拼写了这个单词。"
+      "sentence2": "她正确地拼写了这个单词。",
+      "pronunciation": "/phin˥ ɕjɛ˧˩˧/"
     },
     {
       "id": 722,
       "word": "拼写",
       "sentence1": "拼写在写作中很重要。",
-      "sentence2": "她赢得了拼写比赛。"
+      "sentence2": "她赢得了拼写比赛。",
+      "pronunciation": "/phin˥ ɕjɛ˧˩˧/"
     },
     {
       "id": 723,
       "word": "花费",
       "sentence1": "我喜欢和朋友们一起度过时光。",
-      "sentence2": "她花光了所有的钱。"
+      "sentence2": "她花光了所有的钱。",
+      "pronunciation": "/xwa˥ feɪ˥˩/"
     },
     {
       "id": 724,
       "word": "运动",
       "sentence1": "足球是我最喜欢的运动。",
-      "sentence2": "她做很多运动。"
+      "sentence2": "她做很多运动。",
+      "pronunciation": "/yn˥˩ tʊŋ˥˩/"
     },
     {
       "id": 725,
       "word": "春天",
       "sentence1": "春天是我最喜欢的季节。",
-      "sentence2": "花在春天绽放。"
+      "sentence2": "花在春天绽放。",
+      "pronunciation": "/ʈʂhwən˥ thjɛn˥/"
     },
     {
       "id": 726,
       "word": "站",
       "sentence1": "请站起来。",
-      "sentence2": "她站在窗边。"
+      "sentence2": "她站在窗边。",
+      "pronunciation": "/ʈʂan˥˩/"
     },
     {
       "id": 727,
       "word": "星星/明星",
       "sentence1": "星星闪闪发光。",
-      "sentence2": "她想成为明星。"
+      "sentence2": "她想成为明星。",
+      "pronunciation": "/ɕiŋ˥ ɕiŋ˥/; /miŋ˧˥ ɕiŋ˥/"
     },
     {
       "id": 728,
       "word": "开始",
       "sentence1": "我要开始做作业了。",
-      "sentence2": "她开始了一个新项目。"
+      "sentence2": "她开始了一个新项目。",
+      "pronunciation": "/khaɪ˥ ʂɨ˧˩˧/"
     },
     {
       "id": 729,
       "word": "声明",
       "sentence1": "这是一个清晰的声明。",
-      "sentence2": "她就这个问题发表了声明。"
+      "sentence2": "她就这个问题发表了声明。",
+      "pronunciation": "/ʂɤŋ˥ miŋ˧˥/"
     },
     {
       "id": 730,
       "word": "车站",
       "sentence1": "火车到达车站。",
-      "sentence2": "她在车站等待。"
+      "sentence2": "她在车站等待。",
+      "pronunciation": "/ʈʂhɤ˥ ʈʂan˥˩/"
     },
     {
       "id": 731,
       "word": "停留",
       "sentence1": "我会留在这里。",
-      "sentence2": "她住在酒店。"
+      "sentence2": "她住在酒店。",
+      "pronunciation": "/thiŋ˧˥ ljoʊ˧˥/"
     },
     {
       "id": 732,
       "word": "仍然",
       "sentence1": "我仍在等待。",
-      "sentence2": "她仍在做这件事。"
+      "sentence2": "她仍在做这件事。",
+      "pronunciation": "/ʐɤŋ˧˥ ʐan˧˥/"
     },
     {
       "id": 733,
       "word": "停止",
       "sentence1": "请停止说话。",
-      "sentence2": "她停下了车。"
+      "sentence2": "她停下了车。",
+      "pronunciation": "/thiŋ˧˥ ʈʂɨ˧˩˧/"
     },
     {
       "id": 734,
       "word": "故事",
       "sentence1": "我喜欢这个故事。",
-      "sentence2": "她讲了一个有趣的故事。"
+      "sentence2": "她讲了一个有趣的故事。",
+      "pronunciation": "/ku˥˩ ʂɨ˥˩/"
     },
     {
       "id": 735,
       "word": "街道",
       "sentence1": "商店在街上。",
-      "sentence2": "她住在一条安静的街道上。"
+      "sentence2": "她住在一条安静的街道上。",
+      "pronunciation": "/tɕjɛ˥ tɑʊ˥˩/"
     },
     {
       "id": 736,
       "word": "强壮的",
       "sentence1": "他是一个强壮的人。",
-      "sentence2": "她有强烈的意见。"
+      "sentence2": "她有强烈的意见。",
+      "pronunciation": "/tɕhjɑŋ˧˥ ʈʂwɑŋ˥˩ tɤ/"
     },
     {
       "id": 737,
       "word": "学生",
       "sentence1": "学生正在学习。",
-      "sentence2": "她是一个好学生。"
+      "sentence2": "她是一个好学生。",
+      "pronunciation": "/ɕɥœ˧˥ ʂɤŋ˥/"
     },
     {
       "id": 738,
       "word": "学习",
       "sentence1": "我需要为考试学习。",
-      "sentence2": "她每晚都学习。"
+      "sentence2": "她每晚都学习。",
+      "pronunciation": "/ɕɥœ˧˥ ɕi˧˥/"
     },
     {
       "id": 739,
       "word": "风格",
       "sentence1": "我喜欢你的风格。",
-      "sentence2": "她有独特的风格。"
+      "sentence2": "她有独特的风格。",
+      "pronunciation": "/fɤŋ˥ kɤ˧˥/"
     },
     {
       "id": 740,
       "word": "科目",
       "sentence1": "这节课的主题是什么？",
-      "sentence2": "她对这个科目感兴趣。"
+      "sentence2": "她对这个科目感兴趣。",
+      "pronunciation": "/khɤ˥ mu˥˩/"
     },
     {
       "id": 741,
       "word": "成功",
       "sentence1": "成功需要努力工作。",
-      "sentence2": "她取得了巨大的成功。"
+      "sentence2": "她取得了巨大的成功。",
+      "pronunciation": "/ʈʂhɤŋ˧˥ kʊŋ˥/"
     },
     {
       "id": 742,
       "word": "糖",
       "sentence1": "我喝咖啡加糖。",
-      "sentence2": "她喜欢茶里加糖。"
+      "sentence2": "她喜欢茶里加糖。",
+      "pronunciation": "/thɑŋ˧˥/"
     },
     {
       "id": 743,
       "word": "夏天",
       "sentence1": "这个地区的夏天很热。",
-      "sentence2": "她喜欢暑假。"
+      "sentence2": "她喜欢暑假。",
+      "pronunciation": "/ɕja˥˩ thjɛn˥/"
     },
     {
       "id": 744,
       "word": "太阳",
       "sentence1": "太阳正在明亮地照耀。",
-      "sentence2": "她坐在阳光下。"
+      "sentence2": "她坐在阳光下。",
+      "pronunciation": "/thaɪ˥˩ jɑŋ˧˥/"
     },
     {
       "id": 745,
       "word": "星期日",
       "sentence1": "星期日是休息日。",
-      "sentence2": "她星期天去教堂。"
+      "sentence2": "她星期天去教堂。",
+      "pronunciation": "/ɕiŋ˥ tɕhi˥ ʐɨ˥˩/"
     },
     {
       "id": 746,
       "word": "超市",
       "sentence1": "我需要去超市。",
-      "sentence2": "她在超市买了杂货。"
+      "sentence2": "她在超市买了杂货。",
+      "pronunciation": "/ʈʂhɑʊ˥ ʂɨ˥˩/"
     },
     {
       "id": 747,
       "word": "确定的",
       "sentence1": "你确定吗？",
-      "sentence2": "她确定自己的决定。"
+      "sentence2": "她确定自己的决定。",
+      "pronunciation": "/tɕhɥœ˥˩ tiŋ˥˩ tɤ/"
     },
     {
       "id": 748,
       "word": "毛衣",
       "sentence1": "我买了一件新毛衣。",
-      "sentence2": "她穿了一件暖和的毛衣。"
+      "sentence2": "她穿了一件暖和的毛衣。",
+      "pronunciation": "/mɑʊ˧˥ i˥/"
     },
     {
       "id": 749,
       "word": "游泳",
       "sentence1": "我喜欢在泳池里游泳。",
-      "sentence2": "她每天早上游泳。"
+      "sentence2": "她每天早上游泳。",
+      "pronunciation": "/joʊ˧˥ jʊŋ˧˩˧/"
     },
     {
       "id": 750,
       "word": "游泳",
       "sentence1": "游泳是很好的运动。",
-      "sentence2": "她喜欢在海里游泳。"
+      "sentence2": "她喜欢在海里游泳。",
+      "pronunciation": "/joʊ˧˥ jʊŋ˧˩˧/"
     },
     {
       "id": 751,
       "word": "桌子",
       "sentence1": "桌子是木头做的。",
-      "sentence2": "她摆好了餐桌。"
+      "sentence2": "她摆好了餐桌。",
+      "pronunciation": "/ʈʂwɔ˥ tsɯ˧˩˧/"
     },
     {
       "id": 752,
       "word": "乘/拍",
       "sentence1": "我要坐公交车。",
-      "sentence2": "她拍了一张日落的照片。"
+      "sentence2": "她拍了一张日落的照片。",
+      "pronunciation": "/ʈʂhɤŋ˧˥/; /phaɪ˥/"
     },
     {
       "id": 753,
       "word": "谈话",
       "sentence1": "我们需要谈谈。",
-      "sentence2": "她谈论了她的计划。"
+      "sentence2": "她谈论了她的计划。",
+      "pronunciation": "/than˧˥ xwa˥˩/"
     },
     {
       "id": 754,
       "word": "高的",
       "sentence1": "他又高又健壮。",
-      "sentence2": "她喜欢高楼大厦。"
+      "sentence2": "她喜欢高楼大厦。",
+      "pronunciation": "/kɑʊ˥ tɤ/"
     },
     {
       "id": 755,
       "word": "出租车",
       "sentence1": "我需要一辆出租车去机场。",
-      "sentence2": "她坐出租车回家。"
+      "sentence2": "她坐出租车回家。",
+      "pronunciation": "/ʈʂhu˥ tsu˥ ʈʂhɤ˥/"
     },
     {
       "id": 756,
       "word": "茶",
       "sentence1": "我喜欢喝茶。",
-      "sentence2": "她更喜欢绿茶。"
+      "sentence2": "她更喜欢绿茶。",
+      "pronunciation": "/ʈʂha˧˥/"
     },
     {
       "id": 757,
       "word": "教",
       "sentence1": "我想教英语。",
-      "sentence2": "她在学校教数学。"
+      "sentence2": "她在学校教数学。",
+      "pronunciation": "/tɕjɑʊ˥˩/"
     },
     {
       "id": 758,
       "word": "老师",
       "sentence1": "老师非常乐于助人。",
-      "sentence2": "她是我最喜欢的老师。"
+      "sentence2": "她是我最喜欢的老师。",
+      "pronunciation": "/lɑʊ˧˩˧ ʂɨ˥/"
     },
     {
       "id": 759,
       "word": "团队",
       "sentence1": "我们队赢了比赛。",
-      "sentence2": "她是一个有价值的团队成员。"
+      "sentence2": "她是一个有价值的团队成员。",
+      "pronunciation": "/thwan˧˥ tweɪ˥˩/"
     },
     {
       "id": 760,
       "word": "青少年",
       "sentence1": "青少年面临许多挑战。",
-      "sentence2": "她是一个典型的青少年。"
+      "sentence2": "她是一个典型的青少年。",
+      "pronunciation": "/tɕhiŋ˥ ʂɑʊ˥˩ njɛn˧˥/"
     },
     {
       "id": 761,
       "word": "电话",
       "sentence1": "我需要给你打电话。",
-      "sentence2": "她接了电话。"
+      "sentence2": "她接了电话。",
+      "pronunciation": "/tjɛn˥˩ xwa˥˩/"
     },
     {
       "id": 762,
       "word": "电视",
       "sentence1": "电视在桌子上。",
-      "sentence2": "她每天晚上看电视。"
+      "sentence2": "她每天晚上看电视。",
+      "pronunciation": "/tjɛn˥˩ ʂɨ˥˩/"
     },
     {
       "id": 763,
       "word": "告诉",
       "sentence1": "请告诉我你的名字。",
-      "sentence2": "她告诉了我一个秘密。"
+      "sentence2": "她告诉了我一个秘密。",
+      "pronunciation": "/kɑʊ˥˩ su˥˩/"
     },
     {
       "id": 764,
       "word": "十",
       "sentence1": "我有十个苹果。",
-      "sentence2": "她十岁了。"
+      "sentence2": "她十岁了。",
+      "pronunciation": "/ʂɨ˧˥/"
     },
     {
       "id": 765,
       "word": "网球",
       "sentence1": "我喜欢打网球。",
-      "sentence2": "她周末打网球。"
+      "sentence2": "她周末打网球。",
+      "pronunciation": "/wɑŋ˧˩˧ tɕhjoʊ˧˥/"
     },
     {
       "id": 766,
       "word": "糟糕的",
       "sentence1": "这部电影太糟糕了。",
-      "sentence2": "她有过一次糟糕的经历。"
+      "sentence2": "她有过一次糟糕的经历。",
+      "pronunciation": "/tsɑʊ˥ kɑʊ˥ tɤ/"
     },
     {
       "id": 767,
       "word": "测试",
       "sentence1": "我明天有考试。",
-      "sentence2": "她通过了考试。"
+      "sentence2": "她通过了考试。",
+      "pronunciation": "/tshɤ˥˩ ʂɨ˥˩/"
     },
     {
       "id": 768,
       "word": "文本/短信",
       "sentence1": "请阅读这段文字。",
-      "sentence2": "她写了一条短信。"
+      "sentence2": "她写了一条短信。",
+      "pronunciation": "/wən˧˥ pən˧˩˧/; /twan˧˩˧ ɕin˥˩/"
     },
     {
       "id": 769,
       "word": "比",
       "sentence1": "她比她哥哥高。",
-      "sentence2": "这本书比那本好。"
+      "sentence2": "这本书比那本好。",
+      "pronunciation": "/pi˧˩˧/"
     },
     {
       "id": 770,
       "word": "感谢",
       "sentence1": "我想感谢你。",
-      "sentence2": "她感谢我的帮助。"
+      "sentence2": "她感谢我的帮助。",
+      "pronunciation": "/kan˧˩˧ ɕjɛ˥˩/"
     },
     {
       "id": 771,
       "word": "谢谢",
       "sentence1": "谢谢你的帮助。",
-      "sentence2": "她说了谢谢就离开了。"
+      "sentence2": "她说了谢谢就离开了。",
+      "pronunciation": "/ɕjɛ˥˩ ɕjɛ˥˩/"
     },
     {
       "id": 772,
       "word": "那个",
       "sentence1": "那是我的书。",
-      "sentence2": "她说她会来。"
+      "sentence2": "她说她会来。",
+      "pronunciation": "/na˥˩ kɤ˥˩/"
     },
     {
       "id": 773,
       "word": "这/那",
       "sentence1": "猫在屋顶上。",
-      "sentence2": "她喜欢那条蓝色裙子。"
+      "sentence2": "她喜欢那条蓝色裙子。",
+      "pronunciation": "/ʈʂɤ˥˩/; /na˥˩/"
     },
     {
       "id": 774,
       "word": "剧院",
       "sentence1": "我们要去剧院。",
-      "sentence2": "她喜欢在剧院看戏。"
+      "sentence2": "她喜欢在剧院看戏。",
+      "pronunciation": "/tɕy˥˩ ɥœn˥˩/"
     },
     {
       "id": 775,
       "word": "他们的",
       "sentence1": "这是他们的房子。",
-      "sentence2": "她拍了他们的照片。"
+      "sentence2": "她拍了他们的照片。",
+      "pronunciation": "/tha˥ mən tɤ/"
     },
     {
       "id": 776,
       "word": "他们",
       "sentence1": "我在公园看见了他们。",
-      "sentence2": "她邀请他们参加派对。"
+      "sentence2": "她邀请他们参加派对。",
+      "pronunciation": "/tha˥ mən/"
     },
     {
       "id": 777,
       "word": "然后",
       "sentence1": "那我们可以走了。",
-      "sentence2": "她那时很累。"
+      "sentence2": "她那时很累。",
+      "pronunciation": "/ʐan˧˥ xoʊ˥˩/"
     },
     {
       "id": 778,
       "word": "那里",
       "sentence1": "书在那边。",
-      "sentence2": "她住在那里。"
+      "sentence2": "她住在那里。",
+      "pronunciation": "/na˥˩ li˧˩˧/"
     },
     {
       "id": 779,
       "word": "他们",
       "sentence1": "他们是我的朋友。",
-      "sentence2": "她说他们会来。"
+      "sentence2": "她说他们会来。",
+      "pronunciation": "/tha˥ mən/"
     },
     {
       "id": 780,
       "word": "东西",
       "sentence1": "那是什么东西？",
-      "sentence2": "她丢了她最喜欢的东西。"
+      "sentence2": "她丢了她最喜欢的东西。",
+      "pronunciation": "/tʊŋ˥ ɕi˥/"
     },
     {
       "id": 781,
       "word": "想",
       "sentence1": "我需要考虑一下。",
-      "sentence2": "她对你评价很高。"
+      "sentence2": "她对你评价很高。",
+      "pronunciation": "/ɕjɑŋ˧˩˧/"
     },
     {
       "id": 782,
       "word": "第三",
       "sentence1": "这是我第三次尝试。",
-      "sentence2": "她获得了第三名。"
+      "sentence2": "她获得了第三名。",
+      "pronunciation": "/ti˥˩ san˥/"
     },
     {
       "id": 783,
       "word": "渴的",
       "sentence1": "我渴了。",
-      "sentence2": "她运动后总是感到口渴。"
+      "sentence2": "她运动后总是感到口渴。",
+      "pronunciation": "/khɤ˧˩˧ tɤ/"
     },
     {
       "id": 784,
       "word": "十三",
       "sentence1": "我有十三个苹果。",
-      "sentence2": "她十三岁了。"
+      "sentence2": "她十三岁了。",
+      "pronunciation": "/ʂɨ˧˥ san˥/"
     },
     {
       "id": 785,
       "word": "三十",
       "sentence1": "班上有三十个学生。",
-      "sentence2": "她明年三十岁。"
+      "sentence2": "她明年三十岁。",
+      "pronunciation": "/san˥ ʂɨ˧˥/"
     },
     {
       "id": 786,
       "word": "这个",
       "sentence1": "这是我的书。",
-      "sentence2": "她说这是她最喜欢的。"
+      "sentence2": "她说这是她最喜欢的。",
+      "pronunciation": "/ʈʂɤ˥˩ kɤ˥˩/"
     },
     {
       "id": 787,
       "word": "千",
       "sentence1": "我有一千个想法。",
-      "sentence2": "她赢了一千美元。"
+      "sentence2": "她赢了一千美元。",
+      "pronunciation": "/tɕhjɛn˥/"
     },
     {
       "id": 788,
       "word": "三",
       "sentence1": "我有三个兄弟。",
-      "sentence2": "她三岁了。"
+      "sentence2": "她三岁了。",
+      "pronunciation": "/san˥/"
     },
     {
       "id": 789,
       "word": "穿过/透过",
       "sentence1": "我们穿过公园。",
-      "sentence2": "她透过窗户看。"
+      "sentence2": "她透过窗户看。",
+      "pronunciation": "/ʈʂhwan˥ kwɔ˥˩/; /thoʊ˥˩ kwɔ˥˩/"
     },
     {
       "id": 790,
       "word": "星期四",
       "sentence1": "星期四是我最喜欢的日子。",
-      "sentence2": "她星期四有会议。"
+      "sentence2": "她星期四有会议。",
+      "pronunciation": "/ɕiŋ˥ tɕhi˥ sɯ˥˩/"
     },
     {
       "id": 791,
       "word": "票",
       "sentence1": "我需要买一张票。",
-      "sentence2": "她在入口处出示了她的票。"
+      "sentence2": "她在入口处出示了她的票。",
+      "pronunciation": "/phjɑʊ˥˩/"
     },
     {
       "id": 792,
       "word": "时间",
       "sentence1": "现在几点了？",
-      "sentence2": "她花很多时间阅读。"
+      "sentence2": "她花很多时间阅读。",
+      "pronunciation": "/ʂɨ˧˥ tɕjɛn˥/"
     },
     {
       "id": 793,
       "word": "累的",
       "sentence1": "我累了。",
-      "sentence2": "她长途旅行后感到疲惫。"
+      "sentence2": "她长途旅行后感到疲惫。",
+      "pronunciation": "/leɪ˥˩ tɤ/"
     },
     {
       "id": 794,
       "word": "标题",
       "sentence1": "这本书的标题是什么？",
-      "sentence2": "她给她的故事起了一个吸引人的标题。"
+      "sentence2": "她给她的故事起了一个吸引人的标题。",
+      "pronunciation": "/pjɑʊ˥ thi˧˥/"
     },
     {
       "id": 795,
       "word": "到",
       "sentence1": "我要去商店。",
-      "sentence2": "她把书给了她的朋友。"
+      "sentence2": "她把书给了她的朋友。",
+      "pronunciation": "/tɑʊ˥˩/"
     },
     {
       "id": 796,
       "word": "今天",
       "sentence1": "今天是美好的一天。",
-      "sentence2": "她今天会去看望她的祖母。"
+      "sentence2": "她今天会去看望她的祖母。",
+      "pronunciation": "/tɕin˥ thjɛn˥/"
     },
     {
       "id": 797,
       "word": "一起",
       "sentence1": "我们要一起工作。",
-      "sentence2": "她喜欢和朋友们一起玩游戏。"
+      "sentence2": "她喜欢和朋友们一起玩游戏。",
+      "pronunciation": "/i˥˩ tɕhi˧˩˧/"
     },
     {
       "id": 798,
       "word": "厕所",
       "sentence1": "厕所在哪里？",
-      "sentence2": "她在电影开始前去了厕所。"
+      "sentence2": "她在电影开始前去了厕所。",
+      "pronunciation": "/tshɤ˥˩ swɔ˧˩˧/"
     },
     {
       "id": 799,
       "word": "番茄",
       "sentence1": "我需要一个番茄做沙拉。",
-      "sentence2": "她从市场买了一个番茄。"
+      "sentence2": "她从市场买了一个番茄。",
+      "pronunciation": "/fan˥ tɕhjɛ˧˥/"
     },
     {
       "id": 800,
       "word": "明天",
       "sentence1": "我明天给你打电话。",
-      "sentence2": "她明天有会议。"
+      "sentence2": "她明天有会议。",
+      "pronunciation": "/miŋ˧˥ thjɛn˥/"
     },
     {
       "id": 801,
       "word": "今晚",
       "sentence1": "我今晚有计划。",
-      "sentence2": "她今晚待在家里。"
+      "sentence2": "她今晚待在家里。",
+      "pronunciation": "/tɕin˥ wan˧˩˧/"
     },
     {
       "id": 802,
       "word": "也",
       "sentence1": "我也想去。",
-      "sentence2": "她也要来。"
+      "sentence2": "她也要来。",
+      "pronunciation": "/jɛ˧˩˧/"
     },
     {
       "id": 803,
       "word": "牙齿",
       "sentence1": "我牙疼。",
-      "sentence2": "她的牙齿有蛀牙。"
+      "sentence2": "她的牙齿有蛀牙。",
+      "pronunciation": "/ja˧˥ ʈʂhɨ˧˩˧/"
     },
     {
       "id": 804,
       "word": "话题",
       "sentence1": "讨论的话题是什么？",
-      "sentence2": "她介绍了一个新话题。"
+      "sentence2": "她介绍了一个新话题。",
+      "pronunciation": "/xwa˥˩ thi˧˥/"
     },
     {
       "id": 805,
       "word": "游客",
       "sentence1": "游客拍了很多照片。",
-      "sentence2": "她是这个城市的游客。"
+      "sentence2": "她是这个城市的游客。",
+      "pronunciation": "/joʊ˧˥ khɤ˥˩/"
     },
     {
       "id": 806,
       "word": "小镇",
       "sentence1": "我住在一个小镇。",
-      "sentence2": "她在这个小镇长大。"
+      "sentence2": "她在这个小镇长大。",
+      "pronunciation": "/ɕjɑʊ˧˩˧ ʈʂən˥˩/"
     },
     {
       "id": 807,
       "word": "交通",
       "sentence1": "今天交通很拥挤。",
-      "sentence2": "她被堵在路上。"
+      "sentence2": "她被堵在路上。",
+      "pronunciation": "/tɕjɑʊ˥ thʊŋ˥/"
     },
     {
       "id": 808,
       "word": "火车",
       "sentence1": "我要坐火车去上班。",
-      "sentence2": "她错过了火车。"
+      "sentence2": "她错过了火车。",
+      "pronunciation": "/xwɔ˧˩˧ ʈʂhɤ˥/"
     },
     {
       "id": 809,
       "word": "旅行",
       "sentence1": "我喜欢旅行。",
-      "sentence2": "她正在计划旅行行程。"
+      "sentence2": "她正在计划旅行行程。",
+      "pronunciation": "/ly˧˩˧ ɕiŋ˧˥/"
     },
     {
       "id": 810,
       "word": "树",
       "sentence1": "这棵树很高。",
-      "sentence2": "她爬上了树。"
+      "sentence2": "她爬上了树。",
+      "pronunciation": "/ʂu˥˩/"
     },
     {
       "id": 811,
       "word": "旅行",
       "sentence1": "我要去旅行。",
-      "sentence2": "她很享受这次旅行。"
+      "sentence2": "她很享受这次旅行。",
+      "pronunciation": "/ly˧˩˧ ɕiŋ˧˥/"
     },
     {
       "id": 812,
       "word": "裤子",
       "sentence1": "我买了新裤子。",
-      "sentence2": "她穿着蓝色裤子。"
+      "sentence2": "她穿着蓝色裤子。",
+      "pronunciation": "/khu˥˩ tsɯ˧˩˧/"
     },
     {
       "id": 813,
       "word": "真的",
       "sentence1": "那个声明是真的。",
-      "sentence2": "她总是说实话。"
+      "sentence2": "她总是说实话。",
+      "pronunciation": "/ʈʂən˥ tɤ/"
     },
     {
       "id": 814,
       "word": "尝试",
       "sentence1": "我会尽力。",
-      "sentence2": "她试图解决这个问题。"
+      "sentence2": "她试图解决这个问题。",
+      "pronunciation": "/ʈʂhɑŋ˧˥ ʂɨ˥˩/"
     },
     {
       "id": 815,
       "word": "T恤",
       "sentence1": "我需要一件新T恤。",
-      "sentence2": "她从商店买了一件T恤。"
+      "sentence2": "她从商店买了一件T恤。",
+      "pronunciation": "/t ɕy˥˩/"
     },
     {
       "id": 816,
       "word": "星期二",
       "sentence1": "星期二是我最喜欢的日子。",
-      "sentence2": "她星期二有会议。"
+      "sentence2": "她星期二有会议。",
+      "pronunciation": "/ɕiŋ˥ tɕhi˥ ɑɻ˥˩/"
     },
     {
       "id": 817,
       "word": "关/翻",
       "sentence1": "请关灯。",
-      "sentence2": "她翻了一页。"
+      "sentence2": "她翻了一页。",
+      "pronunciation": "/kwan˥/; /fan˥/"
     },
     {
       "id": 818,
       "word": "电视",
       "sentence1": "我晚上看电视。",
-      "sentence2": "她打开了电视。"
+      "sentence2": "她打开了电视。",
+      "pronunciation": "/tjɛn˥˩ ʂɨ˥˩/"
     },
     {
       "id": 819,
       "word": "十二",
       "sentence1": "一年有十二个月。",
-      "sentence2": "她十二岁了。"
+      "sentence2": "她十二岁了。",
+      "pronunciation": "/ʂɨ˧˥ ɑɻ˥˩/"
     },
     {
       "id": 820,
       "word": "二十",
       "sentence1": "我有二十美元。",
-      "sentence2": "她二十岁了。"
+      "sentence2": "她二十岁了。",
+      "pronunciation": "/ɑɻ˥˩ ʂɨ˧˥/"
     },
     {
       "id": 821,
       "word": "两次",
       "sentence1": "我看过那部电影两次。",
-      "sentence2": "她每月去看父母两次。"
+      "sentence2": "她每月去看父母两次。",
+      "pronunciation": "/ljɑŋ˧˩˧ tshɯ˥˩/"
     },
     {
       "id": 822,
       "word": "二",
       "sentence1": "我有两只猫。",
-      "sentence2": "她想要两张票。"
+      "sentence2": "她想要两张票。",
+      "pronunciation": "/ɑɻ˥˩/"
     },
     {
       "id": 823,
       "word": "类型",
       "sentence1": "你喜欢什么类型的音乐？",
-      "sentence2": "她更喜欢不同类型的书。"
+      "sentence2": "她更喜欢不同类型的书。",
+      "pronunciation": "/leɪ˥˩ ɕiŋ˧˥/"
     },
     {
       "id": 824,
       "word": "雨伞",
       "sentence1": "别忘了你的雨伞。",
-      "sentence2": "她买了一把新雨伞。"
+      "sentence2": "她买了一把新雨伞。",
+      "pronunciation": "/y˧˩˧ san˧˩˧/"
     },
     {
       "id": 825,
       "word": "叔叔",
       "sentence1": "我叔叔住在纽约。",
-      "sentence2": "她去年夏天去看望了叔叔。"
+      "sentence2": "她去年夏天去看望了叔叔。",
+      "pronunciation": "/ʂu˥ ʂu˥/"
     },
     {
       "id": 826,
       "word": "在...下面",
       "sentence1": "猫在桌子下面。",
-      "sentence2": "她在沙发下面找到了钥匙。"
+      "sentence2": "她在沙发下面找到了钥匙。",
+      "pronunciation": "/tsaɪ˥˩ ... ɕja˥˩ mjɛn˥˩/"
     },
     {
       "id": 827,
       "word": "理解",
       "sentence1": "我不理解这个问题。",
-      "sentence2": "她理解这个问题。"
+      "sentence2": "她理解这个问题。",
+      "pronunciation": "/li˧˩˧ tɕjɛ˧˩˧/"
     },
     {
       "id": 828,
       "word": "大学",
       "sentence1": "她在大学学习。",
-      "sentence2": "他从大学毕业了。"
+      "sentence2": "他从大学毕业了。",
+      "pronunciation": "/ta˥˩ ɕɥœ˧˥/"
     },
     {
       "id": 829,
       "word": "直到",
       "sentence1": "我会等到你到达。",
-      "sentence2": "她待到演出结束。"
+      "sentence2": "她待到演出结束。",
+      "pronunciation": "/ʈʂɨ˧˥ tɑʊ˥˩/"
     },
     {
       "id": 830,
       "word": "向上",
       "sentence1": "猫爬上了树。",
-      "sentence2": "她抬头看天空。"
+      "sentence2": "她抬头看天空。",
+      "pronunciation": "/ɕjɑŋ˥˩ ʂɑŋ˥˩/"
     },
     {
       "id": 831,
       "word": "楼上",
       "sentence1": "卧室在楼上。",
-      "sentence2": "她上楼去学习了。"
+      "sentence2": "她上楼去学习了。",
+      "pronunciation": "/loʊ˧˥ ʂɑŋ˥˩/"
     },
     {
       "id": 832,
       "word": "我们",
       "sentence1": "你能帮助我们吗？",
-      "sentence2": "她邀请我们参加她的派对。"
+      "sentence2": "她邀请我们参加她的派对。",
+      "pronunciation": "/wɔ˧˩˧ mən/"
     },
     {
       "id": 833,
       "word": "使用",
       "sentence1": "我需要用电脑。",
-      "sentence2": "她在手机上使用很多应用程序。"
+      "sentence2": "她在手机上使用很多应用程序。",
+      "pronunciation": "/ʂɨ˧˩˧ jʊŋ˥˩/"
     },
     {
       "id": 834,
       "word": "有用的",
       "sentence1": "这本书很有用。",
-      "sentence2": "她觉得这些信息很有用。"
+      "sentence2": "她觉得这些信息很有用。",
+      "pronunciation": "/joʊ˧˩˧ jʊŋ˥˩ tɤ/"
     },
     {
       "id": 835,
       "word": "通常",
       "sentence1": "我通常早起。",
-      "sentence2": "她通常晚上去散步。"
+      "sentence2": "她通常晚上去散步。",
+      "pronunciation": "/thʊŋ˥ ʈʂhɑŋ˧˥/"
     },
     {
       "id": 836,
       "word": "假期",
       "sentence1": "我下周去度假。",
-      "sentence2": "她喜欢在假期旅行。"
+      "sentence2": "她喜欢在假期旅行。",
+      "pronunciation": "/tɕja˧˩˧ tɕhi˥/"
     },
     {
       "id": 837,
       "word": "蔬菜",
       "sentence1": "我吃很多蔬菜。",
-      "sentence2": "她更喜欢水果而不是蔬菜。"
+      "sentence2": "她更喜欢水果而不是蔬菜。",
+      "pronunciation": "/ʂu˥ tshaɪ˥˩/"
     },
     {
       "id": 838,
       "word": "非常",
       "sentence1": "这是一本非常有趣的书。",
-      "sentence2": "她非常有才华。"
+      "sentence2": "她非常有才华。",
+      "pronunciation": "/feɪ˥ ʈʂhɑŋ˧˥/"
     },
     {
       "id": 839,
       "word": "视频",
       "sentence1": "我在网上看了一个有趣的视频。",
-      "sentence2": "她喜欢制作视频。"
+      "sentence2": "她喜欢制作视频。",
+      "pronunciation": "/ʂɨ˥˩ phin˧˥/"
     },
     {
       "id": 840,
       "word": "村庄",
       "sentence1": "他在一个小村庄长大。",
-      "sentence2": "她去村里看望了祖父母。"
+      "sentence2": "她去村里看望了祖父母。",
+      "pronunciation": "/tshwən˥ ʈʂwɑŋ˥/"
     },
     {
       "id": 841,
       "word": "访问",
       "sentence1": "我明天会去看朋友。",
-      "sentence2": "她上周参观了博物馆。"
+      "sentence2": "她上周参观了博物馆。",
+      "pronunciation": "/fɑŋ˧˩˧ wən˥˩/"
     },
     {
       "id": 842,
       "word": "访客",
       "sentence1": "访客问了很多问题。",
-      "sentence2": "她是博物馆的常客。"
+      "sentence2": "她是博物馆的常客。",
+      "pronunciation": "/fɑŋ˧˩˧ khɤ˥˩/"
     },
     {
       "id": 843,
       "word": "等待",
       "sentence1": "我会等你。",
-      "sentence2": "她等了一个小时。"
+      "sentence2": "她等了一个小时。",
+      "pronunciation": "/tɤŋ˧˩˧ taɪ˥˩/"
     },
     {
       "id": 844,
       "word": "服务员",
       "sentence1": "服务员接了我们的订单。",
-      "sentence2": "她以前当过服务员。"
+      "sentence2": "她以前当过服务员。",
+      "pronunciation": "/fu˧˥ u˥˩ ɥœn˧˥/"
     },
     {
       "id": 845,
       "word": "醒来",
       "sentence1": "我早上7点起床。",
-      "sentence2": "她今天起晚了。"
+      "sentence2": "她今天起晚了。",
+      "pronunciation": "/ɕiŋ˧˩˧ laɪ˧˥/"
     },
     {
       "id": 846,
       "word": "走",
       "sentence1": "我喜欢在公园散步。",
-      "sentence2": "她每天早上遛狗。"
+      "sentence2": "她每天早上遛狗。",
+      "pronunciation": "/tsoʊ˧˩˧/"
     },
     {
       "id": 847,
       "word": "墙",
       "sentence1": "照片在墙上。",
-      "sentence2": "她把墙漆成了蓝色。"
+      "sentence2": "她把墙漆成了蓝色。",
+      "pronunciation": "/tɕhjɑŋ˧˥/"
     },
     {
       "id": 848,
       "word": "想要",
       "sentence1": "我想学英语。",
-      "sentence2": "她想要一部新手机。"
+      "sentence2": "她想要一部新手机。",
+      "pronunciation": "/ɕjɑŋ˧˩˧ jɑʊ˥˩/"
     },
     {
       "id": 849,
       "word": "温暖的",
       "sentence1": "汤是温的。",
-      "sentence2": "她喜欢温暖的天气。"
+      "sentence2": "她喜欢温暖的天气。",
+      "pronunciation": "/wən˥ nwan˧˩˧ tɤ/"
     },
     {
       "id": 850,
       "word": "洗",
       "sentence1": "我需要洗手。",
-      "sentence2": "她每周洗车。"
+      "sentence2": "她每周洗车。",
+      "pronunciation": "/ɕi˧˩˧/"
     },
     {
       "id": 851,
       "word": "看",
       "sentence1": "我喜欢看电影。",
-      "sentence2": "她昨晚看了一部纪录片。"
+      "sentence2": "她昨晚看了一部纪录片。",
+      "pronunciation": "/khan˥˩/"
     },
     {
       "id": 852,
       "word": "水/浇水",
       "sentence1": "我喝很多水。",
-      "sentence2": "她给植物浇水了。"
+      "sentence2": "她给植物浇水了。",
+      "pronunciation": "/ʂweɪ˧˩˧/; /tɕjɑʊ˥ ʂweɪ˧˩˧/"
     },
     {
       "id": 853,
       "word": "方式",
       "sentence1": "这是学习的最好方式。",
-      "sentence2": "她找到了解决问题的新方法。"
+      "sentence2": "她找到了解决问题的新方法。",
+      "pronunciation": "/fɑŋ˥ ʂɨ˥˩/"
     },
     {
       "id": 854,
       "word": "我们",
       "sentence1": "我们要去公园。",
-      "sentence2": "他们邀请我们参加他们的婚礼。"
+      "sentence2": "他们邀请我们参加他们的婚礼。",
+      "pronunciation": "/wɔ˧˩˧ mən/"
     },
     {
       "id": 855,
       "word": "穿",
       "sentence1": "我喜欢穿舒适的衣服。",
-      "sentence2": "她穿了一条漂亮的裙子去参加派对。"
+      "sentence2": "她穿了一条漂亮的裙子去参加派对。",
+      "pronunciation": "/ʈʂhwan˥/"
     },
     {
       "id": 856,
       "word": "天气",
       "sentence1": "今天天气很好。",
-      "sentence2": "她查看了天气预报。"
+      "sentence2": "她查看了天气预报。",
+      "pronunciation": "/thjɛn˥ tɕhi˥˩/"
     },
     {
       "id": 857,
       "word": "网站",
       "sentence1": "我找到了一个有用的网站。",
-      "sentence2": "她为她的生意创建了一个网站。"
+      "sentence2": "她为她的生意创建了一个网站。",
+      "pronunciation": "/wɑŋ˧˩˧ ʈʂan˥˩/"
     },
     {
       "id": 858,
       "word": "星期三",
       "sentence1": "星期三是我最喜欢的日子。",
-      "sentence2": "她星期三有会议。"
+      "sentence2": "她星期三有会议。",
+      "pronunciation": "/ɕiŋ˥ tɕhi˥ san˥/"
     },
     {
       "id": 859,
       "word": "周",
       "sentence1": "我每周工作五天。",
-      "sentence2": "她下周去度假。"
+      "sentence2": "她下周去度假。",
+      "pronunciation": "/ʈʂoʊ˥/"
     },
     {
       "id": 860,
       "word": "周末",
       "sentence1": "我喜欢周末放松。",
-      "sentence2": "她周末有计划。"
+      "sentence2": "她周末有计划。",
+      "pronunciation": "/ʈʂoʊ˥ mwɔ˥˩/"
     },
     {
       "id": 861,
       "word": "欢迎",
       "sentence1": "欢迎来到我们家！",
-      "sentence2": "她对客人说欢迎。"
+      "sentence2": "她对客人说欢迎。",
+      "pronunciation": "/xwan˥ iŋ˧˥/"
     },
     {
       "id": 862,
       "word": "好",
       "sentence1": "我希望你一切都好。",
-      "sentence2": "她今天感觉很好。"
+      "sentence2": "她今天感觉很好。",
+      "pronunciation": "/xɑʊ˧˩˧/"
     },
     {
       "id": 863,
       "word": "西方",
       "sentence1": "太阳在西边落下。",
-      "sentence2": "她去了西海岸旅行。"
+      "sentence2": "她去了西海岸旅行。",
+      "pronunciation": "/ɕi˥ fɑŋ˥/"
     },
     {
       "id": 864,
       "word": "什么",
       "sentence1": "你叫什么名字？",
-      "sentence2": "她问几点了。"
+      "sentence2": "她问几点了。",
+      "pronunciation": "/ʂən˧˥ mɤ/"
     },
     {
       "id": 865,
       "word": "什么时候",
       "sentence1": "你的生日是什么时候？",
-      "sentence2": "她没说什么时候到。"
+      "sentence2": "她没说什么时候到。",
+      "pronunciation": "/ʂən˧˥ mɤ ʂɨ˧˥ xoʊ˥˩/"
     },
     {
       "id": 866,
       "word": "哪里",
       "sentence1": "你住在哪里？",
-      "sentence2": "她问最近的车站在哪里。"
+      "sentence2": "她问最近的车站在哪里。",
+      "pronunciation": "/na˧˩˧ li˧˩˧/"
     },
     {
       "id": 867,
       "word": "哪个",
       "sentence1": "你想要哪本书？",
-      "sentence2": "她没说她喜欢哪条裙子。"
+      "sentence2": "她没说她喜欢哪条裙子。",
+      "pronunciation": "/na˧˩˧ kɤ˥˩/"
     },
     {
       "id": 868,
       "word": "白色",
       "sentence1": "白色的猫在睡觉。",
-      "sentence2": "她买了一条白色的裙子。"
+      "sentence2": "她买了一条白色的裙子。",
+      "pronunciation": "/paɪ˧˥ sɤ˥˩/"
     },
     {
       "id": 869,
       "word": "谁",
       "sentence1": "谁是你最好的朋友？",
-      "sentence2": "她没说她和谁在一起。"
+      "sentence2": "她没说她和谁在一起。",
+      "pronunciation": "/ʂeɪ˧˥/"
     },
     {
       "id": 870,
       "word": "为什么",
       "sentence1": "你为什么伤心？",
-      "sentence2": "她问我为什么迟到。"
+      "sentence2": "她问我为什么迟到。",
+      "pronunciation": "/weɪ˧˥ ʂən˧˥ mɤ/"
     },
     {
       "id": 871,
       "word": "妻子",
       "sentence1": "我妻子是医生。",
-      "sentence2": "她是他的妻子。"
+      "sentence2": "她是他的妻子。",
+      "pronunciation": "/tɕhi˥ tsɯ/"
     },
     {
       "id": 872,
       "word": "将",
       "sentence1": "我明天给你打电话。",
-      "sentence2": "她说她会帮助我们。"
+      "sentence2": "她说她会帮助我们。",
+      "pronunciation": "/tɕjɑŋ˥/"
     },
     {
       "id": 873,
       "word": "赢",
       "sentence1": "我希望赢得比赛。",
-      "sentence2": "她在比赛中获奖了。"
+      "sentence2": "她在比赛中获奖了。",
+      "pronunciation": "/iŋ˧˥/"
     },
     {
       "id": 874,
       "word": "窗户",
       "sentence1": "窗户开着。",
-      "sentence2": "她往窗外看。"
+      "sentence2": "她往窗外看。",
+      "pronunciation": "/ʈʂhwɑŋ˥ xu˥˩/"
     },
     {
       "id": 875,
       "word": "葡萄酒",
       "sentence1": "我喜欢喝红酒。",
-      "sentence2": "她晚餐时上了酒。"
+      "sentence2": "她晚餐时上了酒。",
+      "pronunciation": "/phu˧˥ thɑʊ˧˥ tɕjoʊ˧˩˧/"
     },
     {
       "id": 876,
       "word": "冬天",
       "sentence1": "冬天是我最喜欢的季节。",
-      "sentence2": "她喜欢冬天滑雪。"
+      "sentence2": "她喜欢冬天滑雪。",
+      "pronunciation": "/tʊŋ˥ thjɛn˥/"
     },
     {
       "id": 877,
       "word": "和",
       "sentence1": "我和朋友去了商店。",
-      "sentence2": "她正在和同学一起学习。"
+      "sentence2": "她正在和同学一起学习。",
+      "pronunciation": "/xɤ˧˥/"
     },
     {
       "id": 878,
       "word": "没有",
       "sentence1": "我不能没有你。",
-      "sentence2": "她独自完成了项目。"
+      "sentence2": "她独自完成了项目。",
+      "pronunciation": "/meɪ˧˥ joʊ˧˩˧/"
     },
     {
       "id": 879,
       "word": "女人",
       "sentence1": "那个女人在看书。",
-      "sentence2": "她是一个坚强的女人。"
+      "sentence2": "她是一个坚强的女人。",
+      "pronunciation": "/ny˧˩˧ ʐən˧˥/"
     },
     {
       "id": 880,
       "word": "精彩的",
       "sentence1": "你做得太棒了！",
-      "sentence2": "她有美丽的微笑。"
+      "sentence2": "她有美丽的微笑。",
+      "pronunciation": "/tɕiŋ˥ tshaɪ˧˩˧ tɤ/"
     },
     {
       "id": 881,
       "word": "单词",
       "sentence1": "你能拼写那个单词吗？",
-      "sentence2": "她在字典里查了那个单词。"
+      "sentence2": "她在字典里查了那个单词。",
+      "pronunciation": "/tan˥ tshɯ˧˥/"
     },
     {
       "id": 882,
       "word": "工作",
       "sentence1": "我今晚要加班。",
-      "sentence2": "她正在找新工作。"
+      "sentence2": "她正在找新工作。",
+      "pronunciation": "/kʊŋ˥ tswɔ˥˩/"
     },
     {
       "id": 883,
       "word": "工人",
       "sentence1": "工人在修路。",
-      "sentence2": "她是一个勤劳的工人。"
+      "sentence2": "她是一个勤劳的工人。",
+      "pronunciation": "/kʊŋ˥ ʐən˧˥/"
     },
     {
       "id": 884,
       "word": "世界",
       "sentence1": "世界是一个美丽的地方。",
-      "sentence2": "她想环游世界。"
+      "sentence2": "她想环游世界。",
+      "pronunciation": "/ʂɨ˥˩ tɕjɛ˥˩/"
     },
     {
       "id": 885,
       "word": "会",
       "sentence1": "我想要一些咖啡。",
-      "sentence2": "她说她会来参加派对。"
+      "sentence2": "她说她会来参加派对。",
+      "pronunciation": "/xweɪ˥˩/"
     },
     {
       "id": 886,
       "word": "写",
       "sentence1": "我喜欢写故事。",
-      "sentence2": "她正在写一封信。"
+      "sentence2": "她正在写一封信。",
+      "pronunciation": "/ɕjɛ˧˩˧/"
     },
     {
       "id": 887,
       "word": "作家",
       "sentence1": "他是一位著名的作家。",
-      "sentence2": "她想成为一名作家。"
+      "sentence2": "她想成为一名作家。",
+      "pronunciation": "/tswɔ˥˩ tɕja˥/"
     },
     {
       "id": 888,
       "word": "写作",
       "sentence1": "写作是我的爱好。",
-      "sentence2": "她喜欢在空闲时间写作。"
+      "sentence2": "她喜欢在空闲时间写作。",
+      "pronunciation": "/ɕjɛ˧˩˧ tswɔ˥˩/"
     },
     {
       "id": 889,
       "word": "错误的",
       "sentence1": "那是错误的答案。",
-      "sentence2": "她意识到自己错了。"
+      "sentence2": "她意识到自己错了。",
+      "pronunciation": "/tshwɔ˥˩ u˥˩ tɤ/"
     },
     {
       "id": 890,
       "word": "是的",
       "sentence1": "是的，我同意你。",
-      "sentence2": "她对那个提议说了好。"
+      "sentence2": "她对那个提议说了好。",
+      "pronunciation": "/ʂɨ˥˩ tɤ/"
     },
     {
       "id": 891,
       "word": "年",
       "sentence1": "今年很有挑战性。",
-      "sentence2": "她去年毕业了。"
+      "sentence2": "她去年毕业了。",
+      "pronunciation": "/njɛn˧˥/"
     },
     {
       "id": 892,
       "word": "黄色",
       "sentence1": "黄色的花很漂亮。",
-      "sentence2": "她穿了一条黄色的裙子。"
+      "sentence2": "她穿了一条黄色的裙子。",
+      "pronunciation": "/xwɑŋ˧˥ sɤ˥˩/"
     },
     {
       "id": 893,
       "word": "是",
       "sentence1": "是的，我理解。",
-      "sentence2": "她接受了邀请。"
+      "sentence2": "她接受了邀请。",
+      "pronunciation": "/ʂɨ˥˩/"
     },
     {
       "id": 894,
       "word": "昨天",
       "sentence1": "我昨天见到了她。",
-      "sentence2": "她昨天给我打电话了。"
+      "sentence2": "她昨天给我打电话了。",
+      "pronunciation": "/tswɔ˧˥ thjɛn˥/"
     },
     {
       "id": 895,
       "word": "你",
       "sentence1": "你是我最好的朋友。",
-      "sentence2": "她说你要来。"
+      "sentence2": "她说你要来。",
+      "pronunciation": "/ni˧˩˧/"
     },
     {
       "id": 896,
       "word": "年轻的",
       "sentence1": "年轻的男孩在玩耍。",
-      "sentence2": "她年轻又有才华。"
+      "sentence2": "她年轻又有才华。",
+      "pronunciation": "/njɛn˧˥ tɕhiŋ˥ tɤ/"
     },
     {
       "id": 897,
       "word": "你的",
       "sentence1": "你的书在桌子上。",
-      "sentence2": "她说你的想法很有趣。"
+      "sentence2": "她说你的想法很有趣。",
+      "pronunciation": "/ni˧˩˧ tɤ/"
     },
     {
       "id": 898,
       "word": "你自己",
       "sentence1": "照顾好你自己。",
-      "sentence2": "她自己做的。"
+      "sentence2": "她自己做的。",
+      "pronunciation": "/ni˧˩˧ tsɯ˥˩ tɕi˧˩˧/"
     }
   ]
 }

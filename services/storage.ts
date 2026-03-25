@@ -123,6 +123,7 @@ export const clearAllLocalData = async (): Promise<void> => {
             STORAGE_KEYS.VOCABULARY,
             STORAGE_KEYS.NATIVE_LANGUAGE,
             STORAGE_KEYS.TARGET_LANGUAGE,
+            STORAGE_KEYS.VOCABULARY_SCHEMA_VERSION,
             ...allKeys.filter(key => key.startsWith(STORAGE_KEYS.VOCABULARY_LEVEL_PREFIX)),
             STORAGE_KEYS.USER_LEVEL,
             // Notification keys
@@ -131,6 +132,7 @@ export const clearAllLocalData = async (): Promise<void> => {
             STORAGE_KEYS.TRACKED_NOTIFICATIONS,
             STORAGE_KEYS.LAST_FOREGROUND_TIME,
             STORAGE_KEYS.LAST_BACKGROUND_TIME,
+            STORAGE_KEYS.NOTIFICATION_CONTENT_VERSION,
             // Grammar cache
             STORAGE_KEYS.GRAMMAR_CACHE,
             // i18n language preference

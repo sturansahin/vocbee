@@ -41,6 +41,7 @@ jest.mock('../i18n', () => ({
 import { getStoredVocabulary } from '../vocabularyService';
 import { getCurrentLevel, getLearnedWords } from '../progressService';
 import {
+    getNotificationContent,
     requestNotificationPermissions,
     scheduleVocabularyNotifications,
 } from '../notificationService';
@@ -59,9 +60,36 @@ describe('notificationService', () => {
         (getCurrentLevel as jest.Mock).mockResolvedValue('A1');
         (getLearnedWords as jest.Mock).mockResolvedValue([]);
         (getStoredVocabulary as jest.Mock).mockResolvedValue([
-            { id: 1, word: 'hello', translation: 'merhaba' },
+            { id: 1, word: 'hello', pronunciation: '/həˈloʊ/', translation: 'merhaba' },
             { id: 2, word: 'world', translation: 'dunya' },
         ]);
+    });
+
+    it('formats notification body with target pronunciation only when available', () => {
+        expect(
+            getNotificationContent({
+                id: 1,
+                word: 'hello',
+                pronunciation: '/həˈloʊ/',
+                translation: 'merhaba',
+                sentence1: '',
+                sentence2: '',
+                nativeSentence1: '',
+                nativeSentence2: '',
+            }).body
+        ).toBe('hello /həˈloʊ/ - merhaba, tap to see examples');
+
+        expect(
+            getNotificationContent({
+                id: 2,
+                word: 'world',
+                translation: 'dunya',
+                sentence1: '',
+                sentence2: '',
+                nativeSentence1: '',
+                nativeSentence2: '',
+            }).body
+        ).toBe('world - dunya, tap to see examples');
     });
 
     it('does not re-request permission when the system prompt is unavailable', async () => {
@@ -138,11 +166,17 @@ describe('notificationService', () => {
             })
         );
         await AsyncStorage.setItem(STORAGE_KEYS.TARGET_LANGUAGE, 'en');
+        (getStoredVocabulary as jest.Mock).mockResolvedValue([
+            { id: 1, word: 'hello', pronunciation: '/həˈloʊ/', translation: 'merhaba' },
+        ]);
 
         await scheduleVocabularyNotifications();
 
         expect(mockScheduleNotificationAsync).toHaveBeenCalled();
         expect(mockCancelAllScheduledNotificationsAsync).toHaveBeenCalled();
         expect(await AsyncStorage.getItem(STORAGE_KEYS.TRACKED_NOTIFICATIONS)).not.toBeNull();
+        const scheduledPayload = mockScheduleNotificationAsync.mock.calls[0][0];
+        expect(scheduledPayload.content.body).toContain('/həˈloʊ/');
+        expect(scheduledPayload.content.data.pronunciation).toBe('/həˈloʊ/');
     });
 });

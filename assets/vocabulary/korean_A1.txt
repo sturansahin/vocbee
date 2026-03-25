@@ -4,5389 +4,6287 @@
       "id": 1,
       "word": "하나의",
       "sentence1": "나는 고양이가 있어요.",
-      "sentence2": "그녀는 엔지니어예요."
+      "sentence2": "그녀는 엔지니어예요.",
+      "pronunciation": "/hanaɰi/"
     },
     {
       "id": 2,
       "word": "~에 대해",
       "sentence1": "이 책은 역사에 대한 것이에요.",
-      "sentence2": "그것에 대해 어떻게 생각하세요?"
+      "sentence2": "그것에 대해 어떻게 생각하세요?",
+      "pronunciation": "/~e tɛɛ/"
     },
     {
       "id": 3,
       "word": "위에",
       "sentence1": "그림은 소파 위에 있어요.",
-      "sentence2": "비행기가 구름 위를 날고 있어요."
+      "sentence2": "비행기가 구름 위를 날고 있어요.",
+      "pronunciation": "/wie/"
     },
     {
       "id": 4,
       "word": "건너편에",
       "sentence1": "은행은 길 건너편에 있어요.",
-      "sentence2": "그녀는 다리를 건넜어요."
+      "sentence2": "그녀는 다리를 건넜어요.",
+      "pronunciation": "/kʌnnʌphjʌne/"
     },
     {
       "id": 5,
       "word": "행동",
       "sentence1": "지금 행동하세요.",
-      "sentence2": "나는 액션 영화를 좋아해요."
+      "sentence2": "나는 액션 영화를 좋아해요.",
+      "pronunciation": "/hɛŋtoŋ/"
     },
     {
       "id": 6,
       "word": "활동",
       "sentence1": "수영은 내가 가장 좋아하는 활동이에요.",
-      "sentence2": "어떤 활동을 선호하세요?"
+      "sentence2": "어떤 활동을 선호하세요?",
+      "pronunciation": "/hwaltoŋ/"
     },
     {
       "id": 7,
       "word": "배우",
       "sentence1": "그는 유명한 배우예요.",
-      "sentence2": "그 배우는 역할을 잘 연기했어요."
+      "sentence2": "그 배우는 역할을 잘 연기했어요.",
+      "pronunciation": "/pɛu/"
     },
     {
       "id": 8,
       "word": "여배우",
       "sentence1": "그녀는 재능 있는 여배우예요.",
-      "sentence2": "그 여배우는 상을 받았어요."
+      "sentence2": "그 여배우는 상을 받았어요.",
+      "pronunciation": "/jʌpɛu/"
     },
     {
       "id": 9,
       "word": "더하다",
       "sentence1": "수프에 소금을 넣으세요.",
-      "sentence2": "내 번호를 추가해 줄 수 있어요?"
+      "sentence2": "내 번호를 추가해 줄 수 있어요?",
+      "pronunciation": "/tʌata/"
     },
     {
       "id": 10,
       "word": "주소",
       "sentence1": "주소가 어떻게 되세요?",
-      "sentence2": "여기에 주소를 쓰세요."
+      "sentence2": "여기에 주소를 쓰세요.",
+      "pronunciation": "/t͡ɕuso/"
     },
     {
       "id": 11,
       "word": "성인",
       "sentence1": "이 영화는 성인 전용이에요.",
-      "sentence2": "나는 이제 성인이에요."
+      "sentence2": "나는 이제 성인이에요.",
+      "pronunciation": "/sʌŋin/"
     },
     {
       "id": 12,
       "word": "조언",
       "sentence1": "조언을 해주실 수 있어요?",
-      "sentence2": "그의 조언은 도움이 됐어요."
+      "sentence2": "그의 조언은 도움이 됐어요.",
+      "pronunciation": "/t͡ɕoʌn/"
     },
     {
       "id": 13,
       "word": "두려운",
       "sentence1": "나는 거미가 무서워요.",
-      "sentence2": "두려워하지 마세요."
+      "sentence2": "두려워하지 마세요.",
+      "pronunciation": "/tuljʌun/"
     },
     {
       "id": 14,
       "word": "후에",
       "sentence1": "퇴근 후에 만나요.",
-      "sentence2": "저녁 식사 후에 우리는 TV를 봤어요."
+      "sentence2": "저녁 식사 후에 우리는 TV를 봤어요.",
+      "pronunciation": "/hue/"
     },
     {
       "id": 15,
       "word": "오후",
       "sentence1": "좋은 오후예요!",
-      "sentence2": "나는 오후에 자요."
+      "sentence2": "나는 오후에 자요.",
+      "pronunciation": "/ou/"
     },
     {
       "id": 16,
       "word": "다시",
       "sentence1": "다시 말해 주세요.",
-      "sentence2": "다시 만나고 싶어요."
+      "sentence2": "다시 만나고 싶어요.",
+      "pronunciation": "/tasi/"
     },
     {
       "id": 17,
       "word": "나이",
       "sentence1": "나이가 어떻게 되세요?",
-      "sentence2": "그녀는 25살이에요."
+      "sentence2": "그녀는 25살이에요.",
+      "pronunciation": "/nai/"
     },
     {
       "id": 18,
       "word": "전에",
       "sentence1": "2년 전에 그를 만났어요.",
-      "sentence2": "그녀는 한 시간 전에 떠났어요."
+      "sentence2": "그녀는 한 시간 전에 떠났어요.",
+      "pronunciation": "/t͡ɕʌne/"
     },
     {
       "id": 19,
       "word": "동의하다",
       "sentence1": "나는 당신에게 동의해요.",
-      "sentence2": "이 계획에 동의하세요?"
+      "sentence2": "이 계획에 동의하세요?",
+      "pronunciation": "/toŋɰiata/"
     },
     {
       "id": 20,
       "word": "공기",
       "sentence1": "여기 공기가 신선해요.",
-      "sentence2": "신선한 공기가 필요해요."
+      "sentence2": "신선한 공기가 필요해요.",
+      "pronunciation": "/koŋki/"
     },
     {
       "id": 21,
       "word": "공항",
       "sentence1": "공항에서 데리러 갈게요.",
-      "sentence2": "공항이 매우 바빠요."
+      "sentence2": "공항이 매우 바빠요.",
+      "pronunciation": "/koŋhaŋ/"
     },
     {
       "id": 22,
       "word": "모든",
       "sentence1": "모든 학생이 시험에 합격했어요.",
-      "sentence2": "쿠키를 다 먹었어요."
+      "sentence2": "쿠키를 다 먹었어요.",
+      "pronunciation": "/motɯn/"
     },
     {
       "id": 23,
       "word": "또한",
       "sentence1": "나도 피자를 좋아해요.",
-      "sentence2": "그녀도 파티에 와요."
+      "sentence2": "그녀도 파티에 와요.",
+      "pronunciation": "/t͈oan/"
     },
     {
       "id": 24,
       "word": "항상",
       "sentence1": "나는 항상 일찍 일어나요.",
-      "sentence2": "그녀는 항상 행복해요."
+      "sentence2": "그녀는 항상 행복해요.",
+      "pronunciation": "/haŋsaŋ/"
     },
     {
       "id": 25,
       "word": "놀라운",
       "sentence1": "정상에서 보는 경치가 놀라워요.",
-      "sentence2": "정말 잘했어요!"
+      "sentence2": "정말 잘했어요!",
+      "pronunciation": "/nollaun/"
     },
     {
       "id": 26,
       "word": "그리고",
       "sentence1": "나는 차와 커피를 좋아해요.",
-      "sentence2": "그녀는 공부하면서 일해요."
+      "sentence2": "그녀는 공부하면서 일해요.",
+      "pronunciation": "/kɯliko/"
     },
     {
       "id": 27,
       "word": "화난",
       "sentence1": "그는 친구에게 화가 났어요.",
-      "sentence2": "화내지 마세요."
+      "sentence2": "화내지 마세요.",
+      "pronunciation": "/hwanan/"
     },
     {
       "id": 28,
       "word": "동물",
       "sentence1": "코끼리는 큰 동물이에요.",
-      "sentence2": "나는 애완동물이 있어요."
+      "sentence2": "나는 애완동물이 있어요.",
+      "pronunciation": "/toŋmul/"
     },
     {
       "id": 29,
       "word": "또 다른",
       "sentence1": "케이크 한 조각 더 먹어도 될까요?",
-      "sentence2": "그녀는 또 다른 기회를 원해요."
+      "sentence2": "그녀는 또 다른 기회를 원해요.",
+      "pronunciation": "/t͈o talɯn/"
     },
     {
       "id": 30,
       "word": "대답",
       "sentence1": "당신의 대답은 무엇인가요?",
-      "sentence2": "대답을 모르겠어요."
+      "sentence2": "대답을 모르겠어요.",
+      "pronunciation": "/tɛtap/"
     },
     {
       "id": 31,
       "word": "어떤",
       "sentence1": "질문 있으세요?",
-      "sentence2": "돈이 하나도 없어요."
+      "sentence2": "돈이 하나도 없어요.",
+      "pronunciation": "/ʌt͈ʌn/"
     },
     {
       "id": 32,
       "word": "누구",
       "sentence1": "거기 누구 있어요?",
-      "sentence2": "여기 아는 사람이 없어요."
+      "sentence2": "여기 아는 사람이 없어요.",
+      "pronunciation": "/nuku/"
     },
     {
       "id": 33,
       "word": "아무것",
       "sentence1": "뭐 필요한 거 있어요?",
-      "sentence2": "아무것도 못 찾겠어요."
+      "sentence2": "아무것도 못 찾겠어요.",
+      "pronunciation": "/amukʌt/"
     },
     {
       "id": 34,
       "word": "아파트",
       "sentence1": "나는 작은 아파트에 살아요.",
-      "sentence2": "아파트가 아주 좋아요."
+      "sentence2": "아파트가 아주 좋아요.",
+      "pronunciation": "/aphathɯ/"
     },
     {
       "id": 35,
       "word": "사과",
       "sentence1": "나는 매일 사과를 먹는 걸 좋아해요.",
-      "sentence2": "그녀는 사과 파이를 만들었어요."
+      "sentence2": "그녀는 사과 파이를 만들었어요.",
+      "pronunciation": "/sakwa/"
     },
     {
       "id": 36,
       "word": "4월",
       "sentence1": "4월은 네 번째 달이에요.",
-      "sentence2": "내 생일은 4월이에요."
+      "sentence2": "내 생일은 4월이에요.",
+      "pronunciation": "/4wʌl/"
     },
     {
       "id": 37,
       "word": "지역",
       "sentence1": "이것은 넓은 지역이에요.",
-      "sentence2": "공원은 이 지역에 있어요."
+      "sentence2": "공원은 이 지역에 있어요.",
+      "pronunciation": "/t͡ɕijʌk/"
     },
     {
       "id": 38,
       "word": "팔",
       "sentence1": "그는 팔이 부러졌어요.",
-      "sentence2": "그녀는 팔에 문신이 있어요."
+      "sentence2": "그녀는 팔에 문신이 있어요.",
+      "pronunciation": "/phal/"
     },
     {
       "id": 39,
       "word": "주변에",
       "sentence1": "고양이가 테이블 주변에 앉아 있어요.",
-      "sentence2": "공원 주변을 걸어요."
+      "sentence2": "공원 주변을 걸어요.",
+      "pronunciation": "/t͡ɕupjʌne/"
     },
     {
       "id": 40,
       "word": "도착하다",
       "sentence1": "우리는 오후 5시에 도착할 거예요.",
-      "sentence2": "제시간에 도착하세요."
+      "sentence2": "제시간에 도착하세요.",
+      "pronunciation": "/tot͡ɕhakhata/"
     },
     {
       "id": 41,
       "word": "미술",
       "sentence1": "나는 현대 미술을 좋아해요.",
-      "sentence2": "그녀는 미술사를 공부하고 있어요."
+      "sentence2": "그녀는 미술사를 공부하고 있어요.",
+      "pronunciation": "/misul/"
     },
     {
       "id": 42,
       "word": "기사",
       "sentence1": "흥미로운 기사를 읽었어요.",
-      "sentence2": "그 기사는 잘 쓰여졌어요."
+      "sentence2": "그 기사는 잘 쓰여졌어요.",
+      "pronunciation": "/kisa/"
     },
     {
       "id": 43,
       "word": "예술가",
       "sentence1": "그는 유명한 예술가예요.",
-      "sentence2": "그 예술가는 아름다운 그림을 그렸어요."
+      "sentence2": "그 예술가는 아름다운 그림을 그렸어요.",
+      "pronunciation": "/jesulka/"
     },
     {
       "id": 44,
       "word": "~로서",
       "sentence1": "그녀는 선생님으로 일해요.",
-      "sentence2": "그는 훌륭한 리더로 알려져 있어요."
+      "sentence2": "그는 훌륭한 리더로 알려져 있어요.",
+      "pronunciation": "/~losʌ/"
     },
     {
       "id": 45,
       "word": "묻다",
       "sentence1": "질문해도 될까요?",
-      "sentence2": "그녀는 도움을 요청했어요."
+      "sentence2": "그녀는 도움을 요청했어요.",
+      "pronunciation": "/mutt͈a/"
     },
     {
       "id": 46,
       "word": "~에",
       "sentence1": "공원에서 만날게요.",
-      "sentence2": "책은 도서관에 있어요."
+      "sentence2": "책은 도서관에 있어요.",
+      "pronunciation": "/~e/"
     },
     {
       "id": 47,
       "word": "8월",
       "sentence1": "8월은 여덟 번째 달이에요.",
-      "sentence2": "내 휴가는 8월이에요."
+      "sentence2": "내 휴가는 8월이에요.",
+      "pronunciation": "/8wʌl/"
     },
     {
       "id": 48,
       "word": "이모/고모",
       "sentence1": "이모는 다른 도시에 살아요.",
-      "sentence2": "지난 주말에 이모를 방문했어요."
+      "sentence2": "지난 주말에 이모를 방문했어요.",
+      "pronunciation": "/imo/; /komo/"
     },
     {
       "id": 49,
       "word": "가을",
       "sentence1": "가을은 내가 가장 좋아하는 계절이에요.",
-      "sentence2": "가을에 나뭇잎이 떨어져요."
+      "sentence2": "가을에 나뭇잎이 떨어져요.",
+      "pronunciation": "/kaɯl/"
     },
     {
       "id": 50,
       "word": "멀리",
       "sentence1": "가게가 멀리 있어요.",
-      "sentence2": "그는 휴가 중이에요."
+      "sentence2": "그는 휴가 중이에요.",
+      "pronunciation": "/mʌlli/"
     },
     {
       "id": 51,
       "word": "아기",
       "sentence1": "아기가 자고 있어요.",
-      "sentence2": "여동생이 있어요."
+      "sentence2": "여동생이 있어요.",
+      "pronunciation": "/aki/"
     },
     {
       "id": 52,
       "word": "뒤",
       "sentence1": "책은 뒤쪽 선반에 있어요.",
-      "sentence2": "그는 들다가 허리를 다쳤어요."
+      "sentence2": "그는 들다가 허리를 다쳤어요.",
+      "pronunciation": "/twi/"
     },
     {
       "id": 53,
       "word": "나쁜",
       "sentence1": "이 음식은 맛이 없어요.",
-      "sentence2": "그는 안 좋은 하루를 보냈어요."
+      "sentence2": "그는 안 좋은 하루를 보냈어요.",
+      "pronunciation": "/nap͈ɯn/"
     },
     {
       "id": 54,
       "word": "가방",
       "sentence1": "새 가방이 필요해요.",
-      "sentence2": "그녀는 여행을 위해 가방을 쌌어요."
+      "sentence2": "그녀는 여행을 위해 가방을 쌌어요.",
+      "pronunciation": "/kapaŋ/"
     },
     {
       "id": 55,
       "word": "공",
       "sentence1": "공은 둥글어요.",
-      "sentence2": "나는 공을 찼어요."
+      "sentence2": "나는 공을 찼어요.",
+      "pronunciation": "/koŋ/"
     },
     {
       "id": 56,
       "word": "바나나",
       "sentence1": "나는 바나나 먹는 걸 좋아해요.",
-      "sentence2": "그녀는 바나나 스무디를 만들었어요."
+      "sentence2": "그녀는 바나나 스무디를 만들었어요.",
+      "pronunciation": "/panana/"
     },
     {
       "id": 57,
       "word": "밴드",
       "sentence1": "밴드가 음악을 연주하고 있어요.",
-      "sentence2": "이 밴드를 좋아해요."
+      "sentence2": "이 밴드를 좋아해요.",
+      "pronunciation": "/pɛntɯ/"
     },
     {
       "id": 58,
       "word": "은행",
       "sentence1": "은행에 가야 해요.",
-      "sentence2": "그녀는 은행에서 일해요."
+      "sentence2": "그녀는 은행에서 일해요.",
+      "pronunciation": "/ɯnɛŋ/"
     },
     {
       "id": 59,
       "word": "목욕",
       "sentence1": "나는 매일 저녁 목욕해요.",
-      "sentence2": "목욕은 편안해요."
+      "sentence2": "목욕은 편안해요.",
+      "pronunciation": "/mokjok/"
     },
     {
       "id": 60,
       "word": "욕실",
       "sentence1": "욕실이 깨끗해요.",
-      "sentence2": "화장실을 써야 해요."
+      "sentence2": "화장실을 써야 해요.",
+      "pronunciation": "/joks͈il/"
     },
     {
       "id": 61,
       "word": "~이다",
       "sentence1": "나는 의사가 되고 싶어요.",
-      "sentence2": "그녀는 행복할 거예요."
+      "sentence2": "그녀는 행복할 거예요.",
+      "pronunciation": "/~ita/"
     },
     {
       "id": 62,
       "word": "해변",
       "sentence1": "해변이 붐벼요.",
-      "sentence2": "나는 해변을 좋아해요."
+      "sentence2": "나는 해변을 좋아해요.",
+      "pronunciation": "/hɛpjʌn/"
     },
     {
       "id": 63,
       "word": "아름다운",
       "sentence1": "석양이 아름다워요.",
-      "sentence2": "그녀는 아름다운 사람이에요."
+      "sentence2": "그녀는 아름다운 사람이에요.",
+      "pronunciation": "/alɯmtaun/"
     },
     {
       "id": 64,
       "word": "왜냐하면",
       "sentence1": "날씨가 맑아서 기분이 좋아요.",
-      "sentence2": "그녀는 피곤해서 떠났어요."
+      "sentence2": "그녀는 피곤해서 떠났어요.",
+      "pronunciation": "/wɛnjaamjʌn/"
     },
     {
       "id": 65,
       "word": "되다",
       "sentence1": "나는 의사가 되고 싶어요.",
-      "sentence2": "그녀는 훌륭한 리더가 될 거예요."
+      "sentence2": "그녀는 훌륭한 리더가 될 거예요.",
+      "pronunciation": "/tweta/"
     },
     {
       "id": 66,
       "word": "침대",
       "sentence1": "나는 침대에서 자요.",
-      "sentence2": "침대가 편해요."
+      "sentence2": "침대가 편해요.",
+      "pronunciation": "/t͡ɕhimtɛ/"
     },
     {
       "id": 67,
       "word": "침실",
       "sentence1": "내 침실은 작아요.",
-      "sentence2": "내 침실이 좋아요."
+      "sentence2": "내 침실이 좋아요.",
+      "pronunciation": "/t͡ɕhimsil/"
     },
     {
       "id": 68,
       "word": "맥주",
       "sentence1": "나는 맥주 마시는 걸 좋아해요.",
-      "sentence2": "그는 맥주를 주문했어요."
+      "sentence2": "그는 맥주를 주문했어요.",
+      "pronunciation": "/mɛkt͈͡ɕu/"
     },
     {
       "id": 69,
       "word": "전에",
       "sentence1": "먹기 전에 손을 씻어요.",
-      "sentence2": "그녀는 나보다 먼저 도착했어요."
+      "sentence2": "그녀는 나보다 먼저 도착했어요.",
+      "pronunciation": "/t͡ɕʌne/"
     },
     {
       "id": 70,
       "word": "시작하다",
       "sentence1": "숙제를 시작할게요.",
-      "sentence2": "그녀는 노래를 부르기 시작했어요."
+      "sentence2": "그녀는 노래를 부르기 시작했어요.",
+      "pronunciation": "/sit͡ɕakhata/"
     },
     {
       "id": 71,
       "word": "시작",
       "sentence1": "영화 시작이 흥미진진했어요.",
-      "sentence2": "쇼의 시작을 놓쳤어요."
+      "sentence2": "쇼의 시작을 놓쳤어요.",
+      "pronunciation": "/sit͡ɕak/"
     },
     {
       "id": 72,
       "word": "뒤에",
       "sentence1": "고양이가 소파 뒤에 숨어 있어요.",
-      "sentence2": "그는 그녀 뒤에 서 있었어요."
+      "sentence2": "그는 그녀 뒤에 서 있었어요.",
+      "pronunciation": "/twie/"
     },
     {
       "id": 73,
       "word": "믿다",
       "sentence1": "나는 당신을 믿어요.",
-      "sentence2": "유령을 믿어요?"
+      "sentence2": "유령을 믿어요?",
+      "pronunciation": "/mitt͈a/"
     },
     {
       "id": 74,
       "word": "아래에",
       "sentence1": "온도가 영하예요.",
-      "sentence2": "지하실은 지상 아래에 있어요."
+      "sentence2": "지하실은 지상 아래에 있어요.",
+      "pronunciation": "/alɛe/"
     },
     {
       "id": 75,
       "word": "최고의",
       "sentence1": "이것은 내가 읽은 최고의 책이에요.",
-      "sentence2": "그녀는 반에서 최고의 학생이에요."
+      "sentence2": "그녀는 반에서 최고의 학생이에요.",
+      "pronunciation": "/t͡ɕhwekoɰi/"
     },
     {
       "id": 76,
       "word": "더 나은",
       "sentence1": "오늘 기분이 더 나아요.",
-      "sentence2": "이 영화는 전작보다 더 나아요."
+      "sentence2": "이 영화는 전작보다 더 나아요.",
+      "pronunciation": "/tʌ naɯn/"
     },
     {
       "id": 77,
       "word": "사이에",
       "sentence1": "공원은 학교와 도서관 사이에 있어요.",
-      "sentence2": "수업에서 친구들 사이에 앉아요."
+      "sentence2": "수업에서 친구들 사이에 앉아요.",
+      "pronunciation": "/saie/"
     },
     {
       "id": 78,
       "word": "자전거",
       "sentence1": "자전거를 타고 학교에 가요.",
-      "sentence2": "그녀는 새 자전거를 샀어요."
+      "sentence2": "그녀는 새 자전거를 샀어요.",
+      "pronunciation": "/t͡ɕat͡ɕʌnkʌ/"
     },
     {
       "id": 79,
       "word": "큰",
       "sentence1": "이것은 큰 집이에요.",
-      "sentence2": "그는 큰 개가 있어요."
+      "sentence2": "그는 큰 개가 있어요.",
+      "pronunciation": "/khɯn/"
     },
     {
       "id": 80,
       "word": "자전거",
       "sentence1": "자전거를 고쳐야 해요.",
-      "sentence2": "그녀는 매일 자전거를 타요."
+      "sentence2": "그녀는 매일 자전거를 타요.",
+      "pronunciation": "/t͡ɕat͡ɕʌnkʌ/"
     },
     {
       "id": 81,
       "word": "청구서",
       "sentence1": "어제 청구서를 받았어요.",
-      "sentence2": "청구서를 지불해 주세요."
+      "sentence2": "청구서를 지불해 주세요.",
+      "pronunciation": "/t͡ɕhʌŋkusʌ/"
     },
     {
       "id": 82,
       "word": "새",
       "sentence1": "새가 노래하고 있어요.",
-      "sentence2": "화려한 새를 봤어요."
+      "sentence2": "화려한 새를 봤어요.",
+      "pronunciation": "/sɛ/"
     },
     {
       "id": 83,
       "word": "생일",
       "sentence1": "내 생일은 7월이에요.",
-      "sentence2": "그녀는 생일 파티를 했어요."
+      "sentence2": "그녀는 생일 파티를 했어요.",
+      "pronunciation": "/sɛŋil/"
     },
     {
       "id": 84,
       "word": "검정색",
       "sentence1": "검은 고양이가 있어요.",
-      "sentence2": "그 드레스는 검정색이에요."
+      "sentence2": "그 드레스는 검정색이에요.",
+      "pronunciation": "/kʌmt͡ɕʌŋsɛk/"
     },
     {
       "id": 85,
       "word": "블로그",
       "sentence1": "여행에 관한 블로그를 읽었어요.",
-      "sentence2": "그녀는 인기 있는 블로그를 써요."
+      "sentence2": "그녀는 인기 있는 블로그를 써요.",
+      "pronunciation": "/pɯllokɯ/"
     },
     {
       "id": 86,
       "word": "금발의",
       "sentence1": "그녀는 긴 금발 머리를 가지고 있어요.",
-      "sentence2": "그는 금발 여성을 선호해요."
+      "sentence2": "그는 금발 여성을 선호해요.",
+      "pronunciation": "/kɯmpalɰi/"
     },
     {
       "id": 87,
       "word": "파란색",
       "sentence1": "하늘이 파래요.",
-      "sentence2": "파란 꽃을 좋아해요."
+      "sentence2": "파란 꽃을 좋아해요.",
+      "pronunciation": "/phalansɛk/"
     },
     {
       "id": 88,
       "word": "보트",
       "sentence1": "보트가 물 위에 있어요.",
-      "sentence2": "우리는 보트를 탔어요."
+      "sentence2": "우리는 보트를 탔어요.",
+      "pronunciation": "/pothɯ/"
     },
     {
       "id": 89,
       "word": "몸",
       "sentence1": "인체는 복잡해요.",
-      "sentence2": "그녀는 건강을 유지하기 위해 운동해요."
+      "sentence2": "그녀는 건강을 유지하기 위해 운동해요.",
+      "pronunciation": "/mom/"
     },
     {
       "id": 90,
       "word": "책",
       "sentence1": "나는 책을 읽고 있어요.",
-      "sentence2": "그녀는 책이 많아요."
+      "sentence2": "그녀는 책이 많아요.",
+      "pronunciation": "/t͡ɕhɛk/"
     },
     {
       "id": 91,
       "word": "부츠",
       "sentence1": "새 부츠를 샀어요.",
-      "sentence2": "이 부츠는 편해요."
+      "sentence2": "이 부츠는 편해요.",
+      "pronunciation": "/put͡ɕhɯ/"
     },
     {
       "id": 92,
       "word": "지루한",
       "sentence1": "집에서 지루해요.",
-      "sentence2": "그녀는 수업에서 지루해해요."
+      "sentence2": "그녀는 수업에서 지루해해요.",
+      "pronunciation": "/t͡ɕiluan/"
     },
     {
       "id": 93,
       "word": "지루한",
       "sentence1": "이 영화는 지루해요.",
-      "sentence2": "수학이 지루해요."
+      "sentence2": "수학이 지루해요.",
+      "pronunciation": "/t͡ɕiluan/"
     },
     {
       "id": 94,
       "word": "태어난",
       "sentence1": "나는 2000년에 태어났어요.",
-      "sentence2": "그녀는 작은 마을에서 태어났어요."
+      "sentence2": "그녀는 작은 마을에서 태어났어요.",
+      "pronunciation": "/thɛʌnan/"
     },
     {
       "id": 95,
       "word": "둘 다",
       "sentence1": "두 옵션 다 좋아요.",
-      "sentence2": "두 영화 다 좋아해요."
+      "sentence2": "두 영화 다 좋아해요.",
+      "pronunciation": "/tul ta/"
     },
     {
       "id": 96,
       "word": "병",
       "sentence1": "물 한 병이 필요해요.",
-      "sentence2": "그녀는 유리병을 샀어요."
+      "sentence2": "그녀는 유리병을 샀어요.",
+      "pronunciation": "/pjʌŋ/"
     },
     {
       "id": 97,
       "word": "상자",
       "sentence1": "장난감은 상자 안에 있어요.",
-      "sentence2": "책을 담을 상자가 필요해요."
+      "sentence2": "책을 담을 상자가 필요해요.",
+      "pronunciation": "/saŋt͡ɕa/"
     },
     {
       "id": 98,
       "word": "소년",
       "sentence1": "소년이 밖에서 놀고 있어요.",
-      "sentence2": "연을 가진 소년을 봤어요."
+      "sentence2": "연을 가진 소년을 봤어요.",
+      "pronunciation": "/sonjʌn/"
     },
     {
       "id": 99,
       "word": "남자친구",
       "sentence1": "내 남자친구는 매우 친절해요.",
-      "sentence2": "그녀는 나에게 남자친구를 소개했어요."
+      "sentence2": "그녀는 나에게 남자친구를 소개했어요.",
+      "pronunciation": "/namt͡ɕat͡ɕhinku/"
     },
     {
       "id": 100,
       "word": "빵",
       "sentence1": "빵 한 덩어리가 필요해요.",
-      "sentence2": "그녀는 신선한 빵을 구웠어요."
+      "sentence2": "그녀는 신선한 빵을 구웠어요.",
+      "pronunciation": "/p͈aŋ/"
     },
     {
       "id": 101,
       "word": "휴식",
       "sentence1": "휴식을 취해요.",
-      "sentence2": "이 습관을 고쳐야 해요."
+      "sentence2": "이 습관을 고쳐야 해요.",
+      "pronunciation": "/hjusik/"
     },
     {
       "id": 102,
       "word": "아침식사",
       "sentence1": "아침으로 시리얼을 먹었어요.",
-      "sentence2": "아침식사는 가장 중요한 식사예요."
+      "sentence2": "아침식사는 가장 중요한 식사예요.",
+      "pronunciation": "/at͡ɕhimsiks͈a/"
     },
     {
       "id": 103,
       "word": "가져오다",
       "sentence1": "물 한 잔 가져다 줄 수 있어요?",
-      "sentence2": "내일 서류를 가져올게요."
+      "sentence2": "내일 서류를 가져올게요.",
+      "pronunciation": "/kat͡ɕjʌota/"
     },
     {
       "id": 104,
       "word": "형제",
       "sentence1": "내 형은 해외에서 공부하고 있어요.",
-      "sentence2": "그는 남동생이 있어요."
+      "sentence2": "그는 남동생이 있어요.",
+      "pronunciation": "/hjʌŋt͡ɕe/"
     },
     {
       "id": 105,
       "word": "갈색",
       "sentence1": "갈색 개는 친절해요.",
-      "sentence2": "갈색 초콜릿을 좋아해요."
+      "sentence2": "갈색 초콜릿을 좋아해요.",
+      "pronunciation": "/kals͈ɛk/"
     },
     {
       "id": 106,
       "word": "짓다",
       "sentence1": "그들은 새 집을 지을 거예요.",
-      "sentence2": "그는 경력을 쌓고 싶어해요."
+      "sentence2": "그는 경력을 쌓고 싶어해요.",
+      "pronunciation": "/t͡ɕitt͈a/"
     },
     {
       "id": 107,
       "word": "건물",
       "sentence1": "그 건물은 매우 높아요.",
-      "sentence2": "그들은 저 건물에서 일해요."
+      "sentence2": "그들은 저 건물에서 일해요.",
+      "pronunciation": "/kʌnmul/"
     },
     {
       "id": 108,
       "word": "버스",
       "sentence1": "나는 버스를 타고 학교에 가요.",
-      "sentence2": "오늘 버스가 늦었어요."
+      "sentence2": "오늘 버스가 늦었어요.",
+      "pronunciation": "/pʌsɯ/"
     },
     {
       "id": 109,
       "word": "사업",
       "sentence1": "그녀는 자기 사업을 해요.",
-      "sentence2": "올해 사업이 번창해요."
+      "sentence2": "올해 사업이 번창해요.",
+      "pronunciation": "/saʌp/"
     },
     {
       "id": 110,
       "word": "바쁜",
       "sentence1": "지금 바빠요.",
-      "sentence2": "그녀는 바쁜 일정이 있어요."
+      "sentence2": "그녀는 바쁜 일정이 있어요.",
+      "pronunciation": "/pap͈ɯn/"
     },
     {
       "id": 111,
       "word": "하지만",
       "sentence1": "차를 좋아하지만 커피를 더 좋아해요.",
-      "sentence2": "그는 키가 크지만 그의 형제는 작아요."
+      "sentence2": "그는 키가 크지만 그의 형제는 작아요.",
+      "pronunciation": "/hat͡ɕiman/"
     },
     {
       "id": 112,
       "word": "버터",
       "sentence1": "레시피에 버터가 필요해요.",
-      "sentence2": "그녀는 빵에 버터를 좋아해요."
+      "sentence2": "그녀는 빵에 버터를 좋아해요.",
+      "pronunciation": "/pʌthʌ/"
     },
     {
       "id": 113,
       "word": "사다",
       "sentence1": "새 핸드폰을 사고 싶어요.",
-      "sentence2": "그녀는 어제 드레스를 샀어요."
+      "sentence2": "그녀는 어제 드레스를 샀어요.",
+      "pronunciation": "/sata/"
     },
     {
       "id": 114,
       "word": "~에 의해",
       "sentence1": "그 책은 유명한 작가가 썼어요.",
-      "sentence2": "기차로 여행하는 것을 선호해요."
+      "sentence2": "기차로 여행하는 것을 선호해요.",
+      "pronunciation": "/~e ɰiɛ/"
     },
     {
       "id": 115,
       "word": "안녕",
       "sentence1": "친구들에게 작별 인사를 했어요.",
-      "sentence2": "그녀는 공항에서 손을 흔들어 작별했어요."
+      "sentence2": "그녀는 공항에서 손을 흔들어 작별했어요.",
+      "pronunciation": "/annjʌŋ/"
     },
     {
       "id": 116,
       "word": "카페",
       "sentence1": "카페에서 만나요.",
-      "sentence2": "그녀는 작은 카페에서 일해요."
+      "sentence2": "그녀는 작은 카페에서 일해요.",
+      "pronunciation": "/khaphe/"
     },
     {
       "id": 117,
       "word": "케이크",
       "sentence1": "초콜릿 케이크를 구웠어요.",
-      "sentence2": "그녀는 딸기 케이크를 좋아해요."
+      "sentence2": "그녀는 딸기 케이크를 좋아해요.",
+      "pronunciation": "/kheikhɯ/"
     },
     {
       "id": 118,
       "word": "전화하다",
       "sentence1": "나중에 전화할게요.",
-      "sentence2": "그녀는 어머니로부터 전화를 받았어요."
+      "sentence2": "그녀는 어머니로부터 전화를 받았어요.",
+      "pronunciation": "/t͡ɕʌnwaata/"
     },
     {
       "id": 119,
       "word": "카메라",
       "sentence1": "새 카메라를 샀어요.",
-      "sentence2": "그녀는 카메라로 사진을 찍고 있어요."
+      "sentence2": "그녀는 카메라로 사진을 찍고 있어요.",
+      "pronunciation": "/khamela/"
     },
     {
       "id": 120,
       "word": "~할 수 있다",
       "sentence1": "나는 수영을 잘할 수 있어요.",
-      "sentence2": "그녀는 세 가지 언어를 할 수 있어요."
+      "sentence2": "그녀는 세 가지 언어를 할 수 있어요.",
+      "pronunciation": "/~hal su itt͈a/"
     },
     {
       "id": 121,
       "word": "~할 수 없다",
       "sentence1": "열쇠를 찾을 수 없어요.",
-      "sentence2": "그는 파티에 올 수 없어요."
+      "sentence2": "그는 파티에 올 수 없어요.",
+      "pronunciation": "/~hal su ʌpt͈a/"
     },
     {
       "id": 122,
       "word": "수도",
       "sentence1": "앙카라는 터키의 수도예요.",
-      "sentence2": "수도는 매우 바빠요."
+      "sentence2": "수도는 매우 바빠요.",
+      "pronunciation": "/suto/"
     },
     {
       "id": 123,
       "word": "차",
       "sentence1": "빨간 차를 운전해요.",
-      "sentence2": "그녀는 새 차를 사고 싶어해요."
+      "sentence2": "그녀는 새 차를 사고 싶어해요.",
+      "pronunciation": "/t͡ɕha/"
     },
     {
       "id": 124,
       "word": "카드",
       "sentence1": "새 신용카드가 필요해요.",
-      "sentence2": "그녀가 생일 카드를 보내줬어요."
+      "sentence2": "그녀가 생일 카드를 보내줬어요.",
+      "pronunciation": "/khatɯ/"
     },
     {
       "id": 125,
       "word": "경력",
       "sentence1": "그는 성공적인 경력을 쌓고 있어요.",
-      "sentence2": "그녀는 진로를 바꿨어요."
+      "sentence2": "그녀는 진로를 바꿨어요.",
+      "pronunciation": "/kjʌŋnjʌk/"
     },
     {
       "id": 126,
       "word": "당근",
       "sentence1": "생 당근 먹는 것을 좋아해요.",
-      "sentence2": "그녀는 당근 케이크를 만들었어요."
+      "sentence2": "그녀는 당근 케이크를 만들었어요.",
+      "pronunciation": "/taŋkɯn/"
     },
     {
       "id": 127,
       "word": "들다",
       "sentence1": "이 가방을 들어줄 수 있어요?",
-      "sentence2": "그는 어디든 노트북을 들고 다녀요."
+      "sentence2": "그는 어디든 노트북을 들고 다녀요.",
+      "pronunciation": "/tɯlta/"
     },
     {
       "id": 128,
       "word": "고양이",
       "sentence1": "내 고양이는 아주 장난꾸러기예요.",
-      "sentence2": "그녀는 길고양이를 입양했어요."
+      "sentence2": "그녀는 길고양이를 입양했어요.",
+      "pronunciation": "/kojaŋi/"
     },
     {
       "id": 129,
       "word": "CD",
       "sentence1": "차에서 CD를 들었어요.",
-      "sentence2": "그녀는 어제 새 CD를 샀어요."
+      "sentence2": "그녀는 어제 새 CD를 샀어요.",
+      "pronunciation": "/cd/"
     },
     {
       "id": 130,
       "word": "센트",
       "sentence1": "가격은 백 센트예요.",
-      "sentence2": "길에서 1센트를 발견했어요."
+      "sentence2": "길에서 1센트를 발견했어요.",
+      "pronunciation": "/senthɯ/"
     },
     {
       "id": 131,
       "word": "중심",
       "sentence1": "도심은 매우 바빠요.",
-      "sentence2": "도시 중심에 공원이 있어요."
+      "sentence2": "도시 중심에 공원이 있어요.",
+      "pronunciation": "/t͡ɕuŋsim/"
     },
     {
       "id": 132,
       "word": "세기",
       "sentence1": "21세기는 2001년에 시작됐어요.",
-      "sentence2": "20세기에 많은 변화가 일어났어요."
+      "sentence2": "20세기에 많은 변화가 일어났어요.",
+      "pronunciation": "/seki/"
     },
     {
       "id": 133,
       "word": "의자",
       "sentence1": "의자에 앉으세요.",
-      "sentence2": "그녀는 사무실용 새 의자를 샀어요."
+      "sentence2": "그녀는 사무실용 새 의자를 샀어요.",
+      "pronunciation": "/ɰit͡ɕa/"
     },
     {
       "id": 134,
       "word": "바꾸다",
       "sentence1": "헤어스타일을 바꾸고 싶어요.",
-      "sentence2": "그녀는 여행에 대해 마음을 바꿨어요."
+      "sentence2": "그녀는 여행에 대해 마음을 바꿨어요.",
+      "pronunciation": "/pak͈uta/"
     },
     {
       "id": 135,
       "word": "차트",
       "sentence1": "차트는 판매 데이터를 보여줘요.",
-      "sentence2": "그녀는 발표용 차트를 만들었어요."
+      "sentence2": "그녀는 발표용 차트를 만들었어요.",
+      "pronunciation": "/t͡ɕhathɯ/"
     },
     {
       "id": 136,
       "word": "싼",
       "sentence1": "이 셔츠는 매우 싸요.",
-      "sentence2": "휴가를 위해 싼 호텔을 찾았어요."
+      "sentence2": "휴가를 위해 싼 호텔을 찾았어요.",
+      "pronunciation": "/s͈an/"
     },
     {
       "id": 137,
       "word": "확인하다",
       "sentence1": "이메일을 확인하세요.",
-      "sentence2": "일기 예보를 확인해야 해요."
+      "sentence2": "일기 예보를 확인해야 해요.",
+      "pronunciation": "/hwakinata/"
     },
     {
       "id": 138,
       "word": "치즈",
       "sentence1": "빵과 함께 치즈 먹는 것을 좋아해요.",
-      "sentence2": "그녀는 시장에서 치즈를 샀어요."
+      "sentence2": "그녀는 시장에서 치즈를 샀어요.",
+      "pronunciation": "/t͡ɕhit͡ɕɯ/"
     },
     {
       "id": 139,
       "word": "닭고기",
       "sentence1": "저녁으로 닭고기를 원해요.",
-      "sentence2": "그녀는 부엌에서 닭고기를 요리하고 있어요."
+      "sentence2": "그녀는 부엌에서 닭고기를 요리하고 있어요.",
+      "pronunciation": "/takk͈oki/"
     },
     {
       "id": 140,
       "word": "아이",
       "sentence1": "아이가 공원에서 놀고 있어요.",
-      "sentence2": "그녀는 아이 한 명과 애완동물 두 마리가 있어요."
+      "sentence2": "그녀는 아이 한 명과 애완동물 두 마리가 있어요.",
+      "pronunciation": "/ai/"
     },
     {
       "id": 141,
       "word": "초콜릿",
       "sentence1": "초콜릿 아이스크림을 좋아해요.",
-      "sentence2": "그녀가 초콜릿 한 상자를 줬어요."
+      "sentence2": "그녀가 초콜릿 한 상자를 줬어요.",
+      "pronunciation": "/t͡ɕhokhollit/"
     },
     {
       "id": 142,
       "word": "선택하다",
       "sentence1": "파티용 드레스를 골라야 해요.",
-      "sentence2": "그녀는 파란 것을 선택했어요."
+      "sentence2": "그녀는 파란 것을 선택했어요.",
+      "pronunciation": "/sʌnthɛkhata/"
     },
     {
       "id": 143,
       "word": "영화관",
       "sentence1": "오늘 밤 영화관에 가요.",
-      "sentence2": "그녀는 지역 영화관에서 일해요."
+      "sentence2": "그녀는 지역 영화관에서 일해요.",
+      "pronunciation": "/jʌŋhwakwan/"
     },
     {
       "id": 144,
       "word": "도시",
       "sentence1": "도시는 매우 커요.",
-      "sentence2": "그녀는 도심에 살아요."
+      "sentence2": "그녀는 도심에 살아요.",
+      "pronunciation": "/tosi/"
     },
     {
       "id": 145,
       "word": "수업",
       "sentence1": "나는 5학년이에요.",
-      "sentence2": "그녀는 수학 수업을 가르쳐요."
+      "sentence2": "그녀는 수학 수업을 가르쳐요.",
+      "pronunciation": "/suʌp/"
     },
     {
       "id": 146,
       "word": "교실",
       "sentence1": "교실은 밝고 깨끗해요.",
-      "sentence2": "그녀는 새해를 위해 교실을 꾸몄어요."
+      "sentence2": "그녀는 새해를 위해 교실을 꾸몄어요.",
+      "pronunciation": "/kjosil/"
     },
     {
       "id": 147,
       "word": "깨끗한",
       "sentence1": "방을 깨끗하게 유지하세요.",
-      "sentence2": "그녀는 어제 집을 청소했어요."
+      "sentence2": "그녀는 어제 집을 청소했어요.",
+      "pronunciation": "/k͈ɛk͈ɯthan/"
     },
     {
       "id": 148,
       "word": "오르다",
       "sentence1": "산에 오르는 것을 좋아해요.",
-      "sentence2": "그녀는 더 잘 보기 위해 나무에 올랐어요."
+      "sentence2": "그녀는 더 잘 보기 위해 나무에 올랐어요.",
+      "pronunciation": "/olɯta/"
     },
     {
       "id": 149,
       "word": "시계",
       "sentence1": "시계에 몇 시예요?",
-      "sentence2": "그녀는 시간을 확인하기 위해 시계를 봤어요."
+      "sentence2": "그녀는 시간을 확인하기 위해 시계를 봤어요.",
+      "pronunciation": "/sikje/"
     },
     {
       "id": 150,
       "word": "닫다",
       "sentence1": "문을 닫으세요.",
-      "sentence2": "추워서 그녀는 창문을 닫았어요."
+      "sentence2": "추워서 그녀는 창문을 닫았어요.",
+      "pronunciation": "/tatt͈a/"
     },
     {
       "id": 151,
       "word": "옷",
       "sentence1": "새 옷을 사야 해요.",
-      "sentence2": "그녀는 헌 옷을 자선단체에 기부했어요."
+      "sentence2": "그녀는 헌 옷을 자선단체에 기부했어요.",
+      "pronunciation": "/ot/"
     },
     {
       "id": 152,
       "word": "클럽",
       "sentence1": "그는 체스 클럽 회원이에요.",
-      "sentence2": "그녀는 매주 금요일 밤 클럽에 가요."
+      "sentence2": "그녀는 매주 금요일 밤 클럽에 가요.",
+      "pronunciation": "/khɯllʌp/"
     },
     {
       "id": 153,
       "word": "코트",
       "sentence1": "겨울에 코트를 입어요.",
-      "sentence2": "그녀는 추운 날씨를 위해 새 코트를 샀어요."
+      "sentence2": "그녀는 추운 날씨를 위해 새 코트를 샀어요.",
+      "pronunciation": "/khothɯ/"
     },
     {
       "id": 154,
       "word": "커피",
       "sentence1": "아침에 커피 마시는 것을 좋아해요.",
-      "sentence2": "그녀는 카페에서 커피 한 잔을 주문했어요."
+      "sentence2": "그녀는 카페에서 커피 한 잔을 주문했어요.",
+      "pronunciation": "/khʌphi/"
     },
     {
       "id": 155,
       "word": "추운",
       "sentence1": "밖이 매우 추워요.",
-      "sentence2": "추워서 그녀는 재킷을 입었어요."
+      "sentence2": "추워서 그녀는 재킷을 입었어요.",
+      "pronunciation": "/t͡ɕhuun/"
     },
     {
       "id": 156,
       "word": "대학",
       "sentence1": "그는 런던의 대학에서 공부하고 있어요.",
-      "sentence2": "그녀는 고등학교 후에 대학에 가고 싶어해요."
+      "sentence2": "그녀는 고등학교 후에 대학에 가고 싶어해요.",
+      "pronunciation": "/tɛak/"
     },
     {
       "id": 157,
       "word": "색",
       "sentence1": "당신이 좋아하는 색은 무엇인가요?",
-      "sentence2": "그녀는 벽을 연한 파란색으로 칠했어요."
+      "sentence2": "그녀는 벽을 연한 파란색으로 칠했어요.",
+      "pronunciation": "/sɛk/"
     },
     {
       "id": 158,
       "word": "오다",
       "sentence1": "내 파티에 와주세요.",
-      "sentence2": "그녀는 내일 회의에 올 거예요."
+      "sentence2": "그녀는 내일 회의에 올 거예요.",
+      "pronunciation": "/ota/"
     },
     {
       "id": 159,
       "word": "흔한",
       "sentence1": "영어는 흔한 언어예요.",
-      "sentence2": "그녀는 음악에 공통적인 관심을 가지고 있어요."
+      "sentence2": "그녀는 음악에 공통적인 관심을 가지고 있어요.",
+      "pronunciation": "/hɯnan/"
     },
     {
       "id": 160,
       "word": "회사",
       "sentence1": "그는 큰 회사에서 일해요.",
-      "sentence2": "그녀는 작년에 자기 회사를 시작했어요."
+      "sentence2": "그녀는 작년에 자기 회사를 시작했어요.",
+      "pronunciation": "/hwesa/"
     },
     {
       "id": 161,
       "word": "비교하다",
       "sentence1": "우리 답을 비교해요.",
-      "sentence2": "그녀는 사기 전에 두 제품을 비교했어요."
+      "sentence2": "그녀는 사기 전에 두 제품을 비교했어요.",
+      "pronunciation": "/pikjoata/"
     },
     {
       "id": 162,
       "word": "완료하다",
       "sentence1": "양식을 작성해 주세요.",
-      "sentence2": "그녀는 제시간에 프로젝트를 완료했어요."
+      "sentence2": "그녀는 제시간에 프로젝트를 완료했어요.",
+      "pronunciation": "/walljoata/"
     },
     {
       "id": 163,
       "word": "컴퓨터",
       "sentence1": "일할 때 컴퓨터를 사용해요.",
-      "sentence2": "그녀는 지난주에 새 컴퓨터를 샀어요."
+      "sentence2": "그녀는 지난주에 새 컴퓨터를 샀어요.",
+      "pronunciation": "/khʌmphjuthʌ/"
     },
     {
       "id": 164,
       "word": "콘서트",
       "sentence1": "오늘 밤 콘서트에 가요.",
-      "sentence2": "그녀는 라이브 콘서트 녹음을 듣는 것을 좋아해요."
+      "sentence2": "그녀는 라이브 콘서트 녹음을 듣는 것을 좋아해요.",
+      "pronunciation": "/khonsʌthɯ/"
     },
     {
       "id": 165,
       "word": "대화",
       "sentence1": "좋은 대화를 나눴어요.",
-      "sentence2": "그녀는 친구들과 깊은 대화하는 것을 즐겨요."
+      "sentence2": "그녀는 친구들과 깊은 대화하는 것을 즐겨요.",
+      "pronunciation": "/tɛwa/"
     },
     {
       "id": 166,
       "word": "요리하다",
       "sentence1": "이탈리아 음식 요리하는 것을 좋아해요.",
-      "sentence2": "그녀는 가족을 위해 맛있는 식사를 요리했어요."
+      "sentence2": "그녀는 가족을 위해 맛있는 식사를 요리했어요.",
+      "pronunciation": "/joliata/"
     },
     {
       "id": 167,
       "word": "요리",
       "sentence1": "요리는 내가 가장 좋아하는 취미예요.",
-      "sentence2": "그녀는 실력을 향상시키기 위해 요리 수업을 들었어요."
+      "sentence2": "그녀는 실력을 향상시키기 위해 요리 수업을 들었어요.",
+      "pronunciation": "/joli/"
     },
     {
       "id": 168,
       "word": "멋진",
       "sentence1": "저 재킷은 정말 멋져요.",
-      "sentence2": "그녀는 멋진 빈티지 레코드 컬렉션을 가지고 있어요."
+      "sentence2": "그녀는 멋진 빈티지 레코드 컬렉션을 가지고 있어요.",
+      "pronunciation": "/mʌtt͈͡ɕin/"
     },
     {
       "id": 169,
       "word": "고치다",
       "sentence1": "실수를 고치세요.",
-      "sentence2": "그녀는 항상 문법 오류를 고치려고 해요."
+      "sentence2": "그녀는 항상 문법 오류를 고치려고 해요.",
+      "pronunciation": "/kot͡ɕhita/"
     },
     {
       "id": 170,
       "word": "비용",
       "sentence1": "이 책의 가격은 얼마예요?",
-      "sentence2": "그녀는 도시 생활비가 높은 것에 놀랐어요."
+      "sentence2": "그녀는 도시 생활비가 높은 것에 놀랐어요.",
+      "pronunciation": "/pijoŋ/"
     },
     {
       "id": 171,
       "word": "~할 수 있었다",
       "sentence1": "그것을 도와드릴 수 있어요.",
-      "sentence2": "그녀는 일찍 퇴근하면 파티에 올 수 있다고 했어요."
+      "sentence2": "그녀는 일찍 퇴근하면 파티에 올 수 있다고 했어요.",
+      "pronunciation": "/~hal su is͈ʌtt͈a/"
     },
     {
       "id": 172,
       "word": "나라",
       "sentence1": "나는 작은 나라에 살아요.",
-      "sentence2": "그녀는 다른 나라들을 여행하고 싶어해요."
+      "sentence2": "그녀는 다른 나라들을 여행하고 싶어해요.",
+      "pronunciation": "/nala/"
     },
     {
       "id": 173,
       "word": "과정",
       "sentence1": "생물학 과정을 듣고 있어요.",
-      "sentence2": "그녀는 요리 과정에 등록했어요."
+      "sentence2": "그녀는 요리 과정에 등록했어요.",
+      "pronunciation": "/kwat͡ɕʌŋ/"
     },
     {
       "id": 174,
       "word": "사촌",
       "sentence1": "이번 주말에 사촌이 방문해요.",
-      "sentence2": "그녀는 해외에 사는 사촌이 있어요."
+      "sentence2": "그녀는 해외에 사는 사촌이 있어요.",
+      "pronunciation": "/sat͡ɕhon/"
     },
     {
       "id": 175,
       "word": "소",
       "sentence1": "소가 들판에서 풀을 뜯고 있어요.",
-      "sentence2": "그녀는 소와 닭이 있는 농장에서 자랐어요."
+      "sentence2": "그녀는 소와 닭이 있는 농장에서 자랐어요.",
+      "pronunciation": "/so/"
     },
     {
       "id": 176,
       "word": "크림",
       "sentence1": "커피에 크림을 좋아해요.",
-      "sentence2": "그녀는 맛을 더하기 위해 수프에 크림을 넣었어요."
+      "sentence2": "그녀는 맛을 더하기 위해 수프에 크림을 넣었어요.",
+      "pronunciation": "/khɯlim/"
     },
     {
       "id": 177,
       "word": "만들다",
       "sentence1": "새 프로젝트를 만들고 싶어요.",
-      "sentence2": "그녀는 아름다운 그림을 만들었어요."
+      "sentence2": "그녀는 아름다운 그림을 만들었어요.",
+      "pronunciation": "/mantɯlta/"
     },
     {
       "id": 178,
       "word": "문화",
       "sentence1": "다양한 문화에 대해 배우는 데 관심이 있어요.",
-      "sentence2": "그녀는 여행할 때 현지 문화를 탐험하는 것을 즐겨요."
+      "sentence2": "그녀는 여행할 때 현지 문화를 탐험하는 것을 즐겨요.",
+      "pronunciation": "/munwa/"
     },
     {
       "id": 179,
       "word": "컵",
       "sentence1": "컵으로 차를 마셔요.",
-      "sentence2": "그녀는 예쁜 컵 세트를 샀어요."
+      "sentence2": "그녀는 예쁜 컵 세트를 샀어요.",
+      "pronunciation": "/khʌp/"
     },
     {
       "id": 180,
       "word": "고객",
       "sentence1": "고객은 항상 옳아요.",
-      "sentence2": "그녀는 그 가게의 충실한 고객이에요."
+      "sentence2": "그녀는 그 가게의 충실한 고객이에요.",
+      "pronunciation": "/kokɛk/"
     },
     {
       "id": 181,
       "word": "자르다",
       "sentence1": "선을 따라 종이를 자르세요.",
-      "sentence2": "그녀는 케이크를 같은 조각으로 잘랐어요."
+      "sentence2": "그녀는 케이크를 같은 조각으로 잘랐어요.",
+      "pronunciation": "/t͡ɕalɯta/"
     },
     {
       "id": 182,
       "word": "아빠",
       "sentence1": "우리 아빠는 요리를 잘해요.",
-      "sentence2": "그녀는 아빠와 시간 보내는 것을 좋아해요."
+      "sentence2": "그녀는 아빠와 시간 보내는 것을 좋아해요.",
+      "pronunciation": "/ap͈a/"
     },
     {
       "id": 183,
       "word": "춤추다",
       "sentence1": "파티에서 춤추는 것을 좋아해요.",
-      "sentence2": "그녀는 1년 동안 춤 레슨을 받았어요."
+      "sentence2": "그녀는 1년 동안 춤 레슨을 받았어요.",
+      "pronunciation": "/t͡ɕhumt͡ɕhuta/"
     },
     {
       "id": 184,
       "word": "댄서",
       "sentence1": "댄서가 아름답게 공연했어요.",
-      "sentence2": "그녀는 전문 댄서가 되고 싶어해요."
+      "sentence2": "그녀는 전문 댄서가 되고 싶어해요.",
+      "pronunciation": "/tɛnsʌ/"
     },
     {
       "id": 185,
       "word": "춤",
       "sentence1": "춤은 재미있는 운동 방법이에요.",
-      "sentence2": "그녀는 좋아하는 노래에 맞춰 춤추는 것을 즐겨요."
+      "sentence2": "그녀는 좋아하는 노래에 맞춰 춤추는 것을 즐겨요.",
+      "pronunciation": "/t͡ɕhum/"
     },
     {
       "id": 186,
       "word": "위험한",
       "sentence1": "저 동물은 위험해요.",
-      "sentence2": "그녀는 상황이 위험하다는 것을 깨달았어요."
+      "sentence2": "그녀는 상황이 위험하다는 것을 깨달았어요.",
+      "pronunciation": "/wiʌmhan/"
     },
     {
       "id": 187,
       "word": "어두운",
       "sentence1": "밖이 어두워요.",
-      "sentence2": "그녀는 밀크 초콜릿보다 다크 초콜릿을 선호해요."
+      "sentence2": "그녀는 밀크 초콜릿보다 다크 초콜릿을 선호해요.",
+      "pronunciation": "/ʌtuun/"
     },
     {
       "id": 188,
       "word": "날짜",
       "sentence1": "오늘 날짜가 며칠이에요?",
-      "sentence2": "그녀는 종이에 날짜를 썼어요."
+      "sentence2": "그녀는 종이에 날짜를 썼어요.",
+      "pronunciation": "/nalt͈͡ɕa/"
     },
     {
       "id": 189,
       "word": "딸",
       "sentence1": "내 딸은 매우 재능이 있어요.",
-      "sentence2": "그녀는 딸의 성취를 자랑스러워해요."
+      "sentence2": "그녀는 딸의 성취를 자랑스러워해요.",
+      "pronunciation": "/t͈al/"
     },
     {
       "id": 190,
       "word": "날",
       "sentence1": "오늘은 아름다운 날이에요.",
-      "sentence2": "그녀는 하루 종일 쉴 계획이에요."
+      "sentence2": "그녀는 하루 종일 쉴 계획이에요.",
+      "pronunciation": "/nal/"
     },
     {
       "id": 191,
       "word": "친애하는",
       "sentence1": "친한 친구가 방문해요.",
-      "sentence2": "그녀는 사랑하는 어머니에게 편지를 썼어요."
+      "sentence2": "그녀는 사랑하는 어머니에게 편지를 썼어요.",
+      "pronunciation": "/t͡ɕhinɛanɯn/"
     },
     {
       "id": 192,
       "word": "12월",
       "sentence1": "12월은 한 해의 마지막 달이에요.",
-      "sentence2": "그녀는 12월의 휴일 장식을 좋아해요."
+      "sentence2": "그녀는 12월의 휴일 장식을 좋아해요.",
+      "pronunciation": "/12wʌl/"
     },
     {
       "id": 193,
       "word": "결정하다",
       "sentence1": "무엇을 입을지 결정해야 해요.",
-      "sentence2": "그녀는 일에서 쉬기로 결정했어요."
+      "sentence2": "그녀는 일에서 쉬기로 결정했어요.",
+      "pronunciation": "/kjʌlt͡ɕʌŋhata/"
     },
     {
       "id": 194,
       "word": "맛있는",
       "sentence1": "이 케이크는 맛있어요.",
-      "sentence2": "그녀는 가족을 위해 맛있는 식사를 요리하는 것을 즐겨요."
+      "sentence2": "그녀는 가족을 위해 맛있는 식사를 요리하는 것을 즐겨요.",
+      "pronunciation": "/masinnɯn/"
     },
     {
       "id": 195,
       "word": "설명하다",
       "sentence1": "그림을 설명해 줄 수 있어요?",
-      "sentence2": "그녀는 꿈의 휴가를 자세히 설명했어요."
+      "sentence2": "그녀는 꿈의 휴가를 자세히 설명했어요.",
+      "pronunciation": "/sʌlmjʌŋhata/"
     },
     {
       "id": 196,
       "word": "설명",
       "sentence1": "책 설명이 흥미로웠어요.",
-      "sentence2": "그녀는 행사에 대해 자세한 설명을 썼어요."
+      "sentence2": "그녀는 행사에 대해 자세한 설명을 썼어요.",
+      "pronunciation": "/sʌlmjʌŋ/"
     },
     {
       "id": 197,
       "word": "디자인",
       "sentence1": "건물 디자인이 현대적이에요.",
-      "sentence2": "그녀는 대학에서 그래픽 디자인을 공부했어요."
+      "sentence2": "그녀는 대학에서 그래픽 디자인을 공부했어요.",
+      "pronunciation": "/tit͡ɕain/"
     },
     {
       "id": 198,
       "word": "책상",
       "sentence1": "내 책상은 서류로 어질러져 있어요.",
-      "sentence2": "그녀는 책상을 정리정돈해요."
+      "sentence2": "그녀는 책상을 정리정돈해요.",
+      "pronunciation": "/t͡ɕhɛks͈aŋ/"
     },
     {
       "id": 199,
       "word": "세부사항",
       "sentence1": "프로젝트에 대해 더 자세히 알려주세요.",
-      "sentence2": "그녀는 그림에서 작은 세부사항을 발견했어요."
+      "sentence2": "그녀는 그림에서 작은 세부사항을 발견했어요.",
+      "pronunciation": "/sepusaaŋ/"
     },
     {
       "id": 200,
       "word": "대화",
       "sentence1": "영화의 대화가 현실적이었어요.",
-      "sentence2": "그녀는 두 캐릭터 사이의 대화를 썼어요."
+      "sentence2": "그녀는 두 캐릭터 사이의 대화를 썼어요.",
+      "pronunciation": "/tɛwa/"
     },
     {
       "id": 201,
       "word": "사전",
       "sentence1": "단어를 찾으려면 사전이 필요해요.",
-      "sentence2": "그녀는 새 영어-터키어 사전을 샀어요."
+      "sentence2": "그녀는 새 영어-터키어 사전을 샀어요.",
+      "pronunciation": "/sat͡ɕʌn/"
     },
     {
       "id": 202,
       "word": "죽다",
       "sentence1": "젊어서 죽고 싶지 않아요.",
-      "sentence2": "그녀는 혼자 죽을까 봐 두려웠어요."
+      "sentence2": "그녀는 혼자 죽을까 봐 두려웠어요.",
+      "pronunciation": "/t͡ɕukt͈a/"
     },
     {
       "id": 203,
       "word": "식단",
       "sentence1": "건강한 식단을 따르고 있어요.",
-      "sentence2": "그녀는 건강을 유지하기 위해 엄격한 식단을 따라요."
+      "sentence2": "그녀는 건강을 유지하기 위해 엄격한 식단을 따라요.",
+      "pronunciation": "/sikt͈an/"
     },
     {
       "id": 204,
       "word": "차이",
       "sentence1": "이 두 그림의 차이점은 무엇인가요?",
-      "sentence2": "그녀는 처음에 차이를 못 봤어요."
+      "sentence2": "그녀는 처음에 차이를 못 봤어요.",
+      "pronunciation": "/t͡ɕhai/"
     },
     {
       "id": 205,
       "word": "다른",
       "sentence1": "이 책은 다른 것들과 달라요.",
-      "sentence2": "그녀는 그 문제에 대해 다른 시각을 가지고 있어요."
+      "sentence2": "그녀는 그 문제에 대해 다른 시각을 가지고 있어요.",
+      "pronunciation": "/talɯn/"
     },
     {
       "id": 206,
       "word": "어려운",
       "sentence1": "이 운동은 어려워요.",
-      "sentence2": "그녀는 수학 문제가 풀기 어렵다고 느꼈어요."
+      "sentence2": "그녀는 수학 문제가 풀기 어렵다고 느꼈어요.",
+      "pronunciation": "/ʌljʌun/"
     },
     {
       "id": 207,
       "word": "저녁식사",
       "sentence1": "우리는 오후 7시에 저녁을 먹어요.",
-      "sentence2": "그녀는 가족을 위해 맛있는 저녁을 준비했어요."
+      "sentence2": "그녀는 가족을 위해 맛있는 저녁을 준비했어요.",
+      "pronunciation": "/t͡ɕʌnjʌks͈iks͈a/"
     },
     {
       "id": 208,
       "word": "더러운",
       "sentence1": "정원 가꾸기로 손이 더러워요.",
-      "sentence2": "그녀는 더러운 옷 입는 것을 좋아하지 않아요."
+      "sentence2": "그녀는 더러운 옷 입는 것을 좋아하지 않아요.",
+      "pronunciation": "/tʌlʌun/"
     },
     {
       "id": 209,
       "word": "토론하다",
       "sentence1": "프로젝트 세부사항을 논의해요.",
-      "sentence2": "그녀는 팀과 아이디어를 논의하고 싶어해요."
+      "sentence2": "그녀는 팀과 아이디어를 논의하고 싶어해요.",
+      "pronunciation": "/tholonata/"
     },
     {
       "id": 210,
       "word": "요리",
       "sentence1": "이 요리는 내가 제일 좋아하는 거예요.",
-      "sentence2": "그녀는 예쁜 접시에 음식을 담았어요."
+      "sentence2": "그녀는 예쁜 접시에 음식을 담았어요.",
+      "pronunciation": "/joli/"
     },
     {
       "id": 211,
       "word": "하다",
       "sentence1": "오늘 뭐 하고 싶어요?",
-      "sentence2": "그녀는 아침에 요가하는 것을 좋아해요."
+      "sentence2": "그녀는 아침에 요가하는 것을 좋아해요.",
+      "pronunciation": "/hata/"
     },
     {
       "id": 212,
       "word": "의사",
       "sentence1": "의사 선생님이 지금 만나실 거예요.",
-      "sentence2": "그녀는 미래에 의사가 되고 싶어해요."
+      "sentence2": "그녀는 미래에 의사가 되고 싶어해요.",
+      "pronunciation": "/ɰisa/"
     },
     {
       "id": 213,
       "word": "개",
       "sentence1": "내 개는 물건 던지고 가져오기를 좋아해요.",
-      "sentence2": "그녀는 보호소에서 유기견을 입양했어요."
+      "sentence2": "그녀는 보호소에서 유기견을 입양했어요.",
+      "pronunciation": "/kɛ/"
     },
     {
       "id": 214,
       "word": "달러",
       "sentence1": "가격은 20달러예요.",
-      "sentence2": "그녀는 새 핸드폰을 살 만큼 달러를 모았어요."
+      "sentence2": "그녀는 새 핸드폰을 살 만큼 달러를 모았어요.",
+      "pronunciation": "/tallʌ/"
     },
     {
       "id": 215,
       "word": "문",
       "sentence1": "뒤에 문을 닫아 주세요.",
-      "sentence2": "그녀는 문을 두드리고 응답을 기다렸어요."
+      "sentence2": "그녀는 문을 두드리고 응답을 기다렸어요.",
+      "pronunciation": "/mun/"
     },
     {
       "id": 216,
       "word": "아래로",
       "sentence1": "고양이가 선반에서 뛰어내렸어요.",
-      "sentence2": "그녀는 지시사항을 종이에 적었어요."
+      "sentence2": "그녀는 지시사항을 종이에 적었어요.",
+      "pronunciation": "/alɛlo/"
     },
     {
       "id": 217,
       "word": "아래층",
       "sentence1": "세탁실은 아래층에 있어요.",
-      "sentence2": "그녀는 간식을 가지러 아래층으로 갔어요."
+      "sentence2": "그녀는 간식을 가지러 아래층으로 갔어요.",
+      "pronunciation": "/alɛt͡ɕhɯŋ/"
     },
     {
       "id": 218,
       "word": "그리다",
       "sentence1": "여가 시간에 그림 그리는 것을 좋아해요.",
-      "sentence2": "그녀는 아름다운 풍경을 그렸어요."
+      "sentence2": "그녀는 아름다운 풍경을 그렸어요.",
+      "pronunciation": "/kɯlita/"
     },
     {
       "id": 219,
       "word": "드레스",
       "sentence1": "그녀는 파티에 빨간 드레스를 입었어요.",
-      "sentence2": "가게에서 드레스가 할인 중이었어요."
+      "sentence2": "가게에서 드레스가 할인 중이었어요.",
+      "pronunciation": "/tɯlesɯ/"
     },
     {
       "id": 220,
       "word": "마시다",
       "sentence1": "아침에 커피 마시는 것을 좋아해요.",
-      "sentence2": "그녀가 물 한 잔을 권했어요."
+      "sentence2": "그녀가 물 한 잔을 권했어요.",
+      "pronunciation": "/masita/"
     },
     {
       "id": 221,
       "word": "운전하다",
       "sentence1": "18살에 운전을 배웠어요.",
-      "sentence2": "그녀는 장거리 드라이브를 즐겨요."
+      "sentence2": "그녀는 장거리 드라이브를 즐겨요.",
+      "pronunciation": "/unt͡ɕʌnata/"
     },
     {
       "id": 222,
       "word": "운전기사",
       "sentence1": "운전기사가 우리를 공항에 데려다 줬어요.",
-      "sentence2": "그녀는 전문 버스 운전기사예요."
+      "sentence2": "그녀는 전문 버스 운전기사예요.",
+      "pronunciation": "/unt͡ɕʌnkisa/"
     },
     {
       "id": 223,
       "word": "동안",
       "sentence1": "출퇴근하는 동안 음악 듣는 것을 좋아해요.",
-      "sentence2": "그녀는 영화 보는 동안 잠들었어요."
+      "sentence2": "그녀는 영화 보는 동안 잠들었어요.",
+      "pronunciation": "/toŋan/"
     },
     {
       "id": 224,
       "word": "DVD",
       "sentence1": "좋아하는 영화의 새 DVD를 샀어요.",
-      "sentence2": "그녀는 DVD로 영화 보는 것을 선호해요."
+      "sentence2": "그녀는 DVD로 영화 보는 것을 선호해요.",
+      "pronunciation": "/dvd/"
     },
     {
       "id": 225,
       "word": "각각",
       "sentence1": "각 학생은 과제를 제출해야 해요.",
-      "sentence2": "그녀는 각 아이에게 선물을 줬어요."
+      "sentence2": "그녀는 각 아이에게 선물을 줬어요.",
+      "pronunciation": "/kakk͈ak/"
     },
     {
       "id": 226,
       "word": "귀",
       "sentence1": "시끄러운 음악으로 귀가 아파요.",
-      "sentence2": "그녀는 귀에 예쁜 귀걸이를 하고 있어요."
+      "sentence2": "그녀는 귀에 예쁜 귀걸이를 하고 있어요.",
+      "pronunciation": "/kwi/"
     },
     {
       "id": 227,
       "word": "일찍",
       "sentence1": "아침에 일찍 일어나는 것을 좋아해요.",
-      "sentence2": "그녀는 회의 준비를 위해 일찍 도착했어요."
+      "sentence2": "그녀는 회의 준비를 위해 일찍 도착했어요.",
+      "pronunciation": "/ilt͈͡ɕik/"
     },
     {
       "id": 228,
       "word": "동쪽",
       "sentence1": "태양은 동쪽에서 떠요.",
-      "sentence2": "그녀는 새로운 도시를 탐험하기 위해 동쪽으로 여행했어요."
+      "sentence2": "그녀는 새로운 도시를 탐험하기 위해 동쪽으로 여행했어요.",
+      "pronunciation": "/toŋt͈͡ɕok/"
     },
     {
       "id": 229,
       "word": "쉬운",
       "sentence1": "이 운동은 나에게 쉬워요.",
-      "sentence2": "그녀는 문제를 해결하는 쉬운 방법을 찾았어요."
+      "sentence2": "그녀는 문제를 해결하는 쉬운 방법을 찾았어요.",
+      "pronunciation": "/swiun/"
     },
     {
       "id": 230,
       "word": "먹다",
       "sentence1": "건강한 음식 먹는 것을 좋아해요.",
-      "sentence2": "그녀는 우리가 먹을 맛있는 음식을 준비했어요."
+      "sentence2": "그녀는 우리가 먹을 맛있는 음식을 준비했어요.",
+      "pronunciation": "/mʌkt͈a/"
     },
     {
       "id": 231,
       "word": "계란",
       "sentence1": "아침으로 계란을 먹었어요.",
-      "sentence2": "그녀는 스크램블 에그를 좋아해요."
+      "sentence2": "그녀는 스크램블 에그를 좋아해요.",
+      "pronunciation": "/kjelan/"
     },
     {
       "id": 232,
       "word": "여덟",
       "sentence1": "바구니에 사과가 여덟 개 있어요.",
-      "sentence2": "그녀는 여덟 살이에요."
+      "sentence2": "그녀는 여덟 살이에요.",
+      "pronunciation": "/jʌtʌl/"
     },
     {
       "id": 233,
       "word": "열여덟",
       "sentence1": "다음 달에 열여덟 살이 돼요.",
-      "sentence2": "그녀는 이미 열여덟 살이고 투표할 수 있어요."
+      "sentence2": "그녀는 이미 열여덟 살이고 투표할 수 있어요.",
+      "pronunciation": "/jʌljʌtʌl/"
     },
     {
       "id": 234,
       "word": "팔십",
       "sentence1": "책이 80달러예요.",
-      "sentence2": "그녀는 80세이지만 여전히 매우 활동적이에요."
+      "sentence2": "그녀는 80세이지만 여전히 매우 활동적이에요.",
+      "pronunciation": "/phals͈ip/"
     },
     {
       "id": 235,
       "word": "코끼리",
       "sentence1": "코끼리는 가장 큰 육지 동물이에요.",
-      "sentence2": "그녀는 동물원에서 아기 코끼리를 봤어요."
+      "sentence2": "그녀는 동물원에서 아기 코끼리를 봤어요.",
+      "pronunciation": "/khok͈ili/"
     },
     {
       "id": 236,
       "word": "열하나",
       "sentence1": "축구팀에는 11명의 선수가 있어요.",
-      "sentence2": "그녀는 다음 주에 열한 살이 돼요."
+      "sentence2": "그녀는 다음 주에 열한 살이 돼요.",
+      "pronunciation": "/jʌlana/"
     },
     {
       "id": 237,
       "word": "그 외",
       "sentence1": "필요한 게 더 있으세요?",
-      "sentence2": "그녀는 그 드레스가 마음에 안 들어서 다른 것을 골랐어요."
+      "sentence2": "그녀는 그 드레스가 마음에 안 들어서 다른 것을 골랐어요.",
+      "pronunciation": "/kɯ we/"
     },
     {
       "id": 238,
       "word": "이메일",
       "sentence1": "세부사항이 담긴 이메일을 보냈어요.",
-      "sentence2": "그녀는 매일 아침 이메일을 확인해요."
+      "sentence2": "그녀는 매일 아침 이메일을 확인해요.",
+      "pronunciation": "/imeil/"
     },
     {
       "id": 239,
       "word": "끝",
       "sentence1": "영화 결말이 놀라웠어요.",
-      "sentence2": "그녀는 쇼가 끝나서 슬펐어요."
+      "sentence2": "그녀는 쇼가 끝나서 슬펐어요.",
+      "pronunciation": "/k͈ɯt/"
     },
     {
       "id": 240,
       "word": "즐기다",
       "sentence1": "여가 시간에 책 읽는 것을 즐겨요.",
-      "sentence2": "그녀는 공원 산책을 즐겨요."
+      "sentence2": "그녀는 공원 산책을 즐겨요.",
+      "pronunciation": "/t͡ɕɯlkita/"
     },
     {
       "id": 241,
       "word": "충분한",
       "sentence1": "모두에게 충분한 음식이 있나요?",
-      "sentence2": "그녀는 드레스를 살 돈이 충분하지 않았어요."
+      "sentence2": "그녀는 드레스를 살 돈이 충분하지 않았어요.",
+      "pronunciation": "/t͡ɕhuŋpunan/"
     },
     {
       "id": 242,
       "word": "유로",
       "sentence1": "가격은 50유로예요.",
-      "sentence2": "그녀는 은행에서 달러를 유로로 환전했어요."
+      "sentence2": "그녀는 은행에서 달러를 유로로 환전했어요.",
+      "pronunciation": "/julo/"
     },
     {
       "id": 243,
       "word": "심지어",
       "sentence1": "시험이 예상보다 더 쉬웠어요.",
-      "sentence2": "그녀는 작별 인사도 안 했어요."
+      "sentence2": "그녀는 작별 인사도 안 했어요.",
+      "pronunciation": "/simt͡ɕiʌ/"
     },
     {
       "id": 244,
       "word": "저녁",
       "sentence1": "퇴근 후 저녁에 쉬는 것을 좋아해요.",
-      "sentence2": "그녀는 오늘 저녁에 회의가 예정되어 있어요."
+      "sentence2": "그녀는 오늘 저녁에 회의가 예정되어 있어요.",
+      "pronunciation": "/t͡ɕʌnjʌk/"
     },
     {
       "id": 245,
       "word": "행사",
       "sentence1": "연례 행사가 다음 달에 열려요.",
-      "sentence2": "그녀가 올해 행사를 조직하고 있어요."
+      "sentence2": "그녀가 올해 행사를 조직하고 있어요.",
+      "pronunciation": "/hɛŋsa/"
     },
     {
       "id": 246,
       "word": "한 번이라도",
       "sentence1": "파리에 가본 적 있어요?",
-      "sentence2": "그녀는 초밥을 한 번도 먹어본 적이 없어요."
+      "sentence2": "그녀는 초밥을 한 번도 먹어본 적이 없어요.",
+      "pronunciation": "/han pʌnilato/"
     },
     {
       "id": 247,
       "word": "매",
       "sentence1": "모든 학생은 과제를 제출해야 해요.",
-      "sentence2": "그녀는 시험 전 매일 밤 공부해요."
+      "sentence2": "그녀는 시험 전 매일 밤 공부해요.",
+      "pronunciation": "/mɛ/"
     },
     {
       "id": 248,
       "word": "모두",
       "sentence1": "모두 파티에 초대받았어요.",
-      "sentence2": "그녀는 동네 모든 사람을 알아요."
+      "sentence2": "그녀는 동네 모든 사람을 알아요.",
+      "pronunciation": "/motu/"
     },
     {
       "id": 249,
       "word": "모든 사람",
       "sentence1": "모든 사람은 가끔 휴식을 취해야 해요.",
-      "sentence2": "그녀는 모든 사람이 두 번째 기회를 받을 자격이 있다고 믿어요."
+      "sentence2": "그녀는 모든 사람이 두 번째 기회를 받을 자격이 있다고 믿어요.",
+      "pronunciation": "/motɯn salam/"
     },
     {
       "id": 250,
       "word": "모든 것",
       "sentence1": "결국 모든 것이 괜찮아질 거예요.",
-      "sentence2": "그녀는 여행에 필요한 모든 것을 쌌어요."
+      "sentence2": "그녀는 여행에 필요한 모든 것을 쌌어요.",
+      "pronunciation": "/motɯn kʌt/"
     },
     {
       "id": 251,
       "word": "시험",
       "sentence1": "내일 시험이 있어요.",
-      "sentence2": "그녀는 시험을 위해 열심히 공부했어요."
+      "sentence2": "그녀는 시험을 위해 열심히 공부했어요.",
+      "pronunciation": "/siʌm/"
     },
     {
       "id": 252,
       "word": "예",
       "sentence1": "예를 들어줄 수 있어요?",
-      "sentence2": "그녀는 성공한 사람의 훌륭한 예예요."
+      "sentence2": "그녀는 성공한 사람의 훌륭한 예예요.",
+      "pronunciation": "/je/"
     },
     {
       "id": 253,
       "word": "흥분한",
       "sentence1": "콘서트가 기대돼요.",
-      "sentence2": "그녀는 좋아하는 작가를 만나서 흥분했어요."
+      "sentence2": "그녀는 좋아하는 작가를 만나서 흥분했어요.",
+      "pronunciation": "/hɯŋpunan/"
     },
     {
       "id": 254,
       "word": "흥미진진한",
       "sentence1": "영화가 정말 흥미진진했어요.",
-      "sentence2": "그녀는 자신이 사랑하는 흥미진진한 직업을 가지고 있어요."
+      "sentence2": "그녀는 자신이 사랑하는 흥미진진한 직업을 가지고 있어요.",
+      "pronunciation": "/hɯŋmit͡ɕint͡ɕinan/"
     },
     {
       "id": 255,
       "word": "운동",
       "sentence1": "매일 운동하려고 해요.",
-      "sentence2": "그녀는 운동으로 요가를 즐겨요."
+      "sentence2": "그녀는 운동으로 요가를 즐겨요.",
+      "pronunciation": "/untoŋ/"
     },
     {
       "id": 256,
       "word": "비싼",
       "sentence1": "그 드레스는 나에게 너무 비싸요.",
-      "sentence2": "그녀는 선물로 비싼 시계를 샀어요."
+      "sentence2": "그녀는 선물로 비싼 시계를 샀어요.",
+      "pronunciation": "/pis͈an/"
     },
     {
       "id": 257,
       "word": "설명하다",
       "sentence1": "규칙을 설명해 줄 수 있어요?",
-      "sentence2": "그녀는 자신의 관점을 설명하는 데 시간을 들였어요."
+      "sentence2": "그녀는 자신의 관점을 설명하는 데 시간을 들였어요.",
+      "pronunciation": "/sʌlmjʌŋhata/"
     },
     {
       "id": 258,
       "word": "추가의",
       "sentence1": "이것을 끝내려면 추가 시간이 필요해요.",
-      "sentence2": "그녀는 여행을 위해 추가 간식을 가져왔어요."
+      "sentence2": "그녀는 여행을 위해 추가 간식을 가져왔어요.",
+      "pronunciation": "/t͡ɕhukaɰi/"
     },
     {
       "id": 259,
       "word": "눈",
       "sentence1": "그녀는 아름다운 파란 눈을 가지고 있어요.",
-      "sentence2": "눈 검사를 받아야 해요."
+      "sentence2": "눈 검사를 받아야 해요.",
+      "pronunciation": "/nun/"
     },
     {
       "id": 260,
       "word": "얼굴",
       "sentence1": "그는 친절한 얼굴을 가지고 있어요.",
-      "sentence2": "그녀는 얼굴 표정을 숨길 수 없었어요."
+      "sentence2": "그녀는 얼굴 표정을 숨길 수 없었어요.",
+      "pronunciation": "/ʌlkul/"
     },
     {
       "id": 261,
       "word": "사실",
       "sentence1": "지구가 태양 주위를 도는 것은 사실이에요.",
-      "sentence2": "그녀는 흥미로운 사실을 많이 알아요."
+      "sentence2": "그녀는 흥미로운 사실을 많이 알아요.",
+      "pronunciation": "/sasil/"
     },
     {
       "id": 262,
       "word": "떨어지다",
       "sentence1": "넘어지지 않게 조심하세요.",
-      "sentence2": "가을에 나뭇잎이 나무에서 떨어져요."
+      "sentence2": "가을에 나뭇잎이 나무에서 떨어져요.",
+      "pronunciation": "/t͈ʌlʌt͡ɕita/"
     },
     {
       "id": 263,
       "word": "거짓의",
       "sentence1": "그 진술은 거짓이에요.",
-      "sentence2": "그녀는 자신의 믿음이 거짓이라는 것을 깨달았어요."
+      "sentence2": "그녀는 자신의 믿음이 거짓이라는 것을 깨달았어요.",
+      "pronunciation": "/kʌt͡ɕisi/"
     },
     {
       "id": 264,
       "word": "가족",
       "sentence1": "가족은 나에게 매우 중요해요.",
-      "sentence2": "그녀는 대가족 출신이에요."
+      "sentence2": "그녀는 대가족 출신이에요.",
+      "pronunciation": "/kat͡ɕok/"
     },
     {
       "id": 265,
       "word": "유명한",
       "sentence1": "그는 유명한 배우예요.",
-      "sentence2": "그녀는 언젠가 유명해지고 싶어해요."
+      "sentence2": "그녀는 언젠가 유명해지고 싶어해요.",
+      "pronunciation": "/jumjʌŋhan/"
     },
     {
       "id": 266,
       "word": "환상적인",
       "sentence1": "정상에서 보는 경치가 환상적이에요.",
-      "sentence2": "그녀는 프로젝트를 환상적으로 해냈어요."
+      "sentence2": "그녀는 프로젝트를 환상적으로 해냈어요.",
+      "pronunciation": "/hwansaŋt͡ɕʌkin/"
     },
     {
       "id": 267,
       "word": "먼",
       "sentence1": "가게는 우리 집에서 멀어요.",
-      "sentence2": "그녀는 다른 도시에 멀리 살아요."
+      "sentence2": "그녀는 다른 도시에 멀리 살아요.",
+      "pronunciation": "/mʌn/"
     },
     {
       "id": 268,
       "word": "농장",
       "sentence1": "그들은 시골에 농장이 있어요.",
-      "sentence2": "그녀는 여름에 농장 방문하는 것을 좋아해요."
+      "sentence2": "그녀는 여름에 농장 방문하는 것을 좋아해요.",
+      "pronunciation": "/noŋt͡ɕaŋ/"
     },
     {
       "id": 269,
       "word": "농부",
       "sentence1": "농부는 밭에서 열심히 일해요.",
-      "sentence2": "그녀는 농부와 결혼하고 싶어해요."
+      "sentence2": "그녀는 농부와 결혼하고 싶어해요.",
+      "pronunciation": "/noŋpu/"
     },
     {
       "id": 270,
       "word": "빠른",
       "sentence1": "그는 빠른 달리기 선수예요.",
-      "sentence2": "그녀는 빠른 차를 운전해요."
+      "sentence2": "그녀는 빠른 차를 운전해요.",
+      "pronunciation": "/p͈alɯn/"
     },
     {
       "id": 271,
       "word": "뚱뚱한",
       "sentence1": "고양이가 뚱뚱하고 게을러요.",
-      "sentence2": "그녀는 살을 빼기 위해 다이어트 중이에요."
+      "sentence2": "그녀는 살을 빼기 위해 다이어트 중이에요.",
+      "pronunciation": "/t͈uŋt͈uŋhan/"
     },
     {
       "id": 272,
       "word": "아버지",
       "sentence1": "우리 아버지는 의사예요.",
-      "sentence2": "그녀는 아버지를 매우 사랑해요."
+      "sentence2": "그녀는 아버지를 매우 사랑해요.",
+      "pronunciation": "/apʌt͡ɕi/"
     },
     {
       "id": 273,
       "word": "가장 좋아하는",
       "sentence1": "내가 가장 좋아하는 색은 파란색이에요.",
-      "sentence2": "그녀는 자주 읽는 좋아하는 책이 있어요."
+      "sentence2": "그녀는 자주 읽는 좋아하는 책이 있어요.",
+      "pronunciation": "/kat͡ɕaŋ t͡ɕoahanɯn/"
     },
     {
       "id": 274,
       "word": "2월",
       "sentence1": "2월은 일 년의 두 번째 달이에요.",
-      "sentence2": "발렌타인데이는 2월이에요."
+      "sentence2": "발렌타인데이는 2월이에요.",
+      "pronunciation": "/2wʌl/"
     },
     {
       "id": 275,
       "word": "느끼다",
       "sentence1": "오늘 기분이 좋아요.",
-      "sentence2": "그녀는 어제 몸이 안 좋았어요."
+      "sentence2": "그녀는 어제 몸이 안 좋았어요.",
+      "pronunciation": "/nɯk͈ita/"
     },
     {
       "id": 276,
       "word": "느낌",
       "sentence1": "뭔가 잘못된 느낌이 있어요.",
-      "sentence2": "그녀는 편지로 감정을 표현했어요."
+      "sentence2": "그녀는 편지로 감정을 표현했어요.",
+      "pronunciation": "/nɯk͈im/"
     },
     {
       "id": 277,
       "word": "축제",
       "sentence1": "음악 축제가 대단했어요.",
-      "sentence2": "그녀는 연례 축제를 기대해요."
+      "sentence2": "그녀는 연례 축제를 기대해요.",
+      "pronunciation": "/t͡ɕhukt͈͡ɕe/"
     },
     {
       "id": 278,
       "word": "몇몇의",
       "sentence1": "이 도시에 친구가 몇 명 있어요.",
-      "sentence2": "그녀는 여행 중에 사진을 몇 장 찍었어요."
+      "sentence2": "그녀는 여행 중에 사진을 몇 장 찍었어요.",
+      "pronunciation": "/mjʌnmjʌt͡ɕhi/"
     },
     {
       "id": 279,
       "word": "열다섯",
       "sentence1": "우리 반에 15명의 학생이 있어요.",
-      "sentence2": "그녀는 다음 달에 열다섯 살이 돼요."
+      "sentence2": "그녀는 다음 달에 열다섯 살이 돼요.",
+      "pronunciation": "/jʌltasʌt/"
     },
     {
       "id": 280,
       "word": "다섯째",
       "sentence1": "그는 5위로 끝났어요.",
-      "sentence2": "시리즈의 다섯 번째 책이 내가 제일 좋아하는 거예요."
+      "sentence2": "시리즈의 다섯 번째 책이 내가 제일 좋아하는 거예요.",
+      "pronunciation": "/tasʌtt͈͡ɕɛ/"
     },
     {
       "id": 281,
       "word": "오십",
       "sentence1": "미국에는 50개의 주가 있어요.",
-      "sentence2": "그녀는 50세예요."
+      "sentence2": "그녀는 50세예요.",
+      "pronunciation": "/osip/"
     },
     {
       "id": 282,
       "word": "채우다",
       "sentence1": "이 양식을 작성해 주세요.",
-      "sentence2": "그녀는 차에 기름을 넣어야 해요."
+      "sentence2": "그녀는 차에 기름을 넣어야 해요.",
+      "pronunciation": "/t͡ɕhɛuta/"
     },
     {
       "id": 283,
       "word": "영화",
       "sentence1": "어젯밤에 좋은 영화를 봤어요.",
-      "sentence2": "그녀는 언젠가 영화를 만들고 싶어해요."
+      "sentence2": "그녀는 언젠가 영화를 만들고 싶어해요.",
+      "pronunciation": "/jʌŋhwa/"
     },
     {
       "id": 284,
       "word": "마지막의",
       "sentence1": "기말고사가 다음 주예요.",
-      "sentence2": "그녀는 기말고사를 위해 열심히 공부했어요."
+      "sentence2": "그녀는 기말고사를 위해 열심히 공부했어요.",
+      "pronunciation": "/mat͡ɕimaki/"
     },
     {
       "id": 285,
       "word": "찾다",
       "sentence1": "열쇠를 못 찾겠어요.",
-      "sentence2": "그녀가 길을 찾는 것을 도와줬어요."
+      "sentence2": "그녀가 길을 찾는 것을 도와줬어요.",
+      "pronunciation": "/t͡ɕhatt͈a/"
     },
     {
       "id": 286,
       "word": "괜찮은",
       "sentence1": "괜찮아요, 감사합니다.",
-      "sentence2": "그녀는 훌륭한 우표 컬렉션을 가지고 있어요."
+      "sentence2": "그녀는 훌륭한 우표 컬렉션을 가지고 있어요.",
+      "pronunciation": "/kwɛnt͡ɕhanɯn/"
     },
     {
       "id": 287,
       "word": "끝내다",
       "sentence1": "숙제를 끝내세요.",
-      "sentence2": "그녀는 내일 프로젝트를 끝낼 거예요."
+      "sentence2": "그녀는 내일 프로젝트를 끝낼 거예요.",
+      "pronunciation": "/k͈ɯnnɛta/"
     },
     {
       "id": 288,
       "word": "불",
       "sentence1": "불이 매우 뜨거워요.",
-      "sentence2": "그녀는 불이 무서웠어요."
+      "sentence2": "그녀는 불이 무서웠어요.",
+      "pronunciation": "/pul/"
     },
     {
       "id": 289,
       "word": "첫 번째",
       "sentence1": "그녀가 처음으로 도착했어요.",
-      "sentence2": "책의 첫 번째 장이 흥미로워요."
+      "sentence2": "책의 첫 번째 장이 흥미로워요.",
+      "pronunciation": "/t͡ɕhʌs pʌnt͈͡ɕɛ/"
     },
     {
       "id": 290,
       "word": "물고기",
       "sentence1": "큰 물고기를 잡았어요.",
-      "sentence2": "그녀는 저녁으로 생선 먹는 것을 좋아해요."
+      "sentence2": "그녀는 저녁으로 생선 먹는 것을 좋아해요.",
+      "pronunciation": "/mulkoki/"
     },
     {
       "id": 291,
       "word": "다섯",
       "sentence1": "사과가 다섯 개 있어요.",
-      "sentence2": "그녀는 다섯 살이에요."
+      "sentence2": "그녀는 다섯 살이에요.",
+      "pronunciation": "/tasʌt/"
     },
     {
       "id": 292,
       "word": "평평한",
       "sentence1": "길이 평평하고 곧아요.",
-      "sentence2": "그녀는 도시의 아파트에 살아요."
+      "sentence2": "그녀는 도시의 아파트에 살아요.",
+      "pronunciation": "/phjʌŋphjʌŋhan/"
     },
     {
       "id": 293,
       "word": "비행",
       "sentence1": "내 비행기는 오후 6시에 출발해요.",
-      "sentence2": "그녀는 파리행 비행기에 있어요."
+      "sentence2": "그녀는 파리행 비행기에 있어요.",
+      "pronunciation": "/piɛŋ/"
     },
     {
       "id": 294,
       "word": "바닥",
       "sentence1": "책이 바닥에 있어요.",
-      "sentence2": "그녀는 어제 바닥을 청소했어요."
+      "sentence2": "그녀는 어제 바닥을 청소했어요.",
+      "pronunciation": "/patak/"
     },
     {
       "id": 295,
       "word": "꽃",
       "sentence1": "예쁜 꽃을 샀어요.",
-      "sentence2": "그녀는 정원에 꽃 심는 것을 좋아해요."
+      "sentence2": "그녀는 정원에 꽃 심는 것을 좋아해요.",
+      "pronunciation": "/k͈ot/"
     },
     {
       "id": 296,
       "word": "날다",
       "sentence1": "뉴욕으로 날아가고 싶어요.",
-      "sentence2": "그녀는 연을 매우 잘 날려요."
+      "sentence2": "그녀는 연을 매우 잘 날려요.",
+      "pronunciation": "/nalta/"
     },
     {
       "id": 297,
       "word": "따라가다",
       "sentence1": "역까지 저를 따라오세요.",
-      "sentence2": "그녀는 꿈을 따르기로 결심했어요."
+      "sentence2": "그녀는 꿈을 따르기로 결심했어요.",
+      "pronunciation": "/t͈alakata/"
     },
     {
       "id": 298,
       "word": "음식",
       "sentence1": "이탈리아 음식을 좋아해요.",
-      "sentence2": "그녀는 저녁으로 맛있는 음식을 준비했어요."
+      "sentence2": "그녀는 저녁으로 맛있는 음식을 준비했어요.",
+      "pronunciation": "/ɯmsik/"
     },
     {
       "id": 299,
       "word": "발",
       "sentence1": "발이 아파요.",
-      "sentence2": "그녀가 실수로 내 발을 밟았어요."
+      "sentence2": "그녀가 실수로 내 발을 밟았어요.",
+      "pronunciation": "/pal/"
     },
     {
       "id": 300,
       "word": "축구",
       "sentence1": "주말에 축구를 해요.",
-      "sentence2": "그녀는 축구의 열렬한 팬이에요."
+      "sentence2": "그녀는 축구의 열렬한 팬이에요.",
+      "pronunciation": "/t͡ɕhukk͈u/"
     },
     {
       "id": 301,
       "word": "~을 위해",
       "sentence1": "이 선물은 당신을 위한 거예요.",
-      "sentence2": "그녀는 가족을 위해 열심히 일해요."
+      "sentence2": "그녀는 가족을 위해 열심히 일해요.",
+      "pronunciation": "/~ɯl wiɛ/"
     },
     {
       "id": 302,
       "word": "잊다",
       "sentence1": "전화하는 것 잊지 마세요.",
-      "sentence2": "그녀는 항상 열쇠를 어디에 뒀는지 잊어요."
+      "sentence2": "그녀는 항상 열쇠를 어디에 뒀는지 잊어요.",
+      "pronunciation": "/itt͈a/"
     },
     {
       "id": 303,
       "word": "양식",
       "sentence1": "이 양식을 작성해 주세요.",
-      "sentence2": "그녀는 양식을 온라인으로 제출했어요."
+      "sentence2": "그녀는 양식을 온라인으로 제출했어요.",
+      "pronunciation": "/jaŋsik/"
     },
     {
       "id": 304,
       "word": "사십",
       "sentence1": "학교에 40명의 학생이 있어요.",
-      "sentence2": "그녀는 40세예요."
+      "sentence2": "그녀는 40세예요.",
+      "pronunciation": "/sasip/"
     },
     {
       "id": 305,
       "word": "넷",
       "sentence1": "저는 형제가 넷 있어요.",
-      "sentence2": "사계절은 아름다워요."
+      "sentence2": "사계절은 아름다워요.",
+      "pronunciation": "/net/"
     },
     {
       "id": 306,
       "word": "열넷",
       "sentence1": "그녀는 열네 살이에요.",
-      "sentence2": "열넷은 제가 가장 좋아하는 숫자예요."
+      "sentence2": "열넷은 제가 가장 좋아하는 숫자예요.",
+      "pronunciation": "/jʌllet/"
     },
     {
       "id": 307,
       "word": "네 번째",
       "sentence1": "그는 4위로 끝냈어요.",
-      "sentence2": "7월 4일은 독립기념일이에요."
+      "sentence2": "7월 4일은 독립기념일이에요.",
+      "pronunciation": "/ne pʌnt͈͡ɕɛ/"
     },
     {
       "id": 308,
       "word": "무료의",
       "sentence1": "박물관은 일요일에 무료예요.",
-      "sentence2": "그녀는 오후에 시간이 있어요."
+      "sentence2": "그녀는 오후에 시간이 있어요.",
+      "pronunciation": "/muljoɰi/"
     },
     {
       "id": 309,
       "word": "금요일",
       "sentence1": "금요일은 제가 가장 좋아하는 날이에요.",
-      "sentence2": "그녀는 금요일에 회의가 있어요."
+      "sentence2": "그녀는 금요일에 회의가 있어요.",
+      "pronunciation": "/kɯmjoil/"
     },
     {
       "id": 310,
       "word": "친구",
       "sentence1": "제 가장 친한 친구가 올 거예요.",
-      "sentence2": "그녀는 충실한 친구예요."
+      "sentence2": "그녀는 충실한 친구예요.",
+      "pronunciation": "/t͡ɕhinku/"
     },
     {
       "id": 311,
       "word": "친근한",
       "sentence1": "그 개는 매우 친근해요.",
-      "sentence2": "그녀는 저에게 다정한 미소를 지었어요."
+      "sentence2": "그녀는 저에게 다정한 미소를 지었어요.",
+      "pronunciation": "/t͡ɕhinkɯnan/"
     },
     {
       "id": 312,
       "word": "~에서",
       "sentence1": "저는 터키에서 왔어요.",
-      "sentence2": "그녀는 친구로부터 편지를 받았어요."
+      "sentence2": "그녀는 친구로부터 편지를 받았어요.",
+      "pronunciation": "/~esʌ/"
     },
     {
       "id": 313,
       "word": "앞",
       "sentence1": "차가 집 앞에 주차되어 있어요.",
-      "sentence2": "그녀는 줄 맨 앞에 섰어요."
+      "sentence2": "그녀는 줄 맨 앞에 섰어요.",
+      "pronunciation": "/ap/"
     },
     {
       "id": 314,
       "word": "과일",
       "sentence1": "저는 아침에 과일을 먹는 것을 좋아해요.",
-      "sentence2": "그녀는 시장에서 신선한 과일을 샀어요."
+      "sentence2": "그녀는 시장에서 신선한 과일을 샀어요.",
+      "pronunciation": "/kwail/"
     },
     {
       "id": 315,
       "word": "가득 찬",
       "sentence1": "잔이 물로 가득 차 있어요.",
-      "sentence2": "그녀는 오늘 일정이 꽉 차 있어요."
+      "sentence2": "그녀는 오늘 일정이 꽉 차 있어요.",
+      "pronunciation": "/katɯk t͡ɕhan/"
     },
     {
       "id": 316,
       "word": "재미",
       "sentence1": "우리는 파티에서 정말 재미있었어요.",
-      "sentence2": "그녀는 야외 활동을 즐겨요."
+      "sentence2": "그녀는 야외 활동을 즐겨요.",
+      "pronunciation": "/t͡ɕɛmi/"
     },
     {
       "id": 317,
       "word": "웃긴",
       "sentence1": "그 영화는 정말 웃겼어요.",
-      "sentence2": "그녀는 재미있는 유머 감각이 있어요."
+      "sentence2": "그녀는 재미있는 유머 감각이 있어요.",
+      "pronunciation": "/utk͈in/"
     },
     {
       "id": 318,
       "word": "미래",
       "sentence1": "저는 미래가 기대돼요.",
-      "sentence2": "그녀는 미래에 대한 큰 계획이 있어요."
+      "sentence2": "그녀는 미래에 대한 큰 계획이 있어요.",
+      "pronunciation": "/milɛ/"
     },
     {
       "id": 319,
       "word": "게임",
       "sentence1": "저는 비디오 게임을 하는 것을 좋아해요.",
-      "sentence2": "그녀는 어젯밤 경기에서 이겼어요."
+      "sentence2": "그녀는 어젯밤 경기에서 이겼어요.",
+      "pronunciation": "/keim/"
     },
     {
       "id": 320,
       "word": "정원",
       "sentence1": "그녀는 뒤뜰에 아름다운 정원이 있어요.",
-      "sentence2": "그녀는 정원에 꽃을 심는 것을 좋아해요."
+      "sentence2": "그녀는 정원에 꽃을 심는 것을 좋아해요.",
+      "pronunciation": "/t͡ɕʌŋwʌn/"
     },
     {
       "id": 321,
       "word": "지리",
       "sentence1": "저는 학교에서 지리를 공부했어요.",
-      "sentence2": "그녀는 세계 지리에 관심이 있어요."
+      "sentence2": "그녀는 세계 지리에 관심이 있어요.",
+      "pronunciation": "/t͡ɕili/"
     },
     {
       "id": 322,
       "word": "얻다",
       "sentence1": "저는 식료품을 사야 해요.",
-      "sentence2": "그녀는 곧 새 직장을 구할 거예요."
+      "sentence2": "그녀는 곧 새 직장을 구할 거예요.",
+      "pronunciation": "/ʌtt͈a/"
     },
     {
       "id": 323,
       "word": "소녀",
       "sentence1": "그 소녀는 책을 읽고 있어요.",
-      "sentence2": "그녀는 똑똑한 소녀예요."
+      "sentence2": "그녀는 똑똑한 소녀예요.",
+      "pronunciation": "/sonjʌ/"
     },
     {
       "id": 324,
       "word": "여자친구",
       "sentence1": "제 여자친구가 올 거예요.",
-      "sentence2": "그녀는 든든한 여자친구예요."
+      "sentence2": "그녀는 든든한 여자친구예요.",
+      "pronunciation": "/jʌt͡ɕat͡ɕhinku/"
     },
     {
       "id": 325,
       "word": "주다",
       "sentence1": "저는 당신에게 선물을 주고 싶어요.",
-      "sentence2": "그녀는 제 생일에 책을 주었어요."
+      "sentence2": "그녀는 제 생일에 책을 주었어요.",
+      "pronunciation": "/t͡ɕuta/"
     },
     {
       "id": 326,
       "word": "유리잔",
       "sentence1": "그 유리잔 조심하세요.",
-      "sentence2": "그녀는 유리잔으로 물을 마셨어요."
+      "sentence2": "그녀는 유리잔으로 물을 마셨어요.",
+      "pronunciation": "/julit͡ɕan/"
     },
     {
       "id": 327,
       "word": "가다",
       "sentence1": "저는 가게에 가야 해요.",
-      "sentence2": "그녀는 나중에 파티에 갈 거예요."
+      "sentence2": "그녀는 나중에 파티에 갈 거예요.",
+      "pronunciation": "/kata/"
     },
     {
       "id": 328,
       "word": "좋은",
       "sentence1": "이것은 좋은 생각이에요.",
-      "sentence2": "그녀는 좋은 학생이에요."
+      "sentence2": "그녀는 좋은 학생이에요.",
+      "pronunciation": "/t͡ɕoɯn/"
     },
     {
       "id": 329,
       "word": "안녕",
       "sentence1": "저는 친구에게 작별 인사를 했어요.",
-      "sentence2": "그녀는 떠나면서 손을 흔들며 인사했어요."
+      "sentence2": "그녀는 떠나면서 손을 흔들며 인사했어요.",
+      "pronunciation": "/annjʌŋ/"
     },
     {
       "id": 330,
       "word": "할아버지",
       "sentence1": "제 할아버지는 매우 지혜로우세요.",
-      "sentence2": "그는 과거에 대한 멋진 이야기를 해주세요."
+      "sentence2": "그는 과거에 대한 멋진 이야기를 해주세요.",
+      "pronunciation": "/halapʌt͡ɕi/"
     },
     {
       "id": 331,
       "word": "할머니",
       "sentence1": "제 할머니는 가장 맛있는 쿠키를 만드세요.",
-      "sentence2": "그녀는 어린 시절 이야기를 하는 것을 좋아해요."
+      "sentence2": "그녀는 어린 시절 이야기를 하는 것을 좋아해요.",
+      "pronunciation": "/halmʌni/"
     },
     {
       "id": 332,
       "word": "조부모",
       "sentence1": "조부모님은 종종 손주들을 애지중지하세요.",
-      "sentence2": "그들은 손주들과 특별한 유대가 있어요."
+      "sentence2": "그들은 손주들과 특별한 유대가 있어요.",
+      "pronunciation": "/t͡ɕopumo/"
     },
     {
       "id": 333,
       "word": "대단한",
       "sentence1": "당신은 프로젝트를 훌륭하게 해냈어요.",
-      "sentence2": "그녀는 미래에 대한 좋은 아이디어가 있어요."
+      "sentence2": "그녀는 미래에 대한 좋은 아이디어가 있어요.",
+      "pronunciation": "/tɛtanan/"
     },
     {
       "id": 334,
       "word": "초록색",
       "sentence1": "잔디는 초록색이에요.",
-      "sentence2": "그녀는 초록색 드레스를 입었어요."
+      "sentence2": "그녀는 초록색 드레스를 입었어요.",
+      "pronunciation": "/t͡ɕholoks͈ɛk/"
     },
     {
       "id": 335,
       "word": "회색",
       "sentence1": "오늘 하늘이 회색이에요.",
-      "sentence2": "그녀는 회색 고양이를 키워요."
+      "sentence2": "그녀는 회색 고양이를 키워요.",
+      "pronunciation": "/hwesɛk/"
     },
     {
       "id": 336,
       "word": "그룹",
       "sentence1": "우리는 스터디 그룹을 만들었어요.",
-      "sentence2": "그녀는 그룹의 리더예요."
+      "sentence2": "그녀는 그룹의 리더예요.",
+      "pronunciation": "/kɯlup/"
     },
     {
       "id": 337,
       "word": "자라다",
       "sentence1": "식물이 자라려면 물이 필요해요.",
-      "sentence2": "그녀는 아이들이 자라는 것을 지켜봤어요."
+      "sentence2": "그녀는 아이들이 자라는 것을 지켜봤어요.",
+      "pronunciation": "/t͡ɕalata/"
     },
     {
       "id": 338,
       "word": "추측하다",
       "sentence1": "답을 추측할 수 있어요?",
-      "sentence2": "그녀는 좋은 추측을 했어요."
+      "sentence2": "그녀는 좋은 추측을 했어요.",
+      "pronunciation": "/t͡ɕhut͡ɕhɯkhata/"
     },
     {
       "id": 339,
       "word": "기타",
       "sentence1": "저는 기타 치는 것을 좋아해요.",
-      "sentence2": "그녀는 기타 치는 것을 배우고 있어요."
+      "sentence2": "그녀는 기타 치는 것을 배우고 있어요.",
+      "pronunciation": "/kitha/"
     },
     {
       "id": 340,
       "word": "헬스장",
       "sentence1": "저는 매일 아침 헬스장에 가요.",
-      "sentence2": "그녀는 헬스장에서 운동해요."
+      "sentence2": "그녀는 헬스장에서 운동해요.",
+      "pronunciation": "/hels͈ɯt͡ɕaŋ/"
     },
     {
       "id": 341,
       "word": "머리카락",
       "sentence1": "그녀는 긴 머리카락을 가졌어요.",
-      "sentence2": "저는 머리를 잘라야 해요."
+      "sentence2": "저는 머리를 잘라야 해요.",
+      "pronunciation": "/mʌlikhalak/"
     },
     {
       "id": 342,
       "word": "반",
       "sentence1": "저는 피자의 반을 먹었어요.",
-      "sentence2": "그녀는 책의 절반을 읽었어요."
+      "sentence2": "그녀는 책의 절반을 읽었어요.",
+      "pronunciation": "/pan/"
     },
     {
       "id": 343,
       "word": "손",
       "sentence1": "그는 손을 흔들었어요.",
-      "sentence2": "그녀는 그의 손을 꽉 잡았어요."
+      "sentence2": "그녀는 그의 손을 꽉 잡았어요.",
+      "pronunciation": "/son/"
     },
     {
       "id": 344,
       "word": "일어나다",
       "sentence1": "다음에 무슨 일이 일어날까요?",
-      "sentence2": "저는 그런 일이 일어날 줄 몰랐어요."
+      "sentence2": "저는 그런 일이 일어날 줄 몰랐어요.",
+      "pronunciation": "/ilʌnata/"
     },
     {
       "id": 345,
       "word": "행복한",
       "sentence1": "그녀는 행복한 사람이에요.",
-      "sentence2": "오늘 행복해요."
+      "sentence2": "오늘 행복해요.",
+      "pronunciation": "/hɛŋpokhan/"
     },
     {
       "id": 346,
       "word": "어려운",
       "sentence1": "이 운동은 어려워요.",
-      "sentence2": "그녀는 매일 열심히 일해요."
+      "sentence2": "그녀는 매일 열심히 일해요.",
+      "pronunciation": "/ʌljʌun/"
     },
     {
       "id": 347,
       "word": "모자",
       "sentence1": "그는 파티에 모자를 쓰고 갔어요.",
-      "sentence2": "그녀는 새 모자를 샀어요."
+      "sentence2": "그녀는 새 모자를 샀어요.",
+      "pronunciation": "/mot͡ɕa/"
     },
     {
       "id": 348,
       "word": "싫어하다",
       "sentence1": "저는 줄 서는 것을 싫어해요.",
-      "sentence2": "그녀는 숙제하는 것을 싫어해요."
+      "sentence2": "그녀는 숙제하는 것을 싫어해요.",
+      "pronunciation": "/silʌata/"
     },
     {
       "id": 349,
       "word": "가지다",
       "sentence1": "저는 개를 키워요.",
-      "sentence2": "그녀는 고양이를 키워요."
+      "sentence2": "그녀는 고양이를 키워요.",
+      "pronunciation": "/kat͡ɕita/"
     },
     {
       "id": 350,
       "word": "~해야 하다",
       "sentence1": "저는 시험을 위해 공부해야 해요.",
-      "sentence2": "그녀는 일하러 가야 해요."
+      "sentence2": "그녀는 일하러 가야 해요.",
+      "pronunciation": "/~hɛja hata/"
     },
     {
       "id": 351,
       "word": "그",
       "sentence1": "그는 제 남동생이에요.",
-      "sentence2": "저는 어제 그를 봤어요."
+      "sentence2": "저는 어제 그를 봤어요.",
+      "pronunciation": "/kɯ/"
     },
     {
       "id": 352,
       "word": "머리",
       "sentence1": "그녀는 고개를 끄덕였어요.",
-      "sentence2": "그는 두통이 있어요."
+      "sentence2": "그는 두통이 있어요.",
+      "pronunciation": "/mʌli/"
     },
     {
       "id": 353,
       "word": "건강",
       "sentence1": "건강은 매우 중요해요.",
-      "sentence2": "그녀는 건강에 대해 걱정해요."
+      "sentence2": "그녀는 건강에 대해 걱정해요.",
+      "pronunciation": "/kʌnkaŋ/"
     },
     {
       "id": 354,
       "word": "건강한",
       "sentence1": "과일과 채소를 먹는 것은 건강한 식단의 일부예요.",
-      "sentence2": "그녀는 건강하고 날씬해 보여요."
+      "sentence2": "그녀는 건강하고 날씬해 보여요.",
+      "pronunciation": "/kʌnkaŋhan/"
     },
     {
       "id": 355,
       "word": "듣다",
       "sentence1": "저는 음악이 들려요.",
-      "sentence2": "그녀는 이상한 소리를 들었어요."
+      "sentence2": "그녀는 이상한 소리를 들었어요.",
+      "pronunciation": "/tɯtt͈a/"
     },
     {
       "id": 356,
       "word": "안녕하세요",
       "sentence1": "안녕하세요, 어떻게 지내세요?",
-      "sentence2": "그녀는 손을 흔들며 인사했어요."
+      "sentence2": "그녀는 손을 흔들며 인사했어요.",
+      "pronunciation": "/annjʌŋhasejo/"
     },
     {
       "id": 357,
       "word": "도와주다",
       "sentence1": "이것 좀 도와주실 수 있어요?",
-      "sentence2": "그녀는 항상 친구들을 도와줘요."
+      "sentence2": "그녀는 항상 친구들을 도와줘요.",
+      "pronunciation": "/towat͡ɕuta/"
     },
     {
       "id": 358,
       "word": "그녀의",
       "sentence1": "이것은 그녀의 책이에요.",
-      "sentence2": "저는 공원에서 그녀를 봤어요."
+      "sentence2": "저는 공원에서 그녀를 봤어요.",
+      "pronunciation": "/kɯnjʌɰi/"
     },
     {
       "id": 359,
       "word": "여기",
       "sentence1": "여기로 오세요.",
-      "sentence2": "그녀는 지금 여기 없어요."
+      "sentence2": "그녀는 지금 여기 없어요.",
+      "pronunciation": "/jʌki/"
     },
     {
       "id": 360,
       "word": "야",
       "sentence1": "야, 무슨 일이야?",
-      "sentence2": "그녀는 안녕하고 웃었어요."
+      "sentence2": "그녀는 안녕하고 웃었어요.",
+      "pronunciation": "/ja/"
     },
     {
       "id": 361,
       "word": "안녕",
       "sentence1": "안녕, 만나서 반가워요!",
-      "sentence2": "그녀는 손을 흔들며 인사했어요."
+      "sentence2": "그녀는 손을 흔들며 인사했어요.",
+      "pronunciation": "/annjʌŋ/"
     },
     {
       "id": 362,
       "word": "높은",
       "sentence1": "그 건물은 매우 높아요.",
-      "sentence2": "그녀는 높은 선반에 손을 뻗었어요."
+      "sentence2": "그녀는 높은 선반에 손을 뻗었어요.",
+      "pronunciation": "/nophɯn/"
     },
     {
       "id": 363,
       "word": "그를",
       "sentence1": "저는 공원에서 그를 봤어요.",
-      "sentence2": "그녀는 그에게 선물을 줬어요."
+      "sentence2": "그녀는 그에게 선물을 줬어요.",
+      "pronunciation": "/kɯlɯl/"
     },
     {
       "id": 364,
       "word": "그의",
       "sentence1": "이것은 그의 차예요.",
-      "sentence2": "저는 그의 여동생을 만났어요."
+      "sentence2": "저는 그의 여동생을 만났어요.",
+      "pronunciation": "/kɯɰi/"
     },
     {
       "id": 365,
       "word": "역사",
       "sentence1": "역사는 매력적이에요.",
-      "sentence2": "그녀는 역사를 공부하는 것을 좋아해요."
+      "sentence2": "그녀는 역사를 공부하는 것을 좋아해요.",
+      "pronunciation": "/jʌks͈a/"
     },
     {
       "id": 366,
       "word": "취미",
       "sentence1": "제 취미는 그림 그리기예요.",
-      "sentence2": "그녀는 많은 취미가 있어요."
+      "sentence2": "그녀는 많은 취미가 있어요.",
+      "pronunciation": "/t͡ɕhwimi/"
     },
     {
       "id": 367,
       "word": "휴일",
       "sentence1": "우리는 휴가를 가요.",
-      "sentence2": "그녀는 여름 휴가를 좋아해요."
+      "sentence2": "그녀는 여름 휴가를 좋아해요.",
+      "pronunciation": "/hjuil/"
     },
     {
       "id": 368,
       "word": "집",
       "sentence1": "집에 오신 것을 환영해요!",
-      "sentence2": "그녀는 집을 청소하고 있어요."
+      "sentence2": "그녀는 집을 청소하고 있어요.",
+      "pronunciation": "/t͡ɕip/"
     },
     {
       "id": 369,
       "word": "숙제",
       "sentence1": "저는 숙제가 많아요.",
-      "sentence2": "그녀는 남동생의 숙제를 도와줘요."
+      "sentence2": "그녀는 남동생의 숙제를 도와줘요.",
+      "pronunciation": "/sukt͈͡ɕe/"
     },
     {
       "id": 370,
       "word": "희망",
       "sentence1": "빨리 나으시길 바라요.",
-      "sentence2": "그녀는 미래에 대한 희망이 있어요."
+      "sentence2": "그녀는 미래에 대한 희망이 있어요.",
+      "pronunciation": "/himaŋ/"
     },
     {
       "id": 371,
       "word": "말",
       "sentence1": "말이 빨리 달리고 있어요.",
-      "sentence2": "그녀는 말 타는 것을 좋아해요."
+      "sentence2": "그녀는 말 타는 것을 좋아해요.",
+      "pronunciation": "/mal/"
     },
     {
       "id": 372,
       "word": "병원",
       "sentence1": "그는 병원에 있어요.",
-      "sentence2": "그녀는 병원에서 일해요."
+      "sentence2": "그녀는 병원에서 일해요.",
+      "pronunciation": "/pjʌŋwʌn/"
     },
     {
       "id": 373,
       "word": "호텔",
       "sentence1": "우리는 좋은 호텔에 묵었어요.",
-      "sentence2": "그녀는 휴가를 위해 호텔을 예약했어요."
+      "sentence2": "그녀는 휴가를 위해 호텔을 예약했어요.",
+      "pronunciation": "/hothel/"
     },
     {
       "id": 374,
       "word": "시간",
       "sentence1": "거기까지 한 시간 걸려요.",
-      "sentence2": "그녀는 한 시간 후에 돌아올 거예요."
+      "sentence2": "그녀는 한 시간 후에 돌아올 거예요.",
+      "pronunciation": "/sikan/"
     },
     {
       "id": 375,
       "word": "더운",
       "sentence1": "커피가 뜨거워요.",
-      "sentence2": "그녀는 더운 날씨를 좋아해요."
+      "sentence2": "그녀는 더운 날씨를 좋아해요.",
+      "pronunciation": "/tʌun/"
     },
     {
       "id": 376,
       "word": "집",
       "sentence1": "이것은 제 집이에요.",
-      "sentence2": "그녀는 집을 사고 싶어해요."
+      "sentence2": "그녀는 집을 사고 싶어해요.",
+      "pronunciation": "/t͡ɕip/"
     },
     {
       "id": 377,
       "word": "어떻게",
       "sentence1": "어떻게 지내세요?",
-      "sentence2": "그녀는 어떻게 하는지 물었어요."
+      "sentence2": "그녀는 어떻게 하는지 물었어요.",
+      "pronunciation": "/ʌt͈ʌkhe/"
     },
     {
       "id": 378,
       "word": "그러나",
       "sentence1": "비가 왔지만 우리는 외출했어요.",
-      "sentence2": "그녀는 매우 바쁘지만 도와줄 거예요."
+      "sentence2": "그녀는 매우 바쁘지만 도와줄 거예요.",
+      "pronunciation": "/kɯlʌna/"
     },
     {
       "id": 379,
       "word": "백",
       "sentence1": "학교에 백 명의 학생이 있어요.",
-      "sentence2": "그녀는 백 달러를 가지고 있어요."
+      "sentence2": "그녀는 백 달러를 가지고 있어요.",
+      "pronunciation": "/pɛk/"
     },
     {
       "id": 380,
       "word": "배고픈",
       "sentence1": "저는 배고파요.",
-      "sentence2": "그녀는 운동 후에 항상 배가 고파요."
+      "sentence2": "그녀는 운동 후에 항상 배가 고파요.",
+      "pronunciation": "/pɛkophɯn/"
     },
     {
       "id": 381,
       "word": "남편",
       "sentence1": "제 남편은 의사예요.",
-      "sentence2": "그녀는 남편을 매우 사랑해요."
+      "sentence2": "그녀는 남편을 매우 사랑해요.",
+      "pronunciation": "/namphjʌn/"
     },
     {
       "id": 382,
       "word": "얼음",
       "sentence1": "얼음이 녹고 있어요.",
-      "sentence2": "그녀는 음료에 얼음을 넣었어요."
+      "sentence2": "그녀는 음료에 얼음을 넣었어요.",
+      "pronunciation": "/ʌlɯm/"
     },
     {
       "id": 383,
       "word": "아이스크림",
       "sentence1": "저는 아이스크림을 좋아해요.",
-      "sentence2": "그녀는 아이들을 위해 아이스크림을 샀어요."
+      "sentence2": "그녀는 아이들을 위해 아이스크림을 샀어요.",
+      "pronunciation": "/aisɯkhɯlim/"
     },
     {
       "id": 384,
       "word": "아이디어",
       "sentence1": "그거 좋은 생각이에요!",
-      "sentence2": "그녀는 프로젝트에 대한 흥미로운 아이디어가 있어요."
+      "sentence2": "그녀는 프로젝트에 대한 흥미로운 아이디어가 있어요.",
+      "pronunciation": "/ait͡ɕiʌ/"
     },
     {
       "id": 385,
       "word": "만약",
       "sentence1": "비가 오면 우리는 실내에 있을 거예요.",
-      "sentence2": "그녀는 제가 함께하고 싶은지 물었어요."
+      "sentence2": "그녀는 제가 함께하고 싶은지 물었어요.",
+      "pronunciation": "/manjak/"
     },
     {
       "id": 386,
       "word": "상상하다",
       "sentence1": "저는 더 나은 세상을 상상할 수 있어요.",
-      "sentence2": "그녀는 다양한 상황을 상상하는 것을 좋아해요."
+      "sentence2": "그녀는 다양한 상황을 상상하는 것을 좋아해요.",
+      "pronunciation": "/saŋsaŋhata/"
     },
     {
       "id": 387,
       "word": "중요한",
       "sentence1": "이것은 중요한 결정이에요.",
-      "sentence2": "그녀는 중요한 일의 우선순위를 정할 줄 알아요."
+      "sentence2": "그녀는 중요한 일의 우선순위를 정할 줄 알아요.",
+      "pronunciation": "/t͡ɕuŋjoan/"
     },
     {
       "id": 388,
       "word": "향상시키다",
       "sentence1": "저는 영어 실력을 향상시키고 싶어요.",
-      "sentence2": "그녀는 성적을 올리기 위해 열심히 공부해요."
+      "sentence2": "그녀는 성적을 올리기 위해 열심히 공부해요.",
+      "pronunciation": "/hjaŋsaŋsikhita/"
     },
     {
       "id": 389,
       "word": "~안에",
       "sentence1": "책이 가방 안에 있어요.",
-      "sentence2": "그녀는 작은 마을에 살아요."
+      "sentence2": "그녀는 작은 마을에 살아요.",
+      "pronunciation": "/~ane/"
     },
     {
       "id": 390,
       "word": "포함하다",
       "sentence1": "목록에 이름을 적어주세요.",
-      "sentence2": "그녀는 모두를 토론에 포함하고 싶어해요."
+      "sentence2": "그녀는 모두를 토론에 포함하고 싶어해요.",
+      "pronunciation": "/phoamhata/"
     },
     {
       "id": 391,
       "word": "정보",
       "sentence1": "더 많은 정보를 주실 수 있어요?",
-      "sentence2": "그녀는 그 정보가 도움이 되었어요."
+      "sentence2": "그녀는 그 정보가 도움이 되었어요.",
+      "pronunciation": "/t͡ɕʌŋpo/"
     },
     {
       "id": 392,
       "word": "관심",
       "sentence1": "저는 예술에 많은 관심이 있어요.",
-      "sentence2": "그녀는 음악에 대한 제 관심을 공유해요."
+      "sentence2": "그녀는 음악에 대한 제 관심을 공유해요.",
+      "pronunciation": "/kwansim/"
     },
     {
       "id": 393,
       "word": "관심 있는",
       "sentence1": "저는 스페인어를 배우는 것에 관심이 있어요.",
-      "sentence2": "그녀는 여행에 관심이 있어요."
+      "sentence2": "그녀는 여행에 관심이 있어요.",
+      "pronunciation": "/kwansim innɯn/"
     },
     {
       "id": 394,
       "word": "흥미로운",
       "sentence1": "이 책은 매우 흥미로워요.",
-      "sentence2": "그녀는 흥미로운 아이디어가 있어요."
+      "sentence2": "그녀는 흥미로운 아이디어가 있어요.",
+      "pronunciation": "/hɯŋmiloun/"
     },
     {
       "id": 395,
       "word": "인터넷",
       "sentence1": "저는 인터넷에서 찾았어요.",
-      "sentence2": "그녀는 인터넷에서 많은 시간을 보내요."
+      "sentence2": "그녀는 인터넷에서 많은 시간을 보내요.",
+      "pronunciation": "/inthʌnet/"
     },
     {
       "id": 396,
       "word": "면접",
       "sentence1": "저는 내일 취업 면접이 있어요.",
-      "sentence2": "그녀는 면접을 준비했어요."
+      "sentence2": "그녀는 면접을 준비했어요.",
+      "pronunciation": "/mjʌnt͡ɕʌp/"
     },
     {
       "id": 397,
       "word": "~안으로",
       "sentence1": "그는 방으로 들어갔어요.",
-      "sentence2": "그녀는 수영장에 뛰어들었어요."
+      "sentence2": "그녀는 수영장에 뛰어들었어요.",
+      "pronunciation": "/~anɯlo/"
     },
     {
       "id": 398,
       "word": "소개하다",
       "sentence1": "제 친구를 소개할게요.",
-      "sentence2": "그녀가 연사를 소개할 거예요."
+      "sentence2": "그녀가 연사를 소개할 거예요.",
+      "pronunciation": "/sokɛata/"
     },
     {
       "id": 399,
       "word": "섬",
       "sentence1": "발리는 아름다운 섬이에요.",
-      "sentence2": "그녀는 열대 섬을 방문하는 것을 꿈꾸어요."
+      "sentence2": "그녀는 열대 섬을 방문하는 것을 꿈꾸어요.",
+      "pronunciation": "/sʌm/"
     },
     {
       "id": 400,
       "word": "그것",
       "sentence1": "저는 탁자 위에서 그것을 찾았어요.",
-      "sentence2": "그녀는 그것이 자기 책이라고 했어요."
+      "sentence2": "그녀는 그것이 자기 책이라고 했어요.",
+      "pronunciation": "/kɯkʌt/"
     },
     {
       "id": 401,
       "word": "그것의",
       "sentence1": "그 개는 꼬리를 흔들었어요.",
-      "sentence2": "그녀는 그것의 성취를 자랑스러워해요."
+      "sentence2": "그녀는 그것의 성취를 자랑스러워해요.",
+      "pronunciation": "/kɯkʌsi/"
     },
     {
       "id": 402,
       "word": "재킷",
       "sentence1": "저는 새 재킷을 샀어요.",
-      "sentence2": "그녀는 가죽 재킷을 입었어요."
+      "sentence2": "그녀는 가죽 재킷을 입었어요.",
+      "pronunciation": "/t͡ɕɛkhit/"
     },
     {
       "id": 403,
       "word": "1월",
       "sentence1": "1월은 첫 번째 달이에요.",
-      "sentence2": "그녀는 1월에 태어났어요."
+      "sentence2": "그녀는 1월에 태어났어요.",
+      "pronunciation": "/1wʌl/"
     },
     {
       "id": 404,
       "word": "청바지",
       "sentence1": "저는 새 청바지를 사야 해요.",
-      "sentence2": "그녀는 청바지 입는 것을 좋아해요."
+      "sentence2": "그녀는 청바지 입는 것을 좋아해요.",
+      "pronunciation": "/t͡ɕhʌŋpat͡ɕi/"
     },
     {
       "id": 405,
       "word": "직업",
       "sentence1": "저는 새 직장을 구했어요.",
-      "sentence2": "그녀는 자신의 일을 사랑해요."
+      "sentence2": "그녀는 자신의 일을 사랑해요.",
+      "pronunciation": "/t͡ɕikʌp/"
     },
     {
       "id": 406,
       "word": "가입하다",
       "sentence1": "저는 클럽에 가입하고 싶어요.",
-      "sentence2": "그녀는 우리와 함께하기로 했어요."
+      "sentence2": "그녀는 우리와 함께하기로 했어요.",
+      "pronunciation": "/kaiphata/"
     },
     {
       "id": 407,
       "word": "여행",
       "sentence1": "그 여행은 길고 피곤했어요.",
-      "sentence2": "그녀는 여행을 즐겼어요."
+      "sentence2": "그녀는 여행을 즐겼어요.",
+      "pronunciation": "/jʌɛŋ/"
     },
     {
       "id": 408,
       "word": "주스",
       "sentence1": "오렌지 주스를 마시고 싶어요.",
-      "sentence2": "그녀는 매일 아침 주스를 마셔요."
+      "sentence2": "그녀는 매일 아침 주스를 마셔요.",
+      "pronunciation": "/t͡ɕusɯ/"
     },
     {
       "id": 409,
       "word": "7월",
       "sentence1": "7월은 일곱 번째 달이에요.",
-      "sentence2": "그녀는 7월에 휴가를 가는 것을 좋아해요."
+      "sentence2": "그녀는 7월에 휴가를 가는 것을 좋아해요.",
+      "pronunciation": "/7wʌl/"
     },
     {
       "id": 410,
       "word": "6월",
       "sentence1": "6월은 여섯 번째 달이에요.",
-      "sentence2": "그녀는 6월에 졸업했어요."
+      "sentence2": "그녀는 6월에 졸업했어요.",
+      "pronunciation": "/6wʌl/"
     },
     {
       "id": 411,
       "word": "단지",
       "sentence1": "저는 단지 도와주고 싶어요.",
-      "sentence2": "그녀는 그냥 친구예요."
+      "sentence2": "그녀는 그냥 친구예요.",
+      "pronunciation": "/tant͡ɕi/"
     },
     {
       "id": 412,
       "word": "유지하다",
       "sentence1": "문을 닫아 주세요.",
-      "sentence2": "그녀는 방을 깨끗하게 유지하고 싶어해요."
+      "sentence2": "그녀는 방을 깨끗하게 유지하고 싶어해요.",
+      "pronunciation": "/jut͡ɕiata/"
     },
     {
       "id": 413,
       "word": "열쇠",
       "sentence1": "저는 집 열쇠를 잃어버렸어요.",
-      "sentence2": "그녀는 매트 아래에서 열쇠를 찾았어요."
+      "sentence2": "그녀는 매트 아래에서 열쇠를 찾았어요.",
+      "pronunciation": "/jʌls͈we/"
     },
     {
       "id": 414,
       "word": "킬로미터",
       "sentence1": "가게는 5킬로미터 떨어져 있어요.",
-      "sentence2": "그녀는 어제 10킬로미터를 뛰었어요."
+      "sentence2": "그녀는 어제 10킬로미터를 뛰었어요.",
+      "pronunciation": "/khillomithʌ/"
     },
     {
       "id": 415,
       "word": "종류",
       "sentence1": "어떤 종류의 음악을 좋아하세요?",
-      "sentence2": "그녀는 친절한 사람이에요."
+      "sentence2": "그녀는 친절한 사람이에요.",
+      "pronunciation": "/t͡ɕoŋnju/"
     },
     {
       "id": 416,
       "word": "부엌",
       "sentence1": "부엌이 매우 넓어요.",
-      "sentence2": "그녀는 부엌에서 요리하는 것을 좋아해요."
+      "sentence2": "그녀는 부엌에서 요리하는 것을 좋아해요.",
+      "pronunciation": "/puʌk/"
     },
     {
       "id": 417,
       "word": "알다",
       "sentence1": "저는 답을 알아요.",
-      "sentence2": "그녀는 그의 이름을 몰라요."
+      "sentence2": "그녀는 그의 이름을 몰라요.",
+      "pronunciation": "/alta/"
     },
     {
       "id": 418,
       "word": "땅",
       "sentence1": "그 땅은 매우 비옥해요.",
-      "sentence2": "그녀는 땅을 샀어요."
+      "sentence2": "그녀는 땅을 샀어요.",
+      "pronunciation": "/t͈aŋ/"
     },
     {
       "id": 419,
       "word": "언어",
       "sentence1": "영어는 세계적인 언어예요.",
-      "sentence2": "그녀는 세 개 국어를 해요."
+      "sentence2": "그녀는 세 개 국어를 해요.",
+      "pronunciation": "/ʌnʌ/"
     },
     {
       "id": 420,
       "word": "큰",
       "sentence1": "그들은 큰 집에 살아요.",
-      "sentence2": "그녀는 많은 우표를 모아요."
+      "sentence2": "그녀는 많은 우표를 모아요.",
+      "pronunciation": "/khɯn/"
     },
     {
       "id": 421,
       "word": "마지막",
       "sentence1": "이것이 마지막 기회예요.",
-      "sentence2": "그녀는 마지막으로 떠난 사람이었어요."
+      "sentence2": "그녀는 마지막으로 떠난 사람이었어요.",
+      "pronunciation": "/mat͡ɕimak/"
     },
     {
       "id": 422,
       "word": "늦은",
       "sentence1": "저는 회의에 늦었어요.",
-      "sentence2": "그녀는 파티에 늦게 도착했어요."
+      "sentence2": "그녀는 파티에 늦게 도착했어요.",
+      "pronunciation": "/nɯt͡ɕɯn/"
     },
     {
       "id": 423,
       "word": "나중에",
       "sentence1": "나중에 이야기해요.",
-      "sentence2": "그녀는 그날 늦게 저에게 전화했어요."
+      "sentence2": "그녀는 그날 늦게 저에게 전화했어요.",
+      "pronunciation": "/nat͡ɕuŋe/"
     },
     {
       "id": 424,
       "word": "웃다",
       "sentence1": "당신을 웃기게 하는 것을 좋아해요.",
-      "sentence2": "그녀는 웃지 않을 수 없었어요."
+      "sentence2": "그녀는 웃지 않을 수 없었어요.",
+      "pronunciation": "/utt͈a/"
     },
     {
       "id": 425,
       "word": "배우다",
       "sentence1": "저는 새로운 언어를 배우고 싶어요.",
-      "sentence2": "그녀는 빨리 배워요."
+      "sentence2": "그녀는 빨리 배워요.",
+      "pronunciation": "/pɛuta/"
     },
     {
       "id": 426,
       "word": "떠나다",
       "sentence1": "저는 일찍 떠나야 해요.",
-      "sentence2": "그녀는 작별 인사 없이 파티를 떠났어요."
+      "sentence2": "그녀는 작별 인사 없이 파티를 떠났어요.",
+      "pronunciation": "/t͈ʌnata/"
     },
     {
       "id": 427,
       "word": "왼쪽",
       "sentence1": "신호등에서 왼쪽으로 돌아요.",
-      "sentence2": "그녀는 왼손잡이예요."
+      "sentence2": "그녀는 왼손잡이예요.",
+      "pronunciation": "/went͈͡ɕok/"
     },
     {
       "id": 428,
       "word": "다리",
       "sentence1": "다리가 아파요.",
-      "sentence2": "그녀는 다리를 꼬았어요."
+      "sentence2": "그녀는 다리를 꼬았어요.",
+      "pronunciation": "/tali/"
     },
     {
       "id": 429,
       "word": "수업",
       "sentence1": "오늘 수학 수업이 있어요.",
-      "sentence2": "그녀는 수업을 즐겼어요."
+      "sentence2": "그녀는 수업을 즐겼어요.",
+      "pronunciation": "/suʌp/"
     },
     {
       "id": 430,
       "word": "허락하다",
       "sentence1": "제가 도와드릴게요.",
-      "sentence2": "그녀는 그가 책을 빌리도록 허락했어요."
+      "sentence2": "그녀는 그가 책을 빌리도록 허락했어요.",
+      "pronunciation": "/hʌlakhata/"
     },
     {
       "id": 431,
       "word": "편지",
       "sentence1": "저는 친구로부터 편지를 받았어요.",
-      "sentence2": "그녀는 할머니에게 편지를 썼어요."
+      "sentence2": "그녀는 할머니에게 편지를 썼어요.",
+      "pronunciation": "/phjʌnt͡ɕi/"
     },
     {
       "id": 432,
       "word": "도서관",
       "sentence1": "도서관은 오후 8시까지 열어요.",
-      "sentence2": "그녀는 도서관에서 책을 빌렸어요."
+      "sentence2": "그녀는 도서관에서 책을 빌렸어요.",
+      "pronunciation": "/tosʌkwan/"
     },
     {
       "id": 433,
       "word": "거짓말하다",
       "sentence1": "저에게 거짓말하지 마세요.",
-      "sentence2": "그녀는 나이에 대해 거짓말했어요."
+      "sentence2": "그녀는 나이에 대해 거짓말했어요.",
+      "pronunciation": "/kʌt͡ɕinmalata/"
     },
     {
       "id": 434,
       "word": "삶",
       "sentence1": "삶은 아름다워요.",
-      "sentence2": "그녀는 삶에서 세계를 여행하고 싶어해요."
+      "sentence2": "그녀는 삶에서 세계를 여행하고 싶어해요.",
+      "pronunciation": "/sam/"
     },
     {
       "id": 435,
       "word": "빛",
       "sentence1": "빛이 너무 밝아요.",
-      "sentence2": "그녀는 자기 전에 불을 껐어요."
+      "sentence2": "그녀는 자기 전에 불을 껐어요.",
+      "pronunciation": "/pit/"
     },
     {
       "id": 436,
       "word": "~처럼",
       "sentence1": "이 드레스는 어제 본 것과 비슷해요.",
-      "sentence2": "그녀는 같은 생각을 가진 친구들이 있어요."
+      "sentence2": "그녀는 같은 생각을 가진 친구들이 있어요.",
+      "pronunciation": "/~t͡ɕhʌlʌm/"
     },
     {
       "id": 437,
       "word": "좋아하다",
       "sentence1": "저는 이 노래를 좋아해요.",
-      "sentence2": "그녀는 자기 전에 책 읽는 것을 좋아해요."
+      "sentence2": "그녀는 자기 전에 책 읽는 것을 좋아해요.",
+      "pronunciation": "/t͡ɕoahata/"
     },
     {
       "id": 438,
       "word": "줄",
       "sentence1": "직선을 그으세요.",
-      "sentence2": "그녀는 표를 사려고 줄을 섰어요."
+      "sentence2": "그녀는 표를 사려고 줄을 섰어요.",
+      "pronunciation": "/t͡ɕul/"
     },
     {
       "id": 439,
       "word": "사자",
       "sentence1": "사자는 정글의 왕이에요.",
-      "sentence2": "그녀는 동물원에서 사자를 봤어요."
+      "sentence2": "그녀는 동물원에서 사자를 봤어요.",
+      "pronunciation": "/sat͡ɕa/"
     },
     {
       "id": 440,
       "word": "목록",
       "sentence1": "저는 쇼핑 목록을 만들었어요.",
-      "sentence2": "그녀는 목록의 항목을 체크했어요."
+      "sentence2": "그녀는 목록의 항목을 체크했어요.",
+      "pronunciation": "/moŋnok/"
     },
     {
       "id": 441,
       "word": "듣다",
       "sentence1": "저는 음악 듣는 것을 좋아해요.",
-      "sentence2": "그녀는 지시를 주의 깊게 들었어요."
+      "sentence2": "그녀는 지시를 주의 깊게 들었어요.",
+      "pronunciation": "/tɯtt͈a/"
     },
     {
       "id": 442,
       "word": "작은",
       "sentence1": "이 상자는 너무 작아요.",
-      "sentence2": "그녀는 작은 개를 키워요."
+      "sentence2": "그녀는 작은 개를 키워요.",
+      "pronunciation": "/t͡ɕakɯn/"
     },
     {
       "id": 443,
       "word": "살다",
       "sentence1": "저는 작은 마을에 살아요.",
-      "sentence2": "그녀는 도시에 살고 싶어해요."
+      "sentence2": "그녀는 도시에 살고 싶어해요.",
+      "pronunciation": "/salta/"
     },
     {
       "id": 444,
       "word": "지역의",
       "sentence1": "저는 지역 음식을 좋아해요.",
-      "sentence2": "그녀는 지역 사업을 지원해요."
+      "sentence2": "그녀는 지역 사업을 지원해요.",
+      "pronunciation": "/t͡ɕijʌki/"
     },
     {
       "id": 445,
       "word": "긴",
       "sentence1": "이것은 긴 책이에요.",
-      "sentence2": "그녀는 직장에서 긴 하루를 보냈어요."
+      "sentence2": "그녀는 직장에서 긴 하루를 보냈어요.",
+      "pronunciation": "/kin/"
     },
     {
       "id": 446,
       "word": "보다",
       "sentence1": "하늘을 봐요!",
-      "sentence2": "그녀는 창밖을 봤어요."
+      "sentence2": "그녀는 창밖을 봤어요.",
+      "pronunciation": "/pota/"
     },
     {
       "id": 447,
       "word": "잃어버리다",
       "sentence1": "저는 열쇠를 잃어버리고 싶지 않아요.",
-      "sentence2": "그녀는 쇼핑몰에서 핸드폰을 잃어버렸어요."
+      "sentence2": "그녀는 쇼핑몰에서 핸드폰을 잃어버렸어요.",
+      "pronunciation": "/ilʌpʌlita/"
     },
     {
       "id": 448,
       "word": "많은",
       "sentence1": "여기에 사람들이 많아요.",
-      "sentence2": "그녀는 친구가 많아요."
+      "sentence2": "그녀는 친구가 많아요.",
+      "pronunciation": "/manɯn/"
     },
     {
       "id": 449,
       "word": "사랑",
       "sentence1": "사랑이 필요한 전부예요.",
-      "sentence2": "그녀는 예상치 못한 곳에서 사랑을 찾았어요."
+      "sentence2": "그녀는 예상치 못한 곳에서 사랑을 찾았어요.",
+      "pronunciation": "/salaŋ/"
     },
     {
       "id": 450,
       "word": "점심",
       "sentence1": "저는 보통 정오에 점심을 먹어요.",
-      "sentence2": "그녀는 피크닉을 위해 도시락을 싸왔어요."
+      "sentence2": "그녀는 피크닉을 위해 도시락을 싸왔어요.",
+      "pronunciation": "/t͡ɕʌmsim/"
     },
     {
       "id": 451,
       "word": "기계",
       "sentence1": "기계가 고장났어요.",
-      "sentence2": "그녀는 기계를 능숙하게 조작해요."
+      "sentence2": "그녀는 기계를 능숙하게 조작해요.",
+      "pronunciation": "/kikje/"
     },
     {
       "id": 452,
       "word": "잡지",
       "sentence1": "저는 잡지에서 흥미로운 기사를 읽었어요.",
-      "sentence2": "그녀는 여러 잡지를 구독해요."
+      "sentence2": "그녀는 여러 잡지를 구독해요.",
+      "pronunciation": "/t͡ɕapt͈͡ɕi/"
     },
     {
       "id": 453,
       "word": "주요한",
       "sentence1": "정문은 모퉁이를 돌면 있어요.",
-      "sentence2": "그녀는 이야기의 주인공이에요."
+      "sentence2": "그녀는 이야기의 주인공이에요.",
+      "pronunciation": "/t͡ɕujoan/"
     },
     {
       "id": 454,
       "word": "만들다",
       "sentence1": "저는 케이크를 만들고 싶어요.",
-      "sentence2": "그녀는 아름다운 도자기를 만들어요."
+      "sentence2": "그녀는 아름다운 도자기를 만들어요.",
+      "pronunciation": "/mantɯlta/"
     },
     {
       "id": 455,
       "word": "남자",
       "sentence1": "그 남자는 책을 읽고 있어요.",
-      "sentence2": "그녀는 정장을 입은 남자를 봤어요."
+      "sentence2": "그녀는 정장을 입은 남자를 봤어요.",
+      "pronunciation": "/namt͡ɕa/"
     },
     {
       "id": 456,
       "word": "많은",
       "sentence1": "선반에 책이 많아요.",
-      "sentence2": "그녀는 친구가 많지 않아요."
+      "sentence2": "그녀는 친구가 많지 않아요.",
+      "pronunciation": "/manɯn/"
     },
     {
       "id": 457,
       "word": "지도",
       "sentence1": "위치를 찾으려면 지도가 필요해요.",
-      "sentence2": "그녀는 지도를 주의 깊게 살펴봤어요."
+      "sentence2": "그녀는 지도를 주의 깊게 살펴봤어요.",
+      "pronunciation": "/t͡ɕito/"
     },
     {
       "id": 458,
       "word": "3월",
       "sentence1": "3월은 세 번째 달이에요.",
-      "sentence2": "그녀는 3월에 태어났어요."
+      "sentence2": "그녀는 3월에 태어났어요.",
+      "pronunciation": "/3wʌl/"
     },
     {
       "id": 459,
       "word": "시장",
       "sentence1": "저는 시장에서 채소를 샀어요.",
-      "sentence2": "그녀는 지역 시장에서 쇼핑하는 것을 즐겨요."
+      "sentence2": "그녀는 지역 시장에서 쇼핑하는 것을 즐겨요.",
+      "pronunciation": "/sit͡ɕaŋ/"
     },
     {
       "id": 460,
       "word": "결혼한",
       "sentence1": "그들은 결혼한 부부예요.",
-      "sentence2": "그녀는 의사와 결혼했어요."
+      "sentence2": "그녀는 의사와 결혼했어요.",
+      "pronunciation": "/kjʌlonan/"
     },
     {
       "id": 461,
       "word": "경기",
       "sentence1": "경기는 내일 열릴 거예요.",
-      "sentence2": "그녀는 지난주에 경기에서 이겼어요."
+      "sentence2": "그녀는 지난주에 경기에서 이겼어요.",
+      "pronunciation": "/kjʌŋki/"
     },
     {
       "id": 462,
       "word": "5월",
       "sentence1": "5월은 아름다운 달이에요.",
-      "sentence2": "그녀는 5월의 꽃들을 좋아해요."
+      "sentence2": "그녀는 5월의 꽃들을 좋아해요.",
+      "pronunciation": "/5wʌl/"
     },
     {
       "id": 463,
       "word": "아마",
       "sentence1": "아마 공원에 갈 수 있을 거예요.",
-      "sentence2": "그녀는 아마 함께할 것 같다고 했어요."
+      "sentence2": "그녀는 아마 함께할 것 같다고 했어요.",
+      "pronunciation": "/ama/"
     },
     {
       "id": 464,
       "word": "나를",
       "sentence1": "도와주실 수 있어요?",
-      "sentence2": "그녀는 어제 저에게 전화했어요."
+      "sentence2": "그녀는 어제 저에게 전화했어요.",
+      "pronunciation": "/nalɯl/"
     },
     {
       "id": 465,
       "word": "식사",
       "sentence1": "아침은 제가 가장 좋아하는 식사예요.",
-      "sentence2": "그녀는 매일 건강한 식사를 준비해요."
+      "sentence2": "그녀는 매일 건강한 식사를 준비해요.",
+      "pronunciation": "/siks͈a/"
     },
     {
       "id": 466,
       "word": "의미하다",
       "sentence1": "이 단어는 무슨 뜻이에요?",
-      "sentence2": "그녀는 당신을 다치게 하려는 것이 아니었어요."
+      "sentence2": "그녀는 당신을 다치게 하려는 것이 아니었어요.",
+      "pronunciation": "/ɰimiata/"
     },
     {
       "id": 467,
       "word": "의미",
       "sentence1": "삶의 의미는 철학적 질문이에요.",
-      "sentence2": "그녀는 시의 의미를 찾았어요."
+      "sentence2": "그녀는 시의 의미를 찾았어요.",
+      "pronunciation": "/ɰimi/"
     },
     {
       "id": 468,
       "word": "고기",
       "sentence1": "저는 고기를 안 먹어요.",
-      "sentence2": "그녀는 맛있는 고기 요리를 했어요."
+      "sentence2": "그녀는 맛있는 고기 요리를 했어요.",
+      "pronunciation": "/koki/"
     },
     {
       "id": 469,
       "word": "만나다",
       "sentence1": "카페에서 만나요.",
-      "sentence2": "그녀는 나중에 친구들을 만날 거예요."
+      "sentence2": "그녀는 나중에 친구들을 만날 거예요.",
+      "pronunciation": "/mannata/"
     },
     {
       "id": 470,
       "word": "회의",
       "sentence1": "회의는 오전 10시로 예정되어 있어요.",
-      "sentence2": "그녀는 어제 회의에 참석했어요."
+      "sentence2": "그녀는 어제 회의에 참석했어요.",
+      "pronunciation": "/hweɰi/"
     },
     {
       "id": 471,
       "word": "회원",
       "sentence1": "그는 클럽의 회원이에요.",
-      "sentence2": "그녀는 새 회원을 그룹에 초대했어요."
+      "sentence2": "그녀는 새 회원을 그룹에 초대했어요.",
+      "pronunciation": "/hwewʌn/"
     },
     {
       "id": 472,
       "word": "메뉴",
       "sentence1": "메뉴 좀 볼 수 있을까요?",
-      "sentence2": "그녀는 채식 메뉴에서 주문했어요."
+      "sentence2": "그녀는 채식 메뉴에서 주문했어요.",
+      "pronunciation": "/menju/"
     },
     {
       "id": 473,
       "word": "메시지",
       "sentence1": "저는 그녀에게서 메시지를 받았어요.",
-      "sentence2": "그녀는 제 핸드폰에 메시지를 남겼어요."
+      "sentence2": "그녀는 제 핸드폰에 메시지를 남겼어요.",
+      "pronunciation": "/mesit͡ɕi/"
     },
     {
       "id": 474,
       "word": "미터",
       "sentence1": "테이블은 2미터 길이예요.",
-      "sentence2": "그녀는 100미터를 12초 안에 뛰었어요."
+      "sentence2": "그녀는 100미터를 12초 안에 뛰었어요.",
+      "pronunciation": "/mithʌ/"
     },
     {
       "id": 475,
       "word": "자정",
       "sentence1": "파티는 자정에 끝날 거예요.",
-      "sentence2": "그녀는 항상 자정 전에 잠자리에 들어요."
+      "sentence2": "그녀는 항상 자정 전에 잠자리에 들어요.",
+      "pronunciation": "/t͡ɕat͡ɕʌŋ/"
     },
     {
       "id": 476,
       "word": "마일",
       "sentence1": "가게는 5마일 떨어져 있어요.",
-      "sentence2": "그녀는 매일 아침 1마일을 걸었어요."
+      "sentence2": "그녀는 매일 아침 1마일을 걸었어요.",
+      "pronunciation": "/mail/"
     },
     {
       "id": 477,
       "word": "우유",
       "sentence1": "저는 매일 우유를 마셔요.",
-      "sentence2": "그녀는 아몬드 우유를 선호해요."
+      "sentence2": "그녀는 아몬드 우유를 선호해요.",
+      "pronunciation": "/uju/"
     },
     {
       "id": 478,
       "word": "백만",
       "sentence1": "하늘에 백만 개의 별이 있어요.",
-      "sentence2": "그녀는 복권에서 백만 달러를 받았어요."
+      "sentence2": "그녀는 복권에서 백만 달러를 받았어요.",
+      "pronunciation": "/pɛŋman/"
     },
     {
       "id": 479,
       "word": "분",
       "sentence1": "생각할 시간이 조금 필요해요.",
-      "sentence2": "그녀는 1분 늦게 도착했어요."
+      "sentence2": "그녀는 1분 늦게 도착했어요.",
+      "pronunciation": "/pun/"
     },
     {
       "id": 480,
       "word": "그리워하다",
       "sentence1": "가족이 그리워요.",
-      "sentence2": "그녀는 오늘 아침 버스를 놓쳤어요."
+      "sentence2": "그녀는 오늘 아침 버스를 놓쳤어요.",
+      "pronunciation": "/kɯliwʌata/"
     },
     {
       "id": 481,
       "word": "실수",
       "sentence1": "저는 시험에서 실수를 했어요.",
-      "sentence2": "그녀는 실수에서 배웠어요."
+      "sentence2": "그녀는 실수에서 배웠어요.",
+      "pronunciation": "/sils͈u/"
     },
     {
       "id": 482,
       "word": "모델",
       "sentence1": "그 차는 새 모델이에요.",
-      "sentence2": "그녀는 최신 모델을 선호해요."
+      "sentence2": "그녀는 최신 모델을 선호해요.",
+      "pronunciation": "/motel/"
     },
     {
       "id": 483,
       "word": "현대적인",
       "sentence1": "이것은 현대적인 건물이에요.",
-      "sentence2": "그녀는 현대 미술을 좋아해요."
+      "sentence2": "그녀는 현대 미술을 좋아해요.",
+      "pronunciation": "/hjʌntɛt͡ɕʌkin/"
     },
     {
       "id": 484,
       "word": "순간",
       "sentence1": "잠시만 기다려주세요.",
-      "sentence2": "그녀는 그 순간을 사진으로 담았어요."
+      "sentence2": "그녀는 그 순간을 사진으로 담았어요.",
+      "pronunciation": "/sunkan/"
     },
     {
       "id": 485,
       "word": "월요일",
       "sentence1": "월요일은 한 주의 첫날이에요.",
-      "sentence2": "그녀는 월요일에 회의가 있어요."
+      "sentence2": "그녀는 월요일에 회의가 있어요.",
+      "pronunciation": "/wʌljoil/"
     },
     {
       "id": 486,
       "word": "돈",
       "sentence1": "돈이 더 필요해요.",
-      "sentence2": "그녀는 휴가를 위해 돈을 모았어요."
+      "sentence2": "그녀는 휴가를 위해 돈을 모았어요.",
+      "pronunciation": "/ton/"
     },
     {
       "id": 487,
       "word": "달",
       "sentence1": "2월은 가장 짧은 달이에요.",
-      "sentence2": "그녀는 5월에 태어났어요."
+      "sentence2": "그녀는 5월에 태어났어요.",
+      "pronunciation": "/tal/"
     },
     {
       "id": 488,
       "word": "더",
       "sentence1": "시간이 더 필요해요.",
-      "sentence2": "그녀는 그 주제에 대해 더 배우고 싶어해요."
+      "sentence2": "그녀는 그 주제에 대해 더 배우고 싶어해요.",
+      "pronunciation": "/tʌ/"
     },
     {
       "id": 489,
       "word": "아침",
       "sentence1": "저는 아침에 일찍 일어나요.",
-      "sentence2": "그녀는 아침에 뛰는 것을 좋아해요."
+      "sentence2": "그녀는 아침에 뛰는 것을 좋아해요.",
+      "pronunciation": "/at͡ɕhim/"
     },
     {
       "id": 490,
       "word": "가장",
       "sentence1": "이것은 제가 읽은 가장 흥미로운 책이에요.",
-      "sentence2": "그녀는 그룹에서 가장 재능 있는 예술가예요."
+      "sentence2": "그녀는 그룹에서 가장 재능 있는 예술가예요.",
+      "pronunciation": "/kat͡ɕaŋ/"
     },
     {
       "id": 491,
       "word": "어머니",
       "sentence1": "제 어머니는 선생님이에요.",
-      "sentence2": "그녀는 어머니를 돌봐요."
+      "sentence2": "그녀는 어머니를 돌봐요.",
+      "pronunciation": "/ʌmʌni/"
     },
     {
       "id": 492,
       "word": "산",
       "sentence1": "산이 눈으로 덮여 있어요.",
-      "sentence2": "그녀는 지난 여름에 산을 올랐어요."
+      "sentence2": "그녀는 지난 여름에 산을 올랐어요.",
+      "pronunciation": "/san/"
     },
     {
       "id": 493,
       "word": "쥐",
       "sentence1": "쥐가 바닥을 가로질러 뛰었어요.",
-      "sentence2": "그녀는 애완 쥐를 키워요."
+      "sentence2": "그녀는 애완 쥐를 키워요.",
+      "pronunciation": "/t͡ɕwi/"
     },
     {
       "id": 494,
       "word": "입",
       "sentence1": "입을 크게 벌리세요.",
-      "sentence2": "그녀는 아름다운 미소를 지어요."
+      "sentence2": "그녀는 아름다운 미소를 지어요.",
+      "pronunciation": "/ip/"
     },
     {
       "id": 495,
       "word": "이동하다",
       "sentence1": "의자를 좀 옮겨주세요.",
-      "sentence2": "그녀는 새 집으로 이사하고 싶어해요."
+      "sentence2": "그녀는 새 집으로 이사하고 싶어해요.",
+      "pronunciation": "/itoŋhata/"
     },
     {
       "id": 496,
       "word": "영화",
       "sentence1": "어젯밤에 멋진 영화를 봤어요.",
-      "sentence2": "그녀는 로맨틱 영화를 보는 것을 좋아해요."
+      "sentence2": "그녀는 로맨틱 영화를 보는 것을 좋아해요.",
+      "pronunciation": "/jʌŋhwa/"
     },
     {
       "id": 497,
       "word": "많이",
       "sentence1": "시간이 많지 않아요.",
-      "sentence2": "그녀는 많이 안 먹어요."
+      "sentence2": "그녀는 많이 안 먹어요.",
+      "pronunciation": "/mani/"
     },
     {
       "id": 498,
       "word": "엄마",
       "sentence1": "제 엄마는 제 가장 친한 친구예요.",
-      "sentence2": "그녀는 훌륭한 엄마예요."
+      "sentence2": "그녀는 훌륭한 엄마예요.",
+      "pronunciation": "/ʌmma/"
     },
     {
       "id": 499,
       "word": "박물관",
       "sentence1": "저는 미술관을 방문했어요.",
-      "sentence2": "그녀는 박물관에 가는 것을 좋아해요."
+      "sentence2": "그녀는 박물관에 가는 것을 좋아해요.",
+      "pronunciation": "/paŋmulkwan/"
     },
     {
       "id": 500,
       "word": "음악",
       "sentence1": "저는 매일 음악을 들어요.",
-      "sentence2": "그녀는 저녁에 음악을 연주해요."
+      "sentence2": "그녀는 저녁에 음악을 연주해요.",
+      "pronunciation": "/ɯmak/"
     },
     {
       "id": 501,
       "word": "~해야 한다",
       "sentence1": "숙제를 끝내야 해요.",
-      "sentence2": "그녀는 오전 9시까지 출근해야 해요."
+      "sentence2": "그녀는 오전 9시까지 출근해야 해요.",
+      "pronunciation": "/~hɛja hanta/"
     },
     {
       "id": 502,
       "word": "나의",
       "sentence1": "이것은 제 책이에요.",
-      "sentence2": "그녀는 제 가장 친한 친구예요."
+      "sentence2": "그녀는 제 가장 친한 친구예요.",
+      "pronunciation": "/naɰi/"
     },
     {
       "id": 503,
       "word": "이름",
       "sentence1": "이름이 뭐예요?",
-      "sentence2": "그녀는 종이에 이름을 썼어요."
+      "sentence2": "그녀는 종이에 이름을 썼어요.",
+      "pronunciation": "/ilɯm/"
     },
     {
       "id": 504,
       "word": "자연의",
       "sentence1": "이것은 자연 제품이에요.",
-      "sentence2": "그녀는 자연 재료를 선호해요."
+      "sentence2": "그녀는 자연 재료를 선호해요.",
+      "pronunciation": "/t͡ɕajʌni/"
     },
     {
       "id": 505,
       "word": "가까운",
       "sentence1": "가게는 제 집 근처에 있어요.",
-      "sentence2": "그녀는 공원 근처에 살아요."
+      "sentence2": "그녀는 공원 근처에 살아요.",
+      "pronunciation": "/kak͈aun/"
     },
     {
       "id": 506,
       "word": "필요하다",
       "sentence1": "물 한 잔이 필요해요.",
-      "sentence2": "그녀는 숙제에 도움이 필요해요."
+      "sentence2": "그녀는 숙제에 도움이 필요해요.",
+      "pronunciation": "/philjoata/"
     },
     {
       "id": 507,
       "word": "부정적인",
       "sentence1": "이것은 부정적인 답변이에요.",
-      "sentence2": "그녀는 부정적인 태도를 가지고 있어요."
+      "sentence2": "그녀는 부정적인 태도를 가지고 있어요.",
+      "pronunciation": "/put͡ɕʌŋt͡ɕʌkin/"
     },
     {
       "id": 508,
       "word": "이웃",
       "sentence1": "제 이웃은 매우 친절해요.",
-      "sentence2": "그녀는 종종 이웃과 이야기해요."
+      "sentence2": "그녀는 종종 이웃과 이야기해요.",
+      "pronunciation": "/iut/"
     },
     {
       "id": 509,
       "word": "결코 ~않다",
       "sentence1": "저는 절대 아침을 안 먹어요.",
-      "sentence2": "그녀는 파리에 가본 적이 없어요."
+      "sentence2": "그녀는 파리에 가본 적이 없어요.",
+      "pronunciation": "/kjʌlkho ~antha/"
     },
     {
       "id": 510,
       "word": "새로운",
       "sentence1": "저는 새 차를 샀어요.",
-      "sentence2": "그녀는 새 옷을 입고 있어요."
+      "sentence2": "그녀는 새 옷을 입고 있어요.",
+      "pronunciation": "/sɛloun/"
     },
     {
       "id": 511,
       "word": "뉴스",
       "sentence1": "저는 매일 아침 뉴스를 읽어요.",
-      "sentence2": "그녀는 뉴스를 보는 것을 좋아해요."
+      "sentence2": "그녀는 뉴스를 보는 것을 좋아해요.",
+      "pronunciation": "/njusɯ/"
     },
     {
       "id": 512,
       "word": "신문",
       "sentence1": "저는 일간지를 구독해요.",
-      "sentence2": "그녀는 아침에 신문을 읽어요."
+      "sentence2": "그녀는 아침에 신문을 읽어요.",
+      "pronunciation": "/sinmun/"
     },
     {
       "id": 513,
       "word": "다음",
       "sentence1": "다음 기차는 언제예요?",
-      "sentence2": "그녀는 옆방에 앉아 있어요."
+      "sentence2": "그녀는 옆방에 앉아 있어요.",
+      "pronunciation": "/taɯm/"
     },
     {
       "id": 514,
       "word": "~ 옆에",
       "sentence1": "은행은 우체국 옆에 있어요.",
-      "sentence2": "그녀는 가장 친한 친구 옆에 살아요."
+      "sentence2": "그녀는 가장 친한 친구 옆에 살아요.",
+      "pronunciation": "/~ jʌphe/"
     },
     {
       "id": 515,
       "word": "좋은",
       "sentence1": "여기는 휴식하기 좋은 곳이에요.",
-      "sentence2": "그녀는 좋은 미소를 가졌어요."
+      "sentence2": "그녀는 좋은 미소를 가졌어요.",
+      "pronunciation": "/t͡ɕoɯn/"
     },
     {
       "id": 516,
       "word": "밤",
       "sentence1": "저는 밤에 별을 보는 것을 좋아해요.",
-      "sentence2": "그녀는 야간 근무를 해요."
+      "sentence2": "그녀는 야간 근무를 해요.",
+      "pronunciation": "/pam/"
     },
     {
       "id": 517,
       "word": "아홉",
       "sentence1": "사과가 아홉 개 있어요.",
-      "sentence2": "그녀는 5월 9일에 태어났어요."
+      "sentence2": "그녀는 5월 9일에 태어났어요.",
+      "pronunciation": "/aop/"
     },
     {
       "id": 518,
       "word": "열아홉",
       "sentence1": "그녀는 열아홉 살이에요.",
-      "sentence2": "열아홉은 제가 가장 좋아하는 숫자예요."
+      "sentence2": "열아홉은 제가 가장 좋아하는 숫자예요.",
+      "pronunciation": "/jʌlaop/"
     },
     {
       "id": 519,
       "word": "아흔",
       "sentence1": "아흔 달러가 있어요.",
-      "sentence2": "그녀는 1990년에 태어났어요."
+      "sentence2": "그녀는 1990년에 태어났어요.",
+      "pronunciation": "/aɯn/"
     },
     {
       "id": 520,
       "word": "아니요",
       "sentence1": "아니요, 가고 싶지 않아요.",
-      "sentence2": "그녀는 제안을 거절했어요."
+      "sentence2": "그녀는 제안을 거절했어요.",
+      "pronunciation": "/anijo/"
     },
     {
       "id": 521,
       "word": "아무도 ~않다",
       "sentence1": "아무도 답을 몰라요.",
-      "sentence2": "그녀는 아무도 자신을 이해하지 못한다고 느꼈어요."
+      "sentence2": "그녀는 아무도 자신을 이해하지 못한다고 느꼈어요.",
+      "pronunciation": "/amuto ~antha/"
     },
     {
       "id": 522,
       "word": "아무도",
       "sentence1": "완벽한 사람은 아무도 없어요.",
-      "sentence2": "그녀는 아무도 전화하지 않았다고 했어요."
+      "sentence2": "그녀는 아무도 전화하지 않았다고 했어요.",
+      "pronunciation": "/amuto/"
     },
     {
       "id": 523,
       "word": "북쪽",
       "sentence1": "북극은 매우 추워요.",
-      "sentence2": "그녀는 도시 북쪽에 살아요."
+      "sentence2": "그녀는 도시 북쪽에 살아요.",
+      "pronunciation": "/pukt͈͡ɕok/"
     },
     {
       "id": 524,
       "word": "코",
       "sentence1": "그는 코가 커요.",
-      "sentence2": "그녀는 냄새에 코를 막았어요."
+      "sentence2": "그녀는 냄새에 코를 막았어요.",
+      "pronunciation": "/kho/"
     },
     {
       "id": 525,
       "word": "~아니다",
       "sentence1": "그것은 제 책이 아니에요.",
-      "sentence2": "그녀는 결과에 만족하지 않아요."
+      "sentence2": "그녀는 결과에 만족하지 않아요.",
+      "pronunciation": "/~anita/"
     },
     {
       "id": 526,
       "word": "메모",
       "sentence1": "이것을 메모해 주세요.",
-      "sentence2": "그녀는 테이블에 메모를 남겼어요."
+      "sentence2": "그녀는 테이블에 메모를 남겼어요.",
+      "pronunciation": "/memo/"
     },
     {
       "id": 527,
       "word": "아무것도",
       "sentence1": "걱정할 것이 아무것도 없어요.",
-      "sentence2": "그녀는 회의 중에 아무 말도 하지 않았어요."
+      "sentence2": "그녀는 회의 중에 아무 말도 하지 않았어요.",
+      "pronunciation": "/amukʌtt͈o/"
     },
     {
       "id": 528,
       "word": "11월",
       "sentence1": "제 생일은 11월이에요.",
-      "sentence2": "그녀는 11월의 가을을 좋아해요."
+      "sentence2": "그녀는 11월의 가을을 좋아해요.",
+      "pronunciation": "/11wʌl/"
     },
     {
       "id": 529,
       "word": "지금",
       "sentence1": "지금 할게요.",
-      "sentence2": "그녀는 지금 여기 있어요."
+      "sentence2": "그녀는 지금 여기 있어요.",
+      "pronunciation": "/t͡ɕikɯm/"
     },
     {
       "id": 530,
       "word": "숫자",
       "sentence1": "전화번호가 몇 번이에요?",
-      "sentence2": "그녀는 행운의 숫자가 있어요."
+      "sentence2": "그녀는 행운의 숫자가 있어요.",
+      "pronunciation": "/sutt͈͡ɕa/"
     },
     {
       "id": 531,
       "word": "간호사",
       "sentence1": "간호사가 도와줄 거예요.",
-      "sentence2": "그녀는 간호사가 되고 싶어해요."
+      "sentence2": "그녀는 간호사가 되고 싶어해요.",
+      "pronunciation": "/kanosa/"
     },
     {
       "id": 532,
       "word": "물체",
       "sentence1": "이 물체는 무거워요.",
-      "sentence2": "그녀는 흥미로운 물체를 발견했어요."
+      "sentence2": "그녀는 흥미로운 물체를 발견했어요.",
+      "pronunciation": "/mult͡ɕhe/"
     },
     {
       "id": 533,
       "word": "~시",
       "sentence1": "회의는 3시에 있어요.",
-      "sentence2": "그녀는 항상 7시에 일어나요."
+      "sentence2": "그녀는 항상 7시에 일어나요.",
+      "pronunciation": "/~si/"
     },
     {
       "id": 534,
       "word": "10월",
       "sentence1": "제 생일은 10월이에요.",
-      "sentence2": "그녀는 10월의 색깔을 좋아해요."
+      "sentence2": "그녀는 10월의 색깔을 좋아해요.",
+      "pronunciation": "/10wʌl/"
     },
     {
       "id": 535,
       "word": "~의",
       "sentence1": "책의 표지는 파란색이에요.",
-      "sentence2": "그녀는 제 친구예요."
+      "sentence2": "그녀는 제 친구예요.",
+      "pronunciation": "/~ɰi/"
     },
     {
       "id": 536,
       "word": "꺼진",
       "sentence1": "불이 꺼져 있어요.",
-      "sentence2": "그녀는 하루 쉬었어요."
+      "sentence2": "그녀는 하루 쉬었어요.",
+      "pronunciation": "/k͈ʌt͡ɕin/"
     },
     {
       "id": 537,
       "word": "사무실",
       "sentence1": "저는 사무실에서 일해요.",
-      "sentence2": "그녀는 큰 사무실이 있어요."
+      "sentence2": "그녀는 큰 사무실이 있어요.",
+      "pronunciation": "/samusil/"
     },
     {
       "id": 538,
       "word": "자주",
       "sentence1": "저는 자주 헬스장에 가요.",
-      "sentence2": "그녀는 자기 전에 자주 책을 읽어요."
+      "sentence2": "그녀는 자기 전에 자주 책을 읽어요.",
+      "pronunciation": "/t͡ɕat͡ɕu/"
     },
     {
       "id": 539,
       "word": "오",
       "sentence1": "오, 거기 있는 줄 몰랐어요.",
-      "sentence2": "오, 그거 흥미롭네요!"
+      "sentence2": "오, 그거 흥미롭네요!",
+      "pronunciation": "/o/"
     },
     {
       "id": 540,
       "word": "괜찮아요",
       "sentence1": "이 자리 있어요? - 아니요, 괜찮아요.",
-      "sentence2": "그녀는 일찍 가도 괜찮다고 했어요."
+      "sentence2": "그녀는 일찍 가도 괜찮다고 했어요.",
+      "pronunciation": "/kwɛnt͡ɕhanajo/"
     },
     {
       "id": 541,
       "word": "나이 든",
       "sentence1": "제 할아버지는 연세가 많으세요.",
-      "sentence2": "그녀는 오래된 차가 있어요."
+      "sentence2": "그녀는 오래된 차가 있어요.",
+      "pronunciation": "/nai tɯn/"
     },
     {
       "id": 542,
       "word": "~위에",
       "sentence1": "책이 테이블 위에 있어요.",
-      "sentence2": "그녀는 전화 중이에요."
+      "sentence2": "그녀는 전화 중이에요.",
+      "pronunciation": "/~wie/"
     },
     {
       "id": 543,
       "word": "한 번",
       "sentence1": "저는 거기에 한 번 가봤어요.",
-      "sentence2": "그녀는 전에 한 번 말한 적이 있어요."
+      "sentence2": "그녀는 전에 한 번 말한 적이 있어요.",
+      "pronunciation": "/han pʌn/"
     },
     {
       "id": 544,
       "word": "하나",
       "sentence1": "여동생이 한 명 있어요.",
-      "sentence2": "그녀가 제가 말한 그 사람이에요."
+      "sentence2": "그녀가 제가 말한 그 사람이에요.",
+      "pronunciation": "/hana/"
     },
     {
       "id": 545,
       "word": "양파",
       "sentence1": "레시피에 양파가 필요해요.",
-      "sentence2": "그녀는 샐러드에 양파를 좋아하지 않아요."
+      "sentence2": "그녀는 샐러드에 양파를 좋아하지 않아요.",
+      "pronunciation": "/jaŋpha/"
     },
     {
       "id": 546,
       "word": "온라인",
       "sentence1": "저는 온라인에서 찾았어요.",
-      "sentence2": "그녀는 온라인 쇼핑을 선호해요."
+      "sentence2": "그녀는 온라인 쇼핑을 선호해요.",
+      "pronunciation": "/ollain/"
     },
     {
       "id": 547,
       "word": "오직",
       "sentence1": "저는 5달러밖에 없어요.",
-      "sentence2": "그녀만이 도와줄 수 있어요."
+      "sentence2": "그녀만이 도와줄 수 있어요.",
+      "pronunciation": "/ot͡ɕik/"
     },
     {
       "id": 548,
       "word": "열다",
       "sentence1": "창문을 열어주세요.",
-      "sentence2": "그녀는 문을 열어두는 것을 좋아해요."
+      "sentence2": "그녀는 문을 열어두는 것을 좋아해요.",
+      "pronunciation": "/jʌlta/"
     },
     {
       "id": 549,
       "word": "의견",
       "sentence1": "이 문제에 대한 의견이 뭐예요?",
-      "sentence2": "그녀는 정치에 대해 강한 의견이 있어요."
+      "sentence2": "그녀는 정치에 대해 강한 의견이 있어요.",
+      "pronunciation": "/ɰikjʌn/"
     },
     {
       "id": 550,
       "word": "반대",
       "sentence1": "사랑의 반대는 미움이에요.",
-      "sentence2": "그녀는 길 반대편에 살아요."
+      "sentence2": "그녀는 길 반대편에 살아요.",
+      "pronunciation": "/pantɛ/"
     },
     {
       "id": 551,
       "word": "또는",
       "sentence1": "차를 드실래요 아니면 커피를 드실래요?",
-      "sentence2": "그녀는 노래하거나 춤출 수 있어요."
+      "sentence2": "그녀는 노래하거나 춤출 수 있어요.",
+      "pronunciation": "/t͈onɯn/"
     },
     {
       "id": 552,
       "word": "오렌지",
       "sentence1": "저는 오렌지 주스를 좋아해요.",
-      "sentence2": "그녀는 오렌지색 드레스를 입었어요."
+      "sentence2": "그녀는 오렌지색 드레스를 입었어요.",
+      "pronunciation": "/olent͡ɕi/"
     },
     {
       "id": 553,
       "word": "주문",
       "sentence1": "주문하고 싶어요.",
-      "sentence2": "그녀는 주문을 취소했어요."
+      "sentence2": "그녀는 주문을 취소했어요.",
+      "pronunciation": "/t͡ɕumun/"
     },
     {
       "id": 554,
       "word": "다른",
       "sentence1": "다른 아이디어가 있어요.",
-      "sentence2": "그녀는 제 반쪽이에요."
+      "sentence2": "그녀는 제 반쪽이에요.",
+      "pronunciation": "/talɯn/"
     },
     {
       "id": 555,
       "word": "우리의",
       "sentence1": "이것은 우리 집이에요.",
-      "sentence2": "그녀는 우리 팀의 일원이에요."
+      "sentence2": "그녀는 우리 팀의 일원이에요.",
+      "pronunciation": "/uliɰi/"
     },
     {
       "id": 556,
       "word": "밖으로",
       "sentence1": "산책하러 나가요.",
-      "sentence2": "그녀는 오늘 사무실에 없어요."
+      "sentence2": "그녀는 오늘 사무실에 없어요.",
+      "pronunciation": "/pak͈ɯlo/"
     },
     {
       "id": 557,
       "word": "바깥",
       "sentence1": "아이들이 밖에서 놀고 있어요.",
-      "sentence2": "그녀는 야외에서 일하는 것을 좋아해요."
+      "sentence2": "그녀는 야외에서 일하는 것을 좋아해요.",
+      "pronunciation": "/pak͈at/"
     },
     {
       "id": 558,
       "word": "~위에",
       "sentence1": "그림이 소파 위에 걸려 있어요.",
-      "sentence2": "그녀는 서류를 살펴봤어요."
+      "sentence2": "그녀는 서류를 살펴봤어요.",
+      "pronunciation": "/~wie/"
     },
     {
       "id": 559,
       "word": "자신의",
       "sentence1": "저는 제 차가 있어요.",
-      "sentence2": "그녀는 자신의 일에 자부심을 가져요."
+      "sentence2": "그녀는 자신의 일에 자부심을 가져요.",
+      "pronunciation": "/t͡ɕasini/"
     },
     {
       "id": 560,
       "word": "페이지",
       "sentence1": "10페이지로 넘기세요.",
-      "sentence2": "그녀는 그 페이지를 북마크했어요."
+      "sentence2": "그녀는 그 페이지를 북마크했어요.",
+      "pronunciation": "/pheit͡ɕi/"
     },
     {
       "id": 561,
       "word": "페인트",
       "sentence1": "페인트를 사야 해요.",
-      "sentence2": "그녀는 풍경화 그리는 것을 좋아해요."
+      "sentence2": "그녀는 풍경화 그리는 것을 좋아해요.",
+      "pronunciation": "/pheinthɯ/"
     },
     {
       "id": 562,
       "word": "그림",
       "sentence1": "저는 여가 시간에 그림 그리는 것을 즐겨요.",
-      "sentence2": "그녀는 거실에 아름다운 그림이 있어요."
+      "sentence2": "그녀는 거실에 아름다운 그림이 있어요.",
+      "pronunciation": "/kɯlim/"
     },
     {
       "id": 563,
       "word": "한 쌍",
       "sentence1": "새 신발 한 켤레를 샀어요.",
-      "sentence2": "그녀는 어울리는 귀걸이 한 쌍이 있어요."
+      "sentence2": "그녀는 어울리는 귀걸이 한 쌍이 있어요.",
+      "pronunciation": "/han s͈aŋ/"
     },
     {
       "id": 564,
       "word": "종이",
       "sentence1": "종이 한 장이 필요해요.",
-      "sentence2": "그녀는 종이에 메모를 썼어요."
+      "sentence2": "그녀는 종이에 메모를 썼어요.",
+      "pronunciation": "/t͡ɕoŋi/"
     },
     {
       "id": 565,
       "word": "단락",
       "sentence1": "첫 번째 단락을 읽어주세요.",
-      "sentence2": "그녀는 휴가에 대한 단락을 썼어요."
+      "sentence2": "그녀는 휴가에 대한 단락을 썼어요.",
+      "pronunciation": "/tallak/"
     },
     {
       "id": 566,
       "word": "부모",
       "sentence1": "제 부모님은 다른 도시에 살아요.",
-      "sentence2": "그녀는 한부모예요."
+      "sentence2": "그녀는 한부모예요.",
+      "pronunciation": "/pumo/"
     },
     {
       "id": 567,
       "word": "공원",
       "sentence1": "공원에 산책하러 가요.",
-      "sentence2": "그녀는 공원에서 피크닉하는 것을 즐겨요."
+      "sentence2": "그녀는 공원에서 피크닉하는 것을 즐겨요.",
+      "pronunciation": "/koŋwʌn/"
     },
     {
       "id": 568,
       "word": "부분",
       "sentence1": "차 부품이 필요해요.",
-      "sentence2": "그녀는 프로젝트의 새로운 부분을 작업 중이에요."
+      "sentence2": "그녀는 프로젝트의 새로운 부분을 작업 중이에요.",
+      "pronunciation": "/pupun/"
     },
     {
       "id": 569,
       "word": "파트너",
       "sentence1": "그는 제 사업 파트너예요.",
-      "sentence2": "그녀는 협력할 파트너를 찾고 있어요."
+      "sentence2": "그녀는 협력할 파트너를 찾고 있어요.",
+      "pronunciation": "/phathɯnʌ/"
     },
     {
       "id": 570,
       "word": "파티",
       "sentence1": "우리는 토요일에 파티를 해요.",
-      "sentence2": "그녀는 깜짝 파티를 여는 것을 좋아해요."
+      "sentence2": "그녀는 깜짝 파티를 여는 것을 좋아해요.",
+      "pronunciation": "/phat͡ɕhi/"
     },
     {
       "id": 571,
       "word": "여권",
       "sentence1": "여권을 갱신해야 해요.",
-      "sentence2": "그녀는 여행 중에 여권을 잃어버렸어요."
+      "sentence2": "그녀는 여행 중에 여권을 잃어버렸어요.",
+      "pronunciation": "/jʌkwʌn/"
     },
     {
       "id": 572,
       "word": "과거",
       "sentence1": "과거에 연연하지 말아요.",
-      "sentence2": "그녀는 과거의 실수에서 배웠어요."
+      "sentence2": "그녀는 과거의 실수에서 배웠어요.",
+      "pronunciation": "/kwakʌ/"
     },
     {
       "id": 573,
       "word": "지불하다",
       "sentence1": "고지서를 내야 해요.",
-      "sentence2": "그녀는 항상 제때 빚을 갚아요."
+      "sentence2": "그녀는 항상 제때 빚을 갚아요.",
+      "pronunciation": "/t͡ɕipulata/"
     },
     {
       "id": 574,
       "word": "펜",
       "sentence1": "펜 좀 빌려도 될까요?",
-      "sentence2": "그녀는 파란색 펜으로 썼어요."
+      "sentence2": "그녀는 파란색 펜으로 썼어요.",
+      "pronunciation": "/phen/"
     },
     {
       "id": 575,
       "word": "연필",
       "sentence1": "저는 연필을 선호해요.",
-      "sentence2": "그녀는 연필로 스케치를 그렸어요."
+      "sentence2": "그녀는 연필로 스케치를 그렸어요.",
+      "pronunciation": "/jʌnphil/"
     },
     {
       "id": 576,
       "word": "사람들",
       "sentence1": "행사에 많은 사람들이 있었어요.",
-      "sentence2": "그녀는 새로운 사람들을 만나는 것을 즐겨요."
+      "sentence2": "그녀는 새로운 사람들을 만나는 것을 즐겨요.",
+      "pronunciation": "/salamtɯl/"
     },
     {
       "id": 577,
       "word": "후추",
       "sentence1": "저는 음식에 후추를 넣는 것을 좋아해요.",
-      "sentence2": "그녀는 시장에서 빨간 피망을 샀어요."
+      "sentence2": "그녀는 시장에서 빨간 피망을 샀어요.",
+      "pronunciation": "/hut͡ɕhu/"
     },
     {
       "id": 578,
       "word": "완벽한",
       "sentence1": "이것은 완벽한 해결책이에요.",
-      "sentence2": "그녀는 시험에서 만점을 받았어요."
+      "sentence2": "그녀는 시험에서 만점을 받았어요.",
+      "pronunciation": "/wanpjʌkhan/"
     },
     {
       "id": 579,
       "word": "기간",
       "sentence1": "이것은 저에게 힘든 기간이에요.",
-      "sentence2": "그녀는 시험 기간 동안 공부했어요."
+      "sentence2": "그녀는 시험 기간 동안 공부했어요.",
+      "pronunciation": "/kikan/"
     },
     {
       "id": 580,
       "word": "사람",
       "sentence1": "그는 친절한 사람이에요.",
-      "sentence2": "그녀는 가장 먼저 도착한 사람이에요."
+      "sentence2": "그녀는 가장 먼저 도착한 사람이에요.",
+      "pronunciation": "/salam/"
     },
     {
       "id": 581,
       "word": "개인적인",
       "sentence1": "이것은 개인적인 문제예요.",
-      "sentence2": "그녀는 개인적인 경험을 공유했어요."
+      "sentence2": "그녀는 개인적인 경험을 공유했어요.",
+      "pronunciation": "/kɛint͡ɕʌkin/"
     },
     {
       "id": 582,
       "word": "전화기",
       "sentence1": "핸드폰을 충전해야 해요.",
-      "sentence2": "그녀는 빨리 전화를 받았어요."
+      "sentence2": "그녀는 빨리 전화를 받았어요.",
+      "pronunciation": "/t͡ɕʌnwaki/"
     },
     {
       "id": 583,
       "word": "사진",
       "sentence1": "저는 일몰 사진을 찍었어요.",
-      "sentence2": "그녀는 오래된 사진 컬렉션이 있어요."
+      "sentence2": "그녀는 오래된 사진 컬렉션이 있어요.",
+      "pronunciation": "/sat͡ɕin/"
     },
     {
       "id": 584,
       "word": "사진",
       "sentence1": "이 사진은 작년에 찍은 것이에요.",
-      "sentence2": "그녀는 사진을 전시하는 것을 좋아해요."
+      "sentence2": "그녀는 사진을 전시하는 것을 좋아해요.",
+      "pronunciation": "/sat͡ɕin/"
     },
     {
       "id": 585,
       "word": "구절",
       "sentence1": "그 구절을 설명해 주실 수 있어요?",
-      "sentence2": "그녀는 연설에서 흔한 구절을 사용했어요."
+      "sentence2": "그녀는 연설에서 흔한 구절을 사용했어요.",
+      "pronunciation": "/kut͡ɕʌl/"
     },
     {
       "id": 586,
       "word": "피아노",
       "sentence1": "저는 피아노를 배우고 싶어요.",
-      "sentence2": "그녀는 피아노를 아름답게 연주해요."
+      "sentence2": "그녀는 피아노를 아름답게 연주해요.",
+      "pronunciation": "/phiano/"
     },
     {
       "id": 587,
       "word": "그림",
       "sentence1": "그림을 보여주실 수 있어요?",
-      "sentence2": "그녀는 아름다운 그림을 그렸어요."
+      "sentence2": "그녀는 아름다운 그림을 그렸어요.",
+      "pronunciation": "/kɯlim/"
     },
     {
       "id": 588,
       "word": "조각",
       "sentence1": "종이 한 장이 필요해요.",
-      "sentence2": "그녀는 저에게 조언을 해줬어요."
+      "sentence2": "그녀는 저에게 조언을 해줬어요.",
+      "pronunciation": "/t͡ɕokak/"
     },
     {
       "id": 589,
       "word": "돼지",
       "sentence1": "돼지가 우리에 있어요.",
-      "sentence2": "그녀는 농장에서 돼지를 키웠어요."
+      "sentence2": "그녀는 농장에서 돼지를 키웠어요.",
+      "pronunciation": "/twɛt͡ɕi/"
     },
     {
       "id": 590,
       "word": "분홍색",
       "sentence1": "제가 가장 좋아하는 색은 분홍색이에요.",
-      "sentence2": "그녀는 파티에 분홍색 드레스를 입고 갔어요."
+      "sentence2": "그녀는 파티에 분홍색 드레스를 입고 갔어요.",
+      "pronunciation": "/punoŋsɛk/"
     },
     {
       "id": 591,
       "word": "장소",
       "sentence1": "여기는 휴식하기 좋은 장소예요.",
-      "sentence2": "그녀는 책 읽기 좋은 조용한 장소를 찾았어요."
+      "sentence2": "그녀는 책 읽기 좋은 조용한 장소를 찾았어요.",
+      "pronunciation": "/t͡ɕaŋso/"
     },
     {
       "id": 592,
       "word": "계획",
       "sentence1": "주말 계획이 있어요.",
-      "sentence2": "그녀는 프로젝트에 대한 자세한 계획을 세웠어요."
+      "sentence2": "그녀는 프로젝트에 대한 자세한 계획을 세웠어요.",
+      "pronunciation": "/kjewek/"
     },
     {
       "id": 593,
       "word": "비행기",
       "sentence1": "비행기가 높이 날고 있어요.",
-      "sentence2": "그녀는 뉴욕으로 가는 비행기에 있어요."
+      "sentence2": "그녀는 뉴욕으로 가는 비행기에 있어요.",
+      "pronunciation": "/piɛŋki/"
     },
     {
       "id": 594,
       "word": "식물",
       "sentence1": "방에 식물이 있어요.",
-      "sentence2": "그녀는 매일 식물에 물을 줘요."
+      "sentence2": "그녀는 매일 식물에 물을 줘요.",
+      "pronunciation": "/siŋmul/"
     },
     {
       "id": 595,
       "word": "놀다",
       "sentence1": "아이들은 밖에서 노는 것을 좋아해요.",
-      "sentence2": "그녀는 주말에 축구를 해요."
+      "sentence2": "그녀는 주말에 축구를 해요.",
+      "pronunciation": "/nolta/"
     },
     {
       "id": 596,
       "word": "선수",
       "sentence1": "그는 재능 있는 선수예요.",
-      "sentence2": "그녀는 팀에서 가장 뛰어난 선수예요."
+      "sentence2": "그녀는 팀에서 가장 뛰어난 선수예요.",
+      "pronunciation": "/sʌnsu/"
     },
     {
       "id": 597,
       "word": "제발",
       "sentence1": "도와주실 수 있어요?",
-      "sentence2": "그녀는 네, 부탁해요라고 했어요."
+      "sentence2": "그녀는 네, 부탁해요라고 했어요.",
+      "pronunciation": "/t͡ɕepal/"
     },
     {
       "id": 598,
       "word": "점",
       "sentence1": "지도에서 그 점이 보여요?",
-      "sentence2": "그녀는 토론에서 중요한 요점을 제기했어요."
+      "sentence2": "그녀는 토론에서 중요한 요점을 제기했어요.",
+      "pronunciation": "/t͡ɕʌm/"
     },
     {
       "id": 599,
       "word": "경찰",
       "sentence1": "경찰이 사건을 수사 중이에요.",
-      "sentence2": "그녀는 경찰관이 되고 싶어해요."
+      "sentence2": "그녀는 경찰관이 되고 싶어해요.",
+      "pronunciation": "/kjʌŋt͡ɕhal/"
     },
     {
       "id": 600,
       "word": "경찰관",
       "sentence1": "경찰관이 길을 잃은 아이를 도와줬어요.",
-      "sentence2": "그녀는 경찰관의 도움에 감사했어요."
+      "sentence2": "그녀는 경찰관의 도움에 감사했어요.",
+      "pronunciation": "/kjʌŋt͡ɕhalkwan/"
     },
     {
       "id": 601,
       "word": "수영장",
       "sentence1": "수영장은 여름에 열어요.",
-      "sentence2": "그녀는 수영장에서 수영하는 것을 즐겨요."
+      "sentence2": "그녀는 수영장에서 수영하는 것을 즐겨요.",
+      "pronunciation": "/sujʌŋt͡ɕaŋ/"
     },
     {
       "id": 602,
       "word": "가난한",
       "sentence1": "그 가난한 가족은 도움이 필요해요.",
-      "sentence2": "그녀는 가난한 사람들에게 옷을 기부했어요."
+      "sentence2": "그녀는 가난한 사람들에게 옷을 기부했어요.",
+      "pronunciation": "/kananan/"
     },
     {
       "id": 603,
       "word": "인기 있는",
       "sentence1": "이 노래는 매우 인기 있어요.",
-      "sentence2": "그녀는 지역 사회에서 인기 있는 인물이에요."
+      "sentence2": "그녀는 지역 사회에서 인기 있는 인물이에요.",
+      "pronunciation": "/inki innɯn/"
     },
     {
       "id": 604,
       "word": "긍정적인",
       "sentence1": "그녀는 긍정적인 태도를 가졌어요.",
-      "sentence2": "피드백이 매우 긍정적이었어요."
+      "sentence2": "피드백이 매우 긍정적이었어요.",
+      "pronunciation": "/kɯŋt͡ɕʌŋt͡ɕʌkin/"
     },
     {
       "id": 605,
       "word": "가능한",
       "sentence1": "내일 만나는 게 가능할까요?",
-      "sentence2": "그녀는 제시간에 끝내는 것을 가능하게 했어요."
+      "sentence2": "그녀는 제시간에 끝내는 것을 가능하게 했어요.",
+      "pronunciation": "/kanɯŋhan/"
     },
     {
       "id": 606,
       "word": "우편",
       "sentence1": "이 편지를 우편으로 보내야 해요.",
-      "sentence2": "그녀는 우체국에서 일해요."
+      "sentence2": "그녀는 우체국에서 일해요.",
+      "pronunciation": "/uphjʌn/"
     },
     {
       "id": 607,
       "word": "감자",
       "sentence1": "구운 감자를 먹고 싶어요.",
-      "sentence2": "그녀는 정원에 감자를 심었어요."
+      "sentence2": "그녀는 정원에 감자를 심었어요.",
+      "pronunciation": "/kamt͡ɕa/"
     },
     {
       "id": 608,
       "word": "파운드",
       "sentence1": "파운드는 무게 단위예요.",
-      "sentence2": "그녀는 1파운드의 감자를 들었어요."
+      "sentence2": "그녀는 1파운드의 감자를 들었어요.",
+      "pronunciation": "/phauntɯ/"
     },
     {
       "id": 609,
       "word": "연습",
       "sentence1": "연습이 완벽을 만들어요.",
-      "sentence2": "그녀는 향상하기 위해 더 많은 연습이 필요해요."
+      "sentence2": "그녀는 향상하기 위해 더 많은 연습이 필요해요.",
+      "pronunciation": "/jʌnsɯp/"
     },
     {
       "id": 610,
       "word": "연습하다",
       "sentence1": "영어를 연습해야 해요.",
-      "sentence2": "그녀는 매일 피아노를 연습해요."
+      "sentence2": "그녀는 매일 피아노를 연습해요.",
+      "pronunciation": "/jʌnsɯphata/"
     },
     {
       "id": 611,
       "word": "선호하다",
       "sentence1": "저는 커피보다 차를 선호해요.",
-      "sentence2": "그녀는 저녁에 책 읽는 것을 선호해요."
+      "sentence2": "그녀는 저녁에 책 읽는 것을 선호해요.",
+      "pronunciation": "/sʌnoata/"
     },
     {
       "id": 612,
       "word": "준비하다",
       "sentence1": "시험을 준비해야 해요.",
-      "sentence2": "그녀는 저녁으로 맛있는 식사를 준비했어요."
+      "sentence2": "그녀는 저녁으로 맛있는 식사를 준비했어요.",
+      "pronunciation": "/t͡ɕunpiata/"
     },
     {
       "id": 613,
       "word": "발표하다",
       "sentence1": "제 프로젝트를 발표하고 싶어요.",
-      "sentence2": "그녀는 회의에서 연구 결과를 발표했어요."
+      "sentence2": "그녀는 회의에서 연구 결과를 발표했어요.",
+      "pronunciation": "/palphjoata/"
     },
     {
       "id": 614,
       "word": "예쁜",
       "sentence1": "그녀는 예쁜 미소를 가졌어요.",
-      "sentence2": "정원은 봄에 예뻐요."
+      "sentence2": "정원은 봄에 예뻐요.",
+      "pronunciation": "/jep͈ɯn/"
     },
     {
       "id": 615,
       "word": "가격",
       "sentence1": "이 책 가격이 얼마예요?",
-      "sentence2": "그녀는 새 차를 좋은 가격에 샀어요."
+      "sentence2": "그녀는 새 차를 좋은 가격에 샀어요.",
+      "pronunciation": "/kakjʌk/"
     },
     {
       "id": 616,
       "word": "아마",
       "sentence1": "내일 아마 비가 올 거예요.",
-      "sentence2": "그녀는 아마 지금 집에 있을 거예요."
+      "sentence2": "그녀는 아마 지금 집에 있을 거예요.",
+      "pronunciation": "/ama/"
     },
     {
       "id": 617,
       "word": "문제",
       "sentence1": "이 문제를 해결해야 해요.",
-      "sentence2": "그녀는 컴퓨터에 문제가 있었어요."
+      "sentence2": "그녀는 컴퓨터에 문제가 있었어요.",
+      "pronunciation": "/munt͡ɕe/"
     },
     {
       "id": 618,
       "word": "제품",
       "sentence1": "이 제품은 매우 인기가 있어요.",
-      "sentence2": "그녀는 가게에서 새 제품을 샀어요."
+      "sentence2": "그녀는 가게에서 새 제품을 샀어요.",
+      "pronunciation": "/t͡ɕephum/"
     },
     {
       "id": 619,
       "word": "프로그램",
       "sentence1": "저는 TV에서 새 프로그램을 보고 있어요.",
-      "sentence2": "그녀는 교육 프로그램을 담당해요."
+      "sentence2": "그녀는 교육 프로그램을 담당해요.",
+      "pronunciation": "/phɯlokɯlɛm/"
     },
     {
       "id": 620,
       "word": "프로젝트",
       "sentence1": "저는 학교 프로젝트를 하고 있어요.",
-      "sentence2": "그녀는 반에서 프로젝트를 발표했어요."
+      "sentence2": "그녀는 반에서 프로젝트를 발표했어요.",
+      "pronunciation": "/phɯlot͡ɕekthɯ/"
     },
     {
       "id": 621,
       "word": "보라색",
       "sentence1": "제가 가장 좋아하는 색은 보라색이에요.",
-      "sentence2": "그녀는 아름다운 보라색 드레스를 입었어요."
+      "sentence2": "그녀는 아름다운 보라색 드레스를 입었어요.",
+      "pronunciation": "/polasɛk/"
     },
     {
       "id": 622,
       "word": "놓다",
       "sentence1": "책을 선반에 놓아주세요.",
-      "sentence2": "그녀는 핸드폰을 가방에 넣었어요."
+      "sentence2": "그녀는 핸드폰을 가방에 넣었어요.",
+      "pronunciation": "/notha/"
     },
     {
       "id": 623,
       "word": "사분의 일",
       "sentence1": "케이크의 사분의 일이 남았어요.",
-      "sentence2": "그녀는 버스 요금으로 25센트를 냈어요."
+      "sentence2": "그녀는 버스 요금으로 25센트를 냈어요.",
+      "pronunciation": "/sapuni il/"
     },
     {
       "id": 624,
       "word": "질문",
       "sentence1": "질문해도 될까요?",
-      "sentence2": "그녀는 숙제에 대한 질문이 있어요."
+      "sentence2": "그녀는 숙제에 대한 질문이 있어요.",
+      "pronunciation": "/t͡ɕilmun/"
     },
     {
       "id": 625,
       "word": "빠른",
       "sentence1": "그는 빨리 배우는 사람이에요.",
-      "sentence2": "그녀는 질문에 빠른 답변을 했어요."
+      "sentence2": "그녀는 질문에 빠른 답변을 했어요.",
+      "pronunciation": "/p͈alɯn/"
     },
     {
       "id": 626,
       "word": "빨리",
       "sentence1": "숙제를 빨리 끝내세요.",
-      "sentence2": "그녀는 실수를 빨리 알아차렸어요."
+      "sentence2": "그녀는 실수를 빨리 알아차렸어요.",
+      "pronunciation": "/p͈alli/"
     },
     {
       "id": 627,
       "word": "조용한",
       "sentence1": "도서관에서는 조용히 해주세요.",
-      "sentence2": "그녀는 시골의 조용함을 즐겨요."
+      "sentence2": "그녀는 시골의 조용함을 즐겨요.",
+      "pronunciation": "/t͡ɕojoŋhan/"
     },
     {
       "id": 628,
       "word": "꽤",
       "sentence1": "밖이 꽤 추워요.",
-      "sentence2": "그녀는 수학을 꽤 잘해요."
+      "sentence2": "그녀는 수학을 꽤 잘해요.",
+      "pronunciation": "/k͈wɛ/"
     },
     {
       "id": 629,
       "word": "라디오",
       "sentence1": "저는 매일 아침 라디오를 들어요.",
-      "sentence2": "그녀는 라디오 방송국에서 일해요."
+      "sentence2": "그녀는 라디오 방송국에서 일해요.",
+      "pronunciation": "/lat͡ɕio/"
     },
     {
       "id": 630,
       "word": "비",
       "sentence1": "저는 빗소리 듣는 것을 좋아해요.",
-      "sentence2": "그녀는 우산 없이 비를 맞았어요."
+      "sentence2": "그녀는 우산 없이 비를 맞았어요.",
+      "pronunciation": "/pi/"
     },
     {
       "id": 631,
       "word": "읽다",
       "sentence1": "저는 자기 전에 책 읽는 것을 좋아해요.",
-      "sentence2": "그녀는 매주 책을 읽어요."
+      "sentence2": "그녀는 매주 책을 읽어요.",
+      "pronunciation": "/ikt͈a/"
     },
     {
       "id": 632,
       "word": "독자",
       "sentence1": "독자는 항상 이야기에 빠져 있어요.",
-      "sentence2": "그녀는 열성적인 독자예요."
+      "sentence2": "그녀는 열성적인 독자예요.",
+      "pronunciation": "/tokt͈͡ɕa/"
     },
     {
       "id": 633,
       "word": "독서",
       "sentence1": "독서는 휴식하기 좋은 방법이에요.",
-      "sentence2": "그녀는 미스터리 소설 읽는 것을 즐겨요."
+      "sentence2": "그녀는 미스터리 소설 읽는 것을 즐겨요.",
+      "pronunciation": "/toks͈ʌ/"
     },
     {
       "id": 634,
       "word": "준비된",
       "sentence1": "갈 준비 됐어요?",
-      "sentence2": "그녀는 시험 준비가 됐어요."
+      "sentence2": "그녀는 시험 준비가 됐어요.",
+      "pronunciation": "/t͡ɕunpitwen/"
     },
     {
       "id": 635,
       "word": "진짜의",
       "sentence1": "이것은 진짜 다이아몬드예요.",
-      "sentence2": "그녀는 세상에서 진정한 변화를 보고 싶어해요."
+      "sentence2": "그녀는 세상에서 진정한 변화를 보고 싶어해요.",
+      "pronunciation": "/t͡ɕint͈͡ɕaɰi/"
     },
     {
       "id": 636,
       "word": "정말",
       "sentence1": "저는 이 노래를 정말 좋아해요.",
-      "sentence2": "그녀는 일을 정말 잘해요."
+      "sentence2": "그녀는 일을 정말 잘해요.",
+      "pronunciation": "/t͡ɕʌŋmal/"
     },
     {
       "id": 637,
       "word": "이유",
       "sentence1": "방문 이유가 뭐예요?",
-      "sentence2": "그녀는 늦은 이유가 있어요."
+      "sentence2": "그녀는 늦은 이유가 있어요.",
+      "pronunciation": "/iju/"
     },
     {
       "id": 638,
       "word": "빨간색",
       "sentence1": "제가 가장 좋아하는 색은 빨간색이에요.",
-      "sentence2": "그녀는 파티에 빨간 드레스를 입고 갔어요."
+      "sentence2": "그녀는 파티에 빨간 드레스를 입고 갔어요.",
+      "pronunciation": "/p͈alkansɛk/"
     },
     {
       "id": 639,
       "word": "휴식하다",
       "sentence1": "저는 수영장 옆에서 휴식하는 것을 좋아해요.",
-      "sentence2": "그녀는 휴식하려고 목욕을 해요."
+      "sentence2": "그녀는 휴식하려고 목욕을 해요.",
+      "pronunciation": "/hjusikhata/"
     },
     {
       "id": 640,
       "word": "기억하다",
       "sentence1": "불 끄는 것을 기억해 주세요.",
-      "sentence2": "그녀는 열쇠를 어디에 두었는지 기억이 안 나요."
+      "sentence2": "그녀는 열쇠를 어디에 두었는지 기억이 안 나요.",
+      "pronunciation": "/kiʌkhata/"
     },
     {
       "id": 641,
       "word": "반복하다",
       "sentence1": "다시 말씀해 주실 수 있어요?",
-      "sentence2": "그녀는 운동을 여러 번 반복해야 했어요."
+      "sentence2": "그녀는 운동을 여러 번 반복해야 했어요.",
+      "pronunciation": "/panpokhata/"
     },
     {
       "id": 642,
       "word": "보고서",
       "sentence1": "일을 위해 보고서를 써야 해요.",
-      "sentence2": "그녀는 보고서를 제시간에 제출했어요."
+      "sentence2": "그녀는 보고서를 제시간에 제출했어요.",
+      "pronunciation": "/pokosʌ/"
     },
     {
       "id": 643,
       "word": "식당",
       "sentence1": "저녁을 먹으러 식당에 가요.",
-      "sentence2": "그녀는 고급 식당에서 일해요."
+      "sentence2": "그녀는 고급 식당에서 일해요.",
+      "pronunciation": "/sikt͈aŋ/"
     },
     {
       "id": 644,
       "word": "결과",
       "sentence1": "실험 결과가 어땠어요?",
-      "sentence2": "그녀는 결과에 만족했어요."
+      "sentence2": "그녀는 결과에 만족했어요.",
+      "pronunciation": "/kjʌlkwa/"
     },
     {
       "id": 645,
       "word": "돌아오다",
       "sentence1": "내일 책을 반납할게요.",
-      "sentence2": "그녀는 여행 후에 집에 돌아왔어요."
+      "sentence2": "그녀는 여행 후에 집에 돌아왔어요.",
+      "pronunciation": "/tolaota/"
     },
     {
       "id": 646,
       "word": "밥",
       "sentence1": "저는 식사할 때 밥을 먹는 것을 좋아해요.",
-      "sentence2": "그녀는 저녁으로 밥을 지었어요."
+      "sentence2": "그녀는 저녁으로 밥을 지었어요.",
+      "pronunciation": "/pap/"
     },
     {
       "id": 647,
       "word": "부자인",
       "sentence1": "그는 부자예요.",
-      "sentence2": "그녀는 부자와 결혼하고 싶어해요."
+      "sentence2": "그녀는 부자와 결혼하고 싶어해요.",
+      "pronunciation": "/put͡ɕain/"
     },
     {
       "id": 648,
       "word": "타다",
       "sentence1": "저는 공원에서 자전거 타는 것을 좋아해요.",
-      "sentence2": "그녀는 처음으로 말을 타봤어요."
+      "sentence2": "그녀는 처음으로 말을 타봤어요.",
+      "pronunciation": "/thata/"
     },
     {
       "id": 649,
       "word": "오른쪽",
       "sentence1": "신호등에서 오른쪽으로 돌아요.",
-      "sentence2": "그녀는 제 오른쪽에 앉아 있어요."
+      "sentence2": "그녀는 제 오른쪽에 앉아 있어요.",
+      "pronunciation": "/olɯnt͈͡ɕok/"
     },
     {
       "id": 650,
       "word": "강",
       "sentence1": "강이 계곡을 통해 흐르고 있어요.",
-      "sentence2": "그녀는 강에서 낚시하는 것을 좋아해요."
+      "sentence2": "그녀는 강에서 낚시하는 것을 좋아해요.",
+      "pronunciation": "/kaŋ/"
     },
     {
       "id": 651,
       "word": "도로",
       "sentence1": "공사로 도로가 통제되어 있어요.",
-      "sentence2": "그녀는 조용한 길에 살아요."
+      "sentence2": "그녀는 조용한 길에 살아요.",
+      "pronunciation": "/tolo/"
     },
     {
       "id": 652,
       "word": "방",
       "sentence1": "이것은 제 침실이에요.",
-      "sentence2": "그녀는 어제 방을 청소했어요."
+      "sentence2": "그녀는 어제 방을 청소했어요.",
+      "pronunciation": "/paŋ/"
     },
     {
       "id": 653,
       "word": "일상",
       "sentence1": "저는 아침 일상이 있어요.",
-      "sentence2": "그녀는 엄격한 운동 루틴을 따라요."
+      "sentence2": "그녀는 엄격한 운동 루틴을 따라요.",
+      "pronunciation": "/ils͈aŋ/"
     },
     {
       "id": 654,
       "word": "규칙",
       "sentence1": "규칙을 따라야 해요.",
-      "sentence2": "그녀는 규칙을 어기고 문제가 생겼어요."
+      "sentence2": "그녀는 규칙을 어기고 문제가 생겼어요.",
+      "pronunciation": "/kjut͡ɕhik/"
     },
     {
       "id": 655,
       "word": "달리다",
       "sentence1": "저는 아침에 달리는 것을 좋아해요.",
-      "sentence2": "그녀는 매일 5마일을 뛰어요."
+      "sentence2": "그녀는 매일 5마일을 뛰어요.",
+      "pronunciation": "/tallita/"
     },
     {
       "id": 656,
       "word": "슬픈",
       "sentence1": "그녀는 오늘 슬퍼 보여요.",
-      "sentence2": "그 상황에 대해 슬퍼요."
+      "sentence2": "그 상황에 대해 슬퍼요.",
+      "pronunciation": "/sɯlphɯn/"
     },
     {
       "id": 657,
       "word": "샐러드",
       "sentence1": "점심으로 샐러드를 먹고 싶어요.",
-      "sentence2": "그녀는 맛있는 샐러드를 만들었어요."
+      "sentence2": "그녀는 맛있는 샐러드를 만들었어요.",
+      "pronunciation": "/sɛllʌtɯ/"
     },
     {
       "id": 658,
       "word": "소금",
       "sentence1": "소금 좀 주세요.",
-      "sentence2": "그녀는 수프에 소금을 넣었어요."
+      "sentence2": "그녀는 수프에 소금을 넣었어요.",
+      "pronunciation": "/sokɯm/"
     },
     {
       "id": 659,
       "word": "같은",
       "sentence1": "우리는 같은 문제가 있어요.",
-      "sentence2": "그녀는 저와 같은 드레스를 입었어요."
+      "sentence2": "그녀는 저와 같은 드레스를 입었어요.",
+      "pronunciation": "/kathɯn/"
     },
     {
       "id": 660,
       "word": "샌드위치",
       "sentence1": "점심으로 샌드위치를 먹고 싶어요.",
-      "sentence2": "그녀는 칠면조 샌드위치를 만들었어요."
+      "sentence2": "그녀는 칠면조 샌드위치를 만들었어요.",
+      "pronunciation": "/sɛntɯwit͡ɕhi/"
     },
     {
       "id": 661,
       "word": "토요일",
       "sentence1": "토요일은 제가 가장 좋아하는 날이에요.",
-      "sentence2": "그녀는 토요일에 파티가 있어요."
+      "sentence2": "그녀는 토요일에 파티가 있어요.",
+      "pronunciation": "/thojoil/"
     },
     {
       "id": 662,
       "word": "말하다",
       "sentence1": "뭐라고 했어요?",
-      "sentence2": "그녀는 아무 말도 하지 않았어요."
+      "sentence2": "그녀는 아무 말도 하지 않았어요.",
+      "pronunciation": "/malata/"
     },
     {
       "id": 663,
       "word": "학교",
       "sentence1": "저는 매일 학교에 가요.",
-      "sentence2": "그녀는 그 학교의 학생이에요."
+      "sentence2": "그녀는 그 학교의 학생이에요.",
+      "pronunciation": "/hakk͈jo/"
     },
     {
       "id": 664,
       "word": "과학",
       "sentence1": "과학은 매력적이에요.",
-      "sentence2": "그녀는 과학을 공부하고 싶어해요."
+      "sentence2": "그녀는 과학을 공부하고 싶어해요.",
+      "pronunciation": "/kwaak/"
     },
     {
       "id": 665,
       "word": "과학자",
       "sentence1": "그는 과학자예요.",
-      "sentence2": "그녀는 과학자가 되고 싶어해요."
+      "sentence2": "그녀는 과학자가 되고 싶어해요.",
+      "pronunciation": "/kwaakt͈͡ɕa/"
     },
     {
       "id": 666,
       "word": "바다",
       "sentence1": "오늘 바다가 잔잔해요.",
-      "sentence2": "그녀는 바다에서 수영하는 것을 좋아해요."
+      "sentence2": "그녀는 바다에서 수영하는 것을 좋아해요.",
+      "pronunciation": "/pata/"
     },
     {
       "id": 667,
       "word": "두 번째",
       "sentence1": "이것은 제 두 번째 시도예요.",
-      "sentence2": "그녀는 2위로 끝냈어요."
+      "sentence2": "그녀는 2위로 끝냈어요.",
+      "pronunciation": "/tu pʌnt͈͡ɕɛ/"
     },
     {
       "id": 668,
       "word": "부분",
       "sentence1": "이것은 어려운 부분이에요.",
-      "sentence2": "그녀는 그 부분을 주의 깊게 읽었어요."
+      "sentence2": "그녀는 그 부분을 주의 깊게 읽었어요.",
+      "pronunciation": "/pupun/"
     },
     {
       "id": 669,
       "word": "보다",
       "sentence1": "나무에 새가 보여요.",
-      "sentence2": "그녀는 창문에서 산이 보여요."
+      "sentence2": "그녀는 창문에서 산이 보여요.",
+      "pronunciation": "/pota/"
     },
     {
       "id": 670,
       "word": "팔다",
       "sentence1": "오래된 차를 팔고 싶어요.",
-      "sentence2": "그녀는 온라인으로 수제 장신구를 팔아요."
+      "sentence2": "그녀는 온라인으로 수제 장신구를 팔아요.",
+      "pronunciation": "/phalta/"
     },
     {
       "id": 671,
       "word": "보내다",
       "sentence1": "세부 사항을 보내주세요.",
-      "sentence2": "그녀는 친구에게 편지를 보냈어요."
+      "sentence2": "그녀는 친구에게 편지를 보냈어요.",
+      "pronunciation": "/ponɛta/"
     },
     {
       "id": 672,
       "word": "문장",
       "sentence1": "문장을 쓸 수 있어요?",
-      "sentence2": "그녀는 완전한 문장으로 말했어요."
+      "sentence2": "그녀는 완전한 문장으로 말했어요.",
+      "pronunciation": "/munt͡ɕaŋ/"
     },
     {
       "id": 673,
       "word": "9월",
       "sentence1": "9월은 아홉 번째 달이에요.",
-      "sentence2": "그녀는 9월에 태어났어요."
+      "sentence2": "그녀는 9월에 태어났어요.",
+      "pronunciation": "/9wʌl/"
     },
     {
       "id": 674,
       "word": "일곱",
       "sentence1": "사과가 일곱 개 있어요.",
-      "sentence2": "그녀는 일곱 살이에요."
+      "sentence2": "그녀는 일곱 살이에요.",
+      "pronunciation": "/ilkop/"
     },
     {
       "id": 675,
       "word": "열일곱",
       "sentence1": "열일곱은 제가 가장 좋아하는 숫자예요.",
-      "sentence2": "그녀는 지난주에 열일곱 살이 됐어요."
+      "sentence2": "그녀는 지난주에 열일곱 살이 됐어요.",
+      "pronunciation": "/jʌlilkop/"
     },
     {
       "id": 676,
       "word": "칠십",
       "sentence1": "칠십은 큰 숫자예요.",
-      "sentence2": "그녀는 칠십 살이에요."
+      "sentence2": "그녀는 칠십 살이에요.",
+      "pronunciation": "/t͡ɕhils͈ip/"
     },
     {
       "id": 677,
       "word": "나누다",
       "sentence1": "장난감을 나눠줄 수 있어요?",
-      "sentence2": "그녀는 음식을 나누는 것을 좋아해요."
+      "sentence2": "그녀는 음식을 나누는 것을 좋아해요.",
+      "pronunciation": "/nanuta/"
     },
     {
       "id": 678,
       "word": "그녀",
       "sentence1": "그녀는 제 가장 친한 친구예요.",
-      "sentence2": "어제 그녀를 봤어요."
+      "sentence2": "어제 그녀를 봤어요.",
+      "pronunciation": "/kɯnjʌ/"
     },
     {
       "id": 679,
       "word": "양",
       "sentence1": "양들이 들판에 있어요.",
-      "sentence2": "그녀는 애완 양을 키워요."
+      "sentence2": "그녀는 애완 양을 키워요.",
+      "pronunciation": "/jaŋ/"
     },
     {
       "id": 680,
       "word": "셔츠",
       "sentence1": "새 셔츠가 필요해요.",
-      "sentence2": "그녀는 파란색 셔츠를 샀어요."
+      "sentence2": "그녀는 파란색 셔츠를 샀어요.",
+      "pronunciation": "/sjʌt͡ɕhɯ/"
     },
     {
       "id": 681,
       "word": "신발",
       "sentence1": "새 신발을 샀어요.",
-      "sentence2": "그녀는 빨간 신발을 좋아해요."
+      "sentence2": "그녀는 빨간 신발을 좋아해요.",
+      "pronunciation": "/sinpal/"
     },
     {
       "id": 682,
       "word": "가게",
       "sentence1": "가게에 가야 해요.",
-      "sentence2": "그녀는 옷가게에서 일해요."
+      "sentence2": "그녀는 옷가게에서 일해요.",
+      "pronunciation": "/kake/"
     },
     {
       "id": 683,
       "word": "쇼핑",
       "sentence1": "저는 주말에 쇼핑하는 것을 즐겨요.",
-      "sentence2": "그녀는 식료품을 사러 갔어요."
+      "sentence2": "그녀는 식료품을 사러 갔어요.",
+      "pronunciation": "/sjophiŋ/"
     },
     {
       "id": 684,
       "word": "짧은",
       "sentence1": "이것은 짧은 이야기예요.",
-      "sentence2": "그녀는 짧은 드레스를 입었어요."
+      "sentence2": "그녀는 짧은 드레스를 입었어요.",
+      "pronunciation": "/t͈͡ɕalpɯn/"
     },
     {
       "id": 685,
       "word": "~해야 한다",
       "sentence1": "의사를 만나봐야 해요.",
-      "sentence2": "그녀는 사과해야 해요."
+      "sentence2": "그녀는 사과해야 해요.",
+      "pronunciation": "/~hɛja hanta/"
     },
     {
       "id": 686,
       "word": "보여주다",
       "sentence1": "길을 보여주실 수 있어요?",
-      "sentence2": "그녀는 새 드레스를 보여줬어요."
+      "sentence2": "그녀는 새 드레스를 보여줬어요.",
+      "pronunciation": "/pojʌt͡ɕuta/"
     },
     {
       "id": 687,
       "word": "샤워",
       "sentence1": "저는 아침에 샤워하는 것을 좋아해요.",
-      "sentence2": "그녀는 오래 샤워했어요."
+      "sentence2": "그녀는 오래 샤워했어요.",
+      "pronunciation": "/sjawʌ/"
     },
     {
       "id": 688,
       "word": "아픈",
       "sentence1": "오늘 몸이 안 좋아요.",
-      "sentence2": "그녀는 지난주에 아팠어요."
+      "sentence2": "그녀는 지난주에 아팠어요.",
+      "pronunciation": "/aphɯn/"
     },
     {
       "id": 689,
       "word": "비슷한",
       "sentence1": "이 두 그림은 비슷해요.",
-      "sentence2": "그녀는 비슷한 드레스가 있어요."
+      "sentence2": "그녀는 비슷한 드레스가 있어요.",
+      "pronunciation": "/pisɯthan/"
     },
     {
       "id": 690,
       "word": "노래하다",
       "sentence1": "저는 샤워할 때 노래하는 것을 좋아해요.",
-      "sentence2": "그녀는 노래를 아름답게 해요."
+      "sentence2": "그녀는 노래를 아름답게 해요.",
+      "pronunciation": "/nolɛata/"
     },
     {
       "id": 691,
       "word": "가수",
       "sentence1": "제 여동생은 가수예요.",
-      "sentence2": "그녀는 유명한 가수가 되고 싶어해요."
+      "sentence2": "그녀는 유명한 가수가 되고 싶어해요.",
+      "pronunciation": "/kasu/"
     },
     {
       "id": 692,
       "word": "여동생",
       "sentence1": "여동생이 한 명 있어요.",
-      "sentence2": "그녀는 제 여동생이에요."
+      "sentence2": "그녀는 제 여동생이에요.",
+      "pronunciation": "/jʌtoŋsɛŋ/"
     },
     {
       "id": 693,
       "word": "앉다",
       "sentence1": "앉으세요.",
-      "sentence2": "그녀는 창가에 앉는 것을 좋아해요."
+      "sentence2": "그녀는 창가에 앉는 것을 좋아해요.",
+      "pronunciation": "/ant͈a/"
     },
     {
       "id": 694,
       "word": "상황",
       "sentence1": "이것은 어려운 상황이에요.",
-      "sentence2": "그녀는 상황을 잘 처리했어요."
+      "sentence2": "그녀는 상황을 잘 처리했어요.",
+      "pronunciation": "/saŋhwaŋ/"
     },
     {
       "id": 695,
       "word": "여섯",
       "sentence1": "책이 여섯 권 있어요.",
-      "sentence2": "그녀는 여섯 살이에요."
+      "sentence2": "그녀는 여섯 살이에요.",
+      "pronunciation": "/jʌsʌt/"
     },
     {
       "id": 696,
       "word": "열여섯",
       "sentence1": "열여섯은 제가 가장 좋아하는 숫자예요.",
-      "sentence2": "그녀는 지난달에 열여섯 살이 됐어요."
+      "sentence2": "그녀는 지난달에 열여섯 살이 됐어요.",
+      "pronunciation": "/jʌljʌsʌt/"
     },
     {
       "id": 697,
       "word": "육십",
       "sentence1": "육십은 큰 숫자예요.",
-      "sentence2": "그녀는 육십 살이에요."
+      "sentence2": "그녀는 육십 살이에요.",
+      "pronunciation": "/juks͈ip/"
     },
     {
       "id": 698,
       "word": "기술",
       "sentence1": "그는 특별한 기술이 있어요.",
-      "sentence2": "그녀는 새로운 기술을 배우고 있어요."
+      "sentence2": "그녀는 새로운 기술을 배우고 있어요.",
+      "pronunciation": "/kisul/"
     },
     {
       "id": 699,
       "word": "치마",
       "sentence1": "치마가 마음에 들어요.",
-      "sentence2": "그녀는 긴 치마를 입었어요."
+      "sentence2": "그녀는 긴 치마를 입었어요.",
+      "pronunciation": "/t͡ɕhima/"
     },
     {
       "id": 700,
       "word": "잠",
       "sentence1": "잠이 더 필요해요.",
-      "sentence2": "그녀는 매일 밤 8시간을 자요."
+      "sentence2": "그녀는 매일 밤 8시간을 자요.",
+      "pronunciation": "/t͡ɕam/"
     },
     {
       "id": 701,
       "word": "느린",
       "sentence1": "천천히 운전하세요.",
-      "sentence2": "그녀는 책을 느리게 읽어요."
+      "sentence2": "그녀는 책을 느리게 읽어요.",
+      "pronunciation": "/nɯlin/"
     },
     {
       "id": 702,
       "word": "작은",
       "sentence1": "이것은 작은 상자예요.",
-      "sentence2": "그녀는 작은 개를 키워요."
+      "sentence2": "그녀는 작은 개를 키워요.",
+      "pronunciation": "/t͡ɕakɯn/"
     },
     {
       "id": 703,
       "word": "뱀",
       "sentence1": "정원에서 뱀을 봤어요.",
-      "sentence2": "그녀는 뱀을 무서워해요."
+      "sentence2": "그녀는 뱀을 무서워해요.",
+      "pronunciation": "/pɛm/"
     },
     {
       "id": 704,
       "word": "눈",
       "sentence1": "눈이 내리고 있어요.",
-      "sentence2": "그녀는 눈에서 노는 것을 좋아해요."
+      "sentence2": "그녀는 눈에서 노는 것을 좋아해요.",
+      "pronunciation": "/nun/"
     },
     {
       "id": 705,
       "word": "그래서",
       "sentence1": "피곤해서 일찍 잠자리에 들었어요.",
-      "sentence2": "그녀는 행복해서 미소 지었어요."
+      "sentence2": "그녀는 행복해서 미소 지었어요.",
+      "pronunciation": "/kɯlɛsʌ/"
     },
     {
       "id": 706,
       "word": "조금",
       "sentence1": "아이디어가 조금 있어요.",
-      "sentence2": "그녀는 사과를 몇 개 샀어요."
+      "sentence2": "그녀는 사과를 몇 개 샀어요.",
+      "pronunciation": "/t͡ɕokɯm/"
     },
     {
       "id": 707,
       "word": "누군가",
       "sentence1": "누군가 문 앞에 있어요.",
-      "sentence2": "그녀는 유명한 사람을 알아요."
+      "sentence2": "그녀는 유명한 사람을 알아요.",
+      "pronunciation": "/nukunka/"
     },
     {
       "id": 708,
       "word": "누군가",
       "sentence1": "누군가 가방을 두고 갔어요.",
-      "sentence2": "그녀는 도와줄 사람을 찾고 있어요."
+      "sentence2": "그녀는 도와줄 사람을 찾고 있어요.",
+      "pronunciation": "/nukunka/"
     },
     {
       "id": 709,
       "word": "무언가",
       "sentence1": "먹을 것이 필요해요.",
-      "sentence2": "그녀는 무언가를 숨기고 있어요."
+      "sentence2": "그녀는 무언가를 숨기고 있어요.",
+      "pronunciation": "/muʌnka/"
     },
     {
       "id": 710,
       "word": "때때로",
       "sentence1": "저는 때때로 산책을 해요.",
-      "sentence2": "그녀는 때때로 조부모님을 방문해요."
+      "sentence2": "그녀는 때때로 조부모님을 방문해요.",
+      "pronunciation": "/t͈ɛt͈ɛlo/"
     },
     {
       "id": 711,
       "word": "아들",
       "sentence1": "제 아들이 밖에서 놀고 있어요.",
-      "sentence2": "그녀는 아들과 딸이 있어요."
+      "sentence2": "그녀는 아들과 딸이 있어요.",
+      "pronunciation": "/atɯl/"
     },
     {
       "id": 712,
       "word": "노래",
       "sentence1": "이 노래를 좋아해요.",
-      "sentence2": "그녀는 아름다운 노래를 불렀어요."
+      "sentence2": "그녀는 아름다운 노래를 불렀어요.",
+      "pronunciation": "/nolɛ/"
     },
     {
       "id": 713,
       "word": "곧",
       "sentence1": "곧 전화할게요.",
-      "sentence2": "그녀는 곧 도착할 거예요."
+      "sentence2": "그녀는 곧 도착할 거예요.",
+      "pronunciation": "/kot/"
     },
     {
       "id": 714,
       "word": "미안한",
       "sentence1": "실수해서 죄송해요.",
-      "sentence2": "그녀는 그 소식을 듣고 안타까워했어요."
+      "sentence2": "그녀는 그 소식을 듣고 안타까워했어요.",
+      "pronunciation": "/mianan/"
     },
     {
       "id": 715,
       "word": "소리",
       "sentence1": "무슨 소리였어요?",
-      "sentence2": "그녀는 아름다운 목소리를 가졌어요."
+      "sentence2": "그녀는 아름다운 목소리를 가졌어요.",
+      "pronunciation": "/soli/"
     },
     {
       "id": 716,
       "word": "수프",
       "sentence1": "수프를 만들었어요.",
-      "sentence2": "그녀는 토마토 수프를 좋아해요."
+      "sentence2": "그녀는 토마토 수프를 좋아해요.",
+      "pronunciation": "/suphɯ/"
     },
     {
       "id": 717,
       "word": "남쪽",
       "sentence1": "우리는 남쪽에 살아요.",
-      "sentence2": "그녀는 겨울에 남쪽으로 여행했어요."
+      "sentence2": "그녀는 겨울에 남쪽으로 여행했어요.",
+      "pronunciation": "/namt͈͡ɕok/"
     },
     {
       "id": 718,
       "word": "공간",
       "sentence1": "여기는 공간이 많아요.",
-      "sentence2": "그녀는 우주를 탐험하고 싶어해요."
+      "sentence2": "그녀는 우주를 탐험하고 싶어해요.",
+      "pronunciation": "/koŋkan/"
     },
     {
       "id": 719,
       "word": "말하다",
       "sentence1": "저는 영어를 할 수 있어요.",
-      "sentence2": "그녀는 세 개 언어를 해요."
+      "sentence2": "그녀는 세 개 언어를 해요.",
+      "pronunciation": "/malata/"
     },
     {
       "id": 720,
       "word": "특별한",
       "sentence1": "오늘은 특별한 날이에요.",
-      "sentence2": "그녀는 특별한 선물을 받았어요."
+      "sentence2": "그녀는 특별한 선물을 받았어요.",
+      "pronunciation": "/thɯkp͈jʌlan/"
     },
     {
       "id": 721,
       "word": "철자하다",
       "sentence1": "이름을 철자해 주실 수 있어요?",
-      "sentence2": "그녀는 단어를 올바르게 철자했어요."
+      "sentence2": "그녀는 단어를 올바르게 철자했어요.",
+      "pronunciation": "/t͡ɕhʌlt͡ɕaata/"
     },
     {
       "id": 722,
       "word": "철자",
       "sentence1": "철자는 글쓰기에서 중요해요.",
-      "sentence2": "그녀는 철자 대회에서 우승했어요."
+      "sentence2": "그녀는 철자 대회에서 우승했어요.",
+      "pronunciation": "/t͡ɕhʌlt͡ɕa/"
     },
     {
       "id": 723,
       "word": "보내다",
       "sentence1": "저는 친구들과 시간을 보내는 것을 좋아해요.",
-      "sentence2": "그녀는 돈을 다 썼어요."
+      "sentence2": "그녀는 돈을 다 썼어요.",
+      "pronunciation": "/ponɛta/"
     },
     {
       "id": 724,
       "word": "스포츠",
       "sentence1": "축구는 제가 가장 좋아하는 스포츠예요.",
-      "sentence2": "그녀는 스포츠를 많이 해요."
+      "sentence2": "그녀는 스포츠를 많이 해요.",
+      "pronunciation": "/sɯphot͡ɕhɯ/"
     },
     {
       "id": 725,
       "word": "봄",
       "sentence1": "봄은 제가 가장 좋아하는 계절이에요.",
-      "sentence2": "봄에 꽃이 펴요."
+      "sentence2": "봄에 꽃이 펴요.",
+      "pronunciation": "/pom/"
     },
     {
       "id": 726,
       "word": "서다",
       "sentence1": "일어나세요.",
-      "sentence2": "그녀는 창가에 섰어요."
+      "sentence2": "그녀는 창가에 섰어요.",
+      "pronunciation": "/sʌta/"
     },
     {
       "id": 727,
       "word": "별",
       "sentence1": "별이 밝게 빛나고 있어요.",
-      "sentence2": "그녀는 스타가 되고 싶어해요."
+      "sentence2": "그녀는 스타가 되고 싶어해요.",
+      "pronunciation": "/pjʌl/"
     },
     {
       "id": 728,
       "word": "시작하다",
       "sentence1": "숙제를 시작할게요.",
-      "sentence2": "그녀는 새 프로젝트를 시작했어요."
+      "sentence2": "그녀는 새 프로젝트를 시작했어요.",
+      "pronunciation": "/sit͡ɕakhata/"
     },
     {
       "id": 729,
       "word": "진술",
       "sentence1": "이것은 명확한 진술이에요.",
-      "sentence2": "그녀는 그 문제에 대해 진술했어요."
+      "sentence2": "그녀는 그 문제에 대해 진술했어요.",
+      "pronunciation": "/t͡ɕinsul/"
     },
     {
       "id": 730,
       "word": "역",
       "sentence1": "기차가 역에 도착해요.",
-      "sentence2": "그녀는 역에서 기다렸어요."
+      "sentence2": "그녀는 역에서 기다렸어요.",
+      "pronunciation": "/jʌk/"
     },
     {
       "id": 731,
       "word": "머물다",
       "sentence1": "여기 있을게요.",
-      "sentence2": "그녀는 호텔에 묵었어요."
+      "sentence2": "그녀는 호텔에 묵었어요.",
+      "pronunciation": "/mʌmulta/"
     },
     {
       "id": 732,
       "word": "아직",
       "sentence1": "아직 기다리고 있어요.",
-      "sentence2": "그녀는 아직 작업 중이에요."
+      "sentence2": "그녀는 아직 작업 중이에요.",
+      "pronunciation": "/at͡ɕik/"
     },
     {
       "id": 733,
       "word": "멈추다",
       "sentence1": "말 좀 멈추세요.",
-      "sentence2": "그녀는 차를 세웠어요."
+      "sentence2": "그녀는 차를 세웠어요.",
+      "pronunciation": "/mʌmt͡ɕhuta/"
     },
     {
       "id": 734,
       "word": "이야기",
       "sentence1": "이 이야기를 좋아해요.",
-      "sentence2": "그녀는 재미있는 이야기를 했어요."
+      "sentence2": "그녀는 재미있는 이야기를 했어요.",
+      "pronunciation": "/ijaki/"
     },
     {
       "id": 735,
       "word": "거리",
       "sentence1": "가게는 거리에 있어요.",
-      "sentence2": "그녀는 조용한 거리에 살아요."
+      "sentence2": "그녀는 조용한 거리에 살아요.",
+      "pronunciation": "/kʌli/"
     },
     {
       "id": 736,
       "word": "강한",
       "sentence1": "그는 강한 사람이에요.",
-      "sentence2": "그녀는 강한 의견이 있어요."
+      "sentence2": "그녀는 강한 의견이 있어요.",
+      "pronunciation": "/kaŋhan/"
     },
     {
       "id": 737,
       "word": "학생",
       "sentence1": "학생이 공부하고 있어요.",
-      "sentence2": "그녀는 좋은 학생이에요."
+      "sentence2": "그녀는 좋은 학생이에요.",
+      "pronunciation": "/haks͈ɛŋ/"
     },
     {
       "id": 738,
       "word": "공부하다",
       "sentence1": "시험을 위해 공부해야 해요.",
-      "sentence2": "그녀는 매일 밤 공부해요."
+      "sentence2": "그녀는 매일 밤 공부해요.",
+      "pronunciation": "/koŋpuata/"
     },
     {
       "id": 739,
       "word": "스타일",
       "sentence1": "당신의 스타일이 마음에 들어요.",
-      "sentence2": "그녀는 독특한 스타일이 있어요."
+      "sentence2": "그녀는 독특한 스타일이 있어요.",
+      "pronunciation": "/sɯthail/"
     },
     {
       "id": 740,
       "word": "과목",
       "sentence1": "수업의 주제가 뭐예요?",
-      "sentence2": "그녀는 그 과목에 관심이 있어요."
+      "sentence2": "그녀는 그 과목에 관심이 있어요.",
+      "pronunciation": "/kwamok/"
     },
     {
       "id": 741,
       "word": "성공",
       "sentence1": "성공은 노력이 필요해요.",
-      "sentence2": "그녀는 큰 성공을 거두었어요."
+      "sentence2": "그녀는 큰 성공을 거두었어요.",
+      "pronunciation": "/sʌŋkoŋ/"
     },
     {
       "id": 742,
       "word": "설탕",
       "sentence1": "저는 커피에 설탕을 넣어요.",
-      "sentence2": "그녀는 차에 설탕을 넣는 것을 좋아해요."
+      "sentence2": "그녀는 차에 설탕을 넣는 것을 좋아해요.",
+      "pronunciation": "/sʌlthaŋ/"
     },
     {
       "id": 743,
       "word": "여름",
       "sentence1": "이 지역은 여름에 더워요.",
-      "sentence2": "그녀는 여름 휴가를 좋아해요."
+      "sentence2": "그녀는 여름 휴가를 좋아해요.",
+      "pronunciation": "/jʌlɯm/"
     },
     {
       "id": 744,
       "word": "해",
       "sentence1": "해가 밝게 빛나고 있어요.",
-      "sentence2": "그녀는 햇살 아래에 앉았어요."
+      "sentence2": "그녀는 햇살 아래에 앉았어요.",
+      "pronunciation": "/hɛ/"
     },
     {
       "id": 745,
       "word": "일요일",
       "sentence1": "일요일은 휴식하는 날이에요.",
-      "sentence2": "그녀는 일요일에 교회에 가요."
+      "sentence2": "그녀는 일요일에 교회에 가요.",
+      "pronunciation": "/iljoil/"
     },
     {
       "id": 746,
       "word": "슈퍼마켓",
       "sentence1": "슈퍼마켓에 가야 해요.",
-      "sentence2": "그녀는 슈퍼마켓에서 식료품을 샀어요."
+      "sentence2": "그녀는 슈퍼마켓에서 식료품을 샀어요.",
+      "pronunciation": "/sjuphʌmakhet/"
     },
     {
       "id": 747,
       "word": "확신하는",
       "sentence1": "그게 확실해요?",
-      "sentence2": "그녀는 자신의 결정에 확신해요."
+      "sentence2": "그녀는 자신의 결정에 확신해요.",
+      "pronunciation": "/hwaks͈inanɯn/"
     },
     {
       "id": 748,
       "word": "스웨터",
       "sentence1": "새 스웨터를 샀어요.",
-      "sentence2": "그녀는 따뜻한 스웨터를 입었어요."
+      "sentence2": "그녀는 따뜻한 스웨터를 입었어요.",
+      "pronunciation": "/sɯwethʌ/"
     },
     {
       "id": 749,
       "word": "수영하다",
       "sentence1": "저는 수영장에서 수영하는 것을 좋아해요.",
-      "sentence2": "그녀는 매일 아침 수영해요."
+      "sentence2": "그녀는 매일 아침 수영해요.",
+      "pronunciation": "/sujʌŋhata/"
     },
     {
       "id": 750,
       "word": "수영",
       "sentence1": "수영은 좋은 운동이에요.",
-      "sentence2": "그녀는 바다에서 수영하는 것을 즐겨요."
+      "sentence2": "그녀는 바다에서 수영하는 것을 즐겨요.",
+      "pronunciation": "/sujʌŋ/"
     },
     {
       "id": 751,
       "word": "테이블",
       "sentence1": "테이블은 나무로 만들어졌어요.",
-      "sentence2": "그녀는 저녁 식사를 위해 테이블을 차렸어요."
+      "sentence2": "그녀는 저녁 식사를 위해 테이블을 차렸어요.",
+      "pronunciation": "/theipɯl/"
     },
     {
       "id": 752,
       "word": "가져가다",
       "sentence1": "버스를 타고 갈게요.",
-      "sentence2": "그녀는 일몰 사진을 찍었어요."
+      "sentence2": "그녀는 일몰 사진을 찍었어요.",
+      "pronunciation": "/kat͡ɕjʌkata/"
     },
     {
       "id": 753,
       "word": "이야기하다",
       "sentence1": "우리 이야기해야 해요.",
-      "sentence2": "그녀는 계획에 대해 이야기했어요."
+      "sentence2": "그녀는 계획에 대해 이야기했어요.",
+      "pronunciation": "/ijakiata/"
     },
     {
       "id": 754,
       "word": "키가 큰",
       "sentence1": "그는 키가 크고 운동을 잘해요.",
-      "sentence2": "그녀는 높은 건물을 선호해요."
+      "sentence2": "그녀는 높은 건물을 선호해요.",
+      "pronunciation": "/khika khɯn/"
     },
     {
       "id": 755,
       "word": "택시",
       "sentence1": "공항에 택시가 필요해요.",
-      "sentence2": "그녀는 택시를 타고 집에 갔어요."
+      "sentence2": "그녀는 택시를 타고 집에 갔어요.",
+      "pronunciation": "/thɛks͈i/"
     },
     {
       "id": 756,
       "word": "차",
       "sentence1": "저는 차 마시는 것을 좋아해요.",
-      "sentence2": "그녀는 녹차를 선호해요."
+      "sentence2": "그녀는 녹차를 선호해요.",
+      "pronunciation": "/t͡ɕha/"
     },
     {
       "id": 757,
       "word": "가르치다",
       "sentence1": "저는 영어를 가르치고 싶어요.",
-      "sentence2": "그녀는 학교에서 수학을 가르쳐요."
+      "sentence2": "그녀는 학교에서 수학을 가르쳐요.",
+      "pronunciation": "/kalɯt͡ɕhita/"
     },
     {
       "id": 758,
       "word": "선생님",
       "sentence1": "선생님이 매우 도움이 돼요.",
-      "sentence2": "그녀는 제가 가장 좋아하는 선생님이에요."
+      "sentence2": "그녀는 제가 가장 좋아하는 선생님이에요.",
+      "pronunciation": "/sʌnsɛŋnim/"
     },
     {
       "id": 759,
       "word": "팀",
       "sentence1": "우리 팀이 경기에서 이겼어요.",
-      "sentence2": "그녀는 소중한 팀원이에요."
+      "sentence2": "그녀는 소중한 팀원이에요.",
+      "pronunciation": "/thim/"
     },
     {
       "id": 760,
       "word": "십대",
       "sentence1": "십대들은 많은 도전에 직면해요.",
-      "sentence2": "그녀는 전형적인 십대예요."
+      "sentence2": "그녀는 전형적인 십대예요.",
+      "pronunciation": "/sipt͈ɛ/"
     },
     {
       "id": 761,
       "word": "전화",
       "sentence1": "전화로 연락해야 해요.",
-      "sentence2": "그녀가 전화를 받았어요."
+      "sentence2": "그녀가 전화를 받았어요.",
+      "pronunciation": "/t͡ɕʌnwa/"
     },
     {
       "id": 762,
       "word": "텔레비전",
       "sentence1": "텔레비전이 테이블 위에 있어요.",
-      "sentence2": "그녀는 매일 저녁 텔레비전을 봐요."
+      "sentence2": "그녀는 매일 저녁 텔레비전을 봐요.",
+      "pronunciation": "/thellepit͡ɕʌn/"
     },
     {
       "id": 763,
       "word": "말하다",
       "sentence1": "이름을 말해 주세요.",
-      "sentence2": "그녀가 비밀을 말해 줬어요."
+      "sentence2": "그녀가 비밀을 말해 줬어요.",
+      "pronunciation": "/malata/"
     },
     {
       "id": 764,
       "word": "열",
       "sentence1": "사과가 열 개 있어요.",
-      "sentence2": "그녀는 열 살이에요."
+      "sentence2": "그녀는 열 살이에요.",
+      "pronunciation": "/jʌl/"
     },
     {
       "id": 765,
       "word": "테니스",
       "sentence1": "저는 테니스 치는 것을 좋아해요.",
-      "sentence2": "그녀는 주말에 테니스를 쳐요."
+      "sentence2": "그녀는 주말에 테니스를 쳐요.",
+      "pronunciation": "/thenisɯ/"
     },
     {
       "id": 766,
       "word": "끔찍한",
       "sentence1": "그 영화는 끔찍했어요.",
-      "sentence2": "그녀는 끔찍한 경험을 했어요."
+      "sentence2": "그녀는 끔찍한 경험을 했어요.",
+      "pronunciation": "/k͈ɯmt͈͡ɕikhan/"
     },
     {
       "id": 767,
       "word": "시험",
       "sentence1": "내일 시험이 있어요.",
-      "sentence2": "그녀는 시험에 합격했어요."
+      "sentence2": "그녀는 시험에 합격했어요.",
+      "pronunciation": "/siʌm/"
     },
     {
       "id": 768,
       "word": "문자",
       "sentence1": "텍스트를 읽어 주세요.",
-      "sentence2": "그녀는 문자 메시지를 썼어요."
+      "sentence2": "그녀는 문자 메시지를 썼어요.",
+      "pronunciation": "/munt͡ɕa/"
     },
     {
       "id": 769,
       "word": "~보다",
       "sentence1": "그녀는 오빠보다 키가 커요.",
-      "sentence2": "이 책이 저것보다 더 좋아요."
+      "sentence2": "이 책이 저것보다 더 좋아요.",
+      "pronunciation": "/~pota/"
     },
     {
       "id": 770,
       "word": "감사하다",
       "sentence1": "감사드리고 싶어요.",
-      "sentence2": "그녀는 제 도움에 감사했어요."
+      "sentence2": "그녀는 제 도움에 감사했어요.",
+      "pronunciation": "/kamsaata/"
     },
     {
       "id": 771,
       "word": "감사",
       "sentence1": "도움 감사해요.",
-      "sentence2": "그녀는 감사하다고 말하고 떠났어요."
+      "sentence2": "그녀는 감사하다고 말하고 떠났어요.",
+      "pronunciation": "/kamsa/"
     },
     {
       "id": 772,
       "word": "저것",
       "sentence1": "저것은 제 책이에요.",
-      "sentence2": "그녀는 올 거라고 말했어요."
+      "sentence2": "그녀는 올 거라고 말했어요.",
+      "pronunciation": "/t͡ɕʌkʌt/"
     },
     {
       "id": 773,
       "word": "그",
       "sentence1": "고양이가 지붕 위에 있어요.",
-      "sentence2": "그녀는 파란 드레스를 좋아해요."
+      "sentence2": "그녀는 파란 드레스를 좋아해요.",
+      "pronunciation": "/kɯ/"
     },
     {
       "id": 774,
       "word": "극장",
       "sentence1": "우리는 극장에 가요.",
-      "sentence2": "그녀는 극장에서 연극 보는 것을 좋아해요."
+      "sentence2": "그녀는 극장에서 연극 보는 것을 좋아해요.",
+      "pronunciation": "/kɯkt͈͡ɕaŋ/"
     },
     {
       "id": 775,
       "word": "그들의",
       "sentence1": "이것은 그들의 집이에요.",
-      "sentence2": "그녀가 그들의 사진을 찍었어요."
+      "sentence2": "그녀가 그들의 사진을 찍었어요.",
+      "pronunciation": "/kɯtɯlɰi/"
     },
     {
       "id": 776,
       "word": "그들을",
       "sentence1": "공원에서 그들을 봤어요.",
-      "sentence2": "그녀가 파티에 그들을 초대했어요."
+      "sentence2": "그녀가 파티에 그들을 초대했어요.",
+      "pronunciation": "/kɯtɯlɯl/"
     },
     {
       "id": 777,
       "word": "그때",
       "sentence1": "그때 가도 돼요.",
-      "sentence2": "그녀는 그때 피곤했어요."
+      "sentence2": "그녀는 그때 피곤했어요.",
+      "pronunciation": "/kɯt͈ɛ/"
     },
     {
       "id": 778,
       "word": "거기",
       "sentence1": "책이 저기에 있어요.",
-      "sentence2": "그녀는 거기 살아요."
+      "sentence2": "그녀는 거기 살아요.",
+      "pronunciation": "/kʌki/"
     },
     {
       "id": 779,
       "word": "그들",
       "sentence1": "그들은 내 친구예요.",
-      "sentence2": "그녀는 그들이 올 거라고 했어요."
+      "sentence2": "그녀는 그들이 올 거라고 했어요.",
+      "pronunciation": "/kɯtɯl/"
     },
     {
       "id": 780,
       "word": "것",
       "sentence1": "저것은 무엇이에요?",
-      "sentence2": "그녀는 가장 좋아하는 것을 잃어버렸어요."
+      "sentence2": "그녀는 가장 좋아하는 것을 잃어버렸어요.",
+      "pronunciation": "/kʌt/"
     },
     {
       "id": 781,
       "word": "생각하다",
       "sentence1": "그것에 대해 생각해 봐야 해요.",
-      "sentence2": "그녀는 당신을 높이 평가해요."
+      "sentence2": "그녀는 당신을 높이 평가해요.",
+      "pronunciation": "/sɛŋkakhata/"
     },
     {
       "id": 782,
       "word": "세 번째",
       "sentence1": "이것은 세 번째 시도예요.",
-      "sentence2": "그녀는 3등으로 마쳤어요."
+      "sentence2": "그녀는 3등으로 마쳤어요.",
+      "pronunciation": "/se pʌnt͈͡ɕɛ/"
     },
     {
       "id": 783,
       "word": "목마른",
       "sentence1": "목이 말라요.",
-      "sentence2": "그녀는 운동 후에 항상 목이 말라요."
+      "sentence2": "그녀는 운동 후에 항상 목이 말라요.",
+      "pronunciation": "/moŋmalɯn/"
     },
     {
       "id": 784,
       "word": "열셋",
       "sentence1": "사과가 열세 개 있어요.",
-      "sentence2": "그녀는 열세 살이에요."
+      "sentence2": "그녀는 열세 살이에요.",
+      "pronunciation": "/jʌls͈et/"
     },
     {
       "id": 785,
       "word": "서른",
       "sentence1": "반에 학생이 서른 명 있어요.",
-      "sentence2": "그녀는 내년에 서른이 돼요."
+      "sentence2": "그녀는 내년에 서른이 돼요.",
+      "pronunciation": "/sʌlɯn/"
     },
     {
       "id": 786,
       "word": "이것",
       "sentence1": "이것은 제 책이에요.",
-      "sentence2": "그녀는 이것이 가장 좋아하는 거라고 했어요."
+      "sentence2": "그녀는 이것이 가장 좋아하는 거라고 했어요.",
+      "pronunciation": "/ikʌt/"
     },
     {
       "id": 787,
       "word": "천",
       "sentence1": "아이디어가 천 개 있어요.",
-      "sentence2": "그녀는 천 달러를 받았어요."
+      "sentence2": "그녀는 천 달러를 받았어요.",
+      "pronunciation": "/t͡ɕhʌn/"
     },
     {
       "id": 788,
       "word": "셋",
       "sentence1": "형제가 세 명 있어요.",
-      "sentence2": "그녀는 세 살이에요."
+      "sentence2": "그녀는 세 살이에요.",
+      "pronunciation": "/set/"
     },
     {
       "id": 789,
       "word": "~을 통해",
       "sentence1": "우리는 공원을 통과했어요.",
-      "sentence2": "그녀는 창문을 통해 봤어요."
+      "sentence2": "그녀는 창문을 통해 봤어요.",
+      "pronunciation": "/~ɯl thoŋhɛ/"
     },
     {
       "id": 790,
       "word": "목요일",
       "sentence1": "목요일이 제일 좋아하는 날이에요.",
-      "sentence2": "그녀는 목요일에 회의가 있어요."
+      "sentence2": "그녀는 목요일에 회의가 있어요.",
+      "pronunciation": "/mokjoil/"
     },
     {
       "id": 791,
       "word": "표",
       "sentence1": "표를 사야 해요.",
-      "sentence2": "그녀는 입구에서 표를 보여 줬어요."
+      "sentence2": "그녀는 입구에서 표를 보여 줬어요.",
+      "pronunciation": "/phjo/"
     },
     {
       "id": 792,
       "word": "시간",
       "sentence1": "몇 시예요?",
-      "sentence2": "그녀는 독서에 많은 시간을 보내요."
+      "sentence2": "그녀는 독서에 많은 시간을 보내요.",
+      "pronunciation": "/sikan/"
     },
     {
       "id": 793,
       "word": "피곤한",
       "sentence1": "피곤해요.",
-      "sentence2": "그녀는 긴 여행 후에 피곤했어요."
+      "sentence2": "그녀는 긴 여행 후에 피곤했어요.",
+      "pronunciation": "/phikonan/"
     },
     {
       "id": 794,
       "word": "제목",
       "sentence1": "그 책의 제목이 뭐예요?",
-      "sentence2": "그녀는 이야기에 눈길을 끄는 제목을 붙였어요."
+      "sentence2": "그녀는 이야기에 눈길을 끄는 제목을 붙였어요.",
+      "pronunciation": "/t͡ɕemok/"
     },
     {
       "id": 795,
       "word": "~에",
       "sentence1": "가게에 가요.",
-      "sentence2": "그녀는 친구에게 책을 줬어요."
+      "sentence2": "그녀는 친구에게 책을 줬어요.",
+      "pronunciation": "/~e/"
     },
     {
       "id": 796,
       "word": "오늘",
       "sentence1": "오늘은 아름다운 날이에요.",
-      "sentence2": "그녀는 오늘 할머니를 방문할 거예요."
+      "sentence2": "그녀는 오늘 할머니를 방문할 거예요.",
+      "pronunciation": "/onɯl/"
     },
     {
       "id": 797,
       "word": "함께",
       "sentence1": "우리는 함께 일할 거예요.",
-      "sentence2": "그녀는 친구들과 함께 게임하는 것을 좋아해요."
+      "sentence2": "그녀는 친구들과 함께 게임하는 것을 좋아해요.",
+      "pronunciation": "/hamk͈e/"
     },
     {
       "id": 798,
       "word": "화장실",
       "sentence1": "화장실이 어디예요?",
-      "sentence2": "그녀는 영화 전에 화장실에 갔어요."
+      "sentence2": "그녀는 영화 전에 화장실에 갔어요.",
+      "pronunciation": "/hwat͡ɕaŋsil/"
     },
     {
       "id": 799,
       "word": "토마토",
       "sentence1": "샐러드에 토마토가 필요해요.",
-      "sentence2": "그녀는 시장에서 토마토를 샀어요."
+      "sentence2": "그녀는 시장에서 토마토를 샀어요.",
+      "pronunciation": "/thomatho/"
     },
     {
       "id": 800,
       "word": "내일",
       "sentence1": "내일 전화할게요.",
-      "sentence2": "그녀는 내일 회의가 있어요."
+      "sentence2": "그녀는 내일 회의가 있어요.",
+      "pronunciation": "/nɛil/"
     },
     {
       "id": 801,
       "word": "오늘 밤",
       "sentence1": "오늘 밤 계획이 있어요.",
-      "sentence2": "그녀는 오늘 밤 집에 있을 거예요."
+      "sentence2": "그녀는 오늘 밤 집에 있을 거예요.",
+      "pronunciation": "/onɯl pam/"
     },
     {
       "id": 802,
       "word": "또한",
       "sentence1": "저도 가고 싶어요.",
-      "sentence2": "그녀도 와요."
+      "sentence2": "그녀도 와요.",
+      "pronunciation": "/t͈oan/"
     },
     {
       "id": 803,
       "word": "이",
       "sentence1": "이가 아파요.",
-      "sentence2": "그녀는 충치가 있어요."
+      "sentence2": "그녀는 충치가 있어요.",
+      "pronunciation": "/i/"
     },
     {
       "id": 804,
       "word": "주제",
       "sentence1": "토론의 주제가 뭐예요?",
-      "sentence2": "그녀는 새로운 주제를 소개했어요."
+      "sentence2": "그녀는 새로운 주제를 소개했어요.",
+      "pronunciation": "/t͡ɕut͡ɕe/"
     },
     {
       "id": 805,
       "word": "관광객",
       "sentence1": "관광객이 많은 사진을 찍었어요.",
-      "sentence2": "그녀는 그 도시의 관광객이에요."
+      "sentence2": "그녀는 그 도시의 관광객이에요.",
+      "pronunciation": "/kwankwaŋkɛk/"
     },
     {
       "id": 806,
       "word": "마을",
       "sentence1": "작은 마을에 살아요.",
-      "sentence2": "그녀는 이 마을에서 자랐어요."
+      "sentence2": "그녀는 이 마을에서 자랐어요.",
+      "pronunciation": "/maɯl/"
     },
     {
       "id": 807,
       "word": "교통",
       "sentence1": "오늘 교통이 혼잡해요.",
-      "sentence2": "그녀는 교통 체증에 갇혔어요."
+      "sentence2": "그녀는 교통 체증에 갇혔어요.",
+      "pronunciation": "/kjothoŋ/"
     },
     {
       "id": 808,
       "word": "기차",
       "sentence1": "기차를 타고 출근할 거예요.",
-      "sentence2": "그녀는 기차를 놓쳤어요."
+      "sentence2": "그녀는 기차를 놓쳤어요.",
+      "pronunciation": "/kit͡ɕha/"
     },
     {
       "id": 809,
       "word": "여행하다",
       "sentence1": "저는 여행을 좋아해요.",
-      "sentence2": "그녀는 여행 일정을 계획하고 있어요."
+      "sentence2": "그녀는 여행 일정을 계획하고 있어요.",
+      "pronunciation": "/jʌɛŋhata/"
     },
     {
       "id": 810,
       "word": "나무",
       "sentence1": "나무가 매우 높아요.",
-      "sentence2": "그녀는 나무를 올랐어요."
+      "sentence2": "그녀는 나무를 올랐어요.",
+      "pronunciation": "/namu/"
     },
     {
       "id": 811,
       "word": "여행",
       "sentence1": "여행을 갈 거예요.",
-      "sentence2": "그녀는 여행을 즐겼어요."
+      "sentence2": "그녀는 여행을 즐겼어요.",
+      "pronunciation": "/jʌɛŋ/"
     },
     {
       "id": 812,
       "word": "바지",
       "sentence1": "새 바지를 샀어요.",
-      "sentence2": "그녀는 파란 바지를 입고 있어요."
+      "sentence2": "그녀는 파란 바지를 입고 있어요.",
+      "pronunciation": "/pat͡ɕi/"
     },
     {
       "id": 813,
       "word": "사실인",
       "sentence1": "그 진술은 사실이에요.",
-      "sentence2": "그녀는 항상 진실을 말해요."
+      "sentence2": "그녀는 항상 진실을 말해요.",
+      "pronunciation": "/sasilin/"
     },
     {
       "id": 814,
       "word": "노력하다",
       "sentence1": "최선을 다할게요.",
-      "sentence2": "그녀는 문제를 해결하려고 노력했어요."
+      "sentence2": "그녀는 문제를 해결하려고 노력했어요.",
+      "pronunciation": "/noljʌkhata/"
     },
     {
       "id": 815,
       "word": "티셔츠",
       "sentence1": "새 티셔츠가 필요해요.",
-      "sentence2": "그녀는 가게에서 티셔츠를 샀어요."
+      "sentence2": "그녀는 가게에서 티셔츠를 샀어요.",
+      "pronunciation": "/thisjʌt͡ɕhɯ/"
     },
     {
       "id": 816,
       "word": "화요일",
       "sentence1": "화요일이 제일 좋아하는 날이에요.",
-      "sentence2": "그녀는 화요일에 회의가 있어요."
+      "sentence2": "그녀는 화요일에 회의가 있어요.",
+      "pronunciation": "/hwajoil/"
     },
     {
       "id": 817,
       "word": "돌리다",
       "sentence1": "불을 꺼 주세요.",
-      "sentence2": "그녀는 페이지를 넘겼어요."
+      "sentence2": "그녀는 페이지를 넘겼어요.",
+      "pronunciation": "/tollita/"
     },
     {
       "id": 818,
       "word": "TV",
       "sentence1": "저녁에 TV를 봐요.",
-      "sentence2": "그녀는 TV를 켰어요."
+      "sentence2": "그녀는 TV를 켰어요.",
+      "pronunciation": "/tv/"
     },
     {
       "id": 819,
       "word": "열둘",
       "sentence1": "1년에 12개월이 있어요.",
-      "sentence2": "그녀는 열두 살이에요."
+      "sentence2": "그녀는 열두 살이에요.",
+      "pronunciation": "/jʌltul/"
     },
     {
       "id": 820,
       "word": "스물",
       "sentence1": "20달러가 있어요.",
-      "sentence2": "그녀는 스무 살이에요."
+      "sentence2": "그녀는 스무 살이에요.",
+      "pronunciation": "/sɯmul/"
     },
     {
       "id": 821,
       "word": "두 번",
       "sentence1": "그 영화를 두 번 봤어요.",
-      "sentence2": "그녀는 한 달에 두 번 부모님을 방문해요."
+      "sentence2": "그녀는 한 달에 두 번 부모님을 방문해요.",
+      "pronunciation": "/tu pʌn/"
     },
     {
       "id": 822,
       "word": "둘",
       "sentence1": "고양이가 두 마리 있어요.",
-      "sentence2": "그녀는 표 두 장을 원해요."
+      "sentence2": "그녀는 표 두 장을 원해요.",
+      "pronunciation": "/tul/"
     },
     {
       "id": 823,
       "word": "종류",
       "sentence1": "어떤 종류의 음악을 좋아해요?",
-      "sentence2": "그녀는 다른 종류의 책을 선호해요."
+      "sentence2": "그녀는 다른 종류의 책을 선호해요.",
+      "pronunciation": "/t͡ɕoŋnju/"
     },
     {
       "id": 824,
       "word": "우산",
       "sentence1": "우산 잊지 마세요.",
-      "sentence2": "그녀는 새 우산을 샀어요."
+      "sentence2": "그녀는 새 우산을 샀어요.",
+      "pronunciation": "/usan/"
     },
     {
       "id": 825,
       "word": "삼촌",
       "sentence1": "삼촌이 뉴욕에 살아요.",
-      "sentence2": "그녀는 지난 여름에 삼촌을 방문했어요."
+      "sentence2": "그녀는 지난 여름에 삼촌을 방문했어요.",
+      "pronunciation": "/samt͡ɕhon/"
     },
     {
       "id": 826,
       "word": "아래에",
       "sentence1": "고양이가 테이블 아래에 있어요.",
-      "sentence2": "그녀는 소파 아래에서 열쇠를 찾았어요."
+      "sentence2": "그녀는 소파 아래에서 열쇠를 찾았어요.",
+      "pronunciation": "/alɛe/"
     },
     {
       "id": 827,
       "word": "이해하다",
       "sentence1": "질문을 이해하지 못해요.",
-      "sentence2": "그녀는 문제를 이해해요."
+      "sentence2": "그녀는 문제를 이해해요.",
+      "pronunciation": "/iɛhata/"
     },
     {
       "id": 828,
       "word": "대학교",
       "sentence1": "그녀는 대학교에서 공부해요.",
-      "sentence2": "그는 대학교를 졸업했어요."
+      "sentence2": "그는 대학교를 졸업했어요.",
+      "pronunciation": "/tɛakk͈jo/"
     },
     {
       "id": 829,
       "word": "~까지",
       "sentence1": "도착할 때까지 기다릴게요.",
-      "sentence2": "그녀는 쇼가 끝날 때까지 있었어요."
+      "sentence2": "그녀는 쇼가 끝날 때까지 있었어요.",
+      "pronunciation": "/~k͈at͡ɕi/"
     },
     {
       "id": 830,
       "word": "위로",
       "sentence1": "고양이가 나무 위로 올라갔어요.",
-      "sentence2": "그녀는 하늘을 올려다봤어요."
+      "sentence2": "그녀는 하늘을 올려다봤어요.",
+      "pronunciation": "/wilo/"
     },
     {
       "id": 831,
       "word": "위층",
       "sentence1": "침실이 위층에 있어요.",
-      "sentence2": "그녀는 공부하러 위층에 갔어요."
+      "sentence2": "그녀는 공부하러 위층에 갔어요.",
+      "pronunciation": "/wit͡ɕhɯŋ/"
     },
     {
       "id": 832,
       "word": "우리를",
       "sentence1": "도와줄 수 있어요?",
-      "sentence2": "그녀가 우리를 파티에 초대했어요."
+      "sentence2": "그녀가 우리를 파티에 초대했어요.",
+      "pronunciation": "/ulilɯl/"
     },
     {
       "id": 833,
       "word": "사용하다",
       "sentence1": "컴퓨터를 사용해야 해요.",
-      "sentence2": "그녀는 휴대폰에서 많은 앱을 사용해요."
+      "sentence2": "그녀는 휴대폰에서 많은 앱을 사용해요.",
+      "pronunciation": "/sajoŋhata/"
     },
     {
       "id": 834,
       "word": "유용한",
       "sentence1": "이 책은 매우 유용해요.",
-      "sentence2": "그녀는 그 정보가 유용하다고 생각했어요."
+      "sentence2": "그녀는 그 정보가 유용하다고 생각했어요.",
+      "pronunciation": "/jujoŋhan/"
     },
     {
       "id": 835,
       "word": "보통",
       "sentence1": "보통 일찍 일어나요.",
-      "sentence2": "그녀는 보통 저녁에 산책을 해요."
+      "sentence2": "그녀는 보통 저녁에 산책을 해요.",
+      "pronunciation": "/pothoŋ/"
     },
     {
       "id": 836,
       "word": "휴가",
       "sentence1": "다음 주에 휴가를 가요.",
-      "sentence2": "그녀는 휴가 동안 여행하는 것을 좋아해요."
+      "sentence2": "그녀는 휴가 동안 여행하는 것을 좋아해요.",
+      "pronunciation": "/hjuka/"
     },
     {
       "id": 837,
       "word": "채소",
       "sentence1": "채소를 많이 먹어요.",
-      "sentence2": "그녀는 채소보다 과일을 선호해요."
+      "sentence2": "그녀는 채소보다 과일을 선호해요.",
+      "pronunciation": "/t͡ɕhɛso/"
     },
     {
       "id": 838,
       "word": "매우",
       "sentence1": "이것은 매우 흥미로운 책이에요.",
-      "sentence2": "그녀는 매우 재능이 있어요."
+      "sentence2": "그녀는 매우 재능이 있어요.",
+      "pronunciation": "/mɛu/"
     },
     {
       "id": 839,
       "word": "비디오",
       "sentence1": "온라인에서 재미있는 비디오를 봤어요.",
-      "sentence2": "그녀는 비디오 만드는 것을 좋아해요."
+      "sentence2": "그녀는 비디오 만드는 것을 좋아해요.",
+      "pronunciation": "/pit͡ɕio/"
     },
     {
       "id": 840,
       "word": "마을",
       "sentence1": "그는 작은 마을에서 자랐어요.",
-      "sentence2": "그녀는 마을에 있는 조부모님을 방문했어요."
+      "sentence2": "그녀는 마을에 있는 조부모님을 방문했어요.",
+      "pronunciation": "/maɯl/"
     },
     {
       "id": 841,
       "word": "방문하다",
       "sentence1": "내일 친구를 방문할 거예요.",
-      "sentence2": "그녀는 지난주에 박물관을 방문했어요."
+      "sentence2": "그녀는 지난주에 박물관을 방문했어요.",
+      "pronunciation": "/paŋmunata/"
     },
     {
       "id": 842,
       "word": "방문객",
       "sentence1": "방문객이 많은 질문을 했어요.",
-      "sentence2": "그녀는 박물관의 단골 방문객이에요."
+      "sentence2": "그녀는 박물관의 단골 방문객이에요.",
+      "pronunciation": "/paŋmunkɛk/"
     },
     {
       "id": 843,
       "word": "기다리다",
       "sentence1": "기다릴게요.",
-      "sentence2": "그녀는 한 시간 동안 기다렸어요."
+      "sentence2": "그녀는 한 시간 동안 기다렸어요.",
+      "pronunciation": "/kitalita/"
     },
     {
       "id": 844,
       "word": "웨이터",
       "sentence1": "웨이터가 주문을 받았어요.",
-      "sentence2": "그녀는 예전에 웨이터로 일했어요."
+      "sentence2": "그녀는 예전에 웨이터로 일했어요.",
+      "pronunciation": "/weithʌ/"
     },
     {
       "id": 845,
       "word": "일어나다",
       "sentence1": "오전 7시에 일어나요.",
-      "sentence2": "그녀는 오늘 늦게 일어났어요."
+      "sentence2": "그녀는 오늘 늦게 일어났어요.",
+      "pronunciation": "/ilʌnata/"
     },
     {
       "id": 846,
       "word": "걷다",
       "sentence1": "공원에서 걷는 것을 좋아해요.",
-      "sentence2": "그녀는 매일 아침 강아지를 산책시켜요."
+      "sentence2": "그녀는 매일 아침 강아지를 산책시켜요.",
+      "pronunciation": "/kʌtt͈a/"
     },
     {
       "id": 847,
       "word": "벽",
       "sentence1": "사진이 벽에 있어요.",
-      "sentence2": "그녀는 벽을 파란색으로 칠했어요."
+      "sentence2": "그녀는 벽을 파란색으로 칠했어요.",
+      "pronunciation": "/pjʌk/"
     },
     {
       "id": 848,
       "word": "원하다",
       "sentence1": "영어를 배우고 싶어요.",
-      "sentence2": "그녀는 새 휴대폰을 원해요."
+      "sentence2": "그녀는 새 휴대폰을 원해요.",
+      "pronunciation": "/wʌnata/"
     },
     {
       "id": 849,
       "word": "따뜻한",
       "sentence1": "수프가 따뜻해요.",
-      "sentence2": "그녀는 따뜻한 날씨를 좋아해요."
+      "sentence2": "그녀는 따뜻한 날씨를 좋아해요.",
+      "pronunciation": "/t͈at͈ɯthan/"
     },
     {
       "id": 850,
       "word": "씻다",
       "sentence1": "손을 씻어야 해요.",
-      "sentence2": "그녀는 매주 차를 세차해요."
+      "sentence2": "그녀는 매주 차를 세차해요.",
+      "pronunciation": "/s͈itt͈a/"
     },
     {
       "id": 851,
       "word": "보다",
       "sentence1": "영화 보는 것을 좋아해요.",
-      "sentence2": "그녀는 어젯밤에 다큐멘터리를 봤어요."
+      "sentence2": "그녀는 어젯밤에 다큐멘터리를 봤어요.",
+      "pronunciation": "/pota/"
     },
     {
       "id": 852,
       "word": "물",
       "sentence1": "물을 많이 마셔요.",
-      "sentence2": "그녀는 식물에 물을 줬어요."
+      "sentence2": "그녀는 식물에 물을 줬어요.",
+      "pronunciation": "/mul/"
     },
     {
       "id": 853,
       "word": "방법",
       "sentence1": "이것이 배우는 가장 좋은 방법이에요.",
-      "sentence2": "그녀는 문제를 해결하는 새로운 방법을 찾았어요."
+      "sentence2": "그녀는 문제를 해결하는 새로운 방법을 찾았어요.",
+      "pronunciation": "/paŋpʌp/"
     },
     {
       "id": 854,
       "word": "우리",
       "sentence1": "우리는 공원에 가요.",
-      "sentence2": "그들이 우리를 결혼식에 초대했어요."
+      "sentence2": "그들이 우리를 결혼식에 초대했어요.",
+      "pronunciation": "/uli/"
     },
     {
       "id": 855,
       "word": "입다",
       "sentence1": "편한 옷을 입는 것을 좋아해요.",
-      "sentence2": "그녀는 파티에 아름다운 드레스를 입었어요."
+      "sentence2": "그녀는 파티에 아름다운 드레스를 입었어요.",
+      "pronunciation": "/ipt͈a/"
     },
     {
       "id": 856,
       "word": "날씨",
       "sentence1": "오늘 날씨가 좋아요.",
-      "sentence2": "그녀는 일기 예보를 확인했어요."
+      "sentence2": "그녀는 일기 예보를 확인했어요.",
+      "pronunciation": "/nals͈i/"
     },
     {
       "id": 857,
       "word": "웹사이트",
       "sentence1": "유용한 웹사이트를 찾았어요.",
-      "sentence2": "그녀는 사업을 위해 웹사이트를 만들었어요."
+      "sentence2": "그녀는 사업을 위해 웹사이트를 만들었어요.",
+      "pronunciation": "/weps͈aithɯ/"
     },
     {
       "id": 858,
       "word": "수요일",
       "sentence1": "수요일이 제일 좋아하는 날이에요.",
-      "sentence2": "그녀는 수요일에 회의가 있어요."
+      "sentence2": "그녀는 수요일에 회의가 있어요.",
+      "pronunciation": "/sujoil/"
     },
     {
       "id": 859,
       "word": "주",
       "sentence1": "일주일에 5일 일해요.",
-      "sentence2": "그녀는 다음 주에 휴가를 가요."
+      "sentence2": "그녀는 다음 주에 휴가를 가요.",
+      "pronunciation": "/t͡ɕu/"
     },
     {
       "id": 860,
       "word": "주말",
       "sentence1": "주말에 쉬는 것을 좋아해요.",
-      "sentence2": "그녀는 주말 계획이 있어요."
+      "sentence2": "그녀는 주말 계획이 있어요.",
+      "pronunciation": "/t͡ɕumal/"
     },
     {
       "id": 861,
       "word": "환영",
       "sentence1": "우리 집에 오신 것을 환영해요!",
-      "sentence2": "그녀는 손님들에게 환영한다고 말했어요."
+      "sentence2": "그녀는 손님들에게 환영한다고 말했어요.",
+      "pronunciation": "/hwanjʌŋ/"
     },
     {
       "id": 862,
       "word": "잘",
       "sentence1": "잘 지내길 바라요.",
-      "sentence2": "그녀는 오늘 기분이 좋아요."
+      "sentence2": "그녀는 오늘 기분이 좋아요.",
+      "pronunciation": "/t͡ɕal/"
     },
     {
       "id": 863,
       "word": "서쪽",
       "sentence1": "해가 서쪽으로 져요.",
-      "sentence2": "그녀는 서해안으로 여행했어요."
+      "sentence2": "그녀는 서해안으로 여행했어요.",
+      "pronunciation": "/sʌt͈͡ɕok/"
     },
     {
       "id": 864,
       "word": "무엇",
       "sentence1": "이름이 뭐예요?",
-      "sentence2": "그녀는 몇 시인지 물었어요."
+      "sentence2": "그녀는 몇 시인지 물었어요.",
+      "pronunciation": "/muʌt/"
     },
     {
       "id": 865,
       "word": "언제",
       "sentence1": "생일이 언제예요?",
-      "sentence2": "그녀는 언제 도착할지 말하지 않았어요."
+      "sentence2": "그녀는 언제 도착할지 말하지 않았어요.",
+      "pronunciation": "/ʌnt͡ɕe/"
     },
     {
       "id": 866,
       "word": "어디",
       "sentence1": "어디 살아요?",
-      "sentence2": "그녀는 가장 가까운 역이 어디인지 물었어요."
+      "sentence2": "그녀는 가장 가까운 역이 어디인지 물었어요.",
+      "pronunciation": "/ʌt͡ɕi/"
     },
     {
       "id": 867,
       "word": "어느",
       "sentence1": "어떤 책을 원해요?",
-      "sentence2": "그녀는 어떤 드레스를 좋아하는지 말하지 않았어요."
+      "sentence2": "그녀는 어떤 드레스를 좋아하는지 말하지 않았어요.",
+      "pronunciation": "/ʌnɯ/"
     },
     {
       "id": 868,
       "word": "하얀",
       "sentence1": "하얀 고양이가 자고 있어요.",
-      "sentence2": "그녀는 하얀 드레스를 샀어요."
+      "sentence2": "그녀는 하얀 드레스를 샀어요.",
+      "pronunciation": "/hajan/"
     },
     {
       "id": 869,
       "word": "누구",
       "sentence1": "가장 친한 친구가 누구예요?",
-      "sentence2": "그녀는 누구와 함께 있었는지 말하지 않았어요."
+      "sentence2": "그녀는 누구와 함께 있었는지 말하지 않았어요.",
+      "pronunciation": "/nuku/"
     },
     {
       "id": 870,
       "word": "왜",
       "sentence1": "왜 슬퍼요?",
-      "sentence2": "그녀는 왜 늦었는지 물었어요."
+      "sentence2": "그녀는 왜 늦었는지 물었어요.",
+      "pronunciation": "/wɛ/"
     },
     {
       "id": 871,
       "word": "아내",
       "sentence1": "제 아내는 의사예요.",
-      "sentence2": "그녀는 그의 아내예요."
+      "sentence2": "그녀는 그의 아내예요.",
+      "pronunciation": "/anɛ/"
     },
     {
       "id": 872,
       "word": "~할 것이다",
       "sentence1": "내일 전화할게요.",
-      "sentence2": "그녀는 우리를 도와줄 거라고 했어요."
+      "sentence2": "그녀는 우리를 도와줄 거라고 했어요.",
+      "pronunciation": "/~hal kʌsita/"
     },
     {
       "id": 873,
       "word": "이기다",
       "sentence1": "경기에서 이기고 싶어요.",
-      "sentence2": "그녀는 대회에서 상을 받았어요."
+      "sentence2": "그녀는 대회에서 상을 받았어요.",
+      "pronunciation": "/ikita/"
     },
     {
       "id": 874,
       "word": "창문",
       "sentence1": "창문이 열려 있어요.",
-      "sentence2": "그녀는 창문 밖을 봤어요."
+      "sentence2": "그녀는 창문 밖을 봤어요.",
+      "pronunciation": "/t͡ɕhaŋmun/"
     },
     {
       "id": 875,
       "word": "와인",
       "sentence1": "레드 와인을 마시는 것을 좋아해요.",
-      "sentence2": "그녀는 저녁 식사와 함께 와인을 대접했어요."
+      "sentence2": "그녀는 저녁 식사와 함께 와인을 대접했어요.",
+      "pronunciation": "/wain/"
     },
     {
       "id": 876,
       "word": "겨울",
       "sentence1": "겨울은 제가 가장 좋아하는 계절이에요.",
-      "sentence2": "그녀는 겨울에 스키 타는 것을 즐겨요."
+      "sentence2": "그녀는 겨울에 스키 타는 것을 즐겨요.",
+      "pronunciation": "/kjʌul/"
     },
     {
       "id": 877,
       "word": "~와 함께",
       "sentence1": "친구와 함께 가게에 갔어요.",
-      "sentence2": "그녀는 반 친구들과 함께 공부하고 있어요."
+      "sentence2": "그녀는 반 친구들과 함께 공부하고 있어요.",
+      "pronunciation": "/~wa hamk͈e/"
     },
     {
       "id": 878,
       "word": "~없이",
       "sentence1": "당신 없이는 살 수 없어요.",
-      "sentence2": "그녀는 도움 없이 프로젝트를 완성했어요."
+      "sentence2": "그녀는 도움 없이 프로젝트를 완성했어요.",
+      "pronunciation": "/~ʌps͈i/"
     },
     {
       "id": 879,
       "word": "여자",
       "sentence1": "그 여자는 책을 읽고 있어요.",
-      "sentence2": "그녀는 강한 여자예요."
+      "sentence2": "그녀는 강한 여자예요.",
+      "pronunciation": "/jʌt͡ɕa/"
     },
     {
       "id": 880,
       "word": "멋진",
       "sentence1": "정말 잘했어요!",
-      "sentence2": "그녀는 멋진 미소를 가지고 있어요."
+      "sentence2": "그녀는 멋진 미소를 가지고 있어요.",
+      "pronunciation": "/mʌtt͈͡ɕin/"
     },
     {
       "id": 881,
       "word": "단어",
       "sentence1": "그 단어의 철자를 말해 줄 수 있어요?",
-      "sentence2": "그녀는 사전에서 단어를 찾았어요."
+      "sentence2": "그녀는 사전에서 단어를 찾았어요.",
+      "pronunciation": "/tanʌ/"
     },
     {
       "id": 882,
       "word": "일하다",
       "sentence1": "오늘 밤 늦게까지 일해야 해요.",
-      "sentence2": "그녀는 새 직장을 찾고 있어요."
+      "sentence2": "그녀는 새 직장을 찾고 있어요.",
+      "pronunciation": "/ilata/"
     },
     {
       "id": 883,
       "word": "노동자",
       "sentence1": "노동자가 도로를 수리하고 있어요.",
-      "sentence2": "그녀는 열심히 일하는 사람이에요."
+      "sentence2": "그녀는 열심히 일하는 사람이에요.",
+      "pronunciation": "/notoŋt͡ɕa/"
     },
     {
       "id": 884,
       "word": "세계",
       "sentence1": "세상은 아름다운 곳이에요.",
-      "sentence2": "그녀는 세계 여행을 하고 싶어해요."
+      "sentence2": "그녀는 세계 여행을 하고 싶어해요.",
+      "pronunciation": "/sekje/"
     },
     {
       "id": 885,
       "word": "~할 것이다",
       "sentence1": "커피를 마시고 싶어요.",
-      "sentence2": "그녀는 파티에 올 거라고 했어요."
+      "sentence2": "그녀는 파티에 올 거라고 했어요.",
+      "pronunciation": "/~hal kʌsita/"
     },
     {
       "id": 886,
       "word": "쓰다",
       "sentence1": "저는 이야기를 쓰는 것을 좋아해요.",
-      "sentence2": "그녀는 편지를 쓰고 있어요."
+      "sentence2": "그녀는 편지를 쓰고 있어요.",
+      "pronunciation": "/s͈ɯta/"
     },
     {
       "id": 887,
       "word": "작가",
       "sentence1": "그는 유명한 작가예요.",
-      "sentence2": "그녀는 작가가 되고 싶어해요."
+      "sentence2": "그녀는 작가가 되고 싶어해요.",
+      "pronunciation": "/t͡ɕakk͈a/"
     },
     {
       "id": 888,
       "word": "글쓰기",
       "sentence1": "글쓰기는 제 취미예요.",
-      "sentence2": "그녀는 여가 시간에 글쓰기를 즐겨요."
+      "sentence2": "그녀는 여가 시간에 글쓰기를 즐겨요.",
+      "pronunciation": "/kɯls͈ɯki/"
     },
     {
       "id": 889,
       "word": "틀린",
       "sentence1": "그건 틀린 답이에요.",
-      "sentence2": "그녀는 자신이 틀렸다는 것을 깨달았어요."
+      "sentence2": "그녀는 자신이 틀렸다는 것을 깨달았어요.",
+      "pronunciation": "/thɯllin/"
     },
     {
       "id": 890,
       "word": "응",
       "sentence1": "응, 동의해요.",
-      "sentence2": "그녀는 제안에 응이라고 했어요."
+      "sentence2": "그녀는 제안에 응이라고 했어요.",
+      "pronunciation": "/ɯŋ/"
     },
     {
       "id": 891,
       "word": "년",
       "sentence1": "올해는 힘들었어요.",
-      "sentence2": "그녀는 작년에 졸업했어요."
+      "sentence2": "그녀는 작년에 졸업했어요.",
+      "pronunciation": "/njʌn/"
     },
     {
       "id": 892,
       "word": "노란",
       "sentence1": "노란 꽃이 아름다워요.",
-      "sentence2": "그녀는 노란 드레스를 입었어요."
+      "sentence2": "그녀는 노란 드레스를 입었어요.",
+      "pronunciation": "/nolan/"
     },
     {
       "id": 893,
       "word": "네",
       "sentence1": "네, 이해해요.",
-      "sentence2": "그녀는 초대에 네라고 했어요."
+      "sentence2": "그녀는 초대에 네라고 했어요.",
+      "pronunciation": "/ne/"
     },
     {
       "id": 894,
       "word": "어제",
       "sentence1": "어제 그녀를 봤어요.",
-      "sentence2": "그녀가 어제 전화했어요."
+      "sentence2": "그녀가 어제 전화했어요.",
+      "pronunciation": "/ʌt͡ɕe/"
     },
     {
       "id": 895,
       "word": "당신",
       "sentence1": "당신은 내 가장 친한 친구예요.",
-      "sentence2": "그녀는 당신이 온다고 했어요."
+      "sentence2": "그녀는 당신이 온다고 했어요.",
+      "pronunciation": "/taŋsin/"
     },
     {
       "id": 896,
       "word": "젊은",
       "sentence1": "어린 소년이 놀고 있어요.",
-      "sentence2": "그녀는 젊고 재능이 있어요."
+      "sentence2": "그녀는 젊고 재능이 있어요.",
+      "pronunciation": "/t͡ɕʌlmɯn/"
     },
     {
       "id": 897,
       "word": "당신의",
       "sentence1": "당신 책이 테이블 위에 있어요.",
-      "sentence2": "그녀는 당신의 아이디어가 흥미롭다고 했어요."
+      "sentence2": "그녀는 당신의 아이디어가 흥미롭다고 했어요.",
+      "pronunciation": "/taŋsini/"
     },
     {
       "id": 898,
       "word": "당신 자신",
       "sentence1": "몸조심하세요.",
-      "sentence2": "그녀는 혼자 해냈어요."
+      "sentence2": "그녀는 혼자 해냈어요.",
+      "pronunciation": "/taŋsin t͡ɕasin/"
     }
   ]
 }

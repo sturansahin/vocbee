@@ -10,6 +10,7 @@ export type RootStackParamList = {
   Favorites: undefined;
   ExampleSentences: {
     word: string;
+    pronunciation?: string | null;
     translation: string;
     sentence1: string;
     sentence2: string;
@@ -32,4 +33,3 @@ export interface Level {
   description: string;
   color: string;
 }
-

@@ -4,5203 +4,6070 @@
       "id": 1,
       "word": "能力",
       "sentence1": "她有解决复杂问题的能力。",
-      "sentence2": "他快速适应的能力令人印象深刻。"
+      "sentence2": "他快速适应的能力令人印象深刻。",
+      "pronunciation": "/nɤŋ˧˥ li˥˩/"
     },
     {
       "id": 2,
       "word": "能够",
       "sentence1": "她能够按时完成项目。",
-      "sentence2": "他们能够流利地说三种语言。"
+      "sentence2": "他们能够流利地说三种语言。",
+      "pronunciation": "/nɤŋ˧˥ koʊ˥˩/"
     },
     {
       "id": 3,
       "word": "国外",
       "sentence1": "他在国外学习了一年。",
-      "sentence2": "出国旅行可以是很棒的经历。"
+      "sentence2": "出国旅行可以是很棒的经历。",
+      "pronunciation": "/kwɔ˧˥ waɪ˥˩/"
     },
     {
       "id": 4,
       "word": "接受",
       "sentence1": "我接受你的道歉。",
-      "sentence2": "她被大学录取了。"
+      "sentence2": "她被大学录取了。",
+      "pronunciation": "/tɕjɛ˥ ʂoʊ˥˩/"
     },
     {
       "id": 5,
       "word": "事故",
       "sentence1": "他在车祸中受伤了。",
-      "sentence2": "事故随时可能发生。"
+      "sentence2": "事故随时可能发生。",
+      "pronunciation": "/ʂɨ˥˩ ku˥˩/"
     },
     {
       "id": 6,
       "word": "根据",
       "sentence1": "根据报告，销售额增加了。",
-      "sentence2": "据她说，会议取消了。"
+      "sentence2": "据她说，会议取消了。",
+      "pronunciation": "/kən˥ tɕy˥˩/"
     },
     {
       "id": 7,
       "word": "实现",
       "sentence1": "她努力工作来实现目标。",
-      "sentence2": "他们在项目中取得了巨大成功。"
+      "sentence2": "他们在项目中取得了巨大成功。",
+      "pronunciation": "/ʂɨ˧˥ ɕjɛn˥˩/"
     },
     {
       "id": 8,
       "word": "行动/表现",
       "sentence1": "你需要在这种情况下迅速行动。",
-      "sentence2": "他表现得好像什么都没发生。"
+      "sentence2": "他表现得好像什么都没发生。",
+      "pronunciation": "/ɕiŋ˧˥ tʊŋ˥˩/; /pjɑʊ˧˩˧ ɕjɛn˥˩/"
     },
     {
       "id": 9,
       "word": "积极的",
       "sentence1": "她过着积极的生活方式。",
-      "sentence2": "他在社区里非常活跃。"
+      "sentence2": "他在社区里非常活跃。",
+      "pronunciation": "/tɕi˥ tɕi˧˥ tɤ/"
     },
     {
       "id": 10,
       "word": "实际上",
       "sentence1": "我实际上更喜欢茶而不是咖啡。",
-      "sentence2": "她实际上很有才华。"
+      "sentence2": "她实际上很有才华。",
+      "pronunciation": "/ʂɨ˧˥ tɕi˥˩ ʂɑŋ˥˩/"
     },
     {
       "id": 11,
       "word": "成人",
       "sentence1": "成年人要对自己的行为负责。",
-      "sentence2": "这部电影不适合成年人。"
+      "sentence2": "这部电影不适合成年人。",
+      "pronunciation": "/ʈʂhɤŋ˧˥ ʐən˧˥/"
     },
     {
       "id": 12,
       "word": "优势",
       "sentence1": "有车给你很大的优势。",
-      "sentence2": "她利用了这个机会。"
+      "sentence2": "她利用了这个机会。",
+      "pronunciation": "/joʊ˥ ʂɨ˥˩/"
     },
     {
       "id": 13,
       "word": "冒险",
       "sentence1": "他们在山里进行了一次冒险。",
-      "sentence2": "生活是等待探索的冒险。"
+      "sentence2": "生活是等待探索的冒险。",
+      "pronunciation": "/mɑʊ˥˩ ɕjɛn˧˩˧/"
     },
     {
       "id": 14,
       "word": "宣传",
       "sentence1": "他们决定在网上宣传这个活动。",
-      "sentence2": "有效地宣传你的业务很重要。"
+      "sentence2": "有效地宣传你的业务很重要。",
+      "pronunciation": "/ɕɥœn˥ ʈʂhwan˧˥/"
     },
     {
       "id": 15,
       "word": "广告",
       "sentence1": "我看到了一个新手机的广告。",
-      "sentence2": "广告可以影响我们的购买决定。"
+      "sentence2": "广告可以影响我们的购买决定。",
+      "pronunciation": "/kwɑŋ˧˩˧ kɑʊ˥˩/"
     },
     {
       "id": 16,
       "word": "广告业",
       "sentence1": "她在广告业工作，热爱她的工作。",
-      "sentence2": "广告在商业中起着至关重要的作用。"
+      "sentence2": "广告在商业中起着至关重要的作用。",
+      "pronunciation": "/kwɑŋ˧˩˧ kɑʊ˥˩ jɛ˥˩/"
     },
     {
       "id": 17,
       "word": "影响",
       "sentence1": "天气会影响你的心情。",
-      "sentence2": "他的话深深地影响了她。"
+      "sentence2": "他的话深深地影响了她。",
+      "pronunciation": "/iŋ˧˩˧ ɕjɑŋ˧˩˧/"
     },
     {
       "id": 18,
       "word": "之后",
       "sentence1": "我们可以在课后见面。",
-      "sentence2": "雨后太阳出来了。"
+      "sentence2": "雨后太阳出来了。",
+      "pronunciation": "/ʈʂɨ˥ xoʊ˥˩/"
     },
     {
       "id": 19,
       "word": "反对",
       "sentence1": "她反对周末工作的想法。",
-      "sentence2": "他们与不公正作斗争。"
+      "sentence2": "他们与不公正作斗争。",
+      "pronunciation": "/fan˧˩˧ tweɪ˥˩/"
     },
     {
       "id": 20,
       "word": "啊",
       "sentence1": "啊，我明白你的意思了。",
-      "sentence2": "啊，那很有趣！"
+      "sentence2": "啊，那很有趣！",
+      "pronunciation": "/a˥˩/"
     },
     {
       "id": 21,
       "word": "航空公司",
       "sentence1": "我预订了一家廉价航空公司的航班。",
-      "sentence2": "这家航空公司提供国际航班的优惠。"
+      "sentence2": "这家航空公司提供国际航班的优惠。",
+      "pronunciation": "/xɑŋ˧˥ khʊŋ˥ kʊŋ˥ sɯ˥/"
     },
     {
       "id": 22,
       "word": "活着的",
       "sentence1": "花还活着并且正在盛开。",
-      "sentence2": "他感觉比以往更有活力。"
+      "sentence2": "他感觉比以往更有活力。",
+      "pronunciation": "/xwɔ˧˥ ʈʂɤ tɤ/"
     },
     {
       "id": 23,
       "word": "所有",
       "sentence1": "所有学生必须提交作业。",
-      "sentence2": "她吃了所有的饼干。"
+      "sentence2": "她吃了所有的饼干。",
+      "pronunciation": "/swɔ˧˩˧ joʊ˧˩˧/"
     },
     {
       "id": 24,
       "word": "好的/没关系",
       "sentence1": "一切都好吗？",
-      "sentence2": "寻求帮助是可以的。"
+      "sentence2": "寻求帮助是可以的。",
+      "pronunciation": "/xɑʊ˧˩˧ tɤ/; /meɪ˧˥ kwan˥ ɕi˥˩/"
     },
     {
       "id": 25,
       "word": "允许",
       "sentence1": "他们不允许在大楼内吸烟。",
-      "sentence2": "她允许她的儿子熬夜。"
+      "sentence2": "她允许她的儿子熬夜。",
+      "pronunciation": "/yn˧˩˧ ɕy˧˩˧/"
     },
     {
       "id": 26,
       "word": "几乎",
       "sentence1": "我差点忘了你的生日！",
-      "sentence2": "差不多该走了。"
+      "sentence2": "差不多该走了。",
+      "pronunciation": "/tɕi˥ xu˥/"
     },
     {
       "id": 27,
       "word": "独自",
       "sentence1": "她更喜欢独自工作。",
-      "sentence2": "他在人群中感到孤独。"
+      "sentence2": "他在人群中感到孤独。",
+      "pronunciation": "/tu˧˥ tsɯ˥˩/"
     },
     {
       "id": 28,
       "word": "沿着/随行",
       "sentence1": "我们沿着海滩走。",
-      "sentence2": "她有一个朋友陪她旅行。"
+      "sentence2": "她有一个朋友陪她旅行。",
+      "pronunciation": "/jɛn˧˥ ʈʂɤ/; /sweɪ˧˥ ɕiŋ˧˥/"
     },
     {
       "id": 29,
       "word": "已经",
       "sentence1": "我已经吃过午饭了。",
-      "sentence2": "已经该走了吗？"
+      "sentence2": "已经该走了吗？",
+      "pronunciation": "/i˧˩˧ tɕiŋ˥/"
     },
     {
       "id": 30,
       "word": "替代的",
       "sentence1": "我们需要找到替代解决方案。",
-      "sentence2": "有许多替代能源。"
+      "sentence2": "有许多替代能源。",
+      "pronunciation": "/thi˥˩ taɪ˥˩ tɤ/"
     },
     {
       "id": 31,
       "word": "虽然",
       "sentence1": "虽然下雨，我们还是去散步了。",
-      "sentence2": "虽然她很累，但她完成了项目。"
+      "sentence2": "虽然她很累，但她完成了项目。",
+      "pronunciation": "/sweɪ˥ ʐan˧˥/"
     },
     {
       "id": 32,
       "word": "在...之中",
       "sentence1": "她坐在朋友们中间。",
-      "sentence2": "秘密藏在书页之间。"
+      "sentence2": "秘密藏在书页之间。",
+      "pronunciation": "/tsaɪ˥˩ ... ʈʂɨ˥ ʈʂʊŋ˥/"
     },
     {
       "id": 33,
       "word": "数量",
       "sentence1": "瓶子里的水量很低。",
-      "sentence2": "他向慈善机构捐了一大笔钱。"
+      "sentence2": "他向慈善机构捐了一大笔钱。",
+      "pronunciation": "/ʂu˥˩ ljɑŋ˥˩/"
     },
     {
       "id": 34,
       "word": "古代的",
       "sentence1": "他们在沙漠中发现了古代遗迹。",
-      "sentence2": "古代文明拥有先进的知识。"
+      "sentence2": "古代文明拥有先进的知识。",
+      "pronunciation": "/ku˧˩˧ taɪ˥˩ tɤ/"
     },
     {
       "id": 35,
       "word": "脚踝",
       "sentence1": "她跑步时扭伤了脚踝。",
-      "sentence2": "脚踝受伤可能非常疼痛。"
+      "sentence2": "脚踝受伤可能非常疼痛。",
+      "pronunciation": "/tɕjɑʊ˧˩˧ xwaɪ˧˥/"
     },
     {
       "id": 36,
       "word": "任何",
       "sentence1": "你有任何问题吗？",
-      "sentence2": "我没有剩余的钱了。"
+      "sentence2": "我没有剩余的钱了。",
+      "pronunciation": "/ʐən˥˩ xɤ˧˥/"
     },
     {
       "id": 37,
       "word": "任何人",
       "sentence1": "有人在家吗？",
-      "sentence2": "我不认为有人看到我们。"
+      "sentence2": "我不认为有人看到我们。",
+      "pronunciation": "/ʐən˥˩ xɤ˧˥ ʐən˧˥/"
     },
     {
       "id": 38,
       "word": "再",
       "sentence1": "我吃不下了，我饱了。",
-      "sentence2": "你还有其他问题吗？"
+      "sentence2": "你还有其他问题吗？",
+      "pronunciation": "/tsaɪ˥˩/"
     },
     {
       "id": 39,
       "word": "无论如何",
       "sentence1": "我不喜欢那部电影，但我还是去了。",
-      "sentence2": "无论如何，让我们进入下一个话题。"
+      "sentence2": "无论如何，让我们进入下一个话题。",
+      "pronunciation": "/u˧˥ lwən˥˩ ʐu˧˥ xɤ˧˥/"
     },
     {
       "id": 40,
       "word": "任何地方",
       "sentence1": "我到处找不到我的钥匙。",
-      "sentence2": "你最近去过什么有趣的地方吗？"
+      "sentence2": "你最近去过什么有趣的地方吗？",
+      "pronunciation": "/ʐən˥˩ xɤ˧˥ ti˥˩ fɑŋ˥/"
     },
     {
       "id": 41,
       "word": "应用程序",
       "sentence1": "我在手机上下载了一个新应用。",
-      "sentence2": "这个应用帮助你跟踪支出。"
+      "sentence2": "这个应用帮助你跟踪支出。",
+      "pronunciation": "/iŋ˥˩ jʊŋ˥˩ ʈʂhɤŋ˧˥ ɕy˥˩/"
     },
     {
       "id": 42,
       "word": "看起来/出现",
       "sentence1": "她看起来不太高兴。",
-      "sentence2": "星星在夜晚出现。"
+      "sentence2": "星星在夜晚出现。",
+      "pronunciation": "/khan˥˩ tɕhi˧˩˧ laɪ˧˥/; /ʈʂhu˥ ɕjɛn˥˩/"
     },
     {
       "id": 43,
       "word": "外表",
       "sentence1": "他的外表这些年来发生了变化。",
-      "sentence2": "第一印象基于外表。"
+      "sentence2": "第一印象基于外表。",
+      "pronunciation": "/waɪ˥˩ pjɑʊ˧˩˧/"
     },
     {
       "id": 44,
       "word": "申请",
       "sentence1": "我想申请那份工作。",
-      "sentence2": "你可以在网上申请奖学金。"
+      "sentence2": "你可以在网上申请奖学金。",
+      "pronunciation": "/ʂən˥ tɕhiŋ˧˩˧/"
     },
     {
       "id": 45,
       "word": "建筑师",
       "sentence1": "建筑师设计了一座漂亮的建筑。",
-      "sentence2": "她将来想成为一名建筑师。"
+      "sentence2": "她将来想成为一名建筑师。",
+      "pronunciation": "/tɕjɛn˥˩ ʈʂu˥˩ ʂɨ˥/"
     },
     {
       "id": 46,
       "word": "建筑学",
       "sentence1": "她在大学学习建筑学。",
-      "sentence2": "这座建筑的建筑风格是现代的。"
+      "sentence2": "这座建筑的建筑风格是现代的。",
+      "pronunciation": "/tɕjɛn˥˩ ʈʂu˥˩ ɕɥœ˧˥/"
     },
     {
       "id": 47,
       "word": "争论",
       "sentence1": "他们经常争论政治问题。",
-      "sentence2": "为小事争论不值得。"
+      "sentence2": "为小事争论不值得。",
+      "pronunciation": "/ʈʂɤŋ˥ lwən˥˩/"
     },
     {
       "id": 48,
       "word": "争论",
       "sentence1": "他们昨晚发生了激烈的争论。",
-      "sentence2": "文章的主要论点很清晰。"
+      "sentence2": "文章的主要论点很清晰。",
+      "pronunciation": "/ʈʂɤŋ˥ lwən˥˩/"
     },
     {
       "id": 49,
       "word": "军队",
       "sentence1": "他在军队服役了五年。",
-      "sentence2": "军队正在准备大规模演习。"
+      "sentence2": "军队正在准备大规模演习。",
+      "pronunciation": "/tɕyn˥ tweɪ˥˩/"
     },
     {
       "id": 50,
       "word": "安排",
       "sentence1": "你能把椅子排成圆形吗？",
-      "sentence2": "她安排了与经理的会议。"
+      "sentence2": "她安排了与经理的会议。",
+      "pronunciation": "/an˥ phaɪ˧˥/"
     },
     {
       "id": 51,
       "word": "安排",
       "sentence1": "家具的布置很重要。",
-      "sentence2": "我们需要改变房间的布置。"
+      "sentence2": "我们需要改变房间的布置。",
+      "pronunciation": "/an˥ phaɪ˧˥/"
     },
     {
       "id": 52,
       "word": "作为",
       "sentence1": "她作为老师工作。",
-      "sentence2": "他被称为才华横溢的音乐家。"
+      "sentence2": "他被称为才华横溢的音乐家。",
+      "pronunciation": "/tswɔ˥˩ weɪ˧˥/"
     },
     {
       "id": 53,
       "word": "睡着的",
       "sentence1": "婴儿在婴儿床里睡着了。",
-      "sentence2": "我在电影中睡着了。"
+      "sentence2": "我在电影中睡着了。",
+      "pronunciation": "/ʂweɪ˥˩ ʈʂɤ tɤ/"
     },
     {
       "id": 54,
       "word": "助理",
       "sentence1": "她在办公室做助理。",
-      "sentence2": "助理帮助我完成任务。"
+      "sentence2": "助理帮助我完成任务。",
+      "pronunciation": "/ʈʂu˥˩ li˧˩˧/"
     },
     {
       "id": 55,
       "word": "运动员",
       "sentence1": "他是一名职业运动员。",
-      "sentence2": "运动员需要定期训练。"
+      "sentence2": "运动员需要定期训练。",
+      "pronunciation": "/yn˥˩ tʊŋ˥˩ ɥœn˧˥/"
     },
     {
       "id": 56,
       "word": "攻击",
       "sentence1": "军队对敌人基地发动了攻击。",
-      "sentence2": "这种疾病会攻击免疫系统。"
+      "sentence2": "这种疾病会攻击免疫系统。",
+      "pronunciation": "/kʊŋ˥ tɕi˥/"
     },
     {
       "id": 57,
       "word": "参加",
       "sentence1": "我明天会参加会议。",
-      "sentence2": "有多少人参加了活动？"
+      "sentence2": "有多少人参加了活动？",
+      "pronunciation": "/tshan˥ tɕja˥/"
     },
     {
       "id": 58,
       "word": "注意",
       "sentence1": "请注意说明。",
-      "sentence2": "她的演讲吸引了观众'的注意。"
+      "sentence2": "她的演讲吸引了观众'的注意。",
+      "pronunciation": "/ʈʂu˥˩ i˥˩/"
     },
     {
       "id": 59,
       "word": "有吸引力的",
       "sentence1": "她有迷人的微笑。",
-      "sentence2": "这个广告非常有吸引力。"
+      "sentence2": "这个广告非常有吸引力。",
+      "pronunciation": "/joʊ˧˩˧ ɕi˥ in˧˩˧ li˥˩ tɤ/"
     },
     {
       "id": 60,
       "word": "观众",
       "sentence1": "演出结束后观众鼓掌。",
-      "sentence2": "这部电影受到观众的好评。"
+      "sentence2": "这部电影受到观众的好评。",
+      "pronunciation": "/kwan˥ ʈʂʊŋ˥˩/"
     },
     {
       "id": 61,
       "word": "作者",
       "sentence1": "她是几本畅销小说的作者。",
-      "sentence2": "作者将在活动上签名售书。"
+      "sentence2": "作者将在活动上签名售书。",
+      "pronunciation": "/tswɔ˥˩ ʈʂɤ˧˩˧/"
     },
     {
       "id": 62,
       "word": "可用的",
       "sentence1": "这本书有几种语言版本。",
-      "sentence2": "这个座位有人吗？"
+      "sentence2": "这个座位有人吗？",
+      "pronunciation": "/khɤ˧˩˧ jʊŋ˥˩ tɤ/"
     },
     {
       "id": 63,
       "word": "平均",
       "sentence1": "七月的平均气温很高。",
-      "sentence2": "他在班上成绩中等。"
+      "sentence2": "他在班上成绩中等。",
+      "pronunciation": "/phiŋ˧˥ tɕyn˥/"
     },
     {
       "id": 64,
       "word": "避免",
       "sentence1": "你应该避免吃太多糖。",
-      "sentence2": "他试图回避这个问题。"
+      "sentence2": "他试图回避这个问题。",
+      "pronunciation": "/pi˥˩ mjɛn˧˩˧/"
     },
     {
       "id": 65,
       "word": "奖项",
       "sentence1": "她因表演获得了奖项。",
-      "sentence2": "颁奖典礼将于下周举行。"
+      "sentence2": "颁奖典礼将于下周举行。",
+      "pronunciation": "/tɕjɑŋ˧˩˧ ɕjɑŋ˥˩/"
     },
     {
       "id": 66,
       "word": "糟糕的",
       "sentence1": "今天天气很糟糕。",
-      "sentence2": "我今天工作很糟糕。"
+      "sentence2": "我今天工作很糟糕。",
+      "pronunciation": "/tsɑʊ˥ kɑʊ˥ tɤ/"
     },
     {
       "id": 67,
       "word": "后面/背部",
       "sentence1": "她坐在教室后面。",
-      "sentence2": "他举重时伤了背。"
+      "sentence2": "他举重时伤了背。",
+      "pronunciation": "/xoʊ˥˩ mjɛn˥˩/; /peɪ˥˩ pu˥˩/"
     },
     {
       "id": 68,
       "word": "背景",
       "sentence1": "照片的背景很漂亮。",
-      "sentence2": "她有艺术史的背景。"
+      "sentence2": "她有艺术史的背景。",
+      "pronunciation": "/peɪ˥˩ tɕiŋ˧˩˧/"
     },
     {
       "id": 69,
       "word": "严重地",
       "sentence1": "他在事故中严重受伤。",
-      "sentence2": "她唱歌不好听但很享受。"
+      "sentence2": "她唱歌不好听但很享受。",
+      "pronunciation": "/jɛn˧˥ ʈʂʊŋ˥˩ ti˥˩/"
     },
     {
       "id": 70,
       "word": "酒吧",
       "sentence1": "我们去酒吧喝酒。",
-      "sentence2": "酒吧周五晚上很拥挤。"
+      "sentence2": "酒吧周五晚上很拥挤。",
+      "pronunciation": "/tɕjoʊ˧˩˧ pa˥/"
     },
     {
       "id": 71,
       "word": "棒球",
       "sentence1": "他周末打棒球。",
-      "sentence2": "棒球是美国流行的运动。"
+      "sentence2": "棒球是美国流行的运动。",
+      "pronunciation": "/pɑŋ˥˩ tɕhjoʊ˧˥/"
     },
     {
       "id": 72,
       "word": "基于",
       "sentence1": "这部电影基于真实故事。",
-      "sentence2": "我们的结论基于数据。"
+      "sentence2": "我们的结论基于数据。",
+      "pronunciation": "/tɕi˥ y˧˥/"
     },
     {
       "id": 73,
       "word": "篮球",
       "sentence1": "她每周六打篮球。",
-      "sentence2": "篮球是一项快节奏的运动。"
+      "sentence2": "篮球是一项快节奏的运动。",
+      "pronunciation": "/lan˧˥ tɕhjoʊ˧˥/"
     },
     {
       "id": 74,
       "word": "豆子",
       "sentence1": "我喜欢吃绿豆。",
-      "sentence2": "豆子是蛋白质的良好来源。"
+      "sentence2": "豆子是蛋白质的良好来源。",
+      "pronunciation": "/toʊ˥˩ tsɯ˧˩˧/"
     },
     {
       "id": 75,
       "word": "熊",
       "sentence1": "熊是一种大型而强壮的动物。",
-      "sentence2": "我在森林里看到了一只熊。"
+      "sentence2": "我在森林里看到了一只熊。",
+      "pronunciation": "/ɕjʊŋ˧˥/"
     },
     {
       "id": 76,
       "word": "击败",
       "sentence1": "我们队设法击败了冠军。",
-      "sentence2": "他在决赛中被击败了。"
+      "sentence2": "他在决赛中被击败了。",
+      "pronunciation": "/tɕi˥ paɪ˥˩/"
     },
     {
       "id": 77,
       "word": "牛肉",
       "sentence1": "我更喜欢鸡肉而不是牛肉。",
-      "sentence2": "牛肉是许多菜肴中常见的食材。"
+      "sentence2": "牛肉是许多菜肴中常见的食材。",
+      "pronunciation": "/njoʊ˧˥ ʐoʊ˥˩/"
     },
     {
       "id": 78,
       "word": "之前",
       "sentence1": "我以前从未见过如此美丽的日落。",
-      "sentence2": "请在晚饭前完成作业。"
+      "sentence2": "请在晚饭前完成作业。",
+      "pronunciation": "/ʈʂɨ˥ tɕhjɛn˧˥/"
     },
     {
       "id": 79,
       "word": "表现",
       "sentence1": "孩子们应该学会在公共场合行为得体。",
-      "sentence2": "他在派对上表现不好。"
+      "sentence2": "他在派对上表现不好。",
+      "pronunciation": "/pjɑʊ˧˩˧ ɕjɛn˥˩/"
     },
     {
       "id": 80,
       "word": "行为",
       "sentence1": "她昨天的行为很奇怪。",
-      "sentence2": "我们需要改变对环境的态度。"
+      "sentence2": "我们需要改变对环境的态度。",
+      "pronunciation": "/ɕiŋ˧˥ weɪ˧˥/"
     },
     {
       "id": 81,
       "word": "属于",
       "sentence1": "这本书属于我。",
-      "sentence2": "你觉得你属于这里吗？"
+      "sentence2": "你觉得你属于这里吗？",
+      "pronunciation": "/ʂu˧˩˧ y˧˥/"
     },
     {
       "id": 82,
       "word": "腰带",
       "sentence1": "他穿裤子系了一条黑色腰带。",
-      "sentence2": "安全带对安全非常重要。"
+      "sentence2": "安全带对安全非常重要。",
+      "pronunciation": "/jɑʊ˥ taɪ˥˩/"
     },
     {
       "id": 83,
       "word": "益处",
       "sentence1": "新法律将使许多人受益。",
-      "sentence2": "锻炼有什么好处？"
+      "sentence2": "锻炼有什么好处？",
+      "pronunciation": "/i˥˩ ʈʂhu˥˩/"
     },
     {
       "id": 84,
       "word": "最好的",
       "sentence1": "她是班上最好的学生。",
-      "sentence2": "这是我吃过的最好的披萨。"
+      "sentence2": "这是我吃过的最好的披萨。",
+      "pronunciation": "/tsweɪ˥˩ xɑʊ˧˩˧ tɤ/"
     },
     {
       "id": 85,
       "word": "更好的",
       "sentence1": "我今天感觉比昨天好。",
-      "sentence2": "这个解决方案比前一个好。"
+      "sentence2": "这个解决方案比前一个好。",
+      "pronunciation": "/kɤŋ˥˩ xɑʊ˧˩˧ tɤ/"
     },
     {
       "id": 86,
       "word": "在...之间",
       "sentence1": "公园位于学校和图书馆之间。",
-      "sentence2": "两个提案之间有很大的差异。"
+      "sentence2": "两个提案之间有很大的差异。",
+      "pronunciation": "/tsaɪ˥˩ ... ʈʂɨ˥ tɕjɛn˥/"
     },
     {
       "id": 87,
       "word": "十亿",
       "sentence1": "这家公司价值超过十亿美元。",
-      "sentence2": "宇宙中有数十亿颗星星。"
+      "sentence2": "宇宙中有数十亿颗星星。",
+      "pronunciation": "/ʂɨ˧˥ i˥˩/"
     },
     {
       "id": 88,
       "word": "垃圾箱",
       "sentence1": "请把垃圾放进垃圾箱。",
-      "sentence2": "回收箱满了。"
+      "sentence2": "回收箱满了。",
+      "pronunciation": "/la˥ tɕi˥ ɕjɑŋ˥/"
     },
     {
       "id": 89,
       "word": "生物学",
       "sentence1": "她在大学学习生物学。",
-      "sentence2": "生物学是研究生物的学科。"
+      "sentence2": "生物学是研究生物的学科。",
+      "pronunciation": "/ʂɤŋ˥ u˥˩ ɕɥœ˧˥/"
     },
     {
       "id": 90,
       "word": "出生",
       "sentence1": "婴儿的出生是一件令人高兴的事。",
-      "sentence2": "他们庆祝女儿的出生。"
+      "sentence2": "他们庆祝女儿的出生。",
+      "pronunciation": "/ʈʂhu˥ ʂɤŋ˥/"
     },
     {
       "id": 91,
       "word": "饼干",
       "sentence1": "我喜欢喝茶时吃饼干。",
-      "sentence2": "这些饼干是自制的。"
+      "sentence2": "这些饼干是自制的。",
+      "pronunciation": "/piŋ˧˩˧ kan˥˩/"
     },
     {
       "id": 92,
       "word": "一点",
       "sentence1": "我能吃一点你的巧克力吗？",
-      "sentence2": "只需要再加一点盐。"
+      "sentence2": "只需要再加一点盐。",
+      "pronunciation": "/i˥˩ tjɛn˧˩˧/"
     },
     {
       "id": 93,
       "word": "空白的",
       "sentence1": "请用正确答案填空。",
-      "sentence2": "这一页留空以便做笔记。"
+      "sentence2": "这一页留空以便做笔记。",
+      "pronunciation": "/khʊŋ˥ paɪ˧˥ tɤ/"
     },
     {
       "id": 94,
       "word": "血液",
       "sentence1": "血液对生命至关重要。",
-      "sentence2": "他在医院献了血。"
+      "sentence2": "他在医院献了血。",
+      "pronunciation": "/ɕɥœ˥˩ jɛ˥˩/"
     },
     {
       "id": 95,
       "word": "吹",
       "sentence1": "请吹灭蛋糕上的蜡烛。",
-      "sentence2": "风开始刮得更大了。"
+      "sentence2": "风开始刮得更大了。",
+      "pronunciation": "/ʈʂhweɪ˥/"
     },
     {
       "id": 96,
       "word": "黑板/展示板",
       "sentence1": "老师在黑板上写了课程内容。",
-      "sentence2": "我们需要一块展示板。"
+      "sentence2": "我们需要一块展示板。",
+      "pronunciation": "/xeɪ˥ pan˧˩˧/; /ʈʂan˧˩˧ ʂɨ˥˩ pan˧˩˧/"
     },
     {
       "id": 97,
       "word": "煮沸",
       "sentence1": "请在加入意大利面之前把水烧开。",
-      "sentence2": "鸡蛋大约10分钟就煮熟了。"
+      "sentence2": "鸡蛋大约10分钟就煮熟了。",
+      "pronunciation": "/ʈʂu˧˩˧ feɪ˥˩/"
     },
     {
       "id": 98,
       "word": "骨头",
       "sentence1": "狗在院子里埋了一根骨头。",
-      "sentence2": "人体有206块骨头。"
+      "sentence2": "人体有206块骨头。",
+      "pronunciation": "/ku˧˩˧ thoʊ˧˥/"
     },
     {
       "id": 99,
       "word": "书",
       "sentence1": "我正在读一本很有趣的书。",
-      "sentence2": "她收藏了大量的书。"
+      "sentence2": "她收藏了大量的书。",
+      "pronunciation": "/ʂu˥/"
     },
     {
       "id": 100,
       "word": "借",
       "sentence1": "我能借你的笔吗？",
-      "sentence2": "他从图书馆借了一本书。"
+      "sentence2": "他从图书馆借了一本书。",
+      "pronunciation": "/tɕjɛ˥˩/"
     },
     {
       "id": 101,
       "word": "老板",
       "sentence1": "我的老板非常支持我。",
-      "sentence2": "她是市场团队的老板。"
+      "sentence2": "她是市场团队的老板。",
+      "pronunciation": "/lɑʊ˧˩˧ pan˧˩˧/"
     },
     {
       "id": 102,
       "word": "底部",
       "sentence1": "宝藏埋在海底。",
-      "sentence2": "他坐在楼梯底部。"
+      "sentence2": "他坐在楼梯底部。",
+      "pronunciation": "/ti˧˩˧ pu˥˩/"
     },
     {
       "id": 103,
       "word": "碗",
       "sentence1": "她用大碗盛汤。",
-      "sentence2": "这个碗是陶瓷做的。"
+      "sentence2": "这个碗是陶瓷做的。",
+      "pronunciation": "/wan˧˩˧/"
     },
     {
       "id": 104,
       "word": "大脑",
       "sentence1": "大脑是身体的控制中心。",
-      "sentence2": "他有着聪明的头脑和敏锐的大脑。"
+      "sentence2": "他有着聪明的头脑和敏锐的大脑。",
+      "pronunciation": "/ta˥˩ nɑʊ˧˩˧/"
     },
     {
       "id": 105,
       "word": "桥",
       "sentence1": "这座桥连接河的两岸。",
-      "sentence2": "我们走过桥到对岸。"
+      "sentence2": "我们走过桥到对岸。",
+      "pronunciation": "/tɕhjɑʊ˧˥/"
     },
     {
       "id": 106,
       "word": "明亮的/鲜艳的",
       "sentence1": "今天阳光明媚。",
-      "sentence2": "她穿了一条鲜红色的裙子。"
+      "sentence2": "她穿了一条鲜红色的裙子。",
+      "pronunciation": "/miŋ˧˥ ljɑŋ˥˩ tɤ/; /ɕjɛn˥ jɛn˥˩ tɤ/"
     },
     {
       "id": 107,
       "word": "绝妙的/杰出的",
       "sentence1": "他想出了一个绝妙的主意。",
-      "sentence2": "科学家做出了杰出的发现。"
+      "sentence2": "科学家做出了杰出的发现。",
+      "pronunciation": "/tɕɥœ˧˥ mjɑʊ˥˩ tɤ/; /tɕjɛ˧˥ ʈʂhu˥ tɤ/"
     },
     {
       "id": 108,
       "word": "碎的/骨折的",
       "sentence1": "花瓶碎了。",
-      "sentence2": "他在事故中摔断了手臂。"
+      "sentence2": "他在事故中摔断了手臂。",
+      "pronunciation": "/sweɪ˥˩ tɤ/; /ku˧˩˧ ʈʂɤ˧˥ tɤ/"
     },
     {
       "id": 109,
       "word": "刷子/发刷",
       "sentence1": "她用刷子画画。",
-      "sentence2": "他有一把梳子。"
+      "sentence2": "他有一把梳子。",
+      "pronunciation": "/ʂwa˥ tsɯ˧˩˧/; /fa˥ ʂwa˥/"
     },
     {
       "id": 110,
       "word": "烫伤/燃烧",
       "sentence1": "小心不要被炉子烫伤。",
-      "sentence2": "火会燃烧几个小时。"
+      "sentence2": "火会燃烧几个小时。",
+      "pronunciation": "/thɑŋ˥˩ ʂɑŋ˥/; /ʐan˧˥ ʂɑʊ˥/"
     },
     {
       "id": 111,
       "word": "商人",
       "sentence1": "他是一个成功的商人。",
-      "sentence2": "商人经常因工作出差。"
+      "sentence2": "商人经常因工作出差。",
+      "pronunciation": "/ʂɑŋ˥ ʐən˧˥/"
     },
     {
       "id": 112,
       "word": "按钮/纽扣",
       "sentence1": "请按按钮启动机器。",
-      "sentence2": "她在衬衫上缝了一颗纽扣。"
+      "sentence2": "她在衬衫上缝了一颗纽扣。",
+      "pronunciation": "/an˥˩ njoʊ˧˩˧/; /njoʊ˧˩˧ khoʊ˥˩/"
     },
     {
       "id": 113,
       "word": "露营",
       "sentence1": "我们上周末去山里露营了。",
-      "sentence2": "露营是享受大自然的好方式。"
+      "sentence2": "露营是享受大自然的好方式。",
+      "pronunciation": "/lu˥˩ iŋ˧˥/"
     },
     {
       "id": 114,
       "word": "露营",
       "sentence1": "在森林里露营很平静。",
-      "sentence2": "他们喜欢夏天露营。"
+      "sentence2": "他们喜欢夏天露营。",
+      "pronunciation": "/lu˥˩ iŋ˧˥/"
     },
     {
       "id": 115,
       "word": "能",
       "sentence1": "我游泳游得很好。",
-      "sentence2": "你能帮我完成这个任务吗？"
+      "sentence2": "你能帮我完成这个任务吗？",
+      "pronunciation": "/nɤŋ˧˥/"
     },
     {
       "id": 116,
       "word": "关心",
       "sentence1": "照顾植物很放松。",
-      "sentence2": "她非常关心她的家人。"
+      "sentence2": "她非常关心她的家人。",
+      "pronunciation": "/kwan˥ ɕin˥/"
     },
     {
       "id": 117,
       "word": "小心的",
       "sentence1": "过马路时要小心。",
-      "sentence2": "她说话很谨慎。"
+      "sentence2": "她说话很谨慎。",
+      "pronunciation": "/ɕjɑʊ˧˩˧ ɕin˥ tɤ/"
     },
     {
       "id": 118,
       "word": "小心地",
       "sentence1": "他小心地把花瓶放在桌子上。",
-      "sentence2": "她仔细地听着指示。"
+      "sentence2": "她仔细地听着指示。",
+      "pronunciation": "/ɕjɑʊ˧˩˧ ɕin˥ ti˥˩/"
     },
     {
       "id": 119,
       "word": "地毯",
       "sentence1": "客厅的地毯是新的。",
-      "sentence2": "她彻底清洁了地毯。"
+      "sentence2": "她彻底清洁了地毯。",
+      "pronunciation": "/ti˥˩ than˧˩˧/"
     },
     {
       "id": 120,
       "word": "卡通",
       "sentence1": "我最喜欢的卡通片在电视上播放。",
-      "sentence2": "孩子们看了一部有趣的卡通片。"
+      "sentence2": "孩子们看了一部有趣的卡通片。",
+      "pronunciation": "/kha˧˩˧ thʊŋ˥/"
     },
     {
       "id": 121,
       "word": "情况",
       "sentence1": "紧急情况请打911。",
-      "sentence2": "这是一个需要关注的特殊情况。"
+      "sentence2": "这是一个需要关注的特殊情况。",
+      "pronunciation": "/tɕhiŋ˧˥ khwɑŋ˥˩/"
     },
     {
       "id": 122,
       "word": "现金",
       "sentence1": "我更喜欢付现金。",
-      "sentence2": "你身上有现金吗？"
+      "sentence2": "你身上有现金吗？",
+      "pronunciation": "/ɕjɛn˥˩ tɕin˥/"
     },
     {
       "id": 123,
       "word": "城堡",
       "sentence1": "这座城堡有500多年历史了。",
-      "sentence2": "他们在假期参观了城堡。"
+      "sentence2": "他们在假期参观了城堡。",
+      "pronunciation": "/ʈʂhɤŋ˧˥ pɑʊ˧˩˧/"
     },
     {
       "id": 124,
       "word": "抓住/感染",
       "sentence1": "我试图接住球。",
-      "sentence2": "他上周感冒了。"
+      "sentence2": "他上周感冒了。",
+      "pronunciation": "/ʈʂwa˥ ʈʂu˥˩/; /kan˧˩˧ ʐan˧˩˧/"
     },
     {
       "id": 125,
       "word": "引起",
       "sentence1": "吸烟会导致健康问题。",
-      "sentence2": "大雨导致该地区洪水泛滥。"
+      "sentence2": "大雨导致该地区洪水泛滥。",
+      "pronunciation": "/in˧˩˧ tɕhi˧˩˧/"
     },
     {
       "id": 126,
       "word": "庆祝",
       "sentence1": "我们用烟花庆祝除夕。",
-      "sentence2": "他们用晚餐庆祝周年纪念日。"
+      "sentence2": "他们用晚餐庆祝周年纪念日。",
+      "pronunciation": "/tɕhiŋ˥˩ ʈʂu˥˩/"
     },
     {
       "id": 127,
       "word": "名人",
       "sentence1": "她是著名的名人。",
-      "sentence2": "名人经常参加红毯活动。"
+      "sentence2": "名人经常参加红毯活动。",
+      "pronunciation": "/miŋ˧˥ ʐən˧˥/"
     },
     {
       "id": 128,
       "word": "确定的",
       "sentence1": "我确定我把钥匙放在这里了。",
-      "sentence2": "你确定这个决定吗？"
+      "sentence2": "你确定这个决定吗？",
+      "pronunciation": "/tɕhɥœ˥˩ tiŋ˥˩ tɤ/"
     },
     {
       "id": 129,
       "word": "当然",
       "sentence1": "我当然会帮助你。",
-      "sentence2": "她确实有音乐天赋。"
+      "sentence2": "她确实有音乐天赋。",
+      "pronunciation": "/tɑŋ˥ ʐan˧˥/"
     },
     {
       "id": 130,
       "word": "机会",
       "sentence1": "你有机会赢得奖品。",
-      "sentence2": "抓住机会尝试新事物。"
+      "sentence2": "抓住机会尝试新事物。",
+      "pronunciation": "/tɕi˥ xweɪ˥˩/"
     },
     {
       "id": 131,
       "word": "性格/角色",
       "sentence1": "他性格坚强。",
-      "sentence2": "这本书的主角很有趣。"
+      "sentence2": "这本书的主角很有趣。",
+      "pronunciation": "/ɕiŋ˥˩ kɤ˧˥/; /tɕɥœ˧˥ sɤ˥˩/"
     },
     {
       "id": 132,
       "word": "慈善",
       "sentence1": "他们向慈善机构捐了钱。",
-      "sentence2": "慈善活动对社区很重要。"
+      "sentence2": "慈善活动对社区很重要。",
+      "pronunciation": "/tshɯ˧˥ ʂan˥˩/"
     },
     {
       "id": 133,
       "word": "聊天",
       "sentence1": "我们喝咖啡聊聊吧。",
-      "sentence2": "他们愉快地聊天。"
+      "sentence2": "他们愉快地聊天。",
+      "pronunciation": "/ljɑʊ˧˥ thjɛn˥/"
     },
     {
       "id": 134,
       "word": "检查",
       "sentence1": "请查看你的邮件了解详情。",
-      "sentence2": "我需要检查我的日程。"
+      "sentence2": "我需要检查我的日程。",
+      "pronunciation": "/tɕjɛn˧˩˧ ʈʂha˧˥/"
     },
     {
       "id": 135,
       "word": "厨师",
       "sentence1": "厨师准备了一顿美味的饭菜。",
-      "sentence2": "她想成为专业厨师。"
+      "sentence2": "她想成为专业厨师。",
+      "pronunciation": "/ʈʂhu˧˥ ʂɨ˥/"
     },
     {
       "id": 136,
       "word": "化学",
       "sentence1": "化学是我最喜欢的科目。",
-      "sentence2": "他们进行了化学实验。"
+      "sentence2": "他们进行了化学实验。",
+      "pronunciation": "/xwa˥˩ ɕɥœ˧˥/"
     },
     {
       "id": 137,
       "word": "芯片/碎片",
       "sentence1": "电脑需要一个新芯片。",
-      "sentence2": "她在饼干里发现了一块薯片。"
+      "sentence2": "她在饼干里发现了一块薯片。",
+      "pronunciation": "/ɕin˥ phjɛn˥˩/; /sweɪ˥˩ phjɛn˥˩/"
     },
     {
       "id": 138,
       "word": "选择",
       "sentence1": "你可以在两个选项中选择。",
-      "sentence2": "这是一个艰难的选择。"
+      "sentence2": "这是一个艰难的选择。",
+      "pronunciation": "/ɕɥœn˧˩˧ tsɤ˧˥/"
     },
     {
       "id": 139,
       "word": "教堂",
       "sentence1": "他们每周日去教堂。",
-      "sentence2": "这座教堂建于18世纪。"
+      "sentence2": "这座教堂建于18世纪。",
+      "pronunciation": "/tɕjɑʊ˥˩ thɑŋ˧˥/"
     },
     {
       "id": 140,
       "word": "香烟",
       "sentence1": "他晚饭后抽了一根烟。",
-      "sentence2": "香烟广告在许多国家被禁止。"
+      "sentence2": "香烟广告在许多国家被禁止。",
+      "pronunciation": "/ɕjɑŋ˥ jɛn˥/"
     },
     {
       "id": 141,
       "word": "圆圈",
       "sentence1": "在纸上画一个圆圈。",
-      "sentence2": "孩子们围成一圈坐着。"
+      "sentence2": "孩子们围成一圈坐着。",
+      "pronunciation": "/ɥœn˧˥ tɕhɥœn˥/"
     },
     {
       "id": 142,
       "word": "古典的",
       "sentence1": "我喜欢听古典音乐。",
-      "sentence2": "音乐会以古典作曲家为特色。"
+      "sentence2": "音乐会以古典作曲家为特色。",
+      "pronunciation": "/ku˧˩˧ tjɛn˧˩˧ tɤ/"
     },
     {
       "id": 143,
       "word": "收拾/清楚的",
       "sentence1": "请在晚饭后收拾桌子。",
-      "sentence2": "指示清晰易懂。"
+      "sentence2": "指示清晰易懂。",
+      "pronunciation": "/ʂoʊ˥ ʂɨ˧˥/; /tɕhiŋ˥ ʈʂhu˧˩˧ tɤ/"
     },
     {
       "id": 144,
       "word": "清楚地",
       "sentence1": "她在演讲中说得很清楚。",
-      "sentence2": "我现在可以看清楚了。"
+      "sentence2": "我现在可以看清楚了。",
+      "pronunciation": "/tɕhiŋ˥ ʈʂhu˧˩˧ ti˥˩/"
     },
     {
       "id": 145,
       "word": "聪明的",
       "sentence1": "他是一个聪明的学生。",
-      "sentence2": "她想出了一个聪明的解决方案。"
+      "sentence2": "她想出了一个聪明的解决方案。",
+      "pronunciation": "/tshʊŋ˥ miŋ˧˥ tɤ/"
     },
     {
       "id": 146,
       "word": "气候",
       "sentence1": "气候正在快速变化。",
-      "sentence2": "我们需要采取行动保护气候。"
+      "sentence2": "我们需要采取行动保护气候。",
+      "pronunciation": "/tɕhi˥˩ xoʊ˥˩/"
     },
     {
       "id": 147,
       "word": "关闭/靠近",
       "sentence1": "请随手关门。",
-      "sentence2": "商店离我家很近。"
+      "sentence2": "商店离我家很近。",
+      "pronunciation": "/kwan˥ pi˥˩/; /khɑʊ˥˩ tɕin˥˩/"
     },
     {
       "id": 148,
       "word": "关闭的",
       "sentence1": "商店周日关门。",
-      "sentence2": "请保持门关闭。"
+      "sentence2": "请保持门关闭。",
+      "pronunciation": "/kwan˥ pi˥˩ tɤ/"
     },
     {
       "id": 149,
       "word": "衣服",
       "sentence1": "她为冬天买了新衣服。",
-      "sentence2": "这家店卖各种衣服。"
+      "sentence2": "这家店卖各种衣服。",
+      "pronunciation": "/i˥˩ fu˧˥/"
     },
     {
       "id": 150,
       "word": "云",
       "sentence1": "天空布满了云。",
-      "sentence2": "一片云从头顶飘过。"
+      "sentence2": "一片云从头顶飘过。",
+      "pronunciation": "/yn˧˥/"
     },
     {
       "id": 151,
       "word": "教练",
       "sentence1": "他是篮球教练。",
-      "sentence2": "教练发表了激励人心的演讲。"
+      "sentence2": "教练发表了激励人心的演讲。",
+      "pronunciation": "/tɕjɑʊ˥˩ ljɛn˥˩/"
     },
     {
       "id": 152,
       "word": "海岸",
       "sentence1": "我们沿着海岸走。",
-      "sentence2": "夏天海岸很美。"
+      "sentence2": "夏天海岸很美。",
+      "pronunciation": "/xaɪ˧˩˧ an˥˩/"
     },
     {
       "id": 153,
       "word": "代码",
       "sentence1": "请为程序编写代码。",
-      "sentence2": "代码不能正常工作。"
+      "sentence2": "代码不能正常工作。",
+      "pronunciation": "/taɪ˥˩ ma˧˩˧/"
     },
     {
       "id": 154,
       "word": "同事",
       "sentence1": "我的同事非常乐于助人。",
-      "sentence2": "我们经常与同事合作。"
+      "sentence2": "我们经常与同事合作。",
+      "pronunciation": "/thʊŋ˧˥ ʂɨ˥˩/"
     },
     {
       "id": 155,
       "word": "收集",
       "sentence1": "我喜欢集邮。",
-      "sentence2": "他们为研究收集数据。"
+      "sentence2": "他们为研究收集数据。",
+      "pronunciation": "/ʂoʊ˥ tɕi˧˥/"
     },
     {
       "id": 156,
       "word": "列",
       "sentence1": "这个表格有三列。",
-      "sentence2": "请填写第一列。"
+      "sentence2": "请填写第一列。",
+      "pronunciation": "/ljɛ˥˩/"
     },
     {
       "id": 157,
       "word": "喜剧",
       "sentence1": "我喜欢看喜剧电影。",
-      "sentence2": "这部戏是一部搞笑喜剧。"
+      "sentence2": "这部戏是一部搞笑喜剧。",
+      "pronunciation": "/ɕi˧˩˧ tɕy˥˩/"
     },
     {
       "id": 158,
       "word": "舒适的",
       "sentence1": "这把椅子很舒服。",
-      "sentence2": "我穿新衣服感觉很舒服。"
+      "sentence2": "我穿新衣服感觉很舒服。",
+      "pronunciation": "/ʂu˥ ʂɨ˥˩ tɤ/"
     },
     {
       "id": 159,
       "word": "评论",
       "sentence1": "她对这部电影发表了评论。",
-      "sentence2": "请在下面留下你的评论。"
+      "sentence2": "请在下面留下你的评论。",
+      "pronunciation": "/phiŋ˧˥ lwən˥˩/"
     },
     {
       "id": 160,
       "word": "交流",
       "sentence1": "清楚地交流很重要。",
-      "sentence2": "他们用手语交流。"
+      "sentence2": "他们用手语交流。",
+      "pronunciation": "/tɕjɑʊ˥ ljoʊ˧˥/"
     },
     {
       "id": 161,
       "word": "社区",
       "sentence1": "社区团结起来帮助。",
-      "sentence2": "她在当地社区非常活跃。"
+      "sentence2": "她在当地社区非常活跃。",
+      "pronunciation": "/ʂɤ˥˩ tɕhy˥/"
     },
     {
       "id": 162,
       "word": "竞争",
       "sentence1": "许多运动员参加奥运会比赛。",
-      "sentence2": "与自己竞争是健康的。"
+      "sentence2": "与自己竞争是健康的。",
+      "pronunciation": "/tɕiŋ˥˩ ʈʂɤŋ˥/"
     },
     {
       "id": 163,
       "word": "比赛",
       "sentence1": "今年的比赛很激烈。",
-      "sentence2": "她在比赛中获得了一等奖。"
+      "sentence2": "她在比赛中获得了一等奖。",
+      "pronunciation": "/pi˧˩˧ saɪ˥˩/"
     },
     {
       "id": 164,
       "word": "抱怨",
       "sentence1": "他喜欢抱怨天气。",
-      "sentence2": "请不要抱怨服务。"
+      "sentence2": "请不要抱怨服务。",
+      "pronunciation": "/pɑʊ˥˩ ɥœn˥˩/"
     },
     {
       "id": 165,
       "word": "完全地",
       "sentence1": "我完全忘了会议。",
-      "sentence2": "她对这个消息完全感到惊讶。"
+      "sentence2": "她对这个消息完全感到惊讶。",
+      "pronunciation": "/wan˧˥ tɕhɥœn˧˥ ti˥˩/"
     },
     {
       "id": 166,
       "word": "状况/条件",
       "sentence1": "这辆车状况极好。",
-      "sentence2": "他正在从严重疾病中恢复。"
+      "sentence2": "他正在从严重疾病中恢复。",
+      "pronunciation": "/ʈʂwɑŋ˥˩ khwɑŋ˥˩/; /thjɑʊ˧˥ tɕjɛn˥˩/"
     },
     {
       "id": 167,
       "word": "会议",
       "sentence1": "她参加了一个关于气候变化的会议。",
-      "sentence2": "会议将于下个月举行。"
+      "sentence2": "会议将于下个月举行。",
+      "pronunciation": "/xweɪ˥˩ i˥˩/"
     },
     {
       "id": 168,
       "word": "连接",
       "sentence1": "你需要连接到互联网。",
-      "sentence2": "设备可以无线连接。"
+      "sentence2": "设备可以无线连接。",
+      "pronunciation": "/ljɛn˧˥ tɕjɛ˥/"
     },
     {
       "id": 169,
       "word": "连接的",
       "sentence1": "打印机连接到电脑。",
-      "sentence2": "他们通过共享网络连接。"
+      "sentence2": "他们通过共享网络连接。",
+      "pronunciation": "/ljɛn˧˥ tɕjɛ˥ tɤ/"
     },
     {
       "id": 170,
       "word": "考虑",
       "sentence1": "我需要考虑所有选择。",
-      "sentence2": "你考虑过后果吗？"
+      "sentence2": "你考虑过后果吗？",
+      "pronunciation": "/khɑʊ˧˩˧ ly˥˩/"
     },
     {
       "id": 171,
       "word": "包含",
       "sentence1": "盒子里装着旧照片。",
-      "sentence2": "这份文件可能包含敏感信息。"
+      "sentence2": "这份文件可能包含敏感信息。",
+      "pronunciation": "/pɑʊ˥ xan˧˥/"
     },
     {
       "id": 172,
       "word": "语境/背景",
       "sentence1": "背景对理解很重要。",
-      "sentence2": "请为你的问题提供更多背景。"
+      "sentence2": "请为你的问题提供更多背景。",
+      "pronunciation": "/y˧˩˧ tɕiŋ˥˩/; /peɪ˥˩ tɕiŋ˧˩˧/"
     },
     {
       "id": 173,
       "word": "大陆",
       "sentence1": "非洲是第二大洲。",
-      "sentence2": "这片大陆是许多不同文化的家园。"
+      "sentence2": "这片大陆是许多不同文化的家园。",
+      "pronunciation": "/ta˥˩ lu˥˩/"
     },
     {
       "id": 174,
       "word": "继续",
       "sentence1": "我们午饭后继续开会。",
-      "sentence2": "请继续你的演讲。"
+      "sentence2": "请继续你的演讲。",
+      "pronunciation": "/tɕi˥˩ ɕy˥˩/"
     },
     {
       "id": 175,
       "word": "控制",
       "sentence1": "你需要控制你的情绪。",
-      "sentence2": "遥控器在桌子上。"
+      "sentence2": "遥控器在桌子上。",
+      "pronunciation": "/khʊŋ˥˩ ʈʂɨ˥˩/"
     },
     {
       "id": 176,
       "word": "烹饪",
       "sentence1": "我喜欢做意大利菜。",
-      "sentence2": "她从母亲那里学会了做饭。"
+      "sentence2": "她从母亲那里学会了做饭。",
+      "pronunciation": "/phɤŋ˥ ʐən˥˩/"
     },
     {
       "id": 177,
       "word": "炊具",
       "sentence1": "电饭煲非常方便。",
-      "sentence2": "我需要买一个新炊具。"
+      "sentence2": "我需要买一个新炊具。",
+      "pronunciation": "/ʈʂhweɪ˥ tɕy˥˩/"
     },
     {
       "id": 178,
       "word": "复制",
       "sentence1": "请复印这份文件。",
-      "sentence2": "我需要把这个文件复制到我的电脑上。"
+      "sentence2": "我需要把这个文件复制到我的电脑上。",
+      "pronunciation": "/fu˥˩ ʈʂɨ˥˩/"
     },
     {
       "id": 179,
       "word": "角落",
       "sentence1": "猫躲在角落里。",
-      "sentence2": "请在下一个拐角左转。"
+      "sentence2": "请在下一个拐角左转。",
+      "pronunciation": "/tɕjɑʊ˧˩˧ lwɔ˥˩/"
     },
     {
       "id": 180,
       "word": "正确地",
       "sentence1": "请正确回答问题。",
-      "sentence2": "他正确地拼写了这个单词。"
+      "sentence2": "他正确地拼写了这个单词。",
+      "pronunciation": "/ʈʂɤŋ˥˩ tɕhɥœ˥˩ ti˥˩/"
     },
     {
       "id": 181,
       "word": "数",
       "sentence1": "你能数到十吗？",
-      "sentence2": "我需要数一下参与者的数量。"
+      "sentence2": "我需要数一下参与者的数量。",
+      "pronunciation": "/ʂu˥˩/"
     },
     {
       "id": 182,
       "word": "夫妇",
       "sentence1": "他们是一对可爱的夫妇。",
-      "sentence2": "这对夫妇正在庆祝他们的周年纪念日。"
+      "sentence2": "这对夫妇正在庆祝他们的周年纪念日。",
+      "pronunciation": "/fu˥ fu˥˩/"
     },
     {
       "id": 183,
       "word": "覆盖",
       "sentence1": "请把食物盖上。",
-      "sentence2": "屋顶将覆盖整个房子。"
+      "sentence2": "屋顶将覆盖整个房子。",
+      "pronunciation": "/fu˥˩ kaɪ˥˩/"
     },
     {
       "id": 184,
       "word": "疯狂的",
       "sentence1": "那个想法听起来很疯狂。",
-      "sentence2": "他今天表现得有点疯狂。"
+      "sentence2": "他今天表现得有点疯狂。",
+      "pronunciation": "/fɤŋ˥ khwɑŋ˧˥ tɤ/"
     },
     {
       "id": 185,
       "word": "有创意的",
       "sentence1": "她有创造性思维。",
-      "sentence2": "这个项目需要创造性思维。"
+      "sentence2": "这个项目需要创造性思维。",
+      "pronunciation": "/joʊ˧˩˧ ʈʂhwɑŋ˥˩ i˥˩ tɤ/"
     },
     {
       "id": 186,
       "word": "信用/认可",
       "sentence1": "我需要申请一张信用卡。",
-      "sentence2": "她的工作得到了认可。"
+      "sentence2": "她的工作得到了认可。",
+      "pronunciation": "/ɕin˥˩ jʊŋ˥˩/; /ʐən˥˩ khɤ˧˩˧/"
     },
     {
       "id": 187,
       "word": "犯罪",
       "sentence1": "犯罪率在上升。",
-      "sentence2": "他被判犯有严重罪行。"
+      "sentence2": "他被判犯有严重罪行。",
+      "pronunciation": "/fan˥˩ tsweɪ˥˩/"
     },
     {
       "id": 188,
       "word": "罪犯",
       "sentence1": "罪犯被警察抓住了。",
-      "sentence2": "她是一名刑事律师。"
+      "sentence2": "她是一名刑事律师。",
+      "pronunciation": "/tsweɪ˥˩ fan˥˩/"
     },
     {
       "id": 189,
       "word": "穿过",
       "sentence1": "请小心过马路。",
-      "sentence2": "人行横道用白线标记。"
+      "sentence2": "人行横道用白线标记。",
+      "pronunciation": "/ʈʂhwan˥ kwɔ˥˩/"
     },
     {
       "id": 190,
       "word": "人群",
       "sentence1": "人群为球队欢呼。",
-      "sentence2": "音乐会上有大量人群。"
+      "sentence2": "音乐会上有大量人群。",
+      "pronunciation": "/ʐən˧˥ tɕhyn˧˥/"
     },
     {
       "id": 191,
       "word": "拥挤的",
       "sentence1": "高峰时段火车很拥挤。",
-      "sentence2": "我不喜欢拥挤的地方。"
+      "sentence2": "我不喜欢拥挤的地方。",
+      "pronunciation": "/jʊŋ˥ tɕi˧˩˧ tɤ/"
     },
     {
       "id": 192,
       "word": "哭",
       "sentence1": "伤心时哭是可以的。",
-      "sentence2": "婴儿开始哭了。"
+      "sentence2": "婴儿开始哭了。",
+      "pronunciation": "/khu˥/"
     },
     {
       "id": 193,
       "word": "橱柜",
       "sentence1": "盘子在橱柜里。",
-      "sentence2": "她打开橱柜拿杯子。"
+      "sentence2": "她打开橱柜拿杯子。",
+      "pronunciation": "/ʈʂhu˧˥ kweɪ˥˩/"
     },
     {
       "id": 194,
       "word": "卷曲的",
       "sentence1": "她有一头卷发。",
-      "sentence2": "我更喜欢直发而不是卷发。"
+      "sentence2": "我更喜欢直发而不是卷发。",
+      "pronunciation": "/tɕɥœn˥˩ tɕhy˧˩˧ tɤ/"
     },
     {
       "id": 195,
       "word": "循环/骑行",
       "sentence1": "水循环对环境很重要。",
-      "sentence2": "她每次有机会都会骑自行车。"
+      "sentence2": "她每次有机会都会骑自行车。",
+      "pronunciation": "/ɕyn˧˥ xwan˧˥/; /tɕhi˧˥ ɕiŋ˧˥/"
     },
     {
       "id": 196,
       "word": "每日的",
       "sentence1": "我每天看新闻。",
-      "sentence2": "她有每天遵循的日常习惯。"
+      "sentence2": "她有每天遵循的日常习惯。",
+      "pronunciation": "/meɪ˧˩˧ ʐɨ˥˩ tɤ/"
     },
     {
       "id": 197,
       "word": "危险",
       "sentence1": "小心，前面有危险。",
-      "sentence2": "标志警告有危险。"
+      "sentence2": "标志警告有危险。",
+      "pronunciation": "/weɪ˥ ɕjɛn˧˩˧/"
     },
     {
       "id": 198,
       "word": "黑暗的",
       "sentence1": "外面很黑。",
-      "sentence2": "房间又黑又安静。"
+      "sentence2": "房间又黑又安静。",
+      "pronunciation": "/xeɪ˥ an˥˩ tɤ/"
     },
     {
       "id": 199,
       "word": "数据",
       "sentence1": "数据显示了明显的趋势。",
-      "sentence2": "我们需要仔细分析数据。"
+      "sentence2": "我们需要仔细分析数据。",
+      "pronunciation": "/ʂu˥˩ tɕy˥˩/"
     },
     {
       "id": 200,
       "word": "死的",
       "sentence1": "这棵树死了。",
-      "sentence2": "他在花园里发现了一只死鸟。"
+      "sentence2": "他在花园里发现了一只死鸟。",
+      "pronunciation": "/sɯ˧˩˧ tɤ/"
     },
     {
       "id": 201,
       "word": "交易",
       "sentence1": "经过长时间谈判后我们达成了协议。",
-      "sentence2": "这对双方都是一笔好交易。"
+      "sentence2": "这对双方都是一笔好交易。",
+      "pronunciation": "/tɕjɑʊ˥ i˥˩/"
     },
     {
       "id": 202,
       "word": "亲爱的",
       "sentence1": "她给亲爱的朋友写了一封信。",
-      "sentence2": "他对我很重要。"
+      "sentence2": "他对我很重要。",
+      "pronunciation": "/tɕhin˥ aɪ˥˩ tɤ/"
     },
     {
       "id": 203,
       "word": "死亡",
       "sentence1": "新闻报道了一起突然死亡事件。",
-      "sentence2": "她为宠物的死亡感到悲伤。"
+      "sentence2": "她为宠物的死亡感到悲伤。",
+      "pronunciation": "/sɯ˧˩˧ wɑŋ˧˥/"
     },
     {
       "id": 204,
       "word": "决定",
       "sentence1": "是时候做决定了。",
-      "sentence2": "她面临一个艰难的决定。"
+      "sentence2": "她面临一个艰难的决定。",
+      "pronunciation": "/tɕɥœ˧˥ tiŋ˥˩/"
     },
     {
       "id": 205,
       "word": "深的",
       "sentence1": "这里的水很深。",
-      "sentence2": "他说话前深吸了一口气。"
+      "sentence2": "他说话前深吸了一口气。",
+      "pronunciation": "/ʂən˥ tɤ/"
     },
     {
       "id": 206,
       "word": "肯定地",
       "sentence1": "我肯定会到场。",
-      "sentence2": "她肯定是最佳候选人。"
+      "sentence2": "她肯定是最佳候选人。",
+      "pronunciation": "/khən˧˩˧ tiŋ˥˩ ti˥˩/"
     },
     {
       "id": 207,
       "word": "学位/度",
       "sentence1": "他有生物学硕士学位。",
-      "sentence2": "今天温度达到了很高的度数。"
+      "sentence2": "今天温度达到了很高的度数。",
+      "pronunciation": "/ɕɥœ˧˥ weɪ˥˩/; /tu˥˩/"
     },
     {
       "id": 208,
       "word": "牙医",
       "sentence1": "我和牙医有预约。",
-      "sentence2": "她在一家私人诊所当牙医。"
+      "sentence2": "她在一家私人诊所当牙医。",
+      "pronunciation": "/ja˧˥ i˥/"
     },
     {
       "id": 209,
       "word": "部门",
       "sentence1": "他在市场部工作。",
-      "sentence2": "该部门负责客户服务。"
+      "sentence2": "该部门负责客户服务。",
+      "pronunciation": "/pu˥˩ mən˧˥/"
     },
     {
       "id": 210,
       "word": "取决于/依靠",
       "sentence1": "你的成功可能取决于你的努力。",
-      "sentence2": "我依靠朋友们的支持。"
+      "sentence2": "我依靠朋友们的支持。",
+      "pronunciation": "/tɕhy˧˩˧ tɕɥœ˧˥ y˧˥/; /i˧˥ khɑʊ˥˩/"
     },
     {
       "id": 211,
       "word": "沙漠",
       "sentence1": "撒哈拉是世界上最大的热沙漠。",
-      "sentence2": "许多动物已经适应了在沙漠中生活。"
+      "sentence2": "许多动物已经适应了在沙漠中生活。",
+      "pronunciation": "/ʂa˥ mwɔ˥˩/"
     },
     {
       "id": 212,
       "word": "设计师",
       "sentence1": "她是一名时装设计师。",
-      "sentence2": "设计师展示了她的新系列。"
+      "sentence2": "设计师展示了她的新系列。",
+      "pronunciation": "/ʂɤ˥˩ tɕi˥˩ ʂɨ˥/"
     },
     {
       "id": 213,
       "word": "摧毁/破坏",
       "sentence1": "火灾将摧毁这座建筑。",
-      "sentence2": "他们计划拆除旧桥。"
+      "sentence2": "他们计划拆除旧桥。",
+      "pronunciation": "/tshweɪ˥ xweɪ˧˩˧/; /phwɔ˥˩ xwaɪ˥˩/"
     },
     {
       "id": 214,
       "word": "侦探",
       "sentence1": "侦探破了案。",
-      "sentence2": "她长大后想当侦探。"
+      "sentence2": "她长大后想当侦探。",
+      "pronunciation": "/ʈʂən˥ than˥˩/"
     },
     {
       "id": 215,
       "word": "制定/开发",
       "sentence1": "我们需要制定新战略。",
-      "sentence2": "公司计划开发新产品。"
+      "sentence2": "公司计划开发新产品。",
+      "pronunciation": "/ʈʂɨ˥˩ tiŋ˥˩/; /khaɪ˥ fa˥/"
     },
     {
       "id": 216,
       "word": "设备",
       "sentence1": "这个设备可以连接互联网。",
-      "sentence2": "他为电脑买了一个新设备。"
+      "sentence2": "他为电脑买了一个新设备。",
+      "pronunciation": "/ʂɤ˥˩ peɪ˥˩/"
     },
     {
       "id": 217,
       "word": "日记",
       "sentence1": "她写日记记录自己的想法。",
-      "sentence2": "写日记可以治愈心灵。"
+      "sentence2": "写日记可以治愈心灵。",
+      "pronunciation": "/ʐɨ˥˩ tɕi˥˩/"
     },
     {
       "id": 218,
       "word": "不同地",
       "sentence1": "他们以不同的方式处理问题。",
-      "sentence2": "她的想法与同龄人不同。"
+      "sentence2": "她的想法与同龄人不同。",
+      "pronunciation": "/pu˥˩ thʊŋ˧˥ ti˥˩/"
     },
     {
       "id": 219,
       "word": "数字的",
       "sentence1": "数字时代改变了交流方式。",
-      "sentence2": "他更喜欢数字书籍而不是纸质书。"
+      "sentence2": "他更喜欢数字书籍而不是纸质书。",
+      "pronunciation": "/ʂu˥˩ tsɯ˥˩ tɤ/"
     },
     {
       "id": 220,
       "word": "直接的",
       "sentence1": "请给我一个直接的答复。",
-      "sentence2": "前面的路是通往城市的直达路线。"
+      "sentence2": "前面的路是通往城市的直达路线。",
+      "pronunciation": "/ʈʂɨ˧˥ tɕjɛ˥ tɤ/"
     },
     {
       "id": 221,
       "word": "方向",
       "sentence1": "我们应该往哪个方向走？",
-      "sentence2": "指南针显示北方的方向。"
+      "sentence2": "指南针显示北方的方向。",
+      "pronunciation": "/fɑŋ˥ ɕjɑŋ˥˩/"
     },
     {
       "id": 222,
       "word": "导演",
       "sentence1": "导演表现出色。",
-      "sentence2": "她想成为电影导演。"
+      "sentence2": "她想成为电影导演。",
+      "pronunciation": "/tɑʊ˧˩˧ jɛn˧˩˧/"
     },
     {
       "id": 223,
       "word": "不同意",
       "sentence1": "我不同意你的意见。",
-      "sentence2": "他们经常在政治问题上意见不合。"
+      "sentence2": "他们经常在政治问题上意见不合。",
+      "pronunciation": "/pu˥˩ thʊŋ˧˥ i˥˩/"
     },
     {
       "id": 224,
       "word": "消失",
       "sentence1": "魔术师让兔子消失了。",
-      "sentence2": "许多物种面临消失的危险。"
+      "sentence2": "许多物种面临消失的危险。",
+      "pronunciation": "/ɕjɑʊ˥ ʂɨ˥/"
     },
     {
       "id": 225,
       "word": "灾难",
       "sentence1": "地震是一场重大灾难。",
-      "sentence2": "他们正在努力防止未来的灾难。"
+      "sentence2": "他们正在努力防止未来的灾难。",
+      "pronunciation": "/tsaɪ˥ nan˥˩/"
     },
     {
       "id": 226,
       "word": "发现",
       "sentence1": "他们希望发现新的行星。",
-      "sentence2": "她发现了隐藏的绘画天赋。"
+      "sentence2": "她发现了隐藏的绘画天赋。",
+      "pronunciation": "/fa˥ ɕjɛn˥˩/"
     },
     {
       "id": 227,
       "word": "发现",
       "sentence1": "青霉素的发现是医学的转折点。",
-      "sentence2": "他们在遗传学领域取得了重大发现。"
+      "sentence2": "他们在遗传学领域取得了重大发现。",
+      "pronunciation": "/fa˥ ɕjɛn˥˩/"
     },
     {
       "id": 228,
       "word": "讨论",
       "sentence1": "我们讨论了新政策。",
-      "sentence2": "讨论非常有成效。"
+      "sentence2": "讨论非常有成效。",
+      "pronunciation": "/thɑʊ˧˩˧ lwən˥˩/"
     },
     {
       "id": 229,
       "word": "疾病",
       "sentence1": "糖尿病是一种常见疾病。",
-      "sentence2": "他们正在研究这种疾病的治疗方法。"
+      "sentence2": "他们正在研究这种疾病的治疗方法。",
+      "pronunciation": "/tɕi˧˥ piŋ˥˩/"
     },
     {
       "id": 230,
       "word": "距离",
       "sentence1": "两个城市之间的距离是100英里。",
-      "sentence2": "他喜欢远离冲突。"
+      "sentence2": "他喜欢远离冲突。",
+      "pronunciation": "/tɕy˥˩ li˧˥/"
     },
     {
       "id": 231,
       "word": "离婚的",
       "sentence1": "她离婚了，独自生活。",
-      "sentence2": "许多离婚的人发现很难再次约会。"
+      "sentence2": "许多离婚的人发现很难再次约会。",
+      "pronunciation": "/li˧˥ xwən˥ tɤ/"
     },
     {
       "id": 232,
       "word": "文件",
       "sentence1": "请签署这份文件。",
-      "sentence2": "该文件包含重要信息。"
+      "sentence2": "该文件包含重要信息。",
+      "pronunciation": "/wən˧˥ tɕjɛn˥˩/"
     },
     {
       "id": 233,
       "word": "双倍的",
       "sentence1": "我要一杯双份浓缩咖啡。",
-      "sentence2": "价格是去年的两倍。"
+      "sentence2": "价格是去年的两倍。",
+      "pronunciation": "/ʂwɑŋ˥ peɪ˥˩ tɤ/"
     },
     {
       "id": 234,
       "word": "下载",
       "sentence1": "你可以从网站下载文件。",
-      "sentence2": "我需要下载一些软件更新。"
+      "sentence2": "我需要下载一些软件更新。",
+      "pronunciation": "/ɕja˥˩ tsaɪ˥˩/"
     },
     {
       "id": 235,
       "word": "楼下",
       "sentence1": "洗衣房在楼下。",
-      "sentence2": "她下楼去拿挑食。"
+      "sentence2": "她下楼去拿挑食。",
+      "pronunciation": "/loʊ˧˥ ɕja˥˩/"
     },
     {
       "id": 236,
       "word": "戏剧",
       "sentence1": "这部剧是感人的戏剧。",
-      "sentence2": "她喜欢看电视剧。"
+      "sentence2": "她喜欢看电视剧。",
+      "pronunciation": "/ɕi˥˩ tɕy˥˩/"
     },
     {
       "id": 237,
       "word": "绘画",
       "sentence1": "她给我看了她画的风景画。",
-      "sentence2": "绘画是表达创造力的好方式。"
+      "sentence2": "绘画是表达创造力的好方式。",
+      "pronunciation": "/xweɪ˥˩ xwa˥˩/"
     },
     {
       "id": 238,
       "word": "梦",
       "sentence1": "我昨晚做了一个奇怪的梦。",
-      "sentence2": "她希望实现她的梦想。"
+      "sentence2": "她希望实现她的梦想。",
+      "pronunciation": "/mɤŋ˥˩/"
     },
     {
       "id": 239,
       "word": "开车",
       "sentence1": "我喜欢沿着海岸开车。",
-      "sentence2": "他开车兜风放松，清理思绪。"
+      "sentence2": "他开车兜风放松，清理思绪。",
+      "pronunciation": "/khaɪ˥ ʈʂhɤ˥/"
     },
     {
       "id": 240,
       "word": "驾驶",
       "sentence1": "在城市开车可能很有挑战性。",
-      "sentence2": "她喜欢开她的新车。"
+      "sentence2": "她喜欢开她的新车。",
+      "pronunciation": "/tɕja˥˩ ʂɨ˧˩˧/"
     },
     {
       "id": 241,
       "word": "掉落/放弃",
       "sentence1": "请不要把玻璃杯掉下去。",
-      "sentence2": "他决定放弃这个话题继续前进。"
+      "sentence2": "他决定放弃这个话题继续前进。",
+      "pronunciation": "/tjɑʊ˥˩ lwɔ˥˩/; /fɑŋ˥˩ tɕhi˥˩/"
     },
     {
       "id": 242,
       "word": "药物",
       "sentence1": "医生开了一种新药。",
-      "sentence2": "他们正在研究治疗这种疾病的药物。"
+      "sentence2": "他们正在研究治疗这种疾病的药物。",
+      "pronunciation": "/jɑʊ˥˩ u˥˩/"
     },
     {
       "id": 243,
       "word": "干的",
       "sentence1": "衣服在太阳下晒干了。",
-      "sentence2": "沙漠以其干燥的气候闻名。"
+      "sentence2": "沙漠以其干燥的气候闻名。",
+      "pronunciation": "/kan˥˩ tɤ/"
     },
     {
       "id": 244,
       "word": "赚取",
       "sentence1": "她努力工作谋生。",
-      "sentence2": "他希望在工作中获得晋升。"
+      "sentence2": "他希望在工作中获得晋升。",
+      "pronunciation": "/ʈʂwan˥˩ tɕhy˧˩˧/"
     },
     {
       "id": 245,
       "word": "地球",
       "sentence1": "地球绕太阳转。",
-      "sentence2": "许多物种栖息在地球上。"
+      "sentence2": "许多物种栖息在地球上。",
+      "pronunciation": "/ti˥˩ tɕhjoʊ˧˥/"
     },
     {
       "id": 246,
       "word": "容易地",
       "sentence1": "她轻松地解决了问题。",
-      "sentence2": "他很容易适应新环境。"
+      "sentence2": "他很容易适应新环境。",
+      "pronunciation": "/ʐʊŋ˧˥ i˥˩ ti˥˩/"
     },
     {
       "id": 247,
       "word": "教育",
       "sentence1": "教育对个人成长很重要。",
-      "sentence2": "她非常重视她的教育。"
+      "sentence2": "她非常重视她的教育。",
+      "pronunciation": "/tɕjɑʊ˥˩ y˥˩/"
     },
     {
       "id": 248,
       "word": "效果",
       "sentence1": "这药对她的健康有积极影响。",
-      "sentence2": "我们需要评估变化的效果。"
+      "sentence2": "我们需要评估变化的效果。",
+      "pronunciation": "/ɕjɑʊ˥˩ kwɔ˧˩˧/"
     },
     {
       "id": 249,
       "word": "任一",
       "sentence1": "你可以给我打电话或发邮件。",
-      "sentence2": "两个选项对我都可以。"
+      "sentence2": "两个选项对我都可以。",
+      "pronunciation": "/ʐən˥˩ i˥/"
     },
     {
       "id": 250,
       "word": "电动的",
       "sentence1": "电动汽车越来越受欢迎。",
-      "sentence2": "她更喜欢电器因为它们效率高。"
+      "sentence2": "她更喜欢电器因为它们效率高。",
+      "pronunciation": "/tjɛn˥˩ tʊŋ˥˩ tɤ/"
     },
     {
       "id": 251,
       "word": "电气的",
       "sentence1": "电气系统需要更新。",
-      "sentence2": "他在大学学习电气工程。"
+      "sentence2": "他在大学学习电气工程。",
+      "pronunciation": "/tjɛn˥˩ tɕhi˥˩ tɤ/"
     },
     {
       "id": 252,
       "word": "电",
       "sentence1": "电是主要的能源。",
-      "sentence2": "今年电费上涨了。"
+      "sentence2": "今年电费上涨了。",
+      "pronunciation": "/tjɛn˥˩/"
     },
     {
       "id": 253,
       "word": "电子的",
       "sentence1": "电子设备现在被广泛使用。",
-      "sentence2": "她在电子制造业工作。"
+      "sentence2": "她在电子制造业工作。",
+      "pronunciation": "/tjɛn˥˩ tsɯ˧˩˧ tɤ/"
     },
     {
       "id": 254,
       "word": "雇用",
       "sentence1": "公司计划雇用更多员工。",
-      "sentence2": "许多人在服务业就业。"
+      "sentence2": "许多人在服务业就业。",
+      "pronunciation": "/ku˥˩ jʊŋ˥˩/"
     },
     {
       "id": 255,
       "word": "员工",
       "sentence1": "员工因努力工作而受到表彰。",
-      "sentence2": "鼓励员工分享他们的想法。"
+      "sentence2": "鼓励员工分享他们的想法。",
+      "pronunciation": "/ɥœn˧˥ kʊŋ˥/"
     },
     {
       "id": 256,
       "word": "雇主",
       "sentence1": "雇主必须提供安全的工作环境。",
-      "sentence2": "许多雇主提供福利以吸引人才。"
+      "sentence2": "许多雇主提供福利以吸引人才。",
+      "pronunciation": "/ku˥˩ ʈʂu˧˩˧/"
     },
     {
       "id": 257,
       "word": "空的",
       "sentence1": "房间里除了一把椅子什么都没有。",
-      "sentence2": "分手后她感到空虚。"
+      "sentence2": "分手后她感到空虚。",
+      "pronunciation": "/khʊŋ˥ tɤ/"
     },
     {
       "id": 258,
       "word": "结局",
       "sentence1": "电影的结局出人意料。",
-      "sentence2": "她为故事写了一个不同的结局。"
+      "sentence2": "她为故事写了一个不同的结局。",
+      "pronunciation": "/tɕjɛ˧˥ tɕy˧˥/"
     },
     {
       "id": 259,
       "word": "能量",
       "sentence1": "太阳能是可再生资源。",
-      "sentence2": "对于他的年龄来说，他精力充沛。"
+      "sentence2": "对于他的年龄来说，他精力充沛。",
+      "pronunciation": "/nɤŋ˧˥ ljɑŋ˥˩/"
     },
     {
       "id": 260,
       "word": "引擎",
       "sentence1": "引擎是汽车的心脏。",
-      "sentence2": "她听到引擎发出奇怪的声音。"
+      "sentence2": "她听到引擎发出奇怪的声音。",
+      "pronunciation": "/in˧˩˧ tɕhiŋ˧˥/"
     },
     {
       "id": 261,
       "word": "工程师",
       "sentence1": "他是一家科技公司的软件工程师。",
-      "sentence2": "工程师设计和建造复杂的系统。"
+      "sentence2": "工程师设计和建造复杂的系统。",
+      "pronunciation": "/kʊŋ˥ ʈʂhɤŋ˧˥ ʂɨ˥/"
     },
     {
       "id": 262,
       "word": "巨大的",
       "sentence1": "大象是一种巨大的动物。",
-      "sentence2": "他们住在一栋大房子里。"
+      "sentence2": "他们住在一栋大房子里。",
+      "pronunciation": "/tɕy˥˩ ta˥˩ tɤ/"
     },
     {
       "id": 263,
       "word": "进入",
       "sentence1": "请输入密码继续。",
-      "sentence2": "他忘了把数据输入系统。"
+      "sentence2": "他忘了把数据输入系统。",
+      "pronunciation": "/tɕin˥˩ ʐu˥˩/"
     },
     {
       "id": 264,
       "word": "环境",
       "sentence1": "我们必须为子孙后代保护环境。",
-      "sentence2": "公司致力于减少其对环境的影响。"
+      "sentence2": "公司致力于减少其对环境的影响。",
+      "pronunciation": "/xwan˧˥ tɕiŋ˥˩/"
     },
     {
       "id": 265,
       "word": "设备",
       "sentence1": "健身房有很多现代设备。",
-      "sentence2": "他为摄影业务购买了新设备。"
+      "sentence2": "他为摄影业务购买了新设备。",
+      "pronunciation": "/ʂɤ˥˩ peɪ˥˩/"
     },
     {
       "id": 266,
       "word": "错误",
       "sentence1": "代码中有一个错误。",
-      "sentence2": "请在提交前修复错误。"
+      "sentence2": "请在提交前修复错误。",
+      "pronunciation": "/tshwɔ˥˩ u˥˩/"
     },
     {
       "id": 267,
       "word": "尤其",
       "sentence1": "我喜欢水果，尤其是苹果。",
-      "sentence2": "她数学很好，尤其是代数。"
+      "sentence2": "她数学很好，尤其是代数。",
+      "pronunciation": "/joʊ˧˥ tɕhi˧˥/"
     },
     {
       "id": 268,
       "word": "文章",
       "sentence1": "她写了一篇关于气候变化的文章。",
-      "sentence2": "老师布置了一篇500字的文章。"
+      "sentence2": "老师布置了一篇500字的文章。",
+      "pronunciation": "/wən˧˥ ʈʂɑŋ˥/"
     },
     {
       "id": 269,
       "word": "日常的",
       "sentence1": "锻炼应该是你日常生活的一部分。",
-      "sentence2": "她穿日常服装去上班。"
+      "sentence2": "她穿日常服装去上班。",
+      "pronunciation": "/ʐɨ˥˩ ʈʂhɑŋ˧˥ tɤ/"
     },
     {
       "id": 270,
       "word": "到处",
       "sentence1": "我到处找我的钥匙。",
-      "sentence2": "她走到哪里都感觉像在家一样。"
+      "sentence2": "她走到哪里都感觉像在家一样。",
+      "pronunciation": "/tɑʊ˥˩ ʈʂhu˥˩/"
     },
     {
       "id": 271,
       "word": "证据",
       "sentence1": "证据不足以定他的罪。",
-      "sentence2": "没有证据支持这一说法。"
+      "sentence2": "没有证据支持这一说法。",
+      "pronunciation": "/ʈʂɤŋ˥˩ tɕy˥˩/"
     },
     {
       "id": 272,
       "word": "确切的",
       "sentence1": "你能给我确切的尺寸吗？",
-      "sentence2": "确切位置在地图上标出了。"
+      "sentence2": "确切位置在地图上标出了。",
+      "pronunciation": "/tɕhɥœ˥˩ tɕhjɛ˥˩ tɤ/"
     },
     {
       "id": 273,
       "word": "确切地",
       "sentence1": "我不知道到底发生了什么。",
-      "sentence2": "她准时到达了。"
+      "sentence2": "她准时到达了。",
+      "pronunciation": "/tɕhɥœ˥˩ tɕhjɛ˥˩ ti˥˩/"
     },
     {
       "id": 274,
       "word": "优秀的",
       "sentence1": "餐厅的食物很棒。",
-      "sentence2": "她有出色的沟通技巧。"
+      "sentence2": "她有出色的沟通技巧。",
+      "pronunciation": "/joʊ˥ ɕjoʊ˥˩ tɤ/"
     },
     {
       "id": 275,
       "word": "除了",
       "sentence1": "除了约翰，每个人都被邀请了。",
-      "sentence2": "除了香蕉，我喜欢所有水果。"
+      "sentence2": "除了香蕉，我喜欢所有水果。",
+      "pronunciation": "/ʈʂhu˧˥ lɤ/"
     },
     {
       "id": 276,
       "word": "存在",
       "sentence1": "外星人存在吗？",
-      "sentence2": "许多物种生活在热带雨林中。"
+      "sentence2": "许多物种生活在热带雨林中。",
+      "pronunciation": "/tshwən˧˥ tsaɪ˥˩/"
     },
     {
       "id": 277,
       "word": "期望",
       "sentence1": "我期待很快收到回复。",
-      "sentence2": "他们预计本季度销售额会很高。"
+      "sentence2": "他们预计本季度销售额会很高。",
+      "pronunciation": "/tɕhi˥ wɑŋ˥˩/"
     },
     {
       "id": 278,
       "word": "经验",
       "sentence1": "她在市场营销方面有很多经验。",
-      "sentence2": "旅行是获得新体验的好方式。"
+      "sentence2": "旅行是获得新体验的好方式。",
+      "pronunciation": "/tɕiŋ˥ jɛn˥˩/"
     },
     {
       "id": 279,
       "word": "实验",
       "sentence1": "科学家经常通过实验来检验假设。",
-      "sentence2": "实验产生了有趣的结果。"
+      "sentence2": "实验产生了有趣的结果。",
+      "pronunciation": "/ʂɨ˧˥ jɛn˥˩/"
     },
     {
       "id": 280,
       "word": "专家",
       "sentence1": "他是人工智能专家。",
-      "sentence2": "专家提供了宝贵的见解。"
+      "sentence2": "专家提供了宝贵的见解。",
+      "pronunciation": "/ʈʂwan˥ tɕja˥/"
     },
     {
       "id": 281,
       "word": "解释",
       "sentence1": "你能给我解释一下这个问题吗？",
-      "sentence2": "老师的解释非常清楚。"
+      "sentence2": "老师的解释非常清楚。",
+      "pronunciation": "/tɕjɛ˧˩˧ ʂɨ˥˩/"
     },
     {
       "id": 282,
       "word": "表达",
       "sentence1": "她在信中表达了她的感受。",
-      "sentence2": "表达你的想法很重要。"
+      "sentence2": "表达你的想法很重要。",
+      "pronunciation": "/pjɑʊ˧˩˧ ta˧˥/"
     },
     {
       "id": 283,
       "word": "表情",
       "sentence1": "他的面部表情显示出惊讶。",
-      "sentence2": "她有独特的表达方式。"
+      "sentence2": "她有独特的表达方式。",
+      "pronunciation": "/pjɑʊ˧˩˧ tɕhiŋ˧˥/"
     },
     {
       "id": 284,
       "word": "极端的",
       "sentence1": "天气极其炎热。",
-      "sentence2": "他对这件事有极端的看法。"
+      "sentence2": "他对这件事有极端的看法。",
+      "pronunciation": "/tɕi˧˥ twan˥ tɤ/"
     },
     {
       "id": 285,
       "word": "极其",
       "sentence1": "她对结果非常满意。",
-      "sentence2": "这部电影非常有趣。"
+      "sentence2": "这部电影非常有趣。",
+      "pronunciation": "/tɕi˧˥ tɕhi˧˥/"
     },
     {
       "id": 286,
       "word": "因素",
       "sentence1": "许多因素促成成功。",
-      "sentence2": "天气是策划活动的关键因素。"
+      "sentence2": "天气是策划活动的关键因素。",
+      "pronunciation": "/in˥ su˥˩/"
     },
     {
       "id": 287,
       "word": "工厂",
       "sentence1": "这家工厂每年生产数千辆汽车。",
-      "sentence2": "工厂的工作条件有所改善。"
+      "sentence2": "工厂的工作条件有所改善。",
+      "pronunciation": "/kʊŋ˥ ʈʂhɑŋ˧˩˧/"
     },
     {
       "id": 288,
       "word": "失败",
       "sentence1": "如果你失败了，再试一次。",
-      "sentence2": "项目未能达到目标。"
+      "sentence2": "项目未能达到目标。",
+      "pronunciation": "/ʂɨ˥ paɪ˥˩/"
     },
     {
       "id": 289,
       "word": "公平的",
       "sentence1": "比赛公平透明。",
-      "sentence2": "她相信对所有人公平对待。"
+      "sentence2": "她相信对所有人公平对待。",
+      "pronunciation": "/kʊŋ˥ phiŋ˧˥ tɤ/"
     },
     {
       "id": 290,
       "word": "落下",
       "sentence1": "小心不要摔倒。",
-      "sentence2": "秋天树叶从树上落下。"
+      "sentence2": "秋天树叶从树上落下。",
+      "pronunciation": "/lwɔ˥˩ ɕja˥˩/"
     },
     {
       "id": 291,
       "word": "粉丝",
       "sentence1": "他是摇滚音乐的忠实粉丝。",
-      "sentence2": "风扇在吹凉风。"
+      "sentence2": "风扇在吹凉风。",
+      "pronunciation": "/fən˧˩˧ sɯ˥/"
     },
     {
       "id": 292,
       "word": "农场",
       "sentence1": "他们在乡下有一个农场。",
-      "sentence2": "这个农场生产有机蔬菜。"
+      "sentence2": "这个农场生产有机蔬菜。",
+      "pronunciation": "/nʊŋ˧˥ ʈʂhɑŋ˧˩˧/"
     },
     {
       "id": 293,
       "word": "农业",
       "sentence1": "农业是一个重要的行业。",
-      "sentence2": "许多人靠农业为生。"
+      "sentence2": "许多人靠农业为生。",
+      "pronunciation": "/nʊŋ˧˥ jɛ˥˩/"
     },
     {
       "id": 294,
       "word": "时尚",
       "sentence1": "她对时装设计感兴趣。",
-      "sentence2": "时尚潮流变化很快。"
+      "sentence2": "时尚潮流变化很快。",
+      "pronunciation": "/ʂɨ˧˥ ʂɑŋ˥˩/"
     },
     {
       "id": 295,
       "word": "脂肪",
       "sentence1": "这种食物脂肪含量高。",
-      "sentence2": "他正在努力减肥。"
+      "sentence2": "他正在努力减肥。",
+      "pronunciation": "/ʈʂɨ˥ fɑŋ˧˥/"
     },
     {
       "id": 296,
       "word": "恐惧",
       "sentence1": "她恐高。",
-      "sentence2": "恐惧可以是强大的动力。"
+      "sentence2": "恐惧可以是强大的动力。",
+      "pronunciation": "/khʊŋ˧˩˧ tɕy˥˩/"
     },
     {
       "id": 297,
       "word": "特点",
       "sentence1": "新手机有很多令人兴奋的功能。",
-      "sentence2": "软件的主要特点是用户友好。"
+      "sentence2": "软件的主要特点是用户友好。",
+      "pronunciation": "/thɤ˥˩ tjɛn˧˩˧/"
     },
     {
       "id": 298,
       "word": "喂",
       "sentence1": "他们在动物园喂动物。",
-      "sentence2": "定期喂养宠物很重要。"
+      "sentence2": "定期喂养宠物很重要。",
+      "pronunciation": "/weɪ˥˩/"
     },
     {
       "id": 299,
       "word": "女性",
       "sentence1": "雌鸟比雄鸟更鲜艳。",
-      "sentence2": "女性员工占劳动力的很大一部分。"
+      "sentence2": "女性员工占劳动力的很大一部分。",
+      "pronunciation": "/ny˧˩˧ ɕiŋ˥˩/"
     },
     {
       "id": 300,
       "word": "虚构/小说",
       "sentence1": "她喜欢读科幻小说。",
-      "sentence2": "这部电影是虚构作品。"
+      "sentence2": "这部电影是虚构作品。",
+      "pronunciation": "/ɕy˥ koʊ˥˩/; /ɕjɑʊ˧˩˧ ʂwɔ˥/"
     },
     {
       "id": 301,
       "word": "领域/田野",
       "sentence1": "他在医学领域工作。",
-      "sentence2": "春天田野里开满了野花。"
+      "sentence2": "春天田野里开满了野花。",
+      "pronunciation": "/liŋ˧˩˧ y˥˩/; /thjɛn˧˥ jɛ˧˩˧/"
     },
     {
       "id": 302,
       "word": "打架/争夺",
       "sentence1": "他们为一个玩具打架了。",
-      "sentence2": "两位拳击手将争夺冠军头衔。"
+      "sentence2": "两位拳击手将争夺冠军头衔。",
+      "pronunciation": "/ta˧˩˧ tɕja˥˩/; /ʈʂɤŋ˥ twɔ˧˥/"
     },
     {
       "id": 303,
       "word": "人物/身材",
       "sentence1": "这座雕像是历史上著名的人物。",
-      "sentence2": "她身材苗条。"
+      "sentence2": "她身材苗条。",
+      "pronunciation": "/ʐən˧˥ u˥˩/; /ʂən˥ tshaɪ˧˥/"
     },
     {
       "id": 304,
       "word": "电影",
       "sentence1": "他们在电影院看了一部电影。",
-      "sentence2": "这部电影获得了好评。"
+      "sentence2": "这部电影获得了好评。",
+      "pronunciation": "/tjɛn˥˩ iŋ˧˩˧/"
     },
     {
       "id": 305,
       "word": "最后的/决赛",
       "sentence1": "期末考试在下周。",
-      "sentence2": "她赢得了决赛。"
+      "sentence2": "她赢得了决赛。",
+      "pronunciation": "/tsweɪ˥˩ xoʊ˥˩ tɤ/; /tɕɥœ˧˥ saɪ˥˩/"
     },
     {
       "id": 306,
       "word": "终于/最后",
       "sentence1": "终于，项目完成了。",
-      "sentence2": "她终于找到了她的钥匙。"
+      "sentence2": "她终于找到了她的钥匙。",
+      "pronunciation": "/ʈʂʊŋ˥ y˧˥/; /tsweɪ˥˩ xoʊ˥˩/"
     },
     {
       "id": 307,
       "word": "手指",
       "sentence1": "他做饭时伤到了手指。",
-      "sentence2": "她用手指指着。"
+      "sentence2": "她用手指指着。",
+      "pronunciation": "/ʂoʊ˧˩˧ ʈʂɨ˧˩˧/"
     },
     {
       "id": 308,
       "word": "完成",
       "sentence1": "请在晚饭前完成作业。",
-      "sentence2": "他以第一名完成了比赛。"
+      "sentence2": "他以第一名完成了比赛。",
+      "pronunciation": "/wan˧˥ ʈʂhɤŋ˧˥/"
     },
     {
       "id": 309,
       "word": "第一",
       "sentence1": "她是第一个到达派对的人。",
-      "sentence2": "这是我第一次去巴黎。"
+      "sentence2": "这是我第一次去巴黎。",
+      "pronunciation": "/ti˥˩ i˥/"
     },
     {
       "id": 310,
       "word": "首先",
       "sentence1": "首先，我们需要收集所有材料。",
-      "sentence2": "首先，我要感谢大家的到来。"
+      "sentence2": "首先，我要感谢大家的到来。",
+      "pronunciation": "/ʂoʊ˧˩˧ ɕjɛn˥/"
     },
     {
       "id": 311,
       "word": "鱼",
       "sentence1": "我喜欢晚餐吃鱼。",
-      "sentence2": "他在湖里钓到了一条大鱼。"
+      "sentence2": "他在湖里钓到了一条大鱼。",
+      "pronunciation": "/y˧˥/"
     },
     {
       "id": 312,
       "word": "钓鱼",
       "sentence1": "钓鱼是这个地区流行的消遣。",
-      "sentence2": "他们周末去钓鱼了。"
+      "sentence2": "他们周末去钓鱼了。",
+      "pronunciation": "/tjɑʊ˥˩ y˧˥/"
     },
     {
       "id": 313,
       "word": "适合/健康",
       "sentence1": "这双鞋不合我的脚。",
-      "sentence2": "她锻炼身体保持健康。"
+      "sentence2": "她锻炼身体保持健康。",
+      "pronunciation": "/ʂɨ˥˩ xɤ˧˥/; /tɕjɛn˥˩ khɑŋ˥/"
     },
     {
       "id": 314,
       "word": "修理",
       "sentence1": "你能修我的电脑吗？",
-      "sentence2": "他修好了漏水的水龙头。"
+      "sentence2": "他修好了漏水的水龙头。",
+      "pronunciation": "/ɕjoʊ˥ li˧˩˧/"
     },
     {
       "id": 315,
       "word": "平坦/公寓",
       "sentence1": "这片土地平坦，非常适合耕种。",
-      "sentence2": "她住在城里的一套公寓里。"
+      "sentence2": "她住在城里的一套公寓里。",
+      "pronunciation": "/phiŋ˧˥ than˧˩˧/; /kʊŋ˥ y˥˩/"
     },
     {
       "id": 316,
       "word": "流感",
       "sentence1": "我得了流感，不得不待在家里。",
-      "sentence2": "流感在冬天很常见。"
+      "sentence2": "流感在冬天很常见。",
+      "pronunciation": "/ljoʊ˧˥ kan˧˩˧/"
     },
     {
       "id": 317,
       "word": "飞",
       "sentence1": "鸟可以在天空中高飞。",
-      "sentence2": "我看着飞机从头顶飞过。"
+      "sentence2": "我看着飞机从头顶飞过。",
+      "pronunciation": "/feɪ˥/"
     },
     {
       "id": 318,
       "word": "飞行",
       "sentence1": "那只飞翔的鸟吸引了我的注意。",
-      "sentence2": "她喜欢看飞行的昆虫。"
+      "sentence2": "她喜欢看飞行的昆虫。",
+      "pronunciation": "/feɪ˥ ɕiŋ˧˥/"
     },
     {
       "id": 319,
       "word": "专注",
       "sentence1": "你需要专注于学习。",
-      "sentence2": "在这么多噪音中我无法集中注意力。"
+      "sentence2": "在这么多噪音中我无法集中注意力。",
+      "pronunciation": "/ʈʂwan˥ ʈʂu˥˩/"
     },
     {
       "id": 320,
       "word": "接下来的/粉丝",
       "sentence1": "第二天阳光明媚。",
-      "sentence2": "她在社交媒体上有粉丝。"
+      "sentence2": "她在社交媒体上有粉丝。",
+      "pronunciation": "/tɕjɛ˥ ɕja˥˩ laɪ˧˥ tɤ/; /fən˧˩˧ sɯ˥/"
     },
     {
       "id": 321,
       "word": "外国的",
       "sentence1": "他在学习外语。",
-      "sentence2": "这位外国交换生来自西班牙。"
+      "sentence2": "这位外国交换生来自西班牙。",
+      "pronunciation": "/waɪ˥˩ kwɔ˧˥ tɤ/"
     },
     {
       "id": 322,
       "word": "森林",
       "sentence1": "森林是许多动物的家园。",
-      "sentence2": "我们去森林里散步了。"
+      "sentence2": "我们去森林里散步了。",
+      "pronunciation": "/sən˥ lin˧˥/"
     },
     {
       "id": 323,
       "word": "叉子",
       "sentence1": "请把叉子递给我好吗？",
-      "sentence2": "她用叉子吃沙拉。"
+      "sentence2": "她用叉子吃沙拉。",
+      "pronunciation": "/ʈʂha˥ tsɯ˧˩˧/"
     },
     {
       "id": 324,
       "word": "正式的",
       "sentence1": "邀请函是参加正式活动的。",
-      "sentence2": "他穿着正式的西装参加婚礼。"
+      "sentence2": "他穿着正式的西装参加婚礼。",
+      "pronunciation": "/ʈʂɤŋ˥˩ ʂɨ˥˩ tɤ/"
     },
     {
       "id": 325,
       "word": "幸运的是",
       "sentence1": "幸运的是，我们准时到达了。",
-      "sentence2": "幸运的是，她找到了丢失的钱包。"
+      "sentence2": "幸运的是，她找到了丢失的钱包。",
+      "pronunciation": "/ɕiŋ˥˩ yn˥˩ tɤ ʂɨ˥˩/"
     },
     {
       "id": 326,
       "word": "向前",
       "sentence1": "请向前一步发言。",
-      "sentence2": "她向前倾身以便听得更清楚。"
+      "sentence2": "她向前倾身以便听得更清楚。",
+      "pronunciation": "/ɕjɑŋ˥˩ tɕhjɛn˧˥/"
     },
     {
       "id": 327,
       "word": "免费/自由",
       "sentence1": "博物馆周日免费开放。",
-      "sentence2": "她是一个热爱旅行的自由人。"
+      "sentence2": "她是一个热爱旅行的自由人。",
+      "pronunciation": "/mjɛn˧˩˧ feɪ˥˩/; /tsɯ˥˩ joʊ˧˥/"
     },
     {
       "id": 328,
       "word": "新鲜的",
       "sentence1": "我喜欢新鲜面包的味道。",
-      "sentence2": "她从花园里摘了一些鲜花。"
+      "sentence2": "她从花园里摘了一些鲜花。",
+      "pronunciation": "/ɕin˥ ɕjɛn˥ tɤ/"
     },
     {
       "id": 329,
       "word": "冰箱",
       "sentence1": "请把牛奶放进冰箱。",
-      "sentence2": "冰箱里满是剩菜。"
+      "sentence2": "冰箱里满是剩菜。",
+      "pronunciation": "/piŋ˥ ɕjɑŋ˥/"
     },
     {
       "id": 330,
       "word": "青蛙",
       "sentence1": "青蛙跳进了池塘。",
-      "sentence2": "我看到荷叶上有一只绿色的青蛙。"
+      "sentence2": "我看到荷叶上有一只绿色的青蛙。",
+      "pronunciation": "/tɕhiŋ˥ wa˥/"
     },
     {
       "id": 331,
       "word": "有趣",
       "sentence1": "我们在派对上玩得很开心。",
-      "sentence2": "尝试新事物总是很有趣。"
+      "sentence2": "尝试新事物总是很有趣。",
+      "pronunciation": "/joʊ˧˩˧ tɕhy˥˩/"
     },
     {
       "id": 332,
       "word": "家具",
       "sentence1": "他们为客厅买了新家具。",
-      "sentence2": "这家店的家具非常时尚。"
+      "sentence2": "这家店的家具非常时尚。",
+      "pronunciation": "/tɕja˥ tɕy˥˩/"
     },
     {
       "id": 333,
       "word": "进一步",
       "sentence1": "我们需要进一步研究这个问题。",
-      "sentence2": "她进一步推进了研究。"
+      "sentence2": "她进一步推进了研究。",
+      "pronunciation": "/tɕin˥˩ i˧˥ pu˥˩/"
     },
     {
       "id": 334,
       "word": "未来",
       "sentence1": "未来充满可能性。",
-      "sentence2": "他正在规划未来的职业。"
+      "sentence2": "他正在规划未来的职业。",
+      "pronunciation": "/weɪ˥˩ laɪ˧˥/"
     },
     {
       "id": 335,
       "word": "画廊",
       "sentence1": "艺术画廊正在举办新展览。",
-      "sentence2": "她参观了画廊看最新的艺术品。"
+      "sentence2": "她参观了画廊看最新的艺术品。",
+      "pronunciation": "/xwa˥˩ lɑŋ˧˥/"
     },
     {
       "id": 336,
       "word": "间隙/空白",
       "sentence1": "栅栏上有一个缺口。",
-      "sentence2": "我们需要填补知识的空白。"
+      "sentence2": "我们需要填补知识的空白。",
+      "pronunciation": "/tɕjɛn˥ ɕi˥˩/; /khʊŋ˥ paɪ˧˥/"
     },
     {
       "id": 337,
       "word": "气体/汽油",
       "sentence1": "管道正在漏气。",
-      "sentence2": "我们需要为汽车加油。"
+      "sentence2": "我们需要为汽车加油。",
+      "pronunciation": "/tɕhi˥˩ thi˧˩˧/; /tɕhi˥˩ joʊ˧˥/"
     },
     {
       "id": 338,
       "word": "大门",
       "sentence1": "大门晚上上锁。",
-      "sentence2": "请随手关门。"
+      "sentence2": "请随手关门。",
+      "pronunciation": "/ta˥˩ mən˧˥/"
     },
     {
       "id": 339,
       "word": "普遍/总的",
       "sentence1": "普遍意见赞成这个计划。",
-      "sentence2": "他对这个话题有一般的了解。"
+      "sentence2": "他对这个话题有一般的了解。",
+      "pronunciation": "/phu˧˩˧ pjɛn˥˩/; /tsʊŋ˧˩˧ tɤ/"
     },
     {
       "id": 340,
       "word": "礼物",
       "sentence1": "她收到了一份漂亮的生日礼物。",
-      "sentence2": "送一份体贴的礼物总是很好的。"
+      "sentence2": "送一份体贴的礼物总是很好的。",
+      "pronunciation": "/li˧˩˧ u˥˩/"
     },
     {
       "id": 341,
       "word": "目标",
       "sentence1": "我的目标是学一门新语言。",
-      "sentence2": "经过多年的努力，她实现了目标。"
+      "sentence2": "经过多年的努力，她实现了目标。",
+      "pronunciation": "/mu˥˩ pjɑʊ˥/"
     },
     {
       "id": 342,
       "word": "神",
       "sentence1": "许多人相信更高的神。",
-      "sentence2": "海神通常被描绘成强大的。"
+      "sentence2": "海神通常被描绘成强大的。",
+      "pronunciation": "/ʂən˧˥/"
     },
     {
       "id": 343,
       "word": "黄金",
       "sentence1": "金子是贵金属。",
-      "sentence2": "她戴着金项链。"
+      "sentence2": "她戴着金项链。",
+      "pronunciation": "/xwɑŋ˧˥ tɕin˥/"
     },
     {
       "id": 344,
       "word": "高尔夫",
       "sentence1": "他喜欢周末打高尔夫球。",
-      "sentence2": "高尔夫是一项世界流行的运动。"
+      "sentence2": "高尔夫是一项世界流行的运动。",
+      "pronunciation": "/kɑʊ˥ ɑɻ˧˩˧ fu˥/"
     },
     {
       "id": 345,
       "word": "好",
       "sentence1": "她是一个好学生。",
-      "sentence2": "帮助他人总是好的。"
+      "sentence2": "帮助他人总是好的。",
+      "pronunciation": "/xɑʊ˧˩˧/"
     },
     {
       "id": 346,
       "word": "政府",
       "sentence1": "政府正在实施新政策。",
-      "sentence2": "公民有权选举他们的政府。"
+      "sentence2": "公民有权选举他们的政府。",
+      "pronunciation": "/ʈʂɤŋ˥˩ fu˧˩˧/"
     },
     {
       "id": 347,
       "word": "草",
       "sentence1": "孩子们在草地上玩耍。",
-      "sentence2": "草需要修剪了。"
+      "sentence2": "草需要修剪了。",
+      "pronunciation": "/tshɑʊ˧˩˧/"
     },
     {
       "id": 348,
       "word": "问候",
       "sentence1": "见到人时打招呼是有礼貌的。",
-      "sentence2": "她在门口迎接客人。"
+      "sentence2": "她在门口迎接客人。",
+      "pronunciation": "/wən˥˩ xoʊ˥˩/"
     },
     {
       "id": 349,
       "word": "地面",
       "sentence1": "雨后地面是湿的。",
-      "sentence2": "他们坐在地上休息。"
+      "sentence2": "他们坐在地上休息。",
+      "pronunciation": "/ti˥˩ mjɛn˥˩/"
     },
     {
       "id": 350,
       "word": "客人",
       "sentence1": "客房已为访客准备好了。",
-      "sentence2": "这个周末我们有客人住。"
+      "sentence2": "这个周末我们有客人住。",
+      "pronunciation": "/khɤ˥˩ ʐən˧˥/"
     },
     {
       "id": 351,
       "word": "向导/指南",
       "sentence1": "向导带我们参观了这座城市。",
-      "sentence2": "她是博物馆的导游。"
+      "sentence2": "她是博物馆的导游。",
+      "pronunciation": "/ɕjɑŋ˥˩ tɑʊ˧˩˧/; /ʈʂɨ˧˩˧ nan˧˥/"
     },
     {
       "id": 352,
       "word": "枪",
       "sentence1": "警察带着枪。",
-      "sentence2": "枪支管制是一个有争议的问题。"
+      "sentence2": "枪支管制是一个有争议的问题。",
+      "pronunciation": "/tɕhjɑŋ˥/"
     },
     {
       "id": 353,
       "word": "家伙",
       "sentence1": "那个家伙是我哥哥。",
-      "sentence2": "派对上有很多人。"
+      "sentence2": "派对上有很多人。",
+      "pronunciation": "/tɕja˥ xwɔ˧˩˧/"
     },
     {
       "id": 354,
       "word": "习惯",
       "sentence1": "他有咬指甲的习惯。",
-      "sentence2": "改掉坏习惯很重要。"
+      "sentence2": "改掉坏习惯很重要。",
+      "pronunciation": "/ɕi˧˥ kwan˥˩/"
     },
     {
       "id": 355,
       "word": "一半",
       "sentence1": "我吃了一半的披萨。",
-      "sentence2": "她是一半英国人一半西班牙人。"
+      "sentence2": "她是一半英国人一半西班牙人。",
+      "pronunciation": "/i˧˥ pan˥˩/"
     },
     {
       "id": 356,
       "word": "大厅/礼堂",
       "sentence1": "大厅为派对装饰了。",
-      "sentence2": "我们在大厅见面。"
+      "sentence2": "我们在大厅见面。",
+      "pronunciation": "/ta˥˩ thiŋ˥/; /li˧˩˧ thɑŋ˧˥/"
     },
     {
       "id": 357,
       "word": "快乐地",
       "sentence1": "他们从此过上了幸福的生活。",
-      "sentence2": "她听到这个消息高兴地笑了。"
+      "sentence2": "她听到这个消息高兴地笑了。",
+      "pronunciation": "/khwaɪ˥˩ lɤ˥˩ ti˥˩/"
     },
     {
       "id": 358,
       "word": "有",
       "sentence1": "我有一辆车。",
-      "sentence2": "你有任何问题吗？"
+      "sentence2": "你有任何问题吗？",
+      "pronunciation": "/joʊ˧˩˧/"
     },
     {
       "id": 359,
       "word": "头疼",
       "sentence1": "我头疼。",
-      "sentence2": "她吃药治头疼。"
+      "sentence2": "她吃药治头疼。",
+      "pronunciation": "/thoʊ˧˥ thɤŋ˧˥/"
     },
     {
       "id": 360,
       "word": "心脏",
       "sentence1": "心脏是重要器官。",
-      "sentence2": "他感到心跳加速。"
+      "sentence2": "他感到心跳加速。",
+      "pronunciation": "/ɕin˥ tsɑŋ˥˩/"
     },
     {
       "id": 361,
       "word": "热/暖气",
       "sentence1": "夏天的热让人难以忍受。",
-      "sentence2": "她把家里的暖气开大了。"
+      "sentence2": "她把家里的暖气开大了。",
+      "pronunciation": "/ʐɤ˥˩/; /nwan˧˩˧ tɕhi˥˩/"
     },
     {
       "id": 362,
       "word": "重的",
       "sentence1": "这个盒子太重了搬不动。",
-      "sentence2": "他感到肩上有沉重的负担。"
+      "sentence2": "他感到肩上有沉重的负担。",
+      "pronunciation": "/ʈʂʊŋ˥˩ tɤ/"
     },
     {
       "id": 363,
       "word": "高度",
       "sentence1": "这座建筑的高度令人印象深刻。",
-      "sentence2": "她测量了树的高度。"
+      "sentence2": "她测量了树的高度。",
+      "pronunciation": "/kɑʊ˥ tu˥˩/"
     },
     {
       "id": 364,
       "word": "有帮助的",
       "sentence1": "她总是乐于助人。",
-      "sentence2": "一个有用的提示可以产生很大的不同。"
+      "sentence2": "一个有用的提示可以产生很大的不同。",
+      "pronunciation": "/joʊ˧˩˧ pɑŋ˥ ʈʂu˥˩ tɤ/"
     },
     {
       "id": 365,
       "word": "英雄",
       "sentence1": "他是社区里的英雄。",
-      "sentence2": "许多人认为消防员是英雄。"
+      "sentence2": "许多人认为消防员是英雄。",
+      "pronunciation": "/iŋ˥ ɕjʊŋ˧˥/"
     },
     {
       "id": 366,
       "word": "她的",
       "sentence1": "这本书是她的。",
-      "sentence2": "我找到了她的包，是她的。"
+      "sentence2": "我找到了她的包，是她的。",
+      "pronunciation": "/tha˥ tɤ/"
     },
     {
       "id": 367,
       "word": "她自己",
       "sentence1": "她全部自己做的。",
-      "sentence2": "她看着镜子里的自己。"
+      "sentence2": "她看着镜子里的自己。",
+      "pronunciation": "/tha˥ tsɯ˥˩ tɕi˧˩˧/"
     },
     {
       "id": 368,
       "word": "隐藏",
       "sentence1": "他试图隐藏自己的感情。",
-      "sentence2": "猫喜欢躲在床下。"
+      "sentence2": "猫喜欢躲在床下。",
+      "pronunciation": "/in˧˩˧ tshɑŋ˧˥/"
     },
     {
       "id": 369,
       "word": "高的",
       "sentence1": "这座山很高。",
-      "sentence2": "她伸手去拿高架子上的东西。"
+      "sentence2": "她伸手去拿高架子上的东西。",
+      "pronunciation": "/kɑʊ˥ tɤ/"
     },
     {
       "id": 370,
       "word": "小山",
       "sentence1": "我们爬到了山顶。",
-      "sentence2": "从山上看的风景很美。"
+      "sentence2": "从山上看的风景很美。",
+      "pronunciation": "/ɕjɑʊ˧˩˧ ʂan˥/"
     },
     {
       "id": 371,
       "word": "他自己",
       "sentence1": "他自己做的。",
-      "sentence2": "他看着镜子里的自己。"
+      "sentence2": "他看着镜子里的自己。",
+      "pronunciation": "/tha˥ tsɯ˥˩ tɕi˧˩˧/"
     },
     {
       "id": 372,
       "word": "他的",
       "sentence1": "这是他的书。",
-      "sentence2": "我在桌子上找到了他的钥匙。"
+      "sentence2": "我在桌子上找到了他的钥匙。",
+      "pronunciation": "/tha˥ tɤ/"
     },
     {
       "id": 373,
       "word": "打/撞",
       "sentence1": "他试图击球。",
-      "sentence2": "她被车撞了。"
+      "sentence2": "她被车撞了。",
+      "pronunciation": "/ta˧˩˧/; /ʈʂwɑŋ˥˩/"
     },
     {
       "id": 374,
       "word": "曲棍球",
       "sentence1": "他周末打曲棍球。",
-      "sentence2": "曲棍球在加拿大是一项流行的运动。"
+      "sentence2": "曲棍球在加拿大是一项流行的运动。",
+      "pronunciation": "/tɕhy˧˩˧ kwən˥˩ tɕhjoʊ˧˥/"
     },
     {
       "id": 375,
       "word": "握住/抱着",
       "sentence1": "请握住我的手。",
-      "sentence2": "她轻轻地抱着婴儿。"
+      "sentence2": "她轻轻地抱着婴儿。",
+      "pronunciation": "/wɔ˥˩ ʈʂu˥˩/; /pɑʊ˥˩ ʈʂɤ/"
     },
     {
       "id": 376,
       "word": "洞",
       "sentence1": "我的袜子上有个洞。",
-      "sentence2": "他在地上挖了一个洞。"
+      "sentence2": "他在地上挖了一个洞。",
+      "pronunciation": "/tʊŋ˥˩/"
     },
     {
       "id": 377,
       "word": "家",
       "sentence1": "这是我的家。",
-      "sentence2": "我喜欢待在家里。"
+      "sentence2": "我喜欢待在家里。",
+      "pronunciation": "/tɕja˥/"
     },
     {
       "id": 378,
       "word": "希望",
       "sentence1": "我希望你有美好的一天。",
-      "sentence2": "她对未来充满希望。"
+      "sentence2": "她对未来充满希望。",
+      "pronunciation": "/ɕi˥ wɑŋ˥˩/"
     },
     {
       "id": 379,
       "word": "巨大的",
       "sentence1": "大象很大。",
-      "sentence2": "她收藏了大量邮票。"
+      "sentence2": "她收藏了大量邮票。",
+      "pronunciation": "/tɕy˥˩ ta˥˩ tɤ/"
     },
     {
       "id": 380,
       "word": "人类",
       "sentence1": "人类有能力做伟大的事情。",
-      "sentence2": "人脑很复杂。"
+      "sentence2": "人脑很复杂。",
+      "pronunciation": "/ʐən˧˥ leɪ˥˩/"
     },
     {
       "id": 381,
       "word": "伤害/受伤",
       "sentence1": "我不是故意伤害你的感情。",
-      "sentence2": "她踢足球时伤了腿。"
+      "sentence2": "她踢足球时伤了腿。",
+      "pronunciation": "/ʂɑŋ˥ xaɪ˥˩/; /ʂoʊ˥˩ ʂɑŋ˥/"
     },
     {
       "id": 382,
       "word": "理想的",
       "sentence1": "这是野餐的理想地点。",
-      "sentence2": "她对未来有理想的愿景。"
+      "sentence2": "她对未来有理想的愿景。",
+      "pronunciation": "/li˧˩˧ ɕjɑŋ˧˩˧ tɤ/"
     },
     {
       "id": 383,
       "word": "识别",
       "sentence1": "你能识别鸟的种类吗？",
-      "sentence2": "他能够快速识别问题。"
+      "sentence2": "他能够快速识别问题。",
+      "pronunciation": "/ʂɨ˧˥ pjɛ˧˥/"
     },
     {
       "id": 384,
       "word": "生病的",
       "sentence1": "她病了，不能参加会议。",
-      "sentence2": "他旅行后生病了。"
+      "sentence2": "他旅行后生病了。",
+      "pronunciation": "/ʂɤŋ˥ piŋ˥˩ tɤ/"
     },
     {
       "id": 385,
       "word": "疾病",
       "sentence1": "她的病让她待在家里。",
-      "sentence2": "他正在从严重疾病中恢复。"
+      "sentence2": "他正在从严重疾病中恢复。",
+      "pronunciation": "/tɕi˧˥ piŋ˥˩/"
     },
     {
       "id": 386,
       "word": "图像",
       "sentence1": "图像很模糊。",
-      "sentence2": "她拍了一张漂亮的日落照片。"
+      "sentence2": "她拍了一张漂亮的日落照片。",
+      "pronunciation": "/thu˧˥ ɕjɑŋ˥˩/"
     },
     {
       "id": 387,
       "word": "立即",
       "sentence1": "请立即给我打电话。",
-      "sentence2": "他立即离开了房间。"
+      "sentence2": "他立即离开了房间。",
+      "pronunciation": "/li˥˩ tɕi˧˥/"
     },
     {
       "id": 388,
       "word": "不可能的",
       "sentence1": "不可能知道一切。",
-      "sentence2": "她把不可能变成了可能。"
+      "sentence2": "她把不可能变成了可能。",
+      "pronunciation": "/pu˥˩ khɤ˧˩˧ nɤŋ˧˥ tɤ/"
     },
     {
       "id": 389,
       "word": "包括的",
       "sentence1": "价格包含所有税费。",
-      "sentence2": "她觉得自己被包括在群体中。"
+      "sentence2": "她觉得自己被包括在群体中。",
+      "pronunciation": "/pɑʊ˥ khwɔ˥˩ tɤ/"
     },
     {
       "id": 390,
       "word": "包括",
       "sentence1": "包括所有费用，这次旅行很昂贵。",
-      "sentence2": "她喜欢包括远足和游泳在内的活动。"
+      "sentence2": "她喜欢包括远足和游泳在内的活动。",
+      "pronunciation": "/pɑʊ˥ khwɔ˥˩/"
     },
     {
       "id": 391,
       "word": "增加",
       "sentence1": "我们需要加大努力。",
-      "sentence2": "人口持续增加。"
+      "sentence2": "人口持续增加。",
+      "pronunciation": "/tsɤŋ˥ tɕja˥/"
     },
     {
       "id": 392,
       "word": "难以置信的",
       "sentence1": "从顶部看的景色令人难以置信。",
-      "sentence2": "她有令人难以置信的音乐天赋。"
+      "sentence2": "她有令人难以置信的音乐天赋。",
+      "pronunciation": "/nan˧˥ i˧˩˧ ʈʂɨ˥˩ ɕin˥˩ tɤ/"
     },
     {
       "id": 393,
       "word": "独立的",
       "sentence1": "她是一个独立的女性。",
-      "sentence2": "这个国家于1923年独立。"
+      "sentence2": "这个国家于1923年独立。",
+      "pronunciation": "/tu˧˥ li˥˩ tɤ/"
     },
     {
       "id": 394,
       "word": "个人",
       "sentence1": "每个人都有独特的品质。",
-      "sentence2": "该计划是根据个人需求定制的。"
+      "sentence2": "该计划是根据个人需求定制的。",
+      "pronunciation": "/kɤ˥˩ ʐən˧˥/"
     },
     {
       "id": 395,
       "word": "行业/工业",
       "sentence1": "汽车工业正在快速增长。",
-      "sentence2": "她在时尚行业工作。"
+      "sentence2": "她在时尚行业工作。",
+      "pronunciation": "/ɕiŋ˧˥ jɛ˥˩/; /kʊŋ˥ jɛ˥˩/"
     },
     {
       "id": 396,
       "word": "非正式/休闲",
       "sentence1": "会议气氛非正式。",
-      "sentence2": "她更喜欢休闲服装。"
+      "sentence2": "她更喜欢休闲服装。",
+      "pronunciation": "/feɪ˥ ʈʂɤŋ˥˩ ʂɨ˥˩/; /ɕjoʊ˥ ɕjɛn˧˥/"
     },
     {
       "id": 397,
       "word": "受伤",
       "sentence1": "他正在从运动伤害中恢复。",
-      "sentence2": "受伤使她无法参加比赛。"
+      "sentence2": "受伤使她无法参加比赛。",
+      "pronunciation": "/ʂoʊ˥˩ ʂɑŋ˥/"
     },
     {
       "id": 398,
       "word": "昆虫",
       "sentence1": "昆虫在墙上爬。",
-      "sentence2": "她在生物课上研究昆虫。"
+      "sentence2": "她在生物课上研究昆虫。",
+      "pronunciation": "/khwən˥ ʈʂhʊŋ˧˥/"
     },
     {
       "id": 399,
       "word": "内部/里面",
       "sentence1": "猫躲在盒子里面。",
-      "sentence2": "房子里面很暖和。"
+      "sentence2": "房子里面很暖和。",
+      "pronunciation": "/neɪ˥˩ pu˥˩/; /li˧˩˧ mjɛn˥˩/"
     },
     {
       "id": 400,
       "word": "代替/而不是",
       "sentence1": "她选择茶而不是咖啡。",
-      "sentence2": "他待在家里而不是出去。"
+      "sentence2": "他待在家里而不是出去。",
+      "pronunciation": "/taɪ˥˩ thi˥˩/; /ɑɻ˧˥ pu˧˥ ʂɨ˥˩/"
     },
     {
       "id": 401,
       "word": "说明",
       "sentence1": "仔细按照说明操作。",
-      "sentence2": "说明清晰易懂。"
+      "sentence2": "说明清晰易懂。",
+      "pronunciation": "/ʂwɔ˥ miŋ˧˥/"
     },
     {
       "id": 402,
       "word": "教练",
       "sentence1": "教练很好地解释了这个话题。",
-      "sentence2": "她是一名合格的瑜伽教练。"
+      "sentence2": "她是一名合格的瑜伽教练。",
+      "pronunciation": "/tɕjɑʊ˥˩ ljɛn˥˩/"
     },
     {
       "id": 403,
       "word": "乐器",
       "sentence1": "他会演奏乐器。",
-      "sentence2": "钢琴是很难掌握的乐器。"
+      "sentence2": "钢琴是很难掌握的乐器。",
+      "pronunciation": "/lɤ˥˩ tɕhi˥˩/"
     },
     {
       "id": 404,
       "word": "聪明的",
       "sentence1": "她是一个聪明的学生。",
-      "sentence2": "系统的智能设计给所有人留下了深刻印象。"
+      "sentence2": "系统的智能设计给所有人留下了深刻印象。",
+      "pronunciation": "/tshʊŋ˥ miŋ˧˥ tɤ/"
     },
     {
       "id": 405,
       "word": "国际的",
       "sentence1": "会议有国际参与者。",
-      "sentence2": "她在一家国际组织工作。"
+      "sentence2": "她在一家国际组织工作。",
+      "pronunciation": "/kwɔ˧˥ tɕi˥˩ tɤ/"
     },
     {
       "id": 406,
       "word": "介绍",
       "sentence1": "介绍既引人入胜又内容丰富。",
-      "sentence2": "他简要介绍了这个话题。"
+      "sentence2": "他简要介绍了这个话题。",
+      "pronunciation": "/tɕjɛ˥˩ ʂɑʊ˥˩/"
     },
     {
       "id": 407,
       "word": "发明",
       "sentence1": "她想发明一个新装置。",
-      "sentence2": "托马斯·爱迪生发明了电灯泡。"
+      "sentence2": "托马斯·爱迪生发明了电灯泡。",
+      "pronunciation": "/fa˥ miŋ˧˥/"
     },
     {
       "id": 408,
       "word": "发明",
       "sentence1": "电话是一项开创性的发明。",
-      "sentence2": "她最新的发明受到了很多关注。"
+      "sentence2": "她最新的发明受到了很多关注。",
+      "pronunciation": "/fa˥ miŋ˧˥/"
     },
     {
       "id": 409,
       "word": "邀请",
       "sentence1": "我收到了婚礼邀请。",
-      "sentence2": "邀请函设计得很漂亮。"
+      "sentence2": "邀请函设计得很漂亮。",
+      "pronunciation": "/jɑʊ˥ tɕhiŋ˧˩˧/"
     },
     {
       "id": 410,
       "word": "邀请",
       "sentence1": "我想邀请你参加派对。",
-      "sentence2": "他们邀请我们参加他们的婚礼。"
+      "sentence2": "他们邀请我们参加他们的婚礼。",
+      "pronunciation": "/jɑʊ˥ tɕhiŋ˧˩˧/"
     },
     {
       "id": 411,
       "word": "涉及/参与",
       "sentence1": "这个项目将涉及几个阶段。",
-      "sentence2": "她不想让朋友参与这个决定。"
+      "sentence2": "她不想让朋友参与这个决定。",
+      "pronunciation": "/ʂɤ˥˩ tɕi˧˥/; /tshan˥ y˥˩/"
     },
     {
       "id": 412,
       "word": "物品/项",
       "sentence1": "请检查清单上的每一项。",
-      "sentence2": "这件商品缺货。"
+      "sentence2": "这件商品缺货。",
+      "pronunciation": "/u˥˩ phin˧˩˧/; /ɕjɑŋ˥˩/"
     },
     {
       "id": 413,
       "word": "它自己",
       "sentence1": "猫自己清洁自己。",
-      "sentence2": "问题会随着时间自行解决。"
+      "sentence2": "问题会随着时间自行解决。",
+      "pronunciation": "/tha˥ tsɯ˥˩ tɕi˧˩˧/"
     },
     {
       "id": 414,
       "word": "果酱",
       "sentence1": "我喜欢在吐司上涂草莓酱。",
-      "sentence2": "她用新鲜水果做了自制果酱。"
+      "sentence2": "她用新鲜水果做了自制果酱。",
+      "pronunciation": "/kwɔ˧˩˧ tɕjɑŋ˥˩/"
     },
     {
       "id": 415,
       "word": "爵士乐",
       "sentence1": "我喜欢听爵士音乐。",
-      "sentence2": "她弹爵士钢琴弹得很美。"
+      "sentence2": "她弹爵士钢琴弹得很美。",
+      "pronunciation": "/tɕɥœ˧˥ ʂɨ˥˩ lɤ˥˩/"
     },
     {
       "id": 416,
       "word": "珠宝",
       "sentence1": "她戴着漂亮的珠宝参加活动。",
-      "sentence2": "这家店卖手工珠宝。"
+      "sentence2": "这家店卖手工珠宝。",
+      "pronunciation": "/ʈʂu˥ pɑʊ˧˩˧/"
     },
     {
       "id": 417,
       "word": "笑话",
       "sentence1": "他讲了一个有趣的笑话。",
-      "sentence2": "我没听懂这个笑话。"
+      "sentence2": "我没听懂这个笑话。",
+      "pronunciation": "/ɕjɑʊ˥˩ xwa˥˩/"
     },
     {
       "id": 418,
       "word": "记者",
       "sentence1": "记者写了一篇关于这个事件的文章。",
-      "sentence2": "她是一名调查记者。"
+      "sentence2": "她是一名调查记者。",
+      "pronunciation": "/tɕi˥˩ ʈʂɤ˧˩˧/"
     },
     {
       "id": 419,
       "word": "跳",
       "sentence1": "狗喜欢在空中跳跃。",
-      "sentence2": "他跳过了水坑。"
+      "sentence2": "他跳过了水坑。",
+      "pronunciation": "/thjɑʊ˥˩/"
     },
     {
       "id": 420,
       "word": "孩子",
       "sentence1": "孩子在公园里玩。",
-      "sentence2": "她是一个聪明的孩子。"
+      "sentence2": "她是一个聪明的孩子。",
+      "pronunciation": "/xaɪ˧˥ tsɯ/"
     },
     {
       "id": 421,
       "word": "杀死",
       "sentence1": "他不是故意杀死这只昆虫的。",
-      "sentence2": "这种毒药可以杀死你。"
+      "sentence2": "这种毒药可以杀死你。",
+      "pronunciation": "/ʂa˥ sɯ˧˩˧/"
     },
     {
       "id": 422,
       "word": "国王",
       "sentence1": "国王统治这片土地很多年。",
-      "sentence2": "他想当国王。"
+      "sentence2": "他想当国王。",
+      "pronunciation": "/kwɔ˧˥ wɑŋ˧˥/"
     },
     {
       "id": 423,
       "word": "膝盖",
       "sentence1": "她踢足球时伤了膝盖。",
-      "sentence2": "他单膝跪下。"
+      "sentence2": "他单膝跪下。",
+      "pronunciation": "/ɕi˥ kaɪ˥˩/"
     },
     {
       "id": 424,
       "word": "刀",
       "sentence1": "小心那把刀。",
-      "sentence2": "她用锋利的刀切面包。"
+      "sentence2": "她用锋利的刀切面包。",
+      "pronunciation": "/tɑʊ˥/"
     },
     {
       "id": 425,
       "word": "敲",
       "sentence1": "进门前请敲门。",
-      "sentence2": "他大声敲门。"
+      "sentence2": "他大声敲门。",
+      "pronunciation": "/tɕhjɑʊ˥/"
     },
     {
       "id": 426,
       "word": "知识",
       "sentence1": "知识就是力量。",
-      "sentence2": "她有丰富的历史知识。"
+      "sentence2": "她有丰富的历史知识。",
+      "pronunciation": "/ʈʂɨ˥ ʂɨ˧˥/"
     },
     {
       "id": 427,
       "word": "实验室",
       "sentence1": "实验室配备了现代技术。",
-      "sentence2": "她在研究实验室工作。"
+      "sentence2": "她在研究实验室工作。",
+      "pronunciation": "/ʂɨ˧˥ jɛn˥˩ ʂɨ˥˩/"
     },
     {
       "id": 428,
       "word": "女士",
       "sentence1": "柜台的女士非常乐于助人。",
-      "sentence2": "她是一位善良的女士。"
+      "sentence2": "她是一位善良的女士。",
+      "pronunciation": "/ny˧˩˧ ʂɨ˥˩/"
     },
     {
       "id": 429,
       "word": "湖",
       "sentence1": "我们在湖边野餐。",
-      "sentence2": "湖被群山环绕。"
+      "sentence2": "湖被群山环绕。",
+      "pronunciation": "/xu˧˥/"
     },
     {
       "id": 430,
       "word": "灯",
       "sentence1": "离开前请关灯。",
-      "sentence2": "她为房间买了一盏新灯。"
+      "sentence2": "她为房间买了一盏新灯。",
+      "pronunciation": "/tɤŋ˥/"
     },
     {
       "id": 431,
       "word": "土地",
       "sentence1": "这片土地肥沃，适合耕种。",
-      "sentence2": "他们买了一块地来建房子。"
+      "sentence2": "他们买了一块地来建房子。",
+      "pronunciation": "/thu˧˩˧ ti˥˩/"
     },
     {
       "id": 432,
       "word": "笔记本电脑",
       "sentence1": "我用笔记本电脑工作和学习。",
-      "sentence2": "她有一台强大的游戏笔记本电脑。"
+      "sentence2": "她有一台强大的游戏笔记本电脑。",
+      "pronunciation": "/pi˧˩˧ tɕi˥˩ pən˧˩˧ tjɛn˥˩ nɑʊ˧˩˧/"
     },
     {
       "id": 433,
       "word": "最后的",
       "sentence1": "这是买票的最后机会。",
-      "sentence2": "他是最后一个离开房间的人。"
+      "sentence2": "他是最后一个离开房间的人。",
+      "pronunciation": "/tsweɪ˥˩ xoʊ˥˩ tɤ/"
     },
     {
       "id": 434,
       "word": "稍后/之后",
       "sentence1": "我们稍后可以讨论这个。",
-      "sentence2": "她比预期到得晚。"
+      "sentence2": "她比预期到得晚。",
+      "pronunciation": "/ʂɑʊ˥ xoʊ˥˩/; /ʈʂɨ˥ xoʊ˥˩/"
     },
     {
       "id": 435,
       "word": "笑声",
       "sentence1": "笑是最好的药。",
-      "sentence2": "我从外面能听到他们的笑声。"
+      "sentence2": "我从外面能听到他们的笑声。",
+      "pronunciation": "/ɕjɑʊ˥˩ ʂɤŋ˥/"
     },
     {
       "id": 436,
       "word": "法律",
       "sentence1": "法律保护你的权利。",
-      "sentence2": "她在大学学习法律。"
+      "sentence2": "她在大学学习法律。",
+      "pronunciation": "/fa˧˩˧ ly˥˩/"
     },
     {
       "id": 437,
       "word": "律师",
       "sentence1": "他是专门从事刑法的律师。",
-      "sentence2": "她聘请了一位律师来帮助处理这个案件。"
+      "sentence2": "她聘请了一位律师来帮助处理这个案件。",
+      "pronunciation": "/ly˥˩ ʂɨ˥/"
     },
     {
       "id": 438,
       "word": "懒惰的",
       "sentence1": "他太懒了不愿打扫房间。",
-      "sentence2": "不要懒惰，起来做点事！"
+      "sentence2": "不要懒惰，起来做点事！",
+      "pronunciation": "/lan˧˩˧ twɔ˥˩ tɤ/"
     },
     {
       "id": 439,
       "word": "领导",
       "sentence1": "她将从头到尾领导这个项目。",
-      "sentence2": "他被选为团队领导。"
+      "sentence2": "他被选为团队领导。",
+      "pronunciation": "/liŋ˧˩˧ tɑʊ˧˩˧/"
     },
     {
       "id": 440,
       "word": "领导者",
       "sentence1": "小组领导发表了讲话。",
-      "sentence2": "她是天生的领导者。"
+      "sentence2": "她是天生的领导者。",
+      "pronunciation": "/liŋ˧˩˧ tɑʊ˧˩˧ ʈʂɤ˧˩˧/"
     },
     {
       "id": 441,
       "word": "学习",
       "sentence1": "学习一门新语言需要时间。",
-      "sentence2": "她专注于学习。"
+      "sentence2": "她专注于学习。",
+      "pronunciation": "/ɕɥœ˧˥ ɕi˧˥/"
     },
     {
       "id": 442,
       "word": "最少的",
       "sentence1": "他是团队中经验最少的成员。",
-      "sentence2": "至少我们尽力了。"
+      "sentence2": "至少我们尽力了。",
+      "pronunciation": "/tsweɪ˥˩ ʂɑʊ˧˩˧ tɤ/"
     },
     {
       "id": 443,
       "word": "讲座",
       "sentence1": "教授做了一个有趣的讲座。",
-      "sentence2": "我今天下午有一个讲座要参加。"
+      "sentence2": "我今天下午有一个讲座要参加。",
+      "pronunciation": "/tɕjɑŋ˧˩˧ tswɔ˥˩/"
     },
     {
       "id": 444,
       "word": "柠檬",
       "sentence1": "我喜欢在茶里加柠檬。",
-      "sentence2": "柠檬是酸的。"
+      "sentence2": "柠檬是酸的。",
+      "pronunciation": "/niŋ˧˥ mɤŋ˧˥/"
     },
     {
       "id": 445,
       "word": "借给",
       "sentence1": "你能借我一支笔吗？",
-      "sentence2": "我会把书借给你。"
+      "sentence2": "我会把书借给你。",
+      "pronunciation": "/tɕjɛ˥˩ keɪ˧˩˧/"
     },
     {
       "id": 446,
       "word": "更少的",
       "sentence1": "我咖啡里需要少放点糖。",
-      "sentence2": "她对运动不太感兴趣。"
+      "sentence2": "她对运动不太感兴趣。",
+      "pronunciation": "/kɤŋ˥˩ ʂɑʊ˧˩˧ tɤ/"
     },
     {
       "id": 447,
       "word": "水平",
       "sentence1": "你的英语是什么水平？",
-      "sentence2": "她处于高级水平。"
+      "sentence2": "她处于高级水平。",
+      "pronunciation": "/ʂweɪ˧˩˧ phiŋ˧˥/"
     },
     {
       "id": 448,
       "word": "生活方式",
       "sentence1": "他有健康的生活方式。",
-      "sentence2": "他们提倡可持续的生活方式。"
+      "sentence2": "他们提倡可持续的生活方式。",
+      "pronunciation": "/ʂɤŋ˥ xwɔ˧˥ fɑŋ˥ ʂɨ˥˩/"
     },
     {
       "id": 449,
       "word": "电梯",
       "sentence1": "请乘电梯到三楼。",
-      "sentence2": "电梯坏了。"
+      "sentence2": "电梯坏了。",
+      "pronunciation": "/tjɛn˥˩ thi˥/"
     },
     {
       "id": 450,
       "word": "灯",
       "sentence1": "请开灯。",
-      "sentence2": "这个房间的灯太亮了。"
+      "sentence2": "这个房间的灯太亮了。",
+      "pronunciation": "/tɤŋ˥/"
     },
     {
       "id": 451,
       "word": "轻的",
       "sentence1": "这个包轻得可以携带。",
-      "sentence2": "她夏天喜欢轻薄的面料。"
+      "sentence2": "她夏天喜欢轻薄的面料。",
+      "pronunciation": "/tɕhiŋ˥ tɤ/"
     },
     {
       "id": 452,
       "word": "可能的",
       "sentence1": "明天可能会下雨。",
-      "sentence2": "她很可能会得到这份工作。"
+      "sentence2": "她很可能会得到这份工作。",
+      "pronunciation": "/khɤ˧˩˧ nɤŋ˧˥ tɤ/"
     },
     {
       "id": 453,
       "word": "链接/联系",
       "sentence1": "你能把链接发给我吗？",
-      "sentence2": "饮食和健康之间有联系。"
+      "sentence2": "饮食和健康之间有联系。",
+      "pronunciation": "/ljɛn˥˩ tɕjɛ˥/; /ljɛn˧˥ ɕi˥˩/"
     },
     {
       "id": 454,
       "word": "听众",
       "sentence1": "他是一个好的倾听者。",
-      "sentence2": "观众专注并投入。"
+      "sentence2": "观众专注并投入。",
+      "pronunciation": "/thiŋ˥ ʈʂʊŋ˥˩/"
     },
     {
       "id": 455,
       "word": "小的",
       "sentence1": "她有一只小狗。",
-      "sentence2": "我需要多一点时间。"
+      "sentence2": "我需要多一点时间。",
+      "pronunciation": "/ɕjɑʊ˧˩˧ tɤ/"
     },
     {
       "id": 456,
       "word": "锁",
       "sentence1": "别忘了锁门。",
-      "sentence2": "我需要买一把新锁。"
+      "sentence2": "我需要买一把新锁。",
+      "pronunciation": "/swɔ˧˩˧/"
     },
     {
       "id": 457,
       "word": "看/外表",
       "sentence1": "她有独特的外表。",
-      "sentence2": "看看这张图片。"
+      "sentence2": "看看这张图片。",
+      "pronunciation": "/khan˥˩/; /waɪ˥˩ pjɑʊ˧˩˧/"
     },
     {
       "id": 458,
       "word": "卡车",
       "sentence1": "卡车正在送货。",
-      "sentence2": "我在路上看到一辆卡车。"
+      "sentence2": "我在路上看到一辆卡车。",
+      "pronunciation": "/kha˧˩˧ ʈʂhɤ˥/"
     },
     {
       "id": 459,
       "word": "丢失的",
       "sentence1": "我想我丢了钥匙。",
-      "sentence2": "走失的狗被找到了。"
+      "sentence2": "走失的狗被找到了。",
+      "pronunciation": "/tjoʊ˥ ʂɨ˥ tɤ/"
     },
     {
       "id": 460,
       "word": "大声的",
       "sentence1": "音乐太吵了。",
-      "sentence2": "他大声说话。"
+      "sentence2": "他大声说话。",
+      "pronunciation": "/ta˥˩ ʂɤŋ˥ tɤ/"
     },
     {
       "id": 461,
       "word": "大声地",
       "sentence1": "她大声说话以便被听到。",
-      "sentence2": "人群大声欢呼。"
+      "sentence2": "人群大声欢呼。",
+      "pronunciation": "/ta˥˩ ʂɤŋ˥ ti˥˩/"
     },
     {
       "id": 462,
       "word": "可爱的",
       "sentence1": "花园里满是可爱的花。",
-      "sentence2": "她有可爱的微笑。"
+      "sentence2": "她有可爱的微笑。",
+      "pronunciation": "/khɤ˧˩˧ aɪ˥˩ tɤ/"
     },
     {
       "id": 463,
       "word": "低的",
       "sentence1": "这张桌子对我来说太低了。",
-      "sentence2": "他低声说话。"
+      "sentence2": "他低声说话。",
+      "pronunciation": "/ti˥ tɤ/"
     },
     {
       "id": 464,
       "word": "运气",
       "sentence1": "祝你考试好运！",
-      "sentence2": "她最近运气不好。"
+      "sentence2": "她最近运气不好。",
+      "pronunciation": "/yn˥˩ tɕhi˥˩/"
     },
     {
       "id": 465,
       "word": "幸运的",
       "sentence1": "我今天感觉很幸运。",
-      "sentence2": "她是一个幸运的人。"
+      "sentence2": "她是一个幸运的人。",
+      "pronunciation": "/ɕiŋ˥˩ yn˥˩ tɤ/"
     },
     {
       "id": 466,
       "word": "邮件",
       "sentence1": "我昨天收到了你的邮件。",
-      "sentence2": "请查看你的邮件。"
+      "sentence2": "请查看你的邮件。",
+      "pronunciation": "/joʊ˧˥ tɕjɛn˥˩/"
     },
     {
       "id": 467,
       "word": "主要/主修",
       "sentence1": "她主修生物学。",
-      "sentence2": "这是一个主要问题。"
+      "sentence2": "这是一个主要问题。",
+      "pronunciation": "/ʈʂu˧˩˧ jɑʊ˥˩/; /ʈʂu˧˩˧ ɕjoʊ˥/"
     },
     {
       "id": 468,
       "word": "男性",
       "sentence1": "他是这部剧的男主角。",
-      "sentence2": "公猫通常更大。"
+      "sentence2": "公猫通常更大。",
+      "pronunciation": "/nan˧˥ ɕiŋ˥˩/"
     },
     {
       "id": 469,
       "word": "管理/应付",
       "sentence1": "她将管理这个项目。",
-      "sentence2": "你能自己应付吗？"
+      "sentence2": "你能自己应付吗？",
+      "pronunciation": "/kwan˧˩˧ li˧˩˧/; /iŋ˥ fu˥˩/"
     },
     {
       "id": 470,
       "word": "经理",
       "sentence1": "经理负责团队。",
-      "sentence2": "她是一个好经理。"
+      "sentence2": "她是一个好经理。",
+      "pronunciation": "/tɕiŋ˥ li˧˩˧/"
     },
     {
       "id": 471,
       "word": "方式",
       "sentence1": "他举止有礼。",
-      "sentence2": "请以尊重的方式行事。"
+      "sentence2": "请以尊重的方式行事。",
+      "pronunciation": "/fɑŋ˥ ʂɨ˥˩/"
     },
     {
       "id": 472,
       "word": "标记",
       "sentence1": "请标出正确答案。",
-      "sentence2": "他手臂上有胎记。"
+      "sentence2": "他手臂上有胎记。",
+      "pronunciation": "/pjɑʊ˥ tɕi˥˩/"
     },
     {
       "id": 473,
       "word": "结婚",
       "sentence1": "他们计划明年结婚。",
-      "sentence2": "她想为爱情结婚。"
+      "sentence2": "她想为爱情结婚。",
+      "pronunciation": "/tɕjɛ˧˥ xwən˥/"
     },
     {
       "id": 474,
       "word": "材料",
       "sentence1": "这种材料非常耐用。",
-      "sentence2": "我们需要购买更多材料。"
+      "sentence2": "我们需要购买更多材料。",
+      "pronunciation": "/tshaɪ˧˥ ljɑʊ˥˩/"
     },
     {
       "id": 475,
       "word": "数学",
       "sentence1": "数学是我最喜欢的科目。",
-      "sentence2": "她在数学方面表现出色。"
+      "sentence2": "她在数学方面表现出色。",
+      "pronunciation": "/ʂu˥˩ ɕɥœ˧˥/"
     },
     {
       "id": 476,
       "word": "数学",
       "sentence1": "数学可能很有挑战性。",
-      "sentence2": "我喜欢解决数学问题。"
+      "sentence2": "我喜欢解决数学问题。",
+      "pronunciation": "/ʂu˥˩ ɕɥœ˧˥/"
     },
     {
       "id": 477,
       "word": "事情",
       "sentence1": "这只是时间问题。",
-      "sentence2": "真正重要的是你的幸福。"
+      "sentence2": "真正重要的是你的幸福。",
+      "pronunciation": "/ʂɨ˥˩ tɕhiŋ˧˥/"
     },
     {
       "id": 478,
       "word": "可以",
       "sentence1": "你今天可以早点走。",
-      "sentence2": "我可以帮你吗？"
+      "sentence2": "我可以帮你吗？",
+      "pronunciation": "/khɤ˧˩˧ i˧˩˧/"
     },
     {
       "id": 479,
       "word": "媒体",
       "sentence1": "媒体在社会中起着至关重要的作用。",
-      "sentence2": "我在社交媒体上关注新闻。"
+      "sentence2": "我在社交媒体上关注新闻。",
+      "pronunciation": "/meɪ˧˥ thi˧˩˧/"
     },
     {
       "id": 480,
       "word": "医疗的",
       "sentence1": "她需要医疗护理。",
-      "sentence2": "医务人员非常乐于助人。"
+      "sentence2": "医务人员非常乐于助人。",
+      "pronunciation": "/i˥˩ ljɑʊ˧˥ tɤ/"
     },
     {
       "id": 481,
       "word": "药",
       "sentence1": "他吃药治疗过敏。",
-      "sentence2": "药物可以帮助缓解症状。"
+      "sentence2": "药物可以帮助缓解症状。",
+      "pronunciation": "/jɑʊ˥˩/"
     },
     {
       "id": 482,
       "word": "记忆",
       "sentence1": "我的记忆力不如从前了。",
-      "sentence2": "她记名字的能力很强。"
+      "sentence2": "她记名字的能力很强。",
+      "pronunciation": "/tɕi˥˩ i˥˩/"
     },
     {
       "id": 483,
       "word": "提到",
       "sentence1": "请在演讲中提到我的名字。",
-      "sentence2": "我不是故意提到它的。"
+      "sentence2": "我不是故意提到它的。",
+      "pronunciation": "/thi˧˥ tɑʊ˥˩/"
     },
     {
       "id": 484,
       "word": "金属",
       "sentence1": "这张桌子是金属做的。",
-      "sentence2": "金属是良好的热导体。"
+      "sentence2": "金属是良好的热导体。",
+      "pronunciation": "/tɕin˥ ʂu˧˩˧/"
     },
     {
       "id": 485,
       "word": "方法",
       "sentence1": "我们需要一种新方法来解决这个问题。",
-      "sentence2": "科学方法对研究至关重要。"
+      "sentence2": "科学方法对研究至关重要。",
+      "pronunciation": "/fɑŋ˥ fa˧˩˧/"
     },
     {
       "id": 486,
       "word": "中间",
       "sentence1": "路中间是最安全的行走地点。",
-      "sentence2": "她坐在小组中间。"
+      "sentence2": "她坐在小组中间。",
+      "pronunciation": "/ʈʂʊŋ˥ tɕjɛn˥/"
     },
     {
       "id": 487,
       "word": "可能",
       "sentence1": "你可能想考虑不同的方法。",
-      "sentence2": "稍后可能会下雨。"
+      "sentence2": "稍后可能会下雨。",
+      "pronunciation": "/khɤ˧˩˧ nɤŋ˧˥/"
     },
     {
       "id": 488,
       "word": "头脑",
       "sentence1": "她有聪明的头脑。",
-      "sentence2": "请保持开放的心态。"
+      "sentence2": "请保持开放的心态。",
+      "pronunciation": "/thoʊ˧˥ nɑʊ˧˩˧/"
     },
     {
       "id": 489,
       "word": "我的",
       "sentence1": "这本书是我的。",
-      "sentence2": "这支笔是你的还是我的？"
+      "sentence2": "这支笔是你的还是我的？",
+      "pronunciation": "/wɔ˧˩˧ tɤ/"
     },
     {
       "id": 490,
       "word": "镜子",
       "sentence1": "她看着镜子里的自己。",
-      "sentence2": "镜子反射光线。"
+      "sentence2": "镜子反射光线。",
+      "pronunciation": "/tɕiŋ˥˩ tsɯ˧˩˧/"
     },
     {
       "id": 491,
       "word": "缺失的",
       "sentence1": "缺失的部分至关重要。",
-      "sentence2": "我注意到书中缺少一页。"
+      "sentence2": "我注意到书中缺少一页。",
+      "pronunciation": "/tɕhɥœ˥ ʂɨ˥ tɤ/"
     },
     {
       "id": 492,
       "word": "移动的",
       "sentence1": "她使用手机。",
-      "sentence2": "移动技术正在快速发展。"
+      "sentence2": "移动技术正在快速发展。",
+      "pronunciation": "/i˧˥ tʊŋ˥˩ tɤ/"
     },
     {
       "id": 493,
       "word": "猴子",
       "sentence1": "猴子从一棵树荡到另一棵树。",
-      "sentence2": "猴子以聪明著称。"
+      "sentence2": "猴子以聪明著称。",
+      "pronunciation": "/xoʊ˧˥ tsɯ˧˩˧/"
     },
     {
       "id": 494,
       "word": "月亮",
       "sentence1": "月亮在夜晚明亮地照耀。",
-      "sentence2": "我们在满月下散步。"
+      "sentence2": "我们在满月下散步。",
+      "pronunciation": "/ɥœ˥˩ ljɑŋ˥˩/"
     },
     {
       "id": 495,
       "word": "主要地",
       "sentence1": "我主要读小说。",
-      "sentence2": "这周天气主要是晴天。"
+      "sentence2": "这周天气主要是晴天。",
+      "pronunciation": "/ʈʂu˧˩˧ jɑʊ˥˩ ti˥˩/"
     },
     {
       "id": 496,
       "word": "摩托车",
       "sentence1": "他骑摩托车上班。",
-      "sentence2": "摩托车可以很快。"
+      "sentence2": "摩托车可以很快。",
+      "pronunciation": "/mwɔ˧˥ thwɔ˥ ʈʂhɤ˥/"
     },
     {
       "id": 497,
       "word": "运动",
       "sentence1": "汽车的移动很平稳。",
-      "sentence2": "人群中有很多动静。"
+      "sentence2": "人群中有很多动静。",
+      "pronunciation": "/yn˥˩ tʊŋ˥˩/"
     },
     {
       "id": 498,
       "word": "音乐的",
       "sentence1": "她有音乐天赋。",
-      "sentence2": "这部音乐剧非常成功。"
+      "sentence2": "这部音乐剧非常成功。",
+      "pronunciation": "/in˥ ɥœ˥˩ tɤ/"
     },
     {
       "id": 499,
       "word": "音乐家",
       "sentence1": "他是一个有才华的音乐家。",
-      "sentence2": "许多音乐家努力谋生。"
+      "sentence2": "许多音乐家努力谋生。",
+      "pronunciation": "/in˥ ɥœ˥˩ tɕja˥/"
     },
     {
       "id": 500,
       "word": "我自己",
       "sentence1": "我自己做的。",
-      "sentence2": "我需要提醒自己保持专注。"
+      "sentence2": "我需要提醒自己保持专注。",
+      "pronunciation": "/wɔ˧˩˧ tsɯ˥˩ tɕi˧˩˧/"
     },
     {
       "id": 501,
       "word": "狭窄/狭隘",
       "sentence1": "这条街太窄了，汽车过不去。",
-      "sentence2": "她对世界的看法很狭隘。"
+      "sentence2": "她对世界的看法很狭隘。",
+      "pronunciation": "/ɕja˧˥ ʈʂaɪ˧˩˧/; /ɕja˧˥ aɪ˥˩/"
     },
     {
       "id": 502,
       "word": "国家的",
       "sentence1": "国歌响起了。",
-      "sentence2": "国庆节对文化很重要。"
+      "sentence2": "国庆节对文化很重要。",
+      "pronunciation": "/kwɔ˧˥ tɕja˥ tɤ/"
     },
     {
       "id": 503,
       "word": "自然",
       "sentence1": "春天的自然很美。",
-      "sentence2": "我们应该保护自然。"
+      "sentence2": "我们应该保护自然。",
+      "pronunciation": "/tsɯ˥˩ ʐan˧˥/"
     },
     {
       "id": 504,
       "word": "几乎",
       "sentence1": "我差点忘了你的生日。",
-      "sentence2": "她的项目快完成了。"
+      "sentence2": "她的项目快完成了。",
+      "pronunciation": "/tɕi˥ xu˥/"
     },
     {
       "id": 505,
       "word": "必要的",
       "sentence1": "遵守规则是必要的。",
-      "sentence2": "水是生命所必需的。"
+      "sentence2": "水是生命所必需的。",
+      "pronunciation": "/pi˥˩ jɑʊ˥˩ tɤ/"
     },
     {
       "id": 506,
       "word": "脖子",
       "sentence1": "他脖子上围着围巾。",
-      "sentence2": "瓶颈很窄。"
+      "sentence2": "瓶颈很窄。",
+      "pronunciation": "/pwɔ˧˥ tsɯ˧˩˧/"
     },
     {
       "id": 507,
       "word": "需要",
       "sentence1": "我需要帮助完成这项任务。",
-      "sentence2": "需要更多资源。"
+      "sentence2": "需要更多资源。",
+      "pronunciation": "/ɕy˥ jɑʊ˥˩/"
     },
     {
       "id": 508,
       "word": "两者都不",
       "sentence1": "两个选项都不理想。",
-      "sentence2": "我既不喜欢咖啡也不喜欢茶。"
+      "sentence2": "我既不喜欢咖啡也不喜欢茶。",
+      "pronunciation": "/ljɑŋ˧˩˧ ʈʂɤ˧˩˧ toʊ˥ pu˥˩/"
     },
     {
       "id": 509,
       "word": "紧张的",
       "sentence1": "她面试前很紧张。",
-      "sentence2": "在大事件前感到紧张是正常的。"
+      "sentence2": "在大事件前感到紧张是正常的。",
+      "pronunciation": "/tɕin˧˩˧ ʈʂɑŋ˥ tɤ/"
     },
     {
       "id": 510,
       "word": "网络",
       "sentence1": "电脑连接到网络。",
-      "sentence2": "社交网络可以非常有影响力。"
+      "sentence2": "社交网络可以非常有影响力。",
+      "pronunciation": "/wɑŋ˧˩˧ lwɔ˥˩/"
     },
     {
       "id": 511,
       "word": "噪音",
       "sentence1": "施工的噪音很烦人。",
-      "sentence2": "因为噪音我无法集中注意力。"
+      "sentence2": "因为噪音我无法集中注意力。",
+      "pronunciation": "/tsɑʊ˥˩ in˥/"
     },
     {
       "id": 512,
       "word": "吵闹的",
       "sentence1": "孩子们在另一个房间很吵。",
-      "sentence2": "嘈杂的环境可能会分散注意力。"
+      "sentence2": "嘈杂的环境可能会分散注意力。",
+      "pronunciation": "/ʈʂhɑʊ˧˩˧ nɑʊ˥˩ tɤ/"
     },
     {
       "id": 513,
       "word": "没有一个",
       "sentence1": "没有一个答案是正确的。",
-      "sentence2": "清单上的物品我一个都没有。"
+      "sentence2": "清单上的物品我一个都没有。",
+      "pronunciation": "/meɪ˧˥ joʊ˧˩˧ i˧˥ kɤ˥˩/"
     },
     {
       "id": 514,
       "word": "正常的",
       "sentence1": "漫长的一天后感到疲倦是正常的。",
-      "sentence2": "结果在正常范围内。"
+      "sentence2": "结果在正常范围内。",
+      "pronunciation": "/ʈʂɤŋ˥˩ ʈʂhɑŋ˧˥ tɤ/"
     },
     {
       "id": 515,
       "word": "通常",
       "sentence1": "我通常早起。",
-      "sentence2": "这家店周末通常很忙。"
+      "sentence2": "这家店周末通常很忙。",
+      "pronunciation": "/thʊŋ˥ ʈʂhɑŋ˧˥/"
     },
     {
       "id": 516,
       "word": "注意/通知",
       "sentence1": "我没有注意到这个错误。",
-      "sentence2": "请注意文档中的变化。"
+      "sentence2": "请注意文档中的变化。",
+      "pronunciation": "/ʈʂu˥˩ i˥˩/; /thʊŋ˥ ʈʂɨ˥/"
     },
     {
       "id": 517,
       "word": "小说",
       "sentence1": "她正在读一本小说。",
-      "sentence2": "这部小说去年出版。"
+      "sentence2": "这部小说去年出版。",
+      "pronunciation": "/ɕjɑʊ˧˩˧ ʂwɔ˥/"
     },
     {
       "id": 518,
       "word": "无处",
       "sentence1": "我找钥匙，但哪儿都找不到。",
-      "sentence2": "他觉得自己的人生毫无进展。"
+      "sentence2": "他觉得自己的人生毫无进展。",
+      "pronunciation": "/u˧˥ ʈʂhu˥˩/"
     },
     {
       "id": 519,
       "word": "数字",
       "sentence1": "你的电话号码是多少？",
-      "sentence2": "参与者人数正在增加。"
+      "sentence2": "参与者人数正在增加。",
+      "pronunciation": "/ʂu˥˩ tsɯ˥˩/"
     },
     {
       "id": 520,
       "word": "坚果",
       "sentence1": "我喜欢吃坚果作为零食。",
-      "sentence2": "坚果是蛋白质的良好来源。"
+      "sentence2": "坚果是蛋白质的良好来源。",
+      "pronunciation": "/tɕjɛn˥ kwɔ˧˩˧/"
     },
     {
       "id": 521,
       "word": "海洋",
       "sentence1": "海洋广阔而深邃。",
-      "sentence2": "许多生物生活在海洋中。"
+      "sentence2": "许多生物生活在海洋中。",
+      "pronunciation": "/xaɪ˧˩˧ jɑŋ˧˥/"
     },
     {
       "id": 522,
       "word": "提供/提议",
       "sentence1": "我想给你一个报价。",
-      "sentence2": "这份工作邀请非常有吸引力。"
+      "sentence2": "这份工作邀请非常有吸引力。",
+      "pronunciation": "/thi˧˥ kʊŋ˥/; /thi˧˥ i˥˩/"
     },
     {
       "id": 523,
       "word": "官员",
       "sentence1": "警察帮我找到了路。",
-      "sentence2": "她是军队中的高级军官。"
+      "sentence2": "她是军队中的高级军官。",
+      "pronunciation": "/kwan˥ ɥœn˧˥/"
     },
     {
       "id": 524,
       "word": "油",
       "sentence1": "我需要买一些食用油。",
-      "sentence2": "汽车需要换油。"
+      "sentence2": "汽车需要换油。",
+      "pronunciation": "/joʊ˧˥/"
     },
     {
       "id": 525,
       "word": "到...上",
       "sentence1": "猫跳到桌子上。",
-      "sentence2": "他把书放到书架上。"
+      "sentence2": "他把书放到书架上。",
+      "pronunciation": "/tɑʊ˥˩ ... ʂɑŋ˥˩/"
     },
     {
       "id": 526,
       "word": "机会",
       "sentence1": "这对你来说是一个很好的机会。",
-      "sentence2": "不要错过学习的机会。"
+      "sentence2": "不要错过学习的机会。",
+      "pronunciation": "/tɕi˥ xweɪ˥˩/"
     },
     {
       "id": 527,
       "word": "选项",
       "sentence1": "你有几个选项可以选择。",
-      "sentence2": "这是最好的选择。"
+      "sentence2": "这是最好的选择。",
+      "pronunciation": "/ɕɥœn˧˩˧ ɕjɑŋ˥˩/"
     },
     {
       "id": 528,
       "word": "普通的",
       "sentence1": "她过着平凡的生活。",
-      "sentence2": "这只是普通的一天。"
+      "sentence2": "这只是普通的一天。",
+      "pronunciation": "/phu˧˩˧ thʊŋ˥ tɤ/"
     },
     {
       "id": 529,
       "word": "组织",
       "sentence1": "该组织致力于帮助他人。",
-      "sentence2": "她在一家非营利组织工作。"
+      "sentence2": "她在一家非营利组织工作。",
+      "pronunciation": "/tsu˧˩˧ ʈʂɨ˥/"
     },
     {
       "id": 530,
       "word": "组织",
       "sentence1": "我们需要整理文件。",
-      "sentence2": "你能帮我组织这个活动吗？"
+      "sentence2": "你能帮我组织这个活动吗？",
+      "pronunciation": "/tsu˧˩˧ ʈʂɨ˥/"
     },
     {
       "id": 531,
       "word": "原始的",
       "sentence1": "这是原作画。",
-      "sentence2": "我更喜欢歌曲的原版。"
+      "sentence2": "我更喜欢歌曲的原版。",
+      "pronunciation": "/ɥœn˧˥ ʂɨ˧˩˧ tɤ/"
     },
     {
       "id": 532,
       "word": "我们自己",
       "sentence1": "我们需要照顾好自己。",
-      "sentence2": "让我们在派对上尽情享受吧。"
+      "sentence2": "让我们在派对上尽情享受吧。",
+      "pronunciation": "/wɔ˧˩˧ mən tsɯ˥˩ tɕi˧˩˧/"
     },
     {
       "id": 533,
       "word": "外面",
       "sentence1": "孩子们在外面玩。",
-      "sentence2": "晴天坐在外面很舒服。"
+      "sentence2": "晴天坐在外面很舒服。",
+      "pronunciation": "/waɪ˥˩ mjɛn˥˩/"
     },
     {
       "id": 534,
       "word": "烤箱",
       "sentence1": "我需要预热烤箱。",
-      "sentence2": "饼干正在烤箱里烤。"
+      "sentence2": "饼干正在烤箱里烤。",
+      "pronunciation": "/khɑʊ˧˩˧ ɕjɑŋ˥/"
     },
     {
       "id": 535,
       "word": "拥有/自己的",
       "sentence1": "我想拥有自己的房子。",
-      "sentence2": "她拥有一家成功的企业。"
+      "sentence2": "她拥有一家成功的企业。",
+      "pronunciation": "/jʊŋ˥ joʊ˧˩˧/; /tsɯ˥˩ tɕi˧˩˧ tɤ/"
     },
     {
       "id": 536,
       "word": "所有者",
       "sentence1": "餐厅老板非常友好。",
-      "sentence2": "他是一家大公司的老板。"
+      "sentence2": "他是一家大公司的老板。",
+      "pronunciation": "/swɔ˧˩˧ joʊ˧˩˧ ʈʂɤ˧˩˧/"
     },
     {
       "id": 537,
       "word": "打包/包裹",
       "sentence1": "我需要为旅行打包行李。",
-      "sentence2": "那副扑克牌在桌子上。"
+      "sentence2": "那副扑克牌在桌子上。",
+      "pronunciation": "/ta˧˩˧ pɑʊ˥/; /pɑʊ˥ kwɔ˧˩˧/"
     },
     {
       "id": 538,
       "word": "疼痛",
       "sentence1": "我背疼。",
-      "sentence2": "疼痛难以忍受。"
+      "sentence2": "疼痛难以忍受。",
+      "pronunciation": "/thɤŋ˧˥ thʊŋ˥˩/"
     },
     {
       "id": 539,
       "word": "画家",
       "sentence1": "画家创作了一幅美丽的壁画。",
-      "sentence2": "她是一位有才华的画家。"
+      "sentence2": "她是一位有才华的画家。",
+      "pronunciation": "/xwa˥˩ tɕja˥/"
     },
     {
       "id": 540,
       "word": "宫殿",
       "sentence1": "宫殿位于市中心。",
-      "sentence2": "每年有许多游客参观宫殿。"
+      "sentence2": "每年有许多游客参观宫殿。",
+      "pronunciation": "/kʊŋ˥ tjɛn˥˩/"
     },
     {
       "id": 541,
       "word": "裤子",
       "sentence1": "我需要买一条新裤子。",
-      "sentence2": "这条裤子太紧了。"
+      "sentence2": "这条裤子太紧了。",
+      "pronunciation": "/khu˥˩ tsɯ˧˩˧/"
     },
     {
       "id": 542,
       "word": "停车",
       "sentence1": "没有停车位。",
-      "sentence2": "我在街上找到了一个停车位。"
+      "sentence2": "我在街上找到了一个停车位。",
+      "pronunciation": "/thiŋ˧˥ ʈʂhɤ˥/"
     },
     {
       "id": 543,
       "word": "特别的",
       "sentence1": "我对艺术有特别的兴趣。",
-      "sentence2": "你来访有什么特别的原因吗？"
+      "sentence2": "你来访有什么特别的原因吗？",
+      "pronunciation": "/thɤ˥˩ pjɛ˧˥ tɤ/"
     },
     {
       "id": 544,
       "word": "通过/经过",
       "sentence1": "你需要通过考试才能毕业。",
-      "sentence2": "我会把消息传递下去。"
+      "sentence2": "我会把消息传递下去。",
+      "pronunciation": "/thʊŋ˥ kwɔ˥˩/; /tɕiŋ˥ kwɔ˥˩/"
     },
     {
       "id": 545,
       "word": "乘客",
       "sentence1": "乘客非常疲惫。",
-      "sentence2": "所有乘客必须出示车票。"
+      "sentence2": "所有乘客必须出示车票。",
+      "pronunciation": "/ʈʂhɤŋ˧˥ khɤ˥˩/"
     },
     {
       "id": 546,
       "word": "过去",
       "sentence1": "过去常常被遗忘。",
-      "sentence2": "我们从过去学习。"
+      "sentence2": "我们从过去学习。",
+      "pronunciation": "/kwɔ˥˩ tɕhy˥˩/"
     },
     {
       "id": 547,
       "word": "病人/有耐心的",
       "sentence1": "病人恢复得很好。",
-      "sentence2": "医生必须有耐心和理解力。"
+      "sentence2": "医生必须有耐心和理解力。",
+      "pronunciation": "/piŋ˥˩ ʐən˧˥/; /joʊ˧˩˧ naɪ˥˩ ɕin˥ tɤ/"
     },
     {
       "id": 548,
       "word": "图案/模式",
       "sentence1": "这条裙子有漂亮的花卉图案。",
-      "sentence2": "你能看出这些数字中的规律吗？"
+      "sentence2": "你能看出这些数字中的规律吗？",
+      "pronunciation": "/thu˧˥ an˥˩/; /mwɔ˧˥ ʂɨ˥˩/"
     },
     {
       "id": 549,
       "word": "支付",
       "sentence1": "我需要付账单。",
-      "sentence2": "你想怎么付票钱？"
+      "sentence2": "你想怎么付票钱？",
+      "pronunciation": "/ʈʂɨ˥ fu˥˩/"
     },
     {
       "id": 550,
       "word": "和平",
       "sentence1": "我们都想要世界和平。",
-      "sentence2": "和平谈判成功了。"
+      "sentence2": "和平谈判成功了。",
+      "pronunciation": "/xɤ˧˥ phiŋ˧˥/"
     },
     {
       "id": 551,
       "word": "便士",
       "sentence1": "省一分就是赚一分。",
-      "sentence2": "他在街上找到了一枚便士。"
+      "sentence2": "他在街上找到了一枚便士。",
+      "pronunciation": "/pjɛn˥˩ ʂɨ˥˩/"
     },
     {
       "id": 552,
       "word": "每",
       "sentence1": "每件10美元。",
-      "sentence2": "我们每人需要付5美元。"
+      "sentence2": "我们每人需要付5美元。",
+      "pronunciation": "/meɪ˧˩˧/"
     },
     {
       "id": 553,
       "word": "百分比",
       "sentence1": "利率是5%。",
-      "sentence2": "只有一小部分人口受到影响。"
+      "sentence2": "只有一小部分人口受到影响。",
+      "pronunciation": "/paɪ˧˩˧ fən˥ pi˧˩˧/"
     },
     {
       "id": 554,
       "word": "表演",
       "sentence1": "乐队将在音乐节上表演。",
-      "sentence2": "她想在舞台上表演。"
+      "sentence2": "她想在舞台上表演。",
+      "pronunciation": "/pjɑʊ˧˩˧ jɛn˧˩˧/"
     },
     {
       "id": 555,
       "word": "也许",
       "sentence1": "也许我们应该尝试不同的方法。",
-      "sentence2": "我也许稍后会去派对。"
+      "sentence2": "我也许稍后会去派对。",
+      "pronunciation": "/jɛ˧˩˧ ɕy˧˩˧/"
     },
     {
       "id": 556,
       "word": "许可",
       "sentence1": "你需要许可才能进入大楼。",
-      "sentence2": "我有使用汽车的许可。"
+      "sentence2": "我有使用汽车的许可。",
+      "pronunciation": "/ɕy˧˩˧ khɤ˧˩˧/"
     },
     {
       "id": 557,
       "word": "性格",
       "sentence1": "性格测试可以很有启发性。",
-      "sentence2": "她有活泼的性格。"
+      "sentence2": "她有活泼的性格。",
+      "pronunciation": "/ɕiŋ˥˩ kɤ˧˥/"
     },
     {
       "id": 558,
       "word": "宠物",
       "sentence1": "我有一只宠物猫。",
-      "sentence2": "宠物需要很多照顾。"
+      "sentence2": "宠物需要很多照顾。",
+      "pronunciation": "/ʈʂhʊŋ˧˩˧ u˥˩/"
     },
     {
       "id": 559,
       "word": "汽油",
       "sentence1": "这辆车用汽油。",
-      "sentence2": "汽油价格正在上涨。"
+      "sentence2": "汽油价格正在上涨。",
+      "pronunciation": "/tɕhi˥˩ joʊ˧˥/"
     },
     {
       "id": 560,
       "word": "照片",
       "sentence1": "我拍了一张日落的照片。",
-      "sentence2": "她收藏了一些旧照片。"
+      "sentence2": "她收藏了一些旧照片。",
+      "pronunciation": "/ʈʂɑʊ˥˩ phjɛn˥˩/"
     },
     {
       "id": 561,
       "word": "身体的",
       "sentence1": "体育活动对健康很重要。",
-      "sentence2": "他下周有体检。"
+      "sentence2": "他下周有体检。",
+      "pronunciation": "/ʂən˥ thi˧˩˧ tɤ/"
     },
     {
       "id": 562,
       "word": "物理学",
       "sentence1": "物理学是研究物质和能量的学科。",
-      "sentence2": "她喜欢学习物理。"
+      "sentence2": "她喜欢学习物理。",
+      "pronunciation": "/u˥˩ li˧˩˧ ɕɥœ˧˥/"
     },
     {
       "id": 563,
       "word": "挑选",
       "sentence1": "请从牌堆中选一张牌。",
-      "sentence2": "我下午5点来接你。"
+      "sentence2": "我下午5点来接你。",
+      "pronunciation": "/thjɑʊ˥ ɕɥœn˧˩˧/"
     },
     {
       "id": 564,
       "word": "飞行员",
       "sentence1": "飞行员安全地驾驶飞机。",
-      "sentence2": "她想成为一名飞行员。"
+      "sentence2": "她想成为一名飞行员。",
+      "pronunciation": "/feɪ˥ ɕiŋ˧˥ ɥœn˧˥/"
     },
     {
       "id": 565,
       "word": "行星",
       "sentence1": "地球是离太阳第三近的行星。",
-      "sentence2": "火星通常被称为红色星球。"
+      "sentence2": "火星通常被称为红色星球。",
+      "pronunciation": "/ɕiŋ˧˥ ɕiŋ˥/"
     },
     {
       "id": 566,
       "word": "植物/工厂",
       "sentence1": "植物需要水和阳光。",
-      "sentence2": "有许多不同种类的植物。"
+      "sentence2": "有许多不同种类的植物。",
+      "pronunciation": "/ʈʂɨ˧˥ u˥˩/; /kʊŋ˥ ʈʂhɑŋ˧˩˧/"
     },
     {
       "id": 567,
       "word": "塑料",
       "sentence1": "这个瓶子是塑料做的。",
-      "sentence2": "塑料污染是一个主要的环境问题。"
+      "sentence2": "塑料污染是一个主要的环境问题。",
+      "pronunciation": "/su˥˩ ljɑʊ˥˩/"
     },
     {
       "id": 568,
       "word": "盘子",
       "sentence1": "请把盘子放到水槽里。",
-      "sentence2": "这个盘子是陶瓷做的。"
+      "sentence2": "这个盘子是陶瓷做的。",
+      "pronunciation": "/phan˧˥ tsɯ˧˩˧/"
     },
     {
       "id": 569,
       "word": "月台/平台",
       "sentence1": "火车将到达2号月台。",
-      "sentence2": "她站在月台上等火车。"
+      "sentence2": "她站在月台上等火车。",
+      "pronunciation": "/ɥœ˥˩ thaɪ˧˥/; /phiŋ˧˥ thaɪ˧˥/"
     },
     {
       "id": 570,
       "word": "请",
       "sentence1": "请关门。",
-      "sentence2": "你能帮我吗？"
+      "sentence2": "你能帮我吗？",
+      "pronunciation": "/tɕhiŋ˧˩˧/"
     },
     {
       "id": 571,
       "word": "高兴的",
       "sentence1": "我对结果很满意。",
-      "sentence2": "她很高兴见到他。"
+      "sentence2": "她很高兴见到他。",
+      "pronunciation": "/kɑʊ˥ ɕiŋ˥ tɤ/"
     },
     {
       "id": 572,
       "word": "口袋",
       "sentence1": "我在口袋里找到了一些硬币。",
-      "sentence2": "他口袋里有个洞。"
+      "sentence2": "他口袋里有个洞。",
+      "pronunciation": "/khoʊ˧˩˧ taɪ˥˩/"
     },
     {
       "id": 573,
       "word": "礼貌的",
       "sentence1": "说\"谢谢\"是礼貌的。",
-      "sentence2": "她对客人总是很礼貌。"
+      "sentence2": "她对客人总是很礼貌。",
+      "pronunciation": "/li˧˩˧ mɑʊ˥˩ tɤ/"
     },
     {
       "id": 574,
       "word": "污染",
       "sentence1": "空气污染是一个严重的问题。",
-      "sentence2": "我们需要减少城市的污染。"
+      "sentence2": "我们需要减少城市的污染。",
+      "pronunciation": "/u˥ ʐan˧˩˧/"
     },
     {
       "id": 575,
       "word": "砰",
       "sentence1": "如果你挤得太用力，气球会爆掉。",
-      "sentence2": "我听到厨房传来砰的一声。"
+      "sentence2": "我听到厨房传来砰的一声。",
+      "pronunciation": "/phɤŋ˥/"
     },
     {
       "id": 576,
       "word": "人口",
       "sentence1": "这座城市的人口正在增长。",
-      "sentence2": "世界人口超过70亿。"
+      "sentence2": "世界人口超过70亿。",
+      "pronunciation": "/ʐən˧˥ khoʊ˧˩˧/"
     },
     {
       "id": 577,
       "word": "位置/职位",
       "sentence1": "她申请了公司的一个职位。",
-      "sentence2": "他在团队中的位置非常重要。"
+      "sentence2": "他在团队中的位置非常重要。",
+      "pronunciation": "/weɪ˥˩ ʈʂɨ˥˩/; /ʈʂɨ˧˥ weɪ˥˩/"
     },
     {
       "id": 578,
       "word": "拥有",
       "sentence1": "持有非法毒品是犯罪。",
-      "sentence2": "他失去了他的车。"
+      "sentence2": "他失去了他的车。",
+      "pronunciation": "/jʊŋ˥ joʊ˧˩˧/"
     },
     {
       "id": 579,
       "word": "可能性",
       "sentence1": "明天可能会下雨。",
-      "sentence2": "我们应该考虑每一种可能性。"
+      "sentence2": "我们应该考虑每一种可能性。",
+      "pronunciation": "/khɤ˧˩˧ nɤŋ˧˥ ɕiŋ˥˩/"
     },
     {
       "id": 580,
       "word": "海报",
       "sentence1": "海报宣传了即将到来的音乐会。",
-      "sentence2": "她把海报挂在卧室墙上。"
+      "sentence2": "她把海报挂在卧室墙上。",
+      "pronunciation": "/xaɪ˧˩˧ pɑʊ˥˩/"
     },
     {
       "id": 581,
       "word": "力量/电力",
       "sentence1": "暴风雨期间停电了。",
-      "sentence2": "他有权做出决定。"
+      "sentence2": "他有权做出决定。",
+      "pronunciation": "/li˥˩ ljɑŋ˥˩/; /tjɛn˥˩ li˥˩/"
     },
     {
       "id": 582,
       "word": "预测",
       "sentence1": "预测天气很难。",
-      "sentence2": "她能预测比赛结果。"
+      "sentence2": "她能预测比赛结果。",
+      "pronunciation": "/y˥˩ tshɤ˥˩/"
     },
     {
       "id": 583,
       "word": "礼物/呈现/现在",
       "sentence1": "他将在会议上展示他的发现。",
-      "sentence2": "她收到了一份生日礼物。"
+      "sentence2": "她收到了一份生日礼物。",
+      "pronunciation": "/li˧˩˧ u˥˩/; /ʈʂhɤŋ˧˥ ɕjɛn˥˩/; /ɕjɛn˥˩ tsaɪ˥˩/"
     },
     {
       "id": 584,
       "word": "总统",
       "sentence1": "总统向全国发表讲话。",
-      "sentence2": "她想有一天成为总统。"
+      "sentence2": "她想有一天成为总统。",
+      "pronunciation": "/tsʊŋ˧˩˧ thʊŋ˧˩˧/"
     },
     {
       "id": 585,
       "word": "防止",
       "sentence1": "我们必须防止道路交通事故。",
-      "sentence2": "采取了措施防止疾病传播。"
+      "sentence2": "采取了措施防止疾病传播。",
+      "pronunciation": "/fɑŋ˧˥ ʈʂɨ˧˩˧/"
     },
     {
       "id": 586,
       "word": "打印",
       "sentence1": "我需要打印这份文件。",
-      "sentence2": "打印机没墨了。"
+      "sentence2": "打印机没墨了。",
+      "pronunciation": "/ta˧˩˧ in˥˩/"
     },
     {
       "id": 587,
       "word": "打印机",
       "sentence1": "打印机不能正常工作。",
-      "sentence2": "我需要买一台新打印机。"
+      "sentence2": "我需要买一台新打印机。",
+      "pronunciation": "/ta˧˩˧ in˥˩ tɕi˥/"
     },
     {
       "id": 588,
       "word": "监狱",
       "sentence1": "他因犯罪被送进了监狱。",
-      "sentence2": "监狱位于城外。"
+      "sentence2": "监狱位于城外。",
+      "pronunciation": "/tɕjɛn˥ y˥˩/"
     },
     {
       "id": 589,
       "word": "奖品",
       "sentence1": "她在比赛中获奖。",
-      "sentence2": "诺贝尔奖每年颁发一次。"
+      "sentence2": "诺贝尔奖每年颁发一次。",
+      "pronunciation": "/tɕjɑŋ˧˩˧ phin˧˩˧/"
     },
     {
       "id": 590,
       "word": "过程",
       "sentence1": "这个过程很复杂。",
-      "sentence2": "我们需要简化流程。"
+      "sentence2": "我们需要简化流程。",
+      "pronunciation": "/kwɔ˥˩ ʈʂhɤŋ˧˥/"
     },
     {
       "id": 591,
       "word": "生产",
       "sentence1": "他们生产各种各样的产品。",
-      "sentence2": "这家工厂生产汽车。"
+      "sentence2": "这家工厂生产汽车。",
+      "pronunciation": "/ʂɤŋ˥ ʈʂhan˧˩˧/"
     },
     {
       "id": 592,
       "word": "专业的",
       "sentence1": "她是一名专业舞蹈演员。",
-      "sentence2": "他做了专业的演讲。"
+      "sentence2": "他做了专业的演讲。",
+      "pronunciation": "/ʈʂwan˥ jɛ˥˩ tɤ/"
     },
     {
       "id": 593,
       "word": "教授",
       "sentence1": "教授教生物学。",
-      "sentence2": "她是大学里受尊敬的教授。"
+      "sentence2": "她是大学里受尊敬的教授。",
+      "pronunciation": "/tɕjɑʊ˥˩ ʂoʊ˥˩/"
     },
     {
       "id": 594,
       "word": "个人资料",
       "sentence1": "请更新你的个人资料。",
-      "sentence2": "他有很强的网络形象。"
+      "sentence2": "他有很强的网络形象。",
+      "pronunciation": "/kɤ˥˩ ʐən˧˥ tsɯ˥ ljɑʊ˥˩/"
     },
     {
       "id": 595,
       "word": "程序",
       "sentence1": "节目晚上8点开始。",
-      "sentence2": "她参加了一个计算机科学课程。"
+      "sentence2": "她参加了一个计算机科学课程。",
+      "pronunciation": "/ʈʂhɤŋ˧˥ ɕy˥˩/"
     },
     {
       "id": 596,
       "word": "进步",
       "sentence1": "我们在项目上取得了进展。",
-      "sentence2": "她在学习上取得了显著进步。"
+      "sentence2": "她在学习上取得了显著进步。",
+      "pronunciation": "/tɕin˥˩ pu˥˩/"
     },
     {
       "id": 597,
       "word": "承诺",
       "sentence1": "我承诺帮你做作业。",
-      "sentence2": "她承诺永远陪在他身边。"
+      "sentence2": "她承诺永远陪在他身边。",
+      "pronunciation": "/ʈʂhɤŋ˧˥ nwɔ˥˩/"
     },
     {
       "id": 598,
       "word": "发音",
       "sentence1": "正确发音某些单词很难。",
-      "sentence2": "你能帮我念一下我的名字吗？"
+      "sentence2": "你能帮我念一下我的名字吗？",
+      "pronunciation": "/fa˥ in˥/"
     },
     {
       "id": 599,
       "word": "保护",
       "sentence1": "我们必须保护环境。",
-      "sentence2": "这项法律旨在保护消费者。"
+      "sentence2": "这项法律旨在保护消费者。",
+      "pronunciation": "/pɑʊ˧˩˧ xu˥˩/"
     },
     {
       "id": 600,
       "word": "提供",
       "sentence1": "我们需要为学生提供更多资源。",
-      "sentence2": "该组织旨在为有需要的人提供帮助。"
+      "sentence2": "该组织旨在为有需要的人提供帮助。",
+      "pronunciation": "/thi˧˥ kʊŋ˥/"
     },
     {
       "id": 601,
       "word": "酒吧",
       "sentence1": "他们在当地酒吧见面喝酒。",
-      "sentence2": "这家酒吧以现场音乐闻名。"
+      "sentence2": "这家酒吧以现场音乐闻名。",
+      "pronunciation": "/tɕjoʊ˧˩˧ pa˥/"
     },
     {
       "id": 602,
       "word": "公众/公共",
       "sentence1": "公众被邀请参加活动。",
-      "sentence2": "公共交通对城市至关重要。"
+      "sentence2": "公共交通对城市至关重要。",
+      "pronunciation": "/kʊŋ˥ ʈʂʊŋ˥˩/; /kʊŋ˥ kʊŋ˥˩/"
     },
     {
       "id": 603,
       "word": "出版",
       "sentence1": "他们计划明年出版一本新书。",
-      "sentence2": "这篇文章发表在科学期刊上。"
+      "sentence2": "这篇文章发表在科学期刊上。",
+      "pronunciation": "/ʈʂhu˥ pan˧˩˧/"
     },
     {
       "id": 604,
       "word": "拉",
       "sentence1": "请拉门打开。",
-      "sentence2": "他试图把沉重的箱子拉过地板。"
+      "sentence2": "他试图把沉重的箱子拉过地板。",
+      "pronunciation": "/la˥/"
     },
     {
       "id": 605,
       "word": "目的",
       "sentence1": "会议的目的是讨论项目。",
-      "sentence2": "她的职业生涯有明确的目标。"
+      "sentence2": "她的职业生涯有明确的目标。",
+      "pronunciation": "/mu˥˩ tɤ/"
     },
     {
       "id": 606,
       "word": "推",
       "sentence1": "他不得不推车才能启动。",
-      "sentence2": "她推了他一把帮他上山。"
+      "sentence2": "她推了他一把帮他上山。",
+      "pronunciation": "/thweɪ˥/"
     },
     {
       "id": 607,
       "word": "质量",
       "sentence1": "产品质量非常高。",
-      "sentence2": "我们需要提高服务质量。"
+      "sentence2": "我们需要提高服务质量。",
+      "pronunciation": "/ʈʂɨ˥˩ ljɑŋ˥˩/"
     },
     {
       "id": 608,
       "word": "数量",
       "sentence1": "食物的数量足够每个人。",
-      "sentence2": "我们需要减少产生的废物数量。"
+      "sentence2": "我们需要减少产生的废物数量。",
+      "pronunciation": "/ʂu˥˩ ljɑŋ˥˩/"
     },
     {
       "id": 609,
       "word": "女王",
       "sentence1": "女王正在访问这座城市。",
-      "sentence2": "她去年被加冕为女王。"
+      "sentence2": "她去年被加冕为女王。",
+      "pronunciation": "/ny˧˩˧ wɑŋ˧˥/"
     },
     {
       "id": 610,
       "word": "问题",
       "sentence1": "你有问题要问我吗？",
-      "sentence2": "她问了一个难题。"
+      "sentence2": "她问了一个难题。",
+      "pronunciation": "/wən˥˩ thi˧˥/"
     },
     {
       "id": 611,
       "word": "安静地",
       "sentence1": "他轻声说话以免被人听到。",
-      "sentence2": "她安静地穿过房子。"
+      "sentence2": "她安静地穿过房子。",
+      "pronunciation": "/an˥ tɕiŋ˥˩ tɤ/"
     },
     {
       "id": 612,
       "word": "比赛/种族",
       "sentence1": "他们下周将互相比赛。",
-      "sentence2": "她以几秒之差赢得了比赛。"
+      "sentence2": "她以几秒之差赢得了比赛。",
+      "pronunciation": "/pi˧˩˧ saɪ˥˩/; /ʈʂʊŋ˧˩˧ tsu˧˥/"
     },
     {
       "id": 613,
       "word": "铁路",
       "sentence1": "火车站今天很忙。",
-      "sentence2": "她从火车站乘火车。"
+      "sentence2": "她从火车站乘火车。",
+      "pronunciation": "/thjɛ˧˩˧ lu˥˩/"
     },
     {
       "id": 614,
       "word": "提高/筹集/养育",
       "sentence1": "我们需要提高对这个问题的认识。",
-      "sentence2": "他们计划为慈善机构筹集资金。"
+      "sentence2": "他们计划为慈善机构筹集资金。",
+      "pronunciation": "/thi˧˥ kɑʊ˥/; /ʈʂhoʊ˧˥ tɕi˧˥/; /jɑŋ˧˩˧ y˥˩/"
     },
     {
       "id": 615,
       "word": "率",
       "sentence1": "利率已经上涨。",
-      "sentence2": "我们需要找到提高成功率的方法。"
+      "sentence2": "我们需要找到提高成功率的方法。",
+      "pronunciation": "/ʂwaɪ˥˩/"
     },
     {
       "id": 616,
       "word": "宁愿",
       "sentence1": "我今晚宁愿待在家里。",
-      "sentence2": "她相当喜欢古典音乐。"
+      "sentence2": "她相当喜欢古典音乐。",
+      "pronunciation": "/niŋ˧˥ ɥœn˥˩/"
     },
     {
       "id": 617,
       "word": "到达",
       "sentence1": "我们需要在周五前做出决定。",
-      "sentence2": "他多年后终于达到了目标。"
+      "sentence2": "他多年后终于达到了目标。",
+      "pronunciation": "/tɑʊ˥˩ ta˧˥/"
     },
     {
       "id": 618,
       "word": "反应",
       "sentence1": "她对这个消息的反应与预期不同。",
-      "sentence2": "你通常在压力情况下如何反应？"
+      "sentence2": "你通常在压力情况下如何反应？",
+      "pronunciation": "/fan˧˩˧ iŋ˥˩/"
     },
     {
       "id": 619,
       "word": "意识到/实现",
       "sentence1": "我没有意识到已经这么晚了。",
-      "sentence2": "她终于实现了成为医生的梦想。"
+      "sentence2": "她终于实现了成为医生的梦想。",
+      "pronunciation": "/i˥˩ ʂɨ˧˥ tɑʊ˥˩/; /ʂɨ˧˥ ɕjɛn˥˩/"
     },
     {
       "id": 620,
       "word": "收到",
       "sentence1": "我很高兴收到你的来信。",
-      "sentence2": "你收到我寄的包裹了吗？"
+      "sentence2": "你收到我寄的包裹了吗？",
+      "pronunciation": "/ʂoʊ˥ tɑʊ˥˩/"
     },
     {
       "id": 621,
       "word": "最近的",
       "sentence1": "最近的变化改善了系统。",
-      "sentence2": "她正在研究技术的最新发展。"
+      "sentence2": "她正在研究技术的最新发展。",
+      "pronunciation": "/tsweɪ˥˩ tɕin˥˩ tɤ/"
     },
     {
       "id": 622,
       "word": "最近",
       "sentence1": "我最近开始了一份新工作。",
-      "sentence2": "你最近看过什么好电影吗？"
+      "sentence2": "你最近看过什么好电影吗？",
+      "pronunciation": "/tsweɪ˥˩ tɕin˥˩/"
     },
     {
       "id": 623,
       "word": "接待/招待会",
       "sentence1": "招待会在一家高档酒店举行。",
-      "sentence2": "她在前台工作。"
+      "sentence2": "她在前台工作。",
+      "pronunciation": "/tɕjɛ˥ taɪ˥˩/; /ʈʂɑʊ˥ taɪ˥˩ xweɪ˥˩/"
     },
     {
       "id": 624,
       "word": "食谱",
       "sentence1": "你有巧克力蛋糕的食谱吗？",
-      "sentence2": "这个食谱很容易遵循。"
+      "sentence2": "这个食谱很容易遵循。",
+      "pronunciation": "/ʂɨ˧˥ phu˧˩˧/"
     },
     {
       "id": 625,
       "word": "认出",
       "sentence1": "我能从照片上认出她。",
-      "sentence2": "认识自己的长处很重要。"
+      "sentence2": "认识自己的长处很重要。",
+      "pronunciation": "/ʐən˥˩ ʈʂhu˥/"
     },
     {
       "id": 626,
       "word": "推荐",
       "sentence1": "我推荐试试那家新餐厅。",
-      "sentence2": "你能推荐一本好书吗？"
+      "sentence2": "你能推荐一本好书吗？",
+      "pronunciation": "/thweɪ˥ tɕjɛn˥˩/"
     },
     {
       "id": 627,
       "word": "记录/唱片",
       "sentence1": "请记录会议纪要。",
-      "sentence2": "记录显示销售额大幅增长。"
+      "sentence2": "记录显示销售额大幅增长。",
+      "pronunciation": "/tɕi˥˩ lu˥˩/; /ʈʂhɑŋ˥˩ phjɛn˥˩/"
     },
     {
       "id": 628,
       "word": "录音",
       "sentence1": "讲座的录音可以在网上找到。",
-      "sentence2": "她听了自己表演的录音。"
+      "sentence2": "她听了自己表演的录音。",
+      "pronunciation": "/lu˥˩ in˥/"
     },
     {
       "id": 629,
       "word": "回收",
       "sentence1": "我们应该回收纸张和塑料。",
-      "sentence2": "回收有助于减少废物。"
+      "sentence2": "回收有助于减少废物。",
+      "pronunciation": "/xweɪ˧˥ ʂoʊ˥/"
     },
     {
       "id": 630,
       "word": "减少",
       "sentence1": "我们需要减少能源消耗。",
-      "sentence2": "这项政策旨在减少污染。"
+      "sentence2": "这项政策旨在减少污染。",
+      "pronunciation": "/tɕjɛn˧˩˧ ʂɑʊ˧˩˧/"
     },
     {
       "id": 631,
       "word": "参考",
       "sentence1": "请参阅用户手册获取说明。",
-      "sentence2": "他在报告中引用了几项研究。"
+      "sentence2": "他在报告中引用了几项研究。",
+      "pronunciation": "/tshan˥ khɑʊ˧˩˧/"
     },
     {
       "id": 632,
       "word": "拒绝",
       "sentence1": "我不得不拒绝邀请。",
-      "sentence2": "她拒绝回答问题。"
+      "sentence2": "她拒绝回答问题。",
+      "pronunciation": "/tɕy˥˩ tɕɥœ˧˥/"
     },
     {
       "id": 633,
       "word": "地区",
       "sentence1": "这个地区以美丽的风景闻名。",
-      "sentence2": "各地区之间的气候差异很大。"
+      "sentence2": "各地区之间的气候差异很大。",
+      "pronunciation": "/ti˥˩ tɕhy˥/"
     },
     {
       "id": 634,
       "word": "定期的/规律的",
       "sentence1": "我定期去健身房。",
-      "sentence2": "她有规律的睡眠时间表。"
+      "sentence2": "她有规律的睡眠时间表。",
+      "pronunciation": "/tiŋ˥˩ tɕhi˥ tɤ/; /kweɪ˥ ly˥˩ tɤ/"
     },
     {
       "id": 635,
       "word": "关系",
       "sentence1": "他们关系密切。",
-      "sentence2": "她珍视友谊和家庭关系。"
+      "sentence2": "她珍视友谊和家庭关系。",
+      "pronunciation": "/kwan˥ ɕi˥˩/"
     },
     {
       "id": 636,
       "word": "移除",
       "sentence1": "进入前请脱鞋。",
-      "sentence2": "他撕掉了旧墙纸。"
+      "sentence2": "他撕掉了旧墙纸。",
+      "pronunciation": "/i˧˥ ʈʂhu˧˥/"
     },
     {
       "id": 637,
       "word": "修理",
       "sentence1": "我需要修理我的自行车。",
-      "sentence2": "修理花的时间比预期的长。"
+      "sentence2": "修理花的时间比预期的长。",
+      "pronunciation": "/ɕjoʊ˥ li˧˩˧/"
     },
     {
       "id": 638,
       "word": "替换",
       "sentence1": "我们需要更换旧电池。",
-      "sentence2": "她更换了破损的窗户。"
+      "sentence2": "她更换了破损的窗户。",
+      "pronunciation": "/thi˥˩ xwan˥˩/"
     },
     {
       "id": 639,
       "word": "回复",
       "sentence1": "请回复我的邮件。",
-      "sentence2": "他没有回复我的消息。"
+      "sentence2": "他没有回复我的消息。",
+      "pronunciation": "/xweɪ˧˥ fu˥˩/"
     },
     {
       "id": 640,
       "word": "报告",
       "sentence1": "报告按时提交了。",
-      "sentence2": "她正在写一份关于气候变化的报告。"
+      "sentence2": "她正在写一份关于气候变化的报告。",
+      "pronunciation": "/pɑʊ˥˩ kɑʊ˥˩/"
     },
     {
       "id": 641,
       "word": "记者",
       "sentence1": "记者现场报道了这一事件。",
-      "sentence2": "她是一位著名的政治记者。"
+      "sentence2": "她是一位著名的政治记者。",
+      "pronunciation": "/tɕi˥˩ ʈʂɤ˧˩˧/"
     },
     {
       "id": 642,
       "word": "请求",
       "sentence1": "我想提出一个请求。",
-      "sentence2": "请求得到了管理层的批准。"
+      "sentence2": "请求得到了管理层的批准。",
+      "pronunciation": "/tɕhiŋ˧˩˧ tɕhjoʊ˧˥/"
     },
     {
       "id": 643,
       "word": "研究",
       "sentence1": "她正在进行可再生能源研究。",
-      "sentence2": "研究结果发表在期刊上。"
+      "sentence2": "研究结果发表在期刊上。",
+      "pronunciation": "/jɛn˧˥ tɕjoʊ˥/"
     },
     {
       "id": 644,
       "word": "研究员",
       "sentence1": "研究员在会议上展示了她的发现。",
-      "sentence2": "他是该领域的领先研究员。"
+      "sentence2": "他是该领域的领先研究员。",
+      "pronunciation": "/jɛn˧˥ tɕjoʊ˥ ɥœn˧˥/"
     },
     {
       "id": 645,
       "word": "回应",
       "sentence1": "请回复我的询问。",
-      "sentence2": "他很快回复了邮件。"
+      "sentence2": "他很快回复了邮件。",
+      "pronunciation": "/xweɪ˧˥ iŋ˥/"
     },
     {
       "id": 646,
       "word": "回应",
       "sentence1": "回应是积极的。",
-      "sentence2": "我们仍在等待回复。"
+      "sentence2": "我们仍在等待回复。",
+      "pronunciation": "/xweɪ˧˥ iŋ˥/"
     },
     {
       "id": 647,
       "word": "休息/剩余部分",
       "sentence1": "我需要休息一会儿。",
-      "sentence2": "长途旅行后她休息了一下。"
+      "sentence2": "长途旅行后她休息了一下。",
+      "pronunciation": "/ɕjoʊ˥ ɕi˥/; /ʂɤŋ˥˩ y˧˥ pu˥˩ fən˥/"
     },
     {
       "id": 648,
       "word": "审查/复习/评论",
       "sentence1": "请仔细审阅文件。",
-      "sentence2": "审查过程花了几周时间。"
+      "sentence2": "审查过程花了几周时间。",
+      "pronunciation": "/ʂən˧˩˧ ʈʂha˧˥/; /fu˥˩ ɕi˧˥/; /phiŋ˧˥ lwən˥˩/"
     },
     {
       "id": 649,
       "word": "骑",
       "sentence1": "我喜欢周末骑自行车。",
-      "sentence2": "她开新车兜了一圈。"
+      "sentence2": "她开新车兜了一圈。",
+      "pronunciation": "/tɕhi˧˥/"
     },
     {
       "id": 650,
       "word": "戒指",
       "sentence1": "她戴着一枚漂亮的金戒指。",
-      "sentence2": "戒指对她的手指来说太紧了。"
+      "sentence2": "戒指对她的手指来说太紧了。",
+      "pronunciation": "/tɕjɛ˥˩ ʈʂɨ˧˩˧/"
     },
     {
       "id": 651,
       "word": "响",
       "sentence1": "我听到电话响了。",
-      "sentence2": "教堂的钟每小时响一次。"
+      "sentence2": "教堂的钟每小时响一次。",
+      "pronunciation": "/ɕjɑŋ˧˩˧/"
     },
     {
       "id": 652,
       "word": "上升",
       "sentence1": "太阳将在早上6点升起。",
-      "sentence2": "预计明年价格会上涨。"
+      "sentence2": "预计明年价格会上涨。",
+      "pronunciation": "/ʂɑŋ˥˩ ʂɤŋ˥/"
     },
     {
       "id": 653,
       "word": "岩石/摇晃",
       "sentence1": "这块岩石太重了，抬不动。",
-      "sentence2": "她在海滩上收集了漂亮的石头。"
+      "sentence2": "她在海滩上收集了漂亮的石头。",
+      "pronunciation": "/jɛn˧˥ ʂɨ˧˥/; /jɑʊ˧˥ xwɑŋ˥˩/"
     },
     {
       "id": 654,
       "word": "角色",
       "sentence1": "他在项目中发挥了关键作用。",
-      "sentence2": "她在电影中的角色很有挑战性。"
+      "sentence2": "她在电影中的角色很有挑战性。",
+      "pronunciation": "/tɕɥœ˧˥ sɤ˥˩/"
     },
     {
       "id": 655,
       "word": "屋顶",
       "sentence1": "屋顶需要修理。",
-      "sentence2": "他们在屋顶上安装了太阳能板。"
+      "sentence2": "他们在屋顶上安装了太阳能板。",
+      "pronunciation": "/u˥ tiŋ˧˩˧/"
     },
     {
       "id": 656,
       "word": "圆的",
       "sentence1": "桌子是圆的。",
-      "sentence2": "她有一张圆脸。"
+      "sentence2": "她有一张圆脸。",
+      "pronunciation": "/ɥœn˧˥ tɤ/"
     },
     {
       "id": 657,
       "word": "路线",
       "sentence1": "去机场最好的路线是什么？",
-      "sentence2": "这条路线因施工而关闭。"
+      "sentence2": "这条路线因施工而关闭。",
+      "pronunciation": "/lu˥˩ ɕjɛn˥˩/"
     },
     {
       "id": 658,
       "word": "垃圾",
       "sentence1": "请把垃圾拿出去。",
-      "sentence2": "公园里到处都是垃圾。"
+      "sentence2": "公园里到处都是垃圾。",
+      "pronunciation": "/la˥ tɕi˥/"
     },
     {
       "id": 659,
       "word": "粗鲁的",
       "sentence1": "他打断别人是很粗鲁的。",
-      "sentence2": "她对服务员很粗鲁。"
+      "sentence2": "她对服务员很粗鲁。",
+      "pronunciation": "/tshu˥ lu˧˩˧ tɤ/"
     },
     {
       "id": 660,
       "word": "跑/经营/运行",
       "sentence1": "我喜欢早上跑步。",
-      "sentence2": "她每天跑五英里。"
+      "sentence2": "她每天跑五英里。",
+      "pronunciation": "/phɑʊ˧˩˧/; /tɕiŋ˥ iŋ˧˥/; /yn˥˩ ɕiŋ˧˥/"
     },
     {
       "id": 661,
       "word": "跑步者",
       "sentence1": "这位跑步者以创纪录的时间完成了比赛。",
-      "sentence2": "他是一名职业马拉松运动员。"
+      "sentence2": "他是一名职业马拉松运动员。",
+      "pronunciation": "/phɑʊ˧˩˧ pu˥˩ ʈʂɤ˧˩˧/"
     },
     {
       "id": 662,
       "word": "跑步",
       "sentence1": "跑步是保持健康的好方法。",
-      "sentence2": "她喜欢在公园里跑步。"
+      "sentence2": "她喜欢在公园里跑步。",
+      "pronunciation": "/phɑʊ˧˩˧ pu˥˩/"
     },
     {
       "id": 663,
       "word": "悲伤地",
       "sentence1": "她悲伤地向朋友们告别。",
-      "sentence2": "他悲伤地看着她。"
+      "sentence2": "他悲伤地看着她。",
+      "pronunciation": "/peɪ˥ ʂɑŋ˥ ti˥˩/"
     },
     {
       "id": 664,
       "word": "安全的/保险柜",
       "sentence1": "这座建筑能抵抗地震。",
-      "sentence2": "玩耍前确保区域安全。"
+      "sentence2": "玩耍前确保区域安全。",
+      "pronunciation": "/an˥ tɕhɥœn˧˥ tɤ/; /pɑʊ˧˩˧ ɕjɛn˧˩˧ kweɪ˥˩/"
     },
     {
       "id": 665,
       "word": "航行",
       "sentence1": "他们决定环球航行。",
-      "sentence2": "她喜欢周末去航行。"
+      "sentence2": "她喜欢周末去航行。",
+      "pronunciation": "/xɑŋ˧˥ ɕiŋ˧˥/"
     },
     {
       "id": 666,
       "word": "帆船运动",
       "sentence1": "帆船是夏季流行的活动。",
-      "sentence2": "他去年上了帆船课程。"
+      "sentence2": "他去年上了帆船课程。",
+      "pronunciation": "/fan˥ ʈʂhwan˧˥ yn˥˩ tʊŋ˥˩/"
     },
     {
       "id": 667,
       "word": "薪水",
       "sentence1": "她的薪水高于行业平均水平。",
-      "sentence2": "他正在与公司谈判薪水。"
+      "sentence2": "他正在与公司谈判薪水。",
+      "pronunciation": "/ɕin˥ ʂweɪ˧˩˧/"
     },
     {
       "id": 668,
       "word": "销售",
       "sentence1": "这家商店这个周末有大促销。",
-      "sentence2": "我打折时买了这条裙子。"
+      "sentence2": "我打折时买了这条裙子。",
+      "pronunciation": "/ɕjɑʊ˥ ʂoʊ˥˩/"
     },
     {
       "id": 669,
       "word": "酱汁",
       "sentence1": "我喜欢在意大利面上放番茄酱。",
-      "sentence2": "这个食谱需要辣酱。"
+      "sentence2": "这个食谱需要辣酱。",
+      "pronunciation": "/tɕjɑŋ˥˩ ʈʂɨ˥/"
     },
     {
       "id": 670,
       "word": "节省/拯救/保存",
       "sentence1": "我们需要保护环境。",
-      "sentence2": "她存钱买新车。"
+      "sentence2": "她存钱买新车。",
+      "pronunciation": "/tɕjɛ˧˥ ʂɤŋ˧˩˧/; /ʈʂɤŋ˧˩˧ tɕjoʊ˥˩/; /pɑʊ˧˩˧ tshwən˧˥/"
     },
     {
       "id": 671,
       "word": "害怕的",
       "sentence1": "他在看恐怖电影时很害怕。",
-      "sentence2": "她晚上独自走路感到害怕。"
+      "sentence2": "她晚上独自走路感到害怕。",
+      "pronunciation": "/xaɪ˥˩ pha˥˩ tɤ/"
     },
     {
       "id": 672,
       "word": "可怕的",
       "sentence1": "鬼屋真的很可怕。",
-      "sentence2": "我不喜欢恐怖电影。"
+      "sentence2": "我不喜欢恐怖电影。",
+      "pronunciation": "/khɤ˧˩˧ pha˥˩ tɤ/"
     },
     {
       "id": 673,
       "word": "场景",
       "sentence1": "电影的最后一幕很感人。",
-      "sentence2": "他们在公园里拍摄了这个场景。"
+      "sentence2": "他们在公园里拍摄了这个场景。",
+      "pronunciation": "/ʈʂhɑŋ˧˩˧ tɕiŋ˧˩˧/"
     },
     {
       "id": 674,
       "word": "时间表",
       "sentence1": "会议日程可以在网上找到。",
-      "sentence2": "她这周日程很忙。"
+      "sentence2": "她这周日程很忙。",
+      "pronunciation": "/ʂɨ˧˥ tɕjɛn˥ pjɑʊ˧˩˧/"
     },
     {
       "id": 675,
       "word": "分数/得分",
       "sentence1": "最终比分是3比2。",
-      "sentence2": "他踢进了制胜一球。"
+      "sentence2": "他踢进了制胜一球。",
+      "pronunciation": "/fən˥ ʂu˥˩/; /tɤ˧˥ fən˥/"
     },
     {
       "id": 676,
       "word": "屏幕",
       "sentence1": "屏幕太亮了。",
-      "sentence2": "她在大屏幕上看了电影。"
+      "sentence2": "她在大屏幕上看了电影。",
+      "pronunciation": "/phiŋ˧˥ mu˥˩/"
     },
     {
       "id": 677,
       "word": "搜索",
       "sentence1": "我需要找我的钥匙。",
-      "sentence2": "对失踪者的搜索仍在继续。"
+      "sentence2": "对失踪者的搜索仍在继续。",
+      "pronunciation": "/soʊ˥ swɔ˧˩˧/"
     },
     {
       "id": 678,
       "word": "季节",
       "sentence1": "冬天是我最喜欢的季节。",
-      "sentence2": "这部剧的新一季下周开始。"
+      "sentence2": "这部剧的新一季下周开始。",
+      "pronunciation": "/tɕi˥˩ tɕjɛ˧˥/"
     },
     {
       "id": 679,
       "word": "座位",
       "sentence1": "请坐。",
-      "sentence2": "我旁边的座位是空的。"
+      "sentence2": "我旁边的座位是空的。",
+      "pronunciation": "/tswɔ˥˩ weɪ˥˩/"
     },
     {
       "id": 680,
       "word": "第二/秒",
       "sentence1": "第二章更有趣。",
-      "sentence2": "我们将在下次会议上讨论这个问题。"
+      "sentence2": "我们将在下次会议上讨论这个问题。",
+      "pronunciation": "/ti˥˩ ɑɻ˥˩/; /mjɑʊ˧˩˧/"
     },
     {
       "id": 681,
       "word": "其次",
       "sentence1": "其次，我们需要考虑预算。",
-      "sentence2": "其次，她是一个很好的团队成员。"
+      "sentence2": "其次，她是一个很好的团队成员。",
+      "pronunciation": "/tɕhi˧˥ tshɯ˥˩/"
     },
     {
       "id": 682,
       "word": "秘密",
       "sentence1": "这是我们之间的秘密。",
-      "sentence2": "她在我耳边低声说了这个秘密。"
+      "sentence2": "她在我耳边低声说了这个秘密。",
+      "pronunciation": "/mi˥˩ mi˥˩/"
     },
     {
       "id": 683,
       "word": "秘书",
       "sentence1": "秘书将安排会议。",
-      "sentence2": "他在一家律师事务所担任秘书。"
+      "sentence2": "他在一家律师事务所担任秘书。",
+      "pronunciation": "/mi˥˩ ʂu˥/"
     },
     {
       "id": 684,
       "word": "似乎",
       "sentence1": "他们在一起似乎很快乐。",
-      "sentence2": "似乎我们有问题了。"
+      "sentence2": "似乎我们有问题了。",
+      "pronunciation": "/sɯ˥˩ xu˥/"
     },
     {
       "id": 685,
       "word": "感觉/理智",
       "sentence1": "我能感觉到你的兴奋。",
-      "sentence2": "她很有幽默感。"
+      "sentence2": "她很有幽默感。",
+      "pronunciation": "/kan˧˩˧ tɕɥœ˧˥/; /li˧˩˧ ʈʂɨ˥˩/"
     },
     {
       "id": 686,
       "word": "分开",
       "sentence1": "我们需要把这两个问题分开。",
-      "sentence2": "他们决定分开住。"
+      "sentence2": "他们决定分开住。",
+      "pronunciation": "/fən˥ khaɪ˥/"
     },
     {
       "id": 687,
       "word": "系列",
       "sentence1": "我一个周末看完了整部剧。",
-      "sentence2": "这本书是系列的一部分。"
+      "sentence2": "这本书是系列的一部分。",
+      "pronunciation": "/ɕi˥˩ ljɛ˥˩/"
     },
     {
       "id": 688,
       "word": "严肃的",
       "sentence1": "他是一个严肃的人。",
-      "sentence2": "这是一个严重的问题。"
+      "sentence2": "这是一个严重的问题。",
+      "pronunciation": "/jɛn˧˥ su˥˩ tɤ/"
     },
     {
       "id": 689,
       "word": "服务",
       "sentence1": "这家餐厅旨在提供高质量的食物。",
-      "sentence2": "他们从早上7点到11点提供早餐。"
+      "sentence2": "他们从早上7点到11点提供早餐。",
+      "pronunciation": "/fu˧˥ u˥˩/"
     },
     {
       "id": 690,
       "word": "服务",
       "sentence1": "酒店提供优质的客房服务。",
-      "sentence2": "客户服务对我们非常重要。"
+      "sentence2": "客户服务对我们非常重要。",
+      "pronunciation": "/fu˧˥ u˥˩/"
     },
     {
       "id": 691,
       "word": "几个",
       "sentence1": "我读过几本关于这个话题的书。",
-      "sentence2": "几个人参加了会议。"
+      "sentence2": "几个人参加了会议。",
+      "pronunciation": "/tɕi˧˩˧ kɤ˥˩/"
     },
     {
       "id": 692,
       "word": "摇",
       "sentence1": "使用前请摇晃瓶子。",
-      "sentence2": "他们友好地握了手。"
+      "sentence2": "他们友好地握了手。",
+      "pronunciation": "/jɑʊ˧˥/"
     },
     {
       "id": 693,
       "word": "将",
       "sentence1": "我们将一起克服这个挑战。",
-      "sentence2": "我们跳舞好吗？"
+      "sentence2": "我们跳舞好吗？",
+      "pronunciation": "/tɕjɑŋ˥/"
     },
     {
       "id": 694,
       "word": "形状",
       "sentence1": "饼干是星星形状的。",
-      "sentence2": "她在艺术中有独特的形状感。"
+      "sentence2": "她在艺术中有独特的形状感。",
+      "pronunciation": "/ɕiŋ˧˥ ʈʂwɑŋ˥˩/"
     },
     {
       "id": 695,
       "word": "床单/张",
       "sentence1": "我需要一张干净的床单。",
-      "sentence2": "艺术家用了一大张纸。"
+      "sentence2": "艺术家用了一大张纸。",
+      "pronunciation": "/ʈʂhwɑŋ˧˥ tan˥/; /ʈʂɑŋ˥/"
     },
     {
       "id": 696,
       "word": "船",
       "sentence1": "船正在横渡大洋。",
-      "sentence2": "他们为项目建造了一艘模型船。"
+      "sentence2": "他们为项目建造了一艘模型船。",
+      "pronunciation": "/ʈʂhwan˧˥/"
     },
     {
       "id": 697,
       "word": "肩膀",
       "sentence1": "他肩膀上有纹身。",
-      "sentence2": "她把包挎在肩上。"
+      "sentence2": "她把包挎在肩上。",
+      "pronunciation": "/tɕjɛn˥ pɑŋ˧˩˧/"
     },
     {
       "id": 698,
       "word": "喊叫",
       "sentence1": "不要在图书馆大喊大叫。",
-      "sentence2": "她不得不大喊才能让人听到她的声音。"
+      "sentence2": "她不得不大喊才能让人听到她的声音。",
+      "pronunciation": "/xan˧˩˧ tɕjɑʊ˥˩/"
     },
     {
       "id": 699,
       "word": "关闭",
       "sentence1": "请随手关门。",
-      "sentence2": "他关上窗户挡住寒冷。"
+      "sentence2": "他关上窗户挡住寒冷。",
+      "pronunciation": "/kwan˥ pi˥˩/"
     },
     {
       "id": 700,
       "word": "边",
       "sentence1": "建筑物的一侧正在粉刷。",
-      "sentence2": "她喜欢侧身睡觉。"
+      "sentence2": "她喜欢侧身睡觉。",
+      "pronunciation": "/pjɛn˥/"
     },
     {
       "id": 701,
       "word": "标志/手势/签名",
       "sentence1": "有一个标志指示去公园的路。",
-      "sentence2": "他做了一个手势让我知道他准备好了。"
+      "sentence2": "他做了一个手势让我知道他准备好了。",
+      "pronunciation": "/pjɑʊ˥ ʈʂɨ˥˩/; /ʂoʊ˧˩˧ ʂɨ˥˩/; /tɕhjɛn˥ miŋ˧˥/"
     },
     {
       "id": 702,
       "word": "银",
       "sentence1": "她戴着一条漂亮的银项链。",
-      "sentence2": "云的银边清晰可见。"
+      "sentence2": "云的银边清晰可见。",
+      "pronunciation": "/in˧˥/"
     },
     {
       "id": 703,
       "word": "简单的",
       "sentence1": "这是一个简单的任务。",
-      "sentence2": "她用简单的术语解释了这个概念。"
+      "sentence2": "她用简单的术语解释了这个概念。",
+      "pronunciation": "/tɕjɛn˧˩˧ tan˥ tɤ/"
     },
     {
       "id": 704,
       "word": "自从",
       "sentence1": "我从2010年起就住在这里。",
-      "sentence2": "既然你问了，我会帮助你。"
+      "sentence2": "既然你问了，我会帮助你。",
+      "pronunciation": "/tsɯ˥˩ tshʊŋ˧˥/"
     },
     {
       "id": 705,
       "word": "唱歌",
       "sentence1": "她喜欢在淋浴时唱歌。",
-      "sentence2": "唱歌是表达情感的好方法。"
+      "sentence2": "唱歌是表达情感的好方法。",
+      "pronunciation": "/ʈʂhɑŋ˥˩ kɤ˥/"
     },
     {
       "id": 706,
       "word": "单一/单身/单程",
       "sentence1": "他是单亲父母。",
-      "sentence2": "请给我一张单程票。"
+      "sentence2": "请给我一张单程票。",
+      "pronunciation": "/tan˥ i˥/; /tan˥ ʂən˥/; /tan˥ ʈʂhɤŋ˧˥/"
     },
     {
       "id": 707,
       "word": "先生",
       "sentence1": "打扰一下，先生，我能帮您吗？",
-      "sentence2": "老师称呼他为\"先生\"。"
+      "sentence2": "老师称呼他为\"先生\"。",
+      "pronunciation": "/ɕjɛn˥ ʂɤŋ˥/"
     },
     {
       "id": 708,
       "word": "地点",
       "sentence1": "今天建筑工地很忙。",
-      "sentence2": "这个网站是学习的好资源。"
+      "sentence2": "这个网站是学习的好资源。",
+      "pronunciation": "/ti˥˩ tjɛn˧˩˧/"
     },
     {
       "id": 709,
       "word": "尺寸",
       "sentence1": "你穿多大尺寸？",
-      "sentence2": "这件衬衫有不同的尺寸。"
+      "sentence2": "这件衬衫有不同的尺寸。",
+      "pronunciation": "/ʈʂhɨ˧˩˧ tshwən˥˩/"
     },
     {
       "id": 710,
       "word": "滑雪",
       "sentence1": "我喜欢冬天滑雪。",
-      "sentence2": "滑雪是一项流行的冬季运动。"
+      "sentence2": "滑雪是一项流行的冬季运动。",
+      "pronunciation": "/xwa˧˥ ɕɥœ˧˩˧/"
     },
     {
       "id": 711,
       "word": "滑雪",
       "sentence1": "滑雪是我最喜欢的冬季活动。",
-      "sentence2": "她喜欢在山上滑雪。"
+      "sentence2": "她喜欢在山上滑雪。",
+      "pronunciation": "/xwa˧˥ ɕɥœ˧˩˧/"
     },
     {
       "id": 712,
       "word": "皮肤",
       "sentence1": "你的皮肤看起来健康有光泽。",
-      "sentence2": "她在干燥的皮肤上涂抹乳液。"
+      "sentence2": "她在干燥的皮肤上涂抹乳液。",
+      "pronunciation": "/phi˧˥ fu˥/"
     },
     {
       "id": 713,
       "word": "天空",
       "sentence1": "今天天空晴朗湛蓝。",
-      "sentence2": "我们观看了夜空中的星星。"
+      "sentence2": "我们观看了夜空中的星星。",
+      "pronunciation": "/thjɛn˥ khʊŋ˥/"
     },
     {
       "id": 714,
       "word": "睡眠",
       "sentence1": "我晚上需要更多睡眠。",
-      "sentence2": "睡眠对健康很重要。"
+      "sentence2": "睡眠对健康很重要。",
+      "pronunciation": "/ʂweɪ˥˩ mjɛn˧˥/"
     },
     {
       "id": 715,
       "word": "慢慢地",
       "sentence1": "她慢慢地走到公交车站。",
-      "sentence2": "时钟缓慢地滴答作响。"
+      "sentence2": "时钟缓慢地滴答作响。",
+      "pronunciation": "/man˥˩ man˥˩ ti˥˩/"
     },
     {
       "id": 716,
       "word": "智能手机",
       "sentence1": "他用智能手机查看邮件。",
-      "sentence2": "智能手机已成为现代生活中不可或缺的一部分。"
+      "sentence2": "智能手机已成为现代生活中不可或缺的一部分。",
+      "pronunciation": "/ʈʂɨ˥˩ nɤŋ˧˥ ʂoʊ˧˩˧ tɕi˥/"
     },
     {
       "id": 717,
       "word": "气味",
       "sentence1": "我喜欢新鲜咖啡的味道。",
-      "sentence2": "空气中弥漫着花香。"
+      "sentence2": "空气中弥漫着花香。",
+      "pronunciation": "/tɕhi˥˩ weɪ˥˩/"
     },
     {
       "id": 718,
       "word": "微笑",
       "sentence1": "她热情地微笑着迎接我。",
-      "sentence2": "微笑可以让人心情愉快。"
+      "sentence2": "微笑可以让人心情愉快。",
+      "pronunciation": "/weɪ˥ ɕjɑʊ˥˩/"
     },
     {
       "id": 719,
       "word": "烟",
       "sentence1": "烟囱里冒出烟。",
-      "sentence2": "他试着抽烟斗，但不喜欢。"
+      "sentence2": "他试着抽烟斗，但不喜欢。",
+      "pronunciation": "/jɛn˥/"
     },
     {
       "id": 720,
       "word": "吸烟",
       "sentence1": "此区域禁止吸烟。",
-      "sentence2": "他因健康原因戒烟了。"
+      "sentence2": "他因健康原因戒烟了。",
+      "pronunciation": "/ɕi˥ jɛn˥/"
     },
     {
       "id": 721,
       "word": "肥皂",
       "sentence1": "我需要买一些肥皂。",
-      "sentence2": "这块肥皂有宜人的香味。"
+      "sentence2": "这块肥皂有宜人的香味。",
+      "pronunciation": "/feɪ˧˥ tsɑʊ˥˩/"
     },
     {
       "id": 722,
       "word": "足球",
       "sentence1": "足球是世界上流行的运动。",
-      "sentence2": "他每个周末都踢足球。"
+      "sentence2": "他每个周末都踢足球。",
+      "pronunciation": "/tsu˧˥ tɕhjoʊ˧˥/"
     },
     {
       "id": 723,
       "word": "社会的",
       "sentence1": "社交媒体改变了我们的交流方式。",
-      "sentence2": "她积极参与社会公益事业。"
+      "sentence2": "她积极参与社会公益事业。",
+      "pronunciation": "/ʂɤ˥˩ xweɪ˥˩ tɤ/"
     },
     {
       "id": 724,
       "word": "社会",
       "sentence1": "社会在不断发展。",
-      "sentence2": "我们必须共同努力建设更好的社会。"
+      "sentence2": "我们必须共同努力建设更好的社会。",
+      "pronunciation": "/ʂɤ˥˩ xweɪ˥˩/"
     },
     {
       "id": 725,
       "word": "袜子",
       "sentence1": "我需要买一双新袜子。",
-      "sentence2": "这些袜子是用柔软的材料制成的。"
+      "sentence2": "这些袜子是用柔软的材料制成的。",
+      "pronunciation": "/wa˥˩ tsɯ˧˩˧/"
     },
     {
       "id": 726,
       "word": "柔软的",
       "sentence1": "这个枕头非常柔软舒适。",
-      "sentence2": "她的皮肤柔软光滑。"
+      "sentence2": "她的皮肤柔软光滑。",
+      "pronunciation": "/ʐoʊ˧˥ ʐwan˧˩˧ tɤ/"
     },
     {
       "id": 727,
       "word": "士兵",
       "sentence1": "士兵立正站着。",
-      "sentence2": "许多士兵在战争中英勇作战。"
+      "sentence2": "许多士兵在战争中英勇作战。",
+      "pronunciation": "/ʂɨ˥˩ piŋ˥/"
     },
     {
       "id": 728,
       "word": "解决方案",
       "sentence1": "我们需要找到这个问题的解决方案。",
-      "sentence2": "解决方案简单有效。"
+      "sentence2": "解决方案简单有效。",
+      "pronunciation": "/tɕjɛ˧˩˧ tɕɥœ˧˥ fɑŋ˥ an˥˩/"
     },
     {
       "id": 729,
       "word": "解决",
       "sentence1": "你能帮我解决这个谜题吗？",
-      "sentence2": "他们一起合作解决了这个问题。"
+      "sentence2": "他们一起合作解决了这个问题。",
+      "pronunciation": "/tɕjɛ˧˩˧ tɕɥœ˧˥/"
     },
     {
       "id": 730,
       "word": "某处",
       "sentence1": "我想我把钥匙落在房子的某个地方了。",
-      "sentence2": "让我们找个安静的地方谈谈。"
+      "sentence2": "让我们找个安静的地方谈谈。",
+      "pronunciation": "/moʊ˧˩˧ ʈʂhu˥˩/"
     },
     {
       "id": 731,
       "word": "分类/种类",
       "sentence1": "请按日期整理文件。",
-      "sentence2": "整理你的优先事项很重要。"
+      "sentence2": "整理你的优先事项很重要。",
+      "pronunciation": "/fən˥ leɪ˥˩/; /ʈʂʊŋ˧˩˧ leɪ˥˩/"
     },
     {
       "id": 732,
       "word": "来源",
       "sentence1": "信息的来源不明。",
-      "sentence2": "我们需要在继续之前核实来源。"
+      "sentence2": "我们需要在继续之前核实来源。",
+      "pronunciation": "/laɪ˧˥ ɥœn˧˥/"
     },
     {
       "id": 733,
       "word": "演讲者",
       "sentence1": "演讲者做了一次鼓舞人心的演讲。",
-      "sentence2": "她是环境问题方面著名的演讲者。"
+      "sentence2": "她是环境问题方面著名的演讲者。",
+      "pronunciation": "/jɛn˧˩˧ tɕjɑŋ˧˩˧ ʈʂɤ˧˩˧/"
     },
     {
       "id": 734,
       "word": "具体的",
       "sentence1": "你能更具体地说明你的要求吗？",
-      "sentence2": "我们需要具体的例子来理解这个问题。"
+      "sentence2": "我们需要具体的例子来理解这个问题。",
+      "pronunciation": "/tɕy˥˩ thi˧˩˧ tɤ/"
     },
     {
       "id": 735,
       "word": "演讲",
       "sentence1": "总统的演讲非常感人。",
-      "sentence2": "她发表了一篇关于教育重要性的演讲。"
+      "sentence2": "她发表了一篇关于教育重要性的演讲。",
+      "pronunciation": "/jɛn˧˩˧ tɕjɑŋ˧˩˧/"
     },
     {
       "id": 736,
       "word": "速度",
       "sentence1": "这条路的限速是每小时60公里。",
-      "sentence2": "他高速行驶以赶上火车。"
+      "sentence2": "他高速行驶以赶上火车。",
+      "pronunciation": "/su˥˩ tu˥˩/"
     },
     {
       "id": 737,
       "word": "蜘蛛",
       "sentence1": "我在房间角落看到一只蜘蛛。",
-      "sentence2": "她害怕蜘蛛。"
+      "sentence2": "她害怕蜘蛛。",
+      "pronunciation": "/ʈʂɨ˥ ʈʂu˥/"
     },
     {
       "id": 738,
       "word": "勺子",
       "sentence1": "请递给我一把勺子好吗？",
-      "sentence2": "他用勺子搅拌茶。"
+      "sentence2": "他用勺子搅拌茶。",
+      "pronunciation": "/ʂɑʊ˧˥ tsɯ˧˩˧/"
     },
     {
       "id": 739,
       "word": "正方形/广场",
       "sentence1": "桌子是正方形的。",
-      "sentence2": "她在纸上画了一个正方形。"
+      "sentence2": "她在纸上画了一个正方形。",
+      "pronunciation": "/ʈʂɤŋ˥˩ fɑŋ˥ ɕiŋ˧˥/; /kwɑŋ˧˩˧ ʈʂhɑŋ˧˩˧/"
     },
     {
       "id": 740,
       "word": "舞台/阶段",
       "sentence1": "这部剧将在主舞台上演。",
-      "sentence2": "她在后台准备表演。"
+      "sentence2": "她在后台准备表演。",
+      "pronunciation": "/u˧˩˧ thaɪ˧˥/; /tɕjɛ˥ twan˥˩/"
     },
     {
       "id": 741,
       "word": "楼梯",
       "sentence1": "楼梯又陡又窄。",
-      "sentence2": "他在楼梯上滑倒了。"
+      "sentence2": "他在楼梯上滑倒了。",
+      "pronunciation": "/loʊ˧˥ thi˥/"
     },
     {
       "id": 742,
       "word": "邮票/印记",
       "sentence1": "我需要一张邮票来寄这封信。",
-      "sentence2": "她收集世界各地的稀有邮票。"
+      "sentence2": "她收集世界各地的稀有邮票。",
+      "pronunciation": "/joʊ˧˥ phjɑʊ˥˩/; /in˥˩ tɕi˥˩/"
     },
     {
       "id": 743,
       "word": "星星",
       "sentence1": "夜空布满了星星。",
-      "sentence2": "她想成为好莱坞明星。"
+      "sentence2": "她想成为好莱坞明星。",
+      "pronunciation": "/ɕiŋ˥ ɕiŋ˥/"
     },
     {
       "id": 744,
       "word": "开始",
       "sentence1": "是时候开始会议了。",
-      "sentence2": "他们将于下周开始这个项目。"
+      "sentence2": "他们将于下周开始这个项目。",
+      "pronunciation": "/khaɪ˥ ʂɨ˧˩˧/"
     },
     {
       "id": 745,
       "word": "状态/国家/州",
       "sentence1": "经济状况正在改善。",
-      "sentence2": "她处于震惊状态。"
+      "sentence2": "她处于震惊状态。",
+      "pronunciation": "/ʈʂwɑŋ˥˩ thaɪ˥˩/; /kwɔ˧˥ tɕja˥/; /ʈʂoʊ˥/"
     },
     {
       "id": 746,
       "word": "停留",
       "sentence1": "我今晚会待在家里。",
-      "sentence2": "演示期间请保持安静。"
+      "sentence2": "演示期间请保持安静。",
+      "pronunciation": "/thiŋ˧˥ ljoʊ˧˥/"
     },
     {
       "id": 747,
       "word": "偷",
       "sentence1": "有人试图偷我的自行车。",
-      "sentence2": "偷别人的东西是不对的。"
+      "sentence2": "偷别人的东西是不对的。",
+      "pronunciation": "/thoʊ˥/"
     },
     {
       "id": 748,
       "word": "步/步骤",
       "sentence1": "退一步想一想。",
-      "sentence2": "她向前迈了一步帮助他。"
+      "sentence2": "她向前迈了一步帮助他。",
+      "pronunciation": "/pu˥˩/; /pu˧˥ ʈʂoʊ˥˩/"
     },
     {
       "id": 749,
       "word": "胃",
       "sentence1": "我的肚子在咕咕叫，我需要吃东西。",
-      "sentence2": "他吃太多了，胃痛。"
+      "sentence2": "他吃太多了，胃痛。",
+      "pronunciation": "/weɪ˥˩/"
     },
     {
       "id": 750,
       "word": "石头",
       "sentence1": "这块石头太重了，抬不动。",
-      "sentence2": "她从海滩上收集了漂亮的石头。"
+      "sentence2": "她从海滩上收集了漂亮的石头。",
+      "pronunciation": "/ʂɨ˧˥ thoʊ˧˥/"
     },
     {
       "id": 751,
       "word": "商店",
       "sentence1": "我需要去商店买杂货。",
-      "sentence2": "这家商店这个周末有促销。"
+      "sentence2": "这家商店这个周末有促销。",
+      "pronunciation": "/ʂɑŋ˥ tjɛn˥˩/"
     },
     {
       "id": 752,
       "word": "暴风雨",
       "sentence1": "暴风雨造成了很大的损失。",
-      "sentence2": "暴风雨期间我们待在室内。"
+      "sentence2": "暴风雨期间我们待在室内。",
+      "pronunciation": "/pɑʊ˥˩ fɤŋ˥ y˧˩˧/"
     },
     {
       "id": 753,
       "word": "直的",
       "sentence1": "前面的路直走好几英里。",
-      "sentence2": "她有一头垂到肩膀的直发。"
+      "sentence2": "她有一头垂到肩膀的直发。",
+      "pronunciation": "/ʈʂɨ˧˥ tɤ/"
     },
     {
       "id": 754,
       "word": "奇怪的",
       "sentence1": "四月看到下雪很奇怪。",
-      "sentence2": "他对这种情况有一种奇怪的感觉。"
+      "sentence2": "他对这种情况有一种奇怪的感觉。",
+      "pronunciation": "/tɕhi˧˥ kwaɪ˥˩ tɤ/"
     },
     {
       "id": 755,
       "word": "策略",
       "sentence1": "公司的战略是专注于创新。",
-      "sentence2": "我们需要明确的策略才能成功。"
+      "sentence2": "我们需要明确的策略才能成功。",
+      "pronunciation": "/tshɤ˥˩ lɥœ˥˩/"
     },
     {
       "id": 756,
       "word": "压力",
       "sentence1": "她在工作中承受着很大的压力。",
-      "sentence2": "有效管理压力很重要。"
+      "sentence2": "有效管理压力很重要。",
+      "pronunciation": "/ja˥ li˥˩/"
     },
     {
       "id": 757,
       "word": "结构",
       "sentence1": "这座建筑的结构非常现代。",
-      "sentence2": "我们需要改善团队结构。"
+      "sentence2": "我们需要改善团队结构。",
+      "pronunciation": "/tɕjɛ˧˥ koʊ˥˩/"
     },
     {
       "id": 758,
       "word": "愚愚蠢的",
       "sentence1": "我忘了开会真是太蠢了。",
-      "sentence2": "别傻了，行动前要三思。"
+      "sentence2": "别傻了，行动前要三思。",
+      "pronunciation": "/y˧˥ y˧˥ ʈʂhwən˧˩˧ tɤ/"
     },
     {
       "id": 759,
       "word": "成功",
       "sentence1": "她努力工作以在事业上取得成功。",
-      "sentence2": "如果你想成功，就必须坚持不懈。"
+      "sentence2": "如果你想成功，就必须坚持不懈。",
+      "pronunciation": "/ʈʂhɤŋ˧˥ kʊŋ˥/"
     },
     {
       "id": 760,
       "word": "成功的",
       "sentence1": "他是一位成功的商人。",
-      "sentence2": "他们的项目非常成功。"
+      "sentence2": "他们的项目非常成功。",
+      "pronunciation": "/ʈʂhɤŋ˧˥ kʊŋ˥ tɤ/"
     },
     {
       "id": 761,
       "word": "这样的",
       "sentence1": "这种行为是不可接受的。",
-      "sentence2": "我从未见过如此美丽的日落。"
+      "sentence2": "我从未见过如此美丽的日落。",
+      "pronunciation": "/ʈʂɤ˥˩ jɑŋ˥˩ tɤ/"
     },
     {
       "id": 762,
       "word": "突然",
       "sentence1": "灯突然熄灭了。",
-      "sentence2": "她突然意识到了真相。"
+      "sentence2": "她突然意识到了真相。",
+      "pronunciation": "/thu˥ ʐan˧˥/"
     },
     {
       "id": 763,
       "word": "建议",
       "sentence1": "我建议我们休息一下。",
-      "sentence2": "你能推荐一家好餐厅吗？"
+      "sentence2": "你能推荐一家好餐厅吗？",
+      "pronunciation": "/tɕjɛn˥˩ i˥˩/"
     },
     {
       "id": 764,
       "word": "建议",
       "sentence1": "那是个好建议！",
-      "sentence2": "我有一个改进流程的建议。"
+      "sentence2": "我有一个改进流程的建议。",
+      "pronunciation": "/tɕjɛn˥˩ i˥˩/"
     },
     {
       "id": 765,
       "word": "西装/适合",
       "sentence1": "他穿西装去面试。",
-      "sentence2": "这次活动要求穿西装。"
+      "sentence2": "这次活动要求穿西装。",
+      "pronunciation": "/ɕi˥ ʈʂwɑŋ˥/; /ʂɨ˥˩ xɤ˧˥/"
     },
     {
       "id": 766,
       "word": "支持",
       "sentence1": "这个项目我需要你的支持。",
-      "sentence2": "他们为学生提供经济支持。"
+      "sentence2": "他们为学生提供经济支持。",
+      "pronunciation": "/ʈʂɨ˥ ʈʂhɨ˧˥/"
     },
     {
       "id": 767,
       "word": "假设",
       "sentence1": "我想你是对的。",
-      "sentence2": "你认为接下来会发生什么？"
+      "sentence2": "你认为接下来会发生什么？",
+      "pronunciation": "/tɕja˧˩˧ ʂɤ˥˩/"
     },
     {
       "id": 768,
       "word": "确定",
       "sentence1": "你确定吗？",
-      "sentence2": "我不确定我能不能帮忙。"
+      "sentence2": "我不确定我能不能帮忙。",
+      "pronunciation": "/tɕhɥœ˥˩ tiŋ˥˩/"
     },
     {
       "id": 769,
       "word": "惊喜",
       "sentence1": "这是她的生日惊喜派对。",
-      "sentence2": "她喜欢惊喜和意外的礼物。"
+      "sentence2": "她喜欢惊喜和意外的礼物。",
+      "pronunciation": "/tɕiŋ˥ ɕi˧˩˧/"
     },
     {
       "id": 770,
       "word": "惊讶的",
       "sentence1": "我对这个消息感到惊讶。",
-      "sentence2": "当我告诉她时，她看起来很惊讶。"
+      "sentence2": "当我告诉她时，她看起来很惊讶。",
+      "pronunciation": "/tɕiŋ˥ ja˥˩ tɤ/"
     },
     {
       "id": 771,
       "word": "令人惊讶的",
       "sentence1": "结果令人惊讶。",
-      "sentence2": "事情变化之快令人惊讶。"
+      "sentence2": "事情变化之快令人惊讶。",
+      "pronunciation": "/liŋ˥˩ ʐən˧˥ tɕiŋ˥ ja˥˩ tɤ/"
     },
     {
       "id": 772,
       "word": "调查",
       "sentence1": "我们进行了一项调查以收集反馈。",
-      "sentence2": "调查结果将于下周公布。"
+      "sentence2": "调查结果将于下周公布。",
+      "pronunciation": "/tjɑʊ˥˩ ʈʂha˧˥/"
     },
     {
       "id": 773,
       "word": "甜的",
       "sentence1": "这块蛋糕很甜。",
-      "sentence2": "她性格很甜美。"
+      "sentence2": "她性格很甜美。",
+      "pronunciation": "/thjɛn˧˥ tɤ/"
     },
     {
       "id": 774,
       "word": "符号",
       "sentence1": "心形是爱的象征。",
-      "sentence2": "和平通常用鸽子符号来表示。"
+      "sentence2": "和平通常用鸽子符号来表示。",
+      "pronunciation": "/fu˧˥ xɑʊ˥˩/"
     },
     {
       "id": 775,
       "word": "系统",
       "sentence1": "计算机系统正在维护中。",
-      "sentence2": "我们需要改进我们的通信系统。"
+      "sentence2": "我们需要改进我们的通信系统。",
+      "pronunciation": "/ɕi˥˩ thʊŋ˧˩˧/"
     },
     {
       "id": 776,
       "word": "平板电脑",
       "sentence1": "我用平板电脑阅读。",
-      "sentence2": "平板电脑方便上网浏览。"
+      "sentence2": "平板电脑方便上网浏览。",
+      "pronunciation": "/phiŋ˧˥ pan˧˩˧ tjɛn˥˩ nɑʊ˧˩˧/"
     },
     {
       "id": 777,
       "word": "谈话",
       "sentence1": "我们需要谈谈你的表现。",
-      "sentence2": "我们能晚点谈吗？"
+      "sentence2": "我们能晚点谈吗？",
+      "pronunciation": "/than˧˥ xwa˥˩/"
     },
     {
       "id": 778,
       "word": "目标",
       "sentence1": "我们的目标是将销售额提高20%。",
-      "sentence2": "你的目标受众是谁？"
+      "sentence2": "你的目标受众是谁？",
+      "pronunciation": "/mu˥˩ pjɑʊ˥/"
     },
     {
       "id": 779,
       "word": "任务",
       "sentence1": "完成这项任务很重要。",
-      "sentence2": "我有一项任务给你。"
+      "sentence2": "我有一项任务给你。",
+      "pronunciation": "/ʐən˥˩ u˥˩/"
     },
     {
       "id": 780,
       "word": "味道",
       "sentence1": "这道菜有独特的味道。",
-      "sentence2": "我喜欢新鲜水果的味道。"
+      "sentence2": "我喜欢新鲜水果的味道。",
+      "pronunciation": "/weɪ˥˩ tɑʊ˥˩/"
     },
     {
       "id": 781,
       "word": "教学",
       "sentence1": "教学是一项有价值的职业。",
-      "sentence2": "她热衷于教幼儿。"
+      "sentence2": "她热衷于教幼儿。",
+      "pronunciation": "/tɕjɑʊ˥˩ ɕɥœ˧˥/"
     },
     {
       "id": 782,
       "word": "技术",
       "sentence1": "技术正在快技术正在快速变化。",
-      "sentence2": "我们需要跟上最新的技术趋势。"
+      "sentence2": "我们需要跟上最新的技术趋势。",
+      "pronunciation": "/tɕi˥˩ ʂu˥˩/"
     },
     {
       "id": 783,
       "word": "青少年的",
       "sentence1": "青少年时期可能充满挑战。",
-      "sentence2": "她有典型的青少年态度。"
+      "sentence2": "她有典型的青少年态度。",
+      "pronunciation": "/tɕhiŋ˥ ʂɑʊ˥˩ njɛn˧˥ tɤ/"
     },
     {
       "id": 784,
       "word": "温度",
       "sentence1": "温度正在上升。",
-      "sentence2": "外面的温度是多少？"
+      "sentence2": "外面的温度是多少？",
+      "pronunciation": "/wən˥ tu˥˩/"
     },
     {
       "id": 785,
       "word": "术语/学期",
       "sentence1": "这是一个技术术语。",
-      "sentence2": "你能解释一下那个术语吗？"
+      "sentence2": "你能解释一下那个术语吗？",
+      "pronunciation": "/ʂu˥˩ y˧˩˧/; /ɕɥœ˧˥ tɕhi˥/"
     },
     {
       "id": 786,
       "word": "文本",
       "sentence1": "请仔细阅读文本。",
-      "sentence2": "这篇文章很难理解。"
+      "sentence2": "这篇文章很难理解。",
+      "pronunciation": "/wən˧˥ pən˧˩˧/"
     },
     {
       "id": 787,
       "word": "他们自己",
       "sentence1": "他们自己做的。",
-      "sentence2": "她能照顾好自己。"
+      "sentence2": "她能照顾好自己。",
+      "pronunciation": "/tha˥ mən tsɯ˥˩ tɕi˧˩˧/"
     },
     {
       "id": 788,
       "word": "厚的",
       "sentence1": "这本书很厚。",
-      "sentence2": "他的头发很浓密。"
+      "sentence2": "他的头发很浓密。",
+      "pronunciation": "/xoʊ˥˩ tɤ/"
     },
     {
       "id": 789,
       "word": "小偷",
       "sentence1": "小偷被警察抓住了。",
-      "sentence2": "她害怕小偷。"
+      "sentence2": "她害怕小偷。",
+      "pronunciation": "/ɕjɑʊ˧˩˧ thoʊ˥/"
     },
     {
       "id": 790,
       "word": "薄的",
       "sentence1": "这张纸很薄。",
-      "sentence2": "他身材瘦削。"
+      "sentence2": "他身材瘦削。",
+      "pronunciation": "/pɑʊ˧˥ tɤ/"
     },
     {
       "id": 791,
       "word": "思考",
       "sentence1": "思考是解决问题的第一步。",
-      "sentence2": "她总是沉浸在思考中。"
+      "sentence2": "她总是沉浸在思考中。",
+      "pronunciation": "/sɯ˥ khɑʊ˧˩˧/"
     },
     {
       "id": 792,
       "word": "第三",
       "sentence1": "这是我第三次访问这座城市。",
-      "sentence2": "她获得了第三名。"
+      "sentence2": "她获得了第三名。",
+      "pronunciation": "/ti˥˩ san˥/"
     },
     {
       "id": 793,
       "word": "想法",
       "sentence1": "那是个有趣的想法。",
-      "sentence2": "我昨天也有类似的想法。"
+      "sentence2": "我昨天也有类似的想法。",
+      "pronunciation": "/ɕjɑŋ˧˩˧ fa˧˩˧/"
     },
     {
       "id": 794,
       "word": "扔",
       "sentence1": "请把球扔给我。",
-      "sentence2": "他投球很有力。"
+      "sentence2": "他投球很有力。",
+      "pronunciation": "/ʐɤŋ˥/"
     },
     {
       "id": 795,
       "word": "整洁的",
       "sentence1": "请保持房间整洁。",
-      "sentence2": "她外表整洁。"
+      "sentence2": "她外表整洁。",
+      "pronunciation": "/ʈʂɤŋ˧˩˧ tɕjɛ˧˥ tɤ/"
     },
     {
       "id": 796,
       "word": "领带/系/打平",
       "sentence1": "他戴着领带去面试。",
-      "sentence2": "领带是常见的正式配饰。"
+      "sentence2": "领带是常见的正式配饰。",
+      "pronunciation": "/liŋ˧˩˧ taɪ˥˩/; /ɕi˥˩/; /ta˧˩˧ phiŋ˧˥/"
     },
     {
       "id": 797,
       "word": "提示/小费/末端",
       "sentence1": "你能给我一些考试技巧吗？",
-      "sentence2": "她有一些很棒的烹饪技巧。"
+      "sentence2": "她有一些很棒的烹饪技巧。",
+      "pronunciation": "/thi˧˥ ʂɨ˥˩/; /ɕjɑʊ˧˩˧ feɪ˥˩/; /mwɔ˥˩ twan˥/"
     },
     {
       "id": 798,
       "word": "工具",
       "sentence1": "这个工具用于切割木材。",
-      "sentence2": "他有一整套园艺工具。"
+      "sentence2": "他有一整套园艺工具。",
+      "pronunciation": "/kʊŋ˥ tɕy˥˩/"
     },
     {
       "id": 799,
       "word": "顶部",
       "sentence1": "山顶被雪覆盖。",
-      "sentence2": "她是班上的尖子生。"
+      "sentence2": "她是班上的尖子生。",
+      "pronunciation": "/tiŋ˧˩˧ pu˥˩/"
     },
     {
       "id": 800,
       "word": "触摸",
       "sentence1": "请不要触摸画作。",
-      "sentence2": "他的声音有一种舒缓的感觉。"
+      "sentence2": "他的声音有一种舒缓的感觉。",
+      "pronunciation": "/ʈʂhu˥˩ mwɔ˥/"
     },
     {
       "id": 801,
       "word": "旅游",
       "sentence1": "我们参观了这座城市。",
-      "sentence2": "这次旅行非常有收获。"
+      "sentence2": "这次旅行非常有收获。",
+      "pronunciation": "/ly˧˩˧ joʊ˧˥/"
     },
     {
       "id": 802,
       "word": "旅游业",
       "sentence1": "旅游业是一个重要产业。",
-      "sentence2": "这个国家严重依赖旅游业。"
+      "sentence2": "这个国家严重依赖旅游业。",
+      "pronunciation": "/ly˧˩˧ joʊ˧˥ jɛ˥˩/"
     },
     {
       "id": 803,
       "word": "朝向",
       "sentence1": "她朝公园走去。",
-      "sentence2": "他向她靠近以便更好地听。"
+      "sentence2": "他向她靠近以便更好地听。",
+      "pronunciation": "/ʈʂhɑʊ˧˥ ɕjɑŋ˥˩/"
     },
     {
       "id": 804,
       "word": "毛巾",
       "sentence1": "请递给我毛巾。",
-      "sentence2": "淋浴后我需要一条毛巾。"
+      "sentence2": "淋浴后我需要一条毛巾。",
+      "pronunciation": "/mɑʊ˧˥ tɕin˥/"
     },
     {
       "id": 805,
       "word": "塔",
       "sentence1": "这座塔有100米高。",
-      "sentence2": "我们爬到了塔顶。"
+      "sentence2": "我们爬到了塔顶。",
+      "pronunciation": "/tha˧˩˧/"
     },
     {
       "id": 806,
       "word": "玩具",
       "sentence1": "玩具在桌上。",
-      "sentence2": "她给她的狗买了一个新玩具。"
+      "sentence2": "她给她的狗买了一个新玩具。",
+      "pronunciation": "/wan˧˥ tɕy˥˩/"
     },
     {
       "id": 807,
       "word": "轨道/足迹",
       "sentence1": "火车在这条轨道上运行。",
-      "sentence2": "他在雪地里留下了足迹。"
+      "sentence2": "他在雪地里留下了足迹。",
+      "pronunciation": "/kweɪ˧˩˧ tɑʊ˥˩/; /tsu˧˥ tɕi˥˩/"
     },
     {
       "id": 808,
       "word": "传统",
       "sentence1": "与家人一起庆祝新年前夕是一个传统。",
-      "sentence2": "他们有送礼物的传统。"
+      "sentence2": "他们有送礼物的传统。",
+      "pronunciation": "/ʈʂhwan˧˥ thʊŋ˧˩˧/"
     },
     {
       "id": 809,
       "word": "传统的",
       "sentence1": "这是我国的传统菜肴。",
-      "sentence2": "她在节日穿了传统服装。"
+      "sentence2": "她在节日穿了传统服装。",
+      "pronunciation": "/ʈʂhwan˧˥ thʊŋ˧˩˧ tɤ/"
     },
     {
       "id": 810,
       "word": "火车",
       "sentence1": "火车下午5点发车。",
-      "sentence2": "我更喜欢坐火车旅行。"
+      "sentence2": "我更喜欢坐火车旅行。",
+      "pronunciation": "/xwɔ˧˩˧ ʈʂhɤ˥/"
     },
     {
       "id": 811,
       "word": "教练",
       "sentence1": "教练帮助我提高了技能。",
-      "sentence2": "她是一名认证健身教练。"
+      "sentence2": "她是一名认证健身教练。",
+      "pronunciation": "/tɕjɑʊ˥˩ ljɛn˥˩/"
     },
     {
       "id": 812,
       "word": "培训",
       "sentence1": "我每周一都有培训课程。",
-      "sentence2": "公司为新员工提供培训。"
+      "sentence2": "公司为新员工提供培训。",
+      "pronunciation": "/pheɪ˧˥ ɕyn˥˩/"
     },
     {
       "id": 813,
       "word": "交通",
       "sentence1": "这座城市的公共交通非常高效。",
-      "sentence2": "他们以自行车作为主要交通工具。"
+      "sentence2": "他们以自行车作为主要交通工具。",
+      "pronunciation": "/tɕjɑʊ˥ thʊŋ˥/"
     },
     {
       "id": 814,
       "word": "旅行者",
       "sentence1": "好的旅行者总是尊重当地习俗。",
-      "sentence2": "她是一位经验丰富的旅行者，去过很多国家。"
+      "sentence2": "她是一位经验丰富的旅行者，去过很多国家。",
+      "pronunciation": "/ly˧˩˧ ɕiŋ˧˥ ʈʂɤ˧˩˧/"
     },
     {
       "id": 815,
       "word": "麻烦",
       "sentence1": "我的电脑出了问题。",
-      "sentence2": "他因迟到而惹上麻烦。"
+      "sentence2": "他因迟到而惹上麻烦。",
+      "pronunciation": "/ma˧˥ fan˧˥/"
     },
     {
       "id": 816,
       "word": "卡车",
       "sentence1": "卡车装满了货物。",
-      "sentence2": "他们用卡车运输重物。"
+      "sentence2": "他们用卡车运输重物。",
+      "pronunciation": "/kha˧˩˧ ʈʂhɤ˥/"
     },
     {
       "id": 817,
       "word": "双胞胎",
       "sentence1": "他们是双胞胎兄弟。",
-      "sentence2": "这对双胞胎有相似的兴趣。"
+      "sentence2": "这对双胞胎有相似的兴趣。",
+      "pronunciation": "/ʂwɑŋ˥ pɑʊ˥ thaɪ˥/"
     },
     {
       "id": 818,
       "word": "典型的",
       "sentence1": "这是办公室里典型的一天。",
-      "sentence2": "这天气是一年中这个时候典型的天气。"
+      "sentence2": "这天气是一年中这个时候典型的天气。",
+      "pronunciation": "/tjɛn˧˩˧ ɕiŋ˧˥ tɤ/"
     },
     {
       "id": 819,
       "word": "地下/地铁",
       "sentence1": "地铁站很拥挤。",
-      "sentence2": "他们发现了一条地下隧道。"
+      "sentence2": "他们发现了一条地下隧道。",
+      "pronunciation": "/ti˥˩ ɕja˥˩/; /ti˥˩ thjɛ˧˩˧/"
     },
     {
       "id": 820,
       "word": "理解",
       "sentence1": "她对这个话题有很好的理解。",
-      "sentence2": "他对这个问题的理解令人印象深刻。"
+      "sentence2": "他对这个问题的理解令人印象深刻。",
+      "pronunciation": "/li˧˩˧ tɕjɛ˧˩˧/"
     },
     {
       "id": 821,
       "word": "不幸的是",
       "sentence1": "不幸的是，我们不能参加会议。",
-      "sentence2": "不幸的是，活动被取消了。"
+      "sentence2": "不幸的是，活动被取消了。",
+      "pronunciation": "/pu˧˥ ɕiŋ˥˩ tɤ ʂɨ˥˩/"
     },
     {
       "id": 822,
       "word": "不高兴的",
       "sentence1": "她对自己的工作感到不满。",
-      "sentence2": "不满意的顾客抱怨服务。"
+      "sentence2": "不满意的顾客抱怨服务。",
+      "pronunciation": "/pu˥˩ kɑʊ˥ ɕiŋ˥ tɤ/"
     },
     {
       "id": 823,
       "word": "制服",
       "sentence1": "学生们穿校服上学。",
-      "sentence2": "警察穿着全套制服。"
+      "sentence2": "警察穿着全套制服。",
+      "pronunciation": "/ʈʂɨ˥˩ fu˧˥/"
     },
     {
       "id": 824,
       "word": "单位/单元",
       "sentence1": "这是一个计量单位。",
-      "sentence2": "每个单元都有自己的规格。"
+      "sentence2": "每个单元都有自己的规格。",
+      "pronunciation": "/tan˥ weɪ˥˩/; /tan˥ ɥœn˧˥/"
     },
     {
       "id": 825,
       "word": "联合的/团结的",
       "sentence1": "美国是北美的一个国家。",
-      "sentence2": "两家公司形成了统一战线。"
+      "sentence2": "两家公司形成了统一战线。",
+      "pronunciation": "/ljɛn˧˥ xɤ˧˥ tɤ/; /thwan˧˥ tɕjɛ˧˥ tɤ/"
     },
     {
       "id": 826,
       "word": "不寻常的",
       "sentence1": "四月下雪是不寻常的。",
-      "sentence2": "她有不寻常的音乐天赋。"
+      "sentence2": "她有不寻常的音乐天赋。",
+      "pronunciation": "/pu˥˩ ɕyn˧˥ ʈʂhɑŋ˧˥ tɤ/"
     },
     {
       "id": 827,
       "word": "楼上",
       "sentence1": "浴室在楼上。",
-      "sentence2": "她住在楼上的公寓。"
+      "sentence2": "她住在楼上的公寓。",
+      "pronunciation": "/loʊ˧˥ ʂɑŋ˥˩/"
     },
     {
       "id": 828,
       "word": "使用/用途",
       "sentence1": "我用手机查看天气。",
-      "sentence2": "请用钢笔填写表格。"
+      "sentence2": "请用钢笔填写表格。",
+      "pronunciation": "/ʂɨ˧˩˧ jʊŋ˥˩/; /jʊŋ˥˩ thu˧˥/"
     },
     {
       "id": 829,
       "word": "过去经常/习惯于",
       "sentence1": "我过去每个周末都踢足球。",
-      "sentence2": "她习惯了寒冷的天气。"
+      "sentence2": "她习惯了寒冷的天气。",
+      "pronunciation": "/kwɔ˥˩ tɕhy˥˩ tɕiŋ˥ ʈʂhɑŋ˧˥/; /ɕi˧˥ kwan˥˩ y˧˥/"
     },
     {
       "id": 830,
       "word": "通常的",
       "sentence1": "他迟到是常事。",
-      "sentence2": "通常的程序是检查文件。"
+      "sentence2": "通常的程序是检查文件。",
+      "pronunciation": "/thʊŋ˥ ʈʂhɑŋ˧˥ tɤ/"
     },
     {
       "id": 831,
       "word": "山谷",
       "sentence1": "山谷被群山环绕。",
-      "sentence2": "他们去山谷徒步旅行。"
+      "sentence2": "他们去山谷徒步旅行。",
+      "pronunciation": "/ʂan˥ ku˧˩˧/"
     },
     {
       "id": 832,
       "word": "货车/面包车",
       "sentence1": "货车停在外面。",
-      "sentence2": "他们用货车进行团体旅行。"
+      "sentence2": "他们用货车进行团体旅行。",
+      "pronunciation": "/xwɔ˥˩ ʈʂhɤ˥/; /mjɛn˥˩ pɑʊ˥ ʈʂhɤ˥/"
     },
     {
       "id": 833,
       "word": "多样性/品种",
       "sentence1": "有各种各样的水果可供选择。",
-      "sentence2": "她喜欢尝试不同种类的茶。"
+      "sentence2": "她喜欢尝试不同种类的茶。",
+      "pronunciation": "/twɔ˥ jɑŋ˥˩ ɕiŋ˥˩/; /phin˧˩˧ ʈʂʊŋ˧˩˧/"
     },
     {
       "id": 834,
       "word": "车辆/交通工具",
       "sentence1": "汽车是最常见的交通工具类型。",
-      "sentence2": "这家公司销售电动汽车。"
+      "sentence2": "这家公司销售电动汽车。",
+      "pronunciation": "/ʈʂhɤ˥ ljɑŋ˥˩/; /tɕjɑʊ˥ thʊŋ˥ kʊŋ˥ tɕy˥˩/"
     },
     {
       "id": 835,
       "word": "风景/观点",
       "sentence1": "从顶部看到的风景令人叹为观止。",
-      "sentence2": "他们可以看到美丽的湖景。"
+      "sentence2": "他们可以看到美丽的湖景。",
+      "pronunciation": "/fɤŋ˥ tɕiŋ˧˩˧/; /kwan˥ tjɛn˧˩˧/"
     },
     {
       "id": 836,
       "word": "病毒",
       "sentence1": "病毒很容易在人与人之间传播。",
-      "sentence2": "疫苗可以帮助预防病毒感染。"
+      "sentence2": "疫苗可以帮助预防病毒感染。",
+      "pronunciation": "/piŋ˥˩ tu˧˥/"
     },
     {
       "id": 837,
       "word": "声音",
       "sentence1": "她有一副美丽的歌喉。",
-      "sentence2": "他的声音在噪音中几乎听不见。"
+      "sentence2": "他的声音在噪音中几乎听不见。",
+      "pronunciation": "/ʂɤŋ˥ in˥/"
     },
     {
       "id": 838,
       "word": "等待",
       "sentence1": "我会在车站等你。",
-      "sentence2": "请稍等。"
+      "sentence2": "请稍等。",
+      "pronunciation": "/tɤŋ˧˩˧ taɪ˥˩/"
     },
     {
       "id": 839,
       "word": "战争",
       "sentence1": "战争持续了好几年。",
-      "sentence2": "战争期间失去了很多生命。"
+      "sentence2": "战争期间失去了很多生命。",
+      "pronunciation": "/ʈʂan˥˩ ʈʂɤŋ˥/"
     },
     {
       "id": 840,
       "word": "洗",
       "sentence1": "晚饭前我需要洗手。",
-      "sentence2": "吃完饭后请洗碗。"
+      "sentence2": "吃完饭后请洗碗。",
+      "pronunciation": "/ɕi˧˩˧/"
     },
     {
       "id": 841,
       "word": "洗涤/洗",
       "sentence1": "经常洗手很重要。",
-      "sentence2": "洗衣机坏了。"
+      "sentence2": "洗衣机坏了。",
+      "pronunciation": "/ɕi˧˩˧ ti˧˥/; /ɕi˧˩˧/"
     },
     {
       "id": 842,
       "word": "波浪/挥手",
       "sentence1": "波浪拍打着海岸。",
-      "sentence2": "当公交车开走时，她挥手告别。"
+      "sentence2": "当公交车开走时，她挥手告别。",
+      "pronunciation": "/pwɔ˥ lɑŋ˥˩/; /xweɪ˥ ʂoʊ˧˩˧/"
     },
     {
       "id": 843,
       "word": "虚弱的/疲软的",
       "sentence1": "生病后他感到虚弱。",
-      "sentence2": "疲软的经济是许多人关心的问题。"
+      "sentence2": "疲软的经济是许多人关心的问题。",
+      "pronunciation": "/ɕy˥ ʐwɔ˥˩ tɤ/; /phi˧˥ ʐwan˧˩˧ tɤ/"
     },
     {
       "id": 844,
       "word": "网/网页",
       "sentence1": "蜘蛛在角落里织了一张网。",
-      "sentence2": "互联网通常被称为万维网。"
+      "sentence2": "互联网通常被称为万维网。",
+      "pronunciation": "/wɑŋ˧˩˧/; /wɑŋ˧˩˧ jɛ˥˩/"
     },
     {
       "id": 845,
       "word": "婚礼",
       "sentence1": "他们计划在春天举行婚礼。",
-      "sentence2": "婚礼是一场美丽的仪式。"
+      "sentence2": "婚礼是一场美丽的仪式。",
+      "pronunciation": "/xwən˥ li˧˩˧/"
     },
     {
       "id": 846,
       "word": "重量/体重",
       "sentence1": "这个包裹重5公斤。",
-      "sentence2": "她正在努力减肥。"
+      "sentence2": "她正在努力减肥。",
+      "pronunciation": "/ʈʂʊŋ˥˩ ljɑŋ˥˩/; /thi˧˩˧ ʈʂhʊŋ˧˥/"
     },
     {
       "id": 847,
       "word": "欢迎",
       "sentence1": "欢迎来到我们家。",
-      "sentence2": "我们欢迎您的反馈。"
+      "sentence2": "我们欢迎您的反馈。",
+      "pronunciation": "/xwan˥ iŋ˧˥/"
     },
     {
       "id": 848,
       "word": "湿的",
       "sentence1": "雨后地面是湿的。",
-      "sentence2": "请不要在湿地板上行走。"
+      "sentence2": "请不要在湿地板上行走。",
+      "pronunciation": "/ʂɨ˥ tɤ/"
     },
     {
       "id": 849,
       "word": "轮子/方向盘",
       "sentence1": "轮子坏了，需要更换。",
-      "sentence2": "他猛打方向盘。"
+      "sentence2": "他猛打方向盘。",
+      "pronunciation": "/lwən˧˥ tsɯ˧˩˧/; /fɑŋ˥ ɕjɑŋ˥˩ phan˧˥/"
     },
     {
       "id": 850,
       "word": "在此期间/当...时",
       "sentence1": "我等公交车的时候看书。",
-      "sentence2": "她学习时听音乐。"
+      "sentence2": "她学习时听音乐。",
+      "pronunciation": "/tsaɪ˥˩ tshɯ˧˩˧ tɕhi˥ tɕjɛn˥/; /tɑŋ˥ ... ʂɨ˧˥/"
     },
     {
       "id": 851,
       "word": "整个/全部",
       "sentence1": "全家都参加了聚会。",
-      "sentence2": "他一个人吃了整个披萨。"
+      "sentence2": "他一个人吃了整个披萨。",
+      "pronunciation": "/ʈʂɤŋ˧˩˧ kɤ˥˩/; /tɕhɥœn˧˥ pu˥˩/"
     },
     {
       "id": 852,
       "word": "谁的",
       "sentence1": "这是谁的书？",
-      "sentence2": "我不知道那是谁的鞋子。"
+      "sentence2": "我不知道那是谁的鞋子。",
+      "pronunciation": "/ʂeɪ˧˥ tɤ/"
     },
     {
       "id": 853,
       "word": "宽的/广泛的",
       "sentence1": "河在这一点很宽。",
-      "sentence2": "她的兴趣爱好很广泛。"
+      "sentence2": "她的兴趣爱好很广泛。",
+      "pronunciation": "/khwan˥ tɤ/; /kwɑŋ˧˩˧ fan˥˩ tɤ/"
     },
     {
       "id": 854,
       "word": "野生的/疯狂的",
       "sentence1": "野生动物在森林中自由漫步。",
-      "sentence2": "他有丰富的想象力。"
+      "sentence2": "他有丰富的想象力。",
+      "pronunciation": "/jɛ˧˩˧ ʂɤŋ˥ tɤ/; /fɤŋ˥ khwɑŋ˧˥ tɤ/"
     },
     {
       "id": 855,
       "word": "风",
       "sentence1": "今天风刮得很大。",
-      "sentence2": "她感到风吹过她的头发。"
+      "sentence2": "她感到风吹过她的头发。",
+      "pronunciation": "/fɤŋ˥/"
     },
     {
       "id": 856,
       "word": "获胜者",
       "sentence1": "比赛的获胜者将于明天公布。",
-      "sentence2": "她是两届奥运会金牌得主。"
+      "sentence2": "她是两届奥运会金牌得主。",
+      "pronunciation": "/xwɔ˥˩ ʂɤŋ˥˩ ʈʂɤ˧˩˧/"
     },
     {
       "id": 857,
       "word": "希望/愿望",
       "sentence1": "祝你新工作一切顺利。",
-      "sentence2": "她向星星许了一个愿望。"
+      "sentence2": "她向星星许了一个愿望。",
+      "pronunciation": "/ɕi˥ wɑŋ˥˩/; /ɥœn˥˩ wɑŋ˥˩/"
     },
     {
       "id": 858,
       "word": "木头/木柴",
       "sentence1": "桌子是木头做的。",
-      "sentence2": "他收集了生火用的木柴。"
+      "sentence2": "他收集了生火用的木柴。",
+      "pronunciation": "/mu˥˩ thoʊ˧˥/; /mu˥˩ ʈʂhaɪ˧˥/"
     },
     {
       "id": 859,
       "word": "木制的",
       "sentence1": "这把木椅非常舒适。",
-      "sentence2": "她收藏了一些木制玩具。"
+      "sentence2": "她收藏了一些木制玩具。",
+      "pronunciation": "/mu˥˩ ʈʂɨ˥˩ tɤ/"
     },
     {
       "id": 860,
       "word": "工作/运行",
       "sentence1": "他正在做一个新项目。",
-      "sentence2": "工作条件正在改善。"
+      "sentence2": "工作条件正在改善。",
+      "pronunciation": "/kʊŋ˥ tswɔ˥˩/; /yn˥˩ ɕiŋ˧˥/"
     },
     {
       "id": 861,
       "word": "担心的",
       "sentence1": "她担心考试成绩。",
-      "sentence2": "他最近一直感到担忧。"
+      "sentence2": "他最近一直感到担忧。",
+      "pronunciation": "/tan˥ ɕin˥ tɤ/"
     },
     {
       "id": 862,
       "word": "担心/烦恼",
       "sentence1": "不要担心小细节。",
-      "sentence2": "她心里有很多担忧。"
+      "sentence2": "她心里有很多担忧。",
+      "pronunciation": "/tan˥ ɕin˥/; /fan˧˥ nɑʊ˧˩˧/"
     },
     {
       "id": 863,
       "word": "更糟",
       "sentence1": "情况正在变得更糟。",
-      "sentence2": "这是我一生中最糟糕的一天。"
+      "sentence2": "这是我一生中最糟糕的一天。",
+      "pronunciation": "/kɤŋ˥˩ tsɑʊ˥/"
     },
     {
       "id": 864,
       "word": "最糟糕的",
       "sentence1": "他是世界上最倒霉的人。",
-      "sentence2": "这是我看过的最差的电影。"
+      "sentence2": "这是我看过的最差的电影。",
+      "pronunciation": "/tsweɪ˥˩ tsɑʊ˥ kɑʊ˥ tɤ/"
     },
     {
       "id": 865,
       "word": "哇",
       "sentence1": "哇，真是惊人的景色！",
-      "sentence2": "当她看到惊喜派对时，她说\"哇\"。"
+      "sentence2": "当她看到惊喜派对时，她说\"哇\"。",
+      "pronunciation": "/wa˥/"
     },
     {
       "id": 866,
       "word": "还/但是",
       "sentence1": "我还没完成作业。",
-      "sentence2": "她还没来。"
+      "sentence2": "她还没来。",
+      "pronunciation": "/xaɪ˧˥/; /tan˥˩ ʂɨ˥˩/"
     },
     {
       "id": 867,
       "word": "你的",
       "sentence1": "这本书是你的吗？",
-      "sentence2": "我找到了一支你的笔。"
+      "sentence2": "我找到了一支你的笔。",
+      "pronunciation": "/ni˧˩˧ tɤ/"
     }
   ]
 }
