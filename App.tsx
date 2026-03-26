@@ -31,7 +31,11 @@ import {
   setLastBackgroundTime,
 } from './services/notificationService';
 import { STORAGE_KEYS } from './services/storageKeys';
-import { initializeAdMob, checkAndShowAppOpenAd } from './services/adMobService';
+import {
+  initializeAdMob,
+  checkAndShowAppOpenAd,
+  refreshAdInventoryOnForeground,
+} from './services/adMobService';
 
 // Screens
 import CustomSplashScreen from './screens/SplashScreen';
@@ -365,6 +369,10 @@ function AppContent() {
           autoSync(user.uid);
           runNotificationMaintenance('resume');
         }
+
+        refreshAdInventoryOnForeground().catch(error => {
+          console.error('[AdMob] Foreground refresh failed', error);
+        });
       }
       appState.current = nextAppState;
     });
@@ -460,7 +468,14 @@ export default function App() {
 
     // Initialize AdMob after consent and ATT are resolved inside the service.
     initializeAdMob()
-      .then(() => checkAndShowAppOpenAd())
+      .then(async ready => {
+        if (!ready) {
+          return;
+        }
+
+        await refreshAdInventoryOnForeground(false);
+        await checkAndShowAppOpenAd();
+      })
       .catch(err => console.error('[App] AdMob init chain error:', err));
   }, []);
 

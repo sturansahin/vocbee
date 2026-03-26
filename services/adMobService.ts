@@ -46,6 +46,7 @@ const TEST_AD_IDS = {
 
 const APP_LAUNCH_COUNT_KEY = '@app_launch_count';
 const APP_OPEN_TIMEOUT_MS = 5000;
+const INTERSTITIAL_LOAD_TIMEOUT_MS = 15000;
 
 let mobileAdsFactory: any = null;
 let InterstitialAd: any = null;
@@ -76,6 +77,8 @@ let interstitial: any = null;
 let isInterstitialLoaded = false;
 let isInterstitialLoading = false;
 let interstitialListeners: Array<() => void> = [];
+let interstitialLoadStartedAt = 0;
+let interstitialLoadTimeout: ReturnType<typeof setTimeout> | null = null;
 
 export const AD_IDS = __DEV__ ? TEST_AD_IDS : PRODUCTION_AD_IDS;
 
@@ -141,6 +144,23 @@ function cleanupInterstitialListeners() {
     });
 
     interstitialListeners = [];
+}
+
+function clearInterstitialLoadTimeout() {
+    if (interstitialLoadTimeout) {
+        clearTimeout(interstitialLoadTimeout);
+        interstitialLoadTimeout = null;
+    }
+}
+
+function resetInterstitialState(reason: string) {
+    clearInterstitialLoadTimeout();
+    cleanupInterstitialListeners();
+    interstitial = null;
+    isInterstitialLoaded = false;
+    isInterstitialLoading = false;
+    interstitialLoadStartedAt = 0;
+    console.log(`[AdMob] Interstitial state reset (${reason})`);
 }
 
 function buildAdRequestOptions(consentInfo?: ConsentInfoLike | null, userChoices?: any): AdRequestOptions {
@@ -329,7 +349,7 @@ export const initializeAdMob = async (): Promise<boolean> => {
 
 export const ensureAdMobReady = async (): Promise<boolean> => initializeAdMob();
 
-export const loadInterstitial = async (): Promise<boolean> => {
+export const loadInterstitial = async (forceReload: boolean = false): Promise<boolean> => {
     loadAdMobModule();
 
     if (!mobileAdsFactory) {
@@ -341,17 +361,27 @@ export const loadInterstitial = async (): Promise<boolean> => {
         return false;
     }
 
+    if (forceReload) {
+        resetInterstitialState('force reload');
+    }
+
     if (isInterstitialLoaded) {
         return true;
     }
 
     if (isInterstitialLoading) {
-        return false;
+        const isStaleLoad = Date.now() - interstitialLoadStartedAt > INTERSTITIAL_LOAD_TIMEOUT_MS;
+        if (!isStaleLoad) {
+            return false;
+        }
+
+        resetInterstitialState('stale load timeout');
     }
 
     try {
         cleanupInterstitialListeners();
         isInterstitialLoading = true;
+        interstitialLoadStartedAt = Date.now();
         interstitial = InterstitialAd.createForAdRequest(
             AD_IDS.INTERSTITIAL,
             getDefaultAdRequestOptions()
@@ -359,30 +389,43 @@ export const loadInterstitial = async (): Promise<boolean> => {
 
         interstitialListeners = [
             interstitial.addAdEventListener(AdEventType.LOADED, () => {
+                clearInterstitialLoadTimeout();
                 isInterstitialLoaded = true;
                 isInterstitialLoading = false;
+                interstitialLoadStartedAt = 0;
                 console.log('[AdMob] Interstitial loaded');
             }),
             interstitial.addAdEventListener(AdEventType.CLOSED, () => {
+                clearInterstitialLoadTimeout();
                 console.log('[AdMob] Interstitial closed');
+                interstitial = null;
                 isInterstitialLoaded = false;
                 isInterstitialLoading = false;
+                interstitialLoadStartedAt = 0;
                 void loadInterstitial();
             }),
             interstitial.addAdEventListener(AdEventType.ERROR, (error: any) => {
+                clearInterstitialLoadTimeout();
                 console.error('[AdMob] Interstitial failed', error);
+                interstitial = null;
                 isInterstitialLoaded = false;
                 isInterstitialLoading = false;
+                interstitialLoadStartedAt = 0;
             }),
         ];
+
+        interstitialLoadTimeout = setTimeout(() => {
+            if (isInterstitialLoading) {
+                console.warn('[AdMob] Interstitial load timed out');
+                resetInterstitialState('load timed out');
+            }
+        }, INTERSTITIAL_LOAD_TIMEOUT_MS);
 
         interstitial.load();
         return true;
     } catch (error) {
         console.error('[AdMob] Failed to load interstitial', error);
-        isInterstitialLoaded = false;
-        isInterstitialLoading = false;
-        cleanupInterstitialListeners();
+        resetInterstitialState('load threw');
         return false;
     }
 };
@@ -419,11 +462,30 @@ export const showInterstitial = async (): Promise<boolean> => {
         return true;
     } catch (error) {
         console.error('[AdMob] Failed to show interstitial', error);
+        interstitial = null;
         isInterstitialLoaded = false;
         isInterstitialLoading = false;
+        interstitialLoadStartedAt = 0;
         void loadInterstitial();
         return false;
     }
+};
+
+export const refreshAdInventoryOnForeground = async (
+    forceReload: boolean = true
+): Promise<void> => {
+    loadAdMobModule();
+
+    if (!mobileAdsFactory) {
+        return;
+    }
+
+    const isReady = await ensureAdMobReady();
+    if (!isReady) {
+        return;
+    }
+
+    await loadInterstitial(forceReload);
 };
 
 export const checkAndShowAppOpenAd = async (): Promise<void> => {
