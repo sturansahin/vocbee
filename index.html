@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VocBee | Daily vocabulary that fits your level</title>
+  <meta name="description" content="VocBee is a mobile-first language learning app with level-based vocabulary, pronunciation, examples, favorites, and flexible reminders.">
+  <meta name="theme-color" content="#050505">
+  <meta property="og:title" content="VocBee | Daily vocabulary that fits your level">
+  <meta property="og:description" content="A focused vocabulary app for learners who want consistency without clutter.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vocbee.online/">
+  <meta property="og:image" content="https://vocbee.online/assets/icons/vocicon.png">
+  <link rel="icon" type="image/png" href="assets/icons/vocicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#070707;--paper:#f6f2e7;--card:#ffffffd9;--line:#11111114;--text:#141414;--muted:#676256;--white:#f7f5ef;--wline:#ffffff14;--gold:#ffbf1f;--gold2:#f5a700;--soft:#ffbf1f22;--radius:28px;--shadow:0 24px 60px rgba(0,0,0,.14);--max:1180px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"Special Gothic Expanded One",system-ui,sans-serif;background:radial-gradient(circle at top,rgba(255,191,31,.12),transparent 24%),linear-gradient(180deg,#faf7ef 0%,var(--paper) 18%,var(--paper) 100%);color:var(--text)}img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+    .wrap{width:min(calc(100% - 28px),var(--max));margin:0 auto}.skip{position:absolute;left:16px;top:-48px;background:var(--gold);padding:12px 18px;border-radius:999px;z-index:100}.skip:focus{top:16px}
+    .header{position:sticky;top:0;z-index:20;transition:.25s}.header.scrolled{backdrop-filter:blur(14px);background:#090909c7;border-bottom:1px solid var(--wline)}
+    .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:14px;color:var(--white)}.brand img{width:48px;height:48px;border-radius:16px;box-shadow:0 10px 24px rgba(255,191,31,.22)}.brand b{display:block;letter-spacing:.08em}.brand small,.eyebrow,.label,.footer h3{font-family:"Rubik Mono One",monospace;font-size:.56rem;letter-spacing:.12em;text-transform:uppercase}.brand small{color:#ffffff94}
+    .links{display:flex;align-items:center;gap:18px;color:#ffffffcc;font-size:.84rem}.cta,.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 20px;border-radius:999px;transition:.2s}.cta,.btn.primary{background:linear-gradient(180deg,#ffd452 0%,#ffbf1f 100%);color:#111;box-shadow:0 16px 28px rgba(255,191,31,.24)}.btn.secondary{border:1px solid var(--wline);background:#ffffff0d;color:#fff}.cta:hover,.btn:hover{transform:translateY(-1px)}
+    .hero{position:relative;overflow:hidden;padding:52px 0 92px;background:radial-gradient(circle at 18% 18%,rgba(255,191,31,.18),transparent 20%),radial-gradient(circle at 84% 28%,rgba(255,191,31,.1),transparent 18%),linear-gradient(135deg,#040404 0%,#0c0c0c 46%,#181208 100%);color:var(--white);border-bottom-left-radius:36px;border-bottom-right-radius:36px}.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(180deg,#000,transparent)}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.92fr);gap:36px;align-items:center}.eyebrow,.label{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:#ffffff10;border:1px solid var(--wline);color:#ffffffc4}.hero h1{margin:20px 0 16px;font-size:clamp(2.6rem,5vw,4.9rem);line-height:.95;letter-spacing:-.04em;max-width:10ch}.hero p,.section p,.faq p,.footer p{margin:0;line-height:1.9}.hero p{max-width:620px;color:#ffffffbd}
+    .actions,.chips,.metrics,.grid,.split,.lang-grid,.faq-list,.footer-grid{display:grid;gap:16px}.actions{grid-template-columns:repeat(2,minmax(0,max-content));margin-top:28px}.chips{grid-template-columns:repeat(3,max-content);margin-top:24px}.chips span{min-height:40px;display:inline-flex;align-items:center;padding:0 14px;border-radius:999px;background:#ffffff0a;border:1px solid var(--wline);color:#ffffffba;font-size:.74rem}
+    .metrics{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:32px}.metrics article{padding:18px;border-radius:20px;background:#ffffff0c;border:1px solid var(--wline)}.metrics b{display:block;font-size:1.26rem;margin-bottom:8px}.metrics span{color:#ffffff9e;font-size:.73rem;line-height:1.6}
+    .phone{position:relative;width:min(100%,410px);margin-inline:auto;padding:14px;border-radius:40px;background:linear-gradient(160deg,#ffffff1e,#ffffff08);border:1px solid var(--wline);box-shadow:0 28px 70px rgba(0,0,0,.42);backdrop-filter:blur(14px)}.phone:before{content:"";position:absolute;top:12px;left:50%;width:116px;height:24px;transform:translateX(-50%);background:#000000b8;border-radius:0 0 18px 18px}
+    .screen{overflow:hidden;min-height:590px;padding:28px 20px 24px;border-radius:30px;background:radial-gradient(circle at top,rgba(255,191,31,.15),transparent 25%),linear-gradient(180deg,#131313 0%,#0b0b0b 100%);border:1px solid #ffffff0d}.topbar,.row,.lang-pill{display:flex;align-items:center}.topbar{justify-content:space-between;margin:18px 0 24px}.row{gap:12px}.row img{width:34px;height:34px;border-radius:12px}.row small{display:block;color:#ffffff96;font:.56rem "Rubik Mono One",monospace;letter-spacing:.12em;text-transform:uppercase}.dot{width:14px;height:14px;border-radius:999px;background:var(--gold);box-shadow:0 0 0 8px rgba(255,191,31,.12)}
+    .panel{padding:18px;border-radius:24px;background:#ffffff0a;border:1px solid var(--wline);margin-bottom:18px}.panel .between{display:flex;justify-content:space-between;gap:10px;color:#ffffffb8;font-size:.72rem}.panel strong{font-size:1rem;color:#fff}.bar{height:10px;border-radius:999px;background:#ffffff1a;overflow:hidden;margin-top:12px}.bar span{display:block;width:38%;height:100%;background:linear-gradient(90deg,var(--gold2),#ffd452)}
+    .card{position:relative;overflow:hidden;border-radius:28px;background:linear-gradient(180deg,#ffffff10,#ffffff06),#0d0d0d;border:1px solid var(--wline)}.star{position:absolute;top:18px;left:18px;width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:#ffffff0d;color:var(--gold)}.card-top{padding:58px 20px 26px;text-align:center}.card-top h2{margin:0;font-size:2.15rem;letter-spacing:-.03em}.card-top em{display:block;margin-top:10px;color:#ffffff8f;font-size:.92rem}.trans{display:inline-flex;align-items:center;gap:10px;margin-top:14px;color:var(--gold);font-size:1.1rem}.trans span{width:28px;height:28px;border-radius:999px;display:grid;place-items:center;background:#ffbf1f22;font-size:.8rem}
+    .card-bottom{padding:22px 20px 0;background:#ffffff08;border-top:1px solid #ffffff10}.card-bottom p{margin:0;text-align:center}.card-bottom p + p{margin-top:12px;color:#ffffff96;font-size:.82rem}.more{min-height:58px;margin:18px -20px 0;display:flex;align-items:center;justify-content:center;background:#ffffff0c;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase}
+    .float{position:absolute;display:flex;align-items:center;gap:10px;padding:0 14px;min-height:50px;border-radius:999px;background:#ffffff12;border:1px solid var(--wline);box-shadow:0 16px 32px rgba(0,0,0,.22);backdrop-filter:blur(12px);font-size:.7rem}.float img{width:24px;height:24px;border-radius:999px}.f1{top:78px;right:-14px}.f2{left:-20px;bottom:126px}.f3{right:-8px;bottom:34px}
+    .band{margin-top:-44px}.band .grid{grid-template-columns:repeat(4,minmax(0,1fr))}.band article,.feature,.stack,.faq-card,.cta-box,.lang-board{padding:26px;border-radius:24px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow)}.band b{display:block;font-size:1.45rem;margin-bottom:8px}.band span,.feature p,.stack p,.section p,.faq p,.lang-pill span,.footer a,.footer p{color:var(--muted)}
+    .section{padding:92px 0}.section h2{margin:0 0 16px;font-size:clamp(2rem,4vw,3.2rem);line-height:1;letter-spacing:-.03em}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.feature h3,.stack h3{margin:0 0 10px;font-size:1.08rem;line-height:1.15}.icon,.num{width:52px;height:52px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(180deg,#ffd452 0%,#ffbf1f 100%);color:#111;box-shadow:0 14px 26px rgba(255,191,31,.22)}.split{grid-template-columns:minmax(0,.96fr) minmax(0,1.04fr);align-items:start}.stack{display:grid;gap:14px;background:radial-gradient(circle at top right,rgba(255,191,31,.12),transparent 30%),var(--card)}
+    .pick{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:18px;background:#ffffffb8;border:1px solid var(--line)}.pick img{width:34px;height:34px;border-radius:10px}.pick b,.lang-pill b{display:block;font-size:.78rem}.pick span{display:block;font-size:.7rem}.check{margin-left:auto;width:26px;height:26px;border-radius:999px;display:grid;place-items:center;background:var(--gold);color:#111}.grid.twos{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .levels{display:grid;gap:14px}.level{display:flex;align-items:flex-start;gap:16px;padding:22px;border-radius:24px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow)}.badge{min-width:86px;padding:12px 14px;border-radius:16px;background:#111;color:var(--gold);font:.62rem "Rubik Mono One",monospace;letter-spacing:.1em;text-align:center}.level h3{margin:0 0 10px;font-size:1rem}.dark-box{padding:30px;border-radius:32px;background:linear-gradient(145deg,#111,#1a1a1a);color:#fff;box-shadow:0 24px 60px rgba(0,0,0,.18)}.dark-box h3{margin:0 0 12px;font-size:1.95rem;line-height:1}.dark-box p{color:#ffffffb0}.window{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:24px}.window article{padding:16px 18px;border-radius:20px;background:#ffffff10;border:1px solid var(--wline)}.window span{display:block;margin-top:8px;color:#ffffff92;font-size:.72rem}
+    .lang-board{background:radial-gradient(circle at top left,rgba(255,191,31,.12),transparent 24%),var(--card)}.lang-grid{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:24px}.lang-pill{gap:12px;padding:12px 14px;border-radius:16px;background:#ffffffb8;border:1px solid var(--line);min-height:60px}.lang-pill img{width:28px;height:28px;border-radius:999px}.lang-pill span{display:block;font-size:.66rem;line-height:1.4}
+    .faq-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:20px}.faq-card,details,.cta-box{border-radius:24px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow)}.faq-card{padding:26px}.faq-list{gap:14px}details{padding:0 20px}summary{list-style:none;cursor:pointer;padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:18px;font-size:.9rem}summary::-webkit-details-marker{display:none}summary:after{content:"+";font-size:1.3rem;color:var(--gold2)}details[open] summary:after{transform:rotate(45deg)}details p{margin:0 0 20px;font-size:.8rem}.cta-box{padding:28px;display:grid;gap:16px}
+    .footer{margin-top:56px;padding:34px 0 44px;background:radial-gradient(circle at top,rgba(255,191,31,.12),transparent 24%),#0b0b0b;color:#ffffffbc;border-top-left-radius:36px;border-top-right-radius:36px}.footer-grid{grid-template-columns:minmax(0,1.2fr) repeat(3,minmax(0,.8fr))}.footer h3{margin:0 0 14px;color:#fff}.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}.footer p{max-width:34ch}.end{display:flex;justify-content:space-between;gap:16px;padding-top:22px;margin-top:24px;border-top:1px solid var(--wline);font-size:.72rem;color:#ffffff8f}
+    @media (max-width:1080px){.hero-grid,.split,.faq-grid,.footer-grid{grid-template-columns:1fr}.band .grid,.grid,.lang-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width:860px){.links{position:absolute;top:calc(100% + 14px);right:0;display:none;flex-direction:column;align-items:stretch;padding:18px;min-width:240px;background:#0a0a0af5;border:1px solid var(--wline);border-radius:24px;box-shadow:0 24px 48px rgba(0,0,0,.3)}.links.open{display:flex}.menu{display:inline-flex !important;width:48px;height:48px;border-radius:14px;border:1px solid var(--wline);background:#ffffff0a;color:#fff;align-items:center;justify-content:center}.menu span,.menu span:before,.menu span:after{content:"";display:block;width:18px;height:2px;background:currentColor;border-radius:999px;position:relative}.menu span:before{position:absolute;top:-6px}.menu span:after{position:absolute;top:6px}.cta{display:none}.actions,.chips,.metrics,.window{grid-template-columns:1fr}.float{position:static;margin-top:12px}}
+    @media (max-width:640px){.hero{padding:38px 0 74px;border-bottom-left-radius:28px;border-bottom-right-radius:28px}.band .grid,.grid,.grid.twos,.lang-grid{grid-template-columns:1fr}.level{flex-direction:column}.end{flex-direction:column;align-items:flex-start}}
+    .reveal{opacity:0;transform:translateY(18px);transition:.45s}.reveal.show{opacity:1;transform:none}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="header" data-header>
+    <div class="wrap nav">
+      <a class="brand" href="#top"><img src="assets/icons/vocicon.png" alt=""><span><b>VocBee</b><small>Daily Vocabulary App</small></span></a>
+      <div style="position:relative;display:flex;align-items:center;gap:18px">
+        <button class="menu" type="button" data-menu aria-expanded="false" aria-controls="links" style="display:none"><span></span></button>
+        <nav class="links" id="links" data-links>
+          <a href="#features">Features</a>
+          <a href="#flow">How it works</a>
+          <a href="#languages">Languages</a>
+          <a href="#faq">FAQ</a>
+          <a href="privacypolicy/">Privacy</a>
+          <a href="delete_account.html">Delete account</a>
+        </nav>
+        <a class="cta" href="mailto:turansahiniletisim@gmail.com?subject=VocBee%20Website%20Inquiry">Contact</a>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="reveal show">
+          <span class="eyebrow">Built around a calmer daily rhythm</span>
+          <h1>Vocabulary that keeps moving with you.</h1>
+          <p>VocBee turns language learning into a focused daily habit: level-based words, tap-to-hear pronunciation, real sentence context, favorites, progress tracking, and reminder windows that fit your day instead of interrupting it.</p>
+          <div class="actions">
+            <a class="btn primary" href="#flow">See the flow</a>
+            <a class="btn secondary" href="mailto:turansahiniletisim@gmail.com?subject=VocBee%20Support">Talk to support</a>
+          </div>
+          <div class="chips">
+            <span>iOS and Android ready</span>
+            <span>21 interface languages</span>
+            <span>A1 to C1 vocabulary tracks</span>
+          </div>
+          <div class="metrics">
+            <article><b>5 CEFR bands</b><span>From first words to advanced vocabulary without changing tools.</span></article>
+            <article><b>Tap, swipe, save</b><span>Quick mobile gestures for learning, skipping, and favoriting.</span></article>
+            <article><b>Flexible reminders</b><span>Set a learning window and frequency that matches real life.</span></article>
+          </div>
+        </div>
+
+        <div class="phone reveal show" aria-hidden="true">
+          <div class="screen">
+            <div class="topbar">
+              <div class="row"><img src="assets/icons/vocicon.png" alt=""><div><b>VocBee</b><small>today's lesson</small></div></div>
+              <span class="dot"></span>
+            </div>
+            <div class="panel">
+              <div class="between"><strong>B1 - Intermediate</strong><span>128 / 400 learned</span></div>
+              <div class="bar"><span></span></div>
+            </div>
+            <article class="card">
+              <div class="star">★</div>
+              <div class="card-top">
+                <h2>bonjour</h2>
+                <em>/bon-zhoor/</em>
+                <div class="trans"><span>A</span> hello</div>
+              </div>
+              <div class="card-bottom">
+                <p>Bonjour, comment allez-vous aujourd'hui ?</p>
+                <p>Hello, how are you today?</p>
+                <div class="more">More examples</div>
+              </div>
+            </article>
+          </div>
+          <div class="float f1"><img src="assets/icons/fr.png" alt=""><span>Tap to hear pronunciation</span></div>
+          <div class="float f2"><img src="assets/icons/es.png" alt=""><span>Swipe to mark learned</span></div>
+          <div class="float f3"><img src="assets/icons/gb.png" alt=""><span>Daily reminders on your terms</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <div class="grid">
+          <article class="reveal"><b>21</b><span>supported source and target languages inside the app.</span></article>
+          <article class="reveal"><b>7-step</b><span>onboarding flow for language pair, level, and reminders.</span></article>
+          <article class="reveal"><b>2 taps</b><span>to hear pronunciation and sentence audio in context.</span></article>
+          <article class="reveal"><b>1 home card</b><span>that centralizes progress, review, favorites, and examples.</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="wrap">
+        <span class="label">Core Product</span>
+        <h2>Everything on the website maps to a real app behavior.</h2>
+        <p>The landing page mirrors VocBee's actual product flow instead of promising generic language-learning fluff. Visitors see what the mobile experience really looks like before they install.</p>
+        <div class="grid" style="margin-top:28px">
+          <article class="feature reveal"><div class="icon">01</div><h3>Daily word flow</h3><p>Pick up from the exact point you left off with a single vocabulary card built for focus.</p></article>
+          <article class="feature reveal"><div class="icon">02</div><h3>Quick level placement</h3><p>Choose a level manually or take a short placement test before the feed begins.</p></article>
+          <article class="feature reveal"><div class="icon">03</div><h3>Pronunciation on tap</h3><p>Tap the word or sentence to hear it aloud without leaving the lesson.</p></article>
+          <article class="feature reveal"><div class="icon">04</div><h3>Real sentence context</h3><p>Each word comes with examples and translations so learners absorb usage, not isolated memorization.</p></article>
+          <article class="feature reveal"><div class="icon">05</div><h3>Favorites and progress</h3><p>Save worth-repeating words and see clear progress across levels over time.</p></article>
+          <article class="feature reveal"><div class="icon">06</div><h3>Reminder windows</h3><p>Define when reminders start, when they stop, and how often they appear.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="flow">
+      <div class="wrap split">
+        <article class="stack reveal">
+          <span class="label" style="background:var(--soft);color:#8a5c00;border-color:transparent">Setup Preview</span>
+          <div class="pick"><img src="assets/icons/tr.png" alt=""><div><b>Native language</b><span>Turkish selected for translations and prompts.</span></div><span class="check">✓</span></div>
+          <div class="pick"><img src="assets/icons/fr.png" alt=""><div><b>Target language</b><span>French selected as the active learning track.</span></div><span class="check">✓</span></div>
+          <div class="pick"><img src="assets/icons/dflt_dark.png" alt=""><div><b>Placement</b><span>Mini test suggests intermediate vocabulary.</span></div><span class="check">✓</span></div>
+          <div class="pick"><img src="assets/icons/notification-icon.png" alt=""><div><b>Reminder window</b><span>09:00 to 21:00, every 2 hours.</span></div><span class="check">✓</span></div>
+        </article>
+
+        <div class="grid twos">
+          <article class="feature reveal"><div class="num">01</div><h3>Choose your native language</h3><p>VocBee uses it for translations, level prompts, and onboarding clarity.</p></article>
+          <article class="feature reveal"><div class="num">02</div><h3>Pick the language you want to master</h3><p>Supported language pairs pull from the same structured vocabulary system used in the app.</p></article>
+          <article class="feature reveal"><div class="num">03</div><h3>Start with the right level</h3><p>Select Beginner, Intermediate, or Advanced, or take the quick quiz.</p></article>
+          <article class="feature reveal"><div class="num">04</div><h3>Decide how often VocBee should show up</h3><p>Notifications support the habit without hijacking it because schedule stays in your control.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap split">
+        <div>
+          <span class="label">Levels and Progress</span>
+          <h2>A learning system built around steady progression.</h2>
+          <p>VocBee uses CEFR-aligned tracks and progress-aware review, so learners can understand how the app grows with them from first contact to more fluent daily usage.</p>
+          <div class="levels" style="margin-top:24px">
+            <article class="level reveal"><span class="badge">A1-A2</span><div><h3>Beginner</h3><p>Understand basic phrases, build confidence, and start with approachable vocabulary.</p></div></article>
+            <article class="level reveal"><span class="badge">B1-B2</span><div><h3>Intermediate</h3><p>Move into familiar topics, context-driven examples, and conversation-ready words.</p></div></article>
+            <article class="level reveal"><span class="badge">C1</span><div><h3>Advanced</h3><p>Practice more complex words and richer usage patterns without repeating basics.</p></div></article>
+          </div>
+        </div>
+
+        <aside class="dark-box reveal">
+          <span class="label">Reminder Design</span>
+          <h3>Daily consistency, without notification fatigue.</h3>
+          <p>VocBee lets learners define when reminders start, when they stop, and how often they appear. That makes the app better suited for real schedules and more likely to become a routine.</p>
+          <div class="window">
+            <article><b>09:00 start</b><span>Begin when the day actually begins.</span></article>
+            <article><b>21:00 end</b><span>Stop before reminders become background noise.</span></article>
+          </div>
+          <ul style="margin:22px 0 0;padding-left:18px;color:#ffffffc4;line-height:1.9;font-size:.78rem">
+            <li>Choose from every 30 minutes up to once daily.</li>
+            <li>Keep notified words in queue or auto-mark them as learned.</li>
+            <li>Adjust everything later from Settings.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="languages">
+      <div class="wrap">
+        <span class="label">Language Support</span>
+        <h2>Designed for multilingual learners from day one.</h2>
+        <p>VocBee supports a broad set of languages for both the learner's base language and the target language. The website makes that breadth visible with actual supported options.</p>
+        <article class="lang-board reveal" style="margin-top:28px">
+          <h2 style="font-size:clamp(1.8rem,3vw,2.4rem)">21 language options already in the app</h2>
+          <p>English, Turkish, German, French, Spanish, Italian, Portuguese, Russian, Arabic, Chinese, Japanese, Korean, Hindi, Indonesian, Vietnamese, Thai, Amharic, Persian, Serbian, Swahili, and Urdu.</p>
+          <div class="lang-grid">
+            <div class="lang-pill"><img src="assets/icons/gb.png" alt=""><div><b>English</b><span>English</span></div></div>
+            <div class="lang-pill"><img src="assets/icons/tr.png" alt=""><div><b>Turkish</b><span>Turkce</span></div></div>
+            <div class="lang-pill"><img src="assets/icons/de.png" alt=""><div><b>German</b><span>Deutsch</span></div></div>
+            <div class="lang-pill"><img src="assets/icons/fr.png" alt=""><div><b>French</b><span>Francais</span></div></div>
+            <div class="lang-pill"><img src="assets/icons/es.png" alt=""><div><b>Spanish</b><span>Espanol</span></div></div>
+            <div class="lang-pill"><img src="assets/icons/it.png" alt=""><div><b>Italian</b><span>Italiano</span></div></div>
+            <div class="lang-pill"><img src="assets/icons/pt.png" alt=""><div><b>Portuguese</b><span>Portugues</span></div></div>
+            <div class="lang-pill"><img src="assets/icons/ru.png" alt=""><div><b>Russian</b><span>Russkiy</span></div></div>
+            <div class="lang-pill"><img src="assets/icons/ae.png" alt=""><div><b>Arabic</b><span>Arabic</span></div></div>
+            <div class="lang-pill"><img src="assets/icons/cn.png" alt=""><div><b>Chinese</b><span>Chinese</span></div></div>
+            <div class="lang-pill"><img src="assets/icons/jp.png" alt=""><div><b>Japanese</b><span>Nihongo</span></div></div>
+            <div class="lang-pill"><img src="assets/icons/kr.png" alt=""><div><b>Korean</b><span>Hangugo</span></div></div>
+            <div class="lang-pill"><img src="assets/icons/in.png" alt=""><div><b>Hindi</b><span>Hindi</span></div></div>
+            <div class="lang-pill"><img src="assets/icons/id.png" alt=""><div><b>Indonesian</b><span>Bahasa Indonesia</span></div></div>
+            <div class="lang-pill"><img src="assets/icons/vn.png" alt=""><div><b>Vietnamese</b><span>Tieng Viet</span></div></div>
+            <div class="lang-pill"><img src="assets/icons/th.png" alt=""><div><b>Thai</b><span>Thai</span></div></div>
+            <div class="lang-pill"><img src="assets/icons/et.png" alt=""><div><b>Amharic</b><span>Amharic</span></div></div>
+            <div class="lang-pill"><img src="assets/icons/ir.png" alt=""><div><b>Persian</b><span>Farsi</span></div></div>
+            <div class="lang-pill"><img src="assets/icons/rs.png" alt=""><div><b>Serbian</b><span>Srpski</span></div></div>
+            <div class="lang-pill"><img src="assets/icons/ke.png" alt=""><div><b>Swahili</b><span>Kiswahili</span></div></div>
+            <div class="lang-pill"><img src="assets/icons/pk.png" alt=""><div><b>Urdu</b><span>Urdu</span></div></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="wrap faq-grid">
+        <article class="faq-card reveal">
+          <span class="label">FAQ</span>
+          <h2 style="font-size:clamp(2rem,3vw,2.9rem)">Questions users ask before they install.</h2>
+          <p>The answers below align with the current app behavior and help visitors understand what VocBee actually does: how words are learned, how reminders work, and how progress is saved.</p>
+        </article>
+        <div class="faq-list">
+          <details class="reveal"><summary>How do learners mark words as learned?</summary><p>VocBee uses swipe-based flashcard behavior. Learners can swipe a card to mark it as learned, skip it for later, or favorite it for quick review.</p></details>
+          <details class="reveal"><summary>Can users listen to pronunciation inside the lesson?</summary><p>Yes. The app supports tap-to-hear pronunciation for the current word and example sentence so audio stays attached to the learning moment.</p></details>
+          <details class="reveal"><summary>Does the app support level placement?</summary><p>Yes. Users can choose a level directly or take a short test to estimate the right track before the vocabulary feed begins.</p></details>
+          <details class="reveal"><summary>How flexible are the reminders?</summary><p>Users can define start and end hours, choose a reminder frequency, and decide whether notified words should be auto-marked as learned or kept in queue.</p></details>
+          <details class="reveal"><summary>Is progress saved across sessions?</summary><p>VocBee stores progress, favorites, language choices, and reminder preferences so learners can continue where they left off and sync their setup when signed in.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <article class="cta-box reveal">
+          <span class="label">Ready to explore VocBee?</span>
+          <h2 style="margin-bottom:0">Use the site as the front door, then let the app do the real teaching.</h2>
+          <p>This website is designed to match the actual product: focused, warm, mobile-first, and clear about what learners get from the first session.</p>
+          <div class="actions" style="margin-top:4px">
+            <a class="btn primary" href="mailto:turansahiniletisim@gmail.com?subject=VocBee%20Download%20Inquiry">Get in touch</a>
+            <a class="btn secondary" href="privacypolicy/">Privacy policy</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="#top"><img src="assets/icons/vocicon.png" alt=""><span><b>VocBee</b><small>Learn with rhythm</small></span></a>
+          <p style="margin-top:16px">A vocabulary-first mobile learning experience shaped around daily flow, contextual examples, and reminders that respect attention.</p>
+        </div>
+        <div><h3>Product</h3><ul><li><a href="#features">Features</a></li><li><a href="#flow">How it works</a></li><li><a href="#languages">Languages</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+        <div><h3>Legal</h3><ul><li><a href="privacypolicy/">Privacy policy</a></li><li><a href="delete_account.html">Delete account</a></li><li><a href="sitemap.xml">Sitemap</a></li><li><a href="robots.txt">Robots</a></li></ul></div>
+        <div><h3>Contact</h3><ul><li><a href="mailto:turansahiniletisim@gmail.com">turansahiniletisim@gmail.com</a></li><li><a href="https://vocbee.online/">vocbee.online</a></li><li><a href="app.json">App metadata</a></li></ul></div>
+      </div>
+      <div class="end"><span>© 2026 VocBee. All rights reserved.</span><span>Landing page aligned with the current app design system.</span></div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var header = document.querySelector("[data-header]");
+      var menu = document.querySelector("[data-menu]");
+      var links = document.querySelector("[data-links]");
+      var reveal = document.querySelectorAll(".reveal");
+      function onScroll() { header.classList.toggle("scrolled", window.scrollY > 10); }
+      onScroll();
+      window.addEventListener("scroll", onScroll, { passive: true });
+      if (menu && links) {
+        menu.addEventListener("click", function () {
+          var open = menu.getAttribute("aria-expanded") === "true";
+          menu.setAttribute("aria-expanded", String(!open));
+          links.classList.toggle("open", !open);
+        });
+        links.querySelectorAll("a").forEach(function (a) {
+          a.addEventListener("click", function () {
+            menu.setAttribute("aria-expanded", "false");
+            links.classList.remove("open");
+          });
+        });
+      }
+      if ("IntersectionObserver" in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        reveal.forEach(function (el) { if (!el.classList.contains("show")) io.observe(el); });
+      } else {
+        reveal.forEach(function (el) { el.classList.add("show"); });
+      }
+    }());
+  </script>
+</body>
+</html>

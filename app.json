@@ -7,7 +7,7 @@
       "com.vocbee.app",
       "com.googleusercontent.apps.540292978044-695plkaeec13scn3p2s76h302sieti4g"
     ],
-    "version": "1.0.7",
+    "version": "1.0.8",
     "icon": "./assets/icons/vocicon.png",
     "splash": {
       "image": "./assets/transparent-splash.png",
@@ -38,11 +38,35 @@
         "NSCameraUsageDescription": "VocBee needs camera access to take a profile photo.",
         "NSPhotoLibraryUsageDescription": "VocBee needs photo library access to choose a profile photo.",
         "ExpoLocalization_supportsRTL": true,
+        "CFBundleLocalizations": [
+          "en",
+          "tr",
+          "de",
+          "fr",
+          "es",
+          "it",
+          "pt",
+          "ru",
+          "ar",
+          "zh",
+          "ja",
+          "ko",
+          "hi",
+          "id",
+          "vi",
+          "th",
+          "am",
+          "fa",
+          "sr",
+          "sw",
+          "ur"
+        ],
         "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {
       "package": "com.vocbee.app",
+      "versionCode": 2,
       "googleServicesFile": "./google-services.json",
       "splash": {
         "image": "./assets/transparent-splash.png",
