@@ -17,30 +17,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
   <style>
     :root{--bg:#070707;--paper:#f6f2e7;--card:#ffffffd9;--line:#11111114;--text:#141414;--muted:#676256;--white:#f7f5ef;--wline:#ffffff14;--gold:#ffbf1f;--gold2:#f5a700;--soft:#ffbf1f22;--radius:28px;--shadow:0 24px 60px rgba(0,0,0,.14);--max:1180px}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"Special Gothic Expanded One",system-ui,sans-serif;background:radial-gradient(circle at top,rgba(255,191,31,.12),transparent 24%),linear-gradient(180deg,#faf7ef 0%,var(--paper) 18%,var(--paper) 100%);color:var(--text)}img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"Special Gothic Expanded One",system-ui,sans-serif;background:linear-gradient(180deg,#faf7ef 0%,var(--paper) 18%,var(--paper) 100%);color:var(--text)}img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
     .wrap{width:min(calc(100% - 28px),var(--max));margin:0 auto}.skip{position:absolute;left:16px;top:-48px;background:var(--gold);padding:12px 18px;border-radius:999px;z-index:100}.skip:focus{top:16px}
-    .header{position:sticky;top:0;z-index:20;transition:.25s}.header.scrolled{backdrop-filter:blur(14px);background:#090909c7;border-bottom:1px solid var(--wline)}
-    .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:14px;color:var(--white)}.brand img{width:48px;height:48px;border-radius:16px;box-shadow:0 10px 24px rgba(255,191,31,.22)}.brand b{display:block;letter-spacing:.08em}.brand small,.eyebrow,.label,.footer h3{font-family:"Rubik Mono One",monospace;font-size:.56rem;letter-spacing:.12em;text-transform:uppercase}.brand small{color:#ffffff94}
-    .links{display:flex;align-items:center;gap:18px;color:#ffffffcc;font-size:.84rem}.cta,.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 20px;border-radius:999px;transition:.2s}.cta,.btn.primary{background:linear-gradient(180deg,#ffd452 0%,#ffbf1f 100%);color:#111;box-shadow:0 16px 28px rgba(255,191,31,.24)}.btn.secondary{border:1px solid var(--wline);background:#ffffff0d;color:#fff}.cta:hover,.btn:hover{transform:translateY(-1px)}
-    .hero{position:relative;overflow:hidden;padding:52px 0 92px;background:radial-gradient(circle at 18% 18%,rgba(255,191,31,.18),transparent 20%),radial-gradient(circle at 84% 28%,rgba(255,191,31,.1),transparent 18%),linear-gradient(135deg,#040404 0%,#0c0c0c 46%,#181208 100%);color:var(--white);border-bottom-left-radius:36px;border-bottom-right-radius:36px}.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(180deg,#000,transparent)}
+    .header{position:sticky;top:0;z-index:20;background:#FFB700;border-bottom:1px solid rgba(17,17,17,.08);transition:.25s}.header.scrolled{backdrop-filter:blur(14px);background:#FFB700ee;border-bottom:1px solid rgba(17,17,17,.12)}
+    .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:14px;color:#111}.brand img{width:56px;height:56px;border-radius:18px;box-shadow:none}.brand b{display:block;letter-spacing:.08em}.brand small,.eyebrow,.label,.footer h3{font-family:"Rubik Mono One",monospace;font-size:.56rem;letter-spacing:.12em;text-transform:uppercase}.brand small{color:rgba(17,17,17,.68)}
+    .links{display:flex;align-items:center;gap:18px;color:rgba(17,17,17,.84);font-size:.84rem}.cta,.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 20px;border-radius:999px;transition:.2s;box-shadow:none}.cta{background:#111;color:#fff}.btn.primary{background:#FFB700;color:#111}.btn.secondary{border:1px solid var(--wline);background:#ffffff0d;color:#fff}.cta:hover,.btn:hover{transform:translateY(-1px)}
+    .hero{position:relative;overflow:hidden;padding:52px 0 92px;background:linear-gradient(135deg,#040404 0%,#0c0c0c 46%,#181208 100%);color:var(--white);border-bottom-left-radius:36px;border-bottom-right-radius:36px}.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(180deg,#000,transparent)}.hero:after{display:none}.hero-ripples{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0;transition:opacity .22s ease;mix-blend-mode:screen;z-index:0}.hero-ripples.active{opacity:1}
     .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.92fr);gap:36px;align-items:center}.eyebrow,.label{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:#ffffff10;border:1px solid var(--wline);color:#ffffffc4}.hero h1{margin:20px 0 16px;font-size:clamp(2.6rem,5vw,4.9rem);line-height:.95;letter-spacing:-.04em;max-width:10ch}.hero p,.section p,.faq p,.footer p{margin:0;line-height:1.9}.hero p{max-width:620px;color:#ffffffbd}
     .actions,.chips,.metrics,.grid,.split,.lang-grid,.faq-list,.footer-grid{display:grid;gap:16px}.actions{grid-template-columns:repeat(2,minmax(0,max-content));margin-top:28px}.chips{grid-template-columns:repeat(3,max-content);margin-top:24px}.chips span{min-height:40px;display:inline-flex;align-items:center;padding:0 14px;border-radius:999px;background:#ffffff0a;border:1px solid var(--wline);color:#ffffffba;font-size:.74rem}
     .metrics{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:32px}.metrics article{padding:18px;border-radius:20px;background:#ffffff0c;border:1px solid var(--wline)}.metrics b{display:block;font-size:1.26rem;margin-bottom:8px}.metrics span{color:#ffffff9e;font-size:.73rem;line-height:1.6}
-    .phone{position:relative;width:min(100%,410px);margin-inline:auto;padding:14px;border-radius:40px;background:linear-gradient(160deg,#ffffff1e,#ffffff08);border:1px solid var(--wline);box-shadow:0 28px 70px rgba(0,0,0,.42);backdrop-filter:blur(14px)}.phone:before{content:"";position:absolute;top:12px;left:50%;width:116px;height:24px;transform:translateX(-50%);background:#000000b8;border-radius:0 0 18px 18px}
-    .screen{overflow:hidden;min-height:590px;padding:28px 20px 24px;border-radius:30px;background:radial-gradient(circle at top,rgba(255,191,31,.15),transparent 25%),linear-gradient(180deg,#131313 0%,#0b0b0b 100%);border:1px solid #ffffff0d}.topbar,.row,.lang-pill{display:flex;align-items:center}.topbar{justify-content:space-between;margin:18px 0 24px}.row{gap:12px}.row img{width:34px;height:34px;border-radius:12px}.row small{display:block;color:#ffffff96;font:.56rem "Rubik Mono One",monospace;letter-spacing:.12em;text-transform:uppercase}.dot{width:14px;height:14px;border-radius:999px;background:var(--gold);box-shadow:0 0 0 8px rgba(255,191,31,.12)}
+    .phone{position:relative;width:min(100%,410px);margin-inline:auto;padding:14px;border-radius:40px;background:linear-gradient(160deg,#ffffff1e,#ffffff08);border:1px solid var(--wline);box-shadow:0 28px 70px rgba(0,0,0,.42);backdrop-filter:blur(14px)}
+    .screen{overflow:hidden;min-height:590px;padding:28px 20px 24px;border-radius:30px;background:linear-gradient(180deg,#131313 0%,#0b0b0b 100%);border:1px solid #ffffff0d}.topbar,.row,.lang-pill{display:flex;align-items:center}.topbar{justify-content:space-between;margin:18px 0 24px}.row{gap:12px}.row img{width:34px;height:34px;border-radius:12px}.row small{display:block;color:#ffffff96;font:.56rem "Rubik Mono One",monospace;letter-spacing:.12em;text-transform:uppercase}.dot{width:14px;height:14px;border-radius:999px;background:var(--gold);box-shadow:0 0 0 8px rgba(255,191,31,.12)}
     .panel{padding:18px;border-radius:24px;background:#ffffff0a;border:1px solid var(--wline);margin-bottom:18px}.panel .between{display:flex;justify-content:space-between;gap:10px;color:#ffffffb8;font-size:.72rem}.panel strong{font-size:1rem;color:#fff}.bar{height:10px;border-radius:999px;background:#ffffff1a;overflow:hidden;margin-top:12px}.bar span{display:block;width:38%;height:100%;background:linear-gradient(90deg,var(--gold2),#ffd452)}
     .card{position:relative;overflow:hidden;border-radius:28px;background:linear-gradient(180deg,#ffffff10,#ffffff06),#0d0d0d;border:1px solid var(--wline)}.star{position:absolute;top:18px;left:18px;width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:#ffffff0d;color:var(--gold)}.card-top{padding:58px 20px 26px;text-align:center}.card-top h2{margin:0;font-size:2.15rem;letter-spacing:-.03em}.card-top em{display:block;margin-top:10px;color:#ffffff8f;font-size:.92rem}.trans{display:inline-flex;align-items:center;gap:10px;margin-top:14px;color:var(--gold);font-size:1.1rem}.trans span{width:28px;height:28px;border-radius:999px;display:grid;place-items:center;background:#ffbf1f22;font-size:.8rem}
     .card-bottom{padding:22px 20px 0;background:#ffffff08;border-top:1px solid #ffffff10}.card-bottom p{margin:0;text-align:center}.card-bottom p + p{margin-top:12px;color:#ffffff96;font-size:.82rem}.more{min-height:58px;margin:18px -20px 0;display:flex;align-items:center;justify-content:center;background:#ffffff0c;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase}
     .float{position:absolute;display:flex;align-items:center;gap:10px;padding:0 14px;min-height:50px;border-radius:999px;background:#ffffff12;border:1px solid var(--wline);box-shadow:0 16px 32px rgba(0,0,0,.22);backdrop-filter:blur(12px);font-size:.7rem}.float img{width:24px;height:24px;border-radius:999px}.f1{top:78px;right:-14px}.f2{left:-20px;bottom:126px}.f3{right:-8px;bottom:34px}
-    .band{margin-top:-44px}.band .grid{grid-template-columns:repeat(4,minmax(0,1fr))}.band article,.feature,.stack,.faq-card,.cta-box,.lang-board{padding:26px;border-radius:24px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow)}.band b{display:block;font-size:1.45rem;margin-bottom:8px}.band span,.feature p,.stack p,.section p,.faq p,.lang-pill span,.footer a,.footer p{color:var(--muted)}
-    .section{padding:92px 0}.section h2{margin:0 0 16px;font-size:clamp(2rem,4vw,3.2rem);line-height:1;letter-spacing:-.03em}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.feature h3,.stack h3{margin:0 0 10px;font-size:1.08rem;line-height:1.15}.icon,.num{width:52px;height:52px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(180deg,#ffd452 0%,#ffbf1f 100%);color:#111;box-shadow:0 14px 26px rgba(255,191,31,.22)}.split{grid-template-columns:minmax(0,.96fr) minmax(0,1.04fr);align-items:start}.stack{display:grid;gap:14px;background:radial-gradient(circle at top right,rgba(255,191,31,.12),transparent 30%),var(--card)}
-    .pick{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:18px;background:#ffffffb8;border:1px solid var(--line)}.pick img{width:34px;height:34px;border-radius:10px}.pick b,.lang-pill b{display:block;font-size:.78rem}.pick span{display:block;font-size:.7rem}.check{margin-left:auto;width:26px;height:26px;border-radius:999px;display:grid;place-items:center;background:var(--gold);color:#111}.grid.twos{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .band{position:relative;z-index:2;margin-top:-44px}.band .grid{grid-template-columns:repeat(4,minmax(0,1fr))}.band article,.feature,.stack,.faq-card,.cta-box,.lang-board{padding:26px;border-radius:24px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow)}.band b{display:block;font-size:1.45rem;margin-bottom:8px}.band span,.feature p,.stack p,.section p,.faq p,.lang-pill span,.footer a,.footer p{color:var(--muted)}
+    .section{padding:92px 0}.section h2{margin:0 0 16px;font-size:clamp(2rem,4vw,3.2rem);line-height:1;letter-spacing:-.03em}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.feature h3,.stack h3{margin:0 0 10px;font-size:1.08rem;line-height:1.15}.icon,.num{width:52px;height:52px;border-radius:18px;display:grid;place-items:center;background:transparent;color:#111;box-shadow:none}.split{grid-template-columns:minmax(0,.96fr) minmax(0,1.04fr);align-items:start}.stack{display:grid;gap:14px;background:var(--card)}
+    .pick{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:18px;background:#ffffffb8;border:1px solid var(--line)}.pick img{width:34px;height:34px;border-radius:10px}.pick b,.lang-pill b{display:block;font-size:.78rem}.pick div span{display:block;font-size:.7rem}.check{margin-left:auto;width:26px;height:26px;border-radius:999px;display:grid;place-items:center;align-self:center;flex-shrink:0;background:var(--gold);color:#111;line-height:1}.grid.twos{grid-template-columns:repeat(2,minmax(0,1fr))}
     .levels{display:grid;gap:14px}.level{display:flex;align-items:flex-start;gap:16px;padding:22px;border-radius:24px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow)}.badge{min-width:86px;padding:12px 14px;border-radius:16px;background:#111;color:var(--gold);font:.62rem "Rubik Mono One",monospace;letter-spacing:.1em;text-align:center}.level h3{margin:0 0 10px;font-size:1rem}.dark-box{padding:30px;border-radius:32px;background:linear-gradient(145deg,#111,#1a1a1a);color:#fff;box-shadow:0 24px 60px rgba(0,0,0,.18)}.dark-box h3{margin:0 0 12px;font-size:1.95rem;line-height:1}.dark-box p{color:#ffffffb0}.window{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:24px}.window article{padding:16px 18px;border-radius:20px;background:#ffffff10;border:1px solid var(--wline)}.window span{display:block;margin-top:8px;color:#ffffff92;font-size:.72rem}
-    .lang-board{background:radial-gradient(circle at top left,rgba(255,191,31,.12),transparent 24%),var(--card)}.lang-grid{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:24px}.lang-pill{gap:12px;padding:12px 14px;border-radius:16px;background:#ffffffb8;border:1px solid var(--line);min-height:60px}.lang-pill img{width:28px;height:28px;border-radius:999px}.lang-pill span{display:block;font-size:.66rem;line-height:1.4}
+    .lang-board{background:var(--card)}.lang-grid{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:24px}.lang-pill{gap:12px;padding:12px 14px;border-radius:16px;background:#ffffffb8;border:1px solid var(--line);min-height:60px}.lang-pill img{width:28px;height:28px;border-radius:999px}.lang-pill span{display:block;font-size:.66rem;line-height:1.4}
     .faq-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:20px}.faq-card,details,.cta-box{border-radius:24px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow)}.faq-card{padding:26px}.faq-list{gap:14px}details{padding:0 20px}summary{list-style:none;cursor:pointer;padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:18px;font-size:.9rem}summary::-webkit-details-marker{display:none}summary:after{content:"+";font-size:1.3rem;color:var(--gold2)}details[open] summary:after{transform:rotate(45deg)}details p{margin:0 0 20px;font-size:.8rem}.cta-box{padding:28px;display:grid;gap:16px}
-    .footer{margin-top:56px;padding:34px 0 44px;background:radial-gradient(circle at top,rgba(255,191,31,.12),transparent 24%),#0b0b0b;color:#ffffffbc;border-top-left-radius:36px;border-top-right-radius:36px}.footer-grid{grid-template-columns:minmax(0,1.2fr) repeat(3,minmax(0,.8fr))}.footer h3{margin:0 0 14px;color:#fff}.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}.footer p{max-width:34ch}.end{display:flex;justify-content:space-between;gap:16px;padding-top:22px;margin-top:24px;border-top:1px solid var(--wline);font-size:.72rem;color:#ffffff8f}
+    .footer{margin-top:56px;padding:34px 0 44px;background:#0b0b0b;color:#ffffffbc;border-top-left-radius:36px;border-top-right-radius:36px}.footer-grid{grid-template-columns:minmax(0,1.2fr) repeat(3,minmax(0,.8fr))}.footer .brand{align-items:center;color:#fff}.footer .brand img{width:56px;height:56px;border-radius:18px;filter:brightness(0) invert(1)}.footer .brand span{display:flex;flex-direction:column;justify-content:center;gap:4px}.footer .brand b{line-height:1}.footer .brand small{color:rgba(255,255,255,.68)}.store-links{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:18px}.store-links a{display:inline-flex;align-items:center}.store-links img{width:164px;height:auto;display:block}.footer h3{margin:0 0 14px;color:#fff}.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}.footer p{max-width:34ch}.end{display:flex;justify-content:space-between;gap:16px;padding-top:22px;margin-top:24px;border-top:1px solid var(--wline);font-size:.72rem;color:#ffffff8f}
     @media (max-width:1080px){.hero-grid,.split,.faq-grid,.footer-grid{grid-template-columns:1fr}.band .grid,.grid,.lang-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media (max-width:860px){.links{position:absolute;top:calc(100% + 14px);right:0;display:none;flex-direction:column;align-items:stretch;padding:18px;min-width:240px;background:#0a0a0af5;border:1px solid var(--wline);border-radius:24px;box-shadow:0 24px 48px rgba(0,0,0,.3)}.links.open{display:flex}.menu{display:inline-flex !important;width:48px;height:48px;border-radius:14px;border:1px solid var(--wline);background:#ffffff0a;color:#fff;align-items:center;justify-content:center}.menu span,.menu span:before,.menu span:after{content:"";display:block;width:18px;height:2px;background:currentColor;border-radius:999px;position:relative}.menu span:before{position:absolute;top:-6px}.menu span:after{position:absolute;top:6px}.cta{display:none}.actions,.chips,.metrics,.window{grid-template-columns:1fr}.float{position:static;margin-top:12px}}
+    @media (max-width:860px){.links{position:absolute;top:calc(100% + 14px);right:0;display:none;flex-direction:column;align-items:stretch;padding:18px;min-width:240px;background:#FFB700f5;border:1px solid rgba(17,17,17,.12);border-radius:24px;box-shadow:0 24px 48px rgba(0,0,0,.18)}.links.open{display:flex}.menu{display:inline-flex !important;width:48px;height:48px;border-radius:14px;border:1px solid rgba(17,17,17,.12);background:#1111110a;color:#111;align-items:center;justify-content:center}.menu span,.menu span:before,.menu span:after{content:"";display:block;width:18px;height:2px;background:currentColor;border-radius:999px;position:relative}.menu span:before{position:absolute;top:-6px}.menu span:after{position:absolute;top:6px}.cta{display:none}.actions,.chips,.metrics,.window{grid-template-columns:1fr}.float{position:static;margin-top:12px}}
     @media (max-width:640px){.hero{padding:38px 0 74px;border-bottom-left-radius:28px;border-bottom-right-radius:28px}.band .grid,.grid,.grid.twos,.lang-grid{grid-template-columns:1fr}.level{flex-direction:column}.end{flex-direction:column;align-items:flex-start}}
     .reveal{opacity:0;transform:translateY(18px);transition:.45s}.reveal.show{opacity:1;transform:none}
   </style>
@@ -49,23 +49,21 @@
   <a class="skip" href="#main">Skip to content</a>
   <header class="header" data-header>
     <div class="wrap nav">
-      <a class="brand" href="#top"><img src="assets/icons/vocicon.png" alt=""><span><b>VocBee</b><small>Daily Vocabulary App</small></span></a>
+      <a class="brand" href="#top"><img src="assets/icons/notification-icon.png" alt=""><span><b>VocBee</b><small>Daily Vocabulary App</small></span></a>
       <div style="position:relative;display:flex;align-items:center;gap:18px">
         <button class="menu" type="button" data-menu aria-expanded="false" aria-controls="links" style="display:none"><span></span></button>
         <nav class="links" id="links" data-links>
           <a href="#features">Features</a>
           <a href="#flow">How it works</a>
           <a href="#languages">Languages</a>
-          <a href="#faq">FAQ</a>
-          <a href="privacypolicy/">Privacy</a>
-          <a href="delete_account.html">Delete account</a>
         </nav>
-        <a class="cta" href="mailto:turansahiniletisim@gmail.com?subject=VocBee%20Website%20Inquiry">Contact</a>
+        <a class="cta" href="https://mail.google.com/mail/?view=cm&fs=1&to=turansahiniletisim@gmail.com" target="_blank" rel="noreferrer">Contact</a>
       </div>
     </div>
   </header>
   <main id="main">
-    <section class="hero" id="top">
+    <section class="hero" id="top" data-hero>
+      <canvas class="hero-ripples" data-ripples aria-hidden="true"></canvas>
       <div class="wrap hero-grid">
         <div class="reveal show">
           <span class="eyebrow">Built around a calmer daily rhythm</span>
@@ -98,11 +96,10 @@
               <div class="bar"><span></span></div>
             </div>
             <article class="card">
-              <div class="star">★</div>
               <div class="card-top">
                 <h2>bonjour</h2>
                 <em>/bon-zhoor/</em>
-                <div class="trans"><span>A</span> hello</div>
+                <div class="trans">hello</div>
               </div>
               <div class="card-bottom">
                 <p>Bonjour, comment allez-vous aujourd'hui ?</p>
@@ -111,9 +108,9 @@
               </div>
             </article>
           </div>
-          <div class="float f1"><img src="assets/icons/fr.png" alt=""><span>Tap to hear pronunciation</span></div>
-          <div class="float f2"><img src="assets/icons/es.png" alt=""><span>Swipe to mark learned</span></div>
-          <div class="float f3"><img src="assets/icons/gb.png" alt=""><span>Daily reminders on your terms</span></div>
+          <div class="float f1"><img src="assets/icons/fr.png" alt=""><span>Touchez pour entendre</span></div>
+          <div class="float f2"><img src="assets/icons/es.png" alt=""><span>Desliza para aprender</span></div>
+          <div class="float f3"><img src="assets/icons/gb.png" alt=""><span>Daily reminders your way</span></div>
         </div>
       </div>
     </section>
@@ -246,32 +243,19 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="wrap">
-        <article class="cta-box reveal">
-          <span class="label">Ready to explore VocBee?</span>
-          <h2 style="margin-bottom:0">Use the site as the front door, then let the app do the real teaching.</h2>
-          <p>This website is designed to match the actual product: focused, warm, mobile-first, and clear about what learners get from the first session.</p>
-          <div class="actions" style="margin-top:4px">
-            <a class="btn primary" href="mailto:turansahiniletisim@gmail.com?subject=VocBee%20Download%20Inquiry">Get in touch</a>
-            <a class="btn secondary" href="privacypolicy/">Privacy policy</a>
-          </div>
-        </article>
-      </div>
-    </section>
   </main>
   <footer class="footer">
     <div class="wrap">
       <div class="footer-grid">
         <div>
-          <a class="brand" href="#top"><img src="assets/icons/vocicon.png" alt=""><span><b>VocBee</b><small>Learn with rhythm</small></span></a>
+          <a class="brand" href="#top"><img src="assets/icons/notification-icon.png" alt=""><span><b>VocBee</b><small>Learn with rhythm</small></span></a>
           <p style="margin-top:16px">A vocabulary-first mobile learning experience shaped around daily flow, contextual examples, and reminders that respect attention.</p>
         </div>
         <div><h3>Product</h3><ul><li><a href="#features">Features</a></li><li><a href="#flow">How it works</a></li><li><a href="#languages">Languages</a></li><li><a href="#faq">FAQ</a></li></ul></div>
         <div><h3>Legal</h3><ul><li><a href="privacypolicy/">Privacy policy</a></li><li><a href="delete_account.html">Delete account</a></li><li><a href="sitemap.xml">Sitemap</a></li><li><a href="robots.txt">Robots</a></li></ul></div>
-        <div><h3>Contact</h3><ul><li><a href="mailto:turansahiniletisim@gmail.com">turansahiniletisim@gmail.com</a></li><li><a href="https://vocbee.online/">vocbee.online</a></li><li><a href="app.json">App metadata</a></li></ul></div>
+        <div><h3>Contact</h3><ul><li><a href="mailto:turansahiniletisim@gmail.com">turansahiniletisim@gmail.com</a></li><li><a href="https://vocbee.online/">support@vocbee.online</a></li></ul><div class="store-links"><a href="https://apps.apple.com/tr/app/vocbee-learn-vocabulary/id6760262917" target="_blank" rel="noreferrer" aria-label="Download VocBee on the App Store"><img src="assets/icons/appstore.png" alt="Download on the App Store"></a></div></div>
       </div>
-      <div class="end"><span>© 2026 VocBee. All rights reserved.</span><span>Landing page aligned with the current app design system.</span></div>
+      <div class="end"><span>© 2026 VocBee. All rights reserved.</span><span>Build your daily rhythm, one word at a time.</span></div>
     </div>
   </footer>
   <script>
@@ -279,6 +263,7 @@
       var header = document.querySelector("[data-header]");
       var menu = document.querySelector("[data-menu]");
       var links = document.querySelector("[data-links]");
+      var hero = document.querySelector("[data-hero]");
       var reveal = document.querySelectorAll(".reveal");
       function onScroll() { header.classList.toggle("scrolled", window.scrollY > 10); }
       onScroll();
@@ -308,6 +293,218 @@
         reveal.forEach(function (el) { if (!el.classList.contains("show")) io.observe(el); });
       } else {
         reveal.forEach(function (el) { el.classList.add("show"); });
+      }
+
+      if (hero && window.matchMedia("(pointer:fine)").matches) {
+        var rippleCanvas = hero.querySelector("[data-ripples]");
+
+        if (rippleCanvas && rippleCanvas.getContext) {
+          var ctx = rippleCanvas.getContext("2d");
+          var dpr = Math.min(window.devicePixelRatio || 1, 2);
+          var pointerClientX = 0;
+          var pointerClientY = 0;
+          var pointerKnown = false;
+          var pointerInside = false;
+          var glowTrail = [];
+          var rafId = 0;
+          var lastFrame = 0;
+          var smoothX = 0;
+          var smoothY = 0;
+          var lastSpawnX = 0;
+          var lastSpawnY = 0;
+          var smoothReady = false;
+
+          function resizeRippleCanvas() {
+            var rect = hero.getBoundingClientRect();
+            dpr = Math.min(window.devicePixelRatio || 1, 2);
+            rippleCanvas.width = Math.max(1, Math.round(rect.width * dpr));
+            rippleCanvas.height = Math.max(1, Math.round(rect.height * dpr));
+            rippleCanvas.style.width = rect.width + "px";
+            rippleCanvas.style.height = rect.height + "px";
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+          }
+
+          function getHeroPointer() {
+            var rect = hero.getBoundingClientRect();
+            var inside = pointerKnown &&
+              pointerClientX >= rect.left && pointerClientX <= rect.right &&
+              pointerClientY >= rect.top && pointerClientY <= rect.bottom;
+
+            if (!inside) {
+              pointerInside = false;
+              return null;
+            }
+
+            pointerInside = true;
+            return {
+              x: pointerClientX - rect.left,
+              y: pointerClientY - rect.top
+            };
+          }
+
+          function addGlow(x, y, strength) {
+            glowTrail.push({
+              x: x,
+              y: y,
+              age: 0,
+              life: 440 + Math.min(strength * 3.2, 160),
+              radius: 34 + Math.min(strength * 0.08, 18),
+              alpha: 0.08 + Math.min(strength * 0.0009, 0.05)
+            });
+
+            if (glowTrail.length > 26) {
+              glowTrail.shift();
+            }
+          }
+
+          function drawGlow(glow) {
+            var progress = glow.age / glow.life;
+            var radius = glow.radius + progress * 34;
+            var alpha = glow.alpha * Math.pow(1 - progress, 1.8);
+            var gradient;
+
+            if (alpha <= 0) {
+              return;
+            }
+
+            gradient = ctx.createRadialGradient(glow.x, glow.y, 0, glow.x, glow.y, radius);
+            gradient.addColorStop(0, "rgba(255, 220, 136, " + (alpha * 0.58).toFixed(3) + ")");
+            gradient.addColorStop(0.28, "rgba(255, 194, 72, " + (alpha * 0.34).toFixed(3) + ")");
+            gradient.addColorStop(0.62, "rgba(255, 183, 0, " + (alpha * 0.12).toFixed(3) + ")");
+            gradient.addColorStop(1, "rgba(255, 183, 0, 0)");
+            ctx.fillStyle = gradient;
+            ctx.beginPath();
+            ctx.arc(glow.x, glow.y, radius, 0, Math.PI * 2);
+            ctx.fill();
+          }
+
+          function requestRippleFrame() {
+            if (!rafId) {
+              rafId = window.requestAnimationFrame(renderRipples);
+            }
+          }
+
+          function renderRipples(timestamp) {
+            rafId = 0;
+
+            if (!lastFrame) {
+              lastFrame = timestamp;
+            }
+
+            var delta = Math.min(timestamp - lastFrame, 32);
+            lastFrame = timestamp;
+
+            var target = getHeroPointer();
+            ctx.clearRect(0, 0, rippleCanvas.width, rippleCanvas.height);
+
+            if (target) {
+              if (!smoothReady) {
+                smoothX = target.x;
+                smoothY = target.y;
+                lastSpawnX = target.x;
+                lastSpawnY = target.y;
+                smoothReady = true;
+                addGlow(target.x, target.y, 0);
+              } else {
+                smoothX += (target.x - smoothX) * 0.15;
+                smoothY += (target.y - smoothY) * 0.15;
+              }
+
+              var distance = Math.hypot(smoothX - lastSpawnX, smoothY - lastSpawnY);
+
+              if (distance > 12) {
+                var steps = Math.max(1, Math.floor(distance / 12));
+
+                for (var step = 1; step <= steps; step += 1) {
+                  var progress = step / steps;
+                  addGlow(
+                    lastSpawnX + (smoothX - lastSpawnX) * progress,
+                    lastSpawnY + (smoothY - lastSpawnY) * progress,
+                    distance / steps
+                  );
+                }
+
+                lastSpawnX = smoothX;
+                lastSpawnY = smoothY;
+              }
+            } else {
+              smoothReady = false;
+            }
+
+            ctx.globalCompositeOperation = "lighter";
+
+            for (var i = glowTrail.length - 1; i >= 0; i -= 1) {
+              var glow = glowTrail[i];
+              glow.age += delta;
+
+              if (glow.age >= glow.life) {
+                glowTrail.splice(i, 1);
+                continue;
+              }
+
+              drawGlow(glow);
+            }
+
+            if (target) {
+              var headOuter = ctx.createRadialGradient(smoothX, smoothY, 0, smoothX, smoothY, 126);
+              headOuter.addColorStop(0, "rgba(255, 221, 132, 0.12)");
+              headOuter.addColorStop(0.28, "rgba(255, 194, 68, 0.08)");
+              headOuter.addColorStop(0.7, "rgba(255, 183, 0, 0.03)");
+              headOuter.addColorStop(1, "rgba(255, 183, 0, 0)");
+              ctx.fillStyle = headOuter;
+              ctx.beginPath();
+              ctx.arc(smoothX, smoothY, 126, 0, Math.PI * 2);
+              ctx.fill();
+
+              var headCore = ctx.createRadialGradient(smoothX, smoothY, 0, smoothX, smoothY, 58);
+              headCore.addColorStop(0, "rgba(255, 224, 146, 0.1)");
+              headCore.addColorStop(0.36, "rgba(255, 199, 80, 0.07)");
+              headCore.addColorStop(1, "rgba(255, 183, 0, 0)");
+              ctx.fillStyle = headCore;
+              ctx.beginPath();
+              ctx.arc(smoothX, smoothY, 58, 0, Math.PI * 2);
+              ctx.fill();
+            }
+
+            ctx.globalCompositeOperation = "source-over";
+
+            rippleCanvas.classList.toggle("active", pointerInside || glowTrail.length > 0);
+
+            if (pointerInside || glowTrail.length > 0) {
+              requestRippleFrame();
+            }
+          }
+
+          function handlePointerMove(event) {
+            pointerClientX = event.clientX;
+            pointerClientY = event.clientY;
+            pointerKnown = true;
+            requestRippleFrame();
+          }
+
+          function clearPointerState() {
+            pointerInside = false;
+            pointerKnown = false;
+            smoothReady = false;
+            requestRippleFrame();
+          }
+
+          resizeRippleCanvas();
+          hero.addEventListener("pointerenter", handlePointerMove, { passive: true });
+          window.addEventListener("pointermove", handlePointerMove, { passive: true });
+          hero.addEventListener("pointerleave", clearPointerState);
+          window.addEventListener("scroll", requestRippleFrame, { passive: true });
+          window.addEventListener("resize", function () {
+            resizeRippleCanvas();
+            requestRippleFrame();
+          });
+          window.addEventListener("blur", clearPointerState);
+          window.addEventListener("mouseout", function (event) {
+            if (!event.relatedTarget && !event.toElement) {
+              clearPointerState();
+            }
+          });
+        }
       }
     }());
   </script>
