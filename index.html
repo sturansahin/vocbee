@@ -24,7 +24,7 @@
     .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:14px;color:#111}.brand img{width:56px;height:56px;border-radius:18px;box-shadow:none}.brand b{display:block;letter-spacing:.08em}.brand small,.eyebrow,.label,.footer h3{font-family:"Rubik Mono One",monospace;font-size:.56rem;letter-spacing:.12em;text-transform:uppercase}.brand small{color:rgba(17,17,17,.68)}
     .links{display:flex;align-items:center;gap:18px;color:rgba(17,17,17,.84);font-size:.84rem}.cta,.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 20px;border-radius:999px;transition:.2s;box-shadow:none}.cta{background:#111;color:#fff}.btn.primary{background:#FFB700;color:#111}.btn.secondary{border:1px solid var(--wline);background:#ffffff0d;color:#fff}.cta:hover,.btn:hover{transform:translateY(-1px)}
     .hero{position:relative;overflow:hidden;padding:52px 0 92px;background:linear-gradient(135deg,#040404 0%,#0c0c0c 46%,#181208 100%);color:var(--white);border-bottom-left-radius:36px;border-bottom-right-radius:36px}.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(180deg,#000,transparent)}.hero:after{display:none}
-    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.92fr);gap:36px;align-items:center}.eyebrow,.label{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:#ffffff10;border:1px solid var(--wline);color:#ffffffc4}.hero h1{margin:20px 0 16px;font-size:clamp(2.6rem,5vw,4.9rem);line-height:.95;letter-spacing:-.04em;max-width:10ch}.hero p,.section p,.faq p,.footer p{margin:0;line-height:1.9}.hero p{max-width:620px;color:#ffffffbd}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.92fr);gap:36px;align-items:center}.eyebrow,.label{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:#ffffff10;border:1px solid var(--wline)}.eyebrow{color:#ffffffc4}.label{color:#60573d}.hero h1{margin:20px 0 16px;font-size:clamp(2.6rem,5vw,4.9rem);line-height:.95;letter-spacing:-.04em;max-width:10ch}.hero p,.section p,.faq p,.footer p{margin:0;line-height:1.9}.hero p{max-width:620px;color:#ffffffbd}
     .actions,.chips,.metrics,.grid,.split,.lang-grid,.faq-list,.footer-grid{display:grid;gap:16px}.actions{grid-template-columns:repeat(2,minmax(0,max-content));margin-top:28px}.chips{grid-template-columns:repeat(3,max-content);margin-top:24px}.chips span{min-height:40px;display:inline-flex;align-items:center;padding:0 14px;border-radius:999px;background:#ffffff0a;border:1px solid var(--wline);color:#ffffffba;font-size:.74rem}
     .metrics{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:32px}.metrics article{padding:18px;border-radius:20px;background:#ffffff0c;border:1px solid var(--wline)}.metrics b{display:block;font-size:1.26rem;margin-bottom:8px}.metrics span{color:#ffffff9e;font-size:.73rem;line-height:1.6}
     .phone{position:relative;width:min(100%,410px);margin-inline:auto;padding:14px;border-radius:40px;background:linear-gradient(160deg,#ffffff1e,#ffffff08);border:1px solid var(--wline);box-shadow:0 28px 70px rgba(0,0,0,.42);backdrop-filter:blur(14px)}
@@ -93,7 +93,6 @@
           <div class="screen">
             <div class="topbar">
               <div class="row"><img src="assets/icons/vocicon.png" alt=""><div><b>VocBee</b><small>today's lesson</small></div></div>
-              <span class="dot"></span>
             </div>
             <div class="panel">
               <div class="between"><strong>B1 - Intermediate</strong><span>128 / 400 learned</span></div>
@@ -179,7 +178,7 @@
         </div>
 
         <aside class="dark-box reveal">
-          <span class="label">Reminder Design</span>
+          <span class="label" style="border:none;background:none">Reminder Design</span>
           <h3>Daily consistency, without notification fatigue.</h3>
           <p>VocBee lets learners define when reminders start, when they stop, and how often they appear. That makes the app better suited for real schedules and more likely to become a routine.</p>
           <div class="window">
@@ -187,7 +186,7 @@
             <article><b>21:00 end</b><span>Stop before reminders become background noise.</span></article>
           </div>
           <ul style="margin:22px 0 0;padding-left:18px;color:#ffffffc4;line-height:1.9;font-size:.78rem">
-            <li>Choose from every 30 minutes up to once daily.</li>
+            <li>Choose from every 1 hours up to once daily.</li>
             <li>Keep notified words in queue or auto-mark them as learned.</li>
             <li>Adjust everything later from Settings.</li>
           </ul>
