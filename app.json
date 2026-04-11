@@ -7,7 +7,7 @@
       "com.vocbee.app",
       "com.googleusercontent.apps.540292978044-695plkaeec13scn3p2s76h302sieti4g"
     ],
-    "version": "1.0.8",
+    "version": "1.0.9",
     "icon": "./assets/icons/vocicon.png",
     "splash": {
       "image": "./assets/transparent-splash.png",
@@ -80,11 +80,7 @@
       "permissions": [
         "android.permission.POST_NOTIFICATIONS",
         "android.permission.RECORD_AUDIO"
-      ],
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/icons/vocicon.png",
-        "backgroundColor": "#ffffff"
-      }
+      ]
     },
     "notification": {
       "icon": "./assets/icons/notification-icon.png",

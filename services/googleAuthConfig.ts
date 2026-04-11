@@ -5,7 +5,7 @@ export const GOOGLE_WEB_CLIENT_ID =
 export const GOOGLE_IOS_CLIENT_ID =
   '540292978044-695plkaeec13scn3p2s76h302sieti4g.apps.googleusercontent.com';
 export const GOOGLE_ANDROID_CLIENT_ID =
-  '540292978044-2c8urh00ip44furlns58hq4ieil3bfno.apps.googleusercontent.com';
+  '540292978044-ug2ier8vfm951ojjsl6p3ttfjeq3suq2.apps.googleusercontent.com';
 
 export const APP_PRIMARY_SCHEME = Array.isArray(appConfig.expo.scheme)
   ? appConfig.expo.scheme[0]

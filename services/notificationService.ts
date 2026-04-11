@@ -5,7 +5,7 @@
  * Features:
  * - Request notification permissions
  * - Schedule notifications within time range (start to end)
- * - Send target word + pronunciation + translation in notification
+ * - Send target word + translation in notification
  * - Auto-mark words as learned when notification is sent (if enabled)
  * - Unmark word when notification is clicked (for review)
  */
@@ -27,7 +27,7 @@ const LAST_FOREGROUND_TIME_KEY = STORAGE_KEYS.LAST_FOREGROUND_TIME;
 const LAST_BACKGROUND_TIME_KEY = STORAGE_KEYS.LAST_BACKGROUND_TIME;
 const NOTIFICATION_CONTENT_VERSION_KEY = STORAGE_KEYS.NOTIFICATION_CONTENT_VERSION;
 const NOTIFICATION_PERMISSION_PROMPT_PREFIX = STORAGE_KEYS.NOTIFICATION_PERMISSION_PROMPT_PREFIX;
-const NOTIFICATION_CONTENT_VERSION = 2;
+const NOTIFICATION_CONTENT_VERSION = 3;
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Types
@@ -137,18 +137,10 @@ function getDailyNotificationSlotCount(
 // ─────────────────────────────────────────────────────────────────────────────
 import i18n from './i18n';
 
-type NotificationWordSnapshot = Pick<VocabularyWord, 'word' | 'translation' | 'pronunciation'>;
-
-function formatNotificationWord(word: NotificationWordSnapshot): string {
-    if (typeof word.pronunciation === 'string' && word.pronunciation.trim().length > 0) {
-        return `${word.word} ${word.pronunciation.trim()}`;
-    }
-
-    return word.word;
-}
+type NotificationWordSnapshot = Pick<VocabularyWord, 'word' | 'translation'>;
 
 function formatNotificationBody(word: NotificationWordSnapshot): string {
-    return `${formatNotificationWord(word)} - ${word.translation}, ${i18n.t('home.tapToSeeExamples')}`;
+    return `${word.word} - ${word.translation}, ${i18n.t('home.tapToSeeExamples')}`;
 }
 
 async function isNotificationContentOutdated(): Promise<boolean> {

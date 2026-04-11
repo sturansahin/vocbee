@@ -1,47 +1,62 @@
 {
-    "project_info": {
-        "project_number": "540292978044",
-        "project_id": "vocbee-6fe24",
-        "storage_bucket": "vocbee-6fe24.firebasestorage.app"
-    },
-    "client": [
-        {
-            "client_info": {
-                "mobilesdk_app_id": "1:540292978044:android:1c08efe09d4ac6216f00f9",
-                "android_client_info": {
-                    "package_name": "com.vocbee.app"
-                }
-            },
-            "oauth_client": [
-                {
-                    "client_id": "540292978044-2c8urh00ip44furlns58hq4ieil3bfno.apps.googleusercontent.com",
-                    "client_type": 1,
-                    "android_info": {
-                        "package_name": "com.vocbee.app",
-                        "certificate_hash": "5ccd9d8e9dcd425a1ac2f0adbbc2aebac39a1afc"
-                    }
-                },
-                {
-                    "client_id": "540292978044-pjka45r8ej0k63564hicngf1prip5ctu.apps.googleusercontent.com",
-                    "client_type": 3
-                }
-            ],
-            "api_key": [
-                {
-                    "current_key": "AIzaSyCe4kiL-lmp2xuUqnupIYKjPbDtUv77_PU"
-                }
-            ],
-            "services": {
-                "appinvite_service": {
-                    "other_platform_oauth_client": [
-                        {
-                            "client_id": "540292978044-pjka45r8ej0k63564hicngf1prip5ctu.apps.googleusercontent.com",
-                            "client_type": 3
-                        }
-                    ]
-                }
-            }
+  "project_info": {
+    "project_number": "540292978044",
+    "project_id": "vocbee-6fe24",
+    "storage_bucket": "vocbee-6fe24.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:540292978044:android:1c08efe09d4ac6216f00f9",
+        "android_client_info": {
+          "package_name": "com.vocbee.app"
         }
-    ],
-    "configuration_version": "1"
+      },
+      "oauth_client": [
+        {
+          "client_id": "540292978044-2c8urh00ip44furlns58hq4ieil3bfno.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vocbee.app",
+            "certificate_hash": "5ccd9d8e9dcd425a1ac2f0adbbc2aebac39a1afc"
+          }
+        },
+        {
+          "client_id": "540292978044-ug2ier8vfm951ojjsl6p3ttfjeq3suq2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vocbee.app",
+            "certificate_hash": "70957e6b04c1681d4de385034d8e39c75669a63a"
+          }
+        },
+        {
+          "client_id": "540292978044-pjka45r8ej0k63564hicngf1prip5ctu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCe4kiL-lmp2xuUqnupIYKjPbDtUv77_PU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "540292978044-pjka45r8ej0k63564hicngf1prip5ctu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "540292978044-695plkaeec13scn3p2s76h302sieti4g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.vocbee.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
 }

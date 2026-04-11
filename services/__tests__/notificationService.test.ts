@@ -65,7 +65,7 @@ describe('notificationService', () => {
         ]);
     });
 
-    it('formats notification body with target pronunciation only when available', () => {
+    it('formats notification body without pronunciation', () => {
         expect(
             getNotificationContent({
                 id: 1,
@@ -77,7 +77,7 @@ describe('notificationService', () => {
                 nativeSentence1: '',
                 nativeSentence2: '',
             }).body
-        ).toBe('hello /həˈloʊ/ - merhaba, tap to see examples');
+        ).toBe('hello - merhaba, tap to see examples');
 
         expect(
             getNotificationContent({
@@ -176,7 +176,7 @@ describe('notificationService', () => {
         expect(mockCancelAllScheduledNotificationsAsync).toHaveBeenCalled();
         expect(await AsyncStorage.getItem(STORAGE_KEYS.TRACKED_NOTIFICATIONS)).not.toBeNull();
         const scheduledPayload = mockScheduleNotificationAsync.mock.calls[0][0];
-        expect(scheduledPayload.content.body).toContain('/həˈloʊ/');
+        expect(scheduledPayload.content.body).toBe('hello - merhaba, tap to see examples');
         expect(scheduledPayload.content.data.pronunciation).toBe('/həˈloʊ/');
     });
 });
