@@ -1,5 +1,3 @@
-import type { AuthSessionResult } from 'expo-auth-session';
-
 export interface StoredProfile {
   name: string;
   image: string | null;
@@ -30,14 +28,6 @@ interface FirestoreProfileInput {
   authDisplayName?: string | null;
   authPhotoURL?: string | null;
 }
-
-type GoogleAuthResponseLike = AuthSessionResult | null | undefined;
-
-export type GoogleAuthResponseResolution =
-  | { type: 'pending' }
-  | { type: 'cancelled' }
-  | { type: 'success'; idToken: string }
-  | { type: 'error'; message: string };
 
 const normalizeString = (value?: string | null): string | null => {
   if (typeof value !== 'string') {
@@ -143,47 +133,5 @@ export const buildStoredProfileFromFirestore = ({
     name,
     image,
     email: normalizedEmail,
-  };
-};
-
-export const resolveGoogleAuthResponse = (
-  response: GoogleAuthResponseLike
-): GoogleAuthResponseResolution => {
-  if (!response?.type) {
-    return { type: 'pending' };
-  }
-
-  if (response.type === 'cancel' || response.type === 'dismiss') {
-    return { type: 'cancelled' };
-  }
-
-  if (response.type === 'error') {
-    return {
-      type: 'error',
-      message: response.error?.message || 'Google Sign-In did not complete successfully.',
-    };
-  }
-
-  if (response.type !== 'success') {
-    return {
-      type: 'error',
-      message: 'Google Sign-In did not complete successfully.',
-    };
-  }
-
-  const idToken =
-    normalizeString(response.params?.id_token) ??
-    normalizeString(response.authentication?.idToken);
-
-  if (!idToken) {
-    return {
-      type: 'error',
-      message: 'No Google ID token received.',
-    };
-  }
-
-  return {
-    type: 'success',
-    idToken,
   };
 };

@@ -139,7 +139,8 @@
       ],
       "expo-localization",
       "expo-apple-authentication",
-      "expo-tracking-transparency"
+      "expo-tracking-transparency",
+      "@react-native-google-signin/google-signin"
     ],
     "extra": {
       "supportsRTL": true,

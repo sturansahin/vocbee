@@ -1,9 +1,8 @@
 // Authentication Context for VocBee
 // Handles user authentication state and Firebase Auth operations
 
-import React, { createContext, useContext, useState, useEffect, ReactNode, useRef } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Platform } from 'react-native';
 import {
     User,
     createUserWithEmailAndPassword,
@@ -18,17 +17,13 @@ import {
     deleteUser,
 } from 'firebase/auth';
 import * as AppleAuthentication from 'expo-apple-authentication';
-import * as Google from 'expo-auth-session/providers/google';
-import * as WebBrowser from 'expo-web-browser';
-import { makeRedirectUri } from 'expo-auth-session';
 import { auth } from '../config/firebase';
 import {
-    GOOGLE_ANDROID_CLIENT_ID,
-    GOOGLE_ANDROID_REDIRECT_URI,
-    GOOGLE_IOS_CLIENT_ID,
-    GOOGLE_IOS_REDIRECT_URI,
-    GOOGLE_WEB_CLIENT_ID,
-} from '../services/googleAuthConfig';
+    configureNativeGoogleSignIn,
+    disconnectNativeGoogleSession,
+    getNativeGoogleSignInErrorMessage,
+    signInWithNativeGoogle,
+} from '../services/nativeGoogleSignIn';
 import {
     getLocalUserData,
     saveUserDataLocally,
@@ -57,7 +52,6 @@ import {
 } from '../services/notificationService';
 import {
     buildStoredProfileFromAuth,
-    resolveGoogleAuthResponse,
     StoredProfile,
 } from '../services/socialAuthProfile';
 import { STORAGE_KEYS } from '../services/storageKeys';
@@ -93,8 +87,6 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-WebBrowser.maybeCompleteAuthSession();
-
 const SOCIAL_AUTH_CANCELLED_ERROR = 'AUTH_CANCELLED';
 
 // Provider Props
@@ -114,10 +106,14 @@ export function AuthProvider({ children }: AuthProviderProps) {
     const [notificationSettings, setNotificationSettings] = useState<NotificationSettings>(DEFAULT_NOTIFICATION_SETTINGS);
     const [isLoading, setIsLoading] = useState(true);
     const [connectionError, setConnectionError] = useState(false);
-    const pendingGoogleSignInRef = useRef<{
-        resolve: (value: { setupCompleted: boolean }) => void;
-        reject: (error: Error) => void;
-    } | null>(null);
+
+    useEffect(() => {
+        try {
+            configureNativeGoogleSignIn();
+        } catch (error) {
+            console.error('Google Sign-In configuration error:', error);
+        }
+    }, []);
 
     const loadStoredProfile = async (uid: string): Promise<StoredProfile | null> => {
         try {
@@ -251,6 +247,14 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
     const hasCompletedSetup = (data: UserData | null): boolean =>
         !!(data?.setupCompleted || (data?.preferences?.nativeLanguage && data?.preferences?.targetLanguage));
+
+    const clearNativeGoogleSession = async (): Promise<void> => {
+        try {
+            await disconnectNativeGoogleSession();
+        } catch (error) {
+            console.warn('Failed to clear native Google session:', error);
+        }
+    };
 
     // Listen to auth state changes
     useEffect(() => {
@@ -414,111 +418,34 @@ export function AuthProvider({ children }: AuthProviderProps) {
         }
     };
 
-    const googleRedirectUri = makeRedirectUri({
-        native: Platform.select({
-            ios: GOOGLE_IOS_REDIRECT_URI,
-            android: GOOGLE_ANDROID_REDIRECT_URI,
-            default: undefined,
-        }),
-    });
-
-    // Google Sign-In request
-    const [request, response, promptAsync] = Google.useAuthRequest({
-        clientId: GOOGLE_WEB_CLIENT_ID,
-        iosClientId: GOOGLE_IOS_CLIENT_ID,
-        androidClientId: GOOGLE_ANDROID_CLIENT_ID,
-        webClientId: GOOGLE_WEB_CLIENT_ID,
-        redirectUri: googleRedirectUri,
-    });
-
-    useEffect(() => {
-        const pendingGoogleSignIn = pendingGoogleSignInRef.current;
-        if (!pendingGoogleSignIn) {
-            return;
-        }
-
-        const resolution = resolveGoogleAuthResponse(response);
-        if (resolution.type === 'pending') {
-            return;
-        }
-
-        const settlePendingGoogleSignIn = async () => {
-            try {
-                if (resolution.type === 'cancelled') {
-                    throw new Error(SOCIAL_AUTH_CANCELLED_ERROR);
-                }
-
-                if (resolution.type === 'error') {
-                    throw new Error(resolution.message);
-                }
-
-                setIsLoading(true);
-
-                // Create Firebase credential with Google ID token after the native code exchange finishes.
-                const credential = GoogleAuthProvider.credential(resolution.idToken);
-                const userCredential = await signInWithCredential(auth, credential);
-
-                const result = await completeSocialSignIn(userCredential.user, {
-                    email: userCredential.user.email,
-                    displayName: userCredential.user.displayName,
-                    photoURL: userCredential.user.photoURL,
-                });
-
-                pendingGoogleSignIn.resolve(result);
-            } catch (error: any) {
-                if (error.message === SOCIAL_AUTH_CANCELLED_ERROR) {
-                    pendingGoogleSignIn.reject(error);
-                    return;
-                }
-
-                console.error('Google Sign-In error:', error);
-                pendingGoogleSignIn.reject(
-                    new Error('Failed to sign in with Google. Please try again.')
-                );
-            } finally {
-                if (pendingGoogleSignInRef.current === pendingGoogleSignIn) {
-                    pendingGoogleSignInRef.current = null;
-                }
-                setIsLoading(false);
-            }
-        };
-
-        settlePendingGoogleSignIn();
-    }, [response]);
-
     // Sign In with Google
     const signInWithGoogle = async (): Promise<{ setupCompleted: boolean }> => {
-        if (!request) {
-            console.error('Google Auth request not ready');
-            throw new Error('Google Sign-In is not available right now. Please try again.');
+        try {
+            setIsLoading(true);
+
+            const googleResult = await signInWithNativeGoogle();
+            if (googleResult.type === 'cancelled') {
+                throw new Error(SOCIAL_AUTH_CANCELLED_ERROR);
+            }
+
+            const credential = GoogleAuthProvider.credential(googleResult.idToken);
+            const userCredential = await signInWithCredential(auth, credential);
+
+            return await completeSocialSignIn(userCredential.user, {
+                email: googleResult.profile.email || userCredential.user.email,
+                displayName: googleResult.profile.displayName ?? userCredential.user.displayName,
+                photoURL: googleResult.profile.photoURL ?? userCredential.user.photoURL,
+            });
+        } catch (error: any) {
+            if (error.message === SOCIAL_AUTH_CANCELLED_ERROR) {
+                throw error;
+            }
+
+            console.error('Google Sign-In error:', error);
+            throw new Error(getNativeGoogleSignInErrorMessage(error));
+        } finally {
+            setIsLoading(false);
         }
-
-        if (pendingGoogleSignInRef.current) {
-            throw new Error('Google Sign-In is already in progress.');
-        }
-
-        return new Promise((resolve, reject) => {
-            pendingGoogleSignInRef.current = { resolve, reject };
-
-            promptAsync()
-                .then(promptResult => {
-                    if (promptResult.type === 'cancel' || promptResult.type === 'dismiss') {
-                        pendingGoogleSignInRef.current = null;
-                        reject(new Error(SOCIAL_AUTH_CANCELLED_ERROR));
-                        return;
-                    }
-
-                    if (promptResult.type !== 'success') {
-                        pendingGoogleSignInRef.current = null;
-                        reject(new Error('Google Sign-In did not complete successfully.'));
-                    }
-                })
-                .catch((error: any) => {
-                    pendingGoogleSignInRef.current = null;
-                    console.error('Google Sign-In error:', error);
-                    reject(new Error('Failed to start Google Sign-In. Please try again.'));
-                });
-        });
     };
 
     // Sign In with Apple
@@ -586,6 +513,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
             // Sign out from Firebase
             await firebaseSignOut(auth);
+            await clearNativeGoogleSession();
 
             setUserData(null);
         } catch (error: any) {
@@ -705,6 +633,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
             // 4. Delete Firebase Auth user
             await deleteUser(user);
+            await clearNativeGoogleSession();
 
             // 5. Clear state
             setUserData(null);

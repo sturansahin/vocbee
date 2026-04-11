@@ -1,48 +1,9 @@
 import {
   buildStoredProfileFromAuth,
   buildStoredProfileFromFirestore,
-  resolveGoogleAuthResponse,
 } from '../socialAuthProfile';
 
 describe('socialAuthProfile', () => {
-  describe('resolveGoogleAuthResponse', () => {
-    it('resolves success from exchanged params id_token', () => {
-      expect(
-        resolveGoogleAuthResponse({
-          type: 'success',
-          params: { id_token: 'token-from-params' },
-        })
-      ).toEqual({
-        type: 'success',
-        idToken: 'token-from-params',
-      });
-    });
-
-    it('resolves success from authentication idToken fallback', () => {
-      expect(
-        resolveGoogleAuthResponse({
-          type: 'success',
-          authentication: { idToken: 'token-from-authentication' },
-        })
-      ).toEqual({
-        type: 'success',
-        idToken: 'token-from-authentication',
-      });
-    });
-
-    it('returns an error when success response lacks an id token', () => {
-      expect(
-        resolveGoogleAuthResponse({
-          type: 'success',
-          params: {},
-        })
-      ).toEqual({
-        type: 'error',
-        message: 'No Google ID token received.',
-      });
-    });
-  });
-
   describe('buildStoredProfileFromAuth', () => {
     it('prefers provider values and falls back to email prefix', () => {
       expect(
