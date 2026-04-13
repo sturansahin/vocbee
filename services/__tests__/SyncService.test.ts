@@ -51,6 +51,17 @@ jest.mock('../notificationService', () => ({
     saveNotificationSettings: jest.fn(),
 }));
 
+jest.mock('../streakService', () => ({
+    getStreakState: jest.fn(() => Promise.resolve({
+        currentStreak: 3,
+        longestStreak: 5,
+        brokenStreak: null,
+        lastQualifiedDay: '2026-04-12',
+        lastQualifiedAt: '2026-04-12T09:00:00.000Z',
+    })),
+    restoreStreakState: jest.fn(),
+}));
+
 // Import after mocks
 import {
     shouldSync,
@@ -63,6 +74,7 @@ import {
 import { doc, setDoc, getDoc } from 'firebase/firestore';
 import { needsSync, getLastSyncTime } from '../storage';
 import { saveNotificationSettings } from '../notificationService';
+import { restoreStreakState } from '../streakService';
 import { STORAGE_KEYS } from '../storageKeys';
 
 describe('SyncService', () => {
@@ -133,6 +145,7 @@ describe('SyncService', () => {
                 setupCompleted: false,
                 preferences: null,
                 progress: null,
+                streak: null,
             });
         });
 
@@ -232,6 +245,13 @@ describe('SyncService', () => {
                         frequencyMinutes: 120,
                         autoMarkLearned: false,
                     },
+                    streak: {
+                        currentStreak: 4,
+                        longestStreak: 7,
+                        brokenStreak: null,
+                        lastQualifiedDay: '2026-04-12',
+                        lastQualifiedAt: '2026-04-12T09:00:00.000Z',
+                    },
                 }),
             });
 
@@ -251,6 +271,13 @@ describe('SyncService', () => {
                 frequencyMinutes: 120,
                 autoMarkLearned: false,
             }, true);
+            expect(restoreStreakState).toHaveBeenCalledWith({
+                currentStreak: 4,
+                longestStreak: 7,
+                brokenStreak: null,
+                lastQualifiedDay: '2026-04-12',
+                lastQualifiedAt: '2026-04-12T09:00:00.000Z',
+            });
         });
 
         it('preserves existing profile values when firestore profile fields are empty', async () => {

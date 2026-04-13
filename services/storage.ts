@@ -32,6 +32,10 @@ export interface UserData {
     } | null;
 }
 
+interface ClearAllLocalDataOptions {
+    preserveStreak?: boolean;
+}
+
 // Save local progress — DEPRECATED: Progress is managed by progressService.ts
 // Kept only for type export compatibility.
 // export const saveLocalProgress = ...
@@ -103,10 +107,13 @@ export const getLocalUserData = async (): Promise<UserData | null> => {
 };
 
 // Clear all local data (for logout or language change)
-export const clearAllLocalData = async (): Promise<void> => {
+export const clearAllLocalData = async (
+    options: ClearAllLocalDataOptions = {}
+): Promise<void> => {
     try {
         // Get all keys to find shuffle order caches
         const allKeys = await AsyncStorage.getAllKeys();
+        const { preserveStreak = false } = options;
 
         // Keys to remove: all known storage keys (from centralized storageKeys)
         const keysToRemove = [
@@ -142,6 +149,11 @@ export const clearAllLocalData = async (): Promise<void> => {
             // Add all favorites keys (generic and user-specific)
             ...allKeys.filter(key => key.startsWith(STORAGE_KEYS.FAVORITES_PREFIX)),
         ];
+
+        if (!preserveStreak) {
+            keysToRemove.push(STORAGE_KEYS.STREAK);
+        }
+
         await AsyncStorage.multiRemove(keysToRemove);
         console.log('Cleared all local data including shuffle order caches');
     } catch (error) {

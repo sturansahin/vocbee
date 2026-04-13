@@ -17,6 +17,7 @@ import { getUserProgress, getCurrentLevel, restoreProgressFromFirebase, getLastW
 import { restoreFavoritesFromFirebase, syncFavoritesToFirebase } from './favoritesService';
 import { getLanguagePair, isVocabularyGenerated, generateVocabulary, getUserLevelFromCefrLevel, isUserLevel } from './vocabularyService';
 import { getNotificationSettings, saveNotificationSettings, NotificationSettings } from './notificationService';
+import { getStreakState, restoreStreakState, StreakState } from './streakService';
 import { buildStoredProfileFromFirestore } from './socialAuthProfile';
 import { STORAGE_KEYS } from './storageKeys';
 
@@ -89,6 +90,7 @@ export const syncToFirestore = async (userId: string): Promise<boolean> => {
         const notificationSettings = rawNotificationSettings
             ? await getNotificationSettings()
             : null;
+        const streakState = await getStreakState();
 
         // Get language preferences
         const languagePair = await getLanguagePair();
@@ -129,6 +131,8 @@ export const syncToFirestore = async (userId: string): Promise<boolean> => {
         if (notificationSettings) {
             syncData.notificationSettings = notificationSettings;
         }
+
+        syncData.streak = streakState;
 
         // If we have valid preferences locally, force update them in Firestore
         // This ensures the user is marked as "Setup Completed"
@@ -209,6 +213,7 @@ export const createUserDocument = async (
                 setupCompleted: false,
                 preferences: null,
                 progress: null,
+                streak: null,
             });
             console.log('Created new user document');
         }
@@ -232,6 +237,7 @@ export const fetchAndSaveUserData = async (userId: string): Promise<UserData | n
                 preferences: data.preferences,
                 hasProgress: !!data.progress,
                 hasNotificationSettings: !!data.notificationSettings,
+                hasStreak: !!data.streak,
             }, null, 2));
 
             const userData: UserData = {
@@ -262,6 +268,11 @@ export const fetchAndSaveUserData = async (userId: string): Promise<UserData | n
             if (data.notificationSettings && typeof data.notificationSettings === 'object') {
                 await saveNotificationSettings(data.notificationSettings, true);
                 console.log('Restored notification settings from Firebase');
+            }
+
+            if (data.streak && typeof data.streak === 'object') {
+                await restoreStreakState(data.streak as Partial<StreakState>);
+                console.log('Restored streak state from Firebase');
             }
 
             // Restore user-level preference (beginner/intermediate/advanced).

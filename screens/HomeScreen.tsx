@@ -19,13 +19,14 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../types';
-import Feather from '@expo/vector-icons/Feather';
 import { MaterialIcons } from '@expo/vector-icons';
 import Svg, { Polygon } from 'react-native-svg';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '../context/ThemeContext';
-import { FONT_FAMILY, HEADER_FONT_FAMILY } from '../utils/typography';
-import { SwarmLogo } from '../components/SwarmLogo';
+import { FONT_FAMILY } from '../utils/typography';
+import { HomeHeader } from '../components/HomeHeader';
+import { StreakAlertContent } from '../components/StreakAlertContent';
+import { StreakCelebrationOverlay } from '../components/StreakCelebrationOverlay';
 import {
     VocabularyWord,
     Level,
@@ -55,7 +56,19 @@ import { loadInterstitial, showInterstitial, AD_IDS } from '../services/adMobSer
 import { useTranslation } from 'react-i18next';
 import { getTTSLanguageCode } from '../constants';
 import { STORAGE_KEYS } from '../services/storageKeys';
+import {
+    DEFAULT_STREAK_SUMMARY,
+    getStreakSummary,
+    getStreakSummaryFromState,
+    getStreakStatusMessageKey,
+    recordDailyStudyAction,
+    StreakSummary,
+} from '../services/streakService';
 import HomeTutorialOverlay, { LayoutRect } from '../components/HomeTutorialOverlay';
+import {
+    getStreakCelebrationMessageKey,
+    shouldShowStreakCelebration,
+} from '../utils/streakCelebration';
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;
@@ -70,6 +83,13 @@ const moderateScale = (size: number, factor = 0.5) => size + (scale(size) - size
 
 type TutorialLayoutKey = 'card' | 'favoriteButton' | 'word' | 'exampleSentence' | 'moreExample';
 type TutorialLayouts = Record<TutorialLayoutKey, LayoutRect>;
+
+interface StreakCelebrationState {
+    id: number;
+    streakCount: number;
+    streakLabel: string;
+    message: string;
+}
 
 const EMPTY_TUTORIAL_LAYOUT: LayoutRect = {
     x: 0,
@@ -131,6 +151,10 @@ export default function HomeScreen() {
     const [learnedCount, setLearnedCount] = useState(0);
     const [totalCount, setTotalCount] = useState(0);
     const [isCurrentWordFavorite, setIsCurrentWordFavorite] = useState(false);
+    const [streakSummary, setStreakSummary] = useState<StreakSummary>({
+        ...DEFAULT_STREAK_SUMMARY,
+    });
+    const [streakCelebration, setStreakCelebration] = useState<StreakCelebrationState | null>(null);
 
     // TTS language code for target language pronunciation
     const [ttsLanguage, setTtsLanguage] = useState('en-US');
@@ -156,6 +180,8 @@ export default function HomeScreen() {
 
     // Track session learned words for Interstitial Ad
     const sessionLearnedCount = useRef(0);
+    const pendingInterstitialAfterCelebrationRef = useRef(false);
+    const streakCelebrationIdRef = useRef(0);
 
     // Bee animation state
     interface BeePosition {
@@ -174,6 +200,35 @@ export default function HomeScreen() {
     const beeAnimationRef = useRef<any>(null);
     const beeFlightTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
     const loadRequestIdRef = useRef(0);
+
+    const refreshStreak = useCallback(async () => {
+        try {
+            const summary = await getStreakSummary();
+            setStreakSummary(summary);
+        } catch (error) {
+            console.error('[HomeScreen] Failed to refresh streak:', error);
+        }
+    }, []);
+
+    const buildStreakCelebration = useCallback((streakCount: number): StreakCelebrationState => {
+        return {
+            id: ++streakCelebrationIdRef.current,
+            streakCount,
+            streakLabel: t('home.streakCelebrationLabel'),
+            message: t(getStreakCelebrationMessageKey(streakCount), { count: streakCount }),
+        };
+    }, [t]);
+
+    const handleStreakCelebrationComplete = useCallback(() => {
+        setStreakCelebration(null);
+
+        if (pendingInterstitialAfterCelebrationRef.current) {
+            pendingInterstitialAfterCelebrationRef.current = false;
+            showInterstitial().catch(error => {
+                console.error('[HomeScreen] Failed to show queued interstitial:', error);
+            });
+        }
+    }, []);
 
     const measureTutorialLayouts = useCallback(({ show = false, delay = 80 }: { show?: boolean; delay?: number } = {}) => {
         if (tutorialMeasureTimeoutRef.current) {
@@ -623,6 +678,7 @@ export default function HomeScreen() {
             // Update counts - these should now be guaranteed correct
             const learned = await getLearnedCount(level);
             const total = await getTotalWords(level);
+            const latestStreakSummary = await getStreakSummary();
 
             if (isStaleRequest()) {
                 return;
@@ -637,6 +693,7 @@ export default function HomeScreen() {
             setCurrentWordIndex(resumeIndex);
             setLearnedCount(learned);
             setTotalCount(total);
+            setStreakSummary(latestStreakSummary);
 
             if (matchingPendingWordId !== null) {
                 await saveLastWordId(matchingPendingWordId);
@@ -747,6 +804,7 @@ export default function HomeScreen() {
         }
 
         if (handledPending) {
+            await refreshStreak();
             return;
         }
 
@@ -756,12 +814,14 @@ export default function HomeScreen() {
             if (newLevel !== currentLevel) {
                 // Level changed, reload everything
                 hasInitiallyLoaded.current = false;
-                loadData(true);
+                await loadData(true);
+                return;
             } else {
-                updateCounts();
+                await updateCounts();
             }
         }
-    }, [consumePendingNotificationWord, currentLevel, loadData, updateCounts]);
+        await refreshStreak();
+    }, [consumePendingNotificationWord, currentLevel, loadData, refreshStreak, updateCounts]);
 
     // Update counts on focus and check if level changed or pending notification word
     useFocusEffect(
@@ -843,6 +903,26 @@ export default function HomeScreen() {
     const nextWordPronunciation = getDisplayPronunciation(nextWord?.pronunciation);
     const initialLoadingPlaceholderColor = isDarkMode ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.08)';
     const initialLoadingAccentColor = isDarkMode ? 'rgba(255,200,20,0.22)' : 'rgba(255,200,20,0.28)';
+    const streakAccentColor = '#FF8F1F';
+    const streakTextColor = streakSummary.completedToday ? streakAccentColor : colors.text;
+    const streakAccessibilityLabel = t('home.streakAccessibilityLabel', { count: streakSummary.currentStreak });
+
+    const handleStreakPress = useCallback(() => {
+        const statusMessage = t(getStreakStatusMessageKey(streakSummary.status));
+
+        showAlert({
+            title: t('home.streakTitle'),
+            content: (
+                <StreakAlertContent
+                    statusMessage={statusMessage}
+                    currentLabel={t('home.currentStreakLabel')}
+                    bestLabel={t('home.bestStreakLabel')}
+                    currentValue={streakSummary.currentStreak}
+                    bestValue={streakSummary.longestStreak}
+                />
+            ),
+        });
+    }, [showAlert, streakSummary.status, streakSummary.currentStreak, streakSummary.longestStreak, t]);
 
     // Initialize bees when component mounts or word changes
     useEffect(() => {
@@ -1005,13 +1085,25 @@ export default function HomeScreen() {
                 await markWordAsLearned(currentLevel, swipedWord.id);
                 setLearnedCount(prev => prev + 1);
 
+                const streakUpdate = await recordDailyStudyAction();
+                setStreakSummary(getStreakSummaryFromState(streakUpdate.state));
+                const shouldCelebrate = shouldShowStreakCelebration(streakUpdate.didIncrement);
+
+                if (shouldCelebrate) {
+                    setStreakCelebration(buildStreakCelebration(streakUpdate.state.currentStreak));
+                }
+
                 // Increment session count and check for ad
                 sessionLearnedCount.current += 1;
                 console.log(`Session learned count: ${sessionLearnedCount.current}`);
 
                 if (sessionLearnedCount.current % 10 === 0) {
                     console.log('Triggering Interstitial Ad');
-                    await showInterstitial();
+                    if (shouldCelebrate) {
+                        pendingInterstitialAfterCelebrationRef.current = true;
+                    } else {
+                        await showInterstitial();
+                    }
                 }
 
                 const newLevel = await checkAndAdvanceLevel();
@@ -1035,7 +1127,7 @@ export default function HomeScreen() {
                 await loadData(true);
             }
         });
-    }, [currentWord, currentLevel, currentWordIndex, words.length, loadData, position, beePositions, animateBeesAway]);
+    }, [buildStreakCelebration, currentWord, currentLevel, currentWordIndex, words.length, loadData, position, beePositions, animateBeesAway]);
 
     const resetPosition = useCallback(() => {
         Animated.spring(position, {
@@ -1370,18 +1462,17 @@ export default function HomeScreen() {
     if (isLoading && isInitialHydrationRef.current) {
         return (
             <View style={[styles.container, { backgroundColor: colors.background, paddingTop: insets.top }]}>
-                <View style={styles.header}>
-                    <View style={styles.headerTitleContainer}>
-                        <View style={styles.logoContainer}>
-                            <SwarmLogo size={30} color={colors.text} />
-                        </View>
-                        <Text style={[styles.headerTitle, { color: colors.text }]}>VOCBEE</Text>
-                    </View>
-                    <View style={styles.headerButtons}>
-                        <View style={[styles.headerButtonPlaceholder, styles.loadingIconPlaceholder, { backgroundColor: initialLoadingPlaceholderColor }]} />
-                        <View style={[styles.headerButtonPlaceholder, styles.loadingIconPlaceholder, { backgroundColor: initialLoadingPlaceholderColor }]} />
-                    </View>
-                </View>
+                <HomeHeader
+                    titleColor={colors.text}
+                    iconColor={colors.text}
+                    streakCount={0}
+                    streakCompletedToday={false}
+                    streakAtRisk={false}
+                    streakTextColor={colors.text}
+                    streakAccentColor={streakAccentColor}
+                    placeholderColor={initialLoadingPlaceholderColor}
+                    showPlaceholders
+                />
 
                 <BlurView
                     intensity={isDarkMode ? 20 : 32}
@@ -1518,29 +1609,19 @@ export default function HomeScreen() {
     if (words.length === 0) {
         return (
             <View style={[styles.container, { backgroundColor: colors.background, paddingTop: insets.top }]}>
-                {/* Header */}
-                <View style={styles.header}>
-                    <View style={styles.headerTitleContainer}>
-                        <View style={styles.logoContainer}>
-                            <SwarmLogo size={26} color={colors.text} />
-                        </View>
-                        <Text style={[styles.headerTitle, { color: colors.text }]}>VOCBEE</Text>
-                    </View>
-                    <View style={styles.headerButtons}>
-                        <TouchableOpacity
-                            style={styles.headerButton}
-                            onPress={() => navigation.navigate('Favorites')}
-                        >
-                            <Feather name="star" size={24} color={colors.text} />
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.headerButton}
-                            onPress={() => navigation.navigate('Settings')}
-                        >
-                            <Feather name="settings" size={24} color={colors.text} />
-                        </TouchableOpacity>
-                    </View>
-                </View>
+                <HomeHeader
+                    titleColor={colors.text}
+                    iconColor={colors.text}
+                    streakCount={streakSummary.currentStreak}
+                    streakCompletedToday={streakSummary.completedToday}
+                    streakAtRisk={streakSummary.atRisk}
+                    streakTextColor={streakTextColor}
+                    streakAccentColor={streakAccentColor}
+                    streakAccessibilityLabel={streakAccessibilityLabel}
+                    onPressStreak={handleStreakPress}
+                    onPressFavorites={() => navigation.navigate('Favorites')}
+                    onPressSettings={() => navigation.navigate('Settings')}
+                />
 
                 <View style={styles.emptyContainer}>
                     <Text style={[styles.emptyTitle, { color: colors.text }]}>
@@ -1562,29 +1643,19 @@ export default function HomeScreen() {
 
     return (
         <View style={[styles.container, { backgroundColor: colors.background, paddingTop: insets.top }]}>
-            {/* Header */}
-            <View style={styles.header}>
-                <View style={styles.headerTitleContainer}>
-                    <View style={styles.logoContainer}>
-                        <SwarmLogo size={30} color={colors.text} />
-                    </View>
-                    <Text style={[styles.headerTitle, { color: colors.text }]}>VOCBEE</Text>
-                </View>
-                <View style={styles.headerButtons}>
-                    <TouchableOpacity
-                        style={styles.headerButton}
-                        onPress={() => navigation.navigate('Favorites')}
-                    >
-                        <Feather name="star" size={24} color={colors.text} />
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        style={styles.headerButton}
-                        onPress={() => navigation.navigate('Settings')}
-                    >
-                        <Feather name="settings" size={24} color={colors.text} />
-                    </TouchableOpacity>
-                </View>
-            </View>
+            <HomeHeader
+                titleColor={colors.text}
+                iconColor={colors.text}
+                streakCount={streakSummary.currentStreak}
+                streakCompletedToday={streakSummary.completedToday}
+                streakAtRisk={streakSummary.atRisk}
+                streakTextColor={streakTextColor}
+                streakAccentColor={streakAccentColor}
+                streakAccessibilityLabel={streakAccessibilityLabel}
+                onPressStreak={handleStreakPress}
+                onPressFavorites={() => navigation.navigate('Favorites')}
+                onPressSettings={() => navigation.navigate('Settings')}
+            />
 
             {/* Stats Section */}
             <BlurView
@@ -1900,6 +1971,15 @@ export default function HomeScreen() {
                     />
                 </View>
             )}
+
+            <StreakCelebrationOverlay
+                visible={streakCelebration !== null}
+                celebrationKey={streakCelebration?.id ?? 0}
+                streakCount={streakCelebration?.streakCount ?? 0}
+                streakLabel={streakCelebration?.streakLabel ?? ''}
+                message={streakCelebration?.message ?? ''}
+                onComplete={handleStreakCelebrationComplete}
+            />
         </View >
     );
 }
@@ -1907,45 +1987,6 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-    },
-    header: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        paddingVertical: scale(16),
-        paddingHorizontal: scale(20),
-    },
-    headerTitle: {
-        fontSize: moderateScale(22),
-        fontFamily: HEADER_FONT_FAMILY,
-        letterSpacing: scale(6),
-    },
-    headerTitleContainer: {
-        flexDirection: 'row',
-        gap: 6,
-        flex: 1,
-    },
-    logoContainer: {
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.3,
-        shadowRadius: 4,
-        elevation: 5,
-    },
-    headerButtons: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        gap: 12,
-    },
-    headerButton: {
-        padding: 4,
-    },
-    headerButtonPlaceholder: {
-        width: 32,
-        height: 32,
-    },
-    loadingIconPlaceholder: {
-        borderRadius: 16,
     },
     statsBlurContainer: {
         marginHorizontal: 20,

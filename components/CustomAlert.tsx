@@ -20,6 +20,7 @@ interface AlertButton {
 interface AlertOptions {
     title: string;
     message?: string;
+    content?: ReactNode;
     buttons?: AlertButton[];
 }
 
@@ -41,6 +42,7 @@ export const AlertProvider = ({ children }: AlertProviderProps) => {
     const [alertConfig, setAlertConfig] = useState<AlertOptions>({
         title: '',
         message: '',
+        content: null,
         buttons: [{ text: t('common.ok') }],
     });
 
@@ -48,6 +50,7 @@ export const AlertProvider = ({ children }: AlertProviderProps) => {
         setAlertConfig({
             title: options.title,
             message: options.message || '',
+            content: options.content ?? null,
             buttons: options.buttons || [{ text: t('common.ok') }],
         });
         setVisible(true);
@@ -75,6 +78,8 @@ export const AlertProvider = ({ children }: AlertProviderProps) => {
         }
     };
 
+    const hasContent = alertConfig.content !== null && alertConfig.content !== undefined;
+
     return (
         <AlertContext.Provider value={{ showAlert, hideAlert }}>
             {children}
@@ -90,9 +95,25 @@ export const AlertProvider = ({ children }: AlertProviderProps) => {
                             {alertConfig.title}
                         </Text>
                         {alertConfig.message ? (
-                            <Text style={[styles.message, { color: colors.textSecondary }]}>
+                            <Text
+                                style={[
+                                    styles.message,
+                                    { color: colors.textSecondary },
+                                    hasContent ? styles.messageWithContent : null,
+                                ]}
+                            >
                                 {alertConfig.message}
                             </Text>
+                        ) : null}
+                        {hasContent ? (
+                            <View
+                                style={[
+                                    styles.contentContainer,
+                                    !alertConfig.message && styles.contentContainerNoMessage,
+                                ]}
+                            >
+                                {alertConfig.content}
+                            </View>
                         ) : null}
                         <View style={[styles.buttonContainer, alertConfig.buttons && alertConfig.buttons.length > 2 && styles.buttonContainerVertical]}>
                             {alertConfig.buttons?.map((button, index) => (
@@ -174,6 +195,16 @@ const styles = StyleSheet.create({
         paddingHorizontal: 24,
         paddingBottom: 24,
         lineHeight: 20,
+    },
+    messageWithContent: {
+        paddingBottom: 12,
+    },
+    contentContainer: {
+        paddingHorizontal: 20,
+        paddingBottom: 24,
+    },
+    contentContainerNoMessage: {
+        paddingTop: 12,
     },
     buttonContainer: {
         flexDirection: 'row',

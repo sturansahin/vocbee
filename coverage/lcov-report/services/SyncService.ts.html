@@ -25,14 +25,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/155</span>
+                <span class='fraction'>0/160</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/92</span>
+                <span class='fraction'>0/96</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/150</span>
+                <span class='fraction'>0/155</span>
             </div>
         
             
@@ -447,7 +447,18 @@
 <a name='L382'></a><a href='#L382'>382</a>
 <a name='L383'></a><a href='#L383'>383</a>
 <a name='L384'></a><a href='#L384'>384</a>
-<a name='L385'></a><a href='#L385'>385</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L385'></a><a href='#L385'>385</a>
+<a name='L386'></a><a href='#L386'>386</a>
+<a name='L387'></a><a href='#L387'>387</a>
+<a name='L388'></a><a href='#L388'>388</a>
+<a name='L389'></a><a href='#L389'>389</a>
+<a name='L390'></a><a href='#L390'>390</a>
+<a name='L391'></a><a href='#L391'>391</a>
+<a name='L392'></a><a href='#L392'>392</a>
+<a name='L393'></a><a href='#L393'>393</a>
+<a name='L394'></a><a href='#L394'>394</a>
+<a name='L395'></a><a href='#L395'>395</a>
+<a name='L396'></a><a href='#L396'>396</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -470,6 +481,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -538,6 +550,7 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -579,8 +592,10 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -651,6 +666,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -683,6 +699,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -705,8 +722,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -850,6 +872,7 @@ import { getUserProgress, getCurrentLevel, restoreProgressFromFirebase, getLastW
 import { restoreFavoritesFromFirebase, syncFavoritesToFirebase } from './favoritesService';
 import { getLanguagePair, isVocabularyGenerated, generateVocabulary, getUserLevelFromCefrLevel, isUserLevel } from './vocabularyService';
 import { getNotificationSettings, saveNotificationSettings, NotificationSettings } from './notificationService';
+import { getStreakState, restoreStreakState, StreakState } from './streakService';
 import { buildStoredProfileFromFirestore } from './socialAuthProfile';
 import { STORAGE_KEYS } from './storageKeys';
 &nbsp;
@@ -922,6 +945,7 @@ export const syncToFirestore = <span class="cstat-no" title="statement not cover
         const notificationSettings = <span class="cstat-no" title="statement not covered" >rawNotificationSettings</span>
             ? await getNotificationSettings()
             : null;
+        const streakState = <span class="cstat-no" title="statement not covered" >await getStreakState();</span>
 &nbsp;
         // Get language preferences
         const languagePair = <span class="cstat-no" title="statement not covered" >await getLanguagePair();</span>
@@ -962,6 +986,8 @@ export const syncToFirestore = <span class="cstat-no" title="statement not cover
 <span class="cstat-no" title="statement not covered" >        if (notificationSettings) {</span>
 <span class="cstat-no" title="statement not covered" >            syncData.notificationSettings = notificationSettings;</span>
         }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        syncData.streak = streakState;</span>
 &nbsp;
         // If we have valid preferences locally, force update them in Firestore
         // This ensures the user is marked as "Setup Completed"
@@ -1042,6 +1068,7 @@ export const createUserDocument = <span class="cstat-no" title="statement not co
                 setupCompleted: false,
                 preferences: null,
                 progress: null,
+                streak: null,
             });
 <span class="cstat-no" title="statement not covered" >            console.log('Created new user document');</span>
         }
@@ -1065,6 +1092,7 @@ export const fetchAndSaveUserData = <span class="cstat-no" title="statement not 
                 preferences: data.preferences,
                 hasProgress: !!data.progress,
                 hasNotificationSettings: !!data.notificationSettings,
+                hasStreak: !!data.streak,
             }, null, 2));
 &nbsp;
             const userData: UserData = <span class="cstat-no" title="statement not covered" >{</span>
@@ -1095,6 +1123,11 @@ export const fetchAndSaveUserData = <span class="cstat-no" title="statement not 
 <span class="cstat-no" title="statement not covered" >            if (data.notificationSettings &amp;&amp; typeof data.notificationSettings === 'object') {</span>
 <span class="cstat-no" title="statement not covered" >                await saveNotificationSettings(data.notificationSettings, true);</span>
 <span class="cstat-no" title="statement not covered" >                console.log('Restored notification settings from Firebase');</span>
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if (data.streak &amp;&amp; typeof data.streak === 'object') {</span>
+<span class="cstat-no" title="statement not covered" >                await restoreStreakState(data.streak as Partial&lt;StreakState&gt;);</span>
+<span class="cstat-no" title="statement not covered" >                console.log('Restored streak state from Firebase');</span>
             }
 &nbsp;
             // Restore user-level preference (beginner/intermediate/advanced).
@@ -1222,7 +1255,7 @@ export const autoSync = <span class="cstat-no" title="statement not covered" ><s
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-04-11T21:32:54.549Z
+                at 2026-04-13T19:20:45.539Z
             </div>
         <script src="../prettify.js"></script>
         <script>

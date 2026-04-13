@@ -21,6 +21,7 @@ export const STORAGE_KEYS = {
     CURRENT_LEVEL: '@current_level',
     LAST_WORD_ID: '@last_word_id',
     USER_LEVEL: '@user_level',
+    STREAK: '@streak',
 
     // ─── Vocabulary (vocabularyService.ts) ────────────────────────
     VOCABULARY: '@vocabulary',

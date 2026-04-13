@@ -593,7 +593,7 @@ export default function SettingsScreen() {
                                  // Cancel all scheduled notifications (old language words)
                                  await cancelAllNotifications();
                                  // Clear userData cache so AuthContext fetches fresh data after setup
-                                 await clearAllLocalData();
+                                 await clearAllLocalData({ preserveStreak: true });
                                  await resetProgress();
                                  await forceSync(user?.uid || '');
                                  navigation.reset({

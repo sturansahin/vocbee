@@ -60,6 +60,59 @@ jest.mock('../../services/notificationService', () => ({
     clearPendingNotificationWord: jest.fn(() => Promise.resolve()),
 }));
 
+jest.mock('../../services/streakService', () => ({
+    DEFAULT_STREAK_STATE: {
+        currentStreak: 0,
+        longestStreak: 0,
+        brokenStreak: null,
+        lastQualifiedDay: null,
+        lastQualifiedAt: null,
+    },
+    DEFAULT_STREAK_SUMMARY: {
+        currentStreak: 0,
+        storedCurrentStreak: 0,
+        longestStreak: 0,
+        brokenStreak: null,
+        lastQualifiedDay: null,
+        lastQualifiedAt: null,
+        completedToday: false,
+        atRisk: false,
+        isBroken: false,
+        status: 'inactive',
+    },
+    getStreakSummary: jest.fn(() => Promise.resolve({
+        currentStreak: 3,
+        storedCurrentStreak: 3,
+        longestStreak: 5,
+        brokenStreak: null,
+        lastQualifiedDay: '2026-04-12',
+        lastQualifiedAt: '2026-04-12T09:00:00.000Z',
+        completedToday: true,
+        atRisk: false,
+        isBroken: false,
+        status: 'completedToday',
+    })),
+    getStreakSummaryFromState: jest.fn((state) => ({
+        ...state,
+        completedToday: true,
+        atRisk: false,
+        isBroken: false,
+        status: 'completedToday',
+    })),
+    getStreakStatusMessageKey: jest.fn(() => 'home.streakDoneToday'),
+    recordDailyStudyAction: jest.fn(() => Promise.resolve({
+        state: {
+            currentStreak: 3,
+            longestStreak: 5,
+            brokenStreak: null,
+            lastQualifiedDay: '2026-04-12',
+            lastQualifiedAt: '2026-04-12T09:00:00.000Z',
+        },
+        didIncrement: false,
+        completedToday: true,
+    })),
+}));
+
 jest.mock('../../services/adMobService', () => ({
     loadInterstitial: jest.fn(),
     showInterstitial: jest.fn(),

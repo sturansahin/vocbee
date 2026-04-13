@@ -168,6 +168,32 @@ describe('CustomAlert', () => {
                 expect(getByText('common.ok')).toBeTruthy(); // Mocked t() returns key
             });
         });
+
+        it('renders custom content when provided', async () => {
+            const TestCustomContent = () => {
+                const { showAlert } = useAlert();
+                return (
+                    <TouchableOpacity
+                        testID="show-content-alert"
+                        onPress={() => showAlert({
+                            title: 'Custom Content',
+                            content: <Text>Animated streak stats</Text>,
+                        })}
+                    >
+                        <Text>Show</Text>
+                    </TouchableOpacity>
+                );
+            };
+
+            const { getByTestId, getByText } = renderWithProviders(<TestCustomContent />);
+
+            fireEvent.press(getByTestId('show-content-alert'));
+
+            await waitFor(() => {
+                expect(getByText('Custom Content')).toBeTruthy();
+                expect(getByText('Animated streak stats')).toBeTruthy();
+            });
+        });
     });
 
     describe('createAlert helper', () => {
