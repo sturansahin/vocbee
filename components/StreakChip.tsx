@@ -95,7 +95,6 @@ const styles = StyleSheet.create({
         fontFamily: FONT_FAMILY,
         fontSize: 14,
         lineHeight: 16,
-        fontWeight: '700',
         includeFontPadding: false,
     },
 });
