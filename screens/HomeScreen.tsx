@@ -19,12 +19,12 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../types';
-import { MaterialIcons } from '@expo/vector-icons';
 import Svg, { Polygon } from 'react-native-svg';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '../context/ThemeContext';
 import { FONT_FAMILY } from '../utils/typography';
 import { HomeHeader } from '../components/HomeHeader';
+import { VocabularyCardHeader } from '../components/VocabularyCardHeader';
 import { StreakAlertContent } from '../components/StreakAlertContent';
 import { StreakCelebrationOverlay } from '../components/StreakCelebrationOverlay';
 import {
@@ -124,16 +124,6 @@ function FavoriteStarIcon({
         </Svg>
     );
 }
-
-function getDisplayPronunciation(pronunciation?: string | null): string | null {
-    if (typeof pronunciation !== 'string') {
-        return null;
-    }
-
-    const trimmed = pronunciation.trim();
-    return trimmed.length > 0 ? trimmed : null;
-}
-
 
 export default function HomeScreen() {
     const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
@@ -899,8 +889,6 @@ export default function HomeScreen() {
 
     const currentWord = words[currentWordIndex];
     const nextWord = words[(currentWordIndex + 1) % Math.max(words.length, 1)];
-    const currentWordPronunciation = getDisplayPronunciation(currentWord?.pronunciation);
-    const nextWordPronunciation = getDisplayPronunciation(nextWord?.pronunciation);
     const initialLoadingPlaceholderColor = isDarkMode ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.08)';
     const initialLoadingAccentColor = isDarkMode ? 'rgba(255,200,20,0.22)' : 'rgba(255,200,20,0.28)';
     const streakAccentColor = '#FF8F1F';
@@ -1392,35 +1380,15 @@ export default function HomeScreen() {
                                 <FavoriteStarIcon color={colors.primary} size={24} />
                             </View>
                         </View>
-                        <View style={styles.cardUpperSection}>
-                            <Text
-                                style={[styles.wordTitle, { color: colors.text }]}
-                                adjustsFontSizeToFit
-                                numberOfLines={1}
-                            >
-                                {nextWord.word}
-                            </Text>
-                            {nextWordPronunciation ? (
-                                <Text
-                                    style={[styles.pronunciationText, { color: colors.textSecondary }]}
-                                    numberOfLines={2}
-                                >
-                                    {nextWordPronunciation}
-                                </Text>
-                            ) : null}
-                            <View style={styles.translationRow}>
-                                <View style={{ position: 'absolute', left: scale(36) - 35 }}>
-                                    <MaterialIcons name="translate" size={22} color={colors.primary} />
-                                </View>
-                                <Text
-                                    style={[styles.translationText, { color: colors.primary }]}
-                                    adjustsFontSizeToFit
-                                    numberOfLines={1}
-                                >
-                                    {nextWord.translation}
-                                </Text>
-                            </View>
-                        </View>
+                        <VocabularyCardHeader
+                            style={styles.cardUpperSection}
+                            word={nextWord.word}
+                            pronunciation={nextWord.pronunciation}
+                            translation={nextWord.translation}
+                            wordColor={colors.text}
+                            pronunciationColor={colors.textSecondary}
+                            translationColor={colors.primary}
+                        />
 
                         {/* Lower Section - Example Sentences with Gray Background */}
                         <View style={[styles.cardLowerSectionStruct, { zIndex: 1 }]}>
@@ -1812,43 +1780,18 @@ export default function HomeScreen() {
                                     </TouchableOpacity>
 
                                     {/* Upper Section - Word and Translation */}
-                                    <View style={styles.cardUpperSection}>
-
-                                        <View ref={wordRef} collapsable={false} style={{ zIndex: (showTutorial && tutorialStep === 4) ? 100 : 1 }}>
-                                            <TouchableOpacity
-                                                onPress={handleWordPress}
-                                                activeOpacity={0.7}
-                                            >
-                                                <Text
-                                                    style={[styles.wordTitle, { color: colors.text }]}
-                                                    adjustsFontSizeToFit
-                                                    numberOfLines={1}
-                                                >
-                                                    {currentWord.word}
-                                                </Text>
-                                            </TouchableOpacity>
-                                        </View>
-                                        {currentWordPronunciation ? (
-                                            <Text
-                                                style={[styles.pronunciationText, { color: colors.textSecondary }]}
-                                                numberOfLines={2}
-                                            >
-                                                {currentWordPronunciation}
-                                            </Text>
-                                        ) : null}
-                                        <View style={styles.translationRow}>
-                                            <View style={{ position: 'absolute', left: scale(36) - 35 }}>
-                                                <MaterialIcons name="translate" size={22} color={colors.primary} />
-                                            </View>
-                                            <Text
-                                                style={[styles.translationText, { color: colors.primary }]}
-                                                adjustsFontSizeToFit
-                                                numberOfLines={1}
-                                            >
-                                                {currentWord.translation}
-                                            </Text>
-                                        </View>
-                                    </View>
+                                    <VocabularyCardHeader
+                                        style={styles.cardUpperSection}
+                                        word={currentWord.word}
+                                        pronunciation={currentWord.pronunciation}
+                                        translation={currentWord.translation}
+                                        wordColor={colors.text}
+                                        pronunciationColor={colors.textSecondary}
+                                        translationColor={colors.primary}
+                                        wordContainerRef={wordRef}
+                                        wordContainerStyle={{ zIndex: (showTutorial && tutorialStep === 4) ? 100 : 1 }}
+                                        onPressWord={handleWordPress}
+                                    />
 
                                     {/* Lower Section - Example Sentences with Gray Background */}
                                     <View style={[styles.cardLowerSectionStruct, { zIndex: (showTutorial && tutorialStep >= 5) ? 100 : 1 }]}>
@@ -2062,33 +2005,6 @@ const styles = StyleSheet.create({
         paddingHorizontal: 40,
         maxWidth: '100%',
     },
-    pronunciationText: {
-        fontSize: moderateScale(18),
-        lineHeight: moderateScale(24),
-        fontStyle: 'italic',
-        fontWeight: '500',
-        letterSpacing: 0.2,
-        textAlign: 'center',
-        paddingHorizontal: 40,
-        maxWidth: '100%',
-        marginBottom: 12,
-    },
-    translationRow: {
-        width: '100%',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center', // Center content horizontally
-        marginBottom: 24,
-        position: 'relative', // For absolute positioning of icon
-    },
-    translationText: {
-        fontFamily: FONT_FAMILY,
-        fontSize: moderateScale(24),
-        fontWeight: '500',
-        paddingHorizontal: 40,
-        maxWidth: '100%',
-        textAlign: 'center',
-    },
     favoriteButton: {
         position: 'absolute',
         top: scale(16),
@@ -2201,11 +2117,6 @@ const styles = StyleSheet.create({
         fontSize: 16,
         textAlign: 'center',
         lineHeight: 24,
-    },
-    wordTitleRow: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        gap: 12,
     },
     cardUpperSection: {
         flex: 1,
