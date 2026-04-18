@@ -36,6 +36,7 @@ import {
   checkAndShowAppOpenAd,
   refreshAdInventoryOnForeground,
 } from './services/adMobService';
+import { recordReviewAppLaunch } from './services/reviewPromptService';
 
 // Screens
 import CustomSplashScreen from './screens/SplashScreen';
@@ -70,6 +71,7 @@ function AppContent() {
   const notificationPermissionGateInFlight = useRef(false);
   const handledNotificationResponses = useRef<Set<string>>(new Set());
   const checkedNotificationPermissionUsers = useRef<Set<string>>(new Set());
+  const reviewLaunchRecordedUsers = useRef<Set<string>>(new Set());
   const navigationRef = useRef<NavigationContainerRef<RootStackParamList>>(null);
 
   const [isAppReady, setIsAppReady] = useState(false);
@@ -287,6 +289,18 @@ function AppContent() {
     // Run auto sync immediately
     autoSync(user.uid);
   }, [user]);
+
+  useEffect(() => {
+    if (!user) return;
+    if (isLoading) return;
+    if (!hasCompletedSetup) return;
+    if (reviewLaunchRecordedUsers.current.has(user.uid)) return;
+
+    reviewLaunchRecordedUsers.current.add(user.uid);
+    recordReviewAppLaunch().catch(error => {
+      console.error('[ReviewPrompt] Failed to record app launch', error);
+    });
+  }, [user, isLoading, hasCompletedSetup]);
 
   // Run notification maintenance on cold start / login while app is active.
   // Without this, delivered notifications are only processed after a future

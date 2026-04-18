@@ -10,6 +10,7 @@ import {
     Easing,
     AppState,
     AppStateStatus,
+    Platform,
 } from 'react-native';
 import LottieView from 'lottie-react-native';
 import { createSwarmAnimation } from '../assets/animations/swarmAnimation';
@@ -24,6 +25,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '../context/ThemeContext';
 import { FONT_FAMILY } from '../utils/typography';
 import { HomeHeader } from '../components/HomeHeader';
+import { AppRatingPrompt } from '../components/AppRatingPrompt';
 import { VocabularyCardHeader } from '../components/VocabularyCardHeader';
 import { StreakAlertContent } from '../components/StreakAlertContent';
 import { StreakCelebrationOverlay } from '../components/StreakCelebrationOverlay';
@@ -69,6 +71,15 @@ import {
     getStreakCelebrationMessageKey,
     shouldShowStreakCelebration,
 } from '../utils/streakCelebration';
+import {
+    dismissReviewPrompt,
+    getAutomaticReviewPromptDecision,
+    markAutomaticReviewPromptPresented,
+    openReviewFeedbackEmail,
+    openStoreReviewPage,
+    recordSatisfactionRating,
+    requestNativeReview,
+} from '../services/reviewPromptService';
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;
@@ -145,6 +156,7 @@ export default function HomeScreen() {
         ...DEFAULT_STREAK_SUMMARY,
     });
     const [streakCelebration, setStreakCelebration] = useState<StreakCelebrationState | null>(null);
+    const [reviewPromptVisible, setReviewPromptVisible] = useState(false);
 
     // TTS language code for target language pronunciation
     const [ttsLanguage, setTtsLanguage] = useState('en-US');
@@ -172,6 +184,7 @@ export default function HomeScreen() {
     const sessionLearnedCount = useRef(0);
     const pendingInterstitialAfterCelebrationRef = useRef(false);
     const streakCelebrationIdRef = useRef(0);
+    const reviewPromptInFlightRef = useRef(false);
 
     // Bee animation state
     interface BeePosition {
@@ -894,6 +907,34 @@ export default function HomeScreen() {
     const streakAccentColor = '#FF8F1F';
     const streakTextColor = streakSummary.completedToday ? streakAccentColor : colors.text;
     const streakAccessibilityLabel = t('home.streakAccessibilityLabel', { count: streakSummary.currentStreak });
+    const statsContainerStyle = [
+        styles.statsBlurContainer,
+        {
+            backgroundColor: isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0.72)',
+            borderWidth: isDarkMode ? 0 : 1,
+            borderColor: isDarkMode ? 'transparent' : colors.border,
+            shadowColor: '#000',
+            shadowOffset: { width: 0, height: 2 },
+            shadowOpacity: isDarkMode ? 0 : 0.04,
+            shadowRadius: 8,
+            elevation: isDarkMode ? 0 : 2,
+        },
+    ];
+    const renderStatsContainer = (children: React.ReactNode) => {
+        if (Platform.OS === 'android') {
+            return <View style={statsContainerStyle}>{children}</View>;
+        }
+
+        return (
+            <BlurView
+                intensity={isDarkMode ? 20 : 32}
+                tint={isDarkMode ? "dark" : "light"}
+                style={statsContainerStyle}
+            >
+                {children}
+            </BlurView>
+        );
+    };
 
     const handleStreakPress = useCallback(() => {
         const statusMessage = t(getStreakStatusMessageKey(streakSummary.status));
@@ -911,6 +952,86 @@ export default function HomeScreen() {
             ),
         });
     }, [showAlert, streakSummary.status, streakSummary.currentStreak, streakSummary.longestStreak, t]);
+
+    const showStoreOpenError = useCallback(() => {
+        showAlert({
+            title: t('common.error'),
+            message: t('reviewPrompt.storeOpenError', {
+                defaultValue: 'We could not open the store review page. Please try again later.',
+            }),
+        });
+    }, [showAlert, t]);
+
+    const handleReviewPromptDismiss = useCallback(async () => {
+        setReviewPromptVisible(false);
+        await dismissReviewPrompt();
+    }, []);
+
+    const handleReviewRateInStore = useCallback(async (rating: number) => {
+        setReviewPromptVisible(false);
+        await recordSatisfactionRating(rating);
+        const result = await openStoreReviewPage('automatic-rating-prompt');
+
+        if (!result.opened) {
+            showStoreOpenError();
+        }
+    }, [showStoreOpenError]);
+
+    const handleReviewFeedback = useCallback(async (rating?: number) => {
+        setReviewPromptVisible(false);
+        await recordSatisfactionRating(rating ?? 0);
+        const opened = await openReviewFeedbackEmail(rating);
+
+        if (!opened) {
+            showAlert({
+                title: t('common.error'),
+                message: t('reviewPrompt.feedbackOpenError', {
+                    defaultValue: 'We could not open your email app. Please contact support@vocbee.com.',
+                }),
+            });
+        }
+    }, [showAlert, t]);
+
+    const maybeShowAutomaticReviewPrompt = useCallback(async ({
+        nextLearnedCount,
+        nextSessionLearnedCount,
+        isBusy,
+    }: {
+        nextLearnedCount: number;
+        nextSessionLearnedCount: number;
+        isBusy: boolean;
+    }) => {
+        if (reviewPromptVisible || reviewPromptInFlightRef.current) {
+            return;
+        }
+
+        reviewPromptInFlightRef.current = true;
+
+        try {
+            const decision = await getAutomaticReviewPromptDecision({
+                totalLearnedCount: nextLearnedCount,
+                sessionLearnedCount: nextSessionLearnedCount,
+                isTutorialVisible: showTutorialRef.current,
+                isBusy,
+            });
+
+            if (!decision.shouldPrompt) {
+                return;
+            }
+
+            if (decision.mode === 'native') {
+                await requestNativeReview();
+                return;
+            }
+
+            await markAutomaticReviewPromptPresented('satisfactionShown');
+            setReviewPromptVisible(true);
+        } catch (error) {
+            console.warn('[HomeScreen] Review prompt check failed', error);
+        } finally {
+            reviewPromptInFlightRef.current = false;
+        }
+    }, [reviewPromptVisible]);
 
     // Initialize bees when component mounts or word changes
     useEffect(() => {
@@ -1071,6 +1192,7 @@ export default function HomeScreen() {
             // Side effects (storage/progress) can run after UI has advanced
             if (direction === 'right' && swipedWord) {
                 await markWordAsLearned(currentLevel, swipedWord.id);
+                const nextLearnedCount = learnedCount + 1;
                 setLearnedCount(prev => prev + 1);
 
                 const streakUpdate = await recordDailyStudyAction();
@@ -1082,10 +1204,12 @@ export default function HomeScreen() {
                 }
 
                 // Increment session count and check for ad
-                sessionLearnedCount.current += 1;
-                console.log(`Session learned count: ${sessionLearnedCount.current}`);
+                const nextSessionLearnedCount = sessionLearnedCount.current + 1;
+                sessionLearnedCount.current = nextSessionLearnedCount;
+                console.log(`Session learned count: ${nextSessionLearnedCount}`);
 
-                if (sessionLearnedCount.current % 10 === 0) {
+                const shouldShowInterstitial = nextSessionLearnedCount % 10 === 0;
+                if (shouldShowInterstitial) {
                     console.log('Triggering Interstitial Ad');
                     if (shouldCelebrate) {
                         pendingInterstitialAfterCelebrationRef.current = true;
@@ -1101,6 +1225,12 @@ export default function HomeScreen() {
                     await loadData(true);
                     return;
                 }
+
+                await maybeShowAutomaticReviewPrompt({
+                    nextLearnedCount,
+                    nextSessionLearnedCount,
+                    isBusy: shouldCelebrate || shouldShowInterstitial,
+                });
             }
 
             // Save current word ID for resuming later (next word's ID)
@@ -1115,7 +1245,7 @@ export default function HomeScreen() {
                 await loadData(true);
             }
         });
-    }, [buildStreakCelebration, currentWord, currentLevel, currentWordIndex, words.length, loadData, position, beePositions, animateBeesAway]);
+    }, [buildStreakCelebration, currentWord, currentLevel, currentWordIndex, words.length, learnedCount, loadData, maybeShowAutomaticReviewPrompt, position, beePositions, animateBeesAway]);
 
     const resetPosition = useCallback(() => {
         Animated.spring(position, {
@@ -1442,23 +1572,7 @@ export default function HomeScreen() {
                     showPlaceholders
                 />
 
-                <BlurView
-                    intensity={isDarkMode ? 20 : 32}
-                    tint={isDarkMode ? "dark" : "light"}
-                    style={[
-                        styles.statsBlurContainer,
-                        {
-                            backgroundColor: isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0.72)',
-                            borderWidth: isDarkMode ? 0 : 1,
-                            borderColor: isDarkMode ? 'transparent' : colors.border,
-                            shadowColor: '#000',
-                            shadowOffset: { width: 0, height: 2 },
-                            shadowOpacity: isDarkMode ? 0 : 0.04,
-                            shadowRadius: 8,
-                            elevation: isDarkMode ? 0 : 2,
-                        }
-                    ]}
-                >
+                {renderStatsContainer(
                     <View style={styles.statsSection}>
                         <View style={styles.levelRow}>
                             <View style={[styles.loadingLine, styles.loadingLevelBadge, { backgroundColor: initialLoadingAccentColor }]} />
@@ -1489,7 +1603,7 @@ export default function HomeScreen() {
                             />
                         </View>
                     </View>
-                </BlurView>
+                )}
 
                 <View style={styles.cardArea}>
                     <View style={styles.cardStackContainer}>
@@ -1626,23 +1740,7 @@ export default function HomeScreen() {
             />
 
             {/* Stats Section */}
-            <BlurView
-                intensity={isDarkMode ? 20 : 32}
-                tint={isDarkMode ? "dark" : "light"}
-                style={[
-                    styles.statsBlurContainer,
-                    {
-                        backgroundColor: isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0.72)',
-                        borderWidth: isDarkMode ? 0 : 1,
-                        borderColor: isDarkMode ? 'transparent' : colors.border,
-                        shadowColor: '#000',
-                        shadowOffset: { width: 0, height: 2 },
-                        shadowOpacity: isDarkMode ? 0 : 0.04,
-                        shadowRadius: 8,
-                        elevation: isDarkMode ? 0 : 2,
-                    }
-                ]}
-            >
+            {renderStatsContainer(
                 <View style={styles.statsSection}>
                     {/* Level and Progress */}
                     <View>
@@ -1680,7 +1778,7 @@ export default function HomeScreen() {
                         </View>
                     </View>
                 </View>
-            </BlurView>
+            )}
 
             {/* Card Stack Area */}
             <View style={styles.cardArea}>
@@ -1922,6 +2020,12 @@ export default function HomeScreen() {
                 streakLabel={streakCelebration?.streakLabel ?? ''}
                 message={streakCelebration?.message ?? ''}
                 onComplete={handleStreakCelebrationComplete}
+            />
+            <AppRatingPrompt
+                visible={reviewPromptVisible}
+                onDismiss={handleReviewPromptDismiss}
+                onRateInStore={handleReviewRateInStore}
+                onSendFeedback={handleReviewFeedback}
             />
         </View >
     );

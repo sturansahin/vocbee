@@ -41,6 +41,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
 import i18n, { getDeviceLanguage, setToDeviceLanguage, isUsingSystemLanguage } from '../services/i18n';
 import appConfig from '../app.json';
+import { openStoreReviewPage } from '../services/reviewPromptService';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Responsive Utilities
@@ -168,6 +169,19 @@ export default function SettingsScreen() {
    const [tempEmail, setTempEmail] = useState('');
 
    // No Loading state needed!
+
+   const handleRateVocBeePress = async () => {
+      const result = await openStoreReviewPage('settings');
+
+      if (!result.opened) {
+         showAlert({
+            title: t('common.error'),
+            message: t('reviewPrompt.storeOpenError', {
+               defaultValue: 'We could not open the store review page. Please try again later.',
+            }),
+         });
+      }
+   };
 
    // Sync state when context updates (e.g. initial load finishes)
    useEffect(() => {
@@ -710,6 +724,17 @@ export default function SettingsScreen() {
                         <MaterialCommunityIcons name="help" size={20} color={colors.primary} />
                      </View>
                      <Text style={[styles.settingTitle, dynamicStyles.text]}>{t('settings.helpFaq')}</Text>
+                  </View>
+                  <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
+               </TouchableOpacity>
+               <TouchableOpacity style={styles.settingItem} onPress={handleRateVocBeePress}>
+                  <View style={styles.settingLeft}>
+                     <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
+                        <MaterialCommunityIcons name="star-outline" size={24} color={colors.primary} />
+                     </View>
+                     <Text style={[styles.settingTitle, dynamicStyles.text]}>
+                        {t('settings.rateVocBee', { defaultValue: 'Rate VocBee' })}
+                     </Text>
                   </View>
                   <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
                </TouchableOpacity>
