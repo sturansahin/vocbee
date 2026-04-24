@@ -28,6 +28,25 @@ describe('socialAuthProfile', () => {
         email: 'relay-user@example.com',
       });
     });
+
+    it('keeps an existing user-selected profile image on auth refresh', () => {
+      expect(
+        buildStoredProfileFromAuth({
+          existingProfile: {
+            name: 'Existing User',
+            image: 'vocbee-avatar:avatar2',
+            email: 'vocbee@example.com',
+          },
+          email: 'vocbee@example.com',
+          authDisplayName: 'Provider Name',
+          authPhotoURL: 'https://image.example/provider.png',
+        })
+      ).toEqual({
+        name: 'Provider Name',
+        image: 'vocbee-avatar:avatar2',
+        email: 'vocbee@example.com',
+      });
+    });
   });
 
   describe('buildStoredProfileFromFirestore', () => {

@@ -46,6 +46,7 @@ export const LoginScreen = () => {
   const subtitleFontSize = isSmallScreen ? 14 : isLargeScreen ? 18 : 16;
   const logoMarginBottom = isSmallScreen ? 24 : 40;
   const padding = isSmallScreen ? 20 : 24;
+  const authLinkFontSize = isSmallScreen ? 12 : 13;
 
   // Lottie animation ref
   const lottieRef = useRef<LottieView>(null);
@@ -400,9 +401,38 @@ export const LoginScreen = () => {
           iconColor={colors.textSecondary}
         />
 
-        <View style={styles.forgotContainer}>
-          <TouchableOpacity onPress={() => navigation.navigate('ForgotPassword')}>
-            <Text style={[styles.forgotText, { color: colors.textSecondary }]}>{t('auth.forgotPassword')}</Text>
+        <View style={styles.authLinksRow}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('SignUp')}
+            style={styles.signupInlineButton}
+            hitSlop={8}
+            accessibilityRole="button"
+          >
+            <Text
+              style={[styles.signupText, { color: colors.textSecondary, fontSize: authLinkFontSize }]}
+              numberOfLines={1}
+              adjustsFontSizeToFit
+              minimumFontScale={0.86}
+            >
+              {t('auth.noAccount')}{' '}
+              <Text style={[styles.signupLink, { color: colors.primary }]}>{t('auth.signUp')}</Text>
+            </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            onPress={() => navigation.navigate('ForgotPassword')}
+            style={styles.forgotButton}
+            hitSlop={8}
+            accessibilityRole="button"
+          >
+            <Text
+              style={[styles.forgotText, { color: colors.textSecondary, fontSize: authLinkFontSize }]}
+              numberOfLines={1}
+              adjustsFontSizeToFit
+              minimumFontScale={0.86}
+            >
+              {t('auth.forgotPassword')}
+            </Text>
           </TouchableOpacity>
         </View>
 
@@ -454,13 +484,6 @@ export const LoginScreen = () => {
               }]}>{t('auth.apple')}</Text>
             </TouchableOpacity>
           )}
-        </View>
-
-        <View style={styles.signupRow}>
-          <Text style={[styles.signupText, { color: colors.textSecondary }]}>{t('auth.noAccount')} </Text>
-          <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
-            <Text style={[styles.signupLink, { color: colors.primary }]}>{t('auth.signUp')}</Text>
-          </TouchableOpacity>
         </View>
 
       </ScrollView>
@@ -752,14 +775,27 @@ const styles = StyleSheet.create({
   appSubtitle: {
     fontFamily: FONT_FAMILY,
   },
-  forgotContainer: {
-    alignItems: 'flex-end',
+  authLinksRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: 12,
     marginBottom: 24,
+  },
+  signupInlineButton: {
+    flex: 1,
+    minWidth: 0,
+    alignItems: 'flex-start',
+  },
+  forgotButton: {
+    flex: 1,
+    minWidth: 0,
+    alignItems: 'flex-end',
   },
   forgotText: {
     fontFamily: FONT_FAMILY,
     fontWeight: '500',
-    fontSize: 13,
+    textAlign: 'right',
   },
   divider: {
     flexDirection: 'row',
@@ -798,11 +834,6 @@ const styles = StyleSheet.create({
     fontFamily: FONT_FAMILY,
     color: '#fff',
     fontWeight: '500',
-  },
-  signupRow: {
-    marginTop: 24,
-    flexDirection: 'row',
-    justifyContent: 'center',
   },
   signupText: {
     fontFamily: FONT_FAMILY,

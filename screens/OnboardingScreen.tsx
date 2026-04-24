@@ -1,167 +1,229 @@
-import React, { useState, useRef } from 'react';
+import React, { useMemo, useRef, useState } from 'react';
 import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
   FlatList,
-  useWindowDimensions,
+  Image,
+  ImageSourcePropType,
+  NativeScrollEvent,
   NativeSyntheticEvent,
-  NativeScrollEvent
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  useWindowDimensions,
+  View,
 } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../types';
-import { MaterialIcons } from '@expo/vector-icons';
-import { SwarmLogo } from '../components/SwarmLogo';
-import { FONT_FAMILY } from '../utils/typography';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { useTranslation } from 'react-i18next';
 import { useTheme } from '../context/ThemeContext';
 import { STORAGE_KEYS } from '../services/storageKeys';
-import { useTranslation } from 'react-i18next';
+import { RootStackParamList } from '../types';
+import { FONT_FAMILY } from '../utils/typography';
 
 type OnboardingNavigationProp = StackNavigationProp<RootStackParamList, 'Onboarding'>;
+
+interface OnboardingStepSpec {
+  id: string;
+  titleKey: string;
+  subtitleKey: string;
+  image: ImageSourcePropType;
+  titleFallback?: string;
+  subtitleFallback?: string;
+}
+
+interface OnboardingStep extends OnboardingStepSpec {
+  title: string;
+  subtitle: string;
+}
+
+const ONBOARDING_STEP_SPECS: readonly OnboardingStepSpec[] = [
+  {
+    id: 'daily-words',
+    titleKey: 'onboarding.title1',
+    subtitleKey: 'onboarding.subtitle1',
+    image: require('../assets/image/onboard1.png'),
+  },
+  {
+    id: 'progress',
+    titleKey: 'onboarding.title4',
+    subtitleKey: 'onboarding.subtitle4',
+    titleFallback: 'Let words come to you',
+    subtitleFallback: 'Get timely reminders, keep your learning streak alive, and return when it matters.',
+    image: require('../assets/image/onboard2.png'),
+  },
+  {
+    id: 'cards',
+    titleKey: 'onboarding.title2',
+    subtitleKey: 'onboarding.subtitle2',
+    image: require('../assets/image/onboard3.png'),
+  },
+  {
+    id: 'reminders',
+    titleKey: 'onboarding.title3',
+    subtitleKey: 'onboarding.subtitle3',
+    image: require('../assets/image/onboard4.png'),
+  },
+];
+
+const ONBOARDING_IMAGE_SCALE = 1.3;
+const ONBOARDING_IMAGE_BASE = {
+  widthRatio: {
+    small: 0.83,
+    regular: 0.885,
+  },
+  heightRatio: {
+    small: 0.377,
+    regular: 0.462,
+  },
+  maxWidth: {
+    regular: 382,
+    large: 431,
+  },
+  maxHeight: {
+    regular: 410,
+    large: 470,
+  },
+  visualAreaRatio: {
+    small: 0.4,
+    regular: 0.469,
+  },
+  visualAreaMaxHeight: {
+    regular: 431,
+    large: 492,
+  },
+} as const;
 
 export default function OnboardingScreen() {
   const navigation = useNavigation<OnboardingNavigationProp>();
   const { colors } = useTheme();
+  const { t } = useTranslation();
   const { width: screenWidth, height: screenHeight } = useWindowDimensions();
   const [currentStep, setCurrentStep] = useState(0);
-  const flatListRef = useRef<FlatList>(null);
-  const { t } = useTranslation();
+  const flatListRef = useRef<FlatList<OnboardingStep>>(null);
 
-  // Onboarding steps with translations
-  const ONBOARDING_STEPS = [
-    {
-      id: '1',
-      icon: 'menu-book',
-      title: t('onboarding.title1'),
-      subtitle: t('onboarding.subtitle1'),
-    },
-    {
-      id: '2',
-      icon: 'style',
-      title: t('onboarding.title2'),
-      subtitle: t('onboarding.subtitle2'),
-    },
-    {
-      id: '3',
-      icon: 'trending-up',
-      title: t('onboarding.title3'),
-      subtitle: t('onboarding.subtitle3'),
-    },
-  ];
+  const steps = useMemo<OnboardingStep[]>(
+    () =>
+      ONBOARDING_STEP_SPECS.map(step => ({
+        ...step,
+        title: t(step.titleKey, { defaultValue: step.titleFallback }),
+        subtitle: t(step.subtitleKey, { defaultValue: step.subtitleFallback }),
+      })),
+    [t]
+  );
 
-  console.log('[Onboarding] Rendering...');
-
-  // Responsive calculations
   const isSmallScreen = screenHeight < 700;
   const isLargeScreen = screenHeight > 900;
-
-  // Dynamic sizing based on screen dimensions
-  const iconSize = Math.min(screenWidth * 0.25, isSmallScreen ? 80 : 120);
-  const imageContainerSize = Math.min(screenWidth - 48, isSmallScreen ? screenHeight * 0.3 : screenHeight * 0.35);
-  const titleFontSize = isSmallScreen ? 22 : isLargeScreen ? 32 : 26;
+  const titleFontSize = isSmallScreen ? 22 : isLargeScreen ? 32 : 27;
   const subtitleFontSize = isSmallScreen ? 14 : isLargeScreen ? 18 : 16;
-  const logoSize = isSmallScreen ? 32 : 40;  // Arı ikonu büyütüldü
-  const logoTextSize = isSmallScreen ? 20 : 24;
-  const verticalPadding = isSmallScreen ? 20 : 40;
+  const verticalPadding = isSmallScreen ? 18 : 28;
+  const imageWidthRatio = isSmallScreen
+    ? ONBOARDING_IMAGE_BASE.widthRatio.small
+    : ONBOARDING_IMAGE_BASE.widthRatio.regular;
+  const imageHeightRatio = isSmallScreen
+    ? ONBOARDING_IMAGE_BASE.heightRatio.small
+    : ONBOARDING_IMAGE_BASE.heightRatio.regular;
+  const visualAreaRatio = isSmallScreen
+    ? ONBOARDING_IMAGE_BASE.visualAreaRatio.small
+    : ONBOARDING_IMAGE_BASE.visualAreaRatio.regular;
+  const maxImageWidth = isLargeScreen
+    ? ONBOARDING_IMAGE_BASE.maxWidth.large
+    : ONBOARDING_IMAGE_BASE.maxWidth.regular;
+  const maxImageHeight = isLargeScreen
+    ? ONBOARDING_IMAGE_BASE.maxHeight.large
+    : ONBOARDING_IMAGE_BASE.maxHeight.regular;
+  const maxVisualAreaHeight = isLargeScreen
+    ? ONBOARDING_IMAGE_BASE.visualAreaMaxHeight.large
+    : ONBOARDING_IMAGE_BASE.visualAreaMaxHeight.regular;
+  const imageWidth = Math.min(screenWidth * imageWidthRatio, maxImageWidth) * ONBOARDING_IMAGE_SCALE;
+  const imageHeight = Math.min(screenHeight * imageHeightRatio, maxImageHeight) * ONBOARDING_IMAGE_SCALE;
+  const visualAreaHeight = Math.min(screenHeight * visualAreaRatio, maxVisualAreaHeight) * ONBOARDING_IMAGE_SCALE;
+  const isLastStep = currentStep === steps.length - 1;
 
-  const isLastStep = currentStep === ONBOARDING_STEPS.length - 1;
-
-  const markOnboardingAsSeen = async () => {
+  const completeOnboarding = async () => {
     try {
       await AsyncStorage.setItem(STORAGE_KEYS.HAS_SEEN_ONBOARDING, 'true');
     } catch (error) {
       console.error('Error marking onboarding as seen:', error);
-    }
-  };
-
-  const handleNext = async () => {
-    if (currentStep < ONBOARDING_STEPS.length - 1) {
-      flatListRef.current?.scrollToIndex({ index: currentStep + 1, animated: true });
-      setCurrentStep(currentStep + 1);
-    } else {
-      await markOnboardingAsSeen();
+    } finally {
       navigation.navigate('Login');
     }
   };
 
-  const handleSkip = async () => {
-    await markOnboardingAsSeen();
-    navigation.navigate('Login');
-  };
+  const handleNext = () => {
+    if (currentStep < steps.length - 1) {
+      const nextStep = currentStep + 1;
+      flatListRef.current?.scrollToIndex({ index: nextStep, animated: true });
+      setCurrentStep(nextStep);
+      return;
+    }
 
-  const handleStart = async () => {
-    await markOnboardingAsSeen();
-    navigation.navigate('Login');
+    completeOnboarding();
   };
 
   const onScroll = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
     const offsetX = event.nativeEvent.contentOffset.x;
     const newIndex = Math.round(offsetX / screenWidth);
-    if (newIndex !== currentStep && newIndex >= 0 && newIndex < ONBOARDING_STEPS.length) {
+
+    if (newIndex !== currentStep && newIndex >= 0 && newIndex < steps.length) {
       setCurrentStep(newIndex);
     }
   };
 
-  const renderItem = ({ item }: { item: typeof ONBOARDING_STEPS[0] }) => (
+  const renderItem = ({ item }: { item: OnboardingStep }) => (
     <View style={[styles.slide, { width: screenWidth }]}>
-      <View style={[
-        styles.imageContainer,
-        {
-          backgroundColor: colors.surfaceLight,
-          width: imageContainerSize,
-          height: imageContainerSize,
-          borderRadius: imageContainerSize * 0.15,
-          marginBottom: isSmallScreen ? 20 : 40,
-        }
-      ]}>
-        <MaterialIcons name={item.icon as any} size={iconSize} color={colors.primary} />
+      <View style={[styles.copyContainer, { paddingTop: isSmallScreen ? 34 : isLargeScreen ? 68 : 52 }]}>
+        <Text
+          style={[
+            styles.title,
+            {
+              color: colors.text,
+              fontSize: titleFontSize,
+              marginBottom: isSmallScreen ? 8 : 14,
+            },
+          ]}
+        >
+          {item.title}
+        </Text>
+        <Text
+          style={[
+            styles.subtitle,
+            {
+              color: colors.textSecondary,
+              fontSize: subtitleFontSize,
+              lineHeight: subtitleFontSize * 1.5,
+            },
+          ]}
+        >
+          {item.subtitle}
+        </Text>
       </View>
-      <Text style={[
-        styles.title,
-        {
-          color: colors.text,
-          fontSize: titleFontSize,
-          marginBottom: isSmallScreen ? 8 : 16,
-        }
-      ]}>
-        {item.title}
-      </Text>
-      <Text style={[
-        styles.subtitle,
-        {
-          color: colors.textSecondary,
-          fontSize: subtitleFontSize,
-          lineHeight: subtitleFontSize * 1.5,
-        }
-      ]}>
-        {item.subtitle}
-      </Text>
+
+      <View style={[styles.visualArea, { height: visualAreaHeight }]}>
+        <Image
+          source={item.image}
+          resizeMode="contain"
+          style={[
+            styles.visualImage,
+            {
+              width: imageWidth,
+              height: imageHeight,
+            },
+          ]}
+        />
+      </View>
     </View>
   );
 
   return (
     <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
       <View style={[styles.content, { paddingVertical: verticalPadding }]}>
-
-        {/* Header Logo */}
-        <View style={styles.header}>
-          <View style={[styles.logoContainer, { width: logoSize + 10, height: logoSize + 10 }]}>
-            <SwarmLogo size={logoSize} color={colors.primary} />
-          </View>
-          <Text style={[styles.logoText, { color: colors.text, fontSize: logoTextSize }]}>VocBee</Text>
-        </View>
-
-        {/* Carousel with FlatList */}
         <View style={styles.carouselContainer}>
           <FlatList
             ref={flatListRef}
-            data={ONBOARDING_STEPS}
+            data={steps}
             renderItem={renderItem}
-            keyExtractor={(item) => item.id}
+            keyExtractor={item => item.id}
             horizontal
             pagingEnabled
             showsHorizontalScrollIndicator={false}
@@ -176,38 +238,41 @@ export default function OnboardingScreen() {
           />
         </View>
 
-        {/* Dots */}
-        <View style={[styles.dotsContainer, { marginBottom: isSmallScreen ? 20 : 40 }]}>
-          {ONBOARDING_STEPS.map((_, index) => (
+        <View style={[styles.dotsContainer, { marginBottom: isSmallScreen ? 20 : 34 }]}>
+          {steps.map((_, index) => (
             <View
               key={index}
               style={[
                 styles.dot,
                 { backgroundColor: index === currentStep ? colors.primary : colors.border },
-                index === currentStep && styles.dotActive
+                index === currentStep && styles.dotActive,
               ]}
             />
           ))}
         </View>
 
-        {/* Actions - Start button on last step, Skip/Next otherwise */}
         {isLastStep ? (
           <View style={styles.startButtonContainer}>
-            <TouchableOpacity onPress={handleStart} style={styles.startButton}>
-              <Text style={[styles.startButtonText, { color: colors.primary, fontSize: subtitleFontSize + 2 }]}>{t('onboarding.start')}</Text>
+            <TouchableOpacity onPress={completeOnboarding} style={styles.startButton}>
+              <Text style={[styles.startButtonText, { color: colors.primary, fontSize: subtitleFontSize + 2 }]}>
+                {t('onboarding.start')}
+              </Text>
             </TouchableOpacity>
           </View>
         ) : (
           <View style={styles.actions}>
-            <TouchableOpacity onPress={handleSkip} style={styles.skipButton}>
-              <Text style={[styles.skipButtonText, { color: colors.textSecondary, fontSize: subtitleFontSize + 2 }]}>{t('onboarding.skip')}</Text>
+            <TouchableOpacity onPress={completeOnboarding} style={styles.skipButton}>
+              <Text style={[styles.skipButtonText, { color: colors.textSecondary, fontSize: subtitleFontSize + 2 }]}>
+                {t('onboarding.skip')}
+              </Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={handleNext} style={styles.nextButton}>
-              <Text style={[styles.nextButtonText, { color: colors.primary, fontSize: subtitleFontSize + 2 }]}>{t('onboarding.next')}</Text>
+              <Text style={[styles.nextButtonText, { color: colors.primary, fontSize: subtitleFontSize + 2 }]}>
+                {t('onboarding.next')}
+              </Text>
             </TouchableOpacity>
           </View>
         )}
-
       </View>
     </SafeAreaView>
   );
@@ -221,44 +286,31 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
   },
-  header: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 12,
-    paddingTop: 0,
-    paddingHorizontal: 24,
-  },
-  logoContainer: {
-    borderRadius: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  logoText: {
-    fontFamily: FONT_FAMILY,
-  },
   carouselContainer: {
     flex: 1,
-    justifyContent: 'center',
   },
   slide: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingHorizontal: 24,
+    flex: 1,
+    justifyContent: 'space-between',
   },
-  imageContainer: {
-    overflow: 'hidden',
-    alignItems: 'center',
-    justifyContent: 'center',
+  copyContainer: {
+    paddingHorizontal: 28,
   },
   title: {
     fontFamily: FONT_FAMILY,
-    textAlign: 'center',
+    textAlign: 'left',
   },
   subtitle: {
     fontFamily: FONT_FAMILY,
-    textAlign: 'center',
-    paddingHorizontal: 16,
+    textAlign: 'left',
+    maxWidth: 340,
   },
+  visualArea: {
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  visualImage: {},
   dotsContainer: {
     flexDirection: 'row',
     gap: 8,

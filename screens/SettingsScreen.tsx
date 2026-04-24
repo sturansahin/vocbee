@@ -42,6 +42,11 @@ import { useTranslation } from 'react-i18next';
 import i18n, { getDeviceLanguage, setToDeviceLanguage, isUsingSystemLanguage } from '../services/i18n';
 import appConfig from '../app.json';
 import { openStoreReviewPage } from '../services/reviewPromptService';
+import {
+   getProfileImageSource,
+   PROFILE_AVATARS,
+   ProfileAvatarOption,
+} from '../utils/profileAvatar';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Responsive Utilities
@@ -60,6 +65,17 @@ const MINUTES_LIST = Array.from({ length: 60 }, (_, i) => i.toString().padStart(
 const HOURS_EXTENDED = [...HOURS_LIST, ...HOURS_LIST, ...HOURS_LIST];
 const MINUTES_EXTENDED = [...MINUTES_LIST, ...MINUTES_LIST, ...MINUTES_LIST];
 const APP_VERSION = Constants.expoConfig?.version ?? appConfig.expo.version;
+const AVATAR_COLUMNS = 3;
+
+const chunkItems = <T,>(items: readonly T[], size: number): T[][] => {
+   const rows: T[][] = [];
+   for (let i = 0; i < items.length; i += size) {
+      rows.push(items.slice(i, i + size));
+   }
+   return rows;
+};
+
+const PROFILE_AVATAR_ROWS = chunkItems(PROFILE_AVATARS, AVATAR_COLUMNS);
 
 // ─────────────────────────────────────────────────────────────────────────────
 // AnimatedSwitch Component - Unified toggle with variants
@@ -163,6 +179,7 @@ export default function SettingsScreen() {
    // Profile states
    const [showEditProfileModal, setShowEditProfileModal] = useState(false);
    const [showImagePickerModal, setShowImagePickerModal] = useState(false);
+   const [showAvatarPickerModal, setShowAvatarPickerModal] = useState(false);
 
    // Temp states for editing
    const [tempName, setTempName] = useState('');
@@ -347,6 +364,11 @@ export default function SettingsScreen() {
       setShowImagePickerModal(false);
    };
 
+   const selectAvatar = async (avatar: ProfileAvatarOption) => {
+      await updateProfileData({ image: avatar.value });
+      setShowAvatarPickerModal(false);
+   };
+
    // Save profile changes (local only - Firebase sync happens daily)
    const saveProfileChanges = async () => {
       try {
@@ -387,6 +409,10 @@ export default function SettingsScreen() {
       settingIcon: { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)' },
       modalContent: { backgroundColor: colors.surface, borderColor: colors.border },
    };
+   const defaultAvatarSource = isDarkMode
+      ? require('../assets/icons/dflt_dark.png')
+      : require('../assets/icons/dflt_light.png');
+   const profileImageSource = getProfileImageSource(profile.image, defaultAvatarSource);
 
    return (
       <SafeAreaView style={[styles.container, dynamicStyles.container]}>
@@ -406,20 +432,10 @@ export default function SettingsScreen() {
             {/* Profile */}
             <View style={[styles.profileSection, { paddingTop: 24 }]}>
                <TouchableOpacity style={styles.avatarContainer} onPress={() => setShowImagePickerModal(true)}>
-                  {profile.image ? (
-                     <Image
-                        source={{ uri: profile.image }}
-                        style={[styles.avatar, { borderColor: colors.surface }]}
-                     />
-                  ) : (
-                     <Image
-                        source={isDarkMode
-                           ? require('../assets/icons/dflt_dark.png')
-                           : require('../assets/icons/dflt_light.png')
-                        }
-                        style={[styles.avatar, { borderColor: colors.border }]}
-                     />
-                  )}
+                  <Image
+                     source={profileImageSource}
+                     style={[styles.avatar, { borderColor: profile.image ? colors.surface : colors.border }]}
+                  />
                   <View style={[styles.editBadge, { backgroundColor: colors.primary, borderColor: colors.background }]}>
                      <MaterialIcons name="camera-alt" size={16} color={isDarkMode ? '#000' : '#fff'} />
                   </View>
@@ -1228,45 +1244,67 @@ export default function SettingsScreen() {
             animationType="fade"
             onRequestClose={() => setShowImagePickerModal(false)}
          >
-            <TouchableOpacity
-               style={styles.modalOverlay}
-               activeOpacity={1}
-               onPress={() => setShowImagePickerModal(false)}
-            >
-               <View style={[styles.modalContent, dynamicStyles.modalContent]}>
+            <View style={styles.modalOverlay}>
+               <Pressable
+                  style={StyleSheet.absoluteFill}
+                  onPress={() => setShowImagePickerModal(false)}
+               />
+               <View
+                  style={[styles.modalContent, styles.imagePickerModalContent, dynamicStyles.modalContent]}
+                  onStartShouldSetResponder={() => true}
+               >
                   <Text style={[styles.modalTitle, dynamicStyles.text]}>{t('settings.changePhotoTitle')}</Text>
 
-                  <TouchableOpacity
-                     style={[styles.imagePickerOption, { borderBottomColor: colors.border }]}
-                     onPress={takePhotoWithCamera}
+                  <ScrollView
+                     style={styles.imagePickerScroll}
+                     contentContainerStyle={styles.imagePickerScrollContent}
+                     showsVerticalScrollIndicator={false}
                   >
-                     <View style={[styles.imagePickerIcon, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)' }]}>
-                        <MaterialIcons name="camera-alt" size={24} color={colors.primary} />
-                     </View>
-                     <Text style={[styles.imagePickerOptionText, dynamicStyles.text]}>{t('settings.takePhoto')}</Text>
-                  </TouchableOpacity>
-
-                  <TouchableOpacity
-                     style={[styles.imagePickerOption, { borderBottomColor: colors.border }]}
-                     onPress={pickImageFromGallery}
-                  >
-                     <View style={[styles.imagePickerIcon, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)' }]}>
-                        <MaterialIcons name="photo-library" size={24} color={colors.primary} />
-                     </View>
-                     <Text style={[styles.imagePickerOptionText, dynamicStyles.text]}>{t('settings.chooseFromGallery')}</Text>
-                  </TouchableOpacity>
-
-                  {profile.image && (
                      <TouchableOpacity
-                        style={[styles.imagePickerOption, { borderBottomWidth: 0 }]}
-                        onPress={removeProfileImage}
+                        style={[styles.imagePickerOption, { borderBottomColor: colors.border }]}
+                        onPress={takePhotoWithCamera}
                      >
-                        <View style={[styles.imagePickerIcon, { backgroundColor: 'rgba(255,59,48,0.1)' }]}>
-                           <MaterialIcons name="delete" size={24} color={colors.error} />
+                        <View style={[styles.imagePickerIcon, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)' }]}>
+                           <MaterialIcons name="camera-alt" size={24} color={colors.primary} />
                         </View>
-                        <Text style={[styles.imagePickerOptionText, { color: colors.error }]}>{t('settings.removePhoto')}</Text>
+                        <Text style={[styles.imagePickerOptionText, dynamicStyles.text]}>{t('settings.takePhoto')}</Text>
                      </TouchableOpacity>
-                  )}
+
+                     <TouchableOpacity
+                        style={[styles.imagePickerOption, { borderBottomColor: colors.border }]}
+                        onPress={pickImageFromGallery}
+                     >
+                        <View style={[styles.imagePickerIcon, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)' }]}>
+                           <MaterialIcons name="photo-library" size={24} color={colors.primary} />
+                        </View>
+                        <Text style={[styles.imagePickerOptionText, dynamicStyles.text]}>{t('settings.chooseFromGallery')}</Text>
+                     </TouchableOpacity>
+
+                     <TouchableOpacity
+                        style={[styles.imagePickerOption, { borderBottomColor: colors.border }]}
+                        onPress={() => {
+                           setShowImagePickerModal(false);
+                           setShowAvatarPickerModal(true);
+                        }}
+                     >
+                        <View style={[styles.imagePickerIcon, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)' }]}>
+                           <MaterialIcons name="face" size={24} color={colors.primary} />
+                        </View>
+                        <Text style={[styles.imagePickerOptionText, dynamicStyles.text]}>{t('settings.selectAvatar')}</Text>
+                     </TouchableOpacity>
+
+                     {profile.image && (
+                        <TouchableOpacity
+                           style={[styles.imagePickerOption, { borderBottomWidth: 0 }]}
+                           onPress={removeProfileImage}
+                        >
+                           <View style={[styles.imagePickerIcon, { backgroundColor: 'rgba(255,59,48,0.1)' }]}>
+                              <MaterialIcons name="delete" size={24} color={colors.error} />
+                           </View>
+                           <Text style={[styles.imagePickerOptionText, { color: colors.error }]}>{t('settings.removePhoto')}</Text>
+                        </TouchableOpacity>
+                     )}
+                  </ScrollView>
 
                   <TouchableOpacity
                      style={[styles.cancelButton, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)' }]}
@@ -1275,7 +1313,71 @@ export default function SettingsScreen() {
                      <Text style={[styles.cancelButtonText, dynamicStyles.text]}>{t('common.cancel')}</Text>
                   </TouchableOpacity>
                </View>
-            </TouchableOpacity>
+            </View>
+         </Modal>
+
+         {/* Avatar Picker Modal */}
+         <Modal
+            visible={showAvatarPickerModal}
+            transparent
+            animationType="fade"
+            onRequestClose={() => setShowAvatarPickerModal(false)}
+         >
+            <View style={styles.modalOverlay}>
+               <Pressable
+                  style={StyleSheet.absoluteFill}
+                  onPress={() => setShowAvatarPickerModal(false)}
+               />
+               <View
+                  style={[styles.modalContent, styles.avatarPickerModalContent, dynamicStyles.modalContent]}
+                  onStartShouldSetResponder={() => true}
+               >
+                  <Text style={[styles.modalTitle, dynamicStyles.text]}>{t('settings.selectAvatar')}</Text>
+
+                  <View style={styles.avatarGrid}>
+                     {PROFILE_AVATAR_ROWS.map((row, rowIndex) => (
+                        <View key={`avatar-row-${rowIndex}`} style={styles.avatarGridRow}>
+                           {row.map((avatar, avatarIndex) => {
+                              const selected = profile.image === avatar.value;
+                              const optionNumber = rowIndex * AVATAR_COLUMNS + avatarIndex + 1;
+
+                              return (
+                                 <TouchableOpacity
+                                    key={avatar.id}
+                                    style={styles.avatarBareOption}
+                                    onPress={() => selectAvatar(avatar)}
+                                    activeOpacity={0.72}
+                                    accessibilityRole="button"
+                                    accessibilityLabel={t('settings.avatarOptionAccessibility', {
+                                       number: optionNumber,
+                                       defaultValue: `Avatar ${optionNumber}`,
+                                    })}
+                                    accessibilityState={{ selected }}
+                                 >
+                                    <Image source={avatar.source} style={styles.avatarBareImage} />
+                                    {selected && (
+                                       <MaterialIcons
+                                          name="check-circle"
+                                          size={24}
+                                          color={colors.primary}
+                                          style={styles.avatarSelectedIcon}
+                                       />
+                                    )}
+                                 </TouchableOpacity>
+                              );
+                           })}
+                        </View>
+                     ))}
+                  </View>
+
+                  <TouchableOpacity
+                     style={[styles.cancelButton, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)' }]}
+                     onPress={() => setShowAvatarPickerModal(false)}
+                  >
+                     <Text style={[styles.cancelButtonText, dynamicStyles.text]}>{t('common.cancel')}</Text>
+                  </TouchableOpacity>
+               </View>
+            </View>
          </Modal>
 
          {/* Edit Profile Modal */}
@@ -1898,6 +2000,21 @@ const styles = StyleSheet.create({
       fontSize: 13,
    },
    // Profile Modal Styles
+   imagePickerModalContent: {
+      width: '90%',
+      maxWidth: 420,
+      maxHeight: '85%',
+   },
+   avatarPickerModalContent: {
+      width: '88%',
+      maxWidth: 380,
+   },
+   imagePickerScroll: {
+      maxHeight: SCREEN_HEIGHT * 0.58,
+   },
+   imagePickerScrollContent: {
+      paddingBottom: 4,
+   },
    imagePickerOption: {
       flexDirection: 'row',
       alignItems: 'center',
@@ -1915,6 +2032,30 @@ const styles = StyleSheet.create({
    imagePickerOptionText: {
       fontFamily: FONT_FAMILY,
       fontSize: 16,
+   },
+   avatarGrid: {
+      gap: 16,
+   },
+   avatarGridRow: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+   },
+   avatarBareOption: {
+      width: '30%',
+      aspectRatio: 1,
+      alignItems: 'center',
+      justifyContent: 'center',
+      position: 'relative',
+   },
+   avatarBareImage: {
+      width: '100%',
+      height: '100%',
+      borderRadius: 999,
+   },
+   avatarSelectedIcon: {
+      position: 'absolute',
+      right: 0,
+      bottom: 0,
    },
    cancelButton: {
       marginTop: 16,

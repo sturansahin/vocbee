@@ -87,10 +87,10 @@ export const buildStoredProfileFromAuth = ({
     image = preferredImage;
   } else if (preferredPhotoURL === null) {
     image = null;
-  } else if (authImage) {
-    image = authImage;
   } else if (Object.prototype.hasOwnProperty.call(existingProfile ?? {}, 'image')) {
     image = existingProfile?.image ?? null;
+  } else if (authImage) {
+    image = authImage;
   }
 
   return {
