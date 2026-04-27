@@ -107,3 +107,45 @@ jest.mock('react-native-google-mobile-ads', () => ({
     BannerAdSize: {},
     TestIds: {},
 }));
+
+jest.mock('react-native-purchases', () => ({
+    __esModule: true,
+    default: {
+        configure: jest.fn(),
+        setLogLevel: jest.fn(() => Promise.resolve()),
+        getCustomerInfo: jest.fn(() => Promise.resolve({
+            entitlements: { active: {}, all: {} },
+        })),
+        logIn: jest.fn(() => Promise.resolve({
+            customerInfo: { entitlements: { active: {}, all: {} } },
+            created: false,
+        })),
+        restorePurchases: jest.fn(() => Promise.resolve({
+            entitlements: { active: {}, all: {} },
+        })),
+        setAttributes: jest.fn(() => Promise.resolve()),
+        setEmail: jest.fn(() => Promise.resolve()),
+        setDisplayName: jest.fn(() => Promise.resolve()),
+        addCustomerInfoUpdateListener: jest.fn(),
+        removeCustomerInfoUpdateListener: jest.fn(() => true),
+    },
+    LOG_LEVEL: {
+        DEBUG: 'DEBUG',
+        WARN: 'WARN',
+    },
+}));
+
+jest.mock('react-native-purchases-ui', () => ({
+    __esModule: true,
+    default: {
+        presentPaywallIfNeeded: jest.fn(() => Promise.resolve('CANCELLED')),
+        presentCustomerCenter: jest.fn(() => Promise.resolve()),
+    },
+    PAYWALL_RESULT: {
+        NOT_PRESENTED: 'NOT_PRESENTED',
+        ERROR: 'ERROR',
+        CANCELLED: 'CANCELLED',
+        PURCHASED: 'PURCHASED',
+        RESTORED: 'RESTORED',
+    },
+}));

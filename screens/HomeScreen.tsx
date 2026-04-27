@@ -23,6 +23,7 @@ import { RootStackParamList } from '../types';
 import Svg, { Polygon } from 'react-native-svg';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '../context/ThemeContext';
+import { useMonetization } from '../context/MonetizationContext';
 import { FONT_FAMILY } from '../utils/typography';
 import { HomeHeader } from '../components/HomeHeader';
 import { AppRatingPrompt } from '../components/AppRatingPrompt';
@@ -140,8 +141,10 @@ export default function HomeScreen() {
     const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
     const insets = useSafeAreaInsets();
     const { colors, isDarkMode } = useTheme();
+    const { isAdFree, isLoading: isMonetizationLoading } = useMonetization();
     const { showAlert } = useAlert();
     const { t } = useTranslation();
+    const shouldShowAds = !isAdFree && !isMonetizationLoading;
 
     // State
     const [words, setWords] = useState<VocabularyWord[]>([]);
@@ -227,11 +230,13 @@ export default function HomeScreen() {
 
         if (pendingInterstitialAfterCelebrationRef.current) {
             pendingInterstitialAfterCelebrationRef.current = false;
-            showInterstitial().catch(error => {
-                console.error('[HomeScreen] Failed to show queued interstitial:', error);
-            });
+            if (shouldShowAds) {
+                showInterstitial().catch(error => {
+                    console.error('[HomeScreen] Failed to show queued interstitial:', error);
+                });
+            }
         }
-    }, []);
+    }, [shouldShowAds]);
 
     const measureTutorialLayouts = useCallback(({ show = false, delay = 80 }: { show?: boolean; delay?: number } = {}) => {
         if (tutorialMeasureTimeoutRef.current) {
@@ -802,7 +807,7 @@ export default function HomeScreen() {
 
         if (!handledPending && retryPending) {
             // Response listener can write pending word slightly after Home resumes.
-            await new Promise(resolve => setTimeout(resolve, 250));
+            await new Promise<void>(resolve => setTimeout(() => resolve(), 250));
             handledPending = await consumePendingNotificationWord();
         }
 
@@ -1209,7 +1214,7 @@ export default function HomeScreen() {
                 console.log(`Session learned count: ${nextSessionLearnedCount}`);
 
                 const shouldShowInterstitial = nextSessionLearnedCount % 10 === 0;
-                if (shouldShowInterstitial) {
+                if (shouldShowInterstitial && shouldShowAds) {
                     console.log('Triggering Interstitial Ad');
                     if (shouldCelebrate) {
                         pendingInterstitialAfterCelebrationRef.current = true;
@@ -1245,7 +1250,7 @@ export default function HomeScreen() {
                 await loadData(true);
             }
         });
-    }, [buildStreakCelebration, currentWord, currentLevel, currentWordIndex, words.length, learnedCount, loadData, maybeShowAutomaticReviewPrompt, position, beePositions, animateBeesAway]);
+    }, [buildStreakCelebration, currentWord, currentLevel, currentWordIndex, words.length, learnedCount, loadData, maybeShowAutomaticReviewPrompt, position, beePositions, animateBeesAway, shouldShowAds]);
 
     const resetPosition = useCallback(() => {
         Animated.spring(position, {
@@ -1257,8 +1262,10 @@ export default function HomeScreen() {
 
     // Load interstitial on mount
     useEffect(() => {
-        void loadInterstitial();
-    }, []);
+        if (shouldShowAds) {
+            void loadInterstitial();
+        }
+    }, [shouldShowAds]);
 
     // Update refs when functions change
     useEffect(() => {
@@ -1680,9 +1687,11 @@ export default function HomeScreen() {
                     </View>
                 </View>
 
-                <View style={{ alignItems: 'center', justifyContent: 'center', paddingBottom: insets.bottom > 0 ? 0 : 10, backgroundColor: colors.background }}>
-                    <View style={[styles.loadingBannerPlaceholder, { backgroundColor: initialLoadingPlaceholderColor }]} />
-                </View>
+                {shouldShowAds && (
+                    <View style={{ alignItems: 'center', justifyContent: 'center', paddingBottom: insets.bottom > 0 ? 0 : 10, backgroundColor: colors.background }}>
+                        <View style={[styles.loadingBannerPlaceholder, { backgroundColor: initialLoadingPlaceholderColor }]} />
+                    </View>
+                )}
             </View>
         );
     }
@@ -1985,9 +1994,11 @@ export default function HomeScreen() {
 
 
             {/* Banner Ad */}
-            <View style={{ alignItems: 'center', justifyContent: 'center', paddingBottom: insets.bottom > 0 ? 0 : 10, backgroundColor: colors.background }}>
-                <SafeBannerAd unitId={AD_IDS.BANNER} />
-            </View>
+            {shouldShowAds && (
+                <View style={{ alignItems: 'center', justifyContent: 'center', paddingBottom: insets.bottom > 0 ? 0 : 10, backgroundColor: colors.background }}>
+                    <SafeBannerAd unitId={AD_IDS.BANNER} />
+                </View>
+            )}
 
             {/* Tutorial Overlay */}
             {showTutorial && tutorialLayouts && (

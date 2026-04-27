@@ -4,6 +4,11 @@ import { render, waitFor, RenderOptions } from '@testing-library/react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import HomeScreen from '../HomeScreen';
 
+const mockUseMonetization = jest.fn(() => ({
+    isAdFree: false,
+    isLoading: false,
+}));
+
 // Mock expo-network
 jest.mock('expo-network', () => ({
     getNetworkStateAsync: jest.fn(() => Promise.resolve({ isConnected: true, isInternetReachable: true })),
@@ -137,6 +142,10 @@ jest.mock('../../context/ThemeContext', () => ({
     }),
 }));
 
+jest.mock('../../context/MonetizationContext', () => ({
+    useMonetization: () => mockUseMonetization(),
+}));
+
 jest.mock('../../components/CustomAlert', () => ({
     useAlert: () => ({
         showAlert: jest.fn(),
@@ -162,6 +171,10 @@ const renderWithProviders = (ui: React.ReactElement, options?: Omit<RenderOption
 describe('HomeScreen', () => {
     beforeEach(() => {
         jest.clearAllMocks();
+        mockUseMonetization.mockReturnValue({
+            isAdFree: false,
+            isLoading: false,
+        });
     });
 
     it('renders correctly and loads data', async () => {
@@ -185,5 +198,21 @@ describe('HomeScreen', () => {
             // Home uses getLevelDisplay which uses t('level.beginner').
             expect(getByText('level.beginner')).toBeTruthy();
         });
+    });
+
+    it('does not preload interstitial ads for ad-free users', async () => {
+        const adMobService = require('../../services/adMobService');
+        mockUseMonetization.mockReturnValue({
+            isAdFree: true,
+            isLoading: false,
+        });
+
+        const { getByText } = renderWithProviders(<HomeScreen />);
+
+        await waitFor(() => {
+            expect(getByText('Haus')).toBeTruthy();
+        });
+
+        expect(adMobService.loadInterstitial).not.toHaveBeenCalled();
     });
 });

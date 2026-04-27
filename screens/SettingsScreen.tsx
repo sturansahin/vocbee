@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, Image, StyleSheet, Modal, Animated, TextInput, Dimensions, Pressable, Linking } from 'react-native';
+import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, Image, StyleSheet, Modal, Animated, TextInput, Dimensions, Pressable, Linking, ActivityIndicator } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
@@ -11,6 +11,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useTheme } from '../context/ThemeContext';
 import { useAuth } from '../context/AuthContext';
+import { useMonetization } from '../context/MonetizationContext';
 import { FONT_FAMILY } from '../utils/typography';
 import { RootStackParamList } from '../types';
 import { resetProgress, setCurrentLevel, getCurrentLevel } from '../services/progressService';
@@ -148,6 +149,14 @@ export default function SettingsScreen() {
       notificationSettings,
       updateNotificationSettings
    } = useAuth();
+   const {
+      isAdFree,
+      isLoading: isPremiumLoading,
+      activeEntitlement,
+      presentRemoveAdsPaywall,
+      restorePurchases,
+      openCustomerCenter,
+   } = useMonetization();
    const { showAlert } = useAlert();
    const insets = useSafeAreaInsets();
    const { t } = useTranslation();
@@ -175,6 +184,7 @@ export default function SettingsScreen() {
    const [showLevelPicker, setShowLevelPicker] = useState(false);
    const [currentLevel, setCurrentLevelState] = useState<UserLevel>('beginner');
    const [showAutoMarkPicker, setShowAutoMarkPicker] = useState(false);
+   const [premiumAction, setPremiumAction] = useState<'paywall' | 'restore' | 'manage' | null>(null);
 
    // Profile states
    const [showEditProfileModal, setShowEditProfileModal] = useState(false);
@@ -400,6 +410,68 @@ export default function SettingsScreen() {
       setShowEditProfileModal(true);
    };
 
+   const formatAdFreeExpiration = (): string => {
+      if (!activeEntitlement?.expirationDate) {
+         return t('settings.adFreeLifetime');
+      }
+
+      return t('settings.adFreeActiveUntil', {
+         date: new Date(activeEntitlement.expirationDate).toLocaleDateString(),
+      });
+   };
+
+   const runPremiumAction = async (
+      action: 'paywall' | 'restore' | 'manage',
+      task: () => Promise<void>
+   ) => {
+      if (premiumAction) {
+         return;
+      }
+
+      setPremiumAction(action);
+      try {
+         await task();
+      } catch (error) {
+         console.error(`[Settings] Premium action failed (${action})`, error);
+         showAlert({
+            title: t('common.error'),
+            message: t('settings.premiumActionFailed'),
+         });
+      } finally {
+         setPremiumAction(null);
+      }
+   };
+
+   const handleRemoveAdsPress = () => {
+      runPremiumAction('paywall', async () => {
+         const unlocked = await presentRemoveAdsPaywall();
+         if (unlocked) {
+            showAlert({
+               title: t('common.success'),
+               message: t('settings.removeAdsSuccess'),
+            });
+         }
+      });
+   };
+
+   const handleRestorePurchasesPress = () => {
+      runPremiumAction('restore', async () => {
+         const restored = await restorePurchases();
+         showAlert({
+            title: restored ? t('common.success') : t('common.warning'),
+            message: restored
+               ? t('settings.restorePurchasesSuccess')
+               : t('settings.restorePurchasesEmpty'),
+         });
+      });
+   };
+
+   const handleManageSubscriptionPress = () => {
+      runPremiumAction('manage', async () => {
+         await openCustomerCenter();
+      });
+   };
+
    // Dynamic styles based on theme
    const dynamicStyles = {
       container: { backgroundColor: colors.background },
@@ -449,6 +521,89 @@ export default function SettingsScreen() {
                >
                   <Text style={[styles.editButtonText, { color: colors.text }]}>{t('settings.editProfile')}</Text>
                </TouchableOpacity>
+            </View>
+
+            {/* Section: Premium */}
+            <Text style={[styles.sectionTitle, dynamicStyles.textSecondary]}>{t('settings.premium')}</Text>
+            <View style={[styles.sectionCard, dynamicStyles.sectionCard]}>
+               <TouchableOpacity
+                  style={styles.settingItem}
+                  onPress={handleRemoveAdsPress}
+                  disabled={isAdFree || isPremiumLoading || premiumAction !== null}
+               >
+                  <View style={[styles.settingLeft, styles.settingLeftFlexible]}>
+                     <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
+                        <MaterialCommunityIcons
+                           name={isAdFree ? 'crown' : 'crown-outline'}
+                           size={24}
+                           color={colors.primary}
+                        />
+                     </View>
+                     <View style={styles.settingTextContent}>
+                        <Text style={[styles.settingTitle, dynamicStyles.text]}>
+                           {isAdFree ? t('settings.adFreeActive') : t('settings.removeAds')}
+                        </Text>
+                        <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]} numberOfLines={2}>
+                           {isAdFree ? formatAdFreeExpiration() : t('settings.removeAdsDesc')}
+                        </Text>
+                     </View>
+                  </View>
+                  {premiumAction === 'paywall' || isPremiumLoading ? (
+                     <ActivityIndicator size="small" color={colors.primary} />
+                  ) : isAdFree ? (
+                     <MaterialIcons name="check-circle" size={24} color={colors.primary} />
+                  ) : (
+                     <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
+                  )}
+               </TouchableOpacity>
+
+               <TouchableOpacity
+                  style={[styles.settingItem, !isAdFree && { borderBottomWidth: 0 }]}
+                  onPress={handleRestorePurchasesPress}
+                  disabled={isPremiumLoading || premiumAction !== null}
+               >
+                  <View style={[styles.settingLeft, styles.settingLeftFlexible]}>
+                     <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
+                        <MaterialIcons name="restore" size={24} color={colors.primary} />
+                     </View>
+                     <View style={styles.settingTextContent}>
+                        <Text style={[styles.settingTitle, dynamicStyles.text]}>{t('settings.restorePurchases')}</Text>
+                        <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]} numberOfLines={2}>
+                           {t('settings.restorePurchasesDesc')}
+                        </Text>
+                     </View>
+                  </View>
+                  {premiumAction === 'restore' ? (
+                     <ActivityIndicator size="small" color={colors.primary} />
+                  ) : (
+                     <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
+                  )}
+               </TouchableOpacity>
+
+               {isAdFree && (
+                  <TouchableOpacity
+                     style={[styles.settingItem, { borderBottomWidth: 0 }]}
+                     onPress={handleManageSubscriptionPress}
+                     disabled={isPremiumLoading || premiumAction !== null}
+                  >
+                     <View style={[styles.settingLeft, styles.settingLeftFlexible]}>
+                        <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
+                           <MaterialCommunityIcons name="credit-card-outline" size={24} color={colors.primary} />
+                        </View>
+                        <View style={styles.settingTextContent}>
+                           <Text style={[styles.settingTitle, dynamicStyles.text]}>{t('settings.manageSubscription')}</Text>
+                           <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]} numberOfLines={2}>
+                              {t('settings.manageSubscriptionDesc')}
+                           </Text>
+                        </View>
+                     </View>
+                     {premiumAction === 'manage' ? (
+                        <ActivityIndicator size="small" color={colors.primary} />
+                     ) : (
+                        <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
+                     )}
+                  </TouchableOpacity>
+               )}
             </View>
 
             {/* Section: Preferences */}
@@ -692,7 +847,9 @@ export default function SettingsScreen() {
                   onPress={() => {
                      showAlert({
                         title: t('settings.deleteAccountConfirmTitle'),
-                        message: t('settings.deleteAccountConfirmDesc'),
+                        message: isAdFree
+                           ? `${t('settings.deleteAccountConfirmDesc')}\n\n${t('settings.deleteAccountSubscriptionNote')}`
+                           : t('settings.deleteAccountConfirmDesc'),
                         buttons: [
                            { text: t('common.cancel'), style: 'cancel' },
                            {
@@ -1744,6 +1901,15 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       alignItems: 'center',
       gap: 16,
+   },
+   settingLeftFlexible: {
+      flex: 1,
+      minWidth: 0,
+      paddingRight: 12,
+   },
+   settingTextContent: {
+      flex: 1,
+      minWidth: 0,
    },
    settingIcon: {
       width: scale(40),

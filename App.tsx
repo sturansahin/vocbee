@@ -15,6 +15,7 @@ import { MaterialIcons, MaterialCommunityIcons, FontAwesome5, Feather, Ionicons 
 import { RootStackParamList } from './types';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
 import { AuthProvider, useAuth } from './context/AuthContext';
+import { MonetizationProvider, useMonetization } from './context/MonetizationContext';
 import { AlertProvider } from './components/CustomAlert';
 import { autoSync } from './services/SyncService';
 import {
@@ -65,6 +66,7 @@ export { FONT_FAMILY };
 // AppContent component to access auth context
 function AppContent() {
   const { user, userData, isLoading, connectionError, notificationSettings } = useAuth();
+  const { isAdFree, isLoading: isMonetizationLoading } = useMonetization();
   const { isDarkMode, colors } = useTheme();
   const appState = useRef(AppState.currentState);
   const notificationMaintenanceInFlight = useRef(false);
@@ -72,6 +74,7 @@ function AppContent() {
   const handledNotificationResponses = useRef<Set<string>>(new Set());
   const checkedNotificationPermissionUsers = useRef<Set<string>>(new Set());
   const reviewLaunchRecordedUsers = useRef<Set<string>>(new Set());
+  const adStartupUserId = useRef<string | null>(null);
   const navigationRef = useRef<NavigationContainerRef<RootStackParamList>>(null);
 
   const [isAppReady, setIsAppReady] = useState(false);
@@ -321,6 +324,28 @@ function AppContent() {
     ensureAuthenticatedUserNotificationPermission();
   }, [user, isLoading, hasCompletedSetup, ensureAuthenticatedUserNotificationPermission]);
 
+  useEffect(() => {
+    if (!user) return;
+    if (isLoading) return;
+    if (!hasCompletedSetup) return;
+    if (isMonetizationLoading) return;
+    if (isAdFree) return;
+    if (adStartupUserId.current === user.uid) return;
+
+    adStartupUserId.current = user.uid;
+
+    initializeAdMob()
+      .then(async ready => {
+        if (!ready) {
+          return;
+        }
+
+        await refreshAdInventoryOnForeground(false);
+        await checkAndShowAppOpenAd();
+      })
+      .catch(err => console.error('[App] AdMob init chain error:', err));
+  }, [user, isLoading, hasCompletedSetup, isMonetizationLoading, isAdFree]);
+
   // Handle notification response from cold start (app opened by tapping a notification)
   useEffect(() => {
     let cancelled = false;
@@ -332,7 +357,7 @@ function AppContent() {
         if (cancelled) return;
 
         if (delayMs > 0) {
-          await new Promise(resolve => setTimeout(resolve, delayMs));
+          await new Promise<void>(resolve => setTimeout(() => resolve(), delayMs));
         }
 
         try {
@@ -384,9 +409,11 @@ function AppContent() {
           runNotificationMaintenance('resume');
         }
 
-        refreshAdInventoryOnForeground().catch(error => {
-          console.error('[AdMob] Foreground refresh failed', error);
-        });
+        if (user && hasCompletedSetup && !isMonetizationLoading && !isAdFree) {
+          refreshAdInventoryOnForeground().catch(error => {
+            console.error('[AdMob] Foreground refresh failed', error);
+          });
+        }
       }
       appState.current = nextAppState;
     });
@@ -394,7 +421,14 @@ function AppContent() {
     return () => {
       subscription.remove();
     };
-  }, [user, hasCompletedSetup, runNotificationMaintenance, consumeNotificationResponse]);
+  }, [
+    user,
+    hasCompletedSetup,
+    runNotificationMaintenance,
+    consumeNotificationResponse,
+    isMonetizationLoading,
+    isAdFree,
+  ]);
 
   // Show splash screen while app is not ready
   console.log('[App] Render - showSplash:', showSplash, 'isAppReady:', isAppReady, 'connectionError:', connectionError);
@@ -480,17 +514,6 @@ export default function App() {
 
     loadIconFonts();
 
-    // Initialize AdMob after consent and ATT are resolved inside the service.
-    initializeAdMob()
-      .then(async ready => {
-        if (!ready) {
-          return;
-        }
-
-        await refreshAdInventoryOnForeground(false);
-        await checkAndShowAppOpenAd();
-      })
-      .catch(err => console.error('[App] AdMob init chain error:', err));
   }, []);
 
   // Set Android navigation bar to transparent
@@ -527,12 +550,14 @@ export default function App() {
       <ThemeProvider>
         <AlertProvider>
           <AuthProvider>
-            <ErrorBoundary>
-              <GestureHandlerRootView style={{ flex: 1 }}>
-                <OfflineNotice />
-                <AppContent />
-              </GestureHandlerRootView>
-            </ErrorBoundary>
+            <MonetizationProvider>
+              <ErrorBoundary>
+                <GestureHandlerRootView style={{ flex: 1 }}>
+                  <OfflineNotice />
+                  <AppContent />
+                </GestureHandlerRootView>
+              </ErrorBoundary>
+            </MonetizationProvider>
           </AuthProvider>
         </AlertProvider>
       </ThemeProvider>
