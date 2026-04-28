@@ -8,13 +8,15 @@
       "developmentClient": true,
       "distribution": "internal",
       "env": {
-        "EXPO_PUBLIC_GRAMMAR_PROXY_URL": "https://vocbee-proxy.vercel.app/api/grammarProxy"
+        "EXPO_PUBLIC_GRAMMAR_PROXY_URL": "https://vocbee-proxy.vercel.app/api/grammarProxy",
+        "EXPO_PUBLIC_REVENUECAT_IOS_API_KEY": "appl_MZXWENkeyhjqCHRptMNhbzqgtsz"
       }
     },
     "preview": {
       "distribution": "internal",
       "env": {
-        "EXPO_PUBLIC_GRAMMAR_PROXY_URL": "https://vocbee-proxy.vercel.app/api/grammarProxy"
+        "EXPO_PUBLIC_GRAMMAR_PROXY_URL": "https://vocbee-proxy.vercel.app/api/grammarProxy",
+        "EXPO_PUBLIC_REVENUECAT_IOS_API_KEY": "appl_MZXWENkeyhjqCHRptMNhbzqgtsz"
       },
       "android": {
         "buildType": "apk"
@@ -22,7 +24,8 @@
     },
     "production": {
       "env": {
-        "EXPO_PUBLIC_GRAMMAR_PROXY_URL": "https://vocbee-proxy.vercel.app/api/grammarProxy"
+        "EXPO_PUBLIC_GRAMMAR_PROXY_URL": "https://vocbee-proxy.vercel.app/api/grammarProxy",
+        "EXPO_PUBLIC_REVENUECAT_IOS_API_KEY": "appl_MZXWENkeyhjqCHRptMNhbzqgtsz"
       },
       "android": {
         "buildType": "app-bundle"
