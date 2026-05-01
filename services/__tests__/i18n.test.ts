@@ -14,6 +14,7 @@ jest.mock('i18next', () => {
         ...actual,
         use: jest.fn().mockReturnThis(),
         init: jest.fn().mockReturnThis(),
+        on: jest.fn().mockReturnThis(),
         changeLanguage: jest.fn().mockResolvedValue(undefined),
         t: jest.fn((key: string) => key),
     };
