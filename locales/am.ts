@@ -1,5 +1,7 @@
-export default {
-    common: {
+export default 
+{
+    common: 
+    {
         loading: 'በመጫን ላይ...',
         error: 'ስህተት',
         success: 'ተሳክቷል',
@@ -18,7 +20,25 @@ export default {
         search: 'ፈልግ',
         warning: 'ማስጠንቀቂያ',
     },
-    auth: {
+    reviewPrompt: 
+    {
+        enjoyingTitle: 'Enjoying VocBee?',
+        enjoyingMessage: 'If VocBee is helping you learn, we would love a quick rating.',
+        yes: 'Yes',
+        notYet: 'Not yet',
+        later: 'Later',
+        rateTitle: 'How would you rate VocBee?',
+        rateMessage: 'Your rating helps us keep improving the learning experience.',
+        rateInStore: 'Rate in Store',
+        sendFeedback: 'Send Feedback',
+        feedbackTitle: 'Help us improve',
+        feedbackMessage: 'Tell us what would make VocBee better for you.',
+        starAccessibilityLabel: '{{count}} stars',
+        storeOpenError: 'We could not open the store review page. Please try again later.',
+        feedbackOpenError: 'We could not open your email app. Please contact support@vocbee.com.',
+    },
+    auth: 
+    {
         subtitle: 'አዳዲስ ቃላትን በቀላሉ ተማር።',
         email: 'ኢሜይል',
         emailPlaceholder: 'ኢሜይል ወይም የተጠቃሚ ስም',
@@ -52,9 +72,10 @@ export default {
         acceptPrivacyPrefix: 'ይህን አንብቤ እቀበላለሁ:',
         acceptPrivacyRequired: 'መለያ ለመፍጠር የግላዊነት ፖሊሲን መቀበል አለብዎት።',
     },
-    home: {
+    home: 
+    {
         welcome: 'እንኳን ደህና መጣህ',
-        levelComplete: '\uD83C\uDF89 ደረጃ ተጠናቀቀ!',
+        levelComplete: '🎉 ደረጃ ተጠናቀቀ!',
         levelCompleteDesc: 'በ{{level}} ደረጃ ያሉትን ሁሉንም {{count}} ቃላት ተምረሃል!',
         noVocabulary: 'ምንም ቃላት የሉም',
         setupRequired: 'ለመማር እባክህ ማዋቀርን ጨርስ።',
@@ -78,8 +99,11 @@ export default {
         streakCelebrationGeneric: '{{count}} ቀን ተከታታይ። እንዳይቋረጥ አድርግ።',
         words: 'ቃላት',
         learned: 'ተማሩ',
-        skip: 'ዝለል',        tapToSeeExamples: 'ምሳሌ ዓረፍተ ነገሮችን ለማየት ይንኩ',    },
-    settings: {
+        skip: 'ዝለል',
+        tapToSeeExamples: 'ምሳሌ ዓረፍተ ነገሮችን ለማየት ይንኩ',
+    },
+    settings: 
+    {
         title: 'ቅንብሮች',
         profile: 'መገለጫ',
         editProfile: 'መገለጫ አርትዕ',
@@ -106,8 +130,23 @@ export default {
         resetConfirmDesc: 'የመማር ሂደትህን ሙሉ በሙሉ ዳግም ማስጀመር ትፈልጋለህ? ይህ ድርጊት ሊቀለበስ አይችልም።',
         changeLangConfirmTitle: 'የመማሪያ ቋንቋ ቀይር',
         changeLangConfirmDesc: 'ይህ ሂደትህን ዳግም ያስጀምራል እና አዲስ ቋንቋ እንድትመርጥ ያስችልሃል። እርግጠኛ ነህ?',
+        premium: 'Premium',
+        removeAds: 'Remove Ads',
+        removeAdsDesc: 'Unlock an ad-free learning experience with monthly, yearly, or lifetime access.',
+        removeAdsSuccess: 'Ads have been removed from your account.',
+        adFreeActive: 'Ad-Free Active',
+        adFreeLifetime: 'Lifetime access',
+        adFreeActiveUntil: 'Active until {{date}}',
+        restorePurchases: 'Restore Purchases',
+        restorePurchasesDesc: 'Recover purchases made with your store account.',
+        restorePurchasesSuccess: 'Your purchase has been restored.',
+        restorePurchasesEmpty: 'No active ad-free purchase was found for this store account.',
+        manageSubscription: 'Manage Subscription',
+        manageSubscriptionDesc: 'View, change, or cancel your plan.',
+        premiumActionFailed: 'We could not complete this action. Please try again.',
         support: 'ድጋፍ',
         helpFaq: 'እርዳታ እና FAQ',
+        rateVocBee: 'Rate VocBee',
         privacyPolicy: 'የግላዊነት ፖሊሲ',
         logout: 'ውጣ',
         logoutConfirmTitle: 'ውጣ',
@@ -129,6 +168,8 @@ export default {
         changePhotoTitle: 'የፕሮፋይል ፎቶ ቀይር',
         takePhoto: 'ፎቶ አንሳ',
         chooseFromGallery: 'ከጋለሪ ምረጥ',
+        selectAvatar: 'Select Avatar',
+        avatarOptionAccessibility: 'Avatar {{number}}',
         removePhoto: 'ፎቶ አስወግድ',
         resetProgressSuccess: 'እድገትህ ዳግም ተጀምሯል።',
         editProfileTitle: 'ፕሮፋይል አርትዕ',
@@ -139,6 +180,7 @@ export default {
         deleteAccount: 'መለያ ሰርዝ',
         deleteAccountConfirmTitle: 'መለያ ሰርዝ',
         deleteAccountConfirmDesc: 'መለያህን መሰረዝ ትፈልጋለህ? ይህ ድርጊት ሊቀለበስ አይችልም እና ሁሉም ውሂብህ በቋሚነት ይሰረዛል።',
+        deleteAccountSubscriptionNote: 'Deleting your VocBee account does not cancel an active App Store or Google Play subscription. Manage or cancel it from your store account first if needed.',
         deleteAccountSuccess: 'መለያህ በተሳካ ሁኔታ ተሰርዟል',
         deleteAccountError: 'መለያህን በመሰረዝ ላይ ስህተት ተከስቷል',
         permissionRequired: 'ፈቃድ ያስፈልጋል',
@@ -160,7 +202,8 @@ export default {
         privacyYourRightsDesc: 'ሂደትን ዳግም በማስጀመር ወይም በማራገፍ ውሂብ ይሰርዙ።',
         privacyContact: '4. ያግኙን',
     },
-    level: {
+    level: 
+    {
         beginner: 'ጀማሪ',
         intermediate: 'መካከለኛ',
         advanced: 'ከፍተኛ',
@@ -168,7 +211,8 @@ export default {
         intermediateDesc: 'የተለመዱ ርዕሶችን ልወያይ እችላለሁ እና ዋናውን ነጥብ እረዳለሁ።',
         advancedDesc: 'በቀላሉ እገልጻለሁ እና ውስብስብ ጽሑፎችን እረዳለሁ።',
     },
-    languages: {
+    languages: 
+    {
         english: 'እንግሊዝኛ',
         turkish: 'ቱርክኛ',
         german: 'ጀርመንኛ',
@@ -191,7 +235,8 @@ export default {
         swahili: 'ስዋሂሊ',
         urdu: 'ኡርዱ',
     },
-    setup: {
+    setup: 
+    {
         step1TitleWhite: 'የእርስዎ',
         step1TitleGreen: 'የእናት ቋንቋ ምንድን ነው?',
         step1Subtitle: 'ቃላትን ለእርስዎ ለመተርጎም ይጠቅማል።',
@@ -230,18 +275,22 @@ export default {
         endTime: 'የማለቂያ ሰዓት',
         frequency: 'ድግግሞሽ',
     },
-    onboarding: {
+    onboarding: 
+    {
         title1: 'በየቀኑ አዳዲስ ቃላት ይማሩ',
         subtitle1: 'በደረጃዎ የተመጣጠኑ ዕለታዊ ትምህርቶች አዲስ መዝገበ ቃላትን እንዲማሩ ያግዙዎታል።',
         title2: 'በፍላሽካርዶች ይለማመዱ',
         subtitle2: 'በተግባራዊ ፍላሽካርዶች መማርዎን ያጠናክሩ። በመሸብለል ቃላትን እንደተማሩ ምልክት ያድርጉ።',
         title3: 'እድገትዎን ይከታተሉ',
         subtitle3: 'የመማር ጉዞዎን ይከታተሉ እና ሲያድጉ ስኬቶችን ያክብሩ።',
+        title4: 'Let Words Come to You',
+        subtitle4: 'Get timely reminders, keep your learning streak alive, and return when it matters.',
         start: 'ጀምር',
         skip: 'ዝለል',
         next: 'ቀጣይ',
     },
-    example: {
+    example: 
+    {
         title: 'የምሳሌ ዓረፍተ ነገሮች',
         explainGrammarBtn: 'ሰዋሰውን በAI አብራራ',
         grammarExplanationTitle: 'የሰዋሰው ማብራሪያ',
@@ -255,12 +304,14 @@ export default {
         explanationError: 'ማብራሪያውን መጫን አልተቻለም። እባክዎ ዳግመኛ ይሞክሩ።',
         retry: 'ዳግመኛ ሞክር',
     },
-    favorites: {
+    favorites: 
+    {
         title: 'ተወዳጆች',
         noFavoritesTitle: 'አሁን ተወዳጆች የሉም',
         noFavoritesMsg: 'ሲማሩ የኮከብ አዝራሩን በመጫን ተወዳጅ ቃላትን እዚህ ያስቀምጡ።',
     },
-    forgotPassword: {
+    forgotPassword: 
+    {
         title: 'የይለፍ ቃል ረሱ?',
         subtitle: 'አትጨነቁ! ኢሜይልዎን ያስገቡ እና የይለፍ ቃል ለመቀየር አገናኝ እንልካለን።',
         enterEmail: 'እባክዎ ኢሜይልዎን ያስገቡ',
@@ -270,7 +321,8 @@ export default {
         sendResetLink: 'የዳግም ማስጀመሪያ አገናኝ ላክ',
         backToLogin: 'ወደ መግባት ተመለስ',
     },
-    levelTest: {
+    levelTest: 
+    {
         advanced: 'ከፍተኛ',
         intermediate: 'መካከለኛ',
         beginner: 'ጀማሪ',
@@ -282,22 +334,27 @@ export default {
         seeResults: 'ውጤቶችን ይመልከቱ',
         next: 'ቀጣይ',
     },
-    errorBoundary: {
+    errorBoundary: 
+    {
         title: 'አይ! ነገር ተሳስቷል',
         message: 'ይቅርታ፣ መተግበሪያው ያልተጠበቀ ስህተት አጋጥሟል።',
         restart: 'መተግበሪያውን ዳግም አስጀምር',
     },
-    offline: {
+    offline: 
+    {
         message: 'የኢንተርኔት ግንኙነት የለም',
     },
-    connection: {
+    connection: 
+    {
         title: 'የግንኙነት ችግር',
         message: 'ከአገልጋይ ጋር መገናኘት አልተቻለም። እባክዎ የበይነመረብ ግንኙነትዎን ያረጋግጡ እና እንደገና ይሞክሩ።',
         retry: 'እንደገና ሞክር',
     },
-    help: {
+    help: 
+    {
         title: 'እርዳታ እና ተደጋጋሚ ጥያቄዎች',
-        basics: {
+        basics: 
+        {
             q1: 'አዲስ ቃላትን እንዴት እማራለሁ?',
             a1: 'የቃል ካርዱን ወደ ቀኝ አንሸራት እንደተማርኩት ለማመልከት ወይም ወደ ግራ አንሸራት ለመዝለል እና በኋላ ለማየት። ከካርዱ በታች ያሉ ቁልፎችንም መንካት ትችላለህ።',
             q2: 'አነባበብን እንዴት እሰማለሁ?',
@@ -309,43 +366,48 @@ export default {
             q5: '"ሰዋሰው ማብራራት" ባህሪ ምንድነው?',
             a5: 'በምሳሌ ዓረፍተ ነገሮች ማያ ገጽ ላይ "ሰዋሰው ማብራራት" ነካ የቃሉን ሰዋሰው፣ የአጠቃቀም ቅጦች እና ለማስታወስ ጠቃሚ ምክሮች AI ማብራሪያ ለማግኘት።',
         },
-        levels: {
+        levels: 
+        {
             q1: 'የብቃት ደረጃዎች ምንድናቸው?',
             a1: 'VocBee የCEFR ደረጃዎችን ይጠቀማል: ጀማሪ (A1-A2) ለመሠረታዊ ቃላት፣ መካከለኛ (B1-B2) ለውይይት፣ እና ከፍተኛ (C1) ለላቀ ቃላት። በአሁኑ ብቃትህ መሰረት ምረጥ።',
             q2: 'ደረጃዬን እንዴት እቀይራለሁ?',
-            a2: 'ቅንብሮች \u2192 ሂደት \u2192 ደረጃ ቀይር ሂድ። አዲስ ደረጃ ምረጥ እና የቃላት ፊድህ ይዘምናል። የተማርካቸው ቃላት በሁሉም ደረጃዎች ይቀመጣሉ።',
+            a2: 'ቅንብሮች → ሂደት → ደረጃ ቀይር ሂድ። አዲስ ደረጃ ምረጥ እና የቃላት ፊድህ ይዘምናል። የተማርካቸው ቃላት በሁሉም ደረጃዎች ይቀመጣሉ።',
             q3: 'ሂደቴ እንዴት ይከታተላል?',
             a3: 'ሂደትህ በዋና ማያ ገጽ ላይ ከተማሩ/ጠቅላላ ቃላት እና የሂደት አሞሌ ጋር ይታያል። ደረጃዎችን ሲያጠናቅቅ VocBee በራስ ሰር ወደ ከባድ ቃላት ያራምድሃል።',
         },
-        reminders: {
+        reminders: 
+        {
             q1: 'አስታዋሾች እንዴት ይሰራሉ?',
             a1: 'በቅንብሮች ውስጥ ዕለታዊ አስታዋሾችን አንቃ። የምትፈልገውን ሰዓት እና ድግግሞሽ (በየ 15 ደቂቃ እስከ 2 ሰዓት) አዘጋጅ። ቀኑን ሙሉ የቃላት ማሳወቂያዎችን ለመለማመድ ትቀበላለህ።',
             q2: '"ማሳወቂያ ሲደርስ" ምን ማለት ነው?',
             a2: 'በማሳወቂያዎች ውስጥ የተገለጹ ቃላት በራስ ሰር እንደተማሩ ምልክት ይደረግባቸው ወይስ በኋላ ለመመርመር በተራ ውስጥ ይቆዩ ምረጥ።',
         },
-        data: {
+        data: 
+        {
             q1: 'ሂደቴ ወደ ደመና ይቀመጣል?',
             a1: 'አዎ! ሂደትህ እና ተወዳጆችህ በየቀኑ ወደ ደመናችን በራስ ይመሳሰላሉ። ትምህርትን ለመቀጠል በማንኛውም መሣሪያ ግባ።',
             q2: 'ሌላ ቋንቋ መማር እችላለሁ?',
-            a2: 'ቅንብሮች \u2192 ሂደት \u2192 የመማሪያ ቋንቋ ቀይር ሂድ። ማስታወሻ: ይህ ሂደትህን ዳግም ያስጀምራል ምክንያቱም እያንዳንዱ ቋንቋ የራሱ የቃላት ስብስብ አለው።',
+            a2: 'ቅንብሮች → ሂደት → የመማሪያ ቋንቋ ቀይር ሂድ። ማስታወሻ: ይህ ሂደትህን ዳግም ያስጀምራል ምክንያቱም እያንዳንዱ ቋንቋ የራሱ የቃላት ስብስብ አለው።',
             q3: 'ሂደቴን እንዴት ዳግም አስጀምራለሁ?',
-            a3: 'ቅንብሮች \u2192 ሂደት \u2192 ዳግም አስጀምር ሂድ። ይህ የተማሩ ቃላትን ሁሉ ያጸዳል። ማስጠንቀቂያ: ይህ ድርጊት ሊቀለበስ አይችልም!',
+            a3: 'ቅንብሮች → ሂደት → ዳግም አስጀምር ሂድ። ይህ የተማሩ ቃላትን ሁሉ ያጸዳል። ማስጠንቀቂያ: ይህ ድርጊት ሊቀለበስ አይችልም!',
         },
-        support: {
+        support: 
+        {
             title: 'ተጨማሪ እርዳታ ያስፈልግሃል?',
             desc: 'ለማንኛውም ጥያቄዎች፣ ሃሳቦች ወይም ችግሮች እባክህ በ support@vocbee.com አግኙን። ከእርስዎ መስማት ደስ ይለናል!',
         },
     },
-	homeTutorial: {
-        step1: "የተማሩትን ቃላት ላይ ምልክት ለማድረግ ወደ ቀኝ ያንሸራትቱ",
-        step2: "ቃሉን ቆየት ብለው ለመከለስ ወደ ግራ ያንሸራትቱ",
-        step3: "ቃላትን ለተመራጮችዎ ለማቆየት ኮከቡን ይንኩ",
-        step4: "አጠራሩን ለመስማት ቃሉን ይንኩ",
-        step5: "ዓረፍተ ነገሩን ለመስማት ይንኩ",
-        step6: "ተጨማሪ ምሳሌ ዓረፍተ ነገሮችን ለማየት እዚህ ይንኩ",
-        skip: "ዝለል",
-        next: "ቀጣይ",
-        done: "ገብቶኛል!",
-        stepOf: "ከ {{current}} ውስጥ {{total}}",
+    homeTutorial: 
+    {
+        step1: 'የተማሩትን ቃላት ላይ ምልክት ለማድረግ ወደ ቀኝ ያንሸራትቱ',
+        step2: 'ቃሉን ቆየት ብለው ለመከለስ ወደ ግራ ያንሸራትቱ',
+        step3: 'ቃላትን ለተመራጮችዎ ለማቆየት ኮከቡን ይንኩ',
+        step4: 'አጠራሩን ለመስማት ቃሉን ይንኩ',
+        step5: 'ዓረፍተ ነገሩን ለመስማት ይንኩ',
+        step6: 'ተጨማሪ ምሳሌ ዓረፍተ ነገሮችን ለማየት እዚህ ይንኩ',
+        skip: 'ዝለል',
+        next: 'ቀጣይ',
+        done: 'ገብቶኛል!',
+        stepOf: 'ከ {{current}} ውስጥ {{total}}',
     },
 };

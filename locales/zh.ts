@@ -1,5 +1,7 @@
-export default {
-    common: {
+export default 
+{
+    common: 
+    {
         loading: '加载中...',
         error: '错误',
         success: '成功',
@@ -18,7 +20,25 @@ export default {
         search: '搜索',
         warning: '警告',
     },
-    auth: {
+    reviewPrompt: 
+    {
+        enjoyingTitle: 'Enjoying VocBee?',
+        enjoyingMessage: 'If VocBee is helping you learn, we would love a quick rating.',
+        yes: 'Yes',
+        notYet: 'Not yet',
+        later: 'Later',
+        rateTitle: 'How would you rate VocBee?',
+        rateMessage: 'Your rating helps us keep improving the learning experience.',
+        rateInStore: 'Rate in Store',
+        sendFeedback: 'Send Feedback',
+        feedbackTitle: 'Help us improve',
+        feedbackMessage: 'Tell us what would make VocBee better for you.',
+        starAccessibilityLabel: '{{count}} stars',
+        storeOpenError: 'We could not open the store review page. Please try again later.',
+        feedbackOpenError: 'We could not open your email app. Please contact support@vocbee.com.',
+    },
+    auth: 
+    {
         subtitle: '轻松掌握新单词。',
         email: '电子邮件',
         emailPlaceholder: '电子邮件或用户名',
@@ -52,9 +72,10 @@ export default {
         acceptPrivacyPrefix: '我已阅读并同意',
         acceptPrivacyRequired: '您必须接受隐私政策才能创建账户。',
     },
-    home: {
+    home: 
+    {
         welcome: '欢迎',
-        levelComplete: '\uD83C\uDF89 等级完成！',
+        levelComplete: '🎉 等级完成！',
         levelCompleteDesc: '您已学完 {{level}} 的所有 {{count}} 个单词！',
         noVocabulary: '没有词汇',
         setupRequired: '请完成设置以开始学习。',
@@ -78,8 +99,11 @@ export default {
         streakCelebrationGeneric: '{{count}} 天连续记录。继续保持。',
         words: '单词',
         learned: '已学习',
-        skip: '跳过',        tapToSeeExamples: '点击查看例句',    },
-    settings: {
+        skip: '跳过',
+        tapToSeeExamples: '点击查看例句',
+    },
+    settings: 
+    {
         title: '设置',
         profile: '个人资料',
         editProfile: '编辑资料',
@@ -106,8 +130,23 @@ export default {
         resetConfirmDesc: '您确定要重置所有学习进度吗？此操作无法撤销。',
         changeLangConfirmTitle: '更改学习语言',
         changeLangConfirmDesc: '这将重置您的进度并允许您选择一门新语言。您确定吗？',
+        premium: 'Premium',
+        removeAds: 'Remove Ads',
+        removeAdsDesc: 'Unlock an ad-free learning experience with monthly, yearly, or lifetime access.',
+        removeAdsSuccess: 'Ads have been removed from your account.',
+        adFreeActive: 'Ad-Free Active',
+        adFreeLifetime: 'Lifetime access',
+        adFreeActiveUntil: 'Active until {{date}}',
+        restorePurchases: 'Restore Purchases',
+        restorePurchasesDesc: 'Recover purchases made with your store account.',
+        restorePurchasesSuccess: 'Your purchase has been restored.',
+        restorePurchasesEmpty: 'No active ad-free purchase was found for this store account.',
+        manageSubscription: 'Manage Subscription',
+        manageSubscriptionDesc: 'View, change, or cancel your plan.',
+        premiumActionFailed: 'We could not complete this action. Please try again.',
         support: '支持',
         helpFaq: '帮助与常见问题',
+        rateVocBee: 'Rate VocBee',
         privacyPolicy: '隐私政策',
         logout: '退出登录',
         logoutConfirmTitle: '退出登录',
@@ -129,6 +168,8 @@ export default {
         changePhotoTitle: '更换头像',
         takePhoto: '拍照',
         chooseFromGallery: '从相册选择',
+        selectAvatar: 'Select Avatar',
+        avatarOptionAccessibility: 'Avatar {{number}}',
         removePhoto: '移除照片',
         resetProgressSuccess: '你的进度已重置。',
         editProfileTitle: '编辑资料',
@@ -139,6 +180,7 @@ export default {
         deleteAccount: '删除账户',
         deleteAccountConfirmTitle: '删除账户',
         deleteAccountConfirmDesc: '您确定要删除账户吗？此操作无法撤销，所有数据将被永久删除。',
+        deleteAccountSubscriptionNote: 'Deleting your VocBee account does not cancel an active App Store or Google Play subscription. Manage or cancel it from your store account first if needed.',
         deleteAccountSuccess: '您的账户已成功删除',
         deleteAccountError: '删除账户时出错',
         permissionRequired: '需要权限',
@@ -160,7 +202,8 @@ export default {
         privacyYourRightsDesc: '通过重置进度或卸载来删除数据。',
         privacyContact: '4. 联系我们',
     },
-    level: {
+    level: 
+    {
         beginner: '初学者',
         intermediate: '中级',
         advanced: '高级',
@@ -168,7 +211,8 @@ export default {
         intermediateDesc: '我能讨论熟悉的话题并理解主要内容。',
         advancedDesc: '我表达流利并能理解复杂文本。',
     },
-    languages: {
+    languages: 
+    {
         english: '英语',
         turkish: '土耳其语',
         german: '德语',
@@ -191,7 +235,8 @@ export default {
         swahili: '斯瓦希里语',
         urdu: '乌尔都语',
     },
-    setup: {
+    setup: 
+    {
         step1TitleWhite: '你的',
         step1TitleGreen: '母语是什么？',
         step1Subtitle: '我们将用它来为你翻译单词。',
@@ -230,18 +275,22 @@ export default {
         endTime: '结束时间',
         frequency: '频率',
     },
-    onboarding: {
+    onboarding: 
+    {
         title1: '每天学习新单词',
         subtitle1: '通过为你量身定制的每日课程发现并掌握新词汇。',
         title2: '用闪卡练习',
         subtitle2: '使用互动闪卡巩固学习。滑动以标记单词已学习。',
         title3: '追踪你的进度',
         subtitle3: '记录你的学习旅程，并在成长中庆祝每一次进步。',
+        title4: 'Let Words Come to You',
+        subtitle4: 'Get timely reminders, keep your learning streak alive, and return when it matters.',
         start: '开始',
         skip: '跳过',
         next: '下一步',
     },
-    example: {
+    example: 
+    {
         title: '例句',
         explainGrammarBtn: '用AI解释语法',
         grammarExplanationTitle: '语法解释',
@@ -255,12 +304,14 @@ export default {
         explanationError: '无法加载解释。请重试。',
         retry: '重试',
     },
-    favorites: {
+    favorites: 
+    {
         title: '收藏',
         noFavoritesTitle: '还没有收藏',
         noFavoritesMsg: '学习时点击星标按钮，将你喜欢的单词保存在这里。',
     },
-    forgotPassword: {
+    forgotPassword: 
+    {
         title: '忘记密码？',
         subtitle: '别担心！输入你的邮箱，我们会发送重置密码的链接。',
         enterEmail: '请输入你的邮箱地址',
@@ -270,7 +321,8 @@ export default {
         sendResetLink: '发送重置链接',
         backToLogin: '返回登录',
     },
-    levelTest: {
+    levelTest: 
+    {
         advanced: '高级',
         intermediate: '中级',
         beginner: '初学者',
@@ -282,22 +334,27 @@ export default {
         seeResults: '查看结果',
         next: '下一步',
     },
-    errorBoundary: {
+    errorBoundary: 
+    {
         title: '哎呀！出错了',
         message: '很抱歉，应用遇到了一个意外错误。',
         restart: '重新启动应用',
     },
-    offline: {
+    offline: 
+    {
         message: '没有网络连接',
     },
-    connection: {
+    connection: 
+    {
         title: '连接问题',
         message: '无法连接到服务器。请检查您的网络连接并重试。',
         retry: '重试',
     },
-    help: {
+    help: 
+    {
         title: '帮助与常见问题',
-        basics: {
+        basics: 
+        {
             q1: '如何学习新单词？',
             a1: '向右滑动单词卡标记为已学习，或向左滑动跳过稍后再看。您也可以点击卡片下方的按钮。',
             q2: '如何听发音？',
@@ -309,7 +366,8 @@ export default {
             q5: '什么是"解释语法"功能？',
             a5: '在例句屏幕中，点击"解释语法"获取AI驱动的语法解释、用法规律及记忆技巧。',
         },
-        levels: {
+        levels: 
+        {
             q1: '什么是熟练度等级？',
             a1: 'VocBee使用CEFR等级：初学者(A1-A2)用于基础词汇，中级(B1-B2)用于会话词汇，高级(C1)用于高级词汇。根据你当前的水平选择。',
             q2: '如何更改等级？',
@@ -317,13 +375,15 @@ export default {
             q3: '如何跟踪我的进度？',
             a3: '您的进度显示在主屏幕上，包括已学习/总单词数和进度条。完成等级后，VocBee会自动将您推进到更难的词汇。',
         },
-        reminders: {
+        reminders: 
+        {
             q1: '提醒如何工作？',
             a1: '在设置中启用每日提醒。设置您喜欢的时间范围和频率（每15分钟到2小时）。您将在一天中收到词汇通知来练习。',
             q2: '"收到通知时"是什么意思？',
             a2: '选择通知中显示的单词是自动标记为已学习还是保留在队列中供之后手动复习。',
         },
-        data: {
+        data: 
+        {
             q1: '我的进度会保存到云端吗？',
             a1: '是的！您的进度和收藏每天自动同步到我们的云端。在任何设备上登录即可继续学习。',
             q2: '我可以学习其他语言吗？',
@@ -331,21 +391,23 @@ export default {
             q3: '如何重置进度？',
             a3: '前往设置  进度  重置进度。这将清除所有已学单词并重新开始。警告：此操作无法撤销！',
         },
-        support: {
+        support: 
+        {
             title: '需要更多帮助？',
             desc: '如有任何问题、建议或反馈，请通过 support@vocbee.com 联系我们。我们很乐意听取您的意见！',
         },
     },
-	homeTutorial: {
-        step1: "向右滑动以标记已学会的单词",
-        step2: "向左滑动以稍后再次复习该单词",
-        step3: "点击星号将单词收藏",
-        step4: "点击单词听取发音",
-        step5: "点击句子来收听",
-        step6: "点击此处查看更多例句",
-        skip: "跳过",
-        next: "下一步",
-        done: "知道了！",
-        stepOf: "第 {{current}} / {{total}}",
+    homeTutorial: 
+    {
+        step1: '向右滑动以标记已学会的单词',
+        step2: '向左滑动以稍后再次复习该单词',
+        step3: '点击星号将单词收藏',
+        step4: '点击单词听取发音',
+        step5: '点击句子来收听',
+        step6: '点击此处查看更多例句',
+        skip: '跳过',
+        next: '下一步',
+        done: '知道了！',
+        stepOf: '第 {{current}} / {{total}}',
     },
 };

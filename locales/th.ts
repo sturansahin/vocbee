@@ -1,5 +1,7 @@
-export default {
-    common: {
+export default 
+{
+    common: 
+    {
         loading: 'กำลังโหลด...',
         error: 'ข้อผิดพลาด',
         success: 'สำเร็จ',
@@ -18,7 +20,25 @@ export default {
         search: 'ค้นหา',
         warning: 'คำเตือน',
     },
-    auth: {
+    reviewPrompt: 
+    {
+        enjoyingTitle: 'Enjoying VocBee?',
+        enjoyingMessage: 'If VocBee is helping you learn, we would love a quick rating.',
+        yes: 'Yes',
+        notYet: 'Not yet',
+        later: 'Later',
+        rateTitle: 'How would you rate VocBee?',
+        rateMessage: 'Your rating helps us keep improving the learning experience.',
+        rateInStore: 'Rate in Store',
+        sendFeedback: 'Send Feedback',
+        feedbackTitle: 'Help us improve',
+        feedbackMessage: 'Tell us what would make VocBee better for you.',
+        starAccessibilityLabel: '{{count}} stars',
+        storeOpenError: 'We could not open the store review page. Please try again later.',
+        feedbackOpenError: 'We could not open your email app. Please contact support@vocbee.com.',
+    },
+    auth: 
+    {
         subtitle: 'เก่งคำศัพท์ใหม่ได้อย่างง่ายดาย',
         email: 'อีเมล',
         emailPlaceholder: 'อีเมลหรือชื่อผู้ใช้',
@@ -52,9 +72,10 @@ export default {
         acceptPrivacyPrefix: 'ฉันได้อ่านและยอมรับ',
         acceptPrivacyRequired: 'คุณต้องยอมรับนโยบายความเป็นส่วนตัวเพื่อสร้างบัญชี',
     },
-    home: {
+    home: 
+    {
         welcome: 'ยินดีต้อนรับ',
-        levelComplete: '\uD83C\uDF89 เลเวลเสร็จสมบูรณ์!',
+        levelComplete: '🎉 เลเวลเสร็จสมบูรณ์!',
         levelCompleteDesc: 'คุณได้เรียนรู้คำศัพท์ทั้งหมด {{count}} คำในเลเวล {{level}} แล้ว!',
         noVocabulary: 'ไม่มีคำศัพท์',
         setupRequired: 'กรุณาตั้งค่าให้เสร็จสิ้นเพื่อเริ่มเรียนรู้',
@@ -81,7 +102,8 @@ export default {
         skip: 'ข้าม',
         tapToSeeExamples: 'แตะเพื่อดูประโยคตัวอย่าง',
     },
-    settings: {
+    settings: 
+    {
         title: 'การตั้งค่า',
         profile: 'โปรไฟล์',
         editProfile: 'แก้ไขโปรไฟล์',
@@ -108,8 +130,23 @@ export default {
         resetConfirmDesc: 'คุณแน่ใจหรือไม่ว่าต้องการรีเซ็ตความคืบหน้าการเรียนรู้ทั้งหมด? การดำเนินการนี้ไม่สามารถย้อนกลับได้',
         changeLangConfirmTitle: 'เปลี่ยนภาษาที่เรียน',
         changeLangConfirmDesc: 'สิ่งนี้จะรีเซ็ตความคืบหน้าของคุณและให้คุณเลือกภาษาใหม่ คุณแน่ใจหรือไม่?',
+        premium: 'Premium',
+        removeAds: 'Remove Ads',
+        removeAdsDesc: 'Unlock an ad-free learning experience with monthly, yearly, or lifetime access.',
+        removeAdsSuccess: 'Ads have been removed from your account.',
+        adFreeActive: 'Ad-Free Active',
+        adFreeLifetime: 'Lifetime access',
+        adFreeActiveUntil: 'Active until {{date}}',
+        restorePurchases: 'Restore Purchases',
+        restorePurchasesDesc: 'Recover purchases made with your store account.',
+        restorePurchasesSuccess: 'Your purchase has been restored.',
+        restorePurchasesEmpty: 'No active ad-free purchase was found for this store account.',
+        manageSubscription: 'Manage Subscription',
+        manageSubscriptionDesc: 'View, change, or cancel your plan.',
+        premiumActionFailed: 'We could not complete this action. Please try again.',
         support: 'สนับสนุน',
         helpFaq: 'ความช่วยเหลือ & FAQ',
+        rateVocBee: 'Rate VocBee',
         privacyPolicy: 'นโยบายความเป็นส่วนตัว',
         logout: 'ออกจากระบบ',
         logoutConfirmTitle: 'ออกจากระบบ',
@@ -131,6 +168,8 @@ export default {
         changePhotoTitle: 'เปลี่ยนรูปโปรไฟล์',
         takePhoto: 'ถ่ายรูป',
         chooseFromGallery: 'เลือกจากแกลเลอรี',
+        selectAvatar: 'Select Avatar',
+        avatarOptionAccessibility: 'Avatar {{number}}',
         removePhoto: 'ลบรูป',
         resetProgressSuccess: 'ความคืบหน้าของคุณถูกรีเซ็ตแล้ว',
         editProfileTitle: 'แก้ไขโปรไฟล์',
@@ -141,6 +180,7 @@ export default {
         deleteAccount: 'ลบบัญชี',
         deleteAccountConfirmTitle: 'ลบบัญชี',
         deleteAccountConfirmDesc: 'คุณแน่ใจหรือไม่ว่าต้องการลบบัญชี? การดำเนินการนี้ไม่สามารถย้อนกลับได้ และข้อมูลทั้งหมดของคุณจะถูกลบอย่างถาวร',
+        deleteAccountSubscriptionNote: 'Deleting your VocBee account does not cancel an active App Store or Google Play subscription. Manage or cancel it from your store account first if needed.',
         deleteAccountSuccess: 'บัญชีของคุณถูกลบเรียบร้อยแล้ว',
         deleteAccountError: 'เกิดข้อผิดพลาดขณะลบบัญชีของคุณ',
         permissionRequired: 'ต้องการสิทธิ์การเข้าถึง',
@@ -162,7 +202,8 @@ export default {
         privacyYourRightsDesc: 'ลบข้อมูลผ่านรีเซ็ตความคืบหน้าหรือถอนการติดตั้ง',
         privacyContact: '4. ติดต่อ',
     },
-    level: {
+    level: 
+    {
         beginner: 'ผู้เริ่มต้น',
         intermediate: 'ระดับกลาง',
         advanced: 'ระดับสูง',
@@ -170,7 +211,8 @@ export default {
         intermediateDesc: 'ฉันคุยเรื่องที่คุ้นเคยและเข้าใจประเด็นหลักได้',
         advancedDesc: 'ฉันสื่อสารได้อย่างคล่องแคล่วและเข้าใจข้อความที่ซับซ้อนได้',
     },
-    languages: {
+    languages: 
+    {
         english: 'อังกฤษ',
         turkish: 'ตุรกี',
         german: 'เยอรมัน',
@@ -193,7 +235,8 @@ export default {
         swahili: 'สวาฮีลี',
         urdu: 'อูรดู',
     },
-    setup: {
+    setup: 
+    {
         step1TitleWhite: 'ภาษาแม่',
         step1TitleGreen: 'ของคุณคืออะไร?',
         step1Subtitle: 'เราจะใช้สิ่งนี้เพื่อแปลคำศัพท์ให้คุณ',
@@ -232,18 +275,22 @@ export default {
         endTime: 'เวลาสิ้นสุด',
         frequency: 'ความถี่',
     },
-    onboarding: {
+    onboarding: 
+    {
         title1: 'เรียนรู้คำใหม่ทุกวัน',
         subtitle1: 'ค้นพบและฝึกคำศัพท์ใหม่ด้วยบทเรียนรายวันที่ปรับให้เหมาะกับระดับของคุณ',
         title2: 'ฝึกด้วยแฟลชการ์ด',
         subtitle2: 'เสริมการเรียนรู้ด้วยแฟลชการ์ดแบบโต้ตอบ ปัดเพื่อทำเครื่องหมายว่าเรียนรู้แล้ว',
         title3: 'ติดตามความคืบหน้า',
         subtitle3: 'ติดตามการเรียนรู้และฉลองความสำเร็จเมื่อคุณพัฒนา',
+        title4: 'Let Words Come to You',
+        subtitle4: 'Get timely reminders, keep your learning streak alive, and return when it matters.',
         start: 'เริ่ม',
         skip: 'ข้าม',
         next: 'ถัดไป',
     },
-    example: {
+    example: 
+    {
         title: 'ประโยคตัวอย่าง',
         explainGrammarBtn: 'อธิบายไวยากรณ์ด้วย AI',
         grammarExplanationTitle: 'คำอธิบายไวยากรณ์',
@@ -257,12 +304,14 @@ export default {
         explanationError: 'ไม่สามารถโหลดคำอธิบายได้ โปรดลองอีกครั้ง',
         retry: 'ลองอีกครั้ง',
     },
-    favorites: {
+    favorites: 
+    {
         title: 'รายการโปรด',
         noFavoritesTitle: 'ยังไม่มีรายการโปรด',
         noFavoritesMsg: 'แตะปุ่มดาวระหว่างเรียนเพื่อบันทึกคำโปรดของคุณไว้ที่นี่',
     },
-    forgotPassword: {
+    forgotPassword: 
+    {
         title: 'ลืมรหัสผ่าน?',
         subtitle: 'ไม่ต้องกังวล! กรอกอีเมลของคุณ แล้วเราจะส่งลิงก์สำหรับรีเซ็ตรหัสผ่านให้',
         enterEmail: 'โปรดกรอกที่อยู่อีเมลของคุณ',
@@ -272,7 +321,8 @@ export default {
         sendResetLink: 'ส่งลิงก์รีเซ็ต',
         backToLogin: 'กลับไปหน้าเข้าสู่ระบบ',
     },
-    levelTest: {
+    levelTest: 
+    {
         advanced: 'ระดับสูง',
         intermediate: 'ระดับกลาง',
         beginner: 'ผู้เริ่มต้น',
@@ -284,22 +334,27 @@ export default {
         seeResults: 'ดูผลลัพธ์',
         next: 'ถัดไป',
     },
-    errorBoundary: {
+    errorBoundary: 
+    {
         title: 'อุ๊ปส์! มีบางอย่างผิดพลาด',
         message: 'ขออภัย แอปพบข้อผิดพลาดที่ไม่คาดคิด',
         restart: 'เริ่มแอปใหม่',
     },
-    offline: {
+    offline: 
+    {
         message: 'ไม่มีการเชื่อมต่ออินเทอร์เน็ต',
     },
-    connection: {
+    connection: 
+    {
         title: 'ปัญหาการเชื่อมต่อ',
         message: 'ไม่สามารถเชื่อมต่อกับเซิร์ฟเวอร์ได้ กรุณาตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณแล้วลองอีกครั้ง',
         retry: 'ลองอีกครั้ง',
     },
-    help: {
+    help: 
+    {
         title: 'ความช่วยเหลือและคำถามที่พบบ่อย',
-        basics: {
+        basics: 
+        {
             q1: 'ฉันจะเรียนคำศัพท์ใหม่ได้อย่างไร?',
             a1: 'ปัดการ์ดคำศัพท์ไปทางขวาเพื่อทำเครื่องหมายว่าเรียนรู้แล้ว หรือปัดไปทางซ้ายเพื่อข้ามและดูภายหลัง คุณยังสามารถแตะปุ่มด้านล่างการ์ดได้',
             q2: 'ฉันจะฟังการออกเสียงได้อย่างไร?',
@@ -311,7 +366,8 @@ export default {
             q5: 'ฟีเจอร์ "อธิบายไวยากรณ์" คืออะไร?',
             a5: 'ในหน้าจอตัวอย่าง แตะ "อธิบายไวยากรณ์" เพื่อรับคำอธิบาย AI เกี่ยวกับไวยากรณ์ รูปแบบการใช้งาน และเคล็ดลับในการจดจำคำศัพท์',
         },
-        levels: {
+        levels: 
+        {
             q1: 'ระดับความสามารถคืออะไร?',
             a1: 'VocBee ใช้ระดับ CEFR: ผู้เริ่มต้น (A1-A2) สำหรับคำศัพท์พื้นฐาน ระดับกลาง (B1-B2) สำหรับการสนทนา และระดับสูง (C1) สำหรับคำศัพท์ขั้นสูง เลือกตามระดับความสามารถปัจจุบันของคุณ',
             q2: 'ฉันจะเปลี่ยนระดับได้อย่างไร?',
@@ -319,13 +375,15 @@ export default {
             q3: 'ความคืบหน้าของฉันถูกติดตามอย่างไร?',
             a3: 'ความคืบหน้าแสดงบนหน้าจอหลักพร้อมคำที่เรียนรู้/ทั้งหมดและแถบความคืบหน้า เมื่อเรียนจบแต่ละเลเวล VocBee จะเลื่อนคุณไปยังคำศัพท์ที่ยากขึ้นโดยอัตโนมัติ',
         },
-        reminders: {
+        reminders: 
+        {
             q1: 'การแจ้งเตือนทำงานอย่างไร?',
             a1: 'เปิดใช้การแจ้งเตือนรายวันในการตั้งค่า ตั้งช่วงเวลาและความถี่ที่ต้องการ (ทุก 15 นาทีถึง 2 ชั่วโมง) คุณจะได้รับการแจ้งเตือนคำศัพท์ตลอดทั้งวัน',
             q2: '"เมื่อได้รับการแจ้งเตือน" หมายความว่าอะไร?',
             a2: 'เลือกว่าคำในการแจ้งเตือนจะถูกทำเครื่องหมายเป็นเรียนรู้แล้วโดยอัตโนมัติหรือคงอยู่ในคิวเพื่อทบทวนด้วยตนเองในภายหลัง',
         },
-        data: {
+        data: 
+        {
             q1: 'ความคืบหน้าของฉันบันทึกไปยังคลาวด์หรือไม่?',
             a1: 'ใช่! ความคืบหน้าและรายการโปรดซิงค์ไปยังคลาวด์ของเราโดยอัตโนมัติทุกวัน เข้าสู่ระบบบนอุปกรณ์ใดก็ได้เพื่อเรียนรู้ต่อจากที่ค้างไว้',
             q2: 'ฉันสามารถเรียนภาษาอื่นได้หรือไม่?',
@@ -333,21 +391,23 @@ export default {
             q3: 'ฉันจะรีเซ็ตความคืบหน้าได้อย่างไร?',
             a3: 'ไปที่ การตั้งค่า → ความคืบหน้า → รีเซ็ตความคืบหน้า นี่จะลบคำที่เรียนรู้ทั้งหมดและเริ่มต้นใหม่ คำเตือน: การกระทำนี้ไม่สามารถย้อนกลับได้!',
         },
-        support: {
+        support: 
+        {
             title: 'ต้องการความช่วยเหลือเพิ่มเติม?',
             desc: 'สำหรับคำถาม ข้อเสนอแนะ หรือปัญหาใดๆ โปรดติดต่อเราที่ support@vocbee.com เรายินดีรับฟังจากคุณ!',
         },
     },
-	homeTutorial: {
-        step1: "ปัดไปทางขวาเพื่อทำเครื่องหมายคำศัพท์ที่เรียนรู้แล้ว",
-        step2: "ปัดไปทางซ้ายเพื่อทบทวนคำศัพท์อีกครั้งในภายหลัง",
-        step3: "แตะที่ดาวเพื่อบันทึกคำศัพท์ลงในรายการโปรด",
-        step4: "แตะที่คำศัพท์เพื่อฟังการออกเสียง",
-        step5: "แตะประโยคเพื่อฟัง",
-        step6: "แตะที่นี่เพื่อดูประโยคตัวอย่างเพิ่มเติม",
-        skip: "ข้าม",
-        next: "ถัดไป",
-        done: "เข้าใจแล้ว!",
-        stepOf: "{{current}} จาก {{total}}",
+    homeTutorial: 
+    {
+        step1: 'ปัดไปทางขวาเพื่อทำเครื่องหมายคำศัพท์ที่เรียนรู้แล้ว',
+        step2: 'ปัดไปทางซ้ายเพื่อทบทวนคำศัพท์อีกครั้งในภายหลัง',
+        step3: 'แตะที่ดาวเพื่อบันทึกคำศัพท์ลงในรายการโปรด',
+        step4: 'แตะที่คำศัพท์เพื่อฟังการออกเสียง',
+        step5: 'แตะประโยคเพื่อฟัง',
+        step6: 'แตะที่นี่เพื่อดูประโยคตัวอย่างเพิ่มเติม',
+        skip: 'ข้าม',
+        next: 'ถัดไป',
+        done: 'เข้าใจแล้ว!',
+        stepOf: '{{current}} จาก {{total}}',
     },
 };

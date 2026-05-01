@@ -1,5 +1,7 @@
-export default {
-    common: {
+export default 
+{
+    common: 
+    {
         loading: '로딩 중...',
         error: '오류',
         success: '성공',
@@ -18,7 +20,25 @@ export default {
         search: '검색',
         warning: '경고',
     },
-    auth: {
+    reviewPrompt: 
+    {
+        enjoyingTitle: 'Enjoying VocBee?',
+        enjoyingMessage: 'If VocBee is helping you learn, we would love a quick rating.',
+        yes: 'Yes',
+        notYet: 'Not yet',
+        later: 'Later',
+        rateTitle: 'How would you rate VocBee?',
+        rateMessage: 'Your rating helps us keep improving the learning experience.',
+        rateInStore: 'Rate in Store',
+        sendFeedback: 'Send Feedback',
+        feedbackTitle: 'Help us improve',
+        feedbackMessage: 'Tell us what would make VocBee better for you.',
+        starAccessibilityLabel: '{{count}} stars',
+        storeOpenError: 'We could not open the store review page. Please try again later.',
+        feedbackOpenError: 'We could not open your email app. Please contact support@vocbee.com.',
+    },
+    auth: 
+    {
         subtitle: '새로운 단어를 쉽게 마스터하세요.',
         email: '이메일',
         emailPlaceholder: '이메일 또는 사용자 이름',
@@ -52,9 +72,10 @@ export default {
         acceptPrivacyPrefix: '다음을 읽고 동의합니다:',
         acceptPrivacyRequired: '계정을 만들려면 개인정보 처리방침에 동의해야 합니다.',
     },
-    home: {
+    home: 
+    {
         welcome: '환영합니다',
-        levelComplete: '\uD83C\uDF89 레벨 완료!',
+        levelComplete: '🎉 레벨 완료!',
         levelCompleteDesc: '{{level}} 레벨의 모든 {{count}} 단어를 학습했습니다!',
         noVocabulary: '단어 없음',
         setupRequired: '학습을 시작하려면 설정을 완료해주세요.',
@@ -78,8 +99,11 @@ export default {
         streakCelebrationGeneric: '{{count}}일 연속 기록. 계속 이어가세요.',
         words: '단어',
         learned: '학습 완료',
-        skip: '건너뛰기',        tapToSeeExamples: '예문을 보려면 탭하세요',    },
-    settings: {
+        skip: '건너뛰기',
+        tapToSeeExamples: '예문을 보려면 탭하세요',
+    },
+    settings: 
+    {
         title: '설정',
         profile: '프로필',
         editProfile: '프로필 편집',
@@ -106,8 +130,23 @@ export default {
         resetConfirmDesc: '모든 학습 진행 상황을 초기화하시겠습니까? 이 작업은 되돌릴 수 없습니다.',
         changeLangConfirmTitle: '학습 언어 변경',
         changeLangConfirmDesc: '이 작업은 진행 상황을 초기화하고 새로운 언어를 선택할 수 있게 합니다. 계속하시겠습니까?',
+        premium: 'Premium',
+        removeAds: 'Remove Ads',
+        removeAdsDesc: 'Unlock an ad-free learning experience with monthly, yearly, or lifetime access.',
+        removeAdsSuccess: 'Ads have been removed from your account.',
+        adFreeActive: 'Ad-Free Active',
+        adFreeLifetime: 'Lifetime access',
+        adFreeActiveUntil: 'Active until {{date}}',
+        restorePurchases: 'Restore Purchases',
+        restorePurchasesDesc: 'Recover purchases made with your store account.',
+        restorePurchasesSuccess: 'Your purchase has been restored.',
+        restorePurchasesEmpty: 'No active ad-free purchase was found for this store account.',
+        manageSubscription: 'Manage Subscription',
+        manageSubscriptionDesc: 'View, change, or cancel your plan.',
+        premiumActionFailed: 'We could not complete this action. Please try again.',
         support: '지원',
         helpFaq: '도움말 및 FAQ',
+        rateVocBee: 'Rate VocBee',
         privacyPolicy: '개인정보 처리방침',
         logout: '로그아웃',
         logoutConfirmTitle: '로그아웃',
@@ -129,6 +168,8 @@ export default {
         changePhotoTitle: '프로필 사진 변경',
         takePhoto: '사진 찍기',
         chooseFromGallery: '갤러리에서 선택',
+        selectAvatar: 'Select Avatar',
+        avatarOptionAccessibility: 'Avatar {{number}}',
         removePhoto: '사진 제거',
         resetProgressSuccess: '진행 상황이 재설정되었습니다.',
         editProfileTitle: '프로필 편집',
@@ -139,6 +180,7 @@ export default {
         deleteAccount: '계정 삭제',
         deleteAccountConfirmTitle: '계정 삭제',
         deleteAccountConfirmDesc: '정말로 계정을 삭제하시겠습니까? 이 작업은 되돌릴 수 없으며 모든 데이터가 영구적으로 삭제됩니다.',
+        deleteAccountSubscriptionNote: 'Deleting your VocBee account does not cancel an active App Store or Google Play subscription. Manage or cancel it from your store account first if needed.',
         deleteAccountSuccess: '계정이 성공적으로 삭제되었습니다',
         deleteAccountError: '계정 삭제 중 오류가 발생했습니다',
         permissionRequired: '권한 필요',
@@ -160,7 +202,8 @@ export default {
         privacyYourRightsDesc: '진행 상황 초기화 또는 앱 삭제를 통해 데이터를 삭제할 수 있습니다.',
         privacyContact: '4. 연락처',
     },
-    level: {
+    level: 
+    {
         beginner: '초급',
         intermediate: '중급',
         advanced: '고급',
@@ -168,7 +211,8 @@ export default {
         intermediateDesc: '익숙한 주제를 이야기하고 핵심 내용을 이해할 수 있어요.',
         advancedDesc: '유창하게 표현하고 복잡한 글을 이해할 수 있어요.',
     },
-    languages: {
+    languages: 
+    {
         english: '영어',
         turkish: '터키어',
         german: '독일어',
@@ -191,7 +235,8 @@ export default {
         swahili: '스와힐리어',
         urdu: '우르두어',
     },
-    setup: {
+    setup: 
+    {
         step1TitleWhite: '당신의',
         step1TitleGreen: '모국어는 무엇인가요?',
         step1Subtitle: '단어를 번역하는 데 사용합니다.',
@@ -230,18 +275,22 @@ export default {
         endTime: '종료 시간',
         frequency: '빈도',
     },
-    onboarding: {
+    onboarding: 
+    {
         title1: '매일 새로운 단어를 학습하세요',
         subtitle1: '레벨에 맞춘 일일 학습으로 어휘를 늘려보세요.',
         title2: '플래시카드로 연습하세요',
         subtitle2: '인터랙티브 플래시카드로 복습하세요. 스와이프하여 학습 완료로 표시할 수 있어요.',
         title3: '진행 상황을 확인하세요',
         subtitle3: '학습 여정을 추적하고 성장하는 성취를 확인하세요.',
+        title4: 'Let Words Come to You',
+        subtitle4: 'Get timely reminders, keep your learning streak alive, and return when it matters.',
         start: '시작',
         skip: '건너뛰기',
         next: '다음',
     },
-    example: {
+    example: 
+    {
         title: '예문',
         explainGrammarBtn: 'AI로 문법 설명',
         grammarExplanationTitle: '문법 설명',
@@ -255,12 +304,14 @@ export default {
         explanationError: '설명을 불러올 수 없습니다. 다시 시도해 주세요.',
         retry: '다시 시도',
     },
-    favorites: {
+    favorites: 
+    {
         title: '즐겨찾기',
         noFavoritesTitle: '아직 즐겨찾기가 없어요',
         noFavoritesMsg: '학습 중 별 버튼을 눌러 단어를 여기에 저장하세요.',
     },
-    forgotPassword: {
+    forgotPassword: 
+    {
         title: '비밀번호를 잊으셨나요?',
         subtitle: '걱정 마세요! 이메일을 입력하면 비밀번호 재설정 링크를 보내드립니다.',
         enterEmail: '이메일 주소를 입력해 주세요',
@@ -270,7 +321,8 @@ export default {
         sendResetLink: '재설정 링크 보내기',
         backToLogin: '로그인으로 돌아가기',
     },
-    levelTest: {
+    levelTest: 
+    {
         advanced: '고급',
         intermediate: '중급',
         beginner: '초급',
@@ -282,22 +334,27 @@ export default {
         seeResults: '결과 보기',
         next: '다음',
     },
-    errorBoundary: {
+    errorBoundary: 
+    {
         title: '앗! 문제가 발생했어요',
         message: '죄송합니다. 앱에서 예기치 않은 오류가 발생했습니다.',
         restart: '앱 다시 시작',
     },
-    offline: {
+    offline: 
+    {
         message: '인터넷 연결 없음',
     },
-    connection: {
+    connection: 
+    {
         title: '연결 문제',
         message: '서버에 연결할 수 없습니다. 인터넷 연결을 확인하고 다시 시도해 주세요.',
         retry: '다시 시도',
     },
-    help: {
+    help: 
+    {
         title: '도움말 및 FAQ',
-        basics: {
+        basics: 
+        {
             q1: '새로운 단어는 어떻게 학습하나요?',
             a1: '단어 카드를 오른쪽으로 스와이프하여 학습 완료로 표시하거나, 왼쪽으로 스와이프하여 건너뛰고 나중에 다시 볼 수 있습니다. 카드 아래 버튼도 사용할 수 있습니다.',
             q2: '발음은 어떻게 듣나요?',
@@ -309,7 +366,8 @@ export default {
             q5: '"문법 설명" 기능이란 무엇인가요?',
             a5: '예문 화면에서 "문법 설명"을 탭하면 단어의 문법, 사용 패턴 및 기억하는 팁에 대한 AI 기반 설명을 받을 수 있습니다.',
         },
-        levels: {
+        levels: 
+        {
             q1: '숙련도 레벨이란 무엇인가요?',
             a1: 'VocBee는 CEFR 레벨을 사용합니다: 초급(A1-A2)은 기본 어휘, 중급(B1-B2)은 대화 어휘, 고급(C1)은 고급 어휘입니다. 현재 실력에 맞게 선택하세요.',
             q2: '레벨은 어떻게 변경하나요?',
@@ -317,13 +375,15 @@ export default {
             q3: '진행 상황은 어떻게 추적되나요?',
             a3: '진행 상황은 홈 화면에 학습 완료/전체 단어 수와 진행 막대로 표시됩니다. 레벨을 완료하면 VocBee가 자동으로 더 어려운 어휘로 진행시킵니다.',
         },
-        reminders: {
+        reminders: 
+        {
             q1: '알림은 어떻게 작동하나요?',
             a1: '설정에서 일일 알림을 활성화하세요. 원하는 시간대와 빈도(15분에서 2시간 간격)를 설정하세요. 하루 종일 어휘 알림을 받아 연습할 수 있습니다.',
             q2: '"알림 수신 시"는 무슨 의미인가요?',
             a2: '알림에 표시된 단어를 자동으로 학습 완료로 표시할지, 나중에 수동으로 복습하기 위해 대기열에 남길지 선택합니다.',
         },
-        data: {
+        data: 
+        {
             q1: '진행 상황이 클라우드에 저장되나요?',
             a1: '네! 진행 상황과 즐겨찾기가 매일 자동으로 클라우드에 동기화됩니다. 어떤 기기에서든 로그인하여 이전에 하던 학습을 계속할 수 있습니다.',
             q2: '다른 언어를 배울 수 있나요?',
@@ -331,21 +391,23 @@ export default {
             q3: '진행 상황을 초기화하려면 어떻게 하나요?',
             a3: '설정  진행 상황  진행 상황 초기화로 이동합니다. 학습 완료된 모든 단어가 삭제되고 처음부터 다시 시작됩니다. 경고: 이 작업은 되돌릴 수 없습니다!',
         },
-        support: {
+        support: 
+        {
             title: '추가 도움이 필요하신가요?',
             desc: '질문, 제안 또는 문제가 있으시면 support@vocbee.com으로 문의해 주세요. 여러분의 의견을 기다리겠습니다!',
         },
     },
-	homeTutorial: {
-        step1: "오른쪽으로 스와이프하여 학습한 단어를 표시하세요",
-        step2: "왼쪽으로 스와이프하여 나중에 단어를 다시 복습하세요",
-        step3: "별을 탭하여 단어를 즐겨찾기에 저장하세요",
-        step4: "단어를 탭하여 발음을 들어보세요",
-        step5: "문장을 탭하여 들어보세요",
-        step6: "여기를 탭하여 더 많은 예문을 확인하세요",
-        skip: "건너뛰기",
-        next: "다음",
-        done: "알겠습니다!",
-        stepOf: "{{current}} / {{total}}",
+    homeTutorial: 
+    {
+        step1: '오른쪽으로 스와이프하여 학습한 단어를 표시하세요',
+        step2: '왼쪽으로 스와이프하여 나중에 단어를 다시 복습하세요',
+        step3: '별을 탭하여 단어를 즐겨찾기에 저장하세요',
+        step4: '단어를 탭하여 발음을 들어보세요',
+        step5: '문장을 탭하여 들어보세요',
+        step6: '여기를 탭하여 더 많은 예문을 확인하세요',
+        skip: '건너뛰기',
+        next: '다음',
+        done: '알겠습니다!',
+        stepOf: '{{current}} / {{total}}',
     },
 };

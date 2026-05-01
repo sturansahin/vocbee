@@ -1,5 +1,7 @@
-export default {
-    common: {
+export default 
+{
+    common: 
+    {
         loading: 'Memuat...',
         error: 'Kesalahan',
         success: 'Berhasil',
@@ -18,7 +20,25 @@ export default {
         search: 'Cari',
         warning: 'Peringatan',
     },
-    auth: {
+    reviewPrompt: 
+    {
+        enjoyingTitle: 'Enjoying VocBee?',
+        enjoyingMessage: 'If VocBee is helping you learn, we would love a quick rating.',
+        yes: 'Yes',
+        notYet: 'Not yet',
+        later: 'Later',
+        rateTitle: 'How would you rate VocBee?',
+        rateMessage: 'Your rating helps us keep improving the learning experience.',
+        rateInStore: 'Rate in Store',
+        sendFeedback: 'Send Feedback',
+        feedbackTitle: 'Help us improve',
+        feedbackMessage: 'Tell us what would make VocBee better for you.',
+        starAccessibilityLabel: '{{count}} stars',
+        storeOpenError: 'We could not open the store review page. Please try again later.',
+        feedbackOpenError: 'We could not open your email app. Please contact support@vocbee.com.',
+    },
+    auth: 
+    {
         subtitle: 'Kuasai kata-kata baru dengan mudah.',
         email: 'Email',
         emailPlaceholder: 'Email atau Nama Pengguna',
@@ -52,7 +72,8 @@ export default {
         acceptPrivacyPrefix: 'Saya telah membaca dan menyetujui',
         acceptPrivacyRequired: 'Anda harus menyetujui Kebijakan Privasi untuk membuat akun.',
     },
-    home: {
+    home: 
+    {
         welcome: 'Selamat Datang',
         levelComplete: '🎉 Level Selesai!',
         levelCompleteDesc: 'Anda telah mempelajari semua {{count}} kata di {{level}}!',
@@ -78,8 +99,11 @@ export default {
         streakCelebrationGeneric: 'Streak {{count}} hari. Pertahankan.',
         words: 'kata',
         learned: 'DIPELAJARI',
-        skip: 'LEWATI',        tapToSeeExamples: 'Ketuk untuk melihat contoh kalimat',    },
-    settings: {
+        skip: 'LEWATI',
+        tapToSeeExamples: 'Ketuk untuk melihat contoh kalimat',
+    },
+    settings: 
+    {
         title: 'Pengaturan',
         profile: 'Profil',
         editProfile: 'Ubah Profil',
@@ -106,8 +130,23 @@ export default {
         resetConfirmDesc: 'Apakah Anda yakin ingin mengatur ulang semua kemajuan belajar Anda? Tindakan ini tidak dapat dibatalkan.',
         changeLangConfirmTitle: 'Ganti Bahasa Belajar',
         changeLangConfirmDesc: 'Ini akan mengatur ulang kemajuan Anda dan memungkinkan Anda memilih bahasa baru. Apakah Anda yakin?',
+        premium: 'Premium',
+        removeAds: 'Remove Ads',
+        removeAdsDesc: 'Unlock an ad-free learning experience with monthly, yearly, or lifetime access.',
+        removeAdsSuccess: 'Ads have been removed from your account.',
+        adFreeActive: 'Ad-Free Active',
+        adFreeLifetime: 'Lifetime access',
+        adFreeActiveUntil: 'Active until {{date}}',
+        restorePurchases: 'Restore Purchases',
+        restorePurchasesDesc: 'Recover purchases made with your store account.',
+        restorePurchasesSuccess: 'Your purchase has been restored.',
+        restorePurchasesEmpty: 'No active ad-free purchase was found for this store account.',
+        manageSubscription: 'Manage Subscription',
+        manageSubscriptionDesc: 'View, change, or cancel your plan.',
+        premiumActionFailed: 'We could not complete this action. Please try again.',
         support: 'Dukungan',
         helpFaq: 'Bantuan & FAQ',
+        rateVocBee: 'Rate VocBee',
         privacyPolicy: 'Kebijakan Privasi',
         logout: 'Keluar',
         logoutConfirmTitle: 'Keluar',
@@ -129,6 +168,8 @@ export default {
         changePhotoTitle: 'Ubah Foto Profil',
         takePhoto: 'Ambil Foto',
         chooseFromGallery: 'Pilih dari Galeri',
+        selectAvatar: 'Select Avatar',
+        avatarOptionAccessibility: 'Avatar {{number}}',
         removePhoto: 'Hapus Foto',
         resetProgressSuccess: 'Progres Anda telah diatur ulang.',
         editProfileTitle: 'Edit Profil',
@@ -139,6 +180,7 @@ export default {
         deleteAccount: 'Hapus Akun',
         deleteAccountConfirmTitle: 'Hapus Akun',
         deleteAccountConfirmDesc: 'Apakah Anda yakin ingin menghapus akun Anda? Tindakan ini tidak dapat dibatalkan dan semua data Anda akan dihapus secara permanen.',
+        deleteAccountSubscriptionNote: 'Deleting your VocBee account does not cancel an active App Store or Google Play subscription. Manage or cancel it from your store account first if needed.',
         deleteAccountSuccess: 'Akun Anda telah berhasil dihapus',
         deleteAccountError: 'Terjadi kesalahan saat menghapus akun Anda',
         permissionRequired: 'Izin Diperlukan',
@@ -160,7 +202,8 @@ export default {
         privacyYourRightsDesc: 'Hapus data melalui Atur Ulang Kemajuan atau hapus instalasi.',
         privacyContact: '4. Kontak',
     },
-    level: {
+    level: 
+    {
         beginner: 'Pemula',
         intermediate: 'Menengah',
         advanced: 'Lanjutan',
@@ -168,7 +211,8 @@ export default {
         intermediateDesc: 'Saya dapat membahas topik yang familiar dan memahami poin utama.',
         advancedDesc: 'Saya mengekspresikan diri dengan lancar dan memahami teks yang kompleks.',
     },
-    languages: {
+    languages: 
+    {
         english: 'Inggris',
         turkish: 'Turki',
         german: 'Jerman',
@@ -191,7 +235,8 @@ export default {
         swahili: 'Swahili',
         urdu: 'Urdu',
     },
-    setup: {
+    setup: 
+    {
         step1TitleWhite: 'Apa',
         step1TitleGreen: 'bahasa ibu Anda?',
         step1Subtitle: 'Kami akan menggunakannya untuk menerjemahkan kata untuk Anda.',
@@ -230,18 +275,22 @@ export default {
         endTime: 'Waktu Selesai',
         frequency: 'Frekuensi',
     },
-    onboarding: {
+    onboarding: 
+    {
         title1: 'Belajar Kata Baru Setiap Hari',
         subtitle1: 'Temukan dan kuasai kosakata dengan pelajaran harian yang disesuaikan dengan level Anda.',
         title2: 'Latihan dengan Flashcard',
         subtitle2: 'Perkuat pembelajaran dengan flashcard interaktif. Geser untuk menandai kata sebagai sudah dipelajari.',
         title3: 'Pantau Progres Anda',
         subtitle3: 'Pantau perjalanan belajar Anda dan rayakan pencapaian saat Anda berkembang.',
+        title4: 'Let Words Come to You',
+        subtitle4: 'Get timely reminders, keep your learning streak alive, and return when it matters.',
         start: 'Mulai',
         skip: 'Lewati',
         next: 'Berikutnya',
     },
-    example: {
+    example: 
+    {
         title: 'Kalimat Contoh',
         explainGrammarBtn: 'Jelaskan Tata Bahasa dengan AI',
         grammarExplanationTitle: 'Penjelasan Tata Bahasa',
@@ -255,12 +304,14 @@ export default {
         explanationError: 'Tidak dapat memuat penjelasan. Silakan coba lagi.',
         retry: 'Coba Lagi',
     },
-    favorites: {
+    favorites: 
+    {
         title: 'Favorit',
         noFavoritesTitle: 'Belum Ada Favorit',
         noFavoritesMsg: 'Ketuk ikon bintang saat belajar untuk menyimpan kata favorit Anda di sini.',
     },
-    forgotPassword: {
+    forgotPassword: 
+    {
         title: 'Lupa Kata Sandi?',
         subtitle: 'Tenang! Masukkan email Anda dan kami akan mengirim tautan untuk mereset kata sandi.',
         enterEmail: 'Silakan masukkan alamat email Anda',
@@ -270,7 +321,8 @@ export default {
         sendResetLink: 'Kirim Tautan Reset',
         backToLogin: 'Kembali ke Login',
     },
-    levelTest: {
+    levelTest: 
+    {
         advanced: 'Mahir',
         intermediate: 'Menengah',
         beginner: 'Pemula',
@@ -282,22 +334,27 @@ export default {
         seeResults: 'Lihat Hasil',
         next: 'Berikutnya',
     },
-    errorBoundary: {
+    errorBoundary: 
+    {
         title: 'Ups! Terjadi Kesalahan',
         message: 'Maaf, aplikasi mengalami kesalahan yang tidak terduga.',
         restart: 'Mulai Ulang Aplikasi',
     },
-    offline: {
+    offline: 
+    {
         message: 'Tidak Ada Koneksi Internet',
     },
-    connection: {
+    connection: 
+    {
         title: 'Masalah Koneksi',
         message: 'Tidak dapat terhubung ke server. Silakan periksa koneksi internet Anda dan coba lagi.',
         retry: 'Coba Lagi',
     },
-    help: {
+    help: 
+    {
         title: 'Bantuan & FAQ',
-        basics: {
+        basics: 
+        {
             q1: 'Bagaimana cara belajar kata baru?',
             a1: 'Geser kartu kata ke kanan untuk menandai sebagai dipelajari, atau ke kiri untuk melewati dan melihatnya nanti. Anda juga bisa mengetuk tombol di bawah kartu.',
             q2: 'Bagaimana cara mendengar pengucapan?',
@@ -309,43 +366,48 @@ export default {
             q5: 'Apa fitur "Jelaskan Tata Bahasa"?',
             a5: 'Di layar kalimat contoh, ketuk "Jelaskan Tata Bahasa" untuk mendapatkan penjelasan AI tentang tata bahasa, pola penggunaan, dan tips untuk mengingat kata tersebut.',
         },
-        levels: {
+        levels: 
+        {
             q1: 'Apa saja tingkat kemahiran?',
             a1: 'VocBee menggunakan level CEFR: Pemula (A1-A2) untuk kosakata dasar, Menengah (B1-B2) untuk percakapan, dan Lanjutan (C1) untuk kosakata canggih. Pilih berdasarkan tingkat kemampuan Anda saat ini.',
             q2: 'Bagaimana mengubah level saya?',
-            a2: 'Buka Pengaturan \u2192 Kemajuan \u2192 Ganti Level. Pilih level baru dan feed kata Anda akan diperbarui. Kata yang sudah dipelajari tersimpan di semua level.',
+            a2: 'Buka Pengaturan → Kemajuan → Ganti Level. Pilih level baru dan feed kata Anda akan diperbarui. Kata yang sudah dipelajari tersimpan di semua level.',
             q3: 'Bagaimana kemajuan saya dilacak?',
             a3: 'Kemajuan Anda ditampilkan di layar utama dengan kata dipelajari/total dan bilah kemajuan. Saat Anda menyelesaikan level, VocBee secara otomatis memajukan Anda ke kosakata yang lebih sulit.',
         },
-        reminders: {
+        reminders: 
+        {
             q1: 'Bagaimana pengingat bekerja?',
             a1: 'Aktifkan Pengingat Harian di Pengaturan. Atur rentang waktu dan frekuensi pilihan Anda (setiap 15 menit hingga 2 jam). Anda akan menerima notifikasi kosakata untuk berlatih sepanjang hari.',
             q2: 'Apa arti "Saat Notifikasi Tiba"?',
             a2: 'Pilih apakah kata dalam notifikasi otomatis ditandai sebagai dipelajari atau tetap dalam antrian untuk ditinjau secara manual nanti.',
         },
-        data: {
+        data: 
+        {
             q1: 'Apakah kemajuan saya disimpan ke cloud?',
             a1: 'Ya! Kemajuan dan favorit Anda secara otomatis disinkronkan ke cloud kami setiap hari. Masuk di perangkat mana pun untuk melanjutkan belajar dari tempat terakhir.',
             q2: 'Bisakah saya belajar bahasa lain?',
-            a2: 'Buka Pengaturan \u2192 Kemajuan \u2192 Ganti Bahasa Belajar. Catatan: Ini akan mereset kemajuan Anda karena setiap bahasa memiliki set kosakata sendiri.',
+            a2: 'Buka Pengaturan → Kemajuan → Ganti Bahasa Belajar. Catatan: Ini akan mereset kemajuan Anda karena setiap bahasa memiliki set kosakata sendiri.',
             q3: 'Bagaimana mereset kemajuan?',
-            a3: 'Buka Pengaturan \u2192 Kemajuan \u2192 Atur Ulang Kemajuan. Ini akan menghapus semua kata yang dipelajari dan memulai dari awal. Peringatan: Tindakan ini tidak dapat dibatalkan!',
+            a3: 'Buka Pengaturan → Kemajuan → Atur Ulang Kemajuan. Ini akan menghapus semua kata yang dipelajari dan memulai dari awal. Peringatan: Tindakan ini tidak dapat dibatalkan!',
         },
-        support: {
+        support: 
+        {
             title: 'Butuh bantuan lebih?',
             desc: 'Untuk pertanyaan, saran, atau masalah, hubungi kami di support@vocbee.com. Kami senang mendengar dari Anda!',
         },
     },
-	homeTutorial: {
-        step1: "Geser ke kanan untuk menandai kata yang telah dipelajari",
-        step2: "Geser ke kiri untuk mengulas kata lagi nanti",
-        step3: "Ketuk bintang untuk menyimpan kata ke favorit Anda",
-        step4: "Ketuk kata untuk mendengar pengucapannya",
-        step5: "Ketuk kalimat untuk mendengarkannya",
-        step6: "Ketuk di sini untuk melihat kalimat contoh lainnya",
-        skip: "Lewati",
-        next: "Berikutnya",
-        done: "Mengerti!",
-        stepOf: "{{current}} dari {{total}}",
+    homeTutorial: 
+    {
+        step1: 'Geser ke kanan untuk menandai kata yang telah dipelajari',
+        step2: 'Geser ke kiri untuk mengulas kata lagi nanti',
+        step3: 'Ketuk bintang untuk menyimpan kata ke favorit Anda',
+        step4: 'Ketuk kata untuk mendengar pengucapannya',
+        step5: 'Ketuk kalimat untuk mendengarkannya',
+        step6: 'Ketuk di sini untuk melihat kalimat contoh lainnya',
+        skip: 'Lewati',
+        next: 'Berikutnya',
+        done: 'Mengerti!',
+        stepOf: '{{current}} dari {{total}}',
     },
 };

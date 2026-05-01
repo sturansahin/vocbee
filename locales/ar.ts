@@ -1,5 +1,7 @@
-export default {
-    common: {
+export default 
+{
+    common: 
+    {
         loading: 'جار التحميل...',
         error: 'خطأ',
         success: 'نجاح',
@@ -18,7 +20,25 @@ export default {
         search: 'بحث',
         warning: 'تحذير',
     },
-    auth: {
+    reviewPrompt: 
+    {
+        enjoyingTitle: 'Enjoying VocBee?',
+        enjoyingMessage: 'If VocBee is helping you learn, we would love a quick rating.',
+        yes: 'Yes',
+        notYet: 'Not yet',
+        later: 'Later',
+        rateTitle: 'How would you rate VocBee?',
+        rateMessage: 'Your rating helps us keep improving the learning experience.',
+        rateInStore: 'Rate in Store',
+        sendFeedback: 'Send Feedback',
+        feedbackTitle: 'Help us improve',
+        feedbackMessage: 'Tell us what would make VocBee better for you.',
+        starAccessibilityLabel: '{{count}} stars',
+        storeOpenError: 'We could not open the store review page. Please try again later.',
+        feedbackOpenError: 'We could not open your email app. Please contact support@vocbee.com.',
+    },
+    auth: 
+    {
         subtitle: 'أتقن كلمات جديدة بسهولة.',
         email: 'البريد الإلكتروني',
         emailPlaceholder: 'البريد الإلكتروني أو اسم المستخدم',
@@ -52,9 +72,10 @@ export default {
         acceptPrivacyPrefix: 'لقد قرأت وأوافق على',
         acceptPrivacyRequired: 'يجب عليك قبول سياسة الخصوصية لإنشاء حساب.',
     },
-    home: {
+    home: 
+    {
         welcome: 'أهلاً بك',
-        levelComplete: '\uD83C\uDF89 اكتمل المستوى!',
+        levelComplete: '🎉 اكتمل المستوى!',
         levelCompleteDesc: 'لقد تعلمت جميع الكلمات الـ {{count}} في المستوى {{level}}!',
         noVocabulary: 'لا توجد مفردات',
         setupRequired: 'يرجى إكمال الإعداد لبدء التعلم.',
@@ -81,7 +102,8 @@ export default {
         skip: 'تخطي',
         tapToSeeExamples: 'اضغط لرؤية جمل الأمثلة',
     },
-    settings: {
+    settings: 
+    {
         title: 'الإعدادات',
         profile: 'الملف الشخصي',
         editProfile: 'تعديل الملف الشخصي',
@@ -108,8 +130,23 @@ export default {
         resetConfirmDesc: 'هل أنت متأكد من أنك تريد إعادة تعيين كل تقدمك في التعلم؟ لا يمكن التراجع عن هذا الإجراء.',
         changeLangConfirmTitle: 'تغيير لغة التعلم',
         changeLangConfirmDesc: 'سيؤدي هذا إلى إعادة تعيين تقدمك والسماح لك باختيار لغة جديدة للتعلم. هل أنت متأكد؟',
+        premium: 'Premium',
+        removeAds: 'Remove Ads',
+        removeAdsDesc: 'Unlock an ad-free learning experience with monthly, yearly, or lifetime access.',
+        removeAdsSuccess: 'Ads have been removed from your account.',
+        adFreeActive: 'Ad-Free Active',
+        adFreeLifetime: 'Lifetime access',
+        adFreeActiveUntil: 'Active until {{date}}',
+        restorePurchases: 'Restore Purchases',
+        restorePurchasesDesc: 'Recover purchases made with your store account.',
+        restorePurchasesSuccess: 'Your purchase has been restored.',
+        restorePurchasesEmpty: 'No active ad-free purchase was found for this store account.',
+        manageSubscription: 'Manage Subscription',
+        manageSubscriptionDesc: 'View, change, or cancel your plan.',
+        premiumActionFailed: 'We could not complete this action. Please try again.',
         support: 'الدعم',
         helpFaq: 'المساعدة والأسئلة الشائعة',
+        rateVocBee: 'Rate VocBee',
         privacyPolicy: 'سياسة الخصوصية',
         logout: 'تسجيل الخروج',
         logoutConfirmTitle: 'تسجيل الخروج',
@@ -131,6 +168,8 @@ export default {
         changePhotoTitle: 'تغيير صورة الملف الشخصي',
         takePhoto: 'التقاط صورة',
         chooseFromGallery: 'اختيار من المعرض',
+        selectAvatar: 'Select Avatar',
+        avatarOptionAccessibility: 'Avatar {{number}}',
         removePhoto: 'إزالة الصورة',
         resetProgressSuccess: 'تمت إعادة تعيين تقدمك.',
         editProfileTitle: 'تعديل الملف الشخصي',
@@ -141,6 +180,7 @@ export default {
         deleteAccount: 'حذف الحساب',
         deleteAccountConfirmTitle: 'حذف الحساب',
         deleteAccountConfirmDesc: 'هل أنت متأكد من أنك تريد حذف حسابك؟ لا يمكن التراجع عن هذا الإجراء وسيتم حذف جميع بياناتك نهائياً.',
+        deleteAccountSubscriptionNote: 'Deleting your VocBee account does not cancel an active App Store or Google Play subscription. Manage or cancel it from your store account first if needed.',
         deleteAccountSuccess: 'تم حذف حسابك بنجاح',
         deleteAccountError: 'حدث خطأ أثناء حذف حسابك',
         permissionRequired: 'إذن مطلوب',
@@ -162,7 +202,8 @@ export default {
         privacyYourRightsDesc: 'احذف البيانات عبر إعادة تعيين التقدم أو إلغاء تثبيت التطبيق.',
         privacyContact: '4. التواصل',
     },
-    level: {
+    level: 
+    {
         beginner: 'مبتدئ',
         intermediate: 'متوسط',
         advanced: 'متقدم',
@@ -170,7 +211,8 @@ export default {
         intermediateDesc: 'يمكنني مناقشة مواضيع مألوفة وفهم النقاط الرئيسية.',
         advancedDesc: 'أعبّر عن نفسي بطلاقة وأفهم نصوصاً معقدة.',
     },
-    languages: {
+    languages: 
+    {
         english: 'الإنجليزية',
         turkish: 'التركية',
         german: 'الألمانية',
@@ -193,7 +235,8 @@ export default {
         swahili: 'السواحيلية',
         urdu: 'الأردية',
     },
-    setup: {
+    setup: 
+    {
         step1TitleWhite: 'ما هي',
         step1TitleGreen: 'لغتك الأم؟',
         step1Subtitle: 'سنستخدمها لترجمة الكلمات لك.',
@@ -232,18 +275,22 @@ export default {
         endTime: 'وقت الانتهاء',
         frequency: 'التكرار',
     },
-    onboarding: {
+    onboarding: 
+    {
         title1: 'تعلّم كلمات جديدة يومياً',
         subtitle1: 'اكتشف وأتقن مفردات جديدة مع دروس يومية مخصصة تناسب مستواك.',
         title2: 'تدرّب ببطاقات الفلاش',
         subtitle2: 'عزّز تعلمك ببطاقات تفاعلية. اسحب لتحديد الكلمات كمتعلَّمة.',
         title3: 'تتبّع تقدمك',
         subtitle3: 'راقب رحلتك التعليمية واحتفل بإنجازاتك أثناء تطورك.',
+        title4: 'Let Words Come to You',
+        subtitle4: 'Get timely reminders, keep your learning streak alive, and return when it matters.',
         start: 'ابدأ',
         skip: 'تخطي',
         next: 'التالي',
     },
-    example: {
+    example: 
+    {
         title: 'جمل أمثلة',
         explainGrammarBtn: 'اشرح القواعد بالذكاء الاصطناعي',
         grammarExplanationTitle: 'شرح القواعد',
@@ -257,12 +304,14 @@ export default {
         explanationError: 'تعذر تحميل الشرح. يرجى المحاولة مرة أخرى.',
         retry: 'إعادة المحاولة',
     },
-    favorites: {
+    favorites: 
+    {
         title: 'المفضلة',
         noFavoritesTitle: 'لا توجد مفضلات بعد',
         noFavoritesMsg: 'اضغط على زر النجمة أثناء التعلم لحفظ كلماتك المفضلة هنا.',
     },
-    forgotPassword: {
+    forgotPassword: 
+    {
         title: 'هل نسيت كلمة المرور؟',
         subtitle: 'لا تقلق! أدخل بريدك الإلكتروني وسنرسل لك رابطاً لإعادة تعيين كلمة المرور.',
         enterEmail: 'يرجى إدخال عنوان بريدك الإلكتروني',
@@ -272,7 +321,8 @@ export default {
         sendResetLink: 'إرسال رابط إعادة التعيين',
         backToLogin: 'العودة لتسجيل الدخول',
     },
-    levelTest: {
+    levelTest: 
+    {
         advanced: 'متقدم',
         intermediate: 'متوسط',
         beginner: 'مبتدئ',
@@ -284,22 +334,27 @@ export default {
         seeResults: 'عرض النتائج',
         next: 'التالي',
     },
-    errorBoundary: {
+    errorBoundary: 
+    {
         title: 'عذراً! حدث خطأ ما',
         message: 'نأسف، لقد واجه التطبيق خطأ غير متوقع.',
         restart: 'إعادة تشغيل التطبيق',
     },
-    offline: {
+    offline: 
+    {
         message: 'لا يوجد اتصال بالإنترنت',
     },
-    connection: {
+    connection: 
+    {
         title: 'مشكلة في الاتصال',
         message: 'تعذر الاتصال بالخادم. يرجى التحقق من اتصالك بالإنترنت والمحاولة مرة أخرى.',
         retry: 'إعادة المحاولة',
     },
-    help: {
+    help: 
+    {
         title: 'المساعدة والأسئلة الشائعة',
-        basics: {
+        basics: 
+        {
             q1: 'كيف أتعلم كلمات جديدة؟',
             a1: 'اسحب بطاقة الكلمة لليمين لتحديدها كمتعلَّمة، أو لليسار لتخطيها ورؤيتها لاحقاً. يمكنك أيضاً الضغط على الأزرار أسفل البطاقة.',
             q2: 'كيف أستمع إلى النطق؟',
@@ -311,7 +366,8 @@ export default {
             q5: 'ما هي ميزة "شرح القواعد"؟',
             a5: 'في شاشة الجمل النموذجية، اضغط على "شرح القواعد" للحصول على شرح بالذكاء الاصطناعي لقواعد الكلمة وأنماط استخدامها ونصائح لتذكرها.',
         },
-        levels: {
+        levels: 
+        {
             q1: 'ما هي مستويات الإتقان؟',
             a1: 'يستخدم VocBee مستويات CEFR: مبتدئ (A1-A2) للمفردات الأساسية، متوسط (B1-B2) لكلمات المحادثة، ومتقدم (C1) للمفردات المتطورة. اختر بناءً على مستوى مهارتك الحالي.',
             q2: 'كيف أغير مستواي؟',
@@ -319,13 +375,15 @@ export default {
             q3: 'كيف يتم تتبع تقدمي؟',
             a3: 'يظهر تقدمك على الشاشة الرئيسية مع عدد الكلمات المتعلَّمة/الإجمالية وشريط التقدم. عند إكمال المستويات، ينقلك VocBee تلقائياً إلى مفردات أصعب.',
         },
-        reminders: {
+        reminders: 
+        {
             q1: 'كيف تعمل التذكيرات؟',
             a1: 'فعّل التذكيرات اليومية في الإعدادات. حدد النطاق الزمني المفضل والتكرار (من كل 15 دقيقة إلى كل ساعتين). ستتلقى إشعارات بالمفردات للتدرب عليها خلال اليوم.',
             q2: 'ماذا يعني "عند وصول الإشعار"؟',
             a2: 'اختر ما إذا كانت الكلمات المعروضة في الإشعارات ستُحدد تلقائياً كمتعلَّمة أو تبقى في قائمة الانتظار للمراجعة اليدوية لاحقاً.',
         },
-        data: {
+        data: 
+        {
             q1: 'هل يتم حفظ تقدمي في السحابة؟',
             a1: 'نعم! يتم مزامنة تقدمك ومفضلاتك تلقائياً مع سحابتنا يومياً. سجّل الدخول على أي جهاز لمتابعة التعلم من حيث توقفت.',
             q2: 'هل يمكنني تعلم لغة مختلفة؟',
@@ -333,21 +391,23 @@ export default {
             q3: 'كيف أعيد تعيين تقدمي؟',
             a3: 'اذهب إلى الإعدادات ← التقدم ← إعادة تعيين التقدم. سيؤدي هذا إلى مسح جميع الكلمات المتعلَّمة والبدء من جديد. تحذير: لا يمكن التراجع عن هذا الإجراء!',
         },
-        support: {
+        support: 
+        {
             title: 'تحتاج مزيداً من المساعدة؟',
             desc: 'لأي أسئلة أو اقتراحات أو مشاكل، يرجى التواصل معنا على support@vocbee.com. يسعدنا سماعك!',
         },
     },
-	homeTutorial: {
-        step1: "اسحب لليمين لتحديد الكلمات التي تعلمتها",
-        step2: "اسحب لليسار لمراجعة الكلمة لاحقًا",
-        step3: "اضغط على النجمة لحفظ الكلمات في المفضلة",
-        step4: "اضغط على الكلمة للاستماع إلى نطقها",
-        step5: "اضغط على الجملة للاستماع إليها",
-        step6: "اضغط هنا لرؤية المزيد من الجمل الأمثلة",
-        skip: "تخطي",
-        next: "التالي",
-        done: "فهمت",
-        stepOf: "{{current}} من {{total}}",
+    homeTutorial: 
+    {
+        step1: 'اسحب لليمين لتحديد الكلمات التي تعلمتها',
+        step2: 'اسحب لليسار لمراجعة الكلمة لاحقًا',
+        step3: 'اضغط على النجمة لحفظ الكلمات في المفضلة',
+        step4: 'اضغط على الكلمة للاستماع إلى نطقها',
+        step5: 'اضغط على الجملة للاستماع إليها',
+        step6: 'اضغط هنا لرؤية المزيد من الجمل الأمثلة',
+        skip: 'تخطي',
+        next: 'التالي',
+        done: 'فهمت',
+        stepOf: '{{current}} من {{total}}',
     },
 };

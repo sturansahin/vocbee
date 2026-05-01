@@ -1,5 +1,7 @@
-export default {
-    common: {
+export default 
+{
+    common: 
+    {
         loading: 'Загрузка...',
         error: 'Ошибка',
         success: 'Успех',
@@ -18,7 +20,25 @@ export default {
         search: 'Поиск',
         warning: 'Внимание',
     },
-    auth: {
+    reviewPrompt: 
+    {
+        enjoyingTitle: 'Enjoying VocBee?',
+        enjoyingMessage: 'If VocBee is helping you learn, we would love a quick rating.',
+        yes: 'Yes',
+        notYet: 'Not yet',
+        later: 'Later',
+        rateTitle: 'How would you rate VocBee?',
+        rateMessage: 'Your rating helps us keep improving the learning experience.',
+        rateInStore: 'Rate in Store',
+        sendFeedback: 'Send Feedback',
+        feedbackTitle: 'Help us improve',
+        feedbackMessage: 'Tell us what would make VocBee better for you.',
+        starAccessibilityLabel: '{{count}} stars',
+        storeOpenError: 'We could not open the store review page. Please try again later.',
+        feedbackOpenError: 'We could not open your email app. Please contact support@vocbee.com.',
+    },
+    auth: 
+    {
         subtitle: 'Изучайте новые слова без усилий.',
         email: 'Email',
         emailPlaceholder: 'Email или имя пользователя',
@@ -52,9 +72,10 @@ export default {
         acceptPrivacyPrefix: 'Я прочитал(а) и принимаю',
         acceptPrivacyRequired: 'Чтобы создать аккаунт, необходимо принять Политику конфиденциальности.',
     },
-    home: {
+    home: 
+    {
         welcome: 'Добро пожаловать',
-        levelComplete: '\uD83C\uDF89 Уровень завершён!',
+        levelComplete: '🎉 Уровень завершён!',
         levelCompleteDesc: 'Вы выучили все {{count}} слов на уровне {{level}}!',
         noVocabulary: 'Нет слов',
         setupRequired: 'Пожалуйста, завершите настройку, чтобы начать обучение.',
@@ -81,7 +102,8 @@ export default {
         skip: 'ПРОПУСТИТЬ',
         tapToSeeExamples: 'Нажмите, чтобы увидеть примеры предложений',
     },
-    settings: {
+    settings: 
+    {
         title: 'Настройки',
         profile: 'Профиль',
         editProfile: 'Редактировать профиль',
@@ -108,8 +130,23 @@ export default {
         resetConfirmDesc: 'Вы уверены, что хотите сбросить весь прогресс? Это действие нельзя отменить.',
         changeLangConfirmTitle: 'Сменить язык обучения',
         changeLangConfirmDesc: 'Это сбросит ваш прогресс и позволит выбрать новый язык. Вы уверены?',
+        premium: 'Premium',
+        removeAds: 'Remove Ads',
+        removeAdsDesc: 'Unlock an ad-free learning experience with monthly, yearly, or lifetime access.',
+        removeAdsSuccess: 'Ads have been removed from your account.',
+        adFreeActive: 'Ad-Free Active',
+        adFreeLifetime: 'Lifetime access',
+        adFreeActiveUntil: 'Active until {{date}}',
+        restorePurchases: 'Restore Purchases',
+        restorePurchasesDesc: 'Recover purchases made with your store account.',
+        restorePurchasesSuccess: 'Your purchase has been restored.',
+        restorePurchasesEmpty: 'No active ad-free purchase was found for this store account.',
+        manageSubscription: 'Manage Subscription',
+        manageSubscriptionDesc: 'View, change, or cancel your plan.',
+        premiumActionFailed: 'We could not complete this action. Please try again.',
         support: 'Поддержка',
         helpFaq: 'Помощь и FAQ',
+        rateVocBee: 'Rate VocBee',
         privacyPolicy: 'Политика конфиденциальности',
         logout: 'Выйти',
         logoutConfirmTitle: 'Выйти',
@@ -131,6 +168,8 @@ export default {
         changePhotoTitle: 'Изменить фото профиля',
         takePhoto: 'Сделать фото',
         chooseFromGallery: 'Выбрать из галереи',
+        selectAvatar: 'Select Avatar',
+        avatarOptionAccessibility: 'Avatar {{number}}',
         removePhoto: 'Удалить фото',
         resetProgressSuccess: 'Ваш прогресс был сброшен.',
         editProfileTitle: 'Редактировать профиль',
@@ -141,6 +180,7 @@ export default {
         deleteAccount: 'Удалить аккаунт',
         deleteAccountConfirmTitle: 'Удалить аккаунт',
         deleteAccountConfirmDesc: 'Вы уверены, что хотите удалить свой аккаунт? Это действие нельзя отменить, и все ваши данные будут безвозвратно удалены.',
+        deleteAccountSubscriptionNote: 'Deleting your VocBee account does not cancel an active App Store or Google Play subscription. Manage or cancel it from your store account first if needed.',
         deleteAccountSuccess: 'Ваш аккаунт был успешно удалён',
         deleteAccountError: 'Произошла ошибка при удалении аккаунта',
         permissionRequired: 'Требуется разрешение',
@@ -162,7 +202,8 @@ export default {
         privacyYourRightsDesc: 'Удалите данные через Сброс прогресса или удаление приложения.',
         privacyContact: '4. Контакты',
     },
-    level: {
+    level: 
+    {
         beginner: 'Начинающий',
         intermediate: 'Средний',
         advanced: 'Продвинутый',
@@ -170,7 +211,8 @@ export default {
         intermediateDesc: 'Я могу обсуждать знакомые темы и понимать основные мысли.',
         advancedDesc: 'Я свободно выражаюсь и понимаю сложные тексты.',
     },
-    languages: {
+    languages: 
+    {
         english: 'Английский',
         turkish: 'Турецкий',
         german: 'Немецкий',
@@ -193,7 +235,8 @@ export default {
         swahili: 'Суахили',
         urdu: 'Урду',
     },
-    setup: {
+    setup: 
+    {
         step1TitleWhite: 'Какой ваш',
         step1TitleGreen: 'родной язык?',
         step1Subtitle: 'Мы будем использовать это, чтобы переводить слова для вас.',
@@ -232,18 +275,22 @@ export default {
         endTime: 'Время окончания',
         frequency: 'Частота',
     },
-    onboarding: {
+    onboarding: 
+    {
         title1: 'Учите новые слова каждый день',
         subtitle1: 'Открывайте и осваивайте новую лексику с ежедневными уроками под ваш уровень.',
         title2: 'Практикуйтесь с карточками',
         subtitle2: 'Закрепляйте знания с интерактивными карточками. Свайпайте, чтобы отметить слово как выученное.',
         title3: 'Отслеживайте прогресс',
         subtitle3: 'Следите за своим обучением и отмечайте достижения по мере роста.',
+        title4: 'Let Words Come to You',
+        subtitle4: 'Get timely reminders, keep your learning streak alive, and return when it matters.',
         start: 'Начать',
         skip: 'Пропустить',
         next: 'Далее',
     },
-    example: {
+    example: 
+    {
         title: 'Примеры предложений',
         explainGrammarBtn: 'Объяснить грамматику с ИИ',
         grammarExplanationTitle: 'Объяснение грамматики',
@@ -257,12 +304,14 @@ export default {
         explanationError: 'Не удалось загрузить объяснение. Пожалуйста, попробуйте ещё раз.',
         retry: 'Повторить',
     },
-    favorites: {
+    favorites: 
+    {
         title: 'Избранное',
         noFavoritesTitle: 'Пока нет избранного',
         noFavoritesMsg: 'Нажимайте на звёздочку во время обучения, чтобы сохранять любимые слова здесь.',
     },
-    forgotPassword: {
+    forgotPassword: 
+    {
         title: 'Забыли пароль?',
         subtitle: 'Ничего страшного! Введите email, и мы отправим ссылку для сброса пароля.',
         enterEmail: 'Пожалуйста, введите ваш email',
@@ -272,7 +321,8 @@ export default {
         sendResetLink: 'Отправить ссылку для сброса',
         backToLogin: 'Назад ко входу',
     },
-    levelTest: {
+    levelTest: 
+    {
         advanced: 'Продвинутый',
         intermediate: 'Средний',
         beginner: 'Начинающий',
@@ -284,22 +334,27 @@ export default {
         seeResults: 'Посмотреть результаты',
         next: 'Далее',
     },
-    errorBoundary: {
+    errorBoundary: 
+    {
         title: 'Упс! Что-то пошло не так',
         message: 'Извините, в приложении произошла непредвиденная ошибка.',
         restart: 'Перезапустить приложение',
     },
-    offline: {
+    offline: 
+    {
         message: 'Нет подключения к интернету',
     },
-    connection: {
+    connection: 
+    {
         title: 'Проблема с подключением',
         message: 'Не удалось подключиться к серверу. Пожалуйста, проверьте подключение к интернету и попробуйте снова.',
         retry: 'Повторить',
     },
-    help: {
+    help: 
+    {
         title: 'Помощь и FAQ',
-        basics: {
+        basics: 
+        {
             q1: 'Как учить новые слова?',
             a1: 'Проведите по карточке слова вправо, чтобы отметить его как выученное, или влево, чтобы пропустить и увидеть позже. Также можно нажать кнопки под карточкой.',
             q2: 'Как услышать произношение?',
@@ -311,7 +366,8 @@ export default {
             q5: 'Что такое функция "Объяснить грамматику"?',
             a5: 'На экране примеров нажмите "Объяснить грамматику", чтобы получить ИИ-объяснение грамматики слова, шаблонов использования и советов по запоминанию.',
         },
-        levels: {
+        levels: 
+        {
             q1: 'Какие есть уровни владения?',
             a1: 'VocBee использует уровни CEFR: Начинающий (A1-A2) для базового словаря, Средний (B1-B2) для разговорного, и Продвинутый (C1) для сложного словаря. Выберите уровень в зависимости от ваших текущих навыков.',
             q2: 'Как изменить уровень?',
@@ -319,13 +375,15 @@ export default {
             q3: 'Как отслеживается мой прогресс?',
             a3: 'Ваш прогресс отображается на главном экране с количеством выученных/всего слов и шкалой прогресса. При прохождении уровней VocBee автоматически переводит вас на более сложный словарь.',
         },
-        reminders: {
+        reminders: 
+        {
             q1: 'Как работают напоминания?',
             a1: 'Включите ежедневные напоминания в Настройках. Установите предпочтительный диапазон времени и частоту (от каждых 15 минут до 2 часов). Вы будете получать уведомления со словами для практики в течение дня.',
             q2: 'Что означает "При получении уведомления"?',
             a2: 'Выберите, будут ли слова в уведомлениях автоматически отмечаться как выученные или оставаться в очереди для ручного повторения.',
         },
-        data: {
+        data: 
+        {
             q1: 'Сохраняется ли мой прогресс в облаке?',
             a1: 'Да! Ваш прогресс и избранное автоматически синхронизируются с нашим облаком ежедневно. Войдите на любом устройстве, чтобы продолжить обучение с того места, где вы остановились.',
             q2: 'Могу ли я учить другой язык?',
@@ -333,21 +391,23 @@ export default {
             q3: 'Как сбросить прогресс?',
             a3: 'Перейдите в Настройки → Прогресс → Сбросить прогресс. Это удалит все выученные слова и начнёт обучение заново. Внимание: Это действие нельзя отменить!',
         },
-        support: {
+        support: 
+        {
             title: 'Нужна дополнительная помощь?',
             desc: 'По любым вопросам, предложениям или проблемам свяжитесь с нами по адресу support@vocbee.com. Мы будем рады вас услышать!',
         },
     },
-	homeTutorial: {
-        step1: "Смахните вправо, чтобы отметить выученные слова",
-        step2: "Смахните влево, чтобы повторить слово позже",
-        step3: "Нажмите на звездочку, чтобы сохранить слова в избранное",
-        step4: "Нажмите на слово, чтобы услышать его произношение",
-        step5: "Нажмите на предложение, чтобы прослушать его",
-        step6: "Нажмите здесь, чтобы увидеть больше примеров",
-        skip: "Пропустить",
-        next: "Далее",
-        done: "Понятно!",
-        stepOf: "{{current}} из {{total}}",
+    homeTutorial: 
+    {
+        step1: 'Смахните вправо, чтобы отметить выученные слова',
+        step2: 'Смахните влево, чтобы повторить слово позже',
+        step3: 'Нажмите на звездочку, чтобы сохранить слова в избранное',
+        step4: 'Нажмите на слово, чтобы услышать его произношение',
+        step5: 'Нажмите на предложение, чтобы прослушать его',
+        step6: 'Нажмите здесь, чтобы увидеть больше примеров',
+        skip: 'Пропустить',
+        next: 'Далее',
+        done: 'Понятно!',
+        stepOf: '{{current}} из {{total}}',
     },
 };

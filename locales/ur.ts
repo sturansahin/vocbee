@@ -1,5 +1,7 @@
-export default {
-    common: {
+export default 
+{
+    common: 
+    {
         loading: 'لوڈ ہو رہا ہے...',
         error: 'خرابی',
         success: 'کامیابی',
@@ -18,7 +20,25 @@ export default {
         search: 'تلاش',
         warning: 'انتباہ',
     },
-    auth: {
+    reviewPrompt: 
+    {
+        enjoyingTitle: 'Enjoying VocBee?',
+        enjoyingMessage: 'If VocBee is helping you learn, we would love a quick rating.',
+        yes: 'Yes',
+        notYet: 'Not yet',
+        later: 'Later',
+        rateTitle: 'How would you rate VocBee?',
+        rateMessage: 'Your rating helps us keep improving the learning experience.',
+        rateInStore: 'Rate in Store',
+        sendFeedback: 'Send Feedback',
+        feedbackTitle: 'Help us improve',
+        feedbackMessage: 'Tell us what would make VocBee better for you.',
+        starAccessibilityLabel: '{{count}} stars',
+        storeOpenError: 'We could not open the store review page. Please try again later.',
+        feedbackOpenError: 'We could not open your email app. Please contact support@vocbee.com.',
+    },
+    auth: 
+    {
         subtitle: 'نئے الفاظ آسانی سے سیکھیں۔',
         email: 'ای میل',
         emailPlaceholder: 'ای میل یا صارف نام',
@@ -52,7 +72,8 @@ export default {
         acceptPrivacyPrefix: 'میں نے یہ پڑھ لیا ہے اور قبول کرتا/کرتی ہوں:',
         acceptPrivacyRequired: 'اکاؤنٹ بنانے کے لیے آپ کو رازداری کی پالیسی قبول کرنا ہوگی۔',
     },
-    home: {
+    home: 
+    {
         welcome: 'خوش آمدید',
         levelComplete: '🎉 سطح مکمل!',
         levelCompleteDesc: 'آپ نے {{level}} میں سبھی {{count}} الفاظ سیکھ لیے!',
@@ -78,8 +99,11 @@ export default {
         streakCelebrationGeneric: '{{count}} دن کی اسٹریک۔ اسے برقرار رکھیں۔',
         words: 'الفاظ',
         learned: 'سیکھ لیا',
-        skip: 'چھوڑیں',        tapToSeeExamples: 'مثال کے جملے دیکھنے کے لیے تھپتھپائیں',    },
-    settings: {
+        skip: 'چھوڑیں',
+        tapToSeeExamples: 'مثال کے جملے دیکھنے کے لیے تھپتھپائیں',
+    },
+    settings: 
+    {
         title: 'ترتیبات',
         profile: 'پروفائل',
         editProfile: 'پروفائل میں ترمیم',
@@ -106,8 +130,23 @@ export default {
         resetConfirmDesc: 'کیا آپ واقعی اپنی تمام سیکھنے کی پیشرفت ری سیٹ کرنا چاہتے ہیں؟ یہ عمل واپس نہیں ہو سکتا۔',
         changeLangConfirmTitle: 'سیکھنے کی زبان تبدیل کریں',
         changeLangConfirmDesc: 'اس سے آپ کی تمام پیشرفت ری سیٹ ہو جائے گی اور آپ نئی زبان منتخب کر سکیں گے۔ کیا آپ واقعی یہ چاہتے ہیں؟',
+        premium: 'Premium',
+        removeAds: 'Remove Ads',
+        removeAdsDesc: 'Unlock an ad-free learning experience with monthly, yearly, or lifetime access.',
+        removeAdsSuccess: 'Ads have been removed from your account.',
+        adFreeActive: 'Ad-Free Active',
+        adFreeLifetime: 'Lifetime access',
+        adFreeActiveUntil: 'Active until {{date}}',
+        restorePurchases: 'Restore Purchases',
+        restorePurchasesDesc: 'Recover purchases made with your store account.',
+        restorePurchasesSuccess: 'Your purchase has been restored.',
+        restorePurchasesEmpty: 'No active ad-free purchase was found for this store account.',
+        manageSubscription: 'Manage Subscription',
+        manageSubscriptionDesc: 'View, change, or cancel your plan.',
+        premiumActionFailed: 'We could not complete this action. Please try again.',
         support: 'معاونت',
         helpFaq: 'مدد اور سوالات',
+        rateVocBee: 'Rate VocBee',
         privacyPolicy: 'رازداری کی پالیسی',
         logout: 'لاگ آؤٹ',
         logoutConfirmTitle: 'لاگ آؤٹ',
@@ -129,6 +168,8 @@ export default {
         changePhotoTitle: 'پروفائل تصویر تبدیل کریں',
         takePhoto: 'تصویر کھینچیں',
         chooseFromGallery: 'گیلری سے منتخب کریں',
+        selectAvatar: 'Select Avatar',
+        avatarOptionAccessibility: 'Avatar {{number}}',
         removePhoto: 'تصویر ہٹائیں',
         resetProgressSuccess: 'آپ کی پیشرفت ری سیٹ ہو گئی ہے۔',
         editProfileTitle: 'پروفائل میں ترمیم',
@@ -139,6 +180,7 @@ export default {
         deleteAccount: 'اکاؤنٹ حذف کریں',
         deleteAccountConfirmTitle: 'اکاؤنٹ حذف کریں',
         deleteAccountConfirmDesc: 'کیا آپ واقعی اپنا اکاؤنٹ حذف کرنا چاہتے ہیں؟ یہ عمل واپس نہیں ہو سکتا اور آپ کا تمام ڈیٹا مستقل طور پر حذف ہو جائے گا۔',
+        deleteAccountSubscriptionNote: 'Deleting your VocBee account does not cancel an active App Store or Google Play subscription. Manage or cancel it from your store account first if needed.',
         deleteAccountSuccess: 'آپ کا اکاؤنٹ کامیابی سے حذف ہو گیا ہے',
         deleteAccountError: 'اکاؤنٹ حذف کرتے وقت خرابی ہوئی',
         permissionRequired: 'اجازت درکار ہے',
@@ -160,7 +202,8 @@ export default {
         privacyYourRightsDesc: 'پیشرفت ری سیٹ یا ایپ ان انسٹال کر کے ڈیٹا حذف کریں۔',
         privacyContact: '۴۔ رابطہ',
     },
-    level: {
+    level: 
+    {
         beginner: 'ابتدائی',
         intermediate: 'درمیانی',
         advanced: 'اعلیٰ',
@@ -168,7 +211,8 @@ export default {
         intermediateDesc: 'میں مانوس موضوعات پر بات کر سکتا ہوں اور اہم نکات سمجھ سکتا ہوں۔',
         advancedDesc: 'میں روانی سے اظہار کر سکتا ہوں اور مشکل متون سمجھ سکتا ہوں۔',
     },
-    languages: {
+    languages: 
+    {
         english: 'انگریزی',
         turkish: 'ترکی',
         german: 'جرمن',
@@ -191,7 +235,8 @@ export default {
         swahili: 'سواحیلی',
         urdu: 'اردو',
     },
-    setup: {
+    setup: 
+    {
         step1TitleWhite: 'آپ کی',
         step1TitleGreen: 'مادری زبان کیا ہے؟',
         step1Subtitle: 'ہم اسے آپ کے لیے الفاظ کا ترجمہ کرنے کے لیے استعمال کریں گے۔',
@@ -230,18 +275,22 @@ export default {
         endTime: 'اختتام کا وقت',
         frequency: 'تعدد',
     },
-    onboarding: {
+    onboarding: 
+    {
         title1: 'روزانہ نئے الفاظ سیکھیں',
         subtitle1: 'اپنی سطح کے مطابق ذاتی روزانہ اسباق سے نئے الفاظ دریافت کریں اور سیکھیں۔',
         title2: 'فلیش کارڈز سے مشق کریں',
         subtitle2: 'انٹرایکٹو فلیش کارڈز سے اپنی تعلیم مضبوط کریں۔ سیکھا ہوا نشان لگانے کے لیے سوائپ کریں۔',
         title3: 'اپنی پیشرفت ٹریک کریں',
         subtitle3: 'اپنے سیکھنے کے سفر کی نگرانی کریں اور اپنی کامیابیوں کا جشن منائیں۔',
+        title4: 'Let Words Come to You',
+        subtitle4: 'Get timely reminders, keep your learning streak alive, and return when it matters.',
         start: 'شروع',
         skip: 'چھوڑیں',
         next: 'اگلا',
     },
-    example: {
+    example: 
+    {
         title: 'مثالی جملے',
         explainGrammarBtn: 'AI سے گرامر سمجھائیں',
         grammarExplanationTitle: 'گرامر کی وضاحت',
@@ -255,12 +304,14 @@ export default {
         explanationError: 'وضاحت لوڈ نہیں ہو سکی۔ براہ کرم دوبارہ کوشش کریں۔',
         retry: 'دوبارہ کوشش',
     },
-    favorites: {
+    favorites: 
+    {
         title: 'پسندیدہ',
         noFavoritesTitle: 'ابھی کوئی پسندیدہ نہیں',
         noFavoritesMsg: 'سیکھتے وقت ستارے کے بٹن پر ٹیپ کر کے اپنے پسندیدہ الفاظ یہاں محفوظ کریں۔',
     },
-    forgotPassword: {
+    forgotPassword: 
+    {
         title: 'پاس ورڈ بھول گئے؟',
         subtitle: 'فکر نہ کریں! اپنا ای میل درج کریں اور ہم آپ کو پاس ورڈ ری سیٹ کا لنک بھیجیں گے۔',
         enterEmail: 'براہ کرم اپنا ای میل ایڈریس درج کریں',
@@ -270,7 +321,8 @@ export default {
         sendResetLink: 'ری سیٹ لنک بھیجیں',
         backToLogin: 'لاگ ان پر واپس',
     },
-    levelTest: {
+    levelTest: 
+    {
         advanced: 'اعلیٰ',
         intermediate: 'درمیانی',
         beginner: 'ابتدائی',
@@ -282,22 +334,27 @@ export default {
         seeResults: 'نتائج دیکھیں',
         next: 'اگلا',
     },
-    errorBoundary: {
+    errorBoundary: 
+    {
         title: 'افوہ! کچھ غلط ہو گیا',
         message: 'معذرت، ایپلیکیشن میں ایک غیر متوقع خرابی آئی ہے۔',
         restart: 'ایپلیکیشن دوبارہ شروع کریں',
     },
-    offline: {
+    offline: 
+    {
         message: 'انٹرنیٹ کنیکشن نہیں',
     },
-    connection: {
+    connection: 
+    {
         title: 'کنکشن کا مسئلہ',
         message: 'سرور سے رابطہ نہیں ہو سکا۔ براہ کرم اپنا انٹرنیٹ کنیکشن چیک کریں اور دوبارہ کوشش کریں۔',
         retry: 'دوبارہ کوشش کریں',
     },
-    help: {
+    help: 
+    {
         title: 'مدد اور سوالات',
-        basics: {
+        basics: 
+        {
             q1: 'نئے الفاظ کیسے سیکھوں؟',
             a1: 'لفظ کارڈ کو دائیں سوائپ کریں سیکھا ہوا نشان لگانے کے لیے، یا بائیں سوائپ کریں چھوڑنے اور بعد میں دوبارہ دیکھنے کے لیے۔ آپ کارڈ کے نیچے بٹن بھی استعمال کر سکتے ہیں۔',
             q2: 'تلفظ کیسے سنوں؟',
@@ -309,7 +366,8 @@ export default {
             q5: '"گرامر سمجھائیں" فیچر کیا ہے؟',
             a5: 'مثالی جملوں کی اسکرین میں "گرامر سمجھائیں" پر ٹیپ کریں لفظ کی گرامر، استعمال کے طریقے اور یاد رکھنے کی تجاویز کی AI سے وضاحت حاصل کرنے کے لیے۔',
         },
-        levels: {
+        levels: 
+        {
             q1: 'مہارت کی سطحیں کیا ہیں؟',
             a1: 'VocBee CEFR سطحیں استعمال کرتا ہے: ابتدائی (A1-A2) بنیادی الفاظ کے لیے، درمیانی (B1-B2) گفتگو کے الفاظ کے لیے، اور اعلیٰ (C1) پیچیدہ الفاظ کے لیے۔ اپنی موجودہ مہارت کی بنیاد پر منتخب کریں۔',
             q2: 'سطح کیسے تبدیل کروں؟',
@@ -317,13 +375,15 @@ export default {
             q3: 'میری پیشرفت کیسے ٹریک ہوتی ہے؟',
             a3: 'آپ کی پیشرفت ہوم اسکرین پر سیکھے/مجموعی الفاظ اور پروگریس بار کے ساتھ دکھائی دیتی ہے۔ سطحیں مکمل کرنے پر VocBee خود بخود آپ کو مشکل الفاظ کی طرف بڑھاتا ہے۔',
         },
-        reminders: {
+        reminders: 
+        {
             q1: 'یاد دہانیاں کیسے کام کرتی ہیں؟',
             a1: 'ترتیبات میں روزانہ یاد دہانیاں فعال کریں۔ اپنا پسندیدہ وقت اور تعدد (ہر ۱۵ منٹ سے ۲ گھنٹے) منتخب کریں۔ آپ کو دن بھر مشق کے لیے الفاظ کی نوٹیفکیشنز ملیں گی۔',
             q2: '"نوٹیفکیشن ملنے پر" کا کیا مطلب ہے؟',
             a2: 'منتخب کریں کہ نوٹیفکیشنز میں دکھائے گئے الفاظ خود بخود سیکھا ہوا نشان لگ جائیں یا بعد میں دستی جائزے کے لیے آپ کی قطار میں رہیں۔',
         },
-        data: {
+        data: 
+        {
             q1: 'کیا میری پیشرفت کلاؤڈ میں محفوظ ہوتی ہے؟',
             a1: 'جی ہاں! آپ کی پیشرفت اور پسندیدہ خود بخود روزانہ ہمارے کلاؤڈ میں محفوظ ہوتے ہیں۔ کسی بھی آلے پر لاگ ان کریں اور جہاں سے چھوڑا تھا وہاں سے سیکھنا جاری رکھیں۔',
             q2: 'کیا میں کوئی اور زبان سیکھ سکتا ہوں؟',
@@ -331,21 +391,23 @@ export default {
             q3: 'اپنی پیشرفت کیسے ری سیٹ کروں؟',
             a3: 'ترتیبات → پیشرفت → پیشرفت ری سیٹ پر جائیں۔ اس سے تمام سیکھے ہوئے الفاظ صاف ہو جائیں گے اور از سر نو شروع ہو گا۔ انتباہ: یہ عمل واپس نہیں ہو سکتا!',
         },
-        support: {
+        support: 
+        {
             title: 'مزید مدد چاہیے؟',
             desc: 'کسی بھی سوال، تجویز یا مسئلے کے لیے ہم سے support@vocbee.com پر رابطہ کریں۔ ہم آپ سے سننا پسند کریں گے!',
         },
     },
-	homeTutorial: {
-        step1: "سیکھے ہوئے الفاظ کو نشان زد کرنے کے لیے دائیں سوائپ کریں",
-        step2: "بعد میں لفظ کا جائزہ لینے کے لیے بائیں سوائپ کریں",
-        step3: "الفاظ کو اپنے پسندیدہ میں محفوظ کرنے کے لیے ستارے کو تھپتھپائیں",
-        step4: "اس کا تلفظ سننے کے لیے لفظ کو تھپتھپائیں",
-        step5: "جملہ سننے کے لیے اس پر تھپتھپائیں",
-        step6: "مزید مثال کے جملے دیکھنے کے لیے یہاں تھپتھپائیں",
-        skip: "چھوڑیں",
-        next: "اگلا",
-        done: "سمجھ گیا!",
-        stepOf: "{{current}} کا {{total}}",
+    homeTutorial: 
+    {
+        step1: 'سیکھے ہوئے الفاظ کو نشان زد کرنے کے لیے دائیں سوائپ کریں',
+        step2: 'بعد میں لفظ کا جائزہ لینے کے لیے بائیں سوائپ کریں',
+        step3: 'الفاظ کو اپنے پسندیدہ میں محفوظ کرنے کے لیے ستارے کو تھپتھپائیں',
+        step4: 'اس کا تلفظ سننے کے لیے لفظ کو تھپتھپائیں',
+        step5: 'جملہ سننے کے لیے اس پر تھپتھپائیں',
+        step6: 'مزید مثال کے جملے دیکھنے کے لیے یہاں تھپتھپائیں',
+        skip: 'چھوڑیں',
+        next: 'اگلا',
+        done: 'سمجھ گیا!',
+        stepOf: '{{current}} کا {{total}}',
     },
 };

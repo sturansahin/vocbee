@@ -1,5 +1,7 @@
-export default {
-    common: {
+export default 
+{
+    common: 
+    {
         loading: '読み込み中...',
         error: 'エラー',
         success: '成功',
@@ -18,7 +20,25 @@ export default {
         search: '検索',
         warning: '警告',
     },
-    auth: {
+    reviewPrompt: 
+    {
+        enjoyingTitle: 'Enjoying VocBee?',
+        enjoyingMessage: 'If VocBee is helping you learn, we would love a quick rating.',
+        yes: 'Yes',
+        notYet: 'Not yet',
+        later: 'Later',
+        rateTitle: 'How would you rate VocBee?',
+        rateMessage: 'Your rating helps us keep improving the learning experience.',
+        rateInStore: 'Rate in Store',
+        sendFeedback: 'Send Feedback',
+        feedbackTitle: 'Help us improve',
+        feedbackMessage: 'Tell us what would make VocBee better for you.',
+        starAccessibilityLabel: '{{count}} stars',
+        storeOpenError: 'We could not open the store review page. Please try again later.',
+        feedbackOpenError: 'We could not open your email app. Please contact support@vocbee.com.',
+    },
+    auth: 
+    {
         subtitle: '新しい単語を簡単にマスターしましょう。',
         email: 'メール',
         emailPlaceholder: 'メールアドレスまたはユーザー名',
@@ -52,7 +72,8 @@ export default {
         acceptPrivacyPrefix: '私はこれを読み、同意します:',
         acceptPrivacyRequired: 'アカウントを作成するには、プライバシーポリシーに同意する必要があります。',
     },
-    home: {
+    home: 
+    {
         welcome: 'ようこそ',
         levelComplete: ' レベル完了！',
         levelCompleteDesc: '{{level}}の全{{count}}単語を学習しました！',
@@ -81,7 +102,8 @@ export default {
         skip: 'スキップ',
         tapToSeeExamples: 'タップして例文を見る',
     },
-    settings: {
+    settings: 
+    {
         title: '設定',
         profile: 'プロフィール',
         editProfile: 'プロフィール編集',
@@ -108,8 +130,23 @@ export default {
         resetConfirmDesc: 'すべての学習進捗をリセットしてもよろしいですか？この操作は取り消せません。',
         changeLangConfirmTitle: '学習言語を変更',
         changeLangConfirmDesc: 'これにより進捗がリセットされ、新しい言語を選択できるようになります。よろしいですか？',
+        premium: 'Premium',
+        removeAds: 'Remove Ads',
+        removeAdsDesc: 'Unlock an ad-free learning experience with monthly, yearly, or lifetime access.',
+        removeAdsSuccess: 'Ads have been removed from your account.',
+        adFreeActive: 'Ad-Free Active',
+        adFreeLifetime: 'Lifetime access',
+        adFreeActiveUntil: 'Active until {{date}}',
+        restorePurchases: 'Restore Purchases',
+        restorePurchasesDesc: 'Recover purchases made with your store account.',
+        restorePurchasesSuccess: 'Your purchase has been restored.',
+        restorePurchasesEmpty: 'No active ad-free purchase was found for this store account.',
+        manageSubscription: 'Manage Subscription',
+        manageSubscriptionDesc: 'View, change, or cancel your plan.',
+        premiumActionFailed: 'We could not complete this action. Please try again.',
         support: 'サポート',
         helpFaq: 'ヘルプとよくある質問',
+        rateVocBee: 'Rate VocBee',
         privacyPolicy: 'プライバシーポリシー',
         logout: 'ログアウト',
         logoutConfirmTitle: 'ログアウト',
@@ -131,6 +168,8 @@ export default {
         changePhotoTitle: 'プロフィール写真を変更',
         takePhoto: '写真を撮る',
         chooseFromGallery: 'ギャラリーから選択',
+        selectAvatar: 'Select Avatar',
+        avatarOptionAccessibility: 'Avatar {{number}}',
         removePhoto: '写真を削除',
         resetProgressSuccess: '進捗がリセットされました。',
         editProfileTitle: 'プロフィールを編集',
@@ -141,6 +180,7 @@ export default {
         deleteAccount: 'アカウントを削除',
         deleteAccountConfirmTitle: 'アカウントを削除',
         deleteAccountConfirmDesc: 'アカウントを削除してもよろしいですか？この操作は取り消せず、すべてのデータが完全に削除されます。',
+        deleteAccountSubscriptionNote: 'Deleting your VocBee account does not cancel an active App Store or Google Play subscription. Manage or cancel it from your store account first if needed.',
         deleteAccountSuccess: 'アカウントが正常に削除されました',
         deleteAccountError: 'アカウントの削除中にエラーが発生しました',
         permissionRequired: '権限が必要です',
@@ -162,7 +202,8 @@ export default {
         privacyYourRightsDesc: '進捗のリセットまたはアンインストールでデータを削除できます。',
         privacyContact: '4. お問い合わせ',
     },
-    level: {
+    level: 
+    {
         beginner: '初級',
         intermediate: '中級',
         advanced: '上級',
@@ -170,7 +211,8 @@ export default {
         intermediateDesc: '身近な話題について話し、要点を理解できます。',
         advancedDesc: '流暢に表現でき、複雑な文章を理解できます。',
     },
-    languages: {
+    languages: 
+    {
         english: '英語',
         turkish: 'トルコ語',
         german: 'ドイツ語',
@@ -193,7 +235,8 @@ export default {
         swahili: 'スワヒリ語',
         urdu: 'ウルドゥー語',
     },
-    setup: {
+    setup: 
+    {
         step1TitleWhite: 'あなたの',
         step1TitleGreen: '母語は？',
         step1Subtitle: '単語の翻訳に使用します。',
@@ -232,18 +275,22 @@ export default {
         endTime: '終了時間',
         frequency: '頻度',
     },
-    onboarding: {
+    onboarding: 
+    {
         title1: '毎日新しい単語を学ぶ',
         subtitle1: 'レベルに合わせたパーソナライズされた毎日のレッスンで新しい語彙を発見し、マスターしましょう。',
         title2: 'フラッシュカードで練習',
         subtitle2: 'インタラクティブなフラッシュカードで学習を強化。スワイプして単語を習得済みにしましょう。',
         title3: '進捗を確認',
         subtitle3: '学習の歩みを追跡し、成長とともに成果を祝いましょう。',
+        title4: 'Let Words Come to You',
+        subtitle4: 'Get timely reminders, keep your learning streak alive, and return when it matters.',
         start: '開始',
         skip: 'スキップ',
         next: '次へ',
     },
-    example: {
+    example: 
+    {
         title: '例文',
         explainGrammarBtn: 'AIで文法を説明',
         grammarExplanationTitle: '文法の説明',
@@ -257,12 +304,14 @@ export default {
         explanationError: '説明を読み込めませんでした。もう一度お試しください。',
         retry: '再試行',
     },
-    favorites: {
+    favorites: 
+    {
         title: 'お気に入り',
         noFavoritesTitle: 'まだお気に入りはありません',
         noFavoritesMsg: '学習中に星ボタンをタップして、ここにお気に入りの単語を保存しましょう。',
     },
-    forgotPassword: {
+    forgotPassword: 
+    {
         title: 'パスワードをお忘れですか？',
         subtitle: 'ご安心ください！メールアドレスを入力すると、パスワードリセット用のリンクを送信します。',
         enterEmail: 'メールアドレスを入力してください',
@@ -272,7 +321,8 @@ export default {
         sendResetLink: 'リセットリンクを送信',
         backToLogin: 'ログインに戻る',
     },
-    levelTest: {
+    levelTest: 
+    {
         advanced: '上級',
         intermediate: '中級',
         beginner: '初級',
@@ -284,22 +334,27 @@ export default {
         seeResults: '結果を見る',
         next: '次へ',
     },
-    errorBoundary: {
+    errorBoundary: 
+    {
         title: 'おっと！問題が発生しました',
         message: '申し訳ありません。アプリで予期しないエラーが発生しました。',
         restart: 'アプリを再起動',
     },
-    offline: {
+    offline: 
+    {
         message: 'インターネット接続がありません',
     },
-    connection: {
+    connection: 
+    {
         title: '接続の問題',
         message: 'サーバーに接続できませんでした。インターネット接続を確認して、もう一度お試しください。',
         retry: '再試行',
     },
-    help: {
+    help: 
+    {
         title: 'ヘルプとよくある質問',
-        basics: {
+        basics: 
+        {
             q1: '新しい単語はどうやって学習しますか？',
             a1: '単語カードを右にスワイプして学習済みにするか、左にスワイプしてスキップして後で見ることができます。カード下のボタンもタップできます。',
             q2: '発音はどうやって聞きますか？',
@@ -311,7 +366,8 @@ export default {
             q5: '「文法を説明」機能とは何ですか？',
             a5: '例文画面で「文法を説明」をタップすると、AIによる単語の文法、使用パターン、記憶のコツについての説明を取得できます。',
         },
-        levels: {
+        levels: 
+        {
             q1: '習熟度レベルとは何ですか？',
             a1: 'VocBeeはCEFRレベルを使用しています：初級（A1-A2）は基本語彙、中級（B1-B2）は会話語彙、上級（C1）は高度な語彙です。現在のスキルレベルに合わせて選んでください。',
             q2: 'レベルはどうやって変更しますか？',
@@ -319,13 +375,15 @@ export default {
             q3: '進捗はどのように追跡されますか？',
             a3: '進捗はホーム画面に学習済み/全単語数とプログレスバーで表示されます。レベルを完了すると、VocBeeは自動的により難しい語彙に進めます。',
         },
-        reminders: {
+        reminders: 
+        {
             q1: 'リマインダーはどのように機能しますか？',
             a1: '設定でデイリーリマインダーを有効にします。希望の時間帯と頻度（15分ごとから2時間ごと）を設定します。一日を通して語彙通知を受け取って練習できます。',
             q2: '「通知受信時」とはどういう意味ですか？',
             a2: '通知で表示された単語を自動的に学習済みにするか、手動で復習するためにキューに残すかを選択します。',
         },
-        data: {
+        data: 
+        {
             q1: '進捗はクラウドに保存されますか？',
             a1: 'はい！進捗とお気に入りは毎日自動的にクラウドに同期されます。どのデバイスからでもログインして学習を続けられます。',
             q2: '別の言語を学ぶことはできますか？',
@@ -333,21 +391,23 @@ export default {
             q3: '進捗をリセットするにはどうすればいいですか？',
             a3: '設定  進捗  進捗をリセットに移動します。これにより学習済みの単語がすべてクリアされ、最初からやり直せます。警告：この操作は取り消せません！',
         },
-        support: {
+        support: 
+        {
             title: 'さらにサポートが必要ですか？',
             desc: 'ご質問、ご提案、問題がございましたら、support@vocbee.com までお問い合わせください。ご連絡をお待ちしております！',
         },
     },
-	homeTutorial: {
-        step1: "右にスワイプして学習済みの単語をマークします",
-        step2: "左にスワイプして後で単語を復習します",
-        step3: "星をタップして単語をお気に入りに保存します",
-        step4: "単語をタップして発音を聞きます",
-        step5: "文章をタップして聞いてみましょう",
-        step6: "ここをタップして他の例文を表示します",
-        skip: "スキップ",
-        next: "次へ",
-        done: "了解！",
-        stepOf: "{{current}} / {{total}}",
+    homeTutorial: 
+    {
+        step1: '右にスワイプして学習済みの単語をマークします',
+        step2: '左にスワイプして後で単語を復習します',
+        step3: '星をタップして単語をお気に入りに保存します',
+        step4: '単語をタップして発音を聞きます',
+        step5: '文章をタップして聞いてみましょう',
+        step6: 'ここをタップして他の例文を表示します',
+        skip: 'スキップ',
+        next: '次へ',
+        done: '了解！',
+        stepOf: '{{current}} / {{total}}',
     },
 };

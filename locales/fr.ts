@@ -1,5 +1,7 @@
-export default {
-    common: {
+export default 
+{
+    common: 
+    {
         loading: 'Chargement...',
         error: 'Erreur',
         success: 'Succès',
@@ -18,7 +20,25 @@ export default {
         search: 'Rechercher',
         warning: 'Attention',
     },
-    auth: {
+    reviewPrompt: 
+    {
+        enjoyingTitle: 'Enjoying VocBee?',
+        enjoyingMessage: 'If VocBee is helping you learn, we would love a quick rating.',
+        yes: 'Yes',
+        notYet: 'Not yet',
+        later: 'Later',
+        rateTitle: 'How would you rate VocBee?',
+        rateMessage: 'Your rating helps us keep improving the learning experience.',
+        rateInStore: 'Rate in Store',
+        sendFeedback: 'Send Feedback',
+        feedbackTitle: 'Help us improve',
+        feedbackMessage: 'Tell us what would make VocBee better for you.',
+        starAccessibilityLabel: '{{count}} stars',
+        storeOpenError: 'We could not open the store review page. Please try again later.',
+        feedbackOpenError: 'We could not open your email app. Please contact support@vocbee.com.',
+    },
+    auth: 
+    {
         subtitle: 'Maîtrisez de nouveaux mots sans effort.',
         email: 'E-mail',
         emailPlaceholder: 'E-mail ou nom d\'utilisateur',
@@ -52,9 +72,10 @@ export default {
         acceptPrivacyPrefix: 'J\'ai lu et j\'accepte la',
         acceptPrivacyRequired: 'Vous devez accepter la Politique de confidentialité pour créer un compte.',
     },
-    home: {
+    home: 
+    {
         welcome: 'Bienvenue',
-        levelComplete: '\uD83C\uDF89 Niveau terminé !',
+        levelComplete: '🎉 Niveau terminé !',
         levelCompleteDesc: 'Vous avez appris tous les {{count}} mots du niveau {{level}} !',
         noVocabulary: 'Pas de vocabulaire',
         setupRequired: 'Veuillez terminer la configuration pour commencer à apprendre.',
@@ -78,8 +99,11 @@ export default {
         streakCelebrationGeneric: 'Série de {{count}} jours. Garde-la en vie.',
         words: 'mots',
         learned: 'APPRIS',
-        skip: 'PASSER',        tapToSeeExamples: 'Appuyez pour voir des exemples de phrases',    },
-    settings: {
+        skip: 'PASSER',
+        tapToSeeExamples: 'Appuyez pour voir des exemples de phrases',
+    },
+    settings: 
+    {
         title: 'Paramètres',
         profile: 'Profil',
         editProfile: 'Modifier le profil',
@@ -93,7 +117,7 @@ export default {
         enableReminders: 'Activer les rappels',
         startTime: 'Heure de début',
         endTime: 'Heure de fin',
-        endTimeBeforeStart: "L'heure de fin doit être après l'heure de début.",
+        endTimeBeforeStart: 'L\'heure de fin doit être après l\'heure de début.',
         frequency: 'Fréquence',
         progress: 'Progrès',
         changeLevel: 'Changer de niveau',
@@ -106,8 +130,23 @@ export default {
         resetConfirmDesc: 'Êtes-vous sûr de vouloir réinitialiser tous vos progrès d\'apprentissage ? Cette action est irréversible.',
         changeLangConfirmTitle: 'Changer de langue d\'apprentissage',
         changeLangConfirmDesc: 'Cela réinitialisera tous vos progrès et vous permettra de choisir une nouvelle langue à apprendre. Êtes-vous sûr ?',
+        premium: 'Premium',
+        removeAds: 'Remove Ads',
+        removeAdsDesc: 'Unlock an ad-free learning experience with monthly, yearly, or lifetime access.',
+        removeAdsSuccess: 'Ads have been removed from your account.',
+        adFreeActive: 'Ad-Free Active',
+        adFreeLifetime: 'Lifetime access',
+        adFreeActiveUntil: 'Active until {{date}}',
+        restorePurchases: 'Restore Purchases',
+        restorePurchasesDesc: 'Recover purchases made with your store account.',
+        restorePurchasesSuccess: 'Your purchase has been restored.',
+        restorePurchasesEmpty: 'No active ad-free purchase was found for this store account.',
+        manageSubscription: 'Manage Subscription',
+        manageSubscriptionDesc: 'View, change, or cancel your plan.',
+        premiumActionFailed: 'We could not complete this action. Please try again.',
         support: 'Support',
         helpFaq: 'Aide & FAQ',
+        rateVocBee: 'Rate VocBee',
         privacyPolicy: 'Politique de confidentialité',
         logout: 'Déconnexion',
         logoutConfirmTitle: 'Déconnexion',
@@ -129,6 +168,8 @@ export default {
         changePhotoTitle: 'Changer la photo de profil',
         takePhoto: 'Prendre une photo',
         chooseFromGallery: 'Choisir depuis la galerie',
+        selectAvatar: 'Select Avatar',
+        avatarOptionAccessibility: 'Avatar {{number}}',
         removePhoto: 'Supprimer la photo',
         resetProgressSuccess: 'Votre progression a été réinitialisée.',
         editProfileTitle: 'Modifier le profil',
@@ -139,6 +180,7 @@ export default {
         deleteAccount: 'Supprimer le compte',
         deleteAccountConfirmTitle: 'Supprimer le compte',
         deleteAccountConfirmDesc: 'Êtes-vous sûr de vouloir supprimer votre compte ? Cette action est irréversible et toutes vos données seront définitivement supprimées.',
+        deleteAccountSubscriptionNote: 'Deleting your VocBee account does not cancel an active App Store or Google Play subscription. Manage or cancel it from your store account first if needed.',
         deleteAccountSuccess: 'Votre compte a été supprimé avec succès',
         deleteAccountError: 'Une erreur est survenue lors de la suppression de votre compte',
         permissionRequired: 'Autorisation requise',
@@ -160,7 +202,8 @@ export default {
         privacyYourRightsDesc: 'Supprimez vos données via Réinitialiser les progrès ou en désinstallant l\'application.',
         privacyContact: '4. Contact',
     },
-    level: {
+    level: 
+    {
         beginner: 'Débutant',
         intermediate: 'Intermédiaire',
         advanced: 'Avancé',
@@ -168,7 +211,8 @@ export default {
         intermediateDesc: 'Je peux discuter de sujets familiers et comprendre les points principaux.',
         advancedDesc: 'Je m\'exprime couramment et comprends des textes complexes.',
     },
-    languages: {
+    languages: 
+    {
         english: 'Anglais',
         turkish: 'Turc',
         german: 'Allemand',
@@ -191,7 +235,8 @@ export default {
         swahili: 'Swahili',
         urdu: 'Ourdou',
     },
-    setup: {
+    setup: 
+    {
         step1TitleWhite: 'Quelle est votre',
         step1TitleGreen: 'langue maternelle ?',
         step1Subtitle: 'Nous l\'utiliserons pour traduire les mots pour vous.',
@@ -230,18 +275,22 @@ export default {
         endTime: 'Heure de fin',
         frequency: 'Fréquence',
     },
-    onboarding: {
+    onboarding: 
+    {
         title1: 'Apprenez de nouveaux mots chaque jour',
         subtitle1: 'Découvrez et maîtrisez du vocabulaire grâce à des leçons quotidiennes adaptées à votre niveau.',
         title2: 'Pratiquez avec des cartes',
         subtitle2: 'Renforcez vos connaissances avec des cartes interactives. Glissez pour marquer les mots comme appris.',
         title3: 'Suivez vos progrès',
         subtitle3: 'Suivez votre parcours d\'apprentissage et célébrez vos réussites au fil du temps.',
+        title4: 'Let Words Come to You',
+        subtitle4: 'Get timely reminders, keep your learning streak alive, and return when it matters.',
         start: 'Commencer',
         skip: 'Passer',
         next: 'Suivant',
     },
-    example: {
+    example: 
+    {
         title: 'Phrases d\'exemple',
         explainGrammarBtn: 'Expliquer la grammaire avec l\'IA',
         grammarExplanationTitle: 'Explication grammaticale',
@@ -255,12 +304,14 @@ export default {
         explanationError: 'Impossible de charger l\'explication. Veuillez réessayer.',
         retry: 'Réessayer',
     },
-    favorites: {
+    favorites: 
+    {
         title: 'Favoris',
         noFavoritesTitle: 'Aucun favori pour l\'instant',
         noFavoritesMsg: 'Appuyez sur l\'étoile pendant l\'apprentissage pour enregistrer vos mots favoris ici.',
     },
-    forgotPassword: {
+    forgotPassword: 
+    {
         title: 'Mot de passe oublié ?',
         subtitle: 'Pas de souci ! Entrez votre e-mail et nous vous enverrons un lien pour réinitialiser votre mot de passe.',
         enterEmail: 'Veuillez entrer votre adresse e-mail',
@@ -270,7 +321,8 @@ export default {
         sendResetLink: 'Envoyer le lien de réinitialisation',
         backToLogin: 'Retour à la connexion',
     },
-    levelTest: {
+    levelTest: 
+    {
         advanced: 'Avancé',
         intermediate: 'Intermédiaire',
         beginner: 'Débutant',
@@ -282,22 +334,27 @@ export default {
         seeResults: 'Voir les résultats',
         next: 'Suivant',
     },
-    errorBoundary: {
+    errorBoundary: 
+    {
         title: 'Oups ! Un problème est survenu',
         message: 'Désolé, l\'application a rencontré une erreur inattendue.',
         restart: 'Redémarrer l\'application',
     },
-    offline: {
+    offline: 
+    {
         message: 'Aucune connexion Internet',
     },
-    connection: {
+    connection: 
+    {
         title: 'Problème de connexion',
         message: 'Impossible de se connecter au serveur. Veuillez vérifier votre connexion Internet et réessayer.',
         retry: 'Réessayer',
     },
-    help: {
+    help: 
+    {
         title: 'Aide & FAQ',
-        basics: {
+        basics: 
+        {
             q1: 'Comment apprendre de nouveaux mots ?',
             a1: 'Faites glisser la carte de mot vers la droite pour la marquer comme apprise, ou vers la gauche pour la sauter et la revoir plus tard. Vous pouvez aussi utiliser les boutons sous la carte.',
             q2: 'Comment écouter la prononciation ?',
@@ -309,43 +366,48 @@ export default {
             q5: 'Qu\'est-ce que la fonction "Expliquer la grammaire" ?',
             a5: 'Sur l\'écran des phrases d\'exemple, appuyez sur "Expliquer la grammaire" pour obtenir une explication alimentée par l\'IA de la grammaire du mot, des modèles d\'utilisation et des astuces pour le mémoriser.',
         },
-        levels: {
+        levels: 
+        {
             q1: 'Quels sont les niveaux de compétence ?',
             a1: 'VocBee utilise les niveaux CECR : Débutant (A1-A2) pour le vocabulaire de base, Intermédiaire (B1-B2) pour le vocabulaire courant, et Avancé (C1) pour le vocabulaire sophistiqué. Choisissez en fonction de votre niveau actuel.',
             q2: 'Comment changer mon niveau ?',
-            a2: 'Allez dans Paramètres \u2192 Progrès \u2192 Changer de niveau. Sélectionnez un nouveau niveau et votre flux de mots sera mis à jour en conséquence. Vos mots appris sont sauvegardés pour tous les niveaux.',
+            a2: 'Allez dans Paramètres → Progrès → Changer de niveau. Sélectionnez un nouveau niveau et votre flux de mots sera mis à jour en conséquence. Vos mots appris sont sauvegardés pour tous les niveaux.',
             q3: 'Comment mon progrès est-il suivi ?',
             a3: 'Votre progrès s\'affiche sur l\'écran d\'accueil avec les mots appris/total et une barre de progression. Au fur et à mesure que vous terminez les niveaux, VocBee vous fait avancer automatiquement vers un vocabulaire plus difficile.',
         },
-        reminders: {
+        reminders: 
+        {
             q1: 'Comment fonctionnent les rappels ?',
             a1: 'Activez les rappels quotidiens dans Paramètres. Définissez votre plage horaire et fréquence préférées (toutes les 15 min à 2 heures). Vous recevrez des notifications de vocabulaire pour pratiquer tout au long de la journée.',
             q2: 'Que signifie "À la réception de la notification" ?',
             a2: 'Choisissez si les mots affichés dans les notifications sont automatiquement marqués comme appris ou restent dans votre file d\'attente pour une révision manuelle ultérieure.',
         },
-        data: {
+        data: 
+        {
             q1: 'Mon progrès est-il sauvegardé dans le cloud ?',
             a1: 'Oui ! Votre progrès et vos favoris se synchronisent automatiquement avec notre cloud quotidiennement. Connectez-vous sur n\'importe quel appareil pour reprendre là où vous vous êtes arrêté.',
             q2: 'Puis-je apprendre une autre langue ?',
-            a2: 'Allez dans Paramètres \u2192 Progrès \u2192 Changer de langue d\'apprentissage. Remarque : Cela réinitialisera votre progrès actuel car chaque langue a son propre ensemble de vocabulaire.',
+            a2: 'Allez dans Paramètres → Progrès → Changer de langue d\'apprentissage. Remarque : Cela réinitialisera votre progrès actuel car chaque langue a son propre ensemble de vocabulaire.',
             q3: 'Comment réinitialiser mon progrès ?',
-            a3: 'Allez dans Paramètres \u2192 Progrès \u2192 Réinitialiser les progrès. Cela efface tous les mots appris et recommence à zéro. Attention : Cette action est irréversible !',
+            a3: 'Allez dans Paramètres → Progrès → Réinitialiser les progrès. Cela efface tous les mots appris et recommence à zéro. Attention : Cette action est irréversible !',
         },
-        support: {
+        support: 
+        {
             title: 'Besoin d\'aide supplémentaire ?',
             desc: 'Pour toute question, suggestion ou problème, veuillez nous contacter à support@vocbee.com. Nous serions ravis de vous entendre !',
         },
     },
-	homeTutorial: {
-        step1: "Balayez vers la droite pour marquer les mots que vous avez appris",
-        step2: "Balayez vers la gauche pour revoir le mot plus tard",
-        step3: "Appuyez sur l'étoile pour enregistrer des mots dans vos favoris",
-        step4: "Appuyez sur le mot pour entendre sa prononciation",
-        step5: "Appuyez sur la phrase pour l'écouter",
-        step6: "Appuyez ici pour voir d'autres exemples de phrases",
-        skip: "Passer",
-        next: "Suivant",
-        done: "Compris !",
-        stepOf: "{{current}} sur {{total}}",
+    homeTutorial: 
+    {
+        step1: 'Balayez vers la droite pour marquer les mots que vous avez appris',
+        step2: 'Balayez vers la gauche pour revoir le mot plus tard',
+        step3: 'Appuyez sur l\'étoile pour enregistrer des mots dans vos favoris',
+        step4: 'Appuyez sur le mot pour entendre sa prononciation',
+        step5: 'Appuyez sur la phrase pour l\'écouter',
+        step6: 'Appuyez ici pour voir d\'autres exemples de phrases',
+        skip: 'Passer',
+        next: 'Suivant',
+        done: 'Compris !',
+        stepOf: '{{current}} sur {{total}}',
     },
 };

@@ -1,5 +1,7 @@
-export default {
-    common: {
+export default 
+{
+    common: 
+    {
         loading: 'در حال بارگذاری...',
         error: 'خطا',
         success: 'موفقیت',
@@ -18,7 +20,25 @@ export default {
         search: 'جستجو',
         warning: 'هشدار',
     },
-    auth: {
+    reviewPrompt: 
+    {
+        enjoyingTitle: 'Enjoying VocBee?',
+        enjoyingMessage: 'If VocBee is helping you learn, we would love a quick rating.',
+        yes: 'Yes',
+        notYet: 'Not yet',
+        later: 'Later',
+        rateTitle: 'How would you rate VocBee?',
+        rateMessage: 'Your rating helps us keep improving the learning experience.',
+        rateInStore: 'Rate in Store',
+        sendFeedback: 'Send Feedback',
+        feedbackTitle: 'Help us improve',
+        feedbackMessage: 'Tell us what would make VocBee better for you.',
+        starAccessibilityLabel: '{{count}} stars',
+        storeOpenError: 'We could not open the store review page. Please try again later.',
+        feedbackOpenError: 'We could not open your email app. Please contact support@vocbee.com.',
+    },
+    auth: 
+    {
         subtitle: 'کلمات جدید را به راحتی یاد بگیرید.',
         email: 'ایمیل',
         emailPlaceholder: 'ایمیل یا نام کاربری',
@@ -52,7 +72,8 @@ export default {
         acceptPrivacyPrefix: 'این مورد را خوانده‌ام و می‌پذیرم:',
         acceptPrivacyRequired: 'برای ایجاد حساب باید سیاست حفظ حریم خصوصی را بپذیرید.',
     },
-    home: {
+    home: 
+    {
         welcome: 'خوش آمدید',
         levelComplete: '🎉 سطح تکمیل شد!',
         levelCompleteDesc: 'شما همه {{count}} کلمه در {{level}} را یاد گرفتید!',
@@ -81,7 +102,8 @@ export default {
         skip: 'رد شدن',
         tapToSeeExamples: 'برای دیدن جملات مثال ضربه بزنید',
     },
-    settings: {
+    settings: 
+    {
         title: 'تنظیمات',
         profile: 'پروفایل',
         editProfile: 'ویرایش پروفایل',
@@ -108,8 +130,23 @@ export default {
         resetConfirmDesc: 'آیا مطمئن هستید که می‌خواهید همه پیشرفت خود را بازنشانی کنید؟ این عمل قابل برگشت نیست.',
         changeLangConfirmTitle: 'تغییر زبان یادگیری',
         changeLangConfirmDesc: 'این کار پیشرفت شما را بازنشانی می‌کند و به شما اجازه می‌دهد زبان جدیدی انتخاب کنید. آیا مطمئن هستید؟',
+        premium: 'Premium',
+        removeAds: 'Remove Ads',
+        removeAdsDesc: 'Unlock an ad-free learning experience with monthly, yearly, or lifetime access.',
+        removeAdsSuccess: 'Ads have been removed from your account.',
+        adFreeActive: 'Ad-Free Active',
+        adFreeLifetime: 'Lifetime access',
+        adFreeActiveUntil: 'Active until {{date}}',
+        restorePurchases: 'Restore Purchases',
+        restorePurchasesDesc: 'Recover purchases made with your store account.',
+        restorePurchasesSuccess: 'Your purchase has been restored.',
+        restorePurchasesEmpty: 'No active ad-free purchase was found for this store account.',
+        manageSubscription: 'Manage Subscription',
+        manageSubscriptionDesc: 'View, change, or cancel your plan.',
+        premiumActionFailed: 'We could not complete this action. Please try again.',
         support: 'پشتیبانی',
         helpFaq: 'راهنما و سوالات متداول',
+        rateVocBee: 'Rate VocBee',
         privacyPolicy: 'سیاست حفظ حریم خصوصی',
         logout: 'خروج',
         logoutConfirmTitle: 'خروج',
@@ -131,6 +168,8 @@ export default {
         changePhotoTitle: 'تغییر عکس پروفایل',
         takePhoto: 'گرفتن عکس',
         chooseFromGallery: 'انتخاب از گالری',
+        selectAvatar: 'Select Avatar',
+        avatarOptionAccessibility: 'Avatar {{number}}',
         removePhoto: 'حذف عکس',
         resetProgressSuccess: 'پیشرفت شما بازنشانی شد.',
         editProfileTitle: 'ویرایش پروفایل',
@@ -141,6 +180,7 @@ export default {
         deleteAccount: 'حذف حساب کاربری',
         deleteAccountConfirmTitle: 'حذف حساب کاربری',
         deleteAccountConfirmDesc: 'آیا مطمئن هستید که می‌خواهید حساب خود را حذف کنید؟ این عمل قابل برگشت نیست و تمام اطلاعات شما برای همیشه حذف خواهد شد.',
+        deleteAccountSubscriptionNote: 'Deleting your VocBee account does not cancel an active App Store or Google Play subscription. Manage or cancel it from your store account first if needed.',
         deleteAccountSuccess: 'حساب کاربری شما با موفقیت حذف شد',
         deleteAccountError: 'هنگام حذف حساب شما خطایی رخ داد',
         permissionRequired: 'مجوز لازم است',
@@ -162,7 +202,8 @@ export default {
         privacyYourRightsDesc: 'داده‌ها را از طریق بازنشانی پیشرفت یا حذف نصب پاک کنید.',
         privacyContact: '۴. تماس',
     },
-    level: {
+    level: 
+    {
         beginner: 'مبتدی',
         intermediate: 'متوسط',
         advanced: 'پیشرفته',
@@ -170,7 +211,8 @@ export default {
         intermediateDesc: 'می‌توانم درباره موضوعات آشنا صحبت کنم و نکات اصلی را درک کنم.',
         advancedDesc: 'می‌توانم روان صحبت کنم و متون پیچیده را درک کنم.',
     },
-    languages: {
+    languages: 
+    {
         english: 'انگلیسی',
         turkish: 'ترکی',
         german: 'آلمانی',
@@ -193,7 +235,8 @@ export default {
         swahili: 'سواحیلی',
         urdu: 'اردو',
     },
-    setup: {
+    setup: 
+    {
         step1TitleWhite: 'زبان',
         step1TitleGreen: 'مادری شما چیست؟',
         step1Subtitle: 'ما از این برای ترجمه کلمات برای شما استفاده می‌کنیم.',
@@ -232,18 +275,22 @@ export default {
         endTime: 'زمان پایان',
         frequency: 'تکرار',
     },
-    onboarding: {
+    onboarding: 
+    {
         title1: 'روزانه کلمات جدید یاد بگیرید',
         subtitle1: 'لغات جدید را با درس‌های روزانه شخصی‌شده متناسب با سطح خود کشف و تسلط پیدا کنید.',
         title2: 'با فلش‌کارت تمرین کنید',
         subtitle2: 'یادگیری خود را با فلش‌کارت‌های تعاملی تقویت کنید. بکشید تا کلمات را یاد گرفته شده علامت بزنید.',
         title3: 'پیشرفت خود را پیگیری کنید',
         subtitle3: 'سفر یادگیری خود را زیر نظر بگیرید و دستاوردهای خود را جشن بگیرید.',
+        title4: 'Let Words Come to You',
+        subtitle4: 'Get timely reminders, keep your learning streak alive, and return when it matters.',
         start: 'شروع',
         skip: 'رد شدن',
         next: 'بعدی',
     },
-    example: {
+    example: 
+    {
         title: 'جملات نمونه',
         explainGrammarBtn: 'توضیح گرامر با هوش مصنوعی',
         grammarExplanationTitle: 'توضیح گرامر',
@@ -257,12 +304,14 @@ export default {
         explanationError: 'بارگذاری توضیح ممکن نشد. لطفاً دوباره تلاش کنید.',
         retry: 'تلاش مجدد',
     },
-    favorites: {
+    favorites: 
+    {
         title: 'علاقه‌مندی‌ها',
         noFavoritesTitle: 'هنوز علاقه‌مندی ندارید',
         noFavoritesMsg: 'هنگام یادگیری روی دکمه ستاره بزنید تا کلمات مورد علاقه خود را اینجا ذخیره کنید.',
     },
-    forgotPassword: {
+    forgotPassword: 
+    {
         title: 'رمز عبور را فراموش کردید؟',
         subtitle: 'نگران نباشید! ایمیل خود را وارد کنید و ما لینک بازنشانی رمز عبور را برای شما ارسال می‌کنیم.',
         enterEmail: 'لطفاً آدرس ایمیل خود را وارد کنید',
@@ -272,7 +321,8 @@ export default {
         sendResetLink: 'ارسال لینک بازنشانی',
         backToLogin: 'بازگشت به ورود',
     },
-    levelTest: {
+    levelTest: 
+    {
         advanced: 'پیشرفته',
         intermediate: 'متوسط',
         beginner: 'مبتدی',
@@ -284,22 +334,27 @@ export default {
         seeResults: 'مشاهده نتایج',
         next: 'بعدی',
     },
-    errorBoundary: {
+    errorBoundary: 
+    {
         title: 'اوه! مشکلی پیش آمد',
         message: 'متأسفیم، اپلیکیشن با خطای غیرمنتظره‌ای مواجه شد.',
         restart: 'راه‌اندازی مجدد اپلیکیشن',
     },
-    offline: {
+    offline: 
+    {
         message: 'اتصال اینترنت برقرار نیست',
     },
-    connection: {
+    connection: 
+    {
         title: 'مشکل در اتصال',
         message: 'امکان اتصال به سرور وجود ندارد. لطفاً اتصال اینترنت خود را بررسی کرده و دوباره تلاش کنید.',
         retry: 'تلاش مجدد',
     },
-    help: {
+    help: 
+    {
         title: 'راهنما و سوالات متداول',
-        basics: {
+        basics: 
+        {
             q1: 'چگونه کلمات جدید یاد بگیرم؟',
             a1: 'کارت کلمه را به راست بکشید تا یاد گرفته شده علامت بخورد، یا به چپ بکشید تا رد شود و بعداً دوباره ببینید. همچنین می‌توانید از دکمه‌های زیر کارت استفاده کنید.',
             q2: 'چگونه تلفظ را بشنوم؟',
@@ -311,7 +366,8 @@ export default {
             q5: 'ویژگی "توضیح گرامر" چیست؟',
             a5: 'در صفحه جملات نمونه، روی "توضیح گرامر" بزنید تا توضیح هوش مصنوعی درباره گرامر، الگوهای کاربرد و نکات برای یادآوری کلمه دریافت کنید.',
         },
-        levels: {
+        levels: 
+        {
             q1: 'سطوح مهارت چیست؟',
             a1: 'VocBee از سطوح CEFR استفاده می‌کند: مبتدی (A1-A2) برای لغات پایه، متوسط (B1-B2) برای کلمات مکالمه‌ای، و پیشرفته (C1) برای لغات تخصصی. بر اساس سطح فعلی خود انتخاب کنید.',
             q2: 'چگونه سطح خود را تغییر دهم؟',
@@ -319,13 +375,15 @@ export default {
             q3: 'پیشرفت من چگونه پیگیری می‌شود؟',
             a3: 'پیشرفت شما روی صفحه اصلی با کلمات یاد گرفته شده/کل و نوار پیشرفت نشان داده می‌شود. با تکمیل سطوح، VocBee به طور خودکار شما را به لغات سخت‌تر ارتقا می‌دهد.',
         },
-        reminders: {
+        reminders: 
+        {
             q1: 'یادآوری‌ها چگونه کار می‌کنند؟',
             a1: 'یادآوری‌های روزانه را در تنظیمات فعال کنید. بازه زمانی و تکرار مورد نظر خود را تنظیم کنید (هر ۱۵ دقیقه تا ۲ ساعت). اعلان‌های لغت برای تمرین در طول روز دریافت خواهید کرد.',
             q2: '"هنگام دریافت اعلان" یعنی چه؟',
             a2: 'انتخاب کنید که آیا کلمات نشان داده شده در اعلان‌ها به طور خودکار یاد گرفته شده علامت بخورند یا برای مرور دستی در صف بمانند.',
         },
-        data: {
+        data: 
+        {
             q1: 'آیا پیشرفت من در ابر ذخیره می‌شود؟',
             a1: 'بله! پیشرفت و علاقه‌مندی‌های شما روزانه به طور خودکار با ابر همگام‌سازی می‌شود. در هر دستگاهی وارد شوید و از جایی که متوقف شدید ادامه دهید.',
             q2: 'آیا می‌توانم زبان دیگری یاد بگیرم؟',
@@ -333,21 +391,23 @@ export default {
             q3: 'چگونه پیشرفت خود را بازنشانی کنم؟',
             a3: 'به تنظیمات ← پیشرفت ← بازنشانی پیشرفت بروید. این کار همه کلمات یاد گرفته شده را پاک می‌کند و از نو شروع می‌کنید. هشدار: این عمل قابل برگشت نیست!',
         },
-        support: {
+        support: 
+        {
             title: 'به کمک بیشتری نیاز دارید؟',
             desc: 'برای هرگونه سوال، پیشنهاد یا مشکل، لطفاً با ما در support@vocbee.com تماس بگیرید. خوشحال می‌شویم از شما بشنویم!',
         },
     },
-	homeTutorial: {
-        step1: "برای علامت‌گذاری کلماتی که یاد گرفته‌اید به راست بکشید",
-        step2: "برای مرور کلمه در زمان دیگر به چپ بکشید",
-        step3: "برای ذخیره کلمات در علاقه‌مندی‌ها روی ستاره ضربه بزنید",
-        step4: "برای گوش دادن به تلفظ روی کلمه ضربه بزنید",
-        step5: "برای شنیدن جمله روی آن ضربه بزنید",
-        step6: "برای دیدن جملات نمونه بیشتر اینجا ضربه بزنید",
-        skip: "رد کردن",
-        next: "بعدی",
-        done: "متوجه شدم!",
-        stepOf: "{{current}} از {{total}}",
+    homeTutorial: 
+    {
+        step1: 'برای علامت‌گذاری کلماتی که یاد گرفته‌اید به راست بکشید',
+        step2: 'برای مرور کلمه در زمان دیگر به چپ بکشید',
+        step3: 'برای ذخیره کلمات در علاقه‌مندی‌ها روی ستاره ضربه بزنید',
+        step4: 'برای گوش دادن به تلفظ روی کلمه ضربه بزنید',
+        step5: 'برای شنیدن جمله روی آن ضربه بزنید',
+        step6: 'برای دیدن جملات نمونه بیشتر اینجا ضربه بزنید',
+        skip: 'رد کردن',
+        next: 'بعدی',
+        done: 'متوجه شدم!',
+        stepOf: '{{current}} از {{total}}',
     },
 };

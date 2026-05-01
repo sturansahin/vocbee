@@ -1,5 +1,7 @@
-export default {
-    common: {
+export default 
+{
+    common: 
+    {
         loading: 'Đang tải...',
         error: 'Lỗi',
         success: 'Thành công',
@@ -18,7 +20,25 @@ export default {
         search: 'Tìm kiếm',
         warning: 'Cảnh báo',
     },
-    auth: {
+    reviewPrompt: 
+    {
+        enjoyingTitle: 'Enjoying VocBee?',
+        enjoyingMessage: 'If VocBee is helping you learn, we would love a quick rating.',
+        yes: 'Yes',
+        notYet: 'Not yet',
+        later: 'Later',
+        rateTitle: 'How would you rate VocBee?',
+        rateMessage: 'Your rating helps us keep improving the learning experience.',
+        rateInStore: 'Rate in Store',
+        sendFeedback: 'Send Feedback',
+        feedbackTitle: 'Help us improve',
+        feedbackMessage: 'Tell us what would make VocBee better for you.',
+        starAccessibilityLabel: '{{count}} stars',
+        storeOpenError: 'We could not open the store review page. Please try again later.',
+        feedbackOpenError: 'We could not open your email app. Please contact support@vocbee.com.',
+    },
+    auth: 
+    {
         subtitle: 'Nắm vững từ mới một cách dễ dàng.',
         email: 'Email',
         emailPlaceholder: 'Email hoặc Tên người dùng',
@@ -52,7 +72,8 @@ export default {
         acceptPrivacyPrefix: 'Tôi đã đọc và đồng ý với',
         acceptPrivacyRequired: 'Bạn phải chấp nhận Chính sách bảo mật để tạo tài khoản.',
     },
-    home: {
+    home: 
+    {
         welcome: 'Chào mừng',
         levelComplete: ' Hoàn thành cấp độ!',
         levelCompleteDesc: 'Bạn đã học tất cả {{count}} từ ở cấp độ {{level}}!',
@@ -78,8 +99,11 @@ export default {
         streakCelebrationGeneric: 'Chuỗi {{count}} ngày. Hãy giữ vững.',
         words: 'từ',
         learned: 'ĐÃ HỌC',
-        skip: 'BỎ QUA',        tapToSeeExamples: 'Nhấn để xem câu ví dụ',    },
-    settings: {
+        skip: 'BỎ QUA',
+        tapToSeeExamples: 'Nhấn để xem câu ví dụ',
+    },
+    settings: 
+    {
         title: 'Cài đặt',
         profile: 'Hồ sơ',
         editProfile: 'Chỉnh sửa hồ sơ',
@@ -106,8 +130,23 @@ export default {
         resetConfirmDesc: 'Bạn có chắc chắn muốn đặt lại tất cả tiến độ học tập của mình không? Hành động này không thể hoàn tác.',
         changeLangConfirmTitle: 'Đổi ngôn ngữ học',
         changeLangConfirmDesc: 'Điều này sẽ đặt lại tiến trình của bạn và cho phép bạn chọn một ngôn ngữ mới. Bạn có chắc không?',
+        premium: 'Premium',
+        removeAds: 'Remove Ads',
+        removeAdsDesc: 'Unlock an ad-free learning experience with monthly, yearly, or lifetime access.',
+        removeAdsSuccess: 'Ads have been removed from your account.',
+        adFreeActive: 'Ad-Free Active',
+        adFreeLifetime: 'Lifetime access',
+        adFreeActiveUntil: 'Active until {{date}}',
+        restorePurchases: 'Restore Purchases',
+        restorePurchasesDesc: 'Recover purchases made with your store account.',
+        restorePurchasesSuccess: 'Your purchase has been restored.',
+        restorePurchasesEmpty: 'No active ad-free purchase was found for this store account.',
+        manageSubscription: 'Manage Subscription',
+        manageSubscriptionDesc: 'View, change, or cancel your plan.',
+        premiumActionFailed: 'We could not complete this action. Please try again.',
         support: 'Hỗ trợ',
         helpFaq: 'Trợ giúp & FAQ',
+        rateVocBee: 'Rate VocBee',
         privacyPolicy: 'Chính sách bảo mật',
         logout: 'Đăng xuất',
         logoutConfirmTitle: 'Đăng xuất',
@@ -129,6 +168,8 @@ export default {
         changePhotoTitle: 'Thay đổi ảnh hồ sơ',
         takePhoto: 'Chụp ảnh',
         chooseFromGallery: 'Chọn từ thư viện',
+        selectAvatar: 'Select Avatar',
+        avatarOptionAccessibility: 'Avatar {{number}}',
         removePhoto: 'Xóa ảnh',
         resetProgressSuccess: 'Tiến độ của bạn đã được đặt lại.',
         editProfileTitle: 'Chỉnh sửa hồ sơ',
@@ -139,6 +180,7 @@ export default {
         deleteAccount: 'Xóa tài khoản',
         deleteAccountConfirmTitle: 'Xóa tài khoản',
         deleteAccountConfirmDesc: 'Bạn có chắc chắn muốn xóa tài khoản của mình không? Hành động này không thể hoàn tác và tất cả dữ liệu của bạn sẽ bị xóa vĩnh viễn.',
+        deleteAccountSubscriptionNote: 'Deleting your VocBee account does not cancel an active App Store or Google Play subscription. Manage or cancel it from your store account first if needed.',
         deleteAccountSuccess: 'Tài khoản của bạn đã được xóa thành công',
         deleteAccountError: 'Đã xảy ra lỗi khi xóa tài khoản của bạn',
         permissionRequired: 'Yêu cầu quyền truy cập',
@@ -160,7 +202,8 @@ export default {
         privacyYourRightsDesc: 'Xóa dữ liệu qua Đặt lại tiến độ hoặc gỡ cài đặt.',
         privacyContact: '4. Liên hệ',
     },
-    level: {
+    level: 
+    {
         beginner: 'Sơ cấp',
         intermediate: 'Trung cấp',
         advanced: 'Cao cấp',
@@ -168,7 +211,8 @@ export default {
         intermediateDesc: 'Tôi có thể thảo luận các chủ đề quen thuộc và hiểu các ý chính.',
         advancedDesc: 'Tôi diễn đạt trôi chảy và hiểu các văn bản phức tạp.',
     },
-    languages: {
+    languages: 
+    {
         english: 'Tiếng Anh',
         turkish: 'Tiếng Thổ Nhĩ Kỳ',
         german: 'Tiếng Đức',
@@ -191,7 +235,8 @@ export default {
         swahili: 'Tiếng Swahili',
         urdu: 'Tiếng Urdu',
     },
-    setup: {
+    setup: 
+    {
         step1TitleWhite: 'Ngôn ngữ',
         step1TitleGreen: 'mẹ đẻ của bạn là gì?',
         step1Subtitle: 'Chúng tôi sẽ dùng để dịch từ cho bạn.',
@@ -230,18 +275,22 @@ export default {
         endTime: 'Thời gian kết thúc',
         frequency: 'Tần suất',
     },
-    onboarding: {
+    onboarding: 
+    {
         title1: 'Học từ mới mỗi ngày',
         subtitle1: 'Khám phá và làm chủ từ vựng mới với bài học hằng ngày cá nhân hóa theo trình độ của bạn.',
         title2: 'Luyện tập với thẻ flash',
         subtitle2: 'Củng cố việc học bằng thẻ flash tương tác. Vuốt để đánh dấu từ đã học.',
         title3: 'Theo dõi tiến độ',
         subtitle3: 'Theo dõi hành trình học và chúc mừng thành tựu khi bạn tiến bộ.',
+        title4: 'Let Words Come to You',
+        subtitle4: 'Get timely reminders, keep your learning streak alive, and return when it matters.',
         start: 'Bắt đầu',
         skip: 'Bỏ qua',
         next: 'Tiếp theo',
     },
-    example: {
+    example: 
+    {
         title: 'Câu ví dụ',
         explainGrammarBtn: 'Giải thích ngữ pháp bằng AI',
         grammarExplanationTitle: 'Giải thích ngữ pháp',
@@ -255,12 +304,14 @@ export default {
         explanationError: 'Không thể tải phần giải thích. Vui lòng thử lại.',
         retry: 'Thử lại',
     },
-    favorites: {
+    favorites: 
+    {
         title: 'Yêu thích',
         noFavoritesTitle: 'Chưa có mục yêu thích',
         noFavoritesMsg: 'Khi học, hãy nhấn nút ngôi sao để lưu các từ bạn thích vào đây.',
     },
-    forgotPassword: {
+    forgotPassword: 
+    {
         title: 'Quên mật khẩu?',
         subtitle: 'Đừng lo! Nhập email của bạn và chúng tôi sẽ gửi liên kết để đặt lại mật khẩu.',
         enterEmail: 'Vui lòng nhập địa chỉ email của bạn',
@@ -270,7 +321,8 @@ export default {
         sendResetLink: 'Gửi liên kết đặt lại',
         backToLogin: 'Quay lại đăng nhập',
     },
-    levelTest: {
+    levelTest: 
+    {
         advanced: 'Cao cấp',
         intermediate: 'Trung cấp',
         beginner: 'Sơ cấp',
@@ -282,22 +334,27 @@ export default {
         seeResults: 'Xem kết quả',
         next: 'Tiếp theo',
     },
-    errorBoundary: {
+    errorBoundary: 
+    {
         title: 'Ôi! Có lỗi xảy ra',
         message: 'Xin lỗi, ứng dụng đã gặp một lỗi không mong muốn.',
         restart: 'Khởi động lại ứng dụng',
     },
-    offline: {
+    offline: 
+    {
         message: 'Không có kết nối Internet',
     },
-    connection: {
+    connection: 
+    {
         title: 'Lỗi kết nối',
         message: 'Không thể kết nối đến máy chủ. Vui lòng kiểm tra kết nối internet của bạn và thử lại.',
         retry: 'Thử lại',
     },
-    help: {
+    help: 
+    {
         title: 'Trợ giúp & Câu hỏi thường gặp',
-        basics: {
+        basics: 
+        {
             q1: 'Làm thế nào để học từ mới?',
             a1: 'Vuốt thẻ từ sang phải để đánh dấu là đã học, hoặc vuốt sang trái để bỏ qua và xem lại sau. Bạn cũng có thể nhấn các nút bên dưới thẻ.',
             q2: 'Làm thế nào để nghe phát âm?',
@@ -309,7 +366,8 @@ export default {
             q5: 'Tính năng "Giải thích ngữ pháp" là gì?',
             a5: 'Trong màn hình ví dụ, nhấn "Giải thích ngữ pháp" để nhận giải thích AI về ngữ pháp, cách sử dụng và mẹo ghi nhớ từ.',
         },
-        levels: {
+        levels: 
+        {
             q1: 'Các cấp độ thành thạo là gì?',
             a1: 'VocBee sử dụng cấp độ CEFR: Sơ cấp (A1-A2) cho từ vựng cơ bản, Trung cấp (B1-B2) cho từ vựng hội thoại, và Cao cấp (C1) cho từ vựng nâng cao. Chọn dựa trên trình độ hiện tại của bạn.',
             q2: 'Làm thế nào để đổi cấp độ?',
@@ -317,13 +375,15 @@ export default {
             q3: 'Tiến độ của tôi được theo dõi như thế nào?',
             a3: 'Tiến độ hiển thị trên màn hình chính với từ đã học/tổng số và thanh tiến độ. Khi hoàn thành cấp độ, VocBee tự động đưa bạn đến từ vựng khó hơn.',
         },
-        reminders: {
+        reminders: 
+        {
             q1: 'Lời nhắc hoạt động như thế nào?',
             a1: 'Bật Lời nhắc hàng ngày trong Cài đặt. Đặt phạm vi thời gian và tần suất ưa thích (mỗi 15 phút đến 2 giờ). Bạn sẽ nhận được thông báo từ vựng để luyện tập suốt cả ngày.',
             q2: '"Khi nhận thông báo" nghĩa là gì?',
             a2: 'Chọn xem từ trong thông báo có được tự động đánh dấu là đã học hay vẫn ở trong hàng đợi để xem lại thủ công sau.',
         },
-        data: {
+        data: 
+        {
             q1: 'Tiến độ của tôi có được lưu lên đám mây không?',
             a1: 'Có! Tiến độ và yêu thích của bạn tự động đồng bộ với đám mây mỗi ngày. Đăng nhập trên bất kỳ thiết bị nào để tiếp tục học từ nơi bạn đã dừng lại.',
             q2: 'Tôi có thể học ngôn ngữ khác không?',
@@ -331,21 +391,23 @@ export default {
             q3: 'Làm thế nào để đặt lại tiến độ?',
             a3: 'Vào Cài đặt  Tiến độ  Đặt lại tiến độ. Điều này sẽ xóa tất cả từ đã học và bắt đầu lại từ đầu. Cảnh báo: Hành động này không thể hoàn tác!',
         },
-        support: {
+        support: 
+        {
             title: 'Cần thêm trợ giúp?',
             desc: 'Với bất kỳ câu hỏi, đề xuất hoặc vấn đề nào, vui lòng liên hệ chúng tôi tại support@vocbee.com. Chúng tôi rất vui được nghe từ bạn!',
         },
     },
-	homeTutorial: {
-        step1: "Vuốt sang phải để đánh dấu các từ bạn đã học",
-        step2: "Vuốt sang trái để xem lại từ đó sau",
-        step3: "Nhấn vào ngôi sao để lưu các từ vào mục yêu thích của bạn",
-        step4: "Nhấn vào từ để nghe phát âm",
-        step5: "Nhấn vào câu để nghe",
-        step6: "Nhấn vào đây để xem thêm các câu ví dụ",
-        skip: "Bỏ qua",
-        next: "Tiếp theo",
-        done: "Đã hiểu!",
-        stepOf: "{{current}} của {{total}}",
+    homeTutorial: 
+    {
+        step1: 'Vuốt sang phải để đánh dấu các từ bạn đã học',
+        step2: 'Vuốt sang trái để xem lại từ đó sau',
+        step3: 'Nhấn vào ngôi sao để lưu các từ vào mục yêu thích của bạn',
+        step4: 'Nhấn vào từ để nghe phát âm',
+        step5: 'Nhấn vào câu để nghe',
+        step6: 'Nhấn vào đây để xem thêm các câu ví dụ',
+        skip: 'Bỏ qua',
+        next: 'Tiếp theo',
+        done: 'Đã hiểu!',
+        stepOf: '{{current}} của {{total}}',
     },
 };

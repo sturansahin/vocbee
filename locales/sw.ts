@@ -1,5 +1,7 @@
-export default {
-    common: {
+export default 
+{
+    common: 
+    {
         loading: 'Inapakia...',
         error: 'Hitilafu',
         success: 'Imefanikiwa',
@@ -18,7 +20,25 @@ export default {
         search: 'Tafuta',
         warning: 'Onyo',
     },
-    auth: {
+    reviewPrompt: 
+    {
+        enjoyingTitle: 'Enjoying VocBee?',
+        enjoyingMessage: 'If VocBee is helping you learn, we would love a quick rating.',
+        yes: 'Yes',
+        notYet: 'Not yet',
+        later: 'Later',
+        rateTitle: 'How would you rate VocBee?',
+        rateMessage: 'Your rating helps us keep improving the learning experience.',
+        rateInStore: 'Rate in Store',
+        sendFeedback: 'Send Feedback',
+        feedbackTitle: 'Help us improve',
+        feedbackMessage: 'Tell us what would make VocBee better for you.',
+        starAccessibilityLabel: '{{count}} stars',
+        storeOpenError: 'We could not open the store review page. Please try again later.',
+        feedbackOpenError: 'We could not open your email app. Please contact support@vocbee.com.',
+    },
+    auth: 
+    {
         subtitle: 'Jifunze maneno mapya kwa urahisi.',
         email: 'Barua pepe',
         emailPlaceholder: 'Barua pepe au Jina la mtumiaji',
@@ -52,9 +72,10 @@ export default {
         acceptPrivacyPrefix: 'Nimesoma na ninakubali',
         acceptPrivacyRequired: 'Lazima ukubali Sera ya Faragha ili kuunda akaunti.',
     },
-    home: {
+    home: 
+    {
         welcome: 'Karibu',
-        levelComplete: '\uD83C\uDF89 Kiwango Kimekamilika!',
+        levelComplete: '🎉 Kiwango Kimekamilika!',
         levelCompleteDesc: 'Umejifunza maneno yote {{count}} katika {{level}}!',
         noVocabulary: 'Hakuna Msamiati',
         setupRequired: 'Tafadhali kamilisha usanidi kuanza kujifunza.',
@@ -78,8 +99,11 @@ export default {
         streakCelebrationGeneric: 'Mfululizo wa siku {{count}}. Uudumishe.',
         words: 'maneno',
         learned: 'IMEJIFUNZWA',
-        skip: 'RUKA',        tapToSeeExamples: 'Gusa ili kuona sentensi za mfano',    },
-    settings: {
+        skip: 'RUKA',
+        tapToSeeExamples: 'Gusa ili kuona sentensi za mfano',
+    },
+    settings: 
+    {
         title: 'Mipangilio',
         profile: 'Wasifu',
         editProfile: 'Hariri Wasifu',
@@ -106,8 +130,23 @@ export default {
         resetConfirmDesc: 'Una uhakika unataka kuweka upya maendeleo yako yote? Kitendo hiki hakiwezi kutenduliwa.',
         changeLangConfirmTitle: 'Badilisha Lugha ya Kujifunza',
         changeLangConfirmDesc: 'Hii itaweka upya maendeleo yako yote na kukuruhusu kuchagua lugha mpya ya kujifunza. Una uhakika?',
+        premium: 'Premium',
+        removeAds: 'Remove Ads',
+        removeAdsDesc: 'Unlock an ad-free learning experience with monthly, yearly, or lifetime access.',
+        removeAdsSuccess: 'Ads have been removed from your account.',
+        adFreeActive: 'Ad-Free Active',
+        adFreeLifetime: 'Lifetime access',
+        adFreeActiveUntil: 'Active until {{date}}',
+        restorePurchases: 'Restore Purchases',
+        restorePurchasesDesc: 'Recover purchases made with your store account.',
+        restorePurchasesSuccess: 'Your purchase has been restored.',
+        restorePurchasesEmpty: 'No active ad-free purchase was found for this store account.',
+        manageSubscription: 'Manage Subscription',
+        manageSubscriptionDesc: 'View, change, or cancel your plan.',
+        premiumActionFailed: 'We could not complete this action. Please try again.',
         support: 'Msaada',
         helpFaq: 'Msaada na Maswali',
+        rateVocBee: 'Rate VocBee',
         privacyPolicy: 'Sera ya Faragha',
         logout: 'Ondoka',
         logoutConfirmTitle: 'Ondoka',
@@ -129,6 +168,8 @@ export default {
         changePhotoTitle: 'Badilisha Picha ya Wasifu',
         takePhoto: 'Piga Picha',
         chooseFromGallery: 'Chagua kutoka Galeri',
+        selectAvatar: 'Select Avatar',
+        avatarOptionAccessibility: 'Avatar {{number}}',
         removePhoto: 'Ondoa Picha',
         resetProgressSuccess: 'Maendeleo yako yamewekwa upya.',
         editProfileTitle: 'Hariri Wasifu',
@@ -139,6 +180,7 @@ export default {
         deleteAccount: 'Futa Akaunti',
         deleteAccountConfirmTitle: 'Futa Akaunti',
         deleteAccountConfirmDesc: 'Una uhakika unataka kufuta akaunti yako? Kitendo hiki hakiwezi kutenduliwa na data yako yote itafutwa kabisa.',
+        deleteAccountSubscriptionNote: 'Deleting your VocBee account does not cancel an active App Store or Google Play subscription. Manage or cancel it from your store account first if needed.',
         deleteAccountSuccess: 'Akaunti yako imefutwa kwa mafanikio',
         deleteAccountError: 'Hitilafu imetokea wakati wa kufuta akaunti yako',
         permissionRequired: 'Ruhusa Inahitajika',
@@ -160,7 +202,8 @@ export default {
         privacyYourRightsDesc: 'Futa data kupitia Weka Upya Maendeleo au ondoa programu.',
         privacyContact: '4. Mawasiliano',
     },
-    level: {
+    level: 
+    {
         beginner: 'Mwanzo',
         intermediate: 'Kati',
         advanced: 'Juu',
@@ -168,7 +211,8 @@ export default {
         intermediateDesc: 'Naweza kujadili mada zinazojulikana na kuelewa hoja kuu.',
         advancedDesc: 'Naweza kujieleza kwa ufasaha na kuelewa maandishi magumu.',
     },
-    languages: {
+    languages: 
+    {
         english: 'Kiingereza',
         turkish: 'Kituruki',
         german: 'Kijerumani',
@@ -191,7 +235,8 @@ export default {
         swahili: 'Kiswahili',
         urdu: 'Kiurdu',
     },
-    setup: {
+    setup: 
+    {
         step1TitleWhite: 'Lugha yako',
         step1TitleGreen: 'ya asili ni ipi?',
         step1Subtitle: 'Tutatumia hii kutafsiri maneno kwako.',
@@ -230,18 +275,22 @@ export default {
         endTime: 'Wakati wa Kumaliza',
         frequency: 'Mara Ngapi',
     },
-    onboarding: {
+    onboarding: 
+    {
         title1: 'Jifunze Maneno Mapya Kila Siku',
         subtitle1: 'Gundua na ujue msamiati mpya na masomo ya kila siku yaliyoboreshwa kwa kiwango chako.',
         title2: 'Fanya Mazoezi na Kadi',
         subtitle2: 'Imarisha kujifunza kwako na kadi shirikishi. Telezesha kuweka alama maneno kama yamejifunzwa.',
         title3: 'Fuatilia Maendeleo Yako',
         subtitle3: 'Fuatilia safari yako ya kujifunza na usherehekee mafanikio yako unapoendelea.',
+        title4: 'Let Words Come to You',
+        subtitle4: 'Get timely reminders, keep your learning streak alive, and return when it matters.',
         start: 'Anza',
         skip: 'Ruka',
         next: 'Endelea',
     },
-    example: {
+    example: 
+    {
         title: 'Sentensi za Mfano',
         explainGrammarBtn: 'Eleza Sarufi na AI',
         grammarExplanationTitle: 'Maelezo ya Sarufi',
@@ -255,12 +304,14 @@ export default {
         explanationError: 'Haiwezi kupakia maelezo. Tafadhali jaribu tena.',
         retry: 'Jaribu Tena',
     },
-    favorites: {
+    favorites: 
+    {
         title: 'Vipendwa',
         noFavoritesTitle: 'Bado Hakuna Vipendwa',
         noFavoritesMsg: 'Gusa kitufe cha nyota wakati wa kujifunza kuhifadhi maneno yako unayopenda hapa.',
     },
-    forgotPassword: {
+    forgotPassword: 
+    {
         title: 'Umesahau Nenosiri?',
         subtitle: 'Usijali! Ingiza barua pepe yako na tutakutumia kiungo cha kuweka upya nenosiri lako.',
         enterEmail: 'Tafadhali ingiza barua pepe yako',
@@ -270,7 +321,8 @@ export default {
         sendResetLink: 'Tuma Kiungo',
         backToLogin: 'Rudi kwenye Kuingia',
     },
-    levelTest: {
+    levelTest: 
+    {
         advanced: 'Juu',
         intermediate: 'Kati',
         beginner: 'Mwanzo',
@@ -282,22 +334,27 @@ export default {
         seeResults: 'Ona Matokeo',
         next: 'Endelea',
     },
-    errorBoundary: {
+    errorBoundary: 
+    {
         title: 'Lo! Kitu kimeenda vibaya',
         message: 'Tunasikitika, programu imekutana na hitilafu isiyotarajiwa.',
         restart: 'Anza Upya Programu',
     },
-    offline: {
+    offline: 
+    {
         message: 'Hakuna Muunganisho wa Mtandao',
     },
-    connection: {
+    connection: 
+    {
         title: 'Tatizo la Muunganisho',
         message: 'Haikuweza kuunganisha na seva. Tafadhali angalia muunganisho wako wa intaneti na ujaribu tena.',
         retry: 'Jaribu Tena',
     },
-    help: {
+    help: 
+    {
         title: 'Msaada na Maswali',
-        basics: {
+        basics: 
+        {
             q1: 'Ninajifunzaje maneno mapya?',
             a1: 'Telezesha kadi ya neno kulia kuiweka alama imejifunzwa, au telezesha kushoto kuruka na kuiona tena baadaye. Unaweza pia kugusa vitufe vilivyo chini ya kadi.',
             q2: 'Ninasikiaje matamshi?',
@@ -309,43 +366,48 @@ export default {
             q5: 'Kipengele cha "Eleza Sarufi" ni nini?',
             a5: 'Katika skrini ya sentensi za mfano, gusa "Eleza Sarufi" kupata maelezo yanayoendeshwa na AI kuhusu sarufi ya neno, mifumo ya matumizi, na vidokezo vya kukumbuka.',
         },
-        levels: {
+        levels: 
+        {
             q1: 'Viwango vya umahiri ni vipi?',
             a1: 'VocBee inatumia viwango vya CEFR: Mwanzo (A1-A2) kwa msamiati wa msingi, Kati (B1-B2) kwa maneno ya mazungumzo, na Juu (C1) kwa msamiati wa hali ya juu. Chagua kulingana na kiwango chako cha sasa.',
             q2: 'Ninabadilishaje kiwango changu?',
-            a2: 'Nenda Mipangilio \u2192 Maendeleo \u2192 Badilisha Kiwango. Chagua kiwango kipya na mtiririko wako wa maneno utasasishwa. Maneno yako yaliyojifunzwa yanahifadhiwa katika viwango vyote.',
+            a2: 'Nenda Mipangilio → Maendeleo → Badilisha Kiwango. Chagua kiwango kipya na mtiririko wako wa maneno utasasishwa. Maneno yako yaliyojifunzwa yanahifadhiwa katika viwango vyote.',
             q3: 'Maendeleo yangu yanafuatiliwa vipi?',
             a3: 'Maendeleo yako yanaonyeshwa kwenye skrini ya nyumbani na maneno yaliyojifunzwa/jumla na mstari wa maendeleo. Unapokamilisha viwango, VocBee inakupandisha kiotomatiki kwa msamiati mgumu zaidi.',
         },
-        reminders: {
+        reminders: 
+        {
             q1: 'Vikumbusho vinafanya kazi vipi?',
             a1: 'Washa Vikumbusho vya Kila Siku katika Mipangilio. Weka kipindi chako na mara ngapi (kila dakika 15 hadi masaa 2). Utapokea arifa za msamiati kufanya mazoezi siku nzima.',
             q2: '"Arifa Inapofika" inamaanisha nini?',
             a2: 'Chagua kama maneno yanayoonyeshwa katika arifa yawekwe alama kiotomatiki kama yamejifunzwa au yabaki katika foleni yako kwa mapitio ya mikono baadaye.',
         },
-        data: {
+        data: 
+        {
             q1: 'Maendeleo yangu yanahifadhiwa kwenye wingu?',
             a1: 'Ndiyo! Maendeleo na vipendwa vyako vinasawazishwa kiotomatiki kwenye wingu letu kila siku. Ingia kwenye kifaa chochote kuendelea kujifunza mahali ulipoishia.',
             q2: 'Naweza kujifunza lugha tofauti?',
-            a2: 'Nenda Mipangilio \u2192 Maendeleo \u2192 Badilisha Lugha ya Kujifunza. Kumbuka: Hii itaweka upya maendeleo yako ya sasa kwani kila lugha ina seti yake ya msamiati.',
+            a2: 'Nenda Mipangilio → Maendeleo → Badilisha Lugha ya Kujifunza. Kumbuka: Hii itaweka upya maendeleo yako ya sasa kwani kila lugha ina seti yake ya msamiati.',
             q3: 'Ninaweka upya vipi maendeleo yangu?',
-            a3: 'Nenda Mipangilio \u2192 Maendeleo \u2192 Weka Upya Maendeleo. Hii itafuta maneno yote yaliyojifunzwa na kuanza upya. Onyo: Kitendo hiki hakiwezi kutenduliwa!',
+            a3: 'Nenda Mipangilio → Maendeleo → Weka Upya Maendeleo. Hii itafuta maneno yote yaliyojifunzwa na kuanza upya. Onyo: Kitendo hiki hakiwezi kutenduliwa!',
         },
-        support: {
+        support: 
+        {
             title: 'Unahitaji msaada zaidi?',
             desc: 'Kwa maswali yoyote, mapendekezo, au matatizo, tafadhali wasiliana nasi kwa support@vocbee.com. Tungependa kusikia kutoka kwako!',
         },
     },
-	homeTutorial: {
-        step1: "Telezesha kulia kuweka alama kwenye maneno uliyojifunza",
-        step2: "Telezesha kushoto kupitia neno tena baadaye",
-        step3: "Gusa nyota ili kuhifadhi maneno kwa vipendwa vyako",
-        step4: "Gusa neno kusikia matamshi yake",
-        step5: "Gusa sentensi ili kuisikia",
-        step6: "Gusa hapa kuona sentensi zaidi za mfano",
-        skip: "Ruka",
-        next: "Ifuatayo",
-        done: "Nimeelewa!",
-        stepOf: "{{current}} ya {{total}}",
+    homeTutorial: 
+    {
+        step1: 'Telezesha kulia kuweka alama kwenye maneno uliyojifunza',
+        step2: 'Telezesha kushoto kupitia neno tena baadaye',
+        step3: 'Gusa nyota ili kuhifadhi maneno kwa vipendwa vyako',
+        step4: 'Gusa neno kusikia matamshi yake',
+        step5: 'Gusa sentensi ili kuisikia',
+        step6: 'Gusa hapa kuona sentensi zaidi za mfano',
+        skip: 'Ruka',
+        next: 'Ifuatayo',
+        done: 'Nimeelewa!',
+        stepOf: '{{current}} ya {{total}}',
     },
 };

@@ -1,5 +1,7 @@
-export default {
-    common: {
+export default 
+{
+    common: 
+    {
         loading: 'लोड हो रहा है...',
         error: 'त्रुटि',
         success: 'सफल',
@@ -18,7 +20,25 @@ export default {
         search: 'खोजें',
         warning: 'चेतावनी',
     },
-    auth: {
+    reviewPrompt: 
+    {
+        enjoyingTitle: 'Enjoying VocBee?',
+        enjoyingMessage: 'If VocBee is helping you learn, we would love a quick rating.',
+        yes: 'Yes',
+        notYet: 'Not yet',
+        later: 'Later',
+        rateTitle: 'How would you rate VocBee?',
+        rateMessage: 'Your rating helps us keep improving the learning experience.',
+        rateInStore: 'Rate in Store',
+        sendFeedback: 'Send Feedback',
+        feedbackTitle: 'Help us improve',
+        feedbackMessage: 'Tell us what would make VocBee better for you.',
+        starAccessibilityLabel: '{{count}} stars',
+        storeOpenError: 'We could not open the store review page. Please try again later.',
+        feedbackOpenError: 'We could not open your email app. Please contact support@vocbee.com.',
+    },
+    auth: 
+    {
         subtitle: 'आसानी से नए शब्द सीखें।',
         email: 'ईमेल',
         emailPlaceholder: 'ईमेल या उपयोगकर्ता नाम',
@@ -52,7 +72,8 @@ export default {
         acceptPrivacyPrefix: 'मैंने इसे पढ़ लिया है और स्वीकार करता/करती हूँ:',
         acceptPrivacyRequired: 'खाता बनाने के लिए आपको गोपनीयता नीति स्वीकार करनी होगी।',
     },
-    home: {
+    home: 
+    {
         welcome: 'स्वागत है',
         levelComplete: '🎉 स्तर पूरा!',
         levelCompleteDesc: 'आपने {{level}} स्तर के सभी {{count}} शब्द सीख लिए हैं!',
@@ -78,8 +99,11 @@ export default {
         streakCelebrationGeneric: '{{count}} दिन की स्ट्रीक। इसे जारी रखें।',
         words: 'शब्द',
         learned: 'सीखा गया',
-        skip: 'छोड़ें',        tapToSeeExamples: 'उदाहरण वाक्य देखने के लिए टैप करें',    },
-    settings: {
+        skip: 'छोड़ें',
+        tapToSeeExamples: 'उदाहरण वाक्य देखने के लिए टैप करें',
+    },
+    settings: 
+    {
         title: 'सेटिंग्स',
         profile: 'प्रोफ़ाइल',
         editProfile: 'प्रोफ़ाइल संपादित करें',
@@ -106,8 +130,23 @@ export default {
         resetConfirmDesc: 'क्या आप वाकई अपनी सारी सीखने की प्रगति रीसेट करना चाहते हैं? यह क्रिया वापस नहीं की जा सकती।',
         changeLangConfirmTitle: 'सीखने की भाषा बदलें',
         changeLangConfirmDesc: 'इससे आपकी प्रगति रीसेट होगी और आप नई भाषा चुन पाएंगे। क्या आप जारी रखना चाहते हैं?',
+        premium: 'Premium',
+        removeAds: 'Remove Ads',
+        removeAdsDesc: 'Unlock an ad-free learning experience with monthly, yearly, or lifetime access.',
+        removeAdsSuccess: 'Ads have been removed from your account.',
+        adFreeActive: 'Ad-Free Active',
+        adFreeLifetime: 'Lifetime access',
+        adFreeActiveUntil: 'Active until {{date}}',
+        restorePurchases: 'Restore Purchases',
+        restorePurchasesDesc: 'Recover purchases made with your store account.',
+        restorePurchasesSuccess: 'Your purchase has been restored.',
+        restorePurchasesEmpty: 'No active ad-free purchase was found for this store account.',
+        manageSubscription: 'Manage Subscription',
+        manageSubscriptionDesc: 'View, change, or cancel your plan.',
+        premiumActionFailed: 'We could not complete this action. Please try again.',
         support: 'सहायता',
         helpFaq: 'सहायता और FAQ',
+        rateVocBee: 'Rate VocBee',
         privacyPolicy: 'गोपनीयता नीति',
         logout: 'लॉगआउट',
         logoutConfirmTitle: 'लॉगआउट',
@@ -129,6 +168,8 @@ export default {
         changePhotoTitle: 'प्रोफ़ाइल फ़ोटो बदलें',
         takePhoto: 'फ़ोटो लें',
         chooseFromGallery: 'गैलरी से चुनें',
+        selectAvatar: 'Select Avatar',
+        avatarOptionAccessibility: 'Avatar {{number}}',
         removePhoto: 'फ़ोटो हटाएं',
         resetProgressSuccess: 'आपकी प्रगति रीसेट कर दी गई है।',
         editProfileTitle: 'प्रोफ़ाइल संपादित करें',
@@ -139,6 +180,7 @@ export default {
         deleteAccount: 'खाता हटाएं',
         deleteAccountConfirmTitle: 'खाता हटाएं',
         deleteAccountConfirmDesc: 'क्या आप वाकई अपना खाता हटाना चाहते हैं? यह क्रिया वापस नहीं की जा सकती और आपका सारा डेटा स्थायी रूप से हटा दिया जाएगा।',
+        deleteAccountSubscriptionNote: 'Deleting your VocBee account does not cancel an active App Store or Google Play subscription. Manage or cancel it from your store account first if needed.',
         deleteAccountSuccess: 'आपका खाता सफलतापूर्वक हटा दिया गया है',
         deleteAccountError: 'खाता हटाते समय एक त्रुटि हुई',
         permissionRequired: 'अनुमति आवश्यक',
@@ -160,7 +202,8 @@ export default {
         privacyYourRightsDesc: 'प्रगति रीसेट करके या अनइंस्टॉल करके डेटा हटाएं।',
         privacyContact: '4. संपर्क',
     },
-    level: {
+    level: 
+    {
         beginner: 'शुरुआती',
         intermediate: 'मध्यम',
         advanced: 'उन्नत',
@@ -168,7 +211,8 @@ export default {
         intermediateDesc: 'मैं परिचित विषयों पर चर्चा कर सकता/सकती हूँ और मुख्य बातें समझ सकता/सकती हूँ।',
         advancedDesc: 'मैं धाराप्रवाह बोल सकता/सकती हूँ और जटिल पाठ समझ सकता/सकती हूँ।',
     },
-    languages: {
+    languages: 
+    {
         english: 'अंग्रेज़ी',
         turkish: 'तुर्की',
         german: 'जर्मन',
@@ -191,7 +235,8 @@ export default {
         swahili: 'स्वाहिली',
         urdu: 'उर्दू',
     },
-    setup: {
+    setup: 
+    {
         step1TitleWhite: 'आपकी',
         step1TitleGreen: 'मातृभाषा क्या है?',
         step1Subtitle: 'हम इसका उपयोग आपके लिए शब्दों का अनुवाद करने के लिए करेंगे।',
@@ -230,18 +275,22 @@ export default {
         endTime: 'समाप्ति का समय',
         frequency: 'आवृत्ति',
     },
-    onboarding: {
+    onboarding: 
+    {
         title1: 'रोज़ नए शब्द सीखें',
         subtitle1: 'अपने स्तर के अनुसार रोज़ाना पाठ के साथ नया शब्द-भंडार सीखें।',
         title2: 'फ्लैशकार्ड से अभ्यास करें',
         subtitle2: 'इंटरैक्टिव फ्लैशकार्ड से सीखना मजबूत करें। स्वाइप करके शब्दों को सीखा मार्क करें।',
         title3: 'अपनी प्रगति ट्रैक करें',
         subtitle3: 'अपनी सीखने की यात्रा देखें और उपलब्धियों का जश्न मनाएं।',
+        title4: 'Let Words Come to You',
+        subtitle4: 'Get timely reminders, keep your learning streak alive, and return when it matters.',
         start: 'शुरू करें',
         skip: 'छोड़ें',
         next: 'अगला',
     },
-    example: {
+    example: 
+    {
         title: 'उदाहरण वाक्य',
         explainGrammarBtn: 'एआई से व्याकरण समझाएँ',
         grammarExplanationTitle: 'व्याकरण व्याख्या',
@@ -255,12 +304,14 @@ export default {
         explanationError: 'व्याख्या लोड नहीं हो सकी। कृपया फिर से प्रयास करें।',
         retry: 'फिर से कोशिश करें',
     },
-    favorites: {
+    favorites: 
+    {
         title: 'पसंदीदा',
         noFavoritesTitle: 'अभी कोई पसंदीदा नहीं',
         noFavoritesMsg: 'सीखते समय स्टार बटन दबाकर अपने पसंदीदा शब्द यहाँ सेव करें।',
     },
-    forgotPassword: {
+    forgotPassword: 
+    {
         title: 'पासवर्ड भूल गए?',
         subtitle: 'कोई बात नहीं! अपना ईमेल दर्ज करें और हम पासवर्ड रीसेट लिंक भेज देंगे।',
         enterEmail: 'कृपया अपना ईमेल पता दर्ज करें',
@@ -270,7 +321,8 @@ export default {
         sendResetLink: 'रीसेट लिंक भेजें',
         backToLogin: 'लॉगिन पर वापस जाएं',
     },
-    levelTest: {
+    levelTest: 
+    {
         advanced: 'उन्नत',
         intermediate: 'मध्यम',
         beginner: 'शुरुआती',
@@ -282,22 +334,27 @@ export default {
         seeResults: 'परिणाम देखें',
         next: 'अगला',
     },
-    errorBoundary: {
+    errorBoundary: 
+    {
         title: 'ओह! कुछ गलत हो गया',
         message: 'माफ़ कीजिए, ऐप में एक अप्रत्याशित त्रुटि हुई।',
         restart: 'ऐप पुनः शुरू करें',
     },
-    offline: {
+    offline: 
+    {
         message: 'इंटरनेट कनेक्शन नहीं है',
     },
-    connection: {
+    connection: 
+    {
         title: 'कनेक्शन समस्या',
         message: 'सर्वर से कनेक्ट नहीं हो सका। कृपया अपना इंटरनेट कनेक्शन जांचें और पुनः प्रयास करें।',
         retry: 'पुनः प्रयास करें',
     },
-    help: {
+    help: 
+    {
         title: 'सहायता और FAQ',
-        basics: {
+        basics: 
+        {
             q1: 'मैं नए शब्द कैसे सीखूं?',
             a1: 'शब्द कार्ड को दाईं ओर स्वाइप करें सीखा हुआ मार्क करने के लिए, या बाईं ओर स्वाइप करें छोड़ने और बाद में देखने के लिए। आप कार्ड के नीचे बटन भी टैप कर सकते हैं।',
             q2: 'मैं उच्चारण कैसे सुनूं?',
@@ -309,7 +366,8 @@ export default {
             q5: '"व्याकरण समझाएं" फ़ीचर क्या है?',
             a5: 'उदाहरण वाक्य स्क्रीन में "व्याकरण समझाएं" टैप करें शब्द के व्याकरण, उपयोग पैटर्न और याद रखने की युक्तियों की AI-संचालित व्याख्या पाने के लिए।',
         },
-        levels: {
+        levels: 
+        {
             q1: 'प्रवीणता स्तर क्या हैं?',
             a1: 'VocBee CEFR स्तरों का उपयोग करता है: शुरुआती (A1-A2) बुनियादी शब्दावली के लिए, मध्यवर्ती (B1-B2) बातचीत के शब्दों के लिए, और उन्नत (C1) उच्च स्तरीय शब्दावली के लिए। अपने कौशल स्तर के अनुसार चुनें।',
             q2: 'मैं अपना स्तर कैसे बदलूं?',
@@ -317,13 +375,15 @@ export default {
             q3: 'मेरी प्रगति कैसे ट्रैक होती है?',
             a3: 'आपकी प्रगति होम स्क्रीन पर सीखे/कुल शब्दों और प्रगति बार के साथ दिखती है। स्तर पूरा करने पर VocBee स्वचालित रूप से आपको कठिन शब्दावली में आगे बढ़ाता है।',
         },
-        reminders: {
+        reminders: 
+        {
             q1: 'रिमाइंडर कैसे काम करते हैं?',
             a1: 'सेटिंग्स में दैनिक रिमाइंडर सक्षम करें। अपनी पसंदीदा समय सीमा और आवृत्ति (हर 15 मिनट से 2 घंटे) सेट करें। आपको दिन भर अभ्यास के लिए शब्दावली सूचनाएं मिलेंगी।',
             q2: '"सूचना आने पर" का क्या मतलब है?',
             a2: 'चुनें कि सूचनाओं में दिखाए गए शब्द स्वचालित रूप से सीखे हुए मार्क हों या बाद में मैन्युअल समीक्षा के लिए कतार में रहें।',
         },
-        data: {
+        data: 
+        {
             q1: 'क्या मेरी प्रगति क्लाउड में सहेजी जाती है?',
             a1: 'हां! आपकी प्रगति और पसंदीदा हर दिन स्वचालित रूप से हमारे क्लाउड से सिंक होते हैं। किसी भी डिवाइस पर लॉगिन करें और जहाँ छोड़ा था वहीं से सीखना जारी रखें।',
             q2: 'क्या मैं दूसरी भाषा सीख सकता/सकती हूं?',
@@ -331,21 +391,23 @@ export default {
             q3: 'मैं अपनी प्रगति कैसे रीसेट करूं?',
             a3: 'सेटिंग्स → प्रगति → प्रगति रीसेट करें पर जाएं। इससे सभी सीखे शब्द हट जाएंगे और नई शुरुआत होगी। चेतावनी: यह क्रिया वापस नहीं की जा सकती!',
         },
-        support: {
+        support: 
+        {
             title: 'और मदद चाहिए?',
             desc: 'किसी भी प्रश्न, सुझाव या समस्या के लिए support@vocbee.com पर संपर्क करें। हमें आपसे सुनकर खुशी होगी!',
         },
     },
-	homeTutorial: {
-        step1: "सीखे गए शब्दों को चिह्नित करने के लिए दाईं ओर स्वाइप करें",
-        step2: "शब्द को बाद में फिर से देखने के लिए बाईं ओर स्वाइप करें",
-        step3: "शब्दों को अपने पसंदीदा में सहेजने के लिए स्टार पर टैप करें",
-        step4: "इसका उच्चारण सुनने के लिए शब्द पर टैप करें",
-        step5: "वाक्य सुनने के लिए उस पर टैप करें",
-        step6: "अधिक उदाहरण वाक्य देखने के लिए यहां टैप करें",
-        skip: "छोड़ें",
-        next: "अगला",
-        done: "समझ गया!",
-        stepOf: "{{current}} का {{total}}",
+    homeTutorial: 
+    {
+        step1: 'सीखे गए शब्दों को चिह्नित करने के लिए दाईं ओर स्वाइप करें',
+        step2: 'शब्द को बाद में फिर से देखने के लिए बाईं ओर स्वाइप करें',
+        step3: 'शब्दों को अपने पसंदीदा में सहेजने के लिए स्टार पर टैप करें',
+        step4: 'इसका उच्चारण सुनने के लिए शब्द पर टैप करें',
+        step5: 'वाक्य सुनने के लिए उस पर टैप करें',
+        step6: 'अधिक उदाहरण वाक्य देखने के लिए यहां टैप करें',
+        skip: 'छोड़ें',
+        next: 'अगला',
+        done: 'समझ गया!',
+        stepOf: '{{current}} का {{total}}',
     },
 };

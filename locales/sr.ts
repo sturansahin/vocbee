@@ -1,5 +1,7 @@
-export default {
-    common: {
+export default 
+{
+    common: 
+    {
         loading: 'Учитавање...',
         error: 'Грешка',
         success: 'Успех',
@@ -18,7 +20,25 @@ export default {
         search: 'Претражи',
         warning: 'Упозорење',
     },
-    auth: {
+    reviewPrompt: 
+    {
+        enjoyingTitle: 'Enjoying VocBee?',
+        enjoyingMessage: 'If VocBee is helping you learn, we would love a quick rating.',
+        yes: 'Yes',
+        notYet: 'Not yet',
+        later: 'Later',
+        rateTitle: 'How would you rate VocBee?',
+        rateMessage: 'Your rating helps us keep improving the learning experience.',
+        rateInStore: 'Rate in Store',
+        sendFeedback: 'Send Feedback',
+        feedbackTitle: 'Help us improve',
+        feedbackMessage: 'Tell us what would make VocBee better for you.',
+        starAccessibilityLabel: '{{count}} stars',
+        storeOpenError: 'We could not open the store review page. Please try again later.',
+        feedbackOpenError: 'We could not open your email app. Please contact support@vocbee.com.',
+    },
+    auth: 
+    {
         subtitle: 'Савладајте нове речи без напора.',
         email: 'Имејл',
         emailPlaceholder: 'Имејл или корисничко име',
@@ -52,7 +72,8 @@ export default {
         acceptPrivacyPrefix: 'Прочитао/прочитала сам и прихватам',
         acceptPrivacyRequired: 'Морате прихватити Политику приватности да бисте направили налог.',
     },
-    home: {
+    home: 
+    {
         welcome: 'Добродошли',
         levelComplete: ' Ниво завршен!',
         levelCompleteDesc: 'Научили сте свих {{count}} речи на нивоу {{level}}!',
@@ -81,7 +102,8 @@ export default {
         skip: 'ПРЕСКОЧИ',
         tapToSeeExamples: 'Додирните да видите примере реченица',
     },
-    settings: {
+    settings: 
+    {
         title: 'Подешавања',
         profile: 'Профил',
         editProfile: 'Измени профил',
@@ -108,8 +130,23 @@ export default {
         resetConfirmDesc: 'Да ли сте сигурни да желите да ресетујете сав напредак? Ова радња се не може поништити.',
         changeLangConfirmTitle: 'Промени језик учења',
         changeLangConfirmDesc: 'Ово ће ресетовати ваш напредак и омогућити вам избор новог језика. Да ли сте сигурни?',
+        premium: 'Premium',
+        removeAds: 'Remove Ads',
+        removeAdsDesc: 'Unlock an ad-free learning experience with monthly, yearly, or lifetime access.',
+        removeAdsSuccess: 'Ads have been removed from your account.',
+        adFreeActive: 'Ad-Free Active',
+        adFreeLifetime: 'Lifetime access',
+        adFreeActiveUntil: 'Active until {{date}}',
+        restorePurchases: 'Restore Purchases',
+        restorePurchasesDesc: 'Recover purchases made with your store account.',
+        restorePurchasesSuccess: 'Your purchase has been restored.',
+        restorePurchasesEmpty: 'No active ad-free purchase was found for this store account.',
+        manageSubscription: 'Manage Subscription',
+        manageSubscriptionDesc: 'View, change, or cancel your plan.',
+        premiumActionFailed: 'We could not complete this action. Please try again.',
         support: 'Подршка',
         helpFaq: 'Помоћ и ЧПП',
+        rateVocBee: 'Rate VocBee',
         privacyPolicy: 'Политика приватности',
         logout: 'Одјави се',
         logoutConfirmTitle: 'Одјава',
@@ -131,6 +168,8 @@ export default {
         changePhotoTitle: 'Промени профилну слику',
         takePhoto: 'Сликај',
         chooseFromGallery: 'Изабери из галерије',
+        selectAvatar: 'Select Avatar',
+        avatarOptionAccessibility: 'Avatar {{number}}',
         removePhoto: 'Уклони слику',
         resetProgressSuccess: 'Ваш напредак је ресетован.',
         editProfileTitle: 'Измени профил',
@@ -141,6 +180,7 @@ export default {
         deleteAccount: 'Обриши налог',
         deleteAccountConfirmTitle: 'Обриши налог',
         deleteAccountConfirmDesc: 'Да ли сте сигурни да желите да обришете свој налог? Ова радња се не може поништити и сви ваши подаци ће бити трајно обрисани.',
+        deleteAccountSubscriptionNote: 'Deleting your VocBee account does not cancel an active App Store or Google Play subscription. Manage or cancel it from your store account first if needed.',
         deleteAccountSuccess: 'Ваш налог је успешно обрисан',
         deleteAccountError: 'Дошло је до грешке приликом брисања вашег налога',
         permissionRequired: 'Потребна дозвола',
@@ -162,7 +202,8 @@ export default {
         privacyYourRightsDesc: 'Обришите податке преко Ресетуј напредак или деинсталирајте.',
         privacyContact: '4. Контакт',
     },
-    level: {
+    level: 
+    {
         beginner: 'Почетник',
         intermediate: 'Средњи',
         advanced: 'Напредни',
@@ -170,7 +211,8 @@ export default {
         intermediateDesc: 'Могу да разговарам о познатим темама и разумем главне тачке.',
         advancedDesc: 'Могу да се изражавам течно и разумем сложене текстове.',
     },
-    languages: {
+    languages: 
+    {
         english: 'Енглески',
         turkish: 'Турски',
         german: 'Немачки',
@@ -193,7 +235,8 @@ export default {
         swahili: 'Свахили',
         urdu: 'Урду',
     },
-    setup: {
+    setup: 
+    {
         step1TitleWhite: 'Који је ваш',
         step1TitleGreen: 'матерњи језик?',
         step1Subtitle: 'Користићемо га за превод речи за вас.',
@@ -232,18 +275,22 @@ export default {
         endTime: 'Време завршетка',
         frequency: 'Учесталост',
     },
-    onboarding: {
+    onboarding: 
+    {
         title1: 'Учите нове речи сваког дана',
         subtitle1: 'Откријте и савладајте нов вокабулар са персонализованим дневним лекцијама прилагођеним вашем нивоу.',
         title2: 'Вежбајте са картицама',
         subtitle2: 'Учврстите своје знање интерактивним картицама. Превуците да означите речи као научене.',
         title3: 'Пратите свој напредак',
         subtitle3: 'Пратите своје путовање учења и славите своја достигнућа.',
+        title4: 'Let Words Come to You',
+        subtitle4: 'Get timely reminders, keep your learning streak alive, and return when it matters.',
         start: 'Почни',
         skip: 'Прескочи',
         next: 'Даље',
     },
-    example: {
+    example: 
+    {
         title: 'Примери реченица',
         explainGrammarBtn: 'Објасни граматику са AI',
         grammarExplanationTitle: 'Објашњење граматике',
@@ -257,12 +304,14 @@ export default {
         explanationError: 'Није могуће учитати објашњење. Покушајте поново.',
         retry: 'Покушај поново',
     },
-    favorites: {
+    favorites: 
+    {
         title: 'Омиљени',
         noFavoritesTitle: 'Још нема омиљених',
         noFavoritesMsg: 'Додирните дугме звездице током учења да сачувате омиљене речи овде.',
     },
-    forgotPassword: {
+    forgotPassword: 
+    {
         title: 'Заборавили сте лозинку?',
         subtitle: 'Нема проблема! Унесите ваш имејл и послаћемо вам линк за ресетовање лозинке.',
         enterEmail: 'Молимо унесите вашу имејл адресу',
@@ -272,7 +321,8 @@ export default {
         sendResetLink: 'Пошаљи линк за ресетовање',
         backToLogin: 'Назад на пријаву',
     },
-    levelTest: {
+    levelTest: 
+    {
         advanced: 'Напредни',
         intermediate: 'Средњи',
         beginner: 'Почетник',
@@ -284,22 +334,27 @@ export default {
         seeResults: 'Погледај резултате',
         next: 'Даље',
     },
-    errorBoundary: {
+    errorBoundary: 
+    {
         title: 'Упс! Нешто је пошло по злу',
         message: 'Жао нам је, апликација је наишла на неочекивану грешку.',
         restart: 'Поново покрени апликацију',
     },
-    offline: {
+    offline: 
+    {
         message: 'Нема интернет конекције',
     },
-    connection: {
+    connection: 
+    {
         title: 'Проблем са везом',
         message: 'Није могуће повезати се са сервером. Молимо проверите интернет везу и покушајте поново.',
         retry: 'Покушај поново',
     },
-    help: {
+    help: 
+    {
         title: 'Помоћ и ЧПП',
-        basics: {
+        basics: 
+        {
             q1: 'Како да учим нове речи?',
             a1: 'Превуците картицу речи удесно да је означите као научену, или улево да је прескочите и видите касније. Такође можете додирнути дугмад испод картице.',
             q2: 'Како да чујем изговор?',
@@ -311,7 +366,8 @@ export default {
             q5: 'Шта је функција „Објасни граматику“?',
             a5: 'На екрану примера реченица, додирните „Објасни граматику“ да добијете AI објашњење граматике речи, образаца употребе и савета за памћење.',
         },
-        levels: {
+        levels: 
+        {
             q1: 'Који су нивои знања?',
             a1: 'VocBee користи CEFR нивое: Почетник (A1-A2) за основни вокабулар, Средњи (B1-B2) за конверзацијске речи, и Напредни (C1) за напредан вокабулар. Изаберите на основу вашег тренутног нивоа знања.',
             q2: 'Како да променим ниво?',
@@ -319,13 +375,15 @@ export default {
             q3: 'Како се прати мој напредак?',
             a3: 'Ваш напредак се приказује на почетном екрану са наученим/укупним речима и траком напретка. Како завршавате нивое, VocBee вас аутоматски унапређује на тежи вокабулар.',
         },
-        reminders: {
+        reminders: 
+        {
             q1: 'Како функционишу подсетници?',
             a1: 'Омогућите дневне подсетнике у Подешавањима. Подесите жељени временски распон и учесталост (сваких 15 мин до 2 сата). Примаћете обавештења о вокабулару за вежбање током дана.',
             q2: 'Шта значи „Када стигне обавештење“?',
             a2: 'Изаберите да ли се речи у обавештењима аутоматски означавају као научене или остају у реду за ручни преглед касније.',
         },
-        data: {
+        data: 
+        {
             q1: 'Да ли се мој напредак чува у облаку?',
             a1: 'Да! Ваш напредак и омиљени се аутоматски синхронизују са нашим облаком дневно. Пријавите се на било ком уређају да наставите учење тамо где сте стали.',
             q2: 'Могу ли да учим други језик?',
@@ -333,21 +391,23 @@ export default {
             q3: 'Како да ресетујем напредак?',
             a3: 'Идите у Подешавања → Напредак → Ресетуј напредак. Ово брише све научене речи и почиње испочетка. Упозорење: Ова радња се не може поништити!',
         },
-        support: {
+        support: 
+        {
             title: 'Треба вам још помоћи?',
             desc: 'За било каква питања, сугестије или проблеме, контактирајте нас на support@vocbee.com. Радо ћемо вас саслушати!',
         },
     },
-	homeTutorial: {
-        step1: "Превуците удесно да бисте означили научене речи",
-        step2: "Превуците улево да бисте касније поново прегледали реч",
-        step3: "Додирните звездицу да бисте сачували речи у омиљене",
-        step4: "Додирните реч да бисте чули њен изговор",
-        step5: "Додирните реченицу да бисте је чули",
-        step6: "Додирните овде да бисте видели још примера реченица",
-        skip: "Прескочи",
-        next: "Следеће",
-        done: "Разумем!",
-        stepOf: "{{current}} од {{total}}",
+    homeTutorial: 
+    {
+        step1: 'Превуците удесно да бисте означили научене речи',
+        step2: 'Превуците улево да бисте касније поново прегледали реч',
+        step3: 'Додирните звездицу да бисте сачували речи у омиљене',
+        step4: 'Додирните реч да бисте чули њен изговор',
+        step5: 'Додирните реченицу да бисте је чули',
+        step6: 'Додирните овде да бисте видели још примера реченица',
+        skip: 'Прескочи',
+        next: 'Следеће',
+        done: 'Разумем!',
+        stepOf: '{{current}} од {{total}}',
     },
 };
