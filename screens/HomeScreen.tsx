@@ -52,7 +52,11 @@ import {
     getLastWordId
 } from '../services/progressService';
 import { addToFavorites, removeFromFavorites, isFavorite } from '../services/favoritesService';
-import { clearPendingNotificationWord, getPendingNotificationWord } from '../services/notificationService';
+import {
+    clearPendingNotificationWord,
+    getPendingNotificationWord,
+    scheduleStreakReminderNotification,
+} from '../services/notificationService';
 import { useAlert } from '../components/CustomAlert';
 import { SafeBannerAd } from '../components/SafeBannerAd';
 import { loadInterstitial, showInterstitial, AD_IDS } from '../services/adMobService';
@@ -1202,6 +1206,9 @@ export default function HomeScreen() {
 
                 const streakUpdate = await recordDailyStudyAction();
                 setStreakSummary(getStreakSummaryFromState(streakUpdate.state));
+                scheduleStreakReminderNotification().catch(error => {
+                    console.error('[HomeScreen] Failed to refresh streak reminder notification:', error);
+                });
                 const shouldCelebrate = shouldShowStreakCelebration(streakUpdate.didIncrement);
 
                 if (shouldCelebrate) {

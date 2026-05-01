@@ -97,6 +97,10 @@ export default {
         skip: 'SKIP',
         tapToSeeExamples: 'Tap to see example sentences',
     },
+    notifications: {
+        streakReminderTitle: '🔥 Keep your streak alive',
+        streakReminderBody: 'Swipe one word before the day ends and keep your streak going.',
+    },
     settings: {
         title: 'Settings',
         profile: 'Profile',

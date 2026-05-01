@@ -4,6 +4,7 @@ const mockGetPermissionsAsync = jest.fn();
 const mockRequestPermissionsAsync = jest.fn();
 const mockSetNotificationChannelAsync = jest.fn();
 const mockCancelAllScheduledNotificationsAsync = jest.fn();
+const mockCancelScheduledNotificationAsync = jest.fn();
 const mockScheduleNotificationAsync = jest.fn();
 const mockGetAllScheduledNotificationsAsync = jest.fn();
 
@@ -12,6 +13,7 @@ jest.mock('expo-notifications', () => ({
     requestPermissionsAsync: (...args: unknown[]) => mockRequestPermissionsAsync(...args),
     setNotificationChannelAsync: (...args: unknown[]) => mockSetNotificationChannelAsync(...args),
     cancelAllScheduledNotificationsAsync: (...args: unknown[]) => mockCancelAllScheduledNotificationsAsync(...args),
+    cancelScheduledNotificationAsync: (...args: unknown[]) => mockCancelScheduledNotificationAsync(...args),
     scheduleNotificationAsync: (...args: unknown[]) => mockScheduleNotificationAsync(...args),
     getAllScheduledNotificationsAsync: (...args: unknown[]) => mockGetAllScheduledNotificationsAsync(...args),
     setNotificationHandler: jest.fn(),
@@ -34,26 +36,34 @@ jest.mock('../progressService', () => ({
 jest.mock('../i18n', () => ({
     __esModule: true,
     default: {
-        t: jest.fn(() => 'tap to see examples'),
+        t: jest.fn((key: string) => ({
+            'home.tapToSeeExamples': 'tap to see examples',
+            'notifications.streakReminderTitle': 'Keep your streak alive',
+            'notifications.streakReminderBody': 'Swipe one word before the day ends',
+        }[key] ?? key)),
     },
 }));
 
 import { getStoredVocabulary } from '../vocabularyService';
 import { getCurrentLevel, getLearnedWords } from '../progressService';
 import {
+    MAX_VOCABULARY_NOTIFICATIONS,
     getNotificationContent,
     requestNotificationPermissions,
+    scheduleStreakReminderNotification,
     scheduleVocabularyNotifications,
 } from '../notificationService';
 import { STORAGE_KEYS } from '../storageKeys';
 
 describe('notificationService', () => {
     beforeEach(async () => {
+        jest.useRealTimers();
         jest.clearAllMocks();
         await AsyncStorage.clear();
 
         mockGetAllScheduledNotificationsAsync.mockResolvedValue([]);
         mockCancelAllScheduledNotificationsAsync.mockResolvedValue(undefined);
+        mockCancelScheduledNotificationAsync.mockResolvedValue(undefined);
         mockSetNotificationChannelAsync.mockResolvedValue(undefined);
         mockScheduleNotificationAsync.mockResolvedValue('notification-id');
 
@@ -63,6 +73,10 @@ describe('notificationService', () => {
             { id: 1, word: 'hello', pronunciation: '/həˈloʊ/', translation: 'merhaba' },
             { id: 2, word: 'world', translation: 'dunya' },
         ]);
+    });
+
+    afterEach(() => {
+        jest.useRealTimers();
     });
 
     it('formats notification body without pronunciation', () => {
@@ -173,10 +187,86 @@ describe('notificationService', () => {
         await scheduleVocabularyNotifications();
 
         expect(mockScheduleNotificationAsync).toHaveBeenCalled();
-        expect(mockCancelAllScheduledNotificationsAsync).toHaveBeenCalled();
+        expect(mockCancelAllScheduledNotificationsAsync).not.toHaveBeenCalled();
         expect(await AsyncStorage.getItem(STORAGE_KEYS.TRACKED_NOTIFICATIONS)).not.toBeNull();
-        const scheduledPayload = mockScheduleNotificationAsync.mock.calls[0][0];
+        const scheduledPayload = mockScheduleNotificationAsync.mock.calls
+            .map(call => call[0])
+            .find(payload => payload.content.data.kind === 'vocabulary')!;
+        expect(scheduledPayload).toBeTruthy();
         expect(scheduledPayload.content.body).toBe('hello - merhaba, tap to see examples');
         expect(scheduledPayload.content.data.pronunciation).toBe('/həˈloʊ/');
+    });
+    it('reserves one notification slot for the streak reminder', async () => {
+        jest.useFakeTimers();
+        jest.setSystemTime(new Date(2026, 3, 12, 0, 0, 0));
+
+        mockGetPermissionsAsync.mockResolvedValue({
+            status: 'granted',
+            granted: true,
+            canAskAgain: true,
+            expires: 'never',
+        });
+        await AsyncStorage.setItem(
+            STORAGE_KEYS.NOTIFICATION_SETTINGS,
+            JSON.stringify({
+                enabled: true,
+                startHour: 0,
+                startMinute: 0,
+                endHour: 0,
+                endMinute: 0,
+                frequencyMinutes: 60,
+                autoMarkLearned: true,
+            })
+        );
+        await AsyncStorage.setItem(STORAGE_KEYS.TARGET_LANGUAGE, 'en');
+        (getStoredVocabulary as jest.Mock).mockResolvedValue(
+            Array.from({ length: 100 }, (_, index) => ({
+                id: index + 1,
+                word: `word-${index + 1}`,
+                translation: `translation-${index + 1}`,
+            }))
+        );
+
+        await scheduleVocabularyNotifications();
+
+        const scheduledPayloads = mockScheduleNotificationAsync.mock.calls.map(call => call[0]);
+        expect(scheduledPayloads.filter(payload => payload.content.data.kind === 'vocabulary')).toHaveLength(
+            MAX_VOCABULARY_NOTIFICATIONS
+        );
+        expect(scheduledPayloads.filter(payload => payload.content.data.kind === 'streak')).toHaveLength(1);
+        expect(mockScheduleNotificationAsync).toHaveBeenCalledTimes(64);
+
+        jest.useRealTimers();
+    });
+
+    it('moves the streak reminder to tomorrow when today is already complete', async () => {
+        const now = new Date(2026, 3, 12, 12, 0, 0);
+        mockGetPermissionsAsync.mockResolvedValue({
+            status: 'granted',
+            granted: true,
+            canAskAgain: true,
+            expires: 'never',
+        });
+        await AsyncStorage.setItem(
+            STORAGE_KEYS.NOTIFICATION_SETTINGS,
+            JSON.stringify({ enabled: true })
+        );
+        await AsyncStorage.setItem(
+            STORAGE_KEYS.STREAK,
+            JSON.stringify({
+                currentStreak: 1,
+                longestStreak: 1,
+                brokenStreak: null,
+                lastQualifiedDay: '2026-04-12',
+                lastQualifiedAt: now.toISOString(),
+            })
+        );
+
+        await scheduleStreakReminderNotification(now);
+
+        const scheduledPayload = mockScheduleNotificationAsync.mock.calls[0][0];
+        expect(scheduledPayload.identifier).toBe('vocbee-streak-reminder');
+        expect(scheduledPayload.content.data.kind).toBe('streak');
+        expect(scheduledPayload.trigger.seconds).toBe(33 * 60 * 60);
     });
 });

@@ -97,6 +97,10 @@ export default {
         skip: 'GEÇ',
         tapToSeeExamples: 'Örnek cümleleri görmek için dokun',
     },
+    notifications: {
+        streakReminderTitle: '🔥 Serini kaybetme',
+        streakReminderBody: 'Bugün bitmeden bir kelime kaydır, serini canlı tut.',
+    },
     settings: {
         title: 'Ayarlar',
         profile: 'Profil',

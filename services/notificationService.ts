@@ -16,6 +16,7 @@ import { Platform } from 'react-native';
 import { VocabularyWord, Level, LEVELS, getStoredVocabulary } from './vocabularyService';
 import { getCurrentLevel, markWordAsLearned, unmarkWord, getLearnedWords } from './progressService';
 import { STORAGE_KEYS } from './storageKeys';
+import { getStreakState, isStreakCompletedToday } from './streakService';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Storage Keys (centralized via storageKeys.ts)
@@ -27,7 +28,19 @@ const LAST_FOREGROUND_TIME_KEY = STORAGE_KEYS.LAST_FOREGROUND_TIME;
 const LAST_BACKGROUND_TIME_KEY = STORAGE_KEYS.LAST_BACKGROUND_TIME;
 const NOTIFICATION_CONTENT_VERSION_KEY = STORAGE_KEYS.NOTIFICATION_CONTENT_VERSION;
 const NOTIFICATION_PERMISSION_PROMPT_PREFIX = STORAGE_KEYS.NOTIFICATION_PERMISSION_PROMPT_PREFIX;
-const NOTIFICATION_CONTENT_VERSION = 3;
+const NOTIFICATION_CONTENT_VERSION = 4;
+
+const MAX_SCHEDULED_NOTIFICATIONS = 64;
+const STREAK_NOTIFICATION_RESERVED_SLOTS = 1;
+export const MAX_VOCABULARY_NOTIFICATIONS = MAX_SCHEDULED_NOTIFICATIONS - STREAK_NOTIFICATION_RESERVED_SLOTS;
+
+const VOCABULARY_NOTIFICATION_PREFIX = 'vocbee-vocab-';
+const LEGACY_VOCABULARY_REFILL_PREFIX = 'vocbee-refill-';
+const STREAK_NOTIFICATION_ID = 'vocbee-streak-reminder';
+const STREAK_REMINDER_HOUR = 21;
+const STREAK_REMINDER_MINUTE = 0;
+const ANDROID_VOCABULARY_CHANNEL_ID = 'vocabulary';
+const ANDROID_STREAK_CHANNEL_ID = 'streak';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Types
@@ -63,6 +76,8 @@ export interface PendingNotificationWord {
     level?: string;
     targetLanguage?: string;
 }
+
+type NotificationKind = 'vocabulary' | 'streak';
 
 export interface NotificationPermissionState {
     status: string;
@@ -132,6 +147,48 @@ function getDailyNotificationSlotCount(
     return Math.floor(rangeMinutes / frequencyMinutes) + 1;
 }
 
+function isLegacyVocabularyNotificationId(identifier: string): boolean {
+    return /^vocbee-\d+-\d+$/.test(identifier);
+}
+
+function isVocabularyNotificationId(identifier: string): boolean {
+    return (
+        identifier.startsWith(VOCABULARY_NOTIFICATION_PREFIX) ||
+        identifier.startsWith(LEGACY_VOCABULARY_REFILL_PREFIX) ||
+        isLegacyVocabularyNotificationId(identifier)
+    );
+}
+
+function isStreakNotificationId(identifier: string): boolean {
+    return identifier === STREAK_NOTIFICATION_ID || identifier.startsWith('vocbee-streak-');
+}
+
+async function cancelScheduledNotificationsByPredicate(
+    predicate: (identifier: string) => boolean
+): Promise<void> {
+    const scheduled = await Notifications.getAllScheduledNotificationsAsync();
+    const identifiers = scheduled
+        .map(notification => notification.identifier)
+        .filter((identifier): identifier is string => typeof identifier === 'string' && predicate(identifier));
+
+    if (identifiers.length === 0) return;
+
+    await Promise.all(
+        identifiers.map(identifier => Notifications.cancelScheduledNotificationAsync(identifier))
+    );
+}
+
+function getNextStreakReminderTime(now: Date, completedToday: boolean): Date {
+    const reminderTime = new Date(now);
+    reminderTime.setHours(STREAK_REMINDER_HOUR, STREAK_REMINDER_MINUTE, 0, 0);
+
+    if (completedToday || reminderTime <= now) {
+        reminderTime.setDate(reminderTime.getDate() + 1);
+    }
+
+    return reminderTime;
+}
+
 // ─────────────────────────────────────────────────────────────────────────────
 // Notification Content Templates (Patterns)
 // ─────────────────────────────────────────────────────────────────────────────
@@ -157,6 +214,11 @@ export const getNotificationContent = (word: VocabularyWord) => ({
     body: formatNotificationBody(word),
 });
 
+export const getStreakReminderContent = () => ({
+    title: i18n.t('notifications.streakReminderTitle'),
+    body: i18n.t('notifications.streakReminderBody'),
+});
+
 // ─────────────────────────────────────────────────────────────────────────────
 // Permission & Setup
 // ─────────────────────────────────────────────────────────────────────────────
@@ -179,11 +241,18 @@ export function configureNotifications(): void {
 export async function ensureNotificationChannelConfigured(): Promise<void> {
     if (Platform.OS !== 'android') return;
 
-    await Notifications.setNotificationChannelAsync('vocabulary', {
+    await Notifications.setNotificationChannelAsync(ANDROID_VOCABULARY_CHANNEL_ID, {
         name: 'Vocabulary Reminders',
         importance: Notifications.AndroidImportance.HIGH,
         vibrationPattern: [0, 250, 250, 250],
         lightColor: '#FFD700',
+    });
+
+    await Notifications.setNotificationChannelAsync(ANDROID_STREAK_CHANNEL_ID, {
+        name: 'Streak Reminders',
+        importance: Notifications.AndroidImportance.HIGH,
+        vibrationPattern: [0, 250, 250, 250],
+        lightColor: '#FF8F1F',
     });
 }
 
@@ -606,7 +675,8 @@ async function getRandomUnlearnedWord(): Promise<VocabularyWord | null> {
 /**
  * Schedule vocabulary notifications based on settings
  * Dynamically calculates how many days to schedule based on user settings
- * Max 64 notifications (iOS/Android limit)
+ * Max 63 vocabulary notifications. One pending notification slot is reserved
+ * for the fixed 21:00 streak reminder.
  * 
  * IMPORTANT: Words are NOT marked as learned here anymore.
  * Instead, they are tracked and processed when app opens via processDeliveredNotifications()
@@ -631,15 +701,32 @@ export async function scheduleVocabularyNotifications(): Promise<void> {
 
         await ensureNotificationChannelConfigured();
 
-        // Cancel existing notifications and clear tracking
-        await cancelAllNotifications();
+        // Cancel only vocabulary notifications and clear vocabulary tracking.
+        // Streak reminder owns its reserved slot and must survive vocab rebuilds.
+        await cancelVocabularyNotifications();
         await clearTrackedNotifications();
 
         // Reset dedup set for fresh scheduling batch
         _scheduledWordIds.clear();
 
-        const MAX_NOTIFICATIONS = 64;
         const now = new Date();
+        const remainingScheduled = await Notifications.getAllScheduledNotificationsAsync();
+        const nonStreakReservedCount = remainingScheduled.filter(notification =>
+            !isStreakNotificationId(notification.identifier)
+        ).length;
+        const vocabularyCapacity = Math.max(
+            0,
+            Math.min(
+                MAX_VOCABULARY_NOTIFICATIONS,
+                MAX_SCHEDULED_NOTIFICATIONS - STREAK_NOTIFICATION_RESERVED_SLOTS - nonStreakReservedCount
+            )
+        );
+
+        if (vocabularyCapacity <= 0) {
+            console.log('[Notifications] No available notification slots for vocabulary schedule');
+            await scheduleStreakReminderNotification();
+            return;
+        }
 
         // Get current level and target language for tracking
         const currentLevel = await getCurrentLevel();
@@ -665,7 +752,7 @@ export async function scheduleVocabularyNotifications(): Promise<void> {
         );
 
         // Calculate how many days we can schedule
-        const daysToSchedule = Math.ceil(MAX_NOTIFICATIONS / notificationsPerDay);
+        const daysToSchedule = Math.ceil(vocabularyCapacity / notificationsPerDay);
 
         console.log(`[Notifications] Per day: ${notificationsPerDay}, scheduling for ${daysToSchedule} days`);
 
@@ -673,7 +760,7 @@ export async function scheduleVocabularyNotifications(): Promise<void> {
         const trackedNotifications: TrackedNotification[] = [];
 
         // Schedule for multiple days
-        for (let day = 0; day < daysToSchedule && scheduledCount < MAX_NOTIFICATIONS; day++) {
+        for (let day = 0; day < daysToSchedule && scheduledCount < vocabularyCapacity; day++) {
             const baseDate = new Date(now);
             baseDate.setDate(baseDate.getDate() + day);
 
@@ -683,7 +770,7 @@ export async function scheduleVocabularyNotifications(): Promise<void> {
             const isOvernight = dailyEndMinutes <= dailyStartMinutes;
 
             // Schedule notifications for this day
-            for (let i = 0; i < notificationsPerDay && scheduledCount < MAX_NOTIFICATIONS; i++) {
+            for (let i = 0; i < notificationsPerDay && scheduledCount < vocabularyCapacity; i++) {
                 const notificationTime = new Date(startTime.getTime() + i * settings.frequencyMinutes * 60 * 1000);
 
                 // For overnight ranges, check the notification hasn't passed the end time the next day
@@ -702,7 +789,7 @@ export async function scheduleVocabularyNotifications(): Promise<void> {
                 const word = pickRandomUnlearnedWord(vocabulary, learnedIds);
                 if (!word) continue;
 
-                const notificationId = `vocbee-${word.id}-${notificationTime.getTime()}`;
+                const notificationId = `${VOCABULARY_NOTIFICATION_PREFIX}${word.id}-${notificationTime.getTime()}`;
 
                 // Track this notification (do NOT await schedule individually)
                 trackedNotifications.push({
@@ -722,7 +809,7 @@ export async function scheduleVocabularyNotifications(): Promise<void> {
             }
         }
 
-        // Schedule all notifications in parallel (avoids 64 sequential native bridge calls)
+        // Schedule all notifications in parallel (avoids sequential native bridge calls)
         await Promise.all(
             trackedNotifications.map(tracked =>
                 Notifications.scheduleNotificationAsync({
@@ -731,6 +818,7 @@ export async function scheduleVocabularyNotifications(): Promise<void> {
                         title: 'VocBee',
                         body: formatNotificationBody(tracked),
                         data: {
+                            kind: 'vocabulary' as NotificationKind,
                             wordId: tracked.wordId,
                             word: tracked.word,
                             pronunciation: tracked.pronunciation ?? undefined,
@@ -741,7 +829,7 @@ export async function scheduleVocabularyNotifications(): Promise<void> {
                             scheduledTime: tracked.scheduledTime,
                         },
                         sound: 'default',
-                        ...(Platform.OS === 'android' ? { channelId: 'vocabulary' } : {}),
+                        ...(Platform.OS === 'android' ? { channelId: ANDROID_VOCABULARY_CHANNEL_ID } : {}),
                     },
                     trigger: {
                         type: Notifications.SchedulableTriggerInputTypes.TIME_INTERVAL,
@@ -755,11 +843,27 @@ export async function scheduleVocabularyNotifications(): Promise<void> {
         // Save all tracked notifications at once
         await saveTrackedNotifications(trackedNotifications);
         await markNotificationContentCurrent();
+        await scheduleStreakReminderNotification();
 
         console.log(`[Notifications] Scheduled ${scheduledCount} notifications for ${daysToSchedule} days`);
     } catch (error) {
         console.error('[Notifications] Error scheduling notifications:', error);
     }
+}
+
+/**
+ * Cancel only scheduled vocabulary notifications.
+ * Keeps the reserved streak reminder slot intact during vocabulary rebuilds.
+ */
+export async function cancelVocabularyNotifications(): Promise<void> {
+    await cancelScheduledNotificationsByPredicate(isVocabularyNotificationId);
+}
+
+/**
+ * Cancel only scheduled streak reminder notifications.
+ */
+export async function cancelStreakReminderNotification(): Promise<void> {
+    await cancelScheduledNotificationsByPredicate(isStreakNotificationId);
 }
 
 /**
@@ -770,11 +874,70 @@ export async function cancelAllNotifications(): Promise<void> {
 }
 
 /**
+ * Schedule the single fixed 21:00 streak reminder.
+ *
+ * Local notifications cannot check streak state at delivery time, so we keep one
+ * pending reminder and rebuild it whenever the app starts/resumes or the streak
+ * changes. If today's streak is already complete, the reminder is moved to
+ * tomorrow.
+ */
+export async function scheduleStreakReminderNotification(now: Date = new Date()): Promise<void> {
+    try {
+        const settings = await getNotificationSettings();
+        if (!settings.enabled) {
+            await cancelStreakReminderNotification();
+            return;
+        }
+
+        const permissionGranted = await hasNotificationPermission();
+        if (!permissionGranted) {
+            await cancelStreakReminderNotification();
+            return;
+        }
+
+        await ensureNotificationChannelConfigured();
+
+        const streakState = await getStreakState(now);
+        const completedToday = isStreakCompletedToday(streakState, now);
+        const reminderTime = getNextStreakReminderTime(now, completedToday);
+        const { title, body } = getStreakReminderContent();
+
+        await cancelStreakReminderNotification();
+
+        await Notifications.scheduleNotificationAsync({
+            identifier: STREAK_NOTIFICATION_ID,
+            content: {
+                title,
+                body,
+                data: {
+                    kind: 'streak' as NotificationKind,
+                    scheduledTime: reminderTime.getTime(),
+                    reminderHour: STREAK_REMINDER_HOUR,
+                    reminderMinute: STREAK_REMINDER_MINUTE,
+                },
+                sound: 'default',
+                ...(Platform.OS === 'android' ? { channelId: ANDROID_STREAK_CHANNEL_ID } : {}),
+            },
+            trigger: {
+                type: Notifications.SchedulableTriggerInputTypes.TIME_INTERVAL,
+                seconds: Math.max(1, Math.floor((reminderTime.getTime() - now.getTime()) / 1000)),
+                repeats: false,
+            },
+        });
+
+        console.log(`[Notifications] Streak reminder scheduled for ${reminderTime.toISOString()}`);
+    } catch (error) {
+        console.error('[Notifications] Error scheduling streak reminder:', error);
+    }
+}
+
+/**
  * Smart Notification Refill
  * 
  * Instead of canceling all notifications and rescheduling, this function:
  * 1. Checks how many notifications are currently scheduled
- * 2. Calculates how many more can be added (up to 64 limit)
+ * 2. Calculates how many more vocabulary notifications can be added
+ *    (up to 63, preserving one slot for streak)
  * 3. Schedules new notifications AFTER the last scheduled one
  * 
  * This ensures existing scheduled notifications are preserved.
@@ -785,6 +948,7 @@ export async function refillNotifications(): Promise<void> {
 
         if (!settings.enabled) {
             console.log('[Notifications] Refill skipped - notifications disabled');
+            await cancelStreakReminderNotification();
             return;
         }
 
@@ -804,21 +968,32 @@ export async function refillNotifications(): Promise<void> {
             return;
         }
 
+        await scheduleStreakReminderNotification();
+
         // Get currently scheduled notifications
         const scheduled = await Notifications.getAllScheduledNotificationsAsync();
-        const currentCount = scheduled.length;
-        const MAX_NOTIFICATIONS = 64;
+        const vocabularyScheduled = scheduled.filter(notification =>
+            isVocabularyNotificationId(notification.identifier)
+        );
+        const currentVocabularyCount = vocabularyScheduled.length;
 
-        console.log(`[Notifications] Currently scheduled: ${currentCount}/${MAX_NOTIFICATIONS}`);
+        console.log(`[Notifications] Vocabulary scheduled: ${currentVocabularyCount}/${MAX_VOCABULARY_NOTIFICATIONS}, total scheduled: ${scheduled.length}/${MAX_SCHEDULED_NOTIFICATIONS}`);
 
         // If already at max, no need to refill
-        if (currentCount >= MAX_NOTIFICATIONS) {
-            console.log('[Notifications] Already at max capacity, no refill needed');
+        if (currentVocabularyCount >= MAX_VOCABULARY_NOTIFICATIONS) {
+            console.log('[Notifications] Vocabulary notifications already at max capacity, no refill needed');
             return;
         }
 
         // Calculate how many notifications we can add
-        const availableSlots = MAX_NOTIFICATIONS - currentCount;
+        const availableSystemSlots = Math.max(0, MAX_SCHEDULED_NOTIFICATIONS - scheduled.length);
+        const availableVocabularySlots = MAX_VOCABULARY_NOTIFICATIONS - currentVocabularyCount;
+        const availableSlots = Math.min(availableSystemSlots, availableVocabularySlots);
+
+        if (availableSlots <= 0) {
+            console.log('[Notifications] No available notification slots for vocabulary refill');
+            return;
+        }
 
         // Get current tracked notifications
         const trackedNotifications = await getTrackedNotifications();
@@ -832,8 +1007,8 @@ export async function refillNotifications(): Promise<void> {
             }
         }
         // Fallback: use scheduled notifications that include absolute scheduledTime in data
-        if (scheduled.length > 0 && trackedNotifications.length === 0) {
-            for (const notification of scheduled) {
+        if (vocabularyScheduled.length > 0 && trackedNotifications.length === 0) {
+            for (const notification of vocabularyScheduled) {
                 const scheduledTime = (notification.content?.data as any)?.scheduledTime;
                 if (typeof scheduledTime === 'number' && scheduledTime > lastScheduledTime.getTime()) {
                     lastScheduledTime = new Date(scheduledTime);
@@ -897,7 +1072,7 @@ export async function refillNotifications(): Promise<void> {
             }
 
             newTrackedNotifications.push({
-                notificationId: `vocbee-refill-${word.id}-${currentTime.getTime()}`,
+                notificationId: `${VOCABULARY_NOTIFICATION_PREFIX}refill-${word.id}-${currentTime.getTime()}`,
                 wordId: word.id,
                 word: word.word,
                 pronunciation: word.pronunciation ?? null,
@@ -923,6 +1098,7 @@ export async function refillNotifications(): Promise<void> {
                             title: 'VocBee',
                             body: formatNotificationBody(tracked),
                             data: {
+                                kind: 'vocabulary' as NotificationKind,
                                 wordId: tracked.wordId,
                                 word: tracked.word,
                                 pronunciation: tracked.pronunciation ?? undefined,
@@ -933,7 +1109,7 @@ export async function refillNotifications(): Promise<void> {
                                 scheduledTime: tracked.scheduledTime,
                             },
                             sound: 'default',
-                            ...(Platform.OS === 'android' ? { channelId: 'vocabulary' } : {}),
+                            ...(Platform.OS === 'android' ? { channelId: ANDROID_VOCABULARY_CHANNEL_ID } : {}),
                         },
                         trigger: {
                             type: Notifications.SchedulableTriggerInputTypes.TIME_INTERVAL,
@@ -950,7 +1126,7 @@ export async function refillNotifications(): Promise<void> {
             await markNotificationContentCurrent();
         }
 
-        console.log(`[Notifications] Refilled ${scheduledCount} notifications. New total: ${currentCount + scheduledCount}`);
+        console.log(`[Notifications] Refilled ${scheduledCount} vocabulary notifications. New vocabulary total: ${currentVocabularyCount + scheduledCount}`);
     } catch (error) {
         console.error('[Notifications] Error refilling notifications:', error);
     }
@@ -1052,6 +1228,14 @@ export async function handleNotificationResponse(
     response: Notifications.NotificationResponse
 ): Promise<void> {
     const data = response.notification.request.content.data;
+    const kind = typeof data?.kind === 'string' ? data.kind : null;
+
+    if (kind === 'streak') {
+        await scheduleStreakReminderNotification();
+        console.log('[Notifications] Streak reminder response handled');
+        return;
+    }
+
     const rawWordId = data?.wordId;
     const wordId =
         typeof rawWordId === 'number'
@@ -1147,6 +1331,7 @@ export async function sendTestNotification(): Promise<void> {
             title,
             body,
             data: {
+                kind: 'vocabulary' as NotificationKind,
                 wordId: word.id,
                 word: word.word,
                 pronunciation: word.pronunciation ?? undefined,
@@ -1157,7 +1342,7 @@ export async function sendTestNotification(): Promise<void> {
                 scheduledTime: Date.now() + 5000,
             },
             sound: 'default',
-            ...(Platform.OS === 'android' ? { channelId: 'vocabulary' } : {}),
+            ...(Platform.OS === 'android' ? { channelId: ANDROID_VOCABULARY_CHANNEL_ID } : {}),
         },
         trigger: {
             type: Notifications.SchedulableTriggerInputTypes.TIME_INTERVAL,
