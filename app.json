@@ -7,7 +7,7 @@
       "com.vocbee.app",
       "com.googleusercontent.apps.540292978044-695plkaeec13scn3p2s76h302sieti4g"
     ],
-    "version": "1.0.12",
+    "version": "1.0.13",
     "icon": "./assets/icons/vocicon.png",
     "splash": {
       "image": "./assets/transparent-splash.png",
@@ -23,7 +23,7 @@
       "supportsTablet": true,
       "bundleIdentifier": "com.vocbee.app",
       "appStoreUrl": "https://apps.apple.com/tr/app/vocbee-learn-vocabulary/id6760262917?l=tr",
-      "buildNumber": "5",
+      "buildNumber": "6",
       "googleServicesFile": "./GoogleService-Info.plist",
       "splash": {
         "image": "./assets/transparent-splash.png",
