@@ -7,7 +7,8 @@ import Purchases, {
 } from 'react-native-purchases';
 import RevenueCatUI, { PAYWALL_RESULT } from 'react-native-purchases-ui';
 
-export const REVENUECAT_AD_FREE_ENTITLEMENT_ID = 'ad_free';
+// RevenueCat dashboard uses "premium"; every premium product removes ads.
+export const REVENUECAT_AD_FREE_ENTITLEMENT_ID = 'premium';
 
 const TEST_REVENUECAT_API_KEY = 'test_SwKWiFPJFyWvvsHYtFKNTzSNZXw';
 
