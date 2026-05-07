@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "types": ["nativewind/types", "jest", "node"]
+  },
+  "include": [
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "__mocks__/**/*.js",
+    "jest.setup.js",
+    "types/**/*.d.ts"
+  ],
+  "exclude": [
+    "coverage/**",
+    "functions/**",
+    "node_modules/**",
+    "vocbee_final_docs/**"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "App.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "screens/**/*.ts",
+    "screens/**/*.tsx",
+    "services/**/*.ts",
+    "context/**/*.ts",
+    "context/**/*.tsx",
+    "config/**/*.ts",
+    "constants/**/*.ts",
+    "utils/**/*.ts",
+    "locales/**/*.ts",
+    "types/**/*.d.ts",
+    "nativewind-env.d.ts",
+    "types.ts",
+    "swarmAnimation_new.ts"
+  ],
+  "exclude": [
+    "**/__tests__/**",
+    "coverage/**",
+    "functions/**",
+    "node_modules/**",
+    "vocbee_final_docs/**"
+  ]
+}

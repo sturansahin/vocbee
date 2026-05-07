@@ -31,7 +31,6 @@ export const OfflineNotice = () => {
         }).start();
     }, [isConnected, animation]);
 
-    // Always render to allow slide-up animation; use opacity + translateY to hide
     const translateY = animation.interpolate({
         inputRange: [0, 1],
         outputRange: [-100, 0],
@@ -42,9 +41,15 @@ export const OfflineNotice = () => {
         outputRange: [0, 1],
     });
 
+    if (isConnected) {
+        return null;
+    }
+
     return (
         <Animated.View
-            pointerEvents={isConnected ? 'none' : 'auto'}
+            pointerEvents="auto"
+            accessibilityElementsHidden={false}
+            importantForAccessibility="auto"
             style={[
                 styles.container,
                 {

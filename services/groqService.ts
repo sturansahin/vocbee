@@ -7,6 +7,7 @@
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import appConfig from '../app.json';
+import { auth } from '../config/firebase';
 import { STORAGE_KEYS } from './storageKeys';
 
 const APP_CONFIG_GRAMMAR_PROXY_URL = appConfig.expo.extra?.grammarProxyUrl ?? '';
@@ -16,6 +17,7 @@ const GRAMMAR_PROXY_URL = (
 ).trim();
 const GROQ_API_KEY_DEV = __DEV__ ? (process.env.EXPO_PUBLIC_GROQ_API_KEY || '') : '';
 const FETCH_TIMEOUT_MS = 30_000; // 30 second timeout for API calls
+const MAX_SENTENCE_LENGTH = 280;
 
 // Persistent + in-memory grammar cache
 const GRAMMAR_CACHE_KEY = STORAGE_KEYS.GRAMMAR_CACHE;
@@ -104,12 +106,42 @@ interface GrammarApiResponse {
     sentence2?: SentenceAnalysis;
 }
 
+function assertValidGrammarRequest(sentence1: string, sentence2: string): void {
+    const first = sentence1.trim();
+    const second = sentence2.trim();
+
+    if (!first || !second) {
+        throw new Error('Please provide both sentences before requesting grammar help.');
+    }
+
+    if (first.length > MAX_SENTENCE_LENGTH || second.length > MAX_SENTENCE_LENGTH) {
+        throw new Error('Sentences must be 280 characters or fewer.');
+    }
+}
+
+async function getProxyHeaders(): Promise<Record<string, string>> {
+    const headers: Record<string, string> = {
+        'Content-Type': 'application/json',
+    };
+
+    const idToken = await auth.currentUser?.getIdToken();
+    if (idToken) {
+        headers.Authorization = `Bearer ${idToken}`;
+    } else if (!__DEV__) {
+        throw new Error('Grammar service requires sign-in.');
+    }
+
+    return headers;
+}
+
 export const explainGrammar = async (
     sentence1: string,
     sentence2: string,
     outputLanguage: string = 'Turkish'
 ): Promise<GrammarResponse> => {
     try {
+        assertValidGrammarRequest(sentence1, sentence2);
+
         // Create a unique key for the cache
         const cacheKey = `${sentence1.trim()}|${sentence2.trim()}|${outputLanguage}`;
 
@@ -170,13 +202,14 @@ Sentence 2: "${sentence2}"`;
             // ── Route decision: proxy (production) vs direct Groq (dev-only) ──
             if (GRAMMAR_PROXY_URL) {
                 // Production path: call backend proxy (API key stays server-side)
+                const headers = await getProxyHeaders();
                 response = await fetch(GRAMMAR_PROXY_URL, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                    headers,
                     signal: controller.signal,
                     body: JSON.stringify({
-                        sentence1,
-                        sentence2,
+                        sentence1: sentence1.trim(),
+                        sentence2: sentence2.trim(),
                         outputLanguage,
                     }),
                 } as RequestInit);

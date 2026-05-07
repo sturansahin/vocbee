@@ -8,7 +8,7 @@
  */
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { doc, setDoc, getDoc } from 'firebase/firestore';
+import { doc, setDoc, getDoc, serverTimestamp } from 'firebase/firestore';
 import { db, auth } from '../config/firebase';
 import { VocabularyWord, getStoredVocabulary, LEVELS, Level } from './vocabularyService';
 import { markAsUnsynced } from './storage';
@@ -19,18 +19,36 @@ export interface FavoriteItem {
 }
 
 // Get user-specific key for favorites
-const getFavoritesKey = (): string => {
-    const userId = auth.currentUser?.uid;
+const getFavoritesKey = (userId = auth.currentUser?.uid): string => {
     return userId ? `@favorites_${userId}` : '@favorites';
 };
+
+function mergeFavoriteItems(items: FavoriteItem[]): FavoriteItem[] {
+    const seen = new Set<string>();
+    const merged: FavoriteItem[] = [];
+
+    for (const item of items) {
+        if (!item || typeof item.id !== 'number' || !LEVELS.includes(item.level)) {
+            continue;
+        }
+
+        const key = `${item.level}:${item.id}`;
+        if (!seen.has(key)) {
+            seen.add(key);
+            merged.push({ id: item.id, level: item.level });
+        }
+    }
+
+    return merged;
+}
 
 /**
  * Get all favorite items (ID + Level)
  * Handles migration from old format (number[]) on the fly
  */
-export async function getFavoriteItems(): Promise<FavoriteItem[]> {
+export async function getFavoriteItems(userId?: string): Promise<FavoriteItem[]> {
     try {
-        const key = getFavoritesKey();
+        const key = getFavoritesKey(userId);
         const data = await AsyncStorage.getItem(key);
 
         if (!data) return [];
@@ -63,7 +81,7 @@ export async function getFavoriteItems(): Promise<FavoriteItem[]> {
             return migrated;
         }
 
-        return parsed as FavoriteItem[];
+        return mergeFavoriteItems(parsed as FavoriteItem[]);
     } catch (error) {
         console.error('Error getting favorites:', error);
         return [];
@@ -217,30 +235,47 @@ export async function clearFavoritesOnFirebase(userId: string): Promise<void> {
  * Called by SyncService during daily sync or logout
  */
 export async function syncFavoritesToFirebase(): Promise<void> {
-    try {
-        const userId = auth.currentUser?.uid;
-        if (!userId) return;
+    await syncFavoritesToFirebaseForUser(auth.currentUser?.uid);
+}
 
-        const favoriteItems = await getFavoriteItems();
+export async function syncFavoritesToFirebaseForUser(
+    userId: string | undefined,
+    deviceId?: string
+): Promise<void> {
+    try {
+        if (!userId) {
+            throw new Error('Cannot sync favorites without an authenticated user.');
+        }
+
+        const favoriteItems = await getFavoriteItems(userId);
         const userRef = doc(db, 'users', userId);
+        const syncMeta: Record<string, unknown> = {
+            version: 1,
+            updatedAt: serverTimestamp(),
+        };
+        if (deviceId) {
+            syncMeta.updatedByDeviceId = deviceId;
+        }
 
         // Save as array of objects
         await setDoc(userRef, {
             favorites: favoriteItems,
+            syncMeta,
         }, { merge: true });
 
         console.log('Favorites synced to Firebase:', favoriteItems.length, 'items');
     } catch (error) {
         console.error('Error syncing favorites to Firebase:', error);
+        throw error;
     }
 }
 
 /**
  * Restore favorites from Firebase (on login)
  */
-export async function restoreFavoritesFromFirebase(): Promise<void> {
+export async function restoreFavoritesFromFirebase(userIdOverride?: string): Promise<void> {
     try {
-        const userId = auth.currentUser?.uid;
+        const userId = userIdOverride ?? auth.currentUser?.uid;
         if (!userId) return;
 
         const userRef = doc(db, 'users', userId);
@@ -249,12 +284,13 @@ export async function restoreFavoritesFromFirebase(): Promise<void> {
         if (userDoc.exists()) {
             const data = userDoc.data();
             if (data.favorites && Array.isArray(data.favorites)) {
-                const key = getFavoritesKey();
+                const key = getFavoritesKey(userId);
 
-                // Validate/Normalize data
-                // If it's old format (numbers), getFavoriteItems will handle it on next read
-                // But if we're restoring, we might want to store it as is first
-                let itemsToStore = data.favorites;
+                const localItems = await getFavoriteItems(userId);
+                const itemsToStore = mergeFavoriteItems([
+                    ...localItems,
+                    ...(data.favorites as FavoriteItem[]),
+                ]);
 
                 await AsyncStorage.setItem(key, JSON.stringify(itemsToStore));
                 console.log('Favorites restored from Firebase:', itemsToStore.length, 'items');

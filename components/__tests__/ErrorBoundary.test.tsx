@@ -2,7 +2,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
 import { Text, View } from 'react-native';
-import { ErrorBoundary } from '../ErrorBoundary';
+import { ErrorBoundary, ErrorBoundaryInner } from '../ErrorBoundary';
 
 // Mock expo-updates
 jest.mock('expo-updates', () => ({
@@ -68,7 +68,7 @@ describe('ErrorBoundary', () => {
         expect(queryByText('Normal Content')).toBeNull();
     });
 
-    it('displays the error message in error box', () => {
+    it('displays the error message in error box during development', () => {
         const { getByText } = render(
             <ErrorBoundary>
                 <ThrowingComponent shouldThrow={true} />
@@ -148,7 +148,7 @@ describe('ErrorBoundary', () => {
 
     it('getDerivedStateFromError returns correct state', () => {
         const error = new Error('Test');
-        const result = ErrorBoundary.getDerivedStateFromError(error);
+        const result = ErrorBoundaryInner.getDerivedStateFromError(error);
         
         expect(result).toEqual({
             hasError: true,

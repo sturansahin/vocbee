@@ -33,7 +33,7 @@ jest.mock('../../context/ThemeContext', () => ({
         },
         isDarkMode: false
     }),
-    ThemeProvider: ({ children }) => children,
+    ThemeProvider: ({ children }: { children: React.ReactNode }) => children,
 }));
 
 // Mock AuthContext values
@@ -52,7 +52,7 @@ jest.mock('../../context/AuthContext', () => ({
         signOut: mockSignOut,
         isLoading: false,
     }),
-    AuthProvider: ({ children }) => children,
+    AuthProvider: ({ children }: { children: React.ReactNode }) => children,
 }));
 
 // Mock Alert

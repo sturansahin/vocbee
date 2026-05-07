@@ -45,7 +45,8 @@ We automatically collect:
 We may collect device-related information and request specific device permissions to provide our services and display advertisements:
 
 - **Device Information:** Device type, model, operating system version, and anonymized IP address for analytics and security.
-- **Microphone / Audio (Android):** The App may request audio recording permissions (`RECORD_AUDIO`) for features related to pronunciation or speech interaction. We do not store or transmit your audio data to our servers.
+- **Camera and Photo Library:** Used only when you choose to add or update a profile photo.
+- **Notifications:** Used to send vocabulary and streak reminders according to your settings.
 - **Advertising Identifier and Tracking (IDFA / AAID):** We collect your device's advertising identifier to display personalized ads.
   - **iOS Users:** Under Apple's App Tracking Transparency (ATT) framework, we explicitly ask for your permission ("Allow VocBee to track your activity across other companies’ apps and websites") before using your IDFA for personalized advertising.
   - **GDPR / EU Users:** We utilize the User Messaging Platform (UMP) to obtain explicit consent for data processing related to personalized ads.

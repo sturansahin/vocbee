@@ -35,6 +35,7 @@ jest.mock('../progressService', () => ({
 jest.mock('../favoritesService', () => ({
     restoreFavoritesFromFirebase: jest.fn(),
     syncFavoritesToFirebase: jest.fn(),
+    syncFavoritesToFirebaseForUser: jest.fn(),
 }));
 
 // Mock vocabularyService
@@ -65,6 +66,7 @@ jest.mock('../streakService', () => ({
 // Import after mocks
 import {
     shouldSync,
+    syncToFirestore,
     createUserDocument,
     getActiveDeviceIdFromFirebase,
     fetchAndSaveUserData,
@@ -72,8 +74,11 @@ import {
     syncNotificationSettingsToFirestore,
 } from '../SyncService';
 import { doc, setDoc, getDoc } from 'firebase/firestore';
-import { needsSync, getLastSyncTime } from '../storage';
-import { saveNotificationSettings } from '../notificationService';
+import { needsSync, getLastSyncTime, setLastSyncTime, clearSyncFlag } from '../storage';
+import { getUserProgress, getCurrentLevel, restoreProgressFromFirebase, getLastWordId } from '../progressService';
+import { restoreFavoritesFromFirebase, syncFavoritesToFirebaseForUser } from '../favoritesService';
+import { getLanguagePair } from '../vocabularyService';
+import { getNotificationSettings, saveNotificationSettings } from '../notificationService';
 import { restoreStreakState } from '../streakService';
 import { STORAGE_KEYS } from '../storageKeys';
 
@@ -85,6 +90,15 @@ describe('SyncService', () => {
         // Reset storage mocks
         (needsSync as jest.Mock).mockResolvedValue(false);
         (getLastSyncTime as jest.Mock).mockResolvedValue(null);
+        (getUserProgress as jest.Mock).mockResolvedValue({});
+        (getCurrentLevel as jest.Mock).mockResolvedValue('A1');
+        (getLastWordId as jest.Mock).mockResolvedValue(null);
+        (getLanguagePair as jest.Mock).mockResolvedValue({
+            native: 'turkish',
+            target: 'english',
+        });
+        (getNotificationSettings as jest.Mock).mockResolvedValue(null);
+        (syncFavoritesToFirebaseForUser as jest.Mock).mockResolvedValue(undefined);
     });
 
     describe('shouldSync', () => {
@@ -115,14 +129,57 @@ describe('SyncService', () => {
             expect(result).toBe(true);
         });
 
-        it('returns false when last sync was within 24 hours', async () => {
+        it('returns false when last sync was within the mutation debounce window', async () => {
             (needsSync as jest.Mock).mockResolvedValue(true);
-            const recentDate = new Date(Date.now() - 1 * 60 * 60 * 1000);
+            const recentDate = new Date(Date.now() - 1 * 60 * 1000);
             (getLastSyncTime as jest.Mock).mockResolvedValue(recentDate);
 
             const result = await shouldSync();
 
             expect(result).toBe(false);
+        });
+    });
+
+    describe('syncToFirestore', () => {
+        it('clears sync state only after all sync domains succeed', async () => {
+            (setDoc as jest.Mock).mockResolvedValue(undefined);
+
+            const result = await syncToFirestore('user123');
+
+            expect(result).toBe(true);
+            expect(setDoc).toHaveBeenCalledWith(
+                expect.anything(),
+                expect.objectContaining({
+                    progress: expect.objectContaining({
+                        currentLevel: 'A1',
+                        learnedWords: {},
+                    }),
+                    syncMeta: expect.objectContaining({
+                        version: 1,
+                        updatedByDeviceId: 'test-device-id',
+                    }),
+                }),
+                { merge: true }
+            );
+            expect(syncFavoritesToFirebaseForUser).toHaveBeenCalledWith('user123', 'test-device-id');
+            expect(setLastSyncTime).toHaveBeenCalled();
+            expect(clearSyncFlag).toHaveBeenCalled();
+        });
+
+        it('does not clear sync state when favorites sync fails', async () => {
+            const setTimeoutSpy = jest.spyOn(global, 'setTimeout').mockImplementation((callback: any) => {
+                callback();
+                return 0 as any;
+            });
+            (setDoc as jest.Mock).mockResolvedValue(undefined);
+            (syncFavoritesToFirebaseForUser as jest.Mock).mockRejectedValue(new Error('favorites failed'));
+
+            const result = await syncToFirestore('user123');
+
+            expect(result).toBe(false);
+            expect(setLastSyncTime).not.toHaveBeenCalled();
+            expect(clearSyncFlag).not.toHaveBeenCalled();
+            setTimeoutSpy.mockRestore();
         });
     });
 
@@ -310,6 +367,52 @@ describe('SyncService', () => {
                 email: 'test@example.com',
             });
         });
+
+        it('does not overwrite local domain data when local changes are unsynced', async () => {
+            (needsSync as jest.Mock).mockResolvedValue(true);
+            (getDoc as jest.Mock).mockResolvedValueOnce({
+                exists: () => true,
+                data: () => ({
+                    email: 'test@example.com',
+                    displayName: 'Test User',
+                    setupCompleted: true,
+                    preferences: {
+                        nativeLanguage: 'turkish',
+                        targetLanguage: 'english',
+                        level: 'beginner',
+                    },
+                    progress: {
+                        learnedWords: { A1: [1] },
+                        currentLevel: 'A1',
+                        lastWordIndex: 1,
+                    },
+                    notificationSettings: {
+                        enabled: true,
+                        startHour: 8,
+                        startMinute: 0,
+                        endHour: 20,
+                        endMinute: 0,
+                        frequencyMinutes: 120,
+                        autoMarkLearned: true,
+                    },
+                    streak: {
+                        currentStreak: 4,
+                        longestStreak: 7,
+                        brokenStreak: null,
+                        lastQualifiedDay: '2026-04-12',
+                        lastQualifiedAt: '2026-04-12T09:00:00.000Z',
+                    },
+                }),
+            });
+
+            await fetchAndSaveUserData('user123');
+
+            expect(saveNotificationSettings).not.toHaveBeenCalled();
+            expect(restoreStreakState).not.toHaveBeenCalled();
+            expect(restoreProgressFromFirebase).not.toHaveBeenCalled();
+            expect(restoreFavoritesFromFirebase).not.toHaveBeenCalled();
+            expect(clearSyncFlag).not.toHaveBeenCalled();
+        });
     });
 
     describe('syncNotificationSettingsToFirestore', () => {
@@ -328,7 +431,7 @@ describe('SyncService', () => {
 
             expect(setDoc).toHaveBeenCalledWith(
                 expect.anything(),
-                {
+                expect.objectContaining({
                     notificationSettings: {
                         enabled: true,
                         startHour: 9,
@@ -338,7 +441,11 @@ describe('SyncService', () => {
                         frequencyMinutes: 120,
                         autoMarkLearned: true,
                     },
-                },
+                    syncMeta: expect.objectContaining({
+                        version: 1,
+                        updatedByDeviceId: 'test-device-id',
+                    }),
+                }),
                 { merge: true }
             );
         });
@@ -356,11 +463,15 @@ describe('SyncService', () => {
 
             expect(setDoc).toHaveBeenCalledWith(
                 expect.anything(),
-                {
+                expect.objectContaining({
                     email: 'test@example.com',
                     displayName: 'VocBee User',
                     photoURL: 'https://image.example/provider.png',
-                },
+                    syncMeta: expect.objectContaining({
+                        version: 1,
+                        updatedByDeviceId: 'test-device-id',
+                    }),
+                }),
                 { merge: true }
             );
         });

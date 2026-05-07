@@ -125,7 +125,7 @@ describe('streakService', () => {
 
         expect(await AsyncStorage.getItem(STORAGE_KEYS.SYNC_FLAG)).toBeNull();
 
-        const restored = await getStreakState();
+        const restored = await getStreakState(new Date(2026, 3, 12, 10, 0, 0));
         expect(restored.currentStreak).toBe(3);
 
         await clearStreakState();

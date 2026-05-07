@@ -5,11 +5,22 @@ import type { GrammarResponse } from '../groqService';
 const mockFetch = jest.fn();
 global.fetch = mockFetch;
 
+const mockAuth: {
+    currentUser: null | { getIdToken: jest.Mock };
+} = {
+    currentUser: null,
+};
+
+jest.mock('../../config/firebase', () => ({
+    auth: mockAuth,
+}));
+
 describe('groqService', () => {
     let explainGrammar: typeof import('../groqService').explainGrammar;
 
     beforeEach(async () => {
         jest.clearAllMocks();
+        mockAuth.currentUser = null;
         // Clear the module cache to reset the internal grammarCache
         jest.resetModules();
         process.env.EXPO_PUBLIC_GRAMMAR_PROXY_URL = 'https://vocbee-proxy.vercel.app/api/grammarProxy';
@@ -124,6 +135,21 @@ describe('groqService', () => {
                 'https://vocbee-proxy.vercel.app/api/grammarProxy',
                 expect.any(Object)
             );
+        });
+
+        it('sends Firebase auth token to the proxy when available', async () => {
+            mockAuth.currentUser = {
+                getIdToken: jest.fn().mockResolvedValue('firebase-id-token'),
+            };
+            mockFetch.mockResolvedValueOnce({
+                ok: true,
+                json: async () => mockSuccessResponse,
+            });
+
+            await explainGrammar('Test 1', 'Test 2', 'Turkish');
+
+            expect(mockAuth.currentUser.getIdToken).toHaveBeenCalledTimes(1);
+            expect(mockFetch.mock.calls[0][1].headers.Authorization).toBe('Bearer firebase-id-token');
         });
 
         it('sends correct request body', async () => {

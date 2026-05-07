@@ -140,6 +140,7 @@ export async function getCurrentLevel(): Promise<Level> {
 export async function setCurrentLevel(level: Level): Promise<void> {
     try {
         await AsyncStorage.setItem(CURRENT_LEVEL_KEY, level);
+        await markAsUnsynced();
     } catch (error) {
         console.error('Error setting current level:', error);
     }
@@ -167,11 +168,16 @@ export async function checkAndAdvanceLevel(): Promise<Level> {
 /**
  * Reset all progress
  */
-export async function resetProgress(): Promise<void> {
+export async function resetProgress(
+    options: { markUnsynced?: boolean } = {}
+): Promise<void> {
     try {
         await AsyncStorage.removeItem(PROGRESS_KEY);
         await AsyncStorage.removeItem(CURRENT_LEVEL_KEY);
         await AsyncStorage.removeItem(LAST_WORD_ID_KEY);
+        if (options.markUnsynced !== false) {
+            await markAsUnsynced();
+        }
         console.log('Progress reset successfully (including last word)');
     } catch (error) {
         console.error('Error resetting progress:', error);

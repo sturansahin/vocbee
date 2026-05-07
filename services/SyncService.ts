@@ -14,7 +14,7 @@ import {
     getDeviceId,
 } from './storage';
 import { getUserProgress, getCurrentLevel, restoreProgressFromFirebase, getLastWordId } from './progressService';
-import { restoreFavoritesFromFirebase, syncFavoritesToFirebase } from './favoritesService';
+import { restoreFavoritesFromFirebase, syncFavoritesToFirebaseForUser } from './favoritesService';
 import { getLanguagePair, isVocabularyGenerated, generateVocabulary, getUserLevelFromCefrLevel, isUserLevel } from './vocabularyService';
 import { getNotificationSettings, saveNotificationSettings, NotificationSettings } from './notificationService';
 import { getStreakState, restoreStreakState, StreakState } from './streakService';
@@ -24,6 +24,7 @@ import { STORAGE_KEYS } from './storageKeys';
 // ─── Retry Helper with Exponential Backoff ───────────────────────────────────
 const MAX_RETRIES = 3;
 const BASE_DELAY_MS = 1000;
+const MUTATION_SYNC_DEBOUNCE_MS = 5 * 60 * 1000;
 
 async function withRetry<T>(
     fn: () => Promise<T>,
@@ -59,8 +60,8 @@ export const shouldSync = async (): Promise<boolean> => {
         const now = new Date();
         const hoursSinceLastSync = (now.getTime() - lastSync.getTime()) / (1000 * 60 * 60);
 
-        // Sync if it's been more than 24 hours (daily sync)
-        return hoursSinceLastSync >= 24;
+        // Local mutations should not wait for the old 24h daily window.
+        return hoursSinceLastSync * 60 * 60 * 1000 >= MUTATION_SYNC_DEBOUNCE_MS;
     } catch (error) {
         console.error('Error checking sync status:', error);
         return false;
@@ -145,10 +146,26 @@ export const syncToFirestore = async (userId: string): Promise<boolean> => {
             syncData.setupCompleted = true;
         }
 
-        await setDoc(userRef, syncData, { merge: true });
+        syncData.syncMeta = {
+            version: 1,
+            updatedAt: serverTimestamp(),
+            updatedByDeviceId: deviceId,
+        };
 
-        // Sync favorites
-        await syncFavoritesToFirebase();
+        const syncResults = await Promise.allSettled([
+            setDoc(userRef, syncData, { merge: true }),
+            syncFavoritesToFirebaseForUser(userId, deviceId),
+        ]);
+
+        const failedResults = syncResults.filter(
+            (result): result is PromiseRejectedResult => result.status === 'rejected'
+        );
+        if (failedResults.length > 0) {
+            failedResults.forEach(result => {
+                console.error('[SyncService] Domain sync failed:', result.reason);
+            });
+            throw new Error('One or more sync domains failed.');
+        }
 
         await setLastSyncTime();
         await clearSyncFlag();
@@ -248,6 +265,7 @@ export const fetchAndSaveUserData = async (userId: string): Promise<UserData | n
                 preferences: data.preferences,
             };
 
+            const hasUnsyncedLocalChanges = await needsSync();
             await saveUserDataLocally(userData);
 
             const storedProfile = await AsyncStorage.getItem(`${STORAGE_KEYS.PROFILE_PREFIX}${userId}`);
@@ -264,6 +282,11 @@ export const fetchAndSaveUserData = async (userId: string): Promise<UserData | n
                 hasFirestorePhotoURL,
             });
             await AsyncStorage.setItem(`${STORAGE_KEYS.PROFILE_PREFIX}${userId}`, JSON.stringify(newProfile));
+
+            if (hasUnsyncedLocalChanges) {
+                console.warn('[SyncService] Local unsynced changes detected; skipping cloud domain restore.');
+                return userData;
+            }
 
             if (data.notificationSettings && typeof data.notificationSettings === 'object') {
                 await saveNotificationSettings(data.notificationSettings, true);
@@ -327,7 +350,7 @@ export const fetchAndSaveUserData = async (userId: string): Promise<UserData | n
             }
 
             // Restore favorites from Firebase
-            await restoreFavoritesFromFirebase();
+            await restoreFavoritesFromFirebase(userId);
 
             await clearSyncFlag();
 
@@ -346,7 +369,15 @@ export const syncNotificationSettingsToFirestore = async (
 ): Promise<void> => {
     await withRetry(async () => {
         const userRef = doc(db, 'users', userId);
-        await setDoc(userRef, { notificationSettings: settings }, { merge: true });
+        const deviceId = await getDeviceId();
+        await setDoc(userRef, {
+            notificationSettings: settings,
+            syncMeta: {
+                version: 1,
+                updatedAt: serverTimestamp(),
+                updatedByDeviceId: deviceId,
+            },
+        }, { merge: true });
     }, 'syncNotificationSettingsToFirestore');
 };
 
@@ -375,7 +406,15 @@ export const syncAuthProfileToFirestore = async (
                     : null;
         }
 
-        await setDoc(userRef, syncData, { merge: true });
+        const deviceId = await getDeviceId();
+        await setDoc(userRef, {
+            ...syncData,
+            syncMeta: {
+                version: 1,
+                updatedAt: serverTimestamp(),
+                updatedByDeviceId: deviceId,
+            },
+        }, { merge: true });
     }, 'syncAuthProfileToFirestore');
 };
 

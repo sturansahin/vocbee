@@ -1,5 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, SafeAreaView, useColorScheme } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, useColorScheme } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { MaterialIcons } from '@expo/vector-icons';
 import * as Updates from 'expo-updates';
 import i18n from '../services/i18n';
@@ -28,7 +29,7 @@ interface InnerProps extends Props {
     themeColors: typeof DARK_COLORS;
 }
 
-class ErrorBoundaryInner extends Component<InnerProps, State> {
+export class ErrorBoundaryInner extends Component<InnerProps, State> {
     constructor(props: InnerProps) {
         super(props);
         this.state = {
@@ -68,7 +69,7 @@ class ErrorBoundaryInner extends Component<InnerProps, State> {
                             {i18n.t('errorBoundary.message')}
                         </Text>
 
-                        {this.state.error && (
+                        {__DEV__ && this.state.error && (
                             <View style={[styles.errorBox, { backgroundColor: colors.surface, borderColor: colors.border }]}>
                                 <Text style={[styles.errorText, { color: colors.error }]}>
                                     {this.state.error.toString()}

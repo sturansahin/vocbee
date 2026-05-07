@@ -1,0 +1,181 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return signedIn() && request.auth.uid == uid;
+    }
+
+    function has(data, key) {
+      return data.keys().hasAny([key]);
+    }
+
+    function optionalString(data, key, maxLength) {
+      return !has(data, key)
+        || data[key] == null
+        || (data[key] is string && data[key].size() <= maxLength);
+    }
+
+    function optionalBoolean(data, key) {
+      return !has(data, key) || data[key] is bool;
+    }
+
+    function optionalTimestamp(data, key) {
+      return !has(data, key) || data[key] is timestamp;
+    }
+
+    function validLanguage(value) {
+      return value in [
+        'amharic', 'arabic', 'chinese', 'english', 'french', 'german',
+        'hindi', 'indonesian', 'italian', 'japanese', 'korean', 'persian',
+        'portuguese', 'russian', 'serbian', 'spanish', 'swahili', 'thai',
+        'turkish', 'urdu', 'vietnamese'
+      ];
+    }
+
+    function validUserLevel(value) {
+      return value in ['beginner', 'intermediate', 'advanced'];
+    }
+
+    function validCefrLevel(value) {
+      return value in ['A1', 'A2', 'B1', 'B2', 'C1'];
+    }
+
+    function validPreferences(value) {
+      return value == null
+        || (
+          value is map
+          && value.keys().hasOnly(['nativeLanguage', 'targetLanguage', 'level'])
+          && validLanguage(value.nativeLanguage)
+          && validLanguage(value.targetLanguage)
+          && validUserLevel(value.level)
+        );
+    }
+
+    function validProgress(value) {
+      return value == null
+        || (
+          value is map
+          && value.keys().hasOnly(['currentLevel', 'learnedWords', 'lastWordIndex', 'lastSync'])
+          && validCefrLevel(value.currentLevel)
+          && value.learnedWords is map
+          && (!has(value, 'lastWordIndex') || (value.lastWordIndex is int && value.lastWordIndex >= 0))
+          && (!has(value, 'lastSync') || value.lastSync is timestamp)
+        );
+    }
+
+    function validStreak(value) {
+      return value == null
+        || (
+          value is map
+          && value.keys().hasOnly([
+            'currentStreak',
+            'longestStreak',
+            'brokenStreak',
+            'lastQualifiedDay',
+            'lastQualifiedAt'
+          ])
+          && value.currentStreak is int
+          && value.currentStreak >= 0
+          && value.longestStreak is int
+          && value.longestStreak >= 0
+          && (
+            !has(value, 'brokenStreak')
+            || value.brokenStreak == null
+            || (value.brokenStreak is int && value.brokenStreak >= 0)
+          )
+          && (
+            !has(value, 'lastQualifiedDay')
+            || value.lastQualifiedDay == null
+            || value.lastQualifiedDay is string
+          )
+          && (
+            !has(value, 'lastQualifiedAt')
+            || value.lastQualifiedAt == null
+            || value.lastQualifiedAt is string
+          )
+        );
+    }
+
+    function validNotificationSettings(value) {
+      return value == null
+        || (
+          value is map
+          && value.keys().hasOnly([
+            'enabled',
+            'startHour',
+            'startMinute',
+            'endHour',
+            'endMinute',
+            'frequencyMinutes',
+            'autoMarkLearned'
+          ])
+          && value.enabled is bool
+          && value.autoMarkLearned is bool
+          && value.startHour is int && value.startHour >= 0 && value.startHour <= 23
+          && value.endHour is int && value.endHour >= 0 && value.endHour <= 23
+          && value.startMinute is int && value.startMinute >= 0 && value.startMinute <= 59
+          && value.endMinute is int && value.endMinute >= 0 && value.endMinute <= 59
+          && value.frequencyMinutes in [60, 120, 180, 360, 1440]
+        );
+    }
+
+    function validFavorites(value) {
+      return value == null || (value is list && value.size() <= 1000);
+    }
+
+    function validSyncMeta(value) {
+      return value == null
+        || (
+          value is map
+          && value.keys().hasOnly(['version', 'updatedAt', 'updatedByDeviceId'])
+          && (!has(value, 'version') || (value.version is int && value.version >= 1))
+          && (!has(value, 'updatedAt') || value.updatedAt is timestamp)
+          && optionalString(value, 'updatedByDeviceId', 120)
+        );
+    }
+
+    function validUserDocument(data) {
+      return data.keys().hasOnly([
+        'email',
+        'displayName',
+        'photoURL',
+        'createdAt',
+        'setupCompleted',
+        'preferences',
+        'progress',
+        'streak',
+        'notificationSettings',
+        'lastActiveDeviceId',
+        'favorites',
+        'syncMeta'
+      ])
+      && optionalString(data, 'email', 320)
+      && optionalString(data, 'displayName', 120)
+      && optionalString(data, 'photoURL', 2048)
+      && optionalString(data, 'lastActiveDeviceId', 120)
+      && optionalTimestamp(data, 'createdAt')
+      && optionalBoolean(data, 'setupCompleted')
+      && (!has(data, 'preferences') || validPreferences(data.preferences))
+      && (!has(data, 'progress') || validProgress(data.progress))
+      && (!has(data, 'streak') || validStreak(data.streak))
+      && (!has(data, 'notificationSettings') || validNotificationSettings(data.notificationSettings))
+      && (!has(data, 'favorites') || validFavorites(data.favorites))
+      && (!has(data, 'syncMeta') || validSyncMeta(data.syncMeta));
+    }
+
+    match /users/{uid} {
+      allow read: if isOwner(uid);
+      allow create, update: if isOwner(uid) && validUserDocument(request.resource.data);
+      allow delete: if isOwner(uid);
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

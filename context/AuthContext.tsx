@@ -3,6 +3,7 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import appConfig from '../app.json';
 import {
     User,
     createUserWithEmailAndPassword,
@@ -88,6 +89,12 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 const SOCIAL_AUTH_CANCELLED_ERROR = 'AUTH_CANCELLED';
+const APP_CONFIG_DELETE_ACCOUNT_URL = appConfig.expo.extra?.deleteAccountUrl ?? '';
+const DELETE_ACCOUNT_URL = (
+    process.env.EXPO_PUBLIC_DELETE_ACCOUNT_URL
+    || (!__DEV__ ? APP_CONFIG_DELETE_ACCOUNT_URL : '')
+).trim();
+const RECENT_LOGIN_WINDOW_MS = 5 * 60 * 1000;
 
 // Provider Props
 interface AuthProviderProps {
@@ -254,6 +261,62 @@ export function AuthProvider({ children }: AuthProviderProps) {
         } catch (error) {
             console.warn('Failed to clear native Google session:', error);
         }
+    };
+
+    const createRecentLoginError = (): Error => {
+        const error = new Error('Please log out and log in again before deleting your account.');
+        (error as any).code = 'auth/requires-recent-login';
+        return error;
+    };
+
+    const assertRecentLogin = (firebaseUser: User): void => {
+        const lastSignInTime = firebaseUser.metadata.lastSignInTime
+            ? Date.parse(firebaseUser.metadata.lastSignInTime)
+            : NaN;
+        if (!Number.isFinite(lastSignInTime) || Date.now() - lastSignInTime > RECENT_LOGIN_WINDOW_MS) {
+            throw createRecentLoginError();
+        }
+    };
+
+    const deleteAccountRemotely = async (firebaseUser: User): Promise<void> => {
+        assertRecentLogin(firebaseUser);
+
+        if (DELETE_ACCOUNT_URL) {
+            const idToken = await firebaseUser.getIdToken();
+            const response = await fetch(DELETE_ACCOUNT_URL, {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${idToken}`,
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            if (!response.ok) {
+                let code = 'DELETE_ACCOUNT_FAILED';
+                try {
+                    const body = await response.json();
+                    code = body?.error?.code || code;
+                } catch {
+                    // Keep the generic error code.
+                }
+
+                if (code === 'RECENT_LOGIN_REQUIRED' || code === 'INVALID_AUTH_TOKEN') {
+                    throw createRecentLoginError();
+                }
+
+                throw new Error('Failed to delete account. Please try again.');
+            }
+
+            return;
+        }
+
+        if (!__DEV__) {
+            throw new Error('Account deletion endpoint is not configured.');
+        }
+
+        const userDocRef = doc(db, 'users', firebaseUser.uid);
+        await deleteDoc(userDocRef);
+        await deleteUser(firebaseUser);
     };
 
     // Listen to auth state changes
@@ -509,7 +572,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
             // Clear local data
             await clearAllLocalData();
-            await resetProgress();
+            await resetProgress({ markUnsynced: false });
 
             // Sign out from Firebase
             await firebaseSignOut(auth);
@@ -619,20 +682,18 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
             setIsLoading(true);
 
-            // 1. Delete user document from Firestore
-            const userDocRef = doc(db, 'users', user.uid);
-            await deleteDoc(userDocRef);
+            // 1. Delete cloud account/data through the production deletion path.
+            await deleteAccountRemotely(user);
 
             // 2. Cancel all scheduled notifications
             await cancelAllNotifications();
             await clearTrackedNotifications();
 
-            // 3. Clear local data
-            await clearAllLocalData();
-            await resetProgress();
+            // 3. Clear local data, including device/user-specific caches.
+            await clearAllLocalData({ fullPurge: true });
+            await resetProgress({ markUnsynced: false });
 
-            // 4. Delete Firebase Auth user
-            await deleteUser(user);
+            // 4. Clear native provider sessions
             await clearNativeGoogleSession();
 
             // 5. Clear state

@@ -229,6 +229,8 @@ describe('Storage Service', () => {
             await AsyncStorage.setItem('@vocbee_user_data', 'user');
             await AsyncStorage.setItem('@user_progress', 'user_progress');
             await AsyncStorage.setItem('@vocabulary', 'vocab');
+            await AsyncStorage.setItem('profile_user123', 'profile');
+            await AsyncStorage.setItem('@VocBee:appReviewPromptState', 'review');
 
             await clearAllLocalData();
 
@@ -239,6 +241,18 @@ describe('Storage Service', () => {
             expect(progress).toBeNull();
             expect(sync).toBeNull();
             expect(userData).toBeNull();
+            expect(await AsyncStorage.getItem('profile_user123')).toBeNull();
+            expect(await AsyncStorage.getItem('@VocBee:appReviewPromptState')).toBeNull();
+        });
+
+        it('preserves device ID by default and removes it on full purge', async () => {
+            await AsyncStorage.setItem('@vocbee_device_id', 'device_existing_123');
+
+            await clearAllLocalData();
+            expect(await AsyncStorage.getItem('@vocbee_device_id')).toBe('device_existing_123');
+
+            await clearAllLocalData({ fullPurge: true });
+            expect(await AsyncStorage.getItem('@vocbee_device_id')).toBeNull();
         });
     });
 

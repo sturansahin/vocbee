@@ -47,6 +47,18 @@ const assertProductionSafeApiKey = (apiKey: string): void => {
     if (!__DEV__ && apiKey === TEST_REVENUECAT_API_KEY) {
         throw new Error('RevenueCat test API key cannot be used in production builds.');
     }
+
+    if (__DEV__) {
+        return;
+    }
+
+    if (Platform.OS === 'ios' && !apiKey.startsWith('appl_')) {
+        throw new Error('RevenueCat iOS API key must use the appl_ public SDK key.');
+    }
+
+    if (Platform.OS === 'android' && !apiKey.startsWith('goog_')) {
+        throw new Error('RevenueCat Android API key must use the goog_ public SDK key.');
+    }
 };
 
 const getActiveEntitlement = (

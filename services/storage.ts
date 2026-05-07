@@ -34,11 +34,51 @@ export interface UserData {
 
 interface ClearAllLocalDataOptions {
     preserveStreak?: boolean;
+    fullPurge?: boolean;
 }
 
 // Save local progress — DEPRECATED: Progress is managed by progressService.ts
-// Kept only for type export compatibility.
-// export const saveLocalProgress = ...
+// Kept as a small compatibility layer for legacy tests and migration safety.
+export const getLocalProgress = async (): Promise<UserProgress> => {
+    const defaultProgress = (): UserProgress => ({
+        currentLevel: 'A1',
+        learnedWords: {},
+        lastUpdated: new Date().toISOString(),
+    });
+
+    try {
+        const data = await AsyncStorage.getItem(LOCAL_KEYS.USER_PROGRESS);
+        if (!data) {
+            return defaultProgress();
+        }
+
+        const parsed = JSON.parse(data) as Partial<UserProgress>;
+        return {
+            currentLevel: parsed.currentLevel || 'A1',
+            learnedWords: parsed.learnedWords || {},
+            lastUpdated: parsed.lastUpdated || new Date().toISOString(),
+        };
+    } catch (error) {
+        return defaultProgress();
+    }
+};
+
+export const saveLocalProgress = async (progress: Partial<UserProgress>): Promise<void> => {
+    try {
+        const existing = await getLocalProgress();
+        const next: UserProgress = {
+            ...existing,
+            ...progress,
+            learnedWords: progress.learnedWords ?? existing.learnedWords,
+            lastUpdated: new Date().toISOString(),
+        };
+
+        await AsyncStorage.setItem(LOCAL_KEYS.USER_PROGRESS, JSON.stringify(next));
+        await markAsUnsynced();
+    } catch (error) {
+        console.error('Error saving local progress:', error);
+    }
+};
 
 // Mark as needing sync
 export const markAsUnsynced = async (): Promise<void> => {
@@ -113,7 +153,7 @@ export const clearAllLocalData = async (
     try {
         // Get all keys to find shuffle order caches
         const allKeys = await AsyncStorage.getAllKeys();
-        const { preserveStreak = false } = options;
+        const { preserveStreak = false, fullPurge = false } = options;
 
         // Keys to remove: all known storage keys (from centralized storageKeys)
         const keysToRemove = [
@@ -140,10 +180,15 @@ export const clearAllLocalData = async (
             STORAGE_KEYS.LAST_FOREGROUND_TIME,
             STORAGE_KEYS.LAST_BACKGROUND_TIME,
             STORAGE_KEYS.NOTIFICATION_CONTENT_VERSION,
+            ...allKeys.filter(key => key.startsWith(STORAGE_KEYS.NOTIFICATION_PERMISSION_PROMPT_PREFIX)),
             // Grammar cache
             STORAGE_KEYS.GRAMMAR_CACHE,
             // i18n language preference
             STORAGE_KEYS.USER_LANGUAGE,
+            // App review prompt state
+            STORAGE_KEYS.APP_REVIEW_PROMPT_STATE,
+            // User profile cache
+            ...allKeys.filter(key => key.startsWith(STORAGE_KEYS.PROFILE_PREFIX)),
             // Add all shuffle order keys
             ...allKeys.filter(key => key.startsWith(STORAGE_KEYS.SHUFFLE_ORDER_PREFIX)),
             // Add all favorites keys (generic and user-specific)
@@ -154,7 +199,11 @@ export const clearAllLocalData = async (
             keysToRemove.push(STORAGE_KEYS.STREAK);
         }
 
-        await AsyncStorage.multiRemove(keysToRemove);
+        if (fullPurge) {
+            keysToRemove.push(LOCAL_KEYS.DEVICE_ID);
+        }
+
+        await AsyncStorage.multiRemove([...new Set(keysToRemove)]);
         console.log('Cleared all local data including shuffle order caches');
     } catch (error) {
         console.error('Error clearing local data:', error);

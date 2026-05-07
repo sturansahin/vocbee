@@ -80,8 +80,7 @@
         }
       },
       "permissions": [
-        "android.permission.POST_NOTIFICATIONS",
-        "android.permission.RECORD_AUDIO"
+        "android.permission.POST_NOTIFICATIONS"
       ]
     },
     "notification": {
@@ -147,6 +146,7 @@
     "extra": {
       "supportsRTL": true,
       "grammarProxyUrl": "https://vocbee-proxy.vercel.app/api/grammarProxy",
+      "deleteAccountUrl": "https://vocbee-proxy.vercel.app/api/deleteAccount",
       "eas": {
         "projectId": "66067389-3a15-46ea-ade9-ed9a56f5d08b"
       }
