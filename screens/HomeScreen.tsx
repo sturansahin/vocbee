@@ -107,6 +107,18 @@ interface StreakCelebrationState {
     message: string;
 }
 
+export function getTutorialSwipeNextStep(step: number, direction: 'left' | 'right'): number | null {
+    if (step === 1 && direction === 'right') {
+        return 2;
+    }
+
+    if (step === 2 && direction === 'left') {
+        return 3;
+    }
+
+    return null;
+}
+
 const EMPTY_TUTORIAL_LAYOUT: LayoutRect = {
     x: 0,
     y: 0,
@@ -1163,9 +1175,13 @@ export default function HomeScreen() {
 
     const swipeCard = useCallback(async (direction: 'left' | 'right') => {
         const x = direction === 'right' ? SCREEN_WIDTH * 1.5 : -SCREEN_WIDTH * 1.5;
+        const tutorialNextStep = showTutorialRef.current
+            ? getTutorialSwipeNextStep(tutorialStepRef.current, direction)
+            : null;
+        const isTutorialPracticeSwipe = tutorialNextStep !== null;
 
-        // Trigger bees to fly away first
-        if (beePositions.length > 0) {
+        // Practice swipes in the tutorial should only teach the gesture.
+        if (!isTutorialPracticeSwipe && beePositions.length > 0) {
             animateBeesAway(beePositions);
         }
 
@@ -1174,6 +1190,18 @@ export default function HomeScreen() {
             duration: 300,
             useNativeDriver: false,
         }).start(async () => {
+            if (isTutorialPracticeSwipe) {
+                requestAnimationFrame(() => {
+                    position.setValue({ x: 0, y: 0 });
+
+                    if (showTutorialRef.current) {
+                        setTutorialStep(tutorialNextStep);
+                        tutorialStepRef.current = tutorialNextStep;
+                    }
+                });
+                return;
+            }
+
             const swipedWord = currentWord;
             const wasLastWord = currentWordIndex >= words.length - 1;
 
@@ -1188,12 +1216,10 @@ export default function HomeScreen() {
                 
                 // Advance tutorial step after card has reset, to prevent animation conflicts
                 if (showTutorialRef.current) {
-                    if (tutorialStepRef.current === 1 && direction === 'right') {
-                        setTutorialStep(2);
-                        tutorialStepRef.current = 2;
-                    } else if (tutorialStepRef.current === 2 && direction === 'left') {
-                        setTutorialStep(3);
-                        tutorialStepRef.current = 3;
+                    const nextTutorialStep = getTutorialSwipeNextStep(tutorialStepRef.current, direction);
+                    if (nextTutorialStep !== null) {
+                        setTutorialStep(nextTutorialStep);
+                        tutorialStepRef.current = nextTutorialStep;
                     }
                 }
             });

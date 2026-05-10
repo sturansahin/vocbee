@@ -2,7 +2,7 @@
 import React, { ReactNode } from 'react';
 import { render, waitFor, RenderOptions } from '@testing-library/react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import HomeScreen from '../HomeScreen';
+import HomeScreen, { getTutorialSwipeNextStep } from '../HomeScreen';
 
 const mockUseMonetization = jest.fn(() => ({
     isAdFree: false,
@@ -215,5 +215,13 @@ describe('HomeScreen', () => {
         });
 
         expect(adMobService.loadInterstitial).not.toHaveBeenCalled();
+    });
+
+    it('only treats prompted tutorial swipes as practice gestures', () => {
+        expect(getTutorialSwipeNextStep(1, 'right')).toBe(2);
+        expect(getTutorialSwipeNextStep(2, 'left')).toBe(3);
+        expect(getTutorialSwipeNextStep(1, 'left')).toBeNull();
+        expect(getTutorialSwipeNextStep(2, 'right')).toBeNull();
+        expect(getTutorialSwipeNextStep(3, 'right')).toBeNull();
     });
 });
