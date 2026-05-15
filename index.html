@@ -37,7 +37,7 @@
     .section{padding:92px 0}.section h2{margin:0 0 16px;font-size:clamp(2rem,4vw,3.2rem);line-height:1;letter-spacing:-.03em}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.feature h3,.stack h3{margin:0 0 10px;font-size:1.08rem;line-height:1.15}.icon,.num{width:52px;height:52px;border-radius:18px;display:grid;place-items:center;background:transparent;color:#111;box-shadow:none}.split{grid-template-columns:minmax(0,.96fr) minmax(0,1.04fr);align-items:start}.stack{display:grid;gap:14px;background:var(--card)}
     .pick{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:18px;background:#ffffffb8;border:1px solid var(--line)}.pick img{width:34px;height:34px;border-radius:10px}.pick b,.lang-pill b{display:block;font-size:.78rem}.pick div span{display:block;font-size:.7rem}.check{margin-left:auto;width:26px;height:26px;border-radius:999px;display:grid;place-items:center;align-self:center;flex-shrink:0;background:var(--gold);color:#111;line-height:1}.grid.twos{grid-template-columns:repeat(2,minmax(0,1fr))}
     .levels{display:grid;gap:14px}.level{display:flex;align-items:flex-start;gap:16px;padding:22px;border-radius:24px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow)}.badge{min-width:86px;padding:12px 14px;border-radius:16px;background:#111;color:var(--gold);font:.62rem "Rubik Mono One",monospace;letter-spacing:.1em;text-align:center}.level h3{margin:0 0 10px;font-size:1rem}.dark-box{padding:30px;border-radius:32px;background:linear-gradient(145deg,#111,#1a1a1a);color:#fff;box-shadow:0 24px 60px rgba(0,0,0,.18)}.dark-box h3{margin:0 0 12px;font-size:1.95rem;line-height:1}.dark-box p{color:#ffffffb0}.window{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:24px}.window article{padding:16px 18px;border-radius:20px;background:#ffffff10;border:1px solid var(--wline)}.window span{display:block;margin-top:8px;color:#ffffff92;font-size:.72rem}
-    .lang-board{background:var(--card)}.lang-grid{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:24px}.lang-pill{gap:12px;padding:12px 14px;border-radius:16px;background:#ffffffb8;border:1px solid var(--line);min-height:60px}.lang-pill img{width:28px;height:28px;border-radius:999px}.lang-pill span{display:block;font-size:.66rem;line-height:1.4}
+    .lang-board{width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);overflow:hidden;padding:58px 0 54px;border:none;border-radius:0;background:#fff;box-shadow:none}.lang-board h2{width:min(calc(100% - 28px),var(--max));margin:0 auto;text-align:center;text-transform:uppercase;line-height:1.05;letter-spacing:0}.lang-marquee{position:relative;overflow:hidden;margin-top:32px;padding:8px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}.lang-track{display:flex;width:max-content;animation:lang-scroll 34s linear infinite}.lang-set{display:flex;flex:0 0 auto;gap:14px;padding-right:14px}.lang-pill{width:70px;height:70px;display:grid;place-items:center;flex:0 0 auto;padding:0;border:none;border-radius:0;background:transparent;box-shadow:none}.lang-pill img{width:42px;height:42px;border-radius:999px;object-fit:cover}@keyframes lang-scroll{to{transform:translateX(-50%)}}@media (prefers-reduced-motion:reduce){.lang-marquee{overflow-x:auto;-webkit-mask-image:none;mask-image:none}.lang-track{animation:none}}
     .faq-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:20px}.faq-card,details,.cta-box{border-radius:24px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow)}.faq-card{padding:26px}.faq-list{gap:14px}details{padding:0 20px}summary{list-style:none;cursor:pointer;padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:18px;font-size:.9rem}summary::-webkit-details-marker{display:none}summary:after{content:"+";font-size:1.3rem;color:var(--gold2)}details[open] summary:after{transform:rotate(45deg)}details p{margin:0 0 20px;font-size:.8rem}.cta-box{padding:28px;display:grid;gap:16px}
     .footer{margin-top:56px;padding:34px 0 44px;background:#0b0b0b;color:#ffffffbc;border-top-left-radius:36px;border-top-right-radius:36px}.footer-grid{grid-template-columns:minmax(0,1.2fr) repeat(3,minmax(0,.8fr))}.footer .brand{align-items:center;color:#fff}.footer .brand img{width:56px;height:56px;border-radius:18px;filter:brightness(0) invert(1)}.footer .brand span{display:flex;flex-direction:column;justify-content:center;gap:4px}.footer .brand b{line-height:1}.footer .brand small{color:rgba(255,255,255,.68)}.store-links{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:18px}.store-links a{display:inline-flex;align-items:center}.store-links img{width:164px;height:auto;display:block}.footer h3{margin:0 0 14px;color:#fff}.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}.footer p{max-width:34ch}.end{display:flex;justify-content:space-between;gap:16px;padding-top:22px;margin-top:24px;border-top:1px solid var(--wline);font-size:.72rem;color:#ffffff8f}
     @media (max-width:1080px){.hero-grid,.split,.faq-grid,.footer-grid{grid-template-columns:1fr}.band .grid,.grid,.lang-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -58,7 +58,7 @@
           <a href="#flow">How it works</a>
           <a href="#languages">Languages</a>
         </nav>
-        <a class="cta" href="https://mail.google.com/mail/?view=cm&fs=1&to=turansahiniletisim@gmail.com" target="_blank" rel="noreferrer">Contact</a>
+        <a class="cta" href="https://mail.google.com/mail/?view=cm&fs=1&to=support@vocbee.online" target="_blank" rel="noreferrer">Contact</a>
       </div>
       </div>
     </header>
@@ -75,7 +75,7 @@
           <p>VocBee turns language learning into a focused daily habit: level-based words, tap-to-hear pronunciation, real sentence context, favorites, progress tracking, and reminder windows that fit your day instead of interrupting it.</p>
           <div class="actions">
             <a class="btn primary" href="#flow">See the flow</a>
-            <a class="btn secondary" href="mailto:turansahiniletisim@gmail.com?subject=VocBee%20Support">Talk to support</a>
+            <a class="btn secondary" href="mailto:support@vocbee.online?subject=VocBee%20Support">Talk to support</a>
           </div>
           <div class="chips">
             <span>iOS and Android ready</span>
@@ -200,30 +200,56 @@
         <h2>Designed for multilingual learners from day one.</h2>
         <p>VocBee supports a broad set of languages for both the learner's base language and the target language. The website makes that breadth visible with actual supported options.</p>
         <article class="lang-board reveal" style="margin-top:28px">
-          <h2 style="font-size:clamp(1.8rem,3vw,2.4rem)">21 language options already in the app</h2>
-          <p>English, Turkish, German, French, Spanish, Italian, Portuguese, Russian, Arabic, Chinese, Japanese, Korean, Hindi, Indonesian, Vietnamese, Thai, Amharic, Persian, Serbian, Swahili, and Urdu.</p>
-          <div class="lang-grid">
-            <div class="lang-pill"><img src="assets/icons/gb.png" alt=""><div><b>English</b><span>English</span></div></div>
-            <div class="lang-pill"><img src="assets/icons/tr.png" alt=""><div><b>Turkish</b><span>Turkce</span></div></div>
-            <div class="lang-pill"><img src="assets/icons/de.png" alt=""><div><b>German</b><span>Deutsch</span></div></div>
-            <div class="lang-pill"><img src="assets/icons/fr.png" alt=""><div><b>French</b><span>Francais</span></div></div>
-            <div class="lang-pill"><img src="assets/icons/es.png" alt=""><div><b>Spanish</b><span>Espanol</span></div></div>
-            <div class="lang-pill"><img src="assets/icons/it.png" alt=""><div><b>Italian</b><span>Italiano</span></div></div>
-            <div class="lang-pill"><img src="assets/icons/pt.png" alt=""><div><b>Portuguese</b><span>Portugues</span></div></div>
-            <div class="lang-pill"><img src="assets/icons/ru.png" alt=""><div><b>Russian</b><span>Russkiy</span></div></div>
-            <div class="lang-pill"><img src="assets/icons/ae.png" alt=""><div><b>Arabic</b><span>Arabic</span></div></div>
-            <div class="lang-pill"><img src="assets/icons/cn.png" alt=""><div><b>Chinese</b><span>Chinese</span></div></div>
-            <div class="lang-pill"><img src="assets/icons/jp.png" alt=""><div><b>Japanese</b><span>Nihongo</span></div></div>
-            <div class="lang-pill"><img src="assets/icons/kr.png" alt=""><div><b>Korean</b><span>Hangugo</span></div></div>
-            <div class="lang-pill"><img src="assets/icons/in.png" alt=""><div><b>Hindi</b><span>Hindi</span></div></div>
-            <div class="lang-pill"><img src="assets/icons/id.png" alt=""><div><b>Indonesian</b><span>Bahasa Indonesia</span></div></div>
-            <div class="lang-pill"><img src="assets/icons/vn.png" alt=""><div><b>Vietnamese</b><span>Tieng Viet</span></div></div>
-            <div class="lang-pill"><img src="assets/icons/th.png" alt=""><div><b>Thai</b><span>Thai</span></div></div>
-            <div class="lang-pill"><img src="assets/icons/et.png" alt=""><div><b>Amharic</b><span>Amharic</span></div></div>
-            <div class="lang-pill"><img src="assets/icons/ir.png" alt=""><div><b>Persian</b><span>Farsi</span></div></div>
-            <div class="lang-pill"><img src="assets/icons/rs.png" alt=""><div><b>Serbian</b><span>Srpski</span></div></div>
-            <div class="lang-pill"><img src="assets/icons/ke.png" alt=""><div><b>Swahili</b><span>Kiswahili</span></div></div>
-            <div class="lang-pill"><img src="assets/icons/pk.png" alt=""><div><b>Urdu</b><span>Urdu</span></div></div>
+          <h2 style="font-size:clamp(1.8rem,3vw,2.4rem)">21 LANGUAGE OPTIONS ALREADY IN THE APP</h2>
+          <div class="lang-marquee" aria-label="Supported language flags">
+            <div class="lang-track">
+              <div class="lang-set">
+                <span class="lang-pill"><img src="assets/icons/gb.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/tr.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/de.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/fr.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/es.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/it.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/pt.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/ru.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/ae.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/cn.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/jp.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/kr.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/in.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/id.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/vn.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/th.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/et.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/ir.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/rs.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/ke.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/pk.png" alt=""></span>
+              </div>
+              <div class="lang-set" aria-hidden="true">
+                <span class="lang-pill"><img src="assets/icons/gb.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/tr.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/de.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/fr.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/es.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/it.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/pt.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/ru.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/ae.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/cn.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/jp.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/kr.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/in.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/id.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/vn.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/th.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/et.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/ir.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/rs.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/ke.png" alt=""></span>
+                <span class="lang-pill"><img src="assets/icons/pk.png" alt=""></span>
+              </div>
+            </div>
           </div>
         </article>
       </div>
@@ -257,7 +283,7 @@
         </div>
         <div><h3>Product</h3><ul><li><a href="#features">Features</a></li><li><a href="#flow">How it works</a></li><li><a href="#languages">Languages</a></li><li><a href="#faq">FAQ</a></li></ul></div>
         <div><h3>Legal</h3><ul><li><a href="terms/">Terms of use</a></li><li><a href="privacypolicy/">Privacy policy</a></li><li><a href="delete_account.html">Delete account</a></li><li><a href="sitemap.xml">Sitemap</a></li><li><a href="robots.txt">Robots</a></li></ul></div>
-        <div><h3>Contact</h3><ul><li><a href="mailto:turansahiniletisim@gmail.com">turansahiniletisim@gmail.com</a></li><li><a href="mailto:support@vocbee.online">support@vocbee.online</a></li></ul><div class="store-links"><a href="https://apps.apple.com/tr/app/vocbee-learn-vocabulary/id6760262917" target="_blank" rel="noreferrer" aria-label="Download VocBee on the App Store"><img src="assets/icons/appstore.png" alt="Download on the App Store"></a></div></div>
+        <div><h3>Contact</h3><ul><li><a href="mailto:support@vocbee.online">support@vocbee.online</a></li></ul><div class="store-links"><a href="https://apps.apple.com/tr/app/vocbee-learn-vocabulary/id6760262917" target="_blank" rel="noreferrer" aria-label="Download VocBee on the App Store"><img src="assets/icons/appstore.png" alt="Download on the App Store"></a></div></div>
       </div>
       <div class="end"><span>© 2026 VocBee. All rights reserved.</span><span>Build your daily rhythm, one word at a time.</span></div>
     </div>
