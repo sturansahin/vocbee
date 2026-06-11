@@ -126,6 +126,7 @@ jest.mock('react-native-purchases', () => ({
         setAttributes: jest.fn(() => Promise.resolve()),
         setEmail: jest.fn(() => Promise.resolve()),
         setDisplayName: jest.fn(() => Promise.resolve()),
+        overridePreferredLocale: jest.fn(() => Promise.resolve()),
         addCustomerInfoUpdateListener: jest.fn(),
         removeCustomerInfoUpdateListener: jest.fn(() => true),
     },

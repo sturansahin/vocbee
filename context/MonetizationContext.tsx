@@ -18,7 +18,9 @@ import {
     openRevenueCatCustomerCenter,
     presentAdFreePaywall,
     restoreRevenueCatPurchases,
+    syncRevenueCatPreferredUILocale,
 } from '../services/revenueCatService';
+import i18n from '../services/i18n';
 
 interface MonetizationContextType {
     isLoading: boolean;
@@ -44,6 +46,21 @@ export function MonetizationProvider({ children }: { children: ReactNode }) {
         email: user?.email ?? profile.email ?? null,
         displayName: profile.name || user?.displayName || null,
     }), [profile.email, profile.name, user?.displayName, user?.email]);
+
+    useEffect(() => {
+        const handleLanguageChanged = (language: string) => {
+            syncRevenueCatPreferredUILocale(language).catch(error => {
+                console.warn('[RevenueCat] Failed to update paywall language', error);
+            });
+        };
+
+        handleLanguageChanged(i18n.resolvedLanguage || i18n.language);
+        i18n.on('languageChanged', handleLanguageChanged);
+
+        return () => {
+            i18n.off('languageChanged', handleLanguageChanged);
+        };
+    }, []);
 
     const applyCustomerInfo = useCallback((nextCustomerInfo: CustomerInfo | null): boolean => {
         setCustomerInfo(nextCustomerInfo);

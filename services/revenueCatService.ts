@@ -6,6 +6,7 @@ import Purchases, {
     PurchasesEntitlementInfo,
 } from 'react-native-purchases';
 import RevenueCatUI, { PAYWALL_RESULT } from 'react-native-purchases-ui';
+import i18n from './i18n';
 
 // RevenueCat dashboard uses "premium"; every premium product removes ads.
 export const REVENUECAT_AD_FREE_ENTITLEMENT_ID = 'premium';
@@ -22,9 +23,45 @@ export type RevenueCatPaywallResult = {
     customerInfo: CustomerInfo | null;
 };
 
+const REVENUECAT_UI_LOCALE_BY_APP_LANGUAGE: Record<string, string> = {
+    am: 'am',
+    ar: 'ar-SA',
+    zh: 'zh-Hans',
+    en: 'en-US',
+    fr: 'fr-FR',
+    de: 'de-DE',
+    hi: 'hi',
+    id: 'id',
+    it: 'it',
+    ja: 'ja',
+    ko: 'ko',
+    fa: 'fa',
+    pt: 'pt-BR',
+    ru: 'ru',
+    sr: 'sr-Cyrl',
+    es: 'es-ES',
+    sw: 'sw',
+    th: 'th',
+    tr: 'tr',
+    ur: 'ur',
+    vi: 'vi',
+};
+
 let hasConfigured = false;
 let configurePromise: Promise<void> | null = null;
 let activeAppUserId: string | null = null;
+
+const normalizeAppLanguage = (language?: string | null): string => {
+    const normalizedLanguage = language?.replace('_', '-').toLowerCase();
+    return normalizedLanguage?.split('-')[0] || 'en';
+};
+
+export const getRevenueCatPreferredUILocale = (
+    language: string | null | undefined = i18n.resolvedLanguage || i18n.language
+): string => {
+    const appLanguage = normalizeAppLanguage(language);
+    return REVENUECAT_UI_LOCALE_BY_APP_LANGUAGE[appLanguage] ?? appLanguage;
+};
 
 const getPlatformApiKey = (): string => {
     const sharedKey = process.env.EXPO_PUBLIC_REVENUECAT_API_KEY;
@@ -91,6 +128,20 @@ const syncSubscriberAttributes = async (
     }
 };
 
+export const syncRevenueCatPreferredUILocale = async (
+    language: string | null | undefined = i18n.resolvedLanguage || i18n.language
+): Promise<void> => {
+    if (!hasConfigured) {
+        return;
+    }
+
+    try {
+        await Purchases.overridePreferredLocale(getRevenueCatPreferredUILocale(language));
+    } catch (error) {
+        console.warn('[RevenueCat] Failed to sync preferred UI locale', error);
+    }
+};
+
 export const ensureRevenueCatConfigured = async (
     appUserId: string,
     attributes: RevenueCatUserAttributes = {}
@@ -106,6 +157,7 @@ export const ensureRevenueCatConfigured = async (
                     apiKey,
                     appUserID: appUserId,
                     automaticDeviceIdentifierCollectionEnabled: false,
+                    preferredUILocaleOverride: getRevenueCatPreferredUILocale(),
                 });
                 hasConfigured = true;
                 activeAppUserId = appUserId;
