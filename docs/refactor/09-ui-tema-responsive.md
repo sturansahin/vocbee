@@ -9,6 +9,8 @@
 - **Responsive:** `scale`/`moderateScale` `BASE_WIDTH` tabanlı; HomeScreen/SettingsScreen/SetupScreens/
   ExampleSentencesScreen içinde **kopyalanmış**.
 - **NativeWind ^2.0.11** (+ tailwindcss ^3.3.2) bağımlılık olarak var; tsconfig `nativewind` tiplerini içerir.
+  Ancak kaynak kodda aktif `className`/utility kullanımı, `tailwind.config.*` veya `nativewind-env.d.ts`
+  bulunmuyor.
 
 ## Sorunlar
 
@@ -16,7 +18,8 @@
    sistemi yok.
 2. **Responsive kopya kod** (4 ekran) — tutarsızlık ve bakım yükü.
 3. **Dark mode manuel seçim yok** (sadece sistem); kullanıcı talebi gelirse yapı hazır değil.
-4. **NativeWind kısmen kullanılıyor** (ikili stil sistemi: StyleSheet + utility class); tutarsız.
+4. **NativeWind bağımlılığı atıl/yarım yapılandırılmış görünüyor.** İkili stil sistemi fiilen yok;
+   asıl risk kullanılmayan bağımlılık ve eksik config'in kafa karıştırması.
 
 ## Önerilen Yaklaşım: `shared/ui` design-system + `shared/theme` token'ları
 
@@ -37,9 +40,10 @@ shared/hooks/
 `mode: 'system'|'light'|'dark'` eklenir; varsayılan `'system'` (mevcut davranış). Bu ayrı ve opsiyonel
 bir özellik; refactor onu zorlamaz.
 
-**NativeWind kararı:** İkili stil sistemini tek yöne indirgemek ayrı bir karardır. Öneri: yeni
-bileşenlerde **tek bir yaklaşım** (StyleSheet + tema token'ları) standardı belirlenir; NativeWind
-kullanımı mevcut yerlerde bırakılır, yeni kod eklenmez. (Tamamen kaldırmak büyük ve riskli; şimdilik dondurulur.)
+**NativeWind kararı:** Mevcut kod StyleSheet + tema token'ları yönünde standardize edilir. NativeWind
+aktif kullanılmadığı için refactor sırasında yeni `className` kullanımı eklenmez. Ayrı bir cleanup PR'ında
+NativeWind ya doğru config ile sahiplenilir ya da bağımlılık olarak kaldırılır; bu karar native build etkisi
+kontrol edilerek verilir.
 
 ## Alternatifler ve Neden Elendiler
 
@@ -47,7 +51,8 @@ kullanımı mevcut yerlerde bırakılır, yeni kod eklenmez. (Tamamen kaldırmak
   mevcut `UIComponents` zaten test edilmiş.
 - **NativeWind'i tamamen benimse (her şey utility class)** — Elendi (şimdilik): geniş rewrite; v2→v4
   geçişi ayrı risk. Karar ertelenir.
-- **NativeWind'i tamamen kaldır** — Elendi (şimdilik): çalışan kodu bozar; net fayda yoksa dokunma.
+- **NativeWind'i hemen kaldır** — Elendi (şimdilik): bağımlılık/build etkisi ayrı doğrulanmalı; refactor
+  davranış değiştirmemeli.
 - **Tema'yı `constants.ts`'te bırak** — Elendi: tasarım token'ları dil/seviye sabitleriyle aynı dosyada
   karışık; ayırmak netlik sağlar.
 
@@ -68,7 +73,8 @@ Her PR sonunda: `npm run typecheck && npm run test:ci`.
 - **Renk/Token taşıma görsel regresyon** yaratabilir. Azaltım: değerler birebir taşınır; shim ile
   eski importlar çalışır; snapshot/manuel kontrol.
 - **UIComponents bölünürken prop API değişirse** tüm ekranlar etkilenir. Azaltım: facade aynı isim/prop'ları korur.
-- **NativeWind'e dokunmak** beklenmedik stil kırılması. Azaltım: bu refactorda NativeWind davranışı değişmez.
+- **NativeWind config/bağımlılık kararı** native build'i etkileyebilir. Azaltım: bu refactorda yeni
+  NativeWind kullanımı eklenmez; kaldırma/sahiplenme ayrı PR.
 
 ## Test ve Kabul Kriterleri
 

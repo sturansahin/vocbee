@@ -2,17 +2,19 @@
 
 ## Mevcut Durum
 
-- **`screens/SettingsScreen.tsx` (2310 satır):** 26 `useState`, 8 `useEffect`, doğrudan Firestore
-  (`doc/setDoc`) yazımı. İçeriği: profil görünümü, dil seçimi (native/target), bildirim ayarları
+- **`screens/SettingsScreen.tsx` (2196 satır):** 21 `useState`, 5 `useEffect`; Firestore yazımı
+  yapmıyor fakat kullanılmayan `doc/setDoc` ve `db/auth` import'ları mevcut. İçeriği: profil görünümü,
+  dil seçimi (UI dili ve seviye), bildirim ayarları
   (saat/frekans/autoMark), tema/görünüm, abonelik/premium durumu, hesap (çıkış/silme), hakkında/links.
-- **`screens/SetupScreens.tsx` (1240 satır):** 13 `useState`, 7 `useEffect`, doğrudan Firestore yazımı.
+- **`screens/SetupScreens.tsx` (1179 satır):** 11 `useState`, 6 `useEffect`, doğrudan Firestore yazımı.
   Çok adımlı ilk kurulum: dil seçimi, seviye/level test girişi, bildirim izni/tercihleri, `setupCompleted`.
 - Her ikisi de kendi `scale`/`moderateScale` kopyasını içerir (bkz. `04`).
 
 ## Sorunlar
 
 1. İki en büyük 1. ve 4. dosya; tek ekranda çok bağımsız bölüm iç içe.
-2. **Katman ihlali:** ekrandan doğrudan Firestore yazımı (sync sözleşmesini baypas; bkz. `05`).
+2. **Katman ihlali:** Setup ekranından doğrudan Firestore yazımı (sync sözleşmesini baypas; bkz. `05`).
+   Settings ekranındaki stale Firestore import'ları da temizlenmeli.
 3. Aynı ayar mantığı (bildirim/dil) hem Setup hem Settings'te tekrar ediyor.
 4. Test edilemez: `jest.config.js` ikisini de coverage'tan hariç tutuyor.
 
@@ -49,7 +51,7 @@ ilk kurulum hem ayarlar ekranı aynı kaynağı tüketir → tekrar biter, davra
 ## Alternatifler ve Neden Elendiler
 
 - **Form kütüphanesi (Formik/React Hook Form) ekle** — Elendi: mevcut state basit; yeni bağımlılık gereksiz.
-- **Settings'i tek dev bileşen olarak bırak, sadece Firestore'u service'e al** — Kısmen; ama 2310 satır
+- **Settings'i tek dev bileşen olarak bırak, sadece stale Firestore import'unu temizle** — Kısmen; ama 2196 satır
   okunamazlık sorununu çözmez; bölümlere ayırma şart.
 - **Setup'ı ayrı navigator (çoklu route) yap** — Elendi (şimdilik): mevcut tek-ekran adım makinesi davranışı
   korunmalı; route ekleme initial-route mantığını (bkz. `03`) etkiler. İleride düşünülebilir.
@@ -57,9 +59,10 @@ ilk kurulum hem ayarlar ekranı aynı kaynağı tüketir → tekrar biter, davra
 ## Migration / Implementasyon Adımları
 
 1. **PR-1:** `scale/moderateScale` -> `shared/hooks/useResponsive` (bkz. `04` PR-1; ortak adım).
-2. **PR-2 (Firestore kapatma):** `SettingsScreen` ve `SetupScreens` içindeki doğrudan `setDoc` çağrılarını
-   `settingsRepository`/`setup` service'ine taşı; bunlar `shared/firebase/userDoc.ts` kullanır. Yazılan
-   alanlar **birebir** aynı (rules uyumu; bkz. `13`).
+2. **PR-2 (Firestore kapatma):** `SetupScreens` içindeki doğrudan `setDoc` çağrısını
+   `setup` service'ine taşı; `SettingsScreen` içindeki stale Firestore import'larını kaldır ve tüm
+   Settings aksiyonlarını `settingsRepository`/feature facade üzerinden geçir. Bunlar
+   `shared/firebase/userDoc.ts` kullanır. Yazılan alanlar **rules uyumlu normalize edilir** (bkz. `13`).
    - Komut: `npm run typecheck && npm run test:ci && npm run test:rules`
 3. **PR-3:** `SettingsScreen` bölümlerini saf bileşenlere çıkar (her PR'da 1-2 bölüm). State önce ekranda
    kalır, props ile geçilir.
@@ -73,6 +76,10 @@ Her PR sonunda: `npm run typecheck && npm run test:ci`.
 
 - **Firestore yazımı service'e taşınırken alan/zamanlama değişirse** kullanıcı ayarı kaybolur veya rules reddi.
   Azaltım: `userDoc` tek kapı; `test:rules` her PR'da; yazılan alanlar diff'te gözden geçirilir.
+- **Setup disabled notification payload'ı rules'tan geçmeyebilir.** Mevcut kod izin yoksa
+  `{ enabled: false }` yazıyor; rules ise tam alan setini bekliyor. Azaltım: userDoc/setup service
+  disabled durumda `DEFAULT_NOTIFICATION_SETTINGS` ile normalize edilmiş tam payload yazar veya
+  `notificationSettings` alanını bilinçli olarak yazmaz/null yapar; bu karar testle sabitlenir.
 - **Setup adım sırası/`setupCompleted` bayrağı** kırılırsa yeni kullanıcı akışı bozulur (initial-route; bkz. `03`).
   Azaltım: akış testi; bayrak yazım zamanlaması korunur.
 - **Ortak hook'a geçiş** Setup ve Settings davranışını farklılaştırabilir. Azaltım: önce iki ekrandaki
@@ -82,7 +89,7 @@ Her PR sonunda: `npm run typecheck && npm run test:ci`.
 
 - Bölüm bileşenleri coverage'a dahil edilir (hariç listeden çıkarılır).
 - `settingsRepository` ve `useSetupFlow` birim testleri.
-- `test:rules` yeşil: Settings/Setup yazımları rules'tan geçer.
+- `test:rules` yeşil: Setup yazımı ve Settings'ten tetiklenen profile/notification sync payload'ları rules'tan geçer.
 - `npm run typecheck`, `npm run test:ci` yeşil.
 
 ## Etkilenecek Dosyalar
@@ -91,6 +98,7 @@ Her PR sonunda: `npm run typecheck && npm run test:ci`.
 screens/SettingsScreen.tsx  -> src/features/settings/screens/SettingsScreen.tsx
                             -> src/features/settings/components/{Profile,Language,Notification,Appearance,Subscription,Account,About}Section.tsx
                             -> src/features/settings/{hooks,services}/*
+                            -> stale `doc/setDoc` ve `db/auth` import'ları kaldırılır
 screens/SetupScreens.tsx    -> src/features/setup/screens/SetupScreen.tsx
                             -> src/features/setup/steps/{Language,Level,Notification,Summary}Step.tsx
                             -> src/features/setup/hooks/useSetupFlow.ts

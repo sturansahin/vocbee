@@ -8,8 +8,8 @@ Giriş noktası `package.json` → `main: expo/AppEntry.js` → kökte `App.tsx`
 ### Kök yerleşim (gerçek)
 
 ```
-App.tsx                  # bootstrap + AppContent + tüm navigation + lifecycle (566 satır)
-screens/                 # 11 ekran, bazıları çok büyük
+App.tsx                  # bootstrap + AppContent + tüm navigation + lifecycle (486 satır)
+screens/                 # 10 ekran, bazıları çok büyük
 components/              # paylaşılan + ekran-özel karışık UI bileşenleri
 services/                # domain servisleri + altyapı (storage, sync, firebase erişimi)
 context/                 # ThemeContext, AuthContext, MonetizationContext
@@ -42,16 +42,16 @@ flowchart TD
 
 | Dosya | Satır | Not |
 |-------|------:|-----|
-| `screens/HomeScreen.tsx` | 2391 | 18 useState, 21 useCallback, 11 useEffect, 13 AsyncStorage |
-| `screens/SettingsScreen.tsx` | 2310 | 26 useState, 0 useCallback, doğrudan Firestore `setDoc` |
-| `services/notificationService.ts` | 1355 | scheduling + permission + tracking + içerik + streak reminder |
-| `screens/SetupScreens.tsx` | 1240 | setup adımları + bildirim izni + Firestore yazımı |
-| `screens/AuthScreens.tsx` | 876 | Login + SignUp aynı dosyada |
-| `screens/ExampleSentencesScreen.tsx` | 854 | TTS + grammar AI modal |
-| `context/AuthContext.tsx` | 780 | auth + profile + notification settings + delete + retry |
-| `services/adMobService.ts` | 604 | consent + ATT + interstitial + app-open + banner |
-| `App.tsx` | 566 | bootstrap + AppContent (her şey tek dosyada) |
-| `services/vocabularyService.ts` | 547 | asset map + merge + per-level storage + migration |
+| `screens/SettingsScreen.tsx` | 2196 | 21 useState, 0 useCallback, 5 useEffect, kullanılmayan Firestore import'u |
+| `screens/HomeScreen.tsx` | 2185 | 17 useState, 20 useCallback, 10 useEffect, 11 AsyncStorage çağrısı |
+| `screens/SetupScreens.tsx` | 1179 | setup adımları + bildirim izni + doğrudan Firestore yazımı |
+| `services/notificationService.ts` | 1176 | scheduling + permission + tracking + içerik + streak reminder |
+| `screens/AuthScreens.tsx` | 807 | Login + SignUp aynı dosyada |
+| `screens/ExampleSentencesScreen.tsx` | 788 | TTS + grammar AI modal |
+| `context/AuthContext.tsx` | 681 | auth + profile + notification settings + delete + retry |
+| `services/adMobService.ts` | 509 | consent + ATT + interstitial + app-open + banner |
+| `services/vocabularyService.ts` | 491 | asset map + merge + per-level storage + migration |
+| `App.tsx` | 486 | bootstrap + AppContent (her şey tek dosyada) |
 
 ## Güçlü Yönler
 
@@ -64,7 +64,7 @@ flowchart TD
    `notificationService` (`NOTIFICATION_CONTENT_VERSION = 4`) içerik/şema sürümleme yapıyor.
 4. **Firestore rules güçlü ve tipli.** `firestore.rules` her alanı doğrular (`validPreferences`,
    `validProgress`, `validStreak`, `validNotificationSettings`, `validSyncMeta`).
-5. **Anlamlı test tabanı var.** 22 test dosyası (`services/__tests__`, `components/__tests__`,
+5. **Anlamlı test tabanı var.** 21 Jest test dosyası (`services/__tests__`, `components/__tests__`,
    `screens/__tests__`, `utils/__tests__`) + Firestore rules emulator testi (`tests/firestoreRules.ts`).
 6. **Sync güvenliği düşünülmüş.** `SyncService` retry+backoff, device-id ile çoklu cihaz çakışma
    tespiti, `needsSync` ile "unsynced local changes" koruması içeriyor.
@@ -73,25 +73,33 @@ flowchart TD
 
 ## Sorunlar
 
-1. **Dev (god) ekranlar.** `HomeScreen` (2391) ve `SettingsScreen` (2310) UI + state + iş mantığı +
+1. **Dev (god) ekranlar.** `HomeScreen` (2185) ve `SettingsScreen` (2196) UI + state + iş mantığı +
    yan etkileri (TTS, ads, sync, Firestore yazımı) tek dosyada topluyor. Test edilemez ve değişiklik riski yüksek.
 2. **`App.tsx` çok fazla sorumluluk taşıyor.** Bootstrap (font yükleme), provider zinciri, **tüm**
    navigation tanımı ve notification/ads/sync **lifecycle orkestrasyonu** (8+ useEffect) tek dosyada.
 3. **Hook katmanı yok.** Ekranlar servisleri doğrudan çağırıp 15-26 adet `useState` ile orkestra ediyor.
    Yeniden kullanılabilir davranış (ör. "kelime kartı yükleme", "streak yenileme") ekrana gömülü.
 4. **`AuthContext` aşırı yüklü.** Auth'a ek olarak profile cache, notification settings state'i,
-   delete-account HTTP akışı ve retry logic'i de barındırıyor (780 satır).
+   delete-account HTTP akışı ve retry logic'i de barındırıyor (681 satır).
 5. **`notificationService` monolit.** Permission, scheduling, slot matematiği, tracked-notification
-   işleme, içerik şablonları ve streak reminder tek dosyada (1355 satır).
-6. **Doğrudan Firestore erişimi ekranlara sızmış.** `SettingsScreen.tsx` ve `SetupScreens.tsx`
-   `firebase/firestore` `doc/setDoc`'u doğrudan import ediyor — sync katmanını baypas ediyor.
+   işleme, içerik şablonları ve streak reminder tek dosyada (1176 satır).
+6. **Doğrudan Firestore erişimi hâlâ UI/domain sınırlarında sızıntı yapıyor.** `SetupScreens.tsx`
+   setup payload'ını doğrudan `setDoc` ile yazıyor; `SettingsScreen.tsx` içinde kullanılmayan
+   `doc/setDoc` ve `db/auth` import'ları kalmış. `favoritesService` ve `SyncService` de Firestore'a
+   doğrudan erişiyor; bu erişim refactorda `shared/firebase/userDoc.ts` sözleşmesine taşınmalı.
 7. **Responsive yardımcılar kopyalanmış.** `scale`/`moderateScale` en az `HomeScreen`, `SettingsScreen`,
-   `SetupScreens`, `ExampleSentencesScreen` içinde ayrı ayrı tanımlı (DRY ihlali).
+   `SetupScreens`, `ExampleSentencesScreen` ve bazı shared component'lerde ayrı ayrı tanımlı (DRY ihlali).
 8. **`components/` karışık.** Gerçek paylaşılan tasarım sistemi (`UIComponents.tsx`: Button/Input/Header)
    ile ekran-özel parçalar (`HomeHeader`, `HomeTutorialOverlay`, `StreakCelebrationOverlay`) aynı seviyede.
 9. **Stil tanımları satır içi ve tekrarlı.** Her büyük ekranın kendi `StyleSheet.create`'i var; tema
    renkleri `constants.ts`'ten geliyor ama tipografi/spacing token'ı yok.
 10. **`@/*` alias az kullanılıyor.** `tsconfig.json` `@/*` -> `./*` tanımlı; kodda göreli importlar baskın.
+11. **Bazı yardımcı servisler plana tam dahil değil.** `groqService`, `reviewPromptService`,
+    `adMobService.web.ts`, `nativeGoogleSignIn`, `googleAuthConfig`, `socialAuthProfile`,
+    `AppRatingPrompt` ve `ConnectionErrorScreen` refactor mapping'inde açık sahiplik bekliyor.
+12. **Firestore notification settings sözleşmesi kırılgan.** `firestore.rules` tam
+    `notificationSettings` alan seti beklerken Setup izin reddinde `{ enabled: false }` yazıyor.
+    Refactor başlamadan önce bu davranış karakterize edilmeli ve `userDoc` kapısında normalize edilmelidir.
 
 ## Önerilen Yaklaşım
 

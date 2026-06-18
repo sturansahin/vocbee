@@ -2,7 +2,7 @@
 
 ## Mevcut Durum
 
-- **Dev ekranlar:** HomeScreen (2391), SettingsScreen (2310) — büyük render ağacı; HomeScreen 18 state,
+- **Dev ekranlar:** HomeScreen (2185), SettingsScreen (2196) — büyük render ağacı; HomeScreen 17 state,
   21 useCallback (memoization var ama dev bileşen tek parça).
 - **Vocabulary asset'leri** `require` ile bundle'a gömülü (`.txt`/JSON), 21 dil x seviyeler.
 - **AdMob native modul** lazy yükleniyor (iyi). AppState foreground'da sync + notif + ad refresh zinciri.

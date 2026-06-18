@@ -7,7 +7,7 @@
 - **`services/revenueCatService.ts` (237):** entitlement id `premium`; platform API anahtarları
   `EXPO_PUBLIC_*` env'den; locale override haritası; test anahtarı prod'da bloklanır.
   (react-native-purchases ^10.0.1)
-- **`services/adMobService.ts` (604):** lazy native modul yükleme (Expo Go güvenli); UMP consent + ATT;
+- **`services/adMobService.ts` (509):** lazy native modul yükleme (Expo Go güvenli); UMP consent + ATT;
   interstitial / app-open / banner; **app-open her 3. açılışta** (`@app_launch_count`); test/prod ad
   id'leri `__DEV__`'e göre. (react-native-google-mobile-ads ^16.0.1)
 - **`components/SafeBannerAd.tsx`** banner sarmalayıcısı (coverage hariç).
@@ -17,7 +17,7 @@
 
 1. Reklam ve abonelik ayrı servisler ama **monetization politikası** (premium -> reklam kapat) iki yere
    dağılmış (context + adMobService); "reklam gösterilsin mi?" kararı net tek yerde değil.
-2. `adMobService` 604 satır, çok ilgi alanı (consent, ATT, 3 reklam tipi, launch-count, native load).
+2. `adMobService` 509 satır, çok ilgi alanı (consent, ATT, 3 reklam tipi, launch-count, native load).
 3. `@app_launch_count` merkezi anahtar listesinde değil (bkz. `11`).
 4. App lifecycle ile sıkı bağ (init/gösterim zamanlaması; bkz. `03`).
 
@@ -54,7 +54,9 @@ okunur (bkz. `13`). `eas.json`'daki anahtarlar dokümanda tekrar edilmez.
 
 - **Reklam/abonelik kütüphanelerini değiştir** — Elendi: çalışan entegrasyon; değiştirmek yüksek risk + gelir etkisi.
 - **Monetization'ı context'siz, sadece servis yap** — Elendi: `customerInfo` listener reaktif state ister; context uygun.
-- **`adMobService`'i bölmeden bırak** — Elendi: 604 satır, çok sorumluluk; alt modüller test edilebilirlik sağlar.
+- **`adMobService`'i bölmeden bırak** — Elendi: 509 satır, çok sorumluluk; alt modüller test edilebilirlik sağlar.
+- **`adMobService.web.ts`'i yok saymak** — Elendi: web shim'i platform davranışını korur; monetization
+  feature mapping'inde native facade ile birlikte taşınmalıdır.
 - **App-open frekansını (3) değiştir/parametreleştir** — Şimdilik elendi: davranış korunmalı; sabit kalır.
 
 ## Migration / Implementasyon Adımları
@@ -91,6 +93,7 @@ Her PR sonunda: `npm run typecheck && npm run test:ci`.
 context/MonetizationContext.tsx -> src/features/monetization/context/MonetizationProvider.tsx (+ hooks/useMonetization.ts)
 services/revenueCatService.ts   -> src/features/monetization/services/revenueCat/revenueCatService.ts (+ localeMap.ts)
 services/adMobService.ts        -> src/features/monetization/services/admob/{adMobService(facade),consent,interstitial,appOpen,banner,nativeModule,launchCounter,adUnitIds}.ts
+services/adMobService.web.ts    -> src/features/monetization/services/admob/adMobService.web.ts
 components/SafeBannerAd.tsx     -> src/features/monetization/components/SafeBannerAd.tsx
 (yeni)                          -> src/features/monetization/hooks/useAdGate.ts
 App.tsx (ad çağrıları)           -> src/app/lifecycle/useStartupAds.ts (bkz. 03)

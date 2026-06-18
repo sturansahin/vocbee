@@ -2,7 +2,7 @@
 
 ## Mevcut Durum
 
-Tüm bootstrap, provider, navigation ve lifecycle mantığı tek dosyada: `App.tsx` (566 satır).
+Tüm bootstrap, provider, navigation ve lifecycle mantığı tek dosyada: `App.tsx` (486 satır).
 
 - **Modul seviyesi yan etkiler:** `configureNotifications()` (sat. 55) ve
   `SplashScreen.preventAutoHideAsync()` (sat. 58) import anında çalışıyor.

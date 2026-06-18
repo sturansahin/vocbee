@@ -35,18 +35,21 @@ src/
     auth/                   # Login, SignUp, ForgotPassword + useLogin/useSignUp
     setup/                  # SetupScreen + adım bileşenleri (bkz. 08)
     learning/               # HomeScreen + kelime kartı + ExampleSentences + LevelTest
+    grammar/                # grammar explanation, cache, proxy client
     progress/               # progress hesapları + hook
     favorites/              # FavoritesScreen + favorites hook'ları
     streak/                 # streak service + overlay/chip + celebration hook
     notifications/          # scheduling/permission/tracking alt-modülleri (bkz. 06)
     settings/               # SettingsScreen parçaları (bkz. 08)
     monetization/           # AdMob + RevenueCat + Monetization context (bkz. 12)
+    review/                 # app review prompt, store review links, feedback email
   shared/
     ui/                     # design system: Button, Input, Header, CustomAlert...
     theme/                  # ThemeContext + colors/spacing/typography token'ları
     i18n/                   # i18n init + locales
     storage/                # storageKeys + tipli async wrapper'lar (bkz. 11)
     firebase/               # config/firebase + firestore erişim yardımcıları
+    config/                 # env/config sınıflandırması (public client config vs server secret)
     hooks/                  # genel hook'lar (useResponsive, useDebouncedCallback...)
     utils/                  # rtl, typography, profileAvatar...
     types/                  # global tipler
@@ -54,6 +57,7 @@ backend/ (kökte kalır)
   api/                      # Vercel serverless (deleteAccount, grammarProxy)
   proxy/                    # Cloudflare worker
   functions/                # Firebase Functions
+  shared/                   # grammar proxy ortak core (platform adaptörlerinden bağımsız)
 firestore.rules, tests/     # kökte kalır
 App.tsx (kök shim)          # `export { default } from './src/app/App'`
 ```
@@ -153,4 +157,12 @@ screens/SetupScreens.tsx        -> src/features/setup/* (bkz. 08)
 services/notificationService.ts -> src/features/notifications/services/* (bkz. 06)
 services/SyncService.ts         -> src/features/auth/services/sync/* (bkz. 05)
 services/adMobService.ts        -> src/features/monetization/services/admob/* (bkz. 12)
+services/adMobService.web.ts    -> src/features/monetization/services/admob/adMobService.web.ts
+services/groqService.ts         -> src/features/grammar/services/groqService.ts
+services/reviewPromptService.ts -> src/features/review/services/reviewPromptService.ts
+services/nativeGoogleSignIn.ts  -> src/features/auth/services/social/nativeGoogleSignIn.ts
+services/googleAuthConfig.ts    -> src/features/auth/services/social/googleAuthConfig.ts
+services/socialAuthProfile.ts   -> src/features/profile/services/socialAuthProfile.ts
+components/AppRatingPrompt.tsx  -> src/features/review/components/AppRatingPrompt.tsx
+components/ConnectionErrorScreen.tsx -> src/app/components/ConnectionErrorScreen.tsx
 ```

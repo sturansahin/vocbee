@@ -14,10 +14,14 @@ Bu doküman her PR ve her faz için "bitti" tanımını verir. Bir madde işaret
 - [ ] Rollback planı yazıldı (genelde `git revert <PR>`).
 - [ ] Yeni paket eklenmediyse onaylandı; eklendiyse gerekçe + Expo uyumu yazıldı.
 - [ ] Secret/anahtar/`.env`/plist değeri koda veya dokümana sızmadı.
+- [ ] Refactor edilen alanın "mevcut durum" iddiaları güncel komut çıktısıyla doğrulandı
+      (satır/hook sayısı, import grafiği, direct I/O noktaları).
 
 ## B) Veri/Storage'a dokunan PR için ek DoD
 
 - [ ] AsyncStorage anahtar **değerleri değişmedi** (`storageKeys` tek kaynak).
+- [ ] Yeni bulunan legacy/literal storage key varsa envantere eklendi veya bilinçli olarak legacy cleanup
+      listesine yazıldı (`@profile_email`, `@profile_name`, vb.).
 - [ ] JSON şekli korundu; `typedStorage` tipi mevcut şekille uyumlu.
 - [ ] Migration eklendiyse: idempotent + eski-format fixture testi yeşil.
 - [ ] Round-trip testi (get/set) yeşil.
@@ -28,6 +32,8 @@ Bu doküman her PR ve her faz için "bitti" tanımını verir. Bir madde işaret
 - [ ] `npm run typecheck:rules` yeşil.
 - [ ] `npm run test:rules` (emulator) yeşil; izinsiz alan reddediliyor.
 - [ ] Client yazımı `shared/firebase/userDoc.ts` kapısından geçiyor (doğrudan `setDoc` yok).
+- [ ] `notificationSettings` disabled/partial payload davranışı rules ile kanıtlandı; partial `{ enabled: false }`
+      gibi rules dışı şekiller üretilemiyor.
 
 ## D) Notification'a dokunan PR için ek DoD
 

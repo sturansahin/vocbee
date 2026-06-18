@@ -29,6 +29,7 @@ büyümeye hazır hâle getirilmesi için hazırlanmış **uygulamaya hazır** r
 | 17 | `17-risk-register.md` | Risk register |
 | 18 | `18-roadmap.md` | Phase-based implementation roadmap |
 | 19 | `19-definition-of-done.md` | Definition of Done checklist'leri |
+| 20 | `20-refactor-execution-contract.md` | Production-ready refactor execution contract |
 
 ## Her dokümanın ortak bölümleri
 
@@ -62,6 +63,11 @@ Aşağıdakiler refactor sırasında **bozulmamalıdır**. Her PR bu listeye kar
    normalize/derive mantığı ve sakladığı şekiller korunur.
 6. **Abonelik ve reklam akışları** — RevenueCat entitlement (`premium`) ve AdMob consent/ATT/
    gösterim mantığı korunur.
+7. **Firestore rules uyumu** — client'ın yazdığı her payload `firestore.rules` ile test edilmiş olmalıdır.
+   Özellikle `notificationSettings` partial yazılmamalı; disabled durumda bile rules'un beklediği tam şekil
+   veya bilinçli `null`/alan silme stratejisi kullanılmalıdır.
+8. **Gerçek mevcut durum snapshot'ı** — dokümandaki satır/hook/test sayıları refactor başlamadan önce
+   yeniden üretilmelidir. Bu doküman seti 2026-06-12 kod durumuna göre güncellenmiştir.
 
 ## Güvenlik notu
 
@@ -79,3 +85,6 @@ npm run typecheck:worker     # proxy/grammar-worker.ts tip kontrolü
 npm --prefix functions run build
 npm --prefix functions run lint
 ```
+
+`npm run test:rules` için yerel ortamda Java/JDK erişilebilir olmalı ve Firebase CLI emulator'ı
+başlatabilmelidir. CI ortamında Firebase auth/project erişimi ve emulator cache'i açıkça kurulmalıdır.

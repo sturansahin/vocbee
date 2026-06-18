@@ -8,15 +8,19 @@
   (prefix), native/target language, notification settings, tracked notifications, favorites (prefix),
   profile (prefix), shuffle-order (prefix), grammar-cache, user-language, app-review-prompt-state.
 - **`services/storage.ts`:** AsyncStorage sarmalayıcısı (test edilmiş: `services/__tests__/storage.test.ts`).
-- **Tutarsızlık:** `services/adMobService.ts` `@app_launch_count` anahtarını `storageKeys`'e koymadan
-  doğrudan kullanıyor.
+- **Tutarsızlıklar:** `services/adMobService.ts` `@app_launch_count` anahtarını `storageKeys`'e koymadan
+  doğrudan kullanıyor. Ayrıca `SetupScreens.tsx` içinde `@profile_email` ve `@profile_name` literal
+  anahtarları var; bunlar `storageKeys` envanterinde değil ve `clearAllLocalData` kapsamına açıkça girmiyor.
+  Bazı ekran/servislerde `@native_language`, `@target_language`, `@user_level` ve shuffle-order anahtarları
+  literal olarak kullanılıyor; değerler doğru olsa da tek-kaynak prensibini zayıflatıyor.
 - **Offline:** `components/OfflineNotice.tsx` + `SyncService.needsSync` ile yerel-önce davranış.
 - **Cache:** `@grammar_cache` (grammar proxy yanıtları), `@shuffle_order_` (kelime karıştırma sırası).
 
 ## Sorunlar
 
 1. AsyncStorage çağrıları string anahtarla, **tipsiz**; yanlış JSON şekli derleme zamanında yakalanmaz.
-2. Bir anahtar (`@app_launch_count`) merkezi listede değil → tek-kaynak ilkesi delinmiş.
+2. Birden fazla anahtar (`@app_launch_count`, `@profile_email`, `@profile_name` ve bazı doğru-değerli
+   literal kullanımlar) merkezi erişimden geçmiyor → tek-kaynak ilkesi delinmiş.
 3. Migration mantığı her serviste ayrı (vocabulary v2, favorites legacy) — ortak desen yok.
 4. Offline/sync sözleşmesi `SyncService`'e gömülü; tek yerde görünmüyor.
 
@@ -26,7 +30,7 @@ Anahtar **değerleri asla değişmez**; sadece erişim tiplenir ve tek kapıdan 
 
 ```
 shared/storage/
-  storageKeys.ts          # mevcut; TEK KAYNAK (değerler aynı). @app_launch_count buraya eklenir.
+  storageKeys.ts          # mevcut; TEK KAYNAK (değerler aynı). eksik app/profile key'leri buraya eklenir.
   storage.ts              # mevcut sarmalayıcı taşınır
   typedStorage.ts         # get<T>/set<T>/remove tipli wrapper (anahtar -> tip eşleşmesi)
   migrations/
@@ -54,7 +58,9 @@ sadece tek bir orkestrasyona bağlanır.
 
 1. **PR-1:** `storage.ts` + `storageKeys.ts` -> `shared/storage/`; eski yollardan re-export shim.
    - Komut: `npm run typecheck && npm run test:ci`
-2. **PR-2:** `@app_launch_count`'ı `storageKeys`'e ekle (aynı string değer); `adMobService` merkezi anahtarı kullanır.
+2. **PR-2:** `@app_launch_count`, `@profile_email`, `@profile_name` anahtarlarını `storageKeys`'e ekle
+   (aynı string değerler); `adMobService` ve `SetupScreens` merkezi anahtarları kullanır. Mevcut
+   `@native_language`/`@target_language`/`@user_level` literal kullanımları da `STORAGE_KEYS` ile değiştirilir.
 3. **PR-3:** `typedStorage.ts` ekle; en riskli domain'lerden başlayarak (streak/progress/favorites) servisleri
    tipli erişime geçir (her PR'da bir domain). JSON şekli aynı.
 4. **PR-4:** `migrations/` orkestrasyonunu ekle; mevcut vocabulary v2 ve favorites legacy migration'larını
@@ -66,6 +72,9 @@ Her PR sonunda: `npm run typecheck && npm run test:ci`.
 
 - **Anahtar değeri/JSON şekli kazara değişirse** kalıcı kullanıcı verisi kaybı. Azaltım: değerler shim'le
   korunur; `typedStorage` tipleri mevcut şekle göre yazılır; round-trip testleri.
+- **Untracked legacy profile anahtarları unutulursa** logout/reset veya migration sonrası stale profil
+  kalabilir. Azaltım: `@profile_email`/`@profile_name` için karar verilir: ya legacy cleanup listesine
+  eklenir ya da açık migration ile `profile_${uid}` cache'e taşınır.
 - **Migration sırası/idempotensi** yanlışsa veri çift işlenir. Azaltım: her migration idempotent + versiyon
   guard; eski-veri fixture testleri.
 - **Açılışta migration gecikmesi** UI'ı bloklayabilir. Azaltım: migration hızlı/asenkron; splash ardında çalışır.
@@ -81,9 +90,10 @@ Her PR sonunda: `npm run typecheck && npm run test:ci`.
 
 ```
 services/storage.ts       -> src/shared/storage/storage.ts (+ shim)
-services/storageKeys.ts   -> src/shared/storage/storageKeys.ts (+ shim; @app_launch_count eklenir)
+services/storageKeys.ts   -> src/shared/storage/storageKeys.ts (+ shim; @app_launch_count, @profile_email, @profile_name eklenir)
 (yeni)                    -> src/shared/storage/typedStorage.ts
 (yeni)                    -> src/shared/storage/migrations/{index,schemaVersion}.ts
 services/adMobService.ts  -> @app_launch_count için merkezi anahtar kullanır
+screens/SetupScreens.tsx  -> @profile_email/@profile_name ve diğer literal key'ler için merkezi anahtar kullanır
 services/__tests__/storage.test.ts -> import yolu güncellenir
 ```

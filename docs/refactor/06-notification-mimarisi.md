@@ -2,7 +2,7 @@
 
 ## Mevcut Durum
 
-Tüm bildirim mantığı `services/notificationService.ts` (1355 satır) içinde. Gerçek davranışlar:
+Tüm bildirim mantığı `services/notificationService.ts` (1176 satır) içinde. Gerçek davranışlar:
 
 - **Sabitler:** `NOTIFICATION_CONTENT_VERSION = 4`, `MAX_SCHEDULED = 64` (Expo/iOS limiti),
   1 slot streak için rezerve → `MAX_VOCABULARY = 63`.

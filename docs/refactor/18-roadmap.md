@@ -5,6 +5,9 @@ Her faz birden çok küçük PR'dan oluşur. Hiçbir faz "big-bang rewrite" değ
 
 ## Faz 0 — Emniyet ağı ve iskelet (DAVRANIŞ DEĞİŞMEZ)
 Hedef: refactor'ı güvenli yapacak altyapı.
+- Mevcut durum snapshot'ını yeniden üret: satır sayıları, hook sayıları, direct Firestore access,
+  storage key inventory, test suite sayısı.
+- `notificationSettings` disabled payload kararını ver ve rules/setup testleriyle sabitle.
 - CI gate + path-filtre (bkz. 16); coverage threshold düşük başlangıç (bkz. 14).
 - `src/` iskeleti + path alias'lar (bkz. 02 PR-A).
 - Secret-scan + `.gitignore` denetimi (bkz. 13).
@@ -29,7 +32,7 @@ Hedef: `App.tsx` god-component'ini çöz (bkz. 03).
 - Komut: `npm run typecheck && npm run typecheck:test && npm run test:ci`.
 
 ## Faz 3 — Notification modülerleştirme (ORTA-YÜKSEK risk)
-Hedef: 1355 satırlık servisi saf/IO ayır (bkz. 06).
+Hedef: 1176 satırlık servisi saf/IO ayır (bkz. 06).
 - Golden testler önce; sonra `constants/types`, saf `slotPlanner`/`contentBuilder`, `expoAdapter`, kalan modüller.
 - Facade eski API'ı korur.
 - Komut: `npm run typecheck && npm run test:ci`.
@@ -45,7 +48,8 @@ Hedef: vocabulary/progress/streak/favorites feature'lara; Home hook'lara bölün
 - Komut: `npm run typecheck && npm run test:ci`.
 
 ## Faz 6 — Settings / Setup parçalama (ORTA risk)
-Hedef: 2310 + 1240 satırlık ekranları bölümlere; doğrudan Firestore yazımını kapat (bkz. 08).
+Hedef: 2196 + 1179 satırlık ekranları bölümlere; Setup doğrudan Firestore yazımını kapat,
+Settings stale Firestore import'larını temizle (bkz. 08).
 - Ön koşul: `test:rules`.
 - Komut: `npm run typecheck && npm run test:ci && npm run test:rules`.
 

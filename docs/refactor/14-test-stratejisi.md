@@ -7,12 +7,14 @@
   notificationService, favoritesService, progressService, vocabularyService, SettingsScreen, SetupScreens,
   ExampleSentencesScreen, FavoritesScreen, ForgotPasswordScreen, LevelTestScreen, OnboardingScreen,
   SplashScreen, SafeBannerAd.
-- **Mevcut testler:** screens/__tests__ (AuthScreens, HomeScreen); services/__tests__ (api, googleAuthConfig,
+- **Mevcut testler:** 21 Jest test dosyası / 173 test (son yerel doğrulama). screens/__tests__
+  (AuthScreens, HomeScreen); services/__tests__ (api, googleAuthConfig,
   groqService, i18n, nativeGoogleSignIn, notificationFrequency, notificationService, socialAuthProfile,
   storage, streakService, SyncService); utils/__tests__ (profileAvatar, streakCelebration);
   components/__tests__ (CustomAlert, ErrorBoundary, OfflineNotice, SwarmLogo, UIComponents, VocabularyCardHeader).
 - **Typecheck varyantları:** `typecheck` (app), `typecheck:test`, `typecheck:rules`, `typecheck:worker`.
 - **Rules testi:** `test:rules` (firebase emulators), `tests/firestoreRules.ts`.
+  Yerel/CI ortamında Java/JDK ve Firebase emulator erişimi gerekir.
 
 ## Sorunlar
 
@@ -20,6 +22,8 @@
    çünkü test edilebilir değiller (yan etki + UI iç içe). Bu refactor'ın asıl fırsatı burada.
 2. **Karakterizasyon testi yok:** büyük ekranları güvenle bölmek için "mevcut davranışı kilitleyen" test yok.
 3. Coverage eşiği (threshold) tanımlı değil; gerileme sessizce geçebilir.
+4. Jest coverage çıktısı `coverage/` olarak ignore ediliyor; fakat repoda `config/coverage` altında
+   izlenen eski coverage artifact'leri bulunuyor. Bunlar Faz 0'da ayrı cleanup kararı gerektirir.
 
 ## Önerilen Yaklaşım: Test piramidi + "çıkarınca test et, sonra kapsama al"
 
@@ -30,6 +34,8 @@
 - **Bileşen testleri (RTL):** çıkarılan saf sunum bileşenleri (WordCard, sections) için.
 - **Entegrasyon:** kritik akışlar (auth cache-first, setup -> setupCompleted, sync round-trip) için.
 - **Rules emulator:** her client-yazım değişikliğinde `test:rules`.
+- **Contract testleri:** Firestore payload builder'ları (`userDoc`, setup/settings repositories),
+  storage key inventory, env sınıflandırması ve grammar-proxy core davranışı için saf testler.
 - **Coverage kapısı:** her dosya refactor edilip test edildikçe `collectCoverageFrom` HARIÇ listesinden
   ÇIKARILIR; ortak coverage threshold kademeli yükseltilir (ör. başlangıç %40 global, her faz +%5).
 
@@ -65,6 +71,9 @@ Her PR sonunda: `npm run typecheck && npm run typecheck:test && npm run test:ci`
 - `collectCoverageFrom` hariç listesi her fazda kısalır; kaldırılan dosyalar için testler yeşil.
 - Global coverage threshold tanımlı ve CI'da zorunlu (bkz. `16`).
 - Tüm typecheck varyantları ve `test:ci` yeşil.
+- `test:rules` ortam önkoşulları CI dokümanında açık: Java/JDK, Firebase CLI, emulator portları ve auth.
+- Yeni coverage artifact'leri (`coverage/`, `**/coverage/`) git'e girmiyor; mevcutta izlenen
+  `config/coverage` çıktıları ayrı cleanup PR'ında kaldırılıyor.
 
 ## Etkilenecek Dosyalar
 

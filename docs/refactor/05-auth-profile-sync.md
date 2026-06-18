@@ -2,7 +2,7 @@
 
 ## Mevcut Durum
 
-### `context/AuthContext.tsx` (780 satır)
+### `context/AuthContext.tsx` (681 satır)
 Tek context şunların hepsini taşıyor:
 - Firebase Auth durumu (`onAuthStateChanged`, `signIn`, `signUp`, `signOut`).
 - **Profile yönetimi:** AsyncStorage `profile_${uid}` cache + Firestore senkron.
@@ -28,8 +28,9 @@ kurallarla **birebir** uyumlu olmalı.
 
 1. **AuthContext çok sorumlulu (SRP ihlali):** kimlik + profil + bildirim ayarı + cihaz + silme tek yerde.
 2. **SyncService god-object:** her domain'i bildiği için domain ekledikçe büyüyor; test etmek zor.
-3. **Ekrandan doğrudan Firestore yazımı** (`SettingsScreen`, `SetupScreens`) sync sözleşmesini baypas ediyor
-   ve kurallarla uyumsuzluk riskini artırıyor.
+3. **Ekrandan doğrudan Firestore yazımı** (`SetupScreens`) sync sözleşmesini baypas ediyor
+   ve kurallarla uyumsuzluk riskini artırıyor. `SettingsScreen` içinde ise kullanılmayan Firestore
+   import'ları var; bu da mimari niyeti bulanıklaştırıyor.
 4. **HTTP endpoint URL'i context içinde**; test ve değiştirme zor.
 
 ## Önerilen Yaklaşım
@@ -92,7 +93,8 @@ preferences, progress, streak, notificationSettings, lastActiveDeviceId, favorit
 4. **PR-4:** `profileService` + `useProfile` çıkar; AuthContext profili buradan tüketir.
 5. **PR-5:** `useAccountDeletion` çıkar; `DELETE_ACCOUNT_URL` `config`'e taşınır (değer değil, anahtar).
 6. **PR-6:** SyncService içini `DomainSyncer` kayıtlarına böl; `syncOrchestrator` facade'ı aynı imza.
-7. **PR-7:** `SettingsScreen`/`SetupScreens` doğrudan Firestore yazımını `userDoc`/feature service'e taşı.
+7. **PR-7:** `SetupScreens` doğrudan Firestore yazımını `userDoc`/feature service'e taşı.
+   `SettingsScreen` tarafında gerçek yazım olmadığı için stale import temizliği ve settings action facade'ı yapılır.
 
 Her PR: `npm run typecheck && npm run test:ci && npm run typecheck:rules` (rules sözleşmesi etkilenirse).
 
@@ -122,6 +124,6 @@ context/AuthContext.tsx     -> src/features/auth/context/AuthProvider.tsx + hook
 services/SyncService.ts     -> src/features/auth/services/sync/{syncOrchestrator,domainSyncers,syncTypes}.ts
 config/firebase.ts          -> src/shared/firebase/firebase.ts (+ shim)
 (yeni)                      -> src/shared/firebase/userDoc.ts
-screens/SettingsScreen.tsx (setDoc) -> src/features/settings/services/* -> shared/firebase/userDoc.ts
+screens/SettingsScreen.tsx (stale Firestore import) -> kaldırılır / settings action facade'a bağlanır
 screens/SetupScreens.tsx   (setDoc) -> src/features/setup/services/*    -> shared/firebase/userDoc.ts
 ```

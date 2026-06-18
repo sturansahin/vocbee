@@ -14,6 +14,7 @@ Düşük/Orta/Yüksek. Öncelik = S × O.
 | R5 | Streak/progress hesap mantığı değişir -> seri sıfırlanır | Y | D | servis içi mantık değişmez, sadece konum; mevcut testler (bkz. 07) | streakService.test |
 | R6 | Reklam/abonelik akışı kayar -> gelir kaybı / premium'a reklam | Y | O | `canShowAd` saf + test; entitlement `premium` sabit (bkz. 12) | birim testi |
 | R7 | Setup `setupCompleted` / initial-route kırılır -> yeni kullanıcı akışı bozulur | Y | O | akış testi; bayrak zamanlaması korunur (bkz. 03/08) | entegrasyon testi |
+| R7b | Setup disabled notification payload'ı rules'tan geçmez -> yeni kullanıcı setup kaydı reddedilir | Y | O | `notificationSettings` normalize kararı; `userDoc` tek kapı; setup + rules testi (bkz. 08/13) | emulator + integration |
 
 ## Yapısal / Mimari Riskler
 
@@ -32,6 +33,7 @@ Düşük/Orta/Yüksek. Öncelik = S × O.
 | R13 | Secret repoya/dokümana sızar | Y | D | secret-scan; dokümana değer yazma yasak (bkz. 13) |
 | R14 | Grammar-proxy güvenlik düzeltmesi iki kopyadan birinde unutulur | O | O | ortak core modül (bkz. 13) |
 | R15 | Client Firestore yazım yüzeyi genişler | O | O | yazımlar `userDoc` kapısından; rules katı (bkz. 05/08/13) |
+| R15b | Public config ile secret karışır | Y | O | env sınıflandırması; tracked client config vs secret ayrımı; secret scan ve rotation planı (bkz. 13/20) |
 
 ## Süreç Riskleri
 
@@ -40,6 +42,7 @@ Düşük/Orta/Yüksek. Öncelik = S × O.
 | R16 | Refactor sırasında ürün özelliği gecikir | O | O | küçük PR'lar; feature bazlı; freeze yok (bkz. 16) |
 | R17 | Test edilemez dosyalarda coverage threshold zorlaması PR'ları bloklar | O | O | kademeli threshold; önce refactor+test (bkz. 14) |
 | R18 | Golden test mevcut bug'ı "dondurur" | D | O | bug'lar işaretlenir, ayrı PR'da düzeltilir (bkz. 14) |
+| R19 | Coverage/build artifact'leri repoya karışır | D | O | `coverage/` ve `**/coverage/` ignore; mevcut `config/coverage` cleanup PR'ı (bkz. 14/16) |
 
 ## İzleme
 

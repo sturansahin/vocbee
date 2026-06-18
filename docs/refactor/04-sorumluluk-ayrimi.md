@@ -6,10 +6,10 @@ Ekranlar hem UI hem state hem iş mantığı hem yan etki orkestrasyonu yapıyor
 
 | Ekran | useState | useEffect | useCallback | AsyncStorage çağrısı | Doğrudan Firestore |
 |-------|---------:|----------:|------------:|---------------------:|:-------------------:|
-| `screens/HomeScreen.tsx` (2391) | 18 | 11 | 21 | 13 | hayır (service üzerinden) |
-| `screens/SettingsScreen.tsx` (2310) | 26 | 8 | 0 | birden çok | **evet** (`doc/setDoc`) |
-| `screens/SetupScreens.tsx` (1240) | 13 | 7 | - | birden çok | **evet** (`doc/setDoc`) |
-| `screens/AuthScreens.tsx` (876) | 14 | - | - | - | dolaylı (AuthContext) |
+| `screens/HomeScreen.tsx` (2185) | 17 | 10 | 20 | 11 | hayır (service üzerinden) |
+| `screens/SettingsScreen.tsx` (2196) | 21 | 5 | 0 | 3 | hayır; fakat kullanılmayan Firestore import'u var |
+| `screens/SetupScreens.tsx` (1179) | 11 | 6 | 0 | 3 | **evet** (`doc/setDoc`) |
+| `screens/AuthScreens.tsx` (807) | 13 | 0 | 0 | 0 | dolaylı (AuthContext) |
 
 Hook katmanı yok. Tek `useDebounce` vb. yardımcı dahi ekran içinde tanımlı. `scale`/`moderateScale`
 responsive yardımcıları dört ekranda kopyalanmış.
@@ -19,7 +19,8 @@ responsive yardımcıları dört ekranda kopyalanmış.
 1. **Test edilemezlik:** İş mantığı render ağacına bağlı; saf birim testi yazmak için tüm ekranı mount
    etmek gerekiyor (bu yüzden `jest.config.js` bu ekranları coverage'tan **hariç tutmuş**).
 2. **Tekrar:** Aynı davranış (sync tetikleme, ad gösterimi, AsyncStorage okuma) birden çok ekranda kopya.
-3. **Katman ihlali:** Ekran -> Firestore doğrudan erişim (`SettingsScreen`, `SetupScreens`).
+3. **Katman ihlali:** Ekran -> Firestore doğrudan erişim (`SetupScreens`); `SettingsScreen` içinde
+   stale Firestore import'ları var ve temizlenmeli.
 4. **Değişim riski:** 2000+ satırlık dosyada küçük değişiklik geniş yüzey etkiliyor.
 
 ## Önerilen Yaklaşım: 4 katmanlı sorumluluk sözleşmesi
@@ -87,8 +88,9 @@ export function useResponsive(): { scale: (n:number)=>number; moderateScale:(n:n
 3. **PR-3 (hook çıkarımı):** `useWordAudio` gibi en izole davranışı hook'a taşı; ekran hook'u tüketir.
 4. **PR-4..N:** Sırayla `useWordSession`, `useHomeProgress`, `useHomeAds`, `useTutorial`.
    Her PR'da bir davranış hook'a taşınır; ekran satır sayısı düşer.
-5. **PR-Firestore-kapatma:** `SettingsScreen`/`SetupScreens` içindeki doğrudan `setDoc` çağrılarını
-   feature service fonksiyonlarına taşı (davranış ve yazılan alanlar aynı; bkz. `05`/`11`).
+5. **PR-Firestore-kapatma:** `SetupScreens` içindeki doğrudan `setDoc` çağrısını feature service
+   fonksiyonuna taşı; `SettingsScreen` içindeki kullanılmayan Firestore import'larını kaldır.
+   Yazılan alanlar rules ile birebir doğrulanır (bkz. `05`/`11`).
 
 Her PR sonunda: `npm run typecheck && npm run test:ci`.
 
@@ -114,6 +116,6 @@ screens/SetupScreens.tsx (yerel scale/moderateScale)      -> src/shared/hooks/us
 screens/ExampleSentencesScreen.tsx (yerel scale)          -> src/shared/hooks/useResponsive.ts
 screens/HomeScreen.tsx (UI parçaları)                      -> src/features/learning/components/*
 screens/HomeScreen.tsx (state/effect)                     -> src/features/learning/hooks/*
-screens/SettingsScreen.tsx (doğrudan setDoc)              -> src/features/settings/services/* (bkz. 08)
+screens/SettingsScreen.tsx (stale Firestore import)       -> kaldırılır / settings service facade kullanır
 screens/SetupScreens.tsx (doğrudan setDoc)                -> src/features/setup/services/* (bkz. 08)
 ```

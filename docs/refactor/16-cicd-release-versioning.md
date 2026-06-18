@@ -9,6 +9,7 @@
   `audit:prod`, `functions:lint`, `functions:build`.
 - **Backend ayrı dağıtım:** `functions/` (Firebase), `proxy/` (Cloudflare Worker), `api/` (Vercel).
 - CI tanımı repoda doğrulanmalı (görünür bir workflow dosyası incelenmedi).
+  Bu repo durumunda `.github/workflows/*` yok; Faz 0'da eklenmesi zorunlu kabul edilir.
 
 ## Sorunlar
 
@@ -16,6 +17,8 @@
 2. **Çoklu dağıtım hedefi** (app, functions, worker, vercel) farklı süreçler; release koordinasyonu elle.
 3. **Versioning/changelog** stratejisi tanımsız; refactor PR'ları ile ürün sürümleri karışabilir.
 4. Refactor sırasında **regresyon riski**; CI olmadan PR'lar güvenli birleşemez.
+5. Coverage artifact hijyeni eksik: `coverage/` ignore ediliyor ama `config/coverage` altında izlenen
+   eski Jest çıktıları var; CI çıktıları repo dosyası olmamalı.
 
 ## Önerilen Yaklaşım: Tek CI gate + faz-bazlı doğrulama matrisi
 
@@ -26,6 +29,8 @@ Tüm mevcut scriptleri tek CI workflow'ta zorunlu kapı yap (yeni paket gerekmez
 2. `npm run typecheck` + `npm run typecheck:test`
 3. `npm run test:ci` (coverage threshold ile; bkz. `14`)
 4. Değişiklik rules'ı etkiliyorsa: `npm run typecheck:rules` + `npm run test:rules`
+   - Önkoşul: Java/JDK PATH'te olmalı; Firebase emulator çalışabilmeli; CI'da Firebase project/auth
+     erişimi açık kurulmalı.
 5. Değişiklik worker/functions'ı etkiliyorsa: `npm run typecheck:worker`,
    `npm --prefix functions run build`, `npm --prefix functions run lint`
 6. Secret-scan (bkz. `13`)
@@ -48,9 +53,12 @@ EAS `runtimeVersion` / build number politikası netleştirilir (refactor OTA-uyu
 
 1. **PR-1:** CI workflow ekle/güncelle (yukarıdaki aşamalar; path-filtre ile worker/functions/rules).
    - Komut (lokal doğrulama): tüm script matrisi.
+   - Workflow yoksa `.github/workflows/verify.yml` sıfırdan eklenir.
 2. **PR-2:** Coverage threshold'u CI'a bağla (bkz. `14`).
 3. **PR-3:** Secret-scan adımı (bkz. `13`).
-4. **PR-4 (opsiyonel):** Conventional commits + otomatik changelog; `runtimeVersion` politikası belgele.
+4. **PR-4:** Coverage artifact cleanup kararı: `config/coverage` izlenen çıktıysa kaldır; `.gitignore`
+   `coverage/` ve `**/coverage/` desenlerini kapsasın.
+5. **PR-5 (opsiyonel):** Conventional commits + otomatik changelog; `runtimeVersion` politikası belgele.
 
 ## Riskler
 

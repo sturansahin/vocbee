@@ -10,7 +10,7 @@
   lastQualifiedDay, lastQualifiedAt}`; yerel-gün-anahtarı mantığı; `@streak` anahtarı.
 - **`services/favoritesService.ts` (312):** `FavoriteItem {id, level}`; legacy `number[]` migrasyonu;
   kullanıcıya özel `@favorites_${uid}` anahtarı.
-- **UI:** `HomeScreen` (2391) bu domain'lerin hepsini tüketir; `ExampleSentencesScreen` (854),
+- **UI:** `HomeScreen` (2185) bu domain'lerin hepsini tüketir; `ExampleSentencesScreen` (788),
   `LevelTestScreen` (485), `FavoritesScreen`, `StreakCelebrationOverlay` (465), `utils/streakCelebration.ts`.
 
 ## Sorunlar
@@ -45,6 +45,12 @@ features/favorites/
   services/favoritesService.ts
   screens/FavoritesScreen.tsx
   hooks/useFavorites.ts
+features/review/
+  services/reviewPromptService.ts      # app launch count, native/store review, feedback email
+  components/AppRatingPrompt.tsx
+features/grammar/
+  services/groqService.ts              # grammar explanation cache + proxy/direct-dev path
+  hooks/useGrammarExplanation.ts
 ```
 
 **Facade:** her feature `index.ts`'i sadece gerekli fonksiyon/hook'ları ihraç eder. Ör.
@@ -85,6 +91,8 @@ Her PR sonunda: `npm run typecheck && npm run test:ci`.
   mevcut `__mocks__/txtFileMock.js` mapping korunur; PR-2 sonrası `test:ci` zorunlu.
 - **Schema v2 migrasyon** kodu yanlış taşınırsa eski kullanıcı verisi bozulur. Azaltım: migrasyon testi eklenir.
 - **Favorites legacy `number[]` migrasyonu** korunmalı (eski kullanıcılar).
+- **Grammar cache (`@grammar_cache`)** ve review prompt state (`@VocBee:appReviewPromptState`) öğrenme
+  deneyiminin parçası olarak korunmalı; bu servisler mapping dışında bırakılmamalı.
 
 ## Test ve Kabul Kriterleri
 
@@ -100,6 +108,9 @@ services/vocabularyService.ts        -> src/features/learning/vocabulary/vocabul
 services/progressService.ts          -> src/features/progress/services/progressService.ts
 services/streakService.ts            -> src/features/streak/services/streakService.ts
 services/favoritesService.ts         -> src/features/favorites/services/favoritesService.ts
+services/groqService.ts              -> src/features/grammar/services/groqService.ts
+services/reviewPromptService.ts      -> src/features/review/services/reviewPromptService.ts
+components/AppRatingPrompt.tsx       -> src/features/review/components/AppRatingPrompt.tsx
 utils/streakCelebration.ts           -> src/features/streak/hooks/useStreakCelebration.ts
 components/StreakCelebrationOverlay.tsx -> src/features/streak/components/StreakCelebrationOverlay.tsx
 components/StreakChip.tsx (varsa)    -> src/features/streak/components/StreakChip.tsx
