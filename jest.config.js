@@ -10,6 +10,7 @@ module.exports = {
         'screens/**/*.{ts,tsx}',
         'services/**/*.{ts,tsx}',
         'src/shared/**/*.{ts,tsx}',
+        'src/features/**/*.{ts,tsx}',
         '!**/__tests__/**',
         '!**/coverage/**',
         '!**/node_modules/**',
@@ -32,6 +33,8 @@ module.exports = {
         '!screens/SplashScreen.tsx',
         // Exclude component that requires SafeAreaProvider
         '!components/SafeBannerAd.tsx',
+        // Phase 3 prep: Firestore repository impl is verified by emulator (needs Java), not unit coverage
+        '!src/features/**/data/repositories/**',
     ],
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
     moduleNameMapper: {
