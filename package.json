@@ -14,6 +14,7 @@
     "typecheck:test": "tsc -p tsconfig.test.json --noEmit",
     "typecheck:rules": "tsc -p tsconfig.rules.json --noEmit",
     "typecheck:worker": "tsc proxy/grammar-worker.ts --noEmit --lib ES2022,WebWorker --skipLibCheck --moduleResolution bundler --module ESNext --target ES2022",
+    "typecheck:all": "npm run typecheck && npm run typecheck:test && npm run typecheck:rules && npm run typecheck:worker",
     "test:rules": "firebase emulators:exec --only firestore \"jest --runInBand --runTestsByPath tests/firestoreRules.ts\"",
     "audit:prod": "npm audit --omit=dev --audit-level=high",
     "functions:lint": "npm --prefix functions run lint",

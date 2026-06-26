@@ -1,0 +1,66 @@
+# Minimal Phase 0 CI pipeline (refactor-v2).
+# Scope: VERIFICATION ONLY — runs the quality gates that exist today.
+# Builds/releases stay in the EAS pipeline (not here). See docs/refactor-v2/16 + 38.
+#
+# Intentionally OMITTED in Phase 0 (added in later PRs so the pipeline is green now):
+#   - `lint` (eslint): no root ESLint config/deps yet  -> PR-0.2 (doc 38 §5)
+#   - secret-scan (gitleaks): -> PR-0.3 (doc 38 §7)
+# `audit:prod` is non-blocking until vulnerability remediation is approved (see baseline report §5/§9).
+
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [master, refactor-v2]
+
+jobs:
+  quality:
+    name: Typecheck + Tests + Functions
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run typecheck:test
+      - run: npm run typecheck:rules
+      - run: npm run typecheck:worker
+      - run: npm run test:ci
+      - name: Install Cloud Functions deps
+        run: npm --prefix functions ci
+      - run: npm run functions:lint
+      - run: npm run functions:build
+
+  rules:
+    name: Firestore rules (emulator)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      # Firestore emulator requires a JDK; absent in some local/dev envs, provided here.
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - run: npm ci
+      - run: npm run test:rules
+
+  audit:
+    name: Prod dependency audit (non-blocking)
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run audit:prod
