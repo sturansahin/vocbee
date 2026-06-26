@@ -17,6 +17,9 @@ import { createSwarmAnimation } from '../assets/animations/swarmAnimation';
 import { LinearGradient } from 'expo-linear-gradient';
 import { BlurView } from 'expo-blur';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+// Phase 5: tutorial swipe rule lives in the learning domain (pure, tested). Imported for internal use
+// and re-exported below so existing consumers (screens/__tests__/HomeScreen.test.tsx) keep working.
+import { getTutorialSwipeNextStep } from '../src/features/learning';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../types';
@@ -107,17 +110,9 @@ interface StreakCelebrationState {
     message: string;
 }
 
-export function getTutorialSwipeNextStep(step: number, direction: 'left' | 'right'): number | null {
-    if (step === 1 && direction === 'right') {
-        return 2;
-    }
-
-    if (step === 2 && direction === 'left') {
-        return 3;
-    }
-
-    return null;
-}
+// getTutorialSwipeNextStep moved to features/learning/domain/rules (Phase 5, docs/refactor-v2/25 §PR-5.1).
+// Re-exported here for backward compatibility (HomeScreen.test imports it from this module).
+export { getTutorialSwipeNextStep };
 
 const EMPTY_TUTORIAL_LAYOUT: LayoutRect = {
     x: 0,

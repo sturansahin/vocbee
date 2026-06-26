@@ -1,3 +1,3 @@
-// src/features/learning — public barrel. Placeholder (Phase 1).
-// HomeScreen/vocabulary/progress/grammar migration in Phase 5 (docs/refactor-v2/25).
-export {};
+// src/features/learning — public barrel (docs/refactor-v2/33 §4). Pure domain for now.
+export * from './domain/types';
+export * from './domain/rules';
