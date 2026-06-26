@@ -17,6 +17,8 @@ import { VocabularyWord, Level, LEVELS, getStoredVocabulary } from './vocabulary
 import { getCurrentLevel, markWordAsLearned, unmarkWord, getLearnedWords } from './progressService';
 import { STORAGE_KEYS } from './storageKeys';
 import { getStreakState, isStreakCompletedToday } from './streakService';
+// Phase 6: pure scheduling slot-count rule now lives in the notifications domain (pure, tested).
+import { getDailyNotificationSlotCount } from '../src/features/notifications';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Storage Keys (centralized via storageKeys.ts)
@@ -128,24 +130,8 @@ function getNotificationPermissionPromptKey(userId: string): string {
     return `${NOTIFICATION_PERMISSION_PROMPT_PREFIX}${userId}`;
 }
 
-function getDailyNotificationSlotCount(
-    startMinutes: number,
-    endMinutes: number,
-    frequencyMinutes: number
-): number {
-    const isFullDay = startMinutes === endMinutes;
-    if (isFullDay) {
-        // Full 24h mode is modeled as an inclusive range, but we must avoid
-        // duplicating the next day's start timestamp in the same batch.
-        return Math.floor((1440 - 1) / frequencyMinutes) + 1;
-    }
-
-    const rangeMinutes = endMinutes > startMinutes
-        ? endMinutes - startMinutes
-        : (1440 - startMinutes) + endMinutes;
-
-    return Math.floor(rangeMinutes / frequencyMinutes) + 1;
-}
+// getDailyNotificationSlotCount moved to features/notifications/domain/rules (Phase 6,
+// docs/refactor-v2/26 §PR-6.1) and imported above — same pure logic, now unit-tested.
 
 function isLegacyVocabularyNotificationId(identifier: string): boolean {
     return /^vocbee-\d+-\d+$/.test(identifier);
