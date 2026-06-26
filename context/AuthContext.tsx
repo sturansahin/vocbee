@@ -56,6 +56,9 @@ import {
     StoredProfile,
 } from '../services/socialAuthProfile';
 import { STORAGE_KEYS } from '../services/storageKeys';
+// Phase 4: reuse the tested, pure auth domain rules instead of inlining them here
+// (behavior-identical extraction — docs/refactor-v2/24; presentation -> domain).
+import { isRecentLogin, hasCompletedSetup } from '../src/features/auth';
 
 interface ProfileData {
     name: string;
@@ -94,7 +97,6 @@ const DELETE_ACCOUNT_URL = (
     process.env.EXPO_PUBLIC_DELETE_ACCOUNT_URL
     || (!__DEV__ ? APP_CONFIG_DELETE_ACCOUNT_URL : '')
 ).trim();
-const RECENT_LOGIN_WINDOW_MS = 5 * 60 * 1000;
 
 // Provider Props
 interface AuthProviderProps {
@@ -252,8 +254,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
         return fetchedData;
     };
 
-    const hasCompletedSetup = (data: UserData | null): boolean =>
-        !!(data?.setupCompleted || (data?.preferences?.nativeLanguage && data?.preferences?.targetLanguage));
+    // hasCompletedSetup is imported from the auth domain rules (Phase 4) — same logic, now unit-tested.
 
     const clearNativeGoogleSession = async (): Promise<void> => {
         try {
@@ -273,7 +274,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
         const lastSignInTime = firebaseUser.metadata.lastSignInTime
             ? Date.parse(firebaseUser.metadata.lastSignInTime)
             : NaN;
-        if (!Number.isFinite(lastSignInTime) || Date.now() - lastSignInTime > RECENT_LOGIN_WINDOW_MS) {
+        if (!isRecentLogin(lastSignInTime, Date.now())) {
             throw createRecentLoginError();
         }
     };

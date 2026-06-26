@@ -1,3 +1,6 @@
-// src/features/profile — public barrel. Placeholder (Phase 1).
-// Profile is an auth sub-module (docs/refactor-v2/02); migration in Phase 4.
-export {};
+// src/features/profile — public barrel (docs/refactor-v2/33 §4).
+// Exposes domain types + repository INTERFACE + use-cases. Does NOT export FirestoreUserProfileRepository (impl).
+
+export * from './domain/types';
+export type { UserProfileRepository } from './data/contracts';
+export { makeLoadProfile } from './application/useCases/loadProfile';
