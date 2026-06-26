@@ -14,7 +14,10 @@
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@app/*": ["./src/app/*"],
+      "@shared/*": ["./src/shared/*"],
+      "@features/*": ["./src/features/*"]
     },
     "types": ["nativewind/types"]
   },

@@ -9,6 +9,7 @@ module.exports = {
         'components/**/*.{ts,tsx}',
         'screens/**/*.{ts,tsx}',
         'services/**/*.{ts,tsx}',
+        'src/shared/**/*.{ts,tsx}',
         '!**/__tests__/**',
         '!**/coverage/**',
         '!**/node_modules/**',
@@ -34,6 +35,10 @@ module.exports = {
     ],
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
     moduleNameMapper: {
-        '\\.txt$': '<rootDir>/__mocks__/txtFileMock.js'
+        '\\.txt$': '<rootDir>/__mocks__/txtFileMock.js',
+        '^@app/(.*)$': '<rootDir>/src/app/$1',
+        '^@shared/(.*)$': '<rootDir>/src/shared/$1',
+        '^@features/(.*)$': '<rootDir>/src/features/$1',
+        '^@/(.*)$': '<rootDir>/$1'
     }
 };

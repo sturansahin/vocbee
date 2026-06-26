@@ -16,7 +16,9 @@
     "types/**/*.d.ts",
     "nativewind-env.d.ts",
     "types.ts",
-    "swarmAnimation_new.ts"
+    "swarmAnimation_new.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx"
   ],
   "exclude": [
     "**/__tests__/**",
