@@ -1,35 +1,5 @@
-type AdRequestOptions = {
-    requestNonPersonalizedAdsOnly?: boolean;
-};
-
-export const AD_IDS = {
-    BANNER: '',
-    INTERSTITIAL: '',
-    APP_OPEN: '',
-};
-
-export const getDefaultAdRequestOptions = (): AdRequestOptions => ({
-    requestNonPersonalizedAdsOnly: true,
-});
-
-export const requestAdConsent = async (): Promise<void> => undefined;
-
-export const initializeAdMob = async (): Promise<boolean> => false;
-
-export const ensureAdMobReady = async (): Promise<boolean> => false;
-
-export const loadInterstitial = async (_forceReload: boolean = false): Promise<boolean> => false;
-
-export const showInterstitial = async (): Promise<boolean> => false;
-
-export const refreshAdInventoryOnForeground = async (
-    _forceReload: boolean = true
-): Promise<void> => undefined;
-
-export const checkAndShowAppOpenAd = async (): Promise<void> => undefined;
-
-export const getBannerAdComponent = () => null;
-
-export const getBannerAdSize = () => ({});
-
-export const areAdsSupported = () => false;
+// services/adMobService.web.ts — SHIM (Phase 8, docs/refactor-v2/28, /36 §7 desen a).
+// Real implementation moved to src/features/monetization/data/repositories/AdMobRepository.web.ts.
+// This file is a re-export bridge only; it must not contain any logic (docs/refactor-v2/36 §8).
+// Scheduled for removal in Phase 9 once all imports are updated to @features/monetization.
+export * from '../src/features/monetization/data/repositories/AdMobRepository.web';

@@ -17,7 +17,6 @@ module.exports = {
         '!**/babel.config.js',
         '!**/jest.setup.js',
         // Exclude SDK-heavy / UI-heavy files that are hard to unit test meaningfully
-        '!services/adMobService.ts',
         '!services/notificationService.ts',
         '!services/favoritesService.ts',
         '!services/progressService.ts',
@@ -35,6 +34,10 @@ module.exports = {
         '!components/SafeBannerAd.tsx',
         // Phase 3 prep: Firestore repository impl is verified by emulator (needs Java), not unit coverage
         '!src/features/**/data/repositories/**',
+        // Phase 8: monetization repositories are covered by real unit tests (native-module-unavailable /
+        // web no-op / mocked SDK fallback paths) — re-include them despite the Firestore-repository exclude above.
+        'src/features/monetization/data/repositories/**/*.{ts,tsx}',
+        '!src/features/monetization/data/repositories/**/__tests__/**',
     ],
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
     moduleNameMapper: {
