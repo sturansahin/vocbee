@@ -14,7 +14,7 @@ import * as Notifications from 'expo-notifications';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { RootStackParamList } from '../../../types';
 import { useAuth } from '../../../context/AuthContext';
-import { useMonetization } from '../../../context/MonetizationContext';
+import { useMonetization } from '@features/monetization';
 import { autoSync } from '../../../services/SyncService';
 import {
   getNotificationPermissionState,
@@ -28,7 +28,7 @@ import {
   setLastForegroundTime,
   setLastBackgroundTime,
 } from '../../../services/notificationService';
-import { STORAGE_KEYS } from '../../../services/storageKeys';
+import { STORAGE_KEYS } from '@shared/storage';
 import {
   initializeAdMob,
   checkAndShowAppOpenAd,

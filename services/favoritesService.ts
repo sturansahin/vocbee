@@ -11,7 +11,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { doc, setDoc, getDoc, serverTimestamp } from 'firebase/firestore';
 import { db, auth } from '../config/firebase';
 import { VocabularyWord, getStoredVocabulary, LEVELS, Level } from './vocabularyService';
-import { markAsUnsynced } from './storage';
+import { markAsUnsynced } from '@shared/storage';
 
 export interface FavoriteItem {
     id: number;

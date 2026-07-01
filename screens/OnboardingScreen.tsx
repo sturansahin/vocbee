@@ -17,7 +17,7 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
 import { useTheme } from '../context/ThemeContext';
-import { STORAGE_KEYS } from '../services/storageKeys';
+import { STORAGE_KEYS } from '@shared/storage';
 import { RootStackParamList } from '../types';
 import { FONT_FAMILY } from '../utils/typography';
 

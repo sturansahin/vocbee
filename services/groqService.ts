@@ -8,7 +8,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import appConfig from '../app.json';
 import { auth } from '../config/firebase';
-import { STORAGE_KEYS } from './storageKeys';
+import { STORAGE_KEYS } from '@shared/storage';
 
 const APP_CONFIG_GRAMMAR_PROXY_URL = appConfig.expo.extra?.grammarProxyUrl ?? '';
 const GRAMMAR_PROXY_URL = (

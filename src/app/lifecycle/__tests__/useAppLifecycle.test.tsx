@@ -3,13 +3,13 @@
 
 import { renderHook, waitFor } from '@testing-library/react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { STORAGE_KEYS } from '../../../../services/storageKeys';
+import { STORAGE_KEYS } from '@shared/storage';
 
 const mockAuth: { value: any } = { value: null };
 const mockMonetization: { value: any } = { value: { isAdFree: false, isLoading: false } };
 
 jest.mock('../../../../context/AuthContext', () => ({ useAuth: () => mockAuth.value }));
-jest.mock('../../../../context/MonetizationContext', () => ({ useMonetization: () => mockMonetization.value }));
+jest.mock('@features/monetization', () => ({ useMonetization: () => mockMonetization.value }));
 jest.mock('../../../../services/SyncService', () => ({ autoSync: jest.fn() }));
 jest.mock('../../../../services/notificationService', () => ({
   getNotificationPermissionState: jest.fn(async () => ({ granted: false, canAskAgain: true, status: 'undetermined' })),

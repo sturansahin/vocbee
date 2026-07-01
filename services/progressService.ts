@@ -7,8 +7,7 @@
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Level, LEVELS, getStoredVocabulary } from './vocabularyService';
-import { markAsUnsynced } from './storage';
-import { STORAGE_KEYS } from './storageKeys';
+import { markAsUnsynced, STORAGE_KEYS } from '@shared/storage';
 
 const PROGRESS_KEY = STORAGE_KEYS.PROGRESS;
 const CURRENT_LEVEL_KEY = STORAGE_KEYS.CURRENT_LEVEL;

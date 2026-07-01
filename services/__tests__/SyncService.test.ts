@@ -2,7 +2,8 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // Mock storage module first
-jest.mock('../storage', () => ({
+jest.mock('@shared/storage', () => ({
+    ...jest.requireActual('@shared/storage'),
     needsSync: jest.fn(),
     getLastSyncTime: jest.fn(),
     setLastSyncTime: jest.fn(),
@@ -74,13 +75,12 @@ import {
     syncNotificationSettingsToFirestore,
 } from '../SyncService';
 import { doc, setDoc, getDoc } from 'firebase/firestore';
-import { needsSync, getLastSyncTime, setLastSyncTime, clearSyncFlag } from '../storage';
+import { needsSync, getLastSyncTime, setLastSyncTime, clearSyncFlag, STORAGE_KEYS } from '@shared/storage';
 import { getUserProgress, getCurrentLevel, restoreProgressFromFirebase, getLastWordId } from '../progressService';
 import { restoreFavoritesFromFirebase, syncFavoritesToFirebaseForUser } from '../favoritesService';
 import { getLanguagePair } from '../vocabularyService';
 import { getNotificationSettings, saveNotificationSettings } from '../notificationService';
 import { restoreStreakState } from '../streakService';
-import { STORAGE_KEYS } from '../storageKeys';
 
 describe('SyncService', () => {
     beforeEach(async () => {

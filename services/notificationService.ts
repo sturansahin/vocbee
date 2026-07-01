@@ -15,7 +15,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Platform } from 'react-native';
 import { VocabularyWord, Level, LEVELS, getStoredVocabulary } from './vocabularyService';
 import { getCurrentLevel, markWordAsLearned, unmarkWord, getLearnedWords } from './progressService';
-import { STORAGE_KEYS } from './storageKeys';
+import { STORAGE_KEYS } from '@shared/storage';
 import { getStreakState, isStreakCompletedToday } from './streakService';
 // Phase 6: pure scheduling slot-count rule now lives in the notifications domain (pure, tested).
 import { getDailyNotificationSlotCount } from '../src/features/notifications';

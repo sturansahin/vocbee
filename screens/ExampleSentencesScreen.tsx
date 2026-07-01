@@ -21,7 +21,7 @@ import { explainGrammar, GrammarResponse } from '../services/groqService';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useTranslation } from 'react-i18next';
 import { getTTSLanguageCode } from '../constants';
-import { STORAGE_KEYS } from '../services/storageKeys';
+import { STORAGE_KEYS } from '@shared/storage';
 
 // =============================================================================
 // RESPONSIVE UTILITIES

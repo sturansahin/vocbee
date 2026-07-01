@@ -4,15 +4,16 @@
 
 import { MonetizationFacade } from '../MonetizationFacade';
 import type { AdMobRepository, RevenueCatRepository } from '../../data/contracts';
+import type { CustomerInfoLike, RevenueCatUserAttributes } from '../../domain/types';
 
 function makeFakeRevenueCatRepository(): jest.Mocked<RevenueCatRepository> {
     return {
-        getCustomerInfo: jest.fn(async () => null),
-        presentPaywall: jest.fn(async () => ({ result: 'NOT_PRESENTED', customerInfo: null })),
-        restore: jest.fn(async () => null),
-        openCustomerCenter: jest.fn(async () => null),
-        onCustomerInfoChanged: jest.fn(() => () => undefined),
-        syncPreferredUILocale: jest.fn(async () => undefined),
+        getCustomerInfo: jest.fn(async (_userId: string, _attributes?: RevenueCatUserAttributes) => null),
+        presentPaywall: jest.fn(async (_userId: string, _attributes?: RevenueCatUserAttributes) => ({ result: 'NOT_PRESENTED' as const, customerInfo: null })),
+        restore: jest.fn(async (_userId: string, _attributes?: RevenueCatUserAttributes) => null),
+        openCustomerCenter: jest.fn(async (_userId: string, _attributes?: RevenueCatUserAttributes) => null),
+        onCustomerInfoChanged: jest.fn((_cb: (info: CustomerInfoLike) => void) => () => undefined),
+        syncPreferredUILocale: jest.fn(async (_language?: string | null) => undefined),
     };
 }
 

@@ -14,7 +14,7 @@ import {
     getDeviceId,
     UserProgress,
     UserData,
-} from '../storage';
+} from '@shared/storage';
 
 // AsyncStorage is automatically mocked by jest.setup.js
 

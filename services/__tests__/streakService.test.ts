@@ -8,7 +8,7 @@ import {
     recordDailyStudyAction,
     restoreStreakState,
 } from '../streakService';
-import { STORAGE_KEYS } from '../storageKeys';
+import { STORAGE_KEYS } from '@shared/storage';
 
 describe('streakService', () => {
     beforeEach(async () => {

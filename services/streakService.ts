@@ -1,6 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { markAsUnsynced } from './storage';
-import { STORAGE_KEYS } from './storageKeys';
+import { markAsUnsynced, STORAGE_KEYS } from '@shared/storage';
 
 const STREAK_KEY = STORAGE_KEYS.STREAK;
 const DAY_IN_MS = 24 * 60 * 60 * 1000;

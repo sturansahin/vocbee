@@ -26,7 +26,7 @@ import { RootStackParamList } from '../types';
 import Svg, { Polygon } from 'react-native-svg';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '../context/ThemeContext';
-import { useMonetization } from '../context/MonetizationContext';
+import { useMonetization } from '@features/monetization';
 import { FONT_FAMILY } from '../utils/typography';
 import { HomeHeader } from '../components/HomeHeader';
 import { AppRatingPrompt } from '../components/AppRatingPrompt';
@@ -65,7 +65,7 @@ import { SafeBannerAd } from '../components/SafeBannerAd';
 import { loadInterstitial, showInterstitial, AD_IDS } from '../services/adMobService';
 import { useTranslation } from 'react-i18next';
 import { getTTSLanguageCode } from '../constants';
-import { STORAGE_KEYS } from '../services/storageKeys';
+import { STORAGE_KEYS } from '@shared/storage';
 import {
     DEFAULT_STREAK_SUMMARY,
     getStreakSummary,

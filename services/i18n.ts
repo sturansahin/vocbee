@@ -3,7 +3,7 @@ import { initReactI18next } from 'react-i18next';
 import { getLocales } from 'expo-localization';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import resources from '../locales';
-import { STORAGE_KEYS } from './storageKeys';
+import { STORAGE_KEYS } from '@shared/storage';
 import { applyRTLLayout } from '../utils/rtl';
 
 const USER_LANGUAGE_KEY = STORAGE_KEYS.USER_LANGUAGE;

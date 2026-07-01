@@ -31,7 +31,8 @@ import {
     clearAllLocalData,
     UserData,
     getDeviceId,
-} from '../services/storage';
+    STORAGE_KEYS,
+} from '@shared/storage';
 import {
     createUserDocument,
     fetchAndSaveUserData,
@@ -55,7 +56,6 @@ import {
     buildStoredProfileFromAuth,
     StoredProfile,
 } from '../services/socialAuthProfile';
-import { STORAGE_KEYS } from '../services/storageKeys';
 // Phase 4: reuse the tested, pure auth domain rules instead of inlining them here
 // (behavior-identical extraction — docs/refactor-v2/24; presentation -> domain).
 import { isRecentLogin, hasCompletedSetup } from '../src/features/auth';

@@ -22,7 +22,7 @@ jest.mock('../../../../context/AuthContext', () => {
   const { View } = require('react-native');
   return { AuthProvider: ({ children }: any) => <View testID="auth">{children}</View> };
 });
-jest.mock('../../../../context/MonetizationContext', () => {
+jest.mock('@features/monetization', () => {
   const { View } = require('react-native');
   return { MonetizationProvider: ({ children }: any) => <View testID="monetization">{children}</View> };
 });

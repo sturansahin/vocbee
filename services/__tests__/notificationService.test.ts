@@ -53,7 +53,7 @@ import {
     scheduleStreakReminderNotification,
     scheduleVocabularyNotifications,
 } from '../notificationService';
-import { STORAGE_KEYS } from '../storageKeys';
+import { STORAGE_KEYS } from '@shared/storage';
 
 describe('notificationService', () => {
     beforeEach(async () => {

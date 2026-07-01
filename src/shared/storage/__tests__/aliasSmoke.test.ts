@@ -25,13 +25,3 @@ describe('Phase 1 — @shared alias + storage-key preservation', () => {
         expect(err.message).toBe('boom');
     });
 });
-
-// Verify the old service paths (now shims) still expose the same keys.
-import { STORAGE_KEYS as SHIM_KEYS } from '../../../../services/storageKeys';
-
-describe('Phase 1 — storage shim parity', () => {
-    it('old services/storageKeys path re-exports identical values', () => {
-        expect(SHIM_KEYS.PROGRESS).toBe(STORAGE_KEYS.PROGRESS);
-        expect(SHIM_KEYS).toEqual(STORAGE_KEYS);
-    });
-});

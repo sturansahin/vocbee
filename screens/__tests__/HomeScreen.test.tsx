@@ -143,7 +143,7 @@ jest.mock('../../context/ThemeContext', () => ({
     }),
 }));
 
-jest.mock('../../context/MonetizationContext', () => ({
+jest.mock('@features/monetization', () => ({
     useMonetization: () => mockUseMonetization(),
 }));
 

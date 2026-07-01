@@ -12,14 +12,14 @@ import {
     UserData,
     saveUserDataLocally,
     getDeviceId,
-} from './storage';
+    STORAGE_KEYS,
+} from '@shared/storage';
 import { getUserProgress, getCurrentLevel, restoreProgressFromFirebase, getLastWordId } from './progressService';
 import { restoreFavoritesFromFirebase, syncFavoritesToFirebaseForUser } from './favoritesService';
 import { getLanguagePair, isVocabularyGenerated, generateVocabulary, getUserLevelFromCefrLevel, isUserLevel } from './vocabularyService';
 import { getNotificationSettings, saveNotificationSettings, NotificationSettings } from './notificationService';
 import { getStreakState, restoreStreakState, StreakState } from './streakService';
 import { buildStoredProfileFromFirestore } from './socialAuthProfile';
-import { STORAGE_KEYS } from './storageKeys';
 
 // ─── Retry Helper with Exponential Backoff ───────────────────────────────────
 const MAX_RETRIES = 3;

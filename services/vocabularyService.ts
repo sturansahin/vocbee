@@ -9,7 +9,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Asset } from 'expo-asset';
 // @ts-ignore - expo-file-system/legacy is valid in SDK 54 but typescript might not know it yet
 import * as FileSystem from 'expo-file-system/legacy';
-import { STORAGE_KEYS } from './storageKeys';
+import { STORAGE_KEYS } from '@shared/storage';
 
 // Vocabulary assets organized by language.
 // NOTE: Vocabulary files are stored as text assets (JSON content) to avoid Metro bundling/parsing

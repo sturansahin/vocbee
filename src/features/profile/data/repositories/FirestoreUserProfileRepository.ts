@@ -10,7 +10,7 @@
 import { doc, getDoc, setDoc, deleteDoc } from 'firebase/firestore';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { db } from '../../../../../config/firebase';
-import { STORAGE_KEYS } from '../../../../../services/storageKeys';
+import { STORAGE_KEYS } from '@shared/storage';
 import { createUserDocument as syncCreateUserDocument } from '../../../../../services/SyncService';
 import type { Profile } from '../../domain/types';
 import type { UserProfileRepository } from '../contracts';

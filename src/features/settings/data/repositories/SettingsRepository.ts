@@ -8,7 +8,7 @@
 //    setDoc) — kept local-only here so this file has NO Firestore dependency.
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { STORAGE_KEYS } from '../../../../../services/storageKeys';
+import { STORAGE_KEYS } from '@shared/storage';
 import type { UserPreferences } from '../../../setup/domain/types';
 import type { SettingsRepository } from '../contracts';
 

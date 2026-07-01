@@ -11,15 +11,14 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useTheme } from '../context/ThemeContext';
 import { useAuth } from '../context/AuthContext';
-import { useMonetization } from '../context/MonetizationContext';
+import { useMonetization } from '@features/monetization';
 import { FONT_FAMILY } from '../utils/typography';
 import { RootStackParamList } from '../types';
 import { resetProgress, setCurrentLevel, getCurrentLevel } from '../services/progressService';
 import { getFirstLevelForUserLevel, getUserLevelFromCefrLevel, isUserLevel, UserLevel } from '../services/vocabularyService';
 import { forceSync } from '../services/SyncService';
 import { clearFavoritesOnFirebase } from '../services/favoritesService';
-import { clearAllLocalData } from '../services/storage';
-import { STORAGE_KEYS } from '../services/storageKeys';
+import { clearAllLocalData, STORAGE_KEYS } from '@shared/storage';
 import { useAlert } from '../components/CustomAlert';
 import * as ImagePicker from 'expo-image-picker';
 import {

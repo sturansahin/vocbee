@@ -9,7 +9,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { ThemeProvider } from '../../../context/ThemeContext';
 import { AuthProvider } from '../../../context/AuthContext';
-import { MonetizationProvider } from '../../../context/MonetizationContext';
+import { MonetizationProvider } from '@features/monetization';
 import { AlertProvider } from '../../../components/CustomAlert';
 import { ErrorBoundary } from '../../../components/ErrorBoundary';
 import { OfflineNotice } from '../../../components/OfflineNotice';

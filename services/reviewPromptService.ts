@@ -3,7 +3,7 @@ import Constants from 'expo-constants';
 import * as StoreReview from 'expo-store-review';
 import { Linking, Platform } from 'react-native';
 import appConfig from '../app.json';
-import { STORAGE_KEYS } from './storageKeys';
+import { STORAGE_KEYS } from '@shared/storage';
 
 const IOS_APP_STORE_ID = '6760262917';
 const ANDROID_PACKAGE_NAME = 'com.vocbee.app';

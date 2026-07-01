@@ -60,6 +60,8 @@ Repoda zaten olgun bir `docs/refactor/` (v1, 21 doküman) seti var. v2:
 | 37 | `37-testing-code-templates.md` |
 | 38 | `38-ci-eslint-alias-config-spec.md` |
 | 39 | `39-phase-pr-breakdown.md` |
+| 40 | `40-phase-9e-ci-lint-docs-audit.md` *(Phase 9E audit — CI trigger fix + ESLint/secret-scan plan)* |
+| + | `phase-9-firestore-cleanup-plan.md` (Phase 9E — Firestore legacy field cleanup plan, uygulanmadı) |
 | + | `existing-docs-alignment.md` (v1 uyum analizi) |
 
 ## Implementation-spec katmanı (`32`–`39`)
