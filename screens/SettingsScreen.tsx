@@ -1,13 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, Image, StyleSheet, Modal, Animated, TextInput, Dimensions, Pressable, Linking, ActivityIndicator } from 'react-native';
+import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, Image, StyleSheet, Modal, Animated, TextInput, Dimensions, Pressable, Linking } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
 import Constants from 'expo-constants';
 import { COLORS, LANGUAGES, LEVELS } from '../constants';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
-import Feather from '@expo/vector-icons/Feather';
-import Ionicons from '@expo/vector-icons/Ionicons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useTheme } from '../context/ThemeContext';
 import { useAuth } from '../context/AuthContext';
@@ -47,6 +45,17 @@ import {
    PROFILE_AVATARS,
    ProfileAvatarOption,
 } from '../utils/profileAvatar';
+// Phase 7 (ADIM 3, docs/refactor-v2/27): pure UI section components extracted from this screen.
+// SettingsScreen still owns all state/handlers/modals/business logic; sections only render.
+import {
+   ProfileSettingsSection,
+   PremiumSettingsSection,
+   LanguageSettingsSection,
+   LanguageProgressRows,
+   NotificationSettingsSection,
+   ProgressDangerRows,
+   LogoutButton,
+} from '../src/features/settings/presentation/sections';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Responsive Utilities
@@ -471,6 +480,120 @@ export default function SettingsScreen() {
       });
    };
 
+   // Extracted verbatim from the inline onPress handlers so DangerZoneSection/LanguageSettingsSection
+   // can receive them as typed props (ADIM 3, UI-only section extraction — logic unchanged).
+   const handleChangeLanguagePress = () => {
+      showAlert({
+         title: t('settings.changeLangConfirmTitle'),
+         message: t('settings.changeLangConfirmDesc'),
+         buttons: [
+            { text: t('common.cancel'), style: 'cancel' },
+            {
+               text: t('common.continue'),
+               style: 'destructive',
+               onPress: async () => {
+                  // FIRST: Clear favorites on Firebase while we have user ID
+                  if (user?.uid) {
+                     await clearFavoritesOnFirebase(user.uid);
+                  }
+                  // Cancel all scheduled notifications (old language words)
+                  await cancelAllNotifications();
+                  // Clear userData cache so AuthContext fetches fresh data after setup
+                  await clearAllLocalData({ preserveStreak: true });
+                  await resetProgress();
+                  await forceSync(user?.uid || '');
+                  navigation.reset({
+                     index: 0,
+                     routes: [{ name: 'NativeLanguage' }],
+                  });
+               }
+            }
+         ]
+      });
+   };
+
+   const handleResetProgressPress = () => {
+      showAlert({
+         title: t('settings.resetConfirmTitle'),
+         message: t('settings.resetConfirmDesc'),
+         buttons: [
+            { text: t('common.cancel'), style: 'cancel' },
+            {
+               text: t('settings.reset'),
+               style: 'destructive',
+               onPress: async () => {
+                  // FIRST: Clear favorites on Firebase
+                  if (user?.uid) {
+                     await clearFavoritesOnFirebase(user.uid);
+                  }
+                  await resetProgress();
+                  // Cancel stale notifications and reschedule with reset vocabulary
+                  await cancelAllNotifications();
+                  scheduleVocabularyNotifications().catch(console.error);
+                  // Sync empty progress to Firebase
+                  await forceSync(user?.uid || '');
+                  showAlert({ title: t('common.success'), message: t('settings.resetProgressSuccess') });
+               }
+            }
+         ]
+      });
+   };
+
+   const handleDeleteAccountPress = () => {
+      showAlert({
+         title: t('settings.deleteAccountConfirmTitle'),
+         message: isAdFree
+            ? `${t('settings.deleteAccountConfirmDesc')}\n\n${t('settings.deleteAccountSubscriptionNote')}`
+            : t('settings.deleteAccountConfirmDesc'),
+         buttons: [
+            { text: t('common.cancel'), style: 'cancel' },
+            {
+               text: t('settings.deleteAccount'),
+               style: 'destructive',
+               onPress: async () => {
+                  try {
+                     await deleteAccount();
+                     // Navigate to login screen after successful deletion
+                     navigation.reset({
+                        index: 0,
+                        routes: [{ name: 'Login' }],
+                     });
+                  } catch (error) {
+                     console.error('Delete account error:', error);
+                     showAlert({
+                        title: t('common.error'),
+                        message: t('settings.deleteAccountError')
+                     });
+                  }
+               }
+            }
+         ]
+      });
+   };
+
+   const handleLogoutPress = () => {
+      showAlert({
+         title: t('settings.logoutConfirmTitle'),
+         message: t('settings.logoutConfirmDesc'),
+         buttons: [
+            { text: t('common.cancel'), style: 'cancel' },
+            {
+               text: t('settings.logout'), style: 'destructive', onPress: async () => {
+                  try {
+                     await signOut();
+                     navigation.reset({
+                        index: 0,
+                        routes: [{ name: 'Login' }],
+                     });
+                  } catch (error) {
+                     console.error('Logout error:', error);
+                  }
+               }
+            }
+         ]
+      });
+   };
+
    // Dynamic styles based on theme
    const dynamicStyles = {
       container: { backgroundColor: colors.background },
@@ -501,390 +624,112 @@ export default function SettingsScreen() {
 
          <ScrollView style={styles.scrollView} contentContainerStyle={styles.scrollContent}>
             {/* Profile */}
-            <View style={[styles.profileSection, { paddingTop: 24 }]}>
-               <TouchableOpacity style={styles.avatarContainer} onPress={() => setShowImagePickerModal(true)}>
-                  <Image
-                     source={profileImageSource}
-                     style={[styles.avatar, { borderColor: profile.image ? colors.surface : colors.border }]}
-                  />
-                  <View style={[styles.editBadge, { backgroundColor: colors.primary, borderColor: colors.background }]}>
-                     <MaterialIcons name="camera-alt" size={16} color={isDarkMode ? '#000' : '#fff'} />
-                  </View>
-               </TouchableOpacity>
-               <Text style={[styles.profileName, dynamicStyles.text]}>{profile.name || t('settings.defaultUsername')}</Text>
-               <Text style={[styles.profileEmail, dynamicStyles.textSecondary]}>{profile.email}</Text>
-
-               <TouchableOpacity
-                  style={[styles.editButton, { borderColor: colors.border, backgroundColor: colors.surface }]}
-                  onPress={openEditProfileModal}
-               >
-                  <Text style={[styles.editButtonText, { color: colors.text }]}>{t('settings.editProfile')}</Text>
-               </TouchableOpacity>
-            </View>
+            <ProfileSettingsSection
+               profileName={profile.name}
+               profileEmail={profile.email}
+               profileImageSource={profileImageSource}
+               hasCustomImage={!!profile.image}
+               isDarkMode={isDarkMode}
+               colors={colors}
+               defaultUsernameLabel={t('settings.defaultUsername')}
+               editProfileLabel={t('settings.editProfile')}
+               onPressAvatar={() => setShowImagePickerModal(true)}
+               onPressEditProfile={openEditProfileModal}
+            />
 
             {/* Section: Premium */}
-            <Text style={[styles.sectionTitle, dynamicStyles.textSecondary]}>{t('settings.premium')}</Text>
-            <View style={[styles.sectionCard, dynamicStyles.sectionCard]}>
-               <TouchableOpacity
-                  style={styles.settingItem}
-                  onPress={handleRemoveAdsPress}
-                  disabled={isAdFree || isPremiumLoading || premiumAction !== null}
-               >
-                  <View style={[styles.settingLeft, styles.settingLeftFlexible]}>
-                     <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
-                        <MaterialCommunityIcons
-                           name={isAdFree ? 'crown' : 'crown-outline'}
-                           size={24}
-                           color={colors.primary}
-                        />
-                     </View>
-                     <View style={styles.settingTextContent}>
-                        <Text style={[styles.settingTitle, dynamicStyles.text]}>
-                           {isAdFree ? t('settings.adFreeActive') : t('settings.removeAds')}
-                        </Text>
-                        <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]} numberOfLines={2}>
-                           {isAdFree ? formatAdFreeExpiration() : t('settings.removeAdsDesc')}
-                        </Text>
-                     </View>
-                  </View>
-                  {premiumAction === 'paywall' || isPremiumLoading ? (
-                     <ActivityIndicator size="small" color={colors.primary} />
-                  ) : isAdFree ? (
-                     <MaterialIcons name="check-circle" size={24} color={colors.primary} />
-                  ) : (
-                     <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
-                  )}
-               </TouchableOpacity>
+            <PremiumSettingsSection
+               isAdFree={isAdFree}
+               isPremiumLoading={isPremiumLoading}
+               premiumAction={premiumAction}
+               adFreeStatusText={formatAdFreeExpiration()}
+               colors={colors}
+               isDarkMode={isDarkMode}
+               sectionTitle={t('settings.premium')}
+               removeAdsActiveLabel={t('settings.adFreeActive')}
+               removeAdsLabel={t('settings.removeAds')}
+               removeAdsDescription={t('settings.removeAdsDesc')}
+               restorePurchasesLabel={t('settings.restorePurchases')}
+               restorePurchasesDescription={t('settings.restorePurchasesDesc')}
+               manageSubscriptionLabel={t('settings.manageSubscription')}
+               manageSubscriptionDescription={t('settings.manageSubscriptionDesc')}
+               onPressRemoveAds={handleRemoveAdsPress}
+               onPressRestorePurchases={handleRestorePurchasesPress}
+               onPressManageSubscription={handleManageSubscriptionPress}
+            />
 
-               <TouchableOpacity
-                  style={[styles.settingItem, !isAdFree && { borderBottomWidth: 0 }]}
-                  onPress={handleRestorePurchasesPress}
-                  disabled={isPremiumLoading || premiumAction !== null}
-               >
-                  <View style={[styles.settingLeft, styles.settingLeftFlexible]}>
-                     <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
-                        <MaterialIcons name="restore" size={24} color={colors.primary} />
-                     </View>
-                     <View style={styles.settingTextContent}>
-                        <Text style={[styles.settingTitle, dynamicStyles.text]}>{t('settings.restorePurchases')}</Text>
-                        <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]} numberOfLines={2}>
-                           {t('settings.restorePurchasesDesc')}
-                        </Text>
-                     </View>
-                  </View>
-                  {premiumAction === 'restore' ? (
-                     <ActivityIndicator size="small" color={colors.primary} />
-                  ) : (
-                     <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
-                  )}
-               </TouchableOpacity>
+            {/* Section: Preferences (Language row) */}
+            <LanguageSettingsSection
+               colors={colors}
+               isDarkMode={isDarkMode}
+               preferencesSectionTitle={t('settings.preferences')}
+               languageRowLabel={t('settings.language')}
+               isSystemLanguage={isSystemLanguage}
+               systemDefaultLabel={t('settings.systemDefault')}
+               selectedLanguageFlagIcon={LANGUAGES.find(l => l.code === selectedLanguage)?.flagIcon}
+               selectedLanguageName={LANGUAGES.find(l => l.code === selectedLanguage)?.name}
+               onPressLanguageRow={() => setShowLanguagePicker(true)}
+            />
 
-               {isAdFree && (
-                  <TouchableOpacity
-                     style={[styles.settingItem, { borderBottomWidth: 0 }]}
-                     onPress={handleManageSubscriptionPress}
-                     disabled={isPremiumLoading || premiumAction !== null}
-                  >
-                     <View style={[styles.settingLeft, styles.settingLeftFlexible]}>
-                        <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
-                           <MaterialCommunityIcons name="credit-card-outline" size={24} color={colors.primary} />
-                        </View>
-                        <View style={styles.settingTextContent}>
-                           <Text style={[styles.settingTitle, dynamicStyles.text]}>{t('settings.manageSubscription')}</Text>
-                           <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]} numberOfLines={2}>
-                              {t('settings.manageSubscriptionDesc')}
-                           </Text>
-                        </View>
-                     </View>
-                     {premiumAction === 'manage' ? (
-                        <ActivityIndicator size="small" color={colors.primary} />
-                     ) : (
-                        <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
-                     )}
-                  </TouchableOpacity>
-               )}
-            </View>
+            {/* Section: Preferences (Notification action row) + Daily Reminder card */}
+            <NotificationSettingsSection
+               colors={colors}
+               isDarkMode={isDarkMode}
+               preferencesSectionTitle={t('settings.preferences')}
+               dailyReminderSectionTitle={t('settings.dailyReminder')}
+               notificationActionLabel={t('settings.notificationAction')}
+               autoMarkLearned={autoMarkLearned}
+               markAsLearnedLabel={t('settings.markasLearned')}
+               doNotMarkLabel={t('settings.doNotMark')}
+               onPressAutoMarkRow={() => setShowAutoMarkPicker(true)}
+               enableRemindersLabel={t('settings.enableReminders')}
+               reminderEnabled={reminderEnabled}
+               renderSwitch={() => <AnimatedSwitch value={reminderEnabled} onToggle={handleReminderToggle} />}
+               startTimeLabel={t('settings.startTime')}
+               startHour={startHour}
+               startMinute={startMinute}
+               onPressStartTime={() => {
+                  setTempHour(startHour);
+                  setTempMinute(startMinute);
+                  setShowTimePicker('start');
+               }}
+               endTimeLabel={t('settings.endTime')}
+               endHour={endHour}
+               endMinute={endMinute}
+               onPressEndTime={() => {
+                  setTempHour(endHour);
+                  setTempMinute(endMinute);
+                  setShowTimePicker('end');
+               }}
+               frequencyLabel={t('settings.frequency')}
+               frequencyValueLabel={t(`settings.${frequency}`)}
+               onPressFrequency={() => setShowFrequencyPicker(true)}
+            />
 
-            {/* Section: Preferences */}
-            <Text style={[styles.sectionTitle, dynamicStyles.textSecondary]}>{t('settings.preferences')}</Text>
-            <View style={[styles.sectionCard, dynamicStyles.sectionCard]}>
-
-               <TouchableOpacity
-                  style={styles.settingItem}
-                  onPress={() => setShowLanguagePicker(true)}
-               >
-                  <View style={styles.settingLeft}>
-                     <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
-                        <Ionicons name="language" size={24} color={colors.primary} />
-                     </View>
-                     <View>
-                        <Text style={[styles.settingTitle, dynamicStyles.text]}>{t('settings.language')}</Text>
-                        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
-                           {isSystemLanguage ? (
-                              <>
-                                 <MaterialIcons name="phone-iphone" size={12} color={colors.textSecondary} />
-                                 <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>
-                                    {t('settings.systemDefault')}
-                                 </Text>
-                              </>
-                           ) : (
-                              <>
-                                 <Image
-                                    source={LANGUAGES.find(l => l.code === selectedLanguage)?.flagIcon}
-                                    style={{ width: 12, height: 12, borderRadius: 2 }}
-                                    resizeMode="contain"
-                                 />
-                                 <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>
-                                    {LANGUAGES.find(l => l.code === selectedLanguage)?.name}
-                                 </Text>
-                              </>
-                           )}
-                        </View>
-                     </View>
-                  </View>
-                  <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
-               </TouchableOpacity>
-               <TouchableOpacity
-                  style={styles.settingItem}
-                  onPress={() => setShowAutoMarkPicker(true)}
-               >
-                  <View style={styles.settingLeft}>
-                     <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
-                        <MaterialCommunityIcons name="check-circle-outline" size={24} color={colors.primary} />
-                     </View>
-                     <View>
-                        <Text style={[styles.settingTitle, dynamicStyles.text]}>{t('settings.notificationAction')}</Text>
-                        <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>
-                           {autoMarkLearned ? t('settings.markasLearned') : t('settings.doNotMark')}
-                        </Text>
-                     </View>
-                  </View>
-                  <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
-               </TouchableOpacity>
-            </View>
-
-            <Text style={[styles.sectionTitle, dynamicStyles.textSecondary]}>{t('settings.dailyReminder')}</Text>
-            <View style={[styles.sectionCard, dynamicStyles.sectionCard]}>
-               <View style={styles.settingItem}>
-                  <View style={styles.settingLeft}>
-                     <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
-                        <MaterialCommunityIcons name="bell-outline" size={24} color={colors.primary} />
-                     </View>
-                     <Text style={[styles.settingTitle, dynamicStyles.text]}>{t('settings.enableReminders')}</Text>
-                  </View>
-                  <AnimatedSwitch value={reminderEnabled} onToggle={handleReminderToggle} />
-               </View>
-
-               {reminderEnabled && (
-                  <>
-                     {/* Time Range */}
-                     <TouchableOpacity
-                        style={styles.settingItem}
-                        onPress={() => {
-                           setTempHour(startHour);
-                           setTempMinute(startMinute);
-                           setShowTimePicker('start');
-                        }}
-                     >
-                        <View style={styles.settingLeft}>
-                           <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
-                              <MaterialIcons name="schedule" size={20} color={colors.primary} />
-                           </View>
-                           <View>
-                              <Text style={[styles.settingTitle, dynamicStyles.text]}>{t('settings.startTime')}</Text>
-                              <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>{startHour}:{startMinute}</Text>
-                           </View>
-                        </View>
-                        <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
-                     </TouchableOpacity>
-
-                     <TouchableOpacity
-                        style={styles.settingItem}
-                        onPress={() => {
-                           setTempHour(endHour);
-                           setTempMinute(endMinute);
-                           setShowTimePicker('end');
-                        }}
-                     >
-                        <View style={styles.settingLeft}>
-                           <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
-                              <MaterialIcons name="schedule" size={20} color={colors.primary} />
-                           </View>
-                           <View>
-                              <Text style={[styles.settingTitle, dynamicStyles.text]}>{t('settings.endTime')}</Text>
-                              <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>{endHour}:{endMinute}</Text>
-                           </View>
-                        </View>
-                        <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
-                     </TouchableOpacity>
-
-                     {/* Frequency */}
-                     <TouchableOpacity
-                        style={[styles.settingItem, { borderBottomWidth: 0 }]}
-                        onPress={() => setShowFrequencyPicker(true)}
-                     >
-                        <View style={styles.settingLeft}>
-                           <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
-                              <Feather name="repeat" size={18} color={colors.primary} />
-                           </View>
-                           <View>
-                              <Text style={[styles.settingTitle, dynamicStyles.text]}>{t('settings.frequency')}</Text>
-                              <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>{t(`settings.${frequency}`)}</Text>
-                           </View>
-                        </View>
-                        <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
-                     </TouchableOpacity>
-                  </>
-               )}
-            </View>
-
-            {/* Section: Progress */}
+            {/* Section: Progress (Change Level / Change Language rows) */}
             <Text style={[styles.sectionTitle, dynamicStyles.textSecondary]}>{t('settings.progress')}</Text>
             <View style={[styles.sectionCard, dynamicStyles.sectionCard]}>
-               <TouchableOpacity
-                  style={styles.settingItem}
-                  onPress={() => setShowLevelPicker(true)}
-               >
-                  <View style={styles.settingLeft}>
-                     <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
-                        <MaterialCommunityIcons name="trophy-outline" size={24} color={colors.primary} />
-                     </View>
-                     <View>
-                        <Text style={[styles.settingTitle, dynamicStyles.text]}>{t('settings.changeLevel')}</Text>
-                        <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>
-                           {t(`level.${currentLevel}`)} ({LEVELS.find(l => l.id === currentLevel)?.range})
-                        </Text>
-                     </View>
-                  </View>
-                  <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
-               </TouchableOpacity>
-               <TouchableOpacity
-                  style={styles.settingItem}
-                  onPress={() => {
-                     showAlert({
-                        title: t('settings.changeLangConfirmTitle'),
-                        message: t('settings.changeLangConfirmDesc'),
-                        buttons: [
-                           { text: t('common.cancel'), style: 'cancel' },
-                           {
-                              text: t('common.continue'),
-                              style: 'destructive',
-                              onPress: async () => {
-                                 // FIRST: Clear favorites on Firebase while we have user ID
-                                 if (user?.uid) {
-                                    await clearFavoritesOnFirebase(user.uid);
-                                 }
-                                 // Cancel all scheduled notifications (old language words)
-                                 await cancelAllNotifications();
-                                 // Clear userData cache so AuthContext fetches fresh data after setup
-                                 await clearAllLocalData({ preserveStreak: true });
-                                 await resetProgress();
-                                 await forceSync(user?.uid || '');
-                                 navigation.reset({
-                                    index: 0,
-                                    routes: [{ name: 'NativeLanguage' }],
-                                 });
-                              }
-                           }
-                        ]
-                     });
-                  }}
-               >
-                  <View style={styles.settingLeft}>
-                     <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
-                        <MaterialCommunityIcons name="translate" size={24} color={colors.primary} />
-                     </View>
-                     <View>
-                        <Text style={[styles.settingTitle, dynamicStyles.text]}>{t('settings.changeLanguage')}</Text>
-                        <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>{t('settings.changeLanguageDesc')}</Text>
-                     </View>
-                  </View>
-                  <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
-               </TouchableOpacity>
-               <TouchableOpacity
-                  style={[styles.settingItem, { borderBottomWidth: 0 }]}
-                  onPress={() => {
-                     showAlert({
-                        title: t('settings.resetConfirmTitle'),
-                        message: t('settings.resetConfirmDesc'),
-                        buttons: [
-                           { text: t('common.cancel'), style: 'cancel' },
-                           {
-                              text: t('settings.reset'),
-                              style: 'destructive',
-                              onPress: async () => {
-                                 // FIRST: Clear favorites on Firebase
-                                 if (user?.uid) {
-                                    await clearFavoritesOnFirebase(user.uid);
-                                 }
-                                 await resetProgress();
-                                 // Cancel stale notifications and reschedule with reset vocabulary
-                                 await cancelAllNotifications();
-                                 scheduleVocabularyNotifications().catch(console.error);
-                                 // Sync empty progress to Firebase
-                                 await forceSync(user?.uid || '');
-                                 showAlert({ title: t('common.success'), message: t('settings.resetProgressSuccess') });
-                              }
-                           }
-                        ]
-                     });
-                  }}
-               >
-                  <View style={styles.settingLeft}>
-                     <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
-                        <MaterialIcons name="refresh" size={24} color={colors.error} />
-                     </View>
-                     <View>
-                        <Text style={[styles.settingTitle, { color: colors.error }]}>{t('settings.resetProgress')}</Text>
-                        <Text style={[styles.settingSubtitle, dynamicStyles.textSecondary]}>{t('settings.resetProgressDesc')}</Text>
-                     </View>
-                  </View>
-                  <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
-               </TouchableOpacity>
-               <TouchableOpacity
-                  style={[styles.settingItem, { borderBottomWidth: 0 }]}
-                  onPress={() => {
-                     showAlert({
-                        title: t('settings.deleteAccountConfirmTitle'),
-                        message: isAdFree
-                           ? `${t('settings.deleteAccountConfirmDesc')}\n\n${t('settings.deleteAccountSubscriptionNote')}`
-                           : t('settings.deleteAccountConfirmDesc'),
-                        buttons: [
-                           { text: t('common.cancel'), style: 'cancel' },
-                           {
-                              text: t('settings.deleteAccount'),
-                              style: 'destructive',
-                              onPress: async () => {
-                                 try {
-                                    await deleteAccount();
-                                    // Navigate to login screen after successful deletion
-                                    navigation.reset({
-                                       index: 0,
-                                       routes: [{ name: 'Login' }],
-                                    });
-                                 } catch (error) {
-                                    console.error('Delete account error:', error);
-                                    showAlert({
-                                       title: t('common.error'),
-                                       message: t('settings.deleteAccountError')
-                                    });
-                                 }
-                              }
-                           }
-                        ]
-                     });
-                  }}
-               >
-                  <View style={styles.settingLeft}>
-                     <View style={[styles.settingIcon, dynamicStyles.settingIcon]}>
-                        <MaterialIcons name="delete-outline" size={24} color={colors.error} />
-                     </View>
-                     <View>
-                        <Text style={[styles.settingTitle, { color: colors.error }]}>{t('settings.deleteAccount')}</Text>
-                     </View>
-                  </View>
-                  <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
-               </TouchableOpacity>
+               <LanguageProgressRows
+                  colors={colors}
+                  isDarkMode={isDarkMode}
+                  changeLevelLabel={t('settings.changeLevel')}
+                  currentLevelLabel={t(`level.${currentLevel}`)}
+                  currentLevelRange={LEVELS.find(l => l.id === currentLevel)?.range}
+                  onPressChangeLevel={() => setShowLevelPicker(true)}
+                  changeLanguageLabel={t('settings.changeLanguage')}
+                  changeLanguageDescription={t('settings.changeLanguageDesc')}
+                  onPressChangeLanguage={handleChangeLanguagePress}
+               />
+               {/* Section: Progress (destructive rows — Reset Progress / Delete Account) */}
+               <ProgressDangerRows
+                  colors={colors}
+                  isDarkMode={isDarkMode}
+                  resetProgressLabel={t('settings.resetProgress')}
+                  resetProgressDescription={t('settings.resetProgressDesc')}
+                  onPressResetProgress={handleResetProgressPress}
+                  deleteAccountLabel={t('settings.deleteAccount')}
+                  onPressDeleteAccount={handleDeleteAccountPress}
+               />
             </View>
 
             {/* Section: Support */}
@@ -924,34 +769,11 @@ export default function SettingsScreen() {
 
 
             {/* Log Out Button */}
-            <TouchableOpacity
-               style={styles.logoutButton}
-               onPress={() => {
-                  showAlert({
-                     title: t('settings.logoutConfirmTitle'),
-                     message: t('settings.logoutConfirmDesc'),
-                     buttons: [
-                        { text: t('common.cancel'), style: 'cancel' },
-                        {
-                           text: t('settings.logout'), style: 'destructive', onPress: async () => {
-                              try {
-                                 await signOut();
-                                 navigation.reset({
-                                    index: 0,
-                                    routes: [{ name: 'Login' }],
-                                 });
-                              } catch (error) {
-                                 console.error('Logout error:', error);
-                              }
-                           }
-                        }
-                     ]
-                  });
-               }}
-            >
-               <MaterialIcons name="logout" size={20} color={colors.error} />
-               <Text style={[styles.logoutButtonText, { color: colors.error }]}>{t('settings.logout')}</Text>
-            </TouchableOpacity>
+            <LogoutButton
+               colors={colors}
+               logoutLabel={t('settings.logout')}
+               onPressLogout={handleLogoutPress}
+            />
 
             <Text style={[styles.versionText, dynamicStyles.textSecondary, { marginTop: 12, marginBottom: 0 }]}>VocBee v{APP_VERSION}</Text>
          </ScrollView>
