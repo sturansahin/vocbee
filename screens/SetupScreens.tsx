@@ -2,12 +2,10 @@ import React, { useState, useRef, useEffect } from 'react';
 import {
   View,
   Text,
-  ScrollView,
   TouchableOpacity,
   StyleSheet,
   Animated,
   Dimensions,
-  Image,
   Linking,
   Easing,
 } from 'react-native';
@@ -19,7 +17,6 @@ import { doc, setDoc, serverTimestamp } from 'firebase/firestore';
 import { db, auth } from '../config/firebase';
 import { RootStackParamList } from '../types';
 import { Button } from '../components/UIComponents';
-import { MaterialIcons, MaterialCommunityIcons, Feather } from '@expo/vector-icons';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import { LANGUAGES, LEVELS, COLORS } from '../constants';
 import { useTheme } from '../context/ThemeContext';
@@ -44,6 +41,15 @@ import LottieView from 'lottie-react-native';
 import { createSwarmAnimation } from '../assets/animations/swarmAnimation';
 import * as Notifications from 'expo-notifications';
 import { useTranslation } from 'react-i18next';
+import {
+  NativeLanguageStep,
+  TargetLanguageStep,
+  LevelStep,
+  NotificationPermissionStep,
+  NotificationScheduleStartStep,
+  NotificationScheduleEndStep,
+  SetupCompleteStep,
+} from '../src/features/setup/presentation/steps';
 
 type SetupNavProp = StackNavigationProp<RootStackParamList>;
 type SetupRouteProp = RouteProp<RootStackParamList, 'NativeLanguage'>;
@@ -478,337 +484,116 @@ export const SetupScreen = () => {
 
   // Render functions for each step
   const renderStep1Content = () => (
-    <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
-      <View style={styles.languageList}>
-        {LANGUAGES.map((lang) => (
-          <TouchableOpacity
-            key={lang.id}
-            onPress={() => setNativeLanguage(lang.id)}
-            style={[
-              styles.languageItem,
-              { backgroundColor: colors.surface, borderColor: colors.border },
-              nativeLanguage === lang.id && [styles.languageItemSelected, { borderColor: colors.primary }]
-            ]}
-          >
-            <Image
-              source={lang.flagIcon}
-              style={{ width: 32, height: 32, borderRadius: 4 }}
-              resizeMode="contain"
-            />
-            <View style={styles.languageInfo}>
-              <Text style={[styles.languageName, { color: colors.text }]}>{lang.name}</Text>
-              <Text style={[styles.languageNative, { color: colors.textSecondary }]}>{lang.nativeName}</Text>
-            </View>
-            {nativeLanguage === lang.id && (
-              <View style={[styles.checkCircle, { backgroundColor: colors.primary }]}>
-                <MaterialIcons name="check" size={16} color={colors.background} />
-              </View>
-            )}
-          </TouchableOpacity>
-        ))}
-      </View>
-    </ScrollView>
+    <NativeLanguageStep
+      languages={LANGUAGES}
+      selectedLanguage={nativeLanguage}
+      colors={colors}
+      onSelectLanguage={setNativeLanguage}
+    />
   );
 
   const renderStep2Content = () => (
-    <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
-      <View style={styles.languageList}>
-        {LANGUAGES.filter(l => l.id !== nativeLanguage).map((lang) => (
-          <TouchableOpacity
-            key={lang.id}
-            onPress={() => setTargetLanguage(lang.id)}
-            style={[
-              styles.languageItem,
-              { backgroundColor: colors.surface, borderColor: colors.border },
-              targetLanguage === lang.id && [styles.languageItemSelected, { borderColor: colors.primary }]
-            ]}
-          >
-            <Image
-              source={lang.flagIcon}
-              style={{ width: 32, height: 32, borderRadius: 4 }}
-              resizeMode="contain"
-            />
-            <View style={styles.languageInfo}>
-              <Text style={[styles.languageName, { color: colors.text }]}>{lang.name}</Text>
-              <Text style={[styles.languageNative, { color: colors.textSecondary }]}>{lang.nativeName}</Text>
-            </View>
-            {targetLanguage === lang.id && (
-              <View style={[styles.checkCircle, { backgroundColor: colors.primary }]}>
-                <MaterialIcons name="check" size={16} color={colors.background} />
-              </View>
-            )}
-          </TouchableOpacity>
-        ))}
-      </View>
-    </ScrollView>
+    <TargetLanguageStep
+      languages={LANGUAGES}
+      nativeLanguage={nativeLanguage}
+      selectedLanguage={targetLanguage}
+      colors={colors}
+      onSelectLanguage={setTargetLanguage}
+    />
   );
 
   const renderStep3Content = () => (
-    <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
-      <View style={styles.levelList}>
-        {LEVELS.map((lvl) => (
-          <TouchableOpacity
-            key={lvl.id}
-            onPress={() => setLevel(lvl.id)}
-            style={[
-              styles.levelItem,
-              { backgroundColor: colors.surface, borderColor: colors.border },
-              level === lvl.id && [styles.levelItemSelected, { borderColor: colors.primary }]
-            ]}
-          >
-            <View style={styles.levelRow}>
-              <View style={[
-                styles.levelRadio,
-                { borderColor: colors.border },
-                level === lvl.id && [styles.levelRadioSelected, { borderColor: colors.primary }]
-              ]}>
-                {level === lvl.id && <View style={[styles.levelRadioInner, { backgroundColor: colors.primary }]} />}
-              </View>
-              <View style={styles.levelContent}>
-                <View style={styles.levelHeader}>
-                  <Text style={[styles.levelTitle, { color: colors.text }]}>{t(`level.${lvl.id}`)}</Text>
-                  <View style={[styles.levelBadge, { backgroundColor: `${colors.primary}33` }]}>
-                    <Text style={[styles.levelRange, { color: colors.primary }]}>{lvl.range}</Text>
-                  </View>
-                </View>
-                <Text style={[styles.levelDesc, { color: colors.textSecondary }]}>{t(`level.${lvl.id}Desc`)}</Text>
-              </View>
-            </View>
-          </TouchableOpacity>
-        ))}
-      </View>
-
-      <TouchableOpacity
-        style={styles.testLink}
-        onPress={() => navigation.navigate('LevelTest', { nativeLanguage, targetLanguage })}
-      >
-        <MaterialIcons name="quiz" size={20} color={colors.textSecondary} />
-        <Text style={[styles.testLinkText, { color: colors.textSecondary }]}>{t('setup.takeTest')}</Text>
-      </TouchableOpacity>
-    </ScrollView>
+    <LevelStep
+      levels={LEVELS}
+      selectedLevel={level}
+      colors={colors}
+      onSelectLevel={setLevel}
+      onPressTakeTest={() => navigation.navigate('LevelTest', { nativeLanguage, targetLanguage })}
+    />
   );
 
   const renderStep4Content = () => (
-    <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
-      <View style={styles.notificationContent}>
-        <View style={[styles.featureRow, { marginBottom: 16 }]}>
-          <MaterialCommunityIcons name="bell-ring" size={20} color={colors.primary} />
-          <Text style={[styles.notificationTitle, { color: colors.text }]}>
-            {t('setup.learnWithReminders')}
-          </Text>
-        </View>
-        <Text style={[styles.notificationDesc, { color: colors.textSecondary, textAlign: 'center' }]}>
-          {t('setup.notificationBenefits')}
-        </Text>
-        <View style={styles.notificationFeatures}>
-          <View style={styles.featureRow}>
-            <MaterialIcons name="check-circle" size={20} color={colors.primary} />
-            <Text style={[styles.featureText, { color: colors.text }]}>{t('setup.feature1')}</Text>
-          </View>
-          <View style={styles.featureRow}>
-            <MaterialIcons name="check-circle" size={20} color={colors.primary} />
-            <Text style={[styles.featureText, { color: colors.text }]}>{t('setup.feature2')}</Text>
-          </View>
-          <View style={styles.featureRow}>
-            <MaterialIcons name="check-circle" size={20} color={colors.primary} />
-            <Text style={[styles.featureText, { color: colors.text }]}>{t('setup.feature3')}</Text>
-          </View>
-        </View>
-      </View>
-    </ScrollView>
+    <NotificationPermissionStep colors={colors} />
   );
 
   // Step 5 - Start Time
+  const handleStartHourMomentumScrollEnd = (e: any) => {
+    const y = e.nativeEvent.contentOffset.y;
+    const index = Math.round(y / ITEM_HEIGHT);
+    const actualIndex = ((index % HOURS_LIST.length) + HOURS_LIST.length) % HOURS_LIST.length;
+    setStartHour(HOURS_LIST[actualIndex]);
+    const snappedY = index * ITEM_HEIGHT;
+    if (y !== snappedY) {
+      startHourRef.current?.scrollTo({ y: snappedY, animated: true });
+    }
+  };
+
+  const handleStartMinuteMomentumScrollEnd = (e: any) => {
+    const y = e.nativeEvent.contentOffset.y;
+    const index = Math.round(y / ITEM_HEIGHT);
+    const actualIndex = ((index % MINUTES_LIST.length) + MINUTES_LIST.length) % MINUTES_LIST.length;
+    setStartMinute(MINUTES_LIST[actualIndex]);
+    const snappedY = index * ITEM_HEIGHT;
+    if (y !== snappedY) {
+      startMinuteRef.current?.scrollTo({ y: snappedY, animated: true });
+    }
+  };
+
   const renderStep5Content = () => (
-    <View style={[styles.scrollView, { justifyContent: 'center' }]}>
-      <View style={styles.scheduleContainer}>
-        <View style={[styles.scheduleSection, { backgroundColor: colors.surface, borderColor: colors.border }]}>
-          <View style={styles.scheduleLabelRow}>
-            <MaterialIcons name="wb-sunny" size={20} color={colors.primary} />
-            <Text style={[styles.scheduleLabel, { color: colors.text }]}>{t('setup.startTime')}</Text>
-          </View>
-          <View style={styles.timePickerRow}>
-            {/* Hour */}
-            <View style={styles.wheelColumn}>
-              <View style={styles.wheelScrollWrapper}>
-                <View style={[styles.wheelCenterIndicator, { borderColor: colors.primary }]} pointerEvents="none" />
-                <ScrollView
-                  ref={startHourRef}
-                  style={styles.wheelScroll}
-                  showsVerticalScrollIndicator={false}
-                  contentContainerStyle={styles.wheelScrollContent}
-                  decelerationRate="fast"
-                  nestedScrollEnabled={true}
-                  snapToInterval={ITEM_HEIGHT}
-                  onMomentumScrollEnd={(e) => {
-                    const y = e.nativeEvent.contentOffset.y;
-                    const index = Math.round(y / ITEM_HEIGHT);
-                    const actualIndex = ((index % HOURS_LIST.length) + HOURS_LIST.length) % HOURS_LIST.length;
-                    setStartHour(HOURS_LIST[actualIndex]);
-                    const snappedY = index * ITEM_HEIGHT;
-                    if (y !== snappedY) {
-                      startHourRef.current?.scrollTo({ y: snappedY, animated: true });
-                    }
-                  }}
-                >
-                  {HOURS_EXTENDED.map((hour, idx) => (
-                    <View key={`sh-${idx}`} style={styles.wheelItem}>
-                      <Text style={[styles.wheelItemText, { color: colors.text }]}>{hour}</Text>
-                    </View>
-                  ))}
-                </ScrollView>
-              </View>
-            </View>
-            <Text style={[styles.timeSeparator, { color: colors.text }]}>:</Text>
-            {/* Minute */}
-            <View style={styles.wheelColumn}>
-              <View style={styles.wheelScrollWrapper}>
-                <View style={[styles.wheelCenterIndicator, { borderColor: colors.primary }]} pointerEvents="none" />
-                <ScrollView
-                  ref={startMinuteRef}
-                  style={styles.wheelScroll}
-                  showsVerticalScrollIndicator={false}
-                  contentContainerStyle={styles.wheelScrollContent}
-                  decelerationRate="fast"
-                  nestedScrollEnabled={true}
-                  snapToInterval={ITEM_HEIGHT}
-                  onMomentumScrollEnd={(e) => {
-                    const y = e.nativeEvent.contentOffset.y;
-                    const index = Math.round(y / ITEM_HEIGHT);
-                    const actualIndex = ((index % MINUTES_LIST.length) + MINUTES_LIST.length) % MINUTES_LIST.length;
-                    setStartMinute(MINUTES_LIST[actualIndex]);
-                    const snappedY = index * ITEM_HEIGHT;
-                    if (y !== snappedY) {
-                      startMinuteRef.current?.scrollTo({ y: snappedY, animated: true });
-                    }
-                  }}
-                >
-                  {MINUTES_EXTENDED.map((minute, idx) => (
-                    <View key={`sm-${idx}`} style={styles.wheelItem}>
-                      <Text style={[styles.wheelItemText, { color: colors.text }]}>{minute}</Text>
-                    </View>
-                  ))}
-                </ScrollView>
-              </View>
-            </View>
-          </View>
-        </View>
-      </View>
-    </View>
+    <NotificationScheduleStartStep
+      colors={colors}
+      hourValues={HOURS_EXTENDED}
+      minuteValues={MINUTES_EXTENDED}
+      hourScrollRef={startHourRef}
+      minuteScrollRef={startMinuteRef}
+      onHourMomentumScrollEnd={handleStartHourMomentumScrollEnd}
+      onMinuteMomentumScrollEnd={handleStartMinuteMomentumScrollEnd}
+    />
   );
 
   // Step 6 - End Time
+  const handleEndHourMomentumScrollEnd = (e: any) => {
+    const y = e.nativeEvent.contentOffset.y;
+    const index = Math.round(y / ITEM_HEIGHT);
+    const actualIndex = ((index % HOURS_LIST.length) + HOURS_LIST.length) % HOURS_LIST.length;
+    setEndHour(HOURS_LIST[actualIndex]);
+    const snappedY = index * ITEM_HEIGHT;
+    if (y !== snappedY) {
+      endHourRef.current?.scrollTo({ y: snappedY, animated: true });
+    }
+  };
+
+  const handleEndMinuteMomentumScrollEnd = (e: any) => {
+    const y = e.nativeEvent.contentOffset.y;
+    const index = Math.round(y / ITEM_HEIGHT);
+    const actualIndex = ((index % MINUTES_LIST.length) + MINUTES_LIST.length) % MINUTES_LIST.length;
+    setEndMinute(MINUTES_LIST[actualIndex]);
+    const snappedY = index * ITEM_HEIGHT;
+    if (y !== snappedY) {
+      endMinuteRef.current?.scrollTo({ y: snappedY, animated: true });
+    }
+  };
+
   const renderStep6Content = () => (
-    <View style={[styles.scrollView, { justifyContent: 'center' }]}>
-      <View style={styles.scheduleContainer}>
-        <View style={[styles.scheduleSection, { backgroundColor: colors.surface, borderColor: colors.border }]}>
-          <View style={styles.scheduleLabelRow}>
-            <MaterialIcons name="nightlight-round" size={20} color={colors.primary} />
-            <Text style={[styles.scheduleLabel, { color: colors.text }]}>{t('setup.endTime')}</Text>
-          </View>
-          <View style={styles.timePickerRow}>
-            {/* Hour */}
-            <View style={styles.wheelColumn}>
-              <View style={styles.wheelScrollWrapper}>
-                <View style={[styles.wheelCenterIndicator, { borderColor: colors.primary }]} pointerEvents="none" />
-                <ScrollView
-                  ref={endHourRef}
-                  style={styles.wheelScroll}
-                  showsVerticalScrollIndicator={false}
-                  contentContainerStyle={styles.wheelScrollContent}
-                  decelerationRate="fast"
-                  nestedScrollEnabled={true}
-                  snapToInterval={ITEM_HEIGHT}
-                  onMomentumScrollEnd={(e) => {
-                    const y = e.nativeEvent.contentOffset.y;
-                    const index = Math.round(y / ITEM_HEIGHT);
-                    const actualIndex = ((index % HOURS_LIST.length) + HOURS_LIST.length) % HOURS_LIST.length;
-                    setEndHour(HOURS_LIST[actualIndex]);
-                    const snappedY = index * ITEM_HEIGHT;
-                    if (y !== snappedY) {
-                      endHourRef.current?.scrollTo({ y: snappedY, animated: true });
-                    }
-                  }}
-                >
-                  {HOURS_EXTENDED.map((hour, idx) => (
-                    <View key={`eh-${idx}`} style={styles.wheelItem}>
-                      <Text style={[styles.wheelItemText, { color: colors.text }]}>{hour}</Text>
-                    </View>
-                  ))}
-                </ScrollView>
-              </View>
-            </View>
-            <Text style={[styles.timeSeparator, { color: colors.text }]}>:</Text>
-            {/* Minute */}
-            <View style={styles.wheelColumn}>
-              <View style={styles.wheelScrollWrapper}>
-                <View style={[styles.wheelCenterIndicator, { borderColor: colors.primary }]} pointerEvents="none" />
-                <ScrollView
-                  ref={endMinuteRef}
-                  style={styles.wheelScroll}
-                  showsVerticalScrollIndicator={false}
-                  contentContainerStyle={styles.wheelScrollContent}
-                  decelerationRate="fast"
-                  nestedScrollEnabled={true}
-                  snapToInterval={ITEM_HEIGHT}
-                  onMomentumScrollEnd={(e) => {
-                    const y = e.nativeEvent.contentOffset.y;
-                    const index = Math.round(y / ITEM_HEIGHT);
-                    const actualIndex = ((index % MINUTES_LIST.length) + MINUTES_LIST.length) % MINUTES_LIST.length;
-                    setEndMinute(MINUTES_LIST[actualIndex]);
-                    const snappedY = index * ITEM_HEIGHT;
-                    if (y !== snappedY) {
-                      endMinuteRef.current?.scrollTo({ y: snappedY, animated: true });
-                    }
-                  }}
-                >
-                  {MINUTES_EXTENDED.map((minute, idx) => (
-                    <View key={`em-${idx}`} style={styles.wheelItem}>
-                      <Text style={[styles.wheelItemText, { color: colors.text }]}>{minute}</Text>
-                    </View>
-                  ))}
-                </ScrollView>
-              </View>
-            </View>
-          </View>
-        </View>
-      </View>
-    </View>
+    <NotificationScheduleEndStep
+      colors={colors}
+      hourValues={HOURS_EXTENDED}
+      minuteValues={MINUTES_EXTENDED}
+      hourScrollRef={endHourRef}
+      minuteScrollRef={endMinuteRef}
+      onHourMomentumScrollEnd={handleEndHourMomentumScrollEnd}
+      onMinuteMomentumScrollEnd={handleEndMinuteMomentumScrollEnd}
+    />
   );
 
   // Step 7 - Frequency
   const renderStep7Content = () => (
-    <View style={[styles.scrollView, { justifyContent: 'center' }]}>
-      <View style={styles.scheduleContainer}>
-        <View style={[styles.scheduleSection, { backgroundColor: colors.surface, borderColor: colors.border }]}>
-          <View style={styles.scheduleLabelRow}>
-            <Feather name="repeat" size={18} color={colors.primary} />
-            <Text style={[styles.scheduleLabel, { color: colors.text }]}>{t('setup.frequency')}</Text>
-          </View>
-          <View style={styles.frequencyList}>
-            {NOTIFICATION_FREQUENCY_KEYS.map((freqKey) => (
-              <TouchableOpacity
-                key={freqKey}
-                style={[
-                  styles.frequencyItem,
-                  { borderColor: colors.border },
-                  frequency === freqKey && { borderColor: colors.primary, backgroundColor: `${colors.primary}15` }
-                ]}
-                onPress={() => setFrequency(freqKey)}
-              >
-                <Text style={[
-                  styles.frequencyText,
-                  { color: frequency === freqKey ? colors.primary : colors.text }
-                ]}>{t(`settings.${freqKey}`)}</Text>
-                {frequency === freqKey && (
-                  <MaterialIcons name="check" size={18} color={colors.primary} />
-                )}
-              </TouchableOpacity>
-            ))}
-          </View>
-        </View>
-      </View>
-    </View>
+    <SetupCompleteStep
+      colors={colors}
+      frequencyKeys={NOTIFICATION_FREQUENCY_KEYS}
+      selectedFrequency={frequency}
+      onSelectFrequency={setFrequency}
+    />
   );
 
   const insets = useSafeAreaInsets();
