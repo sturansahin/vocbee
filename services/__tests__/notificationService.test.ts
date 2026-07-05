@@ -52,6 +52,9 @@ import {
     requestNotificationPermissions,
     scheduleStreakReminderNotification,
     scheduleVocabularyNotifications,
+    setPendingNotificationWord,
+    getPendingNotificationWord,
+    clearPendingNotificationWord,
 } from '../notificationService';
 import { STORAGE_KEYS } from '@shared/storage';
 
@@ -268,5 +271,43 @@ describe('notificationService', () => {
         expect(scheduledPayload.identifier).toBe('vocbee-streak-reminder');
         expect(scheduledPayload.content.data.kind).toBe('streak');
         expect(scheduledPayload.trigger.seconds).toBe(33 * 60 * 60);
+    });
+
+    // ADIM 6 (PR-6.5): pending-notification-word functions now delegate to
+    // PendingWordRepository (src/features/notifications/data/repositories). These tests confirm the
+    // PUBLIC API (function names/behavior) is unchanged after the delegation, using the real
+    // (non-mocked) AsyncStorage + the exact storage key.
+    describe('pending notification word (delegated to PendingWordRepository)', () => {
+        it('round-trips a word through set -> get -> clear using the real storage key', async () => {
+            await setPendingNotificationWord({ wordId: 42, level: 'A1', targetLanguage: 'english' });
+
+            const raw = await AsyncStorage.getItem(STORAGE_KEYS.PENDING_NOTIFICATION_WORD);
+            expect(raw).toBe(JSON.stringify({ wordId: 42, level: 'A1', targetLanguage: 'english' }));
+
+            const pending = await getPendingNotificationWord();
+            expect(pending).toEqual({ wordId: 42, level: 'A1', targetLanguage: 'english' });
+
+            await clearPendingNotificationWord();
+            expect(await getPendingNotificationWord()).toBeNull();
+        });
+
+        it('getPendingNotificationWord does not clear the stored value', async () => {
+            await setPendingNotificationWord({ wordId: 7 });
+            await getPendingNotificationWord();
+            expect(await AsyncStorage.getItem(STORAGE_KEYS.PENDING_NOTIFICATION_WORD)).not.toBeNull();
+        });
+
+        it('returns null when nothing is pending', async () => {
+            expect(await getPendingNotificationWord()).toBeNull();
+        });
+
+        it('still parses a legacy plain-numeric-string payload written by an old app version', async () => {
+            await AsyncStorage.setItem(STORAGE_KEYS.PENDING_NOTIFICATION_WORD, '123');
+            expect(await getPendingNotificationWord()).toEqual({ wordId: 123 });
+        });
+
+        it('clearPendingNotificationWord does not throw when nothing is stored', async () => {
+            await expect(clearPendingNotificationWord()).resolves.toBeUndefined();
+        });
     });
 });

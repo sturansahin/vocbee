@@ -19,18 +19,25 @@ import { STORAGE_KEYS } from '@shared/storage';
 import { getStreakState, isStreakCompletedToday } from './streakService';
 // Phase 6: pure scheduling slot-count rule now lives in the notifications domain (pure, tested).
 import { getDailyNotificationSlotCount } from '../src/features/notifications';
+// ADIM 6 (PR-6.5): pending-notification-word read/write/clear now delegates to a small repository
+// under the notifications feature. Same storage key, same payload format — parsing/serialization
+// logic lives in the already-tested domain/rules.ts (parsePendingWord/serializePendingWord), reused
+// here instead of duplicated. Public API of this file (function names/signatures) is unchanged.
+import { PendingWordRepository } from '../src/features/notifications/data/repositories/PendingWordRepository';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Storage Keys (centralized via storageKeys.ts)
 // ─────────────────────────────────────────────────────────────────────────────
 const NOTIFICATION_SETTINGS_KEY = STORAGE_KEYS.NOTIFICATION_SETTINGS;
-const PENDING_NOTIFICATION_WORD_KEY = STORAGE_KEYS.PENDING_NOTIFICATION_WORD;
 const TRACKED_NOTIFICATIONS_KEY = STORAGE_KEYS.TRACKED_NOTIFICATIONS;
 const LAST_FOREGROUND_TIME_KEY = STORAGE_KEYS.LAST_FOREGROUND_TIME;
 const LAST_BACKGROUND_TIME_KEY = STORAGE_KEYS.LAST_BACKGROUND_TIME;
 const NOTIFICATION_CONTENT_VERSION_KEY = STORAGE_KEYS.NOTIFICATION_CONTENT_VERSION;
 const NOTIFICATION_PERMISSION_PROMPT_PREFIX = STORAGE_KEYS.NOTIFICATION_PERMISSION_PROMPT_PREFIX;
 const NOTIFICATION_CONTENT_VERSION = 4;
+
+// Composition root: this file (data/service layer) owns the concrete repository instance.
+const pendingWordRepository = new PendingWordRepository();
 
 const MAX_SCHEDULED_NOTIFICATIONS = 64;
 const STREAK_NOTIFICATION_RESERVED_SLOTS = 1;
@@ -1136,41 +1143,7 @@ export async function getScheduledNotificationCount(): Promise<number> {
 export async function setPendingNotificationWord(
     pending: PendingNotificationWord
 ): Promise<void> {
-    await AsyncStorage.setItem(PENDING_NOTIFICATION_WORD_KEY, JSON.stringify(pending));
-}
-
-/**
- * Parse pending notification word payload
- */
-function parsePendingNotificationWord(raw: string): PendingNotificationWord | null {
-    try {
-        const parsed = JSON.parse(raw);
-        if (parsed) {
-            const parsedWordId =
-                typeof parsed.wordId === 'number'
-                    ? parsed.wordId
-                    : typeof parsed.wordId === 'string'
-                        ? parseInt(parsed.wordId, 10)
-                        : NaN;
-
-            if (Number.isFinite(parsedWordId)) {
-                return {
-                    wordId: parsedWordId,
-                    ...(typeof parsed.level === 'string' ? { level: parsed.level } : {}),
-                    ...(typeof parsed.targetLanguage === 'string' ? { targetLanguage: parsed.targetLanguage } : {}),
-                };
-            }
-        }
-    } catch {
-        // fall back to legacy string format
-    }
-
-    const legacyId = parseInt(raw, 10);
-    if (!Number.isNaN(legacyId)) {
-        return { wordId: legacyId };
-    }
-
-    return null;
+    await pendingWordRepository.setPendingWord(pending);
 }
 
 /**
@@ -1179,11 +1152,7 @@ function parsePendingNotificationWord(raw: string): PendingNotificationWord | nu
  */
 export async function getPendingNotificationWord(): Promise<PendingNotificationWord | null> {
     try {
-        const raw = await AsyncStorage.getItem(PENDING_NOTIFICATION_WORD_KEY);
-        if (raw) {
-            return parsePendingNotificationWord(raw);
-        }
-        return null;
+        return await pendingWordRepository.getPendingWord();
     } catch (error) {
         console.error('Error getting pending word:', error);
         return null;
@@ -1195,7 +1164,7 @@ export async function getPendingNotificationWord(): Promise<PendingNotificationW
  */
 export async function clearPendingNotificationWord(): Promise<void> {
     try {
-        await AsyncStorage.removeItem(PENDING_NOTIFICATION_WORD_KEY);
+        await pendingWordRepository.clearPendingWord();
     } catch (error) {
         console.error('Error clearing pending word:', error);
     }

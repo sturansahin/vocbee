@@ -50,18 +50,41 @@ export function serializePendingWord(word: PendingNotificationWord): string {
   return JSON.stringify(word);
 }
 
+/**
+ * VERBATIM extraction of services/notificationService.parsePendingNotificationWord
+ * (behavior contract — docs/refactor-v2/03 §9). Supports:
+ *   1. Current JSON payload: {"wordId": number, level?, targetLanguage?}
+ *   2. Legacy JSON payload with a string wordId (parsed via parseInt).
+ *   3. Legacy plain-numeric-string payload (pre-JSON format, no JSON.parse success).
+ */
 export function parsePendingWord(raw: string | null | undefined): PendingNotificationWord | null {
   if (!raw) return null;
+
   try {
-    const parsed = JSON.parse(raw) as Partial<PendingNotificationWord> | null;
-    if (!parsed || typeof parsed.wordId !== 'number' || !Number.isFinite(parsed.wordId)) {
-      return null;
+    const parsed = JSON.parse(raw);
+    if (parsed) {
+      const parsedWordId =
+        typeof parsed.wordId === 'number'
+          ? parsed.wordId
+          : typeof parsed.wordId === 'string'
+            ? parseInt(parsed.wordId, 10)
+            : NaN;
+
+      if (Number.isFinite(parsedWordId)) {
+        const out: PendingNotificationWord = { wordId: parsedWordId };
+        if (typeof parsed.level === 'string') out.level = parsed.level;
+        if (typeof parsed.targetLanguage === 'string') out.targetLanguage = parsed.targetLanguage;
+        return out;
+      }
     }
-    const out: PendingNotificationWord = { wordId: parsed.wordId };
-    if (typeof parsed.level === 'string') out.level = parsed.level;
-    if (typeof parsed.targetLanguage === 'string') out.targetLanguage = parsed.targetLanguage;
-    return out;
   } catch {
-    return null;
+    // fall back to legacy string format
   }
+
+  const legacyId = parseInt(raw, 10);
+  if (!Number.isNaN(legacyId)) {
+    return { wordId: legacyId };
+  }
+
+  return null;
 }

@@ -69,4 +69,12 @@ describe('pending word serialization', () => {
     expect(parsePendingWord(JSON.stringify({ level: 'A1' }))).toBeNull();
     expect(parsePendingWord(JSON.stringify({ wordId: 'x' }))).toBeNull();
   });
+  it('parses a legacy JSON payload with a string wordId (parseInt fallback)', () => {
+    expect(parsePendingWord(JSON.stringify({ wordId: '42' }))).toEqual({ wordId: 42 });
+    expect(parsePendingWord(JSON.stringify({ wordId: '42', level: 'B1' }))).toEqual({ wordId: 42, level: 'B1' });
+  });
+  it('parses a legacy plain-numeric-string payload (pre-JSON format)', () => {
+    expect(parsePendingWord('42')).toEqual({ wordId: 42 });
+    expect(parsePendingWord('not-json')).toBeNull();
+  });
 });
