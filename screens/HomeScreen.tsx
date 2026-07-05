@@ -12,7 +12,6 @@ import {
     AppStateStatus,
     Platform,
 } from 'react-native';
-import LottieView from 'lottie-react-native';
 import { createSwarmAnimation } from '../assets/animations/swarmAnimation';
 import { LinearGradient } from 'expo-linear-gradient';
 import { BlurView } from 'expo-blur';
@@ -23,16 +22,12 @@ import { getTutorialSwipeNextStep } from '../src/features/learning';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../types';
-import Svg, { Polygon } from 'react-native-svg';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '../context/ThemeContext';
 import { useMonetization } from '@features/monetization';
 import { FONT_FAMILY } from '../utils/typography';
 import { HomeHeader } from '../components/HomeHeader';
-import { AppRatingPrompt } from '../components/AppRatingPrompt';
-import { VocabularyCardHeader } from '../components/VocabularyCardHeader';
 import { StreakAlertContent } from '../components/StreakAlertContent';
-import { StreakCelebrationOverlay } from '../components/StreakCelebrationOverlay';
 import {
     VocabularyWord,
     Level,
@@ -74,7 +69,7 @@ import {
     recordDailyStudyAction,
     StreakSummary,
 } from '../services/streakService';
-import HomeTutorialOverlay, { LayoutRect } from '../components/HomeTutorialOverlay';
+import type { LayoutRect } from '../components/HomeTutorialOverlay';
 import {
     getStreakCelebrationMessageKey,
     shouldShowStreakCelebration,
@@ -88,6 +83,15 @@ import {
     recordSatisfactionRating,
     requestNativeReview,
 } from '../services/reviewPromptService';
+// Phase 5 (ADIM 2, docs/refactor-v2/25): pure UI/JSX extracted into presentational components.
+// HomeScreen still owns 100% of state/handlers/business logic; these components only render.
+import {
+    HomeProgressSection,
+    HomeWordCardSection,
+    HomeTutorialSection,
+    HomeModals,
+    type HomeBeePosition,
+} from '../src/features/home/presentation/components';
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;
@@ -120,33 +124,6 @@ const EMPTY_TUTORIAL_LAYOUT: LayoutRect = {
     width: 0,
     height: 0,
 };
-
-const FEATHER_STAR_POINTS = '12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2';
-
-function FavoriteStarIcon({
-    color,
-    filled = false,
-    size = 24,
-    style,
-}: {
-    color: string;
-    filled?: boolean;
-    size?: number;
-    style?: any;
-}) {
-    return (
-        <Svg width={size} height={size} viewBox="0 0 24 24" style={style}>
-            <Polygon
-                points={FEATHER_STAR_POINTS}
-                fill={filled ? color : 'none'}
-                stroke={color}
-                strokeWidth={2}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            />
-        </Svg>
-    );
-}
 
 export default function HomeScreen() {
     const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
@@ -1432,163 +1409,10 @@ export default function HomeScreen() {
         });
     };
 
-    const renderTutorialHighlight = (targetLayout: LayoutRect, step: number) => {
-        if (!currentWord) return null;
-
-        const absoluteHighlightStyle = {
-            position: 'absolute' as const,
-            left: targetLayout.x,
-            top: targetLayout.y,
-            width: targetLayout.width,
-            height: targetLayout.height,
-            zIndex: 9101,
-        };
-
-        if (step === 3) {
-            return (
-                <TouchableOpacity
-                    style={[absoluteHighlightStyle, styles.tutorialIconHighlight]}
-                    onPress={handleToggleFavorite}
-                    activeOpacity={0.7}
-                    hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
-                >
-                    <View style={{ width: 26, height: 26, justifyContent: 'center', alignItems: 'center' }}>
-                        <FavoriteStarIcon
-                            color={colors.primary}
-                            filled={isCurrentWordFavorite}
-                            size={24}
-                            style={styles.tutorialIconGlow}
-                        />
-                    </View>
-                </TouchableOpacity>
-            );
-        }
-
-        if (step === 4) {
-            return (
-                <View style={[absoluteHighlightStyle, styles.tutorialWordHighlight]}>
-                    <TouchableOpacity onPress={handleWordPress} activeOpacity={0.7} style={styles.tutorialWordTouchable}>
-                        <Text
-                            style={[styles.wordTitle, { color: colors.text }, styles.tutorialWordText]}
-                            adjustsFontSizeToFit
-                            numberOfLines={1}
-                        >
-                            {currentWord.word}
-                        </Text>
-                    </TouchableOpacity>
-                </View>
-            );
-        }
-
-        if (step === 5) {
-            return (
-                <View style={[absoluteHighlightStyle, styles.tutorialSentenceHighlight]}>
-                    <TouchableOpacity onPress={handleExampleSentencePress} activeOpacity={0.7} style={styles.tutorialSentenceTouchable}>
-                        <Text style={[styles.cardExampleText, { color: colors.text }, styles.tutorialSentenceText]}>
-                            {currentWord.sentence1}
-                        </Text>
-                    </TouchableOpacity>
-                </View>
-            );
-        }
-
-        if (step === 6) {
-            return (
-                <TouchableOpacity
-                    style={[
-                        absoluteHighlightStyle,
-                        styles.tutorialRaisedButton,
-                        styles.tutorialMoreExampleButton,
-                        { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)' }
-                    ]}
-                    onPress={handleMoreExamplePress}
-                    activeOpacity={0.85}
-                >
-                    <Text style={[styles.fullWidthButtonText, { color: colors.text }]}>{t('home.moreExample')}</Text>
-                </TouchableOpacity>
-            );
-        }
-
-        return null;
-    };
-
-    // Render background card
-    const renderBackgroundCard = () => {
-        if (!nextWord || words.length <= 1) return null;
-
-        return (
-            <View
-                style={[
-                    styles.cardContainer,
-                    {
-                        transform: [
-                            { scale: 0.95 },
-                            { translateY: 12 },
-                        ],
-                        zIndex: 5,
-                        opacity: 0.8,
-                    },
-                ]}
-            >
-                <View style={[
-                    styles.heroCard,
-                    {
-                        backgroundColor: colors.surface,
-                        borderColor: colors.border,
-                        borderWidth: 1,
-                    }
-                ]}>
-                    <View style={styles.cardContentAbove}>
-                        {/* Upper Section - Word and Translation */}
-                        <View style={styles.favoriteButton}>
-                            <View style={{ width: 26, height: 26, justifyContent: 'center', alignItems: 'center' }}>
-                                <FavoriteStarIcon color={colors.primary} size={24} />
-                            </View>
-                        </View>
-                        <VocabularyCardHeader
-                            style={styles.cardUpperSection}
-                            word={nextWord.word}
-                            pronunciation={nextWord.pronunciation}
-                            translation={nextWord.translation}
-                            wordColor={colors.text}
-                            pronunciationColor={colors.textSecondary}
-                            translationColor={colors.primary}
-                        />
-
-                        {/* Lower Section - Example Sentences with Gray Background */}
-                        <View style={[styles.cardLowerSectionStruct, { zIndex: 1 }]}>
-                            {/* Background extracted */}
-                            <View style={[
-                                StyleSheet.absoluteFillObject,
-                                {
-                                    backgroundColor: isDarkMode ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.04)',
-                                    borderBottomLeftRadius: 32,
-                                    borderBottomRightRadius: 32,
-                                }
-                            ]} />
-
-                            <View style={styles.exampleSentencesContainer}>
-                                <View style={styles.exampleSentenceTouchable}>
-                                    <Text style={[styles.cardExampleText, { color: colors.text }]}>
-                                        {nextWord.sentence1}
-                                    </Text>
-                                </View>
-                                <View style={[styles.thinDivider, { backgroundColor: colors.border }]} />
-                                <Text style={[styles.cardTranslationText, { color: colors.textSecondary }]}>
-                                    {nextWord.nativeSentence1}
-                                </Text>
-                            </View>
-
-                            {/* More Example Button placeholder */}
-                            <View style={[styles.fullWidthButton, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)' }]}>
-                                <Text style={[styles.fullWidthButtonText, { color: colors.text }]}>{t('home.moreExample')}</Text>
-                            </View>
-                        </View>
-                    </View>
-                </View>
-            </View>
-        );
-    };
+    // renderTutorialHighlight and renderBackgroundCard were extracted verbatim into
+    // src/features/home/presentation/components/{HomeTutorialSection,HomeWordCardSection}.tsx
+    // (ADIM 2, docs/refactor-v2/25 — UI-only extraction). Handlers below are unchanged and are now
+    // passed as props into those components.
 
     // Keep a themed home skeleton visible only during the very first hydration
     // so launch stays stable without showing a second splash-like screen.
@@ -1608,36 +1432,23 @@ export default function HomeScreen() {
                 />
 
                 {renderStatsContainer(
-                    <View style={styles.statsSection}>
-                        <View style={styles.levelRow}>
-                            <View style={[styles.loadingLine, styles.loadingLevelBadge, { backgroundColor: initialLoadingAccentColor }]} />
-                            <View style={[styles.loadingLine, styles.loadingLevelText, { backgroundColor: initialLoadingPlaceholderColor }]} />
-                            <View style={[styles.loadingLine, styles.loadingGoalText, { backgroundColor: initialLoadingPlaceholderColor }]} />
-                        </View>
-                        <View
-                            style={[
-                                styles.progressBg,
-                                {
-                                    backgroundColor: isDarkMode ? '#2c2c2e' : colors.surfaceLight,
-                                    borderWidth: isDarkMode ? 0 : 1,
-                                    borderColor: isDarkMode ? 'transparent' : colors.border,
-                                }
-                            ]}
-                        >
-                            <View
-                                style={[
-                                    styles.progressFill,
-                                    {
-                                        backgroundColor: initialLoadingAccentColor,
-                                        width: '38%',
-                                        shadowOpacity: 0,
-                                        shadowRadius: 0,
-                                        elevation: 0,
-                                    }
-                                ]}
-                            />
-                        </View>
-                    </View>
+                    <HomeProgressSection
+                        isLoading
+                        isDarkMode={isDarkMode}
+                        textColor={colors.text}
+                        textSecondaryColor={colors.textSecondary}
+                        primaryColor={colors.primary}
+                        surfaceLightColor={colors.surfaceLight}
+                        borderColor={colors.border}
+                        initialLoadingPlaceholderColor={initialLoadingPlaceholderColor}
+                        initialLoadingAccentColor={initialLoadingAccentColor}
+                        levelCode={levelDisplay.code}
+                        levelDescription={levelDisplay.description}
+                        learnedCount={learnedCount}
+                        totalCount={totalCount}
+                        wordsLabel={t('home.words')}
+                        progressPercentage={0}
+                    />
                 )}
 
                 <View style={styles.cardArea}>
@@ -1778,248 +1589,59 @@ export default function HomeScreen() {
 
             {/* Stats Section */}
             {renderStatsContainer(
-                <View style={styles.statsSection}>
-                    {/* Level and Progress */}
-                    <View>
-                        <View style={styles.levelRow}>
-                            <Text style={[styles.levelValue, { color: colors.text }]}>{levelDisplay.code}</Text>
-                            <Text style={[styles.levelSubtext, { color: colors.textSecondary }]}>{levelDisplay.description}</Text>
-                            <Text style={[styles.goalValue, { color: colors.text, marginLeft: 'auto' }]}>
-                                {learnedCount}/{totalCount} {t('home.words')}
-                            </Text>
-                        </View>
-                        <View
-                            style={[
-                                styles.progressBg,
-                                {
-                                    backgroundColor: isDarkMode ? '#2c2c2e' : colors.surfaceLight,
-                                    borderWidth: isDarkMode ? 0 : 1,
-                                    borderColor: isDarkMode ? 'transparent' : colors.border,
-                                }
-                            ]}
-                        >
-                            <View
-                                style={[
-                                    styles.progressFill,
-                                    {
-                                        backgroundColor: colors.primary,
-                                        width: `${progressPercentage}%`,
-                                        shadowColor: '#FFD700',
-                                        shadowOffset: { width: 0, height: 0 },
-                                        shadowOpacity: 0.8,
-                                        shadowRadius: 6,
-                                        elevation: 5,
-                                    }
-                                ]}
-                            />
-                        </View>
-                    </View>
-                </View>
+                <HomeProgressSection
+                    isLoading={false}
+                    isDarkMode={isDarkMode}
+                    textColor={colors.text}
+                    textSecondaryColor={colors.textSecondary}
+                    primaryColor={colors.primary}
+                    surfaceLightColor={colors.surfaceLight}
+                    borderColor={colors.border}
+                    initialLoadingPlaceholderColor={initialLoadingPlaceholderColor}
+                    initialLoadingAccentColor={initialLoadingAccentColor}
+                    levelCode={levelDisplay.code}
+                    levelDescription={levelDisplay.description}
+                    learnedCount={learnedCount}
+                    totalCount={totalCount}
+                    wordsLabel={t('home.words')}
+                    progressPercentage={progressPercentage}
+                />
             )}
 
             {/* Card Stack Area */}
-            <View style={styles.cardArea}>
-                {/* Wrapper for vertical centering */}
-                <View style={styles.cardStackContainer}>
-                    {/* Background Card */}
-                    {renderBackgroundCard()}
-
-                    {/* Top Card - Swipeable */}
-                    {currentWord && (
-                        <Animated.View
-                            key={currentWord.id}
-                            ref={cardRef}
-                            collapsable={false}
-                            style={[
-                                styles.cardContainer,
-                                {
-                                    transform: [
-                                        { translateX: position.x },
-                                        { translateY: position.y },
-                                        { rotate },
-                                    ],
-                                    // Steps 1 & 2 keep the card above the dim layer so swipe guidance stays interactive.
-                                    // Steps 3-6 move the card below the overlay; only cloned focus targets render above it.
-                                    zIndex: (showTutorial && tutorialStep <= 2) ? 10000 : 10,
-                                },
-                            ]}
-                            {...panResponder.panHandlers}
-                        >
-                            <View style={[
-                                styles.heroCard,
-                                {
-                                    backgroundColor: colors.surface,
-                                    borderColor: colors.border,
-                                    borderWidth: 0.5,
-                                    shadowColor: '#FFD700',
-                                    shadowOffset: { width: 0, height: 0 },
-                                    shadowOpacity: 0.5,
-                                    shadowRadius: 20,
-                                    elevation: 15,
-                                }
-                            ]}>
-                                {/* Skip Overlay */}
-                                <Animated.View
-                                    style={[
-                                        styles.swipeOverlay,
-                                        {
-                                            backgroundColor: isDarkMode ? '#5c2a2a' : '#ffddddff',
-                                            opacity: position.x.interpolate({
-                                                inputRange: [-SWIPE_THRESHOLD, 0],
-                                                outputRange: [1, 0],
-                                                extrapolate: 'clamp',
-                                            }),
-                                        },
-                                    ]}
-                                >
-                                    <View style={styles.swipeLabelContainer}>
-                                        <Text style={[styles.skipText, { color: isDarkMode ? '#ff8a8a' : '#ff6b6bff' }]}>{t('home.skip')}</Text>
-                                    </View>
-                                </Animated.View>
-
-                                {/* Learned Overlay */}
-                                <Animated.View
-                                    style={[
-                                        styles.swipeOverlay,
-                                        {
-                                            backgroundColor: isDarkMode ? '#2a5c3a' : '#ddffddff',
-                                            opacity: position.x.interpolate({
-                                                inputRange: [0, SWIPE_THRESHOLD],
-                                                outputRange: [0, 1],
-                                                extrapolate: 'clamp',
-                                            }),
-                                        },
-                                    ]}
-                                >
-                                    <View style={styles.swipeLabelContainer}>
-                                        <Text style={[styles.learnedText, { color: isDarkMode ? '#8aff8a' : '#6bff6bff' }]}>{t('home.learned')}</Text>
-                                    </View>
-                                </Animated.View>
-
-                                <View style={styles.cardContentAbove} pointerEvents="box-none">
-                                    {/* Favorite Button - Moved to root of content to ensure clickability */}
-                                    <TouchableOpacity
-                                        ref={favoriteRef}
-                                        style={[styles.favoriteButton, { zIndex: (showTutorial && tutorialStep === 3) ? 100 : 1 }]}
-                                        onPress={handleToggleFavorite}
-                                        activeOpacity={0.7}
-                                        hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
-                                    >
-                                        <View style={{ width: 26, height: 26, justifyContent: 'center', alignItems: 'center' }}>
-                                            <FavoriteStarIcon
-                                                color={colors.primary}
-                                                filled={isCurrentWordFavorite}
-                                                size={24}
-                                            />
-                                        </View>
-                                    </TouchableOpacity>
-
-                                    {/* Upper Section - Word and Translation */}
-                                    <VocabularyCardHeader
-                                        style={styles.cardUpperSection}
-                                        word={currentWord.word}
-                                        pronunciation={currentWord.pronunciation}
-                                        translation={currentWord.translation}
-                                        wordColor={colors.text}
-                                        pronunciationColor={colors.textSecondary}
-                                        translationColor={colors.primary}
-                                        wordContainerRef={wordRef}
-                                        wordContainerStyle={{ zIndex: (showTutorial && tutorialStep === 4) ? 100 : 1 }}
-                                        onPressWord={handleWordPress}
-                                    />
-
-                                    {/* Lower Section - Example Sentences with Gray Background */}
-                                    <View style={[styles.cardLowerSectionStruct, { zIndex: (showTutorial && tutorialStep >= 5) ? 100 : 1 }]}>
-                                        {/* Background extracted so elements can escape zIndex context */}
-                                        <View style={[
-                                            StyleSheet.absoluteFillObject,
-                                            {
-                                                backgroundColor: isDarkMode ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.04)',
-                                                borderBottomLeftRadius: 32,
-                                                borderBottomRightRadius: 32,
-                                            }
-                                        ]} />
-
-                                        <View style={styles.exampleSentencesContainer}>
-                                            {/* Example Sentence */}
-                                            <View
-                                                ref={exampleSentenceRef}
-                                                collapsable={false}
-                                                style={{ width: '100%', zIndex: (showTutorial && tutorialStep === 5) ? 100 : 1 }}
-                                            >
-                                                <TouchableOpacity
-                                                    onPress={handleExampleSentencePress}
-                                                    activeOpacity={0.75}
-                                                    style={styles.exampleSentenceTouchable}
-                                                >
-                                                    <Text style={[styles.cardExampleText, { color: colors.text }]}>
-                                                        {currentWord.sentence1}
-                                                    </Text>
-                                                </TouchableOpacity>
-                                            </View>
-
-                                            {/* Thin Divider Line */}
-                                            <View style={[styles.thinDivider, { backgroundColor: colors.border }]} />
-
-                                            {/* Translation */}
-                                            <Text style={[styles.cardTranslationText, { color: colors.textSecondary }]}>
-                                                {currentWord.nativeSentence1}
-                                            </Text>
-                                        </View>
-
-                                        {/* More Example Button - Full Width at Bottom */}
-                                        <TouchableOpacity
-                                            ref={moreExampleRef}
-                                            style={[styles.fullWidthButton, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)', zIndex: (showTutorial && tutorialStep === 6) ? 100 : 1 }]}
-                                            onPress={handleMoreExamplePress}
-                                        >
-                                            <Text style={[styles.fullWidthButtonText, { color: colors.text }]}>{t('home.moreExample')}</Text>
-                                        </TouchableOpacity>
-                                    </View>
-                                </View>
-                            </View>
-
-                            {/* Bees - Moved outside heroCard to avoid clipping by overflow:hidden */}
-                            {beePositions.map((bee) => (
-                                <Animated.View
-                                    key={bee.id}
-                                    style={[
-                                        styles.bee,
-                                        {
-                                            left: bee.x,
-                                            top: bee.y,
-                                            transform: [
-                                                { translateX: bee.translateX },
-                                                { translateY: bee.translateY },
-                                                {
-                                                    rotate: bee.rotation.interpolate({
-                                                        inputRange: [-360, 360],
-                                                        outputRange: ['-360deg', '360deg'],
-                                                    })
-                                                },
-                                                { scale: bee.scale },
-                                            ],
-                                            opacity: bee.opacity,
-                                        },
-                                    ]}
-                                >
-                                    <LottieView
-                                        key={`${bee.id}-${beesAnimating ? 'animated' : 'static'}`}
-                                        source={beesAnimating ? BEE_ACTIVE_ANIMATION : BEE_STATIC_ANIMATION}
-                                        style={styles.beeAnim}
-                                        autoPlay={beesAnimating}
-                                        loop={true}
-                                        speed={1.5}
-                                    />
-                                </Animated.View>
-                            ))}
-                        </Animated.View>
-                    )}
-                </View>
-            </View>
-
-
-
+            <HomeWordCardSection
+                colors={{
+                    text: colors.text,
+                    textSecondary: colors.textSecondary,
+                    primary: colors.primary,
+                    surface: colors.surface,
+                    border: colors.border,
+                }}
+                isDarkMode={isDarkMode}
+                t={t}
+                currentWord={currentWord}
+                nextWord={nextWord}
+                wordsLength={words.length}
+                showTutorial={showTutorial}
+                tutorialStep={tutorialStep}
+                isCurrentWordFavorite={isCurrentWordFavorite}
+                cardRef={cardRef}
+                favoriteRef={favoriteRef}
+                wordRef={wordRef}
+                exampleSentenceRef={exampleSentenceRef}
+                moreExampleRef={moreExampleRef}
+                position={position}
+                rotate={rotate}
+                panHandlers={panResponder.panHandlers}
+                beePositions={beePositions}
+                beesAnimating={beesAnimating}
+                beeStaticAnimation={BEE_STATIC_ANIMATION}
+                beeActiveAnimation={BEE_ACTIVE_ANIMATION}
+                onToggleFavorite={handleToggleFavorite}
+                onWordPress={handleWordPress}
+                onExampleSentencePress={handleExampleSentencePress}
+                onMoreExamplePress={handleMoreExamplePress}
+            />
 
             {/* Banner Ad */}
             {shouldShowAds && (
@@ -2029,42 +1651,44 @@ export default function HomeScreen() {
             )}
 
             {/* Tutorial Overlay */}
-            {showTutorial && tutorialLayouts && (
-                <View style={[StyleSheet.absoluteFill, { zIndex: 9000 }]} pointerEvents="box-none">
-                    <HomeTutorialOverlay
-                        visible={showTutorial}
-                        onComplete={handleTutorialComplete}
-                        currentStep={tutorialStep}
-                        renderHighlight={renderTutorialHighlight}
-                        onNext={() => {
-                            if (tutorialStep < 6) {
-                                setTutorialStep(prev => {
-                                    const next = prev + 1;
-                                    tutorialStepRef.current = next;
-                                    return next;
-                                });
-                            } else {
-                                handleTutorialComplete();
-                            }
-                        }}
-                        layouts={tutorialLayouts}
-                    />
-                </View>
-            )}
-
-            <StreakCelebrationOverlay
-                visible={streakCelebration !== null}
-                celebrationKey={streakCelebration?.id ?? 0}
-                streakCount={streakCelebration?.streakCount ?? 0}
-                streakLabel={streakCelebration?.streakLabel ?? ''}
-                message={streakCelebration?.message ?? ''}
-                onComplete={handleStreakCelebrationComplete}
+            <HomeTutorialSection
+                showTutorial={showTutorial}
+                tutorialLayouts={tutorialLayouts}
+                tutorialStep={tutorialStep}
+                currentWord={currentWord}
+                isCurrentWordFavorite={isCurrentWordFavorite}
+                colors={{ text: colors.text, primary: colors.primary }}
+                isDarkMode={isDarkMode}
+                t={t}
+                onToggleFavorite={handleToggleFavorite}
+                onWordPress={handleWordPress}
+                onExampleSentencePress={handleExampleSentencePress}
+                onMoreExamplePress={handleMoreExamplePress}
+                onTutorialComplete={handleTutorialComplete}
+                onTutorialNext={() => {
+                    if (tutorialStep < 6) {
+                        setTutorialStep(prev => {
+                            const next = prev + 1;
+                            tutorialStepRef.current = next;
+                            return next;
+                        });
+                    } else {
+                        handleTutorialComplete();
+                    }
+                }}
             />
-            <AppRatingPrompt
-                visible={reviewPromptVisible}
-                onDismiss={handleReviewPromptDismiss}
-                onRateInStore={handleReviewRateInStore}
-                onSendFeedback={handleReviewFeedback}
+
+            <HomeModals
+                streakCelebrationVisible={streakCelebration !== null}
+                streakCelebrationKey={streakCelebration?.id ?? 0}
+                streakCelebrationCount={streakCelebration?.streakCount ?? 0}
+                streakCelebrationLabel={streakCelebration?.streakLabel ?? ''}
+                streakCelebrationMessage={streakCelebration?.message ?? ''}
+                onStreakCelebrationComplete={handleStreakCelebrationComplete}
+                reviewPromptVisible={reviewPromptVisible}
+                onReviewPromptDismiss={handleReviewPromptDismiss}
+                onReviewRateInStore={handleReviewRateInStore}
+                onReviewSendFeedback={handleReviewFeedback}
             />
         </View >
     );
