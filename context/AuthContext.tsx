@@ -2,7 +2,6 @@
 // Handles user authentication state and Firebase Auth operations
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import appConfig from '../app.json';
 import {
     User,
@@ -31,18 +30,14 @@ import {
     clearAllLocalData,
     UserData,
     getDeviceId,
-    STORAGE_KEYS,
 } from '@shared/storage';
 import {
-    createUserDocument,
     fetchAndSaveUserData,
     forceSync,
     getActiveDeviceIdFromFirebase,
     syncAuthProfileToFirestore,
     syncNotificationSettingsToFirestore,
 } from '../services/SyncService';
-import { doc, deleteDoc } from 'firebase/firestore';
-import { db } from '../config/firebase';
 import { resetProgress } from '../services/progressService';
 import {
     NotificationSettings,
@@ -59,6 +54,12 @@ import {
 // Phase 4: reuse the tested, pure auth domain rules instead of inlining them here
 // (behavior-identical extraction — docs/refactor-v2/24; presentation -> domain).
 import { isRecentLogin, hasCompletedSetup } from '../src/features/auth';
+// Phase 5 (ADIM 5, step 1/4): profile cache read/write/delete + createUserDocument now delegate to
+// UserProfileRepository instead of inlining AsyncStorage/Firestore calls directly in this file.
+// AuthContext (presentation) composes the concrete repository — domain/application never import
+// Firestore directly (docs/refactor-v2/33 §4, /35 §2). Behavior is verbatim-preserved: same storage
+// key (profile_${uid}), same deleteDoc(users/{uid}), same SyncService.createUserDocument passthrough.
+import { FirestoreUserProfileRepository } from '../src/features/profile/data/repositories/FirestoreUserProfileRepository';
 
 interface ProfileData {
     name: string;
@@ -90,6 +91,10 @@ interface AuthContextType {
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
+
+// Composition root: AuthContext (presentation) owns the concrete repository instance.
+// domain/application layers never construct this directly (docs/refactor-v2/33 §4).
+const userProfileRepository = new FirestoreUserProfileRepository();
 
 const SOCIAL_AUTH_CANCELLED_ERROR = 'AUTH_CANCELLED';
 const APP_CONFIG_DELETE_ACCOUNT_URL = appConfig.expo.extra?.deleteAccountUrl ?? '';
@@ -126,8 +131,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
     const loadStoredProfile = async (uid: string): Promise<StoredProfile | null> => {
         try {
-            const storedProfile = await AsyncStorage.getItem(`${STORAGE_KEYS.PROFILE_PREFIX}${uid}`);
-            return storedProfile ? JSON.parse(storedProfile) : null;
+            return await userProfileRepository.getCachedProfile(uid);
         } catch (error) {
             console.error('Error loading stored profile:', error);
             return null;
@@ -136,7 +140,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
     const persistProfileState = async (uid: string, nextProfile: StoredProfile): Promise<void> => {
         setProfile(nextProfile);
-        await AsyncStorage.setItem(`${STORAGE_KEYS.PROFILE_PREFIX}${uid}`, JSON.stringify(nextProfile));
+        await userProfileRepository.cacheProfile(uid, nextProfile);
     };
 
     const hydrateProfileFromAuthState = async (
@@ -225,7 +229,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
         await cancelAllNotifications();
         await clearTrackedNotifications();
 
-        await createUserDocument(
+        await userProfileRepository.createUserDocument(
             firebaseUser.uid,
             nextProfile.email,
             nextProfile.name,
@@ -315,8 +319,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
             throw new Error('Account deletion endpoint is not configured.');
         }
 
-        const userDocRef = doc(db, 'users', firebaseUser.uid);
-        await deleteDoc(userDocRef);
+        await userProfileRepository.deleteUserDocument(firebaseUser.uid);
         await deleteUser(firebaseUser);
     };
 
@@ -435,7 +438,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
             }
 
             // Create user document in Firestore
-            await createUserDocument(userCredential.user.uid, email, displayName);
+            await userProfileRepository.createUserDocument(userCredential.user.uid, email, displayName);
 
             // Save locally (no preferences yet — user goes through setup)
             const newUserData: UserData = {
@@ -620,7 +623,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
         setProfile(newProfile);
 
         try {
-            await AsyncStorage.setItem(`${STORAGE_KEYS.PROFILE_PREFIX}${user.uid}`, JSON.stringify(newProfile));
+            await userProfileRepository.cacheProfile(user.uid, newProfile);
         } catch (error) {
             console.error('Error updating profile data:', error);
             throw error;
