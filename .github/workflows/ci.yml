@@ -2,8 +2,13 @@
 # Scope: VERIFICATION ONLY — runs the quality gates that exist today.
 # Builds/releases stay in the EAS pipeline (not here). See docs/refactor-v2/16 + 38.
 #
+# ADIM 8: `lint` (eslint) added — see docs/refactor-v2/41-eslint-lint-policy.md. Runs in WARN mode
+# (`--max-warnings=-1`, never fails on warnings) and `continue-on-error: true` for the step itself, so a
+# real eslint crash/misconfig is visible in the CI log without blocking merges yet. This mirrors the
+# rollout plan already written in docs/refactor-v2/40-phase-9e-ci-lint-docs-audit.md §5 (warn -> error
+# only after the legacy backlog in docs/41 §4 is cleared, in a later phase).
+#
 # Intentionally OMITTED in Phase 0 (added in later PRs so the pipeline is green now):
-#   - `lint` (eslint): no root ESLint config/deps yet  -> PR-0.2 (doc 38 §5)
 #   - secret-scan (gitleaks): -> PR-0.3 (doc 38 §7)
 # `audit:prod` is non-blocking until vulnerability remediation is approved (see baseline report §5/§9).
 
@@ -16,7 +21,7 @@ on:
 
 jobs:
   quality:
-    name: Typecheck + Tests + Functions
+    name: Typecheck + Lint + Tests + Functions
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -29,6 +34,9 @@ jobs:
       - run: npm run typecheck:test
       - run: npm run typecheck:rules
       - run: npm run typecheck:worker
+      - name: Lint (warn mode — non-blocking, see docs/refactor-v2/41)
+        continue-on-error: true
+        run: npm run lint
       - run: npm run test:ci
       - name: Install Cloud Functions deps
         run: npm --prefix functions ci
