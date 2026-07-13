@@ -8,6 +8,10 @@ Her prompt sirayla uygulanmalidir. Bir prompt tamamen bitmeden sonraki prompta g
 
 Audit tarihi: 2026-07-09
 
+> Bu bolum tarihsel baslangic snapshot'idir; Prompt 0 sonrasindaki guncel durum kaynagi degildir. Guncel gercek,
+> repository'nin mevcut Git/kod durumu ile `docs/refactor-v2/43-current-refactor-gap-report.md` birlikte
+> dogrulanarak belirlenir. Uyusmazlikta Git/kod durumu esas alinir ve `43` duzeltilir.
+
 Branch durumu:
 
 - Aktif branch: `refactor`
@@ -58,7 +62,10 @@ Bu kurallar her prompt icin zorunludur.
 
 1. `docs/refactor-v2/03-current-app-behavior.md` baglayici sozlesmedir. Davranis degismeyecek.
 2. `docs/refactor-v2/02-target-architecture.md`, `18-definition-of-done.md`, `30-acceptance-checklist.md`, `33-layer-contracts-and-import-rules.md`, `36-shim-and-file-move-recipes.md` ve ilgili phase dokumanlari okunmadan kod degistirilmeyecek.
-3. Presentation katmani Firebase, Firestore, `AsyncStorage`, Expo SDK veya native SDK import etmeyecek.
+3. Presentation katmani Firebase, Firestore, `AsyncStorage`, `expo-notifications`, `expo-speech`,
+   `expo-image-picker` gibi side-effect/platform SDK'larini veya esdeger native SDK'lari import etmeyecek.
+   `@expo/vector-icons` gibi render-only UI kutuphaneleri bu yasagin disindadir; istisna genisletilemez ve lint
+   policy ile acikca belgelenir.
 4. Domain katmani saf TypeScript olacak; React, Firebase, Expo, AsyncStorage, network, storage veya native SDK import etmeyecek.
 5. Feature-to-feature import sadece public `index.ts` barrel uzerinden yapilacak. Baska feature'in `data`, `application`, `presentation` deep path'i import edilmeyecek.
 6. Eski root dosyalar once shim'e cevrilecek. Shim sadece re-export yapacak, logic barindirmayacak.
@@ -68,6 +75,38 @@ Bu kurallar her prompt icin zorunludur.
 10. Gizli anahtar, token, service account veya production credential dosyaya eklenmeyecek.
 11. Test eklemeden veya mevcut testleri guncellemeden davranissal refactor tamamlanmis sayilmayacak.
 12. Native iOS klasoru refactor PR'larina karistirilmayacak. `ios/` sadece bilincli native workflow karariyla commit edilecek.
+13. `docs/refactor-v2/43-current-refactor-gap-report.md`, Prompt 0-10 arasindaki tek kalici durum ve kanit
+    defteridir. Prompt 1-10 bu dosyayi okumadan baslamayacak ve tamamlaninca kendi execution ledger kaydini ekleyecek.
+
+## Prompt Zinciri ve Kalici Kanit Sozlesmesi
+
+`docs/refactor-v2/43-current-refactor-gap-report.md` Prompt 0 tarafindan olusturulur ve sonraki promptlarda
+**append-only execution ledger** olarak yasatilir. Ilk audit snapshot'i veya onceki prompt kayitlari silinmez ya da
+sessizce yeniden yazilmaz; duzeltme gerekiyorsa tarihli bir superseding kayit eklenir.
+
+Prompt 1-10 icin fail-closed handoff kurali:
+
+1. Calismaya baslamadan once `43` dosyasinin tamami, mevcut `git status --short`, branch ve HEAD okunur.
+2. Bir prompt ancak onceki zorunlu promptun son ledger kaydi `complete`, zorunlu komutlari `PASS` ve sonraki prompt
+   gate'i acik ise baslayabilir.
+3. Rapordaki iddia tek basina kanit degildir. Ilgili statik taramalar ve komutlar mevcut checkout uzerinde yeniden
+   dogrulanir. Rapor ile kod/Git uyusmazsa kod/Git esas alinir; uyusmazlik `43`e yazilir ve gate saglanmiyorsa kod
+   degisikligine baslanmaz.
+4. Her prompt sonunda `43` icindeki `Prompt Execution Ledger` bolumune su alanlari iceren kayit eklenir:
+   - prompt numarasi, durum (`complete` veya `blocked`) ve audit zamani/timezone
+   - baslangic ve bitis branch/HEAD/worktree ozeti
+   - kapsam ve degisen dosyalar
+   - cozumlenen gap'ler, guncel sayisal tarama sonuclari ve kalan gap/riskler
+   - uretilen tum artifact'lerin repository-relative path'leri
+   - calistirilan exact komutlar, exit code ve `PASS`/`FAIL` sonucu; testlerde suite/test sayilari
+   - davranis/manual QA sonucu ve gercekte calistirilamayan kontrollerin nedeni
+   - sonraki prompt gate karari: hedef prompt, `acik`/`kapali` ve kanit
+5. Komut calistirilmadiysa, ortam eksikse veya sonuc tahmin edildiyse `PASS` yazilmaz. Zorunlu bir kontrol gercekten
+   calistirilamiyorsa prompt `blocked` olur; hata ciktisi ve remediation `43`e kaydedilir.
+6. Prompt 9 opsiyoneldir. Prompt 10'dan once ledger'da Prompt 9 icin `complete` veya gerekcesi ve owner onayi ile
+   `not-applicable` karari bulunmalidir. Belirsiz/bos durum release gate'ini kapatir.
+7. Prompt 10'un uretecegi `44-final-production-readiness-report.md`, `43`un yerini almaz; final karar hem guncel kodu
+   hem de ledger kanitlarini referanslar.
 
 ## Her Prompt Icin Standart Cikis
 
@@ -79,6 +118,7 @@ Her prompt sonunda Opus 4.8 su bilgileri raporlamalidir:
 - Calistirilan komutlar ve sonuclari
 - Kalan riskler
 - Bir sonraki prompta gecilebilir mi: `evet` veya `hayir`
+- `43-current-refactor-gap-report.md` execution ledger kaydinin path'i ve gate karari
 
 Minimum komutlar:
 
@@ -95,6 +135,10 @@ npm run lint
 npm run prettier:check
 npm run test:rules
 ```
+
+`package.json` icinde bulunan ilgili scriptler atlanmaz. Bir komut ortam bagimliligi nedeniyle calismiyorsa yesil
+varsayilmaz; prompt `blocked` olarak raporlanir. Her prompt ayrica `git diff --check` calistirir. Destructive veya
+production erisimli komutlar bu genel listeye dahil degildir ve yalnizca Prompt 9'un acik onay sozlesmesiyle calisir.
 
 ---
 
@@ -125,6 +169,13 @@ Once su dokumanlari oku:
 - `docs/refactor-v2/33-layer-contracts-and-import-rules.md`
 - `docs/refactor-v2/36-shim-and-file-move-recipes.md`
 - `docs/refactor-v2/39-phase-pr-breakdown.md`
+- `docs/refactor-v2/20-phase-0-safety-baseline.md`
+- `docs/refactor-v2/37-testing-code-templates.md`
+- `docs/refactor-v2/38-ci-eslint-alias-config-spec.md`
+- `docs/refactor-v2/40-phase-9e-ci-lint-docs-audit.md`
+- `docs/refactor-v2/41-eslint-lint-policy.md`
+- `docs/refactor-v2/phase-0-baseline-report.md` (varsa; tarihsel baseline olarak)
+- `docs/refactor-v2/43-current-refactor-gap-report.md` (varsa; yeniden calistirmada history korunacak)
 
 Yap:
 
@@ -136,7 +187,10 @@ Yap:
 6. Feature deep import ihlallerini tespit et.
 7. Buyuk dosyalari satir sayisina gore listele.
 8. Mevcut test komutlarini package scriptlerinden tespit et.
-9. Sonucu `docs/refactor-v2/43-current-refactor-gap-report.md` dosyasina yaz.
+9. Sonucu `docs/refactor-v2/43-current-refactor-gap-report.md` dosyasina yaz. Dosya zaten varsa onceki audit ve
+   ledger history'sini silme; yeni snapshot/duzeltmeyi tarihli kayit olarak ekle.
+10. Raporda `Prompt Execution Ledger` sozlesmesini ve Prompt 0 icin `complete`/`blocked` kaydini olustur. Gate ancak
+    zorunlu komutlar gercekten `PASS` ise Prompt 1 icin `acik` olabilir.
 
 Yapma:
 
@@ -165,6 +219,7 @@ Teslimat:
 - `docs/refactor-v2/43-current-refactor-gap-report.md`
 - Kisa terminal ozeti
 - Sonraki prompta gecilebilir mi bilgisi
+- Prompt 0 execution ledger kaydi ve Prompt 1 gate kaniti
 
 ---
 
@@ -177,13 +232,21 @@ Auth/Profile/Sync refactorunu production-ready seviyeye getir. Bu promptun sonun
 Once su dokumanlari oku:
 
 - `docs/refactor-v2/03-current-app-behavior.md`
-- `docs/refactor-v2/04-phase-1-foundation.md`
-- `docs/refactor-v2/05-phase-2-auth-profile.md`
-- `docs/refactor-v2/08-cross-cutting-auth.md`
+- `docs/refactor-v2/10-auth-profile-sync-plan.md`
 - `docs/refactor-v2/18-definition-of-done.md`
+- `docs/refactor-v2/24-phase-4-auth-profile-sync-refactor.md`
 - `docs/refactor-v2/32-implementation-spec-index.md`
 - `docs/refactor-v2/33-layer-contracts-and-import-rules.md`
+- `docs/refactor-v2/35-repository-adapter-contracts.md`
 - `docs/refactor-v2/36-shim-and-file-move-recipes.md`
+- `docs/refactor-v2/37-testing-code-templates.md`
+- `docs/refactor-v2/43-current-refactor-gap-report.md`
+
+Handoff gate:
+
+- `43` icindeki son Prompt 0 kaydi `complete`, zorunlu komutlari `PASS` ve Prompt 1 gate'i `acik` olmali.
+- Kaydi mevcut branch/HEAD/worktree ve Auth/Profile/Sync koduyla yeniden dogrula. Kayit eksik, stale veya celiskiliyse
+  kod degisikligine baslama; `43`e `blocked`/superseding audit kaydi ekle.
 
 Yap:
 
@@ -196,6 +259,8 @@ Yap:
    - error/loading state
 2. Firebase Auth ve Firestore erisimini presentation/context dosyasindan cikar.
 3. Gerekli repository ve application servislerini `src/features/auth`, `src/features/profile` ve `src/features/sync` altinda olustur veya mevcutlari tamamla.
+   `services/socialAuthProfile.ts`, `services/nativeGoogleSignIn.ts` ve `services/googleAuthConfig.ts` auth data/platform
+   adapter kapsamina dahildir; Prompt 8'e kadar logic tasimayan shim/wrapper haline gelmelidir.
 4. `AuthContext` API'sini mevcut ekranlari kirmadan koru. Public hook ve provider davranisi degismeyecek.
 5. Eski `context/AuthContext.tsx` dosyasini shim'e cevir:
    - sadece `src/features/auth` public barrel'inden export etsin
@@ -247,6 +312,7 @@ Teslimat:
 - Auth/Profile/Sync katman haritasi
 - Shim durumlari
 - Test sonucu
+- `43` icinde Prompt 1 execution ledger kaydi ve kanitli Prompt 2 gate karari
 
 ---
 
@@ -254,19 +320,33 @@ Teslimat:
 
 ## Verilecek Prompt
 
-Vocabulary, progress, favorites, streak ve review servislerini hedef mimariye tamamla. Bu promptun sonunda root `services/*` dosyalari aktif logic tasimayacak; sadece `src/features/*` public API'lerine shim olacak.
+Vocabulary, progress, favorites, streak ve review servislerini hedef mimariye tamamla. Bu promptun sonunda asagida
+listelenen root servisler aktif logic tasimayacak; sadece `src/features/*` public API'lerine shim olacak. Auth/Sync
+servislerinin sahibi Prompt 1, grammar/Groq servisinin sahibi Prompt 4, notification servislerinin sahibi Prompt 5,
+`i18n` ve diger shared/platform servislerinin sahibi Prompt 7'dir.
 
 Once su dokumanlari oku:
 
 - `docs/refactor-v2/03-current-app-behavior.md`
-- `docs/refactor-v2/06-phase-3-data-sync.md`
-- `docs/refactor-v2/07-phase-4-learning.md`
-- `docs/refactor-v2/09-cross-cutting-sync.md`
-- `docs/refactor-v2/12-feature-vocabulary.md`
-- `docs/refactor-v2/13-feature-learning.md`
+- `docs/refactor-v2/07-firestore-data-model-v2.md`
+- `docs/refactor-v2/08-firestore-migration-strategy.md`
+- `docs/refactor-v2/11-learning-progress-vocabulary-plan.md`
 - `docs/refactor-v2/18-definition-of-done.md`
+- `docs/refactor-v2/23-phase-3-firestore-model-and-migration-prep.md`
+- `docs/refactor-v2/24-phase-4-auth-profile-sync-refactor.md`
+- `docs/refactor-v2/25-phase-5-learning-home-refactor.md`
 - `docs/refactor-v2/33-layer-contracts-and-import-rules.md`
+- `docs/refactor-v2/34-firestore-types-rules-migration-spec.md`
+- `docs/refactor-v2/35-repository-adapter-contracts.md`
 - `docs/refactor-v2/36-shim-and-file-move-recipes.md`
+- `docs/refactor-v2/37-testing-code-templates.md`
+- `docs/refactor-v2/43-current-refactor-gap-report.md`
+
+Handoff gate:
+
+- `43` icindeki son Prompt 1 kaydi `complete`, zorunlu komutlari `PASS` ve Prompt 2 gate'i `acik` olmali.
+- Kaydi mevcut branch/HEAD/worktree ve servis/data bagimliliklariyla yeniden dogrula. Kayit eksik, stale veya
+  celiskiliyse kod degisikligine baslama; `43`e `blocked`/superseding audit kaydi ekle.
 
 Yap:
 
@@ -276,7 +356,6 @@ Yap:
    - `services/favoritesService.ts`
    - `services/streakService.ts`
    - `services/reviewPromptService.ts`
-   - `services/SyncService.ts`
 2. Domain modellerini `src/features/*/domain` altinda saf TypeScript olarak tamamla.
 3. Application use case/facade katmanlarini `src/features/*/application` altinda tamamla.
 4. AsyncStorage, Firestore ve network erisimini `data/repositories` veya `data/datasources` altina indir.
@@ -293,7 +372,7 @@ Yap:
    - favorite add/remove/check
    - streak calculation/update
    - review prompt eligibility
-   - sync success/failure/retry davranisi
+   - Prompt 1'deki SyncOrchestrator ile progress/favorites/streak entegrasyonu ve hata/retry davranisi
 
 Yapma:
 
@@ -307,7 +386,9 @@ Kabul kriterleri:
 - Root servis dosyalari shim veya 50 satirin altinda uyumluluk wrapper'i.
 - Business rule domain/application katmaninda.
 - Firebase/AsyncStorage sadece data katmaninda.
-- `services/favoritesService.ts`, `services/groqService.ts`, `services/SyncService.ts` gibi dosyalarda `config/firebase` direct dependency aktif logic olarak kalmamis.
+- Bu promptun sahibi oldugu root servislerde `config/firebase` direct dependency aktif logic olarak kalmamis.
+- Prompt 1 SyncOrchestrator entegrasyonu public boundary uzerinden yapiliyor; auth/sync sorumlulugu yeniden root
+  `SyncService` icine tasinmamis.
 - Unit testler kritik servis davranislarini kapsiyor.
 
 Calistir:
@@ -330,6 +411,7 @@ Teslimat:
 - Korunan storage key ve Firestore path listesi
 - Shim dosya listesi
 - Test sonucu
+- `43` icinde Prompt 2 execution ledger kaydi ve kanitli Prompt 3 gate karari
 
 ---
 
@@ -342,11 +424,20 @@ Teslimat:
 Once su dokumanlari oku:
 
 - `docs/refactor-v2/03-current-app-behavior.md`
-- `docs/refactor-v2/07-phase-4-learning.md`
-- `docs/refactor-v2/13-feature-learning.md`
+- `docs/refactor-v2/11-learning-progress-vocabulary-plan.md`
 - `docs/refactor-v2/18-definition-of-done.md`
+- `docs/refactor-v2/25-phase-5-learning-home-refactor.md`
 - `docs/refactor-v2/33-layer-contracts-and-import-rules.md`
+- `docs/refactor-v2/35-repository-adapter-contracts.md`
 - `docs/refactor-v2/36-shim-and-file-move-recipes.md`
+- `docs/refactor-v2/37-testing-code-templates.md`
+- `docs/refactor-v2/43-current-refactor-gap-report.md`
+
+Handoff gate:
+
+- `43` icindeki son Prompt 2 kaydi `complete`, zorunlu komutlari `PASS` ve Prompt 3 gate'i `acik` olmali.
+- Kaydi mevcut branch/HEAD/worktree ve aktif Home/Learning runtime graph'iyle yeniden dogrula. Kayit eksik, stale
+  veya celiskiliyse kod degisikligine baslama; `43`e `blocked`/superseding audit kaydi ekle.
 
 Yap:
 
@@ -395,7 +486,7 @@ Kabul kriterleri:
 - Root `screens/HomeScreen.tsx` sadece shim.
 - Yeni aktif Home screen `src/features/learning/presentation/screens/HomeScreen.tsx`.
 - Ana screen dosyasi 400 satirin altinda.
-- Presentation dosyalarinda Firebase, AsyncStorage, Expo SDK direct importu yok.
+- Presentation dosyalarinda Firebase, AsyncStorage veya side-effect/platform Expo/native SDK direct importu yok.
 - Home davranisi `03-current-app-behavior.md` ile uyumlu.
 - Ilgili testler yesil.
 
@@ -419,6 +510,7 @@ Teslimat:
 - Shim dosya durumu
 - Yasak import kontrol sonucu
 - Test sonucu
+- `43` icinde Prompt 3 execution ledger kaydi ve kanitli Prompt 4 gate karari
 
 ---
 
@@ -431,12 +523,20 @@ Example Sentences, grammar generation, level test ve favorites ekranlarini hedef
 Once su dokumanlari oku:
 
 - `docs/refactor-v2/03-current-app-behavior.md`
-- `docs/refactor-v2/07-phase-4-learning.md`
-- `docs/refactor-v2/12-feature-vocabulary.md`
-- `docs/refactor-v2/13-feature-learning.md`
+- `docs/refactor-v2/11-learning-progress-vocabulary-plan.md`
 - `docs/refactor-v2/18-definition-of-done.md`
+- `docs/refactor-v2/25-phase-5-learning-home-refactor.md`
 - `docs/refactor-v2/33-layer-contracts-and-import-rules.md`
+- `docs/refactor-v2/35-repository-adapter-contracts.md`
 - `docs/refactor-v2/36-shim-and-file-move-recipes.md`
+- `docs/refactor-v2/37-testing-code-templates.md`
+- `docs/refactor-v2/43-current-refactor-gap-report.md`
+
+Handoff gate:
+
+- `43` icindeki son Prompt 3 kaydi `complete`, zorunlu komutlari `PASS` ve Prompt 4 gate'i `acik` olmali.
+- Kaydi mevcut branch/HEAD/worktree ve ilgili ekranlarin aktif runtime importlariyla yeniden dogrula. Kayit eksik,
+  stale veya celiskiliyse kod degisikligine baslama; `43`e `blocked`/superseding audit kaydi ekle.
 
 Yap:
 
@@ -451,6 +551,7 @@ Yap:
    - favorite/save state
    - loading/error/empty states
 3. Grammar/Groq/network erisimini presentation'dan cikar; application facade ve data client arkasina al.
+   `services/groqService.ts` logic'ini ilgili feature data katmanina tasi ve root dosyayi uyumluluk shim'ine cevir.
 4. `expo-speech` ve `AsyncStorage` importlarini presentation ekranlarindan kaldir.
 5. Level test domain scoring ve persistence kurallarini application/domain altina al.
 6. Favorites ekranini favorites feature public API'si ile calistir; direct service veya storage importu kullanma.
@@ -476,8 +577,9 @@ Yapma:
 Kabul kriterleri:
 
 - Ilgili root screens sadece shim.
+- `services/groqService.ts` logic tasimayan shim/wrapper.
 - Aktif implementasyon `src/features/*/presentation` altinda.
-- Presentation dosyalarinda Firebase, AsyncStorage, Expo SDK direct importu yok.
+- Presentation dosyalarinda Firebase, AsyncStorage veya side-effect/platform Expo/native SDK direct importu yok.
 - ExampleSentences ana screen dosyasi 400 satirin altinda.
 - Level/Favorites davranisi mevcut app davranisiyla ayni.
 - Testler yesil.
@@ -502,6 +604,7 @@ Teslimat:
 - Grammar/network facade ozeti
 - Shim listesi
 - Test sonucu
+- `43` icinde Prompt 4 execution ledger kaydi ve kanitli Prompt 5 gate karari
 
 ---
 
@@ -514,11 +617,20 @@ Notification sistemini hedef mimariye tamamla. `services/notificationService.ts`
 Once su dokumanlari oku:
 
 - `docs/refactor-v2/03-current-app-behavior.md`
-- `docs/refactor-v2/10-cross-cutting-notifications.md`
-- `docs/refactor-v2/15-feature-notifications.md`
+- `docs/refactor-v2/12-notification-architecture-plan.md`
 - `docs/refactor-v2/18-definition-of-done.md`
+- `docs/refactor-v2/26-phase-6-notifications-refactor.md`
 - `docs/refactor-v2/33-layer-contracts-and-import-rules.md`
+- `docs/refactor-v2/35-repository-adapter-contracts.md`
 - `docs/refactor-v2/36-shim-and-file-move-recipes.md`
+- `docs/refactor-v2/37-testing-code-templates.md`
+- `docs/refactor-v2/43-current-refactor-gap-report.md`
+
+Handoff gate:
+
+- `43` icindeki son Prompt 4 kaydi `complete`, zorunlu komutlari `PASS` ve Prompt 5 gate'i `acik` olmali.
+- Kaydi mevcut branch/HEAD/worktree ve notification runtime/lifecycle bagimliliklariyla yeniden dogrula. Kayit eksik,
+  stale veya celiskiliyse kod degisikligine baslama; `43`e `blocked`/superseding audit kaydi ekle.
 
 Yap:
 
@@ -530,6 +642,7 @@ Yap:
    - daily reminder state
    - app lifecycle hooks
    - platform-specific behavior
+   `services/notificationFrequency.ts` bu promptun kapsamindadir ve notification domain/public API'sine tasinir.
 2. Domain modellerini saf TypeScript olarak ayir.
 3. Expo Notifications erisimini data/platform adapter katmanina indir.
 4. Pending word repository importlarini feature public boundary ile uyumlu hale getir.
@@ -547,6 +660,7 @@ Yapma:
 Kabul kriterleri:
 
 - `services/notificationService.ts` 50 satirin altinda shim/wrapper.
+- `services/notificationFrequency.ts` logic tasimayan shim veya notification public API'sine kaldirilmis eski path.
 - Expo Notifications sadece notification data/platform adapter katmaninda.
 - App/provider katmani notification facade kullanir.
 - Notification testleri permission, schedule, cancel, pending word ve error path'lerini kapsar.
@@ -572,6 +686,7 @@ Teslimat:
 - Eski servis shim durumu
 - Platform adapter listesi
 - Test sonucu
+- `43` icinde Prompt 5 execution ledger kaydi ve kanitli Prompt 6 gate karari
 
 ---
 
@@ -584,12 +699,22 @@ Settings, Setup, Onboarding ve Auth screen refactorunu tamamla. Bu promptun sonu
 Once su dokumanlari oku:
 
 - `docs/refactor-v2/03-current-app-behavior.md`
-- `docs/refactor-v2/05-phase-2-auth-profile.md`
-- `docs/refactor-v2/08-cross-cutting-auth.md`
-- `docs/refactor-v2/14-feature-settings.md`
+- `docs/refactor-v2/10-auth-profile-sync-plan.md`
+- `docs/refactor-v2/13-settings-onboarding-plan.md`
 - `docs/refactor-v2/18-definition-of-done.md`
+- `docs/refactor-v2/24-phase-4-auth-profile-sync-refactor.md`
+- `docs/refactor-v2/27-phase-7-settings-onboarding-refactor.md`
 - `docs/refactor-v2/33-layer-contracts-and-import-rules.md`
+- `docs/refactor-v2/35-repository-adapter-contracts.md`
 - `docs/refactor-v2/36-shim-and-file-move-recipes.md`
+- `docs/refactor-v2/37-testing-code-templates.md`
+- `docs/refactor-v2/43-current-refactor-gap-report.md`
+
+Handoff gate:
+
+- `43` icindeki son Prompt 5 kaydi `complete`, zorunlu komutlari `PASS` ve Prompt 6 gate'i `acik` olmali.
+- Kaydi mevcut branch/HEAD/worktree ve Settings/Setup/Onboarding/Auth route importlariyla yeniden dogrula. Kayit eksik,
+  stale veya celiskiliyse kod degisikligine baslama; `43`e `blocked`/superseding audit kaydi ekle.
 
 Yap:
 
@@ -640,7 +765,8 @@ Kabul kriterleri:
 
 - Root screen dosyalari sadece shim.
 - `SettingsScreen`, `SetupScreens`, `AuthScreens` ana implementasyonlari 400 satirin altinda.
-- Presentation'da Firebase, AsyncStorage, Expo SDK veya ImagePicker direct importu yok.
+- Presentation'da Firebase, AsyncStorage veya side-effect/platform Expo/native SDK (ImagePicker dahil) direct
+  importu yok.
 - Setup/Auth/Settings davranisi `03-current-app-behavior.md` ile uyumlu.
 - Testler yesil.
 
@@ -664,6 +790,7 @@ Teslimat:
 - Facade/adapter listesi
 - Shim durumu
 - Test sonucu
+- `43` icinde Prompt 6 execution ledger kaydi ve kanitli Prompt 7 gate karari
 
 ---
 
@@ -677,41 +804,63 @@ Once su dokumanlari oku:
 
 - `docs/refactor-v2/02-target-architecture.md`
 - `docs/refactor-v2/03-current-app-behavior.md`
-- `docs/refactor-v2/11-cross-cutting-ui-theme.md`
-- `docs/refactor-v2/16-shared-modules.md`
-- `docs/refactor-v2/17-platform-integration.md`
+- `docs/refactor-v2/04-feature-boundaries.md`
+- `docs/refactor-v2/05-folder-structure-plan.md`
+- `docs/refactor-v2/09-security-rules-and-env-hygiene.md`
+- `docs/refactor-v2/16-ci-cd-quality-gates.md`
 - `docs/refactor-v2/18-definition-of-done.md`
+- `docs/refactor-v2/21-phase-1-src-skeleton-shared-layer.md`
+- `docs/refactor-v2/22-phase-2-app-bootstrap-navigation-providers.md`
 - `docs/refactor-v2/33-layer-contracts-and-import-rules.md`
 - `docs/refactor-v2/36-shim-and-file-move-recipes.md`
+- `docs/refactor-v2/38-ci-eslint-alias-config-spec.md`
+- `docs/refactor-v2/41-eslint-lint-policy.md`
+- `docs/refactor-v2/43-current-refactor-gap-report.md`
+
+Handoff gate:
+
+- `43` icindeki son Prompt 6 kaydi `complete`, zorunlu komutlari `PASS` ve Prompt 7 gate'i `acik` olmali.
+- Kaydi mevcut branch/HEAD/worktree, root import sayilari ve boundary lint sonucuyla yeniden dogrula. Kayit eksik,
+  stale veya celiskiliyse kod degisikligine baslama; `43`e `blocked`/superseding audit kaydi ekle.
 
 Yap:
 
-1. Root shared adaylarini incele:
+1. `43` root envanterini source-of-truth kod taramasiyla yeniden uret ve Prompt 1-6 sahipligindeki dosyalar dahil
+   her root production dosyasini `logic`, `wrapper`, `shim` veya `unused` olarak siniflandir. Owner'i ve hedef path'i
+   olmayan tek dosya birakma; onceki prompt kapsaminda kalmis aktif logic varsa cleanup'a erteleme, ilgili prompt
+   gate'ini yeniden `kapali` yap.
+2. Root shared adaylarini incele:
    - `components/*`
    - `utils/*`
    - `config/*`
-2. Gercekten shared olanlari `src/shared` altina tasi:
+   - `context/ThemeContext.tsx`
+   - `services/i18n.ts`
+   - `screens/SplashScreen.tsx`
+3. Gercekten shared olanlari `src/shared` altina tasi:
    - UI components
    - typography/theme/colors
    - platform helpers
    - storage abstractions
    - logger/error helpers
    - test utilities
-3. Feature-specific component veya helper'lari ilgili feature altina tasi.
-4. Root dosyalari shim'e cevir.
-5. Firebase config icin tek dogru entrypoint belirle:
+4. Feature-specific component veya helper'lari ilgili feature altina tasi. Ornegin learning/review/monetization
+   component'leri shared'a konmaz; ilgili feature public API'sine tasinir.
+5. `screens/SplashScreen.tsx` implementasyonunu `src/app` bootstrap/presentation sinirina, `context/ThemeContext.tsx`
+   ve `services/i18n.ts` implementasyonlarini uygun `src/shared` sinirlarina tasi; root path'leri shim yap.
+6. Root dosyalari shim'e cevir.
+7. Firebase config icin tek dogru entrypoint belirle:
    - SDK initialization app/data composition tarafinda kalsin
    - presentation/domain direct import yapmasin
-6. `src` icindeki root importlarini yeni alias/public path'lere tası.
-7. Feature public barrel'lerini tamamla:
+8. `src` icindeki root importlarini yeni alias/public path'lere tası.
+9. Feature public barrel'lerini tamamla:
    - `src/features/*/index.ts`
    - sadece public API export et
    - data implementation detaylarini export etme
-8. Import boundary kontrol komutlari veya lint rule'lari ekle/guncelle:
+10. Import boundary kontrol komutlari veya lint rule'lari ekle/guncelle:
    - domain icinde SDK importu yasak
-   - presentation icinde Firebase/AsyncStorage/Expo SDK direct importu yasak
+   - presentation icinde Firebase/AsyncStorage/side-effect Expo-native SDK direct importu yasak
    - feature deep importlari yasak
-9. `src/devtools/screenRegistry.ts` icindeki screen importlarini yeni public path'lere tası.
+11. `src/devtools/screenRegistry.ts` icindeki screen importlarini yeni public path'lere tası.
 
 Yapma:
 
@@ -723,6 +872,8 @@ Kabul kriterleri:
 
 - `src/shared` ortak kodlarin ana evi.
 - Root `components`, `utils`, `config` dosyalari shim veya migration wrapper karakterinde.
+- Root `context/ThemeContext.tsx`, `services/i18n.ts` ve `screens/SplashScreen.tsx` logic tasimayan shim; `43`
+  envanterindeki diger tum root production dosyalari da owner/hedef path ile hesaplanmis durumda.
 - `src` icinde `../../screens`, `../../../screens`, `../services`, `../config` gibi eski root importlari kalmamis.
 - Import boundary rule/test mekanizmasi var ve yesil.
 - Domain ve presentation yasak import kontrolleri yesil.
@@ -748,6 +899,7 @@ Teslimat:
 - Public barrel listesi
 - Boundary rule/test ozeti
 - Yasak import tarama sonucu
+- `43` icinde Prompt 7 execution ledger kaydi ve kanitli Prompt 8 gate karari
 
 ---
 
@@ -759,15 +911,24 @@ Phase 9 cleanup yap. Bu prompt sadece Prompt 1-7 kabul kriterleri tamamen yesil 
 
 Once su dokumanlari oku:
 
+- `docs/refactor-v2/16-ci-cd-quality-gates.md`
 - `docs/refactor-v2/18-definition-of-done.md`
 - `docs/refactor-v2/29-phase-9-cleanup-performance-hardening.md`
 - `docs/refactor-v2/30-acceptance-checklist.md`
 - `docs/refactor-v2/33-layer-contracts-and-import-rules.md`
 - `docs/refactor-v2/36-shim-and-file-move-recipes.md`
+- `docs/refactor-v2/38-ci-eslint-alias-config-spec.md`
 - `docs/refactor-v2/39-phase-pr-breakdown.md`
+- `docs/refactor-v2/40-phase-9e-ci-lint-docs-audit.md`
+- `docs/refactor-v2/41-eslint-lint-policy.md`
+- `docs/refactor-v2/43-current-refactor-gap-report.md`
 
-Baslamadan once dogrula:
+Handoff gate - baslamadan once dogrula:
 
+- `43` icinde Prompt 1-7'nin her biri icin ayri `complete` kaydi, zorunlu komutlarda `PASS` ve Prompt 8 icin
+  `acik` gate var. Yalnizca son promptun genel "yesil" beyanini yeterli kabul etme.
+- Ledger'daki degisen dosya/artifact path'leri mevcut, sayisal root inventory ve import scan sonuclari guncel kodla
+  uyumlu. Uyusmazlikta kod/Git esas alinir; gate kapatilir ve cleanup'a baslanmaz.
 - `src` icinde root `screens`, `services`, `context`, `components`, `config`, `utils` importu yok.
 - Root shim dosyalari disinda aktif logic kalmamis.
 - Tum aktif route importlari `src/features/*` veya `src/app` public path'lerinden geliyor.
@@ -846,6 +1007,7 @@ Teslimat:
 - Kalan istisna listesi
 - Full CI sonucu
 - Production readiness durumu
+- `43` icinde Prompt 8 execution ledger kaydi, Prompt 9 owner-onay durumu ve Prompt 10 gate karari
 
 ---
 
@@ -853,24 +1015,47 @@ Teslimat:
 
 ## Verilecek Prompt
 
-Bu prompt production verisine dokunabilecek Firestore legacy field cleanup icindir. Bu promptu sadece repo sahibi acikca onay verdikten, Prompt 8 tamamen bittikten ve migration/backup plani kabul edildikten sonra uygula.
+Bu prompt production verisine dokunabilecek Firestore legacy field cleanup icindir. Bu promptu sadece repo sahibi
+acikca onay verdikten, Prompt 8 tamamen bittikten ve migration/backup plani kabul edildikten sonra uygula. Ilk onay
+yalnizca audit/script/dry-run hazirligini kapsar; destructive production run, dry-run sonucu goruldukten sonra ikinci
+ve hedefe ozgu bir owner onayi gerektirir.
 
 Once su dokumanlari oku:
 
 - `docs/refactor-v2/03-current-app-behavior.md`
-- `docs/refactor-v2/06-phase-3-data-sync.md`
-- `docs/refactor-v2/09-cross-cutting-sync.md`
+- `docs/refactor-v2/07-firestore-data-model-v2.md`
+- `docs/refactor-v2/08-firestore-migration-strategy.md`
+- `docs/refactor-v2/09-security-rules-and-env-hygiene.md`
 - `docs/refactor-v2/18-definition-of-done.md`
+- `docs/refactor-v2/23-phase-3-firestore-model-and-migration-prep.md`
 - `docs/refactor-v2/29-phase-9-cleanup-performance-hardening.md`
 - `docs/refactor-v2/30-acceptance-checklist.md`
+- `docs/refactor-v2/34-firestore-types-rules-migration-spec.md`
+- `docs/refactor-v2/37-testing-code-templates.md`
+- `docs/refactor-v2/43-current-refactor-gap-report.md`
+- `docs/refactor-v2/phase-9-firestore-cleanup-plan.md`
+
+Handoff gate:
+
+- `43` icindeki Prompt 8 kaydi `complete`, zorunlu komutlari `PASS` ve migration hazirlik gate'i `acik` olmali.
+- Prompt 8 sonrasi runtime'da legacy read/write, dual-write ve eski surum compatibility durumunu mevcut kod/analytics
+  kanitiyla yeniden dogrula. Belirsizlik veya celiski destructive gate'i kapatir.
+- Repo sahibi cleanup'i uygulamamaya karar verirse kod veya remote veri degistirme. Gerekceyi, owner kararini ve
+  compatibility'nin korunduguna dair kaniti Prompt 9 `not-applicable` ledger kaydi olarak `43`e ekle; kosullar
+  saglaniyorsa Prompt 10 gate'ini ac.
 
 Baslamadan once zorunlu onay sor:
 
 - Hangi environment hedefleniyor: dev, staging, production?
+- Hedef Firebase project ID ve kullanilacak credential identity nedir? Emulator/staging ile production kimlikleri
+  birbirinden acikca ayrildi mi?
 - Firestore backup alindi mi?
+- Backup'in path/ID, alinma zamani, retention suresi ve restore dogrulama sonucu nedir?
 - Rollback plani yazildi mi?
 - Eski app versiyonlari icin compatibility window kapandi mi?
 - Dual-write kapatilacak mi, yoksa sadece audit mi yapilacak?
+- Dry-run sonrasi production destructive run icin beklenen document sayisi, hedef project ID ve backup ID yazilarak
+  ikinci owner onayi verildi mi?
 
 Yap:
 
@@ -881,10 +1066,17 @@ Yap:
    - hangi field silinecek/tasinacak
    - once/sonra ornek payload
    - hata halinde durma ve raporlama
+   - PII/secret maskeleme
+   - explicit `--project` ve environment allowlist kontrolu
+   - varsayilan dry-run; destructive mode icin ayri `--execute` flag'i ve project ID confirmation
 4. Backup/restore talimatini dokumante et.
-5. Staging veya emulator uzerinde migration test et.
-6. Production icin default davranisi dry-run yap; destructive mode explicit flag gerektirsin.
-7. Migration sonucunu audit log olarak yazdir.
+5. Emulator ve staging uzerinde migration/rollback test et; staging yoksa bunu production icin blocker olarak kaydet.
+6. Production icin default davranisi dry-run yap. Dry-run raporunu owner'a sunmadan ve hedefe ozgu ikinci onayi
+   `43`e kaydetmeden destructive komutu calistirma.
+7. Migration sonucunu PII icermeyen audit log olarak repository disindaki guvenli operasyon loguna yazdir; raporda
+   yalnizca redacted ozet ve artifact referansi tut.
+8. Script, dry-run raporu, backup/rollback dokumani, approval kaydi ve emulator/staging sonucunun exact
+   repository-relative artifact path'lerini `43` ledger kaydina ekle.
 
 Yapma:
 
@@ -892,6 +1084,8 @@ Yapma:
 - Backup olmadan destructive operation calistirma.
 - App'in eski versiyonlari hala legacy field bekliyorsa field silme.
 - Migration script'ini otomatik production destructive mode ile calistirma.
+- `firebase use` gibi implicit aktif project secimine guvenme; explicit project ID olmadan remote komut calistirma.
+- Credential, service-account JSON, ham production payload'i veya PII'yi repository/rapor/log artifact'ine yazma.
 
 Kabul kriterleri:
 
@@ -900,6 +1094,8 @@ Kabul kriterleri:
 - Backup/rollback dokumani var.
 - Emulator/staging test sonucu kayitli.
 - Production destructive run icin explicit onay ve flag gerekiyor.
+- Remote hedef/project allowlist disindaysa, backup restore dogrulanmadiysa, mismatch sayisi sifir degilse veya ikinci
+  owner onayi yoksa destructive run fail-closed duruyor.
 
 Calistir:
 
@@ -921,6 +1117,7 @@ Teslimat:
 - Dry-run raporu
 - Backup/rollback dokumani
 - Production onay checklist'i
+- Exact artifact path'lerini ve onay kanitini iceren `43` Prompt 9 execution ledger kaydi; Prompt 10 gate karari
 
 ---
 
@@ -932,11 +1129,32 @@ Tum refactor tamamlandiktan sonra final production readiness audit yap. Bu promp
 
 Once su dokumanlari oku:
 
+- `docs/refactor-v2/02-target-architecture.md`
 - `docs/refactor-v2/03-current-app-behavior.md`
+- `docs/refactor-v2/09-security-rules-and-env-hygiene.md`
+- `docs/refactor-v2/15-testing-strategy.md`
+- `docs/refactor-v2/16-ci-cd-quality-gates.md`
+- `docs/refactor-v2/17-risk-register.md`
 - `docs/refactor-v2/18-definition-of-done.md`
 - `docs/refactor-v2/30-acceptance-checklist.md`
 - `docs/refactor-v2/31-implementation-order.md`
 - `docs/refactor-v2/33-layer-contracts-and-import-rules.md`
+- `docs/refactor-v2/38-ci-eslint-alias-config-spec.md`
+- `docs/refactor-v2/40-phase-9e-ci-lint-docs-audit.md`
+- `docs/refactor-v2/41-eslint-lint-policy.md`
+- `docs/refactor-v2/43-current-refactor-gap-report.md`
+- `docs/refactor-v2/phase-9-firestore-cleanup-plan.md`
+
+Handoff gate:
+
+- `43` icinde Prompt 0-8'in her biri icin `complete` kaydi, zorunlu komutlarda `PASS` ve Prompt 10 icin `acik`
+  gate bulunmali. Prompt 9 kaydi ya `complete` olmali ya da repo sahibinin gerekceli karariyla `not-applicable`
+  olmali; belirsiz, eksik veya sadece planlanmis durum release gate'ini kapatir.
+- Ledger'daki artifact path'leri ve sayisal iddialari mevcut checkout'ta yeniden dogrula. Prompt 9 calistiysa dry-run,
+  backup/rollback, onay ve execution artifact'leri mevcut olmali; calismadiysa legacy compatibility'nin korundugunu
+  kod ve rules ile dogrula.
+- Handoff kaniti stale/celiskiliyse audit raporunu yine uret, ancak release kararini `blocked` yap ve ilgili prompt
+  gate'ini `43`te kapat; eksigi bu prompt icinde buyuk refactorla kapatmaya calisma.
 
 Yap:
 
@@ -968,7 +1186,11 @@ Yap:
    - Android emulator varsa Android
 6. Performance ve bundle risklerini kontrol et.
 7. Secret scan ve env audit yap.
-8. Sonucu `docs/refactor-v2/44-final-production-readiness-report.md` dosyasina yaz.
+8. `43` ledger kayitlarindaki degisen dosya, command, test, manual QA, risk ve artifact kanitlarini current checkout
+   ile reconcile et; her kabul maddesinin kanit path/komutunu cikar.
+9. Sonucu `docs/refactor-v2/44-final-production-readiness-report.md` dosyasina yaz.
+10. `43`e Prompt 10 terminal ledger kaydini ekle; `44` path'ini, release kararini ve bloklayan acceptance ID'lerini
+    kaydet. `44` raporu `43` history'sini silmez veya onun yerine gecmez.
 
 Yapma:
 
@@ -1005,6 +1227,7 @@ Teslimat:
 - `docs/refactor-v2/44-final-production-readiness-report.md`
 - Full command result summary
 - Release karari: `ready`, `blocked`, veya `ready with documented risk`
+- `43` icinde Prompt 10 terminal execution ledger kaydi ve `44` kanit baglantisi
 
 ---
 
@@ -1019,7 +1242,9 @@ Teslimat:
 7. Prompt 6 ile Settings/Setup/Onboarding/Auth screens refactorunu tamamla.
 8. Prompt 7 ile shared/import boundary sertlestirmesini yap.
 9. Prompt 8 ile Phase 9 shim silme ve CI hardening yap.
-10. Prompt 9'u sadece production data cleanup icin ayrik onayla uygula.
-11. Prompt 10 ile final release gate raporunu uret.
+10. Prompt 9'u sadece production data cleanup icin iki asamali ayrik onayla uygula; uygulanmayacaksa gerekceli
+    `not-applicable` owner kararini `43`e kaydet.
+11. Prompt 10 ile `43`teki tum handoff kanitlarini current checkout'a karsi dogrula ve final release gate raporunu uret.
 
 Bu sira bozulmamalidir. Ozellikle Prompt 8, onceki promptlar tamamlanmadan calistirilmamalidir. Prompt 9 ise refactorun zorunlu parcasi degil, production data migration parcasi olarak ayrik onayla ele alinmalidir.
+Her adimin sonunda `43-current-refactor-gap-report.md` guncellenmeden ve sonraki gate kanitla acilmadan zincir ilerlemez.

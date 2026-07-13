@@ -392,3 +392,45 @@ Repo disi kullanici ortami:
 ### Bir sonraki prompta gecilebilir mi?
 
 **Evet.** Zorunlu typecheck/hedefli testler, full `test:ci`, lint, `typecheck:rules` ve gercek Firestore emulator `test:rules` suite'i tamamlandi. Prompt 1'e gecis aciktir.
+
+## 13. Prompt Execution Ledger
+
+Bu bolum Prompt 0-10 arasindaki kalici handoff ve kanit defteridir. Ilk audit snapshot'i ile tamamlanmis prompt
+kayitlari **append-only** korunur. Bir kayit hatali veya stale ise eski kayit silinmez; tarih, neden ve onceki kayda
+referans iceren bir superseding kayit eklenir. Mevcut Git/kod durumu raporla celistiginde Git/kod esas alinir.
+
+Her yeni prompt kaydi en az su alanlari icerir:
+
+- prompt numarasi, `complete`/`blocked` durumu ve Europe/Istanbul audit zamani
+- baslangic/bitis branch, HEAD ve worktree ozeti
+- kapsam, degisen dosyalar ve repository-relative artifact path'leri
+- cozumlenen/kalan gap'ler ile yeniden olculmus sayisal tarama sonuclari
+- exact komut, exit code, `PASS`/`FAIL` ve test suite/test sayilari
+- manual QA sonucu veya calistirilamama nedeni
+- sonraki prompt icin `acik`/`kapali` gate ve somut kanit
+
+Komut calistirilmadiysa veya sonuc tahmin edildiyse `PASS` yazilmaz. Zorunlu kontrol calistirilamiyorsa kayit
+`blocked` olur. Prompt 9 opsiyoneldir; Prompt 10'dan once owner onayli `complete` veya gerekceli `not-applicable`
+kaydi zorunludur.
+
+### Prompt 0 — 2026-07-13
+
+| Alan | Kayit |
+|---|---|
+| Durum | **complete** |
+| Audit zamani | 2026-07-13 22:38 +03 (Europe/Istanbul); handoff formati 2026-07-13 23:06 +03'te dogrulandi |
+| Branch / baslangic HEAD | `refactor` / `08c91e57` |
+| Kanit commit'i | `c1def165` (`43` raporu, dedicated rules Jest config'i ve `test:rules` scripti) |
+| Kapsam | Preflight/runtime/import/size/script audit'i; JDK ve gercek Firestore emulator rules-test remediation'i |
+| Degisen dosyalar | `docs/refactor-v2/43-current-refactor-gap-report.md`, `jest.rules.config.js`, `package.json` |
+| Repo disi ortam | Homebrew OpenJDK 21.0.11; `~/.zprofile` ve `~/.zshrc` icinde idempotent `JAVA_HOME`/PATH |
+| Artifact'ler | `docs/refactor-v2/43-current-refactor-gap-report.md`, `jest.rules.config.js` |
+| Cozumlenen gap | Rules testi gercek emulatorla ve explicit `vocbee-rules-test` project ID ile calisiyor; no-test false green kaldirildi |
+| Kalan gap/risk | Bolum 10 ve 12; 45 root logic modulu, 70 root import occurrence'i, 2 deep import, 52 lint warning |
+| Otomatik kanit | `npm run typecheck` exit 0; hedefli Jest 3/3 suite ve 8/8 test; `npm run test:ci` 67/67 suite ve 395/395 test; `npm run lint` exit 0 (52 warning); `npm run typecheck:rules` exit 0; `npm run test:rules` exit 0, 1/1 suite ve 8/8 test |
+| Manual QA | Uygulama davranisi degistirilmedigi icin feature smoke N/A; Firestore emulatorun gercek baslama/kapanma akisi terminalde dogrulandi |
+| Sonraki gate | **Prompt 1: acik.** Zorunlu ve mevcut ek kalite komutlari PASS; oncelik/kapsam Bolum 10'da |
+
+Bu kayit, Prompt 0 sonrasi prompt-zinciri dokumani bakimini bir feature/refactor promptu olarak saymaz.
+`docs/refactor-v2/42-refactor-completion-prompts.md` uzerindeki handoff/reference duzeltmeleri ayri dokumantasyon
+bakimidir; Prompt 1 calisirken mevcut worktree korunarak yeniden kaydedilmelidir.
