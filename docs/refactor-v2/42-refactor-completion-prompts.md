@@ -669,7 +669,7 @@ Teslimat:
 
 # Prompt 7 - Shared Katman, UI Bilesenleri, Config ve Import Boundary Hardening
 
-## Opus 4.8'e Verilecek Prompt
+## Verilecek Prompt
 
 Shared katmani tamamla ve import boundary kurallarini sertlestir. Bu promptun sonunda root `components`, `utils`, `config` aktif implementation alani olmaktan cikacak; ortak kodlar `src/shared` altinda olacak ve eski root dosyalari shim olacak.
 
@@ -753,7 +753,7 @@ Teslimat:
 
 # Prompt 8 - Phase 9 Shim Silme, Dead Code Temizligi ve CI Hardening
 
-## Opus 4.8'e Verilecek Prompt
+## Verilecek Prompt
 
 Phase 9 cleanup yap. Bu prompt sadece Prompt 1-7 kabul kriterleri tamamen yesil olduktan sonra uygulanacak. Amac eski root shim'lerini silmek, dead code'u temizlemek, importlari tamamen `src` mimarisine almak ve CI/lint/test kalitesini production-ready hale getirmektir.
 
@@ -851,7 +851,7 @@ Teslimat:
 
 # Prompt 9 - Firestore Legacy Field Cleanup Icin Ayrik ve Onayli Migration
 
-## Opus 4.8'e Verilecek Prompt
+## Verilecek Prompt
 
 Bu prompt production verisine dokunabilecek Firestore legacy field cleanup icindir. Bu promptu sadece repo sahibi acikca onay verdikten, Prompt 8 tamamen bittikten ve migration/backup plani kabul edildikten sonra uygula.
 
@@ -926,7 +926,7 @@ Teslimat:
 
 # Prompt 10 - Final Production Readiness ve Release Gate
 
-## Opus 4.8'e Verilecek Prompt
+## Verilecek Prompt
 
 Tum refactor tamamlandiktan sonra final production readiness audit yap. Bu promptun amaci yeni ozellik eklemek degil, refactorun eksiksiz ve guvenli sekilde release edilebilir oldugunu kanitlamaktir.
 
