@@ -1,6 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Asset } from 'expo-asset';
-// @ts-expect-error expo-file-system/legacy is valid in Expo SDK 54.
 import * as FileSystem from 'expo-file-system/legacy';
 
 import { STORAGE_KEYS } from '@shared/storage';

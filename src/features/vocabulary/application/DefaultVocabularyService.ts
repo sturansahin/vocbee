@@ -1,8 +1,5 @@
 import { VOCABULARY_SCHEMA_VERSION } from '../domain/constants';
-import {
-  mergeVocabularyWords,
-  type isUserLevel,
-} from '../domain/rules';
+import { mergeVocabularyWords } from '../domain/rules';
 import { LEVELS, type Level, type VocabularyWord } from '../domain/types';
 import type { StoredVocabularyByLevel, VocabularyRepository } from '../data/contracts';
 
@@ -115,5 +112,3 @@ export class DefaultVocabularyService {
     catch (error) { console.error('Error clearing vocabulary:', error); }
   }
 }
-
-void (0 as unknown as typeof isUserLevel);

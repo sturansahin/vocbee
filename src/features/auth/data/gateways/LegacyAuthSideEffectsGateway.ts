@@ -1,4 +1,5 @@
 import type { NotificationSettings } from '@features/notifications';
+import { resetProgress } from '@features/progress';
 
 import {
   cancelAllNotifications,
@@ -6,7 +7,6 @@ import {
   getNotificationSettings,
   saveNotificationSettings,
 } from '../../../../../services/notificationService';
-import { resetProgress } from '../../../../../services/progressService';
 import type {
   AuthNotificationGateway,
   AuthProgressGateway,

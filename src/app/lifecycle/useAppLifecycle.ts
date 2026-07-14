@@ -15,6 +15,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { RootStackParamList } from '../../../types';
 import { useAuth } from '@features/auth';
 import { useMonetization } from '@features/monetization';
+import { recordReviewAppLaunch } from '@features/review';
 import { autoSync } from '@features/sync';
 import {
   getNotificationPermissionState,
@@ -34,7 +35,6 @@ import {
   checkAndShowAppOpenAd,
   refreshAdInventoryOnForeground,
 } from '../../../services/adMobService';
-import { recordReviewAppLaunch } from '../../../services/reviewPromptService';
 
 export function useAppLifecycle() {
   const { user, userData, isLoading, connectionError, notificationSettings } = useAuth();

@@ -25,7 +25,7 @@ jest.mock('../../config/firebase', () => ({
 }));
 
 // Mock progressService
-jest.mock('../progressService', () => ({
+jest.mock('@features/progress', () => ({
     getUserProgress: jest.fn(),
     getCurrentLevel: jest.fn(),
     restoreProgressFromFirebase: jest.fn(),
@@ -33,14 +33,14 @@ jest.mock('../progressService', () => ({
 }));
 
 // Mock favoritesService
-jest.mock('../favoritesService', () => ({
+jest.mock('@features/favorites', () => ({
     restoreFavoritesFromFirebase: jest.fn(),
     syncFavoritesToFirebase: jest.fn(),
     syncFavoritesToFirebaseForUser: jest.fn(),
 }));
 
 // Mock vocabularyService
-jest.mock('../vocabularyService', () => ({
+jest.mock('@features/vocabulary', () => ({
     getLanguagePair: jest.fn(),
     isVocabularyGenerated: jest.fn(),
     generateVocabulary: jest.fn(),
@@ -53,7 +53,7 @@ jest.mock('../notificationService', () => ({
     saveNotificationSettings: jest.fn(),
 }));
 
-jest.mock('../streakService', () => ({
+jest.mock('@features/streak', () => ({
     getStreakState: jest.fn(() => Promise.resolve({
         currentStreak: 3,
         longestStreak: 5,
@@ -76,11 +76,11 @@ import {
 } from '../SyncService';
 import { doc, setDoc, getDoc } from 'firebase/firestore';
 import { needsSync, getLastSyncTime, setLastSyncTime, clearSyncFlag, STORAGE_KEYS } from '@shared/storage';
-import { getUserProgress, getCurrentLevel, restoreProgressFromFirebase, getLastWordId } from '../progressService';
-import { restoreFavoritesFromFirebase, syncFavoritesToFirebaseForUser } from '../favoritesService';
-import { getLanguagePair } from '../vocabularyService';
+import { getUserProgress, getCurrentLevel, restoreProgressFromFirebase, getLastWordId } from '@features/progress';
+import { restoreFavoritesFromFirebase, syncFavoritesToFirebaseForUser } from '@features/favorites';
+import { getLanguagePair } from '@features/vocabulary';
 import { getNotificationSettings, saveNotificationSettings } from '../notificationService';
-import { restoreStreakState } from '../streakService';
+import { restoreStreakState } from '@features/streak';
 
 describe('SyncService', () => {
     beforeEach(async () => {

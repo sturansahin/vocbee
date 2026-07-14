@@ -1,6 +1,6 @@
-import { LEVELS, type Level, type VocabularyWord } from '@features/vocabulary';
+import type { Level, VocabularyWord } from '@features/vocabulary';
 
-import type { FavoriteItem } from '../domain/types';
+import { FAVORITE_LEVELS, type FavoriteItem } from '../domain/types';
 import { mergeFavoriteItems } from '../domain/rules';
 import type { FavoritesLocalStore, FavoritesRemoteRepository, FavoritesVocabularySource } from './contracts';
 
@@ -22,7 +22,7 @@ export class DefaultFavoritesService {
         console.log('Migrating legacy favorites to level-aware format...');
         const migrated: FavoriteItem[] = [];
         for (const id of parsed) {
-          for (const level of LEVELS) {
+          for (const level of FAVORITE_LEVELS) {
             if ((await this.vocabulary.getWords(level)).find(word => word.id === id)) migrated.push({ id, level });
           }
         }

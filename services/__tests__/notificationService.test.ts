@@ -21,12 +21,12 @@ jest.mock('expo-notifications', () => ({
     SchedulableTriggerInputTypes: { TIME_INTERVAL: 'TIME_INTERVAL' },
 }));
 
-jest.mock('../vocabularyService', () => ({
+jest.mock('@features/vocabulary', () => ({
     LEVELS: [],
     getStoredVocabulary: jest.fn(),
 }));
 
-jest.mock('../progressService', () => ({
+jest.mock('@features/progress', () => ({
     getCurrentLevel: jest.fn(),
     markWordAsLearned: jest.fn(),
     unmarkWord: jest.fn(),
@@ -44,8 +44,8 @@ jest.mock('../i18n', () => ({
     },
 }));
 
-import { getStoredVocabulary } from '../vocabularyService';
-import { getCurrentLevel, getLearnedWords } from '../progressService';
+import { getStoredVocabulary } from '@features/vocabulary';
+import { getCurrentLevel, getLearnedWords } from '@features/progress';
 import {
     MAX_VOCABULARY_NOTIFICATIONS,
     getNotificationContent,

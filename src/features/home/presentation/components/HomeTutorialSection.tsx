@@ -9,7 +9,7 @@
 import React from 'react';
 import { Dimensions, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import HomeTutorialOverlay, { LayoutRect } from '../../../../../components/HomeTutorialOverlay';
-import { VocabularyWord } from '../../../../../services/vocabularyService';
+import type { VocabularyWord } from '@features/vocabulary';
 import { FavoriteStarIcon } from './FavoriteStarIcon';
 import { FONT_FAMILY } from '../../../../../utils/typography';
 

@@ -1,29 +1,29 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
+import {
+  restoreFavoritesFromFirebase,
+  syncFavoritesToFirebaseForUser,
+} from '@features/favorites';
 import { buildStoredProfileFromFirestore, type StoredProfile } from '@features/profile';
-import { STORAGE_KEYS } from '@shared/storage';
 import {
   getCurrentLevel,
   getLastWordId,
   getUserProgress,
   restoreProgressFromFirebase,
-} from '../../../../../services/progressService';
-import {
-  restoreFavoritesFromFirebase,
-  syncFavoritesToFirebaseForUser,
-} from '../../../../../services/favoritesService';
+} from '@features/progress';
+import { getStreakState, restoreStreakState } from '@features/streak';
 import {
   generateVocabulary,
   getLanguagePair,
   getUserLevelFromCefrLevel,
   isUserLevel,
   isVocabularyGenerated,
-} from '../../../../../services/vocabularyService';
+} from '@features/vocabulary';
+import { STORAGE_KEYS } from '@shared/storage';
 import {
   getNotificationSettings,
   saveNotificationSettings,
 } from '../../../../../services/notificationService';
-import { getStreakState, restoreStreakState } from '../../../../../services/streakService';
 import type { SyncDomainGateway } from '../../application/contracts';
 import type { LocalSyncSnapshot, RemoteUserDocument } from '../../domain/types';
 

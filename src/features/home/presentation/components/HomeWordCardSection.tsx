@@ -19,7 +19,7 @@ import {
 import LottieView from 'lottie-react-native';
 import { FONT_FAMILY } from '../../../../../utils/typography';
 import { VocabularyCardHeader } from '../../../../../components/VocabularyCardHeader';
-import { VocabularyWord } from '../../../../../services/vocabularyService';
+import type { VocabularyWord } from '@features/vocabulary';
 import { FavoriteStarIcon } from './FavoriteStarIcon';
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');

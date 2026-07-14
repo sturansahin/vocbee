@@ -28,7 +28,7 @@ jest.mock('../../../../services/adMobService', () => ({
   checkAndShowAppOpenAd: jest.fn(async () => {}),
   refreshAdInventoryOnForeground: jest.fn(async () => {}),
 }));
-jest.mock('../../../../services/reviewPromptService', () => ({ recordReviewAppLaunch: jest.fn(async () => {}) }));
+jest.mock('@features/review', () => ({ recordReviewAppLaunch: jest.fn(async () => {}) }));
 jest.mock('expo-notifications', () => ({
   addNotificationResponseReceivedListener: jest.fn(() => ({ remove: jest.fn() })),
   getLastNotificationResponseAsync: jest.fn(async () => null),

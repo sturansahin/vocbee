@@ -13,10 +13,10 @@
 import * as Notifications from 'expo-notifications';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Platform } from 'react-native';
-import { VocabularyWord, Level, LEVELS, getStoredVocabulary } from './vocabularyService';
-import { getCurrentLevel, markWordAsLearned, unmarkWord, getLearnedWords } from './progressService';
+import { type VocabularyWord, type Level, LEVELS, getStoredVocabulary } from '@features/vocabulary';
+import { getCurrentLevel, markWordAsLearned, unmarkWord, getLearnedWords } from '@features/progress';
 import { STORAGE_KEYS } from '@shared/storage';
-import { getStreakState, isStreakCompletedToday } from './streakService';
+import { getStreakState, isStreakCompletedToday } from '@features/streak';
 // Phase 6: pure scheduling slot-count rule now lives in the notifications domain (pure, tested).
 import { getDailyNotificationSlotCount } from '../src/features/notifications';
 // ADIM 6 (PR-6.5): pending-notification-word read/write/clear now delegates to a small repository

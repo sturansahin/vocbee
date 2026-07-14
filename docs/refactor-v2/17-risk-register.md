@@ -31,3 +31,10 @@
 - **R4 kapalı:** iPhone 17 Pro / iOS 26.5 Simulator üzerinde session bootstrap, logout cleanup ve email login akışları runtime loglarıyla doğrulandı.
 - Google/Apple ilk başarısız deneme loglarından sonra kullanıcı nihai manual QA sonucunu email/Google/Apple login, şifre sıfırlama, hesap silme, iki cihaz sync çakışması ve profil güncelleme dahil "hepsi çalışıyor" olarak onayladı.
 - Prompt 1 execution ledger'ına superseding `complete` kaydı eklendi; Prompt 2 gate'i açıldı.
+
+## Prompt 2 servis katmanı güncellemesi — 2026-07-14
+
+- **R1/R11/R12 kontrollü:** Firestore migration, schema veya storage-key değişikliği yapılmadı. `users/{uid}` ana dokümanı, `progress`/`favorites`/`streak` payload'ları ve `syncMeta.version=1` davranışı korundu; mevcut `progressByLevel` hazırlık repository'si aktive edilmedi.
+- **R9 azaltıldı:** vocabulary cache fallback, progress mutation, favorites add/remove/check ve review eligibility için 4 suite/15 test eklendi; mevcut streak ve SyncOrchestrator retry/integration testleriyle birlikte hedefli 6 suite/43 test geçti. Full Jest 74 suite/425 testtir; coverage exclude listesi genişletilmedi.
+- **R2'nin Prompt 2 servis kapsamı kapalı:** iPhone 17 Pro / iOS 26.5 Simulator üzerinde vocabulary üretimi, progress/favorites restore, üç kelime öğrenme, iki favori ekleme, streak güncelleme, reload sonrası progress kalıcılığı ve favorites Firebase sync gözlendi. HomeScreen parçalama ve Phase 5'in tam ekran/manual checklist'i Prompt 3 sahibi olarak açık kalır.
+- Prompt 2'nin sahibi olduğu açık Kritik/Yüksek risk kalmadı; compatibility shim'leri rollback yüzeyi olarak korunuyor.

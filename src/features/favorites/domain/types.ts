@@ -5,3 +5,5 @@
 import type { Level } from '../../vocabulary';
 
 export type FavoriteItem = { id: number; level: Level };
+
+export const FAVORITE_LEVELS: Level[] = ['A1', 'A2', 'B1', 'B2', 'C1'];
