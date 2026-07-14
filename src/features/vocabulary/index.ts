@@ -4,5 +4,7 @@
 
 export * from './domain/types';
 export * from './domain/constants';
+export * from './domain/rules';
 export { parseVocabularyTxt } from './data/adapters/wordAdapter';
 export type { VocabularyRepository } from './data/contracts';
+export * from './composition/vocabularyService';

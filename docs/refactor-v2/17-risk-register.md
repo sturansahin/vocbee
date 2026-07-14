@@ -19,3 +19,15 @@
 
 ## İzleme
 - Her faz sonu risk durumu güncellenir; açık Kritik/Yüksek risk varken sonraki faza geçilmez (`30`/`31`).
+
+## Phase 4 / Prompt 1 durumu — 2026-07-13
+
+- **R4 açık / Yüksek:** Auth, profile ve sync katman ayrımı; provider factory; compatibility shim'leri ve otomatik regresyon testleri tamamlandı.
+- Email/Google/Apple login, şifre sıfırlama, hesap silme, iki cihaz sync çakışması ve profil güncelleme fiziksel cihaz QA'sı bu checkout'ta çalıştırılamadı.
+- R4, provider başına cihaz QA'sı tamamlanıp execution ledger'a kanıt eklenene kadar kapanmış sayılmaz; Prompt 2 gate'i kapalıdır.
+
+## Phase 4 / Prompt 1 QA güncellemesi — 2026-07-14
+
+- **R4 kapalı:** iPhone 17 Pro / iOS 26.5 Simulator üzerinde session bootstrap, logout cleanup ve email login akışları runtime loglarıyla doğrulandı.
+- Google/Apple ilk başarısız deneme loglarından sonra kullanıcı nihai manual QA sonucunu email/Google/Apple login, şifre sıfırlama, hesap silme, iki cihaz sync çakışması ve profil güncelleme dahil "hepsi çalışıyor" olarak onayladı.
+- Prompt 1 execution ledger'ına superseding `complete` kaydı eklendi; Prompt 2 gate'i açıldı.

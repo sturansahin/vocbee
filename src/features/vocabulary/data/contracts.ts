@@ -4,10 +4,18 @@
 
 import type { Level, VocabularyWord } from '../domain/types';
 
+export type StoredVocabularyByLevel = Partial<Record<Level, VocabularyWord[]>>;
+
 export interface VocabularyRepository {
-  getWords(level: Level): Promise<VocabularyWord[]>;       // getStoredVocabulary
-  getTotalCount(level: Level): Promise<number>;            // progress totalCount source
-  isGenerated(): Promise<boolean>;                         // isVocabularyGenerated
-  generate(nativeLanguage: string, targetLanguage: string): Promise<void>; // generateVocabulary
-  clear(): Promise<void>;                                  // clearVocabulary
+  loadAssetWords(language: string, level: Level): Promise<VocabularyWord[] | null>;
+  getSchemaVersion(): Promise<string | null>;
+  setSchemaVersion(version: number): Promise<void>;
+  hasStoredVocabulary(): Promise<boolean>;
+  getLanguagePair(): Promise<{ native: string; target: string } | null>;
+  setLanguagePair(nativeLanguage: string, targetLanguage: string): Promise<void>;
+  getLevelWords(level: Level): Promise<VocabularyWord[] | null>;
+  getLegacyVocabulary(): Promise<StoredVocabularyByLevel | null>;
+  writeLevelWords(entries: StoredVocabularyByLevel): Promise<void>;
+  removeLegacyVocabulary(): Promise<void>;
+  clear(): Promise<void>;
 }

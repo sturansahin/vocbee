@@ -13,9 +13,9 @@ import { NavigationContainerRef } from '@react-navigation/native';
 import * as Notifications from 'expo-notifications';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { RootStackParamList } from '../../../types';
-import { useAuth } from '../../../context/AuthContext';
+import { useAuth } from '@features/auth';
 import { useMonetization } from '@features/monetization';
-import { autoSync } from '../../../services/SyncService';
+import { autoSync } from '@features/sync';
 import {
   getNotificationPermissionState,
   handleNotificationResponse,

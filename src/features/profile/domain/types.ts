@@ -7,3 +7,8 @@ export type Profile = {
   image: string | null;
   email: string;
 };
+
+// Backwards-compatible name used by the legacy social-auth helpers. Keeping the
+// alias in the domain layer lets the root compatibility shim expose the exact
+// old type without owning any implementation.
+export type StoredProfile = Profile;

@@ -6,15 +6,19 @@ import type { AuthUser } from '../../domain/types';
 function makeFakeAuthRepo(overrides: Partial<AuthRepository> = {}): AuthRepository {
   const user: AuthUser = { uid: 'u1', email: 'a@b.com', displayName: 'A', photoURL: null };
   return {
+    configure: jest.fn(),
     getCurrentUser: () => user,
     onAuthStateChanged: () => () => undefined,
     signUpWithEmail: jest.fn(async () => user),
     signInWithEmail: jest.fn(async () => user),
-    signInWithGoogle: jest.fn(async () => user),
-    signInWithApple: jest.fn(async () => user),
+    signInWithGoogle: jest.fn(async () => ({ user })),
+    signInWithApple: jest.fn(async () => ({ user })),
+    updateCurrentUserProfile: jest.fn(async () => undefined),
     signOut: jest.fn(async () => undefined),
+    disconnectProviderSessions: jest.fn(async () => undefined),
     sendPasswordReset: jest.fn(async () => undefined),
     deleteAuthUser: jest.fn(async () => undefined),
+    getIdToken: jest.fn(async () => 'token'),
     getLastSignInTimeMs: () => Date.now(),
     ...overrides,
   };

@@ -434,3 +434,60 @@ kaydi zorunludur.
 Bu kayit, Prompt 0 sonrasi prompt-zinciri dokumani bakimini bir feature/refactor promptu olarak saymaz.
 `docs/refactor-v2/42-refactor-completion-prompts.md` uzerindeki handoff/reference duzeltmeleri ayri dokumantasyon
 bakimidir; Prompt 1 calisirken mevcut worktree korunarak yeniden kaydedilmelidir.
+
+### Prompt 1 — 2026-07-13
+
+| Alan | Kayit |
+|---|---|
+| Durum | **blocked** — implementation ve otomatik gate'ler tamamlandi; faz DoD'sinin zorunlu fiziksel cihaz/provider manual QA'si calistirilamadi |
+| Audit zamani | 2026-07-13 23:41 +03 (Europe/Istanbul) |
+| Branch / baslangic HEAD | `refactor` / `30d5a938`; worktree Prompt 1 baslangicinda temizdi |
+| Branch / bitis HEAD | `refactor` / `30d5a938`; commit olusturulmadi, worktree yalnizca asagidaki Prompt 1 kod/test/dokuman degisikliklerini iceriyor |
+| Handoff revalidation | Son Prompt 0 kaydi `complete`, zorunlu komutlari PASS ve Prompt 1 gate'i `acik`; `c1def165..30d5a938` araligi yalnizca `42`/`43` prompt-handoff dokumantasyon bakimiydi; Auth/Profile/Sync koduyla celiski yoktu |
+| Kapsam | Auth state/session/profile bootstrap/setup/error/loading akisini ince provider + `AuthFacade` olarak ayirma; provider factory/adapters; profile persistence; sync orchestration/repository/local-store; root compatibility shim'leri |
+| Degisen dosyalar | `context/AuthContext.tsx`, `context/__tests__/AuthContext.test.tsx`; `services/{SyncService,googleAuthConfig,nativeGoogleSignIn,socialAuthProfile}.ts`; `src/features/auth/**`; `src/features/profile/**`; `src/features/sync/**`; `src/app/{lifecycle,providers}/**`; ilgili `src/devtools/**` ve `src/features/monetization/**` import/test dosyalari; `docs/refactor-v2/{17-risk-register,43-current-refactor-gap-report}.md` |
+| Artifact'ler | `src/features/auth/application/AuthFacade.ts`, `src/features/auth/presentation/AuthProvider.tsx`, `src/features/auth/data/{clients,gateways,providers,repositories}/`, `src/features/profile/domain/profileRules.ts`, `src/features/profile/data/repositories/FirestoreUserProfileRepository.ts`, `src/features/sync/application/DefaultSyncOrchestrator.ts`, `src/features/sync/data/`, `src/features/sync/composition/` |
+| Cozumlenen gap | Root `AuthContext` 784 -> 3 satir ve salt public re-export shim'i; root `SyncService` 434 -> 2 satir ve salt re-export shim'i; social profile/native Google/config servisleri logic tasimayan shim oldu; uygulama Auth/Sync public feature barrel'lerini kullaniyor; schema, profil field'lari, storage key'leri ve public Auth API korunuyor |
+| Katman kaniti | Auth/Profile presentation/context SDK ve concrete repository import taramasi: 0; Auth/Profile/Sync domain SDK/React import taramasi: 0; bu uc feature arasinda deep import: 0; production `src` icinde eski `context/AuthContext` veya `services/SyncService` importu: 0 |
+| Yeniden olcum | Root production envanteri 47 dosya / 15.054 satir; 7 re-export shim / 40 aktif logic modulu. Production `src` root-relative importlari 71 occurrence / 31 dosya; artis yeni data-layer compatibility gateway'lerinin Prompt 2/5 sahibi root servislere gecici bagimliligindan kaynaklaniyor. Feature deep import borcu degismedi: 2 mevcut `settings -> setup/domain/types` ihlali |
+| Test degisimi | Baseline 67 suite / 395 test -> 70 suite / 410 test. Initial loading, signed-out, signed-in profile/setup, bootstrap error, sign-out cleanup; email/Google/Apple factory; profile cache/Firestore mapping; sync/device conflict ve lifecycle setup routing senaryolari kapsandi |
+| Otomatik kanit | `npm run typecheck` exit 0; `npm run typecheck:all` exit 0; `npm test -- --runInBand` exit 0, 70/70 suite ve 410/410 test; `npm run test:ci` exit 0, 70/70 suite ve 410/410 test; `npm run lint` exit 0, 0 error ve baseline ile ayni 52 warning; `npm run test:rules` exit 0, gercek emulator ile 1/1 suite ve 8/8 test; `git diff --check` exit 0 |
+| Ek statik kanit | Import-boundary `rg` taramalari beklenen bos sonuc; root envanter/root-relative import/deep-import taramalari yukaridaki sayilari yeniden uretti. Projede `prettier:check` scripti yok; calistirilmadi ve PASS sayilmadi |
+| Manual QA | **CALISTIRILAMADI:** provision edilmis iOS/Android cihaz/simulator, Google/Apple test hesabi ve iki cihazli interaktif oturum yoktu. Email/Google/Apple login, sifre sifirlama, hesap silme, iki cihaz sync cakismasi ve profil guncelleme checklist'i acik. Otomatik testler manual QA yerine PASS sayilmadi |
+| Kalan gap/risk | R4 acik/Yuksek: provider ve iki cihaz smoke QA. Prompt 2/5 sahibi root servisler nedeniyle compatibility gateway'leri; 40 root logic modulu, 71 root import occurrence'i, 2 eski deep import ve 52 lint warning sonraki sahip promptlarda kaldi. `ios/`, package/lock ve Firebase schema/rules degistirilmedi |
+| Sonraki gate | **Prompt 2: kapali.** `18` faz DoD ve `24` manual QA checklist'i tamamlanmadan Prompt 1 `complete` olamaz. Cihaz QA'si tamamlanirsa sonuc/ortam kanitiyla bu kaydi silmeden superseding `Prompt 1 complete` kaydi eklenmelidir |
+
+### Prompt 2 — 2026-07-14
+
+| Alan | Kayit |
+|---|---|
+| Durum | **blocked** — Prompt 2 handoff on kosulu saglanmadi; servis koduna baslanmadi |
+| Audit zamani | 2026-07-14 21:33 +03 (Europe/Istanbul) |
+| Branch / HEAD | `refactor` / `30d5a938` |
+| Worktree | Prompt 1'in commitlenmemis Auth/Profile/Sync kod, test, risk-register ve ledger degisiklikleri korunuyor; Prompt 2 sahibi bes root serviste mevcut diff yok |
+| Handoff revalidation | Son Prompt 1 kaydi `blocked`, zorunlu fiziksel cihaz/provider QA checklist'i acik ve kaydin sonraki gate'i `Prompt 2: kapali`. Prompt 2'nin `Prompt 1 complete + PASS + acik gate` kosulu saglanmiyor |
+| Kapsam | Yalnizca fail-closed handoff, mevcut checkout ve Prompt 2 servis envanteri audit'i; Vocabulary/Progress/Favorites/Streak/Review implementasyonu yapilmadi |
+| Degisen dosyalar | Yalnizca bu append-only kayit: `docs/refactor-v2/43-current-refactor-gap-report.md` |
+| Artifact'ler | Yeni kod artifact'i yok; audit kaniti `docs/refactor-v2/43-current-refactor-gap-report.md` |
+| Mevcut sayisal durum | `services/{vocabularyService,progressService,favoritesService,streakService,reviewPromptService}.ts`: sirasiyla 547/300/312/348/375 satir, toplam 1.882 satir aktif logic. Bes servisin besinde direct AsyncStorage importu; `favoritesService` ayrica `firebase/firestore` ve `config/firebase` kullaniyor. Ilgili mevcut Vocabulary/Progress/Favorites/Streak feature agaclarinda 23 dosya, Review feature agacinda 0 dosya var |
+| Cozumlenen gap | Yok; gate basarisiz oldugu icin Prompt 2 kod degisikligi yetkilendirilmedi |
+| Kalan gap/risk | Prompt 1 R4 acik/Yuksek ve cihaz QA'si eksik. Prompt 2 sahibi bes root servis shim/<50 satir kriterini saglamiyor; business/storage/Firestore logic'i root'ta duruyor |
+| Calistirilan kanit | `git branch --show-current` exit 0 -> `refactor`; `git rev-parse --short HEAD` exit 0 -> `30d5a938`; `git status --short` exit 0; bes hedef serviste `wc -l` exit 0 -> toplam 1.882; direct SDK/storage `rg` taramasi exit 0 ve yukaridaki importlari buldu; `git diff --name-only -- <bes hedef servis>` exit 0 ve bos sonuc |
+| Zorunlu kalite komutlari | **CALISTIRILMADI / PASS DEGIL:** `npm run typecheck`, `npm test -- --runInBand`, `npm run test:ci`, `npm run lint`. Handoff gate kod baslamadan kapandigi icin Prompt 2 kalite sonucu uretilmedi |
+| Manual QA | Prompt 2 QA'sina gecilmedi. Once Prompt 1'in email/Google/Apple login, sifre sifirlama, hesap silme, iki cihaz sync cakismasi ve profil guncelleme checklist'i tamamlanmali |
+| Sonraki gate | **Prompt 3: kapali.** Once kanitli superseding `Prompt 1 complete` kaydi ile Prompt 2 gate'i acilmali; ardindan Prompt 2 bastan uygulanip zorunlu komutlari PASS ve Prompt 3 gate'i acik olan yeni bir superseding Prompt 2 kaydi eklenmeli |
+
+### Prompt 1 — 2026-07-14 superseding completion
+
+| Alan | Kayit |
+|---|---|
+| Durum | **complete** — 2026-07-13 tarihli Prompt 1 `blocked` kaydini manual QA sonucu ile supersede eder |
+| Audit zamani | 2026-07-14 21:40 +03 (Europe/Istanbul) |
+| Branch / HEAD | `refactor` / `30d5a938`; Prompt 1 production kodu ve onceki otomatik kanitlardan sonra kod degisikligi yapilmadi |
+| Ortam | iPhone 17 Pro Simulator, iOS 26.5; Expo development build `com.vocbee.app`; Metro bu checkout'tan bundle uretti |
+| Gozlenen runtime kaniti | Stored session bootstrap -> `setupCompleted=true` -> `MainTabs`; logout -> local cleanup -> signed-out state -> `Login`; email login -> remote profile/progress/favorites restore -> `setupCompleted=true` -> `MainTabs`. Crash/red screen veya AuthFacade bootstrap exception'i yok |
+| Manual QA | **PASS — kullanici/owner onayi:** email/Google/Apple login, sifre sifirlama, hesap silme, iki cihaz sync cakismasi ve profil guncelleme dahil checklist icin "hepsi calisiyor" sonucu bildirildi. Google/Apple icin ilk basarisiz deneme loglari sonrasinda nihai sonucu owner retest onayi supersede eder |
+| Otomatik kanit | Ayni Prompt 1 checkout'i icin onceki kayittaki `npm run typecheck`, `npm run typecheck:all`, full Jest 70/70 suite ve 410/410 test, `test:ci`, lint, rules emulator ve `git diff --check` PASS sonuclari gecerlidir; simulator QA sirasinda production kaynak degismedi |
+| Worktree hijyeni | Expo'nun simulator acilisinda degistirdigi tracked `.expo/devices.json` Prompt 1 oncesi icerigine geri alindi; `ios/`, package/lock, Firebase schema/rules degismedi |
+| Risk | R4 Prompt 1 kapsami icin kapatildi; production provider credential/config izlemesi release surecinde devam eder |
+| Sonraki gate | **Prompt 2: acik.** Prompt 1 implementation, otomatik gate'ler ve manual QA artik complete/PASS |

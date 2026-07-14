@@ -33,7 +33,7 @@ jest.mock('../../../screens/FavoritesScreen', () => () => null);
 jest.mock('../../../screens/ExampleSentencesScreen', () => () => null);
 jest.mock('../../../screens/LevelTestScreen', () => () => null);
 jest.mock('../../../screens/ForgotPasswordScreen', () => () => null);
-jest.mock('../../../context/AuthContext', () => ({
+jest.mock('@features/auth', () => ({
   useAuth: () => ({ user: null, userData: null, isLoading: false, isAuthenticated: false, connectionError: false }),
 }));
 

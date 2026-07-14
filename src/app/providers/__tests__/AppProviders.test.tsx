@@ -18,7 +18,7 @@ jest.mock('../../../../context/ThemeContext', () => {
   const { View } = require('react-native');
   return { ThemeProvider: ({ children }: any) => <View testID="theme">{children}</View> };
 });
-jest.mock('../../../../context/AuthContext', () => {
+jest.mock('@features/auth', () => {
   const { View } = require('react-native');
   return { AuthProvider: ({ children }: any) => <View testID="auth">{children}</View> };
 });

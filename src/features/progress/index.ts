@@ -4,7 +4,11 @@
 // (a later phase), never via the barrel.
 
 export * from './domain/types';
-export * from './domain/rules';
+export {
+  calcLevelPercent,
+  computeOverallPercent,
+  isLevelComplete as isLevelCompletionReached,
+} from './domain/rules';
 export * from './domain/constants';
 export type {
   RemoteProgressRepository,
@@ -30,3 +34,4 @@ export {
   sumProgressByLevelModels,
   verifyMigrationCounts,
 } from './data/adapters/progressAdapters';
+export * from './composition/progressService';

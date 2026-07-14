@@ -6,6 +6,17 @@ export type Level = 'A1' | 'A2' | 'B1' | 'B2' | 'C1';
 
 export const LEVELS: Level[] = ['A1', 'A2', 'B1', 'B2', 'C1'];
 
+export interface UserProgress {
+  [level: string]: number[];
+}
+
+export interface OverallProgressStats {
+  totalLearned: number;
+  totalWords: number;
+  percentage: number;
+  completedLevels: Level[];
+}
+
 export function isLevel(value: unknown): value is Level {
   return typeof value === 'string' && (LEVELS as string[]).includes(value);
 }

@@ -4,7 +4,7 @@
 
 import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import { useAuth } from '../../../context/AuthContext';
+import { useAuth } from '@features/auth';
 import type { DevToolsScenario } from '../scenarios';
 
 export interface AuthStatePanelProps {

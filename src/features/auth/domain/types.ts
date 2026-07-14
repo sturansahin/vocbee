@@ -9,6 +9,27 @@ export type AuthUser = {
   photoURL: string | null;
 };
 
-export type SocialSignInResult = {
-  setupCompleted: boolean;
+export type AuthProfilePatch = {
+  displayName?: string;
+  photoURL?: string;
 };
+
+export type ProviderProfile = {
+  email?: string | null;
+  displayName?: string | null;
+  photoURL?: string | null;
+};
+
+export type AuthSignInResult = {
+  user: AuthUser;
+  providerProfile?: ProviderProfile;
+};
+
+export type AuthProviderKind = 'email' | 'google' | 'apple';
+
+export type EmailSignInRequest = {
+  email: string;
+  password: string;
+};
+
+export const SOCIAL_AUTH_CANCELLED_ERROR = 'AUTH_CANCELLED';

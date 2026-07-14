@@ -13,7 +13,7 @@ import React, {
     useMemo,
     useState,
 } from 'react';
-import { useAuth } from '../../../../context/AuthContext';
+import { useAuth } from '@features/auth';
 import i18n from '../../../../services/i18n';
 import { monetizationFacade } from '../application/monetizationFacade.instance';
 import { getActiveEntitlement, hasActiveAdFreeEntitlement } from '../domain/rules';

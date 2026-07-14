@@ -8,9 +8,9 @@ import { STORAGE_KEYS } from '@shared/storage';
 const mockAuth: { value: any } = { value: null };
 const mockMonetization: { value: any } = { value: { isAdFree: false, isLoading: false } };
 
-jest.mock('../../../../context/AuthContext', () => ({ useAuth: () => mockAuth.value }));
+jest.mock('@features/auth', () => ({ useAuth: () => mockAuth.value }));
 jest.mock('@features/monetization', () => ({ useMonetization: () => mockMonetization.value }));
-jest.mock('../../../../services/SyncService', () => ({ autoSync: jest.fn() }));
+jest.mock('@features/sync', () => ({ autoSync: jest.fn() }));
 jest.mock('../../../../services/notificationService', () => ({
   getNotificationPermissionState: jest.fn(async () => ({ granted: false, canAskAgain: true, status: 'undetermined' })),
   handleNotificationResponse: jest.fn(async () => {}),
@@ -70,5 +70,34 @@ describe('useAppLifecycle — initial route decision', () => {
     const { result } = renderHook(() => useAppLifecycle());
     await waitFor(() => expect(result.current.isAppReady).toBe(true));
     expect(result.current.initialRoute).toBe('Login');
+  });
+
+  it('signed-in + complete preferences -> MainTabs', async () => {
+    await AsyncStorage.setItem(STORAGE_KEYS.HAS_SEEN_ONBOARDING, 'true');
+    mockAuth.value = {
+      ...mockAuth.value,
+      user: { uid: 'user-1' },
+      userData: {
+        uid: 'user-1',
+        email: 'user@example.com',
+        setupCompleted: false,
+        preferences: { nativeLanguage: 'turkish', targetLanguage: 'english', level: 'beginner' },
+      },
+    };
+    const { result } = renderHook(() => useAppLifecycle());
+    await waitFor(() => expect(result.current.isAppReady).toBe(true));
+    expect(result.current.initialRoute).toBe('MainTabs');
+  });
+
+  it('signed-in + incomplete setup -> NativeLanguage', async () => {
+    await AsyncStorage.setItem(STORAGE_KEYS.HAS_SEEN_ONBOARDING, 'true');
+    mockAuth.value = {
+      ...mockAuth.value,
+      user: { uid: 'user-1' },
+      userData: { uid: 'user-1', email: 'user@example.com', setupCompleted: false },
+    };
+    const { result } = renderHook(() => useAppLifecycle());
+    await waitFor(() => expect(result.current.isAppReady).toBe(true));
+    expect(result.current.initialRoute).toBe('NativeLanguage');
   });
 });

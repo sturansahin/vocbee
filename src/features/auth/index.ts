@@ -6,3 +6,12 @@ export * from './domain/types';
 export * from './domain/rules';
 export type { AuthRepository } from './data/contracts';
 export { makeSignIn } from './application/useCases/signIn';
+export type {
+  AuthFacade,
+  AuthStatePayload,
+  AuthActionResult,
+} from './application/contracts';
+export { DefaultAuthFacade } from './application/AuthFacade';
+export { AuthProvider } from './composition/AuthProvider';
+export { AuthStateProvider, useAuth } from './presentation/AuthProvider';
+export type { AuthContextType, AuthStateProviderProps } from './presentation/AuthProvider';

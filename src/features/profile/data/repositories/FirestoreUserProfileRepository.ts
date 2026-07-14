@@ -3,20 +3,14 @@
 //
 // WIRED (ADIM 5 / Phase 4 step 1, docs/refactor-v2/24, /35 §2): composed directly by
 // context/AuthContext.tsx (composition root — docs/refactor-v2/33 §4). Currently used for:
-// getCachedProfile/cacheProfile (profile_${uid} cache read/write), createUserDocument (delegates to
-// SyncService.createUserDocument), and deleteUserDocument (the deleteDoc(users/{uid}) call previously
-// inlined in AuthContext.deleteAccountRemotely). fetchProfileFromRemote/saveProfile are implemented
-// but NOT YET called by AuthContext — AuthContext still uses SyncService.fetchAndSaveUserData for the
-// full cache-first user-data fetch, and updateProfileData still only caches locally (no direct
-// Firestore write) — wiring those is a LATER, separate step (bigger orchestration, higher risk).
-// saveProfile uses MERGE and never removes other/legacy fields. createUserDocument delegates to the
-// existing (tested) SyncService.createUserDocument to preserve exact creation behavior.
+// Owns profile cache and users/{uid} profile/document persistence. No presentation module imports
+// this implementation; it is bound by auth composition. saveProfile uses merge semantics and never
+// removes legacy fields.
 
-import { doc, getDoc, setDoc, deleteDoc } from 'firebase/firestore';
+import { doc, getDoc, setDoc, deleteDoc, serverTimestamp } from 'firebase/firestore';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { db } from '../../../../../config/firebase';
 import { STORAGE_KEYS } from '@shared/storage';
-import { createUserDocument as syncCreateUserDocument } from '../../../../../services/SyncService';
 import type { Profile } from '../../domain/types';
 import type { UserProfileRepository } from '../contracts';
 
@@ -46,7 +40,20 @@ export class FirestoreUserProfileRepository implements UserProfileRepository {
   }
 
   async createUserDocument(uid: string, email: string, displayName?: string, photoURL?: string | null): Promise<void> {
-    await syncCreateUserDocument(uid, email, displayName, photoURL);
+    const userRef = doc(db, 'users', uid);
+    const userDoc = await getDoc(userRef);
+    if (!userDoc.exists()) {
+      await setDoc(userRef, {
+        email,
+        displayName: displayName || '',
+        photoURL: photoURL ?? null,
+        createdAt: serverTimestamp(),
+        setupCompleted: false,
+        preferences: null,
+        progress: null,
+        streak: null,
+      });
+    }
   }
 
   async deleteUserDocument(uid: string): Promise<void> {
