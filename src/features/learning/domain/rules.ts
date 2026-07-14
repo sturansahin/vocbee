@@ -38,3 +38,27 @@ export function selectUnlearnedWordIds(allWordIds: number[], learnedWordIds: num
   const learned = new Set(learnedWordIds);
   return allWordIds.filter(id => !learned.has(id));
 }
+
+const TTS_LANGUAGE_CODES: Record<string, string> = {
+  amharic: 'am-ET', arabic: 'ar-SA', chinese: 'zh-CN', english: 'en-US', french: 'fr-FR',
+  german: 'de-DE', hindi: 'hi-IN', indonesian: 'id-ID', italian: 'it-IT', japanese: 'ja-JP',
+  korean: 'ko-KR', persian: 'fa-IR', portuguese: 'pt-BR', russian: 'ru-RU', serbian: 'sr-RS',
+  spanish: 'es-ES', swahili: 'sw-KE', thai: 'th-TH', turkish: 'tr-TR', urdu: 'ur-PK',
+  vietnamese: 'vi-VN',
+};
+
+export function getLearningSpeechLanguage(languageId: string): string {
+  return TTS_LANGUAGE_CODES[languageId?.toLowerCase()] || 'en-US';
+}
+
+export function shouldCelebrateStreak(didIncrement: boolean): boolean {
+  return didIncrement;
+}
+
+export function getStreakCelebrationMessageKey(streakCount: number): string {
+  if (streakCount <= 1) return 'home.streakCelebrationStarted';
+  if (streakCount % 30 === 0) return 'home.streakCelebrationMonthly';
+  if (streakCount % 7 === 0) return 'home.streakCelebrationWeekly';
+  if (streakCount >= 3) return 'home.streakCelebrationKeepGoing';
+  return 'home.streakCelebrationGeneric';
+}

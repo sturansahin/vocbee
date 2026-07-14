@@ -1,227 +1,145 @@
-// file: screens/__tests__/HomeScreen.test.tsx
-import React, { ReactNode } from 'react';
-import { render, waitFor, RenderOptions } from '@testing-library/react-native';
+import React, { type ReactNode } from 'react';
+import { fireEvent, render, waitFor, type RenderOptions } from '@testing-library/react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import HomeScreen, { getTutorialSwipeNextStep } from '../HomeScreen';
+import type { HomeFacade, HomeSessionSnapshot } from '@features/learning';
+import { DEFAULT_STREAK_SUMMARY } from '@features/streak';
+import HomeScreen, { getTutorialSwipeNextStep } from '../../src/features/learning/presentation/screens/HomeScreen';
 
-const mockUseMonetization = jest.fn(() => ({
-    isAdFree: false,
-    isLoading: false,
-}));
-
-// Mock expo-network
-jest.mock('expo-network', () => ({
-    getNetworkStateAsync: jest.fn(() => Promise.resolve({ isConnected: true, isInternetReachable: true })),
-}));
-
-// Mock SafeBannerAd component
-jest.mock('../../components/SafeBannerAd', () => ({
-    SafeBannerAd: () => null,
-}));
-
-// Mock additional services for Home
-jest.mock('../../services/vocabularyService', () => ({
-    LEVELS: ['A1', 'A2', 'B1', 'B2', 'C1'],
-    getStoredVocabulary: jest.fn(() => Promise.resolve([
-        {
-            id: 1,
-            word: 'Haus',
-            pronunciation: '/haʊs/',
-            translation: 'House',
-            sentence1: 'Das ist ein Haus',
-            sentence2: 'This is a house',
-            nativeSentence1: '',
-            nativeSentence2: ''
-        }
-    ])),
-    getCurrentLevel: jest.fn(() => Promise.resolve('A1')),
-    getLearnedWords: jest.fn(() => Promise.resolve([])),
-    isVocabularyGenerated: jest.fn(() => Promise.resolve(true)),
-    getLastWordId: jest.fn(() => Promise.resolve(null)),
-    shuffleArray: (arr: any[]) => arr, // Simple pass through
-    getLevelDisplay: jest.fn(() => ({ code: 'A1', description: 'Beginner' })),
-    generateVocabulary: jest.fn(() => Promise.resolve()),
-}));
-
-jest.mock('../../services/progressService', () => ({
-    getLearnedCount: jest.fn(() => Promise.resolve(0)),
-    getTotalWords: jest.fn(() => Promise.resolve(100)),
-    getLearnedWords: jest.fn(() => Promise.resolve([])),
-    getCurrentLevel: jest.fn(() => Promise.resolve('A1')),
-    markWordAsLearned: jest.fn(() => Promise.resolve()),
-    checkAndAdvanceLevel: jest.fn(() => Promise.resolve('A1')),
-    saveLastWordId: jest.fn(() => Promise.resolve()),
-    getLastWordId: jest.fn(() => Promise.resolve(null)),
-}));
-
-jest.mock('../../services/favoritesService', () => ({
-    isFavorite: jest.fn(() => Promise.resolve(false)),
-    addToFavorites: jest.fn(() => Promise.resolve()),
-    removeFromFavorites: jest.fn(() => Promise.resolve()),
-}));
-
-jest.mock('../../services/notificationService', () => ({
-    getPendingNotificationWord: jest.fn(() => Promise.resolve(null)),
-    clearPendingNotificationWord: jest.fn(() => Promise.resolve()),
-    scheduleStreakReminderNotification: jest.fn(() => Promise.resolve()),
-}));
-
-jest.mock('../../services/streakService', () => ({
-    DEFAULT_STREAK_STATE: {
-        currentStreak: 0,
-        longestStreak: 0,
-        brokenStreak: null,
-        lastQualifiedDay: null,
-        lastQualifiedAt: null,
-    },
-    DEFAULT_STREAK_SUMMARY: {
-        currentStreak: 0,
-        storedCurrentStreak: 0,
-        longestStreak: 0,
-        brokenStreak: null,
-        lastQualifiedDay: null,
-        lastQualifiedAt: null,
-        completedToday: false,
-        atRisk: false,
-        isBroken: false,
-        status: 'inactive',
-    },
-    getStreakSummary: jest.fn(() => Promise.resolve({
-        currentStreak: 3,
-        storedCurrentStreak: 3,
-        longestStreak: 5,
-        brokenStreak: null,
-        lastQualifiedDay: '2026-04-12',
-        lastQualifiedAt: '2026-04-12T09:00:00.000Z',
-        completedToday: true,
-        atRisk: false,
-        isBroken: false,
-        status: 'completedToday',
-    })),
-    getStreakSummaryFromState: jest.fn((state) => ({
-        ...state,
-        completedToday: true,
-        atRisk: false,
-        isBroken: false,
-        status: 'completedToday',
-    })),
-    getStreakStatusMessageKey: jest.fn(() => 'home.streakDoneToday'),
-    recordDailyStudyAction: jest.fn(() => Promise.resolve({
-        state: {
-            currentStreak: 3,
-            longestStreak: 5,
-            brokenStreak: null,
-            lastQualifiedDay: '2026-04-12',
-            lastQualifiedAt: '2026-04-12T09:00:00.000Z',
-        },
-        didIncrement: false,
-        completedToday: true,
-    })),
-}));
-
-jest.mock('../../services/adMobService', () => ({
-    loadInterstitial: jest.fn(),
-    showInterstitial: jest.fn(),
-    getBannerAdSize: jest.fn(),
-    AD_IDS: { BANNER: 'test-banner', INTERSTITIAL: 'test-interstitial' },
-}));
-
+jest.mock('../../components/SafeBannerAd', () => ({ SafeBannerAd: () => null }));
+jest.mock('../../components/CustomAlert', () => ({ useAlert: () => ({ showAlert: jest.fn() }) }));
 jest.mock('../../context/ThemeContext', () => ({
-    useTheme: () => ({
-        colors: {
-            background: '#FFFFFF',
-            text: '#000000',
-            primary: '#FFC814',
-            primaryDark: '#FFA500',
-            border: '#E0E0E0',
-            surface: '#F5F5F5',
-            surfaceLight: '#EEEEEE',
-            textSecondary: '#666666',
-            error: '#FF0000',
-        },
-        isDarkMode: false
-    }),
+  useTheme: () => ({
+    colors: {
+      background: '#fff', text: '#111', textSecondary: '#666', primary: '#ffc814',
+      surface: '#fff', surfaceLight: '#f5f5f5', border: '#ddd', error: '#c00',
+    },
+    isDarkMode: false,
+  }),
 }));
-
 jest.mock('@features/monetization', () => ({
-    useMonetization: () => mockUseMonetization(),
+  useMonetization: () => ({ isAdFree: true, isLoading: false }),
 }));
 
-jest.mock('../../components/CustomAlert', () => ({
-    useAlert: () => ({
-        showAlert: jest.fn(),
-    }),
-}));
+const word = {
+  id: 1,
+  word: 'Haus',
+  pronunciation: '/haʊs/',
+  translation: 'House',
+  sentence1: 'Das ist ein Haus',
+  sentence2: 'Ein großes Haus',
+  nativeSentence1: 'Bu bir ev',
+  nativeSentence2: 'Büyük bir ev',
+};
 
-// SafeAreaProvider initial metrics for testing
+const readySnapshot: HomeSessionSnapshot = {
+  level: 'A1',
+  userLevel: 'beginner',
+  targetLanguage: 'german',
+  words: [word],
+  currentWordIndex: 0,
+  learnedCount: 0,
+  totalCount: 100,
+  streakSummary: { ...DEFAULT_STREAK_SUMMARY, currentStreak: 3, longestStreak: 5 },
+};
+
+function createFacade(overrides: Partial<HomeFacade> = {}): HomeFacade {
+  return {
+    loadSession: jest.fn(async () => readySnapshot),
+    refreshCounts: jest.fn(async () => ({ learnedCount: 0, totalCount: 100 })),
+    getCurrentLevel: jest.fn(async () => 'A1'),
+    getVocabulary: jest.fn(async () => [word]),
+    saveLastWordId: jest.fn(async () => undefined),
+    getPendingWord: jest.fn(async () => null),
+    clearPendingWord: jest.fn(async () => undefined),
+    getTargetLanguage: jest.fn(async () => 'german'),
+    getStreakSummary: jest.fn(async () => readySnapshot.streakSummary),
+    completeWord: jest.fn(async () => ({
+      level: 'A1' as const,
+      streakState: readySnapshot.streakSummary,
+      streakDidIncrement: false,
+    })),
+    scheduleStreakReminder: jest.fn(async () => undefined),
+    isFavorite: jest.fn(async () => false),
+    toggleFavorite: jest.fn(async () => true),
+    speak: jest.fn(async () => undefined),
+    hasSeenTutorial: jest.fn(async () => true),
+    markTutorialSeen: jest.fn(async () => undefined),
+    loadInterstitial: jest.fn(async () => undefined),
+    showInterstitial: jest.fn(async () => undefined),
+    getBannerAdUnitId: jest.fn(() => 'test-banner'),
+    getReviewDecision: jest.fn(async () => ({ shouldPrompt: false, mode: 'native' as const })),
+    markReviewPromptPresented: jest.fn(async () => undefined),
+    requestNativeReview: jest.fn(async () => false),
+    dismissReviewPrompt: jest.fn(async () => undefined),
+    recordSatisfactionRating: jest.fn(async () => undefined),
+    openStoreReviewPage: jest.fn(async () => ({ opened: true, attemptedUrls: [] })),
+    openReviewFeedbackEmail: jest.fn(async () => true),
+    ...overrides,
+  };
+}
+
 const initialMetrics = {
-    frame: { x: 0, y: 0, width: 390, height: 844 },
-    insets: { top: 47, left: 0, right: 0, bottom: 34 },
+  frame: { x: 0, y: 0, width: 390, height: 844 },
+  insets: { top: 47, left: 0, right: 0, bottom: 34 },
 };
 
-// Custom render function with SafeAreaProvider wrapper
-const renderWithProviders = (ui: React.ReactElement, options?: Omit<RenderOptions, 'wrapper'>) => {
-    const Wrapper = ({ children }: { children: ReactNode }) => (
-        <SafeAreaProvider initialMetrics={initialMetrics}>
-            {children}
-        </SafeAreaProvider>
-    );
-    return render(ui, { wrapper: Wrapper, ...options });
-};
+function renderHome(facade: HomeFacade, options?: Omit<RenderOptions, 'wrapper'>) {
+  const Wrapper = ({ children }: { children: ReactNode }) => (
+    <SafeAreaProvider initialMetrics={initialMetrics}>{children}</SafeAreaProvider>
+  );
+  return render(<HomeScreen facade={facade} />, { wrapper: Wrapper, ...options });
+}
 
 describe('HomeScreen', () => {
-    beforeEach(() => {
-        jest.clearAllMocks();
-        mockUseMonetization.mockReturnValue({
-            isAdFree: false,
-            isLoading: false,
-        });
+  it('keeps the loading state visible until the facade resolves', () => {
+    const facade = createFacade({ loadSession: jest.fn(() => new Promise(() => undefined)) });
+    const { getByTestId } = renderHome(facade);
+    expect(getByTestId('home-loading')).toBeTruthy();
+  });
+
+  it('renders a loaded word and delegates favorite and speech actions', async () => {
+    const facade = createFacade();
+    const { getByText, getByTestId } = renderHome(facade);
+    await waitFor(() => expect(getByTestId('home-ready')).toBeTruthy());
+
+    fireEvent.press(getByTestId('home-favorite-action'));
+    fireEvent.press(getByText('Haus'));
+
+    await waitFor(() => {
+      expect(facade.toggleFavorite).toHaveBeenCalledWith(word, 'A1', false);
+      expect(facade.speak).toHaveBeenCalledWith('Haus', 'de-DE');
     });
+  });
 
-    it('renders correctly and loads data', async () => {
-        // We assume navigation provided by global mock
-        const { getByText } = renderWithProviders(<HomeScreen />);
-
-        // It starts loading, then shows word
-        // Wait for word to appear
-        await waitFor(() => {
-            expect(getByText('Haus')).toBeTruthy();
-            expect(getByText('/haʊs/')).toBeTruthy();
-            expect(getByText('House')).toBeTruthy();
-        });
+  it('renders the empty state for a session without words', async () => {
+    const facade = createFacade({
+      loadSession: jest.fn(async () => ({ ...readySnapshot, words: [], totalCount: 0 })),
+      refreshCounts: jest.fn(async () => ({ learnedCount: 0, totalCount: 0 })),
     });
+    const { getByTestId, getByText } = renderHome(facade);
+    await waitFor(() => expect(getByTestId('home-empty')).toBeTruthy());
+    expect(getByText('home.noVocabulary')).toBeTruthy();
+  });
 
-    it('shows level indicator', async () => {
-        const { getByText } = renderWithProviders(<HomeScreen />);
-        await waitFor(() => {
-            // "level.beginner" is the translation key we expect if not translated in test setup
-            // In setup we mocked t: key => key.
-            // Home uses getLevelDisplay which uses t('level.beginner').
-            expect(getByText('level.beginner')).toBeTruthy();
-        });
-    });
+  it('renders an error state and retries through the facade', async () => {
+    const consoleError = jest.spyOn(console, 'error').mockImplementation(() => undefined);
+    const loadSession = jest.fn()
+      .mockRejectedValueOnce(new Error('storage unavailable'))
+      .mockResolvedValueOnce(readySnapshot);
+    const facade = createFacade({ loadSession });
+    const { getByTestId, getByText } = renderHome(facade);
+    await waitFor(() => expect(getByTestId('home-error')).toBeTruthy());
+    fireEvent.press(getByText('common.retry'));
+    await waitFor(() => expect(getByTestId('home-ready')).toBeTruthy());
+    expect(loadSession).toHaveBeenCalledTimes(2);
+    consoleError.mockRestore();
+  });
 
-    it('does not preload interstitial ads for ad-free users', async () => {
-        const adMobService = require('../../services/adMobService');
-        mockUseMonetization.mockReturnValue({
-            isAdFree: true,
-            isLoading: false,
-        });
-
-        const { getByText } = renderWithProviders(<HomeScreen />);
-
-        await waitFor(() => {
-            expect(getByText('Haus')).toBeTruthy();
-        });
-
-        expect(adMobService.loadInterstitial).not.toHaveBeenCalled();
-    });
-
-    it('only treats prompted tutorial swipes as practice gestures', () => {
-        expect(getTutorialSwipeNextStep(1, 'right')).toBe(2);
-        expect(getTutorialSwipeNextStep(2, 'left')).toBe(3);
-        expect(getTutorialSwipeNextStep(1, 'left')).toBeNull();
-        expect(getTutorialSwipeNextStep(2, 'right')).toBeNull();
-        expect(getTutorialSwipeNextStep(3, 'right')).toBeNull();
-    });
+  it('only treats prompted tutorial swipes as practice gestures', () => {
+    expect(getTutorialSwipeNextStep(1, 'right')).toBe(2);
+    expect(getTutorialSwipeNextStep(2, 'left')).toBe(3);
+    expect(getTutorialSwipeNextStep(1, 'left')).toBeNull();
+    expect(getTutorialSwipeNextStep(2, 'right')).toBeNull();
+    expect(getTutorialSwipeNextStep(3, 'right')).toBeNull();
+  });
 });

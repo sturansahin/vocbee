@@ -1,5 +1,12 @@
 // Pure learning domain rules. getTutorialSwipeNextStep cases mirror screens/__tests__/HomeScreen.test.tsx.
-import { getTutorialSwipeNextStep, getNextLevel, selectUnlearnedWordIds } from '../rules';
+import {
+  getLearningSpeechLanguage,
+  getNextLevel,
+  getStreakCelebrationMessageKey,
+  getTutorialSwipeNextStep,
+  selectUnlearnedWordIds,
+  shouldCelebrateStreak,
+} from '../rules';
 
 describe('learning domain rules', () => {
   describe('getTutorialSwipeNextStep', () => {
@@ -29,5 +36,17 @@ describe('learning domain rules', () => {
       expect(selectUnlearnedWordIds([], [1])).toEqual([]);
       expect(selectUnlearnedWordIds([1, 2], [1, 2])).toEqual([]);
     });
+  });
+
+  it('keeps speech language and streak celebration behavior stable', () => {
+    expect(getLearningSpeechLanguage('german')).toBe('de-DE');
+    expect(getLearningSpeechLanguage('unknown')).toBe('en-US');
+    expect(shouldCelebrateStreak(true)).toBe(true);
+    expect(shouldCelebrateStreak(false)).toBe(false);
+    expect(getStreakCelebrationMessageKey(1)).toBe('home.streakCelebrationStarted');
+    expect(getStreakCelebrationMessageKey(7)).toBe('home.streakCelebrationWeekly');
+    expect(getStreakCelebrationMessageKey(30)).toBe('home.streakCelebrationMonthly');
+    expect(getStreakCelebrationMessageKey(3)).toBe('home.streakCelebrationKeepGoing');
+    expect(getStreakCelebrationMessageKey(2)).toBe('home.streakCelebrationGeneric');
   });
 });

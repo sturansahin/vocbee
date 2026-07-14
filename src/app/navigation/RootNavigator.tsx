@@ -14,12 +14,13 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from 'expo-status-bar';
 import { RootStackParamList } from '../../../types';
 import { useTheme } from '../../../context/ThemeContext';
+import { HomeScreen } from '@features/learning';
 
-// Screens (imported exactly as in the original App.tsx)
+// Migrated routes use feature public barrels; remaining routes retain compatibility imports until
+// their owning completion prompts.
 import OnboardingScreen from '../../../screens/OnboardingScreen';
 import { LoginScreen, SignUpScreen } from '../../../screens/AuthScreens';
 import { SetupScreen } from '../../../screens/SetupScreens';
-import HomeScreen from '../../../screens/HomeScreen';
 import SettingsScreen from '../../../screens/SettingsScreen';
 import FavoritesScreen from '../../../screens/FavoritesScreen';
 import ExampleSentencesScreen from '../../../screens/ExampleSentencesScreen';

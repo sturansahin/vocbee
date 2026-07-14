@@ -17,15 +17,13 @@ import {
     Dimensions,
 } from 'react-native';
 import LottieView from 'lottie-react-native';
-import { FONT_FAMILY } from '../../../../../utils/typography';
 import { VocabularyCardHeader } from '../../../../../components/VocabularyCardHeader';
 import type { VocabularyWord } from '@features/vocabulary';
 import { FavoriteStarIcon } from './FavoriteStarIcon';
+import { homeWordCardStyles as styles } from './homeWordCardStyles';
 
-const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
+const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;
-const BASE_WIDTH = 393; // matches original HomeScreen constant verbatim
-const scale = (size: number) => (SCREEN_WIDTH / BASE_WIDTH) * size;
 
 export interface HomeBeePosition {
     id: number;
@@ -192,6 +190,7 @@ export function HomeWordCardSection({
                 {currentWord && (
                     <Animated.View
                         key={currentWord.id}
+                        testID="home-word-card"
                         ref={cardRef}
                         collapsable={false}
                         style={[
@@ -259,6 +258,8 @@ export function HomeWordCardSection({
                             <View style={styles.cardContentAbove} pointerEvents="box-none">
                                 <TouchableOpacity
                                     ref={favoriteRef}
+                                    testID="home-favorite-action"
+                                    accessibilityRole="button"
                                     style={[styles.favoriteButton, { zIndex: (showTutorial && tutorialStep === 3) ? 100 : 1 }]}
                                     onPress={onToggleFavorite}
                                     activeOpacity={0.7}
@@ -303,6 +304,8 @@ export function HomeWordCardSection({
                                             style={{ width: '100%', zIndex: (showTutorial && tutorialStep === 5) ? 100 : 1 }}
                                         >
                                             <TouchableOpacity
+                                                testID="home-example-speech-action"
+                                                accessibilityRole="button"
                                                 onPress={onExampleSentencePress}
                                                 activeOpacity={0.75}
                                                 style={styles.exampleSentenceTouchable}
@@ -322,6 +325,8 @@ export function HomeWordCardSection({
 
                                     <TouchableOpacity
                                         ref={moreExampleRef}
+                                        testID="home-more-examples-action"
+                                        accessibilityRole="button"
                                         style={[styles.fullWidthButton, { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)', zIndex: (showTutorial && tutorialStep === 6) ? 100 : 1 }]}
                                         onPress={onMoreExamplePress}
                                     >
@@ -370,146 +375,5 @@ export function HomeWordCardSection({
         </View>
     );
 }
-
-const styles = StyleSheet.create({
-    cardArea: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    cardStackContainer: {
-        width: SCREEN_WIDTH - 40,
-        height: SCREEN_HEIGHT * 0.55,
-        position: 'relative',
-    },
-    cardContainer: {
-        position: 'absolute',
-        width: SCREEN_WIDTH - 40,
-        height: SCREEN_HEIGHT * 0.55,
-    },
-    heroCard: {
-        flex: 1,
-        borderRadius: 32,
-        padding: 0,
-        justifyContent: 'center',
-        overflow: 'hidden',
-    },
-    cardContentAbove: {
-        flex: 1,
-        width: '100%',
-        justifyContent: 'space-between',
-        zIndex: 200,
-    },
-    favoriteButton: {
-        position: 'absolute',
-        top: scale(16),
-        left: scale(16),
-        width: scale(40),
-        height: scale(40),
-        borderRadius: scale(20),
-        alignItems: 'center',
-        justifyContent: 'center',
-        zIndex: 999,
-    },
-    swipeOverlay: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        borderRadius: 32,
-        alignItems: 'center',
-        justifyContent: 'center',
-        zIndex: 1,
-    },
-    swipeLabelContainer: {
-        alignItems: 'center',
-        gap: 8,
-    },
-    skipText: {
-        fontFamily: FONT_FAMILY,
-        color: '#ea8484ff',
-        fontSize: 20,
-        letterSpacing: 4,
-    },
-    learnedText: {
-        fontFamily: FONT_FAMILY,
-        color: '#35de5dff',
-        fontSize: 20,
-        letterSpacing: 4,
-    },
-    cardUpperSection: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        paddingHorizontal: 24,
-        paddingTop: 10,
-        paddingBottom: 10,
-    },
-    cardLowerSectionStruct: {
-        width: '100%',
-        paddingTop: 20,
-        paddingHorizontal: 0,
-        alignItems: 'center',
-    },
-    exampleSentencesContainer: {
-        width: '100%',
-        paddingHorizontal: 20,
-        paddingBottom: 12,
-        alignItems: 'center',
-    },
-    exampleSentenceTouchable: {
-        width: '100%',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    cardExampleText: {
-        fontFamily: FONT_FAMILY,
-        fontSize: 15,
-        lineHeight: 22,
-        textAlign: 'center',
-        paddingHorizontal: 40,
-    },
-    thinDivider: {
-        height: 1,
-        width: '100%',
-        marginVertical: 10,
-        opacity: 0.5,
-    },
-    cardTranslationText: {
-        fontFamily: FONT_FAMILY,
-        fontSize: 14,
-        fontStyle: 'italic',
-        lineHeight: 20,
-        textAlign: 'center',
-        paddingHorizontal: 40,
-    },
-    fullWidthButton: {
-        width: '100%',
-        paddingVertical: 18,
-        paddingHorizontal: 0,
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginTop: 8,
-        borderBottomLeftRadius: 32,
-        borderBottomRightRadius: 32,
-    },
-    fullWidthButtonText: {
-        fontFamily: FONT_FAMILY,
-        fontSize: 14,
-        fontWeight: '600',
-        letterSpacing: 0.5,
-    },
-    bee: {
-        position: 'absolute',
-        width: 50,
-        height: 50,
-        zIndex: 300,
-    },
-    beeAnim: {
-        width: 50,
-        height: 50,
-    },
-});
 
 export default HomeWordCardSection;

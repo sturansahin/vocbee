@@ -1,3 +1,4 @@
-// src/features/home — public barrel. Placeholder (Phase 1).
-// Home is part of the learning flow (docs/refactor-v2/05); migration in Phase 5 (docs/refactor-v2/25).
-export {};
+// Compatibility public barrel. Home's route/controller lives in `features/learning`; these
+// presentation pieces remain here until the Phase 9 shim cleanup so existing component tests and
+// imports keep working.
+export * from './presentation/components';

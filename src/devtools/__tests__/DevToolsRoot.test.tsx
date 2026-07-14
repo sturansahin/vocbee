@@ -27,7 +27,7 @@ jest.mock('../guard', () => ({
 jest.mock('../../../screens/OnboardingScreen', () => () => null);
 jest.mock('../../../screens/AuthScreens', () => ({ LoginScreen: () => null, SignUpScreen: () => null }));
 jest.mock('../../../screens/SetupScreens', () => ({ SetupScreen: () => null }));
-jest.mock('../../../screens/HomeScreen', () => () => null);
+jest.mock('@features/learning', () => ({ HomeScreen: () => null }));
 jest.mock('../../../screens/SettingsScreen', () => () => null);
 jest.mock('../../../screens/FavoritesScreen', () => () => null);
 jest.mock('../../../screens/ExampleSentencesScreen', () => () => null);

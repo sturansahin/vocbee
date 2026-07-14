@@ -10,7 +10,7 @@ import type { ComponentType } from 'react';
 import OnboardingScreen from '../../screens/OnboardingScreen';
 import { LoginScreen, SignUpScreen } from '../../screens/AuthScreens';
 import { SetupScreen } from '../../screens/SetupScreens';
-import HomeScreen from '../../screens/HomeScreen';
+import { HomeScreen } from '@features/learning';
 import SettingsScreen from '../../screens/SettingsScreen';
 import FavoritesScreen from '../../screens/FavoritesScreen';
 import ExampleSentencesScreen from '../../screens/ExampleSentencesScreen';
