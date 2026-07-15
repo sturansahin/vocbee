@@ -14,7 +14,9 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from 'expo-status-bar';
 import { RootStackParamList } from '../../../types';
 import { useTheme } from '../../../context/ThemeContext';
-import { HomeScreen } from '@features/learning';
+import { FavoritesScreen } from '@features/favorites';
+import { ExampleSentencesScreen, HomeScreen } from '@features/learning';
+import { LevelTestScreen } from '@features/setup';
 
 // Migrated routes use feature public barrels; remaining routes retain compatibility imports until
 // their owning completion prompts.
@@ -22,9 +24,6 @@ import OnboardingScreen from '../../../screens/OnboardingScreen';
 import { LoginScreen, SignUpScreen } from '../../../screens/AuthScreens';
 import { SetupScreen } from '../../../screens/SetupScreens';
 import SettingsScreen from '../../../screens/SettingsScreen';
-import FavoritesScreen from '../../../screens/FavoritesScreen';
-import ExampleSentencesScreen from '../../../screens/ExampleSentencesScreen';
-import LevelTestScreen from '../../../screens/LevelTestScreen';
 import ForgotPasswordScreen from '../../../screens/ForgotPasswordScreen';
 
 const Stack = createStackNavigator<RootStackParamList>();

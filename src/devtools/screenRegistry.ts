@@ -10,11 +10,10 @@ import type { ComponentType } from 'react';
 import OnboardingScreen from '../../screens/OnboardingScreen';
 import { LoginScreen, SignUpScreen } from '../../screens/AuthScreens';
 import { SetupScreen } from '../../screens/SetupScreens';
-import { HomeScreen } from '@features/learning';
+import { FavoritesScreen } from '@features/favorites';
+import { ExampleSentencesScreen, HomeScreen } from '@features/learning';
+import { LevelTestScreen } from '@features/setup';
 import SettingsScreen from '../../screens/SettingsScreen';
-import FavoritesScreen from '../../screens/FavoritesScreen';
-import ExampleSentencesScreen from '../../screens/ExampleSentencesScreen';
-import LevelTestScreen from '../../screens/LevelTestScreen';
 import ForgotPasswordScreen from '../../screens/ForgotPasswordScreen';
 
 export interface ScreenRegistryEntry {

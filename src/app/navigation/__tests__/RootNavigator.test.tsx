@@ -37,11 +37,10 @@ jest.mock('../../../../context/ThemeContext', () => ({
 jest.mock('../../../../screens/OnboardingScreen', () => () => null);
 jest.mock('../../../../screens/AuthScreens', () => ({ LoginScreen: () => null, SignUpScreen: () => null }));
 jest.mock('../../../../screens/SetupScreens', () => ({ SetupScreen: () => null }));
-jest.mock('@features/learning', () => ({ HomeScreen: () => null }));
 jest.mock('../../../../screens/SettingsScreen', () => () => null);
-jest.mock('../../../../screens/FavoritesScreen', () => () => null);
-jest.mock('../../../../screens/ExampleSentencesScreen', () => () => null);
-jest.mock('../../../../screens/LevelTestScreen', () => () => null);
+jest.mock('@features/favorites', () => ({ FavoritesScreen: () => null }));
+jest.mock('@features/learning', () => ({ HomeScreen: () => null, ExampleSentencesScreen: () => null }));
+jest.mock('@features/setup', () => ({ LevelTestScreen: () => null }));
 jest.mock('../../../../screens/ForgotPasswordScreen', () => () => null);
 
 import { RootNavigator } from '../RootNavigator';

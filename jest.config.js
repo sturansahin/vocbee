@@ -24,10 +24,7 @@ module.exports = {
         // Exclude very large screens (>400 lines) - focus on integration tests later
         '!screens/SettingsScreen.tsx',
         '!screens/SetupScreens.tsx',
-        '!screens/ExampleSentencesScreen.tsx',
-        '!screens/FavoritesScreen.tsx',
         '!screens/ForgotPasswordScreen.tsx',
-        '!screens/LevelTestScreen.tsx',
         '!screens/OnboardingScreen.tsx',
         '!screens/SplashScreen.tsx',
         // Exclude component that requires SafeAreaProvider
