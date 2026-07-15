@@ -1,15 +1,36 @@
 // src/features/notifications/application/contracts.ts
 // Layer: application (contracts) | Feature: notifications. The simple facade surface that App/lifecycle
-// will call (docs/refactor-v2/12, /35 §6). Interface only — PREP; the impl + lifecycle wiring is a
-// later, device-QA'd step.
+// calls (docs/refactor-v2/12, /35 §6).
 
-import type { NotificationSettings, PendingNotificationWord } from '../domain/types';
+import type {
+  NotificationPermissionState,
+  NotificationResponsePayload,
+  NotificationResponseSubscription,
+  NotificationSettings,
+  PendingNotificationWord,
+} from '../domain/types';
 
 export interface NotificationFacade {
-  setup(): Promise<void>;
+  configure(): void;
+  getPermissionState(): Promise<NotificationPermissionState>;
+  requestPermission(): Promise<boolean>;
+  hasSeenPermissionPrompt(userId: string): Promise<boolean>;
+  markPermissionPromptSeen(userId: string): Promise<void>;
   reschedule(): Promise<void>;
-  handleResponse(): Promise<PendingNotificationWord | null>;
+  refill(): Promise<void>;
+  processDelivered(): Promise<number>;
+  setForegroundTime(): Promise<void>;
+  setBackgroundTime(): Promise<void>;
+  handleResponse(response: NotificationResponsePayload): Promise<void>;
+  getLastResponse(): Promise<NotificationResponsePayload | null>;
+  addResponseListener(
+    listener: (response: NotificationResponsePayload) => void
+  ): NotificationResponseSubscription;
+  clearLastResponse(): Promise<void>;
+  getPendingWord(): Promise<PendingNotificationWord | null>;
+  clearPendingWord(): Promise<void>;
   sendTest(): Promise<void>;
   getSettings(): Promise<NotificationSettings>;
-  updateSettings(settings: Partial<NotificationSettings>): Promise<void>;
+  updateSettings(settings: Partial<NotificationSettings>, skipScheduling?: boolean): Promise<void>;
+  getScheduledCount(): Promise<number>;
 }

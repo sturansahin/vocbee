@@ -5,8 +5,11 @@
 
 import React, { useCallback, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
-import * as Notifications from 'expo-notifications';
-import { getNotificationPermissionState, getNotificationSettings } from '../../../services/notificationService';
+import {
+  getNotificationPermissionState,
+  getNotificationSettings,
+  getScheduledNotificationCount,
+} from '@features/notifications';
 
 interface NotificationDebugState {
   permission: Awaited<ReturnType<typeof getNotificationPermissionState>> | null;
@@ -28,9 +31,9 @@ export function NotificationDebugPanel() {
       const [permission, settings, scheduled] = await Promise.all([
         getNotificationPermissionState(),
         getNotificationSettings(),
-        Notifications.getAllScheduledNotificationsAsync(),
+        getScheduledNotificationCount(),
       ]);
-      setState({ permission, settings, scheduledCount: scheduled.length });
+      setState({ permission, settings, scheduledCount: scheduled });
     } catch (error) {
       console.error('[DevTools][NotificationDebugPanel] Failed to read notification state', error);
     } finally {

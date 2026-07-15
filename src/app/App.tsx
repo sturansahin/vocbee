@@ -8,7 +8,7 @@
 
 import React from 'react';
 import * as SplashScreen from 'expo-splash-screen';
-import { configureNotifications } from '../../services/notificationService';
+import { notificationFacade } from '@features/notifications';
 import { AppProviders } from './providers/AppProviders';
 import { RootNavigator } from './navigation/RootNavigator';
 import { useAppLifecycle } from './lifecycle/useAppLifecycle';
@@ -23,7 +23,7 @@ import { ConnectionErrorScreen } from '../../components/ConnectionErrorScreen';
 import { DevToolsRoot } from '../devtools';
 
 // Configure notifications globally (module load — same timing as the original App.tsx)
-configureNotifications();
+notificationFacade.configure();
 
 // Keep splash screen visible while loading fonts
 SplashScreen.preventAutoHideAsync();

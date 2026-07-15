@@ -17,7 +17,6 @@ module.exports = {
         '!**/babel.config.js',
         '!**/jest.setup.js',
         // Exclude SDK-heavy / UI-heavy files that are hard to unit test meaningfully
-        '!services/notificationService.ts',
         '!services/favoritesService.ts',
         '!services/progressService.ts',
         '!services/vocabularyService.ts',

@@ -52,3 +52,42 @@ export interface ScheduledSlot {
   hour: number;
   minute: number;
 }
+
+export type NotificationKind = 'vocabulary' | 'streak' | 'test';
+
+export interface NotificationScheduleRequest {
+  identifier?: string;
+  kind: NotificationKind;
+  title: string;
+  body: string;
+  data: Record<string, unknown>;
+  seconds: number;
+}
+
+export interface ScheduledNotificationSnapshot {
+  identifier: string;
+  data?: Record<string, unknown>;
+}
+
+export interface NotificationResponsePayload {
+  actionIdentifier?: string;
+  notification: {
+    request: {
+      identifier: string;
+      content: {
+        data?: Record<string, unknown>;
+      };
+    };
+  };
+}
+
+export interface NotificationResponseSubscription {
+  remove(): void;
+}
+
+export interface NotificationVocabularyWord {
+  id: number;
+  word: string;
+  pronunciation?: string | null;
+  translation: string;
+}

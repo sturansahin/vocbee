@@ -25,13 +25,13 @@ import {
    scheduleVocabularyNotifications,
    cancelAllNotifications,
    sendTestNotification,
-} from '../services/notificationService';
+} from '@features/notifications';
 import {
    getNotificationFrequencyKey,
    getNotificationFrequencyMinutes,
    NOTIFICATION_FREQUENCY_KEYS,
    NotificationFrequencyKey,
-} from '../services/notificationFrequency';
+} from '@features/notifications';
 import { doc, setDoc } from 'firebase/firestore';
 import { db, auth } from '../config/firebase';
 import { updateProfile } from 'firebase/auth';

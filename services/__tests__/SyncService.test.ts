@@ -48,7 +48,7 @@ jest.mock('@features/vocabulary', () => ({
     isUserLevel: jest.fn(() => true),
 }));
 
-jest.mock('../notificationService', () => ({
+jest.mock('@features/notifications', () => ({
     getNotificationSettings: jest.fn(),
     saveNotificationSettings: jest.fn(),
 }));
@@ -79,7 +79,7 @@ import { needsSync, getLastSyncTime, setLastSyncTime, clearSyncFlag, STORAGE_KEY
 import { getUserProgress, getCurrentLevel, restoreProgressFromFirebase, getLastWordId } from '@features/progress';
 import { restoreFavoritesFromFirebase, syncFavoritesToFirebaseForUser } from '@features/favorites';
 import { getLanguagePair } from '@features/vocabulary';
-import { getNotificationSettings, saveNotificationSettings } from '../notificationService';
+import { getNotificationSettings, saveNotificationSettings } from '@features/notifications';
 import { restoreStreakState } from '@features/streak';
 
 describe('SyncService', () => {

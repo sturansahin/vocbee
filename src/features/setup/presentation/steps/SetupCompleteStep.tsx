@@ -14,7 +14,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Feather, MaterialIcons } from '@expo/vector-icons';
 import { useTranslation } from 'react-i18next';
 import { FONT_FAMILY } from '../../../../../utils/typography';
-import type { NotificationFrequencyKey } from '../../../../../services/notificationFrequency';
+import type { NotificationFrequencyKey } from '@features/notifications';
 
 export interface SetupCompleteStepProps {
   colors: { text: string; primary: string; surface: string; border: string };

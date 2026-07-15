@@ -7,6 +7,7 @@ const mockCancelAllScheduledNotificationsAsync = jest.fn();
 const mockCancelScheduledNotificationAsync = jest.fn();
 const mockScheduleNotificationAsync = jest.fn();
 const mockGetAllScheduledNotificationsAsync = jest.fn();
+const mockGetPresentedNotificationsAsync = jest.fn();
 
 jest.mock('expo-notifications', () => ({
     getPermissionsAsync: (...args: unknown[]) => mockGetPermissionsAsync(...args),
@@ -16,13 +17,17 @@ jest.mock('expo-notifications', () => ({
     cancelScheduledNotificationAsync: (...args: unknown[]) => mockCancelScheduledNotificationAsync(...args),
     scheduleNotificationAsync: (...args: unknown[]) => mockScheduleNotificationAsync(...args),
     getAllScheduledNotificationsAsync: (...args: unknown[]) => mockGetAllScheduledNotificationsAsync(...args),
+    getPresentedNotificationsAsync: (...args: unknown[]) => mockGetPresentedNotificationsAsync(...args),
+    getLastNotificationResponseAsync: jest.fn(async () => null),
+    addNotificationResponseReceivedListener: jest.fn(() => ({ remove: jest.fn() })),
+    clearLastNotificationResponseAsync: jest.fn(async () => undefined),
     setNotificationHandler: jest.fn(),
     AndroidImportance: { HIGH: 'HIGH' },
     SchedulableTriggerInputTypes: { TIME_INTERVAL: 'TIME_INTERVAL' },
 }));
 
 jest.mock('@features/vocabulary', () => ({
-    LEVELS: [],
+    LEVELS: ['A1', 'A2', 'B1', 'B2', 'C1'],
     getStoredVocabulary: jest.fn(),
 }));
 
@@ -45,9 +50,11 @@ jest.mock('../i18n', () => ({
 }));
 
 import { getStoredVocabulary } from '@features/vocabulary';
-import { getCurrentLevel, getLearnedWords } from '@features/progress';
+import { getCurrentLevel, getLearnedWords, unmarkWord } from '@features/progress';
 import {
     MAX_VOCABULARY_NOTIFICATIONS,
+    cancelAllNotifications,
+    cancelVocabularyNotifications,
     getNotificationContent,
     requestNotificationPermissions,
     scheduleStreakReminderNotification,
@@ -55,6 +62,7 @@ import {
     setPendingNotificationWord,
     getPendingNotificationWord,
     clearPendingNotificationWord,
+    handleNotificationResponse,
 } from '../notificationService';
 import { STORAGE_KEYS } from '@shared/storage';
 
@@ -69,6 +77,7 @@ describe('notificationService', () => {
         mockCancelScheduledNotificationAsync.mockResolvedValue(undefined);
         mockSetNotificationChannelAsync.mockResolvedValue(undefined);
         mockScheduleNotificationAsync.mockResolvedValue('notification-id');
+        mockGetPresentedNotificationsAsync.mockResolvedValue([]);
 
         (getCurrentLevel as jest.Mock).mockResolvedValue('A1');
         (getLearnedWords as jest.Mock).mockResolvedValue([]);
@@ -138,6 +147,31 @@ describe('notificationService', () => {
 
         expect(granted).toBe(true);
         expect(mockRequestPermissionsAsync).toHaveBeenCalledTimes(1);
+    });
+
+    it('fails gracefully when the permission adapter throws', async () => {
+        mockGetPermissionsAsync.mockRejectedValue(new Error('permission unavailable'));
+        await expect(requestNotificationPermissions()).resolves.toBe(false);
+    });
+
+    it('cancels only vocabulary identifiers and keeps streak/foreign notifications', async () => {
+        mockGetAllScheduledNotificationsAsync.mockResolvedValue([
+            { identifier: 'vocbee-vocab-1-10', content: { data: {} } },
+            { identifier: 'vocbee-refill-2-20', content: { data: {} } },
+            { identifier: 'vocbee-3-30', content: { data: {} } },
+            { identifier: 'vocbee-streak-reminder', content: { data: {} } },
+            { identifier: 'foreign-id', content: { data: {} } },
+        ]);
+
+        await cancelVocabularyNotifications();
+        expect(mockCancelScheduledNotificationAsync.mock.calls.map(call => call[0])).toEqual([
+            'vocbee-vocab-1-10',
+            'vocbee-refill-2-20',
+            'vocbee-3-30',
+        ]);
+
+        await cancelAllNotifications();
+        expect(mockCancelAllScheduledNotificationsAsync).toHaveBeenCalledTimes(1);
     });
 
     it('skips scheduling and clears tracked state when permission is missing', async () => {
@@ -309,5 +343,35 @@ describe('notificationService', () => {
         it('clearPendingNotificationWord does not throw when nothing is stored', async () => {
             await expect(clearPendingNotificationWord()).resolves.toBeUndefined();
         });
+    });
+
+    it('stores a tapped word and unmarks it for review when auto-mark was enabled', async () => {
+        await AsyncStorage.setItem(STORAGE_KEYS.CURRENT_LEVEL, 'A1');
+        await AsyncStorage.setItem(STORAGE_KEYS.TARGET_LANGUAGE, 'english');
+
+        await handleNotificationResponse({
+            actionIdentifier: 'default',
+            notification: {
+                request: {
+                    identifier: 'vocbee-vocab-42-100',
+                    content: {
+                        data: {
+                            kind: 'vocabulary',
+                            wordId: 42,
+                            level: 'A1',
+                            targetLanguage: 'english',
+                            autoMark: true,
+                        },
+                    },
+                },
+            },
+        });
+
+        expect(await getPendingNotificationWord()).toEqual({
+            wordId: 42,
+            level: 'A1',
+            targetLanguage: 'english',
+        });
+        expect(unmarkWord).toHaveBeenCalledWith('A1', 42);
     });
 });

@@ -10,25 +10,13 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { AppState, AppStateStatus } from 'react-native';
 import { NavigationContainerRef } from '@react-navigation/native';
-import * as Notifications from 'expo-notifications';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { RootStackParamList } from '../../../types';
 import { useAuth } from '@features/auth';
 import { useMonetization } from '@features/monetization';
 import { recordReviewAppLaunch } from '@features/review';
 import { autoSync } from '@features/sync';
-import {
-  getNotificationPermissionState,
-  handleNotificationResponse,
-  hasSeenNotificationPermissionPrompt,
-  markNotificationPermissionPromptSeen,
-  refillNotifications,
-  processDeliveredNotifications,
-  requestNotificationPermissions,
-  scheduleVocabularyNotifications,
-  setLastForegroundTime,
-  setLastBackgroundTime,
-} from '../../../services/notificationService';
+import { notificationFacade, type NotificationResponsePayload } from '@features/notifications';
 import { STORAGE_KEYS } from '@shared/storage';
 import {
   initializeAdMob,
@@ -56,7 +44,7 @@ export function useAppLifecycle() {
 
   const consumeNotificationResponse = useCallback(
     async (
-      response: Notifications.NotificationResponse | null,
+      response: NotificationResponsePayload | null,
       source: 'startup' | 'listener' | 'resume'
     ) => {
       if (!response) return;
@@ -80,9 +68,9 @@ export function useAppLifecycle() {
       }
 
       try {
-        await handleNotificationResponse(response);
+        await notificationFacade.handleResponse(response);
         try {
-          await Notifications.clearLastNotificationResponseAsync();
+          await notificationFacade.clearLastResponse();
         } catch (clearError) {
           console.warn(`[Notifications] Failed to clear last response (${source})`, clearError);
         }
@@ -107,7 +95,7 @@ export function useAppLifecycle() {
 
     try {
       try {
-        await processDeliveredNotifications();
+        await notificationFacade.processDelivered();
       } catch (error) {
         console.error(`[Notifications] processDeliveredNotifications failed (${reason})`, error);
       }
@@ -115,13 +103,13 @@ export function useAppLifecycle() {
       // Record foreground baseline after processing delivered notifications so
       // next cycle can correctly identify "arrived while app was open" events.
       try {
-        await setLastForegroundTime();
+        await notificationFacade.setForegroundTime();
       } catch (error) {
         console.error(`[Notifications] setLastForegroundTime failed (${reason})`, error);
       }
 
       try {
-        await refillNotifications();
+        await notificationFacade.refill();
       } catch (error) {
         console.error(`[Notifications] refillNotifications failed (${reason})`, error);
       }
@@ -147,8 +135,8 @@ export function useAppLifecycle() {
     notificationPermissionGateInFlight.current = true;
 
     try {
-      const alreadyPromptedOnThisInstall = await hasSeenNotificationPermissionPrompt(user.uid);
-      const permissionState = await getNotificationPermissionState();
+      const alreadyPromptedOnThisInstall = await notificationFacade.hasSeenPermissionPrompt(user.uid);
+      const permissionState = await notificationFacade.getPermissionState();
 
       if (permissionState.granted) {
         checkedNotificationPermissionUsers.current.add(user.uid);
@@ -157,7 +145,7 @@ export function useAppLifecycle() {
 
       if (!permissionState.canAskAgain || permissionState.status !== 'undetermined') {
         if (!alreadyPromptedOnThisInstall) {
-          await markNotificationPermissionPromptSeen(user.uid);
+          await notificationFacade.markPermissionPromptSeen(user.uid);
         }
         checkedNotificationPermissionUsers.current.add(user.uid);
         console.log('[Notifications] Permission gate completed - system prompt unavailable');
@@ -170,12 +158,12 @@ export function useAppLifecycle() {
         return;
       }
 
-      const granted = await requestNotificationPermissions();
-      await markNotificationPermissionPromptSeen(user.uid);
+      const granted = await notificationFacade.requestPermission();
+      await notificationFacade.markPermissionPromptSeen(user.uid);
       checkedNotificationPermissionUsers.current.add(user.uid);
 
       if (granted && notificationSettings.enabled) {
-        await scheduleVocabularyNotifications();
+        await notificationFacade.reschedule();
       }
     } catch (error) {
       console.error('[Notifications] Auth permission gate failed', error);
@@ -315,7 +303,7 @@ export function useAppLifecycle() {
         }
 
         try {
-          const lastResponse = await Notifications.getLastNotificationResponseAsync();
+          const lastResponse = await notificationFacade.getLastResponse();
           if (lastResponse) {
             await consumeNotificationResponse(lastResponse, 'startup');
             return;
@@ -335,7 +323,7 @@ export function useAppLifecycle() {
 
   // Handle live notification responses while app is running
   useEffect(() => {
-    const subscription = Notifications.addNotificationResponseReceivedListener((response) => {
+    const subscription = notificationFacade.addResponseListener((response) => {
       consumeNotificationResponse(response, 'listener').catch(error => {
         console.error('[Notifications] Listener response handling failed', error);
       });
@@ -348,10 +336,10 @@ export function useAppLifecycle() {
   useEffect(() => {
     const subscription = AppState.addEventListener('change', (nextAppState: AppStateStatus) => {
       if (appState.current === 'active' && nextAppState.match(/inactive|background/)) {
-        setLastBackgroundTime();
+        notificationFacade.setBackgroundTime();
       }
       if (appState.current.match(/inactive|background/) && nextAppState === 'active') {
-        Notifications.getLastNotificationResponseAsync()
+        notificationFacade.getLastResponse()
           .then(lastResponse => consumeNotificationResponse(lastResponse, 'resume'))
           .catch(error => {
             console.error('[Notifications] Resume response handling failed', error);

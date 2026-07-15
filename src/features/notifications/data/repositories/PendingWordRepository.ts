@@ -1,8 +1,8 @@
 // src/features/notifications/data/repositories/PendingWordRepository.ts
 // Layer: data (repository impl) | Feature: notifications.
 //
-// WIRED (ADIM 6, docs/refactor-v2/26 PR-6.5, /35 §6): composed directly by
-// services/notificationService.ts (composition root — docs/refactor-v2/33 §4). Encapsulates the
+// WIRED (docs/refactor-v2/26 PR-6.5, /35 §6): composed by the notification feature's
+// composition root (docs/refactor-v2/33 §4). Encapsulates the
 // AsyncStorage read/write/clear for the pending-notification-word slot that was previously inlined
 // in notificationService's setPendingNotificationWord/getPendingNotificationWord/
 // clearPendingNotificationWord. Same storage key (STORAGE_KEYS.PENDING_NOTIFICATION_WORD =
@@ -31,8 +31,8 @@ export class PendingWordRepository implements NotificationResponseHandler {
     await AsyncStorage.removeItem(STORAGE_KEYS.PENDING_NOTIFICATION_WORD);
   }
 
-  /** NotificationResponseHandler.consumePendingWord — reads then clears in one call (PREP interface,
-   *  not currently used by notificationService.ts, which keeps read/clear as two separate public
+  /** NotificationResponseHandler.consumePendingWord — reads then clears in one call.
+   *  The application keeps read/clear as two separate public
    *  functions to preserve its existing call sites verbatim). */
   async consumePendingWord(): Promise<PendingNotificationWord | null> {
     const word = await this.getPendingWord();

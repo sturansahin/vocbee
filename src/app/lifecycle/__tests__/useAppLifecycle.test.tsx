@@ -11,17 +11,22 @@ const mockMonetization: { value: any } = { value: { isAdFree: false, isLoading: 
 jest.mock('@features/auth', () => ({ useAuth: () => mockAuth.value }));
 jest.mock('@features/monetization', () => ({ useMonetization: () => mockMonetization.value }));
 jest.mock('@features/sync', () => ({ autoSync: jest.fn() }));
-jest.mock('../../../../services/notificationService', () => ({
-  getNotificationPermissionState: jest.fn(async () => ({ granted: false, canAskAgain: true, status: 'undetermined' })),
-  handleNotificationResponse: jest.fn(async () => {}),
-  hasSeenNotificationPermissionPrompt: jest.fn(async () => false),
-  markNotificationPermissionPromptSeen: jest.fn(async () => {}),
-  refillNotifications: jest.fn(async () => {}),
-  processDeliveredNotifications: jest.fn(async () => {}),
-  requestNotificationPermissions: jest.fn(async () => false),
-  scheduleVocabularyNotifications: jest.fn(async () => {}),
-  setLastForegroundTime: jest.fn(async () => {}),
-  setLastBackgroundTime: jest.fn(async () => {}),
+jest.mock('@features/notifications', () => ({
+  notificationFacade: {
+    getPermissionState: jest.fn(async () => ({ granted: false, canAskAgain: true, status: 'undetermined' })),
+    handleResponse: jest.fn(async () => {}),
+    hasSeenPermissionPrompt: jest.fn(async () => false),
+    markPermissionPromptSeen: jest.fn(async () => {}),
+    refill: jest.fn(async () => {}),
+    processDelivered: jest.fn(async () => 0),
+    requestPermission: jest.fn(async () => false),
+    reschedule: jest.fn(async () => {}),
+    setForegroundTime: jest.fn(async () => {}),
+    setBackgroundTime: jest.fn(async () => {}),
+    addResponseListener: jest.fn(() => ({ remove: jest.fn() })),
+    getLastResponse: jest.fn(async () => null),
+    clearLastResponse: jest.fn(async () => {}),
+  },
 }));
 jest.mock('../../../../services/adMobService', () => ({
   initializeAdMob: jest.fn(async () => false),
@@ -29,12 +34,6 @@ jest.mock('../../../../services/adMobService', () => ({
   refreshAdInventoryOnForeground: jest.fn(async () => {}),
 }));
 jest.mock('@features/review', () => ({ recordReviewAppLaunch: jest.fn(async () => {}) }));
-jest.mock('expo-notifications', () => ({
-  addNotificationResponseReceivedListener: jest.fn(() => ({ remove: jest.fn() })),
-  getLastNotificationResponseAsync: jest.fn(async () => null),
-  clearLastNotificationResponseAsync: jest.fn(async () => {}),
-}));
-
 import { useAppLifecycle } from '../useAppLifecycle';
 
 describe('useAppLifecycle — initial route decision', () => {

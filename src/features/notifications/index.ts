@@ -1,5 +1,5 @@
 // src/features/notifications — public barrel (docs/refactor-v2/33 §4).
-// Exposes domain (constants/types/rules) + repository/facade INTERFACES. No impl (PREP).
+// Exposes the stable notification public API. Concrete SDK adapters remain internal to composition.
 
 export * from './domain/constants';
 export * from './domain/types';
@@ -11,3 +11,4 @@ export type {
   NotificationResponseHandler,
 } from './data/contracts';
 export type { NotificationFacade } from './application/contracts';
+export * from './composition/notificationService';

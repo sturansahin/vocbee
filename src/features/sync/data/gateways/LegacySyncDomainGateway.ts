@@ -23,7 +23,7 @@ import { STORAGE_KEYS } from '@shared/storage';
 import {
   getNotificationSettings,
   saveNotificationSettings,
-} from '../../../../../services/notificationService';
+} from '@features/notifications';
 import type { SyncDomainGateway } from '../../application/contracts';
 import type { LocalSyncSnapshot, RemoteUserDocument } from '../../domain/types';
 

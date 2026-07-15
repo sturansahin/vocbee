@@ -24,22 +24,22 @@ import { FONT_FAMILY } from '../utils/typography';
 import { generateVocabulary, getFirstLevelForUserLevel } from '../services/vocabularyService';
 import { setCurrentLevel, resetProgress } from '../services/progressService';
 import {
+  getNotificationPermissionState,
   requestNotificationPermissions,
   saveNotificationSettings,
   scheduleVocabularyNotifications,
-} from '../services/notificationService';
+} from '@features/notifications';
 import {
   DEFAULT_NOTIFICATION_FREQUENCY_KEY,
   getNotificationFrequencyMinutes,
   NOTIFICATION_FREQUENCY_KEYS,
   NotificationFrequencyKey,
-} from '../services/notificationFrequency';
+} from '@features/notifications';
 import { useAlert } from '../components/CustomAlert';
 import { useAuth } from '../context/AuthContext';
 import { SwarmLogo } from '../components/SwarmLogo';
 import LottieView from 'lottie-react-native';
 import { createSwarmAnimation } from '../assets/animations/swarmAnimation';
-import * as Notifications from 'expo-notifications';
 import { useTranslation } from 'react-i18next';
 import {
   NativeLanguageStep,
@@ -115,7 +115,7 @@ export const SetupScreen = () => {
   useEffect(() => {
     const checkExistingPermission = async () => {
       try {
-        const { status } = await Notifications.getPermissionsAsync();
+        const { status } = await getNotificationPermissionState();
         if (status === 'granted') {
           setNotificationPermissionGranted(true);
         }

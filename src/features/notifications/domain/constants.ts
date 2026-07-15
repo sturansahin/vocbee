@@ -21,3 +21,19 @@ export const STREAK_NOTIFICATION_ID = 'vocbee-streak-reminder';
 // Android channels.
 export const ANDROID_VOCABULARY_CHANNEL_ID = 'vocabulary';
 export const ANDROID_STREAK_CHANNEL_ID = 'streak';
+
+export const NOTIFICATION_FREQUENCY_OPTIONS = [
+  { key: 'every1hour', minutes: 60 },
+  { key: 'every2hours', minutes: 120 },
+  { key: 'every3hours', minutes: 180 },
+  { key: 'every6hours', minutes: 360 },
+  { key: 'onceDaily', minutes: 1440 },
+] as const;
+
+export type NotificationFrequencyOption = (typeof NOTIFICATION_FREQUENCY_OPTIONS)[number];
+export type NotificationFrequencyKey = NotificationFrequencyOption['key'];
+
+export const DEFAULT_NOTIFICATION_FREQUENCY_KEY: NotificationFrequencyKey = 'every2hours';
+export const NOTIFICATION_FREQUENCY_KEYS = NOTIFICATION_FREQUENCY_OPTIONS.map(
+  option => option.key
+) as NotificationFrequencyKey[];

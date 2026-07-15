@@ -30,7 +30,7 @@ import {
   clearPendingNotificationWord,
   getPendingNotificationWord,
   scheduleStreakReminderNotification,
-} from '../../../../services/notificationService';
+} from '@features/notifications';
 import { DefaultHomeFacade } from '../application/HomeFacade';
 import { ExpoHomePlatformGateway } from '../data/ExpoHomePlatformGateway';
 

@@ -6,7 +6,7 @@ import {
   clearTrackedNotifications,
   getNotificationSettings,
   saveNotificationSettings,
-} from '../../../../../services/notificationService';
+} from '@features/notifications';
 import type {
   AuthNotificationGateway,
   AuthProgressGateway,
