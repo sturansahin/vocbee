@@ -2,7 +2,7 @@
 import React from 'react';
 import { render } from '@testing-library/react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { ThemeProvider } from '../../../../../../context/ThemeContext';
+import { ThemeProvider } from '@shared/theme';
 import { HomeTutorialSection } from '../HomeTutorialSection';
 
 const initialMetrics = {

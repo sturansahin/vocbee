@@ -4,7 +4,7 @@
 // active scenario used by the read-only preview panels.
 
 import React from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import type { StackNavigationProp } from '@react-navigation/stack';
 import type { DevToolsStackParamList } from './DevToolsNavigator';

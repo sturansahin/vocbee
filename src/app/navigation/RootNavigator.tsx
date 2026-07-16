@@ -12,8 +12,8 @@ import {
 } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from 'expo-status-bar';
-import { RootStackParamList } from '../../../types';
-import { useTheme } from '../../../context/ThemeContext';
+import type { RootStackParamList } from './types';
+import { useTheme } from '@shared/theme';
 import { FavoritesScreen } from '@features/favorites';
 import { ExampleSentencesScreen, HomeScreen } from '@features/learning';
 import { ForgotPasswordScreen, LoginScreen, SignUpScreen } from '@features/auth';

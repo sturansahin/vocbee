@@ -8,10 +8,10 @@
 
 import React from 'react';
 import { Dimensions, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import HomeTutorialOverlay, { LayoutRect } from '../../../../../components/HomeTutorialOverlay';
+import HomeTutorialOverlay, { LayoutRect } from './HomeTutorialOverlay';
 import type { VocabularyWord } from '@features/vocabulary';
 import { FavoriteStarIcon } from './FavoriteStarIcon';
-import { FONT_FAMILY } from '../../../../../utils/typography';
+import { FONT_FAMILY } from '@shared/theme';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const BASE_WIDTH = 393; // matches original HomeScreen constant verbatim

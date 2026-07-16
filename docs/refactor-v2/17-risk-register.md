@@ -63,3 +63,15 @@
   uyumluluğunda regresyon bildirilmedi.
 - Prompt 6 execution ledger'ına önceki `blocked` kaydı koruyan superseding `complete` kaydı eklendi; Prompt 7
   gate'i açıldı.
+
+## Prompt 7 shared/boundary güncellemesi — 2026-07-16
+
+- **R10 kapalı:** `import/no-cycle` error seviyesine yükseltildi; AST boundary suite'i legacy root import,
+  cross-feature deep import, layer/SDK ve public-barrel sınırlarını 5/5 testle doğruluyor.
+- **R13 kontrollü:** 50 root production modülü owner/hedef path ile envanterlendi; tamamı logic-free shim.
+  Aktif implementasyonlar shared/app/feature sınırlarına taşındı ve rollback yüzeyi Prompt 8'e kadar korunuyor.
+- **R6 değişmedi/kontrollü:** Firebase initialization tek `@shared/firebase` entrypoint'ine taşındı; config
+  değerleri, credential veya environment sözleşmesi değiştirilmedi ve yeni secret eklenmedi.
+- **R14 kapalı kalır:** iOS simulator smoke persisted Türkçe/dark-theme Login render'ını doğruladı; Prompt 6
+  owner QA'sındaki dil/RTL sonucu geçerlidir. i18n kaynakları, dil listesi ve storage key'leri değişmedi.
+- Prompt 7 sahibi açık Kritik/Yüksek risk yoktur.

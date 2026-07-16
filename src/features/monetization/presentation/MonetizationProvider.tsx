@@ -14,7 +14,7 @@ import React, {
     useState,
 } from 'react';
 import { useAuth } from '@features/auth';
-import i18n from '../../../../services/i18n';
+import i18n from '@shared/i18n';
 import { monetizationFacade } from '../application/monetizationFacade.instance';
 import { getActiveEntitlement, hasActiveAdFreeEntitlement } from '../domain/rules';
 import type { CustomerInfoLike, EntitlementInfoLike } from '../domain/types';

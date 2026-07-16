@@ -120,3 +120,24 @@ Somut kriter:
 `33` (katman sözleşmeleri/import kuralları — bu dokümanın uygulandığı skeleton), `38` (CI/ESLint/alias
 spec — devDependency ve script önerisi), `40` (Phase 9E audit — ESLint'in neden bu ana kadar
 eklenmediğinin kaydı, warn-mode planının ilk yazıldığı yer).
+
+## 8. Prompt 7 production hardening — 2026-07-16
+
+Bu bölüm §1-5'teki geçici `warn` politikasını supersede eder:
+
+- Mimari zone kuralları ve `import/no-cycle` artık `error` seviyesindedir.
+- Root `screens/services/config/context/components/utils` alias/path importları ile root `constants/types`
+  support importları `src/**` için yasaktır.
+- Cross-feature deep alias importları yasaktır; feature dışı tüketici yalnızca `@features/<feature>` public
+  barrel'ını kullanabilir.
+- `domain` SDK/React bağımsızlığı; `application` ve `presentation` side-effect SDK sınırları error olarak
+  uygulanır. `shared`, `app` veya `features` import edemez.
+- `npm run lint`, `--max-warnings=0` ile çalışır. Prompt 7 baseline'i **0 error / 0 warning**'dir.
+- CI lint step'i blocking'dir; `continue-on-error` kaldırılmıştır.
+- ESLint'e ek olarak TypeScript AST tabanlı `npm run test:boundaries`, legacy root importlarını, cross-feature
+  deep importları, layer/SDK sınırlarını, shared bağımsızlığını, public barrel data implementation sızıntılarını
+  ve her feature için `index.ts` varlığını doğrular.
+- CI quality job'ı `test:boundaries` komutunu ayrı blocking gate olarak çalıştırır.
+
+Root shim'lerin fiziksel silinmesi Prompt 8 kapsamındadır; Prompt 7 itibarıyla aktif production `src` graph'i
+bu shim'leri tüketmez.

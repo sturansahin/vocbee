@@ -5,9 +5,8 @@ import type { HomeFacade, HomeSessionSnapshot } from '@features/learning';
 import { DEFAULT_STREAK_SUMMARY } from '@features/streak';
 import HomeScreen, { getTutorialSwipeNextStep } from '../../src/features/learning/presentation/screens/HomeScreen';
 
-jest.mock('../../components/SafeBannerAd', () => ({ SafeBannerAd: () => null }));
-jest.mock('../../components/CustomAlert', () => ({ useAlert: () => ({ showAlert: jest.fn() }) }));
-jest.mock('../../context/ThemeContext', () => ({
+jest.mock('@shared/ui', () => ({ useAlert: () => ({ showAlert: jest.fn() }) }));
+jest.mock('@shared/theme', () => ({
   useTheme: () => ({
     colors: {
       background: '#fff', text: '#111', textSecondary: '#666', primary: '#ffc814',
@@ -17,6 +16,7 @@ jest.mock('../../context/ThemeContext', () => ({
   }),
 }));
 jest.mock('@features/monetization', () => ({
+  SafeBannerAd: () => null,
   useMonetization: () => ({ isAdFree: true, isLoading: false }),
 }));
 

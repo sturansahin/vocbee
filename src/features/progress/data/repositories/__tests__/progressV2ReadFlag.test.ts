@@ -12,7 +12,7 @@ jest.mock('firebase/firestore', () => ({
     serverTimestamp: jest.fn(),
 }));
 
-jest.mock('../../../../../../config/firebase', () => ({
+jest.mock('@shared/firebase', () => ({
     db: {},
 }));
 

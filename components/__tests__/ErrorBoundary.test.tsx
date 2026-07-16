@@ -10,14 +10,17 @@ jest.mock('expo-updates', () => ({
 }));
 
 // Mock i18n service
-jest.mock('../../services/i18n', () => ({
-    t: (key: string) => {
+jest.mock('@shared/i18n', () => ({
+    __esModule: true,
+    default: {
+      t: (key: string) => {
         const translations: Record<string, string> = {
             'errorBoundary.title': 'Something went wrong',
             'errorBoundary.message': 'An unexpected error occurred.',
             'errorBoundary.restart': 'Restart App',
         };
         return translations[key] || key;
+      },
     },
 }));
 
@@ -106,7 +109,7 @@ describe('ErrorBoundary', () => {
         const Updates = require('expo-updates');
         Updates.reloadAsync.mockRejectedValueOnce(new Error('Reload failed'));
 
-        const { getByText, queryByText, rerender } = render(
+        const { getByText } = render(
             <ErrorBoundary>
                 <ThrowingComponent shouldThrow={true} />
             </ErrorBoundary>

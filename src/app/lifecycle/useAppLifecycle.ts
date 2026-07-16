@@ -11,18 +11,18 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { AppState, AppStateStatus } from 'react-native';
 import { NavigationContainerRef } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { RootStackParamList } from '../../../types';
+import type { RootStackParamList } from '@app/navigation/types';
 import { useAuth } from '@features/auth';
-import { useMonetization } from '@features/monetization';
+import {
+  checkAndShowAppOpenAd,
+  initializeAdMob,
+  refreshAdInventoryOnForeground,
+  useMonetization,
+} from '@features/monetization';
 import { recordReviewAppLaunch } from '@features/review';
 import { autoSync } from '@features/sync';
 import { notificationFacade, type NotificationResponsePayload } from '@features/notifications';
 import { STORAGE_KEYS } from '@shared/storage';
-import {
-  initializeAdMob,
-  checkAndShowAppOpenAd,
-  refreshAdInventoryOnForeground,
-} from '../../../services/adMobService';
 
 export function useAppLifecycle() {
   const { user, userData, isLoading, connectionError, notificationSettings } = useAuth();

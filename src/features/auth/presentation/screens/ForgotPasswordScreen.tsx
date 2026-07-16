@@ -13,13 +13,10 @@ import {
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '@/types';
-import { Input } from '@/components/UIComponents';
+import type { RootStackParamList } from '@app/navigation/types';
 import { MaterialIcons } from '@expo/vector-icons';
-import { COLORS } from '@/constants';
-import { useTheme } from '@/context/ThemeContext';
-import { useAlert } from '@/components/CustomAlert';
-import { FONT_FAMILY } from '@/utils/typography';
+import { COLORS, FONT_FAMILY, useTheme } from '@shared/theme';
+import { Input, useAlert } from '@shared/ui';
 import { useTranslation } from 'react-i18next';
 
 import { validateForgotPassword } from '../../domain/rules';

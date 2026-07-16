@@ -7,12 +7,10 @@
 import React, { ReactNode } from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { ThemeProvider } from '../../../context/ThemeContext';
 import { AuthProvider } from '@features/auth';
 import { MonetizationProvider } from '@features/monetization';
-import { AlertProvider } from '../../../components/CustomAlert';
-import { ErrorBoundary } from '../../../components/ErrorBoundary';
-import { OfflineNotice } from '../../../components/OfflineNotice';
+import { ThemeProvider } from '@shared/theme';
+import { AlertProvider, ErrorBoundary, OfflineNotice } from '@shared/ui';
 
 export function AppProviders({ children }: { children: ReactNode }) {
   return (

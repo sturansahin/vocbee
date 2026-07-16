@@ -4,7 +4,7 @@
 // The repository injects serverTimestamp() as `updatedAt` at write time (docs/refactor-v2/34 §5, /35 §10).
 
 import type { FieldValue, Timestamp } from 'firebase/firestore';
-import { LEVELS, isLevel, type Level, type LevelProgress, type ProgressSummary } from '../../domain/types';
+import { LEVELS, isLevel, type Level, type LevelProgress } from '../../domain/types';
 import { calcLevelPercent, computeOverallPercent } from '../../domain/rules';
 import type {
   LegacyProgressDoc,

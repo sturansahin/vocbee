@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { HomeProgressSection } from '@features/home';
-import { HomeHeader } from '../../../../../components/HomeHeader';
+import { HomeHeader } from '@features/home';
 
 interface StateColors {
   background: string;

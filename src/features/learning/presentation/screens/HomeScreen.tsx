@@ -5,20 +5,22 @@ import type { StackNavigationProp } from '@react-navigation/stack';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
 import {
+  HomeHeader,
   HomeModals,
   HomeProgressSection,
   HomeTutorialSection,
   HomeWordCardSection,
 } from '@features/home';
-import { getStreakStatusMessageKey, getStreakSummaryFromState } from '@features/streak';
-import { useMonetization } from '@features/monetization';
-import type { RootStackParamList } from '../../../../../types';
+import {
+  getStreakStatusMessageKey,
+  getStreakSummaryFromState,
+  StreakAlertContent,
+} from '@features/streak';
+import { SafeBannerAd, useMonetization } from '@features/monetization';
+import { useTheme } from '@shared/theme';
+import { useAlert } from '@shared/ui';
+import type { RootStackParamList } from '@app/navigation/types';
 import { createSwarmAnimation } from '../../../../../assets/animations/swarmAnimation';
-import { HomeHeader } from '../../../../../components/HomeHeader';
-import { SafeBannerAd } from '../../../../../components/SafeBannerAd';
-import { StreakAlertContent } from '../../../../../components/StreakAlertContent';
-import { useAlert } from '../../../../../components/CustomAlert';
-import { useTheme } from '../../../../../context/ThemeContext';
 import type { HomeFacade } from '../../application/contracts';
 import {
   getLearningSpeechLanguage,

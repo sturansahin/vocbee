@@ -57,12 +57,32 @@ export class MonetizationFacade {
         return this.deps.adMobRepository.initialize();
     }
 
+    ensureAdsReady(): Promise<boolean> {
+        return this.deps.adMobRepository.ensureReady();
+    }
+
+    loadInterstitial(forceReload: boolean = false): Promise<boolean> {
+        return this.deps.adMobRepository.loadInterstitial(forceReload);
+    }
+
+    showInterstitial(): Promise<boolean> {
+        return this.deps.adMobRepository.showInterstitial();
+    }
+
+    refreshAdInventoryOnForeground(forceReload: boolean = true): Promise<void> {
+        return this.deps.adMobRepository.refreshAdInventoryOnForeground(forceReload);
+    }
+
+    checkAndShowAppOpenAd(): Promise<void> {
+        return this.deps.adMobRepository.checkAndShowAppOpenAd();
+    }
+
     async maybeShowInterstitial(isAdFree: boolean): Promise<void> {
         if (!this.shouldShowAds(isAdFree)) {
             return;
         }
 
-        await this.deps.adMobRepository.showInterstitial();
+        await this.showInterstitial();
     }
 
     async maybeShowAppOpenAd(isAdFree: boolean): Promise<void> {
@@ -70,7 +90,7 @@ export class MonetizationFacade {
             return;
         }
 
-        await this.deps.adMobRepository.checkAndShowAppOpenAd();
+        await this.checkAndShowAppOpenAd();
     }
 
     async maybeRefreshAdInventoryOnForeground(isAdFree: boolean, forceReload: boolean = true): Promise<void> {
@@ -78,7 +98,7 @@ export class MonetizationFacade {
             return;
         }
 
-        await this.deps.adMobRepository.refreshAdInventoryOnForeground(forceReload);
+        await this.refreshAdInventoryOnForeground(forceReload);
     }
 
     getAdIds() {

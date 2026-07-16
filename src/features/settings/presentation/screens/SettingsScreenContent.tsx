@@ -3,15 +3,14 @@ import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, Image, StyleShe
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
-import { COLORS, LANGUAGES, LEVELS } from '@/constants';
+import { LANGUAGES, LEVELS } from '@shared/i18n';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
-import { useTheme } from '@/context/ThemeContext';
+import { COLORS, FONT_FAMILY, useTheme } from '@shared/theme';
+import { useAlert } from '@shared/ui';
 import { useAuth } from '@features/auth';
 import { useMonetization } from '@features/monetization';
-import { FONT_FAMILY } from '@/utils/typography';
-import { RootStackParamList } from '@/types';
+import type { RootStackParamList } from '@app/navigation/types';
 import { isUserLevel, type UserLevel } from '@features/vocabulary';
-import { useAlert } from '@/components/CustomAlert';
 import {
    getNotificationFrequencyKey,
    getNotificationFrequencyMinutes,
@@ -24,7 +23,7 @@ import {
    getProfileImageSource,
    PROFILE_AVATARS,
    ProfileAvatarOption,
-} from '@/utils/profileAvatar';
+} from '@shared/utils';
 import type { AvatarSource, SettingsFacade } from '../../application/contracts';
 import { buildAccountConfirmation } from '../../application/accountConfirmations';
 // Phase 7: visible information architecture is split into pure sections. Platform/profile/account

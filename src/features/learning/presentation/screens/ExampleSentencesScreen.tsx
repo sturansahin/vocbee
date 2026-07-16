@@ -6,8 +6,8 @@ import { type RouteProp, useNavigation, useRoute } from '@react-navigation/nativ
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
 
-import { useTheme } from '../../../../../context/ThemeContext';
-import type { RootStackParamList } from '../../../../../types';
+import { useTheme } from '@shared/theme';
+import type { RootStackParamList } from '@app/navigation/types';
 import type { ExampleSentencesFacade } from '../../application/exampleSentencesContracts';
 import type { GrammarResponse } from '../../domain/grammarTypes';
 import { AIExplanationModal, ExampleCard } from '../components/ExampleSentencesContent';

@@ -11,7 +11,7 @@ jest.mock('@react-navigation/native', () => ({
   useNavigation: () => ({ goBack: mockGoBack }),
 }));
 
-jest.mock('@/context/ThemeContext', () => ({
+jest.mock('@shared/theme', () => ({
   useTheme: () => ({
     colors: {
       background: '#fff',
@@ -22,11 +22,21 @@ jest.mock('@/context/ThemeContext', () => ({
       primary: '#ffc814',
     },
   }),
+  COLORS: {
+    background: '#fff',
+    primary: '#ffc814',
+  },
+  FONT_FAMILY: 'System',
 }));
 
-jest.mock('@/components/CustomAlert', () => ({
-  useAlert: () => ({ showAlert: mockShowAlert }),
-}));
+jest.mock('@shared/ui', () => {
+  const React = require('react');
+  const { TextInput } = require('react-native');
+  return {
+    Input: (props: any) => React.createElement(TextInput, props),
+    useAlert: () => ({ showAlert: mockShowAlert }),
+  };
+});
 
 jest.mock('../../AuthProvider', () => ({
   useAuth: () => ({ resetPassword: mockResetPassword }),

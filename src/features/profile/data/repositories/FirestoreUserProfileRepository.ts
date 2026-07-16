@@ -9,7 +9,7 @@
 
 import { doc, getDoc, setDoc, deleteDoc, serverTimestamp } from 'firebase/firestore';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { db } from '../../../../../config/firebase';
+import { db } from '@shared/firebase';
 import { STORAGE_KEYS } from '@shared/storage';
 import type { Profile } from '../../domain/types';
 import type { SetupProfileCompletion, UserProfileRepository } from '../contracts';

@@ -13,7 +13,7 @@ import Purchases, {
     LOG_LEVEL,
 } from 'react-native-purchases';
 import RevenueCatUI, { PAYWALL_RESULT } from 'react-native-purchases-ui';
-import i18n from '../../../../../services/i18n';
+import i18n from '@shared/i18n';
 import { REVENUECAT_AD_FREE_ENTITLEMENT_ID } from '../../domain/constants';
 import { hasActiveAdFreeEntitlement as domainHasActiveAdFreeEntitlement } from '../../domain/rules';
 import type { CustomerInfoLike, PaywallOutcome, RevenueCatUserAttributes } from '../../domain/types';

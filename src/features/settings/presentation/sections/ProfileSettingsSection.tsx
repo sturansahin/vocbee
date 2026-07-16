@@ -7,7 +7,7 @@
 import React from 'react';
 import { Dimensions, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
-import { FONT_FAMILY } from '../../../../../utils/typography';
+import { FONT_FAMILY } from '@shared/theme';
 
 export interface ProfileSettingsSectionProps {
     profileName: string;

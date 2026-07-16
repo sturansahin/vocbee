@@ -17,3 +17,9 @@ export type { HomeTutorialSectionProps } from './HomeTutorialSection';
 
 export { HomeModals } from './HomeModals';
 export type { HomeModalsProps } from './HomeModals';
+
+export { HomeHeader } from './HomeHeader';
+export { default as HomeTutorialOverlay } from './HomeTutorialOverlay';
+export type { LayoutRect } from './HomeTutorialOverlay';
+export { VocabularyCardHeader } from './VocabularyCardHeader';
+export type { VocabularyCardHeaderProps } from './VocabularyCardHeader';

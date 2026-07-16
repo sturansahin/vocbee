@@ -18,7 +18,7 @@ import i18n, {
   getDeviceLanguage,
   isUsingSystemLanguage,
   setToDeviceLanguage,
-} from '@/services/i18n';
+} from '@shared/i18n';
 
 import type { SettingsPlatformGateway } from '../../application/contracts';
 

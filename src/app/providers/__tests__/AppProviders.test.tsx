@@ -3,7 +3,7 @@
 // (AuthProvider would otherwise touch Firebase), so this isolates the composition/order.
 
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text } from 'react-native';
 import { render } from '@testing-library/react-native';
 
 jest.mock('react-native-safe-area-context', () => {
@@ -14,7 +14,7 @@ jest.mock('react-native-gesture-handler', () => {
   const { View } = require('react-native');
   return { GestureHandlerRootView: ({ children }: any) => <View testID="gesture-root">{children}</View> };
 });
-jest.mock('../../../../context/ThemeContext', () => {
+jest.mock('@shared/theme', () => {
   const { View } = require('react-native');
   return { ThemeProvider: ({ children }: any) => <View testID="theme">{children}</View> };
 });
@@ -26,17 +26,13 @@ jest.mock('@features/monetization', () => {
   const { View } = require('react-native');
   return { MonetizationProvider: ({ children }: any) => <View testID="monetization">{children}</View> };
 });
-jest.mock('../../../../components/CustomAlert', () => {
+jest.mock('@shared/ui', () => {
   const { View } = require('react-native');
-  return { AlertProvider: ({ children }: any) => <View testID="alert">{children}</View> };
-});
-jest.mock('../../../../components/ErrorBoundary', () => {
-  const { View } = require('react-native');
-  return { ErrorBoundary: ({ children }: any) => <View testID="error-boundary">{children}</View> };
-});
-jest.mock('../../../../components/OfflineNotice', () => {
-  const { View } = require('react-native');
-  return { OfflineNotice: () => <View testID="offline-notice" /> };
+  return {
+    AlertProvider: ({ children }: any) => <View testID="alert">{children}</View>,
+    ErrorBoundary: ({ children }: any) => <View testID="error-boundary">{children}</View>,
+    OfflineNotice: () => <View testID="offline-notice" />,
+  };
 });
 
 import { AppProviders } from '../AppProviders';

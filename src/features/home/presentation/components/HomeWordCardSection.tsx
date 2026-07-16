@@ -17,7 +17,7 @@ import {
     Dimensions,
 } from 'react-native';
 import LottieView from 'lottie-react-native';
-import { VocabularyCardHeader } from '../../../../../components/VocabularyCardHeader';
+import { VocabularyCardHeader } from './VocabularyCardHeader';
 import type { VocabularyWord } from '@features/vocabulary';
 import { FavoriteStarIcon } from './FavoriteStarIcon';
 import { homeWordCardStyles as styles } from './homeWordCardStyles';

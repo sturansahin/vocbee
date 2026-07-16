@@ -1,7 +1,7 @@
 import { LEVELS, getStoredVocabulary, type Level } from '@features/vocabulary';
 import { getCurrentLevel, getLearnedWords, markWordAsLearned, unmarkWord } from '@features/progress';
 import { getStreakState, isStreakCompletedToday } from '@features/streak';
-import i18n from '../../../../services/i18n';
+import i18n from '@shared/i18n';
 
 import { DefaultNotificationFacade } from '../application/DefaultNotificationFacade';
 import { configureNotificationApplication } from '../application/notificationService';

@@ -4,7 +4,7 @@
 // action is exposed here — this panel must never mutate real scheduled notifications.
 
 import React, { useCallback, useState } from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, Text } from 'react-native';
 import {
   getNotificationPermissionState,
   getNotificationSettings,

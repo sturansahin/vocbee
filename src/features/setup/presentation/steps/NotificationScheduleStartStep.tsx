@@ -8,7 +8,7 @@ import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useTranslation } from 'react-i18next';
-import { FONT_FAMILY } from '../../../../../utils/typography';
+import { FONT_FAMILY } from '@shared/theme';
 
 const ITEM_HEIGHT = 44;
 

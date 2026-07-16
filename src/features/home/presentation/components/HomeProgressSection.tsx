@@ -8,7 +8,7 @@
 
 import React from 'react';
 import { Dimensions, StyleSheet, Text, View } from 'react-native';
-import { FONT_FAMILY } from '../../../../../utils/typography';
+import { FONT_FAMILY } from '@shared/theme';
 
 export interface HomeProgressSectionProps {
     isLoading: boolean;

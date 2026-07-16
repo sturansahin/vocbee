@@ -1,7 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { COLORS } from '@/constants';
-import { FONT_FAMILY } from '@/utils/typography';
+import { COLORS, FONT_FAMILY } from '@shared/theme';
 
 export const authStyles = StyleSheet.create({
   container: { flex: 1, backgroundColor: COLORS.background },

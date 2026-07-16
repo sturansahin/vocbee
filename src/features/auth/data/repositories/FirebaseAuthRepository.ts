@@ -13,7 +13,7 @@ import {
 } from 'firebase/auth';
 import * as AppleAuthentication from 'expo-apple-authentication';
 
-import { auth } from '../../../../../config/firebase';
+import { auth } from '@shared/firebase';
 import type {
   AuthProfilePatch,
   AuthSignInResult,

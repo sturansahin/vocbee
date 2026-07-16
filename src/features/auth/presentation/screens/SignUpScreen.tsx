@@ -14,10 +14,9 @@ import type { StackNavigationProp } from '@react-navigation/stack';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
 
-import { Button, Header, Input } from '@/components/UIComponents';
-import { useAlert } from '@/components/CustomAlert';
-import { useTheme } from '@/context/ThemeContext';
-import type { RootStackParamList } from '@/types';
+import { useTheme } from '@shared/theme';
+import { Button, Header, Input, useAlert } from '@shared/ui';
+import type { RootStackParamList } from '@app/navigation/types';
 
 import type { AuthPresentationGateway } from '../../application/presentationContracts';
 import { validateRegistration } from '../../domain/rules';

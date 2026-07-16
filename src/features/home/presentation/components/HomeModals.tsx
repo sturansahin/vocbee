@@ -5,8 +5,8 @@
 // HomeScreen and passed straight through unchanged.
 
 import React from 'react';
-import { StreakCelebrationOverlay } from '../../../../../components/StreakCelebrationOverlay';
-import { AppRatingPrompt } from '../../../../../components/AppRatingPrompt';
+import { AppRatingPrompt } from '@features/review';
+import { StreakCelebrationOverlay } from '@features/streak';
 
 export interface HomeModalsProps {
     streakCelebrationVisible: boolean;

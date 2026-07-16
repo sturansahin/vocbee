@@ -5,9 +5,9 @@ import type { StackNavigationProp } from '@react-navigation/stack';
 import type LottieView from 'lottie-react-native';
 import { useTranslation } from 'react-i18next';
 
-import { useAlert } from '@/components/CustomAlert';
+import { useAlert } from '@shared/ui';
 import { createSwarmAnimation } from '@/assets/animations/swarmAnimation';
-import type { RootStackParamList } from '@/types';
+import type { RootStackParamList } from '@app/navigation/types';
 
 import { SOCIAL_AUTH_CANCELLED_ERROR } from '../../domain/types';
 import { validateLogin } from '../../domain/rules';

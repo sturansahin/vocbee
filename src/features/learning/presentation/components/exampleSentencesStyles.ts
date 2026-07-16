@@ -1,6 +1,6 @@
 import { Dimensions, StyleSheet } from 'react-native';
 
-import { FONT_FAMILY } from '../../../../../utils/typography';
+import { FONT_FAMILY } from '@shared/theme';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 const BASE_WIDTH = 393;

@@ -15,9 +15,8 @@ import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
-import { useTheme } from '@/context/ThemeContext';
-import { RootStackParamList } from '@/types';
-import { FONT_FAMILY } from '@/utils/typography';
+import { FONT_FAMILY, useTheme } from '@shared/theme';
+import type { RootStackParamList } from '@app/navigation/types';
 
 import type { OnboardingFacade } from '../../application/contracts';
 

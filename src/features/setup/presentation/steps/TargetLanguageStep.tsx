@@ -6,8 +6,7 @@
 import React from 'react';
 import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
-import { FONT_FAMILY } from '../../../../../utils/typography';
-import { COLORS } from '../../../../../constants';
+import { COLORS, FONT_FAMILY } from '@shared/theme';
 import type { LanguageOption } from './NativeLanguageStep';
 
 export interface TargetLanguageStepProps {

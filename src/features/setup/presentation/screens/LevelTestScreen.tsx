@@ -10,11 +10,10 @@ import {
 import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { RootStackParamList } from '../../../../../types';
+import type { RootStackParamList } from '@app/navigation/types';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
-import { useTheme } from '../../../../../context/ThemeContext';
-import { FONT_FAMILY } from '../../../../../utils/typography';
-import { Button } from '../../../../../components/UIComponents';
+import { FONT_FAMILY, useTheme } from '@shared/theme';
+import { Button } from '@shared/ui';
 import { useTranslation } from 'react-i18next';
 import type { LevelTestFacade } from '../../application/levelTestContracts';
 import type { LevelTestQuestion } from '../../domain/levelTestTypes';

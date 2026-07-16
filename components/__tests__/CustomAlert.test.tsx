@@ -134,7 +134,7 @@ describe('CustomAlert', () => {
                 );
             };
 
-            const { getByTestId, getByText, queryByText } = renderWithProviders(<TestWithCallback />);
+            const { getByTestId, getByText } = renderWithProviders(<TestWithCallback />);
             
             fireEvent.press(getByTestId('show-callback-alert'));
             

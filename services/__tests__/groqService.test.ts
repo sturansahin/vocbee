@@ -11,7 +11,7 @@ const mockAuth: {
     currentUser: null,
 };
 
-jest.mock('../../config/firebase', () => ({
+jest.mock('@shared/firebase', () => ({
     auth: mockAuth,
 }));
 

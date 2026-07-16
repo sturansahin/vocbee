@@ -22,7 +22,7 @@ const baseProps = {
 
 describe('HomeProgressSection', () => {
     it('renders the loading skeleton variant without real data', () => {
-        const { getByText, queryByText } = render(
+        const { queryByText } = render(
             <HomeProgressSection {...baseProps} isLoading />
         );
         // Loading variant renders only placeholder lines, no level/progress text.

@@ -16,7 +16,7 @@
 //     data/repositories/progressV2ReadFlag.ts — it is ALSO not called by any production code path.
 
 import { doc, getDoc, setDoc, serverTimestamp } from 'firebase/firestore';
-import { db } from '../../../../../config/firebase';
+import { db } from '@shared/firebase';
 import { type Level, type LevelProgress, type ProgressSummary } from '../../domain/types';
 import { PROGRESS_BY_LEVEL_DOC_VERSION } from '../../domain/constants';
 import type { LegacyProgressDoc, ProgressByLevelDoc, UserDocV2 } from '../dto';

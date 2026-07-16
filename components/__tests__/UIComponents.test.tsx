@@ -107,7 +107,7 @@ describe('UIComponents', () => {
         });
 
         it('renders without label', () => {
-            const { getByPlaceholderText, queryByText } = renderWithTheme(
+            const { getByPlaceholderText } = renderWithTheme(
                 <Input placeholder="No Label Input" />
             );
             expect(getByPlaceholderText('No Label Input')).toBeTruthy();

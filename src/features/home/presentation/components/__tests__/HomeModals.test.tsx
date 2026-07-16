@@ -3,10 +3,10 @@ import React from 'react';
 import { render } from '@testing-library/react-native';
 import { HomeModals } from '../HomeModals';
 
-jest.mock('../../../../../../components/StreakCelebrationOverlay', () => ({
+jest.mock('@features/streak', () => ({
     StreakCelebrationOverlay: () => null,
 }));
-jest.mock('../../../../../../components/AppRatingPrompt', () => ({
+jest.mock('@features/review', () => ({
     AppRatingPrompt: () => null,
 }));
 

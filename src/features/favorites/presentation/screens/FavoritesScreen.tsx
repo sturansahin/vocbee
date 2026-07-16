@@ -9,13 +9,12 @@ import {
 } from 'react-native';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../../../../../types';
+import type { RootStackParamList } from '@app/navigation/types';
 import Feather from '@expo/vector-icons/Feather';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { useTheme } from '../../../../../context/ThemeContext';
-import { FONT_FAMILY } from '../../../../../utils/typography';
+import { FONT_FAMILY, useTheme } from '@shared/theme';
 import type { Level, VocabularyWord } from '@features/vocabulary';
 import type { FavoritesScreenFacade } from '../../application/FavoritesScreenFacade';
 import { useTranslation } from 'react-i18next';

@@ -1,6 +1,6 @@
 import { doc, getDoc, serverTimestamp, setDoc } from 'firebase/firestore';
 
-import { auth, db } from '../../../../../config/firebase';
+import { auth, db } from '@shared/firebase';
 
 import type { FavoritesRemoteRepository } from '../../application/contracts';
 import type { FavoriteItem } from '../../domain/types';

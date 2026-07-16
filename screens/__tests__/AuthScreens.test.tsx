@@ -20,7 +20,7 @@ jest.mock('@react-navigation/native', () => {
 });
 
 // Mock contexts
-jest.mock('../../context/ThemeContext', () => ({
+jest.mock('@shared/theme', () => ({
     useTheme: () => ({
         colors: {
             background: '#FFFFFF',
@@ -32,6 +32,14 @@ jest.mock('../../context/ThemeContext', () => ({
         },
         isDarkMode: false
     }),
+    COLORS: {
+        background: '#FFFFFF',
+        textSecondary: '#666666',
+        border: '#E0E0E0',
+        surface: '#F5F5F5',
+        primary: '#FFC814',
+    },
+    FONT_FAMILY: 'System',
     ThemeProvider: ({ children }: { children: React.ReactNode }) => children,
 }));
 
@@ -55,11 +63,30 @@ jest.mock('../../src/features/auth/presentation/AuthProvider', () => ({
 }));
 
 // Mock Alert
-jest.mock('../../components/CustomAlert', () => ({
-    useAlert: () => ({
-        showAlert: mockShowAlert,
-    }),
-}));
+jest.mock('@shared/ui', () => {
+    const React = require('react');
+    const { Text, TextInput, TouchableOpacity, View } = require('react-native');
+    return {
+        Button: ({ title, onPress, disabled }: any) => (
+            <TouchableOpacity onPress={onPress} disabled={disabled}>
+                <Text>{title}</Text>
+            </TouchableOpacity>
+        ),
+        Header: ({ title, onBack }: any) => (
+            <View>
+                <TouchableOpacity onPress={onBack}><Text>Back</Text></TouchableOpacity>
+                {title ? <Text>{title}</Text> : null}
+            </View>
+        ),
+        Input: ({ label, ...props }: any) => (
+            <View>
+                {label ? <Text>{label}</Text> : null}
+                <TextInput {...props} />
+            </View>
+        ),
+        useAlert: () => ({ showAlert: mockShowAlert }),
+    };
+});
 
 describe('AuthScreens', () => {
     const authPresentationGateway = {

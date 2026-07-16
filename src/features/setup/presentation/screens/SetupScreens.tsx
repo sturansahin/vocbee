@@ -8,9 +8,9 @@ import {
   DEFAULT_NOTIFICATION_FREQUENCY_KEY,
   NOTIFICATION_FREQUENCY_KEYS,
 } from '@features/notifications';
-import { Button } from '@/components/UIComponents';
-import { LANGUAGES, LEVELS } from '@/constants';
-import { useTheme } from '@/context/ThemeContext';
+import { LANGUAGES, LEVELS } from '@shared/i18n';
+import { useTheme } from '@shared/theme';
+import { Button } from '@shared/ui';
 
 import type { SetupFacade } from '../../application/setupContracts';
 import {

@@ -25,7 +25,7 @@ import {
   isVocabularyGenerated,
   shuffleArray,
 } from '@features/vocabulary';
-import { AD_IDS, loadInterstitial, showInterstitial } from '../../../../services/adMobService';
+import { AD_IDS, loadInterstitial, showInterstitial } from '@features/monetization';
 import {
   clearPendingNotificationWord,
   getPendingNotificationWord,

@@ -51,8 +51,14 @@ export function getLearningSpeechLanguage(languageId: string): string {
   return TTS_LANGUAGE_CODES[languageId?.toLowerCase()] || 'en-US';
 }
 
+export const DEBUG_FORCE_STREAK_CELEBRATION_ON_RIGHT_SWIPE = false;
+
 export function shouldCelebrateStreak(didIncrement: boolean): boolean {
-  return didIncrement;
+  return didIncrement || DEBUG_FORCE_STREAK_CELEBRATION_ON_RIGHT_SWIPE;
+}
+
+export function shouldShowStreakCelebration(didIncrement: boolean): boolean {
+  return shouldCelebrateStreak(didIncrement);
 }
 
 export function getStreakCelebrationMessageKey(streakCount: number): string {

@@ -1,8 +1,7 @@
 // src/features/monetization — public barrel (docs/refactor-v2/28, /33 §4).
-// Real implementation landed in Phase 8. Only domain types/rules, repository *interfaces*, and the
-// presentation provider/hook are exported here. Concrete repository implementations
-// (RevenueCatRepositoryImpl/AdMobRepositoryImpl) and the facade singleton stay internal to the
-// feature — consumers outside this feature must use `useMonetization()` / `MonetizationProvider`.
+// Real implementation landed in Phase 8. Domain types/rules, repository interfaces, presentation
+// entrypoints, and stable application-facing ad operations are public. Concrete repository
+// implementations and the facade singleton stay internal to the feature.
 
 export type {
     AdGatingState,
@@ -32,3 +31,18 @@ export type { RevenueCatRepository, AdMobRepository } from './data/contracts';
 // NOTE: RevenueCatRepositoryImpl / AdMobRepositoryImpl (concrete implementations) are NOT exported here.
 
 export { MonetizationProvider, useMonetization } from './presentation/MonetizationProvider';
+export { SafeBannerAd } from './presentation/SafeBannerAd';
+export {
+    AD_IDS,
+    areAdsSupported,
+    checkAndShowAppOpenAd,
+    ensureAdMobReady,
+    getBannerAdComponent,
+    getBannerAdSize,
+    getDefaultAdRequestOptions,
+    initializeAdMob,
+    loadInterstitial,
+    refreshAdInventoryOnForeground,
+    requestAdConsent,
+    showInterstitial,
+} from './composition/adMobService';

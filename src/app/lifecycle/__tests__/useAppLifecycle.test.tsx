@@ -9,7 +9,12 @@ const mockAuth: { value: any } = { value: null };
 const mockMonetization: { value: any } = { value: { isAdFree: false, isLoading: false } };
 
 jest.mock('@features/auth', () => ({ useAuth: () => mockAuth.value }));
-jest.mock('@features/monetization', () => ({ useMonetization: () => mockMonetization.value }));
+jest.mock('@features/monetization', () => ({
+  useMonetization: () => mockMonetization.value,
+  initializeAdMob: jest.fn(async () => false),
+  checkAndShowAppOpenAd: jest.fn(async () => {}),
+  refreshAdInventoryOnForeground: jest.fn(async () => {}),
+}));
 jest.mock('@features/sync', () => ({ autoSync: jest.fn() }));
 jest.mock('@features/notifications', () => ({
   notificationFacade: {
@@ -27,11 +32,6 @@ jest.mock('@features/notifications', () => ({
     getLastResponse: jest.fn(async () => null),
     clearLastResponse: jest.fn(async () => {}),
   },
-}));
-jest.mock('../../../../services/adMobService', () => ({
-  initializeAdMob: jest.fn(async () => false),
-  checkAndShowAppOpenAd: jest.fn(async () => {}),
-  refreshAdInventoryOnForeground: jest.fn(async () => {}),
 }));
 jest.mock('@features/review', () => ({ recordReviewAppLaunch: jest.fn(async () => {}) }));
 import { useAppLifecycle } from '../useAppLifecycle';

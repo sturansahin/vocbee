@@ -13,7 +13,6 @@ import {
   fixtureNotificationSettingsEnabled,
   fixtureProgressByLevel,
   fixtureProgressDefault,
-  fixtureProgressEmpty,
   fixtureStreakActive,
   fixtureUserDataLoggedInComplete,
   fixtureUserDataSetupIncomplete,

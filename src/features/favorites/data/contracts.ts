@@ -3,7 +3,7 @@
 // services/favoritesService.ts keeps running as-is; this is the target shape that encapsulates the
 // direct Firestore access (currently inlined in favoritesService) for an incremental migration.
 
-import type { Level, VocabularyWord } from '../../vocabulary';
+import type { Level, VocabularyWord } from '@features/vocabulary';
 import type { FavoriteItem } from '../domain/types';
 
 export interface FavoritesRepository {

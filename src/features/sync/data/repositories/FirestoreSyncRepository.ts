@@ -1,6 +1,6 @@
 import { doc, getDoc, serverTimestamp, setDoc } from 'firebase/firestore';
 
-import { db } from '../../../../../config/firebase';
+import { db } from '@shared/firebase';
 import type { SyncRepository } from '../../application/contracts';
 import type {
   AuthProfileSyncInput,

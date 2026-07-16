@@ -26,7 +26,7 @@ jest.mock('@react-navigation/stack', () => {
 
 jest.mock('expo-status-bar', () => ({ StatusBar: () => null }));
 
-jest.mock('../../../../context/ThemeContext', () => ({
+jest.mock('@shared/theme', () => ({
   useTheme: () => ({
     isDarkMode: false,
     colors: { primary: '#000', background: '#fff', text: '#000', border: '#ccc' },

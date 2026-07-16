@@ -38,7 +38,7 @@ jest.mock('@features/progress', () => ({
     getLearnedWords: jest.fn(),
 }));
 
-jest.mock('../i18n', () => ({
+jest.mock('@shared/i18n', () => ({
     __esModule: true,
     default: {
         t: jest.fn((key: string) => ({

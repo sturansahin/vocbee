@@ -13,8 +13,7 @@ import { AppProviders } from './providers/AppProviders';
 import { RootNavigator } from './navigation/RootNavigator';
 import { useAppLifecycle } from './lifecycle/useAppLifecycle';
 import { useAppBootstrap } from './bootstrap/useAppBootstrap';
-import CustomSplashScreen from '../../screens/SplashScreen';
-import { ConnectionErrorScreen } from '../../components/ConnectionErrorScreen';
+import { ConnectionErrorScreen, SplashScreen as CustomSplashScreen } from './presentation';
 // ADIM 1 (Developer Test Panel, docs/refactor-v2 devtools task): DevToolsRoot renders `null` unless
 // `isDevToolsEnabled` (src/devtools/guard.ts) is true, which itself is only ever true when
 // `__DEV__` is true — it is a no-op in production builds. It is mounted as a sibling OVERLAY of

@@ -6,8 +6,7 @@ import React from 'react';
 import { MaterialIcons } from '@expo/vector-icons';
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useTranslation } from 'react-i18next';
-import { FONT_FAMILY } from '../../../../../utils/typography';
-import { COLORS } from '../../../../../constants';
+import { COLORS, FONT_FAMILY } from '@shared/theme';
 
 export interface LevelOption {
   id: string;

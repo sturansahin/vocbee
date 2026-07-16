@@ -2,7 +2,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Speech from 'expo-speech';
 import { STORAGE_KEYS } from '@shared/storage';
 
-import { getTTSLanguageCode } from '../../../../constants';
+import { getTTSLanguageCode } from '@shared/i18n';
 import type { ExampleSentencesPlatformGateway } from '../application/exampleSentencesContracts';
 
 export class ExpoExampleSentencesPlatformGateway implements ExampleSentencesPlatformGateway {

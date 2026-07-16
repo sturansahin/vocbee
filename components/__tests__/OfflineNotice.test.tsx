@@ -104,7 +104,7 @@ describe('OfflineNotice', () => {
         // Start connected
         mockGetNetworkStateAsync.mockResolvedValue({ isConnected: true });
 
-        const { queryByText, getByText, rerender } = renderWithProviders(<OfflineNotice />);
+        const { queryByText, getByText } = renderWithProviders(<OfflineNotice />);
 
         await act(async () => {
             jest.advanceTimersByTime(100);

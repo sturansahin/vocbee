@@ -7,7 +7,7 @@
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import appConfig from '../../../../app.json';
-import { auth } from '../../../../config/firebase';
+import { auth } from '@shared/firebase';
 import { STORAGE_KEYS } from '@shared/storage';
 
 import { assertValidGrammarRequest } from '../domain/grammarRules';

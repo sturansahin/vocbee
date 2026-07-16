@@ -13,8 +13,8 @@ import LottieView from 'lottie-react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
 
-import { Button, Input } from '@/components/UIComponents';
-import { useTheme } from '@/context/ThemeContext';
+import { useTheme } from '@shared/theme';
+import { Button, Input } from '@shared/ui';
 
 import { useLoginController } from '../hooks/useLoginController';
 import { authStyles as styles } from './authStyles';

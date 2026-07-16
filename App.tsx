@@ -4,4 +4,4 @@
 // FONT_FAMILY is preserved for backward compatibility (original App.tsx re-exported it).
 // This shim is removed in Phase 9 once the entry points to @app/App directly.
 export { default } from './src/app/App';
-export { FONT_FAMILY } from './utils/typography';
+export { FONT_FAMILY } from '@shared/theme';

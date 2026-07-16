@@ -18,7 +18,7 @@ jest.mock('firebase/firestore', () => ({
   serverTimestamp: jest.fn(() => 'server-time'),
 }));
 
-jest.mock('../../../../../../config/firebase', () => ({ db: {} }));
+jest.mock('@shared/firebase', () => ({ db: {} }));
 
 import { STORAGE_KEYS } from '@shared/storage';
 import { FirestoreUserProfileRepository } from '../FirestoreUserProfileRepository';

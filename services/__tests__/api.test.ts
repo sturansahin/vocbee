@@ -1,6 +1,4 @@
 // file: services/__tests__/api.test.ts
-import AsyncStorage from '@react-native-async-storage/async-storage';
-
 // Mock the vocabularyService module to avoid .txt file import issues
 jest.mock('../vocabularyService', () => ({
     getStoredVocabulary: jest.fn(),
