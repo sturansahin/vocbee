@@ -12,7 +12,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { db } from '../../../../../config/firebase';
 import { STORAGE_KEYS } from '@shared/storage';
 import type { Profile } from '../../domain/types';
-import type { UserProfileRepository } from '../contracts';
+import type { SetupProfileCompletion, UserProfileRepository } from '../contracts';
 
 export class FirestoreUserProfileRepository implements UserProfileRepository {
   async getCachedProfile(uid: string): Promise<Profile | null> {
@@ -37,6 +37,26 @@ export class FirestoreUserProfileRepository implements UserProfileRepository {
     if (patch.image !== undefined) docPatch.photoURL = patch.image;
     if (patch.email !== undefined) docPatch.email = patch.email;
     await setDoc(doc(db, 'users', uid), docPatch, { merge: true }); // merge: legacy fields preserved
+  }
+
+  async saveSetupCompletion(
+    uid: string,
+    completion: SetupProfileCompletion
+  ): Promise<void> {
+    await setDoc(
+      doc(db, 'users', uid),
+      {
+        setupCompleted: true,
+        preferences: completion.preferences,
+        progress: {
+          currentLevel: completion.initialLevel,
+          learnedWords: {},
+          lastSync: serverTimestamp(),
+        },
+        notificationSettings: completion.notificationSettings,
+      },
+      { merge: true }
+    );
   }
 
   async createUserDocument(uid: string, email: string, displayName?: string, photoURL?: string | null): Promise<void> {

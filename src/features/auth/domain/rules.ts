@@ -52,3 +52,38 @@ export function getAuthErrorMessage(errorCode: string): string {
       return 'An error occurred. Please try again.';
   }
 }
+
+export type LoginValidationError = 'fillAllFields';
+export type RegistrationValidationError =
+  | 'fillAllFields'
+  | 'invalidEmail'
+  | 'passwordsMismatch'
+  | 'passwordTooShort'
+  | 'acceptPrivacyRequired';
+export type ForgotPasswordValidationError = 'enterEmail' | 'invalidEmail';
+
+export function validateLogin(email: string, password: string): LoginValidationError | null {
+  return !email || !password ? 'fillAllFields' : null;
+}
+
+export function validateRegistration(input: {
+  name: string;
+  email: string;
+  password: string;
+  confirmPassword: string;
+  hasAcceptedPrivacyPolicy: boolean;
+}): RegistrationValidationError | null {
+  if (!input.name || !input.email || !input.password || !input.confirmPassword) {
+    return 'fillAllFields';
+  }
+  if (!/\S+@\S+\.\S+/.test(input.email)) return 'invalidEmail';
+  if (input.password !== input.confirmPassword) return 'passwordsMismatch';
+  if (input.password.length < 6) return 'passwordTooShort';
+  if (!input.hasAcceptedPrivacyPolicy) return 'acceptPrivacyRequired';
+  return null;
+}
+
+export function validateForgotPassword(email: string): ForgotPasswordValidationError | null {
+  if (!email) return 'enterEmail';
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? null : 'invalidEmail';
+}

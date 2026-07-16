@@ -1,5 +1,12 @@
 // Pure auth domain rules — must match context/AuthContext.tsx logic exactly (behavior contract).
-import { isRecentLogin, hasCompletedSetup, RECENT_LOGIN_WINDOW_MS } from '../rules';
+import {
+  hasCompletedSetup,
+  isRecentLogin,
+  RECENT_LOGIN_WINDOW_MS,
+  validateForgotPassword,
+  validateLogin,
+  validateRegistration,
+} from '../rules';
 
 describe('auth domain rules', () => {
   describe('isRecentLogin (RECENT_LOGIN_WINDOW_MS = 5 min)', () => {
@@ -31,6 +38,45 @@ describe('auth domain rules', () => {
       expect(hasCompletedSetup({ preferences: null })).toBe(false);
       expect(hasCompletedSetup({ preferences: { nativeLanguage: 'turkish' } })).toBe(false);
       expect(hasCompletedSetup({ preferences: { targetLanguage: 'english' } })).toBe(false);
+    });
+  });
+
+  describe('form validation', () => {
+    it('preserves login and registration validation precedence', () => {
+      expect(validateLogin('', 'secret')).toBe('fillAllFields');
+      expect(
+        validateRegistration({
+          name: 'Bee',
+          email: 'invalid',
+          password: 'secret',
+          confirmPassword: 'secret',
+          hasAcceptedPrivacyPolicy: true,
+        })
+      ).toBe('invalidEmail');
+      expect(
+        validateRegistration({
+          name: 'Bee',
+          email: 'bee@example.com',
+          password: 'secret',
+          confirmPassword: 'different',
+          hasAcceptedPrivacyPolicy: true,
+        })
+      ).toBe('passwordsMismatch');
+      expect(
+        validateRegistration({
+          name: 'Bee',
+          email: 'bee@example.com',
+          password: 'secret',
+          confirmPassword: 'secret',
+          hasAcceptedPrivacyPolicy: false,
+        })
+      ).toBe('acceptPrivacyRequired');
+    });
+
+    it('preserves forgot-password email validation', () => {
+      expect(validateForgotPassword('')).toBe('enterEmail');
+      expect(validateForgotPassword('not-an-email')).toBe('invalidEmail');
+      expect(validateForgotPassword('bee@example.com')).toBeNull();
     });
   });
 });

@@ -34,14 +34,16 @@ jest.mock('../../../../context/ThemeContext', () => ({
 }));
 
 // Mock every screen module so RootNavigator can import them without loading real screens.
-jest.mock('../../../../screens/OnboardingScreen', () => () => null);
-jest.mock('../../../../screens/AuthScreens', () => ({ LoginScreen: () => null, SignUpScreen: () => null }));
-jest.mock('../../../../screens/SetupScreens', () => ({ SetupScreen: () => null }));
-jest.mock('../../../../screens/SettingsScreen', () => () => null);
+jest.mock('@features/auth', () => ({
+  ForgotPasswordScreen: () => null,
+  LoginScreen: () => null,
+  SignUpScreen: () => null,
+}));
 jest.mock('@features/favorites', () => ({ FavoritesScreen: () => null }));
 jest.mock('@features/learning', () => ({ HomeScreen: () => null, ExampleSentencesScreen: () => null }));
-jest.mock('@features/setup', () => ({ LevelTestScreen: () => null }));
-jest.mock('../../../../screens/ForgotPasswordScreen', () => () => null);
+jest.mock('@features/onboarding', () => () => null);
+jest.mock('@features/settings', () => () => null);
+jest.mock('@features/setup', () => ({ LevelTestScreen: () => null, SetupScreen: () => null }));
 
 import { RootNavigator } from '../RootNavigator';
 

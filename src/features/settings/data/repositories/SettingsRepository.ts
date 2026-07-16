@@ -1,15 +1,14 @@
 // src/features/settings/data/repositories/SettingsRepository.ts
 // Layer: data (repository impl) | Feature: settings.
 //
-// ⚠️ PREP / NOT WIRED (Phase 7, docs/refactor-v2/27, /35 §7): not imported by running code, not exported
-//    from the barrel (docs/refactor-v2/33 §4). Reads/writes the SAME local keys SettingsScreen/SetupScreens
-//    use today (@native_language/@target_language/@user_level/@user_language). Remote preference + setupCompleted
-//    persistence is delegated to UserProfileRepository in a later wiring step (replaces the stale direct
-//    setDoc) — kept local-only here so this file has NO Firestore dependency.
+// Wired by settings composition for the SAME local keys used by legacy Settings/Setup
+// (@native_language/@target_language/@user_level/@user_language). Setup completion's remote merge is
+// delegated separately to UserProfileRepository, so this repository remains SDK-local and has no
+// Firestore dependency.
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { STORAGE_KEYS } from '@shared/storage';
-import type { UserPreferences } from '../../../setup/domain/types';
+import type { UserPreferences } from '@features/setup';
 import type { SettingsRepository } from '../contracts';
 
 export class LocalSettingsRepository implements SettingsRepository {
@@ -40,5 +39,13 @@ export class LocalSettingsRepository implements SettingsRepository {
 
   async setAppLanguage(lang: string): Promise<void> {
     await AsyncStorage.setItem(STORAGE_KEYS.USER_LANGUAGE, lang);
+  }
+
+  getUserLevel(): Promise<string | null> {
+    return AsyncStorage.getItem(STORAGE_KEYS.USER_LEVEL);
+  }
+
+  async setUserLevel(level: string): Promise<void> {
+    await AsyncStorage.setItem(STORAGE_KEYS.USER_LEVEL, level);
   }
 }

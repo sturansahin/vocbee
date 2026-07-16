@@ -13,5 +13,7 @@ export type {
 } from './application/contracts';
 export { DefaultAuthFacade } from './application/AuthFacade';
 export { AuthProvider } from './composition/AuthProvider';
+export { LoginScreen, SignUpScreen } from './composition/AuthScreens';
 export { AuthStateProvider, useAuth } from './presentation/AuthProvider';
+export { default as ForgotPasswordScreen } from './presentation/screens/ForgotPasswordScreen';
 export type { AuthContextType, AuthStateProviderProps } from './presentation/AuthProvider';

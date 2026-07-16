@@ -45,6 +45,7 @@ function makeDependencies(): AuthFacadeDependencies {
     cacheProfile: jest.fn(async () => undefined),
     fetchProfileFromRemote: jest.fn(async () => null),
     saveProfile: jest.fn(async () => undefined),
+    saveSetupCompletion: jest.fn(async () => undefined),
     createUserDocument: jest.fn(async () => undefined),
     deleteUserDocument: jest.fn(async () => undefined),
   };
@@ -118,6 +119,22 @@ describe('DefaultAuthFacade', () => {
     expect(result.connectionError).toBe(false);
   });
 
+  it('loads and updates the profile snapshot used by Settings', async () => {
+    const dependencies = makeDependencies();
+    const facade = new DefaultAuthFacade(dependencies);
+    const loaded = await facade.bootstrapSession(user);
+    const updated = await facade.updateProfileData(user, loaded.profile, {
+      name: 'Updated Bee',
+    });
+
+    expect(loaded.profile.name).toBe('VocBee User');
+    expect(updated.name).toBe('Updated Bee');
+    expect(dependencies.profileRepository.cacheProfile).toHaveBeenLastCalledWith(
+      user.uid,
+      updated
+    );
+  });
+
   it('refreshes remotely when lastActiveDeviceId belongs to another device', async () => {
     const dependencies = makeDependencies();
     (dependencies.sync.getActiveDeviceId as jest.Mock).mockResolvedValue('device-other');
@@ -162,6 +179,26 @@ describe('DefaultAuthFacade', () => {
     await expect(
       new DefaultAuthFacade(dependencies).signIn('user@example.com', 'bad')
     ).rejects.toThrow('Incorrect password.');
+    consoleSpy.mockRestore();
+  });
+
+  it('sends forgot-password email through the auth repository', async () => {
+    const dependencies = makeDependencies();
+    await new DefaultAuthFacade(dependencies).resetPassword('user@example.com');
+    expect(dependencies.authRepository.sendPasswordReset).toHaveBeenCalledWith(
+      'user@example.com'
+    );
+  });
+
+  it('maps forgot-password errors to the existing public message', async () => {
+    const dependencies = makeDependencies();
+    (dependencies.authRepository.sendPasswordReset as jest.Mock).mockRejectedValue({
+      code: 'auth/user-not-found',
+    });
+    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => undefined);
+    await expect(
+      new DefaultAuthFacade(dependencies).resetPassword('missing@example.com')
+    ).rejects.toThrow('No account found with this email.');
     consoleSpy.mockRestore();
   });
 });

@@ -1,9 +1,8 @@
 // file: screens/__tests__/AuthScreens.test.tsx
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
-import { LoginScreen, SignUpScreen } from '../AuthScreens';
-import { ThemeProvider } from '../../context/ThemeContext';
-import { AuthProvider } from '../../context/AuthContext';
+import { LoginScreen } from '../../src/features/auth/presentation/screens/LoginScreen';
+import { SignUpScreen } from '../../src/features/auth/presentation/screens/SignUpScreen';
 
 const mockNavigate = jest.fn();
 const mockShowAlert = jest.fn();
@@ -43,7 +42,7 @@ const mockSignInWithGoogle = jest.fn();
 const mockSignInWithApple = jest.fn();
 const mockSignOut = jest.fn();
 
-jest.mock('../../context/AuthContext', () => ({
+jest.mock('../../src/features/auth/presentation/AuthProvider', () => ({
     useAuth: () => ({
         signIn: mockSignIn,
         signUp: mockSignUp,
@@ -63,8 +62,13 @@ jest.mock('../../components/CustomAlert', () => ({
 }));
 
 describe('AuthScreens', () => {
+    const authPresentationGateway = {
+        openPrivacyPolicy: jest.fn(async () => undefined),
+    };
+
     beforeEach(() => {
         jest.clearAllMocks();
+        mockSignIn.mockResolvedValue({ setupCompleted: true });
     });
 
     describe('LoginScreen', () => {
@@ -118,14 +122,18 @@ describe('AuthScreens', () => {
 
     describe('SignUpScreen', () => {
         it('renders all signup fields', () => {
-            const { getByText, getByPlaceholderText } = render(<SignUpScreen />);
+            const { getByText, getByPlaceholderText } = render(
+                <SignUpScreen gateway={authPresentationGateway} />
+            );
 
             expect(getByText('auth.fullName')).toBeTruthy();
             expect(getByPlaceholderText('auth.enterEmail')).toBeTruthy(); // Adjusted to placeholder from component
         });
 
         it('does not call signUp before privacy policy is accepted', async () => {
-            const { getByText, getByPlaceholderText } = render(<SignUpScreen />);
+            const { getByText, getByPlaceholderText } = render(
+                <SignUpScreen gateway={authPresentationGateway} />
+            );
 
             fireEvent.changeText(getByPlaceholderText('auth.namePlaceholder'), 'John Doe');
             fireEvent.changeText(getByPlaceholderText('auth.enterEmail'), 'new@example.com');
@@ -140,7 +148,9 @@ describe('AuthScreens', () => {
         });
 
         it('calls signUp with valid data', async () => {
-            const { getByText, getByPlaceholderText, getByTestId } = render(<SignUpScreen />);
+            const { getByText, getByPlaceholderText, getByTestId } = render(
+                <SignUpScreen gateway={authPresentationGateway} />
+            );
 
             fireEvent.changeText(getByPlaceholderText('auth.namePlaceholder'), 'John Doe');
             fireEvent.changeText(getByPlaceholderText('auth.enterEmail'), 'new@example.com');

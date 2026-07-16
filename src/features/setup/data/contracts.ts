@@ -1,8 +1,7 @@
 // src/features/setup/data/contracts.ts
-// Layer: data (contracts) | Feature: setup. Interface only — PREP (docs/refactor-v2/13, /35 §7).
-// Encapsulates the persistence that SetupScreens currently does with a DIRECT
-// setDoc(users/{uid}, { setupCompleted: true, preferences }) — to be implemented by delegating to the
-// local stores + UserProfileRepository (no direct Firestore) in a later, device-QA'd wiring step.
+// Layer: data (contracts) | Feature: setup. Compatibility use-case port retained for callers that
+// only need preference persistence. The production SetupFacade uses SetupPlatformGateway and
+// delegates users/{uid} completion writes to UserProfileRepository.
 
 import type { UserPreferences } from '../domain/types';
 

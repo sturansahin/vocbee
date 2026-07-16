@@ -7,14 +7,12 @@
 // push them directly. Screens with no required params use `undefined`.
 
 import type { ComponentType } from 'react';
-import OnboardingScreen from '../../screens/OnboardingScreen';
-import { LoginScreen, SignUpScreen } from '../../screens/AuthScreens';
-import { SetupScreen } from '../../screens/SetupScreens';
+import { ForgotPasswordScreen, LoginScreen, SignUpScreen } from '@features/auth';
 import { FavoritesScreen } from '@features/favorites';
 import { ExampleSentencesScreen, HomeScreen } from '@features/learning';
-import { LevelTestScreen } from '@features/setup';
-import SettingsScreen from '../../screens/SettingsScreen';
-import ForgotPasswordScreen from '../../screens/ForgotPasswordScreen';
+import OnboardingScreen from '@features/onboarding';
+import SettingsScreen from '@features/settings';
+import { LevelTestScreen, SetupScreen } from '@features/setup';
 
 export interface ScreenRegistryEntry {
   /** Stable unique id — used as the DevTools stack route name. Must be unique across the registry. */

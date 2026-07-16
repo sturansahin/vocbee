@@ -8,14 +8,16 @@
 // transformIgnorePatterns outside of jest-expo's own transform scope). This test only verifies
 // registry SHAPE (ids/labels/component refs), not real screen rendering.
 
-jest.mock('../../../screens/OnboardingScreen', () => () => null);
-jest.mock('../../../screens/AuthScreens', () => ({ LoginScreen: () => null, SignUpScreen: () => null }));
-jest.mock('../../../screens/SetupScreens', () => ({ SetupScreen: () => null }));
-jest.mock('../../../screens/SettingsScreen', () => () => null);
+jest.mock('@features/auth', () => ({
+  ForgotPasswordScreen: () => null,
+  LoginScreen: () => null,
+  SignUpScreen: () => null,
+}));
 jest.mock('@features/favorites', () => ({ FavoritesScreen: () => null }));
 jest.mock('@features/learning', () => ({ HomeScreen: () => null, ExampleSentencesScreen: () => null }));
-jest.mock('@features/setup', () => ({ LevelTestScreen: () => null }));
-jest.mock('../../../screens/ForgotPasswordScreen', () => () => null);
+jest.mock('@features/onboarding', () => () => null);
+jest.mock('@features/settings', () => () => null);
+jest.mock('@features/setup', () => ({ LevelTestScreen: () => null, SetupScreen: () => null }));
 
 import { SCREEN_REGISTRY, assertNoDuplicateScreenIds, ScreenRegistryEntry } from '../screenRegistry';
 

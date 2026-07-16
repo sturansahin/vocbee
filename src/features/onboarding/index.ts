@@ -1,3 +1,3 @@
-// src/features/onboarding — public barrel. Placeholder (Phase 1).
-// Migration in Phase 7 (docs/refactor-v2/27).
-export {};
+export type { OnboardingFacade, OnboardingRepository } from './application/contracts';
+export { DefaultOnboardingFacade } from './application/DefaultOnboardingFacade';
+export { default } from './composition/OnboardingScreen';

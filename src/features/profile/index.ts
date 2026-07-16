@@ -3,6 +3,6 @@
 
 export * from './domain/types';
 export * from './domain/profileRules';
-export type { UserProfileRepository } from './data/contracts';
+export type { SetupProfileCompletion, UserProfileRepository } from './data/contracts';
 export { makeLoadProfile } from './application/useCases/loadProfile';
 export { createUserProfileRepository } from './composition/createUserProfileRepository';

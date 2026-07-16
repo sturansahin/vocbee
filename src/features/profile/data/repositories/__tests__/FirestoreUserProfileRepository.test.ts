@@ -90,4 +90,53 @@ describe('FirestoreUserProfileRepository', () => {
     );
     expect(mockDeleteDoc).toHaveBeenCalledWith('user-ref');
   });
+
+  it('merge-persists the setup completion payload through the profile repository', async () => {
+    const repository = new FirestoreUserProfileRepository();
+
+    await repository.saveSetupCompletion('user-1', {
+      preferences: {
+        nativeLanguage: 'turkish',
+        targetLanguage: 'english',
+        level: 'beginner',
+      },
+      initialLevel: 'A1',
+      notificationSettings: {
+        enabled: true,
+        startHour: 9,
+        startMinute: 0,
+        endHour: 21,
+        endMinute: 0,
+        frequencyMinutes: 120,
+        autoMarkLearned: true,
+      },
+    });
+
+    expect(mockSetDoc).toHaveBeenCalledWith(
+      'user-ref',
+      {
+        setupCompleted: true,
+        preferences: {
+          nativeLanguage: 'turkish',
+          targetLanguage: 'english',
+          level: 'beginner',
+        },
+        progress: {
+          currentLevel: 'A1',
+          learnedWords: {},
+          lastSync: 'server-time',
+        },
+        notificationSettings: {
+          enabled: true,
+          startHour: 9,
+          startMinute: 0,
+          endHour: 21,
+          endMinute: 0,
+          frequencyMinutes: 120,
+          autoMarkLearned: true,
+        },
+      },
+      { merge: true }
+    );
+  });
 });

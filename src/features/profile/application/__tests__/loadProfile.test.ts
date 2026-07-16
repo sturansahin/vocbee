@@ -9,6 +9,7 @@ function makeFakeProfileRepo(overrides: Partial<UserProfileRepository> = {}): Us
     cacheProfile: jest.fn(async () => undefined),
     fetchProfileFromRemote: jest.fn(async () => null),
     saveProfile: jest.fn(async () => undefined),
+    saveSetupCompletion: jest.fn(async () => undefined),
     createUserDocument: jest.fn(async () => undefined),
     deleteUserDocument: jest.fn(async () => undefined),
     ...overrides,

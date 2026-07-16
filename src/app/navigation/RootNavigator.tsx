@@ -16,15 +16,10 @@ import { RootStackParamList } from '../../../types';
 import { useTheme } from '../../../context/ThemeContext';
 import { FavoritesScreen } from '@features/favorites';
 import { ExampleSentencesScreen, HomeScreen } from '@features/learning';
-import { LevelTestScreen } from '@features/setup';
-
-// Migrated routes use feature public barrels; remaining routes retain compatibility imports until
-// their owning completion prompts.
-import OnboardingScreen from '../../../screens/OnboardingScreen';
-import { LoginScreen, SignUpScreen } from '../../../screens/AuthScreens';
-import { SetupScreen } from '../../../screens/SetupScreens';
-import SettingsScreen from '../../../screens/SettingsScreen';
-import ForgotPasswordScreen from '../../../screens/ForgotPasswordScreen';
+import { ForgotPasswordScreen, LoginScreen, SignUpScreen } from '@features/auth';
+import OnboardingScreen from '@features/onboarding';
+import SettingsScreen from '@features/settings';
+import { LevelTestScreen, SetupScreen } from '@features/setup';
 
 const Stack = createStackNavigator<RootStackParamList>();
 

@@ -38,3 +38,16 @@
 - **R9 azaltıldı:** vocabulary cache fallback, progress mutation, favorites add/remove/check ve review eligibility için 4 suite/15 test eklendi; mevcut streak ve SyncOrchestrator retry/integration testleriyle birlikte hedefli 6 suite/43 test geçti. Full Jest 74 suite/425 testtir; coverage exclude listesi genişletilmedi.
 - **R2'nin Prompt 2 servis kapsamı kapalı:** iPhone 17 Pro / iOS 26.5 Simulator üzerinde vocabulary üretimi, progress/favorites restore, üç kelime öğrenme, iki favori ekleme, streak güncelleme, reload sonrası progress kalıcılığı ve favorites Firebase sync gözlendi. HomeScreen parçalama ve Phase 5'in tam ekran/manual checklist'i Prompt 3 sahibi olarak açık kalır.
 - Prompt 2'nin sahibi olduğu açık Kritik/Yüksek risk kalmadı; compatibility shim'leri rollback yüzeyi olarak korunuyor.
+
+## Prompt 6 Settings / Setup / Onboarding / Auth ekran güncellemesi — 2026-07-16
+
+- **R2 açık / Yüksek (manual QA bekliyor):** Beş root screen logic-free shim'e çevrildi; Settings/Setup/Auth ana
+  ekranları 400 satır altında, platform erişimleri facade/adapter arkasında ve iOS production bundle'ı 1.870
+  modülle başarıyla üretildi. Ancak bu sandbox CoreSimulatorService'e erişemediği için ilk kurulum, dil/seviye,
+  bildirim ayarı, avatar/profil, logout ve hesap silme etkileşimli checklist'i çalıştırılamadı.
+- **R14 açık / Orta:** Dil değiştirme ve sistem dili akışı `SettingsFacade` arkasına alındı; storage key'leri ve
+  notification reschedule davranışı korundu. RTL dilin gerçek cihaz/simulator görsel doğrulaması owner QA'sına
+  kadar açık kalır.
+- Auth provider/repository davranışı değiştirilmedi; login/register/forgot validation ve facade success/error
+  yolları otomatik testlerle kapsandı. Prompt 7 gate'i, Prompt 6 manual QA sonucu execution ledger'da
+  superseding `complete` kaydıyla belgelenene kadar kapalıdır.
