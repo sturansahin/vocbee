@@ -51,3 +51,15 @@
 - Auth provider/repository davranışı değiştirilmedi; login/register/forgot validation ve facade success/error
   yolları otomatik testlerle kapsandı. Prompt 7 gate'i, Prompt 6 manual QA sonucu execution ledger'da
   superseding `complete` kaydıyla belgelenene kadar kapalıdır.
+
+## Prompt 6 QA güncellemesi — 2026-07-16
+
+- **R2 kapalı:** Kullanıcı/owner güncel Prompt 6 checkout'unda ilk kurulum/onboarding/setup, dil ve seviye
+  değişimi, notification ayarı, profil/avatar, login/register/forgot, logout ve hesap silme confirmation
+  checklist'inin tamamı için "çalışıyor hepsi" sonucunu bildirdi. Simulator runtime logları setup
+  persistence/vocabulary/notification tamamlanmasını, MainTabs'e geçişi ve logout sonrası local cleanup ile
+  Login route'una dönüşü ayrıca doğruladı.
+- **R14 kapalı:** Owner onayı RTL dil ve dil değiştirme akışını da kapsar; storage key, route veya payload
+  uyumluluğunda regresyon bildirilmedi.
+- Prompt 6 execution ledger'ına önceki `blocked` kaydı koruyan superseding `complete` kaydı eklendi; Prompt 7
+  gate'i açıldı.

@@ -660,3 +660,18 @@ fail-closed handoff kaniti olarak korunur.
 | Worktree hijyeni | Jest'in degistirdigi tracked `coverage/**` baslangic icerigine geri alindi; export artifact'i `/tmp` altinda. `ios/`, package/lock, Firebase rules/schema, route adlari veya production credential degistirilmedi |
 | Kalan risk | R2 acik/Yuksek ve R14 acik/Orta yalnizca interaktif QA nedeniyle acik. Otomatik test/bundle/boundary tarafinda Prompt 6 sahibi acik Kritik/Yuksek kod gap'i yok |
 | Sonraki gate | **Prompt 7: kapali.** Owner guncel checkout'ta manual checklist'i tamamlayip sonucu bildirdiginde bu kaydi silmeden superseding `Prompt 6 complete` kaydi eklenmeli; ancak ondan sonra Prompt 7 baslatilabilir |
+
+### Prompt 6 — 2026-07-16 superseding completion
+
+| Alan | Kayit |
+|---|---|
+| Durum | **complete** — 2026-07-16 21:49 +03 tarihli Prompt 6 `blocked` kaydini owner manual QA sonucu ile supersede eder |
+| Audit zamani | 2026-07-16 22:32 +03 (Europe/Istanbul) |
+| Branch / HEAD | `refactor` / `3106df97` (`Refactor root screens into feature layers`); commit Prompt 6 production kodu, testleri ve onceki `blocked` kaydini iceriyor. Commit sonrasinda yalnizca superseding risk-register/ledger tamamlama dokumani degisti |
+| Ortam | iPhone 17 Pro Simulator, iOS 26.5; Expo development build `com.vocbee.app`; Metro guncel checkout'tan bundle uretti |
+| Gozlenen runtime kaniti | Setup completion `korean -> arabic` vocabulary uretimini A1-C1 icin tamamladi, vocabulary/progress persistence ve notification scheduling loglandi, uygulama MainTabs/Home'a gecti. Son QA oturumunda notification permission `granted`, planlama basarili; logout local cleanup/progress reset sonrasinda auth state signed-out oldu ve ilk route `Login` secildi. Setup testinde exception, crash veya red screen gorulmedi |
+| Manual QA | **PASS — kullanici/owner onayi:** ilk kurulum/onboarding/setup; dil ve seviye degisimi; RTL dil; notification ayari; profil adi ve camera/gallery/avatar success/cancel/error; login/register/forgot; logout ve hesap silme confirmation dahil Prompt 6 checklist'i icin "calisiyor hepsi" sonucu bildirildi |
+| Otomatik kanit | Ayni Prompt 6 production checkout'i icin onceki kayittaki `npm run typecheck`, `npm run typecheck:all`, full Jest 85/85 suite ve 472/472 test, `npm run test:ci`, lint 0 error/15 mevcut warning, iOS production export 1.870 modul/166 asset ve `git diff --check` PASS sonuclari gecerlidir; manual QA sirasinda production kaynak degismedi |
+| Worktree hijyeni | Metro QA sonrasi durduruldu; tracked `coverage/**` ve `.expo/devices.json` diff'i yok. `ios/`, package/lock, Firebase rules/schema, route adlari, storage key'leri ve production credential degistirilmedi |
+| Risk | R2 ve R14 Prompt 6 kapsami icin kapatildi; Prompt 6 sahibi acik Kritik/Yuksek risk kalmadi |
+| Sonraki gate | **Prompt 7: acik.** Prompt 6 implementation, zorunlu otomatik/bundle gate'leri ve owner manual QA artik complete/PASS |
