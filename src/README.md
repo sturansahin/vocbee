@@ -1,9 +1,8 @@
 # `src/` — Feature-Based Layered Architecture (refactor-v2)
 
-Target structure (see `docs/refactor-v2/02`, `05`, `33`). Introduced in **Phase 1** as a
-skeleton + shared-layer foundation. Existing root folders (`screens/`, `services/`,
-`context/`, `components/`, `utils/`, `config/`) remain in place behind re-export **shims**
-and are migrated gradually in later phases (see `docs/refactor-v2/39`).
+Production application code lives exclusively in this feature-based layered tree. The Phase 9
+cleanup removed the former root compatibility folders (`screens/`, `services/`, `context/`,
+`components/`, `utils/`, `config/`).
 
 ```
 src/
@@ -12,10 +11,8 @@ src/
   features/   # feature modules (presentation/application/domain/data) — filled Phase 2+
 ```
 
-Path aliases (transition period — `@/*` preserved):
+Supported path aliases are intentionally scoped to architecture owners:
 `@app/*`→`src/app/*`, `@shared/*`→`src/shared/*`, `@features/*`→`src/features/*`.
 
-> Phase 1 only establishes the skeleton, aliases, and the `shared/storage` + `shared/errors`
-> modules. No app behavior changes. Empty `index.ts` files are placeholders kept so the
-> folders are tracked in git; deeper layers (`presentation/application/domain/data`) open
-> only when a feature is actually migrated (avoids empty boilerplate — `docs/refactor-v2/05`/`06`).
+The root `App.tsx` is the only mobile entry adapter retained because Expo's default
+`expo/AppEntry.js` resolves that module. It contains no application logic.

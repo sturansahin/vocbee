@@ -1,13 +1,11 @@
-# Minimal Phase 0 CI pipeline (refactor-v2).
-# Scope: VERIFICATION ONLY — runs the quality gates that exist today.
+# Production quality pipeline (refactor-v2 Phase 9).
+# Scope: verification only; builds/releases stay in the EAS pipeline.
 # Builds/releases stay in the EAS pipeline (not here). See docs/refactor-v2/16 + 38.
 #
 # Prompt 7: architecture rules are blocking ESLint errors and the root lint command permits zero
 # warnings. Boundary/cycle/config/style regressions therefore stop CI.
 #
-# Intentionally OMITTED in Phase 0 (added in later PRs so the pipeline is green now):
-#   - secret-scan (gitleaks): -> PR-0.3 (doc 38 §7)
-# `audit:prod` is non-blocking until vulnerability remediation is approved (see baseline report §5/§9).
+# `audit:prod` blocks high/critical production dependency regressions.
 
 name: CI
 
@@ -17,6 +15,20 @@ on:
     branches: [master, refactor, refactor-v2, 'refactor/**']
 
 jobs:
+  secret-scan:
+    name: Secret scan
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_CONFIG: .gitleaks.toml
+
   quality:
     name: Typecheck + Lint + Tests + Functions
     runs-on: ubuntu-latest
@@ -35,6 +47,7 @@ jobs:
         run: npm run lint
       - run: npm run test:boundaries
       - run: npm run test:ci
+      - run: npm run coverage:check
       - name: Install Cloud Functions deps
         run: npm --prefix functions ci
       - run: npm run functions:lint
@@ -58,9 +71,8 @@ jobs:
       - run: npm run test:rules
 
   audit:
-    name: Prod dependency audit (non-blocking)
+    name: Prod dependency audit
     runs-on: ubuntu-latest
-    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

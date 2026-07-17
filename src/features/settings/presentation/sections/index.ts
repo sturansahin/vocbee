@@ -17,5 +17,3 @@ export type { NotificationSettingsSectionProps } from './NotificationSettingsSec
 
 export { DangerZoneSection, ProgressDangerRows, LogoutButton } from './DangerZoneSection';
 export type { DangerZoneSectionProps } from './DangerZoneSection';
-
-export { SyncSettingsSection } from './SyncSettingsSection';

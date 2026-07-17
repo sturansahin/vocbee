@@ -1,8 +1,7 @@
 // Local Storage Service for VocBee
 // Handles all local progress management with AsyncStorage
 //
-// Moved here from services/storage.ts in Phase 1 (docs/refactor-v2/21, /36).
-// The old path (services/storage.ts) is now a re-export shim. Behavior unchanged.
+// Moved here from services/storage.ts in Phase 1; the Phase 9 cleanup removed the old path.
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { STORAGE_KEYS } from './storageKeys';

@@ -75,3 +75,17 @@
 - **R14 kapalı kalır:** iOS simulator smoke persisted Türkçe/dark-theme Login render'ını doğruladı; Prompt 6
   owner QA'sındaki dil/RTL sonucu geçerlidir. i18n kaynakları, dil listesi ve storage key'leri değişmedi.
 - Prompt 7 sahibi açık Kritik/Yüksek risk yoktur.
+
+## Prompt 8 cleanup/security güncellemesi — 2026-07-16
+
+- **R6 açık / Kritik:** Mevcut mobile/server/tool source ağacı Gitleaks ile temizdir; ancak tam Git geçmişi
+  `0212d97eb3fb0620d35d3be578aa94ce81402a24:services/groqService.ts:1` konumunda gerçek bir `gsk_...` Groq
+  token'ı buldu. Token current tree'de yoktur fakat revoke/rotation kanıtı repository'den doğrulanamaz.
+- Yedi ek `generic-api-key` bulgusu CocoaPods SHA-1 checksum'ları ve AppCheckCore public header'ındaki örnek debug
+  token yorumudur; yalnızca exact rule/path/pattern kombinasyonları `.gitleaks.toml` içinde allowlist edilmiştir.
+- R6, owner Groq anahtarını revoke/rotate edip kanıtlı olarak bildirmeden kapanmaz. Bu gerçekleşene kadar Prompt 8
+  production-readiness ve Prompt 9/10 gate'leri fail-closed kalır; gerçek bulgu CI'da ignore edilmez.
+- **R8 azaltıldı:** secret scan, zero-warning lint, AST boundary, feature coverage, rules emulator,
+  Functions lint/build ve high/critical production dependency audit blocking CI gate'leridir.
+- **R9 azaltıldı:** Auth/Profile/Learning/Vocabulary/Notifications/Settings/Setup için ayrı line-coverage alt
+  sınırları ve toplam `%50` line gate'i eklenmiştir; son full run toplam `%51.7` line coverage üretmiştir.

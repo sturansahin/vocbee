@@ -11,7 +11,7 @@ import {
 } from '@features/notifications';
 import { useAuth } from '@features/auth';
 import { useAlert } from '@shared/ui';
-import { createSwarmAnimation } from '@/assets/animations/swarmAnimation';
+import { createSwarmAnimation } from '../../../../../assets/animations/swarmAnimation';
 import type { RootStackParamList } from '@app/navigation/types';
 
 import type { SetupFacade } from '../../application/setupContracts';

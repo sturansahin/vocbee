@@ -2,8 +2,7 @@
 // Single source of truth for all storage keys used across services
 // IMPORTANT: Do NOT change string values — existing user data depends on them
 //
-// Moved here from services/storageKeys.ts in Phase 1 (docs/refactor-v2/21, /36).
-// The old path (services/storageKeys.ts) is now a re-export shim.
+// Moved here from services/storageKeys.ts in Phase 1; the Phase 9 cleanup removed the old path.
 
 export const STORAGE_KEYS = {
     // ─── Onboarding ───────────────────────────────────────────────

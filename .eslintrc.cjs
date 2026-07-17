@@ -6,17 +6,8 @@ const publicBoundaryPatterns = [
     message: 'Feature imports must use @features/<feature> public index.ts barrels.',
   },
   {
-    group: [
-      '@/components/*',
-      '@/config/*',
-      '@/context/*',
-      '@/screens/*',
-      '@/services/*',
-      '@/utils/*',
-      '@/constants',
-      '@/types',
-    ],
-    message: 'src code must use @shared/@features/@app owners, not legacy root modules.',
+    group: ['@/*'],
+    message: 'The transitional root alias is removed; use @shared/@features/@app owners.',
   },
 ];
 
@@ -97,6 +88,7 @@ module.exports = {
 
     // Prompt 7: architecture rules are blocking while unrelated style debt stays non-blocking.
     'import/no-cycle': ['error', { maxDepth: 1 }],
+    'import/no-duplicates': 'error',
     'no-restricted-imports': ['error', { patterns: publicBoundaryPatterns }],
     'import/no-restricted-paths': ['error', { zones: legacyRootZones }],
   },
@@ -204,27 +196,6 @@ module.exports = {
                 message: 'shared -> features is forbidden.',
               },
             ],
-          },
-        ],
-      },
-    },
-    {
-      files: ['screens/**/*.{ts,tsx}'],
-      rules: {
-        'no-restricted-imports': [
-          'error',
-          {
-            paths: [
-              {
-                name: 'firebase/firestore',
-                message: 'Root screens are compatibility shims and cannot access Firestore.',
-              },
-              {
-                name: '@react-native-async-storage/async-storage',
-                message: 'Root screens are compatibility shims and cannot access AsyncStorage.',
-              },
-            ],
-            patterns: publicBoundaryPatterns,
           },
         ],
       },

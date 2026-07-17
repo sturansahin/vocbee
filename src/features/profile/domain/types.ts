@@ -1,6 +1,6 @@
 // src/features/profile/domain/types.ts
 // Layer: domain | Feature: profile | Pure TS (NO SDK).
-// Matches the existing ProfileData / StoredProfile shape used in context/AuthContext.tsx.
+// Matches the profile shape exposed by the auth presentation contract.
 
 export type Profile = {
   name: string;
@@ -8,7 +8,5 @@ export type Profile = {
   email: string;
 };
 
-// Backwards-compatible name used by the legacy social-auth helpers. Keeping the
-// alias in the domain layer lets the root compatibility shim expose the exact
-// old type without owning any implementation.
+// Stable name used by social-auth profile normalization and sync contracts.
 export type StoredProfile = Profile;

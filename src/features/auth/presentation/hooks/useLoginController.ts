@@ -6,7 +6,7 @@ import type LottieView from 'lottie-react-native';
 import { useTranslation } from 'react-i18next';
 
 import { useAlert } from '@shared/ui';
-import { createSwarmAnimation } from '@/assets/animations/swarmAnimation';
+import { createSwarmAnimation } from '../../../../../assets/animations/swarmAnimation';
 import type { RootStackParamList } from '@app/navigation/types';
 
 import { SOCIAL_AUTH_CANCELLED_ERROR } from '../../domain/types';

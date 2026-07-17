@@ -500,8 +500,8 @@ export default function SettingsScreenContent({ facade }: SettingsScreenContentP
       modalContent: { backgroundColor: colors.surface, borderColor: colors.border },
    };
    const defaultAvatarSource = isDarkMode
-      ? require('@/assets/icons/dflt_dark.png')
-      : require('@/assets/icons/dflt_light.png');
+      ? require('../../../../../assets/icons/dflt_dark.png')
+      : require('../../../../../assets/icons/dflt_light.png');
    const profileImageSource = getProfileImageSource(profile.image, defaultAvatarSource);
 
    return (

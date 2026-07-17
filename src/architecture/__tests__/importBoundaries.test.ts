@@ -85,15 +85,23 @@ function isPackage(specifier: string, packageName: string): boolean {
 const productionFiles = collectProductionFiles(srcRoot);
 
 describe('production import boundaries', () => {
+  it('keeps legacy root source directories and modules removed', () => {
+    const existingLegacyPaths = [
+      ...legacyRootDirs.filter(directory => fs.existsSync(path.join(repoRoot, directory))),
+      ...legacyRootModules
+        .map(moduleName => `${moduleName}.ts`)
+        .filter(fileName => fs.existsSync(path.join(repoRoot, fileName))),
+    ];
+
+    expect(existingLegacyPaths).toEqual([]);
+  });
+
   it('does not import active code from legacy root directories', () => {
     const violations: string[] = [];
 
     for (const filePath of productionFiles) {
       for (const specifier of moduleSpecifiers(filePath)) {
-        const legacyAlias = legacyRootDirs.some(
-          directory => specifier === `@/${directory}` || specifier.startsWith(`@/${directory}/`),
-        );
-        const legacyModuleAlias = legacyRootModules.some(moduleName => specifier === `@/${moduleName}`);
+        const transitionalRootAlias = specifier === '@' || specifier.startsWith('@/');
         const target = relativeTarget(filePath, specifier);
         const legacyRelative = target !== null && legacyRootDirs.some(directory => {
           const legacyRoot = path.join(repoRoot, directory);
@@ -105,7 +113,7 @@ describe('production import boundaries', () => {
           target === path.join(repoRoot, `${moduleName}.tsx`)
         ));
 
-        if (legacyAlias || legacyModuleAlias || legacyRelative || legacyModuleRelative) {
+        if (transitionalRootAlias || legacyRelative || legacyModuleRelative) {
           violations.push(`${relativePath(filePath)} -> ${specifier}`);
         }
       }

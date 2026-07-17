@@ -41,7 +41,7 @@ const ONBOARDING_STEP_SPECS: readonly OnboardingStepSpec[] = [
     id: 'daily-words',
     titleKey: 'onboarding.title1',
     subtitleKey: 'onboarding.subtitle1',
-    image: require('@/assets/image/onboard1.png'),
+    image: require('../../../../../assets/image/onboard1.png'),
   },
   {
     id: 'progress',
@@ -49,19 +49,19 @@ const ONBOARDING_STEP_SPECS: readonly OnboardingStepSpec[] = [
     subtitleKey: 'onboarding.subtitle4',
     titleFallback: 'Let words come to you',
     subtitleFallback: 'Get timely reminders, keep your learning streak alive, and return when it matters.',
-    image: require('@/assets/image/onboard2.png'),
+    image: require('../../../../../assets/image/onboard2.png'),
   },
   {
     id: 'cards',
     titleKey: 'onboarding.title2',
     subtitleKey: 'onboarding.subtitle2',
-    image: require('@/assets/image/onboard3.png'),
+    image: require('../../../../../assets/image/onboard3.png'),
   },
   {
     id: 'reminders',
     titleKey: 'onboarding.title3',
     subtitleKey: 'onboarding.subtitle3',
-    image: require('@/assets/image/onboard4.png'),
+    image: require('../../../../../assets/image/onboard4.png'),
   },
 ];
 

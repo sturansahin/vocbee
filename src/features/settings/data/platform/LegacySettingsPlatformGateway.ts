@@ -13,7 +13,7 @@ import type { Level } from '@features/progress';
 import { openStoreReviewPage } from '@features/review';
 import { forceSync } from '@features/sync';
 import { clearAllLocalData } from '@shared/storage';
-import appConfig from '@/app.json';
+import appConfig from '../../../../../app.json';
 import i18n, {
   getDeviceLanguage,
   isUsingSystemLanguage,

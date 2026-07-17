@@ -14,12 +14,12 @@ import { RootNavigator } from './navigation/RootNavigator';
 import { useAppLifecycle } from './lifecycle/useAppLifecycle';
 import { useAppBootstrap } from './bootstrap/useAppBootstrap';
 import { ConnectionErrorScreen, SplashScreen as CustomSplashScreen } from './presentation';
-// ADIM 1 (Developer Test Panel, docs/refactor-v2 devtools task): DevToolsRoot renders `null` unless
-// `isDevToolsEnabled` (src/devtools/guard.ts) is true, which itself is only ever true when
-// `__DEV__` is true — it is a no-op in production builds. It is mounted as a sibling OVERLAY of
-// <AppContent/>, not inside RootNavigator, so RootStackParamList/RootNavigator/SettingsScreen are
-// completely untouched by this wiring.
-import { DevToolsRoot } from '../devtools';
+
+// Keep the entire devtools graph behind Metro's compile-time __DEV__ guard so production bundles
+// can eliminate the require and all developer-only screens/fixtures.
+const DevToolsRoot: React.ComponentType = __DEV__
+  ? require('../devtools').DevToolsRoot
+  : () => null;
 
 // Configure notifications globally (module load — same timing as the original App.tsx)
 notificationFacade.configure();
@@ -39,10 +39,8 @@ function AppContent() {
     navigationRef,
   } = useAppLifecycle();
 
-  // Show splash screen while app is not ready
-  console.log('[App] Render - showSplash:', showSplash, 'isAppReady:', isAppReady, 'connectionError:', connectionError);
   if (showSplash || !isAppReady) {
-    return <CustomSplashScreen onFinish={() => { console.log('[App] Splash finished'); setShowSplash(false); }} />;
+    return <CustomSplashScreen onFinish={() => setShowSplash(false)} />;
   }
 
   // Show connection error screen ONLY if there's a connection problem AND no cached user data
