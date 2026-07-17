@@ -54,9 +54,11 @@ The 22 test suites were not deleted. They were relocated under the corresponding
 - The current mobile/server/tool source trees are clean under the repository Gitleaks policy.
 - Seven full-history `generic-api-key` findings were verified as CocoaPods SHA-1 checksums or the public
   AppCheckCore example-token comment and are covered by narrow path-and-pattern allowlists.
-- One real Groq `gsk_...` token remains in commit `0212d97eb3fb0620d35d3be578aa94ce81402a24`
-  (`services/groqService.ts:1`). It is absent from the current tree, but revocation/rotation cannot be proven from
-  the repository.
-- Production readiness remains fail-closed until the owner revokes/rotates that token and records confirmation.
-  After rotation, the immutable historical fingerprint may be explicitly baselined or the Git history may be
-  rewritten through a separately approved repository operation.
+- One real Groq `gsk_...` token was found in commit `0212d97eb3fb0620d35d3be578aa94ce81402a24`
+  (`services/groqService.ts:1`). On 2026-07-17 it returned HTTP 200 before rotation and HTTP 401 after owner
+  revocation.
+- The replacement Vercel Production/Preview secret is different from the historical value, returned HTTP 200
+  from Groq's models and inference endpoints, and is active in the Ready production deployment
+  `dpl_BbMAicHuitfhqhtrYNAVa79KV3Df` behind `https://vocbee-proxy.vercel.app`.
+- The revoked immutable fingerprint is recorded in `.gitleaksignore`; no secret value is stored in the repository.
+  Full-history scanning remains blocking for every other finding.

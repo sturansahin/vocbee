@@ -89,3 +89,16 @@
   Functions lint/build ve high/critical production dependency audit blocking CI gate'leridir.
 - **R9 azaltıldı:** Auth/Profile/Learning/Vocabulary/Notifications/Settings/Setup için ayrı line-coverage alt
   sınırları ve toplam `%50` line gate'i eklenmiştir; son full run toplam `%51.7` line coverage üretmiştir.
+
+## Prompt 8 Groq rotation güncellemesi — 2026-07-17
+
+- **R6 kapalı:** Owner yeni Groq production key'i oluşturup Vercel `vocbee-proxy` Preview+Production
+  `GROQ_API_KEY` secret'ını güncelledi. Replacement secret tarihsel değerden farklıdır; Groq models ve gerçek
+  inference smoke çağrıları HTTP 200 ve geçerli payload döndürdü.
+- Mevcut production artifact yeni environment revision ile yeniden deploy edildi:
+  `dpl_BbMAicHuitfhqhtrYNAVa79KV3Df`, status `Ready`, alias `https://vocbee-proxy.vercel.app`. Proxy'nin
+  unauthenticated request'i HTTP 401 ile fail-closed kaldı.
+- Tarihsel `...52DO` key rotation öncesi HTTP 200, owner revocation sonrası HTTP 401 döndürdü. Revoked immutable
+  Gitleaks fingerprint'i `.gitleaksignore` içinde exact fingerprint olarak baselinedir; yeni secret repository'ye,
+  loglara veya ledger'a yazılmadı.
+- Current source ve full-history Gitleaks gate'leri bu baseline dışındaki tüm bulgular için blocking kalır.
