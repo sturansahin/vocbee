@@ -1,0 +1,17 @@
+{
+  "singleQuote": true,
+  "trailingComma": "all",
+  "printWidth": 100,
+  "tabWidth": 2,
+  "semi": true,
+  "overrides": [
+    {
+      "files": ["functions/**/*.js", "functions/**/*.ts"],
+      "options": {
+        "singleQuote": false,
+        "bracketSpacing": false,
+        "quoteProps": "consistent"
+      }
+    }
+  ]
+}

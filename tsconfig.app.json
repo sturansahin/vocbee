@@ -1,23 +1,6 @@
 {
   "extends": "./tsconfig.json",
-  "include": [
-    "App.tsx",
-    "components/**/*.ts",
-    "components/**/*.tsx",
-    "screens/**/*.ts",
-    "screens/**/*.tsx",
-    "services/**/*.ts",
-    "context/**/*.ts",
-    "context/**/*.tsx",
-    "config/**/*.ts",
-    "constants/**/*.ts",
-    "utils/**/*.ts",
-    "locales/**/*.ts",
-    "types/**/*.d.ts",
-    "nativewind-env.d.ts",
-    "types.ts",
-    "swarmAnimation_new.ts"
-  ],
+  "include": ["App.tsx", "types/**/*.d.ts", "nativewind-env.d.ts", "src/**/*.ts", "src/**/*.tsx"],
   "exclude": [
     "**/__tests__/**",
     "coverage/**",

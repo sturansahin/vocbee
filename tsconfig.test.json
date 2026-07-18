@@ -10,10 +10,5 @@
     "jest.setup.js",
     "types/**/*.d.ts"
   ],
-  "exclude": [
-    "coverage/**",
-    "functions/**",
-    "node_modules/**",
-    "vocbee_final_docs/**"
-  ]
+  "exclude": ["coverage/**", "functions/**", "node_modules/**", "vocbee_final_docs/**"]
 }

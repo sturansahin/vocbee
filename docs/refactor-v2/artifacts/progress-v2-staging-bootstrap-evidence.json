@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "evidenceDate": "2026-07-18",
+  "mode": "remote-staging-bootstrap-and-production-backup-gate",
+  "containsPii": false,
+  "projects": {
+    "production": "vocbee-6fe24",
+    "staging": "vocbee-staging-6fe24",
+    "stagingDisplayName": "VocBee Staging",
+    "stagingState": "ACTIVE"
+  },
+  "staging": {
+    "firestoreApiEnabled": true,
+    "database": "(default)",
+    "locationId": "eur3",
+    "type": "FIRESTORE_NATIVE",
+    "edition": "STANDARD",
+    "freeTier": true,
+    "deleteProtectionEnabled": true,
+    "pointInTimeRecoveryEnabled": false,
+    "rulesDeploySucceeded": true,
+    "cleanupAllowlistRegistered": true,
+    "mirrorFunctionDeploySucceeded": false,
+    "mirrorFunctionDeployBlocker": "staging-blaze-plan-required-for-cloud-build"
+  },
+  "productionBackup": {
+    "requestedRecurrence": "DAILY",
+    "requestedRetention": "14d",
+    "scheduleCreateSucceeded": false,
+    "scheduleCreateBlocker": "production-billing-required",
+    "scheduleCountAfterAttempt": 0,
+    "backupCountAfterAttempt": 0,
+    "restoreVerificationAvailable": false
+  },
+  "scope": {
+    "productionUserDocumentsRead": false,
+    "productionFirestoreWrites": false,
+    "productionFirestoreDeletes": false,
+    "productionRulesDeployed": false,
+    "productionFunctionsDeployed": false,
+    "productionBackfillRun": false,
+    "productionCleanupRun": false,
+    "activeFirebaseProjectChanged": false,
+    "credentialOrTokenStored": false
+  },
+  "decision": {
+    "stagingRulesGate": "PASS",
+    "stagingFunctionGate": "BLOCKED",
+    "productionBackupGate": "BLOCKED",
+    "productionRestoreGate": "BLOCKED",
+    "productionRolloutAllowed": false,
+    "productionCleanupAllowed": false,
+    "requiredOwnerActions": [
+      "upgrade-vocbee-staging-6fe24-to-blaze",
+      "enable-billing-for-vocbee-6fe24"
+    ]
+  }
+}

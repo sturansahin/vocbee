@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "decisionDate": "2026-07-18",
+  "containsPii": false,
+  "decision": {
+    "syncOwner": "mobile-client",
+    "cloudFunctionRequired": false,
+    "legacyFieldPolicy": "retain-and-continue-dual-write",
+    "legacyCleanupAuthorized": false,
+    "safeDefaultMode": "legacy"
+  },
+  "clientGuarantees": {
+    "dualWriteAtomic": true,
+    "legacyFieldIncludedInDualWrite": true,
+    "staleV2DetectedByLegacyLastSync": true,
+    "staleV2RepairUsesFirestoreTransaction": true,
+    "staleV2RepairedWithoutLegacyRewrite": true,
+    "malformedLegacyFailsClosed": true
+  },
+  "removedFunctionSurface": {
+    "export": "mirrorLegacyProgressToV2",
+    "source": "functions/src/progressMirror.ts",
+    "test": "functions/test/progressMirror.test.cjs",
+    "ciScript": "functions:test"
+  },
+  "verification": {
+    "typecheckAll": "PASS",
+    "functionsLint": "PASS",
+    "functionsBuild": "PASS",
+    "targetedClientReconciliationTests": {
+      "suites": 1,
+      "tests": 6,
+      "status": "PASS"
+    },
+    "fullJest": { "suites": 91, "tests": 496, "status": "PASS" },
+    "testCi": { "suites": 91, "tests": 496, "status": "PASS" },
+    "firestoreRulesEmulator": { "suites": 1, "tests": 14, "status": "PASS" },
+    "cleanupUnit": { "tests": 7, "status": "PASS" },
+    "cleanupEmulator": { "tests": 1, "status": "PASS" },
+    "coverageGate": "PASS",
+    "lint": "PASS",
+    "gitDiffCheck": "PASS"
+  },
+  "remoteScope": {
+    "productionRead": false,
+    "productionWrite": false,
+    "productionDelete": false,
+    "productionDeploy": false,
+    "stagingFunctionDeployRequired": false,
+    "stagingRulesMetadataRedeploy": "BLOCKED_DNS_TIMEOUT",
+    "stagingExistingClientRuleContractStillActive": true
+  },
+  "remainingGates": [
+    "staging-client-smoke",
+    "production-backup-billing",
+    "production-backup-restore-verification",
+    "separate-production-rollout-approval"
+  ]
+}

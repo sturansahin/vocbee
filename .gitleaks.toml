@@ -1,0 +1,40 @@
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Firebase mobile client API keys are public app identifiers; access is enforced by Auth, App Check, and Firestore rules."
+condition = "AND"
+regexTarget = "match"
+paths = [
+  '''(^|/)config/firebase\.ts$''',
+  '''(^|/)src/shared/firebase/firebase\.ts$''',
+  '''(^|/)google-services\.json$''',
+]
+regexes = [
+  '''AIza[0-9A-Za-z_-]{35}''',
+]
+
+[[allowlists]]
+description = "CocoaPods lockfile SPEC CHECKSUMS are package integrity hashes, not API credentials."
+condition = "AND"
+regexTarget = "match"
+rules = ["generic-api-key"]
+paths = [
+  '''(^|/)ios/Podfile\.lock$''',
+  '''(^|/)ios/Pods/Manifest\.lock$''',
+]
+regexes = [
+  '''[A-Za-z0-9_-]+: [a-f0-9]{40}''',
+]
+
+[[allowlists]]
+description = "AppCheckCore's public header contains a documented example debug-token format."
+condition = "AND"
+regexTarget = "match"
+rules = ["generic-api-key"]
+paths = [
+  '''(^|/)ios/Pods/AppCheckCore/AppCheckCore/Sources/Public/AppCheckCore/GACAppCheckDebugProvider\.h$''',
+]
+regexes = [
+  '''AB12C3D4-56EF-789G-01H2-IJ234567K8L9''',
+]

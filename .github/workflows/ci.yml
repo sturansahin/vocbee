@@ -1,0 +1,96 @@
+# Production quality pipeline (refactor-v2 Phase 9).
+# Scope: verification only; builds/releases stay in the EAS pipeline.
+# Builds/releases stay in the EAS pipeline (not here). See docs/refactor-v2/16 + 38.
+#
+# Prompt 7: architecture rules are blocking ESLint errors and the root lint command permits zero
+# warnings. Boundary/cycle/config/style regressions therefore stop CI.
+#
+# `audit:prod` blocks high/critical production dependency regressions.
+
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [master, refactor, refactor-v2, 'refactor/**']
+
+jobs:
+  secret-scan:
+    name: Secret scan
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_CONFIG: .gitleaks.toml
+          # Pin a release that supports the conditional allowlists used by this repository.
+          GITLEAKS_VERSION: '8.30.1'
+          # Keep the token read-only; findings remain visible in the blocking check and SARIF artifact.
+          GITLEAKS_ENABLE_COMMENTS: 'false'
+
+  quality:
+    name: Typecheck + Lint + Tests + Functions
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run typecheck:test
+      - run: npm run typecheck:rules
+      - run: npm run typecheck:worker
+      - name: Prettier (blocking format guard)
+        run: npm run prettier:check
+      - name: Server/mobile dependency boundary
+        run: npm run check:server-deps && npm run api:check
+      - name: Lint (blocking architecture guard)
+        run: npm run lint
+      - run: npm run test:boundaries
+      - name: Firestore cleanup CLI safety tests
+        run: npm run firestore:cleanup:check && npm run test:firestore-cleanup
+      - run: npm run test:ci
+      - run: npm run coverage:check
+      - name: Install Cloud Functions deps
+        run: npm --prefix functions ci
+      - run: npm run functions:lint
+      - run: npm run functions:build
+
+  rules:
+    name: Firestore rules (emulator)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      # firebase-tools requires Java 21+ for the Firestore emulator.
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - run: npm ci
+      - run: npm run test:rules
+      - name: Firestore cleanup transaction + rollback (emulator)
+        run: npm run test:firestore-cleanup:emulator
+
+  audit:
+    name: Prod dependency audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run audit:prod

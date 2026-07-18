@@ -31,3 +31,43 @@ dist-ssr
 .expo/
 
 .vercel
+
+# ---- Phase 0 security & artifact hardening (refactor-v2) ----
+# Env files: ignore all variants but KEEP the committed template (.env.example)
+.env*
+!.env.example
+.env.*.local
+
+# Service account / Firebase Admin SDK / credential JSONs (NEVER commit)
+*service-account*.json
+*serviceAccount*.json
+service-account*.json
+*-firebase-adminsdk-*.json
+firebase-adminsdk-*.json
+credentials.json
+gha-creds-*.json
+
+# Private keys & signing material
+*.pem
+*.key
+*.keystore
+*.jks
+*.p8
+*.p12
+*.mobileprovision
+
+# Build / cache / coverage artifacts
+coverage/
+config/coverage/
+*.tsbuildinfo
+web-build/
+.metro-health-check*
+
+# OS / IDE / tool caches
+Thumbs.db
+*.swp
+
+# NOTE: google-services.json and GoogleService-Info.plist are currently tracked
+# (required by EAS builds) and are intentionally NOT added here. Moving them to
+# EAS "secure files" + untracking is a separate, approval-required step
+# (see docs/refactor-v2/phase-0-baseline-report.md section 5 and doc 09).

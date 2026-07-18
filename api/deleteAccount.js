@@ -77,8 +77,8 @@ async function verifyRecentFirebaseAuth(req) {
     const decoded = await getAuth(getFirebaseApp()).verifyIdToken(token, true);
     const nowSeconds = Math.floor(Date.now() / 1000);
     if (
-      typeof decoded.auth_time !== 'number'
-      || nowSeconds - decoded.auth_time > RECENT_AUTH_SECONDS
+      typeof decoded.auth_time !== 'number' ||
+      nowSeconds - decoded.auth_time > RECENT_AUTH_SECONDS
     ) {
       throw new HttpError(401, 'RECENT_LOGIN_REQUIRED');
     }
@@ -117,7 +117,8 @@ export default async function handler(req, res) {
     const uid = await verifyRecentFirebaseAuth(req);
     const app = getFirebaseApp();
 
-    await getFirestore(app).collection('users').doc(uid).delete();
+    const firestore = getFirestore(app);
+    await firestore.recursiveDelete(firestore.collection('users').doc(uid));
 
     try {
       await getAuth(app).deleteUser(uid);
