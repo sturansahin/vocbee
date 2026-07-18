@@ -210,3 +210,17 @@
 - Prompt 9 legacy-preservation ve progress-v2 safe-default `legacy` kararı değişmedi. Production Firebase data,
   cleanup, migration, rules/functions/app deploy veya release yapılmadı. Güncel karar ve kanıt:
   `docs/refactor-v2/44-final-production-readiness-report.md` 13:01 superseding audit'i.
+
+## Prompt 10 final remote closure — 2026-07-18 14:27 +03
+
+- **R8 kapalı:** `fd2495e3` için GitHub Actions run `29642281315` tamamlandı; production audit, quality,
+  secret scan ve Firestore rules job'larının dördü de `success`. Gitleaks `8.30.1`, Jest `json-summary` ve Java 21
+  düzeltmeleri gerçek remote runner'da doğrulandı.
+- **Vercel preview green:** `vocbee-proxy` preview deployment `dpl_4geh3VLiwa4ijDf7nYdAnGZh7VLz` aynı source SHA
+  için `READY` / `STAGED`. Project production branch'i `master`; merge otomatik production proxy deploy'udur.
+- **Merge-time kontrol:** Bu remote-closure doküman commit'i PR head'ini değiştireceği için PR'a ait GitHub CI ve
+  Vercel kontrolleri yeniden green olmadan merge yapılmaz. Bu normal merge gate'idir, açık source blocker değildir.
+- **Kalan belgeli riskler:** High/critical production dependency 0 olmakla birlikte moderate/low debt'i;
+  blocker olmayan büyük notification/AdMob/streak dosyaları; duplicate boş Vercel proje kaydı; future Android
+  production config/smoke; ayrı progress-v2 staging/backup/restore/canary gate'leri. Current iOS-only legacy-safe
+  source readiness kararı **READY** kalır.

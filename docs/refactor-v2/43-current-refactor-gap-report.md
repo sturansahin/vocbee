@@ -907,3 +907,20 @@ fail-closed handoff kaniti olarak korunur.
 | Vercel operasyon notu | İlk local build `--yes`, local link bulunmadığı için hesapta boş `vocbee` projesi oluşturup GitHub reposuna bağladı; production URL/deploy oluşmadı. Repo daha sonra gerçek `vocbee-proxy` projesine local olarak linklendi ve build orada doğrulandı. Boş proje silme/disconnect dış mutation'ı owner onayı bekler |
 | Final artifact | `docs/refactor-v2/44-final-production-readiness-report.md` içindeki 13:01 superseding closure |
 | Release kararı | **Kod/local gate READY.** Owner commit+push sonrasında GitHub `secret-scan`, `quality`, `rules`, `audit` job'larını green doğrulamadan production release yapılmamalı. Remote CI henüz PASS değildir ve bu kayıt öyle iddia etmez |
+
+### Prompt 10 — 2026-07-18 final remote closure / PR handoff
+
+| Alan | Kayıt |
+|---|---|
+| Durum | **ready for merge after PR checks** — P10-B05 current source HEAD için kapandı; PR head'i required remote kontrolleri green olmadan merge edilmez |
+| Audit zamanı | 2026-07-18 14:27 +03 (Europe/Istanbul) |
+| Branch / doğrulanan HEAD / worktree | `refactor` / `fd2495e349bc52496c6c709a54492c06dcc1a943`; `HEAD == origin/refactor`, başlangıç worktree temiz; `origin/master...origin/refactor` **0 behind / 42 ahead** |
+| P10-B05 | **CLOSED for current source HEAD.** GitHub Actions [run 29642281315](https://github.com/sturansahin/vocbee/actions/runs/29642281315) status `completed`, conclusion `success`; `Prod dependency audit`, `Typecheck + Lint + Tests + Functions`, `Secret scan`, `Firestore rules (emulator)` job'larının dördü de `success` |
+| CI düzeltme kanıtı | Gitleaks `8.30.1` pin'i ile secret scan green; explicit Jest `json-summary` reporter ile coverage gate green; Firebase emulator Java 21 ile rules ve cleanup emulator green. Commit-diff Gitleaks leak 0; local 91/91 suite ve 496/496 test ile feature/total coverage eşikleri PASS |
+| Vercel preview | `vocbee-proxy` preview aynı `fd2495e3` SHA için deployment `dpl_4geh3VLiwa4ijDf7nYdAnGZh7VLz`, `READY` / `STAGED`. Production branch `master`; fast-lane production deployment açık |
+| Release kapsamı | iOS-only owner scope değişmedi; Android P10-B04 N/A. Prompt 9 legacy-preservation kararı değişmedi; progress-v2 safe default `legacy`, cleanup/migration ve `dual` activation bu PR kapsamında yok |
+| Kalan belgeli risk | Production audit high 0 / critical 0 olsa da moderate/low dependency debt'i; duplicate boş Vercel proje kaydı; Android future-release config/smoke ve ayrı progress-v2 rollout gate'leri. Bunlar current iOS source merge gate'ini bloklamaz |
+| Merge koşulu | `refactor -> master` PR açılacak; rapor/ledger commit'i nedeniyle oluşan PR head'inde GitHub CI ve Vercel kontrolleri yeniden green olmadan merge yapılmayacak. Audit commit zincirini korumak için merge commit tercih edilir |
+| Deploy etkisi | `master` merge'i `vocbee-proxy` için otomatik Vercel production deploy tetikler. GitHub workflow'u EAS/App Store release'i tetiklemez; mobil release ayrı owner adımıdır |
+| Final artifact | `docs/refactor-v2/44-final-production-readiness-report.md` içindeki 14:27 final remote closure |
+| Release kararı | **READY.** Current source acceptance'ı iOS-only/legacy-safe kapsamda tamamlandı; merge yalnız PR remote gate'leri green olduktan sonra yapılabilir |

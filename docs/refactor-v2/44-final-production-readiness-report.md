@@ -1,5 +1,50 @@
 # Prompt 10 — Final Production Readiness Report
 
+## Final remote closure — 2026-07-18 14:27 +03
+
+Branch / doğrulanan HEAD: **`refactor` / `fd2495e349bc52496c6c709a54492c06dcc1a943`**
+
+Release kapsamı: **iOS-only, legacy progress uyumluluğunu koruyan mevcut mobil release**
+
+Karar: **READY FOR MERGE AFTER PR CHECKS**
+
+Bu kayıt aşağıdaki 13:01 local-ready kaydını supersede eder. P10-B01, P10-B02 ve P10-B03 kapalıdır;
+P10-B04 owner'ın iOS-only release kapsamı nedeniyle not-applicable kalır. Son remote blocker P10-B05,
+current source HEAD için GitHub CI ve Vercel preview kanıtıyla kapanmıştır. Bu rapor güncellemesini taşıyan PR'ın
+head'i değişeceğinden merge, PR'a ait required kontroller yeniden green olmadan yapılmaz.
+
+### Remote kanıt
+
+| Gate | Sonuç |
+|---|---|
+| Branch senkronu | PASS; `origin/master...origin/refactor` = **0 behind / 42 ahead** |
+| GitHub CI | PASS; [run 29642281315](https://github.com/sturansahin/vocbee/actions/runs/29642281315), conclusion `success` |
+| `Prod dependency audit` | PASS |
+| `Typecheck + Lint + Tests + Functions` | PASS; coverage dahil bütün blocking adımlar green |
+| `Secret scan` | PASS; pinned Gitleaks `8.30.1` conditional allowlist'i doğru uyguladı |
+| `Firestore rules (emulator)` | PASS; Java 21 runtime ile rules ve cleanup emulator adımları green |
+| Vercel preview | PASS; `fd2495e3`, deployment `dpl_4geh3VLiwa4ijDf7nYdAnGZh7VLz`, state `READY` / `STAGED` |
+| Git/worktree | PASS; doğrulama başında `refactor == origin/refactor`, worktree temiz |
+
+### Merge ve release koşulları
+
+- GitHub'da `refactor -> master` PR açılır; PR'a ait CI ve Vercel kontrollerinin tamamı green olmadan merge edilmez.
+- Audit commit geçmişini korumak için squash yerine merge commit tercih edilir.
+- Vercel `vocbee-proxy` projesinin production branch'i `master` ve fast-lane production deployment açıktır.
+  Merge, server proxy için otomatik production deploy tetikler; bu nedenle merge bilinçli release adımıdır.
+- Repository GitHub workflow'u EAS/iOS store release'i çalıştırmaz. Mobil release ayrı EAS/App Store onayı olarak kalır.
+- Android kapsam dışıdır. Android yeniden release kapsamına alınırsa RevenueCat `goog_` key, production-config testi,
+  build ve emulator smoke yeniden zorunlu olur.
+- Progress-v2 production aktivasyonu bu merge'in parçası değildir. Safe default `legacy` ve legacy field koruması
+  devam eder; `dual` rollout ayrı staging/backup/restore/canary gate'lerine tabidir.
+- Moderate/low dependency bulguları ile duplicate boş Vercel proje kaydı belgeli operasyonel risk olarak kalır;
+  current iOS source correctness veya merge gate'ini bloklamaz.
+
+P10-B05 böylece current source HEAD için **CLOSED** durumundadır. Final source kararı **ready**; merge kararı yalnız
+PR head'i üzerindeki remote kontrollerin green sonucuna bağlıdır.
+
+---
+
 ## Superseding closure audit — 2026-07-18 13:01 +03
 
 Branch / base HEAD: **`refactor` / `b7d9f1f0`**
