@@ -5,6 +5,8 @@ module.exports = {
     'node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)',
   ],
   collectCoverage: true,
+  // Keep machine-readable output explicit so the feature coverage gate is reproducible in CI.
+  coverageReporters: ['json', 'json-summary', 'lcov', 'clover'],
   collectCoverageFrom: [
     'src/app/**/*.{ts,tsx}',
     'src/shared/**/*.{ts,tsx}',
