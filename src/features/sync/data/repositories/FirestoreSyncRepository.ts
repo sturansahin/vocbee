@@ -3,6 +3,7 @@ import {
   doc,
   getDoc,
   getDocs,
+  runTransaction,
   serverTimestamp,
   setDoc,
   writeBatch,
@@ -65,11 +66,7 @@ export class FirestoreSyncRepository implements SyncRepository {
     );
 
     if (needsRepair && remote.progress) {
-      const plan = this.buildLegacyRepairPlan(remote.progress);
-      if (!plan) return remote;
-      await this.writeProgressV2(userId, plan, remote.lastActiveDeviceId ?? 'legacy-reconcile');
-      const restored = progressV2LevelsToLegacy(plan.activeLevel, plan.levels);
-      return { ...remote, progressV2: { ...restored, source: 'legacy-reconciled' } };
+      return this.reconcileProgressV2(userId, remote.lastActiveDeviceId ?? 'legacy-reconcile');
     }
 
     if (levels.length > 0) {
@@ -218,20 +215,63 @@ export class FirestoreSyncRepository implements SyncRepository {
     await batch.commit();
   }
 
-  private async writeProgressV2(userId: string, plan: ProgressV2WritePlan, deviceId: string): Promise<void> {
-    const timestamp = serverTimestamp();
-    await this.commitDualWrite(
-      userId,
-      {
+  private async reconcileProgressV2(userId: string, fallbackDeviceId: string): Promise<RemoteUserDocument | null> {
+    return runTransaction(db, async transaction => {
+      const userReference = doc(db, 'users', userId);
+      const userSnapshot = await transaction.get(userReference);
+      if (!userSnapshot.exists()) return null;
+
+      const currentRemote = userSnapshot.data() as RemoteUserDocument;
+      if (!currentRemote.progress) return currentRemote;
+      const levelReferences = LEVELS.map(level => doc(db, 'users', userId, 'progressByLevel', level));
+      const levelSnapshots = await Promise.all(levelReferences.map(reference => transaction.get(reference)));
+      const existingLevelCount = levelSnapshots.filter(snapshot => snapshot.exists()).length;
+      const levels = levelSnapshots
+        .map((snapshot, index) => snapshot.exists()
+          ? this.parseLevelProgress(LEVELS[index], snapshot.data())
+          : null)
+        .filter((level): level is LevelProgress => level !== null);
+      const activeLevel = isLevel(currentRemote.activeLevel)
+        ? currentRemote.activeLevel
+        : isLevel(currentRemote.progress.currentLevel)
+          ? currentRemote.progress.currentLevel
+          : 'A1';
+      const legacyUpdatedAt = this.timestampMillis(currentRemote.progress.lastSync);
+      const oldestV2UpdatedAt = existingLevelCount > 0
+        ? Math.min(...levelSnapshots
+          .filter(snapshot => snapshot.exists())
+          .map(snapshot => this.timestampMillis(snapshot.data().updatedAt)))
+        : 0;
+      const stillNeedsRepair = currentRemote.schemaVersion !== PROGRESS_SCHEMA_VERSION
+        || existingLevelCount !== LEVELS.length
+        || levels.length !== LEVELS.length
+        || legacyUpdatedAt > oldestV2UpdatedAt;
+
+      if (!stillNeedsRepair) {
+        const restored = progressV2LevelsToLegacy(activeLevel, levels);
+        return { ...currentRemote, progressV2: { ...restored, source: 'v2' } };
+      }
+
+      const plan = this.buildLegacyRepairPlan(currentRemote.progress);
+      if (!plan) return currentRemote;
+      const timestamp = serverTimestamp();
+      const deviceId = currentRemote.lastActiveDeviceId ?? fallbackDeviceId;
+      transaction.set(userReference, {
         activeLevel: plan.activeLevel,
         schemaVersion: PROGRESS_SCHEMA_VERSION,
         lastActiveAt: timestamp,
         progressSummary: { ...plan.summary, updatedAt: timestamp },
-      },
-      plan,
-      deviceId,
-      timestamp
-    );
+      }, { merge: true });
+      plan.levels.forEach((level, index) => {
+        transaction.set(
+          levelReferences[index],
+          this.levelPayload(level, deviceId, timestamp),
+          { merge: true }
+        );
+      });
+      const restored = progressV2LevelsToLegacy(plan.activeLevel, plan.levels);
+      return { ...currentRemote, progressV2: { ...restored, source: 'legacy-reconciled' } };
+    });
   }
 
   async createUserDocument(

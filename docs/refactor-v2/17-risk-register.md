@@ -146,3 +146,23 @@
 - **R12 açık/Orta:** Staging rules hazır olsa da function/app flow ve adoption ölçümü yok; safe default `legacy`,
   legacy alan ve cleanup yasağı korunur.
 - PII'siz kanıt: `docs/refactor-v2/artifacts/progress-v2-staging-bootstrap-evidence.json`.
+
+## 2026-07-18 client reconciliation owner kararı
+
+- **R1 kontrollü fakat açık/Kritik:** Owner Cloud Function yerine mobile client dual-write + timestamp reconciliation
+  seçti ve legacy alana dokunulmamasını istedi. Function export/source/test/CI adımı kaldırıldı; staging Blaze artık
+  progress-v2 önkoşulu değildir.
+- **R11 kontrollü/Orta:** Yeni client legacy + v2'yi tek batch'te yazar. Eski client'ın daha yeni legacy yazımı,
+  yeni client'ın sonraki sync'inde `lastSync > oldestV2.updatedAt` kontrolüyle algılanır; repair yalnız v2 ana
+  metadata + beş level belgesini merge eder ve legacy `progress` alanını payload'a dahil etmez. Repair Firestore
+  transaction içinde ana legacy belgeyi tekrar okur; aradaki concurrent eski-client yazımı transaction retry'ı
+  tetikler ve stale içeriğin daha yeni v2 timestamp'iyle sessizce kazanmasını engeller.
+- **Bilinçli eventual-consistency riski/Orta:** Eski client yazımından yeni client'ın sonraki sync'ine kadar v2 stale
+  kalabilir. Legacy veri canonical fallback olarak korunduğundan veri kaybı olmaz; bu süre içinde v2 tek başına
+  authoritative kabul edilmez.
+- **R12 açık/Orta:** Production safe default `legacy`; staging client smoke, backup/restore ve canary adoption kanıtı
+  olmadan dual rollout yok. Legacy cleanup mevcut owner kararında yasaktır.
+- **Remote config drift/Düşük:** Function kaldırıldıktan sonraki rules farkı yalnız server-owned Admin backfill
+  metadata değerlerini sadeleştirir; client v2 rule kontratı değişmedi. Staging redeploy, `firebaserules.googleapis.com`
+  DNS `ENOTFOUND/ETIMEOUT` nedeniyle üç denemede gerçekleşmedi; emulator 14/14 PASS. Staging smoke öncesi retry edilir.
+- PII'siz karar kanıtı: `docs/refactor-v2/artifacts/progress-v2-client-reconciliation-decision.json`.

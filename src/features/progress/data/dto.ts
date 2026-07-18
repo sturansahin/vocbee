@@ -48,11 +48,9 @@ export type UserDocV2 = {
   schemaVersion?: 2;                               // NEW — must be added to rules hasOnly before write
   activeLevel?: Level;
   progressMigration?: {
-    state: 'mirroring' | 'verified' | 'cleanup-ready';
-    source: 'legacy-mirror' | 'backfill';
-    legacyMirrorEnabled: boolean;
+    state: 'backfilled' | 'verified' | 'cleanup-ready';
+    source: 'backfill';
     migratedAt: Timestamp | FieldValue;
-    lastLegacyMirrorAt: Timestamp | FieldValue;
     verifiedAt?: Timestamp | FieldValue;
   };
   // TRANSITION: legacy 'progress' field is KEPT (dual-read/write); never deleted in this phase.

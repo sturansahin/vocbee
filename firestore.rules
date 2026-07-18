@@ -187,16 +187,12 @@ service cloud.firestore {
         && value.keys().hasOnly([
           'state',
           'source',
-          'legacyMirrorEnabled',
           'migratedAt',
-          'lastLegacyMirrorAt',
           'verifiedAt'
         ])
-        && value.state in ['mirroring', 'verified', 'cleanup-ready']
-        && value.source in ['legacy-mirror', 'backfill']
-        && value.legacyMirrorEnabled is bool
+        && value.state in ['backfilled', 'verified', 'cleanup-ready']
+        && value.source == 'backfill'
         && value.migratedAt is timestamp
-        && value.lastLegacyMirrorAt is timestamp
         && (!has(value, 'verifiedAt') || value.verifiedAt is timestamp);
     }
 

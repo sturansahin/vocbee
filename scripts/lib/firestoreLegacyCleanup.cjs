@@ -308,9 +308,7 @@ function assessUserDocument(userData, progressByLevelData) {
   if (!isPlainObject(progressByLevelData)) reasons.push('progress-by-level-snapshot-invalid');
   if (hasOwn(userData.progress, 'lastSync')) {
     legacyLastSync = timestampMillis(userData.progress.lastSync);
-    const syncUpdatedAt = timestampMillis(
-      userData.progressMigration && userData.progressMigration.lastLegacyMirrorAt
-    ) ?? timestampMillis(userData.lastActiveAt)
+    const syncUpdatedAt = timestampMillis(userData.lastActiveAt)
       ?? timestampMillis(userData.syncMeta && userData.syncMeta.updatedAt);
     if (legacyLastSync === null) reasons.push('legacy-last-sync-invalid');
     if (syncUpdatedAt === null) reasons.push('sync-meta-updated-at-missing');

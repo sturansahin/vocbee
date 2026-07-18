@@ -20,6 +20,15 @@ Ancak staging Blaze olmadığı için mirror function deploy/smoke tamamlanamad�
 billing kapalı olduğu için oluşturulamadı; backup/restore kanıtı hâlâ yoktur. Bu ilerleme production dry-run veya
 destructive cleanup gate'ini açmaz. Kanıt: `artifacts/progress-v2-staging-bootstrap-evidence.json`.
 
+## 2026-07-18 client reconciliation superseding kararı
+
+Owner progress-v2 uyumluluğunun Cloud Function yerine uygulama kodunda yürütülmesini ve legacy alana
+dokunulmamasını istedi. `mirrorLegacyProgressToV2` kaldırıldı. Yeni istemci atomik legacy + v2 yazmaya; retained
+legacy daha yeniyse yalnız v2 belgelerini transaction + timestamp tabanlı onarmaya devam eder. Function deploy ve staging Blaze
+artık rollout gate'i değildir. Legacy cleanup için onay verilmedi; bu dokümandaki destructive prosedür tarihsel,
+fail-closed gelecek planı olarak kalır ve mevcut rollout tarafından çağrılmaz. Kanıt:
+`artifacts/progress-v2-client-reconciliation-decision.json`.
+
 ## 2026-07-17 Prompt 9 superseding revalidation
 
 Bu dokümanın aşağıdaki ilk audit bölümleri tarihsel plan kanıtıdır; root `services/` path'leri Prompt 8'de

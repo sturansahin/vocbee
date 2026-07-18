@@ -6,12 +6,15 @@ const mockSetDoc = jest.fn();
 const mockBatchSet = jest.fn();
 const mockBatchCommit = jest.fn(async () => undefined);
 const mockWriteBatch = jest.fn(() => ({ set: mockBatchSet, commit: mockBatchCommit }));
+const mockTransactionSet = jest.fn();
+const mockRunTransaction = jest.fn();
 
 jest.mock('firebase/firestore', () => ({
   collection: (...parts: unknown[]) => mockCollection(...parts),
   doc: (...parts: unknown[]) => mockDoc(...parts),
   getDoc: (...args: unknown[]) => mockGetDoc(...args),
   getDocs: (...args: unknown[]) => mockGetDocs(...args),
+  runTransaction: (...args: unknown[]) => mockRunTransaction(...args),
   serverTimestamp: jest.fn(() => 'server-time'),
   setDoc: (...args: unknown[]) => mockSetDoc(...args),
   writeBatch: () => mockWriteBatch(),
@@ -41,6 +44,7 @@ const remoteSnapshot = (data: Record<string, unknown>) => ({
 
 const levelDocs = (updatedAt = 20) => ['A1', 'A2', 'B1', 'B2', 'C1'].map(level => ({
   id: level,
+  exists: () => true,
   data: () => ({
     level,
     learnedWordIds: level === 'A1' ? [1, 2] : level === 'A2' ? [8] : [],
@@ -51,6 +55,27 @@ const levelDocs = (updatedAt = 20) => ['A1', 'A2', 'B1', 'B2', 'C1'].map(level =
     version: 2,
   }),
 }));
+
+const missingLevelDoc = (level: string) => ({ id: level, exists: () => false, data: () => undefined });
+
+function mockReconciliationTransaction(
+  userData: Record<string, unknown>,
+  docs: ReturnType<typeof levelDocs>
+): void {
+  const levels = ['A1', 'A2', 'B1', 'B2', 'C1'];
+  const byLevel = new Map(docs.map(document => [document.id, document]));
+  const snapshots = [
+    remoteSnapshot(userData),
+    ...levels.map(level => byLevel.get(level) ?? missingLevelDoc(level)),
+  ];
+  mockRunTransaction.mockImplementationOnce(async (_db, update) => {
+    let readIndex = 0;
+    return update({
+      get: jest.fn(async () => snapshots[readIndex++]),
+      set: mockTransactionSet,
+    });
+  });
+}
 
 describe('FirestoreSyncRepository progress rollout', () => {
   beforeEach(() => {
@@ -120,7 +145,7 @@ describe('FirestoreSyncRepository progress rollout', () => {
 
   it('repairs an incomplete or stale v2 view from retained legacy data', async () => {
     process.env.EXPO_PUBLIC_PROGRESS_SYNC_MODE = 'dual';
-    mockGetDoc.mockResolvedValueOnce(remoteSnapshot({
+    const remoteData = {
       schemaVersion: 1,
       activeLevel: 'A1',
       lastActiveDeviceId: 'legacy-device',
@@ -128,8 +153,10 @@ describe('FirestoreSyncRepository progress rollout', () => {
         currentLevel: 'A1', learnedWords: { A1: [3, 1] }, lastWordIndex: 3,
         lastSync: { toMillis: () => 30 },
       },
-    }));
+    };
+    mockGetDoc.mockResolvedValueOnce(remoteSnapshot(remoteData));
     mockGetDocs.mockResolvedValueOnce({ docs: levelDocs(20).slice(0, 1) });
+    mockReconciliationTransaction(remoteData, levelDocs(20).slice(0, 1));
 
     const remote = await new FirestoreSyncRepository().getUserDocument('user-a');
 
@@ -139,8 +166,37 @@ describe('FirestoreSyncRepository progress rollout', () => {
       lastWordId: 3,
       source: 'legacy-reconciled',
     });
-    expect(mockBatchSet).toHaveBeenCalledTimes(6);
-    expect(mockBatchCommit).toHaveBeenCalledTimes(1);
+    expect(mockTransactionSet).toHaveBeenCalledTimes(6);
+    expect(mockRunTransaction).toHaveBeenCalledTimes(1);
+  });
+
+  it('repairs a stale complete v2 view after a legacy-only client write without rewriting legacy', async () => {
+    process.env.EXPO_PUBLIC_PROGRESS_SYNC_MODE = 'dual';
+    const remoteData = {
+      schemaVersion: 2,
+      activeLevel: 'A2',
+      lastActiveDeviceId: 'legacy-device',
+      progress: {
+        currentLevel: 'A2', learnedWords: { A1: [1, 2], A2: [9, 8] }, lastWordIndex: 9,
+        lastSync: { toMillis: () => 30 },
+      },
+    };
+    mockGetDoc.mockResolvedValueOnce(remoteSnapshot(remoteData));
+    mockGetDocs.mockResolvedValueOnce({ docs: levelDocs(20) });
+    mockReconciliationTransaction(remoteData, levelDocs(20));
+
+    const remote = await new FirestoreSyncRepository().getUserDocument('user-a');
+
+    expect(remote?.progressV2).toEqual({
+      currentLevel: 'A2',
+      learnedWords: { A1: [1, 2], A2: [8, 9], B1: [], B2: [], C1: [] },
+      lastWordId: 9,
+      source: 'legacy-reconciled',
+    });
+    expect(mockTransactionSet).toHaveBeenCalledTimes(6);
+    expect(mockTransactionSet.mock.calls[0][1]).not.toHaveProperty('progress');
+    expect(mockTransactionSet.mock.calls[0][2]).toEqual({ merge: true });
+    expect(mockRunTransaction).toHaveBeenCalledTimes(1);
   });
 
   it('fails closed instead of rewriting malformed legacy progress', async () => {

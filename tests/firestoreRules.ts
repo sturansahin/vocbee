@@ -247,11 +247,9 @@ describe('firestore.rules users/{uid}', () => {
         const db = testEnv.authenticatedContext('user-a').firestore();
         const userRef = doc(db, 'users/user-a');
         const migration = {
-            state: 'mirroring',
-            source: 'legacy-mirror',
-            legacyMirrorEnabled: true,
+            state: 'backfilled',
+            source: 'backfill',
             migratedAt: new Date(),
-            lastLegacyMirrorAt: new Date(),
         };
 
         await assertFails(setDoc(userRef, { ...validUserDocument(), progressMigration: migration }));

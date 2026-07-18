@@ -16,8 +16,8 @@ operasyon ekibi tarafından doğrulandıktan sonra doldurulur. Bugünkü durum `
 | Ayrı hedefte restore doğrulaması | Yok. Managed backup restore aynı source project içinde yeni named database gerektiriyor; ilk backup oluşmadan test edilemez | BLOCKED |
 | Rollback plan ID | Cevap bekleniyor | BLOCKED |
 | Compatibility window kapandı mı? | Hayır/kanıt yok; version adoption telemetry yok | BLOCKED |
-| Dual-write durumu | v2 dual-write yok; runtime legacy-only yazıyor | BLOCKED |
-| Staging target + credential | `vocbee-staging-6fe24` ACTIVE; `(default)` Firestore `eur3`, delete protection açık ve rules deploy PASS. Function deploy staging Blaze olmadığı için BLOCKED; dedicated staging migration identity yok | PARTIAL |
+| Dual-write durumu | Client dual-write + timestamp reconciliation kodu hazır; safe default hâlâ `legacy`, production rollout yapılmadı | BLOCKED |
+| Staging target + credential | `vocbee-staging-6fe24` ACTIVE; `(default)` Firestore `eur3`, delete protection açık ve ilk rules deploy PASS. Function kaldırıldı/Blaze gerekmiyor. Client kontratı değişmedi; yalnız Admin backfill metadata rules redeploy'u DNS timeout nedeniyle pending. Staging client smoke ve dedicated backfill identity yok | PARTIAL |
 | Firestore database koruması | `(default)`, `eur3`, Native/Standard; PITR disabled ve delete protection disabled | BLOCKED |
 | Backup schedule | Günlük/14 gün oluşturma denendi; production billing kapalı olduğu için oluşmadı. Son sayı 0 | BLOCKED |
 
@@ -32,6 +32,11 @@ Owner daha sonra planın sonraki aşamasına geçilmesini onayladı. Bu kapsamda
 rules staging'e deploy edildi ve production managed backup schedule güvenli biçimde denendi. Function deploy ve
 backup schedule billing gate'lerinde durdu; production user belgesi okunmadı/yazılmadı. Güncel PII'siz kanıt:
 `artifacts/progress-v2-staging-bootstrap-evidence.json`.
+
+Owner'ın aynı gün verdiği “kod içinde yap, legacy alana dokunma” kararı Cloud Function yaklaşımını supersede eder.
+Yeni istemci dual-write yapar; eski istemci legacy'yi daha yeni hale getirirse yeni istemci v2'yi timestamp tabanlı
+onarır ve repair sırasında legacy alanı yazmaz/silmez. Cleanup için yeni bir owner onayı verilmemiştir. Kanıt:
+`artifacts/progress-v2-client-reconciliation-decision.json`.
 
 ## B. Dry-run sonucu
 

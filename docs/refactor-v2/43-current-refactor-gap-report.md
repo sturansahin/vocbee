@@ -828,3 +828,21 @@ fail-closed handoff kaniti olarak korunur.
 | Veri hijyeni | Production application collection/user document okunmadı veya yazılmadı; production rules/function deploy, backfill, cleanup ve delete yapılmadı. `firebase use` çalıştırılmadı; `.firebaserc` değiştirilmedi |
 | Kalan owner aksiyonu | `vocbee-staging-6fe24` Blaze'e yükseltilmeli; `vocbee-6fe24` billing etkinleştirilmeli. Ardından mirror staging deploy + sentetik legacy-write smoke, daily backup oluşumu, aynı production projesinde izole named-database restore ve rollback kanıtı sırasıyla çalıştırılabilir |
 | Gate kararı | Production rollout, remote dry-run, Prompt 9 destructive cleanup ve Prompt 10 **kapalı**. Safe runtime default `legacy`; legacy veri korunur |
+
+### Progress v2 client reconciliation kararı — 2026-07-18
+
+| Alan | Kayıt |
+|---|---|
+| Durum | **implementation complete / remote rollout closed** — Cloud Function yaklaşımı owner kararıyla kaldırıldı; client dual-write + stale-v2 reconciliation tek runtime stratejisidir |
+| Branch / başlangıç HEAD | `refactor` / `1ac6ab12` (`Implement progress v2 safe rollout infrastructure`); başlangıç worktree temiz, agent commit oluşturmadı |
+| Owner kararı | Kullanıcı “bunu benim kodlarımın içerisinde yapabilirsin” ve “öyle yapalım, legacy alana dokunma” dedi. Bu karar Function implementasyonunu supersede eder; legacy `users/{uid}.progress` korunur, dual modda yazılmaya devam eder ve cleanup yetkisi verilmez |
+| Client davranışı | Yeni app dual modda legacy ana belge + summary + beş v2 belgeyi tek batch'te yazar. Eski app legacy-only yazarsa yeni app sonraki sync'te `progress.lastSync` değerini tüm v2 belgelerin en eski `updatedAt` değeriyle karşılaştırır; legacy daha yeniyse yalnız v2 metadata/belgelerini merge-repair eder. Repair ana belge + beş v2 belgeyi transaction içinde tekrar okur; concurrent legacy değişimi Firestore retry'ı tetikler |
+| Legacy koruma kanıtı | Reconciliation transaction'ının ana payload'ı `progress` alanı içermez ve `{merge:true}` kullanır. Ayrı test tam fakat stale beş v2 belgesini daha yeni legacy kaydından onardı; legacy alanına write/delete üretmedi. Malformed legacy fail-closed kalır |
+| Kaldırılan yüzey | `mirrorLegacyProgressToV2` export'u; `functions/src/progressMirror.ts`; `functions/test/progressMirror.test.cjs`; Functions/root `functions:test` scriptleri ve blocking CI çağrısı. Base Functions lint/build altyapısı korundu |
+| Schema sadeleştirme | Server-owned `progressMigration` yalnız gelecekteki dedicated Admin `backfill` audit marker'ı olarak kaldı; `legacy-mirror`, `mirroring`, `legacyMirrorEnabled`, `lastLegacyMirrorAt` alanları DTO/rules/cleanup doğrulamasından çıkarıldı |
+| İlk otomatik kanıt | `npm run typecheck:all` PASS; `npm run functions:lint` PASS; `npm run functions:build` PASS; hedefli `FirestoreSyncRepository.test.ts` **1/1 suite, 6/6 test PASS** |
+| Final otomatik kanıt | `npm run lint` 0 error/0 warning; `npm test -- --runInBand --silent` ve `npm run test:ci -- --silent` ayrı ayrı **91/91 suite, 496/496 test PASS**; coverage gate PASS (total %51.7); Firestore rules emulator **14/14 PASS**; cleanup syntax/unit **7/7 PASS**; cleanup transaction/post-check/rollback emulator **1/1 PASS**; Functions lint/build PASS; JSON parse ve `git diff --check` PASS |
+| Staging rules sync | Function-specific rules alanları localde backfill-only olarak sadeleştirildi. Initial staging rules client v2 alanlarını zaten kabul ediyor; client kontratı değişmedi. Güncel rules redeploy üç explicit denemede `firebaserules.googleapis.com` DNS `ENOTFOUND/ETIMEOUT` nedeniyle exit 1; remote rules değişmedi. Emulator compile/behavior 14/14 PASS; staging smoke öncesi retry zorunlu |
+| Artifact | `docs/refactor-v2/artifacts/progress-v2-client-reconciliation-decision.json`; PII/secret içermez |
+| Remote hijyen | Bu kararda production/staging user document read/write/delete, function/rules/app deploy, backfill veya cleanup çalıştırılmadı. Önceki başarısız staging Function deploy denemesi tarihsel kanıttır; yeniden denenmeyecek |
+| Kalan gate | Staging Blaze artık gerekmez. Güncel sıra: staging client smoke -> production billing/backup -> aynı project named-database restore -> ayrı production rules/app canary onayı. Prompt 9 cleanup ve Prompt 10 kapalı; safe default `legacy` |
