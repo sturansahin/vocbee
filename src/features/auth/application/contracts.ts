@@ -65,11 +65,15 @@ export interface AuthFacade {
   refreshUserData(user: AuthUser): Promise<RetryResult>;
   retryConnection(user: AuthUser): Promise<RetryResult>;
   deleteAccount(user: AuthUser | null): Promise<void>;
-  updateProfileData(user: AuthUser | null, profile: Profile, patch: Partial<Profile>): Promise<Profile>;
+  updateProfileData(
+    user: AuthUser | null,
+    profile: Profile,
+    patch: Partial<Profile>,
+  ): Promise<Profile>;
   updateNotificationSettings(
     user: AuthUser | null,
     current: NotificationSettings,
-    patch: Partial<NotificationSettings>
+    patch: Partial<NotificationSettings>,
   ): Promise<NotificationSettings>;
   refreshNotificationSettings(): Promise<NotificationSettings>;
 }

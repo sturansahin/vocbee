@@ -7,14 +7,9 @@ import {
   getNotificationSettings,
   saveNotificationSettings,
 } from '@features/notifications';
-import type {
-  AuthNotificationGateway,
-  AuthProgressGateway,
-} from '../../application/contracts';
+import type { AuthNotificationGateway, AuthProgressGateway } from '../../application/contracts';
 
-export class LegacyAuthSideEffectsGateway
-  implements AuthNotificationGateway, AuthProgressGateway
-{
+export class LegacyAuthSideEffectsGateway implements AuthNotificationGateway, AuthProgressGateway {
   getSettings(): Promise<NotificationSettings> {
     return getNotificationSettings();
   }

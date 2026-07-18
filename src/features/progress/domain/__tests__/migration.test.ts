@@ -11,11 +11,15 @@ describe('progress v2 migration plan', () => {
 
     expect(plan.activeLevel).toBe('B1');
     expect(plan.levels).toHaveLength(5);
-    expect(plan.levels.find(level => level.level === 'A1')).toMatchObject({
-      learnedWordIds: [1, 3], lastWordId: 0, learnedCount: 2,
+    expect(plan.levels.find((level) => level.level === 'A1')).toMatchObject({
+      learnedWordIds: [1, 3],
+      lastWordId: 0,
+      learnedCount: 2,
     });
-    expect(plan.levels.find(level => level.level === 'B1')).toMatchObject({
-      learnedWordIds: [7, 8], lastWordId: 8, learnedCount: 2,
+    expect(plan.levels.find((level) => level.level === 'B1')).toMatchObject({
+      learnedWordIds: [7, 8],
+      lastWordId: 8,
+      learnedCount: 2,
       vocabularySchemaVersion: 2,
     });
     expect(plan.summary.totalLearnedCount).toBe(4);

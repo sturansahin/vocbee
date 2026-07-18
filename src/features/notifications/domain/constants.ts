@@ -4,7 +4,8 @@
 
 export const MAX_SCHEDULED_NOTIFICATIONS = 64;
 export const STREAK_NOTIFICATION_RESERVED_SLOTS = 1;
-export const MAX_VOCABULARY_NOTIFICATIONS = MAX_SCHEDULED_NOTIFICATIONS - STREAK_NOTIFICATION_RESERVED_SLOTS; // 63
+export const MAX_VOCABULARY_NOTIFICATIONS =
+  MAX_SCHEDULED_NOTIFICATIONS - STREAK_NOTIFICATION_RESERVED_SLOTS; // 63
 
 export const NOTIFICATION_CONTENT_VERSION = 4;
 
@@ -35,5 +36,5 @@ export type NotificationFrequencyKey = NotificationFrequencyOption['key'];
 
 export const DEFAULT_NOTIFICATION_FREQUENCY_KEY: NotificationFrequencyKey = 'every2hours';
 export const NOTIFICATION_FREQUENCY_KEYS = NOTIFICATION_FREQUENCY_OPTIONS.map(
-  option => option.key
+  (option) => option.key,
 ) as NotificationFrequencyKey[];

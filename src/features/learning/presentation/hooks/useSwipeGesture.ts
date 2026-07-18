@@ -15,23 +15,38 @@ interface SwipeGestureOptions {
 }
 
 export function useSwipeGesture(options: SwipeGestureOptions) {
-  const { tutorialVisibleRef, tutorialStepRef, tutorialVisible, tutorialStep, setTutorialStep, onSwipe } = options;
+  const {
+    tutorialVisibleRef,
+    tutorialStepRef,
+    tutorialVisible,
+    tutorialStep,
+    setTutorialStep,
+    onSwipe,
+  } = options;
   const position = useRef(new Animated.ValueXY()).current;
   const tutorialAnimationRef = useRef<Animated.CompositeAnimation | null>(null);
   const swipeRef = useRef<(direction: 'left' | 'right') => void>(() => undefined);
   const resetRef = useRef<() => void>(() => undefined);
 
   const reset = useCallback(() => {
-    Animated.spring(position, { toValue: { x: 0, y: 0 }, friction: 5, useNativeDriver: false }).start();
+    Animated.spring(position, {
+      toValue: { x: 0, y: 0 },
+      friction: 5,
+      useNativeDriver: false,
+    }).start();
   }, [position]);
 
-  const swipe = useCallback((direction: 'left' | 'right') => {
-    const tutorialNext = tutorialVisibleRef.current
-      ? getTutorialSwipeNextStep(tutorialStepRef.current, direction)
-      : null;
-    const destination = direction === 'right' ? SCREEN_WIDTH * 1.5 : -SCREEN_WIDTH * 1.5;
-    Animated.timing(position, { toValue: { x: destination, y: 0 }, duration: 300, useNativeDriver: false })
-      .start(() => {
+  const swipe = useCallback(
+    (direction: 'left' | 'right') => {
+      const tutorialNext = tutorialVisibleRef.current
+        ? getTutorialSwipeNextStep(tutorialStepRef.current, direction)
+        : null;
+      const destination = direction === 'right' ? SCREEN_WIDTH * 1.5 : -SCREEN_WIDTH * 1.5;
+      Animated.timing(position, {
+        toValue: { x: destination, y: 0 },
+        duration: 300,
+        useNativeDriver: false,
+      }).start(() => {
         requestAnimationFrame(() => position.setValue({ x: 0, y: 0 }));
         if (tutorialNext !== null) {
           setTutorialStep(tutorialNext);
@@ -39,29 +54,38 @@ export function useSwipeGesture(options: SwipeGestureOptions) {
         }
         void onSwipe(direction);
       });
-  }, [onSwipe, position, setTutorialStep, tutorialStepRef, tutorialVisibleRef]);
-
-  useEffect(() => { swipeRef.current = swipe; resetRef.current = reset; }, [reset, swipe]);
-
-  const panResponder = useRef(PanResponder.create({
-    onStartShouldSetPanResponder: () => false,
-    onMoveShouldSetPanResponder: (_, gesture) => {
-      if (tutorialVisibleRef.current && tutorialStepRef.current > 2) return false;
-      return Math.abs(gesture.dx) > 15 || Math.abs(gesture.dy) > 15;
     },
-    onPanResponderGrant: () => tutorialAnimationRef.current?.stop(),
-    onPanResponderMove: (_, gesture) => position.setValue({ x: gesture.dx, y: gesture.dy * 0.3 }),
-    onPanResponderRelease: (_, gesture) => {
-      if (tutorialVisibleRef.current) {
-        if (tutorialStepRef.current === 1 && gesture.dx <= SWIPE_THRESHOLD) return resetRef.current();
-        if (tutorialStepRef.current === 2 && gesture.dx >= -SWIPE_THRESHOLD) return resetRef.current();
-        if (tutorialStepRef.current > 2) return resetRef.current();
-      }
-      if (gesture.dx > SWIPE_THRESHOLD) swipeRef.current('right');
-      else if (gesture.dx < -SWIPE_THRESHOLD) swipeRef.current('left');
-      else resetRef.current();
-    },
-  })).current;
+    [onSwipe, position, setTutorialStep, tutorialStepRef, tutorialVisibleRef],
+  );
+
+  useEffect(() => {
+    swipeRef.current = swipe;
+    resetRef.current = reset;
+  }, [reset, swipe]);
+
+  const panResponder = useRef(
+    PanResponder.create({
+      onStartShouldSetPanResponder: () => false,
+      onMoveShouldSetPanResponder: (_, gesture) => {
+        if (tutorialVisibleRef.current && tutorialStepRef.current > 2) return false;
+        return Math.abs(gesture.dx) > 15 || Math.abs(gesture.dy) > 15;
+      },
+      onPanResponderGrant: () => tutorialAnimationRef.current?.stop(),
+      onPanResponderMove: (_, gesture) => position.setValue({ x: gesture.dx, y: gesture.dy * 0.3 }),
+      onPanResponderRelease: (_, gesture) => {
+        if (tutorialVisibleRef.current) {
+          if (tutorialStepRef.current === 1 && gesture.dx <= SWIPE_THRESHOLD)
+            return resetRef.current();
+          if (tutorialStepRef.current === 2 && gesture.dx >= -SWIPE_THRESHOLD)
+            return resetRef.current();
+          if (tutorialStepRef.current > 2) return resetRef.current();
+        }
+        if (gesture.dx > SWIPE_THRESHOLD) swipeRef.current('right');
+        else if (gesture.dx < -SWIPE_THRESHOLD) swipeRef.current('left');
+        else resetRef.current();
+      },
+    }),
+  ).current;
 
   useEffect(() => {
     tutorialAnimationRef.current?.stop();
@@ -70,10 +94,22 @@ export function useSwipeGesture(options: SwipeGestureOptions) {
       return;
     }
     const x = tutorialStep === 1 ? 30 : -30;
-    tutorialAnimationRef.current = Animated.loop(Animated.sequence([
-      Animated.timing(position, { toValue: { x, y: 0 }, duration: 800, easing: Easing.inOut(Easing.ease), useNativeDriver: false }),
-      Animated.timing(position, { toValue: { x: 0, y: 0 }, duration: 800, easing: Easing.inOut(Easing.ease), useNativeDriver: false }),
-    ]));
+    tutorialAnimationRef.current = Animated.loop(
+      Animated.sequence([
+        Animated.timing(position, {
+          toValue: { x, y: 0 },
+          duration: 800,
+          easing: Easing.inOut(Easing.ease),
+          useNativeDriver: false,
+        }),
+        Animated.timing(position, {
+          toValue: { x: 0, y: 0 },
+          duration: 800,
+          easing: Easing.inOut(Easing.ease),
+          useNativeDriver: false,
+        }),
+      ]),
+    );
     tutorialAnimationRef.current.start();
     return () => tutorialAnimationRef.current?.stop();
   }, [position, reset, tutorialStep, tutorialVisible]);

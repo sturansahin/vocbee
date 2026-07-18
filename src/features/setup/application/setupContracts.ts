@@ -30,6 +30,6 @@ export interface SetupFacade {
   openSystemSettings(): Promise<void>;
   complete(
     input: SetupCompletionInput,
-    refreshNotificationSettings: () => Promise<void>
+    refreshNotificationSettings: () => Promise<void>,
   ): Promise<void>;
 }

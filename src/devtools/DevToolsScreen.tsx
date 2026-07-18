@@ -13,12 +13,36 @@ import { useSelectedScenario } from './scenarioStore';
 type Nav = StackNavigationProp<DevToolsStackParamList, 'DevToolsHome'>;
 
 const MENU_ITEMS: { route: keyof DevToolsStackParamList; label: string; description: string }[] = [
-  { route: 'ScreenTester', label: 'Screen Tester', description: 'Open any real screen from screenRegistry.ts' },
-  { route: 'ScenarioPicker', label: 'Scenarios', description: 'Pick a named fixture scenario for preview panels' },
-  { route: 'AuthState', label: 'Auth State', description: 'Live auth state (read-only) vs. scenario fixture' },
-  { route: 'StorageDebug', label: 'Storage Debug', description: 'Inspect real AsyncStorage keys (read-only)' },
-  { route: 'NotificationDebug', label: 'Notification Debug', description: 'Inspect permission/settings/schedule (read-only)' },
-  { route: 'FirestoreModel', label: 'Firestore Model', description: 'Offline fixture preview of the users/{uid} doc shape' },
+  {
+    route: 'ScreenTester',
+    label: 'Screen Tester',
+    description: 'Open any real screen from screenRegistry.ts',
+  },
+  {
+    route: 'ScenarioPicker',
+    label: 'Scenarios',
+    description: 'Pick a named fixture scenario for preview panels',
+  },
+  {
+    route: 'AuthState',
+    label: 'Auth State',
+    description: 'Live auth state (read-only) vs. scenario fixture',
+  },
+  {
+    route: 'StorageDebug',
+    label: 'Storage Debug',
+    description: 'Inspect real AsyncStorage keys (read-only)',
+  },
+  {
+    route: 'NotificationDebug',
+    label: 'Notification Debug',
+    description: 'Inspect permission/settings/schedule (read-only)',
+  },
+  {
+    route: 'FirestoreModel',
+    label: 'Firestore Model',
+    description: 'Offline fixture preview of the users/{uid} doc shape',
+  },
 ];
 
 export function DevToolsScreen() {
@@ -31,7 +55,7 @@ export function DevToolsScreen() {
       <Text style={styles.subtitle}>
         Internal only — never available in a production build. Active scenario: {scenario.label}
       </Text>
-      {MENU_ITEMS.map(item => (
+      {MENU_ITEMS.map((item) => (
         <Pressable
           key={item.route}
           testID={`devtools-menu-${item.route}`}

@@ -68,8 +68,14 @@ export const SCENARIOS: Record<ScenarioId, DevToolsScenario> = {
   default: {
     id: 'default',
     label: 'Default (logged in, setup complete)',
-    description: 'Baseline happy-path state: authenticated user, setup completed, free tier with ads, mid-progress.',
-    auth: { user: baseLoggedIn, userData: fixtureUserDataLoggedInComplete, isLoading: false, connectionError: false },
+    description:
+      'Baseline happy-path state: authenticated user, setup completed, free tier with ads, mid-progress.',
+    auth: {
+      user: baseLoggedIn,
+      userData: fixtureUserDataLoggedInComplete,
+      isLoading: false,
+      connectionError: false,
+    },
     monetization: { isAdFree: false, isLoading: false },
     progress: { shape: 'legacy', legacy: fixtureProgressDefault },
     notificationSettings: fixtureNotificationSettingsEnabled,
@@ -92,8 +98,14 @@ export const SCENARIOS: Record<ScenarioId, DevToolsScenario> = {
   empty: {
     id: 'empty',
     label: 'Empty state',
-    description: 'Logged in, setup complete, but zero progress/favorites/streak — tests empty-state UI.',
-    auth: { user: baseLoggedIn, userData: fixtureUserDataLoggedInComplete, isLoading: false, connectionError: false },
+    description:
+      'Logged in, setup complete, but zero progress/favorites/streak — tests empty-state UI.',
+    auth: {
+      user: baseLoggedIn,
+      userData: fixtureUserDataLoggedInComplete,
+      isLoading: false,
+      connectionError: false,
+    },
     monetization: { isAdFree: false, isLoading: false },
     progress: { shape: 'empty' },
     notificationSettings: fixtureNotificationSettingsDisabled,
@@ -104,7 +116,8 @@ export const SCENARIOS: Record<ScenarioId, DevToolsScenario> = {
   error: {
     id: 'error',
     label: 'Error state',
-    description: 'Simulated connection/data error — tests error banners/ConnectionErrorScreen paths.',
+    description:
+      'Simulated connection/data error — tests error banners/ConnectionErrorScreen paths.',
     auth: { user: baseLoggedIn, userData: null, isLoading: false, connectionError: true },
     monetization: { isAdFree: false, isLoading: false },
     progress: { shape: 'empty' },
@@ -129,7 +142,12 @@ export const SCENARIOS: Record<ScenarioId, DevToolsScenario> = {
     id: 'loggedIn',
     label: 'Logged in',
     description: 'Authenticated user with completed setup, default progress.',
-    auth: { user: baseLoggedIn, userData: fixtureUserDataLoggedInComplete, isLoading: false, connectionError: false },
+    auth: {
+      user: baseLoggedIn,
+      userData: fixtureUserDataLoggedInComplete,
+      isLoading: false,
+      connectionError: false,
+    },
     monetization: { isAdFree: false, isLoading: false },
     progress: { shape: 'legacy', legacy: fixtureProgressDefault },
     notificationSettings: fixtureNotificationSettingsEnabled,
@@ -141,7 +159,12 @@ export const SCENARIOS: Record<ScenarioId, DevToolsScenario> = {
     id: 'setupIncomplete',
     label: 'Setup incomplete',
     description: 'Logged in but has not finished onboarding/setup — tests SetupScreens routing.',
-    auth: { user: baseLoggedIn, userData: fixtureUserDataSetupIncomplete, isLoading: false, connectionError: false },
+    auth: {
+      user: baseLoggedIn,
+      userData: fixtureUserDataSetupIncomplete,
+      isLoading: false,
+      connectionError: false,
+    },
     monetization: { isAdFree: false, isLoading: false },
     progress: { shape: 'empty' },
     notificationSettings: fixtureNotificationSettingsEnabled,
@@ -153,7 +176,12 @@ export const SCENARIOS: Record<ScenarioId, DevToolsScenario> = {
     id: 'premium',
     label: 'Premium (ad-free)',
     description: 'RevenueCat "premium" entitlement active — ads should be hidden everywhere.',
-    auth: { user: baseLoggedIn, userData: fixtureUserDataLoggedInComplete, isLoading: false, connectionError: false },
+    auth: {
+      user: baseLoggedIn,
+      userData: fixtureUserDataLoggedInComplete,
+      isLoading: false,
+      connectionError: false,
+    },
     monetization: { isAdFree: true, isLoading: false },
     progress: { shape: 'legacy', legacy: fixtureProgressDefault },
     notificationSettings: fixtureNotificationSettingsEnabled,
@@ -165,7 +193,12 @@ export const SCENARIOS: Record<ScenarioId, DevToolsScenario> = {
     id: 'freeWithAds',
     label: 'Free (with ads)',
     description: 'No premium entitlement — banner/interstitial/app-open ad paths should be active.',
-    auth: { user: baseLoggedIn, userData: fixtureUserDataLoggedInComplete, isLoading: false, connectionError: false },
+    auth: {
+      user: baseLoggedIn,
+      userData: fixtureUserDataLoggedInComplete,
+      isLoading: false,
+      connectionError: false,
+    },
     monetization: { isAdFree: false, isLoading: false },
     progress: { shape: 'legacy', legacy: fixtureProgressDefault },
     notificationSettings: fixtureNotificationSettingsEnabled,
@@ -177,7 +210,12 @@ export const SCENARIOS: Record<ScenarioId, DevToolsScenario> = {
     id: 'legacyProgress',
     label: 'Legacy progress shape',
     description: 'Multi-level learnedWords map (the only shape production code writes today).',
-    auth: { user: baseLoggedIn, userData: fixtureUserDataLoggedInComplete, isLoading: false, connectionError: false },
+    auth: {
+      user: baseLoggedIn,
+      userData: fixtureUserDataLoggedInComplete,
+      isLoading: false,
+      connectionError: false,
+    },
     monetization: { isAdFree: false, isLoading: false },
     progress: { shape: 'legacy', legacy: fixtureLegacyProgress },
     notificationSettings: fixtureNotificationSettingsEnabled,
@@ -191,7 +229,12 @@ export const SCENARIOS: Record<ScenarioId, DevToolsScenario> = {
     description:
       'Rollout-gated v2 progressByLevel shape. This preview remains offline fixture data and never ' +
       'touches live Firestore.',
-    auth: { user: baseLoggedIn, userData: fixtureUserDataLoggedInComplete, isLoading: false, connectionError: false },
+    auth: {
+      user: baseLoggedIn,
+      userData: fixtureUserDataLoggedInComplete,
+      isLoading: false,
+      connectionError: false,
+    },
     monetization: { isAdFree: false, isLoading: false },
     progress: { shape: 'progressByLevel', byLevel: fixtureProgressByLevel },
     notificationSettings: fixtureNotificationSettingsEnabled,

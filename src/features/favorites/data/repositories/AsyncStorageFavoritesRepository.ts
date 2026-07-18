@@ -5,7 +5,7 @@ import { markAsUnsynced } from '@shared/storage';
 import type { FavoritesLocalStore } from '../../application/contracts';
 import type { FavoriteItem } from '../../domain/types';
 
-const keyFor = (userId?: string) => userId ? `@favorites_${userId}` : '@favorites';
+const keyFor = (userId?: string) => (userId ? `@favorites_${userId}` : '@favorites');
 
 export class AsyncStorageFavoritesRepository implements FavoritesLocalStore {
   async read(userId?: string): Promise<unknown> {

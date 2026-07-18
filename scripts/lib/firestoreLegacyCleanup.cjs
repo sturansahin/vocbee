@@ -37,7 +37,10 @@ function isPlainObject(value) {
 function parsePositiveInteger(raw, flag, { allowZero = false } = {}) {
   const value = Number(raw);
   if (!Number.isSafeInteger(value) || value < (allowZero ? 0 : 1)) {
-    throw new SafetyError(`${flag} must be a ${allowZero ? 'non-negative' : 'positive'} integer.`, 'INVALID_ARGUMENT');
+    throw new SafetyError(
+      `${flag} must be a ${allowZero ? 'non-negative' : 'positive'} integer.`,
+      'INVALID_ARGUMENT',
+    );
   }
   return value;
 }
@@ -104,12 +107,19 @@ function parseArgs(argv) {
   options.batchSize = parsePositiveInteger(options.batchSize, '--batch-size');
   options.maxDocuments = parsePositiveInteger(options.maxDocuments, '--max-documents');
   if (options.backupRetentionDays !== undefined) {
-    options.backupRetentionDays = parsePositiveInteger(options.backupRetentionDays, '--backup-retention-days');
+    options.backupRetentionDays = parsePositiveInteger(
+      options.backupRetentionDays,
+      '--backup-retention-days',
+    );
   }
   if (options.expectedDocuments !== undefined) {
-    options.expectedDocuments = parsePositiveInteger(options.expectedDocuments, '--expected-documents', {
-      allowZero: true,
-    });
+    options.expectedDocuments = parsePositiveInteger(
+      options.expectedDocuments,
+      '--expected-documents',
+      {
+        allowZero: true,
+      },
+    );
   }
   return options;
 }
@@ -120,14 +130,20 @@ function loadAllowlist(allowlistPath) {
   try {
     parsed = JSON.parse(fs.readFileSync(resolved, 'utf8'));
   } catch (error) {
-    throw new SafetyError(`Unable to read project allowlist: ${error.message}`, 'ALLOWLIST_INVALID');
+    throw new SafetyError(
+      `Unable to read project allowlist: ${error.message}`,
+      'ALLOWLIST_INVALID',
+    );
   }
   if (parsed.schemaVersion !== 1 || !isPlainObject(parsed.environments)) {
     throw new SafetyError('Project allowlist has an unsupported shape.', 'ALLOWLIST_INVALID');
   }
   for (const environment of ENVIRONMENTS) {
     if (!Array.isArray(parsed.environments[environment])) {
-      throw new SafetyError(`Project allowlist is missing environment: ${environment}`, 'ALLOWLIST_INVALID');
+      throw new SafetyError(
+        `Project allowlist is missing environment: ${environment}`,
+        'ALLOWLIST_INVALID',
+      );
     }
   }
   return { resolved, environments: parsed.environments };
@@ -144,10 +160,20 @@ function resolveCredentialEvidence(options, env = process.env) {
     try {
       credential = JSON.parse(fs.readFileSync(path.resolve(credentialFile), 'utf8'));
     } catch (error) {
-      throw new SafetyError(`Credential metadata could not be read: ${error.message}`, 'CREDENTIAL_UNVERIFIED');
+      throw new SafetyError(
+        `Credential metadata could not be read: ${error.message}`,
+        'CREDENTIAL_UNVERIFIED',
+      );
     }
-    if (credential.type !== 'service_account' || !credential.client_email || !credential.project_id) {
-      throw new SafetyError('Credential file must contain service-account identity and project metadata.', 'CREDENTIAL_UNVERIFIED');
+    if (
+      credential.type !== 'service_account' ||
+      !credential.client_email ||
+      !credential.project_id
+    ) {
+      throw new SafetyError(
+        'Credential file must contain service-account identity and project metadata.',
+        'CREDENTIAL_UNVERIFIED',
+      );
     }
     return {
       identity: credential.client_email,
@@ -161,7 +187,7 @@ function resolveCredentialEvidence(options, env = process.env) {
   if (!identity || !projectId) {
     throw new SafetyError(
       'Remote runs require verifiable credential metadata via GOOGLE_APPLICATION_CREDENTIALS or the workload-identity attestation variables.',
-      'CREDENTIAL_UNVERIFIED'
+      'CREDENTIAL_UNVERIFIED',
     );
   }
   return { identity, projectId, source: 'workload-identity-attestation' };
@@ -170,36 +196,55 @@ function resolveCredentialEvidence(options, env = process.env) {
 function validateTarget(options, context = {}) {
   if (!options.project) throw new SafetyError('--project is required.', 'PROJECT_REQUIRED');
   if (!options.environment || !ENVIRONMENTS.includes(options.environment)) {
-    throw new SafetyError(`--environment must be one of: ${ENVIRONMENTS.join(', ')}.`, 'ENVIRONMENT_REQUIRED');
+    throw new SafetyError(
+      `--environment must be one of: ${ENVIRONMENTS.join(', ')}.`,
+      'ENVIRONMENT_REQUIRED',
+    );
   }
-  if (!options.allowlistPath) throw new SafetyError('--allowlist is required.', 'ALLOWLIST_REQUIRED');
+  if (!options.allowlistPath)
+    throw new SafetyError('--allowlist is required.', 'ALLOWLIST_REQUIRED');
   if (!options.reportPath) throw new SafetyError('--report is required.', 'REPORT_REQUIRED');
 
   const allowlist = loadAllowlist(options.allowlistPath);
   if (!allowlist.environments[options.environment].includes(options.project)) {
     throw new SafetyError(
       `Project is not allowlisted for environment ${options.environment}.`,
-      'PROJECT_NOT_ALLOWLISTED'
+      'PROJECT_NOT_ALLOWLISTED',
     );
   }
 
   const emulatorHost = (context.env || process.env).FIRESTORE_EMULATOR_HOST;
   if (options.environment === 'emulator' && !emulatorHost) {
-    throw new SafetyError('Emulator target requires FIRESTORE_EMULATOR_HOST.', 'EMULATOR_HOST_REQUIRED');
+    throw new SafetyError(
+      'Emulator target requires FIRESTORE_EMULATOR_HOST.',
+      'EMULATOR_HOST_REQUIRED',
+    );
   }
   if (options.environment !== 'emulator' && emulatorHost) {
-    throw new SafetyError('Remote target refuses to run while FIRESTORE_EMULATOR_HOST is set.', 'TARGET_MISMATCH');
+    throw new SafetyError(
+      'Remote target refuses to run while FIRESTORE_EMULATOR_HOST is set.',
+      'TARGET_MISMATCH',
+    );
   }
 
   const evidence = resolveCredentialEvidence(options, context.env || process.env);
   if (options.environment !== 'emulator' && !options.credentialIdentity) {
-    throw new SafetyError('--credential-identity is required for remote targets.', 'CREDENTIAL_IDENTITY_REQUIRED');
+    throw new SafetyError(
+      '--credential-identity is required for remote targets.',
+      'CREDENTIAL_IDENTITY_REQUIRED',
+    );
   }
   if (options.environment !== 'emulator' && evidence.identity !== options.credentialIdentity) {
-    throw new SafetyError('Declared credential identity does not match verified credential metadata.', 'CREDENTIAL_MISMATCH');
+    throw new SafetyError(
+      'Declared credential identity does not match verified credential metadata.',
+      'CREDENTIAL_MISMATCH',
+    );
   }
   if (evidence.projectId !== options.project) {
-    throw new SafetyError('Credential project does not match the explicit target project.', 'CREDENTIAL_PROJECT_MISMATCH');
+    throw new SafetyError(
+      'Credential project does not match the explicit target project.',
+      'CREDENTIAL_PROJECT_MISMATCH',
+    );
   }
 
   return { allowlist, credentialEvidence: evidence };
@@ -213,30 +258,39 @@ function collectDestructiveGateReasons(options, summary) {
   const reasons = [];
   if (summary.mismatched !== 0) reasons.push('migration-mismatch-count-nonzero');
   if (summary.candidates === 0) reasons.push('no-cleanup-candidates');
-  if (!options.confirmProject || options.confirmProject !== options.project) reasons.push('project-confirmation-missing-or-mismatch');
+  if (!options.confirmProject || options.confirmProject !== options.project)
+    reasons.push('project-confirmation-missing-or-mismatch');
   if (!options.backupId) reasons.push('backup-id-missing');
-  if (!isoDateIsValid(options.backupCreatedAt)) reasons.push('backup-created-at-missing-or-invalid');
+  if (!isoDateIsValid(options.backupCreatedAt))
+    reasons.push('backup-created-at-missing-or-invalid');
   if (!Number.isSafeInteger(options.backupRetentionDays) || options.backupRetentionDays < 1) {
     reasons.push('backup-retention-missing-or-invalid');
   }
-  if (!isoDateIsValid(options.restoreVerifiedAt)) reasons.push('restore-verification-missing-or-invalid');
+  if (!isoDateIsValid(options.restoreVerifiedAt))
+    reasons.push('restore-verification-missing-or-invalid');
   if (!options.rollbackPlan) reasons.push('rollback-plan-missing');
   if (options.compatibilityWindow !== 'closed') reasons.push('compatibility-window-not-closed');
   if (options.dualWrite !== 'disabled') reasons.push('dual-write-not-disabled');
   if (!options.approvalId) reasons.push('second-owner-approval-missing');
-  if (options.approvalProject !== options.project) reasons.push('approval-project-missing-or-mismatch');
-  if (!options.backupId || options.approvalBackupId !== options.backupId) reasons.push('approval-backup-missing-or-mismatch');
-  if (!Number.isSafeInteger(options.expectedDocuments) || options.expectedDocuments !== summary.candidates) {
+  if (options.approvalProject !== options.project)
+    reasons.push('approval-project-missing-or-mismatch');
+  if (!options.backupId || options.approvalBackupId !== options.backupId)
+    reasons.push('approval-backup-missing-or-mismatch');
+  if (
+    !Number.isSafeInteger(options.expectedDocuments) ||
+    options.expectedDocuments !== summary.candidates
+  ) {
     reasons.push('approved-document-count-missing-or-mismatch');
   }
   if (!options.opsLogPath) reasons.push('external-operations-log-missing');
-  if (options.environment === 'production' && !options.stagingEvidenceId) reasons.push('staging-evidence-missing');
+  if (options.environment === 'production' && !options.stagingEvidenceId)
+    reasons.push('staging-evidence-missing');
   return reasons;
 }
 
 function canonicalWordIds(value) {
   if (!Array.isArray(value)) return null;
-  if (!value.every(id => Number.isSafeInteger(id) && id >= 0)) return null;
+  if (!value.every((id) => Number.isSafeInteger(id) && id >= 0)) return null;
   const unique = [...new Set(value)].sort((left, right) => left - right);
   if (unique.length !== value.length) return null;
   return unique;
@@ -253,11 +307,15 @@ function expectedProgressByLevel(legacyProgress) {
     return { models: [], issues };
   }
 
-  const unknownKeys = Object.keys(legacyProgress.learnedWords).filter(level => !LEVELS.includes(level));
+  const unknownKeys = Object.keys(legacyProgress.learnedWords).filter(
+    (level) => !LEVELS.includes(level),
+  );
   if (unknownKeys.length > 0) issues.push('legacy-learned-words-has-unknown-level');
 
-  const lastWordIndex = legacyProgress.lastWordIndex === undefined ? 0 : legacyProgress.lastWordIndex;
-  if (!Number.isSafeInteger(lastWordIndex) || lastWordIndex < 0) issues.push('legacy-last-word-index-invalid');
+  const lastWordIndex =
+    legacyProgress.lastWordIndex === undefined ? 0 : legacyProgress.lastWordIndex;
+  if (!Number.isSafeInteger(lastWordIndex) || lastWordIndex < 0)
+    issues.push('legacy-last-word-index-invalid');
 
   const models = [];
   for (const level of LEVELS) {
@@ -308,8 +366,9 @@ function assessUserDocument(userData, progressByLevelData) {
   if (!isPlainObject(progressByLevelData)) reasons.push('progress-by-level-snapshot-invalid');
   if (hasOwn(userData.progress, 'lastSync')) {
     legacyLastSync = timestampMillis(userData.progress.lastSync);
-    const syncUpdatedAt = timestampMillis(userData.lastActiveAt)
-      ?? timestampMillis(userData.syncMeta && userData.syncMeta.updatedAt);
+    const syncUpdatedAt =
+      timestampMillis(userData.lastActiveAt) ??
+      timestampMillis(userData.syncMeta && userData.syncMeta.updatedAt);
     if (legacyLastSync === null) reasons.push('legacy-last-sync-invalid');
     if (syncUpdatedAt === null) reasons.push('sync-meta-updated-at-missing');
     if (legacyLastSync !== null && syncUpdatedAt !== null && syncUpdatedAt < legacyLastSync) {
@@ -317,11 +376,14 @@ function assessUserDocument(userData, progressByLevelData) {
     }
   }
 
-  const expectedLevels = new Set(models.map(model => model.level));
+  const expectedLevels = new Set(models.map((model) => model.level));
   const actualLevels = isPlainObject(progressByLevelData)
-    ? Object.keys(progressByLevelData).filter(level => progressByLevelData[level] !== null)
+    ? Object.keys(progressByLevelData).filter((level) => progressByLevelData[level] !== null)
     : [];
-  if (actualLevels.some(level => !expectedLevels.has(level)) || models.some(model => !actualLevels.includes(model.level))) {
+  if (
+    actualLevels.some((level) => !expectedLevels.has(level)) ||
+    models.some((model) => !actualLevels.includes(model.level))
+  ) {
     reasons.push('progress-by-level-level-set-mismatch');
   }
 
@@ -332,7 +394,8 @@ function assessUserDocument(userData, progressByLevelData) {
       continue;
     }
     const actualIds = canonicalWordIds(actual.learnedWordIds);
-    if (actual.level !== expected.level) reasons.push(`progress-by-level-${expected.level}-level-mismatch`);
+    if (actual.level !== expected.level)
+      reasons.push(`progress-by-level-${expected.level}-level-mismatch`);
     if (actualIds === null || !arraysEqual(actualIds, expected.learnedWordIds)) {
       reasons.push(`progress-by-level-${expected.level}-ids-mismatch`);
     }
@@ -403,16 +466,23 @@ function ensureReportIsRedacted(report) {
 function writeJsonFile(filePath, value) {
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
   const temporaryPath = `${filePath}.${process.pid}.tmp`;
-  fs.writeFileSync(temporaryPath, `${JSON.stringify(value, null, 2)}\n`, { encoding: 'utf8', mode: 0o600 });
+  fs.writeFileSync(temporaryPath, `${JSON.stringify(value, null, 2)}\n`, {
+    encoding: 'utf8',
+    mode: 0o600,
+  });
   fs.renameSync(temporaryPath, filePath);
 }
 
 function assertOpsLogOutsideRepository(opsLogPath, repositoryRoot) {
-  if (!opsLogPath) throw new SafetyError('--ops-log is required in execute mode.', 'OPS_LOG_REQUIRED');
+  if (!opsLogPath)
+    throw new SafetyError('--ops-log is required in execute mode.', 'OPS_LOG_REQUIRED');
   const resolved = path.resolve(opsLogPath);
   const relative = path.relative(path.resolve(repositoryRoot), resolved);
   if (relative === '' || (!relative.startsWith('..') && !path.isAbsolute(relative))) {
-    throw new SafetyError('Operational log must be stored outside the repository.', 'OPS_LOG_INSIDE_REPOSITORY');
+    throw new SafetyError(
+      'Operational log must be stored outside the repository.',
+      'OPS_LOG_INSIDE_REPOSITORY',
+    );
   }
   return resolved;
 }
@@ -422,7 +492,18 @@ function appendOpsLog(filePath, event) {
   fs.appendFileSync(filePath, `${JSON.stringify(event)}\n`, { encoding: 'utf8', mode: 0o600 });
 }
 
-function buildReport({ options, target, summary, deleted, gateReasons, runId, generatedAt, mode, opsLogPath, errorCode }) {
+function buildReport({
+  options,
+  target,
+  summary,
+  deleted,
+  gateReasons,
+  runId,
+  generatedAt,
+  mode,
+  opsLogPath,
+  errorCode,
+}) {
   return {
     schemaVersion: 1,
     runId,
@@ -443,14 +524,22 @@ function buildReport({ options, target, summary, deleted, gateReasons, runId, ge
     destructiveGate: {
       ready: gateReasons.length === 0,
       reasons: gateReasons,
-      secondApprovalIdHash: options.approvalId ? `sha256:${sha256(options.approvalId).slice(0, 16)}` : null,
+      secondApprovalIdHash: options.approvalId
+        ? `sha256:${sha256(options.approvalId).slice(0, 16)}`
+        : null,
       backupIdHash: options.backupId ? `sha256:${sha256(options.backupId).slice(0, 16)}` : null,
       stagingEvidenceIdHash: options.stagingEvidenceId
         ? `sha256:${sha256(options.stagingEvidenceId).slice(0, 16)}`
         : null,
     },
     execution: {
-      status: errorCode ? 'failed' : mode === 'execute' ? 'completed' : mode === 'execute-refused' ? 'refused' : 'not-run',
+      status: errorCode
+        ? 'failed'
+        : mode === 'execute'
+          ? 'completed'
+          : mode === 'execute-refused'
+            ? 'refused'
+            : 'not-run',
       errorCode: errorCode || null,
     },
     beforeAfterExample: sanitizedBeforeAfterExample(),
@@ -472,16 +561,20 @@ async function auditStore(store, options) {
   };
   const candidateIds = [];
 
-  await store.scanUsers(options.batchSize, async user => {
+  await store.scanUsers(options.batchSize, async (user) => {
     summary.scanned += 1;
     if (summary.scanned > options.maxDocuments) {
-      throw new SafetyError('Scan exceeded --max-documents; no cleanup was executed.', 'MAX_DOCUMENTS_EXCEEDED');
+      throw new SafetyError(
+        'Scan exceeded --max-documents; no cleanup was executed.',
+        'MAX_DOCUMENTS_EXCEEDED',
+      );
     }
     const userData = user.data || {};
     if (hasOwn(userData, 'progress') && userData.progress !== null) summary.legacyDocuments += 1;
-    const progressByLevel = hasOwn(userData, 'progress') && userData.progress !== null
-      ? await store.getProgressByLevel(user.id)
-      : {};
+    const progressByLevel =
+      hasOwn(userData, 'progress') && userData.progress !== null
+        ? await store.getProgressByLevel(user.id)
+        : {};
     const assessment = assessUserDocument(userData, progressByLevel);
     if (assessment.status === 'candidate') {
       summary.candidates += 1;
@@ -498,7 +591,12 @@ async function auditStore(store, options) {
   return { summary, candidateIds };
 }
 
-async function runCleanup({ options, store, repositoryRoot = process.cwd(), now = () => new Date() }) {
+async function runCleanup({
+  options,
+  store,
+  repositoryRoot = process.cwd(),
+  now = () => new Date(),
+}) {
   const target = validateTarget(options);
   const startedAt = now().toISOString();
   const runId = crypto.randomUUID();
@@ -541,7 +639,10 @@ async function runCleanup({ options, store, repositoryRoot = process.cwd(), now 
       });
       ensureReportIsRedacted(refusedReport);
       writeJsonFile(path.resolve(options.reportPath), refusedReport);
-      throw new SafetyError(`Destructive cleanup refused: ${gateReasons.join(', ')}.`, 'DESTRUCTIVE_GATE_CLOSED');
+      throw new SafetyError(
+        `Destructive cleanup refused: ${gateReasons.join(', ')}.`,
+        'DESTRUCTIVE_GATE_CLOSED',
+      );
     }
     try {
       opsLogPath = assertOpsLogOutsideRepository(options.opsLogPath, repositoryRoot);
@@ -574,7 +675,12 @@ async function runCleanup({ options, store, repositoryRoot = process.cwd(), now 
       try {
         await store.deleteLegacyProgressIfStillVerified(userId);
         deleted += 1;
-        appendOpsLog(opsLogPath, { runId, at: now().toISOString(), event: 'legacy-field-deleted', subjectHash });
+        appendOpsLog(opsLogPath, {
+          runId,
+          at: now().toISOString(),
+          event: 'legacy-field-deleted',
+          subjectHash,
+        });
       } catch (error) {
         appendOpsLog(opsLogPath, {
           runId,
@@ -600,7 +706,12 @@ async function runCleanup({ options, store, repositoryRoot = process.cwd(), now 
         throw error;
       }
     }
-    appendOpsLog(opsLogPath, { runId, at: now().toISOString(), event: 'cleanup-completed', deleted });
+    appendOpsLog(opsLogPath, {
+      runId,
+      at: now().toISOString(),
+      event: 'cleanup-completed',
+      deleted,
+    });
   }
 
   const report = buildReport({

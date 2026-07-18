@@ -3,7 +3,9 @@ import { makeLoadProfile } from '../useCases/loadProfile';
 import type { UserProfileRepository } from '../../data/contracts';
 import type { Profile } from '../../domain/types';
 
-function makeFakeProfileRepo(overrides: Partial<UserProfileRepository> = {}): UserProfileRepository {
+function makeFakeProfileRepo(
+  overrides: Partial<UserProfileRepository> = {},
+): UserProfileRepository {
   return {
     getCachedProfile: jest.fn(async () => null),
     cacheProfile: jest.fn(async () => undefined),
@@ -28,7 +30,9 @@ describe('makeLoadProfile (cache-first)', () => {
   });
 
   it('falls back to remote and caches it when no cache', async () => {
-    const repo = makeFakeProfileRepo({ fetchProfileFromRemote: jest.fn(async () => remoteProfile) });
+    const repo = makeFakeProfileRepo({
+      fetchProfileFromRemote: jest.fn(async () => remoteProfile),
+    });
     const result = await makeLoadProfile(repo)('u1');
     expect(result).toEqual(remoteProfile);
     expect(repo.getCachedProfile).toHaveBeenCalledWith('u1');

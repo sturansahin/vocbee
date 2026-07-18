@@ -14,7 +14,9 @@ export interface NotificationPermissionStepProps {
   colors: { text: string; textSecondary: string; primary: string };
 }
 
-export const NotificationPermissionStep: React.FC<NotificationPermissionStepProps> = ({ colors }) => {
+export const NotificationPermissionStep: React.FC<NotificationPermissionStepProps> = ({
+  colors,
+}) => {
   const { t } = useTranslation();
 
   return (
@@ -26,7 +28,9 @@ export const NotificationPermissionStep: React.FC<NotificationPermissionStepProp
             {t('setup.learnWithReminders')}
           </Text>
         </View>
-        <Text style={[styles.notificationDesc, { color: colors.textSecondary, textAlign: 'center' }]}>
+        <Text
+          style={[styles.notificationDesc, { color: colors.textSecondary, textAlign: 'center' }]}
+        >
           {t('setup.notificationBenefits')}
         </Text>
         <View style={styles.notificationFeatures}>

@@ -20,12 +20,19 @@ export function useWordActions(options: WordActionOptions) {
     let active = true;
     if (!word) {
       setIsFavorite(false);
-      return () => { active = false; };
+      return () => {
+        active = false;
+      };
     }
-    facade.isFavorite(word.id, level)
-      .then(value => { if (active) setIsFavorite(value); })
-      .catch(error => console.warn('[HomeScreen] Favorite state could not be loaded', error));
-    return () => { active = false; };
+    facade
+      .isFavorite(word.id, level)
+      .then((value) => {
+        if (active) setIsFavorite(value);
+      })
+      .catch((error) => console.warn('[HomeScreen] Favorite state could not be loaded', error));
+    return () => {
+      active = false;
+    };
   }, [facade, level, word]);
 
   const toggleFavorite = useCallback(async () => {

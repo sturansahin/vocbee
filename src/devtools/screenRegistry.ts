@@ -40,8 +40,18 @@ export const SCREEN_REGISTRY: ScreenRegistryEntry[] = [
     sampleParams: { nativeLanguage: 'turkish', targetLanguage: 'english' },
     notes: 'Requires nativeLanguage/targetLanguage route params — sample params supplied.',
   },
-  { id: 'Home', label: 'Home (main learning screen)', component: HomeScreen, notes: 'Reads useAuth/useMonetization from real providers.' },
-  { id: 'Settings', label: 'Settings', component: SettingsScreen, notes: 'Reads useAuth/useMonetization from real providers.' },
+  {
+    id: 'Home',
+    label: 'Home (main learning screen)',
+    component: HomeScreen,
+    notes: 'Reads useAuth/useMonetization from real providers.',
+  },
+  {
+    id: 'Settings',
+    label: 'Settings',
+    component: SettingsScreen,
+    notes: 'Reads useAuth/useMonetization from real providers.',
+  },
   { id: 'Favorites', label: 'Favorites', component: FavoritesScreen },
   {
     id: 'ExampleSentences',

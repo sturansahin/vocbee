@@ -28,23 +28,30 @@ export function buildLevelTestQuestions(
 ): LevelTestQuestion[] {
   if (vocabulary.length < 4) return [];
 
-  return shuffleLevelTestItems(vocabulary, random).slice(0, count).map((word, offset) => {
-    const distractors = shuffleLevelTestItems(
-      vocabulary.filter(candidate => candidate.id !== word.id),
-      random,
-    ).slice(0, 3).map(candidate => candidate.translation);
+  return shuffleLevelTestItems(vocabulary, random)
+    .slice(0, count)
+    .map((word, offset) => {
+      const distractors = shuffleLevelTestItems(
+        vocabulary.filter((candidate) => candidate.id !== word.id),
+        random,
+      )
+        .slice(0, 3)
+        .map((candidate) => candidate.translation);
 
-    return {
-      id: firstQuestionId + offset,
-      word: word.word,
-      correct: word.translation,
-      options: shuffleLevelTestItems([word.translation, ...distractors], random),
-      level,
-    };
-  });
+      return {
+        id: firstQuestionId + offset,
+        word: word.word,
+        correct: word.translation,
+        options: shuffleLevelTestItems([word.translation, ...distractors], random),
+        level,
+      };
+    });
 }
 
-export function detectLevelFromScore(correctAnswers: number, totalQuestions: number): DetectedLevel {
+export function detectLevelFromScore(
+  correctAnswers: number,
+  totalQuestions: number,
+): DetectedLevel {
   const percentage = totalQuestions > 0 ? (correctAnswers / totalQuestions) * 100 : 0;
   if (percentage >= 80) return 'advanced';
   if (percentage >= 50) return 'intermediate';

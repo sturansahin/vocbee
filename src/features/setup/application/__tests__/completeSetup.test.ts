@@ -4,7 +4,11 @@ import { makeCompleteSetup } from '../useCases/completeSetup';
 import type { SetupPreferencesWriter } from '../../data/contracts';
 import type { UserPreferences } from '../../domain/types';
 
-const validPrefs: UserPreferences = { nativeLanguage: 'turkish', targetLanguage: 'english', level: 'beginner' };
+const validPrefs: UserPreferences = {
+  nativeLanguage: 'turkish',
+  targetLanguage: 'english',
+  level: 'beginner',
+};
 
 function makeFakeWriter(): SetupPreferencesWriter {
   return { saveSetupPreferences: jest.fn(async () => undefined) };
@@ -21,7 +25,7 @@ describe('makeCompleteSetup', () => {
     const writer = makeFakeWriter();
     const completeSetup = makeCompleteSetup(writer);
     await expect(
-      completeSetup('uid-1', { nativeLanguage: 'turkish', targetLanguage: 'english', level: 'A1' })
+      completeSetup('uid-1', { nativeLanguage: 'turkish', targetLanguage: 'english', level: 'A1' }),
     ).rejects.toThrow(/invalid language\/level/i);
     expect(writer.saveSetupPreferences).not.toHaveBeenCalled();
   });

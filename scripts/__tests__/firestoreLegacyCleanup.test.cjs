@@ -34,10 +34,42 @@ const v2Progress = {
     version: 2,
     updatedAt: new Date('2026-07-17T12:00:00.000Z'),
   },
-  A2: { level: 'A2', learnedWordIds: [], learnedCount: 0, lastWordId: 0, vocabularySchemaVersion: 2, version: 2, updatedAt: new Date('2026-07-17T12:00:00.000Z') },
-  B1: { level: 'B1', learnedWordIds: [], learnedCount: 0, lastWordId: 0, vocabularySchemaVersion: 2, version: 2, updatedAt: new Date('2026-07-17T12:00:00.000Z') },
-  B2: { level: 'B2', learnedWordIds: [], learnedCount: 0, lastWordId: 0, vocabularySchemaVersion: 2, version: 2, updatedAt: new Date('2026-07-17T12:00:00.000Z') },
-  C1: { level: 'C1', learnedWordIds: [], learnedCount: 0, lastWordId: 0, vocabularySchemaVersion: 2, version: 2, updatedAt: new Date('2026-07-17T12:00:00.000Z') },
+  A2: {
+    level: 'A2',
+    learnedWordIds: [],
+    learnedCount: 0,
+    lastWordId: 0,
+    vocabularySchemaVersion: 2,
+    version: 2,
+    updatedAt: new Date('2026-07-17T12:00:00.000Z'),
+  },
+  B1: {
+    level: 'B1',
+    learnedWordIds: [],
+    learnedCount: 0,
+    lastWordId: 0,
+    vocabularySchemaVersion: 2,
+    version: 2,
+    updatedAt: new Date('2026-07-17T12:00:00.000Z'),
+  },
+  B2: {
+    level: 'B2',
+    learnedWordIds: [],
+    learnedCount: 0,
+    lastWordId: 0,
+    vocabularySchemaVersion: 2,
+    version: 2,
+    updatedAt: new Date('2026-07-17T12:00:00.000Z'),
+  },
+  C1: {
+    level: 'C1',
+    learnedWordIds: [],
+    learnedCount: 0,
+    lastWordId: 0,
+    vocabularySchemaVersion: 2,
+    version: 2,
+    updatedAt: new Date('2026-07-17T12:00:00.000Z'),
+  },
 };
 
 function emulatorOptions(reportPath, overrides = {}) {
@@ -67,11 +99,41 @@ function withEmulatorHost(callback) {
 test('builds the exact v2 equivalence model and rejects lossy legacy data', () => {
   assert.deepEqual(expectedProgressByLevel(legacyProgress), {
     models: [
-      { level: 'A1', learnedWordIds: [1, 2, 3], learnedCount: 3, lastWordId: 3, vocabularySchemaVersion: 2 },
-      { level: 'A2', learnedWordIds: [], learnedCount: 0, lastWordId: 0, vocabularySchemaVersion: 2 },
-      { level: 'B1', learnedWordIds: [], learnedCount: 0, lastWordId: 0, vocabularySchemaVersion: 2 },
-      { level: 'B2', learnedWordIds: [], learnedCount: 0, lastWordId: 0, vocabularySchemaVersion: 2 },
-      { level: 'C1', learnedWordIds: [], learnedCount: 0, lastWordId: 0, vocabularySchemaVersion: 2 },
+      {
+        level: 'A1',
+        learnedWordIds: [1, 2, 3],
+        learnedCount: 3,
+        lastWordId: 3,
+        vocabularySchemaVersion: 2,
+      },
+      {
+        level: 'A2',
+        learnedWordIds: [],
+        learnedCount: 0,
+        lastWordId: 0,
+        vocabularySchemaVersion: 2,
+      },
+      {
+        level: 'B1',
+        learnedWordIds: [],
+        learnedCount: 0,
+        lastWordId: 0,
+        vocabularySchemaVersion: 2,
+      },
+      {
+        level: 'B2',
+        learnedWordIds: [],
+        learnedCount: 0,
+        lastWordId: 0,
+        vocabularySchemaVersion: 2,
+      },
+      {
+        level: 'C1',
+        learnedWordIds: [],
+        learnedCount: 0,
+        lastWordId: 0,
+        vocabularySchemaVersion: 2,
+      },
     ],
     issues: [],
   });
@@ -88,7 +150,7 @@ test('builds the exact v2 equivalence model and rejects lossy legacy data', () =
 test('only marks schemaVersion=2 with byte-equivalent level documents as a cleanup candidate', () => {
   assert.equal(
     assessUserDocument({ schemaVersion: 2, progress: legacyProgress }, v2Progress).status,
-    'candidate'
+    'candidate',
   );
   const noSchema = assessUserDocument({ progress: legacyProgress }, v2Progress);
   assert.equal(noSchema.status, 'mismatch');
@@ -96,7 +158,7 @@ test('only marks schemaVersion=2 with byte-equivalent level documents as a clean
 
   const drifted = assessUserDocument(
     { schemaVersion: 2, progress: legacyProgress },
-    { A1: { ...v2Progress.A1, learnedWordIds: [1, 2], learnedCount: 2 } }
+    { A1: { ...v2Progress.A1, learnedWordIds: [1, 2], learnedCount: 2 } },
   );
   assert.equal(drifted.status, 'mismatch');
   assert.ok(drifted.reasons.includes('progress-by-level-A1-ids-mismatch'));
@@ -107,7 +169,7 @@ test('only marks schemaVersion=2 with byte-equivalent level documents as a clean
       progress: { ...legacyProgress, lastSync: new Date('2026-07-17T12:00:00.000Z') },
       syncMeta: { updatedAt: new Date('2026-07-17T11:59:00.000Z') },
     },
-    v2Progress
+    v2Progress,
   );
   assert.equal(staleSync.status, 'mismatch');
   assert.ok(staleSync.reasons.includes('sync-meta-older-than-legacy-last-sync'));
@@ -118,7 +180,7 @@ test('only marks schemaVersion=2 with byte-equivalent level documents as a clean
       progress: { ...legacyProgress, lastSync: new Date('2026-07-17T12:01:00.000Z') },
       syncMeta: { updatedAt: new Date('2026-07-17T12:02:00.000Z') },
     },
-    v2Progress
+    v2Progress,
   );
   assert.equal(staleLevel.status, 'mismatch');
   assert.ok(staleLevel.reasons.includes('progress-by-level-A1-older-than-legacy'));
@@ -126,45 +188,61 @@ test('only marks schemaVersion=2 with byte-equivalent level documents as a clean
 
 test('CLI parser defaults to dry-run and requires explicit execute inputs', () => {
   const parsed = parseArgs([
-    '--project', 'vocbee-firestore-cleanup-emulator',
-    '--environment', 'emulator',
-    '--report', '/tmp/report.json',
-    '--expected-documents', '0',
+    '--project',
+    'vocbee-firestore-cleanup-emulator',
+    '--environment',
+    'emulator',
+    '--report',
+    '/tmp/report.json',
+    '--expected-documents',
+    '0',
   ]);
   assert.equal(parsed.execute, false);
   assert.equal(parsed.expectedDocuments, 0);
   assert.equal(parsed.batchSize, 200);
-  assert.throws(() => parseArgs(['--unknown']), error => error instanceof SafetyError && error.code === 'INVALID_ARGUMENT');
+  assert.throws(
+    () => parseArgs(['--unknown']),
+    (error) => error instanceof SafetyError && error.code === 'INVALID_ARGUMENT',
+  );
 });
 
 test('target validation rejects an environment/project mismatch before Firestore access', () => {
   withEmulatorHost(() => {
     assert.throws(
       () => validateTarget(emulatorOptions('/tmp/report.json', { project: 'vocbee-6fe24' })),
-      error => error instanceof SafetyError && error.code === 'PROJECT_NOT_ALLOWLISTED'
+      (error) => error instanceof SafetyError && error.code === 'PROJECT_NOT_ALLOWLISTED',
     );
   });
 
   const temporaryRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'vocbee-cleanup-credential-'));
   const credentialPath = path.join(temporaryRoot, 'credential.json');
-  fs.writeFileSync(credentialPath, JSON.stringify({
-    type: 'service_account', client_email: 'cleanup@example.invalid', project_id: 'vocbee-6fe24',
-  }));
+  fs.writeFileSync(
+    credentialPath,
+    JSON.stringify({
+      type: 'service_account',
+      client_email: 'cleanup@example.invalid',
+      project_id: 'vocbee-6fe24',
+    }),
+  );
   assert.throws(
-    () => validateTarget({
-      ...emulatorOptions('/tmp/report.json'),
-      project: 'vocbee-6fe24',
-      environment: 'production',
-      credentialIdentity: 'different@example.invalid',
-    }, { env: { GOOGLE_APPLICATION_CREDENTIALS: credentialPath } }),
-    error => error instanceof SafetyError && error.code === 'CREDENTIAL_MISMATCH'
+    () =>
+      validateTarget(
+        {
+          ...emulatorOptions('/tmp/report.json'),
+          project: 'vocbee-6fe24',
+          environment: 'production',
+          credentialIdentity: 'different@example.invalid',
+        },
+        { env: { GOOGLE_APPLICATION_CREDENTIALS: credentialPath } },
+      ),
+    (error) => error instanceof SafetyError && error.code === 'CREDENTIAL_MISMATCH',
   );
 });
 
 test('destructive gate names every required production blocker', () => {
   const reasons = collectDestructiveGateReasons(
     { project: 'vocbee-6fe24', environment: 'production' },
-    { candidates: 2, mismatched: 1 }
+    { candidates: 2, mismatched: 1 },
   );
   assert.ok(reasons.includes('migration-mismatch-count-nonzero'));
   assert.ok(reasons.includes('restore-verification-missing-or-invalid'));
@@ -179,18 +257,27 @@ test('dry-run reports counts and never calls the destructive store method', asyn
   let deletes = 0;
   const store = {
     async scanUsers(_batchSize, visitor) {
-      await visitor({ id: 'raw-uid-never-reported', data: { schemaVersion: 2, progress: legacyProgress } });
+      await visitor({
+        id: 'raw-uid-never-reported',
+        data: { schemaVersion: 2, progress: legacyProgress },
+      });
       await visitor({ id: 'no-progress', data: { schemaVersion: 2 } });
     },
-    async getProgressByLevel() { return v2Progress; },
-    async deleteLegacyProgressIfStillVerified() { deletes += 1; },
+    async getProgressByLevel() {
+      return v2Progress;
+    },
+    async deleteLegacyProgressIfStillVerified() {
+      deletes += 1;
+    },
   };
 
-  const report = await withEmulatorHost(() => runCleanup({
-    options: emulatorOptions(reportPath),
-    store,
-    repositoryRoot: path.join(temporaryRoot, 'repo'),
-  }));
+  const report = await withEmulatorHost(() =>
+    runCleanup({
+      options: emulatorOptions(reportPath),
+      store,
+      repositoryRoot: path.join(temporaryRoot, 'repo'),
+    }),
+  );
 
   assert.equal(deletes, 0);
   assert.deepEqual(report.counts, {
@@ -218,8 +305,12 @@ test('execute requires the exact second approval and writes only a redacted exte
     async scanUsers(_batchSize, visitor) {
       await visitor({ id: 'sensitive-uid', data: { schemaVersion: 2, progress: legacyProgress } });
     },
-    async getProgressByLevel() { return v2Progress; },
-    async deleteLegacyProgressIfStillVerified() { deletes += 1; },
+    async getProgressByLevel() {
+      return v2Progress;
+    },
+    async deleteLegacyProgressIfStillVerified() {
+      deletes += 1;
+    },
   };
   const approved = emulatorOptions(reportPath, {
     execute: true,
@@ -238,16 +329,22 @@ test('execute requires the exact second approval and writes only a redacted exte
     opsLogPath,
   });
 
-  const report = await withEmulatorHost(() => runCleanup({ options: approved, store, repositoryRoot }));
+  const report = await withEmulatorHost(() =>
+    runCleanup({ options: approved, store, repositoryRoot }),
+  );
   assert.equal(report.destructiveGate.ready, true);
   assert.equal(deletes, 1);
   const opsLog = fs.readFileSync(opsLogPath, 'utf8');
   assert.equal(opsLog.includes('sensitive-uid'), false);
   assert.match(opsLog, /subjectHash/);
 
-  const refused = { ...approved, reportPath: path.join(repositoryRoot, 'refused.json'), expectedDocuments: 2 };
+  const refused = {
+    ...approved,
+    reportPath: path.join(repositoryRoot, 'refused.json'),
+    expectedDocuments: 2,
+  };
   await assert.rejects(
     withEmulatorHost(() => runCleanup({ options: refused, store, repositoryRoot })),
-    error => error instanceof SafetyError && error.code === 'DESTRUCTIVE_GATE_CLOSED'
+    (error) => error instanceof SafetyError && error.code === 'DESTRUCTIVE_GATE_CLOSED',
   );
 });

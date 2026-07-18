@@ -60,13 +60,41 @@ export function DevToolsNavigator({ onClose }: DevToolsNavigatorProps) {
             headerRight: () => <CloseButton onPress={onClose} />,
           }}
         />
-        <Stack.Screen name="ScreenTester" component={ScreenTesterScreen} options={{ title: 'Screen Tester' }} />
-        <Stack.Screen name="ScreenPreview" component={ScreenPreviewScreen} options={{ title: 'Screen Preview' }} />
-        <Stack.Screen name="ScenarioPicker" component={ScenarioPickerScreen} options={{ title: 'Scenarios' }} />
-        <Stack.Screen name="AuthState" component={AuthStateScreen} options={{ title: 'Auth State' }} />
-        <Stack.Screen name="StorageDebug" component={StorageDebugPanel} options={{ title: 'Storage Debug' }} />
-        <Stack.Screen name="NotificationDebug" component={NotificationDebugPanel} options={{ title: 'Notification Debug' }} />
-        <Stack.Screen name="FirestoreModel" component={FirestoreModelScreen} options={{ title: 'Firestore Model' }} />
+        <Stack.Screen
+          name="ScreenTester"
+          component={ScreenTesterScreen}
+          options={{ title: 'Screen Tester' }}
+        />
+        <Stack.Screen
+          name="ScreenPreview"
+          component={ScreenPreviewScreen}
+          options={{ title: 'Screen Preview' }}
+        />
+        <Stack.Screen
+          name="ScenarioPicker"
+          component={ScenarioPickerScreen}
+          options={{ title: 'Scenarios' }}
+        />
+        <Stack.Screen
+          name="AuthState"
+          component={AuthStateScreen}
+          options={{ title: 'Auth State' }}
+        />
+        <Stack.Screen
+          name="StorageDebug"
+          component={StorageDebugPanel}
+          options={{ title: 'Storage Debug' }}
+        />
+        <Stack.Screen
+          name="NotificationDebug"
+          component={NotificationDebugPanel}
+          options={{ title: 'Notification Debug' }}
+        />
+        <Stack.Screen
+          name="FirestoreModel"
+          component={FirestoreModelScreen}
+          options={{ title: 'Firestore Model' }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -74,7 +102,12 @@ export function DevToolsNavigator({ onClose }: DevToolsNavigatorProps) {
 
 function CloseButton({ onPress }: { onPress: () => void }) {
   return (
-    <Pressable onPress={onPress} accessibilityRole="button" testID="devtools-close-button" style={{ paddingHorizontal: 12 }}>
+    <Pressable
+      onPress={onPress}
+      accessibilityRole="button"
+      testID="devtools-close-button"
+      style={{ paddingHorizontal: 12 }}
+    >
       <Text style={{ fontWeight: '700' }}>Close</Text>
     </Pressable>
   );

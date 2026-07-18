@@ -112,7 +112,7 @@ function normalizeOutputLanguage(value = 'turkish') {
   if (byId) return byId;
 
   const label = Object.values(LANGUAGE_LABELS).find(
-    (language) => language.toLowerCase() === normalized
+    (language) => language.toLowerCase() === normalized,
   );
   if (label) return label;
 
@@ -144,9 +144,7 @@ function getAdminApp() {
 
   const projectId = process.env.FIREBASE_PROJECT_ID || process.env.GCLOUD_PROJECT || 'vocbee-6fe24';
   const rawServiceAccount = process.env.FIREBASE_SERVICE_ACCOUNT_JSON;
-  const credential = rawServiceAccount
-    ? cert(JSON.parse(rawServiceAccount))
-    : applicationDefault();
+  const credential = rawServiceAccount ? cert(JSON.parse(rawServiceAccount)) : applicationDefault();
 
   return initializeApp({ credential, projectId });
 }
@@ -170,10 +168,10 @@ function getClientIp(req) {
   const forwardedIp = Array.isArray(forwardedFor) ? forwardedFor[0] : forwardedFor;
 
   return (
-    forwardedIp?.split(',')[0]?.trim()
-    || req.headers['x-real-ip']
-    || req.socket?.remoteAddress
-    || 'unknown'
+    forwardedIp?.split(',')[0]?.trim() ||
+    req.headers['x-real-ip'] ||
+    req.socket?.remoteAddress ||
+    'unknown'
   );
 }
 
@@ -216,7 +214,7 @@ async function checkRateLimit(key) {
 
   const now = Date.now();
   const timestamps = (memoryRateLimit.get(key) || []).filter(
-    (timestamp) => now - timestamp < RATE_LIMIT_WINDOW_SECONDS * 1000
+    (timestamp) => now - timestamp < RATE_LIMIT_WINDOW_SECONDS * 1000,
   );
   if (timestamps.length >= RATE_LIMIT_MAX) {
     throw new HttpError(429, 'RATE_LIMITED');
@@ -309,7 +307,8 @@ async function callGroq(payload) {
         messages: [
           {
             role: 'system',
-            content: 'You are an excellent language teacher. Return exactly the requested JSON object and never include markdown.',
+            content:
+              'You are an excellent language teacher. Return exactly the requested JSON object and never include markdown.',
           },
           {
             role: 'user',

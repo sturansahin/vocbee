@@ -8,7 +8,11 @@ export interface ProgressLocalStore {
   readLastWordId(): Promise<string | null>;
   writeLastWordId(wordId: number): Promise<void>;
   clear(markUnsynced: boolean): Promise<void>;
-  restore(progress: UserProgress | null, currentLevel: string | null, lastWordId?: number | null): Promise<void>;
+  restore(
+    progress: UserProgress | null,
+    currentLevel: string | null,
+    lastWordId?: number | null,
+  ): Promise<void>;
 }
 
 export interface ProgressVocabularySource {

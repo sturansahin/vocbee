@@ -11,7 +11,7 @@ export const PROFILE_AVATAR_IDS = [
   'avatar6',
 ] as const;
 
-export type ProfileAvatarId = typeof PROFILE_AVATAR_IDS[number];
+export type ProfileAvatarId = (typeof PROFILE_AVATAR_IDS)[number];
 export type ProfileAvatarValue = `${typeof PROFILE_AVATAR_PREFIX}${ProfileAvatarId}`;
 
 export interface ProfileAvatarOption {
@@ -29,7 +29,7 @@ const PROFILE_AVATAR_SOURCES: Record<ProfileAvatarId, ImageSourcePropType> = {
   avatar6: require('../../../assets/icons/avatar6.png'),
 };
 
-export const PROFILE_AVATARS: readonly ProfileAvatarOption[] = PROFILE_AVATAR_IDS.map(id => ({
+export const PROFILE_AVATARS: readonly ProfileAvatarOption[] = PROFILE_AVATAR_IDS.map((id) => ({
   id,
   value: `${PROFILE_AVATAR_PREFIX}${id}` as ProfileAvatarValue,
   source: PROFILE_AVATAR_SOURCES[id],
@@ -40,12 +40,12 @@ export function getProfileAvatarByValue(value?: string | null): ProfileAvatarOpt
     return null;
   }
 
-  return PROFILE_AVATARS.find(avatar => avatar.value === value) ?? null;
+  return PROFILE_AVATARS.find((avatar) => avatar.value === value) ?? null;
 }
 
 export function getProfileImageSource(
   image: string | null | undefined,
-  fallbackSource: ImageSourcePropType
+  fallbackSource: ImageSourcePropType,
 ): ImageSourcePropType {
   if (!image) {
     return fallbackSource;

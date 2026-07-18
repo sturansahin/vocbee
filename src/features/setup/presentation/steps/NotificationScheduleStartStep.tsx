@@ -36,16 +36,26 @@ export const NotificationScheduleStartStep: React.FC<NotificationScheduleStartSt
   return (
     <View style={[styles.scrollView, { justifyContent: 'center' }]}>
       <View style={styles.scheduleContainer}>
-        <View style={[styles.scheduleSection, { backgroundColor: colors.surface, borderColor: colors.border }]}>
+        <View
+          style={[
+            styles.scheduleSection,
+            { backgroundColor: colors.surface, borderColor: colors.border },
+          ]}
+        >
           <View style={styles.scheduleLabelRow}>
             <MaterialIcons name="wb-sunny" size={20} color={colors.primary} />
-            <Text style={[styles.scheduleLabel, { color: colors.text }]}>{t('setup.startTime')}</Text>
+            <Text style={[styles.scheduleLabel, { color: colors.text }]}>
+              {t('setup.startTime')}
+            </Text>
           </View>
           <View style={styles.timePickerRow}>
             {/* Hour */}
             <View style={styles.wheelColumn}>
               <View style={styles.wheelScrollWrapper}>
-                <View style={[styles.wheelCenterIndicator, { borderColor: colors.primary }]} pointerEvents="none" />
+                <View
+                  style={[styles.wheelCenterIndicator, { borderColor: colors.primary }]}
+                  pointerEvents="none"
+                />
                 <ScrollView
                   ref={hourScrollRef}
                   style={styles.wheelScroll}
@@ -68,7 +78,10 @@ export const NotificationScheduleStartStep: React.FC<NotificationScheduleStartSt
             {/* Minute */}
             <View style={styles.wheelColumn}>
               <View style={styles.wheelScrollWrapper}>
-                <View style={[styles.wheelCenterIndicator, { borderColor: colors.primary }]} pointerEvents="none" />
+                <View
+                  style={[styles.wheelCenterIndicator, { borderColor: colors.primary }]}
+                  pointerEvents="none"
+                />
                 <ScrollView
                   ref={minuteScrollRef}
                   style={styles.wheelScroll}

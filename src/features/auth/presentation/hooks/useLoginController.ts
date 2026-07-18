@@ -25,14 +25,8 @@ export function useLoginController(screenHeight: number) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
   const lottieRef = useRef<LottieView>(null);
-  const staticAnimation = useMemo(
-    () => createSwarmAnimation([1, 0.78, 0.08, 1], true),
-    []
-  );
-  const animatedAnimation = useMemo(
-    () => createSwarmAnimation([1, 0.78, 0.08, 1], false),
-    []
-  );
+  const staticAnimation = useMemo(() => createSwarmAnimation([1, 0.78, 0.08, 1], true), []);
+  const animatedAnimation = useMemo(() => createSwarmAnimation([1, 0.78, 0.08, 1], false), []);
   const translateX = useRef(new Animated.Value(0)).current;
   const translateY = useRef(new Animated.Value(0)).current;
   const opacity = useRef(new Animated.Value(1)).current;
@@ -85,7 +79,7 @@ export function useLoginController(screenHeight: number) {
     setIsAnimating(true);
     setIsSubmitting(true);
     void signIn(email, password)
-      .then(result => {
+      .then((result) => {
         loginResultRef.current = result;
       })
       .catch((error: unknown) => {
@@ -98,16 +92,14 @@ export function useLoginController(screenHeight: number) {
     lottieRef.current?.play();
     createLoginFlyAwayAnimation(
       { translateX, translateY, opacity, rotation, scale },
-      screenHeight
+      screenHeight,
     ).start(() => {
       animationCompleteRef.current = true;
       finishWhenReady();
     });
   };
 
-  const handleSocialSignIn = async (
-    action: () => Promise<{ setupCompleted: boolean }>
-  ) => {
+  const handleSocialSignIn = async (action: () => Promise<{ setupCompleted: boolean }>) => {
     if (isSubmitting || isAnimating) return;
     setIsSubmitting(true);
     try {

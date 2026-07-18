@@ -59,7 +59,7 @@ export const buildStoredProfileFromAuth = ({
     preferredDisplayName,
     authDisplayName,
     existingProfile?.name,
-    getEmailFallbackName(normalizedEmail)
+    getEmailFallbackName(normalizedEmail),
   );
 
   let image: string | null = null;
@@ -92,12 +92,12 @@ export const buildStoredProfileFromFirestore = ({
     firestoreDisplayName,
     authDisplayName,
     existingProfile?.name,
-    getEmailFallbackName(normalizedEmail)
+    getEmailFallbackName(normalizedEmail),
   );
 
   const image = hasFirestorePhotoURL
-    ? normalizeString(firestorePhotoURL) ?? null
-    : normalizeString(authPhotoURL) ?? existingProfile?.image ?? null;
+    ? (normalizeString(firestorePhotoURL) ?? null)
+    : (normalizeString(authPhotoURL) ?? existingProfile?.image ?? null);
 
   return { name, image, email: normalizedEmail };
 };

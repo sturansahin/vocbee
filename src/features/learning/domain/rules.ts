@@ -8,7 +8,10 @@ import { LEVELS, type Level, type TutorialSwipeDirection } from './types';
  * screens/HomeScreen.tsx (already covered by screens/__tests__/HomeScreen.test.tsx). Only the
  * prompted practice swipes advance the tutorial: step 1 advances on 'right', step 2 on 'left'.
  */
-export function getTutorialSwipeNextStep(step: number, direction: TutorialSwipeDirection): number | null {
+export function getTutorialSwipeNextStep(
+  step: number,
+  direction: TutorialSwipeDirection,
+): number | null {
   if (step === 1 && direction === 'right') {
     return 2;
   }
@@ -36,14 +39,30 @@ export function getNextLevel(level: Level): Level | null {
  */
 export function selectUnlearnedWordIds(allWordIds: number[], learnedWordIds: number[]): number[] {
   const learned = new Set(learnedWordIds);
-  return allWordIds.filter(id => !learned.has(id));
+  return allWordIds.filter((id) => !learned.has(id));
 }
 
 const TTS_LANGUAGE_CODES: Record<string, string> = {
-  amharic: 'am-ET', arabic: 'ar-SA', chinese: 'zh-CN', english: 'en-US', french: 'fr-FR',
-  german: 'de-DE', hindi: 'hi-IN', indonesian: 'id-ID', italian: 'it-IT', japanese: 'ja-JP',
-  korean: 'ko-KR', persian: 'fa-IR', portuguese: 'pt-BR', russian: 'ru-RU', serbian: 'sr-RS',
-  spanish: 'es-ES', swahili: 'sw-KE', thai: 'th-TH', turkish: 'tr-TR', urdu: 'ur-PK',
+  amharic: 'am-ET',
+  arabic: 'ar-SA',
+  chinese: 'zh-CN',
+  english: 'en-US',
+  french: 'fr-FR',
+  german: 'de-DE',
+  hindi: 'hi-IN',
+  indonesian: 'id-ID',
+  italian: 'it-IT',
+  japanese: 'ja-JP',
+  korean: 'ko-KR',
+  persian: 'fa-IR',
+  portuguese: 'pt-BR',
+  russian: 'ru-RU',
+  serbian: 'sr-RS',
+  spanish: 'es-ES',
+  swahili: 'sw-KE',
+  thai: 'th-TH',
+  turkish: 'tr-TR',
+  urdu: 'ur-PK',
   vietnamese: 'vi-VN',
 };
 

@@ -9,8 +9,14 @@ jest.mock('@shared/ui', () => ({ useAlert: () => ({ showAlert: jest.fn() }) }));
 jest.mock('@shared/theme', () => ({
   useTheme: () => ({
     colors: {
-      background: '#fff', text: '#111', textSecondary: '#666', primary: '#ffc814',
-      surface: '#fff', surfaceLight: '#f5f5f5', border: '#ddd', error: '#c00',
+      background: '#fff',
+      text: '#111',
+      textSecondary: '#666',
+      primary: '#ffc814',
+      surface: '#fff',
+      surfaceLight: '#f5f5f5',
+      border: '#ddd',
+      error: '#c00',
     },
     isDarkMode: false,
   }),
@@ -123,7 +129,8 @@ describe('HomeScreen', () => {
 
   it('renders an error state and retries through the facade', async () => {
     const consoleError = jest.spyOn(console, 'error').mockImplementation(() => undefined);
-    const loadSession = jest.fn()
+    const loadSession = jest
+      .fn()
       .mockRejectedValueOnce(new Error('storage unavailable'))
       .mockResolvedValueOnce(readySnapshot);
     const facade = createFacade({ loadSession });

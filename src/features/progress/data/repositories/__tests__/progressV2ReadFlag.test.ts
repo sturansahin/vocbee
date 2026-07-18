@@ -6,36 +6,39 @@
 const mockGetDoc = jest.fn();
 
 jest.mock('firebase/firestore', () => ({
-    doc: jest.fn(),
-    getDoc: (...args: unknown[]) => mockGetDoc(...args),
-    setDoc: jest.fn(),
-    serverTimestamp: jest.fn(),
+  doc: jest.fn(),
+  getDoc: (...args: unknown[]) => mockGetDoc(...args),
+  setDoc: jest.fn(),
+  serverTimestamp: jest.fn(),
 }));
 
 jest.mock('@shared/firebase', () => ({
-    db: {},
+  db: {},
 }));
 
-import { isFirestoreProgressV2ReadEnabled, readProgressByLevelWithFlag } from '../progressV2ReadFlag';
+import {
+  isFirestoreProgressV2ReadEnabled,
+  readProgressByLevelWithFlag,
+} from '../progressV2ReadFlag';
 
 describe('progressV2ReadFlag — safe default-OFF wiring', () => {
-    beforeEach(() => {
-        jest.clearAllMocks();
-        delete process.env.EXPO_PUBLIC_PROGRESS_SYNC_MODE;
-    });
+  beforeEach(() => {
+    jest.clearAllMocks();
+    delete process.env.EXPO_PUBLIC_PROGRESS_SYNC_MODE;
+  });
 
-    it('uses the shared reviewed rollout value', () => {
-        process.env.EXPO_PUBLIC_PROGRESS_SYNC_MODE = 'dual';
-        expect(isFirestoreProgressV2ReadEnabled()).toBe(true);
-    });
+  it('uses the shared reviewed rollout value', () => {
+    process.env.EXPO_PUBLIC_PROGRESS_SYNC_MODE = 'dual';
+    expect(isFirestoreProgressV2ReadEnabled()).toBe(true);
+  });
 
-    it('the flag defaults to disabled', () => {
-        expect(isFirestoreProgressV2ReadEnabled()).toBe(false);
-    });
+  it('the flag defaults to disabled', () => {
+    expect(isFirestoreProgressV2ReadEnabled()).toBe(false);
+  });
 
-    it('readProgressByLevelWithFlag returns null and never touches Firestore when disabled', async () => {
-        const result = await readProgressByLevelWithFlag('user-a', 'A1');
-        expect(result).toBeNull();
-        expect(mockGetDoc).not.toHaveBeenCalled();
-    });
+  it('readProgressByLevelWithFlag returns null and never touches Firestore when disabled', async () => {
+    const result = await readProgressByLevelWithFlag('user-a', 'A1');
+    expect(result).toBeNull();
+    expect(mockGetDoc).not.toHaveBeenCalled();
+  });
 });

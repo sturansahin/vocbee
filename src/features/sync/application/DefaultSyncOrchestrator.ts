@@ -26,7 +26,7 @@ export interface SyncOrchestratorDependencies {
 async function withRetry<T>(
   operation: () => Promise<T>,
   label: string,
-  retries = MAX_RETRIES
+  retries = MAX_RETRIES,
 ): Promise<T> {
   let lastError: unknown;
   for (let attempt = 0; attempt <= retries; attempt += 1) {
@@ -37,9 +37,9 @@ async function withRetry<T>(
       if (attempt < retries) {
         const delay = BASE_DELAY_MS * Math.pow(2, attempt);
         console.warn(
-          `[SyncService] ${label} failed (attempt ${attempt + 1}/${retries + 1}), retrying in ${delay}ms...`
+          `[SyncService] ${label} failed (attempt ${attempt + 1}/${retries + 1}), retrying in ${delay}ms...`,
         );
-        await new Promise<void>(resolve => setTimeout(resolve, delay));
+        await new Promise<void>((resolve) => setTimeout(resolve, delay));
       }
     }
   }
@@ -84,10 +84,12 @@ export class DefaultSyncOrchestrator implements SyncOrchestrator {
           this.dependencies.domains.syncFavorites(userId, deviceId),
         ]);
         const failures = results.filter(
-          (result): result is PromiseRejectedResult => result.status === 'rejected'
+          (result): result is PromiseRejectedResult => result.status === 'rejected',
         );
         if (failures.length > 0) {
-          failures.forEach(result => console.error('[SyncService] Domain sync failed:', result.reason));
+          failures.forEach((result) =>
+            console.error('[SyncService] Domain sync failed:', result.reason),
+          );
           throw new Error('One or more sync domains failed.');
         }
         await this.dependencies.localStore.setLastSyncTime();
@@ -126,7 +128,7 @@ export class DefaultSyncOrchestrator implements SyncOrchestrator {
     userId: string,
     email: string,
     displayName?: string,
-    photoURL?: string | null
+    photoURL?: string | null,
   ): Promise<void> {
     try {
       await this.dependencies.repository.createUserDocument(userId, email, displayName, photoURL);
@@ -146,7 +148,9 @@ export class DefaultSyncOrchestrator implements SyncOrchestrator {
       await this.dependencies.localStore.saveUserData(userData);
       await this.dependencies.domains.cacheRemoteProfile(userId, remote);
       if (hasUnsyncedLocalChanges) {
-        console.warn('[SyncService] Local unsynced changes detected; skipping cloud domain restore.');
+        console.warn(
+          '[SyncService] Local unsynced changes detected; skipping cloud domain restore.',
+        );
         return userData;
       }
 
@@ -161,7 +165,7 @@ export class DefaultSyncOrchestrator implements SyncOrchestrator {
 
   async syncNotificationSettings(
     userId: string,
-    settings: SyncNotificationSettings
+    settings: SyncNotificationSettings,
   ): Promise<void> {
     await withRetry(async () => {
       const deviceId = await this.dependencies.localStore.getDeviceId();

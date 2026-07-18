@@ -14,9 +14,9 @@ import type {
 } from '../domain/types';
 
 export interface NotificationPermissionRepository {
-  getPermissionState(): Promise<NotificationPermissionState>;        // getNotificationPermissionState
-  requestPermission(): Promise<NotificationPermissionState>;         // requestNotificationPermissions
-  hasSeenPrompt(userId: string): Promise<boolean>;                   // @notification_permission_prompted_${uid}
+  getPermissionState(): Promise<NotificationPermissionState>; // getNotificationPermissionState
+  requestPermission(): Promise<NotificationPermissionState>; // requestNotificationPermissions
+  hasSeenPrompt(userId: string): Promise<boolean>; // @notification_permission_prompted_${uid}
   markPromptSeen(userId: string): Promise<void>;
   ensureChannels(): Promise<void>;
 }
@@ -30,15 +30,15 @@ export interface NotificationScheduler {
   cancelAll(): Promise<void>;
   getLastResponse(): Promise<NotificationResponsePayload | null>;
   addResponseListener(
-    listener: (response: NotificationResponsePayload) => void
+    listener: (response: NotificationResponsePayload) => void,
   ): NotificationResponseSubscription;
   clearLastResponse(): Promise<void>;
 }
 
 export interface NotificationTrackingRepository {
-  getTracked(): Promise<TrackedNotification[]>;                      // @tracked_notifications
+  getTracked(): Promise<TrackedNotification[]>; // @tracked_notifications
   saveTracked(notifications: TrackedNotification[]): Promise<void>;
-  getSettings(): Promise<NotificationSettings>;                      // getNotificationSettings
+  getSettings(): Promise<NotificationSettings>; // getNotificationSettings
   saveSettings(settings: NotificationSettings): Promise<void>;
   clearTracked(): Promise<void>;
   setLastForegroundTime(timestamp: number): Promise<void>;
@@ -52,7 +52,7 @@ export interface NotificationTrackingRepository {
 }
 
 export interface NotificationResponseHandler {
-  setPendingWord(word: PendingNotificationWord): Promise<void>;      // @pending_notification_word
+  setPendingWord(word: PendingNotificationWord): Promise<void>; // @pending_notification_word
   getPendingWord(): Promise<PendingNotificationWord | null>;
   clearPendingWord(): Promise<void>;
   consumePendingWord(): Promise<PendingNotificationWord | null>;

@@ -19,7 +19,7 @@ interface ConfirmationCopy {
 
 export function buildAccountConfirmation(
   copy: ConfirmationCopy,
-  onConfirm: () => void
+  onConfirm: () => void,
 ): ConfirmationAlert {
   return {
     title: copy.title,

@@ -7,15 +7,17 @@ import type { FieldValue, Timestamp } from 'firebase/firestore';
 import type { Level } from '../domain/types';
 
 // ─── v2 main user doc (users/{uid}) — must stay compatible with firestore.rules validUserDocument ───
-export type NotificationSettingsDoc = {
-  enabled: boolean;
-  startHour: number;
-  startMinute: number;
-  endHour: number;
-  endMinute: number;
-  frequencyMinutes: number;
-  autoMarkLearned: boolean;
-} | { enabled: false };
+export type NotificationSettingsDoc =
+  | {
+      enabled: boolean;
+      startHour: number;
+      startMinute: number;
+      endHour: number;
+      endMinute: number;
+      frequencyMinutes: number;
+      autoMarkLearned: boolean;
+    }
+  | { enabled: false };
 
 export type StreakDoc = {
   currentStreak: number;
@@ -37,15 +39,15 @@ export type UserDocV2 = {
   email?: string | null;
   photoURL?: string | null;
   createdAt?: Timestamp | FieldValue;
-  lastActiveAt?: Timestamp | FieldValue;           // NEW (07 §3) — must be added to rules hasOnly before write
+  lastActiveAt?: Timestamp | FieldValue; // NEW (07 §3) — must be added to rules hasOnly before write
   setupCompleted?: boolean;
   preferences?: { nativeLanguage: string; targetLanguage: string; level: string };
-  notificationSettings?: NotificationSettingsDoc;  // unchanged, stays on main doc
-  streak?: StreakDoc;                              // small, stays on main doc
-  progressSummary?: ProgressSummaryDoc;            // NEW (07 §3)
+  notificationSettings?: NotificationSettingsDoc; // unchanged, stays on main doc
+  streak?: StreakDoc; // small, stays on main doc
+  progressSummary?: ProgressSummaryDoc; // NEW (07 §3)
   syncMeta?: { version?: number; updatedAt?: Timestamp | FieldValue; updatedByDeviceId?: string };
   lastActiveDeviceId?: string;
-  schemaVersion?: 2;                               // NEW — must be added to rules hasOnly before write
+  schemaVersion?: 2; // NEW — must be added to rules hasOnly before write
   activeLevel?: Level;
   progressMigration?: {
     state: 'backfilled' | 'verified' | 'cleanup-ready';
@@ -63,7 +65,7 @@ export type ProgressByLevelDoc = {
   level: Level;
   learnedWordIds: number[];
   favoriteWordIds?: number[];
-  wrongWordIds?: number[];                 // OPTIONAL — only if SRS ships (not now)
+  wrongWordIds?: number[]; // OPTIONAL — only if SRS ships (not now)
   lastWordId: number;
   learnedCount: number;
   vocabularySchemaVersion: number;
@@ -78,10 +80,10 @@ export type ProgressByLevelWriteModel = Omit<ProgressByLevelDoc, 'updatedAt'>;
 
 // ─── LEGACY (current production shape) — source: firestore.rules validProgress + SyncService + progressService ───
 export type LegacyProgressDoc = {
-  currentLevel?: string;                       // 'A1'..'C1'
-  learnedWords?: Record<string, number[]>;     // { A1: [1,2,3], A2: [...] }  ← the growing field
+  currentLevel?: string; // 'A1'..'C1'
+  learnedWords?: Record<string, number[]>; // { A1: [1,2,3], A2: [...] }  ← the growing field
   lastWordIndex?: number;
-  lastSync?: unknown;                          // Timestamp | string (inconsistent — 07 §2)
+  lastSync?: unknown; // Timestamp | string (inconsistent — 07 §2)
 };
 
 // AsyncStorage legacy shapes (services/storage.ts UserProgress + services/progressService.ts UserProgress)

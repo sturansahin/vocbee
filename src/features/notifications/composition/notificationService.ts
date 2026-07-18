@@ -1,5 +1,10 @@
 import { LEVELS, getStoredVocabulary, type Level } from '@features/vocabulary';
-import { getCurrentLevel, getLearnedWords, markWordAsLearned, unmarkWord } from '@features/progress';
+import {
+  getCurrentLevel,
+  getLearnedWords,
+  markWordAsLearned,
+  unmarkWord,
+} from '@features/progress';
 import { getStreakState, isStreakCompletedToday } from '@features/streak';
 import i18n from '@shared/i18n';
 
@@ -27,8 +32,9 @@ configureNotificationApplication({
   markWordAsLearned,
   unmarkWord,
   getStreakState,
-  isStreakCompletedToday: (state, now) => isStreakCompletedToday(state as Awaited<ReturnType<typeof getStreakState>>, now),
-  translate: key => i18n.t(key),
+  isStreakCompletedToday: (state, now) =>
+    isStreakCompletedToday(state as Awaited<ReturnType<typeof getStreakState>>, now),
+  translate: (key) => i18n.t(key),
 });
 
 export const notificationFacade = new DefaultNotificationFacade();

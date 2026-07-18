@@ -4,7 +4,7 @@ import type { UserProfileRepository } from '../data/contracts';
 export const createUserProfileRepository = (): UserProfileRepository => {
   // Keep the SDK-heavy implementation out of consumers that only import profile domain rules.
   // The require executes only at the application composition boundary.
-  const { FirestoreUserProfileRepository } = require('../data/repositories/FirestoreUserProfileRepository') as
-    typeof import('../data/repositories/FirestoreUserProfileRepository');
+  const { FirestoreUserProfileRepository } =
+    require('../data/repositories/FirestoreUserProfileRepository') as typeof import('../data/repositories/FirestoreUserProfileRepository');
   return new FirestoreUserProfileRepository();
 };

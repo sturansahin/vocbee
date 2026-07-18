@@ -1,6 +1,10 @@
 import type { StreakSummary, StreakState } from '@features/streak';
 import type { Level, VocabularyWord } from '@features/vocabulary';
-import type { ReviewPromptContext, ReviewPromptDecision, StoreReviewOpenResult } from '@features/review';
+import type {
+  ReviewPromptContext,
+  ReviewPromptDecision,
+  StoreReviewOpenResult,
+} from '@features/review';
 
 export interface PendingLearningWord {
   wordId: number;

@@ -25,7 +25,10 @@ export interface SetupCompletionData {
  *   !!(setupCompleted || (preferences.nativeLanguage && preferences.targetLanguage))
  */
 export function hasCompletedSetup(data: SetupCompletionData | null | undefined): boolean {
-  return !!(data?.setupCompleted || (data?.preferences?.nativeLanguage && data?.preferences?.targetLanguage));
+  return !!(
+    data?.setupCompleted ||
+    (data?.preferences?.nativeLanguage && data?.preferences?.targetLanguage)
+  );
 }
 
 export function getAuthErrorMessage(errorCode: string): string {

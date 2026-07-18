@@ -8,9 +8,18 @@ import { Platform } from 'react-native';
 import * as NavigationBar from 'expo-navigation-bar';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
-import { useFonts, SpecialGothicExpandedOne_400Regular } from '@expo-google-fonts/special-gothic-expanded-one';
+import {
+  useFonts,
+  SpecialGothicExpandedOne_400Regular,
+} from '@expo-google-fonts/special-gothic-expanded-one';
 import { RubikMonoOne_400Regular } from '@expo-google-fonts/rubik-mono-one';
-import { MaterialIcons, MaterialCommunityIcons, FontAwesome5, Feather, Ionicons } from '@expo/vector-icons';
+import {
+  MaterialIcons,
+  MaterialCommunityIcons,
+  FontAwesome5,
+  Feather,
+  Ionicons,
+} from '@expo/vector-icons';
 
 export function useAppBootstrap(): boolean {
   // Load custom fonts
@@ -41,7 +50,6 @@ export function useAppBootstrap(): boolean {
     }
 
     loadIconFonts();
-
   }, []);
 
   // Set Android navigation bar to transparent

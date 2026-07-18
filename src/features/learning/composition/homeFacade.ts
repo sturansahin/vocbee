@@ -55,14 +55,24 @@ export const homeFacade = new DefaultHomeFacade(new ExpoHomePlatformGateway(), {
   isFavorite,
   addFavorite: addToFavorites,
   removeFavorite: removeFromFavorites,
-  loadInterstitial: async () => { await loadInterstitial(); },
-  showInterstitial: async () => { await showInterstitial(); },
+  loadInterstitial: async () => {
+    await loadInterstitial();
+  },
+  showInterstitial: async () => {
+    await showInterstitial();
+  },
   bannerAdUnitId: AD_IDS.BANNER,
   getReviewDecision: getAutomaticReviewPromptDecision,
-  markReviewPromptPresented: async () => { await markAutomaticReviewPromptPresented('satisfactionShown'); },
+  markReviewPromptPresented: async () => {
+    await markAutomaticReviewPromptPresented('satisfactionShown');
+  },
   requestNativeReview,
-  dismissReviewPrompt: async () => { await dismissReviewPrompt(); },
-  recordSatisfactionRating: async rating => { await recordSatisfactionRating(rating); },
+  dismissReviewPrompt: async () => {
+    await dismissReviewPrompt();
+  },
+  recordSatisfactionRating: async (rating) => {
+    await recordSatisfactionRating(rating);
+  },
   openStoreReviewPage,
   openReviewFeedbackEmail,
 });

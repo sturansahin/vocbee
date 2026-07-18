@@ -2,11 +2,11 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { UserProfileRepository } from '@features/profile';
 
 const mockSaveNotificationSettings = jest.fn(
-  async (_settings: unknown, _skipScheduling?: boolean) => undefined
+  async (_settings: unknown, _skipScheduling?: boolean) => undefined,
 );
 const mockScheduleVocabularyNotifications = jest.fn(async () => undefined);
 const mockGenerateVocabulary = jest.fn(
-  async (_nativeLanguage: string, _targetLanguage: string) => undefined
+  async (_nativeLanguage: string, _targetLanguage: string) => undefined,
 );
 const mockResetProgress = jest.fn(async () => undefined);
 const mockSetCurrentLevel = jest.fn(async (_level: string) => undefined);
@@ -96,7 +96,7 @@ describe('LegacySetupPlatformGateway', () => {
     });
     expect(mockSaveNotificationSettings).toHaveBeenCalledWith(
       expect.objectContaining({ enabled: true, frequencyMinutes: 120 }),
-      true
+      true,
     );
   });
 

@@ -9,6 +9,6 @@ import { adMobRepository } from '../data/repositories/AdMobRepository';
 import { MonetizationFacade } from './MonetizationFacade';
 
 export const monetizationFacade = new MonetizationFacade({
-    revenueCatRepository,
-    adMobRepository,
+  revenueCatRepository,
+  adMobRepository,
 });

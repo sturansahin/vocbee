@@ -14,12 +14,19 @@ jest.mock('@features/auth', () => ({
   SignUpScreen: () => null,
 }));
 jest.mock('@features/favorites', () => ({ FavoritesScreen: () => null }));
-jest.mock('@features/learning', () => ({ HomeScreen: () => null, ExampleSentencesScreen: () => null }));
+jest.mock('@features/learning', () => ({
+  HomeScreen: () => null,
+  ExampleSentencesScreen: () => null,
+}));
 jest.mock('@features/onboarding', () => () => null);
 jest.mock('@features/settings', () => () => null);
 jest.mock('@features/setup', () => ({ LevelTestScreen: () => null, SetupScreen: () => null }));
 
-import { SCREEN_REGISTRY, assertNoDuplicateScreenIds, ScreenRegistryEntry } from '../screenRegistry';
+import {
+  SCREEN_REGISTRY,
+  assertNoDuplicateScreenIds,
+  ScreenRegistryEntry,
+} from '../screenRegistry';
 
 describe('screenRegistry', () => {
   it('has no duplicate ids', () => {
@@ -49,14 +56,14 @@ describe('screenRegistry', () => {
   });
 
   it('contains the expected real production screens (spot check)', () => {
-    const ids = SCREEN_REGISTRY.map(e => e.id);
+    const ids = SCREEN_REGISTRY.map((e) => e.id);
     expect(ids).toEqual(
-      expect.arrayContaining(['Onboarding', 'Login', 'SignUp', 'Home', 'Settings', 'Favorites'])
+      expect.arrayContaining(['Onboarding', 'Login', 'SignUp', 'Home', 'Settings', 'Favorites']),
     );
   });
 
   it('registry size matches the number of unique ids (no accidental duplicates via arrayContaining check)', () => {
-    const ids = SCREEN_REGISTRY.map(e => e.id);
+    const ids = SCREEN_REGISTRY.map((e) => e.id);
     expect(new Set(ids).size).toBe(ids.length);
   });
 });

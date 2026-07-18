@@ -45,7 +45,7 @@ export class FirestoreSyncRepository implements SyncRepository {
 
     const v2Snapshot = await getDocs(collection(db, 'users', userId, 'progressByLevel'));
     const levels = v2Snapshot.docs
-      .map(levelSnapshot => this.parseLevelProgress(levelSnapshot.id, levelSnapshot.data()))
+      .map((levelSnapshot) => this.parseLevelProgress(levelSnapshot.id, levelSnapshot.data()))
       .filter((level): level is LevelProgress => level !== null);
     const activeLevel = isLevel(remote.activeLevel)
       ? remote.activeLevel
@@ -53,17 +53,20 @@ export class FirestoreSyncRepository implements SyncRepository {
         ? remote.progress.currentLevel
         : 'A1';
     const legacyUpdatedAt = this.timestampMillis(remote.progress?.lastSync);
-    const oldestV2UpdatedAt = v2Snapshot.docs.length > 0
-      ? Math.min(...v2Snapshot.docs.map(
-        levelSnapshot => this.timestampMillis(levelSnapshot.data().updatedAt)
-      ))
-      : 0;
-    const needsRepair = !!remote.progress && (
-      remote.schemaVersion !== PROGRESS_SCHEMA_VERSION
-      || v2Snapshot.docs.length !== LEVELS.length
-      || levels.length !== LEVELS.length
-      || legacyUpdatedAt > oldestV2UpdatedAt
-    );
+    const oldestV2UpdatedAt =
+      v2Snapshot.docs.length > 0
+        ? Math.min(
+            ...v2Snapshot.docs.map((levelSnapshot) =>
+              this.timestampMillis(levelSnapshot.data().updatedAt),
+            ),
+          )
+        : 0;
+    const needsRepair =
+      !!remote.progress &&
+      (remote.schemaVersion !== PROGRESS_SCHEMA_VERSION ||
+        v2Snapshot.docs.length !== LEVELS.length ||
+        levels.length !== LEVELS.length ||
+        legacyUpdatedAt > oldestV2UpdatedAt);
 
     if (needsRepair && remote.progress) {
       return this.reconcileProgressV2(userId, remote.lastActiveDeviceId ?? 'legacy-reconcile');
@@ -121,26 +124,32 @@ export class FirestoreSyncRepository implements SyncRepository {
     await this.commitDualWrite(userId, data, plan, deviceId, timestamp);
   }
 
-  private parseLevelProgress(documentId: string, data: Record<string, unknown>): LevelProgress | null {
-    if (!isLevel(documentId) || data.level !== documentId || !Array.isArray(data.learnedWordIds)) return null;
+  private parseLevelProgress(
+    documentId: string,
+    data: Record<string, unknown>,
+  ): LevelProgress | null {
+    if (!isLevel(documentId) || data.level !== documentId || !Array.isArray(data.learnedWordIds))
+      return null;
     const learnedWordIds = data.learnedWordIds.filter(
-      (id): id is number => typeof id === 'number' && Number.isSafeInteger(id) && id >= 0
+      (id): id is number => typeof id === 'number' && Number.isSafeInteger(id) && id >= 0,
     );
     if (
-      learnedWordIds.length !== data.learnedWordIds.length
-      || new Set(learnedWordIds).size !== learnedWordIds.length
-      || data.learnedCount !== learnedWordIds.length
-      || data.version !== PROGRESS_BY_LEVEL_DOC_VERSION
-    ) return null;
+      learnedWordIds.length !== data.learnedWordIds.length ||
+      new Set(learnedWordIds).size !== learnedWordIds.length ||
+      data.learnedCount !== learnedWordIds.length ||
+      data.version !== PROGRESS_BY_LEVEL_DOC_VERSION
+    )
+      return null;
     if (
-      typeof data.lastWordId !== 'number'
-      || !Number.isSafeInteger(data.lastWordId)
-      || data.lastWordId < 0
-      || typeof data.vocabularySchemaVersion !== 'number'
-      || !Number.isSafeInteger(data.vocabularySchemaVersion)
-      || data.vocabularySchemaVersion < 1
-      || this.timestampMillis(data.updatedAt) === 0
-    ) return null;
+      typeof data.lastWordId !== 'number' ||
+      !Number.isSafeInteger(data.lastWordId) ||
+      data.lastWordId < 0 ||
+      typeof data.vocabularySchemaVersion !== 'number' ||
+      !Number.isSafeInteger(data.vocabularySchemaVersion) ||
+      data.vocabularySchemaVersion < 1 ||
+      this.timestampMillis(data.updatedAt) === 0
+    )
+      return null;
     return {
       level: documentId,
       learnedWordIds,
@@ -151,9 +160,12 @@ export class FirestoreSyncRepository implements SyncRepository {
   }
 
   private buildLegacyRepairPlan(
-    progress: NonNullable<RemoteUserDocument['progress']>
+    progress: NonNullable<RemoteUserDocument['progress']>,
   ): ProgressV2WritePlan | null {
-    if (!isLevel(progress.currentLevel) || !this.isStrictLegacyLearnedWords(progress.learnedWords)) {
+    if (
+      !isLevel(progress.currentLevel) ||
+      !this.isStrictLegacyLearnedWords(progress.learnedWords)
+    ) {
       return null;
     }
     const lastWordId = progress.lastWordIndex ?? 0;
@@ -170,9 +182,12 @@ export class FirestoreSyncRepository implements SyncRepository {
     if (!value || typeof value !== 'object' || Array.isArray(value)) return false;
     const entries = Object.entries(value);
     if (entries.some(([level]) => !isLevel(level))) return false;
-    return entries.every(([, ids]) => Array.isArray(ids)
-      && ids.every(id => typeof id === 'number' && Number.isSafeInteger(id) && id >= 0)
-      && new Set(ids).size === ids.length);
+    return entries.every(
+      ([, ids]) =>
+        Array.isArray(ids) &&
+        ids.every((id) => typeof id === 'number' && Number.isSafeInteger(id) && id >= 0) &&
+        new Set(ids).size === ids.length,
+    );
   }
 
   private timestampMillis(value: unknown): number {
@@ -201,7 +216,7 @@ export class FirestoreSyncRepository implements SyncRepository {
     mainData: Record<string, unknown>,
     plan: ProgressV2WritePlan,
     deviceId: string,
-    timestamp: unknown
+    timestamp: unknown,
   ): Promise<void> {
     const batch = writeBatch(db);
     batch.set(doc(db, 'users', userId), mainData, { merge: true });
@@ -209,27 +224,34 @@ export class FirestoreSyncRepository implements SyncRepository {
       batch.set(
         doc(db, 'users', userId, 'progressByLevel', level.level),
         this.levelPayload(level, deviceId, timestamp),
-        { merge: true }
+        { merge: true },
       );
     }
     await batch.commit();
   }
 
-  private async reconcileProgressV2(userId: string, fallbackDeviceId: string): Promise<RemoteUserDocument | null> {
-    return runTransaction(db, async transaction => {
+  private async reconcileProgressV2(
+    userId: string,
+    fallbackDeviceId: string,
+  ): Promise<RemoteUserDocument | null> {
+    return runTransaction(db, async (transaction) => {
       const userReference = doc(db, 'users', userId);
       const userSnapshot = await transaction.get(userReference);
       if (!userSnapshot.exists()) return null;
 
       const currentRemote = userSnapshot.data() as RemoteUserDocument;
       if (!currentRemote.progress) return currentRemote;
-      const levelReferences = LEVELS.map(level => doc(db, 'users', userId, 'progressByLevel', level));
-      const levelSnapshots = await Promise.all(levelReferences.map(reference => transaction.get(reference)));
-      const existingLevelCount = levelSnapshots.filter(snapshot => snapshot.exists()).length;
+      const levelReferences = LEVELS.map((level) =>
+        doc(db, 'users', userId, 'progressByLevel', level),
+      );
+      const levelSnapshots = await Promise.all(
+        levelReferences.map((reference) => transaction.get(reference)),
+      );
+      const existingLevelCount = levelSnapshots.filter((snapshot) => snapshot.exists()).length;
       const levels = levelSnapshots
-        .map((snapshot, index) => snapshot.exists()
-          ? this.parseLevelProgress(LEVELS[index], snapshot.data())
-          : null)
+        .map((snapshot, index) =>
+          snapshot.exists() ? this.parseLevelProgress(LEVELS[index], snapshot.data()) : null,
+        )
         .filter((level): level is LevelProgress => level !== null);
       const activeLevel = isLevel(currentRemote.activeLevel)
         ? currentRemote.activeLevel
@@ -237,15 +259,19 @@ export class FirestoreSyncRepository implements SyncRepository {
           ? currentRemote.progress.currentLevel
           : 'A1';
       const legacyUpdatedAt = this.timestampMillis(currentRemote.progress.lastSync);
-      const oldestV2UpdatedAt = existingLevelCount > 0
-        ? Math.min(...levelSnapshots
-          .filter(snapshot => snapshot.exists())
-          .map(snapshot => this.timestampMillis(snapshot.data().updatedAt)))
-        : 0;
-      const stillNeedsRepair = currentRemote.schemaVersion !== PROGRESS_SCHEMA_VERSION
-        || existingLevelCount !== LEVELS.length
-        || levels.length !== LEVELS.length
-        || legacyUpdatedAt > oldestV2UpdatedAt;
+      const oldestV2UpdatedAt =
+        existingLevelCount > 0
+          ? Math.min(
+              ...levelSnapshots
+                .filter((snapshot) => snapshot.exists())
+                .map((snapshot) => this.timestampMillis(snapshot.data().updatedAt)),
+            )
+          : 0;
+      const stillNeedsRepair =
+        currentRemote.schemaVersion !== PROGRESS_SCHEMA_VERSION ||
+        existingLevelCount !== LEVELS.length ||
+        levels.length !== LEVELS.length ||
+        legacyUpdatedAt > oldestV2UpdatedAt;
 
       if (!stillNeedsRepair) {
         const restored = progressV2LevelsToLegacy(activeLevel, levels);
@@ -256,18 +282,20 @@ export class FirestoreSyncRepository implements SyncRepository {
       if (!plan) return currentRemote;
       const timestamp = serverTimestamp();
       const deviceId = currentRemote.lastActiveDeviceId ?? fallbackDeviceId;
-      transaction.set(userReference, {
-        activeLevel: plan.activeLevel,
-        schemaVersion: PROGRESS_SCHEMA_VERSION,
-        lastActiveAt: timestamp,
-        progressSummary: { ...plan.summary, updatedAt: timestamp },
-      }, { merge: true });
+      transaction.set(
+        userReference,
+        {
+          activeLevel: plan.activeLevel,
+          schemaVersion: PROGRESS_SCHEMA_VERSION,
+          lastActiveAt: timestamp,
+          progressSummary: { ...plan.summary, updatedAt: timestamp },
+        },
+        { merge: true },
+      );
       plan.levels.forEach((level, index) => {
-        transaction.set(
-          levelReferences[index],
-          this.levelPayload(level, deviceId, timestamp),
-          { merge: true }
-        );
+        transaction.set(levelReferences[index], this.levelPayload(level, deviceId, timestamp), {
+          merge: true,
+        });
       });
       const restored = progressV2LevelsToLegacy(plan.activeLevel, plan.levels);
       return { ...currentRemote, progressV2: { ...restored, source: 'legacy-reconciled' } };
@@ -278,7 +306,7 @@ export class FirestoreSyncRepository implements SyncRepository {
     userId: string,
     email: string,
     displayName?: string,
-    photoURL?: string | null
+    photoURL?: string | null,
   ): Promise<void> {
     const userRef = doc(db, 'users', userId);
     const snapshot = await getDoc(userRef);
@@ -299,7 +327,7 @@ export class FirestoreSyncRepository implements SyncRepository {
   async saveNotificationSettings(
     userId: string,
     settings: SyncNotificationSettings,
-    deviceId: string
+    deviceId: string,
   ): Promise<void> {
     await setDoc(
       doc(db, 'users', userId),
@@ -311,14 +339,14 @@ export class FirestoreSyncRepository implements SyncRepository {
           updatedByDeviceId: deviceId,
         },
       },
-      { merge: true }
+      { merge: true },
     );
   }
 
   async saveAuthProfile(
     userId: string,
     profile: AuthProfileSyncInput,
-    deviceId: string
+    deviceId: string,
   ): Promise<void> {
     const profileData: Record<string, string | null> = { email: profile.email };
     if (typeof profile.displayName === 'string' && profile.displayName.trim()) {
@@ -340,7 +368,7 @@ export class FirestoreSyncRepository implements SyncRepository {
           updatedByDeviceId: deviceId,
         },
       },
-      { merge: true }
+      { merge: true },
     );
   }
 }

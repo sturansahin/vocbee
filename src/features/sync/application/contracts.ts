@@ -15,12 +15,12 @@ export interface SyncRepository {
     userId: string,
     email: string,
     displayName?: string,
-    photoURL?: string | null
+    photoURL?: string | null,
   ): Promise<void>;
   saveNotificationSettings(
     userId: string,
     settings: SyncNotificationSettings,
-    deviceId: string
+    deviceId: string,
   ): Promise<void>;
   saveAuthProfile(userId: string, profile: AuthProfileSyncInput, deviceId: string): Promise<void>;
 }
@@ -51,7 +51,7 @@ export interface SyncOrchestrator {
     userId: string,
     email: string,
     displayName?: string,
-    photoURL?: string | null
+    photoURL?: string | null,
   ): Promise<void>;
   fetchAndSaveUserData(userId: string): Promise<UserData | null>;
   syncNotificationSettings(userId: string, settings: SyncNotificationSettings): Promise<void>;

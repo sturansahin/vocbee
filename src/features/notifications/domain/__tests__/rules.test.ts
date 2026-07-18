@@ -78,10 +78,12 @@ describe('notification scheduling plan', () => {
     const times = buildVocabularyScheduleTimes(settings, now, 10);
     expect(times).toHaveLength(10);
     expect(new Date(times[0]).getHours()).toBe(9);
-    expect(times.every(time => {
-      const hour = new Date(time).getHours();
-      return hour >= 9 && hour <= 21;
-    })).toBe(true);
+    expect(
+      times.every((time) => {
+        const hour = new Date(time).getHours();
+        return hour >= 9 && hour <= 21;
+      }),
+    ).toBe(true);
   });
 
   it('returns no slots when capacity is zero', () => {
@@ -111,22 +113,19 @@ describe('notification scheduling plan', () => {
       endHour: 6,
       frequencyMinutes: 120,
     });
-    const times = buildVocabularyScheduleTimes(
-      overnight,
-      new Date(2026, 3, 12, 21, 0, 0),
-      5
-    );
-    expect(times.map(time => new Date(time).getHours())).toEqual([22, 0, 2, 4, 6]);
+    const times = buildVocabularyScheduleTimes(overnight, new Date(2026, 3, 12, 21, 0, 0), 5);
+    expect(times.map((time) => new Date(time).getHours())).toEqual([22, 0, 2, 4, 6]);
   });
 
   it('moves a pre-window refill to today start and leaves full-day cadence unchanged', () => {
-    const beforeStart = getNextVocabularyRefillTime(
-      new Date(2026, 3, 12, 4, 0, 0),
-      settings
-    );
+    const beforeStart = getNextVocabularyRefillTime(new Date(2026, 3, 12, 4, 0, 0), settings);
     expect(beforeStart.getHours()).toBe(9);
 
-    const fullDay = normalizeNotificationSettings({ startHour: 0, endHour: 0, frequencyMinutes: 60 });
+    const fullDay = normalizeNotificationSettings({
+      startHour: 0,
+      endHour: 0,
+      frequencyMinutes: 60,
+    });
     const fullDayNext = getNextVocabularyRefillTime(new Date(2026, 3, 12, 23, 0, 0), fullDay);
     expect(fullDayNext.getDate()).toBe(13);
     expect(fullDayNext.getHours()).toBe(0);
@@ -135,13 +134,15 @@ describe('notification scheduling plan', () => {
 
 describe('settings, frequency and identifier rules', () => {
   it('normalizes missing/non-finite settings and floors frequency', () => {
-    expect(normalizeNotificationSettings({
-      frequencyMinutes: 30,
-      startHour: Number.NaN,
-      startMinute: Number.NaN,
-      endHour: Number.NaN,
-      endMinute: Number.NaN,
-    })).toMatchObject({
+    expect(
+      normalizeNotificationSettings({
+        frequencyMinutes: 30,
+        startHour: Number.NaN,
+        startMinute: Number.NaN,
+        endHour: Number.NaN,
+        endMinute: Number.NaN,
+      }),
+    ).toMatchObject({
       frequencyMinutes: 60,
       startHour: 9,
       startMinute: 0,
@@ -192,7 +193,10 @@ describe('pending word serialization', () => {
   });
   it('parses a legacy JSON payload with a string wordId (parseInt fallback)', () => {
     expect(parsePendingWord(JSON.stringify({ wordId: '42' }))).toEqual({ wordId: 42 });
-    expect(parsePendingWord(JSON.stringify({ wordId: '42', level: 'B1' }))).toEqual({ wordId: 42, level: 'B1' });
+    expect(parsePendingWord(JSON.stringify({ wordId: '42', level: 'B1' }))).toEqual({
+      wordId: 42,
+      level: 'B1',
+    });
   });
   it('parses a legacy plain-numeric-string payload (pre-JSON format)', () => {
     expect(parsePendingWord('42')).toEqual({ wordId: 42 });

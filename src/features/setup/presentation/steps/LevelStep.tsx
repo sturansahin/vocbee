@@ -40,7 +40,10 @@ export const LevelStep: React.FC<LevelStepProps> = ({
             style={[
               styles.levelItem,
               { backgroundColor: colors.surface, borderColor: colors.border },
-              selectedLevel === lvl.id && [styles.levelItemSelected, { borderColor: colors.primary }],
+              selectedLevel === lvl.id && [
+                styles.levelItemSelected,
+                { borderColor: colors.primary },
+              ],
             ]}
           >
             <View style={styles.levelRow}>
@@ -48,7 +51,10 @@ export const LevelStep: React.FC<LevelStepProps> = ({
                 style={[
                   styles.levelRadio,
                   { borderColor: colors.border },
-                  selectedLevel === lvl.id && [styles.levelRadioSelected, { borderColor: colors.primary }],
+                  selectedLevel === lvl.id && [
+                    styles.levelRadioSelected,
+                    { borderColor: colors.primary },
+                  ],
                 ]}
               >
                 {selectedLevel === lvl.id && (
@@ -57,12 +63,16 @@ export const LevelStep: React.FC<LevelStepProps> = ({
               </View>
               <View style={styles.levelContent}>
                 <View style={styles.levelHeader}>
-                  <Text style={[styles.levelTitle, { color: colors.text }]}>{t(`level.${lvl.id}`)}</Text>
+                  <Text style={[styles.levelTitle, { color: colors.text }]}>
+                    {t(`level.${lvl.id}`)}
+                  </Text>
                   <View style={[styles.levelBadge, { backgroundColor: `${colors.primary}33` }]}>
                     <Text style={[styles.levelRange, { color: colors.primary }]}>{lvl.range}</Text>
                   </View>
                 </View>
-                <Text style={[styles.levelDesc, { color: colors.textSecondary }]}>{t(`level.${lvl.id}Desc`)}</Text>
+                <Text style={[styles.levelDesc, { color: colors.textSecondary }]}>
+                  {t(`level.${lvl.id}Desc`)}
+                </Text>
               </View>
             </View>
           </TouchableOpacity>
@@ -71,7 +81,9 @@ export const LevelStep: React.FC<LevelStepProps> = ({
 
       <TouchableOpacity style={styles.testLink} onPress={onPressTakeTest}>
         <MaterialIcons name="quiz" size={20} color={colors.textSecondary} />
-        <Text style={[styles.testLinkText, { color: colors.textSecondary }]}>{t('setup.takeTest')}</Text>
+        <Text style={[styles.testLinkText, { color: colors.textSecondary }]}>
+          {t('setup.takeTest')}
+        </Text>
       </TouchableOpacity>
     </ScrollView>
   );

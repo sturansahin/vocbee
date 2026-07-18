@@ -42,7 +42,11 @@ export class FirestoreUserProfileRepository implements UserProfileRepository {
   async fetchProfileFromRemote(uid: string): Promise<Profile | null> {
     const snap = await getDoc(doc(db, 'users', uid));
     if (!snap.exists()) return null;
-    const data = snap.data() as { displayName?: string | null; email?: string | null; photoURL?: string | null };
+    const data = snap.data() as {
+      displayName?: string | null;
+      email?: string | null;
+      photoURL?: string | null;
+    };
     return { name: data.displayName ?? '', image: data.photoURL ?? null, email: data.email ?? '' };
   }
 
@@ -54,10 +58,7 @@ export class FirestoreUserProfileRepository implements UserProfileRepository {
     await setDoc(doc(db, 'users', uid), docPatch, { merge: true }); // merge: legacy fields preserved
   }
 
-  async saveSetupCompletion(
-    uid: string,
-    completion: SetupProfileCompletion
-  ): Promise<void> {
+  async saveSetupCompletion(uid: string, completion: SetupProfileCompletion): Promise<void> {
     const timestamp = serverTimestamp();
     const userReference = doc(db, 'users', uid);
     const legacyData = {
@@ -82,26 +83,39 @@ export class FirestoreUserProfileRepository implements UserProfileRepository {
       vocabularySchemaVersion: VOCABULARY_SCHEMA_VERSION,
     });
     const batch = writeBatch(db);
-    batch.set(userReference, {
-      ...legacyData,
-      activeLevel: plan.activeLevel,
-      schemaVersion: PROGRESS_SCHEMA_VERSION,
-      lastActiveAt: timestamp,
-      progressSummary: { ...plan.summary, updatedAt: timestamp },
-      syncMeta: { version: 2, updatedAt: timestamp, updatedByDeviceId: 'setup' },
-    }, { merge: true });
+    batch.set(
+      userReference,
+      {
+        ...legacyData,
+        activeLevel: plan.activeLevel,
+        schemaVersion: PROGRESS_SCHEMA_VERSION,
+        lastActiveAt: timestamp,
+        progressSummary: { ...plan.summary, updatedAt: timestamp },
+        syncMeta: { version: 2, updatedAt: timestamp, updatedByDeviceId: 'setup' },
+      },
+      { merge: true },
+    );
     for (const level of plan.levels) {
-      batch.set(doc(db, 'users', uid, 'progressByLevel', level.level), {
-        ...level,
-        updatedAt: timestamp,
-        updatedByDeviceId: 'setup',
-        version: PROGRESS_BY_LEVEL_DOC_VERSION,
-      }, { merge: true });
+      batch.set(
+        doc(db, 'users', uid, 'progressByLevel', level.level),
+        {
+          ...level,
+          updatedAt: timestamp,
+          updatedByDeviceId: 'setup',
+          version: PROGRESS_BY_LEVEL_DOC_VERSION,
+        },
+        { merge: true },
+      );
     }
     await batch.commit();
   }
 
-  async createUserDocument(uid: string, email: string, displayName?: string, photoURL?: string | null): Promise<void> {
+  async createUserDocument(
+    uid: string,
+    email: string,
+    displayName?: string,
+    photoURL?: string | null,
+  ): Promise<void> {
     const userRef = doc(db, 'users', uid);
     const userDoc = await getDoc(userRef);
     if (!userDoc.exists()) {

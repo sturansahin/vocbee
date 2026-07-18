@@ -54,11 +54,8 @@ describe('ForgotPasswordScreen', () => {
     fireEvent.changeText(getByPlaceholderText('auth.enterEmail'), 'bee@example.com');
     fireEvent.press(getByText('forgotPassword.sendResetLink'));
 
-    await waitFor(() =>
-      expect(mockResetPassword).toHaveBeenCalledWith('bee@example.com')
-    );
-    const successAlert =
-      mockShowAlert.mock.calls[mockShowAlert.mock.calls.length - 1]?.[0];
+    await waitFor(() => expect(mockResetPassword).toHaveBeenCalledWith('bee@example.com'));
+    const successAlert = mockShowAlert.mock.calls[mockShowAlert.mock.calls.length - 1]?.[0];
     expect(successAlert.title).toBe('forgotPassword.emailSent');
     successAlert.buttons[0].onPress();
     expect(mockGoBack).toHaveBeenCalled();
@@ -75,7 +72,7 @@ describe('ForgotPasswordScreen', () => {
       expect(mockShowAlert).toHaveBeenLastCalledWith({
         title: 'auth.error',
         message: 'Reset failed',
-      })
+      }),
     );
     expect(mockGoBack).not.toHaveBeenCalled();
   });

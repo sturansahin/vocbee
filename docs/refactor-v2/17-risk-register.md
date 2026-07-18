@@ -188,3 +188,25 @@
   onayı olmadan başlatılamaz.
 - Final karar **BLOCKED**. Kanıt ve blocker ID'leri:
   `docs/refactor-v2/44-final-production-readiness-report.md`.
+
+## Prompt 10 superseding local-ready closure — 2026-07-18 13:01 +03
+
+- **R5 current iOS release için N/A:** Owner Android'ı mevcut release kapsamından çıkardı. iOS RevenueCat config
+  kanıtı geçerlidir. Android tekrar release scope'a girerse `goog_` production key, config testi, build ve emulator
+  smoke tamamlanmadan R5 yeniden Yüksek açılır.
+- **R7 kapalı:** `firebase-admin` root mobile dependency'den çıkarıldı; `api/` npm workspace'i server dependency
+  ownership'ini taşır, Functions kendi bağımsız ownership'ini korur. CI manifest/source boundary kontrolü ve iOS
+  HBC marker 0 kanıtı mobile bundle regresyonunu fail-closed tutar. Bu ayrım ek çağrı veya maliyet üretmez.
+- **R8 local kapalı / owner remote handoff:** Prettier, lint, typecheck, 91/496 Jest, coverage, rules 14/14,
+  cleanup 7/7+1/1, Functions ve high/critical audit gate'leri green. Current worktree için GitHub remote CI henüz
+  çalışmadı; owner commit/push ve dört blocking job'ın green sonucunu release öncesi doğrulayacak.
+- **R13 Settings için kapalı:** Gerçek Settings content 15 satır; controller 359 ve en büyük style modülü 371.
+  Settings production dosyalarının tamamı `<400`. Notification application service, AdMob repository ve streak
+  overlay boyutları blocker olmayan maintainability borcu olarak kalır.
+- **Vercel duplicate project riski / Düşük:** Local build CLI'sı yanlışlıkla boş `vocbee` projesi oluşturup GitHub
+  reposuna bağladı; deploy/production URL yok. Gerçek `vocbee-proxy` local build'i PASS. Owner boş projeyi silme
+  veya Git bağlantısını kaldırma kararı verene kadar push duplicate Vercel build tetikleyebilir; source/runtime
+  correctness'i etkilemez fakat gereksiz build kotası tüketebilir.
+- Prompt 9 legacy-preservation ve progress-v2 safe-default `legacy` kararı değişmedi. Production Firebase data,
+  cleanup, migration, rules/functions/app deploy veya release yapılmadı. Güncel karar ve kanıt:
+  `docs/refactor-v2/44-final-production-readiness-report.md` 13:01 superseding audit'i.

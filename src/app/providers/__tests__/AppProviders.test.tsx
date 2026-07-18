@@ -12,7 +12,9 @@ jest.mock('react-native-safe-area-context', () => {
 });
 jest.mock('react-native-gesture-handler', () => {
   const { View } = require('react-native');
-  return { GestureHandlerRootView: ({ children }: any) => <View testID="gesture-root">{children}</View> };
+  return {
+    GestureHandlerRootView: ({ children }: any) => <View testID="gesture-root">{children}</View>,
+  };
 });
 jest.mock('@shared/theme', () => {
   const { View } = require('react-native');
@@ -24,7 +26,9 @@ jest.mock('@features/auth', () => {
 });
 jest.mock('@features/monetization', () => {
   const { View } = require('react-native');
-  return { MonetizationProvider: ({ children }: any) => <View testID="monetization">{children}</View> };
+  return {
+    MonetizationProvider: ({ children }: any) => <View testID="monetization">{children}</View>,
+  };
 });
 jest.mock('@shared/ui', () => {
   const { View } = require('react-native');
@@ -40,7 +44,7 @@ import { AppProviders } from '../AppProviders';
 function collectTestIds(node: any, ids: string[] = []): string[] {
   if (!node) return ids;
   if (Array.isArray(node)) {
-    node.forEach(child => collectTestIds(child, ids));
+    node.forEach((child) => collectTestIds(child, ids));
     return ids;
   }
   if (node.props && node.props.testID) ids.push(node.props.testID);
@@ -53,7 +57,7 @@ describe('AppProviders', () => {
     const { toJSON, getByText } = render(
       <AppProviders>
         <Text>CHILD_CONTENT</Text>
-      </AppProviders>
+      </AppProviders>,
     );
 
     // children reach the bottom of the chain

@@ -18,7 +18,7 @@ describe('NotificationScheduleEndStep', () => {
         minuteScrollRef={minuteScrollRef}
         onHourMomentumScrollEnd={jest.fn()}
         onMinuteMomentumScrollEnd={jest.fn()}
-      />
+      />,
     );
     expect(getByText('setup.endTime')).toBeTruthy();
     expect(getAllByText('21').length).toBeGreaterThan(0);
@@ -38,7 +38,7 @@ describe('NotificationScheduleEndStep', () => {
         minuteScrollRef={minuteScrollRef}
         onHourMomentumScrollEnd={jest.fn()}
         onMinuteMomentumScrollEnd={onMinuteMomentumScrollEnd}
-      />
+      />,
     );
     const scrollViews = UNSAFE_getAllByType(require('react-native').ScrollView);
     fireEvent(scrollViews[1], 'momentumScrollEnd', { nativeEvent: { contentOffset: { y: 0 } } });

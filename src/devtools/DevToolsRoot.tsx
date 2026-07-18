@@ -32,7 +32,12 @@ export function DevToolsRoot() {
         </Pressable>
       </View>
 
-      <Modal visible={isOpen} animationType="slide" onRequestClose={() => setIsOpen(false)} testID="devtools-modal">
+      <Modal
+        visible={isOpen}
+        animationType="slide"
+        onRequestClose={() => setIsOpen(false)}
+        testID="devtools-modal"
+      >
         <DevToolsNavigator onClose={() => setIsOpen(false)} />
       </Modal>
     </>

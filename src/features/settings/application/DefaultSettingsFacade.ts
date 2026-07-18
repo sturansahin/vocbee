@@ -18,7 +18,7 @@ export class DefaultSettingsFacade implements SettingsFacade {
   constructor(
     private readonly repository: SettingsRepository,
     private readonly avatarPicker: AvatarPickerGateway,
-    private readonly platform: SettingsPlatformGateway
+    private readonly platform: SettingsPlatformGateway,
   ) {}
 
   getAppVersion(): string {
@@ -41,7 +41,7 @@ export class DefaultSettingsFacade implements SettingsFacade {
 
   async pickAndUpdateAvatar(
     source: AvatarSource,
-    updateProfile: (patch: { image?: string | null }) => Promise<void>
+    updateProfile: (patch: { image?: string | null }) => Promise<void>,
   ): Promise<AvatarPickResult> {
     let result: AvatarPickResult;
     try {
@@ -61,7 +61,7 @@ export class DefaultSettingsFacade implements SettingsFacade {
 
   async updateProfileName(
     name: string,
-    updateProfile: (patch: { name?: string }) => Promise<void>
+    updateProfile: (patch: { name?: string }) => Promise<void>,
   ): Promise<'updated' | 'empty' | 'too-short'> {
     const normalized = name.trim();
     if (!normalized) return 'empty';

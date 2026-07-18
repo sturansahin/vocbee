@@ -19,17 +19,13 @@ import type { SetupFacade } from '../../application/setupContracts';
 const TOTAL_STEPS = 7;
 export const SETUP_ITEM_HEIGHT = 44;
 export const SETUP_HOURS = Array.from({ length: 24 }, (_, index) =>
-  index.toString().padStart(2, '0')
+  index.toString().padStart(2, '0'),
 );
 export const SETUP_MINUTES = Array.from({ length: 60 }, (_, index) =>
-  index.toString().padStart(2, '0')
+  index.toString().padStart(2, '0'),
 );
 export const SETUP_HOURS_EXTENDED = [...SETUP_HOURS, ...SETUP_HOURS, ...SETUP_HOURS];
-export const SETUP_MINUTES_EXTENDED = [
-  ...SETUP_MINUTES,
-  ...SETUP_MINUTES,
-  ...SETUP_MINUTES,
-];
+export const SETUP_MINUTES_EXTENDED = [...SETUP_MINUTES, ...SETUP_MINUTES, ...SETUP_MINUTES];
 
 const normalizedWheelValue = (offset: number, values: readonly string[]): string => {
   const index = Math.round(offset / SETUP_ITEM_HEIGHT);
@@ -52,7 +48,7 @@ export function useSetupController(facade: SetupFacade) {
   const [endHour, setEndHour] = useState('21');
   const [endMinute, setEndMinute] = useState('00');
   const [frequency, setFrequency] = useState<NotificationFrequencyKey>(
-    DEFAULT_NOTIFICATION_FREQUENCY_KEY
+    DEFAULT_NOTIFICATION_FREQUENCY_KEY,
   );
   const [isGenerating, setIsGenerating] = useState(false);
   const [waitingForSettings, setWaitingForSettings] = useState(false);
@@ -63,10 +59,7 @@ export function useSetupController(facade: SetupFacade) {
   const lottieRef = useRef<LottieView>(null);
   const progressAnim = useRef(new Animated.Value(20)).current;
   const fadeAnim = useRef(new Animated.Value(1)).current;
-  const animatedAnimation = useMemo(
-    () => createSwarmAnimation([1, 0.78, 0.08, 1], false),
-    []
-  );
+  const animatedAnimation = useMemo(() => createSwarmAnimation([1, 0.78, 0.08, 1], false), []);
 
   const goToStep = (nextStep: number) => {
     Animated.timing(fadeAnim, {
@@ -105,7 +98,7 @@ export function useSetupController(facade: SetupFacade) {
           endMinute,
           frequency,
         },
-        refreshNotificationSettings
+        refreshNotificationSettings,
       );
       navigation.reset({ index: 0, routes: [{ name: 'MainTabs' }] });
     } catch (error) {
@@ -188,7 +181,7 @@ export function useSetupController(facade: SetupFacade) {
     facade
       .getNotificationPermissionGranted()
       .then(setNotificationPermissionGranted)
-      .catch(error => console.log('Error checking notification permission:', error));
+      .catch((error) => console.log('Error checking notification permission:', error));
   }, [facade]);
 
   useEffect(() => {
@@ -228,7 +221,7 @@ export function useSetupController(facade: SetupFacade) {
   useEffect(() => {
     if (!waitingForSettings || currentStep !== 4) return;
     const interval = setInterval(() => {
-      void facade.requestNotificationPermission().then(granted => {
+      void facade.requestNotificationPermission().then((granted) => {
         if (granted) {
           setWaitingForSettings(false);
           setNotificationPermissionGranted(true);

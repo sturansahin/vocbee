@@ -23,8 +23,10 @@ export function normalizeStreakState(state?: Partial<StreakState> | null): Strea
     lastQualifiedAt: normalizeTimestamp(state?.lastQualifiedAt),
   };
   if (normalized.currentStreak > 0) normalized.brokenStreak = null;
-  if (normalized.longestStreak < normalized.currentStreak) normalized.longestStreak = normalized.currentStreak;
-  if (normalized.brokenStreak && normalized.longestStreak < normalized.brokenStreak) normalized.longestStreak = normalized.brokenStreak;
+  if (normalized.longestStreak < normalized.currentStreak)
+    normalized.longestStreak = normalized.currentStreak;
+  if (normalized.brokenStreak && normalized.longestStreak < normalized.brokenStreak)
+    normalized.longestStreak = normalized.brokenStreak;
   return normalized;
 }
 
@@ -42,29 +44,60 @@ const dayKeyToNoonDate = (dayKey: string): Date | null => {
 const getDayDifference = (from: string, to: string): number | null => {
   const fromDate = dayKeyToNoonDate(from);
   const toDate = dayKeyToNoonDate(to);
-  return fromDate && toDate ? Math.round((toDate.getTime() - fromDate.getTime()) / DAY_IN_MS) : null;
+  return fromDate && toDate
+    ? Math.round((toDate.getTime() - fromDate.getTime()) / DAY_IN_MS)
+    : null;
 };
 
 const derive = (state: StreakState, now = new Date()) => {
   const normalized = normalizeStreakState(state);
-  if (normalized.currentStreak <= 0) return { normalized, status: normalized.brokenStreak ? 'broken' as const : 'inactive' as const, effectiveCurrentStreak: 0 };
-  if (!normalized.lastQualifiedDay) return { normalized, status: 'inactive' as const, effectiveCurrentStreak: 0 };
+  if (normalized.currentStreak <= 0)
+    return {
+      normalized,
+      status: normalized.brokenStreak ? ('broken' as const) : ('inactive' as const),
+      effectiveCurrentStreak: 0,
+    };
+  if (!normalized.lastQualifiedDay)
+    return { normalized, status: 'inactive' as const, effectiveCurrentStreak: 0 };
   const difference = getDayDifference(normalized.lastQualifiedDay, getLocalDayKey(now));
-  if (difference === null) return { normalized, status: 'inactive' as const, effectiveCurrentStreak: 0 };
-  if (difference <= 0) return { normalized, status: 'completedToday' as const, effectiveCurrentStreak: normalized.currentStreak };
-  if (difference === 1) return { normalized, status: 'atRisk' as const, effectiveCurrentStreak: normalized.currentStreak };
+  if (difference === null)
+    return { normalized, status: 'inactive' as const, effectiveCurrentStreak: 0 };
+  if (difference <= 0)
+    return {
+      normalized,
+      status: 'completedToday' as const,
+      effectiveCurrentStreak: normalized.currentStreak,
+    };
+  if (difference === 1)
+    return {
+      normalized,
+      status: 'atRisk' as const,
+      effectiveCurrentStreak: normalized.currentStreak,
+    };
   return { normalized, status: 'broken' as const, effectiveCurrentStreak: 0 };
 };
 
 export function getCanonicalStreakState(state: StreakState, now = new Date()): StreakState {
   const derived = derive(state, now);
-  if (derived.status === 'broken') return { ...derived.normalized, brokenStreak: derived.normalized.brokenStreak ?? derived.normalized.currentStreak, currentStreak: 0 };
-  if (derived.effectiveCurrentStreak === derived.normalized.currentStreak) return derived.normalized;
-  return { ...derived.normalized, brokenStreak: null, currentStreak: derived.effectiveCurrentStreak };
+  if (derived.status === 'broken')
+    return {
+      ...derived.normalized,
+      brokenStreak: derived.normalized.brokenStreak ?? derived.normalized.currentStreak,
+      currentStreak: 0,
+    };
+  if (derived.effectiveCurrentStreak === derived.normalized.currentStreak)
+    return derived.normalized;
+  return {
+    ...derived.normalized,
+    brokenStreak: null,
+    currentStreak: derived.effectiveCurrentStreak,
+  };
 }
 
-export const isStreakCompletedToday = (state: StreakState, now = new Date()): boolean => derive(state, now).status === 'completedToday';
-export const getStreakStatus = (state: StreakState, now = new Date()): StreakStatus => derive(state, now).status;
+export const isStreakCompletedToday = (state: StreakState, now = new Date()): boolean =>
+  derive(state, now).status === 'completedToday';
+export const getStreakStatus = (state: StreakState, now = new Date()): StreakStatus =>
+  derive(state, now).status;
 
 export function getStreakStatusMessageKey(status: StreakStatus): string {
   if (status === 'completedToday') return 'home.streakDoneToday';
@@ -86,12 +119,18 @@ export function getStreakSummaryFromState(state: StreakState, now = new Date()):
   };
 }
 
-export function recordDailyStudyActionState(current: StreakState, now = new Date()): RecordStreakResult {
+export function recordDailyStudyActionState(
+  current: StreakState,
+  now = new Date(),
+): RecordStreakResult {
   const todayKey = getLocalDayKey(now);
-  if (current.lastQualifiedDay === todayKey) return { state: current, didIncrement: false, completedToday: true };
+  if (current.lastQualifiedDay === todayKey)
+    return { state: current, didIncrement: false, completedToday: true };
   const next = normalizeStreakState(current);
   if (!current.lastQualifiedDay) next.currentStreak = 1;
-  else next.currentStreak = getDayDifference(current.lastQualifiedDay, todayKey) === 1 ? current.currentStreak + 1 : 1;
+  else
+    next.currentStreak =
+      getDayDifference(current.lastQualifiedDay, todayKey) === 1 ? current.currentStreak + 1 : 1;
   next.longestStreak = Math.max(next.longestStreak, next.currentStreak);
   next.brokenStreak = null;
   next.lastQualifiedDay = todayKey;

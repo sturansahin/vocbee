@@ -1,7 +1,7 @@
 import { buildLevelTestQuestions, detectLevelFromScore } from '../levelTestRules';
 import type { VocabularyWord } from '@features/vocabulary';
 
-const words: VocabularyWord[] = [1, 2, 3, 4].map(id => ({
+const words: VocabularyWord[] = [1, 2, 3, 4].map((id) => ({
   id,
   word: `word-${id}`,
   translation: `translation-${id}`,

@@ -52,13 +52,16 @@ export default function ExampleSentencesScreen({ facade }: ExampleSentencesScree
   const [aiExplanation, setAiExplanation] = useState<GrammarResponse | null>(null);
   const [showAiModal, setShowAiModal] = useState(false);
 
-  const speakText = useCallback(async (text: string) => {
-    try {
-      await facade.speak(text);
-    } catch (error) {
-      console.error('[ExampleSentences] Speech error:', error);
-    }
-  }, [facade]);
+  const speakText = useCallback(
+    async (text: string) => {
+      try {
+        await facade.speak(text);
+      } catch (error) {
+        console.error('[ExampleSentences] Speech error:', error);
+      }
+    },
+    [facade],
+  );
 
   const handleExplainGrammar = useCallback(async () => {
     if (aiExplanation) {
@@ -76,9 +79,12 @@ export default function ExampleSentencesScreen({ facade }: ExampleSentencesScree
     }
   }, [aiExplanation, facade, sentence1, sentence2]);
 
-  const dynamicStyles = useMemo(() => ({
-    topPadding: insets.top + ICON_CONTAINER_SIZE + scale(16),
-  }), [insets.top]);
+  const dynamicStyles = useMemo(
+    () => ({
+      topPadding: insets.top + ICON_CONTAINER_SIZE + scale(16),
+    }),
+    [insets.top],
+  );
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>

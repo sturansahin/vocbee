@@ -29,7 +29,11 @@ describe('auth domain rules', () => {
       expect(hasCompletedSetup({ setupCompleted: true })).toBe(true);
     });
     it('true when both native+target preferences exist', () => {
-      expect(hasCompletedSetup({ preferences: { nativeLanguage: 'turkish', targetLanguage: 'english' } })).toBe(true);
+      expect(
+        hasCompletedSetup({
+          preferences: { nativeLanguage: 'turkish', targetLanguage: 'english' },
+        }),
+      ).toBe(true);
     });
     it('false otherwise', () => {
       expect(hasCompletedSetup(null)).toBe(false);
@@ -51,7 +55,7 @@ describe('auth domain rules', () => {
           password: 'secret',
           confirmPassword: 'secret',
           hasAcceptedPrivacyPolicy: true,
-        })
+        }),
       ).toBe('invalidEmail');
       expect(
         validateRegistration({
@@ -60,7 +64,7 @@ describe('auth domain rules', () => {
           password: 'secret',
           confirmPassword: 'different',
           hasAcceptedPrivacyPolicy: true,
-        })
+        }),
       ).toBe('passwordsMismatch');
       expect(
         validateRegistration({
@@ -69,7 +73,7 @@ describe('auth domain rules', () => {
           password: 'secret',
           confirmPassword: 'secret',
           hasAcceptedPrivacyPolicy: false,
-        })
+        }),
       ).toBe('acceptPrivacyRequired');
     });
 

@@ -100,10 +100,7 @@ export function SetupScreen({ facade }: SetupScreenProps) {
 
   return (
     <View
-      style={[
-        styles.container,
-        { backgroundColor: colors.background, paddingTop: insets.top },
-      ]}
+      style={[styles.container, { backgroundColor: colors.background, paddingTop: insets.top }]}
     >
       <View style={styles.headerContainer}>
         {controller.currentStep > 1 ? (

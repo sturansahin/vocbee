@@ -1,9 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-import {
-  restoreFavoritesFromFirebase,
-  syncFavoritesToFirebaseForUser,
-} from '@features/favorites';
+import { restoreFavoritesFromFirebase, syncFavoritesToFirebaseForUser } from '@features/favorites';
 import { buildStoredProfileFromFirestore, type StoredProfile } from '@features/profile';
 import {
   getCurrentLevel,
@@ -59,7 +56,7 @@ export class LegacySyncDomainGateway implements SyncDomainGateway {
       learnedWords,
       vocabularySchemaVersion: VOCABULARY_SCHEMA_VERSION,
       profileName: profile.name,
-      profileImage: hasProfileImage ? profile.image ?? null : undefined,
+      profileImage: hasProfileImage ? (profile.image ?? null) : undefined,
       hasProfileImage,
       notificationSettings,
       streak,
@@ -99,7 +96,7 @@ export class LegacySyncDomainGateway implements SyncDomainGateway {
         remote.notificationSettings.enabled === false
           ? { ...DEFAULT_NOTIFICATION_SETTINGS, enabled: false }
           : remote.notificationSettings,
-        true
+        true,
       );
     }
     if (remote.streak && typeof remote.streak === 'object') {
@@ -112,7 +109,7 @@ export class LegacySyncDomainGateway implements SyncDomainGateway {
       const restoredUserLevel = isUserLevel(preferenceLevel)
         ? preferenceLevel
         : getUserLevelFromCefrLevel(
-            typeof preferenceLevel === 'string' ? preferenceLevel : progressLevel
+            typeof preferenceLevel === 'string' ? preferenceLevel : progressLevel,
           );
       await AsyncStorage.setItem(STORAGE_KEYS.USER_LEVEL, restoredUserLevel);
     }
@@ -138,13 +135,13 @@ export class LegacySyncDomainGateway implements SyncDomainGateway {
       await restoreProgressFromFirebase(
         remote.progressV2.learnedWords,
         remote.progressV2.currentLevel,
-        remote.progressV2.lastWordId
+        remote.progressV2.lastWordId,
       );
     } else if (remote.progress) {
       await restoreProgressFromFirebase(
         remote.progress.learnedWords ?? null,
         remote.progress.currentLevel ?? null,
-        remote.progress.lastWordIndex
+        remote.progress.lastWordIndex,
       );
     }
     await restoreFavoritesFromFirebase(userId);

@@ -10,7 +10,11 @@ import {
   STREAK_REMINDER_MINUTE,
   type NotificationFrequencyKey,
 } from './constants';
-import { DEFAULT_NOTIFICATION_SETTINGS, type NotificationSettings, type PendingNotificationWord } from './types';
+import {
+  DEFAULT_NOTIFICATION_SETTINGS,
+  type NotificationSettings,
+  type PendingNotificationWord,
+} from './types';
 
 /**
  * Daily slot count for the given window + frequency.
@@ -22,7 +26,7 @@ import { DEFAULT_NOTIFICATION_SETTINGS, type NotificationSettings, type PendingN
 export function getDailyNotificationSlotCount(
   startMinutes: number,
   endMinutes: number,
-  frequencyMinutes: number
+  frequencyMinutes: number,
 ): number {
   const isFullDay = startMinutes === endMinutes;
   if (isFullDay) {
@@ -31,9 +35,8 @@ export function getDailyNotificationSlotCount(
     return Math.floor((1440 - 1) / frequencyMinutes) + 1;
   }
 
-  const rangeMinutes = endMinutes > startMinutes
-    ? endMinutes - startMinutes
-    : (1440 - startMinutes) + endMinutes;
+  const rangeMinutes =
+    endMinutes > startMinutes ? endMinutes - startMinutes : 1440 - startMinutes + endMinutes;
 
   return Math.floor(rangeMinutes / frequencyMinutes) + 1;
 }
@@ -44,7 +47,9 @@ export function capVocabularySlots(count: number): number {
 }
 
 /** Reschedule when the stored content version differs from the current one (notificationService line ~204). */
-export function shouldRescheduleForContentVersion(storedVersion: string | null | undefined): boolean {
+export function shouldRescheduleForContentVersion(
+  storedVersion: string | null | undefined,
+): boolean {
   return storedVersion !== String(NOTIFICATION_CONTENT_VERSION);
 }
 
@@ -54,7 +59,7 @@ export function normalizeFrequencyMinutes(frequencyMinutes: number): number {
 }
 
 export function normalizeNotificationSettings(
-  settings?: Partial<NotificationSettings> | null
+  settings?: Partial<NotificationSettings> | null,
 ): NotificationSettings {
   const normalized = {
     ...DEFAULT_NOTIFICATION_SETTINGS,
@@ -79,13 +84,19 @@ export function normalizeNotificationSettings(
 }
 
 export function getNotificationFrequencyMinutes(key: string): number {
-  return NOTIFICATION_FREQUENCY_OPTIONS.find(option => option.key === key)?.minutes
-    ?? NOTIFICATION_FREQUENCY_OPTIONS.find(option => option.key === DEFAULT_NOTIFICATION_FREQUENCY_KEY)!.minutes;
+  return (
+    NOTIFICATION_FREQUENCY_OPTIONS.find((option) => option.key === key)?.minutes ??
+    NOTIFICATION_FREQUENCY_OPTIONS.find(
+      (option) => option.key === DEFAULT_NOTIFICATION_FREQUENCY_KEY,
+    )!.minutes
+  );
 }
 
 export function getNotificationFrequencyKey(minutes: number): NotificationFrequencyKey {
-  return NOTIFICATION_FREQUENCY_OPTIONS.find(option => option.minutes === minutes)?.key
-    ?? DEFAULT_NOTIFICATION_FREQUENCY_KEY;
+  return (
+    NOTIFICATION_FREQUENCY_OPTIONS.find((option) => option.minutes === minutes)?.key ??
+    DEFAULT_NOTIFICATION_FREQUENCY_KEY
+  );
 }
 
 export function isLegacyVocabularyNotificationId(identifier: string): boolean {
@@ -93,9 +104,11 @@ export function isLegacyVocabularyNotificationId(identifier: string): boolean {
 }
 
 export function isVocabularyNotificationId(identifier: string): boolean {
-  return identifier.startsWith('vocbee-vocab-')
-    || identifier.startsWith('vocbee-refill-')
-    || isLegacyVocabularyNotificationId(identifier);
+  return (
+    identifier.startsWith('vocbee-vocab-') ||
+    identifier.startsWith('vocbee-refill-') ||
+    isLegacyVocabularyNotificationId(identifier)
+  );
 }
 
 export function isStreakNotificationId(identifier: string): boolean {
@@ -117,7 +130,7 @@ export function getNextStreakReminderTime(now: Date, completedToday: boolean): D
 export function buildVocabularyScheduleTimes(
   settings: NotificationSettings,
   now: Date,
-  capacity: number
+  capacity: number,
 ): number[] {
   if (capacity <= 0) return [];
 
@@ -128,7 +141,7 @@ export function buildVocabularyScheduleTimes(
   const notificationsPerDay = getDailyNotificationSlotCount(
     dailyStartMinutes,
     dailyEndMinutes,
-    settings.frequencyMinutes
+    settings.frequencyMinutes,
   );
   const daysToSchedule = Math.ceil(capacity / notificationsPerDay);
   const times: number[] = [];
@@ -141,15 +154,16 @@ export function buildVocabularyScheduleTimes(
 
     for (let i = 0; i < notificationsPerDay && times.length < capacity; i++) {
       const notificationTime = new Date(
-        startTime.getTime() + i * settings.frequencyMinutes * 60 * 1000
+        startTime.getTime() + i * settings.frequencyMinutes * 60 * 1000,
       );
 
       if (isOvernight && !isFullDayRange) {
-        const notificationMinutes = notificationTime.getHours() * 60 + notificationTime.getMinutes();
+        const notificationMinutes =
+          notificationTime.getHours() * 60 + notificationTime.getMinutes();
         if (
-          notificationTime > startTime
-          && notificationMinutes > dailyEndMinutes
-          && notificationMinutes < dailyStartMinutes
+          notificationTime > startTime &&
+          notificationMinutes > dailyEndMinutes &&
+          notificationMinutes < dailyStartMinutes
         ) {
           break;
         }
@@ -164,7 +178,7 @@ export function buildVocabularyScheduleTimes(
 
 export function getNextVocabularyRefillTime(
   previousTime: Date,
-  settings: NotificationSettings
+  settings: NotificationSettings,
 ): Date {
   const nextTime = new Date(previousTime.getTime() + settings.frequencyMinutes * 60 * 1000);
   const dailyStartMinutes = settings.startHour * 60 + settings.startMinute;

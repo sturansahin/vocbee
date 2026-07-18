@@ -13,10 +13,7 @@ import { resetProgress, setCurrentLevel } from '@features/progress';
 import { generateVocabulary, getFirstLevelForUserLevel } from '@features/vocabulary';
 import { STORAGE_KEYS } from '@shared/storage';
 
-import type {
-  SetupCompletionInput,
-  SetupPlatformGateway,
-} from '../application/setupContracts';
+import type { SetupCompletionInput, SetupPlatformGateway } from '../application/setupContracts';
 
 export class LegacySetupPlatformGateway implements SetupPlatformGateway {
   constructor(private readonly profileRepository: UserProfileRepository) {}
@@ -78,7 +75,7 @@ export class LegacySetupPlatformGateway implements SetupPlatformGateway {
             autoMarkLearned: true,
           }
         : { enabled: false },
-      true
+      true,
     );
   }
 

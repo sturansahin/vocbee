@@ -1,84 +1,316 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy | VocBee</title>
-  <meta name="description" content="Read the VocBee privacy policy covering account data, learning progress, reminders, storage, and deletion rights.">
-  <meta name="theme-color" content="#050505">
-  <link rel="icon" type="image/png" href="../assets/icons/vocicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
-  <style>
-    :root{--bg:#050505;--paper:#f6f2e7;--card:#ffffffe0;--line:#11111112;--text:#171717;--muted:#676256;--white:#f7f5ef;--wline:#ffffff14;--gold:#ffbf1f;--soft:#ffbf1f18;--shadow:0 24px 60px rgba(0,0,0,.16);--max:980px}
-    *{box-sizing:border-box}body{margin:0;font-family:"Special Gothic Expanded One",system-ui,sans-serif;background:radial-gradient(circle at top,rgba(255,191,31,.16),transparent 18%),linear-gradient(180deg,#050505 0%,#0b0b0b 34%,var(--paper) 34%,var(--paper) 100%);color:var(--text)}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
-    .wrap{width:min(calc(100% - 28px),var(--max));margin:0 auto}.brand{display:flex;align-items:center;gap:14px;color:var(--white)}.brand img{width:48px;height:48px;border-radius:16px;box-shadow:0 10px 24px rgba(255,191,31,.22)}.brand b{display:block;letter-spacing:.08em}.brand small,.tag{font:.56rem "Rubik Mono One",monospace;letter-spacing:.12em;text-transform:uppercase}.brand small{display:block;color:#ffffff96}
-    .top{padding:28px 0 78px;color:var(--white)}.tag{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border-radius:999px;background:#ffffff0c;border:1px solid var(--wline);color:#ffffffc8;margin-top:34px}h1{margin:18px 0 14px;font-size:clamp(2.4rem,5vw,4.3rem);line-height:.95;letter-spacing:-.04em;max-width:8ch}.top p{margin:0;max-width:760px;color:#ffffffbc;line-height:1.9}
-    .panel{margin-top:-18px;border-radius:30px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);overflow:hidden}.summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}.summary article{padding:24px;background:#ffffffb5}.summary article + article{border-left:1px solid var(--line)}.summary b{display:block;margin-bottom:8px}.summary p,.section p,.section li,.foot{color:var(--muted);line-height:1.9}
-    .body{display:grid;gap:16px;padding:24px}.section{padding:24px;border-radius:24px;background:#ffffffb8;border:1px solid var(--line)}.section h2{margin:0 0 12px;font-size:1.24rem;line-height:1.1}.section ul{margin:16px 0 0;padding-left:18px}.section li + li{margin-top:8px}.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}.chips a,.chips span{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border-radius:999px;background:var(--soft);color:#8a5c00;font-size:.68rem}
-    .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding:26px 0 50px;font-size:.74rem}
-    @media (max-width:820px){.summary{grid-template-columns:1fr}.summary article + article{border-left:0;border-top:1px solid var(--line)}}
-  </style>
-</head>
-<body>
-  <header class="top">
-    <div class="wrap">
-      <a class="brand" href="../index.html"><img src="../assets/icons/vocicon.png" alt=""><span><b>VocBee</b><small>Privacy policy</small></span></a>
-      <span class="tag">Legal and data practices</span>
-      <h1>Privacy policy for VocBee.</h1>
-      <p>This page summarizes how VocBee handles account data, learning progress, local storage, reminder preferences, and third-party services used to support the mobile app.</p>
-    </div>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy | VocBee</title>
+    <meta
+      name="description"
+      content="Read the VocBee privacy policy covering account data, learning progress, reminders, storage, and deletion rights."
+    />
+    <meta name="theme-color" content="#050505" />
+    <link rel="icon" type="image/png" href="../assets/icons/vocicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Special+Gothic+Expanded+One&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #050505;
+        --paper: #f6f2e7;
+        --card: #ffffffe0;
+        --line: #11111112;
+        --text: #171717;
+        --muted: #676256;
+        --white: #f7f5ef;
+        --wline: #ffffff14;
+        --gold: #ffbf1f;
+        --soft: #ffbf1f18;
+        --shadow: 0 24px 60px rgba(0, 0, 0, 0.16);
+        --max: 980px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: 'Special Gothic Expanded One', system-ui, sans-serif;
+        background:
+          radial-gradient(circle at top, rgba(255, 191, 31, 0.16), transparent 18%),
+          linear-gradient(180deg, #050505 0%, #0b0b0b 34%, var(--paper) 34%, var(--paper) 100%);
+        color: var(--text);
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+      }
+      .wrap {
+        width: min(calc(100% - 28px), var(--max));
+        margin: 0 auto;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        color: var(--white);
+      }
+      .brand img {
+        width: 48px;
+        height: 48px;
+        border-radius: 16px;
+        box-shadow: 0 10px 24px rgba(255, 191, 31, 0.22);
+      }
+      .brand b {
+        display: block;
+        letter-spacing: 0.08em;
+      }
+      .brand small,
+      .tag {
+        font:
+          0.56rem 'Rubik Mono One',
+          monospace;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .brand small {
+        display: block;
+        color: #ffffff96;
+      }
+      .top {
+        padding: 28px 0 78px;
+        color: var(--white);
+      }
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        min-height: 40px;
+        padding: 0 14px;
+        border-radius: 999px;
+        background: #ffffff0c;
+        border: 1px solid var(--wline);
+        color: #ffffffc8;
+        margin-top: 34px;
+      }
+      h1 {
+        margin: 18px 0 14px;
+        font-size: clamp(2.4rem, 5vw, 4.3rem);
+        line-height: 0.95;
+        letter-spacing: -0.04em;
+        max-width: 8ch;
+      }
+      .top p {
+        margin: 0;
+        max-width: 760px;
+        color: #ffffffbc;
+        line-height: 1.9;
+      }
+      .panel {
+        margin-top: -18px;
+        border-radius: 30px;
+        background: var(--card);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+      .summary {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .summary article {
+        padding: 24px;
+        background: #ffffffb5;
+      }
+      .summary article + article {
+        border-left: 1px solid var(--line);
+      }
+      .summary b {
+        display: block;
+        margin-bottom: 8px;
+      }
+      .summary p,
+      .section p,
+      .section li,
+      .foot {
+        color: var(--muted);
+        line-height: 1.9;
+      }
+      .body {
+        display: grid;
+        gap: 16px;
+        padding: 24px;
+      }
+      .section {
+        padding: 24px;
+        border-radius: 24px;
+        background: #ffffffb8;
+        border: 1px solid var(--line);
+      }
+      .section h2 {
+        margin: 0 0 12px;
+        font-size: 1.24rem;
+        line-height: 1.1;
+      }
+      .section ul {
+        margin: 16px 0 0;
+        padding-left: 18px;
+      }
+      .section li + li {
+        margin-top: 8px;
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 16px;
+      }
+      .chips a,
+      .chips span {
+        display: inline-flex;
+        align-items: center;
+        min-height: 40px;
+        padding: 0 14px;
+        border-radius: 999px;
+        background: var(--soft);
+        color: #8a5c00;
+        font-size: 0.68rem;
+      }
+      .foot {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 26px 0 50px;
+        font-size: 0.74rem;
+      }
+      @media (max-width: 820px) {
+        .summary {
+          grid-template-columns: 1fr;
+        }
+        .summary article + article {
+          border-left: 0;
+          border-top: 1px solid var(--line);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top">
+      <div class="wrap">
+        <a class="brand" href="../index.html"
+          ><img src="../assets/icons/vocicon.png" alt="" /><span
+            ><b>VocBee</b><small>Privacy policy</small></span
+          ></a
+        >
+        <span class="tag">Legal and data practices</span>
+        <h1>Privacy policy for VocBee.</h1>
+        <p>
+          This page summarizes how VocBee handles account data, learning progress, local storage,
+          reminder preferences, and third-party services used to support the mobile app.
+        </p>
+      </div>
+    </header>
 
-  <main class="wrap">
-    <article class="panel">
-      <div class="summary">
-        <article><b>What we collect</b><p>Account details, learning progress, favorites, language choices, reminder settings, and limited device data needed for ads and operations.</p></article>
-        <article><b>Why we use it</b><p>To authenticate users, store progress, personalize vocabulary delivery, send reminders, and improve app reliability.</p></article>
-        <article><b>Your controls</b><p>You can update profile data, change reminder settings, reset progress, or request deletion of your account and associated data.</p></article>
+    <main class="wrap">
+      <article class="panel">
+        <div class="summary">
+          <article>
+            <b>What we collect</b>
+            <p>
+              Account details, learning progress, favorites, language choices, reminder settings,
+              and limited device data needed for ads and operations.
+            </p>
+          </article>
+          <article>
+            <b>Why we use it</b>
+            <p>
+              To authenticate users, store progress, personalize vocabulary delivery, send
+              reminders, and improve app reliability.
+            </p>
+          </article>
+          <article>
+            <b>Your controls</b>
+            <p>
+              You can update profile data, change reminder settings, reset progress, or request
+              deletion of your account and associated data.
+            </p>
+          </article>
+        </div>
+        <div class="body">
+          <section class="section">
+            <h2>1. Information we collect</h2>
+            <p>
+              VocBee may collect account registration data, optional Google Sign-In profile data,
+              profile information, learning progress, favorites, selected languages, and
+              notification preferences.
+            </p>
+            <ul>
+              <li>
+                Email address, display name, and authentication data handled through Firebase
+                Authentication.
+              </li>
+              <li>
+                Progress data such as current level, learned words, favorites, and last viewed word
+                position.
+              </li>
+              <li>
+                Device-related information used by third-party services, including operating system
+                version and advertising identifiers where permitted.
+              </li>
+            </ul>
+          </section>
+          <section class="section">
+            <h2>2. How we use data</h2>
+            <p>
+              We use collected information to create and manage accounts, save learning progress,
+              synchronize preferences, deliver reminders, support AI-powered grammar explanations,
+              and improve the app.
+            </p>
+          </section>
+          <section class="section">
+            <h2>3. Storage and third parties</h2>
+            <p>
+              VocBee stores some information locally on device and uses external services for
+              authentication, sync, ads, AI explanations, and notifications.
+            </p>
+            <div class="chips">
+              <a href="https://firebase.google.com/support/privacy">Firebase</a>
+              <a href="https://policies.google.com/privacy">Google</a>
+              <a href="https://groq.com/privacy-policy/">Groq AI</a>
+              <a href="https://expo.dev/privacy">Expo</a>
+            </div>
+          </section>
+          <section class="section">
+            <h2>4. Rights, deletion, and contact</h2>
+            <p>
+              You can update profile information and reminder settings from the app. You may also
+              request deletion of your account and associated data.
+            </p>
+            <ul>
+              <li>Delete from within the app if you still have access.</li>
+              <li>Request deletion by email if you no longer have access.</li>
+              <li>Contact: turansahiniletisim@gmail.com</li>
+            </ul>
+            <div class="chips">
+              <a href="mailto:turansahiniletisim@gmail.com">Email support</a>
+              <a href="../delete_account.html">Delete account page</a>
+              <a href="../index.html">Back to homepage</a>
+            </div>
+          </section>
+        </div>
+      </article>
+      <div class="foot">
+        <span>Last updated: April 2, 2026</span
+        ><span
+          ><a href="../index.html">Homepage</a> ·
+          <a href="../delete_account.html">Delete account</a></span
+        >
       </div>
-      <div class="body">
-        <section class="section">
-          <h2>1. Information we collect</h2>
-          <p>VocBee may collect account registration data, optional Google Sign-In profile data, profile information, learning progress, favorites, selected languages, and notification preferences.</p>
-          <ul>
-            <li>Email address, display name, and authentication data handled through Firebase Authentication.</li>
-            <li>Progress data such as current level, learned words, favorites, and last viewed word position.</li>
-            <li>Device-related information used by third-party services, including operating system version and advertising identifiers where permitted.</li>
-          </ul>
-        </section>
-        <section class="section">
-          <h2>2. How we use data</h2>
-          <p>We use collected information to create and manage accounts, save learning progress, synchronize preferences, deliver reminders, support AI-powered grammar explanations, and improve the app.</p>
-        </section>
-        <section class="section">
-          <h2>3. Storage and third parties</h2>
-          <p>VocBee stores some information locally on device and uses external services for authentication, sync, ads, AI explanations, and notifications.</p>
-          <div class="chips">
-            <a href="https://firebase.google.com/support/privacy">Firebase</a>
-            <a href="https://policies.google.com/privacy">Google</a>
-            <a href="https://groq.com/privacy-policy/">Groq AI</a>
-            <a href="https://expo.dev/privacy">Expo</a>
-          </div>
-        </section>
-        <section class="section">
-          <h2>4. Rights, deletion, and contact</h2>
-          <p>You can update profile information and reminder settings from the app. You may also request deletion of your account and associated data.</p>
-          <ul>
-            <li>Delete from within the app if you still have access.</li>
-            <li>Request deletion by email if you no longer have access.</li>
-            <li>Contact: turansahiniletisim@gmail.com</li>
-          </ul>
-          <div class="chips">
-            <a href="mailto:turansahiniletisim@gmail.com">Email support</a>
-            <a href="../delete_account.html">Delete account page</a>
-            <a href="../index.html">Back to homepage</a>
-          </div>
-        </section>
-      </div>
-    </article>
-    <div class="foot"><span>Last updated: April 2, 2026</span><span><a href="../index.html">Homepage</a> · <a href="../delete_account.html">Delete account</a></span></div>
-  </main>
-</body>
+    </main>
+  </body>
 </html>

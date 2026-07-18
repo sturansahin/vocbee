@@ -60,7 +60,10 @@ async function main(): Promise<void> {
 
   // ── Per-user transform (the part that is real + unit-tested) ─────────────────────────────
   // This helper is exported for tests and shows exactly what the loop body does per user.
-  const processUser = (uid: string, legacy: LegacyProgressDoc | null | undefined): 'OK' | 'MISMATCH' | 'SKIP' => {
+  const processUser = (
+    uid: string,
+    legacy: LegacyProgressDoc | null | undefined,
+  ): 'OK' | 'MISMATCH' | 'SKIP' => {
     summary.scanned++;
     if (!legacy?.learnedWords) {
       summary.skipped++;
@@ -75,9 +78,11 @@ async function main(): Promise<void> {
     if (!ok) summary.mismatched++;
 
     // PII-masked per-user line (docs/refactor-v2/08 §dry-run)
-    const perLevel = models.map(m => `${m.level}: ?→${m.learnedWordIds.length}`).join(', ');
+    const perLevel = models.map((m) => `${m.level}: ?→${m.learnedWordIds.length}`).join(', ');
     // eslint-disable-next-line no-console
-    console.log(`uidMask=${maskUid(uid)}, ${perLevel}, old=${oldTotal} new=${newTotal} status=${ok ? 'OK' : 'MISMATCH'}`);
+    console.log(
+      `uidMask=${maskUid(uid)}, ${perLevel}, old=${oldTotal} new=${newTotal} status=${ok ? 'OK' : 'MISMATCH'}`,
+    );
 
     if (!DRY_RUN && ok) {
       // WRITE mode (copy-only) — guarded; never deletes legacy fields.
@@ -95,7 +100,9 @@ async function main(): Promise<void> {
   // eslint-disable-next-line no-console
   console.log(`SUMMARY ${JSON.stringify(summary)}`);
   if (summary.mismatched > 0) {
-    throw new Error(`Migration halted: ${summary.mismatched} user(s) failed count verification. Review before writing.`);
+    throw new Error(
+      `Migration halted: ${summary.mismatched} user(s) failed count verification. Review before writing.`,
+    );
   }
 }
 

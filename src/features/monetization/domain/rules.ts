@@ -12,7 +12,7 @@ import { REVENUECAT_AD_FREE_ENTITLEMENT_ID } from './constants';
  * ads are shown for free users, hidden once the ad-free entitlement is active.
  */
 export function shouldShowAds(state: AdGatingState): boolean {
-    return !state.isAdFree;
+  return !state.isAdFree;
 }
 
 /**
@@ -20,10 +20,10 @@ export function shouldShowAds(state: AdGatingState): boolean {
  * Mirrors services/revenueCatService.ts#getActiveEntitlement.
  */
 export function getActiveEntitlement(
-    customerInfo: CustomerInfoLike | null,
-    entitlementId: string = REVENUECAT_AD_FREE_ENTITLEMENT_ID
+  customerInfo: CustomerInfoLike | null,
+  entitlementId: string = REVENUECAT_AD_FREE_ENTITLEMENT_ID,
 ): EntitlementInfoLike | null {
-    return customerInfo?.entitlements.active[entitlementId] ?? null;
+  return customerInfo?.entitlements.active[entitlementId] ?? null;
 }
 
 /**
@@ -31,10 +31,10 @@ export function getActiveEntitlement(
  * Mirrors services/revenueCatService.ts#hasActiveAdFreeEntitlement.
  */
 export function hasActiveAdFreeEntitlement(customerInfo: CustomerInfoLike | null): boolean {
-    return Boolean(getActiveEntitlement(customerInfo)?.isActive);
+  return Boolean(getActiveEntitlement(customerInfo)?.isActive);
 }
 
 /** Whether an app-open ad should be attempted on this launch count (services/adMobService.ts behavior). */
 export function shouldAttemptAppOpenAd(launchCount: number, interval: number): boolean {
-    return interval > 0 && launchCount % interval === 0;
+  return interval > 0 && launchCount % interval === 0;
 }

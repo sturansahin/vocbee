@@ -40,7 +40,10 @@ jest.mock('@features/auth', () => ({
   SignUpScreen: () => null,
 }));
 jest.mock('@features/favorites', () => ({ FavoritesScreen: () => null }));
-jest.mock('@features/learning', () => ({ HomeScreen: () => null, ExampleSentencesScreen: () => null }));
+jest.mock('@features/learning', () => ({
+  HomeScreen: () => null,
+  ExampleSentencesScreen: () => null,
+}));
 jest.mock('@features/onboarding', () => () => null);
 jest.mock('@features/settings', () => () => null);
 jest.mock('@features/setup', () => ({ LevelTestScreen: () => null, SetupScreen: () => null }));
@@ -50,7 +53,7 @@ import { RootNavigator } from '../RootNavigator';
 function collectRouteNames(node: any, names: string[] = []): string[] {
   if (!node) return names;
   if (Array.isArray(node)) {
-    node.forEach(child => collectRouteNames(child, names));
+    node.forEach((child) => collectRouteNames(child, names));
     return names;
   }
   const testID: string | undefined = node.props && node.props.testID;
@@ -62,9 +65,7 @@ function collectRouteNames(node: any, names: string[] = []): string[] {
 describe('RootNavigator', () => {
   it('registers exactly the expected routes in order', () => {
     const ref = React.createRef<any>();
-    const { toJSON } = render(
-      <RootNavigator initialRoute="Login" navigationRef={ref} />
-    );
+    const { toJSON } = render(<RootNavigator initialRoute="Login" navigationRef={ref} />);
 
     const routes = collectRouteNames(toJSON());
     expect(routes).toEqual([

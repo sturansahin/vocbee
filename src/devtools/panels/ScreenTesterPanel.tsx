@@ -23,7 +23,7 @@ export function ScreenTesterPanel({ onOpenScreen }: ScreenTesterPanelProps) {
       </Text>
       <FlatList
         data={SCREEN_REGISTRY}
-        keyExtractor={item => item.id}
+        keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <Pressable
             testID={`devtools-screen-entry-${item.id}`}

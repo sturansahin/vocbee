@@ -29,11 +29,11 @@ export function normalizePronunciation(value: unknown): string | null {
 
 export function mergeVocabularyWords(
   targetWords: VocabularyWord[] | null,
-  nativeWords: VocabularyWord[] | null
+  nativeWords: VocabularyWord[] | null,
 ): VocabularyWord[] {
   if (!targetWords) return [];
   if (!nativeWords) {
-    return targetWords.map(word => ({
+    return targetWords.map((word) => ({
       ...word,
       pronunciation: normalizePronunciation(word.pronunciation),
       translation: word.word,
@@ -42,8 +42,8 @@ export function mergeVocabularyWords(
     }));
   }
 
-  const nativeById = new Map(nativeWords.map(word => [word.id, word]));
-  return targetWords.map(targetWord => {
+  const nativeById = new Map(nativeWords.map((word) => [word.id, word]));
+  return targetWords.map((targetWord) => {
     const nativeWord = nativeById.get(targetWord.id);
     return {
       id: targetWord.id,

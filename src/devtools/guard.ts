@@ -10,4 +10,5 @@
 //   because the `__DEV__` check is applied first and is not env-controlled.
 // - Nothing in `src/devtools/**` may be imported by production-guarded code paths outside of the
 //   single `__DEV__`-gated mount point in `src/app/App.tsx`.
-export const isDevToolsEnabled: boolean = __DEV__ && process.env.EXPO_PUBLIC_ENABLE_DEVTOOLS !== 'false';
+export const isDevToolsEnabled: boolean =
+  __DEV__ && process.env.EXPO_PUBLIC_ENABLE_DEVTOOLS !== 'false';

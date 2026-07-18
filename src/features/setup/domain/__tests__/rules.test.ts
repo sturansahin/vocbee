@@ -42,9 +42,19 @@ describe('setup domain rules', () => {
       expect(canCompleteSetup(null)).toBe(false);
       expect(canCompleteSetup(undefined)).toBe(false);
       expect(canCompleteSetup({})).toBe(false);
-      expect(canCompleteSetup({ nativeLanguage: 'turkish', targetLanguage: 'english' })).toBe(false);
-      expect(canCompleteSetup({ nativeLanguage: 'turkish', targetLanguage: 'english', level: 'A1' })).toBe(false);
-      expect(canCompleteSetup({ nativeLanguage: 'klingon', targetLanguage: 'english', level: 'beginner' })).toBe(false);
+      expect(canCompleteSetup({ nativeLanguage: 'turkish', targetLanguage: 'english' })).toBe(
+        false,
+      );
+      expect(
+        canCompleteSetup({ nativeLanguage: 'turkish', targetLanguage: 'english', level: 'A1' }),
+      ).toBe(false);
+      expect(
+        canCompleteSetup({
+          nativeLanguage: 'klingon',
+          targetLanguage: 'english',
+          level: 'beginner',
+        }),
+      ).toBe(false);
     });
   });
 

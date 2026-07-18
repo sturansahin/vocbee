@@ -4,10 +4,7 @@ import { act, renderHook, waitFor } from '@testing-library/react-native';
 import type { NotificationSettings } from '@features/notifications';
 import type { AuthFacade } from '../../application/contracts';
 import type { AuthUser } from '../../domain/types';
-import {
-  AuthStateProvider,
-  useAuth,
-} from '../AuthProvider';
+import { AuthStateProvider, useAuth } from '../AuthProvider';
 
 const settings: NotificationSettings = {
   enabled: true,
@@ -31,11 +28,11 @@ let sessionListener: ((user: AuthUser | null) => void) | null = null;
 function makeFacade(overrides: Partial<AuthFacade> = {}): AuthFacade {
   return {
     initialize: jest.fn(),
-    subscribe: jest.fn(callback => {
+    subscribe: jest.fn((callback) => {
       sessionListener = callback;
       return jest.fn();
     }),
-    bootstrapSession: jest.fn(async nextUser => ({
+    bootstrapSession: jest.fn(async (nextUser) => ({
       userData: nextUser
         ? { uid: nextUser.uid, email: nextUser.email ?? '', setupCompleted: true }
         : null,
@@ -55,7 +52,10 @@ function makeFacade(overrides: Partial<AuthFacade> = {}): AuthFacade {
     retryConnection: jest.fn(),
     deleteAccount: jest.fn(async () => undefined),
     updateProfileData: jest.fn(async (_user, profile, patch) => ({ ...profile, ...patch })),
-    updateNotificationSettings: jest.fn(async (_user, current, patch) => ({ ...current, ...patch })),
+    updateNotificationSettings: jest.fn(async (_user, current, patch) => ({
+      ...current,
+      ...patch,
+    })),
     refreshNotificationSettings: jest.fn(async () => settings),
     ...overrides,
   };
@@ -63,9 +63,7 @@ function makeFacade(overrides: Partial<AuthFacade> = {}): AuthFacade {
 
 function renderAuth(facade: AuthFacade) {
   return renderHook(() => useAuth(), {
-    wrapper: ({ children }) => (
-      <AuthStateProvider facade={facade}>{children}</AuthStateProvider>
-    ),
+    wrapper: ({ children }) => <AuthStateProvider facade={facade}>{children}</AuthStateProvider>,
   });
 }
 

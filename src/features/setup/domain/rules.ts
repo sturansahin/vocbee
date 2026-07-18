@@ -6,10 +6,27 @@ import type { UserPreferences } from './types';
 // Supported languages — VERBATIM from firestore.rules validLanguage (21 languages) so client-side
 // validation matches what the server rules accept (behavior contract — docs/refactor-v2/03 §2, /09).
 export const SUPPORTED_LANGUAGES = [
-  'amharic', 'arabic', 'chinese', 'english', 'french', 'german',
-  'hindi', 'indonesian', 'italian', 'japanese', 'korean', 'persian',
-  'portuguese', 'russian', 'serbian', 'spanish', 'swahili', 'thai',
-  'turkish', 'urdu', 'vietnamese',
+  'amharic',
+  'arabic',
+  'chinese',
+  'english',
+  'french',
+  'german',
+  'hindi',
+  'indonesian',
+  'italian',
+  'japanese',
+  'korean',
+  'persian',
+  'portuguese',
+  'russian',
+  'serbian',
+  'spanish',
+  'swahili',
+  'thai',
+  'turkish',
+  'urdu',
+  'vietnamese',
 ] as const;
 
 // User levels — VERBATIM from firestore.rules validUserLevel / vocabularyService.UserLevel.
@@ -24,12 +41,14 @@ export function isValidUserLevel(value: unknown): boolean {
 }
 
 export function isValidUserPreferences(
-  prefs: Partial<UserPreferences> | null | undefined
+  prefs: Partial<UserPreferences> | null | undefined,
 ): prefs is UserPreferences {
-  return !!prefs
-    && isValidLanguage(prefs.nativeLanguage)
-    && isValidLanguage(prefs.targetLanguage)
-    && isValidUserLevel(prefs.level);
+  return (
+    !!prefs &&
+    isValidLanguage(prefs.nativeLanguage) &&
+    isValidLanguage(prefs.targetLanguage) &&
+    isValidUserLevel(prefs.level)
+  );
 }
 
 /** Setup may complete only when both languages + a level are valid (matches setupCompleted gating). */

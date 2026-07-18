@@ -27,6 +27,10 @@ jest.mock('@expo/vector-icons', () => ({
 
 jest.mock('@expo/vector-icons/FontAwesome5', () => 'FontAwesome5');
 
+jest.mock('../../components/AnimatedSwitch', () => ({
+  AnimatedSwitch: () => null,
+}));
+
 jest.mock('@shared/theme', () => ({
   COLORS: {
     background: '#ffffff',
@@ -56,9 +60,7 @@ jest.mock('@shared/ui', () => ({
 }));
 
 jest.mock('@shared/i18n', () => ({
-  LANGUAGES: [
-    { id: 'english', code: 'en', name: 'English', nativeName: 'English', flagIcon: 1 },
-  ],
+  LANGUAGES: [{ id: 'english', code: 'en', name: 'English', nativeName: 'English', flagIcon: 1 }],
   LEVELS: [
     { id: 'beginner', range: 'A1-A2' },
     { id: 'intermediate', range: 'B1-B2' },
@@ -74,12 +76,8 @@ jest.mock('@features/notifications', () => ({
     'every6hours',
     'onceDaily',
   ],
-  getNotificationFrequencyKey: (minutes: number) => (
-    minutes === 60 ? 'every1hour' : 'every2hours'
-  ),
-  getNotificationFrequencyMinutes: (key: string) => (
-    key === 'every1hour' ? 60 : 120
-  ),
+  getNotificationFrequencyKey: (minutes: number) => (minutes === 60 ? 'every1hour' : 'every2hours'),
+  getNotificationFrequencyMinutes: (key: string) => (key === 'every1hour' ? 60 : 120),
 }));
 
 jest.mock('@features/auth', () => ({
@@ -192,10 +190,7 @@ describe('SettingsScreenContent', () => {
     fireEvent.press(getByText('common.save'));
 
     await waitFor(() => {
-      expect(facade.updateProfileName).toHaveBeenCalledWith(
-        'Updated Name',
-        mockUpdateProfileData,
-      );
+      expect(facade.updateProfileName).toHaveBeenCalledWith('Updated Name', mockUpdateProfileData);
       expect(mockShowAlert).toHaveBeenCalledWith({
         title: 'common.success',
         message: 'settings.profileUpdated',

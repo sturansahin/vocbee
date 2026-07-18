@@ -45,9 +45,9 @@ export class FirestoreProgressRepository implements RemoteProgressRepository {
     // Fallback to legacy main-doc field (backward compatibility for un-migrated users).
     const legacy = await this.getLegacyProgressFallback(userId);
     if (!legacy) return null;
-    const model = adaptLegacyLearnedWordsToProgressByLevelDocs(legacy, { deviceId: this.deviceId }).find(
-      m => m.level === level
-    );
+    const model = adaptLegacyLearnedWordsToProgressByLevelDocs(legacy, {
+      deviceId: this.deviceId,
+    }).find((m) => m.level === level);
     if (!model) return null;
     return {
       level,
@@ -80,10 +80,11 @@ export class FirestoreProgressRepository implements RemoteProgressRepository {
     const snap = await getDoc(doc(db, `users/${userId}`));
     const summary = snap.exists() ? (snap.data() as UserDocV2).progressSummary : undefined;
     if (summary) {
-      const totalLearnedCount = summary.totalLearnedCount
-        ?? Object.values(summary.byLevel).reduce(
+      const totalLearnedCount =
+        summary.totalLearnedCount ??
+        Object.values(summary.byLevel).reduce(
           (total, entry) => total + (entry?.learnedCount ?? 0),
-          0
+          0,
         );
       return {
         byLevel: summary.byLevel,

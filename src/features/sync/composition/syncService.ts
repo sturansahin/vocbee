@@ -20,16 +20,16 @@ export const createUserDocument = (
   userId: string,
   email: string,
   displayName?: string,
-  photoURL?: string | null
+  photoURL?: string | null,
 ): Promise<void> => syncService.createUserDocument(userId, email, displayName, photoURL);
 export const fetchAndSaveUserData = (userId: string) => syncService.fetchAndSaveUserData(userId);
 export const syncNotificationSettingsToFirestore = (
   userId: string,
-  settings: SyncNotificationSettings
+  settings: SyncNotificationSettings,
 ): Promise<void> => syncService.syncNotificationSettings(userId, settings);
 export const syncAuthProfileToFirestore = (
   userId: string,
-  profile: AuthProfileSyncInput
+  profile: AuthProfileSyncInput,
 ): Promise<void> => syncService.syncAuthProfile(userId, profile);
 
 export { syncService };

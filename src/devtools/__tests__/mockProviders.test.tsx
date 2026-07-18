@@ -7,8 +7,16 @@ import React from 'react';
 import { Text } from 'react-native';
 import { render } from '@testing-library/react-native';
 import { SCENARIOS } from '../scenarios';
-import { MockAuthContext, MockAuthProvider, buildMockAuthValue } from '../mockProviders/MockAuthProvider';
-import { MockMonetizationContext, MockMonetizationProvider, buildMockMonetizationValue } from '../mockProviders/MockMonetizationProvider';
+import {
+  MockAuthContext,
+  MockAuthProvider,
+  buildMockAuthValue,
+} from '../mockProviders/MockAuthProvider';
+import {
+  MockMonetizationContext,
+  MockMonetizationProvider,
+  buildMockMonetizationValue,
+} from '../mockProviders/MockMonetizationProvider';
 import { DevToolsScenarioProvider } from '../mockProviders/DevToolsScenarioProvider';
 
 describe('devtools mock providers (render smoke test)', () => {
@@ -25,7 +33,7 @@ describe('devtools mock providers (render smoke test)', () => {
     const { getByText } = render(
       <MockAuthProvider scenario={scenario}>
         <Probe />
-      </MockAuthProvider>
+      </MockAuthProvider>,
     );
 
     expect(getByText('PROBE_CHILD')).toBeTruthy();
@@ -60,7 +68,7 @@ describe('devtools mock providers (render smoke test)', () => {
     const { getByText } = render(
       <MockMonetizationProvider scenario={scenario}>
         <Probe />
-      </MockMonetizationProvider>
+      </MockMonetizationProvider>,
     );
 
     expect(getByText('PROBE_MONETIZATION')).toBeTruthy();
@@ -77,7 +85,7 @@ describe('devtools mock providers (render smoke test)', () => {
     const { getByText } = render(
       <DevToolsScenarioProvider scenario={SCENARIOS.setupIncomplete}>
         <Text>COMPOSED_CHILD</Text>
-      </DevToolsScenarioProvider>
+      </DevToolsScenarioProvider>,
     );
 
     expect(getByText('COMPOSED_CHILD')).toBeTruthy();

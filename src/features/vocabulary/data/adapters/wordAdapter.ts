@@ -22,7 +22,7 @@ export function parseVocabularyTxt(raw: string): VocabularyWord[] {
   const rows: unknown[] = Array.isArray(parsed)
     ? parsed
     : parsed && typeof parsed === 'object' && Array.isArray((parsed as { words?: unknown }).words)
-      ? ((parsed as { words: unknown[] }).words)
+      ? (parsed as { words: unknown[] }).words
       : [];
 
   const out: VocabularyWord[] = [];

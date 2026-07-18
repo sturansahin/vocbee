@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-  Dimensions,
-  Pressable,
-} from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Dimensions, Pressable } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { FONT_FAMILY, useTheme } from '@shared/theme';
@@ -36,7 +29,14 @@ interface HomeTutorialOverlayProps {
   };
 }
 
-export default function HomeTutorialOverlay({ visible, onComplete, currentStep, onNext, renderHighlight, layouts }: HomeTutorialOverlayProps) {
+export default function HomeTutorialOverlay({
+  visible,
+  onComplete,
+  currentStep,
+  onNext,
+  renderHighlight,
+  layouts,
+}: HomeTutorialOverlayProps) {
   const { t } = useTranslation();
   const { colors } = useTheme();
   const insets = useSafeAreaInsets();
@@ -121,13 +121,15 @@ export default function HomeTutorialOverlay({ visible, onComplete, currentStep, 
   return (
     <View style={StyleSheet.absoluteFill} pointerEvents="box-none">
       <View style={styles.container} pointerEvents="box-none">
-
         {/* 
           Steps 1 & 2: The card in HomeScreen is zIndex 10000 and renders ON TOP of this entire overlay.
           So we don't need a hole! We just render a solid background to darken the rest of the screen.
         */}
         {(currentStep <= 2 || hasFloatingHighlight) && (
-          <Pressable style={[StyleSheet.absoluteFill, { backgroundColor: bgColor }]} onPress={() => {}} />
+          <Pressable
+            style={[StyleSheet.absoluteFill, { backgroundColor: bgColor }]}
+            onPress={() => {}}
+          />
         )}
 
         {/* Fallback spotlight for callers that still prefer a cutout instead of a floating highlight */}
@@ -184,7 +186,10 @@ export default function HomeTutorialOverlay({ visible, onComplete, currentStep, 
         </View>
 
         {/* Footer Controls */}
-        <View style={[styles.footer, { paddingBottom: Math.max(insets.bottom, 20) }]} pointerEvents="box-none">
+        <View
+          style={[styles.footer, { paddingBottom: Math.max(insets.bottom, 20) }]}
+          pointerEvents="box-none"
+        >
           {/* Buttons matching OnboardingScreen */}
           <View style={styles.actions}>
             {currentStep < TOTAL_STEPS ? (
@@ -195,7 +200,12 @@ export default function HomeTutorialOverlay({ visible, onComplete, currentStep, 
                   </Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={onNext} style={styles.btnNav}>
-                  <Text style={[styles.btnNextText, { color: colors.primary, fontSize: subtitleFontSize + 2 }]}>
+                  <Text
+                    style={[
+                      styles.btnNextText,
+                      { color: colors.primary, fontSize: subtitleFontSize + 2 },
+                    ]}
+                  >
                     {t('homeTutorial.next')}
                   </Text>
                 </TouchableOpacity>
@@ -203,7 +213,12 @@ export default function HomeTutorialOverlay({ visible, onComplete, currentStep, 
             ) : (
               <View style={styles.startButtonContainer}>
                 <TouchableOpacity onPress={onComplete} style={styles.startButton}>
-                  <Text style={[styles.startButtonText, { color: colors.primary, fontSize: subtitleFontSize + 2 }]}>
+                  <Text
+                    style={[
+                      styles.startButtonText,
+                      { color: colors.primary, fontSize: subtitleFontSize + 2 },
+                    ]}
+                  >
                     {t('homeTutorial.done')}
                   </Text>
                 </TouchableOpacity>
@@ -211,7 +226,6 @@ export default function HomeTutorialOverlay({ visible, onComplete, currentStep, 
             )}
           </View>
         </View>
-
       </View>
     </View>
   );

@@ -3,18 +3,28 @@ import type { HomePlatformGateway, HomeServiceDependencies } from '../contracts'
 import { DEFAULT_STREAK_SUMMARY } from '@features/streak';
 
 const word = {
-  id: 1, word: 'Haus', pronunciation: '/haʊs/', translation: 'House',
-  sentence1: 'Das ist ein Haus', sentence2: 'Ein Haus',
-  nativeSentence1: 'Bu bir ev', nativeSentence2: 'Bir ev',
+  id: 1,
+  word: 'Haus',
+  pronunciation: '/haʊs/',
+  translation: 'House',
+  sentence1: 'Das ist ein Haus',
+  sentence2: 'Ein Haus',
+  nativeSentence1: 'Bu bir ev',
+  nativeSentence2: 'Bir ev',
 };
 
 function makeDependencies(overrides: Partial<HomeServiceDependencies> = {}) {
   const platform: HomePlatformGateway = {
-    getItem: jest.fn(async key => ({
-      '@native_language': 'turkish',
-      '@target_language': 'german',
-      '@user_level': 'beginner',
-    } as Record<string, string>)[key] ?? null),
+    getItem: jest.fn(
+      async (key) =>
+        (
+          ({
+            '@native_language': 'turkish',
+            '@target_language': 'german',
+            '@user_level': 'beginner',
+          }) as Record<string, string>
+        )[key] ?? null,
+    ),
     setItem: jest.fn(async () => undefined),
     speak: jest.fn(async () => undefined),
   };
@@ -22,7 +32,7 @@ function makeDependencies(overrides: Partial<HomeServiceDependencies> = {}) {
     isVocabularyGenerated: jest.fn(async () => true),
     generateVocabulary: jest.fn(async () => undefined),
     getStoredVocabulary: jest.fn(async () => [word]),
-    shuffleWords: jest.fn(words => words),
+    shuffleWords: jest.fn((words) => words),
     getCurrentLevel: jest.fn(async () => 'A1'),
     getLearnedWords: jest.fn(async () => []),
     getLearnedCount: jest.fn(async () => 0),
@@ -34,7 +44,10 @@ function makeDependencies(overrides: Partial<HomeServiceDependencies> = {}) {
     getPendingWord: jest.fn(async () => null),
     clearPendingWord: jest.fn(async () => undefined),
     getStreakSummary: jest.fn(async () => DEFAULT_STREAK_SUMMARY),
-    recordDailyStudyAction: jest.fn(async () => ({ state: DEFAULT_STREAK_SUMMARY, didIncrement: true })),
+    recordDailyStudyAction: jest.fn(async () => ({
+      state: DEFAULT_STREAK_SUMMARY,
+      didIncrement: true,
+    })),
     scheduleStreakReminder: jest.fn(async () => undefined),
     isFavorite: jest.fn(async () => false),
     addFavorite: jest.fn(async () => undefined),
@@ -79,6 +92,10 @@ describe('DefaultHomeFacade', () => {
     await facade.speak('Haus', 'de-DE');
     expect(services.addFavorite).toHaveBeenCalledWith(word, 'A1');
     expect(services.removeFavorite).toHaveBeenCalledWith(1, 'A1');
-    expect(platform.speak).toHaveBeenCalledWith('Haus', { language: 'de-DE', pitch: 1, rate: 0.75 });
+    expect(platform.speak).toHaveBeenCalledWith('Haus', {
+      language: 'de-DE',
+      pitch: 1,
+      rate: 0.75,
+    });
   });
 });

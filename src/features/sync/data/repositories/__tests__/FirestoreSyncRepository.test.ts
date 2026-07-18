@@ -42,31 +42,36 @@ const remoteSnapshot = (data: Record<string, unknown>) => ({
   data: () => data,
 });
 
-const levelDocs = (updatedAt = 20) => ['A1', 'A2', 'B1', 'B2', 'C1'].map(level => ({
-  id: level,
-  exists: () => true,
-  data: () => ({
-    level,
-    learnedWordIds: level === 'A1' ? [1, 2] : level === 'A2' ? [8] : [],
-    lastWordId: level === 'A2' ? 8 : 0,
-    learnedCount: level === 'A1' ? 2 : level === 'A2' ? 1 : 0,
-    vocabularySchemaVersion: 2,
-    updatedAt: { toMillis: () => updatedAt },
-    version: 2,
-  }),
-}));
+const levelDocs = (updatedAt = 20) =>
+  ['A1', 'A2', 'B1', 'B2', 'C1'].map((level) => ({
+    id: level,
+    exists: () => true,
+    data: () => ({
+      level,
+      learnedWordIds: level === 'A1' ? [1, 2] : level === 'A2' ? [8] : [],
+      lastWordId: level === 'A2' ? 8 : 0,
+      learnedCount: level === 'A1' ? 2 : level === 'A2' ? 1 : 0,
+      vocabularySchemaVersion: 2,
+      updatedAt: { toMillis: () => updatedAt },
+      version: 2,
+    }),
+  }));
 
-const missingLevelDoc = (level: string) => ({ id: level, exists: () => false, data: () => undefined });
+const missingLevelDoc = (level: string) => ({
+  id: level,
+  exists: () => false,
+  data: () => undefined,
+});
 
 function mockReconciliationTransaction(
   userData: Record<string, unknown>,
-  docs: ReturnType<typeof levelDocs>
+  docs: ReturnType<typeof levelDocs>,
 ): void {
   const levels = ['A1', 'A2', 'B1', 'B2', 'C1'];
-  const byLevel = new Map(docs.map(document => [document.id, document]));
+  const byLevel = new Map(docs.map((document) => [document.id, document]));
   const snapshots = [
     remoteSnapshot(userData),
-    ...levels.map(level => byLevel.get(level) ?? missingLevelDoc(level)),
+    ...levels.map((level) => byLevel.get(level) ?? missingLevelDoc(level)),
   ];
   mockRunTransaction.mockImplementationOnce(async (_db, update) => {
     let readIndex = 0;
@@ -109,27 +114,35 @@ describe('FirestoreSyncRepository progress rollout', () => {
       progressSummary: { totalLearnedCount: 3 },
       syncMeta: { version: 2 },
     });
-    expect(mockBatchSet.mock.calls.slice(1).map(call => call[1])).toEqual(
+    expect(mockBatchSet.mock.calls.slice(1).map((call) => call[1])).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
-          level: 'A2', learnedWordIds: [8], lastWordId: 8,
-          learnedCount: 1, vocabularySchemaVersion: 2, version: 2,
+          level: 'A2',
+          learnedWordIds: [8],
+          lastWordId: 8,
+          learnedCount: 1,
+          vocabularySchemaVersion: 2,
+          version: 2,
         }),
-      ])
+      ]),
     );
     expect(mockBatchCommit).toHaveBeenCalledTimes(1);
   });
 
   it('prefers a complete and newer v2 view without rewriting it', async () => {
     process.env.EXPO_PUBLIC_PROGRESS_SYNC_MODE = 'dual';
-    mockGetDoc.mockResolvedValueOnce(remoteSnapshot({
-      schemaVersion: 2,
-      activeLevel: 'A2',
-      progress: {
-        currentLevel: 'A2', learnedWords: { A1: [1] }, lastWordIndex: 1,
-        lastSync: { toMillis: () => 10 },
-      },
-    }));
+    mockGetDoc.mockResolvedValueOnce(
+      remoteSnapshot({
+        schemaVersion: 2,
+        activeLevel: 'A2',
+        progress: {
+          currentLevel: 'A2',
+          learnedWords: { A1: [1] },
+          lastWordIndex: 1,
+          lastSync: { toMillis: () => 10 },
+        },
+      }),
+    );
     mockGetDocs.mockResolvedValueOnce({ docs: levelDocs(20) });
 
     const remote = await new FirestoreSyncRepository().getUserDocument('user-a');
@@ -150,7 +163,9 @@ describe('FirestoreSyncRepository progress rollout', () => {
       activeLevel: 'A1',
       lastActiveDeviceId: 'legacy-device',
       progress: {
-        currentLevel: 'A1', learnedWords: { A1: [3, 1] }, lastWordIndex: 3,
+        currentLevel: 'A1',
+        learnedWords: { A1: [3, 1] },
+        lastWordIndex: 3,
         lastSync: { toMillis: () => 30 },
       },
     };
@@ -177,7 +192,9 @@ describe('FirestoreSyncRepository progress rollout', () => {
       activeLevel: 'A2',
       lastActiveDeviceId: 'legacy-device',
       progress: {
-        currentLevel: 'A2', learnedWords: { A1: [1, 2], A2: [9, 8] }, lastWordIndex: 9,
+        currentLevel: 'A2',
+        learnedWords: { A1: [1, 2], A2: [9, 8] },
+        lastWordIndex: 9,
         lastSync: { toMillis: () => 30 },
       },
     };
@@ -201,12 +218,16 @@ describe('FirestoreSyncRepository progress rollout', () => {
 
   it('fails closed instead of rewriting malformed legacy progress', async () => {
     process.env.EXPO_PUBLIC_PROGRESS_SYNC_MODE = 'dual';
-    mockGetDoc.mockResolvedValueOnce(remoteSnapshot({
-      schemaVersion: 1,
-      progress: {
-        currentLevel: 'A1', learnedWords: { A1: [1, 1] }, lastWordIndex: 1,
-      },
-    }));
+    mockGetDoc.mockResolvedValueOnce(
+      remoteSnapshot({
+        schemaVersion: 1,
+        progress: {
+          currentLevel: 'A1',
+          learnedWords: { A1: [1, 1] },
+          lastWordIndex: 1,
+        },
+      }),
+    );
     mockGetDocs.mockResolvedValueOnce({ docs: [] });
 
     const remote = await new FirestoreSyncRepository().getUserDocument('user-a');

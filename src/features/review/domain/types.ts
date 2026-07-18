@@ -1,6 +1,11 @@
 export type ReviewPromptOutcome =
-  | 'nativeRequested' | 'satisfactionShown' | 'dismissed' | 'positiveRating'
-  | 'negativeRating' | 'openedStore' | 'feedbackOpened';
+  | 'nativeRequested'
+  | 'satisfactionShown'
+  | 'dismissed'
+  | 'positiveRating'
+  | 'negativeRating'
+  | 'openedStore'
+  | 'feedbackOpened';
 
 export type AutomaticReviewMode = 'native' | 'satisfaction';
 
@@ -30,7 +35,10 @@ export interface ReviewPromptDecision {
   reason?: string;
 }
 
-export interface StoreReviewOpenResult { opened: boolean; attemptedUrls: string[]; }
+export interface StoreReviewOpenResult {
+  opened: boolean;
+  attemptedUrls: string[];
+}
 
 export const DEFAULT_REVIEW_PROMPT_STATE: ReviewPromptState = {
   appLaunchCount: 0,

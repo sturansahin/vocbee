@@ -24,7 +24,7 @@ export interface NotificationFacade {
   handleResponse(response: NotificationResponsePayload): Promise<void>;
   getLastResponse(): Promise<NotificationResponsePayload | null>;
   addResponseListener(
-    listener: (response: NotificationResponsePayload) => void
+    listener: (response: NotificationResponsePayload) => void,
   ): NotificationResponseSubscription;
   clearLastResponse(): Promise<void>;
   getPendingWord(): Promise<PendingNotificationWord | null>;

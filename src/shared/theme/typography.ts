@@ -6,11 +6,11 @@ export const HEADER_FONT_FAMILY = 'RubikMonoOne_400Regular';
 
 // Use this for all text styles that should use the custom font
 export const typography = {
-    fontFamily: FONT_FAMILY,
+  fontFamily: FONT_FAMILY,
 };
 
 // Helper function to apply custom font to style object
 export const withCustomFont = (style: object = {}) => ({
-    ...style,
-    fontFamily: FONT_FAMILY,
+  ...style,
+  fontFamily: FONT_FAMILY,
 });

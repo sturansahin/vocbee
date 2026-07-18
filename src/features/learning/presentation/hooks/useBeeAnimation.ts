@@ -19,15 +19,45 @@ export function useBeeAnimation(active: boolean, wordId?: number) {
     bee.scale.setValue(0.7);
     const animation = Animated.sequence([
       Animated.parallel([
-        Animated.timing(bee.translateX, { toValue: -20, duration: 1000, easing: Easing.linear, useNativeDriver: true }),
-        Animated.timing(bee.translateY, { toValue: -20, duration: 1000, easing: Easing.linear, useNativeDriver: true }),
-        Animated.timing(bee.rotation, { toValue: 10, duration: 1000, easing: Easing.linear, useNativeDriver: true }),
+        Animated.timing(bee.translateX, {
+          toValue: -20,
+          duration: 1000,
+          easing: Easing.linear,
+          useNativeDriver: true,
+        }),
+        Animated.timing(bee.translateY, {
+          toValue: -20,
+          duration: 1000,
+          easing: Easing.linear,
+          useNativeDriver: true,
+        }),
+        Animated.timing(bee.rotation, {
+          toValue: 10,
+          duration: 1000,
+          easing: Easing.linear,
+          useNativeDriver: true,
+        }),
         Animated.spring(bee.scale, { toValue: 1, tension: 30, friction: 5, useNativeDriver: true }),
       ]),
       Animated.parallel([
-        Animated.spring(bee.translateX, { toValue: 0, tension: 15, friction: 8, useNativeDriver: true }),
-        Animated.spring(bee.translateY, { toValue: 0, tension: 15, friction: 8, useNativeDriver: true }),
-        Animated.spring(bee.rotation, { toValue: 0, tension: 20, friction: 7, useNativeDriver: true }),
+        Animated.spring(bee.translateX, {
+          toValue: 0,
+          tension: 15,
+          friction: 8,
+          useNativeDriver: true,
+        }),
+        Animated.spring(bee.translateY, {
+          toValue: 0,
+          tension: 15,
+          friction: 8,
+          useNativeDriver: true,
+        }),
+        Animated.spring(bee.rotation, {
+          toValue: 0,
+          tension: 20,
+          friction: 7,
+          useNativeDriver: true,
+        }),
       ]),
     ]);
     animationRef.current?.stop();

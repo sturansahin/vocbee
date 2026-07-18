@@ -5,10 +5,10 @@
 import type { UserPreferences } from '@features/setup';
 
 export interface SettingsRepository {
-  getPreferences(): Promise<UserPreferences | null>;                       // local-first
-  savePreferences(userId: string, prefs: UserPreferences): Promise<void>;  // local + profile-repo delegation
-  getAppLanguage(): Promise<string>;                                       // @user_language
-  setAppLanguage(lang: string): Promise<void>;                            // i18n + RTL (utils/rtl.ts) in wiring
+  getPreferences(): Promise<UserPreferences | null>; // local-first
+  savePreferences(userId: string, prefs: UserPreferences): Promise<void>; // local + profile-repo delegation
+  getAppLanguage(): Promise<string>; // @user_language
+  setAppLanguage(lang: string): Promise<void>; // i18n + RTL (utils/rtl.ts) in wiring
   getUserLevel(): Promise<string | null>;
   setUserLevel(level: string): Promise<void>;
 }

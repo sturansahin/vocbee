@@ -3,7 +3,14 @@ import React from 'react';
 import { fireEvent, render } from '@testing-library/react-native';
 import { TargetLanguageStep } from '../TargetLanguageStep';
 
-const colors = { text: '#000', textSecondary: '#666', surface: '#F5F5F5', border: '#E0E0E0', primary: '#FFC814', background: '#fff' };
+const colors = {
+  text: '#000',
+  textSecondary: '#666',
+  surface: '#F5F5F5',
+  border: '#E0E0E0',
+  primary: '#FFC814',
+  background: '#fff',
+};
 
 const languages = [
   { id: 'english', name: 'English', nativeName: 'The English Language', flagIcon: 1 },
@@ -19,7 +26,7 @@ describe('TargetLanguageStep', () => {
         selectedLanguage=""
         colors={colors}
         onSelectLanguage={jest.fn()}
-      />
+      />,
     );
     expect(getByText('English')).toBeTruthy();
     expect(queryByText('Turkish')).toBeNull();
@@ -34,7 +41,7 @@ describe('TargetLanguageStep', () => {
         selectedLanguage=""
         colors={colors}
         onSelectLanguage={onSelectLanguage}
-      />
+      />,
     );
     fireEvent.press(getByText('English'));
     expect(onSelectLanguage).toHaveBeenCalledWith('english');

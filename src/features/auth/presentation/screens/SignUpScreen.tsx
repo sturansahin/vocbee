@@ -78,9 +78,7 @@ export function SignUpScreen({ gateway }: SignUpScreenProps) {
     }
   };
 
-  const handleSocialSignIn = async (
-    action: () => Promise<{ setupCompleted: boolean }>
-  ) => {
+  const handleSocialSignIn = async (action: () => Promise<{ setupCompleted: boolean }>) => {
     if (isSubmitting) return;
     setIsSubmitting(true);
     try {
@@ -115,17 +113,9 @@ export function SignUpScreen({ gateway }: SignUpScreenProps) {
         textColor={colors.text}
       />
       <ScrollView
-        contentContainerStyle={[
-          styles.scrollContentSignup,
-          { padding: isSmallScreen ? 20 : 24 },
-        ]}
+        contentContainerStyle={[styles.scrollContentSignup, { padding: isSmallScreen ? 20 : 24 }]}
       >
-        <View
-          style={[
-            styles.titleSection,
-            { marginBottom: isSmallScreen ? 20 : 32 },
-          ]}
-        >
+        <View style={[styles.titleSection, { marginBottom: isSmallScreen ? 20 : 32 }]}>
           <Text
             style={[
               styles.titleWhite,
@@ -168,7 +158,7 @@ export function SignUpScreen({ gateway }: SignUpScreenProps) {
           onChangeText={setPassword}
           secureTextEntry={!showPassword}
           rightIcon={showPassword ? 'visibility' : 'visibility-off'}
-          onRightIconPress={() => setShowPassword(value => !value)}
+          onRightIconPress={() => setShowPassword((value) => !value)}
           {...inputColors}
         />
         <Input
@@ -178,26 +168,22 @@ export function SignUpScreen({ gateway }: SignUpScreenProps) {
           onChangeText={setConfirmPassword}
           secureTextEntry={!showConfirmPassword}
           rightIcon={showConfirmPassword ? 'visibility' : 'visibility-off'}
-          onRightIconPress={() => setShowConfirmPassword(value => !value)}
+          onRightIconPress={() => setShowConfirmPassword((value) => !value)}
           {...inputColors}
         />
 
         <View style={styles.privacyConsentRow}>
           <TouchableOpacity
             testID="privacy-consent-checkbox"
-            onPress={() => setHasAcceptedPrivacyPolicy(value => !value)}
+            onPress={() => setHasAcceptedPrivacyPolicy((value) => !value)}
             style={styles.privacyCheckboxButton}
             accessibilityRole="checkbox"
             accessibilityState={{ checked: hasAcceptedPrivacyPolicy }}
           >
             <MaterialIcons
-              name={
-                hasAcceptedPrivacyPolicy ? 'check-box' : 'check-box-outline-blank'
-              }
+              name={hasAcceptedPrivacyPolicy ? 'check-box' : 'check-box-outline-blank'}
               size={24}
-              color={
-                hasAcceptedPrivacyPolicy ? colors.primary : colors.textSecondary
-              }
+              color={hasAcceptedPrivacyPolicy ? colors.primary : colors.textSecondary}
             />
           </TouchableOpacity>
           <Text style={[styles.privacyConsentText, { color: colors.textSecondary }]}>
@@ -219,11 +205,7 @@ export function SignUpScreen({ gateway }: SignUpScreenProps) {
           disabled={isSubmitting || !hasAcceptedPrivacyPolicy}
         />
         {isSubmitting && (
-          <ActivityIndicator
-            size="small"
-            color={colors.primary}
-            style={{ marginTop: 16 }}
-          />
+          <ActivityIndicator size="small" color={colors.primary} style={{ marginTop: 16 }} />
         )}
         <View style={[styles.divider, { marginVertical: isSmallScreen ? 20 : 32 }]}>
           <View style={[styles.dividerLine, { backgroundColor: colors.border }]} />

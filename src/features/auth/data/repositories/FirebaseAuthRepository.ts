@@ -94,7 +94,7 @@ export class FirebaseAuthRepository implements AuthRepository {
   }
 
   onAuthStateChanged(callback: (user: AuthUser | null) => void): () => void {
-    return firebaseOnAuthStateChanged(auth, user => callback(user ? mapUser(user) : null));
+    return firebaseOnAuthStateChanged(auth, (user) => callback(user ? mapUser(user) : null));
   }
 
   async signUpWithEmail(email: string, password: string, displayName?: string): Promise<AuthUser> {

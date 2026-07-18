@@ -51,11 +51,8 @@ export function RootNavigator({ initialRoute, navigationRef }: RootNavigatorProp
 
   return (
     <NavigationContainer ref={navigationRef} theme={navigationTheme}>
-      <StatusBar style={isDarkMode ? "light" : "dark"} />
-      <Stack.Navigator
-        screenOptions={{ headerShown: false }}
-        initialRouteName={initialRoute}
-      >
+      <StatusBar style={isDarkMode ? 'light' : 'dark'} />
+      <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName={initialRoute}>
         {/* Onboarding Flow */}
         <Stack.Screen name="Onboarding" component={OnboardingScreen} />
 

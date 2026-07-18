@@ -9,7 +9,7 @@ const legacyRootModules = ['constants', 'types'];
 const sourceExtensions = new Set(['.ts', '.tsx']);
 
 function collectProductionFiles(directory: string): string[] {
-  return fs.readdirSync(directory, { withFileTypes: true }).flatMap(entry => {
+  return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
     const absolutePath = path.join(directory, entry.name);
 
     if (entry.isDirectory()) {
@@ -47,10 +47,8 @@ function moduleSpecifiers(filePath: string): string[] {
       ts.isCallExpression(node) &&
       node.arguments.length === 1 &&
       ts.isStringLiteral(node.arguments[0]) &&
-      (
-        node.expression.kind === ts.SyntaxKind.ImportKeyword ||
-        (ts.isIdentifier(node.expression) && node.expression.text === 'require')
-      )
+      (node.expression.kind === ts.SyntaxKind.ImportKeyword ||
+        (ts.isIdentifier(node.expression) && node.expression.text === 'require'))
     ) {
       specifiers.push(node.arguments[0].text);
     }
@@ -63,9 +61,7 @@ function moduleSpecifiers(filePath: string): string[] {
 }
 
 function relativeTarget(filePath: string, specifier: string): string | null {
-  return specifier.startsWith('.')
-    ? path.resolve(path.dirname(filePath), specifier)
-    : null;
+  return specifier.startsWith('.') ? path.resolve(path.dirname(filePath), specifier) : null;
 }
 
 function relativePath(filePath: string): string {
@@ -87,10 +83,10 @@ const productionFiles = collectProductionFiles(srcRoot);
 describe('production import boundaries', () => {
   it('keeps legacy root source directories and modules removed', () => {
     const existingLegacyPaths = [
-      ...legacyRootDirs.filter(directory => fs.existsSync(path.join(repoRoot, directory))),
+      ...legacyRootDirs.filter((directory) => fs.existsSync(path.join(repoRoot, directory))),
       ...legacyRootModules
-        .map(moduleName => `${moduleName}.ts`)
-        .filter(fileName => fs.existsSync(path.join(repoRoot, fileName))),
+        .map((moduleName) => `${moduleName}.ts`)
+        .filter((fileName) => fs.existsSync(path.join(repoRoot, fileName))),
     ];
 
     expect(existingLegacyPaths).toEqual([]);
@@ -103,15 +99,20 @@ describe('production import boundaries', () => {
       for (const specifier of moduleSpecifiers(filePath)) {
         const transitionalRootAlias = specifier === '@' || specifier.startsWith('@/');
         const target = relativeTarget(filePath, specifier);
-        const legacyRelative = target !== null && legacyRootDirs.some(directory => {
-          const legacyRoot = path.join(repoRoot, directory);
-          return target === legacyRoot || target.startsWith(`${legacyRoot}${path.sep}`);
-        });
-        const legacyModuleRelative = target !== null && legacyRootModules.some(moduleName => (
-          target === path.join(repoRoot, moduleName) ||
-          target === path.join(repoRoot, `${moduleName}.ts`) ||
-          target === path.join(repoRoot, `${moduleName}.tsx`)
-        ));
+        const legacyRelative =
+          target !== null &&
+          legacyRootDirs.some((directory) => {
+            const legacyRoot = path.join(repoRoot, directory);
+            return target === legacyRoot || target.startsWith(`${legacyRoot}${path.sep}`);
+          });
+        const legacyModuleRelative =
+          target !== null &&
+          legacyRootModules.some(
+            (moduleName) =>
+              target === path.join(repoRoot, moduleName) ||
+              target === path.join(repoRoot, `${moduleName}.ts`) ||
+              target === path.join(repoRoot, `${moduleName}.tsx`),
+          );
 
         if (transitionalRootAlias || legacyRelative || legacyModuleRelative) {
           violations.push(`${relativePath(filePath)} -> ${specifier}`);
@@ -185,7 +186,7 @@ describe('production import boundaries', () => {
 
       for (const specifier of moduleSpecifiers(filePath)) {
         const forbiddenPackages = isDomain ? domainForbidden : sideEffectSdkForbidden;
-        if (forbiddenPackages.some(packageName => isPackage(specifier, packageName))) {
+        if (forbiddenPackages.some((packageName) => isPackage(specifier, packageName))) {
           violations.push(`${normalized} -> ${specifier}`);
         }
 
@@ -215,12 +216,10 @@ describe('production import boundaries', () => {
       for (const specifier of moduleSpecifiers(filePath)) {
         if (
           isShared &&
-          (
-            specifier === '@app' ||
+          (specifier === '@app' ||
             specifier.startsWith('@app/') ||
             specifier === '@features' ||
-            specifier.startsWith('@features/')
-          )
+            specifier.startsWith('@features/'))
         ) {
           violations.push(`${normalized} -> ${specifier}`);
         }
@@ -239,10 +238,11 @@ describe('production import boundaries', () => {
   });
 
   it('provides a public index.ts for every feature', () => {
-    const missing = fs.readdirSync(path.join(srcRoot, 'features'), { withFileTypes: true })
-      .filter(entry => entry.isDirectory())
-      .map(entry => entry.name)
-      .filter(feature => !fs.existsSync(path.join(srcRoot, 'features', feature, 'index.ts')));
+    const missing = fs
+      .readdirSync(path.join(srcRoot, 'features'), { withFileTypes: true })
+      .filter((entry) => entry.isDirectory())
+      .map((entry) => entry.name)
+      .filter((feature) => !fs.existsSync(path.join(srcRoot, 'features', feature, 'index.ts')));
 
     expect(missing).toEqual([]);
   });

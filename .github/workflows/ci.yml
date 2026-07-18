@@ -36,13 +36,17 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
       - run: npm ci
       - run: npm run typecheck
       - run: npm run typecheck:test
       - run: npm run typecheck:rules
       - run: npm run typecheck:worker
+      - name: Prettier (blocking format guard)
+        run: npm run prettier:check
+      - name: Server/mobile dependency boundary
+        run: npm run check:server-deps && npm run api:check
       - name: Lint (blocking architecture guard)
         run: npm run lint
       - run: npm run test:boundaries
@@ -62,7 +66,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
       # Firestore emulator requires a JDK; absent in some local/dev envs, provided here.
       - uses: actions/setup-java@v4
@@ -81,7 +85,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
       - run: npm ci
       - run: npm run audit:prod

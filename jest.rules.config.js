@@ -4,9 +4,9 @@
 const appConfig = require('./jest.config');
 
 module.exports = {
-    ...appConfig,
-    collectCoverage: false,
-    setupFilesAfterEnv: [],
-    testEnvironment: 'node',
-    testMatch: ['<rootDir>/tests/firestoreRules.ts'],
+  ...appConfig,
+  collectCoverage: false,
+  setupFilesAfterEnv: [],
+  testEnvironment: 'node',
+  testMatch: ['<rootDir>/tests/firestoreRules.ts'],
 };

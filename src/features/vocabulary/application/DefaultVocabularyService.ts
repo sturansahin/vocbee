@@ -19,7 +19,11 @@ export class DefaultVocabularyService {
     }
   }
 
-  async mergeVocabulary(nativeLanguage: string, targetLanguage: string, level: Level): Promise<VocabularyWord[]> {
+  async mergeVocabulary(
+    nativeLanguage: string,
+    targetLanguage: string,
+    level: Level,
+  ): Promise<VocabularyWord[]> {
     const [targetWords, nativeWords] = await Promise.all([
       this.getLanguageVocabulary(targetLanguage, level),
       this.getLanguageVocabulary(nativeLanguage, level),
@@ -32,7 +36,10 @@ export class DefaultVocabularyService {
     return mergeVocabularyWords(targetWords, nativeWords);
   }
 
-  private async writeGeneratedVocabulary(nativeLanguage: string, targetLanguage: string): Promise<void> {
+  private async writeGeneratedVocabulary(
+    nativeLanguage: string,
+    targetLanguage: string,
+  ): Promise<void> {
     console.log(`Generating vocabulary: ${nativeLanguage} -> ${targetLanguage}`);
     await this.repository.setLanguagePair(nativeLanguage, targetLanguage);
     const entries: StoredVocabularyByLevel = {};
@@ -61,9 +68,13 @@ export class DefaultVocabularyService {
         console.warn('[Vocabulary] Schema upgrade skipped - language pair missing');
         return;
       }
-      console.log(`[Vocabulary] Upgrading cached vocabulary schema ${storedVersion ?? 'unknown'} -> ${VOCABULARY_SCHEMA_VERSION}`);
+      console.log(
+        `[Vocabulary] Upgrading cached vocabulary schema ${storedVersion ?? 'unknown'} -> ${VOCABULARY_SCHEMA_VERSION}`,
+      );
       await this.writeGeneratedVocabulary(pair.native, pair.target);
-    })().finally(() => { this.schemaSyncPromise = null; });
+    })().finally(() => {
+      this.schemaSyncPromise = null;
+    });
     return this.schemaSyncPromise;
   }
 
@@ -98,17 +109,29 @@ export class DefaultVocabularyService {
   }
 
   async isVocabularyGenerated(): Promise<boolean> {
-    try { return await this.repository.hasStoredVocabulary(); }
-    catch (error) { console.error('Error checking vocabulary:', error); return false; }
+    try {
+      return await this.repository.hasStoredVocabulary();
+    } catch (error) {
+      console.error('Error checking vocabulary:', error);
+      return false;
+    }
   }
 
   async getLanguagePair(): Promise<{ native: string; target: string } | null> {
-    try { return await this.repository.getLanguagePair(); }
-    catch (error) { console.error('Error getting language pair:', error); return null; }
+    try {
+      return await this.repository.getLanguagePair();
+    } catch (error) {
+      console.error('Error getting language pair:', error);
+      return null;
+    }
   }
 
   async clearVocabulary(): Promise<void> {
-    try { await this.repository.clear(); console.log('Vocabulary cleared (per-level + legacy)'); }
-    catch (error) { console.error('Error clearing vocabulary:', error); }
+    try {
+      await this.repository.clear();
+      console.log('Vocabulary cleared (per-level + legacy)');
+    } catch (error) {
+      console.error('Error clearing vocabulary:', error);
+    }
   }
 }

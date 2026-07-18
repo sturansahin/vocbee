@@ -25,7 +25,10 @@ jest.mock('../guard', () => ({
 }));
 
 jest.mock('@features/favorites', () => ({ FavoritesScreen: () => null }));
-jest.mock('@features/learning', () => ({ HomeScreen: () => null, ExampleSentencesScreen: () => null }));
+jest.mock('@features/learning', () => ({
+  HomeScreen: () => null,
+  ExampleSentencesScreen: () => null,
+}));
 jest.mock('@features/onboarding', () => () => null);
 jest.mock('@features/settings', () => () => null);
 jest.mock('@features/setup', () => ({ LevelTestScreen: () => null, SetupScreen: () => null }));
@@ -33,7 +36,13 @@ jest.mock('@features/auth', () => ({
   ForgotPasswordScreen: () => null,
   LoginScreen: () => null,
   SignUpScreen: () => null,
-  useAuth: () => ({ user: null, userData: null, isLoading: false, isAuthenticated: false, connectionError: false }),
+  useAuth: () => ({
+    user: null,
+    userData: null,
+    isLoading: false,
+    isAuthenticated: false,
+    connectionError: false,
+  }),
 }));
 
 import React from 'react';

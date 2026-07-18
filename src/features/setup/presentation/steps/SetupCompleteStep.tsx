@@ -34,10 +34,17 @@ export const SetupCompleteStep: React.FC<SetupCompleteStepProps> = ({
   return (
     <View style={[styles.scrollView, { justifyContent: 'center' }]}>
       <View style={styles.scheduleContainer}>
-        <View style={[styles.scheduleSection, { backgroundColor: colors.surface, borderColor: colors.border }]}>
+        <View
+          style={[
+            styles.scheduleSection,
+            { backgroundColor: colors.surface, borderColor: colors.border },
+          ]}
+        >
           <View style={styles.scheduleLabelRow}>
             <Feather name="repeat" size={18} color={colors.primary} />
-            <Text style={[styles.scheduleLabel, { color: colors.text }]}>{t('setup.frequency')}</Text>
+            <Text style={[styles.scheduleLabel, { color: colors.text }]}>
+              {t('setup.frequency')}
+            </Text>
           </View>
           <View style={styles.frequencyList}>
             {frequencyKeys.map((freqKey) => (
@@ -46,7 +53,10 @@ export const SetupCompleteStep: React.FC<SetupCompleteStepProps> = ({
                 style={[
                   styles.frequencyItem,
                   { borderColor: colors.border },
-                  selectedFrequency === freqKey && { borderColor: colors.primary, backgroundColor: `${colors.primary}15` },
+                  selectedFrequency === freqKey && {
+                    borderColor: colors.primary,
+                    backgroundColor: `${colors.primary}15`,
+                  },
                 ]}
                 onPress={() => onSelectFrequency(freqKey)}
               >

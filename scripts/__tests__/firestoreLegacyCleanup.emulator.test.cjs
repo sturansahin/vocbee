@@ -28,8 +28,11 @@ function options(reportPath, overrides = {}) {
   };
 }
 
-test('emulator dry-run, transactional cleanup, post-check and rollback all succeed', async t => {
-  assert.ok(process.env.FIRESTORE_EMULATOR_HOST, 'FIRESTORE_EMULATOR_HOST must be set by firebase emulators:exec');
+test('emulator dry-run, transactional cleanup, post-check and rollback all succeed', async (t) => {
+  assert.ok(
+    process.env.FIRESTORE_EMULATOR_HOST,
+    'FIRESTORE_EMULATOR_HOST must be set by firebase emulators:exec',
+  );
   const app = initializeApp({ projectId: PROJECT }, `cleanup-emulator-test-${process.pid}`);
   const db = getFirestore(app);
   const { FieldPath, FieldValue } = require('firebase-admin/firestore');
@@ -49,16 +52,41 @@ test('emulator dry-run, transactional cleanup, post-check and rollback all succe
   await db.recursiveDelete(db.collection('users'));
 
   const user = db.collection('users').doc('emulator-user');
-  await user.set({ schemaVersion: 2, progress: legacyProgress, displayName: 'PII must never enter reports' });
-  await user.collection('progressByLevel').doc('A1').set({
-    level: 'A1', learnedWordIds: [1, 2, 3], learnedCount: 3, lastWordId: 3, vocabularySchemaVersion: 2, version: 2, updatedAt: new Date(),
+  await user.set({
+    schemaVersion: 2,
+    progress: legacyProgress,
+    displayName: 'PII must never enter reports',
   });
+  await user
+    .collection('progressByLevel')
+    .doc('A1')
+    .set({
+      level: 'A1',
+      learnedWordIds: [1, 2, 3],
+      learnedCount: 3,
+      lastWordId: 3,
+      vocabularySchemaVersion: 2,
+      version: 2,
+      updatedAt: new Date(),
+    });
   await user.collection('progressByLevel').doc('A2').set({
-    level: 'A2', learnedWordIds: [], learnedCount: 0, lastWordId: 0, vocabularySchemaVersion: 2, version: 2, updatedAt: new Date(),
+    level: 'A2',
+    learnedWordIds: [],
+    learnedCount: 0,
+    lastWordId: 0,
+    vocabularySchemaVersion: 2,
+    version: 2,
+    updatedAt: new Date(),
   });
   for (const level of ['B1', 'B2', 'C1']) {
     await user.collection('progressByLevel').doc(level).set({
-      level, learnedWordIds: [], learnedCount: 0, lastWordId: 0, vocabularySchemaVersion: 2, version: 2, updatedAt: new Date(),
+      level,
+      learnedWordIds: [],
+      learnedCount: 0,
+      lastWordId: 0,
+      vocabularySchemaVersion: 2,
+      version: 2,
+      updatedAt: new Date(),
     });
   }
 
@@ -99,5 +127,8 @@ test('emulator dry-run, transactional cleanup, post-check and rollback all succe
   await user.set({ progress: legacyProgress }, { merge: true });
   const restored = (await user.get()).data();
   assert.deepEqual(restored.progress, legacyProgress);
-  assert.deepEqual((await user.collection('progressByLevel').doc('A1').get()).data().learnedWordIds, [1, 2, 3]);
+  assert.deepEqual(
+    (await user.collection('progressByLevel').doc('A1').get()).data().learnedWordIds,
+    [1, 2, 3],
+  );
 });

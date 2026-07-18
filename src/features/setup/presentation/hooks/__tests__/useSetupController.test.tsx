@@ -53,16 +53,22 @@ describe('useSetupController', () => {
   beforeEach(() => {
     jest.clearAllMocks();
     delete mockRouteParams.detectedLevel;
-    jest.spyOn(Animated, 'timing').mockImplementation(() => ({
-      start: (callback?: Animated.EndCallback) => callback?.({ finished: true }),
-      stop: jest.fn(),
-      reset: jest.fn(),
-    }) as never);
-    jest.spyOn(Animated, 'spring').mockImplementation(() => ({
-      start: (callback?: Animated.EndCallback) => callback?.({ finished: true }),
-      stop: jest.fn(),
-      reset: jest.fn(),
-    }) as never);
+    jest.spyOn(Animated, 'timing').mockImplementation(
+      () =>
+        ({
+          start: (callback?: Animated.EndCallback) => callback?.({ finished: true }),
+          stop: jest.fn(),
+          reset: jest.fn(),
+        }) as never,
+    );
+    jest.spyOn(Animated, 'spring').mockImplementation(
+      () =>
+        ({
+          start: (callback?: Animated.EndCallback) => callback?.({ finished: true }),
+          stop: jest.fn(),
+          reset: jest.fn(),
+        }) as never,
+    );
   });
 
   afterEach(() => {

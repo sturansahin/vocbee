@@ -13,7 +13,14 @@ export interface TargetLanguageStepProps {
   languages: readonly LanguageOption[];
   nativeLanguage: string;
   selectedLanguage: string;
-  colors: { text: string; textSecondary: string; surface: string; border: string; primary: string; background: string };
+  colors: {
+    text: string;
+    textSecondary: string;
+    surface: string;
+    border: string;
+    primary: string;
+    background: string;
+  };
   onSelectLanguage: (languageId: string) => void;
 }
 
@@ -26,32 +33,39 @@ export const TargetLanguageStep: React.FC<TargetLanguageStepProps> = ({
 }) => (
   <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
     <View style={styles.languageList}>
-      {languages.filter((l) => l.id !== nativeLanguage).map((lang) => (
-        <TouchableOpacity
-          key={lang.id}
-          onPress={() => onSelectLanguage(lang.id)}
-          style={[
-            styles.languageItem,
-            { backgroundColor: colors.surface, borderColor: colors.border },
-            selectedLanguage === lang.id && [styles.languageItemSelected, { borderColor: colors.primary }],
-          ]}
-        >
-          <Image
-            source={lang.flagIcon as never}
-            style={{ width: 32, height: 32, borderRadius: 4 }}
-            resizeMode="contain"
-          />
-          <View style={styles.languageInfo}>
-            <Text style={[styles.languageName, { color: colors.text }]}>{lang.name}</Text>
-            <Text style={[styles.languageNative, { color: colors.textSecondary }]}>{lang.nativeName}</Text>
-          </View>
-          {selectedLanguage === lang.id && (
-            <View style={[styles.checkCircle, { backgroundColor: colors.primary }]}>
-              <MaterialIcons name="check" size={16} color={colors.background} />
+      {languages
+        .filter((l) => l.id !== nativeLanguage)
+        .map((lang) => (
+          <TouchableOpacity
+            key={lang.id}
+            onPress={() => onSelectLanguage(lang.id)}
+            style={[
+              styles.languageItem,
+              { backgroundColor: colors.surface, borderColor: colors.border },
+              selectedLanguage === lang.id && [
+                styles.languageItemSelected,
+                { borderColor: colors.primary },
+              ],
+            ]}
+          >
+            <Image
+              source={lang.flagIcon as never}
+              style={{ width: 32, height: 32, borderRadius: 4 }}
+              resizeMode="contain"
+            />
+            <View style={styles.languageInfo}>
+              <Text style={[styles.languageName, { color: colors.text }]}>{lang.name}</Text>
+              <Text style={[styles.languageNative, { color: colors.textSecondary }]}>
+                {lang.nativeName}
+              </Text>
             </View>
-          )}
-        </TouchableOpacity>
-      ))}
+            {selectedLanguage === lang.id && (
+              <View style={[styles.checkCircle, { backgroundColor: colors.primary }]}>
+                <MaterialIcons name="check" size={16} color={colors.background} />
+              </View>
+            )}
+          </TouchableOpacity>
+        ))}
     </View>
   </ScrollView>
 );

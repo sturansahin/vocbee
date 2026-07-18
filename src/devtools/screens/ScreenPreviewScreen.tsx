@@ -19,7 +19,7 @@ type ScreenPreviewRoute = RouteProp<DevToolsStackParamList, 'ScreenPreview'>;
 
 export function ScreenPreviewScreen() {
   const route = useRoute<ScreenPreviewRoute>();
-  const entry = SCREEN_REGISTRY.find(item => item.id === route.params.screenId);
+  const entry = SCREEN_REGISTRY.find((item) => item.id === route.params.screenId);
 
   if (!entry) {
     return (

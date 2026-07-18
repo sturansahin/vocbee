@@ -44,7 +44,9 @@ export interface MockAuthValue {
 
 function noopAsync(label: string) {
   return async (..._args: any[]) => {
-    console.log(`[DevTools][MockAuthProvider] blocked no-op call: ${label} (fixture data is never written to Firebase)`);
+    console.log(
+      `[DevTools][MockAuthProvider] blocked no-op call: ${label} (fixture data is never written to Firebase)`,
+    );
   };
 }
 

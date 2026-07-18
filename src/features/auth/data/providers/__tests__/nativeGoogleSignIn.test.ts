@@ -90,11 +90,11 @@ describe('nativeGoogleSignIn', () => {
     const { getNativeGoogleSignInErrorMessage } = loadModule();
 
     expect(getNativeGoogleSignInErrorMessage({ code: 'IN_PROGRESS' })).toBe(
-      'Google Sign-In is already in progress.'
+      'Google Sign-In is already in progress.',
     );
-    expect(
-      getNativeGoogleSignInErrorMessage({ code: 'PLAY_SERVICES_NOT_AVAILABLE' })
-    ).toBe('Google Play Services is unavailable or needs an update on this device.');
+    expect(getNativeGoogleSignInErrorMessage({ code: 'PLAY_SERVICES_NOT_AVAILABLE' })).toBe(
+      'Google Play Services is unavailable or needs an update on this device.',
+    );
   });
 
   it('treats missing native Google state as a no-op during sign-out cleanup', async () => {

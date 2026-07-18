@@ -71,7 +71,11 @@ class FirestoreAdminStore {
   }
 
   async getProgressByLevel(userId) {
-    const snapshot = await this.db.collection('users').doc(userId).collection('progressByLevel').get();
+    const snapshot = await this.db
+      .collection('users')
+      .doc(userId)
+      .collection('progressByLevel')
+      .get();
     const result = {};
     for (const document of snapshot.docs) result[document.id] = document.data();
     return result;
@@ -79,13 +83,16 @@ class FirestoreAdminStore {
 
   async deleteLegacyProgressIfStillVerified(userId) {
     const userReference = this.db.collection('users').doc(userId);
-    await this.db.runTransaction(async transaction => {
+    await this.db.runTransaction(async (transaction) => {
       const userSnapshot = await transaction.get(userReference);
-      if (!userSnapshot.exists) throw new SafetyError('Candidate disappeared during execute.', 'CANDIDATE_CHANGED');
+      if (!userSnapshot.exists)
+        throw new SafetyError('Candidate disappeared during execute.', 'CANDIDATE_CHANGED');
 
       const levelSnapshots = [];
       for (const level of LEVELS) {
-        levelSnapshots.push(await transaction.get(userReference.collection('progressByLevel').doc(level)));
+        levelSnapshots.push(
+          await transaction.get(userReference.collection('progressByLevel').doc(level)),
+        );
       }
       const progressByLevel = {};
       for (const snapshot of levelSnapshots) {
@@ -93,13 +100,19 @@ class FirestoreAdminStore {
       }
       const assessment = assessUserDocument(userSnapshot.data(), progressByLevel);
       if (assessment.status !== 'candidate') {
-        throw new SafetyError('Candidate changed after dry-run; cleanup halted.', 'CANDIDATE_CHANGED');
+        throw new SafetyError(
+          'Candidate changed after dry-run; cleanup halted.',
+          'CANDIDATE_CHANGED',
+        );
       }
       transaction.update(userReference, { progress: this.FieldValue.delete() });
     });
 
     const verification = await userReference.get();
-    if (verification.exists && Object.prototype.hasOwnProperty.call(verification.data(), 'progress')) {
+    if (
+      verification.exists &&
+      Object.prototype.hasOwnProperty.call(verification.data(), 'progress')
+    ) {
       throw new SafetyError('Post-delete verification failed.', 'POST_DELETE_VERIFICATION_FAILED');
     }
   }
@@ -130,25 +143,32 @@ async function main(argv = process.argv.slice(2)) {
     // Validate explicit target, environment allowlist and credential evidence before SDK initialization/read.
     validateTarget(options);
     connection = await createStore(options);
-    const report = await runCleanup({ options, store: connection.store, repositoryRoot: process.cwd() });
-    process.stdout.write(`${JSON.stringify({
-      mode: report.mode,
-      target: report.target,
-      counts: report.counts,
-      destructiveGate: report.destructiveGate,
-      report: path.resolve(options.reportPath),
-    })}\n`);
+    const report = await runCleanup({
+      options,
+      store: connection.store,
+      repositoryRoot: process.cwd(),
+    });
+    process.stdout.write(
+      `${JSON.stringify({
+        mode: report.mode,
+        target: report.target,
+        counts: report.counts,
+        destructiveGate: report.destructiveGate,
+        report: path.resolve(options.reportPath),
+      })}\n`,
+    );
   } finally {
     if (connection) await connection.close();
   }
 }
 
 if (require.main === module) {
-  main().catch(error => {
+  main().catch((error) => {
     const code = error instanceof SafetyError ? error.code : 'UNEXPECTED_ERROR';
-    const message = error instanceof SafetyError
-      ? error.message
-      : 'Unexpected cleanup failure. Review the redacted report and secure external operations log.';
+    const message =
+      error instanceof SafetyError
+        ? error.message
+        : 'Unexpected cleanup failure. Review the redacted report and secure external operations log.';
     process.stderr.write(`${JSON.stringify({ status: 'failed', code, message })}\n`);
     process.exitCode = 1;
   });

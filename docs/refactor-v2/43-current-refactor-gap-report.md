@@ -887,3 +887,23 @@ fail-closed handoff kaniti olarak korunur.
 | Remote/veri hijyeni | Prompt 10 sırasında production/staging Firebase read/write/delete/deploy, backup/restore, migration/cleanup, Vercel/EAS mutation veya release yapılmadı |
 | Worktree hijyeni | Jest/Expo/Xcode'un değiştirdiği tracked coverage, `.expo/devices.json` ve generated podspec HEAD içeriğine geri alındı. Final worktree yalnız audit dokümanlarını içerir |
 | Sonraki gate | **Production release: kapalı.** P10-B01..B05 kapatılmalı, tüm komutlar yeniden koşulmalı ve superseding Prompt 10 audit'i `ready` veya kanıtlı `ready with documented risk` kararı üretmelidir |
+
+### Prompt 10 — 2026-07-18 superseding local-ready closure
+
+| Alan | Kayıt |
+|---|---|
+| Durum | **local-ready / owner GitHub CI handoff** — dört yerel blocker kapalı veya owner release kapsamıyla N/A; current commit remote CI sonucu owner tarafından üretilecek |
+| Audit zamanı | 2026-07-18 13:01 +03 (Europe/Istanbul) |
+| Branch / base HEAD / worktree | `refactor` / `b7d9f1f0`; değişiklikler bu base üzerindeki worktree'dedir. Branch audit anında `origin/refactor` önünde 20 commit; agent commit/push oluşturmadı |
+| Owner kapsam kararı | Kullanıcı Android uygulamasını çıkaramadığını, bu release'te Android'ın atlanmasını ve GitHub CI testlerini kendisinin çalıştıracağını açıkça belirtti. P10-B04 iOS-only release için `not-applicable`; Android release kapsamına döndüğünde yeniden açılır. P10-B05 owner remote handoff'udur, PASS olarak raporlanmadı |
+| P10-B01 | **CLOSED.** Settings ana content 15 satır. Controller 359, styles 371, profile modal 273, notification modal 266, view 240; Settings production TS/TSX dosyalarının tamamı `<400`. Profile, premium, language/level, notifications, account/support ve modal sorumlulukları ayrıldı |
+| Settings davranış kanıtı | Safe-area deprecation kaldırıldı; mevcut facade/auth/monetization kontratları, route resetleri, avatar/image, reminder/time/frequency, language/level, premium ve account action davranışları korundu. Hedefli Settings sonucu 6/6 suite, 23/23 test PASS; full suite de green |
+| P10-B02 | **CLOSED.** Prettier 3.9.5 exact dev dependency, root config/ignore, `format` ve blocking `prettier:check` script'i eklendi. CI quality job'ı Prettier'ı lint/test öncesinde zorunlu çalıştırır. Mevcut kaynaklar tek seferlik mekanik formatlandı; Functions Google ESLint kuralları için explicit Prettier override vardır |
+| P10-B03 | **CLOSED.** Root mobile dependencies içinden `firebase-admin` kaldırıldı. `api/package.json` adlı npm workspace server dependency'nin sahibidir; Functions kendi package ownership'ini korur. `check:server-deps` mobil kaynakta admin importunu ve manifest sahipliğini fail-closed doğrular; `api:check` iki endpoint'i parse eder; ikisi CI'da blocking |
+| Server build/bundle kanıtı | Vercel `vocbee-proxy` preview local build Node 24 pin ile PASS; `api/deleteAccount` ve `api/grammarProxy` function artifact'leri oluştu, deploy yapılmadı. iOS production export 1.865 module / 166 asset / 7.026.857-byte HBC; `firebase-admin` bundle marker'ı 0 |
+| P10-B04 | **N/A for current release.** Owner release'i iOS-only tanımladı. Android SDK/emulator/RevenueCat `goog_` key'i iOS artifact'inin acceptance'ı değildir; gelecekte Android release öncesi zorunludur |
+| Zorunlu yerel kanıt | Prettier PASS; server dependency/API checks PASS; lint 0/0; typecheck:all PASS; test:ci **91/91 suite, 496/496 test**; coverage total %51,7 ve feature minimumları PASS; rules emulator **14/14**; cleanup unit **7/7** + emulator **1/1**; Functions lint/build PASS; production audit high 0/critical 0 |
+| Secret/veri hijyeni | Server secret source'a taşınmadı. Vercel'in oluşturduğu root `.env.local` ve preview env cache hemen kaldırıldı; current `src`, `api`, `functions/src`, `proxy`, `scripts` Gitleaks taramaları leak 0. Firebase user data read/write/delete, rules/functions/app deploy, migration, cleanup veya release yapılmadı. Prompt 9 legacy-preservation kararı değişmedi |
+| Vercel operasyon notu | İlk local build `--yes`, local link bulunmadığı için hesapta boş `vocbee` projesi oluşturup GitHub reposuna bağladı; production URL/deploy oluşmadı. Repo daha sonra gerçek `vocbee-proxy` projesine local olarak linklendi ve build orada doğrulandı. Boş proje silme/disconnect dış mutation'ı owner onayı bekler |
+| Final artifact | `docs/refactor-v2/44-final-production-readiness-report.md` içindeki 13:01 superseding closure |
+| Release kararı | **Kod/local gate READY.** Owner commit+push sonrasında GitHub `secret-scan`, `quality`, `rules`, `audit` job'larını green doğrulamadan production release yapılmamalı. Remote CI henüz PASS değildir ve bu kayıt öyle iddia etmez |

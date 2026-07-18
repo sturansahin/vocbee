@@ -10,8 +10,13 @@ export class AsyncStorageReviewPromptRepository implements ReviewPromptRepositor
   async read(): Promise<ReviewPromptState> {
     try {
       const raw = await AsyncStorage.getItem(STORAGE_KEYS.APP_REVIEW_PROMPT_STATE);
-      return raw ? normalizeReviewPromptState(JSON.parse(raw) as Partial<ReviewPromptState>) : DEFAULT_REVIEW_PROMPT_STATE;
-    } catch (error) { console.warn('[ReviewPrompt] Failed to read state', error); return DEFAULT_REVIEW_PROMPT_STATE; }
+      return raw
+        ? normalizeReviewPromptState(JSON.parse(raw) as Partial<ReviewPromptState>)
+        : DEFAULT_REVIEW_PROMPT_STATE;
+    } catch (error) {
+      console.warn('[ReviewPrompt] Failed to read state', error);
+      return DEFAULT_REVIEW_PROMPT_STATE;
+    }
   }
   write(state: ReviewPromptState): Promise<void> {
     return AsyncStorage.setItem(STORAGE_KEYS.APP_REVIEW_PROMPT_STATE, JSON.stringify(state));

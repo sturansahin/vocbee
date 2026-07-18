@@ -30,15 +30,19 @@ function isValidWordId(id: unknown): id is number {
  */
 export function adaptLegacyLearnedWordsToProgressByLevelDocs(
   legacy: LegacyProgressDoc | null | undefined,
-  opts: { deviceId?: string; version?: number; vocabularySchemaVersion?: number } = {}
+  opts: { deviceId?: string; version?: number; vocabularySchemaVersion?: number } = {},
 ): ProgressByLevelWriteModel[] {
   const learnedWords = legacy?.learnedWords;
   if (!learnedWords || typeof learnedWords !== 'object') return [];
 
-  const currentLevel: Level | undefined = isLevel(legacy?.currentLevel) ? legacy!.currentLevel as Level : undefined;
+  const currentLevel: Level | undefined = isLevel(legacy?.currentLevel)
+    ? (legacy!.currentLevel as Level)
+    : undefined;
   const rawIndex = legacy?.lastWordIndex;
   const legacyLastWordIndex =
-    typeof rawIndex === 'number' && Number.isFinite(rawIndex) && rawIndex >= 0 ? Math.floor(rawIndex) : 0;
+    typeof rawIndex === 'number' && Number.isFinite(rawIndex) && rawIndex >= 0
+      ? Math.floor(rawIndex)
+      : 0;
 
   const models: ProgressByLevelWriteModel[] = [];
 
@@ -68,7 +72,7 @@ export function adaptLegacyLearnedWordsToProgressByLevelDocs(
 export function toProgressByLevelDoc(
   model: LevelProgress,
   updatedAt: Timestamp | FieldValue,
-  opts: { deviceId?: string; version?: number } = {}
+  opts: { deviceId?: string; version?: number } = {},
 ): ProgressByLevelDoc {
   const learnedWordIds = [...model.learnedWordIds];
   const doc: ProgressByLevelDoc = {
@@ -87,7 +91,9 @@ export function toProgressByLevelDoc(
 
 /** Firestore DTO → domain model. Timestamp/updatedAt is intentionally dropped (domain has no Timestamp). */
 export function fromProgressByLevelDoc(doc: ProgressByLevelDoc): LevelProgress {
-  const learnedWordIds = Array.isArray(doc.learnedWordIds) ? doc.learnedWordIds.filter(isValidWordId) : [];
+  const learnedWordIds = Array.isArray(doc.learnedWordIds)
+    ? doc.learnedWordIds.filter(isValidWordId)
+    : [];
   const model: LevelProgress = {
     level: doc.level,
     learnedWordIds,
@@ -98,14 +104,15 @@ export function fromProgressByLevelDoc(doc: ProgressByLevelDoc): LevelProgress {
         ? doc.vocabularySchemaVersion
         : 1,
   };
-  if (Array.isArray(doc.favoriteWordIds)) model.favoriteWordIds = doc.favoriteWordIds.filter(isValidWordId);
+  if (Array.isArray(doc.favoriteWordIds))
+    model.favoriteWordIds = doc.favoriteWordIds.filter(isValidWordId);
   return model;
 }
 
 /** Build the main-doc progressSummary. totalCount per level comes from LOCAL vocabulary (docs/refactor-v2/34 §5). */
 export function buildProgressSummary(
   models: ProgressByLevelWriteModel[],
-  totalCountByLevel: Partial<Record<Level, number>>
+  totalCountByLevel: Partial<Record<Level, number>>,
 ): ProgressSummaryDoc {
   const byLevel: ProgressSummaryDoc['byLevel'] = {};
   let totalLearned = 0;
@@ -114,7 +121,11 @@ export function buildProgressSummary(
   for (const m of models) {
     const totalCount = totalCountByLevel[m.level] ?? 0;
     const learnedCount = m.learnedCount;
-    byLevel[m.level] = { learnedCount, totalCount, percent: calcLevelPercent(learnedCount, totalCount) };
+    byLevel[m.level] = {
+      learnedCount,
+      totalCount,
+      percent: calcLevelPercent(learnedCount, totalCount),
+    };
     totalLearned += learnedCount;
     totalWords += totalCount;
   }
@@ -150,7 +161,7 @@ export function sumProgressByLevelModels(models: ProgressByLevelWriteModel[]): n
  */
 export function verifyMigrationCounts(
   legacy: LegacyProgressDoc | null | undefined,
-  models: ProgressByLevelWriteModel[]
+  models: ProgressByLevelWriteModel[],
 ): { oldTotal: number; newTotal: number; ok: boolean } {
   const oldTotal = sumLegacyLearnedWords(legacy);
   const newTotal = sumProgressByLevelModels(models);

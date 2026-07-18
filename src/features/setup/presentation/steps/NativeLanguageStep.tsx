@@ -17,7 +17,14 @@ export interface LanguageOption {
 export interface NativeLanguageStepProps {
   languages: readonly LanguageOption[];
   selectedLanguage: string;
-  colors: { text: string; textSecondary: string; surface: string; border: string; primary: string; background: string };
+  colors: {
+    text: string;
+    textSecondary: string;
+    surface: string;
+    border: string;
+    primary: string;
+    background: string;
+  };
   onSelectLanguage: (languageId: string) => void;
 }
 
@@ -36,7 +43,10 @@ export const NativeLanguageStep: React.FC<NativeLanguageStepProps> = ({
           style={[
             styles.languageItem,
             { backgroundColor: colors.surface, borderColor: colors.border },
-            selectedLanguage === lang.id && [styles.languageItemSelected, { borderColor: colors.primary }],
+            selectedLanguage === lang.id && [
+              styles.languageItemSelected,
+              { borderColor: colors.primary },
+            ],
           ]}
         >
           <Image
@@ -46,7 +56,9 @@ export const NativeLanguageStep: React.FC<NativeLanguageStepProps> = ({
           />
           <View style={styles.languageInfo}>
             <Text style={[styles.languageName, { color: colors.text }]}>{lang.name}</Text>
-            <Text style={[styles.languageNative, { color: colors.textSecondary }]}>{lang.nativeName}</Text>
+            <Text style={[styles.languageNative, { color: colors.textSecondary }]}>
+              {lang.nativeName}
+            </Text>
           </View>
           {selectedLanguage === lang.id && (
             <View style={[styles.checkCircle, { backgroundColor: colors.primary }]}>

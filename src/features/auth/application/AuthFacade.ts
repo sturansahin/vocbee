@@ -1,8 +1,5 @@
 import { DEFAULT_NOTIFICATION_SETTINGS, type NotificationSettings } from '@features/notifications';
-import {
-  buildStoredProfileFromAuth,
-  type Profile,
-} from '@features/profile';
+import { buildStoredProfileFromAuth, type Profile } from '@features/profile';
 import type { UserData } from '@shared/storage';
 
 import type {
@@ -12,11 +9,7 @@ import type {
   AuthStatePayload,
   RetryResult,
 } from './contracts';
-import {
-  SOCIAL_AUTH_CANCELLED_ERROR,
-  type AuthSignInResult,
-  type AuthUser,
-} from '../domain/types';
+import { SOCIAL_AUTH_CANCELLED_ERROR, type AuthSignInResult, type AuthUser } from '../domain/types';
 import { getAuthErrorMessage, hasCompletedSetup, isRecentLogin } from '../domain/rules';
 
 const EMPTY_PROFILE: Profile = { name: '', image: null, email: '' };
@@ -144,7 +137,11 @@ export class DefaultAuthFacade implements AuthFacade {
     try {
       await this.dependencies.notifications.cancelAll();
       await this.dependencies.notifications.clearTracked();
-      const user = await this.dependencies.authRepository.signUpWithEmail(email, password, displayName);
+      const user = await this.dependencies.authRepository.signUpWithEmail(
+        email,
+        password,
+        displayName,
+      );
       await this.dependencies.profileRepository.createUserDocument(user.uid, email, displayName);
       const userData: UserData = { uid: user.uid, email, displayName };
       await this.dependencies.localStore.saveUserData(userData);
@@ -205,7 +202,7 @@ export class DefaultAuthFacade implements AuthFacade {
       user.uid,
       profile.email,
       profile.name,
-      profile.image
+      profile.image,
     );
     await this.dependencies.sync.syncAuthProfile(user.uid, {
       email: profile.email,
@@ -247,7 +244,7 @@ export class DefaultAuthFacade implements AuthFacade {
   async signInWithGoogle(): Promise<AuthActionResult> {
     try {
       return await this.completeSocialSignIn(
-        await this.dependencies.authRepository.signInWithGoogle()
+        await this.dependencies.authRepository.signInWithGoogle(),
       );
     } catch (error) {
       if (errorMessage(error) === SOCIAL_AUTH_CANCELLED_ERROR) throw error;
@@ -259,7 +256,7 @@ export class DefaultAuthFacade implements AuthFacade {
   async signInWithApple(): Promise<AuthActionResult> {
     try {
       return await this.completeSocialSignIn(
-        await this.dependencies.authRepository.signInWithApple()
+        await this.dependencies.authRepository.signInWithApple(),
       );
     } catch (error) {
       if (errorCode(error) === 'ERR_REQUEST_CANCELED') {
@@ -323,7 +320,7 @@ export class DefaultAuthFacade implements AuthFacade {
 
     try {
       const handledRemotely = await this.dependencies.accountDeletion.deleteAccount(() =>
-        this.dependencies.authRepository.getIdToken()
+        this.dependencies.authRepository.getIdToken(),
       );
       if (!handledRemotely) {
         await this.dependencies.profileRepository.deleteUserDocument(user.uid);
@@ -347,7 +344,7 @@ export class DefaultAuthFacade implements AuthFacade {
   async updateProfileData(
     user: AuthUser | null,
     profile: Profile,
-    patch: Partial<Profile>
+    patch: Partial<Profile>,
   ): Promise<Profile> {
     if (!user) return profile;
     const next = { ...profile, ...patch };
@@ -358,12 +355,12 @@ export class DefaultAuthFacade implements AuthFacade {
   async updateNotificationSettings(
     user: AuthUser | null,
     current: NotificationSettings,
-    patch: Partial<NotificationSettings>
+    patch: Partial<NotificationSettings>,
   ): Promise<NotificationSettings> {
     await this.dependencies.notifications.saveSettings(patch);
     const persisted = await this.dependencies.notifications.getSettings();
     if (user) {
-      this.dependencies.sync.syncNotificationSettings(user.uid, persisted).catch(error => {
+      this.dependencies.sync.syncNotificationSettings(user.uid, persisted).catch((error) => {
         console.error('Error syncing notification settings to Firestore:', error);
       });
     }

@@ -14,11 +14,7 @@ import { openStoreReviewPage } from '@features/review';
 import { forceSync } from '@features/sync';
 import { clearAllLocalData } from '@shared/storage';
 import appConfig from '../../../../../app.json';
-import i18n, {
-  getDeviceLanguage,
-  isUsingSystemLanguage,
-  setToDeviceLanguage,
-} from '@shared/i18n';
+import i18n, { getDeviceLanguage, isUsingSystemLanguage, setToDeviceLanguage } from '@shared/i18n';
 
 import type { SettingsPlatformGateway } from '../../application/contracts';
 

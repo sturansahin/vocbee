@@ -30,12 +30,23 @@ export function AuthStatePanel({ scenario }: AuthStatePanelProps) {
       <Row label="isLoading" value={String(isLoading)} />
       <Row label="connectionError" value={String(connectionError)} />
       <Row label="user.uid" value={user?.uid ?? '(none)'} />
-      <Row label="userData.setupCompleted" value={String((userData as any)?.setupCompleted ?? '(none)')} />
+      <Row
+        label="userData.setupCompleted"
+        value={String((userData as any)?.setupCompleted ?? '(none)')}
+      />
 
-      <Text style={[styles.title, styles.sectionSpacing]}>Selected Scenario Fixture (preview only)</Text>
+      <Text style={[styles.title, styles.sectionSpacing]}>
+        Selected Scenario Fixture (preview only)
+      </Text>
       <Row label="scenario.id" value={scenario.id} />
-      <Row label="scenario.auth.user" value={scenario.auth.user ? scenario.auth.user.uid : '(null / logged out)'} />
-      <Row label="scenario.auth.userData.setupCompleted" value={String(scenario.auth.userData?.setupCompleted ?? '(null)')} />
+      <Row
+        label="scenario.auth.user"
+        value={scenario.auth.user ? scenario.auth.user.uid : '(null / logged out)'}
+      />
+      <Row
+        label="scenario.auth.userData.setupCompleted"
+        value={String(scenario.auth.userData?.setupCompleted ?? '(null)')}
+      />
       <Row label="scenario.auth.isLoading" value={String(scenario.auth.isLoading)} />
       <Row label="scenario.auth.connectionError" value={String(scenario.auth.connectionError)} />
     </ScrollView>
@@ -46,7 +57,13 @@ const styles = StyleSheet.create({
   container: { flex: 1, padding: 16 },
   title: { fontSize: 16, fontWeight: '700', marginBottom: 8 },
   sectionSpacing: { marginTop: 20 },
-  row: { flexDirection: 'row', justifyContent: 'space-between', paddingVertical: 6, borderBottomWidth: 1, borderBottomColor: '#eee' },
+  row: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingVertical: 6,
+    borderBottomWidth: 1,
+    borderBottomColor: '#eee',
+  },
   rowLabel: { fontSize: 13, color: '#333', flex: 1 },
   rowValue: { fontSize: 13, color: '#111', fontWeight: '600', flex: 1, textAlign: 'right' },
 });

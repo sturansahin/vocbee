@@ -1,5 +1,68 @@
 # Prompt 10 — Final Production Readiness Report
 
+## Superseding closure audit — 2026-07-18 13:01 +03
+
+Branch / base HEAD: **`refactor` / `b7d9f1f0`**
+
+Release kapsamı: **iOS-only, legacy progress uyumluluğunu koruyan mevcut mobil release**
+
+Karar: **LOCAL READY — OWNER GITHUB CI HANDOFF**
+
+Bu kayıt aşağıdaki 12:19 audit'ini supersede eder. Owner Android uygulamasını bu release'te yayınlamadığını
+belirtti; Android build, emulator ve RevenueCat `goog_` key kontrolü bu release için **not-applicable** olarak
+kaydedildi. Android yeniden release kapsamına alınırsa bu kontroller otomatik olarak yeniden zorunlu olur.
+Prompt 9 kararı değişmedi: legacy `users/{uid}.progress` korunur, cleanup/migration yapılmaz ve progress-v2
+safe-default `legacy` kalır.
+
+### Kapatılan dört yerel adım
+
+| Adım | Sonuç | Güncel kanıt |
+|---|---|---|
+| **P10-B01 — Settings `<400`** | **CLOSED** | Ana content 15, controller 359, style 371, profile modal 273, notification modal 266, view 240 satır; Settings production dosyalarının tamamı `<400` |
+| **P10-B02 — Prettier gate** | **CLOSED** | Prettier `3.9.5`, root config/ignore, `format` ve `prettier:check`; CI quality job'ında blocking step; full repository check PASS |
+| **P10-B03 — server/mobile dependency** | **CLOSED** | Root mobil `dependencies` içinde `firebase-admin` yok; `api/package.json` npm workspace'i dependency'nin sahibidir; manifest/source boundary gate ve API syntax check CI'da blocking |
+| **P10-B04 — Android release config** | **N/A (owner scope)** | Owner mevcut uygulamayı Android'e çıkarmadığını ve bu release'te Android'ın atlanmasını istediğini belirtti; iOS production kapsamı korunuyor |
+
+### Güncel doğrulama
+
+| Gate | Sonuç |
+|---|---|
+| `npm run typecheck:all` | PASS; app/test/rules/worker |
+| `npm run lint` | PASS; 0 error / 0 warning |
+| `npm run prettier:check` | PASS; full configured repository scope |
+| `npm run check:server-deps && npm run api:check` | PASS |
+| Settings hedefli testleri | PASS; 6 suite / 23 test |
+| `npm run test:ci` | PASS; **91 suite / 496 test** |
+| `npm run coverage:check` | PASS; total %51,7; settings %43,1 >= %40 |
+| Firestore rules emulator | PASS; **14/14** |
+| Cleanup syntax/unit/emulator | PASS; **7/7 + 1/1** |
+| Functions lint/build | PASS |
+| Production dependency audit | PASS gate; high 0 / critical 0; 27 moderate + 1 low belgeli risk |
+| Current server/mobile source Gitleaks | PASS; `src`, `api`, `functions/src`, `proxy`, `scripts` leak 0 |
+| iOS Expo production export | PASS; 1.865 module, 166 asset, 7.026.857-byte HBC |
+| iOS bundle `firebase-admin` marker | **0** |
+| Vercel `vocbee-proxy` local build | PASS; Node 24 pin ile `deleteAccount` ve `grammarProxy` functions paketlendi; deploy yapılmadı |
+
+`firebase-admin` ayrımı yeni ücretli servis, ek Firebase çağrısı veya veri modeli değişikliği oluşturmaz. Aynı
+API işlemleri devam eder; yalnız dependency ownership sunucu paketine taşınmıştır. Root npm workspace yaklaşımı
+Vercel'in resmi monorepo/workspace kurallarıyla uyumludur.
+
+### Kalan owner handoff
+
+**P10-B05 yerel uygulama blocker'ı değildir; remote release kanıtıdır.** Owner GitHub push ve CI testlerini
+kendisinin çalıştıracağını belirtti. Bu nedenle kod ve local release gate'i **ready**, production release butonu
+ise current commit için GitHub `secret-scan`, `quality`, `rules` ve `audit` job'ları green görülene kadar owner
+kontrolündedir. Bu kayıt remote CI çalışmış gibi göstermez.
+
+Operasyonel not: local Vercel build sırasında CLI, repository daha önce yerelde linkli olmadığı için yanlışlıkla
+boş `vocbee` proje kaydı oluşturup GitHub repo bağlantısı ekledi. Production deploy yapılmadı; gerçek
+`vocbee-proxy` projesine yeniden link edilerek onun local build'i PASS doğrulandı. Yeni boş `vocbee` kaydının
+silinmesi/bağlantısının kaldırılması owner onayı bekler ve source readiness kararını değiştirmez.
+
+---
+
+## Superseded audit — 2026-07-18 12:19 +03
+
 Audit zamanı: **2026-07-18 12:19 +03 (Europe/Istanbul)**
 
 Branch / HEAD: **`refactor` / `ef263d14`**

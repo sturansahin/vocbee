@@ -23,12 +23,15 @@ describe('devtools scenarios', () => {
     expect(SCENARIO_LIST).toHaveLength(REQUIRED_SCENARIO_IDS.length);
   });
 
-  it.each(REQUIRED_SCENARIO_IDS)('scenario "%s" has a label, description and consistent id', id => {
-    const scenario = SCENARIOS[id];
-    expect(scenario.id).toBe(id);
-    expect(scenario.label.length).toBeGreaterThan(0);
-    expect(scenario.description.length).toBeGreaterThan(0);
-  });
+  it.each(REQUIRED_SCENARIO_IDS)(
+    'scenario "%s" has a label, description and consistent id',
+    (id) => {
+      const scenario = SCENARIOS[id];
+      expect(scenario.id).toBe(id);
+      expect(scenario.label.length).toBeGreaterThan(0);
+      expect(scenario.description.length).toBeGreaterThan(0);
+    },
+  );
 
   it('loggedOut scenario has a null user', () => {
     expect(SCENARIOS.loggedOut.auth.user).toBeNull();

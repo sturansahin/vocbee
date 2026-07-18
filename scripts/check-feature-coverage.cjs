@@ -45,7 +45,8 @@ for (const [feature, minimum] of Object.entries(thresholds)) {
 const totalMinimum = 50;
 const totalActual = summary.total.lines.pct;
 console.log(`${'total'.padEnd(13)} ${totalActual.toFixed(1)}% (minimum ${totalMinimum}%)`);
-if (totalActual < totalMinimum) failures.push(`total: ${totalActual.toFixed(1)}% < ${totalMinimum}%`);
+if (totalActual < totalMinimum)
+  failures.push(`total: ${totalActual.toFixed(1)}% < ${totalMinimum}%`);
 
 if (failures.length > 0) {
   console.error(`Coverage gate failed:\n- ${failures.join('\n- ')}`);

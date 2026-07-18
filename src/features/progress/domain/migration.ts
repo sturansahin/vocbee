@@ -9,9 +9,13 @@ export type ProgressV2WriteInput = {
 
 function canonicalWordIds(value: unknown): number[] {
   if (!Array.isArray(value)) return [];
-  return Array.from(new Set(value.filter(
-    (id): id is number => typeof id === 'number' && Number.isSafeInteger(id) && id >= 0
-  ))).sort((left, right) => left - right);
+  return Array.from(
+    new Set(
+      value.filter(
+        (id): id is number => typeof id === 'number' && Number.isSafeInteger(id) && id >= 0,
+      ),
+    ),
+  ).sort((left, right) => left - right);
 }
 
 /**
@@ -20,15 +24,16 @@ function canonicalWordIds(value: unknown): number[] {
  */
 export function buildProgressV2WritePlan(input: ProgressV2WriteInput): ProgressV2WritePlan {
   const activeLevel: Level = isLevel(input.currentLevel) ? input.currentLevel : 'A1';
-  const resumeWordId = Number.isSafeInteger(input.lastWordId) && (input.lastWordId ?? -1) >= 0
-    ? input.lastWordId ?? 0
-    : 0;
-  const vocabularySchemaVersion = Number.isSafeInteger(input.vocabularySchemaVersion)
-    && input.vocabularySchemaVersion >= 1
-    ? input.vocabularySchemaVersion
-    : 1;
+  const resumeWordId =
+    Number.isSafeInteger(input.lastWordId) && (input.lastWordId ?? -1) >= 0
+      ? (input.lastWordId ?? 0)
+      : 0;
+  const vocabularySchemaVersion =
+    Number.isSafeInteger(input.vocabularySchemaVersion) && input.vocabularySchemaVersion >= 1
+      ? input.vocabularySchemaVersion
+      : 1;
 
-  const levels = LEVELS.map(level => {
+  const levels = LEVELS.map((level) => {
     const learnedWordIds = canonicalWordIds(input.learnedWords[level]);
     return {
       level,
@@ -39,7 +44,7 @@ export function buildProgressV2WritePlan(input: ProgressV2WriteInput): ProgressV
     };
   });
   const byLevel = Object.fromEntries(
-    levels.map(level => [level.level, { learnedCount: level.learnedCount }])
+    levels.map((level) => [level.level, { learnedCount: level.learnedCount }]),
   ) as ProgressV2WritePlan['summary']['byLevel'];
 
   return {
@@ -54,13 +59,13 @@ export function buildProgressV2WritePlan(input: ProgressV2WriteInput): ProgressV
 
 export function progressV2LevelsToLegacy(
   activeLevel: Level,
-  levels: ProgressV2WritePlan['levels']
+  levels: ProgressV2WritePlan['levels'],
 ): { learnedWords: UserProgress; currentLevel: Level; lastWordId: number } {
   const learnedWords: UserProgress = {};
   for (const level of levels) learnedWords[level.level] = canonicalWordIds(level.learnedWordIds);
   return {
     learnedWords,
     currentLevel: activeLevel,
-    lastWordId: levels.find(level => level.level === activeLevel)?.lastWordId ?? 0,
+    lastWordId: levels.find((level) => level.level === activeLevel)?.lastWordId ?? 0,
   };
 }

@@ -8,7 +8,7 @@ import type { UserProgress } from '../../domain/types';
 export class AsyncStorageProgressRepository implements ProgressLocalStore {
   async readProgress(): Promise<UserProgress> {
     const raw = await AsyncStorage.getItem(STORAGE_KEYS.PROGRESS);
-    return raw ? JSON.parse(raw) as UserProgress : {};
+    return raw ? (JSON.parse(raw) as UserProgress) : {};
   }
 
   async writeProgress(progress: UserProgress): Promise<void> {
@@ -46,7 +46,7 @@ export class AsyncStorageProgressRepository implements ProgressLocalStore {
   async restore(
     progress: UserProgress | null,
     currentLevel: string | null,
-    lastWordId?: number | null
+    lastWordId?: number | null,
   ): Promise<void> {
     if (progress && typeof progress === 'object') {
       await AsyncStorage.setItem(STORAGE_KEYS.PROGRESS, JSON.stringify(progress));

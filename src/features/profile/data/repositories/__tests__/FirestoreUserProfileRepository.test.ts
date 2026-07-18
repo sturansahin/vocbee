@@ -3,7 +3,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const mockDoc = jest.fn((_database: unknown, _collection: string, _id: string) => 'user-ref');
 const mockGetDoc = jest.fn((_reference: unknown): Promise<unknown> => Promise.resolve());
 const mockSetDoc = jest.fn(
-  async (_reference: unknown, _data: unknown, _options?: unknown) => undefined
+  async (_reference: unknown, _data: unknown, _options?: unknown) => undefined,
 );
 const mockCollection = jest.fn((_reference: unknown, _collection: string) => 'progress-ref');
 const mockGetDocs = jest.fn(async (_reference: unknown) => ({
@@ -22,9 +22,7 @@ jest.mock('firebase/firestore', () => ({
   doc: (database: unknown, collection: string, id: string) => mockDoc(database, collection, id),
   getDoc: (reference: unknown) => mockGetDoc(reference),
   setDoc: (reference: unknown, data: unknown, options?: unknown) =>
-    options === undefined
-      ? mockSetDoc(reference, data)
-      : mockSetDoc(reference, data, options),
+    options === undefined ? mockSetDoc(reference, data) : mockSetDoc(reference, data, options),
   collection: (reference: unknown, collection: string) => mockCollection(reference, collection),
   getDocs: (reference: unknown) => mockGetDocs(reference),
   writeBatch: () => mockWriteBatch(),
@@ -50,7 +48,7 @@ describe('FirestoreUserProfileRepository', () => {
     await repository.cacheProfile('user-1', profile);
 
     expect(await AsyncStorage.getItem(`${STORAGE_KEYS.PROFILE_PREFIX}user-1`)).toBe(
-      JSON.stringify(profile)
+      JSON.stringify(profile),
     );
     expect(await repository.getCachedProfile('user-1')).toEqual(profile);
   });
@@ -100,7 +98,7 @@ describe('FirestoreUserProfileRepository', () => {
     expect(mockSetDoc).toHaveBeenCalledWith(
       'user-ref',
       { displayName: 'Updated', photoURL: null },
-      { merge: true }
+      { merge: true },
     );
     expect(mockCollection).toHaveBeenCalledWith('user-ref', 'progressByLevel');
     expect(mockBatchDelete.mock.calls).toEqual([
@@ -156,7 +154,7 @@ describe('FirestoreUserProfileRepository', () => {
           autoMarkLearned: true,
         },
       },
-      { merge: true }
+      { merge: true },
     );
   });
 
@@ -190,7 +188,7 @@ describe('FirestoreUserProfileRepository', () => {
       progressSummary: { totalLearnedCount: 0 },
       syncMeta: { version: 2, updatedByDeviceId: 'setup' },
     });
-    expect(mockBatchSet.mock.calls.slice(1).map(call => call[1])).toEqual(
+    expect(mockBatchSet.mock.calls.slice(1).map((call) => call[1])).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
           level: 'A1',
@@ -200,7 +198,7 @@ describe('FirestoreUserProfileRepository', () => {
           vocabularySchemaVersion: 2,
           version: 2,
         }),
-      ])
+      ]),
     );
     expect(mockBatchCommit).toHaveBeenCalledTimes(1);
   });

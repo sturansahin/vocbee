@@ -3,7 +3,7 @@ import { buildAccountConfirmation } from '../accountConfirmations';
 describe('settings account confirmations', () => {
   it.each(['Sign out', 'Delete account'])(
     'runs %s only after destructive confirmation',
-    confirmLabel => {
+    (confirmLabel) => {
       const onConfirm = jest.fn();
       const alert = buildAccountConfirmation(
         {
@@ -12,13 +12,13 @@ describe('settings account confirmations', () => {
           cancelLabel: 'Cancel',
           confirmLabel,
         },
-        onConfirm
+        onConfirm,
       );
 
       expect(alert.buttons[0].style).toBe('cancel');
       expect(onConfirm).not.toHaveBeenCalled();
       alert.buttons[1].onPress?.();
       expect(onConfirm).toHaveBeenCalledTimes(1);
-    }
+    },
   );
 });

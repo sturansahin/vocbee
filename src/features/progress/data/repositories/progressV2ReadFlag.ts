@@ -22,7 +22,7 @@ export function isFirestoreProgressV2ReadEnabled(): boolean {
 export async function readProgressByLevelWithFlag(
   userId: string,
   level: Level,
-  deviceId?: string
+  deviceId?: string,
 ): Promise<LevelProgress | null> {
   if (!isFirestoreProgressV2ReadEnabled()) {
     return null;

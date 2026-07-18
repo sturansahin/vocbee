@@ -1,7 +1,4 @@
-import {
-  buildStoredProfileFromAuth,
-  buildStoredProfileFromFirestore,
-} from '../profileRules';
+import { buildStoredProfileFromAuth, buildStoredProfileFromFirestore } from '../profileRules';
 
 describe('socialAuthProfile', () => {
   describe('buildStoredProfileFromAuth', () => {
@@ -11,7 +8,7 @@ describe('socialAuthProfile', () => {
           email: 'vocbee@example.com',
           preferredDisplayName: 'VocBee User',
           preferredPhotoURL: 'https://image.example/profile.png',
-        })
+        }),
       ).toEqual({
         name: 'VocBee User',
         image: 'https://image.example/profile.png',
@@ -21,7 +18,7 @@ describe('socialAuthProfile', () => {
       expect(
         buildStoredProfileFromAuth({
           email: 'relay-user@example.com',
-        })
+        }),
       ).toEqual({
         name: 'relay-user',
         image: null,
@@ -40,7 +37,7 @@ describe('socialAuthProfile', () => {
           email: 'vocbee@example.com',
           authDisplayName: 'Provider Name',
           authPhotoURL: 'https://image.example/provider.png',
-        })
+        }),
       ).toEqual({
         name: 'Provider Name',
         image: 'vocbee-avatar:avatar2',
@@ -61,7 +58,7 @@ describe('socialAuthProfile', () => {
           email: 'existing@example.com',
           firestoreDisplayName: '',
           hasFirestorePhotoURL: false,
-        })
+        }),
       ).toEqual({
         name: 'Existing Name',
         image: 'https://image.example/existing.png',
@@ -81,7 +78,7 @@ describe('socialAuthProfile', () => {
           firestoreDisplayName: 'Existing Name',
           firestorePhotoURL: null,
           hasFirestorePhotoURL: true,
-        })
+        }),
       ).toEqual({
         name: 'Existing Name',
         image: null,

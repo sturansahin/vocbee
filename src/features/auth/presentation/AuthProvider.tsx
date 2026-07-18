@@ -7,10 +7,7 @@ import React, {
   useState,
 } from 'react';
 
-import {
-  DEFAULT_NOTIFICATION_SETTINGS,
-  type NotificationSettings,
-} from '@features/notifications';
+import { DEFAULT_NOTIFICATION_SETTINGS, type NotificationSettings } from '@features/notifications';
 import type { Profile } from '@features/profile';
 import type { UserData } from '@shared/storage';
 
@@ -59,19 +56,19 @@ export function AuthStateProvider({ children, facade }: AuthStateProviderProps) 
 
   useEffect(() => {
     facade.initialize();
-    return facade.subscribe(nextUser => {
+    return facade.subscribe((nextUser) => {
       const generation = ++sessionGeneration.current;
       setUser(nextUser);
       void facade
         .bootstrapSession(nextUser)
-        .then(snapshot => {
+        .then((snapshot) => {
           if (generation !== sessionGeneration.current) return;
           setUserData(snapshot.userData);
           setProfile(snapshot.profile);
           setNotificationSettings(snapshot.notificationSettings);
           setConnectionError(snapshot.connectionError);
         })
-        .catch(error => {
+        .catch((error) => {
           if (generation !== sessionGeneration.current) return;
           console.error('[AuthProvider] Session bootstrap failed:', error);
           setConnectionError(!!nextUser);
@@ -177,9 +174,9 @@ export function AuthStateProvider({ children, facade }: AuthStateProviderProps) 
   };
 
   const updateNotificationSettings = async (patch: Partial<NotificationSettings>) => {
-    setNotificationSettings(current => ({ ...current, ...patch }));
+    setNotificationSettings((current) => ({ ...current, ...patch }));
     setNotificationSettings(
-      await facade.updateNotificationSettings(user, notificationSettings, patch)
+      await facade.updateNotificationSettings(user, notificationSettings, patch),
     );
   };
 
@@ -202,7 +199,7 @@ export function AuthStateProvider({ children, facade }: AuthStateProviderProps) 
     signOut,
     signInWithGoogle,
     signInWithApple,
-    resetPassword: email => facade.resetPassword(email),
+    resetPassword: (email) => facade.resetPassword(email),
     refreshUserData,
     retryConnection,
     deleteAccount,

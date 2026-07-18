@@ -48,7 +48,8 @@ const ONBOARDING_STEP_SPECS: readonly OnboardingStepSpec[] = [
     titleKey: 'onboarding.title4',
     subtitleKey: 'onboarding.subtitle4',
     titleFallback: 'Let words come to you',
-    subtitleFallback: 'Get timely reminders, keep your learning streak alive, and return when it matters.',
+    subtitleFallback:
+      'Get timely reminders, keep your learning streak alive, and return when it matters.',
     image: require('../../../../../assets/image/onboard2.png'),
   },
   {
@@ -107,12 +108,12 @@ export default function OnboardingScreen({ facade }: OnboardingScreenProps) {
 
   const steps = useMemo<OnboardingStep[]>(
     () =>
-      ONBOARDING_STEP_SPECS.map(step => ({
+      ONBOARDING_STEP_SPECS.map((step) => ({
         ...step,
         title: t(step.titleKey, { defaultValue: step.titleFallback }),
         subtitle: t(step.subtitleKey, { defaultValue: step.subtitleFallback }),
       })),
-    [t]
+    [t],
   );
 
   const isSmallScreen = screenHeight < 700;
@@ -138,9 +139,12 @@ export default function OnboardingScreen({ facade }: OnboardingScreenProps) {
   const maxVisualAreaHeight = isLargeScreen
     ? ONBOARDING_IMAGE_BASE.visualAreaMaxHeight.large
     : ONBOARDING_IMAGE_BASE.visualAreaMaxHeight.regular;
-  const imageWidth = Math.min(screenWidth * imageWidthRatio, maxImageWidth) * ONBOARDING_IMAGE_SCALE;
-  const imageHeight = Math.min(screenHeight * imageHeightRatio, maxImageHeight) * ONBOARDING_IMAGE_SCALE;
-  const visualAreaHeight = Math.min(screenHeight * visualAreaRatio, maxVisualAreaHeight) * ONBOARDING_IMAGE_SCALE;
+  const imageWidth =
+    Math.min(screenWidth * imageWidthRatio, maxImageWidth) * ONBOARDING_IMAGE_SCALE;
+  const imageHeight =
+    Math.min(screenHeight * imageHeightRatio, maxImageHeight) * ONBOARDING_IMAGE_SCALE;
+  const visualAreaHeight =
+    Math.min(screenHeight * visualAreaRatio, maxVisualAreaHeight) * ONBOARDING_IMAGE_SCALE;
   const isLastStep = currentStep === steps.length - 1;
 
   const completeOnboarding = async () => {
@@ -175,7 +179,9 @@ export default function OnboardingScreen({ facade }: OnboardingScreenProps) {
 
   const renderItem = ({ item }: { item: OnboardingStep }) => (
     <View style={[styles.slide, { width: screenWidth }]}>
-      <View style={[styles.copyContainer, { paddingTop: isSmallScreen ? 34 : isLargeScreen ? 68 : 52 }]}>
+      <View
+        style={[styles.copyContainer, { paddingTop: isSmallScreen ? 34 : isLargeScreen ? 68 : 52 }]}
+      >
         <Text
           style={[
             styles.title,
@@ -226,7 +232,7 @@ export default function OnboardingScreen({ facade }: OnboardingScreenProps) {
             ref={flatListRef}
             data={steps}
             renderItem={renderItem}
-            keyExtractor={item => item.id}
+            keyExtractor={(item) => item.id}
             horizontal
             pagingEnabled
             showsHorizontalScrollIndicator={false}
@@ -257,7 +263,12 @@ export default function OnboardingScreen({ facade }: OnboardingScreenProps) {
         {isLastStep ? (
           <View style={styles.startButtonContainer}>
             <TouchableOpacity onPress={completeOnboarding} style={styles.startButton}>
-              <Text style={[styles.startButtonText, { color: colors.primary, fontSize: subtitleFontSize + 2 }]}>
+              <Text
+                style={[
+                  styles.startButtonText,
+                  { color: colors.primary, fontSize: subtitleFontSize + 2 },
+                ]}
+              >
                 {t('onboarding.start')}
               </Text>
             </TouchableOpacity>
@@ -265,12 +276,22 @@ export default function OnboardingScreen({ facade }: OnboardingScreenProps) {
         ) : (
           <View style={styles.actions}>
             <TouchableOpacity onPress={completeOnboarding} style={styles.skipButton}>
-              <Text style={[styles.skipButtonText, { color: colors.textSecondary, fontSize: subtitleFontSize + 2 }]}>
+              <Text
+                style={[
+                  styles.skipButtonText,
+                  { color: colors.textSecondary, fontSize: subtitleFontSize + 2 },
+                ]}
+              >
                 {t('onboarding.skip')}
               </Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={handleNext} style={styles.nextButton}>
-              <Text style={[styles.nextButtonText, { color: colors.primary, fontSize: subtitleFontSize + 2 }]}>
+              <Text
+                style={[
+                  styles.nextButtonText,
+                  { color: colors.primary, fontSize: subtitleFontSize + 2 },
+                ]}
+              >
                 {t('onboarding.next')}
               </Text>
             </TouchableOpacity>

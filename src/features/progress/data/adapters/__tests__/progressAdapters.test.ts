@@ -17,9 +17,14 @@ describe('adaptLegacyLearnedWordsToProgressByLevelDocs — edge cases (docs/refa
       lastWordIndex: 3,
       currentLevel: 'A1',
     });
-    const a1 = docs.find(d => d.level === 'A1');
-    const a2 = docs.find(d => d.level === 'A2');
-    expect(a1).toMatchObject({ level: 'A1', learnedWordIds: [1, 2, 3], learnedCount: 3, lastWordId: 3 });
+    const a1 = docs.find((d) => d.level === 'A1');
+    const a2 = docs.find((d) => d.level === 'A2');
+    expect(a1).toMatchObject({
+      level: 'A1',
+      learnedWordIds: [1, 2, 3],
+      learnedCount: 3,
+      lastWordId: 3,
+    });
     expect(a2).toMatchObject({ level: 'A2', learnedWordIds: [10], learnedCount: 1, lastWordId: 0 });
   });
 
@@ -33,11 +38,18 @@ describe('adaptLegacyLearnedWordsToProgressByLevelDocs — edge cases (docs/refa
   it('empty level array (A1: []) -> consistent doc with learnedCount 0', () => {
     const docs = adaptLegacyLearnedWordsToProgressByLevelDocs({ learnedWords: { A1: [] } });
     expect(docs).toHaveLength(1);
-    expect(docs[0]).toMatchObject({ level: 'A1', learnedWordIds: [], learnedCount: 0, lastWordId: 0 });
+    expect(docs[0]).toMatchObject({
+      level: 'A1',
+      learnedWordIds: [],
+      learnedCount: 0,
+      lastWordId: 0,
+    });
   });
 
   it('duplicate wordIds are deduped (A1: [1,1,2,2,3] -> [1,2,3])', () => {
-    const docs = adaptLegacyLearnedWordsToProgressByLevelDocs({ learnedWords: { A1: [1, 1, 2, 2, 3] } });
+    const docs = adaptLegacyLearnedWordsToProgressByLevelDocs({
+      learnedWords: { A1: [1, 1, 2, 2, 3] },
+    });
     expect(docs[0].learnedWordIds).toEqual([1, 2, 3]);
     expect(docs[0].learnedCount).toBe(3);
   });
@@ -50,13 +62,16 @@ describe('adaptLegacyLearnedWordsToProgressByLevelDocs — edge cases (docs/refa
   });
 
   it('lastWordIndex missing -> 0', () => {
-    const docs = adaptLegacyLearnedWordsToProgressByLevelDocs({ learnedWords: { A1: [1] }, currentLevel: 'A1' });
+    const docs = adaptLegacyLearnedWordsToProgressByLevelDocs({
+      learnedWords: { A1: [1] },
+      currentLevel: 'A1',
+    });
     expect(docs[0].lastWordId).toBe(0);
   });
 
   it('A1 present, A2 absent -> only A1 doc', () => {
     const docs = adaptLegacyLearnedWordsToProgressByLevelDocs({ learnedWords: { A1: [1, 2] } });
-    expect(docs.map(d => d.level)).toEqual(['A1']);
+    expect(docs.map((d) => d.level)).toEqual(['A1']);
   });
 
   it('ids are sorted ascending', () => {
@@ -67,7 +82,7 @@ describe('adaptLegacyLearnedWordsToProgressByLevelDocs — edge cases (docs/refa
   it('attaches deviceId/version when provided', () => {
     const docs = adaptLegacyLearnedWordsToProgressByLevelDocs(
       { learnedWords: { A1: [1] } },
-      { deviceId: 'device-a', version: 2, vocabularySchemaVersion: 2 }
+      { deviceId: 'device-a', version: 2, vocabularySchemaVersion: 2 },
     );
     expect(docs[0].updatedByDeviceId).toBe('device-a');
     expect(docs[0].version).toBe(2);
@@ -77,7 +92,7 @@ describe('adaptLegacyLearnedWordsToProgressByLevelDocs — edge cases (docs/refa
   it('is idempotent (re-running yields identical output) — safe to re-run migration', () => {
     const legacy = { learnedWords: { A1: [1, 2], B1: [5] }, lastWordIndex: 1, currentLevel: 'A1' };
     expect(adaptLegacyLearnedWordsToProgressByLevelDocs(legacy)).toEqual(
-      adaptLegacyLearnedWordsToProgressByLevelDocs(legacy)
+      adaptLegacyLearnedWordsToProgressByLevelDocs(legacy),
     );
   });
 });
@@ -99,7 +114,7 @@ describe('verifyMigrationCounts — copy/verify safety (docs/refactor-v2/08 §7)
   it('ok=false when words live under an invalid level key (dropped -> mismatch)', () => {
     const legacy = { learnedWords: { A1: [1], A0: [9, 9] } } as any;
     const models = adaptLegacyLearnedWordsToProgressByLevelDocs(legacy);
-    expect(models.map(m => m.level)).toEqual(['A1']);
+    expect(models.map((m) => m.level)).toEqual(['A1']);
     expect(verifyMigrationCounts(legacy, models).ok).toBe(false);
   });
 
@@ -120,7 +135,10 @@ describe('toProgressByLevelDoc / fromProgressByLevelDoc — no Timestamp leaks i
       learnedCount: 2,
       vocabularySchemaVersion: 2,
     };
-    const dto = toProgressByLevelDoc(model, 'SENTINEL_TS' as any, { deviceId: 'device-a', version: 1 });
+    const dto = toProgressByLevelDoc(model, 'SENTINEL_TS' as any, {
+      deviceId: 'device-a',
+      version: 1,
+    });
     expect(dto.updatedAt).toBe('SENTINEL_TS');
     expect(dto.updatedByDeviceId).toBe('device-a');
     expect(dto.learnedCount).toBe(2);
@@ -139,7 +157,9 @@ describe('toProgressByLevelDoc / fromProgressByLevelDoc — no Timestamp leaks i
 
 describe('buildProgressSummary', () => {
   it('computes per-level + overall percent from LOCAL totals', () => {
-    const models = adaptLegacyLearnedWordsToProgressByLevelDocs({ learnedWords: { A1: [1, 2, 3], A2: [10] } });
+    const models = adaptLegacyLearnedWordsToProgressByLevelDocs({
+      learnedWords: { A1: [1, 2, 3], A2: [10] },
+    });
     const summary = buildProgressSummary(models, { A1: 12, A2: 8 });
     expect(summary.byLevel.A1).toEqual({ learnedCount: 3, totalCount: 12, percent: 25 });
     expect(summary.byLevel.A2).toEqual({ learnedCount: 1, totalCount: 8, percent: 13 });

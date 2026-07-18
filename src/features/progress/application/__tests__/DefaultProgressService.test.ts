@@ -6,13 +6,33 @@ class FakeStore implements ProgressLocalStore {
   progress: UserProgress = {};
   level: string | null = 'A1';
   last: string | null = null;
-  readProgress() { return Promise.resolve(structuredClone(this.progress)); }
-  writeProgress(progress: UserProgress) { this.progress = structuredClone(progress); return Promise.resolve(); }
-  readCurrentLevel() { return Promise.resolve(this.level); }
-  writeCurrentLevel(level: string) { this.level = level; return Promise.resolve(); }
-  readLastWordId() { return Promise.resolve(this.last); }
-  writeLastWordId(id: number) { this.last = String(id); return Promise.resolve(); }
-  clear() { this.progress = {}; this.level = null; this.last = null; return Promise.resolve(); }
+  readProgress() {
+    return Promise.resolve(structuredClone(this.progress));
+  }
+  writeProgress(progress: UserProgress) {
+    this.progress = structuredClone(progress);
+    return Promise.resolve();
+  }
+  readCurrentLevel() {
+    return Promise.resolve(this.level);
+  }
+  writeCurrentLevel(level: string) {
+    this.level = level;
+    return Promise.resolve();
+  }
+  readLastWordId() {
+    return Promise.resolve(this.last);
+  }
+  writeLastWordId(id: number) {
+    this.last = String(id);
+    return Promise.resolve();
+  }
+  clear() {
+    this.progress = {};
+    this.level = null;
+    this.last = null;
+    return Promise.resolve();
+  }
   restore(progress: UserProgress | null, level: string | null, last?: number | null) {
     if (progress) this.progress = progress;
     if (level) this.level = level;

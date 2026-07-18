@@ -11,18 +11,13 @@ const publicBoundaryPatterns = [
   },
 ];
 
-const legacyRootZones = [
-  'components',
-  'config',
-  'context',
-  'screens',
-  'services',
-  'utils',
-].map(directory => ({
-  target: './src',
-  from: `./${directory}`,
-  message: `src -> legacy ${directory}/ import is forbidden; use the owning public module.`,
-}));
+const legacyRootZones = ['components', 'config', 'context', 'screens', 'services', 'utils'].map(
+  (directory) => ({
+    target: './src',
+    from: `./${directory}`,
+    message: `src -> legacy ${directory}/ import is forbidden; use the owning public module.`,
+  }),
+);
 
 const sideEffectSdkPattern = {
   group: [
@@ -55,10 +50,7 @@ module.exports = {
     ecmaFeatures: { jsx: true },
   },
   plugins: ['@typescript-eslint', 'import'],
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-  ],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
   settings: {
     'import/resolver': {
       typescript: { project: './tsconfig.json' },
@@ -80,7 +72,10 @@ module.exports = {
   ],
   rules: {
     '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
+    ],
     'no-unused-vars': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     'no-undef': 'off',
@@ -128,10 +123,7 @@ module.exports = {
         'no-restricted-imports': [
           'error',
           {
-            patterns: [
-              ...publicBoundaryPatterns,
-              sideEffectSdkPattern,
-            ],
+            patterns: [...publicBoundaryPatterns, sideEffectSdkPattern],
           },
         ],
         'import/no-restricted-paths': [
@@ -156,10 +148,7 @@ module.exports = {
         'no-restricted-imports': [
           'error',
           {
-            patterns: [
-              ...publicBoundaryPatterns,
-              sideEffectSdkPattern,
-            ],
+            patterns: [...publicBoundaryPatterns, sideEffectSdkPattern],
           },
         ],
       },

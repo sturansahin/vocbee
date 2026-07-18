@@ -2,10 +2,7 @@ import type { Level } from '@features/progress';
 import type { Profile } from '@features/profile';
 
 import { DefaultSettingsFacade } from '../DefaultSettingsFacade';
-import type {
-  AvatarPickerGateway,
-  SettingsPlatformGateway,
-} from '../contracts';
+import type { AvatarPickerGateway, SettingsPlatformGateway } from '../contracts';
 import type { SettingsRepository } from '../../data/contracts';
 
 function makeSubject(avatarResult: Awaited<ReturnType<AvatarPickerGateway['pick']>>) {
@@ -51,9 +48,7 @@ describe('DefaultSettingsFacade', () => {
     const updateProfile = jest.fn(async (_patch: Partial<Profile>) => undefined);
 
     await expect(facade.loadUserLevel()).resolves.toBe('intermediate');
-    await expect(facade.updateProfileName('  Bee User  ', updateProfile)).resolves.toBe(
-      'updated'
-    );
+    await expect(facade.updateProfileName('  Bee User  ', updateProfile)).resolves.toBe('updated');
     expect(updateProfile).toHaveBeenCalledWith({ name: 'Bee User' });
   });
 

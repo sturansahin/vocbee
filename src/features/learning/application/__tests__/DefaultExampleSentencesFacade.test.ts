@@ -25,7 +25,9 @@ describe('DefaultExampleSentencesFacade', () => {
   it('loads a grammar explanation through the application boundary', async () => {
     const { facade, grammar } = makeFacade();
 
-    await expect(facade.explainGrammar('Sentence one.', 'Sentence two.')).resolves.toEqual(explanation);
+    await expect(facade.explainGrammar('Sentence one.', 'Sentence two.')).resolves.toEqual(
+      explanation,
+    );
     expect(grammar.explain).toHaveBeenCalledWith('Sentence one.', 'Sentence two.', 'Turkish');
   });
 

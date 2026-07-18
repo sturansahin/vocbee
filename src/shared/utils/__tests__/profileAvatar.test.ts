@@ -10,7 +10,7 @@ describe('profileAvatar', () => {
 
   it('exposes six bundled avatars with stable storage values', () => {
     expect(PROFILE_AVATARS).toHaveLength(6);
-    expect(new Set(PROFILE_AVATARS.map(avatar => avatar.value)).size).toBe(6);
+    expect(new Set(PROFILE_AVATARS.map((avatar) => avatar.value)).size).toBe(6);
     expect(PROFILE_AVATARS[0].value).toBe(`${PROFILE_AVATAR_PREFIX}avatar1`);
   });
 
@@ -32,6 +32,8 @@ describe('profileAvatar', () => {
 
   it('falls back for empty or unknown bundled avatar values', () => {
     expect(getProfileImageSource(null, fallbackSource)).toBe(fallbackSource);
-    expect(getProfileImageSource(`${PROFILE_AVATAR_PREFIX}missing`, fallbackSource)).toBe(fallbackSource);
+    expect(getProfileImageSource(`${PROFILE_AVATAR_PREFIX}missing`, fallbackSource)).toBe(
+      fallbackSource,
+    );
   });
 });

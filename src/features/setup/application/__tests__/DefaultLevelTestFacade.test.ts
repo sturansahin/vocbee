@@ -6,15 +6,16 @@ import type {
   LevelTestVocabularySource,
 } from '../levelTestContracts';
 
-const words = (level: Level): VocabularyWord[] => [1, 2, 3, 4].map(id => ({
-  id: Number(`${level.charCodeAt(0)}${id}`),
-  word: `${level}-word-${id}`,
-  translation: `${level}-translation-${id}`,
-  sentence1: '',
-  sentence2: '',
-  nativeSentence1: '',
-  nativeSentence2: '',
-}));
+const words = (level: Level): VocabularyWord[] =>
+  [1, 2, 3, 4].map((id) => ({
+    id: Number(`${level.charCodeAt(0)}${id}`),
+    word: `${level}-word-${id}`,
+    translation: `${level}-translation-${id}`,
+    sentence1: '',
+    sentence2: '',
+    nativeSentence1: '',
+    nativeSentence2: '',
+  }));
 
 function makeFacade() {
   const preferences: LevelTestPreferencesRepository = {
@@ -57,10 +58,12 @@ describe('DefaultLevelTestFacade', () => {
     const errorSpy = jest.spyOn(console, 'error').mockImplementation(() => undefined);
     jest.mocked(vocabulary.getWords).mockRejectedValue(new Error('asset unavailable'));
 
-    await expect(facade.loadQuestions({
-      nativeLanguage: 'turkish',
-      targetLanguage: 'english',
-    })).rejects.toThrow('No questions generated');
+    await expect(
+      facade.loadQuestions({
+        nativeLanguage: 'turkish',
+        targetLanguage: 'english',
+      }),
+    ).rejects.toThrow('No questions generated');
     expect(errorSpy).toHaveBeenCalledTimes(5);
     errorSpy.mockRestore();
   });

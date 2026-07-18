@@ -3,10 +3,7 @@ import * as Notifications from 'expo-notifications';
 import { Platform } from 'react-native';
 import { STORAGE_KEYS } from '@shared/storage';
 
-import {
-  ANDROID_STREAK_CHANNEL_ID,
-  ANDROID_VOCABULARY_CHANNEL_ID,
-} from '../../domain/constants';
+import { ANDROID_STREAK_CHANNEL_ID, ANDROID_VOCABULARY_CHANNEL_ID } from '../../domain/constants';
 import type { NotificationPermissionState } from '../../domain/types';
 import type { NotificationPermissionRepository } from '../contracts';
 
@@ -40,7 +37,7 @@ export class ExpoNotificationPermissionRepository implements NotificationPermiss
   async hasSeenPrompt(userId: string): Promise<boolean> {
     try {
       const value = await AsyncStorage.getItem(
-        `${STORAGE_KEYS.NOTIFICATION_PERMISSION_PROMPT_PREFIX}${userId}`
+        `${STORAGE_KEYS.NOTIFICATION_PERMISSION_PROMPT_PREFIX}${userId}`,
       );
       return value === 'true';
     } catch (error) {
@@ -53,7 +50,7 @@ export class ExpoNotificationPermissionRepository implements NotificationPermiss
     try {
       await AsyncStorage.setItem(
         `${STORAGE_KEYS.NOTIFICATION_PERMISSION_PROMPT_PREFIX}${userId}`,
-        'true'
+        'true',
       );
     } catch (error) {
       console.error('[Notifications] Failed to persist permission prompt flag:', error);

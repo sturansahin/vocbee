@@ -39,13 +39,14 @@ export function useAppLifecycle() {
   const [isAppReady, setIsAppReady] = useState(false);
   const [initialRoute, setInitialRoute] = useState<keyof RootStackParamList>('Onboarding');
   const [showSplash, setShowSplash] = useState(true);
-  const hasCompletedSetup = (userData as any)?.setupCompleted === true ||
+  const hasCompletedSetup =
+    (userData as any)?.setupCompleted === true ||
     !!(userData?.preferences?.nativeLanguage && userData?.preferences?.targetLanguage);
 
   const consumeNotificationResponse = useCallback(
     async (
       response: NotificationResponsePayload | null,
-      source: 'startup' | 'listener' | 'resume'
+      source: 'startup' | 'listener' | 'resume',
     ) => {
       if (!response) return;
 
@@ -54,7 +55,9 @@ export function useAppLifecycle() {
       const responseKey = `${notificationId}:${actionIdentifier}`;
 
       if (handledNotificationResponses.current.has(responseKey)) {
-        console.log(`[Notifications] Response ${responseKey} skipped (${source}) - already handled`);
+        console.log(
+          `[Notifications] Response ${responseKey} skipped (${source}) - already handled`,
+        );
         return;
       }
 
@@ -79,45 +82,48 @@ export function useAppLifecycle() {
         console.error(`[Notifications] Failed to handle response (${source})`, error);
       }
     },
-    []
+    [],
   );
 
-  const runNotificationMaintenance = useCallback(async (reason: 'startup' | 'resume') => {
-    if (!user) return;
+  const runNotificationMaintenance = useCallback(
+    async (reason: 'startup' | 'resume') => {
+      if (!user) return;
 
-    if (notificationMaintenanceInFlight.current) {
-      console.log(`[Notifications] Maintenance skipped (${reason}) - already running`);
-      return;
-    }
-
-    notificationMaintenanceInFlight.current = true;
-    console.log(`[Notifications] Maintenance started (${reason})`);
-
-    try {
-      try {
-        await notificationFacade.processDelivered();
-      } catch (error) {
-        console.error(`[Notifications] processDeliveredNotifications failed (${reason})`, error);
+      if (notificationMaintenanceInFlight.current) {
+        console.log(`[Notifications] Maintenance skipped (${reason}) - already running`);
+        return;
       }
 
-      // Record foreground baseline after processing delivered notifications so
-      // next cycle can correctly identify "arrived while app was open" events.
-      try {
-        await notificationFacade.setForegroundTime();
-      } catch (error) {
-        console.error(`[Notifications] setLastForegroundTime failed (${reason})`, error);
-      }
+      notificationMaintenanceInFlight.current = true;
+      console.log(`[Notifications] Maintenance started (${reason})`);
 
       try {
-        await notificationFacade.refill();
-      } catch (error) {
-        console.error(`[Notifications] refillNotifications failed (${reason})`, error);
+        try {
+          await notificationFacade.processDelivered();
+        } catch (error) {
+          console.error(`[Notifications] processDeliveredNotifications failed (${reason})`, error);
+        }
+
+        // Record foreground baseline after processing delivered notifications so
+        // next cycle can correctly identify "arrived while app was open" events.
+        try {
+          await notificationFacade.setForegroundTime();
+        } catch (error) {
+          console.error(`[Notifications] setLastForegroundTime failed (${reason})`, error);
+        }
+
+        try {
+          await notificationFacade.refill();
+        } catch (error) {
+          console.error(`[Notifications] refillNotifications failed (${reason})`, error);
+        }
+      } finally {
+        notificationMaintenanceInFlight.current = false;
+        console.log(`[Notifications] Maintenance finished (${reason})`);
       }
-    } finally {
-      notificationMaintenanceInFlight.current = false;
-      console.log(`[Notifications] Maintenance finished (${reason})`);
-    }
-  }, [user]);
+    },
+    [user],
+  );
 
   const ensureAuthenticatedUserNotificationPermission = useCallback(async () => {
     if (!user || !hasCompletedSetup) return;
@@ -135,7 +141,9 @@ export function useAppLifecycle() {
     notificationPermissionGateInFlight.current = true;
 
     try {
-      const alreadyPromptedOnThisInstall = await notificationFacade.hasSeenPermissionPrompt(user.uid);
+      const alreadyPromptedOnThisInstall = await notificationFacade.hasSeenPermissionPrompt(
+        user.uid,
+      );
       const permissionState = await notificationFacade.getPermissionState();
 
       if (permissionState.granted) {
@@ -187,7 +195,15 @@ export function useAppLifecycle() {
           return;
         }
         console.log('[App] Auth loaded. User:', user ? 'logged in' : 'not logged in');
-        console.log('[App] userData:', userData ? JSON.stringify({ setupCompleted: userData.setupCompleted, prefs: userData.preferences }) : 'null');
+        console.log(
+          '[App] userData:',
+          userData
+            ? JSON.stringify({
+                setupCompleted: userData.setupCompleted,
+                prefs: userData.preferences,
+              })
+            : 'null',
+        );
 
         let route: keyof RootStackParamList = 'Onboarding';
 
@@ -197,7 +213,8 @@ export function useAppLifecycle() {
         } else if (user) {
           // User is logged in
           // Check if setup is completed by verifying setupCompleted flag OR complete preferences
-          const hasCompletedSetup = (userData as any)?.setupCompleted === true ||
+          const hasCompletedSetup =
+            (userData as any)?.setupCompleted === true ||
             (userData?.preferences?.nativeLanguage && userData?.preferences?.targetLanguage);
 
           if (hasCompletedSetup) {
@@ -242,7 +259,7 @@ export function useAppLifecycle() {
     if (reviewLaunchRecordedUsers.current.has(user.uid)) return;
 
     reviewLaunchRecordedUsers.current.add(user.uid);
-    recordReviewAppLaunch().catch(error => {
+    recordReviewAppLaunch().catch((error) => {
       console.error('[ReviewPrompt] Failed to record app launch', error);
     });
   }, [user, isLoading, hasCompletedSetup]);
@@ -277,7 +294,7 @@ export function useAppLifecycle() {
     adStartupUserId.current = user.uid;
 
     initializeAdMob()
-      .then(async ready => {
+      .then(async (ready) => {
         if (!ready) {
           return;
         }
@@ -285,7 +302,7 @@ export function useAppLifecycle() {
         await refreshAdInventoryOnForeground(false);
         await checkAndShowAppOpenAd();
       })
-      .catch(err => console.error('[App] AdMob init chain error:', err));
+      .catch((err) => console.error('[App] AdMob init chain error:', err));
   }, [user, isLoading, hasCompletedSetup, isMonetizationLoading, isAdFree]);
 
   // Handle notification response from cold start (app opened by tapping a notification)
@@ -299,7 +316,7 @@ export function useAppLifecycle() {
         if (cancelled) return;
 
         if (delayMs > 0) {
-          await new Promise<void>(resolve => setTimeout(() => resolve(), delayMs));
+          await new Promise<void>((resolve) => setTimeout(() => resolve(), delayMs));
         }
 
         try {
@@ -324,7 +341,7 @@ export function useAppLifecycle() {
   // Handle live notification responses while app is running
   useEffect(() => {
     const subscription = notificationFacade.addResponseListener((response) => {
-      consumeNotificationResponse(response, 'listener').catch(error => {
+      consumeNotificationResponse(response, 'listener').catch((error) => {
         console.error('[Notifications] Listener response handling failed', error);
       });
     });
@@ -339,9 +356,10 @@ export function useAppLifecycle() {
         notificationFacade.setBackgroundTime();
       }
       if (appState.current.match(/inactive|background/) && nextAppState === 'active') {
-        notificationFacade.getLastResponse()
-          .then(lastResponse => consumeNotificationResponse(lastResponse, 'resume'))
-          .catch(error => {
+        notificationFacade
+          .getLastResponse()
+          .then((lastResponse) => consumeNotificationResponse(lastResponse, 'resume'))
+          .catch((error) => {
             console.error('[Notifications] Resume response handling failed', error);
           });
 
@@ -352,7 +370,7 @@ export function useAppLifecycle() {
         }
 
         if (user && hasCompletedSetup && !isMonetizationLoading && !isAdFree) {
-          refreshAdInventoryOnForeground().catch(error => {
+          refreshAdInventoryOnForeground().catch((error) => {
             console.error('[AdMob] Foreground refresh failed', error);
           });
         }

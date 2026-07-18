@@ -22,8 +22,7 @@ export interface NativeGoogleProfile {
 }
 
 export type NativeGoogleSignInResult =
-  | { type: 'cancelled' }
-  | { type: 'success'; idToken: string; profile: NativeGoogleProfile };
+  { type: 'cancelled' } | { type: 'success'; idToken: string; profile: NativeGoogleProfile };
 
 export const configureNativeGoogleSignIn = (): void => {
   if (Platform.OS === 'web' || hasConfiguredNativeGoogleSignIn) return;

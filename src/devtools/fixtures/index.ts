@@ -68,10 +68,38 @@ export const fixtureProgressByLevel = {
     vocabularySchemaVersion: 2,
     version: 2,
   },
-  A2: { level: 'A2' as const, learnedWordIds: [], lastWordId: 0, learnedCount: 0, vocabularySchemaVersion: 2, version: 2 },
-  B1: { level: 'B1' as const, learnedWordIds: [], lastWordId: 0, learnedCount: 0, vocabularySchemaVersion: 2, version: 2 },
-  B2: { level: 'B2' as const, learnedWordIds: [], lastWordId: 0, learnedCount: 0, vocabularySchemaVersion: 2, version: 2 },
-  C1: { level: 'C1' as const, learnedWordIds: [], lastWordId: 0, learnedCount: 0, vocabularySchemaVersion: 2, version: 2 },
+  A2: {
+    level: 'A2' as const,
+    learnedWordIds: [],
+    lastWordId: 0,
+    learnedCount: 0,
+    vocabularySchemaVersion: 2,
+    version: 2,
+  },
+  B1: {
+    level: 'B1' as const,
+    learnedWordIds: [],
+    lastWordId: 0,
+    learnedCount: 0,
+    vocabularySchemaVersion: 2,
+    version: 2,
+  },
+  B2: {
+    level: 'B2' as const,
+    learnedWordIds: [],
+    lastWordId: 0,
+    learnedCount: 0,
+    vocabularySchemaVersion: 2,
+    version: 2,
+  },
+  C1: {
+    level: 'C1' as const,
+    learnedWordIds: [],
+    lastWordId: 0,
+    learnedCount: 0,
+    vocabularySchemaVersion: 2,
+    version: 2,
+  },
 };
 
 export const fixtureStreakActive = {
@@ -112,4 +140,6 @@ export const fixtureNotificationSettingsDisabled = {
 
 export const fixtureFavorites = [1, 3, 7];
 
-export const fixtureError = new Error('DevTools fixture error: simulated failure for error-state testing');
+export const fixtureError = new Error(
+  'DevTools fixture error: simulated failure for error-state testing',
+);

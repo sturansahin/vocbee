@@ -1,8 +1,4 @@
-import type {
-  AuthProviderKind,
-  AuthSignInResult,
-  EmailSignInRequest,
-} from '../../domain/types';
+import type { AuthProviderKind, AuthSignInResult, EmailSignInRequest } from '../../domain/types';
 
 type SignInRequest = EmailSignInRequest | undefined;
 
@@ -20,19 +16,19 @@ const providerFactories: Record<
   AuthProviderKind,
   (dependencies: AuthProviderFactoryDependencies) => AuthSignInProvider
 > = {
-  email: dependencies => ({
-    signIn: async request => {
+  email: (dependencies) => ({
+    signIn: async (request) => {
       if (!request) throw new Error('Email sign-in credentials are required.');
       return dependencies.email(request);
     },
   }),
-  google: dependencies => ({ signIn: async () => dependencies.google() }),
-  apple: dependencies => ({ signIn: async () => dependencies.apple() }),
+  google: (dependencies) => ({ signIn: async () => dependencies.google() }),
+  apple: (dependencies) => ({ signIn: async () => dependencies.apple() }),
 };
 
 export function createAuthSignInProvider(
   kind: AuthProviderKind,
-  dependencies: AuthProviderFactoryDependencies
+  dependencies: AuthProviderFactoryDependencies,
 ): AuthSignInProvider {
   return providerFactories[kind](dependencies);
 }

@@ -129,10 +129,7 @@ describe('DefaultAuthFacade', () => {
 
     expect(loaded.profile.name).toBe('VocBee User');
     expect(updated.name).toBe('Updated Bee');
-    expect(dependencies.profileRepository.cacheProfile).toHaveBeenLastCalledWith(
-      user.uid,
-      updated
-    );
+    expect(dependencies.profileRepository.cacheProfile).toHaveBeenLastCalledWith(user.uid, updated);
   });
 
   it('refreshes remotely when lastActiveDeviceId belongs to another device', async () => {
@@ -152,7 +149,7 @@ describe('DefaultAuthFacade', () => {
 
     expect(result.setupCompleted).toBe(false);
     expect((dependencies.localStore.clear as jest.Mock).mock.invocationCallOrder[0]).toBeLessThan(
-      (dependencies.notifications.cancelAll as jest.Mock).mock.invocationCallOrder[0]
+      (dependencies.notifications.cancelAll as jest.Mock).mock.invocationCallOrder[0],
     );
   });
 
@@ -177,7 +174,7 @@ describe('DefaultAuthFacade', () => {
     const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => undefined);
 
     await expect(
-      new DefaultAuthFacade(dependencies).signIn('user@example.com', 'bad')
+      new DefaultAuthFacade(dependencies).signIn('user@example.com', 'bad'),
     ).rejects.toThrow('Incorrect password.');
     consoleSpy.mockRestore();
   });
@@ -185,9 +182,7 @@ describe('DefaultAuthFacade', () => {
   it('sends forgot-password email through the auth repository', async () => {
     const dependencies = makeDependencies();
     await new DefaultAuthFacade(dependencies).resetPassword('user@example.com');
-    expect(dependencies.authRepository.sendPasswordReset).toHaveBeenCalledWith(
-      'user@example.com'
-    );
+    expect(dependencies.authRepository.sendPasswordReset).toHaveBeenCalledWith('user@example.com');
   });
 
   it('maps forgot-password errors to the existing public message', async () => {
@@ -197,7 +192,7 @@ describe('DefaultAuthFacade', () => {
     });
     const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => undefined);
     await expect(
-      new DefaultAuthFacade(dependencies).resetPassword('missing@example.com')
+      new DefaultAuthFacade(dependencies).resetPassword('missing@example.com'),
     ).rejects.toThrow('No account found with this email.');
     consoleSpy.mockRestore();
   });

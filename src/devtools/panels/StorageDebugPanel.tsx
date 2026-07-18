@@ -23,10 +23,10 @@ export function StorageDebugPanel() {
     try {
       const staticKeys = Object.values(STORAGE_KEYS).filter(
         // Exclude prefix-only entries (they are not real keys by themselves).
-        k => !k.endsWith('_') && !k.endsWith('Prefix')
+        (k) => !k.endsWith('_') && !k.endsWith('Prefix'),
       );
       const entries = await Promise.all(
-        staticKeys.map(async key => ({ key, value: await AsyncStorage.getItem(key) }))
+        staticKeys.map(async (key) => ({ key, value: await AsyncStorage.getItem(key) })),
       );
       setRows(entries);
     } catch (error) {
@@ -47,7 +47,7 @@ export function StorageDebugPanel() {
       </Pressable>
       <FlatList
         data={rows}
-        keyExtractor={item => item.key}
+        keyExtractor={(item) => item.key}
         renderItem={({ item }) => (
           <View style={styles.row}>
             <Text style={styles.rowKey}>{item.key}</Text>
@@ -65,7 +65,13 @@ const styles = StyleSheet.create({
   container: { flex: 1, padding: 16 },
   title: { fontSize: 18, fontWeight: '700', marginBottom: 4 },
   subtitle: { fontSize: 12, color: '#666', marginBottom: 12 },
-  refreshButton: { backgroundColor: '#eee', paddingVertical: 10, borderRadius: 8, alignItems: 'center', marginBottom: 12 },
+  refreshButton: {
+    backgroundColor: '#eee',
+    paddingVertical: 10,
+    borderRadius: 8,
+    alignItems: 'center',
+    marginBottom: 12,
+  },
   refreshButtonText: { fontWeight: '600' },
   row: { paddingVertical: 8, borderBottomWidth: 1, borderBottomColor: '#eee' },
   rowKey: { fontSize: 12, fontWeight: '700', color: '#333' },

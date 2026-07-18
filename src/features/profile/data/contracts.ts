@@ -34,7 +34,12 @@ export interface UserProfileRepository {
   saveProfile(uid: string, patch: Partial<Profile>): Promise<void>;
   /** Merge setupCompleted/preferences/progress/notificationSettings into users/{uid}. */
   saveSetupCompletion(uid: string, completion: SetupProfileCompletion): Promise<void>;
-  createUserDocument(uid: string, email: string, displayName?: string, photoURL?: string | null): Promise<void>;
+  createUserDocument(
+    uid: string,
+    email: string,
+    displayName?: string,
+    photoURL?: string | null,
+  ): Promise<void>;
   /** deleteDoc(users/{uid}) — the call currently inlined in AuthContext.deleteAccountRemotely. */
   deleteUserDocument(uid: string): Promise<void>;
 }

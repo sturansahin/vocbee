@@ -37,11 +37,11 @@ export interface SettingsFacade {
   changeUserLevel(level: UserLevel): Promise<void>;
   pickAndUpdateAvatar(
     source: AvatarSource,
-    updateProfile: (patch: Partial<Profile>) => Promise<void>
+    updateProfile: (patch: Partial<Profile>) => Promise<void>,
   ): Promise<AvatarPickResult>;
   updateProfileName(
     name: string,
-    updateProfile: (patch: Partial<Profile>) => Promise<void>
+    updateProfile: (patch: Partial<Profile>) => Promise<void>,
   ): Promise<'updated' | 'empty' | 'too-short'>;
   requestNotificationPermission(): Promise<boolean>;
   openSystemSettings(): Promise<void>;

@@ -34,18 +34,10 @@ export function LoginScreen() {
   return (
     <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
       <ScrollView
-        contentContainerStyle={[
-          styles.scrollContent,
-          { padding: isSmallScreen ? 20 : 24 },
-        ]}
+        contentContainerStyle={[styles.scrollContent, { padding: isSmallScreen ? 20 : 24 }]}
         showsVerticalScrollIndicator={false}
       >
-        <View
-          style={[
-            styles.logoSection,
-            { marginBottom: isSmallScreen ? 24 : 40 },
-          ]}
-        >
+        <View style={[styles.logoSection, { marginBottom: isSmallScreen ? 24 : 40 }]}>
           <Animated.View
             style={[
               styles.lottieContainer,
@@ -70,9 +62,7 @@ export function LoginScreen() {
             <LottieView
               ref={controller.lottieRef}
               source={
-                controller.isAnimating
-                  ? controller.animatedAnimation
-                  : controller.staticAnimation
+                controller.isAnimating ? controller.animatedAnimation : controller.staticAnimation
               }
               style={{ width: '100%', height: '100%', transform: [{ scale: 1.15 }] }}
               autoPlay={controller.isAnimating}
@@ -114,9 +104,7 @@ export function LoginScreen() {
           onChangeText={controller.setPassword}
           secureTextEntry={!controller.showPassword}
           rightIcon={controller.showPassword ? 'visibility' : 'visibility-off'}
-          onRightIconPress={() =>
-            controller.setShowPassword(!controller.showPassword)
-          }
+          onRightIconPress={() => controller.setShowPassword(!controller.showPassword)}
           backgroundColor={colors.surface}
           borderColor={colors.border}
           labelColor={colors.textSecondary}
@@ -140,9 +128,7 @@ export function LoginScreen() {
               minimumFontScale={0.86}
             >
               {t('auth.noAccount')}{' '}
-              <Text style={[styles.signupLink, { color: colors.primary }]}>
-                {t('auth.signUp')}
-              </Text>
+              <Text style={[styles.signupLink, { color: colors.primary }]}>{t('auth.signUp')}</Text>
             </Text>
           </TouchableOpacity>
           <TouchableOpacity

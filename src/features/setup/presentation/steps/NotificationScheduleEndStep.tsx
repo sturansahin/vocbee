@@ -35,7 +35,12 @@ export const NotificationScheduleEndStep: React.FC<NotificationScheduleEndStepPr
   return (
     <View style={[styles.scrollView, { justifyContent: 'center' }]}>
       <View style={styles.scheduleContainer}>
-        <View style={[styles.scheduleSection, { backgroundColor: colors.surface, borderColor: colors.border }]}>
+        <View
+          style={[
+            styles.scheduleSection,
+            { backgroundColor: colors.surface, borderColor: colors.border },
+          ]}
+        >
           <View style={styles.scheduleLabelRow}>
             <MaterialIcons name="nightlight-round" size={20} color={colors.primary} />
             <Text style={[styles.scheduleLabel, { color: colors.text }]}>{t('setup.endTime')}</Text>
@@ -44,7 +49,10 @@ export const NotificationScheduleEndStep: React.FC<NotificationScheduleEndStepPr
             {/* Hour */}
             <View style={styles.wheelColumn}>
               <View style={styles.wheelScrollWrapper}>
-                <View style={[styles.wheelCenterIndicator, { borderColor: colors.primary }]} pointerEvents="none" />
+                <View
+                  style={[styles.wheelCenterIndicator, { borderColor: colors.primary }]}
+                  pointerEvents="none"
+                />
                 <ScrollView
                   ref={hourScrollRef}
                   style={styles.wheelScroll}
@@ -67,7 +75,10 @@ export const NotificationScheduleEndStep: React.FC<NotificationScheduleEndStepPr
             {/* Minute */}
             <View style={styles.wheelColumn}>
               <View style={styles.wheelScrollWrapper}>
-                <View style={[styles.wheelCenterIndicator, { borderColor: colors.primary }]} pointerEvents="none" />
+                <View
+                  style={[styles.wheelCenterIndicator, { borderColor: colors.primary }]}
+                  pointerEvents="none"
+                />
                 <ScrollView
                   ref={minuteScrollRef}
                   style={styles.wheelScroll}

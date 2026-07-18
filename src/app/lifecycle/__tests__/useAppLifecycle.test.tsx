@@ -18,7 +18,11 @@ jest.mock('@features/monetization', () => ({
 jest.mock('@features/sync', () => ({ autoSync: jest.fn() }));
 jest.mock('@features/notifications', () => ({
   notificationFacade: {
-    getPermissionState: jest.fn(async () => ({ granted: false, canAskAgain: true, status: 'undetermined' })),
+    getPermissionState: jest.fn(async () => ({
+      granted: false,
+      canAskAgain: true,
+      status: 'undetermined',
+    })),
     handleResponse: jest.fn(async () => {}),
     hasSeenPermissionPrompt: jest.fn(async () => false),
     markPermissionPromptSeen: jest.fn(async () => {}),

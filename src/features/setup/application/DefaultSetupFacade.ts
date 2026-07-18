@@ -1,9 +1,5 @@
 import { canCompleteSetup } from '../domain/rules';
-import type {
-  SetupCompletionInput,
-  SetupFacade,
-  SetupPlatformGateway,
-} from './setupContracts';
+import type { SetupCompletionInput, SetupFacade, SetupPlatformGateway } from './setupContracts';
 
 export class DefaultSetupFacade implements SetupFacade {
   constructor(private readonly gateway: SetupPlatformGateway) {}
@@ -22,7 +18,7 @@ export class DefaultSetupFacade implements SetupFacade {
 
   async complete(
     input: SetupCompletionInput,
-    refreshNotificationSettings: () => Promise<void>
+    refreshNotificationSettings: () => Promise<void>,
   ): Promise<void> {
     if (!canCompleteSetup(input)) {
       throw new Error('Setup cannot be completed: invalid language/level preferences.');

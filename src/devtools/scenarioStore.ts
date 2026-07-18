@@ -14,7 +14,7 @@ export function getSelectedScenarioId(): ScenarioId {
 
 export function setSelectedScenarioId(id: ScenarioId): void {
   currentScenarioId = id;
-  listeners.forEach(listener => listener(id));
+  listeners.forEach((listener) => listener(id));
 }
 
 export function useSelectedScenario(): [DevToolsScenario, (id: ScenarioId) => void] {

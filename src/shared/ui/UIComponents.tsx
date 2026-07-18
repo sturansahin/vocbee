@@ -19,7 +19,7 @@ export const Button: React.FC<ButtonProps> = ({
   variant = 'primary',
   icon,
   fullWidth = true,
-  disabled = false
+  disabled = false,
 }) => {
   const { colors } = useTheme(); // Use dynamic theme
 
@@ -28,7 +28,10 @@ export const Button: React.FC<ButtonProps> = ({
       case 'primary':
         return [styles.buttonPrimary, { backgroundColor: colors.primary }];
       case 'secondary':
-        return [styles.buttonPrimary, { backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.border }];
+        return [
+          styles.buttonPrimary,
+          { backgroundColor: colors.surface, borderWidth: 1, borderColor: colors.border },
+        ];
       case 'outline':
         return [styles.buttonOutline, { borderColor: colors.border }];
       case 'ghost':
@@ -55,11 +58,16 @@ export const Button: React.FC<ButtonProps> = ({
 
   const getIconColor = () => {
     switch (variant) {
-      case 'primary': return '#000000';
-      case 'secondary': return colors.text;
-      case 'outline': return colors.text;
-      case 'ghost': return colors.textSecondary;
-      default: return '#000000';
+      case 'primary':
+        return '#000000';
+      case 'secondary':
+        return colors.text;
+      case 'outline':
+        return colors.text;
+      case 'ghost':
+        return colors.textSecondary;
+      default:
+        return '#000000';
     }
   };
 
@@ -68,7 +76,12 @@ export const Button: React.FC<ButtonProps> = ({
       onPress={onPress}
       activeOpacity={0.6}
       disabled={disabled}
-      style={[styles.buttonBase, getButtonStyle(), fullWidth && styles.fullWidth, disabled && styles.buttonDisabled]}
+      style={[
+        styles.buttonBase,
+        getButtonStyle(),
+        fullWidth && styles.fullWidth,
+        disabled && styles.buttonDisabled,
+      ]}
     >
       {icon && <MaterialIcons name={icon} size={20} color={getIconColor()} />}
       <Text style={[styles.buttonText, getTextStyle()]}>{title}</Text>
@@ -149,7 +162,7 @@ export const Header: React.FC<HeaderProps> = ({
   onBack,
   rightAction,
   backgroundColor,
-  textColor
+  textColor,
 }) => {
   const { colors } = useTheme();
   const finalBg = backgroundColor || colors.background;
@@ -158,10 +171,7 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <View style={[styles.headerContainer, { backgroundColor: finalBg }]}>
       {showBack ? (
-        <TouchableOpacity
-          onPress={onBack}
-          style={styles.backButton}
-        >
+        <TouchableOpacity onPress={onBack} style={styles.backButton}>
           <FontAwesome5 name="arrow-left" size={24} color={finalTextColor} />
         </TouchableOpacity>
       ) : (
@@ -173,9 +183,7 @@ export const Header: React.FC<HeaderProps> = ({
         {subtitle && <Text style={styles.headerSubtitle}>{subtitle}</Text>}
       </View>
 
-      <View style={styles.headerRight}>
-        {rightAction}
-      </View>
+      <View style={styles.headerRight}>{rightAction}</View>
     </View>
   );
 };

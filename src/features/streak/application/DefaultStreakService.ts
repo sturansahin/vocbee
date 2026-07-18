@@ -5,7 +5,12 @@ import {
   normalizeStreakState,
   recordDailyStudyActionState,
 } from '../domain/rules';
-import { DEFAULT_STREAK_STATE, type RecordStreakResult, type StreakState, type StreakSummary } from '../domain/types';
+import {
+  DEFAULT_STREAK_STATE,
+  type RecordStreakResult,
+  type StreakState,
+  type StreakSummary,
+} from '../domain/types';
 
 export class DefaultStreakService {
   constructor(private readonly repository: StreakRepository) {}
@@ -18,17 +23,26 @@ export class DefaultStreakService {
       const canonical = getCanonicalStreakState(parsed, now);
       if (canonical.currentStreak !== parsed.currentStreak) return this.saveStreakState(canonical);
       return canonical;
-    } catch (error) { console.error('[Streak] Failed to load streak state:', error); return DEFAULT_STREAK_STATE; }
+    } catch (error) {
+      console.error('[Streak] Failed to load streak state:', error);
+      return DEFAULT_STREAK_STATE;
+    }
   }
 
   async getStreakSummary(now = new Date()): Promise<StreakSummary> {
     return getStreakSummaryFromState(await this.getStreakState(now), now);
   }
 
-  async saveStreakState(state: Partial<StreakState>, options: { markUnsynced?: boolean } = {}): Promise<StreakState> {
+  async saveStreakState(
+    state: Partial<StreakState>,
+    options: { markUnsynced?: boolean } = {},
+  ): Promise<StreakState> {
     const normalized = normalizeStreakState(state);
-    try { await this.repository.write(normalized, options.markUnsynced !== false); }
-    catch (error) { console.error('[Streak] Failed to save streak state:', error); }
+    try {
+      await this.repository.write(normalized, options.markUnsynced !== false);
+    } catch (error) {
+      console.error('[Streak] Failed to save streak state:', error);
+    }
     return normalized;
   }
 
@@ -37,8 +51,11 @@ export class DefaultStreakService {
   }
 
   async clearStreakState(): Promise<void> {
-    try { await this.repository.clear(); }
-    catch (error) { console.error('[Streak] Failed to clear streak state:', error); }
+    try {
+      await this.repository.clear();
+    } catch (error) {
+      console.error('[Streak] Failed to clear streak state:', error);
+    }
   }
 
   async recordDailyStudyAction(now = new Date()): Promise<RecordStreakResult> {

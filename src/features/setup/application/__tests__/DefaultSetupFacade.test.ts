@@ -34,10 +34,10 @@ describe('DefaultSetupFacade', () => {
     expect(refresh).toHaveBeenCalled();
     expect(gateway.prepareLearningContent).toHaveBeenCalledWith(input);
     expect((gateway.persistCompletion as jest.Mock).mock.invocationCallOrder[0]).toBeLessThan(
-      refresh.mock.invocationCallOrder[0]
+      refresh.mock.invocationCallOrder[0],
     );
     expect(refresh.mock.invocationCallOrder[0]).toBeLessThan(
-      (gateway.prepareLearningContent as jest.Mock).mock.invocationCallOrder[0]
+      (gateway.prepareLearningContent as jest.Mock).mock.invocationCallOrder[0],
     );
   });
 
@@ -57,8 +57,8 @@ describe('DefaultSetupFacade', () => {
           endMinute: '00',
           frequency: 'every2hours',
         },
-        async () => undefined
-      )
+        async () => undefined,
+      ),
     ).rejects.toThrow('Setup cannot be completed');
     expect(gateway.persistCompletion).not.toHaveBeenCalled();
   });

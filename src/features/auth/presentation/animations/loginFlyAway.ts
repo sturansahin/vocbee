@@ -12,7 +12,7 @@ const timing = (
   value: Animated.Value,
   toValue: number,
   duration: number,
-  easing: (value: number) => number
+  easing: (value: number) => number,
 ) =>
   Animated.timing(value, {
     toValue,
@@ -23,7 +23,7 @@ const timing = (
 
 export function createLoginFlyAwayAnimation(
   values: LoginAnimationValues,
-  screenHeight: number
+  screenHeight: number,
 ): Animated.CompositeAnimation {
   const smooth = Easing.bezier(0.42, 0, 0.58, 1);
   const exit = Easing.bezier(0.33, 0, 0.2, 1);

@@ -18,7 +18,7 @@ export function ScenarioPickerPanel({ selectedId, onSelect }: ScenarioPickerPane
       <Text style={styles.title}>Scenarios</Text>
       <FlatList
         data={SCENARIO_LIST}
-        keyExtractor={item => item.id}
+        keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
           const active = item.id === selectedId;
           return (

@@ -14,5 +14,7 @@ export class AsyncStorageStreakRepository implements StreakRepository {
     await AsyncStorage.setItem(STORAGE_KEYS.STREAK, JSON.stringify(state));
     if (shouldMarkUnsynced) await markAsUnsynced();
   }
-  clear(): Promise<void> { return AsyncStorage.removeItem(STORAGE_KEYS.STREAK); }
+  clear(): Promise<void> {
+    return AsyncStorage.removeItem(STORAGE_KEYS.STREAK);
+  }
 }

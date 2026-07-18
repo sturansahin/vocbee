@@ -16,7 +16,9 @@ export interface MockMonetizationValue {
 
 function noopAsync(label: string) {
   return async (..._args: any[]) => {
-    console.log(`[DevTools][MockMonetizationProvider] blocked no-op call: ${label} (no real RevenueCat/AdMob call is made)`);
+    console.log(
+      `[DevTools][MockMonetizationProvider] blocked no-op call: ${label} (no real RevenueCat/AdMob call is made)`,
+    );
   };
 }
 
@@ -41,5 +43,7 @@ export function MockMonetizationProvider({
   children: ReactNode;
 }) {
   const value = useMemo(() => buildMockMonetizationValue(scenario), [scenario]);
-  return <MockMonetizationContext.Provider value={value}>{children}</MockMonetizationContext.Provider>;
+  return (
+    <MockMonetizationContext.Provider value={value}>{children}</MockMonetizationContext.Provider>
+  );
 }

@@ -77,8 +77,8 @@ async function verifyRecentFirebaseAuth(req) {
     const decoded = await getAuth(getFirebaseApp()).verifyIdToken(token, true);
     const nowSeconds = Math.floor(Date.now() / 1000);
     if (
-      typeof decoded.auth_time !== 'number'
-      || nowSeconds - decoded.auth_time > RECENT_AUTH_SECONDS
+      typeof decoded.auth_time !== 'number' ||
+      nowSeconds - decoded.auth_time > RECENT_AUTH_SECONDS
     ) {
       throw new HttpError(401, 'RECENT_LOGIN_REQUIRED');
     }

@@ -14,7 +14,7 @@ describe('SetupCompleteStep', () => {
         frequencyKeys={frequencyKeys}
         selectedFrequency="every1hour"
         onSelectFrequency={jest.fn()}
-      />
+      />,
     );
     expect(getByText('setup.frequency')).toBeTruthy();
     expect(getByText('settings.every1hour')).toBeTruthy();
@@ -30,7 +30,7 @@ describe('SetupCompleteStep', () => {
         frequencyKeys={frequencyKeys}
         selectedFrequency="every1hour"
         onSelectFrequency={onSelectFrequency}
-      />
+      />,
     );
     fireEvent.press(getByText('settings.every2hours'));
     expect(onSelectFrequency).toHaveBeenCalledWith('every2hours');
