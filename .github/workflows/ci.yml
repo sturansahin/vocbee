@@ -46,6 +46,8 @@ jobs:
       - name: Lint (blocking architecture guard)
         run: npm run lint
       - run: npm run test:boundaries
+      - name: Firestore cleanup CLI safety tests
+        run: npm run firestore:cleanup:check && npm run test:firestore-cleanup
       - run: npm run test:ci
       - run: npm run coverage:check
       - name: Install Cloud Functions deps
@@ -69,6 +71,8 @@ jobs:
           java-version: '17'
       - run: npm ci
       - run: npm run test:rules
+      - name: Firestore cleanup transaction + rollback (emulator)
+        run: npm run test:firestore-cleanup:emulator
 
   audit:
     name: Prod dependency audit

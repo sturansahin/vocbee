@@ -19,6 +19,10 @@
     "typecheck:worker": "tsc proxy/grammar-worker.ts --noEmit --lib ES2022,WebWorker --skipLibCheck --moduleResolution bundler --module ESNext --target ES2022",
     "typecheck:all": "npm run typecheck && npm run typecheck:test && npm run typecheck:rules && npm run typecheck:worker",
     "test:rules": "firebase emulators:exec --project vocbee-rules-test --only firestore \"jest --config jest.rules.config.js --runInBand\"",
+    "firestore:cleanup": "node scripts/firestoreLegacyCleanup.cjs",
+    "firestore:cleanup:check": "node --check scripts/firestoreLegacyCleanup.cjs && node --check scripts/lib/firestoreLegacyCleanup.cjs",
+    "test:firestore-cleanup": "node --test scripts/__tests__/firestoreLegacyCleanup.test.cjs",
+    "test:firestore-cleanup:emulator": "firebase emulators:exec --project vocbee-firestore-cleanup-emulator --only firestore \"node --test scripts/__tests__/firestoreLegacyCleanup.emulator.test.cjs\"",
     "audit:prod": "npm audit --omit=dev --audit-level=high",
     "functions:lint": "npm --prefix functions run lint",
     "functions:build": "npm --prefix functions run build"

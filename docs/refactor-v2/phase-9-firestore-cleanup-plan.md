@@ -1,8 +1,27 @@
 # Phase 9 — Firestore Legacy Cleanup Plan
 
-> Bu doküman **yalnızca plandır**. Bu görevde hiçbir Firestore verisi okunmadı/yazılmadı/silinmedi,
-> `firestore.rules` değiştirilmedi, hiçbir migration script'i çalıştırılmadı. Aşağıdaki tüm adımlar
-> gelecekteki, ayrı onaylı bir uygulama fazı için hazırlanmıştır.
+> Bu doküman ilk olarak **yalnızca plan** olarak yazıldı. 2026-07-17 Prompt 9 revalidation'ında yalnız izole
+> Firestore Emulator fixture'ı okundu/yazıldı/silindi ve geri yüklendi; staging/production Firestore'a
+> dokunulmadı, `firestore.rules` değiştirilmedi. Aşağıdaki production adımları ayrı onaylıdır.
+
+## 2026-07-17 Prompt 9 superseding revalidation
+
+Bu dokümanın aşağıdaki ilk audit bölümleri tarihsel plan kanıtıdır; root `services/` path'leri Prompt 8'de
+silindiği için güncel owner path'leri `src/features/**` altındadır. Güncel checkout yeniden doğrulaması:
+
+- `FirestoreProgressRepository` concrete hazırlık implementasyonu artık vardır, fakat production composition'a
+  bağlı değildir; v2 read flag sabit `false` ve runtime consumer sayısı sıfırdır.
+- Aktif `FirestoreSyncRepository.saveSnapshot` ve `FirestoreUserProfileRepository.saveSetupCompletion` legacy
+  `progress` yazmaya; `LegacySyncDomainGateway.restoreRemoteDomains` legacy alanı okumaya devam eder.
+- Rules hâlâ legacy-only'dir ve v2 subcollection'ı catch-all ile reddeder.
+- Production-safe, varsayılan dry-run ve çoklu fail-closed gate içeren cleanup CLI'sı
+  `scripts/firestoreLegacyCleanup.cjs` olarak hazırlanmıştır. Unit ve gerçek emulator
+  dry-run/transaction-delete/rollback testi PASS'tir.
+- Staging, v2 rollout/adoption, backup restore ve ikinci owner onayı bulunmadığı için production dry-run/execute
+  çalıştırılmadı. Güncel ayrıntı: `prompt-9-static-audit.md`, runbook ve production approval checklist.
+
+Bu revalidation eski “script yok”/“concrete repository yok” ifadelerini supersede eder; destructive cleanup'ın
+hazır olmadığı ana kararını değiştirmez.
 
 ## 0. Zemin doğrulaması (bu audit'te yapıldı)
 

@@ -102,3 +102,20 @@
   Gitleaks fingerprint'i `.gitleaksignore` içinde exact fingerprint olarak baselinedir; yeni secret repository'ye,
   loglara veya ledger'a yazılmadı.
 - Current source ve full-history Gitleaks gate'leri bu baseline dışındaki tüm bulgular için blocking kalır.
+
+## Prompt 9 Firestore cleanup hazırlığı — 2026-07-17
+
+- **R1 açık / Kritik:** Production runtime legacy `users/{uid}.progress` alanını hâlâ aktif okuyup yazıyor;
+  `progressByLevel` rules/rollout/adoption tamamlanmadı. Bu nedenle production field deletion yasaktır.
+- **R11 kontrollü fakat cleanup için kapalı gate:** v2 dual-write hiç aktive edilmedi. Script execute için
+  `dualWrite=disabled` ister, ancak bugünkü legacy-only write durumu v2 geçişinin tamamlandığı anlamına gelmez.
+- **R12 açık / Orta:** App version/schema adoption telemetry yok ve compatibility window kapanışı kanıtlanamıyor.
+- Fail-closed cleanup CLI, explicit environment/project allowlist, verified credential metadata, backup/restore,
+  exact dry-run count, staging evidence ve ikinci owner approval gate'leriyle hazırlandı. Unit test 7/7 ve gerçek
+  Firestore Emulator dry-run → transaction delete → post-check → rollback testi 1/1 PASS.
+- Staging hedefi/credential'ı tanımlı değil; production remote dry-run ve destructive execute yapılmadı. R1/R12
+  kapanmadan Prompt 9 `complete`, production-ready veya Prompt 10 gate `open` beyan edilemez.
+- **2026-07-18 metadata kanıtı:** Firebase Projects/Firestore Admin API salt-okunur audit'inde erişilebilir tek
+  proje `vocbee-6fe24`; ayrı staging yok. `(default)` database `eur3`, Native/Standard; backup 0, schedule 0,
+  PITR disabled, delete protection disabled ve restore kanıtı yok. Bu sonuç R1 cleanup riskini azaltmaz; aksine
+  backup/staging gate'lerini somut olarak kapalı doğrular. User document okunmadı ve remote write/delete yapılmadı.

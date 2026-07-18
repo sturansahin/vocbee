@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "environments": {
+    "emulator": ["vocbee-firestore-cleanup-emulator"],
+    "dev": [],
+    "staging": [],
+    "production": ["vocbee-6fe24"]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "auditDate": "2026-07-18",
+  "mode": "remote-metadata-read-only",
+  "containsPii": false,
+  "credential": {
+    "type": "interactive-firebase-cli-owner-user",
+    "identityStoredInRepository": false,
+    "dedicatedMigrationIdentityVerified": false,
+    "environmentSeparated": false
+  },
+  "projects": {
+    "accessibleCount": 1,
+    "targetProjectId": "vocbee-6fe24",
+    "displayName": "VocBee",
+    "state": "ACTIVE",
+    "productionRole": "inferred-from-repository-and-registered-apps",
+    "separateStagingProjectFound": false
+  },
+  "firestore": {
+    "database": "(default)",
+    "locationId": "eur3",
+    "type": "FIRESTORE_NATIVE",
+    "edition": "STANDARD",
+    "versionRetentionSeconds": 3600,
+    "pointInTimeRecoveryEnabled": false,
+    "deleteProtectionEnabled": false
+  },
+  "backup": {
+    "backupCount": 0,
+    "scheduleCount": 0,
+    "restoreVerificationAvailable": false,
+    "retentionVerified": false
+  },
+  "operations": {
+    "pendingOperationCount": 0,
+    "note": "Firestore operations API returned an empty object; Firebase CLI 15.16.0 then hit a display-only empty-list error."
+  },
+  "scope": {
+    "userDocumentsRead": false,
+    "firestoreWrites": false,
+    "firestoreDeletes": false,
+    "backupCreated": false,
+    "rulesDeployed": false,
+    "activeProjectChanged": false
+  },
+  "decision": {
+    "productionDryRunAllowed": false,
+    "productionExecuteAllowed": false,
+    "blockers": [
+      "no-backup",
+      "no-backup-schedule",
+      "no-restore-verification",
+      "no-separate-staging-project",
+      "no-dedicated-migration-credential",
+      "pitr-disabled",
+      "delete-protection-disabled",
+      "legacy-runtime-still-active",
+      "compatibility-window-not-closed",
+      "second-owner-approval-missing"
+    ]
+  }
+}
