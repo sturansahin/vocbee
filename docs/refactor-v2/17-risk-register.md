@@ -166,3 +166,25 @@
   metadata değerlerini sadeleştirir; client v2 rule kontratı değişmedi. Staging redeploy, `firebaserules.googleapis.com`
   DNS `ENOTFOUND/ETIMEOUT` nedeniyle üç denemede gerçekleşmedi; emulator 14/14 PASS. Staging smoke öncesi retry edilir.
 - PII'siz karar kanıtı: `docs/refactor-v2/artifacts/progress-v2-client-reconciliation-decision.json`.
+
+## Prompt 10 final readiness audit'i — 2026-07-18
+
+- **R5 yeniden açık/Yüksek:** `eas.json` production profilinde iOS RevenueCat public SDK key'i tanımlı, ancak
+  Android `goog_` key'i yok. Production repository Android'de key yoksa fail-fast olur; ilk customer-info
+  hatası provider tarafından free fallback'e çevrilse de premium tanıma, paywall ve restore davranışı production
+  config kanıtı olmadan doğru kabul edilemez.
+- **R7 açık/Orta:** Root mobile `package.json` hâlâ `firebase-admin` production dependency'sini taşır. Güncel
+  iOS Hermes HBC string taramasında `firebase-admin` marker'ı 0 olsa da `09`/`30` tarafından istenen server/mobile
+  dependency ayrımı yapılmamıştır.
+- **R8 kontrollü fakat release gate açık:** Local typecheck/lint/Jest/rules/coverage/audit/secret-scan kapıları
+  yeşildir; buna rağmen `ef263d14`, `origin/refactor` önünde 19 commit olduğu için current HEAD'e ait remote CI
+  sonucu yoktur. Push ve tüm blocking job'ların green sonucu olmadan release gate kapanmaz.
+- **R13 açık/Orta:** Legacy root source temizliği tamamlanmış olsa da gerçek Settings presentation
+  implementasyonu 1.951, notification application service 1.041 ve AdMob repository 644 satırdır. Explicit
+  `<400` Settings kabulü başarısızdır; diğer büyük dosyalar maintainability/review borcudur.
+- **R1 current legacy release için N/A; v2 activation için açık/Kritik kalır:** EAS profillerinde
+  `EXPO_PUBLIC_PROGRESS_SYNC_MODE=dual` yoktur ve exact olmayan değer safe `legacy` davranışına düşer. Bu release
+  migration/cleanup yapmaz. Gelecekteki v2 activation staging client smoke + production backup/restore + canary
+  onayı olmadan başlatılamaz.
+- Final karar **BLOCKED**. Kanıt ve blocker ID'leri:
+  `docs/refactor-v2/44-final-production-readiness-report.md`.

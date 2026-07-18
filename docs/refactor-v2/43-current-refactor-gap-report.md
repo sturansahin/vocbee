@@ -846,3 +846,44 @@ fail-closed handoff kaniti olarak korunur.
 | Artifact | `docs/refactor-v2/artifacts/progress-v2-client-reconciliation-decision.json`; PII/secret içermez |
 | Remote hijyen | Bu kararda production/staging user document read/write/delete, function/rules/app deploy, backfill veya cleanup çalıştırılmadı. Önceki başarısız staging Function deploy denemesi tarihsel kanıttır; yeniden denenmeyecek |
 | Kalan gate | Staging Blaze artık gerekmez. Güncel sıra: staging client smoke -> production billing/backup -> aynı project named-database restore -> ayrı production rules/app canary onayı. Prompt 9 cleanup ve Prompt 10 kapalı; safe default `legacy` |
+
+### Prompt 9 — 2026-07-18 owner decision / not-applicable closure
+
+| Alan | Kayıt |
+|---|---|
+| Durum | **not-applicable — owner legacy cleanup'ı uygulamamayı seçti; compatibility korunuyor** |
+| Audit zamanı | 2026-07-18 11:57 +03 (Europe/Istanbul) |
+| Branch / HEAD / başlangıç worktree | `refactor` / `ef263d14`; başlangıç worktree temizdi |
+| Owner kararı | Kullanıcının “bunu benim kodlarımın içerisinde yapabilirsin”, ardından “öyle yapalım legacy alana dokunma” talimatı `users/{uid}.progress` alanının korunması ve production cleanup'ın uygulanmaması için gerekçeli owner kararıdır. Destructive ikinci onay verilmedi ve verilmeyeceği bu rollout kapsamında kesinleştirildi |
+| Prompt 9 sonucu | Cleanup script/rules/emulator hazırlığı tarihsel güvenlik artifact'i olarak kalır; production dry-run/execute, field delete, backfill veya user document read çalıştırılmadı. Prompt 9'un destructive `complete` yolu seçilmedi; prompt sözleşmesindeki opsiyonel `not-applicable` yolu kullanıldı |
+| Legacy compatibility | Safe default env değeri `legacy`; yalnız exact `EXPO_PUBLIC_PROGRESS_SYNC_MODE=dual` yeni modeli açar. Legacy `progress` normal sync payload'ında korunur ve dual modda da aynı atomik batch'e dahil edilir. Eski istemci legacy-only yazarsa yeni istemci transaction içinde v2'yi onarır; repair ana payload'ı `progress` içermez ve legacy write/delete yapmaz |
+| Cloud Function kararı | Server mirror kaldırıldı; client dual-write + transaction reconciliation tek stratejidir. Function export/source/test/CI referansı current production source taramasında 0 |
+| Kanıt | `docs/refactor-v2/artifacts/progress-v2-client-reconciliation-decision.json`; full committed kanıt 91/91 suite ve 496/496 test, rules 14/14, cleanup unit 7/7, cleanup emulator 1/1, typecheck/lint/coverage PASS. Bu kapanışta hedefli repository + rollout testi yeniden çalıştırıldı: **2/2 suite, 7/7 PASS**; `git diff --check` PASS |
+| Remote/veri hijyeni | Bu kapanışta Firebase/production read, write, delete, deploy, backup, restore veya cleanup komutu çalıştırılmadı; credential/PII artifact'e yazılmadı |
+| Kalan ayrı rollout | Dormant v2'yi production'da aktive etmek bu Prompt 9 kapanışının parçası değildir; staging client smoke + backup/restore + ayrı rules/app canary onayı gerektirir. Safe legacy release bu rollout'tan bağımsızdır |
+| Prompt 10 gate | **Açık.** Prompt 0-8'in en son superseding kayıtları `complete`; Prompt 9 owner kararıyla `not-applicable`; legacy compatibility kod/test/rules kanıtıyla korunuyor. Prompt 10 final audit'i başlayabilir; bu gate tek başına release-ready sonucu değildir |
+
+### Prompt 10 — 2026-07-18 terminal production-readiness audit
+
+| Alan | Kayıt |
+|---|---|
+| Durum | **blocked** — güncel checkout'un otomatik, secret, bundle ve iOS simulator kapıları büyük ölçüde yeşil; ancak beş zorunlu release blocker'ı bulundu |
+| Audit zamanı | 2026-07-18 12:19 +03 (Europe/Istanbul) |
+| Branch / başlangıç HEAD / worktree | `refactor` / `ef263d14`; audit başlangıcında worktree temizdi |
+| Handoff revalidation | Prompt 0-8'in son superseding kayıtları `complete`; Prompt 9 owner legacy cleanup'ı uygulamama kararıyla `not-applicable`; Prompt 10 gate'i açıktı |
+| Kapsam | Salt audit: `03` davranış matrisi, architecture/file-health, test/coverage/CI, manual QA reconciliation, iOS native+runtime smoke, iOS/Android bundle, secret/env/dependency ve risk audit'i. Production source davranışı değiştirilmedi |
+| Değişen dosyalar | `docs/refactor-v2/44-final-production-readiness-report.md` eklendi; `17-risk-register.md` ve bu append-only ledger audit sonucuyla güncellendi. Prompt 9 N/A kapanışı da bu turda ledger'a eklendi |
+| Final artifact | `docs/refactor-v2/44-final-production-readiness-report.md` |
+| Release kararı | **BLOCKED.** `ready` veya `ready with documented risk` kabul edilmedi |
+| Blocker'lar | **P10-B01:** gerçek Settings content 1.951 satır, `<400` kabulü fail. **P10-B02:** `prettier:check` script/config/CI gate yok. **P10-B03:** root mobile dependency'de `firebase-admin`. **P10-B04:** EAS production Android RevenueCat `goog_` key'i yok. **P10-B05:** HEAD upstream'den 19 commit ileride, current-HEAD remote CI sonucu yok |
+| Davranış sonucu | `03` matrisi **16 PASS / 1 FAIL**. Android premium/RevenueCat production config eksikliği nedeniyle premium/ads davranışı FAIL; diğer 16 davranış güncel test/smoke ve önceki owner QA kanıtlarıyla reconcile edildi |
+| Mimari ölçüm | Legacy `screens/services/context/components/config/utils` absent; root `App.tsx` 3 satır; 15/15 feature barrel. AST boundary 6/6. Production `src` 279 TS/TSX dosya / 24.453 satır. Büyükler: Settings content 1.951, notification application service 1.041, AdMob repository 644, streak overlay 464 |
+| Zorunlu kalite kanıtı | `npm run typecheck` exit 0; `npm run typecheck:all` exit 0; `npm run lint` exit 0, 0 error/0 warning; `npm test -- --runInBand` exit 0, **91/91 suite ve 496/496 test**; `npm run test:ci -- --silent` exit 0, **91/91 suite ve 496/496 test**; `npm run test:rules` exit 0, emulator **14/14**; `npm run prettier:check` script olmadığı için **NOT AVAILABLE / PASS değil** |
+| Ek kalite kanıtı | `npm run test:boundaries` 1/1 suite, 6/6 PASS; `npm run coverage:check` PASS, total %51,7; Functions lint/build PASS; cleanup syntax + unit **7/7** + emulator transaction/post-check/rollback **1/1** PASS; `git diff --check` PASS |
+| Secret/dependency | Full-history Gitleaks exit 0: **136 commit / 357,31 MB / leak 0**. Service-account/private key yok. `npm run audit:prod` exit 0: high 0, critical 0; 27 moderate + 1 low açık. Root `firebase-admin` dependency ayrımı kabulü FAIL; HBC marker'ı 0 |
+| Build/bundle | iOS Expo production export PASS: 1.855 modül, 166 asset, 7.024.298-byte HBC. Android export PASS: 1.857 modül, 166 asset, 7.038.253-byte HBC. iOS Xcode simulator Debug build `** BUILD SUCCEEDED **` |
+| Simulator/manual QA | Güncel iPhone 17 Pro / iOS 26.5 dev build bootstrap -> authenticated profile -> `MainTabs`/Home; crash/red screen yok, progress/streak/card/avatar asset render edildi. Historical owner QA cold start/onboarding/auth/setup/home/favorite/grammar/level/notification/profile/offline checklist'ini kapsıyor. Android SDK/ADB/AVD yok; Android emulator smoke **NOT RUN / PASS değil** |
+| Progress-v2 kapsamı | Current legacy release için N/A: EAS profillerinde exact `dual` yok, safe default `legacy`, legacy field korunuyor. V2 production activation ayrı blocked rollout; staging client smoke + backup/restore + canary onayı gerekir |
+| Remote/veri hijyeni | Prompt 10 sırasında production/staging Firebase read/write/delete/deploy, backup/restore, migration/cleanup, Vercel/EAS mutation veya release yapılmadı |
+| Worktree hijyeni | Jest/Expo/Xcode'un değiştirdiği tracked coverage, `.expo/devices.json` ve generated podspec HEAD içeriğine geri alındı. Final worktree yalnız audit dokümanlarını içerir |
+| Sonraki gate | **Production release: kapalı.** P10-B01..B05 kapatılmalı, tüm komutlar yeniden koşulmalı ve superseding Prompt 10 audit'i `ready` veya kanıtlı `ready with documented risk` kararı üretmelidir |
