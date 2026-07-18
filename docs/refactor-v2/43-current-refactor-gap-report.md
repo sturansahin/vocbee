@@ -786,3 +786,45 @@ fail-closed handoff kaniti olarak korunur.
 | Veri hijyeni | `users` veya herhangi bir application collection/document okunmadi. Remote Firestore write/delete, export/backup create, restore, deploy, `firebase use` veya active-project degisikligi yapilmadi |
 | Gate karari | Staging yok + backup 0 + restore yok + dedicated migration identity yok + v2 runtime/rules/adoption yok + compatibility window acik. Production remote data dry-run ve destructive cleanup **calistirilamaz** |
 | Ikinci onay / Prompt 10 | Dry-run candidate count uretilmedi ve ikinci hedefe ozgu owner onayi yok. Prompt 9 `blocked`, Prompt 10 gate **kapali** kalir |
+
+### Progress v2 safe rollout hazırlığı — 2026-07-18
+
+| Alan | Kayıt |
+|---|---|
+| Durum | **implementation complete / production activation blocked** — yeni model, uygulama entegrasyonu, rules/function ve testler hazır; canlı deploy/backfill/cleanup yapılmadı |
+| Owner kapsamı | Kullanıcının “eksik kısımları ekle, eski veri kalsın, sonra güvenli aktaralım” ve ardından “bu plana başla” talebi kod/rules/test/runbook hazırlığına izin verdi. Backup/staging olmadan production mutasyonu veya destructive işlem izni olarak yorumlanmadı |
+| Branch / başlangıç HEAD | `refactor` / `cddd37f5` (`Add Firestore legacy cleanup CLI, tests and docs`); agent commit oluşturmadı |
+| Veri modeli | `users/{uid}` üzerinde `activeLevel`, `schemaVersion=2`, küçük `progressSummary`, server-owned `progressMigration`; `users/{uid}/progressByLevel/{A1..C1}` altında `learnedWordIds`, gerçek anlamı düzeltilmiş `lastWordId`, `learnedCount`, `vocabularySchemaVersion`, timestamp/device/doc version. Legacy `users/{uid}.progress` korunur; favorites/streak taşınmaz |
+| Mobil rollout | `EXPO_PUBLIC_PROGRESS_SYNC_MODE` yalnız exact `dual` değerinde aktive olur; unset/yanlış değer `legacy`. Sync ve setup dual modda ana belge + beş seviye belgesini tek batch'te yazar. Okuma yalnız tam/geçerli/yeterince yeni v2 setini tercih eder; strict legacy veri uygunsa eksik/eski seti non-destructive onarır, malformed legacy veriyi uzaktan yeniden yazmaz |
+| Eski istemci uyumu | `mirrorLegacyProgressToV2` Firestore v2 trigger'ı legacy-only yazımları beş deterministik belgeye ve summary'ye kopyalar; unknown level, duplicate veya invalid word id'de fail-closed durur. Loglarda raw uid/veri yok, yalnız truncated SHA-256 kimliği ve sabit hata kodu vardır. Yeni dual client `syncMeta.version=2` ile gereksiz mirror write'ından ayrılır |
+| Rules | Main v2 alanları ve owner-only `progressByLevel` create/read/update/delete doğrulaması eklendi. Level/doc id, count/list size, `lastWordId`, vocabulary/doc version, timestamp ve device id doğrulanır. `progressMigration` istemciden oluşturulamaz/değiştirilemez. Setup'ın mevcut `{enabled:false}` notification şekli de rules ile uyumlu hale getirildi |
+| Hesap silme | Production account endpoint'i Admin SDK `recursiveDelete` kullanır. İstemci fallback'i mevcut `progressByLevel` belgelerini ana user belgesiyle aynı batch'te siler; subcollection yetim bırakılmaz |
+| Cleanup uyumu | Cleanup doğrulayıcısı artık tüm beş v2 belgeyi, `lastWordId`, `vocabularySchemaVersion=2`, doc `version=2` ve mirror/active/sync timestamp kanıtını zorunlu tutar. Legacy alan silme gate'leri ve ikinci owner onayı aynen kapalıdır |
+| CI | Functions saf dönüşüm testleri için `functions:test` eklendi ve blocking CI adımına bağlandı. Rules emulator ve cleanup transaction/rollback emulator gate'leri korunur |
+| Otomatik kanıt | `npm run typecheck:all` PASS; `npm run lint` 0 error/0 warning; boundary 6/6; final full Jest **91/91 suite, 495/495 test**; feature coverage gate PASS (total %51.7); Functions lint/build + 3/3 mirror testi PASS; Firestore rules emulator **14/14**; cleanup unit **7/7** ve emulator transaction/delete/post-check/rollback **1/1**; `git diff --check` PASS |
+| Bundle kanıtı | Final `npx expo export --platform ios --output-dir /tmp/vocbee-progress-v2-export-final --clear` PASS; 1.855 modül, 166 asset, 7.02 MB Hermes bundle |
+| Remote veri hijyeni | Production user document/collection okunmadı; rules/function/app deploy edilmedi; backup/backfill/cleanup/write/delete yapılmadı; `firebase use` çalıştırılmadı. Emulator projeleri izole fixture verisi kullandı |
+| Rollout gate | **Kapalı.** Sıra: ayrı staging -> backup + ayrı hedefe restore -> rules deploy -> mirror deploy -> copy-only canary/backfill -> küçük yüzdede dual app rollout -> iki sürüm ve en az 90 gün adoption gözlemi -> ayrı cleanup onayı. Ayrıntı: `44-progress-v2-safe-rollout.md` |
+| Prompt 9 / Prompt 10 | Prompt 9 production cleanup hâlâ `blocked`; Prompt 10 gate kapalıdır. Bu kayıt yalnız eksik v2 rollout altyapısının kod hazırlığını supersede eder |
+
+### Progress v2 staging bootstrap / production backup gate — 2026-07-18
+
+| Alan | Kayıt |
+|---|---|
+| Durum | **partially complete / billing blocked** — staging project/database ve staging rules hazır; staging mirror function ile production backup/restore tamamlanamadı |
+| Audit zamanı | 2026-07-18 11:24 +03 (Europe/Istanbul) |
+| Branch / HEAD / worktree | `refactor` / `cddd37f5`; progress-v2 implementation worktree'si korunuyor, agent commit oluşturmadı |
+| Owner kapsamı | Kullanıcının planı başlatmasından sonraki “sonraki aşamaya geçelim” talebi, belgelenen güvenli sıradaki staging bootstrap ve production backup/restore hazırlığına açık onay olarak uygulandı. Production rules/function/backfill/cleanup veya user document read izni olarak genişletilmedi |
+| Staging project | `vocbee-staging-6fe24` (`VocBee Staging`) oluşturuldu ve ACTIVE doğrulandı. `firestore.googleapis.com` yalnız staging'de etkinleştirildi |
+| Staging database | `(default)`, `eur3`, Firestore Native/Standard, free tier; delete protection **ENABLED**, PITR disabled. Production bölgesiyle eşleşir |
+| Staging rules | `npx --no-install firebase deploy --only firestore:rules --project vocbee-staging-6fe24 --non-interactive --json` exit 0, **PASS**. Production rules deploy edilmedi |
+| Staging allowlist | `scripts/firestore-legacy-cleanup.projects.json` staging listesine yalnız `vocbee-staging-6fe24` eklendi. Credential evidence ve diğer fail-closed gate'ler değişmedi; remote cleanup komutu çalıştırılmadı |
+| Staging function | Exact `functions:mirrorLegacyProgressToV2` deploy denemesinde predeploy ESLint ve TypeScript build PASS; staging Blaze olmadığı için required `cloudbuild.googleapis.com` etkinleştirilmeden exit 1. Remote function deploy yok; gate **BLOCKED** |
+| Production backup | Ön kontrol schedule 0. `(default)` için `DAILY`, retention `14d` create denemesi production billing kapalı olduğu için HTTP 403/exit 1 ile fail-closed. Son kontrol schedule 0 ve backup 0; kısmi schedule oluşmadı |
+| Restore kararı | Managed backup restore source backup'ın projesi içinde yeni database oluşturur; staging'e cross-project restore kullanılmayacak. İlk production backup sonrası `vocbee-6fe24` içinde izole named database hedeflenecek. Backup olmadığı için restore çalıştırılmadı |
+| Artifact | `docs/refactor-v2/artifacts/progress-v2-staging-bootstrap-evidence.json`; PII/secret/token içermez |
+| Exact remote komut kanıtı | `npx --no-install firebase projects:create vocbee-staging-6fe24 --display-name 'VocBee Staging' --json` exit 0; authenticated Service Usage enable `firestore.googleapis.com` exit 0; `npx --no-install firebase firestore:databases:create '(default)' --project vocbee-staging-6fe24 --location eur3 --edition standard --delete-protection ENABLED --point-in-time-recovery DISABLED --json` exit 0; staging rules deploy exit 0; exact mirror function deploy exit 1/Blaze blocker; production daily/14d backup schedule create exit 1/billing blocker; final staging DB, project list, production schedule ve backup metadata kontrolleri exit 0 |
+| Yerel gate revalidation | `npm run firestore:cleanup:check` exit 0; `npm run test:firestore-cleanup` exit 0, **7/7 PASS**; allowlist/evidence JSON parse PASS; `git diff --check` PASS. Function deploy predeploy adımında Functions ESLint ve TypeScript build PASS |
+| Veri hijyeni | Production application collection/user document okunmadı veya yazılmadı; production rules/function deploy, backfill, cleanup ve delete yapılmadı. `firebase use` çalıştırılmadı; `.firebaserc` değiştirilmedi |
+| Kalan owner aksiyonu | `vocbee-staging-6fe24` Blaze'e yükseltilmeli; `vocbee-6fe24` billing etkinleştirilmeli. Ardından mirror staging deploy + sentetik legacy-write smoke, daily backup oluşumu, aynı production projesinde izole named-database restore ve rollback kanıtı sırasıyla çalıştırılabilir |
+| Gate kararı | Production rollout, remote dry-run, Prompt 9 destructive cleanup ve Prompt 10 **kapalı**. Safe runtime default `legacy`; legacy veri korunur |

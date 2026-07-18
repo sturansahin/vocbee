@@ -29,10 +29,15 @@ const v2Progress = {
     level: 'A1',
     learnedWordIds: [1, 2, 3],
     learnedCount: 3,
-    lastWordIndex: 3,
-    version: 1,
+    lastWordId: 3,
+    vocabularySchemaVersion: 2,
+    version: 2,
     updatedAt: new Date('2026-07-17T12:00:00.000Z'),
   },
+  A2: { level: 'A2', learnedWordIds: [], learnedCount: 0, lastWordId: 0, vocabularySchemaVersion: 2, version: 2, updatedAt: new Date('2026-07-17T12:00:00.000Z') },
+  B1: { level: 'B1', learnedWordIds: [], learnedCount: 0, lastWordId: 0, vocabularySchemaVersion: 2, version: 2, updatedAt: new Date('2026-07-17T12:00:00.000Z') },
+  B2: { level: 'B2', learnedWordIds: [], learnedCount: 0, lastWordId: 0, vocabularySchemaVersion: 2, version: 2, updatedAt: new Date('2026-07-17T12:00:00.000Z') },
+  C1: { level: 'C1', learnedWordIds: [], learnedCount: 0, lastWordId: 0, vocabularySchemaVersion: 2, version: 2, updatedAt: new Date('2026-07-17T12:00:00.000Z') },
 };
 
 function emulatorOptions(reportPath, overrides = {}) {
@@ -61,7 +66,13 @@ function withEmulatorHost(callback) {
 
 test('builds the exact v2 equivalence model and rejects lossy legacy data', () => {
   assert.deepEqual(expectedProgressByLevel(legacyProgress), {
-    models: [{ level: 'A1', learnedWordIds: [1, 2, 3], learnedCount: 3, lastWordIndex: 3 }],
+    models: [
+      { level: 'A1', learnedWordIds: [1, 2, 3], learnedCount: 3, lastWordId: 3, vocabularySchemaVersion: 2 },
+      { level: 'A2', learnedWordIds: [], learnedCount: 0, lastWordId: 0, vocabularySchemaVersion: 2 },
+      { level: 'B1', learnedWordIds: [], learnedCount: 0, lastWordId: 0, vocabularySchemaVersion: 2 },
+      { level: 'B2', learnedWordIds: [], learnedCount: 0, lastWordId: 0, vocabularySchemaVersion: 2 },
+      { level: 'C1', learnedWordIds: [], learnedCount: 0, lastWordId: 0, vocabularySchemaVersion: 2 },
+    ],
     issues: [],
   });
 
@@ -100,6 +111,17 @@ test('only marks schemaVersion=2 with byte-equivalent level documents as a clean
   );
   assert.equal(staleSync.status, 'mismatch');
   assert.ok(staleSync.reasons.includes('sync-meta-older-than-legacy-last-sync'));
+
+  const staleLevel = assessUserDocument(
+    {
+      schemaVersion: 2,
+      progress: { ...legacyProgress, lastSync: new Date('2026-07-17T12:01:00.000Z') },
+      syncMeta: { updatedAt: new Date('2026-07-17T12:02:00.000Z') },
+    },
+    v2Progress
+  );
+  assert.equal(staleLevel.status, 'mismatch');
+  assert.ok(staleLevel.reasons.includes('progress-by-level-A1-older-than-legacy'));
 });
 
 test('CLI parser defaults to dry-run and requires explicit execute inputs', () => {

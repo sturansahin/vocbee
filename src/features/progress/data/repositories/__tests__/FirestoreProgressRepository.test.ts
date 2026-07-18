@@ -44,8 +44,9 @@ describe('FirestoreProgressRepository — dual-read branching', () => {
             mockSnapshot(true, {
                 level: 'A1',
                 learnedWordIds: [1, 2, 3],
-                lastWordIndex: 3,
+                lastWordId: 3,
                 learnedCount: 3,
+                vocabularySchemaVersion: 2,
                 updatedAt: 'ts',
             })
         );
@@ -53,7 +54,10 @@ describe('FirestoreProgressRepository — dual-read branching', () => {
         const repo = new FirestoreProgressRepository();
         const result = await repo.getProgressByLevel('user-a', 'A1');
 
-        expect(result).toEqual({ level: 'A1', learnedWordIds: [1, 2, 3], lastWordIndex: 3, learnedCount: 3 });
+        expect(result).toEqual({
+            level: 'A1', learnedWordIds: [1, 2, 3], lastWordId: 3,
+            learnedCount: 3, vocabularySchemaVersion: 2,
+        });
         // Only the v2 doc should have been fetched — no legacy fallback read.
         expect(mockGetDoc).toHaveBeenCalledTimes(1);
     });
@@ -70,7 +74,10 @@ describe('FirestoreProgressRepository — dual-read branching', () => {
         const repo = new FirestoreProgressRepository();
         const result = await repo.getProgressByLevel('user-a', 'A1');
 
-        expect(result).toEqual({ level: 'A1', learnedWordIds: [1, 2], lastWordIndex: 2, learnedCount: 2 });
+        expect(result).toEqual({
+            level: 'A1', learnedWordIds: [1, 2], lastWordId: 2,
+            learnedCount: 2, vocabularySchemaVersion: 1,
+        });
         expect(mockGetDoc).toHaveBeenCalledTimes(2);
     });
 
@@ -128,7 +135,10 @@ describe('FirestoreProgressRepository — dual-read branching', () => {
         const repo = new FirestoreProgressRepository();
         const result = await repo.getProgressByLevel('user-a', 'A1');
 
-        expect(result).toEqual({ level: 'A1', learnedWordIds: [1, 2, 3], lastWordIndex: 0, learnedCount: 3 });
+        expect(result).toEqual({
+            level: 'A1', learnedWordIds: [1, 2, 3], lastWordId: 0,
+            learnedCount: 3, vocabularySchemaVersion: 1,
+        });
     });
 
     it('6. requesting a different level than currentLevel only returns that level\'s data (lastWordIndex=0)', async () => {
@@ -144,7 +154,10 @@ describe('FirestoreProgressRepository — dual-read branching', () => {
         const result = await repo.getProgressByLevel('user-a', 'A2');
 
         // A2 is not the currentLevel, so lastWordIndex must be 0 (matches adaptLegacyLearnedWordsToProgressByLevelDocs).
-        expect(result).toEqual({ level: 'A2', learnedWordIds: [10, 20], lastWordIndex: 0, learnedCount: 2 });
+        expect(result).toEqual({
+            level: 'A2', learnedWordIds: [10, 20], lastWordId: 0,
+            learnedCount: 2, vocabularySchemaVersion: 1,
+        });
     });
 
     it('6b. requesting the currentLevel carries the legacy lastWordIndex', async () => {
@@ -159,7 +172,10 @@ describe('FirestoreProgressRepository — dual-read branching', () => {
         const repo = new FirestoreProgressRepository();
         const result = await repo.getProgressByLevel('user-a', 'B1');
 
-        expect(result).toEqual({ level: 'B1', learnedWordIds: [5, 6], lastWordIndex: 7, learnedCount: 2 });
+        expect(result).toEqual({
+            level: 'B1', learnedWordIds: [5, 6], lastWordId: 7,
+            learnedCount: 2, vocabularySchemaVersion: 1,
+        });
     });
 
     it('getLegacyProgressFallback returns null when the main doc does not exist', async () => {
@@ -182,8 +198,9 @@ describe('FirestoreProgressRepository — dual-read branching', () => {
         await repo.saveProgressByLevel('user-a', {
             level: 'A1',
             learnedWordIds: [1, 2],
-            lastWordIndex: 2,
+            lastWordId: 2,
             learnedCount: 2,
+            vocabularySchemaVersion: 2,
         });
 
         expect(mockSetDoc).toHaveBeenCalledTimes(1);
@@ -191,8 +208,9 @@ describe('FirestoreProgressRepository — dual-read branching', () => {
         expect(payload).toMatchObject({
             level: 'A1',
             learnedWordIds: [1, 2],
-            lastWordIndex: 2,
+            lastWordId: 2,
             learnedCount: 2,
+            vocabularySchemaVersion: 2,
             updatedByDeviceId: 'device-x',
         });
         expect(options).toEqual({ merge: true });
@@ -203,11 +221,15 @@ describe('FirestoreProgressRepository — dual-read branching', () => {
     it('getProgressSummary returns zeroed summary when the main doc has no progressSummary field', async () => {
         mockGetDoc.mockResolvedValueOnce(mockSnapshot(true, { email: 'a@b.com' }));
         const repo = new FirestoreProgressRepository();
-        expect(await repo.getProgressSummary('user-a')).toEqual({ byLevel: {}, overallPercent: 0 });
+        expect(await repo.getProgressSummary('user-a')).toEqual({ byLevel: {}, totalLearnedCount: 0 });
     });
 
     it('getProgressSummary returns the stored summary when present', async () => {
-        const summary = { byLevel: { A1: { learnedCount: 3, totalCount: 12, percent: 25 } }, overallPercent: 25 };
+        const summary = {
+            byLevel: { A1: { learnedCount: 3, totalCount: 12, percent: 25 } },
+            totalLearnedCount: 3,
+            overallPercent: 25,
+        };
         mockGetDoc.mockResolvedValueOnce(mockSnapshot(true, { progressSummary: summary }));
         const repo = new FirestoreProgressRepository();
         expect(await repo.getProgressSummary('user-a')).toEqual(summary);

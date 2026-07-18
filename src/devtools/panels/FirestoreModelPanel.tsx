@@ -26,7 +26,7 @@ export function FirestoreModelPanel({ scenario }: FirestoreModelPanelProps) {
       scenario.progress.shape === 'legacy'
         ? scenario.progress.legacy
         : scenario.progress.shape === 'progressByLevel'
-          ? '(v2 progressByLevel — see subcollection preview below; not written under `progress` today)'
+          ? '(v2 progressByLevel — see rollout-gated subcollection preview below)'
           : null,
     streak: scenario.streak,
     notificationSettings: scenario.notificationSettings,
@@ -42,14 +42,13 @@ export function FirestoreModelPanel({ scenario }: FirestoreModelPanelProps) {
         network call is made.
       </Text>
 
-      <Text style={styles.sectionTitle}>users/{'{uid}'} (legacy shape, matches firestore.rules today)</Text>
+      <Text style={styles.sectionTitle}>users/{'{uid}'} (compatibility main document)</Text>
       <Text style={styles.value}>{JSON.stringify(fakeUserDocument, null, 2)}</Text>
 
       {scenario.progress.shape === 'progressByLevel' ? (
         <View>
           <Text style={styles.sectionTitle}>
-            users/{'{uid}'}/progressByLevel/{'{level}'} (illustrative v2 preview — docs/refactor-v2/07+23; not
-            written by any production repository today)
+            users/{'{uid}'}/progressByLevel/{'{level}'} (rollout-gated v2 fixture preview)
           </Text>
           <Text style={styles.value}>{JSON.stringify(scenario.progress.byLevel, null, 2)}</Text>
         </View>

@@ -261,8 +261,10 @@ function expectedProgressByLevel(legacyProgress) {
 
   const models = [];
   for (const level of LEVELS) {
-    if (!hasOwn(legacyProgress.learnedWords, level)) continue;
-    const ids = canonicalWordIds(legacyProgress.learnedWords[level]);
+    const rawIds = hasOwn(legacyProgress.learnedWords, level)
+      ? legacyProgress.learnedWords[level]
+      : [];
+    const ids = canonicalWordIds(rawIds);
     if (ids === null) {
       issues.push(`legacy-${level}-ids-invalid-or-duplicated`);
       continue;
@@ -271,10 +273,10 @@ function expectedProgressByLevel(legacyProgress) {
       level,
       learnedWordIds: ids,
       learnedCount: ids.length,
-      lastWordIndex: legacyProgress.currentLevel === level ? lastWordIndex : 0,
+      lastWordId: legacyProgress.currentLevel === level ? lastWordIndex : 0,
+      vocabularySchemaVersion: 2,
     });
   }
-  if (models.length === 0) issues.push('legacy-has-no-level-documents');
   return { models, issues };
 }
 
@@ -301,11 +303,15 @@ function assessUserDocument(userData, progressByLevelData) {
 
   const { models, issues } = expectedProgressByLevel(userData.progress);
   const reasons = [...issues];
+  let legacyLastSync = null;
   if (userData.schemaVersion !== 2) reasons.push('schema-version-not-v2');
   if (!isPlainObject(progressByLevelData)) reasons.push('progress-by-level-snapshot-invalid');
   if (hasOwn(userData.progress, 'lastSync')) {
-    const legacyLastSync = timestampMillis(userData.progress.lastSync);
-    const syncUpdatedAt = timestampMillis(userData.syncMeta && userData.syncMeta.updatedAt);
+    legacyLastSync = timestampMillis(userData.progress.lastSync);
+    const syncUpdatedAt = timestampMillis(
+      userData.progressMigration && userData.progressMigration.lastLegacyMirrorAt
+    ) ?? timestampMillis(userData.lastActiveAt)
+      ?? timestampMillis(userData.syncMeta && userData.syncMeta.updatedAt);
     if (legacyLastSync === null) reasons.push('legacy-last-sync-invalid');
     if (syncUpdatedAt === null) reasons.push('sync-meta-updated-at-missing');
     if (legacyLastSync !== null && syncUpdatedAt !== null && syncUpdatedAt < legacyLastSync) {
@@ -335,14 +341,20 @@ function assessUserDocument(userData, progressByLevelData) {
     if (actual.learnedCount !== expected.learnedCount) {
       reasons.push(`progress-by-level-${expected.level}-count-mismatch`);
     }
-    if (actual.lastWordIndex !== expected.lastWordIndex) {
-      reasons.push(`progress-by-level-${expected.level}-index-mismatch`);
+    if (actual.lastWordId !== expected.lastWordId) {
+      reasons.push(`progress-by-level-${expected.level}-word-id-mismatch`);
     }
-    if (!Number.isSafeInteger(actual.version) || actual.version < 1) {
+    if (actual.vocabularySchemaVersion !== expected.vocabularySchemaVersion) {
+      reasons.push(`progress-by-level-${expected.level}-vocabulary-version-invalid`);
+    }
+    if (actual.version !== 2) {
       reasons.push(`progress-by-level-${expected.level}-version-invalid`);
     }
-    if (timestampMillis(actual.updatedAt) === null) {
+    const actualUpdatedAt = timestampMillis(actual.updatedAt);
+    if (actualUpdatedAt === null) {
       reasons.push(`progress-by-level-${expected.level}-updated-at-invalid`);
+    } else if (legacyLastSync !== null && actualUpdatedAt < legacyLastSync) {
+      reasons.push(`progress-by-level-${expected.level}-older-than-legacy`);
     }
   }
 

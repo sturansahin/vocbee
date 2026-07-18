@@ -19,8 +19,8 @@ describe('adaptLegacyLearnedWordsToProgressByLevelDocs — edge cases (docs/refa
     });
     const a1 = docs.find(d => d.level === 'A1');
     const a2 = docs.find(d => d.level === 'A2');
-    expect(a1).toMatchObject({ level: 'A1', learnedWordIds: [1, 2, 3], learnedCount: 3, lastWordIndex: 3 });
-    expect(a2).toMatchObject({ level: 'A2', learnedWordIds: [10], learnedCount: 1, lastWordIndex: 0 });
+    expect(a1).toMatchObject({ level: 'A1', learnedWordIds: [1, 2, 3], learnedCount: 3, lastWordId: 3 });
+    expect(a2).toMatchObject({ level: 'A2', learnedWordIds: [10], learnedCount: 1, lastWordId: 0 });
   });
 
   it('learnedWords missing / undefined / null / empty -> [] (user counted as skipped)', () => {
@@ -33,7 +33,7 @@ describe('adaptLegacyLearnedWordsToProgressByLevelDocs — edge cases (docs/refa
   it('empty level array (A1: []) -> consistent doc with learnedCount 0', () => {
     const docs = adaptLegacyLearnedWordsToProgressByLevelDocs({ learnedWords: { A1: [] } });
     expect(docs).toHaveLength(1);
-    expect(docs[0]).toMatchObject({ level: 'A1', learnedWordIds: [], learnedCount: 0, lastWordIndex: 0 });
+    expect(docs[0]).toMatchObject({ level: 'A1', learnedWordIds: [], learnedCount: 0, lastWordId: 0 });
   });
 
   it('duplicate wordIds are deduped (A1: [1,1,2,2,3] -> [1,2,3])', () => {
@@ -51,7 +51,7 @@ describe('adaptLegacyLearnedWordsToProgressByLevelDocs — edge cases (docs/refa
 
   it('lastWordIndex missing -> 0', () => {
     const docs = adaptLegacyLearnedWordsToProgressByLevelDocs({ learnedWords: { A1: [1] }, currentLevel: 'A1' });
-    expect(docs[0].lastWordIndex).toBe(0);
+    expect(docs[0].lastWordId).toBe(0);
   });
 
   it('A1 present, A2 absent -> only A1 doc', () => {
@@ -67,10 +67,11 @@ describe('adaptLegacyLearnedWordsToProgressByLevelDocs — edge cases (docs/refa
   it('attaches deviceId/version when provided', () => {
     const docs = adaptLegacyLearnedWordsToProgressByLevelDocs(
       { learnedWords: { A1: [1] } },
-      { deviceId: 'device-a', version: 1 }
+      { deviceId: 'device-a', version: 2, vocabularySchemaVersion: 2 }
     );
     expect(docs[0].updatedByDeviceId).toBe('device-a');
-    expect(docs[0].version).toBe(1);
+    expect(docs[0].version).toBe(2);
+    expect(docs[0].vocabularySchemaVersion).toBe(2);
   });
 
   it('is idempotent (re-running yields identical output) — safe to re-run migration', () => {
@@ -112,14 +113,26 @@ describe('verifyMigrationCounts — copy/verify safety (docs/refactor-v2/08 §7)
 
 describe('toProgressByLevelDoc / fromProgressByLevelDoc — no Timestamp leaks into domain', () => {
   it('round-trips and drops updatedAt from the domain model', () => {
-    const model = { level: 'A1' as const, learnedWordIds: [1, 2], lastWordIndex: 2, learnedCount: 2 };
+    const model = {
+      level: 'A1' as const,
+      learnedWordIds: [1, 2],
+      lastWordId: 2,
+      learnedCount: 2,
+      vocabularySchemaVersion: 2,
+    };
     const dto = toProgressByLevelDoc(model, 'SENTINEL_TS' as any, { deviceId: 'device-a', version: 1 });
     expect(dto.updatedAt).toBe('SENTINEL_TS');
     expect(dto.updatedByDeviceId).toBe('device-a');
     expect(dto.learnedCount).toBe(2);
 
     const back = fromProgressByLevelDoc(dto);
-    expect(back).toMatchObject({ level: 'A1', learnedWordIds: [1, 2], learnedCount: 2, lastWordIndex: 2 });
+    expect(back).toMatchObject({
+      level: 'A1',
+      learnedWordIds: [1, 2],
+      learnedCount: 2,
+      lastWordId: 2,
+      vocabularySchemaVersion: 2,
+    });
     expect((back as Record<string, unknown>).updatedAt).toBeUndefined();
   });
 });

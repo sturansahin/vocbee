@@ -19,6 +19,7 @@ export interface LocalSyncSnapshot {
   userLevel: string;
   lastWordId: number | null;
   learnedWords: Record<string, number[]>;
+  vocabularySchemaVersion: number;
   profileName?: string;
   profileImage?: string | null;
   hasProfileImage: boolean;
@@ -45,8 +46,18 @@ export interface RemoteUserDocument {
     learnedWords?: Record<string, number[]>;
     currentLevel?: string;
     lastWordIndex?: number;
+    lastSync?: unknown;
   } | null;
-  notificationSettings?: SyncNotificationSettings | null;
+  activeLevel?: string;
+  schemaVersion?: number;
+  /** Runtime-only resolved v2 view assembled by FirestoreSyncRepository; never stored on the main doc. */
+  progressV2?: {
+    learnedWords: Record<string, number[]>;
+    currentLevel: string;
+    lastWordId: number;
+    source: 'v2' | 'legacy-reconciled';
+  };
+  notificationSettings?: SyncNotificationSettings | { enabled: false } | null;
   streak?: unknown;
   lastActiveDeviceId?: string | null;
   [key: string]: unknown;

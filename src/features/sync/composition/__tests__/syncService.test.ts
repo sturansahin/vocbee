@@ -26,6 +26,7 @@ jest.mock('@shared/firebase', () => ({
 
 // Mock progressService
 jest.mock('@features/progress', () => ({
+    ...jest.requireActual('@features/progress'),
     getUserProgress: jest.fn(),
     getCurrentLevel: jest.fn(),
     restoreProgressFromFirebase: jest.fn(),
@@ -41,6 +42,7 @@ jest.mock('@features/favorites', () => ({
 
 // Mock vocabularyService
 jest.mock('@features/vocabulary', () => ({
+    ...jest.requireActual('@features/vocabulary'),
     getLanguagePair: jest.fn(),
     isVocabularyGenerated: jest.fn(),
     generateVocabulary: jest.fn(),
@@ -49,6 +51,7 @@ jest.mock('@features/vocabulary', () => ({
 }));
 
 jest.mock('@features/notifications', () => ({
+    ...jest.requireActual('@features/notifications'),
     getNotificationSettings: jest.fn(),
     saveNotificationSettings: jest.fn(),
 }));
@@ -366,6 +369,31 @@ describe('SyncService', () => {
                 image: 'https://image.example/existing.png',
                 email: 'test@example.com',
             });
+        });
+
+        it('normalizes the compact disabled notification shape from setup', async () => {
+            (getDoc as jest.Mock).mockResolvedValueOnce({
+                exists: () => true,
+                data: () => ({
+                    email: 'test@example.com',
+                    setupCompleted: true,
+                    preferences: null,
+                    progress: null,
+                    notificationSettings: { enabled: false },
+                }),
+            });
+
+            await fetchAndSaveUserData('user123');
+
+            expect(saveNotificationSettings).toHaveBeenCalledWith(
+                expect.objectContaining({
+                    enabled: false,
+                    startHour: 9,
+                    endHour: 21,
+                    frequencyMinutes: 120,
+                }),
+                true,
+            );
         });
 
         it('does not overwrite local domain data when local changes are unsynced', async () => {

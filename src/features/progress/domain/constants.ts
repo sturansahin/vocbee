@@ -6,4 +6,7 @@
 export const PROGRESS_SCHEMA_VERSION = 2 as const;
 
 // progressByLevel doc version (optimistic concurrency / future migrations). docs/refactor-v2/34 §3.
-export const PROGRESS_BY_LEVEL_DOC_VERSION = 1 as const;
+export const PROGRESS_BY_LEVEL_DOC_VERSION = 2 as const;
+
+/** Minimum legacy compatibility window after dual-write reaches production. */
+export const PROGRESS_LEGACY_RETENTION_DAYS = 90 as const;

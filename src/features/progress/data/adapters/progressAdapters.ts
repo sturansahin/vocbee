@@ -24,13 +24,13 @@ function isValidWordId(id: unknown): id is number {
  *  - learnedWords missing / not an object  → [] (caller counts this user as "skipped")
  *  - one doc per level KEY present (Array) — even if empty (key absent → no doc, e.g. "A1 var A2 yok")
  *  - ids deduped, non-integer/negative filtered out, sorted ascending
- *  - legacy single lastWordIndex assigned to the currentLevel's doc; other levels get 0
+ *  - legacy single lastWordIndex (actually a word id) assigned to currentLevel.lastWordId; other levels get 0
  *  - learnedCount = learnedWordIds.length
  * updatedAt is NOT set here (added by the repository) — keeps this SDK-free.
  */
 export function adaptLegacyLearnedWordsToProgressByLevelDocs(
   legacy: LegacyProgressDoc | null | undefined,
-  opts: { deviceId?: string; version?: number } = {}
+  opts: { deviceId?: string; version?: number; vocabularySchemaVersion?: number } = {}
 ): ProgressByLevelWriteModel[] {
   const learnedWords = legacy?.learnedWords;
   if (!learnedWords || typeof learnedWords !== 'object') return [];
@@ -52,8 +52,9 @@ export function adaptLegacyLearnedWordsToProgressByLevelDocs(
     const model: ProgressByLevelWriteModel = {
       level,
       learnedWordIds: cleaned,
-      lastWordIndex: isCurrent ? legacyLastWordIndex : 0,
+      lastWordId: isCurrent ? legacyLastWordIndex : 0,
       learnedCount: cleaned.length,
+      vocabularySchemaVersion: opts.vocabularySchemaVersion ?? 1,
     };
     if (opts.deviceId !== undefined) model.updatedByDeviceId = opts.deviceId;
     if (opts.version !== undefined) model.version = opts.version;
@@ -73,8 +74,9 @@ export function toProgressByLevelDoc(
   const doc: ProgressByLevelDoc = {
     level: model.level,
     learnedWordIds,
-    lastWordIndex: model.lastWordIndex,
+    lastWordId: model.lastWordId,
     learnedCount: learnedWordIds.length, // authoritative: always derived from the list
+    vocabularySchemaVersion: model.vocabularySchemaVersion,
     updatedAt,
   };
   if (model.favoriteWordIds) doc.favoriteWordIds = [...model.favoriteWordIds];
@@ -89,8 +91,12 @@ export function fromProgressByLevelDoc(doc: ProgressByLevelDoc): LevelProgress {
   const model: LevelProgress = {
     level: doc.level,
     learnedWordIds,
-    lastWordIndex: typeof doc.lastWordIndex === 'number' && doc.lastWordIndex >= 0 ? doc.lastWordIndex : 0,
+    lastWordId: typeof doc.lastWordId === 'number' && doc.lastWordId >= 0 ? doc.lastWordId : 0,
     learnedCount: learnedWordIds.length,
+    vocabularySchemaVersion:
+      typeof doc.vocabularySchemaVersion === 'number' && doc.vocabularySchemaVersion >= 1
+        ? doc.vocabularySchemaVersion
+        : 1,
   };
   if (Array.isArray(doc.favoriteWordIds)) model.favoriteWordIds = doc.favoriteWordIds.filter(isValidWordId);
   return model;
@@ -113,7 +119,11 @@ export function buildProgressSummary(
     totalWords += totalCount;
   }
 
-  return { byLevel, overallPercent: computeOverallPercent(totalLearned, totalWords) };
+  return {
+    byLevel,
+    totalLearnedCount: totalLearned,
+    overallPercent: computeOverallPercent(totalLearned, totalWords),
+  };
 }
 
 /** Raw legacy learned-word count (sum of ALL array lengths, every key) — used by the verify step. */

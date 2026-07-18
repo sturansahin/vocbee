@@ -1,7 +1,11 @@
 // src/features/progress/data/repositories/FirestoreProgressRepository.ts
 // Layer: data (repository impl) | Feature: progress.
 //
-// ⚠️ PREP / NOT WIRED (Phase 3, docs/refactor-v2/23, /34 §9, /39 PR-3.3; tested in ADIM 7):
+// Compatibility repository retained for focused per-level access and tests. The active application sync
+// path now performs rollout-gated v2 reads/writes through FirestoreSyncRepository; this class is not
+// independently composed into the runtime graph.
+//
+// Historical prep notes:
 //   - This class is NOT imported by any running code, NOT exported from the feature barrel
 //     (docs/refactor-v2/33 §4), and is NOT instantiated anywhere in production. It performs ZERO I/O
 //     until wired in a later, separately-approved step. It exists to make the dual-read design concrete
@@ -48,8 +52,9 @@ export class FirestoreProgressRepository implements RemoteProgressRepository {
     return {
       level,
       learnedWordIds: model.learnedWordIds,
-      lastWordIndex: model.lastWordIndex,
+      lastWordId: model.lastWordId,
       learnedCount: model.learnedCount,
+      vocabularySchemaVersion: model.vocabularySchemaVersion,
       ...(model.favoriteWordIds ? { favoriteWordIds: model.favoriteWordIds } : {}),
     };
   }
@@ -74,7 +79,20 @@ export class FirestoreProgressRepository implements RemoteProgressRepository {
   async getProgressSummary(userId: string): Promise<ProgressSummary> {
     const snap = await getDoc(doc(db, `users/${userId}`));
     const summary = snap.exists() ? (snap.data() as UserDocV2).progressSummary : undefined;
-    if (summary) return { byLevel: summary.byLevel, overallPercent: summary.overallPercent };
-    return { byLevel: {}, overallPercent: 0 };
+    if (summary) {
+      const totalLearnedCount = summary.totalLearnedCount
+        ?? Object.values(summary.byLevel).reduce(
+          (total, entry) => total + (entry?.learnedCount ?? 0),
+          0
+        );
+      return {
+        byLevel: summary.byLevel,
+        totalLearnedCount,
+        ...(typeof summary.overallPercent === 'number'
+          ? { overallPercent: summary.overallPercent }
+          : {}),
+      };
+    }
+    return { byLevel: {}, totalLearnedCount: 0 };
   }
 }

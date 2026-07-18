@@ -5,7 +5,18 @@ const mockGetDoc = jest.fn((_reference: unknown): Promise<unknown> => Promise.re
 const mockSetDoc = jest.fn(
   async (_reference: unknown, _data: unknown, _options?: unknown) => undefined
 );
-const mockDeleteDoc = jest.fn(async (_reference: unknown) => undefined);
+const mockCollection = jest.fn((_reference: unknown, _collection: string) => 'progress-ref');
+const mockGetDocs = jest.fn(async (_reference: unknown) => ({
+  docs: [{ ref: 'progress-a1-ref' }, { ref: 'progress-a2-ref' }],
+}));
+const mockBatchDelete = jest.fn((_reference: unknown) => undefined);
+const mockBatchSet = jest.fn((_reference: unknown, _data: unknown, _options: unknown) => undefined);
+const mockBatchCommit = jest.fn(async () => undefined);
+const mockWriteBatch = jest.fn(() => ({
+  delete: mockBatchDelete,
+  set: mockBatchSet,
+  commit: mockBatchCommit,
+}));
 
 jest.mock('firebase/firestore', () => ({
   doc: (database: unknown, collection: string, id: string) => mockDoc(database, collection, id),
@@ -14,7 +25,9 @@ jest.mock('firebase/firestore', () => ({
     options === undefined
       ? mockSetDoc(reference, data)
       : mockSetDoc(reference, data, options),
-  deleteDoc: (reference: unknown) => mockDeleteDoc(reference),
+  collection: (reference: unknown, collection: string) => mockCollection(reference, collection),
+  getDocs: (reference: unknown) => mockGetDocs(reference),
+  writeBatch: () => mockWriteBatch(),
   serverTimestamp: jest.fn(() => 'server-time'),
 }));
 
@@ -26,6 +39,7 @@ import { FirestoreUserProfileRepository } from '../FirestoreUserProfileRepositor
 describe('FirestoreUserProfileRepository', () => {
   beforeEach(async () => {
     jest.clearAllMocks();
+    delete process.env.EXPO_PUBLIC_PROGRESS_SYNC_MODE;
     await AsyncStorage.clear();
   });
 
@@ -77,7 +91,7 @@ describe('FirestoreUserProfileRepository', () => {
     });
   });
 
-  it('merge-updates profile fields and delegates document deletion', async () => {
+  it('merge-updates profile fields and recursively deletes known progress documents', async () => {
     const repository = new FirestoreUserProfileRepository();
 
     await repository.saveProfile('user-1', { name: 'Updated', image: null });
@@ -88,7 +102,13 @@ describe('FirestoreUserProfileRepository', () => {
       { displayName: 'Updated', photoURL: null },
       { merge: true }
     );
-    expect(mockDeleteDoc).toHaveBeenCalledWith('user-ref');
+    expect(mockCollection).toHaveBeenCalledWith('user-ref', 'progressByLevel');
+    expect(mockBatchDelete.mock.calls).toEqual([
+      ['progress-a1-ref'],
+      ['progress-a2-ref'],
+      ['user-ref'],
+    ]);
+    expect(mockBatchCommit).toHaveBeenCalledTimes(1);
   });
 
   it('merge-persists the setup completion payload through the profile repository', async () => {
@@ -138,5 +158,50 @@ describe('FirestoreUserProfileRepository', () => {
       },
       { merge: true }
     );
+  });
+
+  it('atomically dual-writes setup progress when the rollout mode is enabled', async () => {
+    process.env.EXPO_PUBLIC_PROGRESS_SYNC_MODE = 'dual';
+    const repository = new FirestoreUserProfileRepository();
+
+    await repository.saveSetupCompletion('user-1', {
+      preferences: {
+        nativeLanguage: 'turkish',
+        targetLanguage: 'english',
+        level: 'beginner',
+      },
+      initialLevel: 'A1',
+      notificationSettings: {
+        enabled: true,
+        startHour: 9,
+        startMinute: 0,
+        endHour: 21,
+        endMinute: 0,
+        frequencyMinutes: 120,
+        autoMarkLearned: true,
+      },
+    });
+
+    expect(mockSetDoc).not.toHaveBeenCalled();
+    expect(mockBatchSet).toHaveBeenCalledTimes(6);
+    expect(mockBatchSet.mock.calls[0][1]).toMatchObject({
+      activeLevel: 'A1',
+      schemaVersion: 2,
+      progressSummary: { totalLearnedCount: 0 },
+      syncMeta: { version: 2, updatedByDeviceId: 'setup' },
+    });
+    expect(mockBatchSet.mock.calls.slice(1).map(call => call[1])).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          level: 'A1',
+          learnedWordIds: [],
+          lastWordId: 0,
+          learnedCount: 0,
+          vocabularySchemaVersion: 2,
+          version: 2,
+        }),
+      ])
+    );
+    expect(mockBatchCommit).toHaveBeenCalledTimes(1);
   });
 });

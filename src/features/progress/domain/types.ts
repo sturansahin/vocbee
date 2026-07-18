@@ -25,13 +25,29 @@ export function isLevel(value: unknown): value is Level {
 export type LevelProgress = {
   level: Level;
   learnedWordIds: number[];
-  lastWordIndex: number;
+  /** Canonical resume pointer. Legacy Firestore called this value `lastWordIndex`, but it stores a word id. */
+  lastWordId: number;
   learnedCount: number;
+  vocabularySchemaVersion: number;
   favoriteWordIds?: number[];
 };
 
-// Per-level + overall summary kept on the main user doc so profile reads stay cheap (docs/refactor-v2/07 §3).
+export type ProgressSummaryEntry = {
+  learnedCount: number;
+  /** Optional derived display data. The persisted source of truth remains learnedWordIds. */
+  totalCount?: number;
+  percent?: number;
+};
+
+// Small derived summary kept on the main user doc so profile reads stay cheap.
 export type ProgressSummary = {
-  byLevel: Partial<Record<Level, { learnedCount: number; totalCount: number; percent: number }>>;
-  overallPercent: number;
+  byLevel: Partial<Record<Level, ProgressSummaryEntry>>;
+  totalLearnedCount: number;
+  overallPercent?: number;
+};
+
+export type ProgressV2WritePlan = {
+  activeLevel: Level;
+  levels: LevelProgress[];
+  summary: ProgressSummary;
 };

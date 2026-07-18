@@ -66,7 +66,10 @@ async function main(): Promise<void> {
       summary.skipped++;
       return 'SKIP';
     }
-    const models = adaptLegacyLearnedWordsToProgressByLevelDocs(legacy, { version: 1 });
+    const models = adaptLegacyLearnedWordsToProgressByLevelDocs(legacy, {
+      version: 2,
+      vocabularySchemaVersion: 2,
+    });
     const { oldTotal, newTotal, ok } = verifyMigrationCounts(legacy, models);
     summary.planned += models.length;
     if (!ok) summary.mismatched++;

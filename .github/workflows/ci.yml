@@ -54,6 +54,7 @@ jobs:
         run: npm --prefix functions ci
       - run: npm run functions:lint
       - run: npm run functions:build
+      - run: npm run functions:test
 
   rules:
     name: Firestore rules (emulator)

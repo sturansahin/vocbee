@@ -115,12 +115,17 @@ service cloud.firestore {
             'autoMarkLearned'
           ])
           && value.enabled is bool
-          && value.autoMarkLearned is bool
-          && value.startHour is int && value.startHour >= 0 && value.startHour <= 23
-          && value.endHour is int && value.endHour >= 0 && value.endHour <= 23
-          && value.startMinute is int && value.startMinute >= 0 && value.startMinute <= 59
-          && value.endMinute is int && value.endMinute >= 0 && value.endMinute <= 59
-          && value.frequencyMinutes in [60, 120, 180, 360, 1440]
+          && (
+            (value.enabled == false && value.keys().hasOnly(['enabled']))
+            || (
+              value.autoMarkLearned is bool
+              && value.startHour is int && value.startHour >= 0 && value.startHour <= 23
+              && value.endHour is int && value.endHour >= 0 && value.endHour <= 23
+              && value.startMinute is int && value.startMinute >= 0 && value.startMinute <= 59
+              && value.endMinute is int && value.endMinute >= 0 && value.endMinute <= 59
+              && value.frequencyMinutes in [60, 120, 180, 360, 1440]
+            )
+          )
         );
     }
 
@@ -139,6 +144,73 @@ service cloud.firestore {
         );
     }
 
+    function validProgressSummaryEntry(value) {
+      return value is map
+        && value.keys().hasOnly(['learnedCount', 'totalCount', 'percent'])
+        && value.learnedCount is int
+        && value.learnedCount >= 0
+        && (
+          !has(value, 'totalCount')
+          || (value.totalCount is int && value.totalCount >= 0)
+        )
+        && (
+          !has(value, 'percent')
+          || (value.percent is number && value.percent >= 0 && value.percent <= 100)
+        );
+    }
+
+    function validProgressSummary(value) {
+      return value is map
+        && value.keys().hasOnly(['byLevel', 'totalLearnedCount', 'overallPercent', 'updatedAt'])
+        && value.byLevel is map
+        && value.byLevel.keys().hasOnly(['A1', 'A2', 'B1', 'B2', 'C1'])
+        && (!has(value.byLevel, 'A1') || validProgressSummaryEntry(value.byLevel.A1))
+        && (!has(value.byLevel, 'A2') || validProgressSummaryEntry(value.byLevel.A2))
+        && (!has(value.byLevel, 'B1') || validProgressSummaryEntry(value.byLevel.B1))
+        && (!has(value.byLevel, 'B2') || validProgressSummaryEntry(value.byLevel.B2))
+        && (!has(value.byLevel, 'C1') || validProgressSummaryEntry(value.byLevel.C1))
+        && value.totalLearnedCount is int
+        && value.totalLearnedCount >= 0
+        && (
+          !has(value, 'overallPercent')
+          || (
+            value.overallPercent is number
+            && value.overallPercent >= 0
+            && value.overallPercent <= 100
+          )
+        )
+        && (!has(value, 'updatedAt') || value.updatedAt is timestamp);
+    }
+
+    function validProgressMigration(value) {
+      return value is map
+        && value.keys().hasOnly([
+          'state',
+          'source',
+          'legacyMirrorEnabled',
+          'migratedAt',
+          'lastLegacyMirrorAt',
+          'verifiedAt'
+        ])
+        && value.state in ['mirroring', 'verified', 'cleanup-ready']
+        && value.source in ['legacy-mirror', 'backfill']
+        && value.legacyMirrorEnabled is bool
+        && value.migratedAt is timestamp
+        && value.lastLegacyMirrorAt is timestamp
+        && (!has(value, 'verifiedAt') || value.verifiedAt is timestamp);
+    }
+
+    function progressMigrationUnchanged() {
+      return (
+        !has(resource.data, 'progressMigration')
+        && !has(request.resource.data, 'progressMigration')
+      ) || (
+        has(resource.data, 'progressMigration')
+        && has(request.resource.data, 'progressMigration')
+        && request.resource.data.progressMigration == resource.data.progressMigration
+      );
+    }
+
     function validUserDocument(data) {
       return data.keys().hasOnly([
         'email',
@@ -152,26 +224,85 @@ service cloud.firestore {
         'notificationSettings',
         'lastActiveDeviceId',
         'favorites',
-        'syncMeta'
+        'syncMeta',
+        'lastActiveAt',
+        'schemaVersion',
+        'activeLevel',
+        'progressSummary',
+        'progressMigration'
       ])
       && optionalString(data, 'email', 320)
       && optionalString(data, 'displayName', 120)
       && optionalString(data, 'photoURL', 2048)
       && optionalString(data, 'lastActiveDeviceId', 120)
       && optionalTimestamp(data, 'createdAt')
+      && optionalTimestamp(data, 'lastActiveAt')
       && optionalBoolean(data, 'setupCompleted')
+      && (!has(data, 'schemaVersion') || (data.schemaVersion is int && data.schemaVersion == 2))
+      && (!has(data, 'activeLevel') || validCefrLevel(data.activeLevel))
       && (!has(data, 'preferences') || validPreferences(data.preferences))
       && (!has(data, 'progress') || validProgress(data.progress))
       && (!has(data, 'streak') || validStreak(data.streak))
       && (!has(data, 'notificationSettings') || validNotificationSettings(data.notificationSettings))
       && (!has(data, 'favorites') || validFavorites(data.favorites))
-      && (!has(data, 'syncMeta') || validSyncMeta(data.syncMeta));
+      && (!has(data, 'syncMeta') || validSyncMeta(data.syncMeta))
+      && (!has(data, 'progressSummary') || validProgressSummary(data.progressSummary))
+      && (!has(data, 'progressMigration') || validProgressMigration(data.progressMigration));
+    }
+
+    function validProgressByLevel(data, level) {
+      return validCefrLevel(level)
+        && data.keys().hasOnly([
+          'level',
+          'learnedWordIds',
+          'favoriteWordIds',
+          'wrongWordIds',
+          'lastWordId',
+          'learnedCount',
+          'vocabularySchemaVersion',
+          'updatedAt',
+          'updatedByDeviceId',
+          'version'
+        ])
+        && data.level == level
+        && data.learnedWordIds is list
+        && data.learnedWordIds.size() <= 5000
+        && data.lastWordId is int
+        && data.lastWordId >= 0
+        && data.learnedCount is int
+        && data.learnedCount == data.learnedWordIds.size()
+        && data.vocabularySchemaVersion is int
+        && data.vocabularySchemaVersion >= 1
+        && data.updatedAt is timestamp
+        && data.version is int
+        && data.version == 2
+        && (
+          !has(data, 'favoriteWordIds')
+          || (data.favoriteWordIds is list && data.favoriteWordIds.size() <= 1000)
+        )
+        && (
+          !has(data, 'wrongWordIds')
+          || (data.wrongWordIds is list && data.wrongWordIds.size() <= 1000)
+        )
+        && optionalString(data, 'updatedByDeviceId', 120);
     }
 
     match /users/{uid} {
       allow read: if isOwner(uid);
-      allow create, update: if isOwner(uid) && validUserDocument(request.resource.data);
+      allow create: if isOwner(uid)
+        && !has(request.resource.data, 'progressMigration')
+        && validUserDocument(request.resource.data);
+      allow update: if isOwner(uid)
+        && progressMigrationUnchanged()
+        && validUserDocument(request.resource.data);
       allow delete: if isOwner(uid);
+
+      match /progressByLevel/{level} {
+        allow read: if isOwner(uid);
+        allow create, update: if isOwner(uid)
+          && validProgressByLevel(request.resource.data, level);
+        allow delete: if isOwner(uid);
+      }
     }
 
     match /{document=**} {

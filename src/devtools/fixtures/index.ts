@@ -33,8 +33,8 @@ export const fixtureUserDataSetupIncomplete: UserData = {
 export const fixtureUserDataLoggedOut: null = null;
 
 // Legacy progress shape — matches firestore.rules `validProgress()` / services/progressService.ts
-// (currentLevel + learnedWords map + lastWordIndex). This is the ONLY shape currently written by
-// production code (docs/refactor-v2/phase-9-firestore-cleanup-plan.md §0).
+// (currentLevel + learnedWords map + lastWordIndex). It remains the safe-default production shape
+// and is retained during the dual-write compatibility window.
 export const fixtureLegacyProgress = {
   currentLevel: 'B1',
   learnedWords: {
@@ -57,13 +57,21 @@ export const fixtureProgressEmpty = {
   lastWordIndex: 0,
 };
 
-// "progressByLevel" fixture models the v2 shape described in docs/refactor-v2/07 + 23 for
-// dev-panel preview purposes only. No production repository reads/writes this shape today
-// (see docs/refactor-v2/phase-9-firestore-cleanup-plan.md §0) — this is illustrative fixture data,
-// not a live migration path.
+// "progressByLevel" fixture models the rollout-gated v2 shape. Devtools remains fixture-only and
+// never reads or writes live Firestore data.
 export const fixtureProgressByLevel = {
-  A1: { level: 'A1' as const, learnedWordIds: [1, 2, 3, 4, 5], lastWordIndex: 5, learnedCount: 5 },
-  A2: { level: 'A2' as const, learnedWordIds: [], lastWordIndex: 0, learnedCount: 0 },
+  A1: {
+    level: 'A1' as const,
+    learnedWordIds: [1, 2, 3, 4, 5],
+    lastWordId: 5,
+    learnedCount: 5,
+    vocabularySchemaVersion: 2,
+    version: 2,
+  },
+  A2: { level: 'A2' as const, learnedWordIds: [], lastWordId: 0, learnedCount: 0, vocabularySchemaVersion: 2, version: 2 },
+  B1: { level: 'B1' as const, learnedWordIds: [], lastWordId: 0, learnedCount: 0, vocabularySchemaVersion: 2, version: 2 },
+  B2: { level: 'B2' as const, learnedWordIds: [], lastWordId: 0, learnedCount: 0, vocabularySchemaVersion: 2, version: 2 },
+  C1: { level: 'C1' as const, learnedWordIds: [], lastWordId: 0, learnedCount: 0, vocabularySchemaVersion: 2, version: 2 },
 };
 
 export const fixtureStreakActive = {

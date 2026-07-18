@@ -25,7 +25,8 @@
     "test:firestore-cleanup:emulator": "firebase emulators:exec --project vocbee-firestore-cleanup-emulator --only firestore \"node --test scripts/__tests__/firestoreLegacyCleanup.emulator.test.cjs\"",
     "audit:prod": "npm audit --omit=dev --audit-level=high",
     "functions:lint": "npm --prefix functions run lint",
-    "functions:build": "npm --prefix functions run build"
+    "functions:build": "npm --prefix functions run build",
+    "functions:test": "npm --prefix functions run test"
   },
   "dependencies": {
     "@expo-google-fonts/rubik-mono-one": "^0.4.1",

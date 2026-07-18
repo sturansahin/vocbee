@@ -3,7 +3,7 @@
   "environments": {
     "emulator": ["vocbee-firestore-cleanup-emulator"],
     "dev": [],
-    "staging": [],
+    "staging": ["vocbee-staging-6fe24"],
     "production": ["vocbee-6fe24"]
   }
 }

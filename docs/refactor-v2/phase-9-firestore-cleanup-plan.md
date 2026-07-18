@@ -4,6 +4,22 @@
 > Firestore Emulator fixture'ı okundu/yazıldı/silindi ve geri yüklendi; staging/production Firestore'a
 > dokunulmadı, `firestore.rules` değiştirilmedi. Aşağıdaki production adımları ayrı onaylıdır.
 
+## 2026-07-18 progress v2 rollout implementasyonu
+
+Bu dokümandaki “v2 runtime/rules yok” tespitleri tarihsel olarak kalır ve
+`44-progress-v2-safe-rollout.md` tarafından supersede edilir. Rollout-gated dual read/write, legacy mirror
+function, v2 rules, recursive account deletion ve cleanup v2 doğrulaması artık kodda hazırlanmıştır. Safe default
+`legacy` olduğu ve remote deploy/backfill yapılmadığı için production verisi hâlâ korunmaktadır. Staging,
+backup/restore ve ayrı rollout onayı eksik olduğundan destructive cleanup gate'i kapalı kalır.
+
+## 2026-07-18 staging/bootstrap superseding durumu
+
+Ayrı `vocbee-staging-6fe24` projesi ve `eur3` Firestore artık vardır; v2 rules staging'e başarıyla deploy edilmiştir.
+Dolayısıyla aşağıdaki tarihsel “staging yok” ifadeleri staging projesinin varlığı açısından supersede edilmiştir.
+Ancak staging Blaze olmadığı için mirror function deploy/smoke tamamlanamadı. Production managed backup schedule da
+billing kapalı olduğu için oluşturulamadı; backup/restore kanıtı hâlâ yoktur. Bu ilerleme production dry-run veya
+destructive cleanup gate'ini açmaz. Kanıt: `artifacts/progress-v2-staging-bootstrap-evidence.json`.
+
 ## 2026-07-17 Prompt 9 superseding revalidation
 
 Bu dokümanın aşağıdaki ilk audit bölümleri tarihsel plan kanıtıdır; root `services/` path'leri Prompt 8'de

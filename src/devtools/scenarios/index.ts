@@ -189,8 +189,8 @@ export const SCENARIOS: Record<ScenarioId, DevToolsScenario> = {
     id: 'progressByLevel',
     label: 'progressByLevel (v2 preview, illustrative)',
     description:
-      'Illustrative v2 progressByLevel shape from docs/refactor-v2/07+23. No production repository ' +
-      'reads/writes this today — for UI preview only, not a live migration.',
+      'Rollout-gated v2 progressByLevel shape. This preview remains offline fixture data and never ' +
+      'touches live Firestore.',
     auth: { user: baseLoggedIn, userData: fixtureUserDataLoggedInComplete, isLoading: false, connectionError: false },
     monetization: { isAdFree: false, isLoading: false },
     progress: { shape: 'progressByLevel', byLevel: fixtureProgressByLevel },

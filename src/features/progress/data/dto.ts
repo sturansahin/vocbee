@@ -15,7 +15,7 @@ export type NotificationSettingsDoc = {
   endMinute: number;
   frequencyMinutes: number;
   autoMarkLearned: boolean;
-};
+} | { enabled: false };
 
 export type StreakDoc = {
   currentStreak: number;
@@ -26,8 +26,10 @@ export type StreakDoc = {
 };
 
 export type ProgressSummaryDoc = {
-  byLevel: Partial<Record<Level, { learnedCount: number; totalCount: number; percent: number }>>;
-  overallPercent: number;
+  byLevel: Partial<Record<Level, { learnedCount: number; totalCount?: number; percent?: number }>>;
+  totalLearnedCount: number;
+  overallPercent?: number;
+  updatedAt?: Timestamp | FieldValue;
 };
 
 export type UserDocV2 = {
@@ -44,6 +46,15 @@ export type UserDocV2 = {
   syncMeta?: { version?: number; updatedAt?: Timestamp | FieldValue; updatedByDeviceId?: string };
   lastActiveDeviceId?: string;
   schemaVersion?: 2;                               // NEW — must be added to rules hasOnly before write
+  activeLevel?: Level;
+  progressMigration?: {
+    state: 'mirroring' | 'verified' | 'cleanup-ready';
+    source: 'legacy-mirror' | 'backfill';
+    legacyMirrorEnabled: boolean;
+    migratedAt: Timestamp | FieldValue;
+    lastLegacyMirrorAt: Timestamp | FieldValue;
+    verifiedAt?: Timestamp | FieldValue;
+  };
   // TRANSITION: legacy 'progress' field is KEPT (dual-read/write); never deleted in this phase.
   progress?: LegacyProgressDoc | null;
   favorites?: Array<{ id: number; level: Level }>; // existing; max 1000 (rules)
@@ -55,8 +66,9 @@ export type ProgressByLevelDoc = {
   learnedWordIds: number[];
   favoriteWordIds?: number[];
   wrongWordIds?: number[];                 // OPTIONAL — only if SRS ships (not now)
-  lastWordIndex: number;
+  lastWordId: number;
   learnedCount: number;
+  vocabularySchemaVersion: number;
   updatedAt: Timestamp | FieldValue;
   updatedByDeviceId?: string;
   version?: number;

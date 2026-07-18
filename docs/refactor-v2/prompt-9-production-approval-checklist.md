@@ -7,19 +7,19 @@ operasyon ekibi tarafından doğrulandıktan sonra doldurulur. Bugünkü durum `
 
 | Soru | Owner cevabı / kanıt | Durum |
 |---|---|---|
-| Hedef environment (`dev`, `staging`, `production`) | Erişilebilir tek proje ve production app kayıtları nedeniyle `production` olarak çıkarıldı; destructive onayda owner exact teyidi yine zorunlu | PARTIAL |
+| Hedef environment (`dev`, `staging`, `production`) | Rollout doğrulaması `staging`, backup/restore ve gelecekteki cleanup `production`; destructive onayda owner exact teyidi yine zorunlu | PARTIAL |
 | Exact Firebase project ID | `vocbee-6fe24`, state `ACTIVE`; `.firebaserc` ve remote Firebase Projects API eşleşiyor | PASS |
-| Credential identity ve environment ayrımı | Interactive Firebase CLI owner identity secure oturumda doğrulandı; raw identity repository'ye yazılmadı. Dedicated migration identity ve staging/production ayrımı yok | BLOCKED |
-| Backup alındı mı? | Hayır; `firestore:backups:list --location eur3` sonucu 0 | BLOCKED |
+| Credential identity ve environment ayrımı | Interactive Firebase CLI owner identity secure oturumda doğrulandı; raw identity repository'ye yazılmadı. Ayrı staging project var, fakat dedicated migration identity hâlâ yok | BLOCKED |
+| Backup alındı mı? | Hayır; günlük/14 gün schedule isteği production billing kapalı olduğu için HTTP 403 ile reddedildi. Son backup sayısı 0 | BLOCKED |
 | Backup path/resource ID | Yok | BLOCKED |
 | Backup zamanı ve retention | Backup yok; database version retention `3600s`, PITR disabled. Bu değer doğrulanmış backup yerine geçmez | BLOCKED |
-| Ayrı hedefte restore doğrulaması | Backup ve ayrı staging target olmadığı için yok | BLOCKED |
+| Ayrı hedefte restore doğrulaması | Yok. Managed backup restore aynı source project içinde yeni named database gerektiriyor; ilk backup oluşmadan test edilemez | BLOCKED |
 | Rollback plan ID | Cevap bekleniyor | BLOCKED |
 | Compatibility window kapandı mı? | Hayır/kanıt yok; version adoption telemetry yok | BLOCKED |
 | Dual-write durumu | v2 dual-write yok; runtime legacy-only yazıyor | BLOCKED |
-| Staging target + credential | Remote project listesinde yalnız `vocbee-6fe24` var; ayrı staging bulunamadı, allowlist staging listesi boş | BLOCKED |
+| Staging target + credential | `vocbee-staging-6fe24` ACTIVE; `(default)` Firestore `eur3`, delete protection açık ve rules deploy PASS. Function deploy staging Blaze olmadığı için BLOCKED; dedicated staging migration identity yok | PARTIAL |
 | Firestore database koruması | `(default)`, `eur3`, Native/Standard; PITR disabled ve delete protection disabled | BLOCKED |
-| Backup schedule | 0 | BLOCKED |
+| Backup schedule | Günlük/14 gün oluşturma denendi; production billing kapalı olduğu için oluşmadı. Son sayı 0 | BLOCKED |
 
 Owner'ın 2026-07-17 tarihli “Prompt 9'u uygula” talebi yerel audit/script/emulator hazırlığı için ilk aşama
 yetkilendirmesi olarak yorumlandı. O tarihte zorunlu cevaplar verilmediğinden remote dry-run yetkilendirmesi
@@ -27,6 +27,11 @@ sayılmadı.
 2026-07-18 owner talebiyle Firebase'e salt-okunur metadata erişimi verildi; sonuç
 `artifacts/prompt-9-firebase-metadata-audit.json` içinde PII'siz kaydedildi. Bu izin backup oluşturma, staging
 oluşturma, rules deploy, user document okuma veya destructive cleanup yetkisi olarak genişletilmedi.
+
+Owner daha sonra planın sonraki aşamasına geçilmesini onayladı. Bu kapsamda ayrı staging proje/database oluşturuldu,
+rules staging'e deploy edildi ve production managed backup schedule güvenli biçimde denendi. Function deploy ve
+backup schedule billing gate'lerinde durdu; production user belgesi okunmadı/yazılmadı. Güncel PII'siz kanıt:
+`artifacts/progress-v2-staging-bootstrap-evidence.json`.
 
 ## B. Dry-run sonucu
 

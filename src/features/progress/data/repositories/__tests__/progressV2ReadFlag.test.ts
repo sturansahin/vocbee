@@ -21,6 +21,12 @@ import { isFirestoreProgressV2ReadEnabled, readProgressByLevelWithFlag } from '.
 describe('progressV2ReadFlag — safe default-OFF wiring', () => {
     beforeEach(() => {
         jest.clearAllMocks();
+        delete process.env.EXPO_PUBLIC_PROGRESS_SYNC_MODE;
+    });
+
+    it('uses the shared reviewed rollout value', () => {
+        process.env.EXPO_PUBLIC_PROGRESS_SYNC_MODE = 'dual';
+        expect(isFirestoreProgressV2ReadEnabled()).toBe(true);
     });
 
     it('the flag defaults to disabled', () => {

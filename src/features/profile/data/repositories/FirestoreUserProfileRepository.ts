@@ -7,8 +7,23 @@
 // this implementation; it is bound by auth composition. saveProfile uses merge semantics and never
 // removes legacy fields.
 
-import { doc, getDoc, setDoc, deleteDoc, serverTimestamp } from 'firebase/firestore';
+import {
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  serverTimestamp,
+  setDoc,
+  writeBatch,
+} from 'firebase/firestore';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {
+  buildProgressV2WritePlan,
+  getProgressSyncMode,
+  PROGRESS_BY_LEVEL_DOC_VERSION,
+  PROGRESS_SCHEMA_VERSION,
+} from '@features/progress';
+import { VOCABULARY_SCHEMA_VERSION } from '@features/vocabulary';
 import { db } from '@shared/firebase';
 import { STORAGE_KEYS } from '@shared/storage';
 import type { Profile } from '../../domain/types';
@@ -43,20 +58,47 @@ export class FirestoreUserProfileRepository implements UserProfileRepository {
     uid: string,
     completion: SetupProfileCompletion
   ): Promise<void> {
-    await setDoc(
-      doc(db, 'users', uid),
-      {
-        setupCompleted: true,
-        preferences: completion.preferences,
-        progress: {
-          currentLevel: completion.initialLevel,
-          learnedWords: {},
-          lastSync: serverTimestamp(),
-        },
-        notificationSettings: completion.notificationSettings,
+    const timestamp = serverTimestamp();
+    const userReference = doc(db, 'users', uid);
+    const legacyData = {
+      setupCompleted: true,
+      preferences: completion.preferences,
+      progress: {
+        currentLevel: completion.initialLevel,
+        learnedWords: {},
+        lastSync: timestamp,
       },
-      { merge: true }
-    );
+      notificationSettings: completion.notificationSettings,
+    };
+    if (getProgressSyncMode() !== 'dual') {
+      await setDoc(userReference, legacyData, { merge: true });
+      return;
+    }
+
+    const plan = buildProgressV2WritePlan({
+      currentLevel: completion.initialLevel,
+      learnedWords: {},
+      lastWordId: 0,
+      vocabularySchemaVersion: VOCABULARY_SCHEMA_VERSION,
+    });
+    const batch = writeBatch(db);
+    batch.set(userReference, {
+      ...legacyData,
+      activeLevel: plan.activeLevel,
+      schemaVersion: PROGRESS_SCHEMA_VERSION,
+      lastActiveAt: timestamp,
+      progressSummary: { ...plan.summary, updatedAt: timestamp },
+      syncMeta: { version: 2, updatedAt: timestamp, updatedByDeviceId: 'setup' },
+    }, { merge: true });
+    for (const level of plan.levels) {
+      batch.set(doc(db, 'users', uid, 'progressByLevel', level.level), {
+        ...level,
+        updatedAt: timestamp,
+        updatedByDeviceId: 'setup',
+        version: PROGRESS_BY_LEVEL_DOC_VERSION,
+      }, { merge: true });
+    }
+    await batch.commit();
   }
 
   async createUserDocument(uid: string, email: string, displayName?: string, photoURL?: string | null): Promise<void> {
@@ -77,6 +119,11 @@ export class FirestoreUserProfileRepository implements UserProfileRepository {
   }
 
   async deleteUserDocument(uid: string): Promise<void> {
-    await deleteDoc(doc(db, 'users', uid)); // verbatim from AuthContext.deleteAccountRemotely
+    const userReference = doc(db, 'users', uid);
+    const progressSnapshot = await getDocs(collection(userReference, 'progressByLevel'));
+    const batch = writeBatch(db);
+    for (const progressDocument of progressSnapshot.docs) batch.delete(progressDocument.ref);
+    batch.delete(userReference);
+    await batch.commit();
   }
 }

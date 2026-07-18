@@ -10,6 +10,9 @@ export {
   isLevelComplete as isLevelCompletionReached,
 } from './domain/rules';
 export * from './domain/constants';
+export * from './domain/migration';
+export { getProgressSyncMode, resolveProgressSyncMode } from './application/progressRollout';
+export type { ProgressSyncMode } from './application/progressRollout';
 export type {
   RemoteProgressRepository,
   LocalProgressRepository,

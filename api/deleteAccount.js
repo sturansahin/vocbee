@@ -117,7 +117,8 @@ export default async function handler(req, res) {
     const uid = await verifyRecentFirebaseAuth(req);
     const app = getFirebaseApp();
 
-    await getFirestore(app).collection('users').doc(uid).delete();
+    const firestore = getFirestore(app);
+    await firestore.recursiveDelete(firestore.collection('users').doc(uid));
 
     try {
       await getAuth(app).deleteUser(uid);

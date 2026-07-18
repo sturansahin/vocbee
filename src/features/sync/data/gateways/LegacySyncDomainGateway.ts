@@ -18,9 +18,11 @@ import {
   getUserLevelFromCefrLevel,
   isUserLevel,
   isVocabularyGenerated,
+  VOCABULARY_SCHEMA_VERSION,
 } from '@features/vocabulary';
 import { STORAGE_KEYS } from '@shared/storage';
 import {
+  DEFAULT_NOTIFICATION_SETTINGS,
   getNotificationSettings,
   saveNotificationSettings,
 } from '@features/notifications';
@@ -55,6 +57,7 @@ export class LegacySyncDomainGateway implements SyncDomainGateway {
       userLevel,
       lastWordId,
       learnedWords,
+      vocabularySchemaVersion: VOCABULARY_SCHEMA_VERSION,
       profileName: profile.name,
       profileImage: hasProfileImage ? profile.image ?? null : undefined,
       hasProfileImage,
@@ -92,14 +95,19 @@ export class LegacySyncDomainGateway implements SyncDomainGateway {
 
   async restoreRemoteDomains(userId: string, remote: RemoteUserDocument): Promise<void> {
     if (remote.notificationSettings && typeof remote.notificationSettings === 'object') {
-      await saveNotificationSettings(remote.notificationSettings, true);
+      await saveNotificationSettings(
+        remote.notificationSettings.enabled === false
+          ? { ...DEFAULT_NOTIFICATION_SETTINGS, enabled: false }
+          : remote.notificationSettings,
+        true
+      );
     }
     if (remote.streak && typeof remote.streak === 'object') {
       await restoreStreakState(remote.streak as Parameters<typeof restoreStreakState>[0]);
     }
 
     const preferenceLevel = remote.preferences?.level;
-    const progressLevel = remote.progress?.currentLevel;
+    const progressLevel = remote.progressV2?.currentLevel ?? remote.progress?.currentLevel;
     if (typeof preferenceLevel === 'string' || typeof progressLevel === 'string') {
       const restoredUserLevel = isUserLevel(preferenceLevel)
         ? preferenceLevel
@@ -126,7 +134,13 @@ export class LegacySyncDomainGateway implements SyncDomainGateway {
       }
     }
 
-    if (remote.progress) {
+    if (remote.progressV2) {
+      await restoreProgressFromFirebase(
+        remote.progressV2.learnedWords,
+        remote.progressV2.currentLevel,
+        remote.progressV2.lastWordId
+      );
+    } else if (remote.progress) {
       await restoreProgressFromFirebase(
         remote.progress.learnedWords ?? null,
         remote.progress.currentLevel ?? null,

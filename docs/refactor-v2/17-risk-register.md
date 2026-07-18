@@ -119,3 +119,30 @@
   proje `vocbee-6fe24`; ayrı staging yok. `(default)` database `eur3`, Native/Standard; backup 0, schedule 0,
   PITR disabled, delete protection disabled ve restore kanıtı yok. Bu sonuç R1 cleanup riskini azaltmaz; aksine
   backup/staging gate'lerini somut olarak kapalı doğrular. User document okunmadı ve remote write/delete yapılmadı.
+
+## 2026-07-18 progress v2 rollout hazırlığı
+
+- **R1 kontrollü fakat açık/Kritik:** Legacy veri silinmeden rollout-gated atomik dual-write, fail-closed
+  dual-read/reconcile, eski istemci mirror function'ı, v2 rules ve yeni schema doğrulamalı cleanup audit'i
+  hazırlandı. Safe default `legacy`; production deploy/backfill/cleanup yapılmadı.
+- **R11 kontrollü/Orta:** Ana belge + beş seviye belgesi tek batch'te yazılıyor; her yazım device id,
+  server timestamp, vocabulary schema ve doc version taşıyor. Eski istemci mirror'ı duplicate/geçersiz veri
+  gördüğünde uzaktan normalize ederek yazmak yerine duruyor.
+- **R12 açık/Orta:** `schemaVersion=2` ve `progressMigration` adoption sinyalleri hazır olsa da ayrı staging,
+  yayın adoption metriği ve iki sürüm/90 gün compatibility kanıtı henüz yok. Legacy alan ve mirror bu nedenle
+  korunur; cleanup gate'i kapalıdır.
+- Hesap silme endpoint'i recursive delete'e geçirildi; v2 subcollection'ın yetim kalma riski kapatıldı.
+- Ayrıntılı deploy/backfill sırası ve kapalı gate: `44-progress-v2-safe-rollout.md`.
+
+## 2026-07-18 staging bootstrap ve backup gate
+
+- **R1 açık/Kritik:** Ayrı `vocbee-staging-6fe24` projesi, `eur3` Standard/Native Firestore ve delete protection
+  oluşturuldu; v2 rules yalnız staging'e deploy edildi. Bu, production veri kaybı riskini azaltan ilk remote
+  izolasyon kanıtıdır; production rules/data değişmedi.
+- **R1 blocker:** Staging mirror function deploy'u predeploy lint/build sonrasında Blaze/Cloud Build gereksiniminde
+  fail-closed durdu. Eski istemci legacy-write mirror smoke'u henüz gerçek staging üzerinde kanıtlanmadı.
+- **R1 backup blocker:** Production günlük/14 gün managed backup schedule isteği billing kapalı olduğu için reddedildi;
+  son schedule ve backup sayısı 0. Restore kanıtı bu nedenle yoktur.
+- **R12 açık/Orta:** Staging rules hazır olsa da function/app flow ve adoption ölçümü yok; safe default `legacy`,
+  legacy alan ve cleanup yasağı korunur.
+- PII'siz kanıt: `docs/refactor-v2/artifacts/progress-v2-staging-bootstrap-evidence.json`.

@@ -23,6 +23,17 @@ const validUserDocument = () => ({
     streak: null,
 });
 
+const validLevelProgress = (level = 'A1') => ({
+    level,
+    learnedWordIds: [1, 2, 3],
+    lastWordId: 3,
+    learnedCount: 3,
+    vocabularySchemaVersion: 2,
+    updatedAt: new Date(),
+    updatedByDeviceId: 'device-a',
+    version: 2,
+});
+
 beforeAll(async () => {
     testEnv = await initializeTestEnvironment({
         projectId: PROJECT_ID,
@@ -168,5 +179,96 @@ describe('firestore.rules users/{uid}', () => {
                 updatedByDeviceId: 'device-a',
             },
         }));
+    });
+
+    it('allows the owner to store v2 summary and level progress', async () => {
+        const db = testEnv.authenticatedContext('user-a').firestore();
+        const userRef = doc(db, 'users/user-a');
+        const levelRef = doc(db, 'users/user-a/progressByLevel/A1');
+
+        await assertSucceeds(setDoc(userRef, {
+            ...validUserDocument(),
+            activeLevel: 'A1',
+            schemaVersion: 2,
+            lastActiveAt: new Date(),
+            progressSummary: {
+                byLevel: { A1: { learnedCount: 3, totalCount: 100, percent: 3 } },
+                totalLearnedCount: 3,
+                overallPercent: 3,
+                updatedAt: new Date(),
+            },
+        }));
+        await assertSucceeds(setDoc(levelRef, validLevelProgress()));
+        await assertSucceeds(getDoc(levelRef));
+        await assertSucceeds(deleteDoc(levelRef));
+    });
+
+    it('accepts the compact notification-disabled shape written during setup', async () => {
+        const db = testEnv.authenticatedContext('user-a').firestore();
+        await assertSucceeds(setDoc(doc(db, 'users/user-a'), {
+            ...validUserDocument(),
+            notificationSettings: { enabled: false },
+        }));
+    });
+
+    it('denies cross-user and unauthenticated v2 progress access', async () => {
+        const ownerDb = testEnv.authenticatedContext('owner').firestore();
+        const levelRef = doc(ownerDb, 'users/owner/progressByLevel/A1');
+        await assertSucceeds(setDoc(levelRef, validLevelProgress()));
+
+        const otherDb = testEnv.authenticatedContext('other').firestore();
+        const anonymousDb = testEnv.unauthenticatedContext().firestore();
+        await assertFails(getDoc(doc(otherDb, 'users/owner/progressByLevel/A1')));
+        await assertFails(setDoc(
+            doc(otherDb, 'users/owner/progressByLevel/A1'),
+            validLevelProgress(),
+        ));
+        await assertFails(getDoc(doc(anonymousDb, 'users/owner/progressByLevel/A1')));
+    });
+
+    it('denies malformed or mismatched v2 progress documents', async () => {
+        const db = testEnv.authenticatedContext('user-a').firestore();
+
+        await assertFails(setDoc(
+            doc(db, 'users/user-a/progressByLevel/A1'),
+            { ...validLevelProgress(), level: 'A2' },
+        ));
+        await assertFails(setDoc(
+            doc(db, 'users/user-a/progressByLevel/A1'),
+            { ...validLevelProgress(), learnedCount: 99 },
+        ));
+        await assertFails(setDoc(
+            doc(db, 'users/user-a/progressByLevel/C2'),
+            { ...validLevelProgress('C2'), version: 1 },
+        ));
+    });
+
+    it('denies client creation or mutation of server-owned migration metadata', async () => {
+        const db = testEnv.authenticatedContext('user-a').firestore();
+        const userRef = doc(db, 'users/user-a');
+        const migration = {
+            state: 'mirroring',
+            source: 'legacy-mirror',
+            legacyMirrorEnabled: true,
+            migratedAt: new Date(),
+            lastLegacyMirrorAt: new Date(),
+        };
+
+        await assertFails(setDoc(userRef, { ...validUserDocument(), progressMigration: migration }));
+        await testEnv.withSecurityRulesDisabled(async (context) => {
+            await setDoc(doc(context.firestore(), 'users/user-a'), {
+                ...validUserDocument(),
+                progressMigration: migration,
+            });
+        });
+        await assertSucceeds(setDoc(userRef, { displayName: 'Safe update' }, { merge: true }));
+        await assertFails(setDoc(userRef, {
+            progressMigration: { ...migration, state: 'verified' },
+        }, { merge: true }));
+    });
+
+    it('keeps unknown subcollections denied', async () => {
+        const db = testEnv.authenticatedContext('user-a').firestore();
+        await assertFails(setDoc(doc(db, 'users/user-a/private/data'), { value: true }));
     });
 });

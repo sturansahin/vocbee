@@ -51,11 +51,16 @@ test('emulator dry-run, transactional cleanup, post-check and rollback all succe
   const user = db.collection('users').doc('emulator-user');
   await user.set({ schemaVersion: 2, progress: legacyProgress, displayName: 'PII must never enter reports' });
   await user.collection('progressByLevel').doc('A1').set({
-    level: 'A1', learnedWordIds: [1, 2, 3], learnedCount: 3, lastWordIndex: 3, version: 1, updatedAt: new Date(),
+    level: 'A1', learnedWordIds: [1, 2, 3], learnedCount: 3, lastWordId: 3, vocabularySchemaVersion: 2, version: 2, updatedAt: new Date(),
   });
   await user.collection('progressByLevel').doc('A2').set({
-    level: 'A2', learnedWordIds: [], learnedCount: 0, lastWordIndex: 0, version: 1, updatedAt: new Date(),
+    level: 'A2', learnedWordIds: [], learnedCount: 0, lastWordId: 0, vocabularySchemaVersion: 2, version: 2, updatedAt: new Date(),
   });
+  for (const level of ['B1', 'B2', 'C1']) {
+    await user.collection('progressByLevel').doc(level).set({
+      level, learnedWordIds: [], learnedCount: 0, lastWordId: 0, vocabularySchemaVersion: 2, version: 2, updatedAt: new Date(),
+    });
+  }
 
   const dryRunPath = path.join(repositoryRoot, 'dry-run.json');
   const dryRun = await runCleanup({ options: options(dryRunPath), store, repositoryRoot });
