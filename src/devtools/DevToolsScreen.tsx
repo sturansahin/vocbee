@@ -3,7 +3,7 @@
 // (Screen Tester, Auth State, Storage Debug, Notification Debug, Firestore Model) and pick the
 // active scenario used by the read-only preview panels.
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import type { StackNavigationProp } from '@react-navigation/stack';
@@ -48,6 +48,7 @@ const MENU_ITEMS: { route: keyof DevToolsStackParamList; label: string; descript
 export function DevToolsScreen() {
   const navigation = useNavigation<Nav>();
   const [scenario] = useSelectedScenario();
+  const [touchCount, setTouchCount] = useState(0);
 
   return (
     <ScrollView style={styles.container} testID="devtools-home-screen">
@@ -55,6 +56,17 @@ export function DevToolsScreen() {
       <Text style={styles.subtitle}>
         Internal only — never available in a production build. Active scenario: {scenario.label}
       </Text>
+      <Pressable
+        accessibilityLabel="Test developer panel touch input"
+        accessibilityRole="button"
+        onPress={() => setTouchCount((count) => count + 1)}
+        style={styles.touchTest}
+        testID="devtools-touch-test"
+      >
+        <Text style={styles.touchTestText}>
+          {touchCount === 0 ? 'Touch test - tap here' : `Touch input OK - ${touchCount}`}
+        </Text>
+      </Pressable>
       {MENU_ITEMS.map((item) => (
         <Pressable
           key={item.route}
@@ -74,6 +86,17 @@ const styles = StyleSheet.create({
   container: { flex: 1, padding: 20, backgroundColor: '#fff' },
   title: { fontSize: 22, fontWeight: '800', marginBottom: 4 },
   subtitle: { fontSize: 12, color: '#666', marginBottom: 20 },
+  touchTest: {
+    alignItems: 'center',
+    backgroundColor: '#e8f7ee',
+    borderColor: '#2b9b58',
+    borderRadius: 12,
+    borderWidth: 1,
+    marginBottom: 12,
+    paddingHorizontal: 16,
+    paddingVertical: 13,
+  },
+  touchTestText: { color: '#176a39', fontSize: 14, fontWeight: '700' },
   menuItem: { paddingVertical: 14, borderBottomWidth: 1, borderBottomColor: '#eee' },
   menuItemLabel: { fontSize: 16, fontWeight: '700' },
   menuItemDescription: { fontSize: 12, color: '#777', marginTop: 2 },

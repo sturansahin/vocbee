@@ -1,6 +1,6 @@
 // src/devtools/screens/ScreenTesterScreen.tsx
 // Navigator container for ScreenTesterPanel — pushes the selected registry entry onto the
-// DevTools stack under its own route ("ScreenPreview"), passing sampleParams if any.
+// DevTools stack under the matching production route name, passing sampleParams if any.
 
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
@@ -15,7 +15,7 @@ export function ScreenTesterScreen() {
   const navigation = useNavigation<Nav>();
 
   const handleOpenScreen = (entry: ScreenRegistryEntry) => {
-    navigation.navigate('ScreenPreview', { screenId: entry.id, ...(entry.sampleParams ?? {}) });
+    navigation.navigate(entry.routeName as any, entry.sampleParams as any);
   };
 
   return <ScreenTesterPanel onOpenScreen={handleOpenScreen} />;

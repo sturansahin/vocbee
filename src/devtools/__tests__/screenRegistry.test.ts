@@ -35,8 +35,8 @@ describe('screenRegistry', () => {
 
   it('throws when given a list with duplicate ids (guards the checker itself)', () => {
     const withDuplicate: ScreenRegistryEntry[] = [
-      { id: 'A', label: 'A', component: () => null },
-      { id: 'A', label: 'A again', component: () => null },
+      { id: 'A', routeName: 'Login', label: 'A', component: () => null },
+      { id: 'A', routeName: 'SignUp', label: 'A again', component: () => null },
     ];
     expect(() => assertNoDuplicateScreenIds(withDuplicate)).toThrow(/Duplicate screenRegistry id/);
   });
@@ -53,6 +53,11 @@ describe('screenRegistry', () => {
       expect(entry.component).toBeDefined();
       expect(['function', 'object']).toContain(typeof entry.component);
     }
+  });
+
+  it('uses each production route name exactly once', () => {
+    const routeNames = SCREEN_REGISTRY.map((entry) => entry.routeName);
+    expect(new Set(routeNames).size).toBe(routeNames.length);
   });
 
   it('contains the expected real production screens (spot check)', () => {

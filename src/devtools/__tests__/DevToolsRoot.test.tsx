@@ -18,19 +18,45 @@
 
 const guardState = { isDevToolsEnabled: true };
 
+// The global Jest setup replaces useNavigation with a no-op mock for isolated screen tests.
+// DevTools interaction tests need the real navigation context so button presses exercise the
+// actual independent stack rather than a mocked navigate() function.
+jest.mock('@react-navigation/native', () => jest.requireActual('@react-navigation/native'));
+
 jest.mock('../guard', () => ({
   get isDevToolsEnabled() {
     return guardState.isDevToolsEnabled;
   },
 }));
+jest.mock('../panels/NotificationDebugPanel', () => ({
+  NotificationDebugPanel: () => null,
+}));
 
 jest.mock('@features/favorites', () => ({ FavoritesScreen: () => null }));
 jest.mock('@features/learning', () => ({
-  HomeScreen: () => null,
+  HomeScreen: () => {
+    const React = require('react');
+    const { Pressable, Text } = require('react-native');
+    const { useNavigation } = require('@react-navigation/native');
+    const navigation = useNavigation();
+
+    return React.createElement(
+      Pressable,
+      {
+        testID: 'devtools-mock-home-open-settings',
+        onPress: () => navigation.navigate('Settings'),
+      },
+      React.createElement(Text, null, 'Open settings'),
+    );
+  },
   ExampleSentencesScreen: () => null,
 }));
 jest.mock('@features/onboarding', () => () => null);
-jest.mock('@features/settings', () => () => null);
+jest.mock('@features/settings', () => () => {
+  const React = require('react');
+  const { View } = require('react-native');
+  return React.createElement(View, { testID: 'devtools-mock-settings-screen' });
+});
 jest.mock('@features/setup', () => ({ LevelTestScreen: () => null, SetupScreen: () => null }));
 jest.mock('@features/auth', () => ({
   ForgotPasswordScreen: () => null,
@@ -46,7 +72,7 @@ jest.mock('@features/auth', () => ({
 }));
 
 import React from 'react';
-import { render } from '@testing-library/react-native';
+import { act, fireEvent, render, waitFor } from '@testing-library/react-native';
 import { DevToolsRoot } from '../DevToolsRoot';
 
 describe('DevToolsRoot (production guard behavior)', () => {
@@ -65,5 +91,49 @@ describe('DevToolsRoot (production guard behavior)', () => {
     const { queryByTestId } = render(<DevToolsRoot />);
 
     expect(queryByTestId('devtools-launcher-button')).toBeTruthy();
+  });
+
+  it('opens the panel and navigates when a menu button is pressed', async () => {
+    guardState.isDevToolsEnabled = true;
+
+    const { getByTestId } = render(<DevToolsRoot />);
+
+    fireEvent.press(getByTestId('devtools-launcher-button'));
+    expect(getByTestId('devtools-home-screen')).toBeTruthy();
+
+    fireEvent.press(getByTestId('devtools-touch-test'));
+    expect(getByTestId('devtools-touch-test')).toHaveTextContent('Touch input OK - 1');
+
+    fireEvent.press(getByTestId('devtools-menu-ScreenTester'));
+
+    await waitFor(() => {
+      expect(getByTestId('devtools-screen-tester-panel')).toBeTruthy();
+    });
+
+    fireEvent.press(getByTestId('devtools-screen-entry-Home'));
+    await waitFor(() => {
+      expect(getByTestId('devtools-mock-home-open-settings')).toBeTruthy();
+    });
+
+    fireEvent.press(getByTestId('devtools-mock-home-open-settings'));
+    await waitFor(() => {
+      expect(getByTestId('devtools-mock-settings-screen')).toBeTruthy();
+    });
+
+    // Let React Navigation's mocked native animation completion callbacks settle inside act.
+    await act(async () => {
+      await new Promise((resolve) => setTimeout(resolve, 400));
+    });
+  });
+
+  it('closes the panel when the header close button is pressed', () => {
+    guardState.isDevToolsEnabled = true;
+
+    const { getByTestId, queryByTestId } = render(<DevToolsRoot />);
+
+    fireEvent.press(getByTestId('devtools-launcher-button'));
+    fireEvent.press(getByTestId('devtools-close-button'));
+
+    expect(queryByTestId('devtools-home-screen')).toBeNull();
   });
 });

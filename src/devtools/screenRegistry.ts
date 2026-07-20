@@ -13,10 +13,13 @@ import { ExampleSentencesScreen, HomeScreen } from '@features/learning';
 import OnboardingScreen from '@features/onboarding';
 import SettingsScreen from '@features/settings';
 import { LevelTestScreen, SetupScreen } from '@features/setup';
+import type { RootStackParamList } from '../app/navigation/types';
 
 export interface ScreenRegistryEntry {
-  /** Stable unique id — used as the DevTools stack route name. Must be unique across the registry. */
+  /** Stable unique id used by the Screen Tester list and test IDs. */
   id: string;
+  /** Production route name so navigation inside the real screen works in the test stack. */
+  routeName: keyof RootStackParamList;
   /** Human-readable label shown in the ScreenTesterPanel list. */
   label: string;
   /** The real, unmodified screen component. */
@@ -28,13 +31,29 @@ export interface ScreenRegistryEntry {
 }
 
 export const SCREEN_REGISTRY: ScreenRegistryEntry[] = [
-  { id: 'Onboarding', label: 'Onboarding', component: OnboardingScreen },
-  { id: 'Login', label: 'Login', component: LoginScreen },
-  { id: 'SignUp', label: 'Sign Up', component: SignUpScreen },
-  { id: 'ForgotPassword', label: 'Forgot Password', component: ForgotPasswordScreen },
-  { id: 'NativeLanguage', label: 'Setup (Native Language / steps)', component: SetupScreen },
+  {
+    id: 'Onboarding',
+    routeName: 'Onboarding',
+    label: 'Onboarding',
+    component: OnboardingScreen,
+  },
+  { id: 'Login', routeName: 'Login', label: 'Login', component: LoginScreen },
+  { id: 'SignUp', routeName: 'SignUp', label: 'Sign Up', component: SignUpScreen },
+  {
+    id: 'ForgotPassword',
+    routeName: 'ForgotPassword',
+    label: 'Forgot Password',
+    component: ForgotPasswordScreen,
+  },
+  {
+    id: 'NativeLanguage',
+    routeName: 'NativeLanguage',
+    label: 'Setup (Native Language / steps)',
+    component: SetupScreen,
+  },
   {
     id: 'LevelTest',
+    routeName: 'LevelTest',
     label: 'Level Test',
     component: LevelTestScreen,
     sampleParams: { nativeLanguage: 'turkish', targetLanguage: 'english' },
@@ -42,19 +61,27 @@ export const SCREEN_REGISTRY: ScreenRegistryEntry[] = [
   },
   {
     id: 'Home',
+    routeName: 'MainTabs',
     label: 'Home (main learning screen)',
     component: HomeScreen,
     notes: 'Reads useAuth/useMonetization from real providers.',
   },
   {
     id: 'Settings',
+    routeName: 'Settings',
     label: 'Settings',
     component: SettingsScreen,
     notes: 'Reads useAuth/useMonetization from real providers.',
   },
-  { id: 'Favorites', label: 'Favorites', component: FavoritesScreen },
+  {
+    id: 'Favorites',
+    routeName: 'Favorites',
+    label: 'Favorites',
+    component: FavoritesScreen,
+  },
   {
     id: 'ExampleSentences',
+    routeName: 'ExampleSentences',
     label: 'Example Sentences',
     component: ExampleSentencesScreen,
     sampleParams: {

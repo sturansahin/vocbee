@@ -17,16 +17,16 @@ import {
   AuthStateScreen,
   FirestoreModelScreen,
   ScenarioPickerScreen,
-  ScreenPreviewScreen,
   ScreenTesterScreen,
 } from './screens';
 import { StorageDebugPanel } from './panels/StorageDebugPanel';
 import { NotificationDebugPanel } from './panels/NotificationDebugPanel';
+import { SCREEN_REGISTRY } from './screenRegistry';
+import type { RootStackParamList } from '../app/navigation/types';
 
-export type DevToolsStackParamList = {
+export type DevToolsStackParamList = RootStackParamList & {
   DevToolsHome: undefined;
   ScreenTester: undefined;
-  ScreenPreview: { screenId: string } & Record<string, unknown>;
   ScenarioPicker: undefined;
   AuthState: undefined;
   StorageDebug: undefined;
@@ -49,6 +49,11 @@ export function DevToolsNavigator({ onClose }: DevToolsNavigatorProps) {
         screenOptions={{
           headerShown: true,
           headerBackTitleVisible: false,
+          // The test panel is an absolute overlay. It doesn't need interactive swipe-back
+          // gestures, and disabling them prevents the stack's pan handler from competing with
+          // Pressable/ScrollView touches.
+          gestureEnabled: false,
+          animationEnabled: false,
         }}
       >
         <Stack.Screen
@@ -64,11 +69,6 @@ export function DevToolsNavigator({ onClose }: DevToolsNavigatorProps) {
           name="ScreenTester"
           component={ScreenTesterScreen}
           options={{ title: 'Screen Tester' }}
-        />
-        <Stack.Screen
-          name="ScreenPreview"
-          component={ScreenPreviewScreen}
-          options={{ title: 'Screen Preview' }}
         />
         <Stack.Screen
           name="ScenarioPicker"
@@ -95,6 +95,14 @@ export function DevToolsNavigator({ onClose }: DevToolsNavigatorProps) {
           component={FirestoreModelScreen}
           options={{ title: 'Firestore Model' }}
         />
+        {SCREEN_REGISTRY.map((entry) => (
+          <Stack.Screen
+            key={entry.routeName}
+            name={entry.routeName}
+            component={entry.component}
+            options={{ title: entry.label }}
+          />
+        ))}
       </Stack.Navigator>
     </NavigationContainer>
   );

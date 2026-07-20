@@ -7,7 +7,7 @@
 // own independent `NavigationContainer` (never touching RootNavigator/RootStackParamList).
 
 import React, { useState } from 'react';
-import { Modal, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { isDevToolsEnabled } from './guard';
 import { DevToolsNavigator } from './DevToolsNavigator';
 
@@ -20,31 +20,36 @@ export function DevToolsRoot() {
 
   return (
     <>
-      <View style={styles.launcherContainer} pointerEvents="box-none">
-        <Pressable
-          testID="devtools-launcher-button"
-          style={styles.launcherButton}
-          onPress={() => setIsOpen(true)}
-          accessibilityRole="button"
-          accessibilityLabel="Open Developer Test Panel"
-        >
-          <Text style={styles.launcherButtonText}>DEV</Text>
-        </Pressable>
-      </View>
+      {!isOpen ? (
+        <View style={styles.launcherContainer} pointerEvents="box-none">
+          <Pressable
+            testID="devtools-launcher-button"
+            style={styles.launcherButton}
+            onPress={() => setIsOpen(true)}
+            accessibilityRole="button"
+            accessibilityLabel="Open Developer Test Panel"
+          >
+            <Text style={styles.launcherButtonText}>DEV</Text>
+          </Pressable>
+        </View>
+      ) : null}
 
-      <Modal
-        visible={isOpen}
-        animationType="slide"
-        onRequestClose={() => setIsOpen(false)}
-        testID="devtools-modal"
-      >
-        <DevToolsNavigator onClose={() => setIsOpen(false)} />
-      </Modal>
+      {isOpen ? (
+        <View style={styles.panelOverlay} testID="devtools-modal">
+          <DevToolsNavigator onClose={() => setIsOpen(false)} />
+        </View>
+      ) : null}
     </>
   );
 }
 
 const styles = StyleSheet.create({
+  panelOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: '#fff',
+    elevation: 10000,
+    zIndex: 10000,
+  },
   launcherContainer: {
     position: 'absolute',
     right: 12,
