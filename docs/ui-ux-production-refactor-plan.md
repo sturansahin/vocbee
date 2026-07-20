@@ -5,6 +5,8 @@ Durum: Uygulamaya hazır plan
 Ana platform: iOS  
 Son güncelleme: 2026-07-20
 
+Tek-phase uygulama promptu: `docs/ui-ux-production-implementation-prompt.md`
+
 ## 1. Yönetici özeti
 
 VocBee'nin feature/layer mimarisi production geliştirmeye uygun durumdadır. UI kodu feature
