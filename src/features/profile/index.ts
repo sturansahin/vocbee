@@ -1,4 +1,4 @@
-// src/features/profile — public barrel (docs/refactor-v2/33 §4).
+// src/features/profile — public barrel (docs/architecture.md).
 // Exposes domain types + repository INTERFACE + use-cases. Does NOT export FirestoreUserProfileRepository (impl).
 
 export * from './domain/types';

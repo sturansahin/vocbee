@@ -1,4 +1,4 @@
-// Real migration transform tests — covers the full edge-case list from docs/refactor-v2/37 §4.
+// Real migration transform tests — covers the full edge-case list from docs/architecture.md
 // These must pass before any migration is considered "ready" (no Firebase / emulator needed — pure functions).
 import {
   adaptLegacyLearnedWordsToProgressByLevelDocs,
@@ -10,7 +10,7 @@ import {
   verifyMigrationCounts,
 } from '../progressAdapters';
 
-describe('adaptLegacyLearnedWordsToProgressByLevelDocs — edge cases (docs/refactor-v2/37 §4)', () => {
+describe('adaptLegacyLearnedWordsToProgressByLevelDocs — edge cases (docs/architecture.md)', () => {
   it('converts learned word ids by level; currentLevel carries lastWordIndex', () => {
     const docs = adaptLegacyLearnedWordsToProgressByLevelDocs({
       learnedWords: { A1: [1, 2, 3], A2: [10] },
@@ -97,7 +97,7 @@ describe('adaptLegacyLearnedWordsToProgressByLevelDocs — edge cases (docs/refa
   });
 });
 
-describe('verifyMigrationCounts — copy/verify safety (docs/refactor-v2/08 §7)', () => {
+describe('verifyMigrationCounts — copy/verify safety (docs/architecture.md)', () => {
   it('ok=true when counts match (clean data)', () => {
     const legacy = { learnedWords: { A1: [1, 2, 3], A2: [10] } };
     const models = adaptLegacyLearnedWordsToProgressByLevelDocs(legacy);

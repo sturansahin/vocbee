@@ -1,4 +1,4 @@
-// src/features/auth — public barrel (docs/refactor-v2/33 §4).
+// src/features/auth — public barrel (docs/architecture.md).
 // Exposes domain types/rules, repository INTERFACE, and use-cases.
 // Does NOT export FirebaseAuthRepository (data impl) — bound only at a composition root.
 

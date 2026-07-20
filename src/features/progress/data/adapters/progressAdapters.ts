@@ -1,7 +1,7 @@
 // src/features/progress/data/adapters/progressAdapters.ts
 // Layer: data (adapters) | Feature: progress. PURE functions (Timestamp/FieldValue are TYPE-ONLY imports —
 // no Firestore SDK is loaded), so the migration transform is fully unit-testable without an emulator.
-// The repository injects serverTimestamp() as `updatedAt` at write time (docs/refactor-v2/34 §5, /35 §10).
+// The repository injects serverTimestamp() as `updatedAt` at write time (docs/architecture.md).
 
 import type { FieldValue, Timestamp } from 'firebase/firestore';
 import { LEVELS, isLevel, type Level, type LevelProgress } from '../../domain/types';
@@ -109,7 +109,7 @@ export function fromProgressByLevelDoc(doc: ProgressByLevelDoc): LevelProgress {
   return model;
 }
 
-/** Build the main-doc progressSummary. totalCount per level comes from LOCAL vocabulary (docs/refactor-v2/34 §5). */
+/** Build the main-doc progressSummary. totalCount per level comes from LOCAL vocabulary (docs/architecture.md). */
 export function buildProgressSummary(
   models: ProgressByLevelWriteModel[],
   totalCountByLevel: Partial<Record<Level, number>>,
@@ -155,7 +155,7 @@ export function sumProgressByLevelModels(models: ProgressByLevelWriteModel[]): n
 }
 
 /**
- * Migration verify (docs/refactor-v2/08 §7): old raw total must equal new total.
+ * Migration verify (docs/architecture.md): old raw total must equal new total.
  * ok=false (e.g. duplicates, non-number entries, or words under an invalid level key were dropped)
  * means the migration MUST STOP for that user and be reviewed before any write.
  */

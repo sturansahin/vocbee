@@ -1,7 +1,7 @@
 // src/features/auth/domain/rules.ts
-// Layer: domain | Feature: auth | Pure TS (NO SDK — docs/refactor-v2/33).
+// Layer: domain | Feature: auth | Pure TS (NO SDK — docs/architecture.md).
 // Verbatim-equivalent extraction of the rules currently inlined in context/AuthContext.tsx
-// (behavior contract — docs/refactor-v2/03 §3, /24 §9). Values MUST match the existing logic.
+// (behavior contract — docs/architecture.md). Values MUST match the existing logic.
 
 // Recent-login window for sensitive operations (account deletion). Matches AuthContext.RECENT_LOGIN_WINDOW_MS.
 export const RECENT_LOGIN_WINDOW_MS = 5 * 60 * 1000;

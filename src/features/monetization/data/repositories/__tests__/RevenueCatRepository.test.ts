@@ -1,6 +1,6 @@
 // src/features/monetization/data/repositories/__tests__/RevenueCatRepository.test.ts
 // Repository test against the real class, with react-native-purchases mocked globally (jest.setup.js).
-// Covers restore flow + error fallback (docs/refactor-v2/28 §11, /37 §10).
+// Covers restore flow + error fallback (docs/architecture.md).
 
 import Purchases from 'react-native-purchases';
 import { RevenueCatRepositoryImpl } from '../RevenueCatRepository';

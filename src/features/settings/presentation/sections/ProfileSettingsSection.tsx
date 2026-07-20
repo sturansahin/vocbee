@@ -1,7 +1,7 @@
 // src/features/settings/presentation/sections/ProfileSettingsSection.tsx
 // Pure presentational extraction of the profile header block (avatar + name + email + edit
 // button) from screens/SettingsScreen.tsx (ADIM 3, UI-only section extraction —
-// docs/refactor-v2/27). VERBATIM JSX/styles — no logic. SettingsScreen still owns all profile
+// docs/architecture.md). VERBATIM JSX/styles — no logic. SettingsScreen still owns all profile
 // state (profile, image picker modal visibility) and handlers (openEditProfileModal, image press).
 
 import React from 'react';

@@ -108,7 +108,7 @@ test('emulator dry-run, transactional cleanup, post-check and rollback all succe
       backupCreatedAt: '2026-07-17T12:00:00.000Z',
       backupRetentionDays: 7,
       restoreVerifiedAt: '2026-07-17T12:05:00.000Z',
-      rollbackPlan: 'docs/refactor-v2/prompt-9-firestore-cleanup-runbook.md',
+      rollbackPlan: 'docs/firestore-legacy-cleanup-runbook.md',
       compatibilityWindow: 'closed',
       dualWrite: 'disabled',
       approvalId: 'emulator-second-approval',

@@ -1,4 +1,4 @@
-// Cache-first profile load test with a fake UserProfileRepository (docs/refactor-v2/35 §2.6, /37 §3).
+// Cache-first profile load test with a fake UserProfileRepository (docs/architecture.md).
 import { makeLoadProfile } from '../useCases/loadProfile';
 import type { UserProfileRepository } from '../../data/contracts';
 import type { Profile } from '../../domain/types';

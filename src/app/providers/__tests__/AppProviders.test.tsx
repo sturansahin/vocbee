@@ -1,5 +1,5 @@
 // Verifies AppProviders renders the provider chain in the EXACT contracted order
-// (docs/refactor-v2/03 §1, /22 §9) and passes children through. Heavy providers are mocked
+// (docs/architecture.md) and passes children through. Heavy providers are mocked
 // (AuthProvider would otherwise touch Firebase), so this isolates the composition/order.
 
 import React from 'react';

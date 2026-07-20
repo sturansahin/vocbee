@@ -1,5 +1,5 @@
 // src/features/monetization/presentation/MonetizationProvider.tsx
-// Thin state provider, moved from context/MonetizationContext.tsx (docs/refactor-v2/14, /28 PR-8.4).
+// Thin state provider, moved from context/MonetizationContext.tsx (docs/architecture.md).
 // Behavior preserved exactly: same effects/order, same public shape via useMonetization(). The only
 // change is that all RevenueCat calls now go through `monetizationFacade` (application layer) instead
 // of calling services/revenueCatService.ts functions directly.

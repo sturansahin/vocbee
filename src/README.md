@@ -1,14 +1,14 @@
-# `src/` — Feature-Based Layered Architecture (refactor-v2)
+# `src/` — Feature-Based Layered Architecture
 
-Production application code lives exclusively in this feature-based layered tree. The Phase 9
-cleanup removed the former root compatibility folders (`screens/`, `services/`, `context/`,
-`components/`, `utils/`, `config/`).
+Production application code lives exclusively in this feature-based layered tree. The former root
+compatibility folders (`screens/`, `services/`, `context/`, `components/`, `utils`, `config`) are
+retired.
 
 ```
 src/
-  app/        # application bootstrap (providers, navigation, lifecycle, bootstrap, config) — filled Phase 2
+  app/        # application bootstrap, providers, navigation, lifecycle and composition
   shared/     # cross-cutting infra (ui, theme, storage, firebase, api, i18n, utils, errors, types)
-  features/   # feature modules (presentation/application/domain/data) — filled Phase 2+
+  features/   # feature modules (presentation/application/domain/data/composition)
 ```
 
 Supported path aliases are intentionally scoped to architecture owners:
@@ -16,3 +16,6 @@ Supported path aliases are intentionally scoped to architecture owners:
 
 The root `App.tsx` is the only mobile entry adapter retained because Expo's default
 `expo/AppEntry.js` resolves that module. It contains no application logic.
+
+The current dependency rules, provider contract, protected product behavior and production
+verification commands are documented in `docs/architecture.md`.

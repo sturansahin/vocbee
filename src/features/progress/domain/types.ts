@@ -1,5 +1,5 @@
 // src/features/progress/domain/types.ts
-// Layer: domain | Feature: progress | Pure TS (NO SDK imports — docs/refactor-v2/33, /34 §2).
+// Layer: domain | Feature: progress | Pure TS (NO SDK imports — docs/architecture.md).
 // Dates are NOT represented here (no Firestore Timestamp); date/Timestamp conversion lives in data/adapters.
 
 export type Level = 'A1' | 'A2' | 'B1' | 'B2' | 'C1';

@@ -1,4 +1,4 @@
-// Pure .txt -> VocabularyWord[] adapter (docs/refactor-v2/37 §2).
+// Pure .txt -> VocabularyWord[] adapter (docs/architecture.md).
 import { parseVocabularyTxt } from '../wordAdapter';
 
 describe('parseVocabularyTxt', () => {

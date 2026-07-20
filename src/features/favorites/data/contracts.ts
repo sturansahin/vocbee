@@ -1,5 +1,5 @@
 // src/features/favorites/data/contracts.ts
-// Layer: data (contracts) | Feature: favorites. Interface only — PREP (docs/refactor-v2/35 §5).
+// Layer: data (contracts) | Feature: favorites. Interface only — PREP (docs/architecture.md).
 // services/favoritesService.ts keeps running as-is; this is the target shape that encapsulates the
 // direct Firestore access (currently inlined in favoritesService) for an incremental migration.
 

@@ -1,6 +1,6 @@
 // src/app/navigation/RootNavigator.tsx
 // Extracted VERBATIM from App.tsx (AppContent's NavigationContainer render) in Phase 2
-// (docs/refactor-v2/22). Behavior unchanged: same routes, same order, same theme mapping,
+// (docs/architecture.md). Behavior unchanged: same routes, same order, same theme mapping,
 // same screenOptions. No new routes/screens.
 
 import React, { useMemo } from 'react';

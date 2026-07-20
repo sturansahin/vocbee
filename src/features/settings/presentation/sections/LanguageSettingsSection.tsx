@@ -1,6 +1,6 @@
 // src/features/settings/presentation/sections/LanguageSettingsSection.tsx
 // Pure presentational extraction of the language-related settings rows from
-// screens/SettingsScreen.tsx (ADIM 3, UI-only section extraction — docs/refactor-v2/27):
+// screens/SettingsScreen.tsx (ADIM 3, UI-only section extraction — docs/architecture.md):
 // the "Preferences > Language" row (opens the language picker modal) and the "Progress > Change
 // Level" + "Progress > Change Language" rows. VERBATIM JSX/styles — no logic. SettingsScreen still
 // owns all language/level state and handlers (setShowLanguagePicker, setShowLevelPicker, the

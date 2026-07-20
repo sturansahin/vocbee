@@ -1,5 +1,5 @@
 // src/app/bootstrap/useAppBootstrap.ts
-// Extracted VERBATIM from App.tsx's App() font/splash bootstrap in Phase 2 (docs/refactor-v2/22).
+// Extracted VERBATIM from App.tsx's App() font/splash bootstrap in Phase 2 (docs/architecture.md).
 // Same effects, same order, same conditions. Returns `fontsReady` (custom fonts AND icon fonts loaded);
 // the caller renders null until this is true — identical to the original gate.
 

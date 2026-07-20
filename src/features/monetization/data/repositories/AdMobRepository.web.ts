@@ -1,5 +1,5 @@
 // src/features/monetization/data/repositories/AdMobRepository.web.ts
-// Web no-op implementation, moved verbatim from services/adMobService.web.ts (docs/refactor-v2/28,
+// Web no-op implementation, moved verbatim from services/adMobService.web.ts (docs/architecture.md,
 // PR-8.3). Metro/webpack resolve this file automatically for web builds via the `.web.ts` suffix.
 
 import type { AdIds, AdRequestOptionsLike } from '../../domain/types';

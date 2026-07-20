@@ -1,5 +1,5 @@
 // Phase 1 smoke test: verifies the @shared alias resolves (tsconfig + jest moduleNameMapper + babel)
-// and that the moved storage keys are byte-identical (behavior contract — docs/refactor-v2/03, /21 §9).
+// and that the moved storage keys are byte-identical (behavior contract — docs/architecture.md).
 import { STORAGE_KEYS } from '@shared/storage';
 import { AppError, isAppError } from '@shared/errors';
 

@@ -1,5 +1,5 @@
 // src/features/settings/presentation/sections/index.ts
-// Barrel for SettingsScreen's extracted pure UI sections (ADIM 3 — docs/refactor-v2/27 UI-only
+// Barrel for SettingsScreen's extracted pure UI sections (ADIM 3 — docs/architecture.md UI-only
 // extraction). No business logic; every section here is presentational and receives all data via
 // typed props from screens/SettingsScreen.tsx.
 

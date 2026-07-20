@@ -1,5 +1,5 @@
 // src/features/monetization/application/MonetizationFacade.ts
-// Orchestrates RevenueCatRepository + AdMobRepository behind a single facade (docs/refactor-v2/06 §C
+// Orchestrates RevenueCatRepository + AdMobRepository behind a single facade (docs/architecture.md
 // Facade Pattern, /14, /28 PR-8.4). No SDK calls here — only repository-interface calls + domain rules.
 // MonetizationProvider (presentation) depends on this facade instead of talking to the repositories
 // directly, keeping the provider a thin state container.

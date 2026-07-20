@@ -1,4 +1,4 @@
-// Pure domain rules — must match services/progressService.ts formulas (behavior contract, docs/refactor-v2/03).
+// Pure domain rules — must match services/progressService.ts formulas (behavior contract, docs/architecture.md).
 import { calcLevelPercent, isLevelComplete, computeOverallPercent } from '../rules';
 
 describe('progress domain rules', () => {

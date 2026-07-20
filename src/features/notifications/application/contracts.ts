@@ -1,6 +1,6 @@
 // src/features/notifications/application/contracts.ts
 // Layer: application (contracts) | Feature: notifications. The simple facade surface that App/lifecycle
-// calls (docs/refactor-v2/12, /35 §6).
+// calls (docs/architecture.md).
 
 import type {
   NotificationPermissionState,

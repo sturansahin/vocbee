@@ -1,6 +1,6 @@
 // src/features/vocabulary/domain/types.ts
 // Layer: domain | Feature: vocabulary | Pure TS (NO SDK).
-// Mirrors the real shapes in services/vocabularyService.ts (binding — docs/refactor-v2/34, /35 §4).
+// Mirrors the real shapes in services/vocabularyService.ts (binding — docs/architecture.md).
 
 export type Level = 'A1' | 'A2' | 'B1' | 'B2' | 'C1';
 export const LEVELS: Level[] = ['A1', 'A2', 'B1', 'B2', 'C1'];

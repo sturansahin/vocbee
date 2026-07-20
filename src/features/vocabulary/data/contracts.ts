@@ -1,5 +1,5 @@
 // src/features/vocabulary/data/contracts.ts
-// Layer: data (contracts) | Feature: vocabulary. Interface only (docs/refactor-v2/35 §4).
+// Layer: data (contracts) | Feature: vocabulary. Interface only (docs/architecture.md).
 // Local-first: words come from assets/vocabulary/*.txt + AsyncStorage cache — NEVER Firestore.
 
 import type { Level, VocabularyWord } from '../domain/types';

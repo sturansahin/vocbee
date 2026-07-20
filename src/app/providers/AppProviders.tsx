@@ -1,6 +1,6 @@
 // src/app/providers/AppProviders.tsx
-// Extracted VERBATIM from App.tsx's provider chain in Phase 2 (docs/refactor-v2/22).
-// Provider order is a BINDING behavior contract (docs/refactor-v2/03 §1, /22 §9) — DO NOT reorder:
+// Extracted VERBATIM from App.tsx's provider chain in Phase 2 (docs/architecture.md).
+// Provider order is a BINDING behavior contract (docs/architecture.md) — DO NOT reorder:
 //   SafeAreaProvider > ThemeProvider > AlertProvider > AuthProvider > MonetizationProvider
 //   > ErrorBoundary > GestureHandlerRootView > (OfflineNotice + children)
 

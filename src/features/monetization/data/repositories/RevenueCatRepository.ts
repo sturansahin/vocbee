@@ -1,10 +1,10 @@
 // src/features/monetization/data/repositories/RevenueCatRepository.ts
-// Real RevenueCat SDK access, moved verbatim from services/revenueCatService.ts (docs/refactor-v2/28,
+// Real RevenueCat SDK access, moved verbatim from services/revenueCatService.ts (docs/architecture.md,
 // PR-8.2). Behavior preserved exactly: same API key resolution, same production-safety assertions,
 // same subscriber-attribute sync, same paywall/restore/customer-center flows.
 //
 // This is the ONLY file in the monetization feature that imports `react-native-purchases` /
-// `react-native-purchases-ui` (docs/refactor-v2/33 — SDK access confined to `data`).
+// `react-native-purchases-ui` (docs/architecture.md — SDK access confined to `data`).
 
 import { Platform } from 'react-native';
 import Purchases, {

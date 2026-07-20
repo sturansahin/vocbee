@@ -1,5 +1,5 @@
 // src/features/home/presentation/components/index.ts
-// Barrel for HomeScreen's extracted pure UI components (ADIM 2 — docs/refactor-v2/25 UI-only
+// Barrel for HomeScreen's extracted pure UI components (ADIM 2 — docs/architecture.md UI-only
 // extraction). No business logic; every component here is presentational and receives all data
 // via typed props from screens/HomeScreen.tsx.
 

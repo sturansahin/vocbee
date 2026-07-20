@@ -1,5 +1,5 @@
 // src/features/monetization/application/__tests__/MonetizationFacade.test.ts
-// Fake-repository use-case tests (docs/refactor-v2/37 §3, /28 §11). No SDK involved — verifies the
+// Fake-repository use-case tests (docs/architecture.md). No SDK involved — verifies the
 // facade delegates correctly and applies the gating rule before calling AdMob repository methods.
 
 import { MonetizationFacade } from '../MonetizationFacade';

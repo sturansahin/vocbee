@@ -1,4 +1,4 @@
-# Prompt 9 — Production Approval Checklist
+# Firestore Legacy Cleanup — Production Approval Checklist
 
 Bu dosya secret, service-account JSON, ham payload, UID, email veya displayName içermez. Değerler yalnız owner ve
 operasyon ekibi tarafından doğrulandıktan sonra doldurulur. Bugünkü durum `NOT APPROVED`dır.

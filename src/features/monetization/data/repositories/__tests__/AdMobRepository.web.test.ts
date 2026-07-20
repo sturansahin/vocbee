@@ -1,5 +1,5 @@
 // src/features/monetization/data/repositories/__tests__/AdMobRepository.web.test.ts
-// Web no-op variant test (docs/refactor-v2/28 §11: "web no-op").
+// Web no-op variant test (docs/architecture.md: "web no-op").
 
 import { AdMobRepositoryImpl, AD_IDS } from '../AdMobRepository.web';
 

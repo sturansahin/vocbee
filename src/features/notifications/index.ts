@@ -1,4 +1,4 @@
-// src/features/notifications — public barrel (docs/refactor-v2/33 §4).
+// src/features/notifications — public barrel (docs/architecture.md).
 // Exposes the stable notification public API. Concrete SDK adapters remain internal to composition.
 
 export * from './domain/constants';

@@ -1,11 +1,11 @@
 /**
- * scripts/migrateProgressByLevel.ts — DRY-RUN MIGRATION SKELETON (docs/refactor-v2/08, /34 §6)
+ * scripts/migrateProgressByLevel.ts — progress-v2 dry-run migration skeleton.
  *
  * ⚠️ SERVER-SIDE ADMIN SCRIPT — NOT part of the mobile bundle, NOT auto-run, NOT executed in this phase.
  * ⚠️ DEFAULT IS SAFE: dry-run only (reads + reports). It performs NO writes unless explicitly forced,
  *    and even then it only COPIES (never deletes the legacy `progress` field — cleanup is Phase 9).
  *
- * Preconditions before ANY real run (docs/refactor-v2/08 §1, /23 §16):
+ * Preconditions before ANY real run (see docs/progress-v2-rollout.md):
  *   1) Verified Firestore backup exists:  gcloud firestore export gs://<bucket>/pre-v2-<date>
  *   2) progressByLevel security rules deployed + verified via `npm run test:rules` (needs Java/emulator)
  *   3) Dry-run reports `mismatched=0`
@@ -26,7 +26,7 @@ import type { LegacyProgressDoc } from '../src/features/progress/data/dto';
 // Default to DRY_RUN unless explicitly disabled — safe by construction.
 const DRY_RUN = process.env.DRY_RUN !== '0';
 
-/** PII protection (docs/refactor-v2/08 §PII): never log raw uid/email/displayName. */
+/** PII protection: never log raw uid/email/displayName. */
 function maskUid(uid: string): string {
   return uid.length <= 6 ? '***' : `${uid.slice(0, 4)}…${uid.slice(-2)}`;
 }
@@ -41,7 +41,7 @@ interface MigrationSummary {
 
 async function main(): Promise<void> {
   // NOTE: Admin SDK init + user iteration are intentionally left as a documented skeleton.
-  // They require firebase-admin + a service account on a server (docs/refactor-v2/09). Example shape:
+  // They require firebase-admin + a service account on a server. Example shape:
   //
   //   import { applicationDefault, initializeApp } from 'firebase-admin/app';
   //   import { getFirestore } from 'firebase-admin/firestore';
@@ -77,7 +77,7 @@ async function main(): Promise<void> {
     summary.planned += models.length;
     if (!ok) summary.mismatched++;
 
-    // PII-masked per-user line (docs/refactor-v2/08 §dry-run)
+    // PII-masked per-user line for dry-run evidence.
     const perLevel = models.map((m) => `${m.level}: ?→${m.learnedWordIds.length}`).join(', ');
     // eslint-disable-next-line no-console
     console.log(
@@ -96,7 +96,7 @@ async function main(): Promise<void> {
   // Silence "unused in skeleton" while keeping the real signature visible.
   void processUser;
 
-  // ── Summary + STOP rule (docs/refactor-v2/34 §6): mismatched > 0 halts the migration ──
+  // ── Summary + STOP rule: mismatched > 0 halts the migration ──
   // eslint-disable-next-line no-console
   console.log(`SUMMARY ${JSON.stringify(summary)}`);
   if (summary.mismatched > 0) {

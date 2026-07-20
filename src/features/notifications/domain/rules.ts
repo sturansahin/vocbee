@@ -1,5 +1,5 @@
 // src/features/notifications/domain/rules.ts
-// Layer: domain | Feature: notifications | Pure TS (NO SDK). docs/refactor-v2/12, /26 §8, /37 §7.
+// Layer: domain | Feature: notifications | Pure TS (NO SDK). docs/architecture.md
 
 import {
   DEFAULT_NOTIFICATION_FREQUENCY_KEY,
@@ -19,7 +19,7 @@ import {
 /**
  * Daily slot count for the given window + frequency.
  * VERBATIM extraction of services/notificationService.getDailyNotificationSlotCount
- * (behavior contract — docs/refactor-v2/03 §9). Examples (must match existing tests):
+ * (behavior contract — docs/architecture.md). Examples (must match existing tests):
  *   09:00–21:00 @ 120min  -> floor(720/120)+1 = 7
  *   full day    @ 60min   -> floor((1440-1)/60)+1 = 24
  */
@@ -208,7 +208,7 @@ export function serializePendingWord(word: PendingNotificationWord): string {
 
 /**
  * VERBATIM extraction of services/notificationService.parsePendingNotificationWord
- * (behavior contract — docs/refactor-v2/03 §9). Supports:
+ * (behavior contract — docs/architecture.md). Supports:
  *   1. Current JSON payload: {"wordId": number, level?, targetLanguage?}
  *   2. Legacy JSON payload with a string wordId (parsed via parseInt).
  *   3. Legacy plain-numeric-string payload (pre-JSON format, no JSON.parse success).

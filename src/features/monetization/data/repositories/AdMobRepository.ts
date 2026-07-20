@@ -1,9 +1,9 @@
 // src/features/monetization/data/repositories/AdMobRepository.ts
-// Real AdMob SDK access, moved verbatim from services/adMobService.ts (docs/refactor-v2/28, PR-8.3).
+// Real AdMob SDK access, moved verbatim from services/adMobService.ts (docs/architecture.md).
 // Behavior preserved exactly: same consent (UMP) flow, same ATT flow, same interstitial load/show
 // lifecycle + timeouts, same app-open ad launch-count gating, same Expo Go / native-module-unavailable
 // fallbacks. This is the ONLY file that imports `react-native-google-mobile-ads` /
-// `expo-tracking-transparency` (docs/refactor-v2/33 — SDK access confined to `data`).
+// `expo-tracking-transparency` (docs/architecture.md — SDK access confined to `data`).
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Constants, { ExecutionEnvironment } from 'expo-constants';

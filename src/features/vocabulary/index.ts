@@ -1,4 +1,4 @@
-// src/features/vocabulary — public barrel (docs/refactor-v2/33 §4).
+// src/features/vocabulary — public barrel (docs/architecture.md).
 // Exposes domain types/constants, pure rules, and the repository INTERFACE.
 // Does NOT export AssetVocabularyRepository (impl).
 

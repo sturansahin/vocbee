@@ -1,7 +1,7 @@
 // src/features/home/presentation/components/HomeWordCardSection.tsx
 // Pure presentational extraction of the card-stack area (background card + swipeable top card +
 // bee animation layer) from screens/HomeScreen.tsx (ADIM 2, UI-only extraction —
-// docs/refactor-v2/25). VERBATIM JSX/styles — every prop below is exactly the value/handler/ref
+// docs/architecture.md). VERBATIM JSX/styles — every prop below is exactly the value/handler/ref
 // HomeScreen already owned; nothing here computes state, calls services, or touches
 // AsyncStorage/Firebase. PanResponder, Animated.Value instances, and all callbacks are created and
 // owned by HomeScreen and passed down; this component only renders them.

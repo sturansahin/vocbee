@@ -1,11 +1,11 @@
 // src/features/progress/data/contracts.ts
 // Layer: data (contracts) | Feature: progress. Interfaces only (domain types in/out — no DTO leakage).
-// application/presentation depend ONLY on these interfaces (DIP — docs/refactor-v2/06, /33, /35 §3).
+// application/presentation depend ONLY on these interfaces (DIP — docs/architecture.md).
 
 import type { Level, LevelProgress, ProgressSummary } from '../domain/types';
 import type { LegacyProgressDoc } from './dto';
 
-/** Remote (Firestore) progress access with v2 progressByLevel + legacy dual-read (docs/refactor-v2/34 §9). */
+/** Remote (Firestore) progress access with v2 progressByLevel + legacy dual-read (docs/architecture.md). */
 export interface RemoteProgressRepository {
   getProgressSummary(userId: string): Promise<ProgressSummary>;
   /** Dual-read: progressByLevel/{level} first, else adapt legacy progress.learnedWords[level]. */
@@ -24,5 +24,5 @@ export interface LocalProgressRepository {
   getLastWordId(): Promise<number | null>;
 }
 
-/** Composite repository (docs/refactor-v2/35 §3). Implementations are split (Firestore + Local). */
+/** Composite repository (docs/architecture.md). Implementations are split (Firestore + Local). */
 export type ProgressRepository = RemoteProgressRepository & LocalProgressRepository;

@@ -1,6 +1,6 @@
 // src/features/monetization/data/contracts.ts
-// Repository interfaces (docs/refactor-v2/35 §9). Application depends only on these interfaces,
-// never on the concrete RevenueCat/AdMob SDK-backed implementations (docs/refactor-v2/33 import matrix).
+// Repository interfaces (docs/architecture.md). Application depends only on these interfaces,
+// never on the concrete RevenueCat/AdMob SDK-backed implementations (docs/architecture.md import matrix).
 
 import type {
   AdIds,

@@ -1,6 +1,6 @@
 // src/features/home/presentation/components/HomeTutorialSection.tsx
 // Pure presentational extraction of the tutorial highlight renderer + overlay wrapper from
-// screens/HomeScreen.tsx (ADIM 2, UI-only extraction — docs/refactor-v2/25). VERBATIM JSX/styles:
+// screens/HomeScreen.tsx (ADIM 2, UI-only extraction — docs/architecture.md). VERBATIM JSX/styles:
 // `renderTutorialHighlight` (steps 3-6 floating highlight clones) and the `HomeTutorialOverlay`
 // wrapper (absolute-fill container + step-advance callback wiring). All step/word state and
 // handlers (favorite toggle, word press, example press, more-example press, tutorial

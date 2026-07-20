@@ -1,6 +1,6 @@
 // src/features/auth/data/contracts.ts
 // Layer: data (contracts) | Feature: auth. Interface only (provider-agnostic AuthUser in/out).
-// application/use-cases depend ONLY on this interface (DIP — docs/refactor-v2/06, /33, /35 §1).
+// application/use-cases depend ONLY on this interface (DIP — docs/architecture.md).
 
 import type { AuthProfilePatch, AuthSignInResult, AuthUser } from '../domain/types';
 

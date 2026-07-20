@@ -1,4 +1,4 @@
-// Pure notification domain rules (docs/refactor-v2/37 §7). getDailyNotificationSlotCount cases match
+// Pure notification domain rules (docs/architecture.md). getDailyNotificationSlotCount cases match
 // the outputs exercised by services/__tests__/notificationService.test.ts.
 import {
   getDailyNotificationSlotCount,

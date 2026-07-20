@@ -32,7 +32,7 @@ dist-ssr
 
 .vercel
 
-# ---- Phase 0 security & artifact hardening (refactor-v2) ----
+# ---- Security and artifact hardening ----
 # Env files: ignore all variants but KEEP the committed template (.env.example)
 .env*
 !.env.example
@@ -69,5 +69,4 @@ Thumbs.db
 
 # NOTE: google-services.json and GoogleService-Info.plist are currently tracked
 # (required by EAS builds) and are intentionally NOT added here. Moving them to
-# EAS "secure files" + untracking is a separate, approval-required step
-# (see docs/refactor-v2/phase-0-baseline-report.md section 5 and doc 09).
+# EAS "secure files" + untracking is a separate, approval-required step.

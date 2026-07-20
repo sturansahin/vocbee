@@ -1,7 +1,7 @@
 // src/features/progress/domain/rules.ts
 // Layer: domain | Feature: progress | Pure TS (NO SDK).
 // These are the PURE extraction of the existing services/progressService.ts formulas — values must match
-// exactly (behavior contract, docs/refactor-v2/03):
+// exactly (behavior contract, docs/architecture.md):
 //   getLevelProgress: totalWords === 0 ? 0 : Math.round((learnedCount / totalWords) * 100)
 //   isLevelComplete:  totalWords > 0 && learnedCount >= totalWords
 //   getOverallStats:  totalWords > 0 ? Math.round((totalLearned / totalWords) * 100) : 0

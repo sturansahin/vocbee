@@ -1,10 +1,10 @@
 // src/features/setup/domain/rules.ts
-// Layer: domain | Feature: setup | Pure TS (NO SDK). docs/refactor-v2/13, /27, /37 §9.
+// Layer: domain | Feature: setup | Pure TS (NO SDK). docs/architecture.md
 
 import type { UserPreferences } from './types';
 
 // Supported languages — VERBATIM from firestore.rules validLanguage (21 languages) so client-side
-// validation matches what the server rules accept (behavior contract — docs/refactor-v2/03 §2, /09).
+// validation matches what the server rules accept (behavior contract — docs/architecture.md).
 export const SUPPORTED_LANGUAGES = [
   'amharic',
   'arabic',

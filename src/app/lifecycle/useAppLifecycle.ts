@@ -1,8 +1,8 @@
 // src/app/lifecycle/useAppLifecycle.ts
 // Extracted VERBATIM from App.tsx's AppContent (everything except the render) in Phase 2
-// (docs/refactor-v2/22). The refs, state, callbacks and the 8 effects are copied with the
+// (docs/architecture.md). The refs, state, callbacks and the 8 effects are copied with the
 // SAME ORDER, SAME dependency arrays and SAME bodies — trigger order/conditions are a binding
-// behavior contract (docs/refactor-v2/03 §1, /22 §9). No logic changes.
+// behavior contract (docs/architecture.md). No logic changes.
 //
 // navigationTheme + StatusBar (which also used useTheme) moved to RootNavigator; this hook no
 // longer needs useTheme. All other behavior is identical.

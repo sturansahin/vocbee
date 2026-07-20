@@ -1,6 +1,6 @@
 // src/features/notifications/domain/constants.ts
 // Layer: domain | Feature: notifications | Pure TS (NO SDK).
-// VERBATIM values from services/notificationService.ts (binding behavior — docs/refactor-v2/03 §9, /12, /26 §9).
+// VERBATIM values from services/notificationService.ts (binding behavior — docs/architecture.md).
 
 export const MAX_SCHEDULED_NOTIFICATIONS = 64;
 export const STREAK_NOTIFICATION_RESERVED_SLOTS = 1;

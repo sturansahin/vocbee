@@ -1,7 +1,7 @@
 // src/features/settings/presentation/sections/PremiumSettingsSection.tsx
 // Pure presentational extraction of the "Premium" settings card (remove ads / restore purchases /
 // manage subscription rows) from screens/SettingsScreen.tsx (ADIM 3, UI-only section extraction —
-// docs/refactor-v2/27). VERBATIM JSX/styles — no logic. SettingsScreen still owns all monetization
+// docs/architecture.md). VERBATIM JSX/styles — no logic. SettingsScreen still owns all monetization
 // state (isAdFree, isPremiumLoading, premiumAction, activeEntitlement) and handlers
 // (handleRemoveAdsPress, handleRestorePurchasesPress, handleManageSubscriptionPress).
 

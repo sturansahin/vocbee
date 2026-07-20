@@ -1,4 +1,4 @@
-# Prompt 9 — Firestore Legacy Cleanup Runbook
+# Firestore Legacy Cleanup Runbook
 
 Bu runbook `users/{uid}.progress` alanının v2 `progressByLevel` rollout'u tamamlandıktan sonra güvenli biçimde
 temizlenmesi içindir. Bugünkü checkout'ta rollout tamamlanmadığından production execute yetkili değildir.
@@ -112,7 +112,7 @@ npm run firestore:cleanup -- \
   --project '<EXPLICIT_PROJECT_ID>' \
   --environment '<dev|staging|production>' \
   --credential-identity '<VERIFIED_SERVICE_ACCOUNT_EMAIL>' \
-  --report 'docs/refactor-v2/artifacts/prompt-9-production-dry-run.json'
+  --report 'docs/artifacts/firestore-legacy-cleanup-production-dry-run.json'
 ```
 
 Beklenen karar: `counts.mismatched=0`. Report'taki `candidates`, ikinci owner onayındaki
@@ -137,7 +137,8 @@ dualWrite=disabled
 approvalId=<IMMUTABLE_APPROVAL_ID>
 ```
 
-Execute ancak bu onay `43-current-refactor-gap-report.md` ledger'ına redacted referansla işlendiğinde çalıştırılır:
+Execute ancak bu onay repository dışında değiştirilemez bir operasyon kaydına PII içermeyen referansla
+işlendiğinde çalıştırılır:
 
 ```bash
 GOOGLE_APPLICATION_CREDENTIALS='/secure/outside-repo/service-account.json' \
@@ -145,7 +146,7 @@ npm run firestore:cleanup -- \
   --project '<EXACT_PROJECT_ID>' \
   --environment production \
   --credential-identity '<VERIFIED_SERVICE_ACCOUNT_EMAIL>' \
-  --report 'docs/refactor-v2/artifacts/prompt-9-production-execute-report.json' \
+  --report 'docs/artifacts/firestore-legacy-cleanup-production-execute-report.json' \
   --execute \
   --confirm-project '<EXACT_PROJECT_ID>' \
   --backup-id '<EXACT_BACKUP_RESOURCE_ID>' \

@@ -1,7 +1,7 @@
 // src/features/profile/application/useCases/loadProfile.ts
 // Layer: application | Feature: profile. Depends only on UserProfileRepository (DIP).
 // Cache-first: return cached profile (profile_${uid}) if present, else fetch remote and cache it —
-// mirrors the cache-first strategy in context/AuthContext.tsx (docs/refactor-v2/03 §3, /10).
+// mirrors the cache-first strategy in context/AuthContext.tsx (docs/architecture.md).
 
 import type { UserProfileRepository } from '../../data/contracts';
 import type { Profile } from '../../domain/types';

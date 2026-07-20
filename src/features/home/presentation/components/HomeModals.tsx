@@ -1,6 +1,6 @@
 // src/features/home/presentation/components/HomeModals.tsx
 // Pure presentational composition of the two overlay/modal components rendered at the bottom of
-// screens/HomeScreen.tsx (ADIM 2, UI-only extraction — docs/refactor-v2/25): StreakCelebrationOverlay
+// screens/HomeScreen.tsx (ADIM 2, UI-only extraction — docs/architecture.md): StreakCelebrationOverlay
 // and AppRatingPrompt. VERBATIM props wiring — no new logic; all values/handlers are owned by
 // HomeScreen and passed straight through unchanged.
 

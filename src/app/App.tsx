@@ -1,5 +1,5 @@
 // src/app/App.tsx
-// Thin composition root produced in Phase 2 (docs/refactor-v2/22) by decomposing the original
+// Thin composition root produced in Phase 2 (docs/architecture.md) by decomposing the original
 // root App.tsx into bootstrap + providers + navigation + lifecycle. Behavior is identical:
 //  - module-level side effects run at the same time (configureNotifications + preventAutoHideAsync)
 //  - font/splash gate (useAppBootstrap) renders null until fonts are ready

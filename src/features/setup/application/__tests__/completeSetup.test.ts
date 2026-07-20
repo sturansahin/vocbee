@@ -1,5 +1,5 @@
 // completeSetup use-case (Firebase-free, fake writer). Verifies validation gate + delegation
-// (no direct Firestore) — docs/refactor-v2/37 §9.
+// (no direct Firestore) — docs/architecture.md
 import { makeCompleteSetup } from '../useCases/completeSetup';
 import type { SetupPreferencesWriter } from '../../data/contracts';
 import type { UserPreferences } from '../../domain/types';

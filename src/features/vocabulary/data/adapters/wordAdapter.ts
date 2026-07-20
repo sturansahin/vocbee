@@ -1,7 +1,7 @@
 // src/features/vocabulary/data/adapters/wordAdapter.ts
 // Layer: data (adapter) | Feature: vocabulary. PURE (no SDK) — parses raw vocabulary .txt (JSON) into
 // VocabularyWord[]. Handles both the asset shape ({ words: [...] }) and a bare array; skips malformed
-// rows without throwing; normalizes pronunciation to string | null (mirrors vocabularyService). docs/refactor-v2/35 §10, /37 §2.
+// rows without throwing; normalizes pronunciation to string | null (mirrors vocabularyService). docs/architecture.md
 
 import type { VocabularyWord } from '../../domain/types';
 

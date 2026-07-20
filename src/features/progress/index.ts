@@ -1,4 +1,4 @@
-// src/features/progress — public barrel (docs/refactor-v2/33 §4).
+// src/features/progress — public barrel (docs/architecture.md).
 // Exposes domain types/rules/constants, repository INTERFACES, and the stable composition API.
 // Does NOT export FirestoreProgressRepository (data impl) — it is bound only at a composition root
 // (a later phase), never via the barrel.

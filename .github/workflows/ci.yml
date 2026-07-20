@@ -1,9 +1,9 @@
-# Production quality pipeline (refactor-v2 Phase 9).
+# Production source quality pipeline.
 # Scope: verification only; builds/releases stay in the EAS pipeline.
-# Builds/releases stay in the EAS pipeline (not here). See docs/refactor-v2/16 + 38.
+# Builds/releases stay in the EAS pipeline; this workflow validates source quality only.
 #
-# Prompt 7: architecture rules are blocking ESLint errors and the root lint command permits zero
-# warnings. Boundary/cycle/config/style regressions therefore stop CI.
+# Architecture rules are blocking ESLint errors and the root lint command permits zero warnings.
+# Boundary, cycle, configuration and style regressions therefore stop CI.
 #
 # `audit:prod` blocks high/critical production dependency regressions.
 

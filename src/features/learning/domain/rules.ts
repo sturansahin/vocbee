@@ -1,5 +1,5 @@
 // src/features/learning/domain/rules.ts
-// Layer: domain | Feature: learning | Pure TS (NO SDK). Behavior contract: docs/refactor-v2/03 §4-6.
+// Layer: domain | Feature: learning | Pure TS (NO SDK). Behavior contract: docs/architecture.md
 
 import { LEVELS, type Level, type TutorialSwipeDirection } from './types';
 

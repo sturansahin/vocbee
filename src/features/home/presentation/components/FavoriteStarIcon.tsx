@@ -1,6 +1,6 @@
 // src/features/home/presentation/components/FavoriteStarIcon.tsx
 // Pure presentational SVG icon extracted VERBATIM from screens/HomeScreen.tsx (ADIM 2, UI-only
-// extraction — docs/refactor-v2/25). No behavior/logic change: same points, same props, same
+// extraction — docs/architecture.md). No behavior/logic change: same points, same props, same
 // rendering. HomeScreen still owns all favorite-toggle state/handlers; this component only draws
 // the star shape.
 

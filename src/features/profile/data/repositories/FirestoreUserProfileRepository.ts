@@ -1,8 +1,8 @@
 // src/features/profile/data/repositories/FirestoreUserProfileRepository.ts
 // Layer: data (repository impl) | Feature: profile.
 //
-// WIRED (ADIM 5 / Phase 4 step 1, docs/refactor-v2/24, /35 §2): composed directly by
-// context/AuthContext.tsx (composition root — docs/refactor-v2/33 §4). Currently used for:
+// WIRED (ADIM 5 / Phase 4 step 1, docs/architecture.md): composed directly by
+// context/AuthContext.tsx (composition root — docs/architecture.md). Currently used for:
 // Owns profile cache and users/{uid} profile/document persistence. No presentation module imports
 // this implementation; it is bound by auth composition. saveProfile uses merge semantics and never
 // removes legacy fields.

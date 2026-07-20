@@ -1,5 +1,5 @@
 // src/features/settings/data/contracts.ts
-// Layer: data (contracts) | Feature: settings. Interface only (docs/refactor-v2/35 §7).
+// Layer: data (contracts) | Feature: settings. Interface only (docs/architecture.md).
 // Local-first; setup's remote preference write is delegated to UserProfileRepository.
 
 import type { UserPreferences } from '@features/setup';

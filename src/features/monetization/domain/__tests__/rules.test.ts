@@ -1,5 +1,5 @@
 // src/features/monetization/domain/__tests__/rules.test.ts
-// Pure gating rule tests (docs/refactor-v2/37 §10, /28 PR-8.1). No SDK/mock needed.
+// Pure gating rule tests (docs/architecture.md). No SDK/mock needed.
 
 import {
   getActiveEntitlement,

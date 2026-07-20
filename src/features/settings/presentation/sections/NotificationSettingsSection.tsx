@@ -1,6 +1,6 @@
 // src/features/settings/presentation/sections/NotificationSettingsSection.tsx
 // Pure presentational extraction of the notification-related settings rows from
-// screens/SettingsScreen.tsx (ADIM 3, UI-only section extraction — docs/refactor-v2/27): the
+// screens/SettingsScreen.tsx (ADIM 3, UI-only section extraction — docs/architecture.md): the
 // "Preferences > Notification action" (auto-mark) row and the full "Daily Reminder" card
 // (enable switch + start/end time rows + frequency row). VERBATIM JSX/styles — no logic.
 // SettingsScreen still owns all notification state (reminderEnabled, autoMarkLearned, startHour,

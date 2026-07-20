@@ -1,6 +1,6 @@
 // src/features/settings/presentation/sections/DangerZoneSection.tsx
 // Pure presentational extraction of the destructive-action rows from screens/SettingsScreen.tsx
-// (ADIM 3, UI-only section extraction — docs/refactor-v2/27): "Progress > Reset Progress",
+// (ADIM 3, UI-only section extraction — docs/architecture.md): "Progress > Reset Progress",
 // "Progress > Delete Account", and the standalone Logout button. VERBATIM JSX/styles — no logic.
 // SettingsScreen still owns the confirm-dialog flows (showAlert with destructive buttons) and the
 // actual resetProgress/deleteAccount/signOut calls — these components only render the rows and

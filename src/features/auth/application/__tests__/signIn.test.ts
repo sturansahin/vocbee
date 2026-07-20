@@ -1,4 +1,4 @@
-// Fake-repository use-case test (Firebase-free, docs/refactor-v2/37 §3).
+// Fake-repository use-case test (Firebase-free, docs/architecture.md).
 import { makeSignIn } from '../useCases/signIn';
 import type { AuthRepository } from '../../data/contracts';
 import type { AuthUser } from '../../domain/types';

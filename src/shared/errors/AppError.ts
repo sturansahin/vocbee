@@ -1,4 +1,4 @@
-// src/shared/errors/AppError — typed application error (docs/refactor-v2/02, /21 §8e).
+// src/shared/errors/AppError — typed application error (docs/architecture.md).
 // NEW in Phase 1. Behavior-neutral: not yet consumed by any runtime path.
 // Provides a consistent error shape for future feature/data layers (no SDK imports).
 

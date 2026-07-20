@@ -1,6 +1,6 @@
 // src/features/notifications/data/contracts.ts
 // Layer: data (contracts) | Feature: notifications. The 4 interfaces that split notificationService's
-// single surface by responsibility (ISP — docs/refactor-v2/35 §6, /12).
+// single surface by responsibility (ISP — docs/architecture.md).
 
 import type {
   NotificationPermissionState,

@@ -1,5 +1,5 @@
 // src/features/profile/data/contracts.ts
-// Layer: data (contracts) | Feature: profile. Interface only (docs/refactor-v2/35 §2).
+// Layer: data (contracts) | Feature: profile. Interface only (docs/architecture.md).
 // Encapsulates cache-first profile (profile_${uid}) + users/{uid} doc read/write/create/DELETE.
 
 import type { Profile } from '../domain/types';

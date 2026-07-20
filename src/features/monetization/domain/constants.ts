@@ -1,9 +1,9 @@
 // src/features/monetization/domain/constants.ts
-// Pure constants for the monetization domain. No SDK imports (docs/refactor-v2/33).
+// Pure constants for the monetization domain. No SDK imports (docs/architecture.md).
 
 /**
  * RevenueCat dashboard entitlement id. Every premium product removes ads.
- * MUST NOT change without a corresponding RevenueCat dashboard migration (docs/refactor-v2/14, /28).
+ * MUST NOT change without a corresponding RevenueCat dashboard migration (docs/architecture.md).
  */
 export const REVENUECAT_AD_FREE_ENTITLEMENT_ID = 'premium';
 

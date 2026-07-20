@@ -1,5 +1,5 @@
 // src/features/monetization/domain/rules.ts
-// Pure premium/free gating rules. No SDK imports (docs/refactor-v2/06, /14, /28, /33).
+// Pure premium/free gating rules. No SDK imports (docs/architecture.md).
 // This is the ONLY place that decides "should ads be shown" — screens/facades must delegate here
 // instead of re-deriving the condition (previously `!isAdFree && !isMonetizationLoading` inline in
 // screens/HomeScreen.tsx and `services/adMobService`/`context/MonetizationContext` consumers).
@@ -8,7 +8,7 @@ import type { AdGatingState, CustomerInfoLike, EntitlementInfoLike } from './typ
 import { REVENUECAT_AD_FREE_ENTITLEMENT_ID } from './constants';
 
 /**
- * Premium/free ad gating rule (docs/refactor-v2/37 §10):
+ * Premium/free ad gating rule (docs/architecture.md):
  * ads are shown for free users, hidden once the ad-free entitlement is active.
  */
 export function shouldShowAds(state: AdGatingState): boolean {

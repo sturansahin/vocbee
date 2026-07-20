@@ -1,6 +1,6 @@
 // src/features/home/presentation/components/HomeProgressSection.tsx
 // Pure presentational extraction of the "stats" block (level badge + progress bar) from
-// screens/HomeScreen.tsx (ADIM 2, UI-only extraction — docs/refactor-v2/25). Renders either the
+// screens/HomeScreen.tsx (ADIM 2, UI-only extraction — docs/architecture.md). Renders either the
 // loading-skeleton placeholder lines (isLoading=true) or the real level/progress content
 // (isLoading=false) — VERBATIM JSX/styles from the three call sites in the original file
 // (initial-hydration skeleton + main render; the "no words" state does not render this block at

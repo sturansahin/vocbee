@@ -1,5 +1,5 @@
 // src/features/monetization/domain/types.ts
-// Pure TypeScript types for the monetization domain. No SDK imports (docs/refactor-v2/33).
+// Pure TypeScript types for the monetization domain. No SDK imports (docs/architecture.md).
 // These are lightweight, SDK-agnostic mirrors of the RevenueCat/AdMob shapes actually consumed
 // by the app (context/MonetizationContext.tsx, services/revenueCatService.ts, services/adMobService.ts).
 

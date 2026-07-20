@@ -1,4 +1,4 @@
-# Firestore Progress v2 — Güvenli Rollout
+# Firestore Progress v2 — Production Rollout Planı
 
 ## Karar
 
@@ -83,8 +83,8 @@ Bu sıra değiştirilemez; her adım önce staging/emulator kanıtı, sonra ayr�
   [Firestore restore API](https://docs.cloud.google.com/firestore/docs/reference/rest/v1/projects.databases/restore).
 
 PII'siz operasyon kanıtı:
-`docs/refactor-v2/artifacts/progress-v2-staging-bootstrap-evidence.json`. Function'ı supersede eden client kararı:
-`docs/refactor-v2/artifacts/progress-v2-client-reconciliation-decision.json`.
+`docs/artifacts/progress-v2-staging-bootstrap-evidence.json`. Function yaklaşımını geçersiz
+kılan istemci kararı: `docs/artifacts/progress-v2-client-reconciliation-decision.json`.
 
 ## Mevcut gate
 

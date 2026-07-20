@@ -1,7 +1,7 @@
 // src/features/monetization/data/repositories/__tests__/AdMobRepository.test.ts
 // Repository test against the real class. jest.setup.js mocks react-native-google-mobile-ads with
 // only { BannerAd, BannerAdSize, TestIds } — missing MobileAds/InterstitialAd/AppOpenAd/AdEventType —
-// which reproduces the "native module unavailable" fallback path (docs/refactor-v2/28 §11: "AdMob
+// which reproduces the "native module unavailable" fallback path (docs/architecture.md: "AdMob
 // unavailable case"), matching services/adMobService.ts's loadAdMobModule() guard behavior.
 
 import { AdMobRepositoryImpl } from '../AdMobRepository';

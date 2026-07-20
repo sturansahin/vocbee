@@ -1,4 +1,4 @@
-// src/features/monetization — public barrel (docs/refactor-v2/28, /33 §4).
+// src/features/monetization — public barrel (docs/architecture.md).
 // Real implementation landed in Phase 8. Domain types/rules, repository interfaces, presentation
 // entrypoints, and stable application-facing ad operations are public. Concrete repository
 // implementations and the facade singleton stay internal to the feature.

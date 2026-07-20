@@ -1,5 +1,5 @@
 // src/features/progress/data/dto.ts
-// Layer: data | Feature: progress. Raw Firestore shapes (docs/refactor-v2/34 §3-4).
+// Layer: data | Feature: progress. Raw Firestore shapes (docs/architecture.md).
 // Timestamp/FieldValue are imported TYPE-ONLY (erased at runtime) so this module pulls in NO Firestore SDK
 // and stays unit-testable without an emulator. Actual serverTimestamp() is applied by the repository.
 
