@@ -35,7 +35,7 @@ const baseProps = {
   tutorialStep: 3,
   currentWord: word,
   isCurrentWordFavorite: false,
-  colors: { text: '#000000', primary: '#FFC814' },
+  colors: { textPrimary: '#000000', accent: '#FFC814', shadow: '#000000' },
   isDarkMode: false,
   t: (key: string) => key,
   onToggleFavorite: jest.fn(),

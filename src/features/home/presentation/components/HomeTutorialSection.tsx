@@ -7,16 +7,12 @@
 // complete/advance) are owned by HomeScreen and passed in as props — no logic lives here.
 
 import React from 'react';
-import { Dimensions, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import HomeTutorialOverlay, { LayoutRect } from './HomeTutorialOverlay';
 import type { VocabularyWord } from '@features/vocabulary';
 import { FavoriteStarIcon } from './FavoriteStarIcon';
+import { useResponsiveLayout } from '@shared/responsive';
 import { FONT_FAMILY } from '@shared/theme';
-
-const { width: SCREEN_WIDTH } = Dimensions.get('window');
-const BASE_WIDTH = 393; // matches original HomeScreen constant verbatim
-const scale = (size: number) => (SCREEN_WIDTH / BASE_WIDTH) * size;
-const moderateScale = (size: number, factor = 0.5) => size + (scale(size) - size) * factor;
 
 type TutorialLayoutKey = 'card' | 'favoriteButton' | 'word' | 'exampleSentence' | 'moreExample';
 type TutorialLayouts = Record<TutorialLayoutKey, LayoutRect>;
@@ -28,8 +24,9 @@ export interface HomeTutorialSectionProps {
   currentWord: VocabularyWord | undefined;
   isCurrentWordFavorite: boolean;
   colors: {
-    text: string;
-    primary: string;
+    textPrimary: string;
+    accent: string;
+    shadow: string;
   };
   isDarkMode: boolean;
   t: (key: string) => string;
@@ -58,6 +55,8 @@ export function HomeTutorialSection({
   onTutorialComplete,
   onTutorialNext,
 }: HomeTutorialSectionProps) {
+  const { moderateScale } = useResponsiveLayout();
+
   if (!showTutorial || !tutorialLayouts) {
     return null;
   }
@@ -77,6 +76,8 @@ export function HomeTutorialSection({
     if (step === 3) {
       return (
         <TouchableOpacity
+          accessibilityLabel={t('home.favorites')}
+          accessibilityRole="button"
           style={[absoluteHighlightStyle, styles.tutorialIconHighlight]}
           onPress={onToggleFavorite}
           activeOpacity={0.7}
@@ -84,7 +85,7 @@ export function HomeTutorialSection({
         >
           <View style={{ width: 26, height: 26, justifyContent: 'center', alignItems: 'center' }}>
             <FavoriteStarIcon
-              color={colors.primary}
+              color={colors.accent}
               filled={isCurrentWordFavorite}
               size={24}
               style={styles.tutorialIconGlow}
@@ -98,12 +99,18 @@ export function HomeTutorialSection({
       return (
         <View style={[absoluteHighlightStyle, styles.tutorialWordHighlight]}>
           <TouchableOpacity
+            accessibilityLabel={currentWord.word}
+            accessibilityRole="button"
             onPress={onWordPress}
             activeOpacity={0.7}
             style={styles.tutorialWordTouchable}
           >
             <Text
-              style={[styles.wordTitle, { color: colors.text }, styles.tutorialWordText]}
+              style={[
+                styles.wordTitle,
+                { color: colors.textPrimary, fontSize: moderateScale(36) },
+                styles.tutorialWordText,
+              ]}
               adjustsFontSizeToFit
               numberOfLines={1}
             >
@@ -118,12 +125,18 @@ export function HomeTutorialSection({
       return (
         <View style={[absoluteHighlightStyle, styles.tutorialSentenceHighlight]}>
           <TouchableOpacity
+            accessibilityLabel={currentWord.sentence1}
+            accessibilityRole="button"
             onPress={onExampleSentencePress}
             activeOpacity={0.7}
             style={styles.tutorialSentenceTouchable}
           >
             <Text
-              style={[styles.cardExampleText, { color: colors.text }, styles.tutorialSentenceText]}
+              style={[
+                styles.cardExampleText,
+                { color: colors.textPrimary },
+                styles.tutorialSentenceText,
+              ]}
             >
               {currentWord.sentence1}
             </Text>
@@ -135,16 +148,21 @@ export function HomeTutorialSection({
     if (step === 6) {
       return (
         <TouchableOpacity
+          accessibilityLabel={t('home.moreExample')}
+          accessibilityRole="button"
           style={[
             absoluteHighlightStyle,
             styles.tutorialRaisedButton,
             styles.tutorialMoreExampleButton,
-            { backgroundColor: isDarkMode ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)' },
+            {
+              backgroundColor: isDarkMode ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)',
+              shadowColor: colors.shadow,
+            },
           ]}
           onPress={onMoreExamplePress}
           activeOpacity={0.85}
         >
-          <Text style={[styles.fullWidthButtonText, { color: colors.text }]}>
+          <Text style={[styles.fullWidthButtonText, { color: colors.textPrimary }]}>
             {t('home.moreExample')}
           </Text>
         </TouchableOpacity>
@@ -163,6 +181,7 @@ export function HomeTutorialSection({
         renderHighlight={renderTutorialHighlight}
         onNext={onTutorialNext}
         layouts={tutorialLayouts}
+        shadowColor={colors.shadow}
       />
     </View>
   );
@@ -171,8 +190,7 @@ export function HomeTutorialSection({
 const styles = StyleSheet.create({
   wordTitle: {
     fontFamily: FONT_FAMILY,
-    fontSize: moderateScale(36),
-    marginBottom: scale(4),
+    marginBottom: 4,
     letterSpacing: 1,
     textAlign: 'center',
     paddingHorizontal: 40,
@@ -228,7 +246,6 @@ const styles = StyleSheet.create({
     textShadowRadius: 8,
   },
   tutorialRaisedButton: {
-    shadowColor: '#000',
     shadowOffset: { width: 0, height: 6 },
     shadowOpacity: 0.18,
     shadowRadius: 12,

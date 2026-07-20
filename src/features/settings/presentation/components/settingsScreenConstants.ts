@@ -1,13 +1,5 @@
-import { Dimensions } from 'react-native';
-
 import { PROFILE_AVATARS } from '@shared/utils';
 
-const { width: screenWidth, height: screenHeight } = Dimensions.get('window');
-const baseWidth = 393;
-
-export const scale = (size: number) => (screenWidth / baseWidth) * size;
-export const moderateScale = (size: number, factor = 0.5) => size + (scale(size) - size) * factor;
-export const SCREEN_HEIGHT = screenHeight;
 export const ITEM_HEIGHT = 44;
 export const HOURS = Array.from({ length: 24 }, (_, index) => index.toString().padStart(2, '0'));
 export const MINUTES = Array.from({ length: 60 }, (_, index) => index.toString().padStart(2, '0'));

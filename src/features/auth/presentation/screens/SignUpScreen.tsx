@@ -1,28 +1,29 @@
 import React, { useState } from 'react';
-import {
-  ActivityIndicator,
-  Platform,
-  ScrollView,
-  Text,
-  TouchableOpacity,
-  useWindowDimensions,
-  View,
-} from 'react-native';
-import { AntDesign, MaterialIcons } from '@expo/vector-icons';
+import { Platform, StyleSheet } from 'react-native';
+import { AntDesign } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import type { StackNavigationProp } from '@react-navigation/stack';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
 
-import { useTheme } from '@shared/theme';
-import { Button, Header, Input, useAlert } from '@shared/ui';
 import type { RootStackParamList } from '@app/navigation/types';
+import { useResponsiveLayout } from '@shared/responsive';
+import {
+  AppButton,
+  AppHeader,
+  AppInput,
+  AppScrollView,
+  AppSwitch,
+  AppText,
+  Divider,
+  Inline,
+  Stack,
+  useAlert,
+} from '@shared/ui';
 
 import type { AuthPresentationGateway } from '../../application/presentationContracts';
 import { validateRegistration } from '../../domain/rules';
 import { SOCIAL_AUTH_CANCELLED_ERROR } from '../../domain/types';
 import { useAuth } from '../AuthProvider';
-import { authStyles as styles } from './authStyles';
 
 interface SignUpScreenProps {
   gateway: AuthPresentationGateway;
@@ -30,22 +31,16 @@ interface SignUpScreenProps {
 
 export function SignUpScreen({ gateway }: SignUpScreenProps) {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
-  const { colors } = useTheme();
   const { signUp, signInWithGoogle, signInWithApple, signOut } = useAuth();
   const { showAlert } = useAlert();
-  const { height: screenHeight } = useWindowDimensions();
+  const { isSmallHeight } = useResponsiveLayout();
   const { t } = useTranslation();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [hasAcceptedPrivacyPolicy, setHasAcceptedPrivacyPolicy] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const isSmallScreen = screenHeight < 700;
-  const isLargeScreen = screenHeight > 900;
-  const titleFontSize = isSmallScreen ? 22 : isLargeScreen ? 32 : 28;
 
   const handleSignUp = async () => {
     const validationError = validateRegistration({
@@ -83,8 +78,7 @@ export function SignUpScreen({ gateway }: SignUpScreenProps) {
     setIsSubmitting(true);
     try {
       const result = await action();
-      if (result.setupCompleted) navigation.navigate('MainTabs');
-      else navigation.navigate('NativeLanguage');
+      navigation.navigate(result.setupCompleted ? 'MainTabs' : 'NativeLanguage');
     } catch (error) {
       if (error instanceof Error && error.message === SOCIAL_AUTH_CANCELLED_ERROR) return;
       showAlert({
@@ -96,155 +90,136 @@ export function SignUpScreen({ gateway }: SignUpScreenProps) {
     }
   };
 
-  const inputColors = {
-    backgroundColor: colors.surface,
-    borderColor: colors.border,
-    labelColor: colors.textSecondary,
-    textColor: colors.text,
-    iconColor: colors.textSecondary,
-  };
-
   return (
-    <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
-      <Header
-        showBack
+    <AppScrollView
+      contentContainerStyle={{ paddingVertical: isSmallHeight ? 12 : 24 }}
+      keyboardAvoiding
+      testID="signup-screen"
+    >
+      <AppHeader
+        backAccessibilityLabel={t('common.back', { defaultValue: 'Back' })}
         onBack={() => navigation.goBack()}
-        backgroundColor={colors.background}
-        textColor={colors.text}
+        title={t('auth.signUp')}
       />
-      <ScrollView
-        contentContainerStyle={[styles.scrollContentSignup, { padding: isSmallScreen ? 20 : 24 }]}
-      >
-        <View style={[styles.titleSection, { marginBottom: isSmallScreen ? 20 : 32 }]}>
-          <Text
-            style={[
-              styles.titleWhite,
-              {
-                color: colors.text,
-                fontSize: titleFontSize,
-                lineHeight: titleFontSize * 1.5,
-              },
-            ]}
-          >
+      <Stack gap={isSmallHeight ? 'lg' : '2xl'}>
+        <Stack gap="xs">
+          <AppText accessibilityRole="header" variant="screenTitle">
             {t('auth.startYourLanguage')}
-            {'\n'}
-            <Text style={[styles.titleGreen, { color: colors.primary }]}>
-              {t('auth.journeyToday')}
-            </Text>
-          </Text>
-        </View>
-        <Input
-          label={t('auth.fullName')}
-          placeholder={t('auth.namePlaceholder')}
-          icon="person"
-          value={name}
-          onChangeText={setName}
-          {...inputColors}
-        />
-        <Input
-          label={t('auth.email')}
-          placeholder={t('auth.enterEmail')}
-          icon="mail"
-          value={email}
-          onChangeText={setEmail}
-          keyboardType="email-address"
-          autoCapitalize="none"
-          {...inputColors}
-        />
-        <Input
-          label={t('auth.password')}
-          placeholder={t('auth.createPassword')}
-          value={password}
-          onChangeText={setPassword}
-          secureTextEntry={!showPassword}
-          rightIcon={showPassword ? 'visibility' : 'visibility-off'}
-          onRightIconPress={() => setShowPassword((value) => !value)}
-          {...inputColors}
-        />
-        <Input
-          label={t('auth.confirmPassword')}
-          placeholder={t('auth.confirmPasswordPlaceholder')}
-          value={confirmPassword}
-          onChangeText={setConfirmPassword}
-          secureTextEntry={!showConfirmPassword}
-          rightIcon={showConfirmPassword ? 'visibility' : 'visibility-off'}
-          onRightIconPress={() => setShowConfirmPassword((value) => !value)}
-          {...inputColors}
-        />
+          </AppText>
+          <AppText color="accent" variant="screenTitle">
+            {t('auth.journeyToday')}
+          </AppText>
+        </Stack>
 
-        <View style={styles.privacyConsentRow}>
-          <TouchableOpacity
+        <Stack gap="lg">
+          <AppInput
+            autoComplete="name"
+            label={t('auth.fullName')}
+            onChangeText={setName}
+            placeholder={t('auth.namePlaceholder')}
+            textContentType="name"
+            value={name}
+          />
+          <AppInput
+            autoCapitalize="none"
+            autoComplete="email"
+            keyboardType="email-address"
+            label={t('auth.email')}
+            onChangeText={setEmail}
+            placeholder={t('auth.enterEmail')}
+            textContentType="emailAddress"
+            value={email}
+          />
+          <AppInput
+            autoComplete="new-password"
+            label={t('auth.password')}
+            onChangeText={setPassword}
+            placeholder={t('auth.createPassword')}
+            secureTextEntry
+            textContentType="newPassword"
+            value={password}
+          />
+          <AppInput
+            autoComplete="new-password"
+            label={t('auth.confirmPassword')}
+            onChangeText={setConfirmPassword}
+            onSubmitEditing={() => void handleSignUp()}
+            placeholder={t('auth.confirmPasswordPlaceholder')}
+            returnKeyType="done"
+            secureTextEntry
+            textContentType="newPassword"
+            value={confirmPassword}
+          />
+        </Stack>
+
+        <Inline align="center">
+          <AppSwitch
+            accessibilityLabel={t('auth.acceptPrivacyPrefix')}
+            onValueChange={setHasAcceptedPrivacyPolicy}
             testID="privacy-consent-checkbox"
-            onPress={() => setHasAcceptedPrivacyPolicy((value) => !value)}
-            style={styles.privacyCheckboxButton}
-            accessibilityRole="checkbox"
-            accessibilityState={{ checked: hasAcceptedPrivacyPolicy }}
-          >
-            <MaterialIcons
-              name={hasAcceptedPrivacyPolicy ? 'check-box' : 'check-box-outline-blank'}
-              size={24}
-              color={hasAcceptedPrivacyPolicy ? colors.primary : colors.textSecondary}
-            />
-          </TouchableOpacity>
-          <Text style={[styles.privacyConsentText, { color: colors.textSecondary }]}>
-            {t('auth.acceptPrivacyPrefix')}{' '}
-            <Text
-              testID="privacy-policy-link"
-              style={[styles.privacyConsentLink, { color: colors.primary }]}
-              onPress={() => void gateway.openPrivacyPolicy()}
-            >
-              {t('settings.privacyPolicy')}
-            </Text>
-            .
-          </Text>
-        </View>
+            value={hasAcceptedPrivacyPolicy}
+          />
+          <AppText color="textSecondary" style={styles.consentCopy} variant="caption">
+            {t('auth.acceptPrivacyPrefix')}
+          </AppText>
+          <AppButton
+            fullWidth={false}
+            label={t('settings.privacyPolicy')}
+            onPress={() => void gateway.openPrivacyPolicy()}
+            testID="privacy-policy-link"
+            variant="ghost"
+          />
+        </Inline>
 
-        <Button
-          title={isSubmitting ? t('auth.creatingAccount') : t('auth.signUp')}
+        <AppButton
+          disabled={!hasAcceptedPrivacyPolicy}
+          label={t('auth.signUp')}
+          loading={isSubmitting}
           onPress={handleSignUp}
-          disabled={isSubmitting || !hasAcceptedPrivacyPolicy}
+          testID="signup-submit"
         />
-        {isSubmitting && (
-          <ActivityIndicator size="small" color={colors.primary} style={{ marginTop: 16 }} />
-        )}
-        <View style={[styles.divider, { marginVertical: isSmallScreen ? 20 : 32 }]}>
-          <View style={[styles.dividerLine, { backgroundColor: colors.border }]} />
-          <Text style={[styles.dividerText, { color: colors.textSecondary }]}>
+
+        <Inline align="center">
+          <Divider style={styles.divider} />
+          <AppText color="textSecondary" variant="caption">
             {t('auth.orContinueWith')}
-          </Text>
-          <View style={[styles.dividerLine, { backgroundColor: colors.border }]} />
-        </View>
-        <View style={[styles.socialRow, { marginBottom: isSmallScreen ? 20 : 32 }]}>
-          <TouchableOpacity
-            style={[
-              styles.socialButton,
-              { backgroundColor: colors.surface, borderColor: colors.border },
-            ]}
+          </AppText>
+          <Divider style={styles.divider} />
+        </Inline>
+
+        <Inline align="stretch">
+          <AppButton
+            fullWidth={false}
+            label={t('auth.google')}
+            leadingIcon={(color) => <AntDesign color={color} name="google" size={18} />}
             onPress={() => void handleSocialSignIn(signInWithGoogle)}
-            disabled={isSubmitting}
-          >
-            <AntDesign name="google" size={16} color={colors.text} />
-            <Text style={[styles.socialButtonText, { color: colors.text }]}>
-              {t('auth.google')}
-            </Text>
-          </TouchableOpacity>
-          {Platform.OS === 'ios' && (
-            <TouchableOpacity
-              style={[
-                styles.socialButton,
-                { backgroundColor: colors.surface, borderColor: colors.border },
-              ]}
+            style={styles.socialButton}
+            variant="outline"
+          />
+          {Platform.OS === 'ios' ? (
+            <AppButton
+              fullWidth={false}
+              label={t('auth.apple')}
+              leadingIcon={(color) => <AntDesign color={color} name="apple" size={18} />}
               onPress={() => void handleSocialSignIn(signInWithApple)}
-              disabled={isSubmitting}
-            >
-              <AntDesign name="apple" size={16} color={colors.text} />
-              <Text style={[styles.socialButtonText, { color: colors.text }]}>
-                {t('auth.apple')}
-              </Text>
-            </TouchableOpacity>
-          )}
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+              style={styles.socialButton}
+              variant="outline"
+            />
+          ) : null}
+        </Inline>
+      </Stack>
+    </AppScrollView>
   );
 }
+
+const styles = StyleSheet.create({
+  consentCopy: {
+    flex: 1,
+  },
+  divider: {
+    flex: 1,
+  },
+  socialButton: {
+    flex: 1,
+  },
+});

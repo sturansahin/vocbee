@@ -4,11 +4,8 @@ import { fireEvent, render } from '@testing-library/react-native';
 import { DangerZoneSection, ProgressDangerRows, LogoutButton } from '../DangerZoneSection';
 
 const colors = {
-  text: '#000',
   textSecondary: '#666',
-  surface: '#F5F5F5',
-  border: '#E0E0E0',
-  error: '#FF0000',
+  danger: '#FF0000',
 };
 
 describe('ProgressDangerRows', () => {

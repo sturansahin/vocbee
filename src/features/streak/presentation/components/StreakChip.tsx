@@ -4,16 +4,20 @@ import { FONT_FAMILY } from '@shared/theme';
 
 const FIRE_ICON = require('../../../../../assets/icons/fire.png');
 
-interface StreakChipProps {
+interface StreakChipBaseProps {
   count: number;
   completedToday: boolean;
   atRisk: boolean;
   textColor: string;
   accentColor: string;
   style?: StyleProp<ViewStyle>;
-  accessibilityLabel?: string;
-  onPress?: () => void;
 }
+
+type StreakChipProps = StreakChipBaseProps &
+  (
+    | { onPress: () => void; accessibilityLabel: string }
+    | { onPress?: undefined; accessibilityLabel?: string }
+  );
 
 export function StreakChip({
   count,
@@ -61,7 +65,8 @@ export function StreakChip({
 const styles = StyleSheet.create({
   pressable: {
     flexShrink: 0,
-    minHeight: 32,
+    minHeight: 44,
+    minWidth: 44,
     paddingHorizontal: 4,
     justifyContent: 'center',
   },

@@ -1,13 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View, Dimensions } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import Feather from '@expo/vector-icons/Feather';
 import { StreakChip } from '@features/streak';
+import { useResponsiveLayout } from '@shared/responsive';
 import { HEADER_FONT_FAMILY } from '@shared/theme';
-
-const { width: SCREEN_WIDTH } = Dimensions.get('window');
-const BASE_WIDTH = 393;
-const scale = (size: number) => (SCREEN_WIDTH / BASE_WIDTH) * size;
-const moderateScale = (size: number, factor = 0.5) => size + (scale(size) - size) * factor;
+import { IconButton } from '@shared/ui';
 
 interface HomeHeaderProps {
   titleColor: string;
@@ -18,7 +15,9 @@ interface HomeHeaderProps {
   streakAtRisk: boolean;
   streakTextColor: string;
   streakAccentColor: string;
-  streakAccessibilityLabel?: string;
+  streakAccessibilityLabel: string;
+  favoritesAccessibilityLabel: string;
+  settingsAccessibilityLabel: string;
   onPressStreak?: () => void;
   onPressFavorites?: () => void;
   onPressSettings?: () => void;
@@ -35,15 +34,30 @@ export function HomeHeader({
   streakTextColor,
   streakAccentColor,
   streakAccessibilityLabel,
+  favoritesAccessibilityLabel,
+  settingsAccessibilityLabel,
   onPressStreak,
   onPressFavorites,
   onPressSettings,
   showPlaceholders = false,
 }: HomeHeaderProps) {
+  const { moderateScale } = useResponsiveLayout();
+
   return (
-    <View style={styles.header}>
+    <View style={[styles.header, { paddingVertical: moderateScale(16) }]}>
       <View style={styles.headerTitleContainer}>
-        <Text style={[styles.headerTitle, { color: titleColor }]}>VOCBEE</Text>
+        <Text
+          style={[
+            styles.headerTitle,
+            {
+              color: titleColor,
+              fontSize: moderateScale(22),
+              letterSpacing: moderateScale(6),
+            },
+          ]}
+        >
+          VOCBEE
+        </Text>
       </View>
       <View style={styles.headerButtons}>
         {showPlaceholders ? (
@@ -63,20 +77,16 @@ export function HomeHeader({
               accessibilityLabel={streakAccessibilityLabel}
               onPress={onPressStreak}
             />
-            <TouchableOpacity
-              style={styles.headerButton}
+            <IconButton
+              accessibilityLabel={favoritesAccessibilityLabel}
               onPress={onPressFavorites}
-              activeOpacity={0.8}
-            >
-              <Feather name="star" size={24} color={iconColor} />
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.headerButton}
+              icon={<Feather name="star" size={24} color={iconColor} />}
+            />
+            <IconButton
+              accessibilityLabel={settingsAccessibilityLabel}
               onPress={onPressSettings}
-              activeOpacity={0.8}
-            >
-              <Feather name="settings" size={24} color={iconColor} />
-            </TouchableOpacity>
+              icon={<Feather name="settings" size={24} color={iconColor} />}
+            />
           </>
         )}
       </View>
@@ -89,24 +99,18 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingVertical: scale(16),
     paddingHorizontal: 20,
   },
   headerTitleContainer: {
     flex: 1,
   },
   headerTitle: {
-    fontSize: moderateScale(22),
     fontFamily: HEADER_FONT_FAMILY,
-    letterSpacing: scale(6),
   },
   headerButtons: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 12,
-  },
-  headerButton: {
-    padding: 4,
   },
   streakPlaceholder: {
     width: 42,

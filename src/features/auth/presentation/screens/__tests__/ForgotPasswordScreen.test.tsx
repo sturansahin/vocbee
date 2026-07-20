@@ -1,5 +1,6 @@
 import React from 'react';
 import { fireEvent, render, waitFor } from '@testing-library/react-native';
+import { ThemeProvider } from '@shared/theme';
 
 import ForgotPasswordScreen from '../ForgotPasswordScreen';
 
@@ -11,29 +12,9 @@ jest.mock('@react-navigation/native', () => ({
   useNavigation: () => ({ goBack: mockGoBack }),
 }));
 
-jest.mock('@shared/theme', () => ({
-  useTheme: () => ({
-    colors: {
-      background: '#fff',
-      surface: '#f5f5f5',
-      border: '#ddd',
-      text: '#111',
-      textSecondary: '#666',
-      primary: '#ffc814',
-    },
-  }),
-  COLORS: {
-    background: '#fff',
-    primary: '#ffc814',
-  },
-  FONT_FAMILY: 'System',
-}));
-
 jest.mock('@shared/ui', () => {
-  const React = require('react');
-  const { TextInput } = require('react-native');
   return {
-    Input: (props: any) => React.createElement(TextInput, props),
+    ...jest.requireActual('@shared/ui'),
     useAlert: () => ({ showAlert: mockShowAlert }),
   };
 });
@@ -49,7 +30,11 @@ describe('ForgotPasswordScreen', () => {
 
   it('shows success and returns to login after reset email is sent', async () => {
     mockResetPassword.mockResolvedValue(undefined);
-    const { getByPlaceholderText, getByText } = render(<ForgotPasswordScreen />);
+    const { getByPlaceholderText, getByText } = render(
+      <ThemeProvider forcedMode="light">
+        <ForgotPasswordScreen />
+      </ThemeProvider>,
+    );
 
     fireEvent.changeText(getByPlaceholderText('auth.enterEmail'), 'bee@example.com');
     fireEvent.press(getByText('forgotPassword.sendResetLink'));
@@ -63,7 +48,11 @@ describe('ForgotPasswordScreen', () => {
 
   it('shows the facade error without navigating', async () => {
     mockResetPassword.mockRejectedValue(new Error('Reset failed'));
-    const { getByPlaceholderText, getByText } = render(<ForgotPasswordScreen />);
+    const { getByPlaceholderText, getByText } = render(
+      <ThemeProvider forcedMode="dark">
+        <ForgotPasswordScreen />
+      </ThemeProvider>,
+    );
 
     fireEvent.changeText(getByPlaceholderText('auth.enterEmail'), 'bee@example.com');
     fireEvent.press(getByText('forgotPassword.sendResetLink'));
@@ -75,5 +64,28 @@ describe('ForgotPasswordScreen', () => {
       }),
     );
     expect(mockGoBack).not.toHaveBeenCalled();
+  });
+
+  it('blocks repeated submit while the request is loading', async () => {
+    let resolveRequest: (() => void) | undefined;
+    mockResetPassword.mockImplementation(
+      () =>
+        new Promise<void>((resolve) => {
+          resolveRequest = resolve;
+        }),
+    );
+    const { getByPlaceholderText, getByTestId } = render(
+      <ThemeProvider forcedMode="light">
+        <ForgotPasswordScreen />
+      </ThemeProvider>,
+    );
+    fireEvent.changeText(getByPlaceholderText('auth.enterEmail'), 'bee@example.com');
+
+    fireEvent.press(getByTestId('forgot-password-submit'));
+    fireEvent.press(getByTestId('forgot-password-submit'));
+    expect(mockResetPassword).toHaveBeenCalledTimes(1);
+
+    resolveRequest?.();
+    await waitFor(() => expect(mockShowAlert).toHaveBeenCalled());
   });
 });

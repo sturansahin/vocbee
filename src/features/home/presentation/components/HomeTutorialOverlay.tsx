@@ -1,11 +1,10 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Dimensions, Pressable } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Pressable } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useResponsiveLayout } from '@shared/responsive';
 import { FONT_FAMILY, useTheme } from '@shared/theme';
 import Svg, { Defs, Rect, Mask } from 'react-native-svg';
-
-const { height: SCREEN_HEIGHT } = Dimensions.get('window');
 
 export interface LayoutRect {
   x: number;
@@ -27,6 +26,7 @@ interface HomeTutorialOverlayProps {
     exampleSentence: LayoutRect;
     moreExample: LayoutRect;
   };
+  shadowColor?: string;
 }
 
 export default function HomeTutorialOverlay({
@@ -36,10 +36,12 @@ export default function HomeTutorialOverlay({
   onNext,
   renderHighlight,
   layouts,
+  shadowColor,
 }: HomeTutorialOverlayProps) {
   const { t } = useTranslation();
   const { colors } = useTheme();
   const insets = useSafeAreaInsets();
+  const { height, isSmallHeight } = useResponsiveLayout();
   const TOTAL_STEPS = 6;
 
   if (!visible) return null;
@@ -93,7 +95,7 @@ export default function HomeTutorialOverlay({
 
     // Steps 1 & 2: Move tooltip above the card area
     if (currentStep <= 2) {
-      top = Math.max(insets.top + 8, layouts.card.y - (isSmallScreen ? 100 : 112));
+      top = Math.max(insets.top + 8, layouts.card.y - (isSmallHeight ? 100 : 112));
     }
     // Steps 3, 4, 5: Tooltip below the highlighted content
     else if (currentStep === 3 || currentStep === 4 || currentStep === 5) {
@@ -102,7 +104,7 @@ export default function HomeTutorialOverlay({
     // Step 6: Tooltip above the bottom button to avoid screen edge
     else if (currentStep === 6) {
       top = undefined;
-      bottom = SCREEN_HEIGHT - targetLayout.y + 20;
+      bottom = height - targetLayout.y + 20;
     }
 
     return {
@@ -115,8 +117,7 @@ export default function HomeTutorialOverlay({
     };
   };
 
-  const isSmallScreen = SCREEN_HEIGHT < 700;
-  const subtitleFontSize = isSmallScreen ? 14 : 16;
+  const subtitleFontSize = isSmallHeight ? 14 : 16;
 
   return (
     <View style={StyleSheet.absoluteFill} pointerEvents="box-none">
@@ -175,11 +176,12 @@ export default function HomeTutorialOverlay({
               styles.tooltipBox,
               {
                 backgroundColor: colors.surface,
-                borderColor: colors.border,
+                borderColor: colors.borderDefault,
+                shadowColor: shadowColor ?? colors.shadow,
               },
             ]}
           >
-            <Text style={[styles.tooltipText, { color: colors.text }]}>
+            <Text style={[styles.tooltipText, { color: colors.textPrimary }]}>
               {t(`homeTutorial.step${currentStep}` as any)}
             </Text>
           </View>
@@ -194,16 +196,31 @@ export default function HomeTutorialOverlay({
           <View style={styles.actions}>
             {currentStep < TOTAL_STEPS ? (
               <>
-                <TouchableOpacity onPress={onComplete} style={styles.btnNav}>
-                  <Text style={[styles.btnSkipText, { fontSize: subtitleFontSize + 2 }]}>
+                <TouchableOpacity
+                  accessibilityLabel={t('homeTutorial.skip')}
+                  accessibilityRole="button"
+                  onPress={onComplete}
+                  style={styles.btnNav}
+                >
+                  <Text
+                    style={[
+                      styles.btnSkipText,
+                      { color: colors.onOverlay, fontSize: subtitleFontSize + 2 },
+                    ]}
+                  >
                     {t('homeTutorial.skip')}
                   </Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={onNext} style={styles.btnNav}>
+                <TouchableOpacity
+                  accessibilityLabel={t('homeTutorial.next')}
+                  accessibilityRole="button"
+                  onPress={onNext}
+                  style={styles.btnNav}
+                >
                   <Text
                     style={[
                       styles.btnNextText,
-                      { color: colors.primary, fontSize: subtitleFontSize + 2 },
+                      { color: colors.accent, fontSize: subtitleFontSize + 2 },
                     ]}
                   >
                     {t('homeTutorial.next')}
@@ -212,11 +229,16 @@ export default function HomeTutorialOverlay({
               </>
             ) : (
               <View style={styles.startButtonContainer}>
-                <TouchableOpacity onPress={onComplete} style={styles.startButton}>
+                <TouchableOpacity
+                  accessibilityLabel={t('homeTutorial.done')}
+                  accessibilityRole="button"
+                  onPress={onComplete}
+                  style={styles.startButton}
+                >
                   <Text
                     style={[
                       styles.startButtonText,
-                      { color: colors.primary, fontSize: subtitleFontSize + 2 },
+                      { color: colors.accent, fontSize: subtitleFontSize + 2 },
                     ]}
                   >
                     {t('homeTutorial.done')}
@@ -241,7 +263,6 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     borderRadius: 12,
     borderWidth: 1,
-    shadowColor: '#000',
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
     shadowRadius: 5,
@@ -277,7 +298,6 @@ const styles = StyleSheet.create({
   },
   btnSkipText: {
     fontFamily: FONT_FAMILY,
-    color: 'white',
     opacity: 0.8,
   },
   btnNextText: {

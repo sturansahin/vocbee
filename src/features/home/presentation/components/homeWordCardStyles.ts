@@ -1,27 +1,21 @@
-import { Dimensions, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { FONT_FAMILY } from '@shared/theme';
-
-const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get('window');
-const BASE_WIDTH = 393;
-const scale = (size: number) => (SCREEN_WIDTH / BASE_WIDTH) * size;
 
 export const homeWordCardStyles = StyleSheet.create({
   cardArea: { flex: 1, alignItems: 'center', justifyContent: 'center' },
   cardStackContainer: {
-    width: SCREEN_WIDTH - 40,
-    height: SCREEN_HEIGHT * 0.55,
     position: 'relative',
   },
-  cardContainer: { position: 'absolute', width: SCREEN_WIDTH - 40, height: SCREEN_HEIGHT * 0.55 },
+  cardContainer: { position: 'absolute' },
   heroCard: { flex: 1, borderRadius: 32, padding: 0, justifyContent: 'center', overflow: 'hidden' },
   cardContentAbove: { flex: 1, width: '100%', justifyContent: 'space-between', zIndex: 200 },
   favoriteButton: {
     position: 'absolute',
-    top: scale(16),
-    left: scale(16),
-    width: scale(40),
-    height: scale(40),
-    borderRadius: scale(20),
+    top: 12,
+    left: 12,
+    width: 44,
+    height: 44,
+    borderRadius: 22,
     alignItems: 'center',
     justifyContent: 'center',
     zIndex: 999,
@@ -38,8 +32,8 @@ export const homeWordCardStyles = StyleSheet.create({
     zIndex: 1,
   },
   swipeLabelContainer: { alignItems: 'center', gap: 8 },
-  skipText: { fontFamily: FONT_FAMILY, color: '#ea8484ff', fontSize: 20, letterSpacing: 4 },
-  learnedText: { fontFamily: FONT_FAMILY, color: '#35de5dff', fontSize: 20, letterSpacing: 4 },
+  skipText: { fontFamily: FONT_FAMILY, fontSize: 20, letterSpacing: 4 },
+  learnedText: { fontFamily: FONT_FAMILY, fontSize: 20, letterSpacing: 4 },
   cardUpperSection: {
     flex: 1,
     alignItems: 'center',
@@ -95,4 +89,12 @@ export const homeWordCardStyles = StyleSheet.create({
   },
   bee: { position: 'absolute', width: 50, height: 50, zIndex: 300 },
   beeAnim: { width: 50, height: 50 },
+  accessibleActions: {
+    width: '100%',
+    flexDirection: 'row',
+    gap: 12,
+  },
+  accessibleAction: {
+    flex: 1,
+  },
 });

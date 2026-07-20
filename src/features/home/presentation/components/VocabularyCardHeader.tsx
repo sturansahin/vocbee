@@ -9,12 +9,11 @@ import {
   ViewStyle,
 } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
+import { useResponsiveLayout } from '@shared/responsive';
 import { FONT_FAMILY } from '@shared/theme';
 
 const CARD_HORIZONTAL_MARGIN = 40;
 const CONTENT_HORIZONTAL_PADDING = 72;
-const BASE_CARD_WIDTH = 353; // 393 screen width - 40 outer margin
-const BASE_SCREEN_WIDTH = 393;
 const CARD_HEADER_SIDE_PADDING = 24;
 const MIN_CONTENT_WIDTH = 220;
 const MAX_CONTENT_WIDTH = 500;
@@ -58,29 +57,29 @@ export const VocabularyCardHeader = memo(function VocabularyCardHeader({
   onPressWord,
 }: VocabularyCardHeaderProps) {
   const { width } = useWindowDimensions();
+  const { moderateScale } = useResponsiveLayout();
   const contentWidth = clamp(
     width - CARD_HORIZONTAL_MARGIN - CONTENT_HORIZONTAL_PADDING,
     MIN_CONTENT_WIDTH,
     MAX_CONTENT_WIDTH,
   );
-  const contentScale = contentWidth / BASE_CARD_WIDTH;
-  const wordFontSize = clamp(36 * contentScale, 34, 52);
-  const pronunciationFontSize = clamp(18 * contentScale, 17, 26);
-  const translationFontSize = clamp(24 * contentScale, 22, 36);
-  const translationIconSize = clamp(22 * contentScale, 20, 26);
-  const favoriteIconCenterX = (width / BASE_SCREEN_WIDTH) * 36;
+  const wordFontSize = clamp(moderateScale(36), 34, 52);
+  const pronunciationFontSize = clamp(moderateScale(18), 17, 26);
+  const translationFontSize = clamp(moderateScale(24), 22, 36);
+  const translationIconSize = clamp(moderateScale(22), 20, 26);
+  const favoriteIconCenterX = moderateScale(36);
   const translationIconLeft = Math.max(
     0,
     favoriteIconCenterX - CARD_HEADER_SIDE_PADDING - translationIconSize / 2,
   );
   const translationTextHorizontalPadding = clamp(
-    Math.max(40 * contentScale, translationIconLeft + translationIconSize + 12),
+    Math.max(moderateScale(40), translationIconLeft + translationIconSize + 12),
     40,
     96,
   );
-  const wordBottomSpacing = clamp(8 * contentScale, 6, 10);
-  const pronunciationBottomSpacing = clamp(12 * contentScale, 10, 16);
-  const translationBottomSpacing = clamp(24 * contentScale, 18, 30);
+  const wordBottomSpacing = clamp(moderateScale(8), 6, 10);
+  const pronunciationBottomSpacing = clamp(moderateScale(12), 10, 16);
+  const translationBottomSpacing = clamp(moderateScale(24), 18, 30);
   const displayPronunciation = normalizePronunciation(pronunciation);
 
   const wordText = (
@@ -108,7 +107,12 @@ export const VocabularyCardHeader = memo(function VocabularyCardHeader({
     <View style={[styles.root, style]}>
       <View ref={wordContainerRef} collapsable={false} style={wordContainerStyle}>
         {onPressWord ? (
-          <TouchableOpacity onPress={onPressWord} activeOpacity={0.7} accessibilityRole="button">
+          <TouchableOpacity
+            onPress={onPressWord}
+            activeOpacity={0.7}
+            accessibilityRole="button"
+            accessibilityLabel={word}
+          >
             {wordText}
           </TouchableOpacity>
         ) : (

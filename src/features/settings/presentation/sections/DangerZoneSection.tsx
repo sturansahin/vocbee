@@ -12,23 +12,12 @@
 // the Support card — there is no single shared container for all three in the original UI.
 
 import React from 'react';
-import { Dimensions, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
-import { FONT_FAMILY } from '@shared/theme';
-
-const { width: SCREEN_WIDTH } = Dimensions.get('window');
-const BASE_WIDTH = 393;
-const scale = (size: number) => (SCREEN_WIDTH / BASE_WIDTH) * size;
-const moderateScale = (size: number, factor = 0.5) => size + (scale(size) - size) * factor;
+import { FONT_FAMILY, type ThemeColors } from '@shared/theme';
 
 export interface DangerZoneSectionProps {
-  colors: {
-    text: string;
-    textSecondary: string;
-    surface: string;
-    border: string;
-    error: string;
-  };
+  colors: Pick<ThemeColors, 'textSecondary' | 'danger'>;
   isDarkMode: boolean;
 
   resetProgressLabel: string;
@@ -67,13 +56,19 @@ export function ProgressDangerRows({
 
   return (
     <>
-      <TouchableOpacity style={styles.settingItem} onPress={onPressResetProgress}>
+      <TouchableOpacity
+        accessibilityRole="button"
+        style={styles.settingItem}
+        onPress={onPressResetProgress}
+      >
         <View style={styles.settingLeft}>
           <View style={[styles.settingIcon, settingIconStyle]}>
-            <MaterialIcons name="refresh" size={24} color={colors.error} />
+            <MaterialIcons name="refresh" size={24} color={colors.danger} />
           </View>
           <View>
-            <Text style={[styles.settingTitle, { color: colors.error }]}>{resetProgressLabel}</Text>
+            <Text style={[styles.settingTitle, { color: colors.danger }]}>
+              {resetProgressLabel}
+            </Text>
             <Text style={[styles.settingSubtitle, { color: colors.textSecondary }]}>
               {resetProgressDescription}
             </Text>
@@ -82,15 +77,18 @@ export function ProgressDangerRows({
         <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
       </TouchableOpacity>
       <TouchableOpacity
+        accessibilityRole="button"
         style={[styles.settingItem, { borderBottomWidth: 0 }]}
         onPress={onPressDeleteAccount}
       >
         <View style={styles.settingLeft}>
           <View style={[styles.settingIcon, settingIconStyle]}>
-            <MaterialIcons name="delete-outline" size={24} color={colors.error} />
+            <MaterialIcons name="delete-outline" size={24} color={colors.danger} />
           </View>
           <View>
-            <Text style={[styles.settingTitle, { color: colors.error }]}>{deleteAccountLabel}</Text>
+            <Text style={[styles.settingTitle, { color: colors.danger }]}>
+              {deleteAccountLabel}
+            </Text>
           </View>
         </View>
         <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
@@ -106,9 +104,13 @@ export function LogoutButton({
   onPressLogout,
 }: Pick<DangerZoneSectionProps, 'colors' | 'logoutLabel' | 'onPressLogout'>) {
   return (
-    <TouchableOpacity style={styles.logoutButton} onPress={onPressLogout}>
-      <MaterialIcons name="logout" size={20} color={colors.error} />
-      <Text style={[styles.logoutButtonText, { color: colors.error }]}>{logoutLabel}</Text>
+    <TouchableOpacity
+      accessibilityRole="button"
+      style={styles.logoutButton}
+      onPress={onPressLogout}
+    >
+      <MaterialIcons name="logout" size={20} color={colors.danger} />
+      <Text style={[styles.logoutButtonText, { color: colors.danger }]}>{logoutLabel}</Text>
     </TouchableOpacity>
   );
 }
@@ -143,20 +145,20 @@ const styles = StyleSheet.create({
     gap: 16,
   },
   settingIcon: {
-    width: scale(40),
-    height: scale(40),
-    borderRadius: scale(20),
+    width: 40,
+    height: 40,
+    borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
   },
   settingTitle: {
     fontFamily: FONT_FAMILY,
-    fontSize: moderateScale(16),
+    fontSize: 16,
     fontWeight: '500',
   },
   settingSubtitle: {
     fontFamily: FONT_FAMILY,
-    fontSize: moderateScale(12),
+    fontSize: 12,
     fontWeight: '500',
     marginTop: 2,
   },

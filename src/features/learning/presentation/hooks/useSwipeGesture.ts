@@ -1,11 +1,10 @@
-import { useCallback, useEffect, useRef } from 'react';
-import { Animated, Dimensions, Easing, PanResponder } from 'react-native';
+import { useCallback, useEffect, useMemo, useRef } from 'react';
+import { Animated, Easing, PanResponder } from 'react-native';
 import { getTutorialSwipeNextStep } from '../../domain/rules';
 
-const SCREEN_WIDTH = Dimensions.get('window').width;
-const SWIPE_THRESHOLD = SCREEN_WIDTH * 0.25;
-
 interface SwipeGestureOptions {
+  viewportWidth: number;
+  reducedMotion: boolean;
   tutorialVisibleRef: React.MutableRefObject<boolean>;
   tutorialStepRef: React.MutableRefObject<number>;
   tutorialVisible: boolean;
@@ -16,6 +15,8 @@ interface SwipeGestureOptions {
 
 export function useSwipeGesture(options: SwipeGestureOptions) {
   const {
+    viewportWidth,
+    reducedMotion,
     tutorialVisibleRef,
     tutorialStepRef,
     tutorialVisible,
@@ -27,11 +28,18 @@ export function useSwipeGesture(options: SwipeGestureOptions) {
   const tutorialAnimationRef = useRef<Animated.CompositeAnimation | null>(null);
   const swipeRef = useRef<(direction: 'left' | 'right') => void>(() => undefined);
   const resetRef = useRef<() => void>(() => undefined);
+  const viewportWidthRef = useRef(viewportWidth);
+  const reducedMotionRef = useRef(reducedMotion);
+
+  useEffect(() => {
+    viewportWidthRef.current = viewportWidth;
+    reducedMotionRef.current = reducedMotion;
+  }, [reducedMotion, viewportWidth]);
 
   const reset = useCallback(() => {
     Animated.spring(position, {
       toValue: { x: 0, y: 0 },
-      friction: 5,
+      friction: reducedMotionRef.current ? 100 : 5,
       useNativeDriver: false,
     }).start();
   }, [position]);
@@ -41,10 +49,11 @@ export function useSwipeGesture(options: SwipeGestureOptions) {
       const tutorialNext = tutorialVisibleRef.current
         ? getTutorialSwipeNextStep(tutorialStepRef.current, direction)
         : null;
-      const destination = direction === 'right' ? SCREEN_WIDTH * 1.5 : -SCREEN_WIDTH * 1.5;
+      const destination =
+        direction === 'right' ? viewportWidthRef.current * 1.5 : -viewportWidthRef.current * 1.5;
       Animated.timing(position, {
         toValue: { x: destination, y: 0 },
-        duration: 300,
+        duration: reducedMotionRef.current ? 0 : 300,
         useNativeDriver: false,
       }).start(() => {
         requestAnimationFrame(() => position.setValue({ x: 0, y: 0 }));
@@ -73,15 +82,14 @@ export function useSwipeGesture(options: SwipeGestureOptions) {
       onPanResponderGrant: () => tutorialAnimationRef.current?.stop(),
       onPanResponderMove: (_, gesture) => position.setValue({ x: gesture.dx, y: gesture.dy * 0.3 }),
       onPanResponderRelease: (_, gesture) => {
+        const threshold = viewportWidthRef.current * 0.25;
         if (tutorialVisibleRef.current) {
-          if (tutorialStepRef.current === 1 && gesture.dx <= SWIPE_THRESHOLD)
-            return resetRef.current();
-          if (tutorialStepRef.current === 2 && gesture.dx >= -SWIPE_THRESHOLD)
-            return resetRef.current();
+          if (tutorialStepRef.current === 1 && gesture.dx <= threshold) return resetRef.current();
+          if (tutorialStepRef.current === 2 && gesture.dx >= -threshold) return resetRef.current();
           if (tutorialStepRef.current > 2) return resetRef.current();
         }
-        if (gesture.dx > SWIPE_THRESHOLD) swipeRef.current('right');
-        else if (gesture.dx < -SWIPE_THRESHOLD) swipeRef.current('left');
+        if (gesture.dx > threshold) swipeRef.current('right');
+        else if (gesture.dx < -threshold) swipeRef.current('left');
         else resetRef.current();
       },
     }),
@@ -89,7 +97,7 @@ export function useSwipeGesture(options: SwipeGestureOptions) {
 
   useEffect(() => {
     tutorialAnimationRef.current?.stop();
-    if (!tutorialVisible || tutorialStep > 2) {
+    if (!tutorialVisible || tutorialStep > 2 || reducedMotion) {
       reset();
       return;
     }
@@ -112,13 +120,17 @@ export function useSwipeGesture(options: SwipeGestureOptions) {
     );
     tutorialAnimationRef.current.start();
     return () => tutorialAnimationRef.current?.stop();
-  }, [position, reset, tutorialStep, tutorialVisible]);
+  }, [position, reducedMotion, reset, tutorialStep, tutorialVisible]);
 
-  const rotate = position.x.interpolate({
-    inputRange: [-SCREEN_WIDTH / 2, 0, SCREEN_WIDTH / 2],
-    outputRange: ['-15deg', '0deg', '15deg'],
-    extrapolate: 'clamp',
-  });
+  const rotate = useMemo(
+    () =>
+      position.x.interpolate({
+        inputRange: [-viewportWidth / 2, 0, viewportWidth / 2],
+        outputRange: ['-15deg', '0deg', '15deg'],
+        extrapolate: 'clamp',
+      }),
+    [position.x, viewportWidth],
+  );
 
   return { position, rotate, panHandlers: panResponder.panHandlers, swipe };
 }

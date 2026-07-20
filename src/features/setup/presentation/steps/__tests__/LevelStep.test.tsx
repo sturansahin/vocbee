@@ -1,14 +1,18 @@
 // src/features/setup/presentation/steps/__tests__/LevelStep.test.tsx
 import React from 'react';
-import { fireEvent, render } from '@testing-library/react-native';
+import { fireEvent, render as testingRender } from '@testing-library/react-native';
+import { ThemeProvider } from '@shared/theme';
 import { LevelStep } from '../LevelStep';
 
+const render = (element: React.ReactElement) =>
+  testingRender(<ThemeProvider forcedMode="light">{element}</ThemeProvider>);
+
 const colors = {
-  text: '#000',
+  textPrimary: '#000',
   textSecondary: '#666',
   surface: '#F5F5F5',
-  border: '#E0E0E0',
-  primary: '#FFC814',
+  borderDefault: '#E0E0E0',
+  accent: '#FFC814',
 };
 
 const levels = [
@@ -27,13 +31,13 @@ describe('LevelStep', () => {
         onPressTakeTest={jest.fn()}
       />,
     );
-    expect(getByText('A1-A2')).toBeTruthy();
-    expect(getByText('B1-B2')).toBeTruthy();
+    expect(getByText(/A1-A2/)).toBeTruthy();
+    expect(getByText(/B1-B2/)).toBeTruthy();
   });
 
   it('calls onSelectLevel when a level row is pressed', () => {
     const onSelectLevel = jest.fn();
-    const { getByText } = render(
+    const { getByTestId } = render(
       <LevelStep
         levels={levels}
         selectedLevel=""
@@ -42,7 +46,7 @@ describe('LevelStep', () => {
         onPressTakeTest={jest.fn()}
       />,
     );
-    fireEvent.press(getByText('B1-B2'));
+    fireEvent.press(getByTestId('setup-level-intermediate'));
     expect(onSelectLevel).toHaveBeenCalledWith('intermediate');
   });
 

@@ -1,8 +1,7 @@
-import React, { useCallback, useRef, useState } from 'react';
+import React, { useCallback } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import type { StackNavigationProp } from '@react-navigation/stack';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
 import {
   HomeHeader,
@@ -17,19 +16,16 @@ import {
   StreakAlertContent,
 } from '@features/streak';
 import { SafeBannerAd, useMonetization } from '@features/monetization';
+import { useReducedMotion, useResponsiveLayout } from '@shared/responsive';
 import { useTheme } from '@shared/theme';
-import { useAlert } from '@shared/ui';
+import { Screen, useAlert } from '@shared/ui';
 import type { RootStackParamList } from '@app/navigation/types';
 import { createSwarmAnimation } from '../../../../../assets/animations/swarmAnimation';
 import type { HomeFacade } from '../../application/contracts';
-import {
-  getLearningSpeechLanguage,
-  getStreakCelebrationMessageKey,
-  getTutorialSwipeNextStep,
-  shouldCelebrateStreak,
-} from '../../domain/rules';
+import { getLearningSpeechLanguage, getTutorialSwipeNextStep } from '../../domain/rules';
 import { HomeEmptyState, HomeErrorState, HomeLoadingState } from '../components/HomeScreenStates';
 import { useBeeAnimation } from '../hooks/useBeeAnimation';
+import { useHomeEngagementFlow } from '../hooks/useHomeEngagementFlow';
 import { useLearningSession } from '../hooks/useLearningSession';
 import { useSwipeGesture } from '../hooks/useSwipeGesture';
 import { useTutorialOverlay } from '../hooks/useTutorialOverlay';
@@ -41,21 +37,15 @@ const BEE_COLOR: [number, number, number, number] = [1, 0.78, 0.08, 1];
 const BEE_STATIC_ANIMATION = createSwarmAnimation(BEE_COLOR, true);
 const BEE_ACTIVE_ANIMATION = createSwarmAnimation(BEE_COLOR, false);
 
-interface CelebrationState {
-  id: number;
-  count: number;
-  label: string;
-  message: string;
-}
-
 export interface HomeScreenProps {
   facade: HomeFacade;
 }
 
 export default function HomeScreen({ facade }: HomeScreenProps) {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
-  const insets = useSafeAreaInsets();
   const { colors, isDarkMode } = useTheme();
+  const layout = useResponsiveLayout();
+  const reducedMotion = useReducedMotion();
   const { isAdFree, isLoading: monetizationLoading } = useMonetization();
   const { showAlert } = useAlert();
   const { t } = useTranslation();
@@ -66,12 +56,6 @@ export default function HomeScreen({ facade }: HomeScreenProps) {
     session.currentWordIndex,
   );
   const shouldShowAds = !isAdFree && !monetizationLoading;
-  const sessionLearnedCountRef = useRef(0);
-  const celebrationIdRef = useRef(0);
-  const pendingInterstitialRef = useRef(false);
-  const reviewInFlightRef = useRef(false);
-  const [celebration, setCelebration] = useState<CelebrationState | null>(null);
-  const [reviewPromptVisible, setReviewPromptVisible] = useState(false);
   const speechLanguage = getLearningSpeechLanguage(session.targetLanguage);
   const wordActions = useWordActions({
     facade,
@@ -82,35 +66,18 @@ export default function HomeScreen({ facade }: HomeScreenProps) {
     tutorialVisible: tutorial.showTutorial,
     setTutorialStep: tutorial.setTutorialStep,
   });
+  const engagement = useHomeEngagementFlow({
+    facade,
+    shouldShowAds,
+    isTutorialVisible: tutorial.showTutorialRef,
+    t,
+    showAlert,
+  });
   const bees = useBeeAnimation(
     session.loadState === 'ready' && session.words.length > 0,
+    layout.width,
+    reducedMotion,
     session.currentWord?.id,
-  );
-
-  const maybeShowReview = useCallback(
-    async (nextLearnedCount: number, busy: boolean) => {
-      if (reviewPromptVisible || reviewInFlightRef.current) return;
-      reviewInFlightRef.current = true;
-      try {
-        const decision = await facade.getReviewDecision({
-          totalLearnedCount: nextLearnedCount,
-          sessionLearnedCount: sessionLearnedCountRef.current,
-          isTutorialVisible: tutorial.showTutorialRef.current,
-          isBusy: busy,
-        });
-        if (!decision.shouldPrompt) return;
-        if (decision.mode === 'native') await facade.requestNativeReview();
-        else {
-          await facade.markReviewPromptPresented();
-          setReviewPromptVisible(true);
-        }
-      } catch (error) {
-        console.warn('[HomeScreen] Review prompt check failed', error);
-      } finally {
-        reviewInFlightRef.current = false;
-      }
-    },
-    [facade, reviewPromptVisible, tutorial.showTutorialRef],
   );
 
   const handleSwipe = useCallback(
@@ -126,31 +93,13 @@ export default function HomeScreen({ facade }: HomeScreenProps) {
         session.setLearnedCount((count) => count + 1);
         const result = await facade.completeWord(session.currentLevel, word.id);
         session.setStreakSummary(getStreakSummaryFromState(result.streakState));
-        void facade.scheduleStreakReminder().catch((error) => {
-          console.error('[HomeScreen] Failed to refresh streak reminder notification:', error);
-        });
-        const celebrate = shouldCelebrateStreak(result.streakDidIncrement);
-        if (celebrate) {
-          const count = result.streakState.currentStreak;
-          setCelebration({
-            id: ++celebrationIdRef.current,
-            count,
-            label: t('home.streakCelebrationLabel'),
-            message: t(getStreakCelebrationMessageKey(count), { count }),
-          });
-        }
-        sessionLearnedCountRef.current += 1;
-        const showInterstitial = shouldShowAds && sessionLearnedCountRef.current % 10 === 0;
-        if (showInterstitial) {
-          if (celebrate) pendingInterstitialRef.current = true;
-          else await facade.showInterstitial();
-        }
+        const engagementBusy = await engagement.recordLearnedWord(result);
         if (result.level !== session.currentLevel) {
           session.setCurrentLevel(result.level);
           await session.load(true);
           return;
         }
-        await maybeShowReview(nextLearnedCount, celebrate || showInterstitial);
+        await engagement.maybeShowReview(nextLearnedCount, engagementBusy);
       }
 
       const nextIndex = session.currentWordIndex + 1;
@@ -161,10 +110,12 @@ export default function HomeScreen({ facade }: HomeScreenProps) {
         await session.load(true);
       }
     },
-    [bees, facade, maybeShowReview, session, shouldShowAds, t],
+    [bees, engagement, facade, session],
   );
 
   const swipe = useSwipeGesture({
+    viewportWidth: layout.width,
+    reducedMotion,
     tutorialVisibleRef: tutorial.showTutorialRef,
     tutorialStepRef: tutorial.tutorialStepRef,
     tutorialVisible: tutorial.showTutorial,
@@ -172,10 +123,6 @@ export default function HomeScreen({ facade }: HomeScreenProps) {
     setTutorialStep: tutorial.setTutorialStep,
     onSwipe: handleSwipe,
   });
-
-  React.useEffect(() => {
-    if (shouldShowAds) void facade.loadInterstitial();
-  }, [facade, shouldShowAds]);
 
   const levelDescription = t(
     `level.${
@@ -186,16 +133,18 @@ export default function HomeScreen({ facade }: HomeScreenProps) {
   );
   const header = (
     <HomeHeader
-      titleColor={colors.text}
-      iconColor={colors.text}
+      titleColor={colors.textPrimary}
+      iconColor={colors.textPrimary}
       streakCount={session.streakSummary.currentStreak}
       streakCompletedToday={session.streakSummary.completedToday}
       streakAtRisk={session.streakSummary.atRisk}
-      streakTextColor={session.streakSummary.completedToday ? '#FF8F1F' : colors.text}
-      streakAccentColor="#FF8F1F"
+      streakTextColor={session.streakSummary.completedToday ? colors.streak : colors.textPrimary}
+      streakAccentColor={colors.streak}
       streakAccessibilityLabel={t('home.streakAccessibilityLabel', {
         count: session.streakSummary.currentStreak,
       })}
+      favoritesAccessibilityLabel={t('home.favorites')}
+      settingsAccessibilityLabel={t('home.settings')}
       onPressStreak={() =>
         showAlert({
           title: t('home.streakTitle'),
@@ -220,7 +169,6 @@ export default function HomeScreen({ facade }: HomeScreenProps) {
       <HomeLoadingState
         colors={colors}
         isDarkMode={isDarkMode}
-        topInset={insets.top}
         showBannerPlaceholder={shouldShowAds}
         levelCode={session.currentLevel}
         levelDescription={levelDescription}
@@ -232,7 +180,6 @@ export default function HomeScreen({ facade }: HomeScreenProps) {
     return (
       <HomeErrorState
         colors={colors}
-        topInset={insets.top}
         title={t('common.error')}
         description={t('home.setupRequired')}
         retryLabel={t('common.retry', { defaultValue: 'Retry' })}
@@ -244,7 +191,6 @@ export default function HomeScreen({ facade }: HomeScreenProps) {
     return (
       <HomeEmptyState
         colors={colors}
-        topInset={insets.top}
         header={header}
         title={session.totalCount > 0 ? t('home.levelComplete') : t('home.noVocabulary')}
         description={
@@ -264,25 +210,22 @@ export default function HomeScreen({ facade }: HomeScreenProps) {
     styles.stats,
     {
       backgroundColor: isDarkMode ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.72)',
-      borderColor: colors.border,
+      borderColor: colors.borderDefault,
     },
   ];
 
   return (
-    <View
-      testID="home-ready"
-      style={[styles.container, { backgroundColor: colors.background, paddingTop: insets.top }]}
-    >
+    <Screen testID="home-ready" constrainWidth={false} contentStyle={styles.container}>
       {header}
       <View style={surfaceStyle}>
         <HomeProgressSection
           isLoading={false}
           isDarkMode={isDarkMode}
-          textColor={colors.text}
+          textColor={colors.textPrimary}
           textSecondaryColor={colors.textSecondary}
-          primaryColor={colors.primary}
-          surfaceLightColor={colors.surfaceLight}
-          borderColor={colors.border}
+          primaryColor={colors.accent}
+          surfaceLightColor={colors.surfaceMuted}
+          borderColor={colors.borderDefault}
           initialLoadingPlaceholderColor="transparent"
           initialLoadingAccentColor="transparent"
           levelCode={session.currentLevel}
@@ -323,14 +266,11 @@ export default function HomeScreen({ facade }: HomeScreenProps) {
             pronunciation: word.pronunciation ?? null,
           });
         }}
+        onSkip={() => swipe.swipe('left')}
+        onLearned={() => swipe.swipe('right')}
       />
       {shouldShowAds && (
-        <View
-          style={[
-            styles.banner,
-            { backgroundColor: colors.background, paddingBottom: insets.bottom > 0 ? 0 : 10 },
-          ]}
-        >
+        <View style={[styles.banner, { backgroundColor: colors.background }]}>
           <SafeBannerAd unitId={facade.getBannerAdUnitId()} />
         </View>
       )}
@@ -361,39 +301,18 @@ export default function HomeScreen({ facade }: HomeScreenProps) {
         }
       />
       <HomeModals
-        streakCelebrationVisible={celebration !== null}
-        streakCelebrationKey={celebration?.id ?? 0}
-        streakCelebrationCount={celebration?.count ?? 0}
-        streakCelebrationLabel={celebration?.label ?? ''}
-        streakCelebrationMessage={celebration?.message ?? ''}
-        onStreakCelebrationComplete={() => {
-          setCelebration(null);
-          if (pendingInterstitialRef.current) {
-            pendingInterstitialRef.current = false;
-            if (shouldShowAds) void facade.showInterstitial();
-          }
-        }}
-        reviewPromptVisible={reviewPromptVisible}
-        onReviewPromptDismiss={async () => {
-          setReviewPromptVisible(false);
-          await facade.dismissReviewPrompt();
-        }}
-        onReviewRateInStore={async (rating) => {
-          setReviewPromptVisible(false);
-          await facade.recordSatisfactionRating(rating);
-          const result = await facade.openStoreReviewPage('automatic-rating-prompt');
-          if (!result.opened)
-            showAlert({ title: t('common.error'), message: t('reviewPrompt.storeOpenError') });
-        }}
-        onReviewSendFeedback={async (rating) => {
-          setReviewPromptVisible(false);
-          await facade.recordSatisfactionRating(rating ?? 0);
-          if (!(await facade.openReviewFeedbackEmail(rating))) {
-            showAlert({ title: t('common.error'), message: t('reviewPrompt.feedbackOpenError') });
-          }
-        }}
+        streakCelebrationVisible={engagement.celebration !== null}
+        streakCelebrationKey={engagement.celebration?.id ?? 0}
+        streakCelebrationCount={engagement.celebration?.count ?? 0}
+        streakCelebrationLabel={engagement.celebration?.label ?? ''}
+        streakCelebrationMessage={engagement.celebration?.message ?? ''}
+        onStreakCelebrationComplete={engagement.completeCelebration}
+        reviewPromptVisible={engagement.reviewPromptVisible}
+        onReviewPromptDismiss={engagement.dismissReview}
+        onReviewRateInStore={engagement.rateInStore}
+        onReviewSendFeedback={engagement.sendFeedback}
       />
-    </View>
+    </Screen>
   );
 }
 

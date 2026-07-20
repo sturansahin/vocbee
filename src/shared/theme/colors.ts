@@ -1,34 +1,52 @@
-export const DARK_COLORS = {
-  primary: '#FFD700',
-  primaryDark: '#FFA500',
-  background: '#000000',
-  surface: '#1c1c1e',
-  surfaceLight: '#2c2c2e',
-  text: '#ffffff',
-  textSecondary: '#b8b8b8',
-  border: '#3a3a3c',
-  error: '#ff6b6b',
-};
-
-export const LIGHT_COLORS = {
-  primary: '#FFD700',
-  primaryDark: '#FF8C00',
-  background: '#ffffff',
-  surface: '#ffffff',
-  surfaceLight: '#f5f5f5',
-  text: '#1a2c22',
-  textSecondary: '#5a7d68',
-  border: '#e0e0e0',
-  error: '#e53935',
-};
-
-// Kept for compatibility with legacy style declarations that intentionally use dark tokens.
-export const COLORS = DARK_COLORS;
+/**
+ * Raw palette values live only in the theme package. Product UI consumes semantic
+ * roles from `useTheme()` instead of importing palette values.
+ */
+export const PALETTE = {
+  gold: '#FFD700',
+  goldPressedDark: '#FFA500',
+  goldPressedLight: '#FF8C00',
+  amber: '#FF8F1F',
+  amberSoft: '#FFC24A',
+  emberGlow: '#FFD24A',
+  warmCream: '#FFF7EB',
+  warmBrown: '#6A3300',
+  black: '#000000',
+  ink: '#1A2C22',
+  charcoal: '#1C1C1E',
+  graphite: '#2C2C2E',
+  slate: '#3A3A3C',
+  white: '#FFFFFF',
+  mist: '#F5F5F5',
+  lightBorder: '#E0E0E0',
+  lightSecondary: '#5A7D68',
+  darkSecondary: '#B8B8B8',
+  darkDanger: '#FF6B6B',
+  lightDanger: '#E53935',
+  darkSuccess: '#6BE58C',
+  lightSuccess: '#218A45',
+  darkWarning: '#FFC24A',
+  lightWarning: '#9A5B00',
+  transparent: 'transparent',
+  darkOverlay: 'rgba(0, 0, 0, 0.68)',
+  lightOverlay: 'rgba(26, 44, 34, 0.42)',
+  darkAccentSoft: 'rgba(255, 215, 0, 0.16)',
+  lightAccentSoft: 'rgba(255, 215, 0, 0.22)',
+  darkDangerSoft: 'rgba(255, 107, 107, 0.16)',
+  lightDangerSoft: 'rgba(229, 57, 53, 0.12)',
+  darkSuccessSoft: 'rgba(107, 229, 140, 0.16)',
+  lightSuccessSoft: 'rgba(33, 138, 69, 0.12)',
+  darkFocus: '#FFE44D',
+  lightFocus: '#8A6500',
+  darkCelebrationLabel: 'rgba(255, 247, 235, 0.78)',
+  darkCelebrationMessage: 'rgba(255, 247, 235, 0.92)',
+  lightCelebrationLabel: 'rgba(106, 51, 0, 0.72)',
+} as const;
 
 export const GRADIENT_COLORS = {
-  dark: ['#FFD700', '#1a1a1a', '#000000'] as const,
-  light: ['#FFA500', '#f5f9f7', '#ffffff'] as const,
+  dark: [PALETTE.gold, '#1A1A1A', PALETTE.black] as const,
+  light: [PALETTE.goldPressedDark, '#F5F9F7', PALETTE.white] as const,
   locations: [0, 0.2, 1] as const,
   start: { x: 0.7, y: 0 },
   end: { x: 0.7, y: 2 },
-};
+} as const;

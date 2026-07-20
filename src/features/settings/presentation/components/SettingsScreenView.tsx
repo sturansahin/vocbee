@@ -1,10 +1,10 @@
 import React from 'react';
-import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
-import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
+import { ScrollView, View } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import { LANGUAGES, LEVELS } from '@shared/i18n';
+import { useResponsiveLayout } from '@shared/responsive';
+import { AppHeader, AppSwitch, AppText, Screen, SectionCard, SettingsRow } from '@shared/ui';
 
 import type { SettingsScreenController } from '../hooks/useSettingsScreenController';
 import {
@@ -16,12 +16,10 @@ import {
   ProfileSettingsSection,
   ProgressDangerRows,
 } from '../sections';
-import { AnimatedSwitch } from './AnimatedSwitch';
 import { SettingsHelpModal } from './SettingsHelpModal';
 import { SettingsNotificationModals } from './SettingsNotificationModals';
 import { SettingsPreferenceModals } from './SettingsPreferenceModals';
 import { SettingsProfileModals } from './SettingsProfileModals';
-import { scale } from './settingsScreenConstants';
 import { settingsStyles as styles } from './settingsScreenStyles';
 
 interface SettingsScreenViewProps {
@@ -30,30 +28,31 @@ interface SettingsScreenViewProps {
 
 export function SettingsScreenView({ controller: c }: SettingsScreenViewProps) {
   const { colors, isDarkMode, t } = c;
-  const cardStyle = { backgroundColor: colors.surface, borderColor: colors.border };
+  const { contentMaxWidth, horizontalGutter } = useResponsiveLayout();
   const iconStyle = {
     backgroundColor: isDarkMode ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)',
   };
 
   return (
-    <SafeAreaView
-      edges={['left', 'right', 'bottom']}
-      style={[styles.container, { backgroundColor: colors.background }]}
-    >
-      <View style={[styles.header, { paddingTop: Math.max(c.insets.top, scale(12)) }]}>
-        <TouchableOpacity
-          onPress={() => c.navigation.goBack()}
-          style={styles.backButton}
-          accessibilityRole="button"
-          accessibilityLabel={t('common.back')}
-        >
-          <FontAwesome5 name="arrow-left" size={24} color={colors.text} />
-        </TouchableOpacity>
-        <Text style={[styles.headerTitle, { color: colors.text }]}>{t('settings.title')}</Text>
-        <View style={styles.headerSpacer} />
-      </View>
+    <Screen constrainWidth={false} contentStyle={styles.container}>
+      <AppHeader
+        title={t('settings.title')}
+        backAccessibilityLabel={t('common.back')}
+        onBack={() => c.navigation.goBack()}
+      />
 
-      <ScrollView style={styles.scrollView} contentContainerStyle={styles.scrollContent}>
+      <ScrollView
+        style={styles.scrollView}
+        contentContainerStyle={[
+          styles.scrollContent,
+          {
+            width: '100%',
+            maxWidth: contentMaxWidth,
+            paddingHorizontal: horizontalGutter,
+            alignSelf: 'center',
+          },
+        ]}
+      >
         <ProfileSettingsSection
           profileName={c.profile.name}
           profileEmail={c.profile.email}
@@ -63,7 +62,7 @@ export function SettingsScreenView({ controller: c }: SettingsScreenViewProps) {
           colors={colors}
           defaultUsernameLabel={t('settings.defaultUsername')}
           editProfileLabel={t('settings.editProfile')}
-          onPressAvatar={() => c.setShowImagePickerModal(true)}
+          onPressAvatar={() => c.openModal('image-picker')}
           onPressEditProfile={c.openEditProfile}
         />
 
@@ -100,7 +99,7 @@ export function SettingsScreenView({ controller: c }: SettingsScreenViewProps) {
           selectedLanguageName={
             LANGUAGES.find((language) => language.code === c.selectedLanguage)?.name
           }
-          onPressLanguageRow={() => c.setShowLanguagePicker(true)}
+          onPressLanguageRow={() => c.openModal('language')}
         />
 
         <NotificationSettingsSection
@@ -112,13 +111,14 @@ export function SettingsScreenView({ controller: c }: SettingsScreenViewProps) {
           autoMarkLearned={c.autoMarkLearned}
           markAsLearnedLabel={t('settings.markasLearned')}
           doNotMarkLabel={t('settings.doNotMark')}
-          onPressAutoMarkRow={() => c.setShowAutoMarkPicker(true)}
+          onPressAutoMarkRow={() => c.openModal('auto-mark')}
           enableRemindersLabel={t('settings.enableReminders')}
           reminderEnabled={c.reminderEnabled}
           renderSwitch={() => (
-            <AnimatedSwitch
+            <AppSwitch
+              accessibilityLabel={t('settings.enableReminders')}
               value={c.reminderEnabled}
-              onToggle={() => void c.handleReminderToggle()}
+              onValueChange={() => void c.handleReminderToggle()}
             />
           )}
           startTimeLabel={t('settings.startTime')}
@@ -131,20 +131,17 @@ export function SettingsScreenView({ controller: c }: SettingsScreenViewProps) {
           onPressEndTime={() => c.openTimePicker('end')}
           frequencyLabel={t('settings.frequency')}
           frequencyValueLabel={t(`settings.${c.frequency}`)}
-          onPressFrequency={() => c.setShowFrequencyPicker(true)}
+          onPressFrequency={() => c.openModal('frequency')}
         />
 
-        <Text style={[styles.sectionTitle, { color: colors.textSecondary }]}>
-          {t('settings.progress')}
-        </Text>
-        <View style={[styles.sectionCard, cardStyle]}>
+        <SectionCard title={t('settings.progress')} style={styles.sectionSpacing}>
           <LanguageProgressRows
             colors={colors}
             isDarkMode={isDarkMode}
             changeLevelLabel={t('settings.changeLevel')}
             currentLevelLabel={t(`level.${c.currentLevel}`)}
             currentLevelRange={LEVELS.find((level) => level.id === c.currentLevel)?.range}
-            onPressChangeLevel={() => c.setShowLevelPicker(true)}
+            onPressChangeLevel={() => c.openModal('level')}
             changeLanguageLabel={t('settings.changeLanguage')}
             changeLanguageDescription={t('settings.changeLanguageDesc')}
             onPressChangeLanguage={c.handleChangeLanguage}
@@ -158,16 +155,13 @@ export function SettingsScreenView({ controller: c }: SettingsScreenViewProps) {
             deleteAccountLabel={t('settings.deleteAccount')}
             onPressDeleteAccount={c.handleDeleteAccount}
           />
-        </View>
+        </SectionCard>
 
-        <Text style={[styles.sectionTitle, { color: colors.textSecondary }]}>
-          {t('settings.support')}
-        </Text>
-        <View style={[styles.sectionCard, cardStyle]}>
+        <SectionCard title={t('settings.support')} style={styles.sectionSpacing}>
           <SupportRow
             icon="help"
             label={t('settings.helpFaq')}
-            onPress={() => c.setShowHelpModal(true)}
+            onPress={() => c.openModal('help')}
             controller={c}
             iconStyle={iconStyle}
           />
@@ -186,23 +180,23 @@ export function SettingsScreenView({ controller: c }: SettingsScreenViewProps) {
             iconStyle={iconStyle}
             last
           />
-        </View>
+        </SectionCard>
 
         <LogoutButton
           colors={colors}
           logoutLabel={t('settings.logout')}
           onPressLogout={c.handleLogout}
         />
-        <Text style={[styles.versionText, { color: colors.textSecondary }]}>
+        <AppText align="center" color="textSecondary" variant="caption" style={styles.versionText}>
           VocBee v{c.facade.getAppVersion()}
-        </Text>
+        </AppText>
       </ScrollView>
 
       <SettingsNotificationModals controller={c} />
       <SettingsPreferenceModals controller={c} />
       <SettingsProfileModals controller={c} />
       <SettingsHelpModal controller={c} />
-    </SafeAreaView>
+    </Screen>
   );
 }
 
@@ -224,17 +218,16 @@ function SupportRow({
   last = false,
 }: SupportRowProps) {
   return (
-    <TouchableOpacity
-      style={[styles.settingItem, last && { borderBottomWidth: 0 }]}
-      onPress={onPress}
-    >
-      <View style={styles.settingLeft}>
+    <SettingsRow
+      label={label}
+      leading={
         <View style={[styles.settingIcon, iconStyle]}>
-          <MaterialCommunityIcons name={icon} size={22} color={colors.primary} />
+          <MaterialCommunityIcons name={icon} size={22} color={colors.accent} />
         </View>
-        <Text style={[styles.settingTitle, { color: colors.text }]}>{label}</Text>
-      </View>
-      <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
-    </TouchableOpacity>
+      }
+      onPress={onPress}
+      showChevron
+      style={last ? { borderBottomWidth: 0 } : undefined}
+    />
   );
 }

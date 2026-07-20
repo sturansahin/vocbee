@@ -1,9 +1,18 @@
 // src/features/setup/presentation/steps/__tests__/NotificationScheduleEndStep.test.tsx
 import React from 'react';
-import { fireEvent, render } from '@testing-library/react-native';
+import { fireEvent, render as testingRender } from '@testing-library/react-native';
+import { ThemeProvider } from '@shared/theme';
 import { NotificationScheduleEndStep } from '../NotificationScheduleEndStep';
 
-const colors = { text: '#000', primary: '#FFC814', surface: '#F5F5F5', border: '#E0E0E0' };
+const render = (element: React.ReactElement) =>
+  testingRender(<ThemeProvider forcedMode="light">{element}</ThemeProvider>);
+
+const colors = {
+  textPrimary: '#000',
+  accent: '#FFC814',
+  surface: '#F5F5F5',
+  borderDefault: '#E0E0E0',
+};
 
 describe('NotificationScheduleEndStep', () => {
   it('renders the end-time label and hour/minute wheel values', () => {

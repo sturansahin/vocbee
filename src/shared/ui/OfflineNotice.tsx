@@ -4,10 +4,14 @@ import * as Network from 'expo-network';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
+import { useReducedMotion } from '@shared/responsive';
+import { useTheme } from '@shared/theme';
 
 export const OfflineNotice = () => {
   const insets = useSafeAreaInsets();
   const { t } = useTranslation();
+  const reducedMotion = useReducedMotion();
+  const { colors, shadows } = useTheme();
   const [isConnected, setIsConnected] = useState(true);
   // Use useRef for Animated.Value to avoid re-creation on re-render
   const animation = useRef(new Animated.Value(0)).current;
@@ -26,10 +30,10 @@ export const OfflineNotice = () => {
   useEffect(() => {
     Animated.timing(animation, {
       toValue: isConnected ? 0 : 1,
-      duration: 300,
+      duration: reducedMotion ? 0 : 300,
       useNativeDriver: true,
     }).start();
-  }, [isConnected, animation]);
+  }, [animation, isConnected, reducedMotion]);
 
   const translateY = animation.interpolate({
     inputRange: [0, 1],
@@ -48,6 +52,9 @@ export const OfflineNotice = () => {
   return (
     <Animated.View
       pointerEvents="auto"
+      accessibilityLabel={t('offline.message')}
+      accessibilityLiveRegion="assertive"
+      accessibilityRole="alert"
       accessibilityElementsHidden={false}
       importantForAccessibility="auto"
       style={[
@@ -56,11 +63,13 @@ export const OfflineNotice = () => {
           top: insets.top,
           transform: [{ translateY }],
           opacity,
+          backgroundColor: colors.danger,
+          ...shadows.floating,
         },
       ]}
     >
-      <MaterialIcons name="wifi-off" size={20} color="#fff" />
-      <Text style={styles.text}>{t('offline.message')}</Text>
+      <MaterialIcons name="wifi-off" size={20} color={colors.onDanger} />
+      <Text style={[styles.text, { color: colors.onDanger }]}>{t('offline.message')}</Text>
     </Animated.View>
   );
 };
@@ -71,7 +80,6 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     zIndex: 9999,
-    backgroundColor: '#FF6B6B',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
@@ -79,15 +87,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     marginHorizontal: 16,
     borderRadius: 8,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 4,
-    elevation: 5,
     gap: 8,
   },
   text: {
-    color: '#fff',
     fontSize: 14,
     fontWeight: '600',
   },

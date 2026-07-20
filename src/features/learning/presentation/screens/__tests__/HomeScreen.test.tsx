@@ -5,8 +5,55 @@ import type { HomeFacade, HomeSessionSnapshot } from '@features/learning';
 import { DEFAULT_STREAK_SUMMARY } from '@features/streak';
 import HomeScreen, { getTutorialSwipeNextStep } from '../HomeScreen';
 
-jest.mock('@shared/ui', () => ({ useAlert: () => ({ showAlert: jest.fn() }) }));
+jest.mock('@shared/ui', () => {
+  const ReactModule = require('react');
+  const { Pressable, Text, View } = require('react-native');
+  const Screen = ({ children, ...props }: any) => ReactModule.createElement(View, props, children);
+  const AppButton = ({ label, onPress, ...props }: any) =>
+    ReactModule.createElement(
+      Pressable,
+      { accessibilityRole: 'button', onPress, ...props },
+      ReactModule.createElement(Text, null, label),
+    );
+  const IconButton = ({ accessibilityLabel, icon, onPress, ...props }: any) =>
+    ReactModule.createElement(
+      Pressable,
+      { accessibilityLabel, accessibilityRole: 'button', onPress, ...props },
+      icon,
+    );
+  const AppModal = ({ visible, children, actions }: any) =>
+    visible ? ReactModule.createElement(View, null, children, actions) : null;
+  const State = ({ title, message, actionLabel, retryLabel, onAction, onRetry }: any) =>
+    ReactModule.createElement(
+      View,
+      null,
+      ReactModule.createElement(Text, null, title),
+      message ? ReactModule.createElement(Text, null, message) : null,
+      actionLabel || retryLabel
+        ? ReactModule.createElement(
+            Pressable,
+            { onPress: onAction ?? onRetry },
+            ReactModule.createElement(Text, null, actionLabel ?? retryLabel),
+          )
+        : null,
+    );
+  return {
+    AppButton,
+    AppModal,
+    EmptyState: State,
+    ErrorState: State,
+    IconButton,
+    Screen,
+    useAlert: () => ({ showAlert: jest.fn() }),
+  };
+});
 jest.mock('@shared/theme', () => ({
+  breakpoints: {
+    compactMax: 374,
+    wideMin: 768,
+    smallHeightMax: 700,
+    contentMaxWidth: { compact: 560, regular: 680, wide: 760 },
+  },
   useTheme: () => ({
     colors: {
       background: '#fff',
@@ -17,8 +64,52 @@ jest.mock('@shared/theme', () => ({
       surfaceLight: '#f5f5f5',
       border: '#ddd',
       error: '#c00',
+      streak: '#ff8f1f',
+      shadow: '#000',
+      swipeSkip: '#c00',
+      swipeSkipSoft: 'rgba(204,0,0,0.12)',
+      swipeLearn: '#080',
+      swipeLearnSoft: 'rgba(0,128,0,0.12)',
+      onOverlay: '#fff',
+      transparent: 'transparent',
+      focusRing: '#ffd700',
+      accent: '#ffc814',
+      accentPressed: '#e0aa00',
+      onAccent: '#000',
+      borderStrong: '#999',
+      textPrimary: '#111',
+      textDisabled: '#999',
+      surfaceMuted: '#f5f5f5',
+      danger: '#c00',
+      onDanger: '#fff',
     },
     isDarkMode: false,
+    radii: { pill: 999 },
+    spacing: { sm: 8 },
+    typography: {
+      display: {},
+      screenTitle: {},
+      sectionTitle: {},
+      body: {},
+      bodyStrong: {},
+      caption: {},
+      button: {},
+      input: {},
+      metric: {},
+    },
+  }),
+}));
+jest.mock('@shared/responsive', () => ({
+  useReducedMotion: () => true,
+  useResponsiveLayout: () => ({
+    width: 390,
+    height: 844,
+    orientation: 'portrait',
+    sizeClass: 'regular',
+    isSmallHeight: false,
+    contentMaxWidth: 680,
+    horizontalGutter: 20,
+    moderateScale: (value: number) => value,
   }),
 }));
 jest.mock('@features/monetization', () => ({
@@ -115,6 +206,23 @@ describe('HomeScreen', () => {
       expect(facade.toggleFavorite).toHaveBeenCalledWith(word, 'A1', false);
       expect(facade.speak).toHaveBeenCalledWith('Haus', 'de-DE');
     });
+  });
+
+  it('offers accessible skip and learned actions with the same swipe meanings', async () => {
+    const skipFacade = createFacade();
+    const skipScreen = renderHome(skipFacade);
+    await waitFor(() => expect(skipScreen.getByTestId('home-ready')).toBeTruthy());
+    fireEvent.press(skipScreen.getByTestId('home-skip-action'));
+    await waitFor(() => expect(skipFacade.saveLastWordId).toHaveBeenCalledWith(0));
+    expect(skipFacade.completeWord).not.toHaveBeenCalled();
+    skipScreen.unmount();
+
+    const learnedFacade = createFacade();
+    const learnedScreen = renderHome(learnedFacade);
+    await waitFor(() => expect(learnedScreen.getByTestId('home-ready')).toBeTruthy());
+    fireEvent.press(learnedScreen.getByTestId('home-learned-action'));
+    await waitFor(() => expect(learnedFacade.completeWord).toHaveBeenCalledWith('A1', word.id));
+    expect(learnedFacade.scheduleStreakReminder).toHaveBeenCalledTimes(1);
   });
 
   it('renders the empty state for a session without words', async () => {

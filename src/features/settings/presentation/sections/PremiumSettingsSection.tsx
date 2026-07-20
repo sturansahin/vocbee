@@ -6,21 +6,9 @@
 // (handleRemoveAdsPress, handleRestorePurchasesPress, handleManageSubscriptionPress).
 
 import React from 'react';
-import {
-  ActivityIndicator,
-  Dimensions,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import { ActivityIndicator, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
-import { FONT_FAMILY } from '@shared/theme';
-
-const { width: SCREEN_WIDTH } = Dimensions.get('window');
-const BASE_WIDTH = 393;
-const scale = (size: number) => (SCREEN_WIDTH / BASE_WIDTH) * size;
-const moderateScale = (size: number, factor = 0.5) => size + (scale(size) - size) * factor;
+import { FONT_FAMILY, type ThemeColors } from '@shared/theme';
 
 export type PremiumActionKind = 'paywall' | 'restore' | 'manage' | null;
 
@@ -29,13 +17,10 @@ export interface PremiumSettingsSectionProps {
   isPremiumLoading: boolean;
   premiumAction: PremiumActionKind;
   adFreeStatusText: string;
-  colors: {
-    text: string;
-    textSecondary: string;
-    surface: string;
-    border: string;
-    primary: string;
-  };
+  colors: Pick<
+    ThemeColors,
+    'textPrimary' | 'textSecondary' | 'surface' | 'borderDefault' | 'accent'
+  >;
   isDarkMode: boolean;
   sectionTitle: string;
   removeAdsActiveLabel: string;
@@ -79,10 +64,15 @@ export function PremiumSettingsSection({
       <View
         style={[
           styles.sectionCard,
-          { backgroundColor: colors.surface, borderColor: colors.border },
+          { backgroundColor: colors.surface, borderColor: colors.borderDefault },
         ]}
       >
         <TouchableOpacity
+          accessibilityRole="button"
+          accessibilityState={{
+            busy: premiumAction === 'paywall' || isPremiumLoading,
+            disabled: isAdFree || isPremiumLoading || premiumAction !== null,
+          }}
           style={styles.settingItem}
           onPress={onPressRemoveAds}
           disabled={isAdFree || isPremiumLoading || premiumAction !== null}
@@ -92,11 +82,11 @@ export function PremiumSettingsSection({
               <MaterialCommunityIcons
                 name={isAdFree ? 'crown' : 'crown-outline'}
                 size={24}
-                color={colors.primary}
+                color={colors.accent}
               />
             </View>
             <View style={styles.settingTextContent}>
-              <Text style={[styles.settingTitle, { color: colors.text }]}>
+              <Text style={[styles.settingTitle, { color: colors.textPrimary }]}>
                 {isAdFree ? removeAdsActiveLabel : removeAdsLabel}
               </Text>
               <Text
@@ -108,25 +98,30 @@ export function PremiumSettingsSection({
             </View>
           </View>
           {premiumAction === 'paywall' || isPremiumLoading ? (
-            <ActivityIndicator size="small" color={colors.primary} />
+            <ActivityIndicator size="small" color={colors.accent} />
           ) : isAdFree ? (
-            <MaterialIcons name="check-circle" size={24} color={colors.primary} />
+            <MaterialIcons name="check-circle" size={24} color={colors.accent} />
           ) : (
             <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
           )}
         </TouchableOpacity>
 
         <TouchableOpacity
+          accessibilityRole="button"
+          accessibilityState={{
+            busy: premiumAction === 'restore',
+            disabled: isPremiumLoading || premiumAction !== null,
+          }}
           style={[styles.settingItem, !isAdFree && { borderBottomWidth: 0 }]}
           onPress={onPressRestorePurchases}
           disabled={isPremiumLoading || premiumAction !== null}
         >
           <View style={[styles.settingLeft, styles.settingLeftFlexible]}>
             <View style={[styles.settingIcon, settingIconStyle]}>
-              <MaterialIcons name="restore" size={24} color={colors.primary} />
+              <MaterialIcons name="restore" size={24} color={colors.accent} />
             </View>
             <View style={styles.settingTextContent}>
-              <Text style={[styles.settingTitle, { color: colors.text }]}>
+              <Text style={[styles.settingTitle, { color: colors.textPrimary }]}>
                 {restorePurchasesLabel}
               </Text>
               <Text
@@ -138,7 +133,7 @@ export function PremiumSettingsSection({
             </View>
           </View>
           {premiumAction === 'restore' ? (
-            <ActivityIndicator size="small" color={colors.primary} />
+            <ActivityIndicator size="small" color={colors.accent} />
           ) : (
             <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
           )}
@@ -146,6 +141,11 @@ export function PremiumSettingsSection({
 
         {isAdFree && (
           <TouchableOpacity
+            accessibilityRole="button"
+            accessibilityState={{
+              busy: premiumAction === 'manage',
+              disabled: isPremiumLoading || premiumAction !== null,
+            }}
             style={[styles.settingItem, { borderBottomWidth: 0 }]}
             onPress={onPressManageSubscription}
             disabled={isPremiumLoading || premiumAction !== null}
@@ -155,11 +155,11 @@ export function PremiumSettingsSection({
                 <MaterialCommunityIcons
                   name="credit-card-outline"
                   size={24}
-                  color={colors.primary}
+                  color={colors.accent}
                 />
               </View>
               <View style={styles.settingTextContent}>
-                <Text style={[styles.settingTitle, { color: colors.text }]}>
+                <Text style={[styles.settingTitle, { color: colors.textPrimary }]}>
                   {manageSubscriptionLabel}
                 </Text>
                 <Text
@@ -171,7 +171,7 @@ export function PremiumSettingsSection({
               </View>
             </View>
             {premiumAction === 'manage' ? (
-              <ActivityIndicator size="small" color={colors.primary} />
+              <ActivityIndicator size="small" color={colors.accent} />
             ) : (
               <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
             )}
@@ -220,20 +220,20 @@ const styles = StyleSheet.create({
     minWidth: 0,
   },
   settingIcon: {
-    width: scale(40),
-    height: scale(40),
-    borderRadius: scale(20),
+    width: 40,
+    height: 40,
+    borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
   },
   settingTitle: {
     fontFamily: FONT_FAMILY,
-    fontSize: moderateScale(16),
+    fontSize: 16,
     fontWeight: '500',
   },
   settingSubtitle: {
     fontFamily: FONT_FAMILY,
-    fontSize: moderateScale(12),
+    fontSize: 12,
     fontWeight: '500',
     marginTop: 2,
   },

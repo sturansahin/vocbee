@@ -1,10 +1,11 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, useColorScheme } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { MaterialIcons } from '@expo/vector-icons';
 import * as Updates from 'expo-updates';
 import i18n from '@shared/i18n';
-import { DARK_COLORS, LIGHT_COLORS } from '@shared/theme';
+import { useTheme, type ThemeColors } from '@shared/theme';
+import { AppButton } from './primitives/AppButton';
 
 interface Props {
   children: ReactNode;
@@ -18,15 +19,13 @@ interface State {
 // Wrapper to inject theme into class component
 function withThemeColors(WrappedComponent: typeof ErrorBoundaryInner) {
   return function ThemedErrorBoundary(props: Props) {
-    const colorScheme = useColorScheme();
-    const isDark = colorScheme === 'dark';
-    const colors = isDark ? DARK_COLORS : LIGHT_COLORS;
+    const { colors } = useTheme();
     return <WrappedComponent {...props} themeColors={colors} />;
   };
 }
 
 interface InnerProps extends Props {
-  themeColors: typeof DARK_COLORS;
+  themeColors: ThemeColors;
 }
 
 export class ErrorBoundaryInner extends Component<InnerProps, State> {
@@ -61,9 +60,9 @@ export class ErrorBoundaryInner extends Component<InnerProps, State> {
       return (
         <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
           <View style={styles.content}>
-            <MaterialIcons name="error-outline" size={64} color={colors.error} />
+            <MaterialIcons name="error-outline" size={64} color={colors.danger} />
 
-            <Text style={[styles.title, { color: colors.text }]}>
+            <Text style={[styles.title, { color: colors.textPrimary }]}>
               {i18n.t('errorBoundary.title')}
             </Text>
 
@@ -75,22 +74,20 @@ export class ErrorBoundaryInner extends Component<InnerProps, State> {
               <View
                 style={[
                   styles.errorBox,
-                  { backgroundColor: colors.surface, borderColor: colors.border },
+                  { backgroundColor: colors.surface, borderColor: colors.borderDefault },
                 ]}
               >
-                <Text style={[styles.errorText, { color: colors.error }]}>
+                <Text style={[styles.errorText, { color: colors.danger }]}>
                   {this.state.error.toString()}
                 </Text>
               </View>
             )}
 
-            <TouchableOpacity
-              style={styles.button}
+            <AppButton
+              fullWidth={false}
+              label={i18n.t('errorBoundary.restart')}
               onPress={this.handleRestart}
-              activeOpacity={0.8}
-            >
-              <Text style={styles.buttonText}>{i18n.t('errorBoundary.restart')}</Text>
-            </TouchableOpacity>
+            />
           </View>
         </SafeAreaView>
       );
@@ -136,21 +133,5 @@ const styles = StyleSheet.create({
   errorText: {
     fontSize: 12,
     fontFamily: 'monospace',
-  },
-  button: {
-    backgroundColor: '#FFD700',
-    paddingVertical: 14,
-    paddingHorizontal: 32,
-    borderRadius: 24,
-    elevation: 2,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-  },
-  buttonText: {
-    color: '#000',
-    fontSize: 16,
-    fontWeight: 'bold',
   },
 });

@@ -7,13 +7,14 @@
 // all, matching original behavior). No business logic: all values are passed in as props.
 
 import React from 'react';
-import { Dimensions, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import { useResponsiveLayout } from '@shared/responsive';
 import { FONT_FAMILY } from '@shared/theme';
 
 export interface HomeProgressSectionProps {
   isLoading: boolean;
   isDarkMode: boolean;
-  /** colors.text / colors.textSecondary / colors.primary / colors.surfaceLight / colors.border */
+  /** Semantic theme colors supplied by the Home screen. */
   textColor: string;
   textSecondaryColor: string;
   primaryColor: string;
@@ -46,6 +47,8 @@ export function HomeProgressSection({
   wordsLabel,
   progressPercentage,
 }: HomeProgressSectionProps) {
+  const { moderateScale } = useResponsiveLayout();
+
   if (isLoading) {
     return (
       <View style={styles.statsSection}>
@@ -76,7 +79,7 @@ export function HomeProgressSection({
           style={[
             styles.progressBg,
             {
-              backgroundColor: isDarkMode ? '#2c2c2e' : surfaceLightColor,
+              backgroundColor: surfaceLightColor,
               borderWidth: isDarkMode ? 0 : 1,
               borderColor: isDarkMode ? 'transparent' : borderColor,
             },
@@ -103,11 +106,18 @@ export function HomeProgressSection({
     <View style={styles.statsSection}>
       <View>
         <View style={styles.levelRow}>
-          <Text style={[styles.levelValue, { color: textColor }]}>{levelCode}</Text>
+          <Text style={[styles.levelValue, { color: textColor, fontSize: moderateScale(26) }]}>
+            {levelCode}
+          </Text>
           <Text style={[styles.levelSubtext, { color: textSecondaryColor }]}>
             {levelDescription}
           </Text>
-          <Text style={[styles.goalValue, { color: textColor, marginLeft: 'auto' }]}>
+          <Text
+            style={[
+              styles.goalValue,
+              { color: textColor, marginLeft: 'auto', fontSize: moderateScale(12) },
+            ]}
+          >
             {learnedCount}/{totalCount} {wordsLabel}
           </Text>
         </View>
@@ -115,7 +125,7 @@ export function HomeProgressSection({
           style={[
             styles.progressBg,
             {
-              backgroundColor: isDarkMode ? '#2c2c2e' : surfaceLightColor,
+              backgroundColor: surfaceLightColor,
               borderWidth: isDarkMode ? 0 : 1,
               borderColor: isDarkMode ? 'transparent' : borderColor,
             },
@@ -127,7 +137,7 @@ export function HomeProgressSection({
               {
                 backgroundColor: primaryColor,
                 width: `${progressPercentage}%`,
-                shadowColor: '#FFD700',
+                shadowColor: primaryColor,
                 shadowOffset: { width: 0, height: 0 },
                 shadowOpacity: 0.8,
                 shadowRadius: 6,
@@ -141,11 +151,6 @@ export function HomeProgressSection({
   );
 }
 
-const { width: SCREEN_WIDTH } = Dimensions.get('window');
-const BASE_WIDTH = 393; // iPhone 14 Pro base width — matches original HomeScreen constant verbatim
-const scale = (size: number) => (SCREEN_WIDTH / BASE_WIDTH) * size;
-const moderateScale = (size: number, factor = 0.5) => size + (scale(size) - size) * factor;
-
 const styles = StyleSheet.create({
   statsSection: {
     paddingHorizontal: 20,
@@ -158,7 +163,6 @@ const styles = StyleSheet.create({
   },
   levelValue: {
     fontFamily: FONT_FAMILY,
-    fontSize: moderateScale(26),
   },
   levelSubtext: {
     fontFamily: FONT_FAMILY,
@@ -166,7 +170,6 @@ const styles = StyleSheet.create({
   },
   goalValue: {
     fontFamily: FONT_FAMILY,
-    fontSize: moderateScale(12),
   },
   progressBg: {
     height: 8,

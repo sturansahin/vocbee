@@ -15,8 +15,38 @@ type Nav = StackNavigationProp<DevToolsStackParamList, 'DevToolsHome'>;
 const MENU_ITEMS: { route: keyof DevToolsStackParamList; label: string; description: string }[] = [
   {
     route: 'ScreenTester',
-    label: 'Screen Tester',
+    label: 'Screens',
     description: 'Open any real screen from screenRegistry.ts',
+  },
+  {
+    route: 'ComponentCatalog',
+    label: 'Components',
+    description: 'Interactive public primitive variants',
+  },
+  {
+    route: 'StateCatalog',
+    label: 'States',
+    description: 'Loading, empty, error and offline scenarios',
+  },
+  {
+    route: 'ThemeCatalog',
+    label: 'Theme',
+    description: 'Light and dark semantic token contracts',
+  },
+  {
+    route: 'ResponsiveCatalog',
+    label: 'Responsive',
+    description: 'Live orientation and size-class metrics',
+  },
+  {
+    route: 'AccessibilityCatalog',
+    label: 'Accessibility',
+    description: 'Labels, roles, states and touch targets',
+  },
+  {
+    route: 'MotionCatalog',
+    label: 'Motion',
+    description: 'Reduced-motion behavior previews',
   },
   {
     route: 'ScenarioPicker',

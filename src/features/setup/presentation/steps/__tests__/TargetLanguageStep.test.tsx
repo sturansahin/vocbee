@@ -1,14 +1,18 @@
 // src/features/setup/presentation/steps/__tests__/TargetLanguageStep.test.tsx
 import React from 'react';
-import { fireEvent, render } from '@testing-library/react-native';
+import { fireEvent, render as testingRender } from '@testing-library/react-native';
+import { ThemeProvider } from '@shared/theme';
 import { TargetLanguageStep } from '../TargetLanguageStep';
 
+const render = (element: React.ReactElement) =>
+  testingRender(<ThemeProvider forcedMode="light">{element}</ThemeProvider>);
+
 const colors = {
-  text: '#000',
+  textPrimary: '#000',
   textSecondary: '#666',
   surface: '#F5F5F5',
-  border: '#E0E0E0',
-  primary: '#FFC814',
+  borderDefault: '#E0E0E0',
+  accent: '#FFC814',
   background: '#fff',
 };
 

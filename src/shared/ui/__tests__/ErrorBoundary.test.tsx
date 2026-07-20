@@ -1,8 +1,12 @@
 // file: src/shared/ui/__tests__/ErrorBoundary.test.tsx
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react-native';
+import { render as testingRender, fireEvent } from '@testing-library/react-native';
 import { Text, View } from 'react-native';
+import { ThemeProvider } from '@shared/theme';
 import { ErrorBoundary, ErrorBoundaryInner } from '../ErrorBoundary';
+
+const render = (ui: React.ReactElement) =>
+  testingRender(<ThemeProvider forcedMode="light">{ui}</ThemeProvider>);
 
 // Mock expo-updates
 jest.mock('expo-updates', () => ({

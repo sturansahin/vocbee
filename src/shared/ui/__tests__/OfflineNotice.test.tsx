@@ -2,6 +2,7 @@
 import React from 'react';
 import { render, act, waitFor } from '@testing-library/react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { ThemeProvider } from '@shared/theme';
 import { OfflineNotice } from '../OfflineNotice';
 
 // Mock expo-network
@@ -17,7 +18,11 @@ const initialMetrics = {
 };
 
 const renderWithProviders = (ui: React.ReactElement) => {
-  return render(<SafeAreaProvider initialMetrics={initialMetrics}>{ui}</SafeAreaProvider>);
+  return render(
+    <SafeAreaProvider initialMetrics={initialMetrics}>
+      <ThemeProvider forcedMode="light">{ui}</ThemeProvider>
+    </SafeAreaProvider>,
+  );
 };
 
 describe('OfflineNotice', () => {

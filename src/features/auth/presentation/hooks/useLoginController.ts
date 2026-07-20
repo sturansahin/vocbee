@@ -14,7 +14,7 @@ import { validateLogin } from '../../domain/rules';
 import { useAuth } from '../AuthProvider';
 import { createLoginFlyAwayAnimation } from '../animations/loginFlyAway';
 
-export function useLoginController(screenHeight: number) {
+export function useLoginController(screenHeight: number, reducedMotion = false) {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
   const { signIn, signInWithGoogle, signInWithApple } = useAuth();
   const { showAlert } = useAlert();
@@ -89,14 +89,19 @@ export function useLoginController(screenHeight: number) {
         loginCompleteRef.current = true;
         finishWhenReady();
       });
-    lottieRef.current?.play();
-    createLoginFlyAwayAnimation(
-      { translateX, translateY, opacity, rotation, scale },
-      screenHeight,
-    ).start(() => {
+    if (reducedMotion) {
       animationCompleteRef.current = true;
       finishWhenReady();
-    });
+    } else {
+      lottieRef.current?.play();
+      createLoginFlyAwayAnimation(
+        { translateX, translateY, opacity, rotation, scale },
+        screenHeight,
+      ).start(() => {
+        animationCompleteRef.current = true;
+        finishWhenReady();
+      });
+    }
   };
 
   const handleSocialSignIn = async (action: () => Promise<{ setupCompleted: boolean }>) => {

@@ -10,6 +10,9 @@ const mockReset = jest.fn();
 const mockShowAlert = jest.fn();
 const mockUpdateProfileData = jest.fn(async () => undefined);
 const mockUpdateNotificationSettings = jest.fn(async () => undefined);
+const mockSignOut = jest.fn(async () => undefined);
+const mockDeleteAccount = jest.fn(async () => undefined);
+let mockNotificationEnabled = true;
 
 jest.mock('@react-navigation/native', () => ({
   useNavigation: () => ({
@@ -27,17 +30,12 @@ jest.mock('@expo/vector-icons', () => ({
 
 jest.mock('@expo/vector-icons/FontAwesome5', () => 'FontAwesome5');
 
-jest.mock('../../components/AnimatedSwitch', () => ({
-  AnimatedSwitch: () => null,
-}));
-
 jest.mock('@shared/theme', () => ({
-  COLORS: {
-    background: '#ffffff',
-    surface: '#ffffff',
-    text: '#111111',
-    textSecondary: '#666666',
-    primary: '#f7b500',
+  breakpoints: {
+    compactMax: 374,
+    wideMin: 768,
+    smallHeightMax: 700,
+    contentMaxWidth: { compact: 560, regular: 680, wide: 760 },
   },
   FONT_FAMILY: 'System',
   useTheme: () => ({
@@ -51,13 +49,82 @@ jest.mock('@shared/theme', () => ({
       primary: '#f7b500',
       border: '#dddddd',
       error: '#cc0000',
+      accent: '#f7b500',
+      danger: '#cc0000',
+      dangerSoft: '#ffeeee',
+      surfaceMuted: '#f5f5f5',
+      textPrimary: '#111111',
+      borderDefault: '#dddddd',
     },
   }),
 }));
 
-jest.mock('@shared/ui', () => ({
-  useAlert: () => ({ showAlert: mockShowAlert }),
-}));
+jest.mock('@shared/ui', () => {
+  const ReactModule = require('react');
+  const { Pressable, Switch, Text, TextInput, View } = require('react-native');
+  const Container = ({ children, title, ...props }: any) =>
+    ReactModule.createElement(
+      View,
+      props,
+      title ? ReactModule.createElement(Text, null, title) : null,
+      children,
+    );
+  const Action = ({ label, onPress, ...props }: any) =>
+    ReactModule.createElement(
+      Pressable,
+      { accessibilityRole: 'button', onPress, ...props },
+      ReactModule.createElement(Text, null, label),
+    );
+  return {
+    AppButton: Action,
+    AppHeader: ({ title, onBack }: any) =>
+      ReactModule.createElement(
+        View,
+        null,
+        ReactModule.createElement(Pressable, { onPress: onBack }),
+        ReactModule.createElement(Text, null, title),
+      ),
+    AppInput: ({ label, ...props }: any) =>
+      ReactModule.createElement(
+        View,
+        null,
+        ReactModule.createElement(Text, null, label),
+        ReactModule.createElement(TextInput, props),
+      ),
+    AppModal: ({ visible, title, children, actions, onRequestClose }: any) =>
+      visible
+        ? ReactModule.createElement(
+            View,
+            null,
+            ReactModule.createElement(Pressable, {
+              testID: 'app-modal-backdrop',
+              onPress: onRequestClose,
+            }),
+            ReactModule.createElement(Text, null, title),
+            children,
+            actions,
+          )
+        : null,
+    AppSwitch: (props: any) => ReactModule.createElement(Switch, props),
+    AppText: ({ children, ...props }: any) => ReactModule.createElement(Text, props, children),
+    Screen: Container,
+    SectionCard: Container,
+    SelectionRow: ({ label, onPress }: any) =>
+      ReactModule.createElement(
+        Pressable,
+        { onPress },
+        ReactModule.createElement(Text, null, label),
+      ),
+    SettingsRow: ({ label, onPress, leading }: any) =>
+      ReactModule.createElement(
+        Pressable,
+        { onPress },
+        leading,
+        ReactModule.createElement(Text, null, label),
+      ),
+    useAlert: () => ({ showAlert: mockShowAlert }),
+  };
+});
 
 jest.mock('@shared/i18n', () => ({
   LANGUAGES: [{ id: 'english', code: 'en', name: 'English', nativeName: 'English', flagIcon: 1 }],
@@ -82,8 +149,8 @@ jest.mock('@features/notifications', () => ({
 
 jest.mock('@features/auth', () => ({
   useAuth: () => ({
-    signOut: jest.fn(async () => undefined),
-    deleteAccount: jest.fn(async () => undefined),
+    signOut: mockSignOut,
+    deleteAccount: mockDeleteAccount,
     user: { uid: 'user-1' },
     profile: {
       name: 'VocBee User',
@@ -92,7 +159,7 @@ jest.mock('@features/auth', () => ({
     },
     updateProfileData: mockUpdateProfileData,
     notificationSettings: {
-      enabled: true,
+      enabled: mockNotificationEnabled,
       startHour: 9,
       startMinute: 0,
       endHour: 21,
@@ -153,6 +220,7 @@ function renderScreen(facade: SettingsFacade) {
 describe('SettingsScreenContent', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    mockNotificationEnabled = true;
   });
 
   it('renders profile, notification, progress, support, and version content', async () => {
@@ -196,5 +264,64 @@ describe('SettingsScreenContent', () => {
         message: 'settings.profileUpdated',
       });
     });
+  });
+
+  it('keeps notification permission denial visible and does not persist enablement', async () => {
+    mockNotificationEnabled = false;
+    const facade = makeFacade({
+      requestNotificationPermission: jest.fn(async () => false),
+    });
+    const { getByRole } = renderScreen(facade);
+
+    fireEvent(getByRole('switch'), 'valueChange', true);
+
+    await waitFor(() => {
+      expect(facade.requestNotificationPermission).toHaveBeenCalledTimes(1);
+      expect(mockShowAlert).toHaveBeenCalledWith(
+        expect.objectContaining({
+          title: 'settings.permissionRequired',
+          message: 'settings.enableNotificationsInSettings',
+        }),
+      );
+    });
+    expect(mockUpdateNotificationSettings).not.toHaveBeenCalled();
+  });
+
+  it('routes destructive rows through confirmation before invoking facade work', async () => {
+    const facade = makeFacade();
+    const { getByText } = renderScreen(facade);
+
+    fireEvent.press(getByText('settings.resetProgress'));
+    const resetConfirmation = mockShowAlert.mock.calls[mockShowAlert.mock.calls.length - 1]?.[0];
+    expect(resetConfirmation.buttons[1].style).toBe('destructive');
+    await resetConfirmation.buttons[1].onPress();
+    expect(facade.resetLearningProgress).toHaveBeenCalledWith('user-1');
+
+    fireEvent.press(getByText('settings.deleteAccount'));
+    const deleteConfirmation = mockShowAlert.mock.calls[mockShowAlert.mock.calls.length - 1]?.[0];
+    expect(deleteConfirmation.buttons[1].style).toBe('destructive');
+    deleteConfirmation.buttons[1].onPress();
+    await waitFor(() => expect(mockDeleteAccount).toHaveBeenCalledTimes(1));
+
+    fireEvent.press(getByText('settings.logout'));
+    const logoutConfirmation = mockShowAlert.mock.calls[mockShowAlert.mock.calls.length - 1]?.[0];
+    expect(logoutConfirmation.buttons[1].style).toBe('destructive');
+    logoutConfirmation.buttons[1].onPress();
+    await waitFor(() => expect(mockSignOut).toHaveBeenCalledTimes(1));
+  });
+
+  it('opens modal state from settings rows and closes via the shared backdrop contract', () => {
+    const facade = makeFacade();
+    const { getAllByText, getByText, getByTestId, queryByText } = renderScreen(facade);
+
+    fireEvent.press(getByText('settings.notificationAction'));
+    expect(getAllByText('settings.markasLearned').length).toBeGreaterThan(1);
+    fireEvent.press(getByTestId('app-modal-backdrop'));
+    expect(queryByText('settings.autoMarkDesc1')).toBeNull();
+
+    fireEvent.press(getByText('settings.changeLevel'));
+    expect(getByText('settings.selectLevel')).toBeTruthy();
+    fireEvent.press(getByTestId('app-modal-backdrop'));
+    expect(queryByText('settings.selectLevel')).toBeNull();
   });
 });

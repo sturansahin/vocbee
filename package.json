@@ -13,6 +13,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:ci": "jest --runInBand",
+    "test:ui": "jest --runInBand --coverage=false --testPathPattern=\"(presentation|shared/ui|shared/theme|shared/responsive|devtools)\" && node --test scripts/__tests__/uiAudit.test.cjs",
+    "audit:ui": "node scripts/ui-audit.cjs",
     "coverage:check": "node scripts/check-feature-coverage.cjs",
     "test:boundaries": "jest --runInBand --coverage=false --runTestsByPath src/architecture/__tests__/importBoundaries.test.ts",
     "lint": "eslint . --ext .ts,.tsx --max-warnings=0",
@@ -31,8 +33,8 @@
     "functions:build": "npm --prefix functions run build",
     "api:check": "node --check api/deleteAccount.js && node --check api/grammarProxy.js",
     "check:server-deps": "node scripts/check-server-dependency-boundary.cjs",
-    "prettier:check": "prettier --check . --ignore-unknown",
-    "format": "prettier --write . --ignore-unknown"
+    "prettier:check": "prettier --check . --ignore-unknown --end-of-line auto",
+    "format": "prettier --write . --ignore-unknown --end-of-line auto"
   },
   "dependencies": {
     "@expo-google-fonts/rubik-mono-one": "^0.4.1",

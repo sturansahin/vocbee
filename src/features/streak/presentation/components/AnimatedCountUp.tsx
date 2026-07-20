@@ -29,6 +29,12 @@ export function AnimatedCountUp({
     progress.stopAnimation();
     progress.setValue(0);
 
+    if (animationDuration === 0) {
+      progress.setValue(1);
+      setDisplayValue(normalizedValue);
+      return;
+    }
+
     const listenerId = progress.addListener(({ value: animatedValue }) => {
       setDisplayValue(Math.round(animatedValue * normalizedValue));
     });

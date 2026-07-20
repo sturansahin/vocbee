@@ -11,11 +11,11 @@ jest.mock('@expo/vector-icons', () => ({
 }));
 
 const colors = {
-  text: '#000',
+  textPrimary: '#000',
   textSecondary: '#666',
   surface: '#F5F5F5',
-  border: '#E0E0E0',
-  primary: '#FFC814',
+  borderDefault: '#E0E0E0',
+  accent: '#FFC814',
 };
 
 const baseProps = {

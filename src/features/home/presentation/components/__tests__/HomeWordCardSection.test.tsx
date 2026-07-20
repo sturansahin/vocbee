@@ -2,6 +2,7 @@
 import React from 'react';
 import { Animated } from 'react-native';
 import { render } from '@testing-library/react-native';
+import { ThemeProvider } from '@shared/theme';
 import { HomeWordCardSection } from '../HomeWordCardSection';
 
 const word = {
@@ -36,11 +37,16 @@ describe('HomeWordCardSection', () => {
 
   const baseProps = {
     colors: {
-      text: '#000000',
+      textPrimary: '#000000',
       textSecondary: '#666666',
-      primary: '#FFC814',
+      accent: '#FFC814',
       surface: '#F5F5F5',
-      border: '#E0E0E0',
+      borderDefault: '#E0E0E0',
+      shadow: '#000000',
+      swipeSkip: '#E53935',
+      swipeSkipSoft: 'rgba(229, 57, 53, 0.12)',
+      swipeLearn: '#218A45',
+      swipeLearnSoft: 'rgba(33, 138, 69, 0.12)',
     },
     isDarkMode: false,
     t: (key: string) => key,
@@ -66,16 +72,26 @@ describe('HomeWordCardSection', () => {
     onWordPress: jest.fn(),
     onExampleSentencePress: jest.fn(),
     onMoreExamplePress: jest.fn(),
+    onSkip: jest.fn(),
+    onLearned: jest.fn(),
   };
 
   it('renders the current word and background next word without crashing', () => {
-    const { getByText } = render(<HomeWordCardSection {...baseProps} />);
+    const { getByText } = render(
+      <ThemeProvider>
+        <HomeWordCardSection {...baseProps} />
+      </ThemeProvider>,
+    );
     expect(getByText('Haus')).toBeTruthy();
     expect(getByText('Das ist ein Haus')).toBeTruthy();
   });
 
   it('renders nothing for the top card when there is no current word', () => {
-    const { queryByText } = render(<HomeWordCardSection {...baseProps} currentWord={undefined} />);
+    const { queryByText } = render(
+      <ThemeProvider>
+        <HomeWordCardSection {...baseProps} currentWord={undefined} />
+      </ThemeProvider>,
+    );
     expect(queryByText('Haus')).toBeNull();
   });
 });

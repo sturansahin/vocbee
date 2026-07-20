@@ -4,12 +4,13 @@ import { fireEvent, render } from '@testing-library/react-native';
 import { ProfileSettingsSection } from '../ProfileSettingsSection';
 
 const colors = {
-  text: '#000000',
+  textPrimary: '#000000',
   textSecondary: '#666666',
   surface: '#F5F5F5',
-  border: '#E0E0E0',
-  primary: '#FFC814',
+  borderDefault: '#E0E0E0',
+  accent: '#FFC814',
   background: '#FFFFFF',
+  onAccent: '#000000',
 };
 
 describe('ProfileSettingsSection', () => {

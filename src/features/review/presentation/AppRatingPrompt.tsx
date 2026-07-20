@@ -1,16 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import {
-  ActivityIndicator,
-  Modal,
-  Pressable,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import React, { useEffect, useRef, useState } from 'react';
+import { StyleSheet, View } from 'react-native';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { useTranslation } from 'react-i18next';
-import { FONT_FAMILY, useTheme } from '@shared/theme';
+import { useTheme } from '@shared/theme';
+import { AppButton, AppModal, IconButton } from '@shared/ui';
 
 type PromptStep = 'enjoyment' | 'rating' | 'feedback';
 
@@ -21,7 +14,7 @@ interface AppRatingPromptProps {
   onSendFeedback: (rating?: number) => void | Promise<void>;
 }
 
-const STAR_VALUES = [1, 2, 3, 4, 5];
+const STAR_VALUES = [1, 2, 3, 4, 5] as const;
 
 export function AppRatingPrompt({
   visible,
@@ -29,14 +22,16 @@ export function AppRatingPrompt({
   onRateInStore,
   onSendFeedback,
 }: AppRatingPromptProps) {
-  const { colors, isDarkMode } = useTheme();
+  const { colors } = useTheme();
   const { t } = useTranslation();
+  const actionInFlight = useRef(false);
   const [step, setStep] = useState<PromptStep>('enjoyment');
   const [rating, setRating] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     if (visible) {
+      actionInFlight.current = false;
       setStep('enjoyment');
       setRating(0);
       setIsSubmitting(false);
@@ -44,12 +39,13 @@ export function AppRatingPrompt({
   }, [visible]);
 
   const runAction = async (action: () => void | Promise<void>) => {
-    if (isSubmitting) return;
-
+    if (actionInFlight.current) return;
+    actionInFlight.current = true;
     setIsSubmitting(true);
     try {
       await action();
     } finally {
+      actionInFlight.current = false;
       setIsSubmitting(false);
     }
   };
@@ -60,7 +56,6 @@ export function AppRatingPrompt({
       : step === 'feedback'
         ? t('reviewPrompt.feedbackTitle', { defaultValue: 'Help us improve' })
         : t('reviewPrompt.enjoyingTitle', { defaultValue: 'Enjoying VocBee?' });
-
   const message =
     step === 'rating'
       ? t('reviewPrompt.rateMessage', {
@@ -73,241 +68,143 @@ export function AppRatingPrompt({
         : t('reviewPrompt.enjoyingMessage', {
             defaultValue: 'If VocBee is helping you learn, we would love a quick rating.',
           });
+  const laterLabel = t('reviewPrompt.later', { defaultValue: 'Later' });
+  const sendFeedbackLabel = t('reviewPrompt.sendFeedback', {
+    defaultValue: 'Send Feedback',
+  });
+
+  const actions =
+    step === 'enjoyment' ? (
+      <View style={styles.actions}>
+        <AppButton
+          disabled={isSubmitting}
+          fullWidth={false}
+          label={laterLabel}
+          onPress={() => runAction(onDismiss)}
+          variant="ghost"
+          style={styles.action}
+        />
+        <AppButton
+          disabled={isSubmitting}
+          fullWidth={false}
+          label={t('reviewPrompt.notYet', { defaultValue: 'Not yet' })}
+          onPress={() => setStep('feedback')}
+          variant="secondary"
+          style={styles.action}
+        />
+        <AppButton
+          disabled={isSubmitting}
+          fullWidth={false}
+          label={t('reviewPrompt.yes', { defaultValue: 'Yes' })}
+          onPress={() => setStep('rating')}
+          style={styles.action}
+        />
+      </View>
+    ) : step === 'rating' ? (
+      <View style={styles.actions}>
+        <AppButton
+          disabled={isSubmitting}
+          fullWidth={false}
+          label={laterLabel}
+          onPress={() => runAction(onDismiss)}
+          variant="ghost"
+          style={styles.action}
+        />
+        <AppButton
+          disabled={rating <= 0}
+          fullWidth={false}
+          label={
+            rating >= 4
+              ? t('reviewPrompt.rateInStore', { defaultValue: 'Rate in Store' })
+              : sendFeedbackLabel
+          }
+          loading={isSubmitting}
+          onPress={() =>
+            runAction(rating >= 4 ? () => onRateInStore(rating) : () => onSendFeedback(rating))
+          }
+          style={styles.action}
+        />
+      </View>
+    ) : (
+      <View style={styles.actions}>
+        <AppButton
+          disabled={isSubmitting}
+          fullWidth={false}
+          label={laterLabel}
+          onPress={() => runAction(onDismiss)}
+          variant="ghost"
+          style={styles.action}
+        />
+        <AppButton
+          fullWidth={false}
+          label={sendFeedbackLabel}
+          loading={isSubmitting}
+          onPress={() => runAction(() => onSendFeedback())}
+          style={styles.action}
+        />
+      </View>
+    );
 
   return (
-    <Modal
+    <AppModal
       visible={visible}
-      transparent
-      animationType="fade"
-      onRequestClose={() => runAction(onDismiss)}
+      title={title}
+      description={message}
+      actions={actions}
+      dismissOnBackdropPress={!isSubmitting}
+      onRequestClose={() => void runAction(onDismiss)}
     >
-      <View style={styles.overlay}>
+      {step === 'rating' ? (
         <View
-          style={[
-            styles.card,
-            {
-              backgroundColor: colors.surface,
-              borderColor: colors.border,
-            },
-          ]}
+          accessibilityLabel={t('reviewPrompt.rateTitle', {
+            defaultValue: 'How would you rate VocBee?',
+          })}
+          accessibilityRole="radiogroup"
+          style={styles.starRow}
         >
-          <Text style={[styles.title, { color: colors.text }]}>{title}</Text>
-          <Text style={[styles.message, { color: colors.textSecondary }]}>{message}</Text>
-
-          {step === 'rating' ? (
-            <View style={styles.starRow} accessibilityRole="adjustable">
-              {STAR_VALUES.map((value) => {
-                const selected = value <= rating;
-                return (
-                  <Pressable
-                    key={value}
-                    accessibilityRole="button"
-                    accessibilityLabel={t('reviewPrompt.starAccessibilityLabel', {
-                      defaultValue: '{{count}} stars',
-                      count: value,
-                    })}
-                    onPress={() => setRating(value)}
-                    style={styles.starButton}
-                  >
-                    <MaterialIcons
-                      name={selected ? 'star' : 'star-border'}
-                      size={34}
-                      color={selected ? colors.primary : colors.textSecondary}
-                    />
-                  </Pressable>
-                );
-              })}
-            </View>
-          ) : null}
-
-          <View style={styles.actions}>
-            {step === 'enjoyment' ? (
-              <>
-                <TouchableOpacity
-                  style={[styles.actionButton, styles.secondaryButton]}
-                  onPress={() => runAction(onDismiss)}
-                  activeOpacity={0.85}
-                  disabled={isSubmitting}
-                >
-                  <Text style={[styles.secondaryText, { color: colors.textSecondary }]}>
-                    {t('reviewPrompt.later', { defaultValue: 'Later' })}
-                  </Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                  style={[styles.actionButton, styles.secondaryButton]}
-                  onPress={() => setStep('feedback')}
-                  activeOpacity={0.85}
-                  disabled={isSubmitting}
-                >
-                  <Text style={[styles.secondaryText, { color: colors.textSecondary }]}>
-                    {t('reviewPrompt.notYet', { defaultValue: 'Not yet' })}
-                  </Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                  style={[styles.actionButton, { backgroundColor: colors.primary }]}
-                  onPress={() => setStep('rating')}
-                  activeOpacity={0.9}
-                  disabled={isSubmitting}
-                >
-                  <Text style={[styles.primaryText, { color: isDarkMode ? '#000' : '#1a2c22' }]}>
-                    {t('reviewPrompt.yes', { defaultValue: 'Yes' })}
-                  </Text>
-                </TouchableOpacity>
-              </>
-            ) : null}
-
-            {step === 'rating' ? (
-              <>
-                <TouchableOpacity
-                  style={[styles.actionButton, styles.secondaryButton]}
-                  onPress={() => runAction(onDismiss)}
-                  activeOpacity={0.85}
-                  disabled={isSubmitting}
-                >
-                  <Text style={[styles.secondaryText, { color: colors.textSecondary }]}>
-                    {t('reviewPrompt.later', { defaultValue: 'Later' })}
-                  </Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                  style={[
-                    styles.actionButton,
-                    {
-                      backgroundColor: rating > 0 ? colors.primary : colors.surfaceLight,
-                      opacity: rating > 0 ? 1 : 0.75,
-                    },
-                  ]}
-                  onPress={() => {
-                    if (rating <= 0) return;
-                    const nextAction =
-                      rating >= 4 ? () => onRateInStore(rating) : () => onSendFeedback(rating);
-                    runAction(nextAction);
-                  }}
-                  activeOpacity={0.9}
-                  disabled={rating <= 0 || isSubmitting}
-                >
-                  {isSubmitting ? (
-                    <ActivityIndicator size="small" color={isDarkMode ? '#000' : '#1a2c22'} />
-                  ) : (
-                    <Text
-                      style={[
-                        styles.primaryText,
-                        {
-                          color:
-                            rating > 0 ? (isDarkMode ? '#000' : '#1a2c22') : colors.textSecondary,
-                        },
-                      ]}
-                    >
-                      {rating >= 4
-                        ? t('reviewPrompt.rateInStore', { defaultValue: 'Rate in Store' })
-                        : t('reviewPrompt.sendFeedback', { defaultValue: 'Send Feedback' })}
-                    </Text>
-                  )}
-                </TouchableOpacity>
-              </>
-            ) : null}
-
-            {step === 'feedback' ? (
-              <>
-                <TouchableOpacity
-                  style={[styles.actionButton, styles.secondaryButton]}
-                  onPress={() => runAction(onDismiss)}
-                  activeOpacity={0.85}
-                  disabled={isSubmitting}
-                >
-                  <Text style={[styles.secondaryText, { color: colors.textSecondary }]}>
-                    {t('reviewPrompt.later', { defaultValue: 'Later' })}
-                  </Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                  style={[styles.actionButton, { backgroundColor: colors.primary }]}
-                  onPress={() => runAction(() => onSendFeedback())}
-                  activeOpacity={0.9}
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? (
-                    <ActivityIndicator size="small" color={isDarkMode ? '#000' : '#1a2c22'} />
-                  ) : (
-                    <Text style={[styles.primaryText, { color: isDarkMode ? '#000' : '#1a2c22' }]}>
-                      {t('reviewPrompt.sendFeedback', { defaultValue: 'Send Feedback' })}
-                    </Text>
-                  )}
-                </TouchableOpacity>
-              </>
-            ) : null}
-          </View>
+          {STAR_VALUES.map((value) => {
+            const selected = value <= rating;
+            return (
+              <IconButton
+                key={value}
+                accessibilityLabel={t('reviewPrompt.starAccessibilityLabel', {
+                  defaultValue: '{{count}} stars',
+                  count: value,
+                })}
+                accessibilityState={{ selected: rating === value }}
+                icon={
+                  <MaterialIcons
+                    name={selected ? 'star' : 'star-border'}
+                    size={34}
+                    color={selected ? colors.accent : colors.textSecondary}
+                  />
+                }
+                onPress={() => setRating(value)}
+              />
+            );
+          })}
         </View>
-      </View>
-    </Modal>
+      ) : null}
+    </AppModal>
   );
 }
 
 const styles = StyleSheet.create({
-  overlay: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingHorizontal: 28,
-    backgroundColor: 'rgba(0, 0, 0, 0.58)',
-  },
-  card: {
-    width: '100%',
-    maxWidth: 380,
-    borderRadius: 18,
-    borderWidth: 1,
-    paddingHorizontal: 22,
-    paddingTop: 24,
-    paddingBottom: 18,
-  },
-  title: {
-    fontFamily: FONT_FAMILY,
-    fontSize: 19,
-    textAlign: 'center',
-    lineHeight: 25,
-  },
-  message: {
-    fontFamily: FONT_FAMILY,
-    fontSize: 14,
-    lineHeight: 20,
-    marginTop: 10,
-    textAlign: 'center',
-  },
   starRow: {
     flexDirection: 'row',
+    flexWrap: 'wrap',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 20,
     gap: 4,
   },
-  starButton: {
-    width: 44,
-    height: 44,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   actions: {
+    width: '100%',
     flexDirection: 'row',
-    gap: 10,
-    marginTop: 22,
+    flexWrap: 'wrap',
+    gap: 8,
   },
-  actionButton: {
-    flex: 1,
-    minHeight: 46,
-    borderRadius: 12,
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingHorizontal: 10,
-  },
-  secondaryButton: {
-    backgroundColor: 'transparent',
-  },
-  primaryText: {
-    fontFamily: FONT_FAMILY,
-    fontSize: 13,
-    textAlign: 'center',
-  },
-  secondaryText: {
-    fontFamily: FONT_FAMILY,
-    fontSize: 13,
-    textAlign: 'center',
+  action: {
+    flexGrow: 1,
+    minWidth: 92,
   },
 });

@@ -15,12 +15,13 @@ interface StreakStatCardProps {
   label: string;
   value: number;
   numberColor: string;
+  labelColor: string;
 }
 
-function StreakStatCard({ label, value, numberColor }: StreakStatCardProps) {
+function StreakStatCard({ label, value, numberColor, labelColor }: StreakStatCardProps) {
   return (
     <View style={styles.statCard}>
-      <Text style={styles.statLabel}>{label}</Text>
+      <Text style={[styles.statLabel, { color: labelColor }]}>{label}</Text>
       <View style={styles.numberWrapper}>
         <AnimatedCountUp value={value} style={[styles.number, { color: numberColor }]} />
       </View>
@@ -36,14 +37,19 @@ export function StreakAlertContent({
   bestValue,
 }: StreakAlertContentProps) {
   const { colors } = useTheme();
-  const numberColor = '#FFC24A';
+  const numberColor = colors.emberSecondary;
 
   return (
     <View style={styles.container}>
       <Text style={[styles.statusMessage, { color: colors.textSecondary }]}>{statusMessage}</Text>
 
       <View style={styles.currentCardWrapper}>
-        <StreakStatCard label={currentLabel} value={currentValue} numberColor={numberColor} />
+        <StreakStatCard
+          label={currentLabel}
+          value={currentValue}
+          numberColor={numberColor}
+          labelColor={colors.textSecondary}
+        />
       </View>
 
       <Text style={[styles.bestStreakText, { color: colors.textSecondary }]}>
@@ -83,7 +89,6 @@ const styles = StyleSheet.create({
     fontSize: 12,
     lineHeight: 16,
     textAlign: 'center',
-    color: '#FFFFFF',
   },
   numberWrapper: {
     alignItems: 'center',

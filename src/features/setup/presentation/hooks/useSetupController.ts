@@ -32,7 +32,7 @@ const normalizedWheelValue = (offset: number, values: readonly string[]): string
   return values[((index % values.length) + values.length) % values.length];
 };
 
-export function useSetupController(facade: SetupFacade) {
+export function useSetupController(facade: SetupFacade, reducedMotion = false) {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
   const route = useRoute<RouteProp<RootStackParamList, 'NativeLanguage'>>();
   const { showAlert } = useAlert();
@@ -62,6 +62,11 @@ export function useSetupController(facade: SetupFacade) {
   const animatedAnimation = useMemo(() => createSwarmAnimation([1, 0.78, 0.08, 1], false), []);
 
   const goToStep = (nextStep: number) => {
+    if (reducedMotion) {
+      setCurrentStep(nextStep);
+      fadeAnim.setValue(1);
+      return;
+    }
     Animated.timing(fadeAnim, {
       toValue: 0,
       duration: 150,

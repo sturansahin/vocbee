@@ -1,46 +1,35 @@
 import React from 'react';
-import {
-  Animated,
-  Platform,
-  ScrollView,
-  Text,
-  TouchableOpacity,
-  useWindowDimensions,
-  View,
-} from 'react-native';
+import { Animated, Platform, StyleSheet } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import LottieView from 'lottie-react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
 
-import { useTheme } from '@shared/theme';
-import { Button, Input } from '@shared/ui';
+import { useReducedMotion, useResponsiveLayout } from '@shared/responsive';
+import { AppButton, AppInput, AppScrollView, AppText, Divider, Inline, Stack } from '@shared/ui';
 
 import { useLoginController } from '../hooks/useLoginController';
-import { authStyles as styles } from './authStyles';
 
 export function LoginScreen() {
-  const { colors } = useTheme();
-  const { height: screenHeight } = useWindowDimensions();
+  const layout = useResponsiveLayout();
+  const reducedMotion = useReducedMotion();
   const { t } = useTranslation();
-  const controller = useLoginController(screenHeight);
-  const isSmallScreen = screenHeight < 700;
-  const isLargeScreen = screenHeight > 900;
-  const lottieSize = isSmallScreen ? 150 : isLargeScreen ? 150 : 130;
-  const titleFontSize = isSmallScreen ? 28 : isLargeScreen ? 40 : 36;
-  const subtitleFontSize = isSmallScreen ? 14 : isLargeScreen ? 18 : 16;
-  const authLinkFontSize = isSmallScreen ? 12 : 13;
+  const controller = useLoginController(layout.height, reducedMotion);
+  const lottieSize = layout.isSmallHeight ? 120 : layout.height > 900 ? 150 : 130;
 
   return (
-    <SafeAreaView style={[styles.container, { backgroundColor: colors.background }]}>
-      <ScrollView
-        contentContainerStyle={[styles.scrollContent, { padding: isSmallScreen ? 20 : 24 }]}
-        showsVerticalScrollIndicator={false}
-      >
-        <View style={[styles.logoSection, { marginBottom: isSmallScreen ? 24 : 40 }]}>
+    <AppScrollView
+      contentContainerStyle={[
+        styles.content,
+        { justifyContent: layout.isSmallHeight ? 'flex-start' : 'center' },
+      ]}
+      keyboardAvoiding
+      testID="login-screen"
+    >
+      <Stack gap={layout.isSmallHeight ? 'lg' : '2xl'}>
+        <Stack align="center" gap="sm">
           <Animated.View
             style={[
-              styles.lottieContainer,
+              styles.lottie,
               {
                 width: lottieSize,
                 height: lottieSize,
@@ -60,169 +49,129 @@ export function LoginScreen() {
             ]}
           >
             <LottieView
+              autoPlay={!reducedMotion && controller.isAnimating}
+              loop={!reducedMotion}
               ref={controller.lottieRef}
               source={
-                controller.isAnimating ? controller.animatedAnimation : controller.staticAnimation
+                controller.isAnimating && !reducedMotion
+                  ? controller.animatedAnimation
+                  : controller.staticAnimation
               }
-              style={{ width: '100%', height: '100%', transform: [{ scale: 1.15 }] }}
-              autoPlay={controller.isAnimating}
-              loop
               speed={1.5}
+              style={styles.lottieAsset}
             />
           </Animated.View>
-          <Text style={[styles.appTitle, { color: colors.text, fontSize: titleFontSize }]}>
+          <AppText accessibilityRole="header" align="center" variant="display">
             VocBee
-          </Text>
-          <Text
-            style={[
-              styles.appSubtitle,
-              { color: colors.textSecondary, fontSize: subtitleFontSize },
-            ]}
-          >
+          </AppText>
+          <AppText align="center" color="textSecondary">
             {t('auth.subtitle')}
-          </Text>
-        </View>
+          </AppText>
+        </Stack>
 
-        <Input
-          label={t('auth.email')}
-          placeholder={t('auth.emailPlaceholder')}
-          icon="mail"
-          value={controller.email}
-          onChangeText={controller.setEmail}
-          backgroundColor={colors.surface}
-          borderColor={colors.border}
-          labelColor={colors.textSecondary}
-          textColor={colors.text}
-          iconColor={colors.textSecondary}
-          keyboardType="email-address"
-          autoCapitalize="none"
-        />
-        <Input
-          label={t('auth.password')}
-          placeholder={t('auth.passwordPlaceholder')}
-          value={controller.password}
-          onChangeText={controller.setPassword}
-          secureTextEntry={!controller.showPassword}
-          rightIcon={controller.showPassword ? 'visibility' : 'visibility-off'}
-          onRightIconPress={() => controller.setShowPassword(!controller.showPassword)}
-          backgroundColor={colors.surface}
-          borderColor={colors.border}
-          labelColor={colors.textSecondary}
-          textColor={colors.text}
-          iconColor={colors.textSecondary}
-        />
+        <Stack gap="lg">
+          <AppInput
+            autoCapitalize="none"
+            autoComplete="email"
+            keyboardType="email-address"
+            label={t('auth.email')}
+            onChangeText={controller.setEmail}
+            placeholder={t('auth.emailPlaceholder')}
+            returnKeyType="next"
+            textContentType="emailAddress"
+            value={controller.email}
+          />
+          <AppInput
+            autoComplete="password"
+            label={t('auth.password')}
+            onChangeText={controller.setPassword}
+            onSubmitEditing={controller.handleLogin}
+            placeholder={t('auth.passwordPlaceholder')}
+            returnKeyType="go"
+            secureTextEntry
+            textContentType="password"
+            value={controller.password}
+          />
+        </Stack>
 
-        <View style={styles.authLinksRow}>
-          <TouchableOpacity
+        <Inline justify="space-between" wrap>
+          <AppButton
+            fullWidth={false}
+            label={`${t('auth.noAccount')} ${t('auth.signUp')}`}
             onPress={controller.openSignUp}
-            style={styles.signupInlineButton}
-            hitSlop={8}
-          >
-            <Text
-              style={[
-                styles.signupText,
-                { color: colors.textSecondary, fontSize: authLinkFontSize },
-              ]}
-              numberOfLines={1}
-              adjustsFontSizeToFit
-              minimumFontScale={0.86}
-            >
-              {t('auth.noAccount')}{' '}
-              <Text style={[styles.signupLink, { color: colors.primary }]}>{t('auth.signUp')}</Text>
-            </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
+            testID="login-open-signup"
+            variant="ghost"
+          />
+          <AppButton
+            fullWidth={false}
+            label={t('auth.forgotPassword')}
             onPress={controller.openForgotPassword}
-            style={styles.forgotButton}
-            hitSlop={8}
-          >
-            <Text
-              style={[
-                styles.forgotText,
-                { color: colors.textSecondary, fontSize: authLinkFontSize },
-              ]}
-              numberOfLines={1}
-              adjustsFontSizeToFit
-              minimumFontScale={0.86}
-            >
-              {t('auth.forgotPassword')}
-            </Text>
-          </TouchableOpacity>
-        </View>
+            testID="login-open-forgot-password"
+            variant="ghost"
+          />
+        </Inline>
 
-        <Button
-          title={
-            controller.isSubmitting
-              ? t('auth.loggingIn')
-              : controller.isAnimating
-                ? ''
-                : t('auth.logIn')
-          }
+        <AppButton
+          disabled={controller.isAnimating}
+          label={t('auth.logIn')}
+          loading={controller.isSubmitting}
           onPress={controller.handleLogin}
-          disabled={controller.isSubmitting || controller.isAnimating}
-          variant="primary"
+          testID="login-submit"
         />
 
-        <View style={[styles.divider, { marginVertical: isSmallScreen ? 20 : 32 }]}>
-          <View style={[styles.dividerLine, { backgroundColor: colors.border }]} />
-          <Text
-            style={[
-              styles.dividerText,
-              { color: colors.textSecondary, fontSize: isSmallScreen ? 12 : 14 },
-            ]}
-          >
+        <Inline align="center">
+          <Divider style={styles.divider} />
+          <AppText color="textSecondary" variant="caption">
             {t('auth.orContinueWith')}
-          </Text>
-          <View style={[styles.dividerLine, { backgroundColor: colors.border }]} />
-        </View>
+          </AppText>
+          <Divider style={styles.divider} />
+        </Inline>
 
-        <View style={[styles.socialRow, { marginBottom: isSmallScreen ? 8 : 12 }]}>
-          <TouchableOpacity
-            style={[
-              styles.socialButton,
-              {
-                backgroundColor: colors.surface,
-                borderColor: colors.border,
-                height: isSmallScreen ? 44 : isLargeScreen ? 56 : 48,
-              },
-            ]}
+        <Inline align="stretch">
+          <AppButton
+            fullWidth={false}
+            label={t('auth.google')}
+            leadingIcon={(color) => <AntDesign color={color} name="google" size={18} />}
             onPress={controller.signInWithGoogle}
-            disabled={controller.isSubmitting}
-          >
-            <AntDesign
-              name="google"
-              size={isSmallScreen ? 14 : isLargeScreen ? 20 : 16}
-              color={colors.text}
-            />
-            <Text style={[styles.socialButtonText, { color: colors.text }]}>
-              {t('auth.google')}
-            </Text>
-          </TouchableOpacity>
-          {Platform.OS === 'ios' && (
-            <TouchableOpacity
-              style={[
-                styles.socialButton,
-                {
-                  backgroundColor: colors.surface,
-                  borderColor: colors.border,
-                  height: isSmallScreen ? 44 : isLargeScreen ? 56 : 48,
-                },
-              ]}
+            style={styles.socialButton}
+            testID="login-google"
+            variant="outline"
+          />
+          {Platform.OS === 'ios' ? (
+            <AppButton
+              fullWidth={false}
+              label={t('auth.apple')}
+              leadingIcon={(color) => <AntDesign color={color} name="apple" size={18} />}
               onPress={controller.signInWithApple}
-              disabled={controller.isSubmitting}
-            >
-              <AntDesign
-                name="apple"
-                size={isSmallScreen ? 14 : isLargeScreen ? 20 : 16}
-                color={colors.text}
-              />
-              <Text style={[styles.socialButtonText, { color: colors.text }]}>
-                {t('auth.apple')}
-              </Text>
-            </TouchableOpacity>
-          )}
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+              style={styles.socialButton}
+              testID="login-apple"
+              variant="outline"
+            />
+          ) : null}
+        </Inline>
+      </Stack>
+    </AppScrollView>
   );
 }
+
+const styles = StyleSheet.create({
+  content: {
+    paddingVertical: 20,
+  },
+  lottie: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    overflow: 'visible',
+  },
+  lottieAsset: {
+    width: '100%',
+    height: '100%',
+    transform: [{ scale: 1.15 }],
+  },
+  divider: {
+    flex: 1,
+  },
+  socialButton: {
+    flex: 1,
+  },
+});

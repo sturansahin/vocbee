@@ -1,15 +1,23 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
-import { View, Text, Modal, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
-import { FONT_FAMILY, useTheme } from '@shared/theme';
+import React, {
+  createContext,
+  useCallback,
+  useContext,
+  useMemo,
+  useState,
+  type ReactNode,
+} from 'react';
+import { StyleSheet, View } from 'react-native';
 import { useTranslation } from 'react-i18next';
+import { AppModal } from './feedback/AppModal';
+import { AppButton, type AppButtonVariant } from './primitives/AppButton';
 
-interface AlertButton {
+export interface AlertButton {
   text: string;
-  onPress?: () => void;
+  onPress?: () => void | Promise<void>;
   style?: 'default' | 'cancel' | 'destructive';
 }
 
-interface AlertOptions {
+export interface AlertOptions {
   title: string;
   message?: string;
   content?: ReactNode;
@@ -23,210 +31,83 @@ interface AlertContextType {
 
 const AlertContext = createContext<AlertContextType | undefined>(undefined);
 
-interface AlertProviderProps {
-  children: ReactNode;
-}
-
-export const AlertProvider = ({ children }: AlertProviderProps) => {
-  const { colors } = useTheme();
+export function AlertProvider({ children }: { children: ReactNode }) {
   const { t } = useTranslation();
-  const [visible, setVisible] = useState(false);
-  const [alertConfig, setAlertConfig] = useState<AlertOptions>({
-    title: '',
-    message: '',
-    content: null,
-    buttons: [{ text: t('common.ok') }],
-  });
+  const [alertConfig, setAlertConfig] = useState<AlertOptions | null>(null);
+  const hideAlert = useCallback(() => setAlertConfig(null), []);
+  const showAlert = useCallback(
+    (options: AlertOptions) =>
+      setAlertConfig({
+        ...options,
+        buttons: options.buttons ?? [{ text: t('common.ok') }],
+      }),
+    [t],
+  );
+  const context = useMemo(() => ({ showAlert, hideAlert }), [hideAlert, showAlert]);
+  const buttons = alertConfig?.buttons ?? [];
 
-  const showAlert = (options: AlertOptions) => {
-    setAlertConfig({
-      title: options.title,
-      message: options.message || '',
-      content: options.content ?? null,
-      buttons: options.buttons || [{ text: t('common.ok') }],
-    });
-    setVisible(true);
-  };
+  const getVariant = (style: AlertButton['style']): AppButtonVariant =>
+    style === 'destructive' ? 'destructive' : style === 'cancel' ? 'ghost' : 'primary';
 
-  const hideAlert = () => {
-    setVisible(false);
-  };
-
-  const handleButtonPress = (button: AlertButton) => {
+  const handleButtonPress = async (button: AlertButton) => {
     hideAlert();
-    if (button.onPress) {
-      button.onPress();
-    }
+    await button.onPress?.();
   };
-
-  const getButtonColor = (style?: string) => {
-    switch (style) {
-      case 'destructive':
-        return '#FF453A';
-      case 'cancel':
-        return colors.textSecondary;
-      default:
-        return colors.primary;
-    }
-  };
-
-  const hasContent = alertConfig.content !== null && alertConfig.content !== undefined;
 
   return (
-    <AlertContext.Provider value={{ showAlert, hideAlert }}>
+    <AlertContext.Provider value={context}>
       {children}
-      <Modal visible={visible} transparent animationType="fade" onRequestClose={hideAlert}>
-        <View style={styles.overlay}>
-          <View style={[styles.alertBox, { backgroundColor: colors.surface }]}>
-            <Text style={[styles.title, { color: colors.text }]}>{alertConfig.title}</Text>
-            {alertConfig.message ? (
-              <Text
-                style={[
-                  styles.message,
-                  { color: colors.textSecondary },
-                  hasContent ? styles.messageWithContent : null,
-                ]}
-              >
-                {alertConfig.message}
-              </Text>
-            ) : null}
-            {hasContent ? (
-              <View
-                style={[
-                  styles.contentContainer,
-                  !alertConfig.message && styles.contentContainerNoMessage,
-                ]}
-              >
-                {alertConfig.content}
-              </View>
-            ) : null}
-            <View
-              style={[
-                styles.buttonContainer,
-                alertConfig.buttons &&
-                  alertConfig.buttons.length > 2 &&
-                  styles.buttonContainerVertical,
-              ]}
-            >
-              {alertConfig.buttons?.map((button, index) => (
-                <TouchableOpacity
-                  key={index}
-                  style={[
-                    styles.button,
-                    alertConfig.buttons &&
-                      alertConfig.buttons.length <= 2 &&
-                      styles.buttonHorizontal,
-                    index > 0 &&
-                      alertConfig.buttons &&
-                      alertConfig.buttons.length <= 2 && {
-                        borderLeftWidth: 1,
-                        borderLeftColor: colors.border,
-                      },
-                  ]}
-                  onPress={() => handleButtonPress(button)}
-                >
-                  <Text
-                    style={[
-                      styles.buttonText,
-                      { color: getButtonColor(button.style) },
-                      button.style === 'cancel' && styles.buttonTextCancel,
-                    ]}
-                  >
-                    {button.text}
-                  </Text>
-                </TouchableOpacity>
-              ))}
-            </View>
+      <AppModal
+        visible={alertConfig !== null}
+        title={alertConfig?.title ?? ''}
+        description={alertConfig?.message}
+        dismissOnBackdropPress={false}
+        onRequestClose={hideAlert}
+        actions={
+          <View style={[styles.actions, buttons.length > 2 && styles.vertical]}>
+            {buttons.map((button, index) => (
+              <AppButton
+                key={`${button.text}-${index}`}
+                fullWidth={buttons.length > 2}
+                label={button.text}
+                onPress={() => handleButtonPress(button)}
+                variant={getVariant(button.style)}
+                style={buttons.length <= 2 ? styles.horizontalAction : undefined}
+              />
+            ))}
           </View>
-        </View>
-      </Modal>
+        }
+      >
+        {alertConfig?.content}
+      </AppModal>
     </AlertContext.Provider>
   );
-};
+}
 
-export const useAlert = () => {
+export function useAlert(): AlertContextType {
   const context = useContext(AlertContext);
   if (context === undefined) {
     throw new Error('useAlert must be used within an AlertProvider');
   }
   return context;
-};
+}
 
-// Convenience function for simple alerts
 export const createAlert = (showAlert: AlertContextType['showAlert']) => ({
   alert: (title: string, message?: string, buttons?: AlertButton[]) => {
     showAlert({ title, message, buttons });
   },
 });
 
-const { width: SCREEN_WIDTH } = Dimensions.get('window');
-const BASE_WIDTH = 393;
-const scale = (size: number) => (SCREEN_WIDTH / BASE_WIDTH) * size;
-
 const styles = StyleSheet.create({
-  overlay: {
-    flex: 1,
-    backgroundColor: 'rgba(0, 0, 0, 0.6)',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: scale(40),
-  },
-  alertBox: {
-    width: Math.min(SCREEN_WIDTH * 0.85, 360),
-    maxWidth: 400,
-    minWidth: 280,
-    borderRadius: scale(16),
-    overflow: 'hidden',
-  },
-  title: {
-    fontFamily: FONT_FAMILY,
-    fontSize: 18,
-    fontWeight: '600',
-    textAlign: 'center',
-    paddingTop: 24,
-    paddingHorizontal: 24,
-  },
-  message: {
-    fontFamily: FONT_FAMILY,
-    fontSize: 14,
-    textAlign: 'center',
-    paddingTop: 8,
-    paddingHorizontal: 24,
-    paddingBottom: 24,
-    lineHeight: 20,
-  },
-  messageWithContent: {
-    paddingBottom: 12,
-  },
-  contentContainer: {
-    paddingHorizontal: 20,
-    paddingBottom: 24,
-  },
-  contentContainerNoMessage: {
-    paddingTop: 12,
-  },
-  buttonContainer: {
+  actions: {
+    width: '100%',
     flexDirection: 'row',
-    borderTopWidth: 1,
-    borderTopColor: 'rgba(255, 255, 255, 0.1)',
+    gap: 8,
   },
-  buttonContainerVertical: {
+  vertical: {
     flexDirection: 'column',
   },
-  button: {
-    paddingVertical: 14,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  buttonHorizontal: {
+  horizontalAction: {
     flex: 1,
-  },
-  buttonText: {
-    fontFamily: FONT_FAMILY,
-    fontSize: 16,
-    fontWeight: '600',
-  },
-  buttonTextCancel: {
-    fontWeight: '400',
   },
 });

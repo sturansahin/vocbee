@@ -39,15 +39,15 @@ export function RootNavigator({ initialRoute, navigationRef }: RootNavigatorProp
       dark: isDarkMode,
       colors: {
         ...baseTheme.colors,
-        primary: colors.primary,
+        primary: colors.accent,
         background: colors.background,
         card: colors.background,
-        text: colors.text,
-        border: colors.border,
-        notification: colors.primary,
+        text: colors.textPrimary,
+        border: colors.borderDefault,
+        notification: colors.accent,
       },
     };
-  }, [isDarkMode, colors.background, colors.border, colors.primary, colors.text]);
+  }, [isDarkMode, colors.accent, colors.background, colors.borderDefault, colors.textPrimary]);
 
   return (
     <NavigationContainer ref={navigationRef} theme={navigationTheme}>

@@ -1,229 +1,143 @@
-import React, { useState, useCallback } from 'react';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  StyleSheet,
-  FlatList,
-  ActivityIndicator,
-} from 'react-native';
-import { useNavigation, useFocusEffect } from '@react-navigation/native';
-import { StackNavigationProp } from '@react-navigation/stack';
-import type { RootStackParamList } from '@app/navigation/types';
+import React, { useCallback, useState } from 'react';
+import { FlatList, StyleSheet } from 'react-native';
 import Feather from '@expo/vector-icons/Feather';
-import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import { MaterialIcons } from '@expo/vector-icons';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { FONT_FAMILY, useTheme } from '@shared/theme';
-import type { Level, VocabularyWord } from '@features/vocabulary';
-import type { FavoritesScreenFacade } from '../../application/FavoritesScreenFacade';
+import { useFocusEffect, useNavigation } from '@react-navigation/native';
+import type { StackNavigationProp } from '@react-navigation/stack';
 import { useTranslation } from 'react-i18next';
+
+import type { RootStackParamList } from '@app/navigation/types';
+import type { Level, VocabularyWord } from '@features/vocabulary';
+import { useTheme } from '@shared/theme';
+import {
+  AppHeader,
+  EmptyState,
+  ErrorState,
+  IconButton,
+  LoadingState,
+  Screen,
+  SettingsRow,
+  Surface,
+} from '@shared/ui';
+
+import type { FavoritesScreenFacade } from '../../application/FavoritesScreenFacade';
 
 export interface FavoritesScreenProps {
   facade: FavoritesScreenFacade;
 }
 
+type Favorite = VocabularyWord & { level: Level };
+
 export default function FavoritesScreen({ facade }: FavoritesScreenProps) {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
-  const insets = useSafeAreaInsets();
   const { colors } = useTheme();
   const { t } = useTranslation();
-
-  const [favorites, setFavorites] = useState<(VocabularyWord & { level: Level })[]>([]);
+  const [favorites, setFavorites] = useState<Favorite[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [loadError, setLoadError] = useState<string | null>(null);
 
-  // Load favorites when screen is focused
-  useFocusEffect(
-    useCallback(() => {
-      loadFavorites();
-    }, []),
-  );
-
-  const loadFavorites = async () => {
+  const loadFavorites = useCallback(async () => {
     setIsLoading(true);
+    setLoadError(null);
     try {
-      const data = await facade.list();
-      setFavorites(data);
+      setFavorites(await facade.list());
     } catch (error) {
       console.error('Error loading favorites:', error);
+      setLoadError(error instanceof Error ? error.message : String(error));
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [facade]);
+
+  useFocusEffect(
+    useCallback(() => {
+      void loadFavorites();
+    }, [loadFavorites]),
+  );
 
   const handleRemoveFavorite = async (wordId: number, level: Level) => {
-    // Optimistically update UI by removing from state
-    setFavorites((prev) => prev.filter((item) => !(item.id === wordId && item.level === level)));
-    // Remove from storage in background
+    setFavorites((current) =>
+      current.filter((item) => !(item.id === wordId && item.level === level)),
+    );
     await facade.remove(wordId, level);
   };
 
-  const renderFavoriteItem = ({ item }: { item: VocabularyWord & { level: Level } }) => (
-    <TouchableOpacity
-      style={[styles.favoriteCard, { backgroundColor: colors.surface, borderColor: colors.border }]}
-      onPress={() =>
-        navigation.navigate('ExampleSentences', {
-          word: item.word,
-          translation: item.translation,
-          sentence1: item.sentence1,
-          sentence2: item.sentence2,
-          nativeSentence1: item.nativeSentence1,
-          nativeSentence2: item.nativeSentence2,
-        })
-      }
-      activeOpacity={0.7}
-    >
-      <View style={styles.favoriteContent}>
-        <View style={styles.favoriteText}>
-          <Text style={[styles.favoriteWord, { color: colors.text }]}>{item.word}</Text>
-          <View style={styles.translationRow}>
-            <MaterialIcons name="translate" size={16} color={colors.primary} />
-            <Text style={[styles.favoriteTranslation, { color: colors.primary }]}>
-              {item.translation}
-            </Text>
-          </View>
-        </View>
-        <TouchableOpacity
-          onPress={(e) => {
-            e.stopPropagation();
-            handleRemoveFavorite(item.id, item.level);
-          }}
-          hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
-        >
-          <Feather name="trash-2" size={22} color={colors.textSecondary} />
-        </TouchableOpacity>
-      </View>
-    </TouchableOpacity>
-  );
+  const openFavorite = (item: Favorite) => {
+    navigation.navigate('ExampleSentences', {
+      word: item.word,
+      translation: item.translation,
+      sentence1: item.sentence1,
+      sentence2: item.sentence2,
+      nativeSentence1: item.nativeSentence1,
+      nativeSentence2: item.nativeSentence2,
+    });
+  };
 
   return (
-    <View
-      style={[styles.container, { paddingTop: insets.top, backgroundColor: colors.background }]}
-    >
-      {/* Floating Back Button */}
-      <TouchableOpacity
-        onPress={() => navigation.goBack()}
-        style={[styles.backButton, { top: insets.top + 8 }]}
-      >
-        <FontAwesome5 name="arrow-left" size={24} color={colors.text} />
-      </TouchableOpacity>
-
-      {/* Header */}
-      <View style={styles.header}>
-        <View style={styles.headerSpacer} />
-        <Text style={[styles.headerTitle, { color: colors.text }]}>{t('favorites.title')}</Text>
-        <View style={styles.headerSpacer} />
-      </View>
-
-      {/* Content */}
+    <Screen contentStyle={styles.screenContent} testID="favorites-screen">
+      <AppHeader
+        backAccessibilityLabel={t('common.back', { defaultValue: 'Back' })}
+        onBack={() => navigation.goBack()}
+        title={t('favorites.title')}
+      />
       {isLoading ? (
-        <View style={styles.loadingContainer}>
-          <ActivityIndicator size="large" color={colors.primary} />
-        </View>
+        <LoadingState title={t('common.loading')} />
+      ) : loadError ? (
+        <ErrorState
+          message={loadError}
+          onRetry={loadFavorites}
+          retryLabel={t('connection.retry')}
+          title={t('common.error')}
+        />
       ) : favorites.length === 0 ? (
-        <View style={styles.emptyContainer}>
-          <Feather name="star" size={64} color={colors.textSecondary} />
-          <Text style={[styles.emptyTitle, { color: colors.text }]}>
-            {t('favorites.noFavoritesTitle')}
-          </Text>
-          <Text style={[styles.emptyText, { color: colors.textSecondary }]}>
-            {t('favorites.noFavoritesMsg')}
-          </Text>
-        </View>
+        <EmptyState
+          icon={<Feather color={colors.textSecondary} name="star" size={64} />}
+          message={t('favorites.noFavoritesMsg')}
+          title={t('favorites.noFavoritesTitle')}
+        />
       ) : (
         <FlatList
-          data={favorites}
-          renderItem={renderFavoriteItem}
-          keyExtractor={(item) => `${item.id}_${item.level}`}
           contentContainerStyle={styles.listContent}
+          data={favorites}
+          keyExtractor={(item) => `${item.id}_${item.level}`}
+          renderItem={({ item }) => (
+            <Surface style={[styles.card, { borderColor: colors.borderDefault }]}>
+              <SettingsRow
+                description={item.translation}
+                label={item.word}
+                leading={<MaterialIcons color={colors.accent} name="translate" size={20} />}
+                onPress={() => openFavorite(item)}
+                testID={`favorite-row-${item.id}-${item.level}`}
+                trailing={
+                  <IconButton
+                    accessibilityLabel={t('favorites.remove', {
+                      defaultValue: `Remove ${item.word} from favorites`,
+                    })}
+                    icon={(color) => <Feather color={color} name="trash-2" size={22} />}
+                    onPress={() => void handleRemoveFavorite(item.id, item.level)}
+                    testID={`favorite-remove-${item.id}-${item.level}`}
+                    variant="destructive"
+                  />
+                }
+              />
+            </Surface>
+          )}
         />
       )}
-    </View>
+    </Screen>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  header: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingVertical: 16,
-    paddingHorizontal: 20,
-  },
-  backButton: {
-    position: 'absolute',
-    left: 20,
-    width: 44,
-    height: 44,
-    borderRadius: 22,
-    alignItems: 'center',
-    justifyContent: 'center',
-    zIndex: 10,
-  },
-  headerTitle: {
-    fontFamily: FONT_FAMILY,
-    fontSize: 22,
-    letterSpacing: 2,
-  },
-  headerSpacer: {
-    width: 32,
-  },
-  loadingContainer: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  emptyContainer: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingHorizontal: 40,
-    gap: 16,
-  },
-  emptyTitle: {
-    fontFamily: FONT_FAMILY,
-    fontSize: 24,
-    marginTop: 16,
-  },
-  emptyText: {
-    fontFamily: FONT_FAMILY,
-    fontSize: 16,
-    textAlign: 'center',
-    lineHeight: 24,
+  screenContent: {
+    paddingHorizontal: 0,
   },
   listContent: {
-    padding: 20,
+    paddingVertical: 12,
     gap: 12,
   },
-  favoriteCard: {
-    borderRadius: 16,
+  card: {
+    overflow: 'hidden',
     borderWidth: 1,
-    padding: 16,
-  },
-  favoriteContent: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-  favoriteText: {
-    flex: 1,
-    gap: 4,
-  },
-  favoriteWord: {
-    fontFamily: FONT_FAMILY,
-    fontSize: 20,
-    fontWeight: '600',
-  },
-  translationRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-  },
-  favoriteTranslation: {
-    fontFamily: FONT_FAMILY,
-    fontSize: 16,
   },
 });

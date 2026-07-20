@@ -14,10 +14,16 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { DevToolsScreen } from './DevToolsScreen';
 import {
+  AccessibilityCatalogScreen,
   AuthStateScreen,
+  ComponentCatalogScreen,
   FirestoreModelScreen,
+  MotionCatalogScreen,
+  ResponsiveCatalogScreen,
   ScenarioPickerScreen,
   ScreenTesterScreen,
+  StateCatalogScreen,
+  ThemeCatalogScreen,
 } from './screens';
 import { StorageDebugPanel } from './panels/StorageDebugPanel';
 import { NotificationDebugPanel } from './panels/NotificationDebugPanel';
@@ -27,6 +33,12 @@ import type { RootStackParamList } from '../app/navigation/types';
 export type DevToolsStackParamList = RootStackParamList & {
   DevToolsHome: undefined;
   ScreenTester: undefined;
+  ComponentCatalog: undefined;
+  StateCatalog: undefined;
+  ThemeCatalog: undefined;
+  ResponsiveCatalog: undefined;
+  AccessibilityCatalog: undefined;
+  MotionCatalog: undefined;
   ScenarioPicker: undefined;
   AuthState: undefined;
   StorageDebug: undefined;
@@ -69,6 +81,36 @@ export function DevToolsNavigator({ onClose }: DevToolsNavigatorProps) {
           name="ScreenTester"
           component={ScreenTesterScreen}
           options={{ title: 'Screen Tester' }}
+        />
+        <Stack.Screen
+          name="ComponentCatalog"
+          component={ComponentCatalogScreen}
+          options={{ title: 'Components' }}
+        />
+        <Stack.Screen
+          name="StateCatalog"
+          component={StateCatalogScreen}
+          options={{ title: 'States' }}
+        />
+        <Stack.Screen
+          name="ThemeCatalog"
+          component={ThemeCatalogScreen}
+          options={{ title: 'Theme' }}
+        />
+        <Stack.Screen
+          name="ResponsiveCatalog"
+          component={ResponsiveCatalogScreen}
+          options={{ title: 'Responsive' }}
+        />
+        <Stack.Screen
+          name="AccessibilityCatalog"
+          component={AccessibilityCatalogScreen}
+          options={{ title: 'Accessibility' }}
+        />
+        <Stack.Screen
+          name="MotionCatalog"
+          component={MotionCatalogScreen}
+          options={{ title: 'Motion' }}
         />
         <Stack.Screen
           name="ScenarioPicker"

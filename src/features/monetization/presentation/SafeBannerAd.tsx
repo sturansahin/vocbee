@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { AppState, AppStateStatus, View, Text, StyleSheet } from 'react-native';
 import { useIsFocused } from '@react-navigation/native';
+import { useTheme } from '@shared/theme';
 import {
   areAdsSupported,
   ensureAdMobReady,
@@ -21,6 +22,7 @@ interface SafeBannerAdProps {
 }
 
 export const SafeBannerAd: React.FC<SafeBannerAdProps> = ({ unitId, size, requestOptions }) => {
+  const { colors } = useTheme();
   const isFocused = useIsFocused();
   const [hasError, setHasError] = useState(false);
   const [isReady, setIsReady] = useState(!areAdsSupported());
@@ -173,9 +175,18 @@ export const SafeBannerAd: React.FC<SafeBannerAdProps> = ({ unitId, size, reques
   if (!areAdsSupported()) {
     if (__DEV__) {
       return (
-        <View style={styles.placeholder}>
-          <Text style={styles.text}>AdMob Banner (Development Mode)</Text>
-          <Text style={styles.subtext}>Native ads not available in Expo Go</Text>
+        <View
+          style={[
+            styles.placeholder,
+            { backgroundColor: colors.surfaceMuted, borderTopColor: colors.borderDefault },
+          ]}
+        >
+          <Text style={[styles.text, { color: colors.textSecondary }]}>
+            AdMob Banner (Development Mode)
+          </Text>
+          <Text style={[styles.subtext, { color: colors.textDisabled }]}>
+            Native ads not available in Expo Go
+          </Text>
         </View>
       );
     }
@@ -186,8 +197,15 @@ export const SafeBannerAd: React.FC<SafeBannerAdProps> = ({ unitId, size, reques
   if (!isReady || hasError) {
     if (__DEV__ && !hasError) {
       return (
-        <View style={styles.placeholder}>
-          <Text style={styles.text}>AdMob Banner is preparing</Text>
+        <View
+          style={[
+            styles.placeholder,
+            { backgroundColor: colors.surfaceMuted, borderTopColor: colors.borderDefault },
+          ]}
+        >
+          <Text style={[styles.text, { color: colors.textSecondary }]}>
+            AdMob Banner is preparing
+          </Text>
         </View>
       );
     }
@@ -236,19 +254,15 @@ const styles = StyleSheet.create({
   placeholder: {
     width: '100%',
     height: 60,
-    backgroundColor: '#f0f0f0',
     alignItems: 'center',
     justifyContent: 'center',
     borderTopWidth: 1,
-    borderTopColor: '#ccc',
   },
   text: {
     fontSize: 12,
     fontWeight: 'bold',
-    color: '#666',
   },
   subtext: {
     fontSize: 10,
-    color: '#888',
   },
 });

@@ -7,23 +7,15 @@
 // change-language destructive confirm flow via showAlert).
 
 import React from 'react';
-import { Dimensions, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Ionicons, MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
-import { FONT_FAMILY } from '@shared/theme';
-
-const { width: SCREEN_WIDTH } = Dimensions.get('window');
-const BASE_WIDTH = 393;
-const scale = (size: number) => (SCREEN_WIDTH / BASE_WIDTH) * size;
-const moderateScale = (size: number, factor = 0.5) => size + (scale(size) - size) * factor;
+import { FONT_FAMILY, type ThemeColors } from '@shared/theme';
 
 export interface LanguageSettingsSectionProps {
-  colors: {
-    text: string;
-    textSecondary: string;
-    surface: string;
-    border: string;
-    primary: string;
-  };
+  colors: Pick<
+    ThemeColors,
+    'textPrimary' | 'textSecondary' | 'surface' | 'borderDefault' | 'accent'
+  >;
   isDarkMode: boolean;
   preferencesSectionTitle: string;
 
@@ -79,19 +71,22 @@ export function LanguageSettingsSection({
       <View
         style={[
           styles.sectionCard,
-          { backgroundColor: colors.surface, borderColor: colors.border },
+          { backgroundColor: colors.surface, borderColor: colors.borderDefault },
         ]}
       >
         <TouchableOpacity
+          accessibilityRole="button"
           style={[styles.settingItem, { borderBottomWidth: 0 }]}
           onPress={onPressLanguageRow}
         >
           <View style={styles.settingLeft}>
             <View style={[styles.settingIcon, settingIconStyle]}>
-              <Ionicons name="language" size={24} color={colors.primary} />
+              <Ionicons name="language" size={24} color={colors.accent} />
             </View>
             <View>
-              <Text style={[styles.settingTitle, { color: colors.text }]}>{languageRowLabel}</Text>
+              <Text style={[styles.settingTitle, { color: colors.textPrimary }]}>
+                {languageRowLabel}
+              </Text>
               <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
                 {isSystemLanguage ? (
                   <>
@@ -157,13 +152,19 @@ export function LanguageProgressRows({
 
   return (
     <>
-      <TouchableOpacity style={styles.settingItem} onPress={onPressChangeLevel}>
+      <TouchableOpacity
+        accessibilityRole="button"
+        style={styles.settingItem}
+        onPress={onPressChangeLevel}
+      >
         <View style={styles.settingLeft}>
           <View style={[styles.settingIcon, settingIconStyle]}>
-            <MaterialCommunityIcons name="trophy-outline" size={24} color={colors.primary} />
+            <MaterialCommunityIcons name="trophy-outline" size={24} color={colors.accent} />
           </View>
           <View>
-            <Text style={[styles.settingTitle, { color: colors.text }]}>{changeLevelLabel}</Text>
+            <Text style={[styles.settingTitle, { color: colors.textPrimary }]}>
+              {changeLevelLabel}
+            </Text>
             <Text style={[styles.settingSubtitle, { color: colors.textSecondary }]}>
               {currentLevelLabel} ({currentLevelRange})
             </Text>
@@ -171,13 +172,19 @@ export function LanguageProgressRows({
         </View>
         <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
       </TouchableOpacity>
-      <TouchableOpacity style={styles.settingItem} onPress={onPressChangeLanguage}>
+      <TouchableOpacity
+        accessibilityRole="button"
+        style={styles.settingItem}
+        onPress={onPressChangeLanguage}
+      >
         <View style={styles.settingLeft}>
           <View style={[styles.settingIcon, settingIconStyle]}>
-            <MaterialCommunityIcons name="translate" size={24} color={colors.primary} />
+            <MaterialCommunityIcons name="translate" size={24} color={colors.accent} />
           </View>
           <View>
-            <Text style={[styles.settingTitle, { color: colors.text }]}>{changeLanguageLabel}</Text>
+            <Text style={[styles.settingTitle, { color: colors.textPrimary }]}>
+              {changeLanguageLabel}
+            </Text>
             <Text style={[styles.settingSubtitle, { color: colors.textSecondary }]}>
               {changeLanguageDescription}
             </Text>
@@ -218,20 +225,20 @@ const styles = StyleSheet.create({
     gap: 16,
   },
   settingIcon: {
-    width: scale(40),
-    height: scale(40),
-    borderRadius: scale(20),
+    width: 40,
+    height: 40,
+    borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
   },
   settingTitle: {
     fontFamily: FONT_FAMILY,
-    fontSize: moderateScale(16),
+    fontSize: 16,
     fontWeight: '500',
   },
   settingSubtitle: {
     fontFamily: FONT_FAMILY,
-    fontSize: moderateScale(12),
+    fontSize: 12,
     fontWeight: '500',
     marginTop: 2,
   },

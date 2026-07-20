@@ -65,8 +65,37 @@ jest.mock('../../AuthProvider', () => ({
 // Mock Alert
 jest.mock('@shared/ui', () => {
   const React = require('react');
-  const { Text, TextInput, TouchableOpacity, View } = require('react-native');
+  const { ScrollView, Text, TextInput, TouchableOpacity, View } = require('react-native');
   return {
+    AppButton: ({ label, onPress, disabled, testID }: any) => (
+      <TouchableOpacity testID={testID} onPress={onPress} disabled={disabled}>
+        <Text>{label}</Text>
+      </TouchableOpacity>
+    ),
+    AppHeader: ({ title, onBack }: any) => (
+      <View>
+        <TouchableOpacity onPress={onBack}>
+          <Text>Back</Text>
+        </TouchableOpacity>
+        {title ? <Text>{title}</Text> : null}
+      </View>
+    ),
+    AppInput: ({ label, ...props }: any) => (
+      <View>
+        {label ? <Text>{label}</Text> : null}
+        <TextInput {...props} />
+      </View>
+    ),
+    AppScrollView: ({ children, ...props }: any) => <ScrollView {...props}>{children}</ScrollView>,
+    AppSwitch: ({ onValueChange, testID, value }: any) => (
+      <TouchableOpacity testID={testID} onPress={() => onValueChange(!value)}>
+        <Text>{String(value)}</Text>
+      </TouchableOpacity>
+    ),
+    AppText: ({ children }: any) => <Text>{children}</Text>,
+    Divider: () => <View />,
+    Inline: ({ children }: any) => <View>{children}</View>,
+    Stack: ({ children }: any) => <View>{children}</View>,
     Button: ({ title, onPress, disabled }: any) => (
       <TouchableOpacity onPress={onPress} disabled={disabled}>
         <Text>{title}</Text>
@@ -89,6 +118,20 @@ jest.mock('@shared/ui', () => {
     useAlert: () => ({ showAlert: mockShowAlert }),
   };
 });
+
+jest.mock('@shared/responsive', () => ({
+  useResponsiveLayout: () => ({
+    width: 393,
+    height: 852,
+    orientation: 'portrait',
+    sizeClass: 'regular',
+    isSmallHeight: false,
+    contentMaxWidth: 680,
+    horizontalGutter: 24,
+    moderateScale: (value: number) => value,
+  }),
+  useReducedMotion: () => true,
+}));
 
 describe('AuthScreens', () => {
   const authPresentationGateway = {
@@ -160,7 +203,7 @@ describe('AuthScreens', () => {
     });
 
     it('does not call signUp before privacy policy is accepted', async () => {
-      const { getByText, getByPlaceholderText } = render(
+      const { getByPlaceholderText, getByTestId } = render(
         <SignUpScreen gateway={authPresentationGateway} />,
       );
 
@@ -169,7 +212,7 @@ describe('AuthScreens', () => {
       fireEvent.changeText(getByPlaceholderText('auth.createPassword'), 'pass123456');
       fireEvent.changeText(getByPlaceholderText('auth.confirmPasswordPlaceholder'), 'pass123456');
 
-      fireEvent.press(getByText('auth.signUp'));
+      fireEvent.press(getByTestId('signup-submit'));
 
       await waitFor(() => {
         expect(mockSignUp).not.toHaveBeenCalled();
@@ -177,7 +220,7 @@ describe('AuthScreens', () => {
     });
 
     it('calls signUp with valid data', async () => {
-      const { getByText, getByPlaceholderText, getByTestId } = render(
+      const { getByPlaceholderText, getByTestId } = render(
         <SignUpScreen gateway={authPresentationGateway} />,
       );
 
@@ -188,7 +231,7 @@ describe('AuthScreens', () => {
       fireEvent.changeText(getByPlaceholderText('auth.confirmPasswordPlaceholder'), 'pass123456');
       fireEvent.press(getByTestId('privacy-consent-checkbox'));
 
-      fireEvent.press(getByText('auth.signUp'));
+      fireEvent.press(getByTestId('signup-submit'));
 
       await waitFor(() => {
         expect(mockSignUp).toHaveBeenCalledWith('new@example.com', 'pass123456', 'John Doe');

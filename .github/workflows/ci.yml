@@ -54,7 +54,11 @@ jobs:
         run: npm run check:server-deps && npm run api:check
       - name: Lint (blocking architecture guard)
         run: npm run lint
+      - name: UI production audit
+        run: npm run audit:ui
       - run: npm run test:boundaries
+      - name: UI contract and regression tests
+        run: npm run test:ui
       - name: Firestore cleanup CLI safety tests
         run: npm run firestore:cleanup:check && npm run test:firestore-cleanup
       - run: npm run test:ci
