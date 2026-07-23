@@ -31,7 +31,7 @@ export default function OnboardingScreen({ facade }: OnboardingScreenProps) {
           styles.controls,
           {
             paddingHorizontal: controller.layout.horizontalGutter,
-            paddingBottom: controller.layout.isSmallHeight ? 8 : 20,
+            paddingBottom: controller.layout.isSmallHeight ? 8 : 16,
           },
         ]}
       >
@@ -58,6 +58,8 @@ const styles = StyleSheet.create({
   },
   controls: {
     width: '100%',
-    gap: 20,
+    maxWidth: 600,
+    alignSelf: 'center',
+    gap: 16,
   },
 });

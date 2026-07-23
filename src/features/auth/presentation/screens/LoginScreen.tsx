@@ -1,20 +1,17 @@
 import React from 'react';
-import { Animated, Platform, StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
-import LottieView from 'lottie-react-native';
 import { useTranslation } from 'react-i18next';
 
-import { useReducedMotion, useResponsiveLayout } from '@shared/responsive';
+import { useResponsiveLayout } from '@shared/responsive';
 import { AppButton, AppInput, AppScrollView, AppText, Divider, Inline, Stack } from '@shared/ui';
 
 import { useLoginController } from '../hooks/useLoginController';
 
 export function LoginScreen() {
   const layout = useResponsiveLayout();
-  const reducedMotion = useReducedMotion();
   const { t } = useTranslation();
-  const controller = useLoginController(layout.height, reducedMotion);
-  const lottieSize = layout.isSmallHeight ? 120 : layout.height > 900 ? 150 : 130;
+  const controller = useLoginController();
 
   return (
     <AppScrollView
@@ -25,56 +22,13 @@ export function LoginScreen() {
       keyboardAvoiding
       testID="login-screen"
     >
-      <Stack gap={layout.isSmallHeight ? 'lg' : '2xl'}>
-        <Stack align="center" gap="sm">
-          <Animated.View
-            style={[
-              styles.lottie,
-              {
-                width: lottieSize,
-                height: lottieSize,
-                transform: [
-                  { translateX: controller.translateX },
-                  { translateY: controller.translateY },
-                  {
-                    rotate: controller.rotation.interpolate({
-                      inputRange: [-360, 360],
-                      outputRange: ['-360deg', '360deg'],
-                    }),
-                  },
-                  { scale: controller.scale },
-                ],
-                opacity: controller.opacity,
-              },
-            ]}
-          >
-            <LottieView
-              autoPlay={!reducedMotion && controller.isAnimating}
-              loop={!reducedMotion}
-              ref={controller.lottieRef}
-              source={
-                controller.isAnimating && !reducedMotion
-                  ? controller.animatedAnimation
-                  : controller.staticAnimation
-              }
-              speed={1.5}
-              style={styles.lottieAsset}
-            />
-          </Animated.View>
-          <AppText accessibilityRole="header" align="center" variant="display">
-            VocBee
-          </AppText>
-          <AppText align="center" color="textSecondary">
-            {t('auth.subtitle')}
-          </AppText>
-        </Stack>
-
+      <Stack gap={layout.isSmallHeight ? 'lg' : '2xl'} style={styles.formContent}>
         <Stack gap="lg">
           <AppInput
+            accessibilityLabel={t('auth.email')}
             autoCapitalize="none"
             autoComplete="email"
             keyboardType="email-address"
-            label={t('auth.email')}
             onChangeText={controller.setEmail}
             placeholder={t('auth.emailPlaceholder')}
             returnKeyType="next"
@@ -82,8 +36,8 @@ export function LoginScreen() {
             value={controller.email}
           />
           <AppInput
+            accessibilityLabel={t('auth.password')}
             autoComplete="password"
-            label={t('auth.password')}
             onChangeText={controller.setPassword}
             onSubmitEditing={controller.handleLogin}
             placeholder={t('auth.passwordPlaceholder')}
@@ -98,6 +52,7 @@ export function LoginScreen() {
           <AppButton
             fullWidth={false}
             label={`${t('auth.noAccount')} ${t('auth.signUp')}`}
+            labelStyle={styles.authLinkLabel}
             onPress={controller.openSignUp}
             testID="login-open-signup"
             variant="ghost"
@@ -105,6 +60,7 @@ export function LoginScreen() {
           <AppButton
             fullWidth={false}
             label={t('auth.forgotPassword')}
+            labelStyle={styles.authLinkLabel}
             onPress={controller.openForgotPassword}
             testID="login-open-forgot-password"
             variant="ghost"
@@ -112,7 +68,7 @@ export function LoginScreen() {
         </Inline>
 
         <AppButton
-          disabled={controller.isAnimating}
+          disabled={controller.isSubmitting}
           label={t('auth.logIn')}
           loading={controller.isSubmitting}
           onPress={controller.handleLogin}
@@ -158,15 +114,14 @@ const styles = StyleSheet.create({
   content: {
     paddingVertical: 20,
   },
-  lottie: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    overflow: 'visible',
+  authLinkLabel: {
+    fontSize: 13,
+    lineHeight: 18,
   },
-  lottieAsset: {
+  formContent: {
     width: '100%',
-    height: '100%',
-    transform: [{ scale: 1.15 }],
+    maxWidth: 500,
+    alignSelf: 'center',
   },
   divider: {
     flex: 1,

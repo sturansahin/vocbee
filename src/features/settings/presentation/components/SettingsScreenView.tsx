@@ -39,6 +39,12 @@ export function SettingsScreenView({ controller: c }: SettingsScreenViewProps) {
         title={t('settings.title')}
         backAccessibilityLabel={t('common.back')}
         onBack={() => c.navigation.goBack()}
+        style={{
+          width: '100%',
+          maxWidth: contentMaxWidth,
+          paddingHorizontal: horizontalGutter,
+          alignSelf: 'center',
+        }}
       />
 
       <ScrollView
@@ -134,7 +140,11 @@ export function SettingsScreenView({ controller: c }: SettingsScreenViewProps) {
           onPressFrequency={() => c.openModal('frequency')}
         />
 
-        <SectionCard title={t('settings.progress')} style={styles.sectionSpacing}>
+        <SectionCard
+          title={t('settings.progress')}
+          titleVariant="bodyStrong"
+          style={styles.sectionSpacing}
+        >
           <LanguageProgressRows
             colors={colors}
             isDarkMode={isDarkMode}
@@ -157,7 +167,11 @@ export function SettingsScreenView({ controller: c }: SettingsScreenViewProps) {
           />
         </SectionCard>
 
-        <SectionCard title={t('settings.support')} style={styles.sectionSpacing}>
+        <SectionCard
+          title={t('settings.support')}
+          titleVariant="bodyStrong"
+          style={styles.sectionSpacing}
+        >
           <SupportRow
             icon="help"
             label={t('settings.helpFaq')}

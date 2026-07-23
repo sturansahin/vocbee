@@ -13,10 +13,10 @@ export interface OnboardingCarouselProps {
 
 export function OnboardingCarousel({ steps, listRef, layout, onScroll }: OnboardingCarouselProps) {
   const visualHeight = Math.min(
-    layout.height * (layout.isSmallHeight ? 0.36 : 0.46),
-    layout.sizeClass === 'wide' ? 440 : 400,
+    layout.height * (layout.isSmallHeight ? 0.34 : 0.42),
+    layout.sizeClass === 'wide' ? 400 : 360,
   );
-  const imageWidth = Math.min(layout.width * 0.9, layout.sizeClass === 'wide' ? 500 : 390);
+  const imageWidth = Math.min(layout.width * 0.86, layout.sizeClass === 'wide' ? 460 : 360);
 
   return (
     <FlatList
@@ -40,7 +40,7 @@ export function OnboardingCarousel({ steps, listRef, layout, onScroll }: Onboard
             {
               width: layout.width,
               paddingHorizontal: layout.horizontalGutter,
-              paddingTop: layout.isSmallHeight ? 12 : 32,
+              paddingTop: layout.isSmallHeight ? 12 : 24,
             },
           ]}
           nestedScrollEnabled

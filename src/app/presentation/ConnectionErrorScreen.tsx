@@ -16,15 +16,15 @@ export function ConnectionErrorScreen() {
       <Stack align="center" gap="2xl" style={{ width: '100%' }}>
         <Surface
           style={{
-            width: 120,
-            height: 120,
-            borderRadius: 60,
+            width: 104,
+            height: 104,
+            borderRadius: 52,
             alignItems: 'center',
             justifyContent: 'center',
           }}
           tone="muted"
         >
-          <MaterialIcons color={colors.danger} name="wifi-off" size={64} />
+          <MaterialIcons color={colors.danger} name="wifi-off" size={52} />
         </Surface>
         <Stack align="center" gap="md">
           <AppText accessibilityRole="header" align="center" variant="screenTitle">

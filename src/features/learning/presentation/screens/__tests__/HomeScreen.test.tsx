@@ -208,21 +208,12 @@ describe('HomeScreen', () => {
     });
   });
 
-  it('offers accessible skip and learned actions with the same swipe meanings', async () => {
-    const skipFacade = createFacade();
-    const skipScreen = renderHome(skipFacade);
-    await waitFor(() => expect(skipScreen.getByTestId('home-ready')).toBeTruthy());
-    fireEvent.press(skipScreen.getByTestId('home-skip-action'));
-    await waitFor(() => expect(skipFacade.saveLastWordId).toHaveBeenCalledWith(0));
-    expect(skipFacade.completeWord).not.toHaveBeenCalled();
-    skipScreen.unmount();
+  it('does not render redundant skip and learned buttons', async () => {
+    const screen = renderHome(createFacade());
+    await waitFor(() => expect(screen.getByTestId('home-ready')).toBeTruthy());
 
-    const learnedFacade = createFacade();
-    const learnedScreen = renderHome(learnedFacade);
-    await waitFor(() => expect(learnedScreen.getByTestId('home-ready')).toBeTruthy());
-    fireEvent.press(learnedScreen.getByTestId('home-learned-action'));
-    await waitFor(() => expect(learnedFacade.completeWord).toHaveBeenCalledWith('A1', word.id));
-    expect(learnedFacade.scheduleStreakReminder).toHaveBeenCalledTimes(1);
+    expect(screen.queryByTestId('home-skip-action')).toBeNull();
+    expect(screen.queryByTestId('home-learned-action')).toBeNull();
   });
 
   it('renders the empty state for a session without words', async () => {

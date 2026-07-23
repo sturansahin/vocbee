@@ -39,8 +39,7 @@ export function NotificationPermissionStep(_: NotificationPermissionStepProps) {
 
 const styles = StyleSheet.create({
   content: {
-    paddingVertical: 24,
-    paddingBottom: 100,
+    paddingVertical: 16,
   },
   card: {
     padding: 20,

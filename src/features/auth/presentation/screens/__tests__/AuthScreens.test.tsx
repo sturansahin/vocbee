@@ -92,7 +92,7 @@ jest.mock('@shared/ui', () => {
         <Text>{String(value)}</Text>
       </TouchableOpacity>
     ),
-    AppText: ({ children }: any) => <Text>{children}</Text>,
+    AppText: ({ children, ...props }: any) => <Text {...props}>{children}</Text>,
     Divider: () => <View />,
     Inline: ({ children }: any) => <View>{children}</View>,
     Stack: ({ children }: any) => <View>{children}</View>,
@@ -145,11 +145,14 @@ describe('AuthScreens', () => {
 
   describe('LoginScreen', () => {
     it('renders email and password inputs', () => {
-      const { getByText, getByPlaceholderText } = render(<LoginScreen />);
+      const { getByPlaceholderText, queryByText } = render(<LoginScreen />);
 
-      expect(getByText('auth.email')).toBeTruthy(); // Using translation key mock
-      expect(getByText('auth.password')).toBeTruthy();
       expect(getByPlaceholderText('auth.emailPlaceholder')).toBeTruthy();
+      expect(getByPlaceholderText('auth.passwordPlaceholder')).toBeTruthy();
+      expect(queryByText('auth.email')).toBeNull();
+      expect(queryByText('auth.password')).toBeNull();
+      expect(queryByText('VocBee')).toBeNull();
+      expect(queryByText('auth.subtitle')).toBeNull();
     });
 
     it('validates empty inputs', () => {
@@ -194,12 +197,23 @@ describe('AuthScreens', () => {
 
   describe('SignUpScreen', () => {
     it('renders all signup fields', () => {
-      const { getByText, getByPlaceholderText } = render(
+      const { getByText, getByPlaceholderText, getByTestId } = render(
         <SignUpScreen gateway={authPresentationGateway} />,
       );
 
       expect(getByText('auth.fullName')).toBeTruthy();
       expect(getByPlaceholderText('auth.enterEmail')).toBeTruthy(); // Adjusted to placeholder from component
+      expect(getByTestId('privacy-consent-checkbox').props.accessibilityState).toEqual({
+        checked: true,
+      });
+    });
+
+    it('opens the privacy policy from the linked sentence text', () => {
+      const { getByTestId } = render(<SignUpScreen gateway={authPresentationGateway} />);
+
+      fireEvent.press(getByTestId('privacy-policy-link'));
+
+      expect(authPresentationGateway.openPrivacyPolicy).toHaveBeenCalledTimes(1);
     });
 
     it('does not call signUp before privacy policy is accepted', async () => {
@@ -211,6 +225,7 @@ describe('AuthScreens', () => {
       fireEvent.changeText(getByPlaceholderText('auth.enterEmail'), 'new@example.com');
       fireEvent.changeText(getByPlaceholderText('auth.createPassword'), 'pass123456');
       fireEvent.changeText(getByPlaceholderText('auth.confirmPasswordPlaceholder'), 'pass123456');
+      fireEvent.press(getByTestId('privacy-consent-checkbox'));
 
       fireEvent.press(getByTestId('signup-submit'));
 
@@ -229,7 +244,6 @@ describe('AuthScreens', () => {
 
       fireEvent.changeText(getByPlaceholderText('auth.createPassword'), 'pass123456');
       fireEvent.changeText(getByPlaceholderText('auth.confirmPasswordPlaceholder'), 'pass123456');
-      fireEvent.press(getByTestId('privacy-consent-checkbox'));
 
       fireEvent.press(getByTestId('signup-submit'));
 

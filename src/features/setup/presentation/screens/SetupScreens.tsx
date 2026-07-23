@@ -3,10 +3,7 @@ import { Animated, StyleSheet, View } from 'react-native';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import LottieView from 'lottie-react-native';
 
-import {
-  DEFAULT_NOTIFICATION_FREQUENCY_KEY,
-  NOTIFICATION_FREQUENCY_KEYS,
-} from '@features/notifications';
+import { NOTIFICATION_FREQUENCY_KEYS } from '@features/notifications';
 import { LANGUAGES, LEVELS } from '@shared/i18n';
 import { useReducedMotion, useResponsiveLayout } from '@shared/responsive';
 import { useTheme } from '@shared/theme';
@@ -23,17 +20,15 @@ import {
 
 import type { SetupFacade } from '../../application/setupContracts';
 import {
-  SETUP_HOURS_EXTENDED,
-  SETUP_MINUTES_EXTENDED,
+  SETUP_TIME_OPTIONS,
+  SETUP_TOTAL_STEPS,
   useSetupController,
 } from '../hooks/useSetupController';
 import {
   LevelStep,
   NativeLanguageStep,
   NotificationPermissionStep,
-  NotificationScheduleEndStep,
-  NotificationScheduleStartStep,
-  SetupCompleteStep,
+  ReminderScheduleStep,
   TargetLanguageStep,
 } from '../steps';
 
@@ -76,48 +71,26 @@ export function SetupScreen({ facade }: SetupScreenProps) {
     ),
     4: <NotificationPermissionStep colors={colors} />,
     5: (
-      <NotificationScheduleStartStep
-        colors={colors}
-        hourScrollRef={controller.startHourRef}
-        hourValues={SETUP_HOURS_EXTENDED}
-        minuteScrollRef={controller.startMinuteRef}
-        minuteValues={SETUP_MINUTES_EXTENDED}
-        onHourMomentumScrollEnd={controller.handleStartHourScroll}
-        onMinuteMomentumScrollEnd={controller.handleStartMinuteScroll}
-      />
-    ),
-    6: (
-      <NotificationScheduleEndStep
-        colors={colors}
-        hourScrollRef={controller.endHourRef}
-        hourValues={SETUP_HOURS_EXTENDED}
-        minuteScrollRef={controller.endMinuteRef}
-        minuteValues={SETUP_MINUTES_EXTENDED}
-        onHourMomentumScrollEnd={controller.handleEndHourScroll}
-        onMinuteMomentumScrollEnd={controller.handleEndMinuteScroll}
-      />
-    ),
-    7: (
-      <SetupCompleteStep
-        colors={colors}
+      <ReminderScheduleStep
+        endTime={controller.endTime}
         frequencyKeys={NOTIFICATION_FREQUENCY_KEYS}
+        onSelectEndTime={controller.setEndTime}
         onSelectFrequency={controller.setFrequency}
-        selectedFrequency={controller.frequency ?? DEFAULT_NOTIFICATION_FREQUENCY_KEY}
+        onSelectStartTime={controller.setStartTime}
+        selectedFrequency={controller.frequency}
+        startTime={controller.startTime}
+        timeOptions={SETUP_TIME_OPTIONS}
       />
     ),
   } as const;
 
   return (
-    <Screen
-      contentStyle={styles.screenContent}
-      edges={['top', 'left', 'right']}
-      testID="setup-screen"
-    >
+    <Screen edges={['top', 'left', 'right']} testID="setup-screen">
       <View style={styles.header}>
         {controller.currentStep > 1 ? (
           <IconButton
             accessibilityLabel="Go to previous setup step"
-            icon={(color) => <FontAwesome5 color={color} name="arrow-left" size={22} />}
+            icon={(color) => <FontAwesome5 color={color} name="arrow-left" size={18} />}
             onPress={controller.handleBack}
             testID="setup-back"
           />
@@ -125,9 +98,9 @@ export function SetupScreen({ facade }: SetupScreenProps) {
           <View style={styles.headerSide} />
         )}
         <ProgressBar
-          accessibilityLabel={`Setup progress, step ${controller.currentStep} of 7`}
+          accessibilityLabel={`Setup progress, step ${controller.currentStep} of ${SETUP_TOTAL_STEPS}`}
           style={styles.progress}
-          value={controller.currentStep / 7}
+          value={controller.currentStep / SETUP_TOTAL_STEPS}
         />
         <View style={styles.headerSide} />
       </View>
@@ -137,7 +110,7 @@ export function SetupScreen({ facade }: SetupScreenProps) {
           styles.content,
           {
             opacity: reducedMotion ? 1 : controller.fadeAnim,
-            paddingTop: layout.isSmallHeight ? 4 : 16,
+            paddingTop: layout.isSmallHeight ? 0 : 8,
           },
         ]}
       >
@@ -145,17 +118,18 @@ export function SetupScreen({ facade }: SetupScreenProps) {
           <AppText accessibilityRole="header" variant="screenTitle">
             {controller.stepTitle.white}
           </AppText>
-          <AppText color="accent" variant="screenTitle">
-            {controller.stepTitle.green}
-          </AppText>
-          <AppText color="textSecondary">{controller.stepSubtitle}</AppText>
+          {controller.stepTitle.green ? (
+            <AppText color="accent" variant="screenTitle">
+              {controller.stepTitle.green}
+            </AppText>
+          ) : null}
         </Stack>
         <View style={styles.step}>
           {stepContent[controller.currentStep as keyof typeof stepContent]}
         </View>
       </Animated.View>
 
-      <BottomActionBar>
+      <BottomActionBar style={styles.bottomBar}>
         <AppButton
           disabled={controller.buttonDisabled}
           label={controller.buttonTitle}
@@ -187,24 +161,25 @@ export function SetupScreen({ facade }: SetupScreenProps) {
 }
 
 const styles = StyleSheet.create({
-  screenContent: {
+  bottomBar: {
     paddingHorizontal: 0,
   },
   header: {
-    minHeight: 56,
+    minHeight: 44,
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 12,
+    gap: 8,
   },
   headerSide: {
     width: 44,
   },
   progress: {
     flex: 1,
+    height: 4,
   },
   content: {
     flex: 1,
-    gap: 20,
+    gap: 12,
   },
   step: {
     flex: 1,

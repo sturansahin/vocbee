@@ -45,7 +45,7 @@ export function LanguageSelectionList({
 const styles = StyleSheet.create({
   list: {
     gap: 12,
-    paddingBottom: 100,
+    paddingBottom: 16,
   },
   flag: {
     width: 32,

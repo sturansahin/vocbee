@@ -41,18 +41,23 @@ export function HomeHeader({
   onPressSettings,
   showPlaceholders = false,
 }: HomeHeaderProps) {
-  const { moderateScale } = useResponsiveLayout();
+  const { horizontalGutter, moderateScale, sizeClass } = useResponsiveLayout();
 
   return (
-    <View style={[styles.header, { paddingVertical: moderateScale(16) }]}>
+    <View
+      style={[
+        styles.header,
+        { paddingHorizontal: horizontalGutter, paddingVertical: moderateScale(12) },
+      ]}
+    >
       <View style={styles.headerTitleContainer}>
         <Text
           style={[
             styles.headerTitle,
             {
               color: titleColor,
-              fontSize: moderateScale(22),
-              letterSpacing: moderateScale(6),
+              fontSize: moderateScale(sizeClass === 'compact' ? 20 : 22),
+              letterSpacing: moderateScale(4),
             },
           ]}
         >
@@ -99,7 +104,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingHorizontal: 20,
   },
   headerTitleContainer: {
     flex: 1,
@@ -110,7 +114,7 @@ const styles = StyleSheet.create({
   headerButtons: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 12,
+    gap: 8,
   },
   streakPlaceholder: {
     width: 42,

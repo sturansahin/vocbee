@@ -49,7 +49,7 @@ export function LevelTestResultView({
           </AppText>
         </Stack>
       </ScrollView>
-      <BottomActionBar>
+      <BottomActionBar style={styles.bottomBar}>
         <AppButton label={continueLabel} onPress={onContinue} testID="level-test-continue" />
       </BottomActionBar>
     </Screen>
@@ -57,15 +57,18 @@ export function LevelTestResultView({
 }
 
 const styles = StyleSheet.create({
+  bottomBar: {
+    paddingHorizontal: 0,
+  },
   content: {
     flexGrow: 1,
     justifyContent: 'center',
-    paddingVertical: 40,
+    paddingVertical: 32,
   },
   levelCard: {
     minWidth: 220,
-    paddingHorizontal: 32,
-    paddingVertical: 28,
+    paddingHorizontal: 24,
+    paddingVertical: 24,
     gap: 8,
   },
 });

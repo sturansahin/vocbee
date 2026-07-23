@@ -48,6 +48,8 @@ export function HomeProgressSection({
   progressPercentage,
 }: HomeProgressSectionProps) {
   const { moderateScale } = useResponsiveLayout();
+  const levelFontSize = moderateScale(26);
+  const goalFontSize = moderateScale(12);
 
   if (isLoading) {
     return (
@@ -106,7 +108,16 @@ export function HomeProgressSection({
     <View style={styles.statsSection}>
       <View>
         <View style={styles.levelRow}>
-          <Text style={[styles.levelValue, { color: textColor, fontSize: moderateScale(26) }]}>
+          <Text
+            style={[
+              styles.levelValue,
+              {
+                color: textColor,
+                fontSize: levelFontSize,
+                lineHeight: Math.ceil(levelFontSize * 1.08),
+              },
+            ]}
+          >
             {levelCode}
           </Text>
           <Text style={[styles.levelSubtext, { color: textSecondaryColor }]}>
@@ -115,7 +126,12 @@ export function HomeProgressSection({
           <Text
             style={[
               styles.goalValue,
-              { color: textColor, marginLeft: 'auto', fontSize: moderateScale(12) },
+              {
+                color: textColor,
+                marginLeft: 'auto',
+                fontSize: goalFontSize,
+                lineHeight: Math.ceil(goalFontSize * 1.35),
+              },
             ]}
           >
             {learnedCount}/{totalCount} {wordsLabel}
@@ -153,13 +169,17 @@ export function HomeProgressSection({
 
 const styles = StyleSheet.create({
   statsSection: {
+    alignSelf: 'stretch',
+    flexGrow: 0,
+    flexShrink: 1,
     paddingHorizontal: 20,
-    marginBottom: 16,
+    paddingVertical: 6,
   },
   levelRow: {
     flexDirection: 'row',
     alignItems: 'baseline',
     gap: 8,
+    marginBottom: 6,
   },
   levelValue: {
     fontFamily: FONT_FAMILY,
@@ -167,19 +187,20 @@ const styles = StyleSheet.create({
   levelSubtext: {
     fontFamily: FONT_FAMILY,
     fontSize: 14,
+    lineHeight: 18,
   },
   goalValue: {
     fontFamily: FONT_FAMILY,
   },
   progressBg: {
-    height: 8,
+    height: 6,
     width: '100%',
-    borderRadius: 4,
+    borderRadius: 3,
     overflow: 'hidden',
   },
   progressFill: {
     height: '100%',
-    borderRadius: 4,
+    borderRadius: 3,
   },
   loadingLine: {
     borderRadius: 999,

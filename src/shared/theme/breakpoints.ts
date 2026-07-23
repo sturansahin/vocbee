@@ -5,8 +5,8 @@ export const breakpoints: BreakpointTokens = Object.freeze({
   wideMin: 768,
   smallHeightMax: 700,
   contentMaxWidth: Object.freeze({
-    compact: 560,
-    regular: 680,
-    wide: 760,
+    compact: 520,
+    regular: 600,
+    wide: 680,
   }),
 });

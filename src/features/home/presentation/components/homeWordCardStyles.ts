@@ -44,13 +44,13 @@ export const homeWordCardStyles = StyleSheet.create({
   },
   cardLowerSectionStruct: {
     width: '100%',
-    paddingTop: 20,
+    paddingTop: 14,
     paddingHorizontal: 0,
     alignItems: 'center',
   },
   exampleSentencesContainer: {
     width: '100%',
-    paddingHorizontal: 20,
+    paddingHorizontal: 16,
     paddingBottom: 12,
     alignItems: 'center',
   },
@@ -60,7 +60,7 @@ export const homeWordCardStyles = StyleSheet.create({
     fontSize: 15,
     lineHeight: 22,
     textAlign: 'center',
-    paddingHorizontal: 40,
+    paddingHorizontal: 8,
   },
   thinDivider: { height: 1, width: '100%', marginVertical: 10, opacity: 0.5 },
   cardTranslationText: {
@@ -69,7 +69,7 @@ export const homeWordCardStyles = StyleSheet.create({
     fontStyle: 'italic',
     lineHeight: 20,
     textAlign: 'center',
-    paddingHorizontal: 40,
+    paddingHorizontal: 8,
   },
   fullWidthButton: {
     width: '100%',

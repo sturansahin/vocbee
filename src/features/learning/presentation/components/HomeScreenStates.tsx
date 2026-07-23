@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { HomeHeader, HomeProgressSection } from '@features/home';
+import { useResponsiveLayout } from '@shared/responsive';
 import { EmptyState, ErrorState, Screen } from '@shared/ui';
 
 interface StateColors {
@@ -23,6 +24,7 @@ interface LoadingProps {
 }
 
 export function HomeLoadingState(props: LoadingProps) {
+  const { horizontalGutter } = useResponsiveLayout();
   const placeholder = props.isDarkMode ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.08)';
   const accent = props.isDarkMode ? 'rgba(255,200,20,0.22)' : 'rgba(255,200,20,0.28)';
   return (
@@ -41,7 +43,12 @@ export function HomeLoadingState(props: LoadingProps) {
         placeholderColor={placeholder}
         showPlaceholders
       />
-      <View style={[styles.stats, { borderColor: props.colors.borderDefault }]}>
+      <View
+        style={[
+          styles.stats,
+          { borderColor: props.colors.borderDefault, marginHorizontal: horizontalGutter },
+        ]}
+      >
         <HomeProgressSection
           isLoading
           isDarkMode={props.isDarkMode}
@@ -66,6 +73,7 @@ export function HomeLoadingState(props: LoadingProps) {
           {
             backgroundColor: placeholder,
             borderColor: props.colors.borderDefault,
+            marginHorizontal: horizontalGutter,
           },
         ]}
       />
@@ -113,7 +121,20 @@ export function HomeErrorState({
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
-  stats: { marginHorizontal: 20, marginTop: 8, borderRadius: 20, borderWidth: 1, padding: 16 },
-  cardPlaceholder: { flex: 1, margin: 20, borderRadius: 32, borderWidth: 1, opacity: 0.45 },
+  stats: {
+    alignSelf: 'stretch',
+    flexGrow: 0,
+    flexShrink: 0,
+    borderRadius: 16,
+    borderWidth: 1,
+    overflow: 'hidden',
+  },
+  cardPlaceholder: {
+    flex: 1,
+    marginVertical: 16,
+    borderRadius: 24,
+    borderWidth: 1,
+    opacity: 0.45,
+  },
   bannerPlaceholder: { height: 50, marginHorizontal: 24, marginBottom: 12, borderRadius: 16 },
 });

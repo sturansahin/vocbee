@@ -10,8 +10,8 @@ export const settingsStyles = StyleSheet.create({
     flex: 1,
   },
   scrollContent: {
-    paddingTop: 24,
-    paddingBottom: 40,
+    paddingTop: 16,
+    paddingBottom: 32,
   },
   sectionTitle: {
     fontFamily: FONT_FAMILY,
@@ -29,7 +29,7 @@ export const settingsStyles = StyleSheet.create({
     borderColor: 'rgba(255,255,255,0.05)',
   },
   sectionSpacing: {
-    marginBottom: 24,
+    marginBottom: 20,
   },
   settingItem: {
     flexDirection: 'row',
@@ -45,9 +45,9 @@ export const settingsStyles = StyleSheet.create({
     gap: 16,
   },
   settingIcon: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
+    width: 36,
+    height: 36,
+    borderRadius: 18,
     alignItems: 'center',
     justifyContent: 'center',
   },

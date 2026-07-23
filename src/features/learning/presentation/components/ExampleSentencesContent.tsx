@@ -25,6 +25,7 @@ export const ExampleCard = React.memo<ExampleCardProps>(
     >
       <TouchableOpacity
         style={styles.sentenceRow}
+        hitSlop={4}
         onPress={onSpeak}
         activeOpacity={0.7}
         accessibilityLabel={sentence}

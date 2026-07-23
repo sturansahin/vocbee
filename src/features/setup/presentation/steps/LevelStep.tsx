@@ -1,9 +1,9 @@
 import React from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useTranslation } from 'react-i18next';
-import type { ThemeColors } from '@shared/theme';
-import { AppButton, SelectionRow } from '@shared/ui';
+import { useTheme, type ThemeColors } from '@shared/theme';
+import { AppText, SelectionRow } from '@shared/ui';
 
 export interface LevelOption {
   id: string;
@@ -28,6 +28,7 @@ export function LevelStep({
   onPressTakeTest,
 }: LevelStepProps) {
   const { t } = useTranslation();
+  const { colors: themeColors, radii } = useTheme();
 
   return (
     <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
@@ -43,24 +44,63 @@ export function LevelStep({
           />
         ))}
       </View>
-      <AppButton
-        label={t('setup.takeTest')}
-        leadingIcon={(color) => <MaterialIcons color={color} name="quiz" size={20} />}
+      <Pressable
+        accessibilityRole="button"
         onPress={onPressTakeTest}
+        style={({ pressed }) => [
+          styles.testRow,
+          {
+            backgroundColor: pressed ? themeColors.surfaceMuted : themeColors.surface,
+            borderColor: themeColors.borderDefault,
+            borderRadius: radii.md,
+          },
+        ]}
         testID="setup-take-level-test"
-        variant="ghost"
-      />
+      >
+        <View
+          style={[
+            styles.testIcon,
+            { backgroundColor: themeColors.accentSoft, borderRadius: radii.sm },
+          ]}
+        >
+          <MaterialIcons color={themeColors.accent} name="quiz" size={20} />
+        </View>
+        <AppText style={styles.testText} variant="bodyStrong">
+          {t('setup.takeTest')}
+        </AppText>
+        <MaterialIcons color={themeColors.textSecondary} name="chevron-right" size={20} />
+      </Pressable>
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   content: {
-    paddingBottom: 100,
-    gap: 16,
+    paddingBottom: 12,
+    gap: 12,
   },
   levels: {
-    gap: 12,
+    gap: 8,
+  },
+  testRow: {
+    minHeight: 54,
+    borderWidth: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    gap: 10,
+  },
+  testIcon: {
+    width: 34,
+    height: 34,
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexShrink: 0,
+  },
+  testText: {
+    flex: 1,
+    flexShrink: 1,
   },
 });
 

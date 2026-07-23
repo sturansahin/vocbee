@@ -209,8 +209,9 @@ export default function HomeScreen({ facade }: HomeScreenProps) {
   const surfaceStyle = [
     styles.stats,
     {
-      backgroundColor: isDarkMode ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.72)',
+      backgroundColor: colors.surfaceElevated,
       borderColor: colors.borderDefault,
+      marginHorizontal: layout.horizontalGutter,
     },
   ];
 
@@ -266,8 +267,6 @@ export default function HomeScreen({ facade }: HomeScreenProps) {
             pronunciation: word.pronunciation ?? null,
           });
         }}
-        onSkip={() => swipe.swipe('left')}
-        onLearned={() => swipe.swipe('right')}
       />
       {shouldShowAds && (
         <View style={[styles.banner, { backgroundColor: colors.background }]}>
@@ -318,6 +317,13 @@ export default function HomeScreen({ facade }: HomeScreenProps) {
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
-  stats: { marginHorizontal: 20, borderRadius: 20, borderWidth: 1, overflow: 'hidden' },
+  stats: {
+    alignSelf: 'stretch',
+    flexGrow: 0,
+    flexShrink: 0,
+    borderRadius: 16,
+    borderWidth: 1,
+    overflow: 'hidden',
+  },
   banner: { alignItems: 'center', justifyContent: 'center' },
 });

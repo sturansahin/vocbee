@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     gap: 12,
-    paddingVertical: 24,
+    paddingVertical: 20,
   },
   wordContainer: {
     width: '100%',
@@ -21,8 +21,8 @@ export const styles = StyleSheet.create({
   },
   wordTitle: {
     fontFamily: FONT_FAMILY,
-    fontSize: 32,
-    lineHeight: 40,
+    fontSize: 30,
+    lineHeight: 38,
     textAlign: 'center',
   },
   pronunciationText: {
@@ -44,8 +44,8 @@ export const styles = StyleSheet.create({
   translationText: {
     flexShrink: 1,
     fontFamily: FONT_FAMILY,
-    fontSize: 28,
-    lineHeight: 36,
+    fontSize: 24,
+    lineHeight: 32,
     fontWeight: '500',
     textAlign: 'center',
   },
@@ -53,11 +53,11 @@ export const styles = StyleSheet.create({
     width: '85%',
     height: 1,
     alignSelf: 'center',
-    marginBottom: 32,
+    marginBottom: 24,
   },
   examplesSection: {
     width: '100%',
-    gap: 16,
+    gap: 12,
     marginBottom: 16,
   },
   sectionTitle: {
@@ -65,19 +65,19 @@ export const styles = StyleSheet.create({
     fontSize: 20,
   },
   examplesList: {
-    gap: 16,
+    gap: 8,
   },
   exampleCard: {
-    padding: 20,
-    borderRadius: 12,
+    padding: 14,
+    borderRadius: 16,
     borderWidth: 1,
-    gap: 12,
+    gap: 8,
   },
   sentenceRow: {
-    minHeight: 44,
+    minHeight: 40,
     flexDirection: 'row',
-    alignItems: 'flex-start',
-    gap: 12,
+    alignItems: 'center',
+    gap: 10,
   },
   exampleText: {
     flex: 1,
@@ -87,7 +87,8 @@ export const styles = StyleSheet.create({
   },
   exampleDivider: {
     height: 1,
-    width: '100%',
+    width: '92%',
+    alignSelf: 'center',
   },
   nativeText: {
     fontFamily: FONT_FAMILY,

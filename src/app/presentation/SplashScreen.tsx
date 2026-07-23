@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useMemo } from 'react';
 import { View, StyleSheet, Animated } from 'react-native';
 import LottieView from 'lottie-react-native';
+import { useResponsiveLayout } from '@shared/responsive';
 import { useTheme } from '@shared/theme';
 import { createSwarmAnimation } from '../../../assets/animations/swarmAnimation';
 
@@ -10,11 +11,14 @@ interface SplashScreenProps {
 
 export default function SplashScreen({ onFinish }: SplashScreenProps) {
   const { colors } = useTheme();
+  const { isSmallHeight, sizeClass } = useResponsiveLayout();
   const lottieRef = useRef<LottieView>(null);
   const logoOpacity = useRef(new Animated.Value(0)).current;
   const logoScale = useRef(new Animated.Value(0.96)).current;
 
-  // Yellow bee color (same as LoginScreen) — hoisted as constant to avoid referential inequality
+  const logoSize = isSmallHeight ? 160 : sizeClass === 'wide' ? 200 : 184;
+
+  // Yellow bee color — hoisted as a constant to avoid referential inequality.
   const beeColor = useMemo<[number, number, number, number]>(() => [1, 0.78, 0.08, 1], []);
 
   // Animated version (wings flapping) - beeColor is stable via useMemo
@@ -55,6 +59,8 @@ export default function SplashScreen({ onFinish }: SplashScreenProps) {
         style={[
           styles.logoContainer,
           {
+            width: logoSize,
+            height: logoSize,
             opacity: logoOpacity,
             transform: [{ scale: logoScale }],
           },
@@ -63,7 +69,7 @@ export default function SplashScreen({ onFinish }: SplashScreenProps) {
         <LottieView
           ref={lottieRef}
           source={animatedAnimation}
-          style={styles.lottieAnimation}
+          style={{ width: logoSize, height: logoSize }}
           resizeMode="contain"
           loop={true}
           speed={1.1}
@@ -80,14 +86,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   logoContainer: {
-    width: 200,
-    height: 200,
     alignItems: 'center',
     justifyContent: 'center',
     overflow: 'visible',
-  },
-  lottieAnimation: {
-    width: 200,
-    height: 200, // Compensate for off-center bee in Lottie canvas
   },
 });

@@ -72,8 +72,6 @@ describe('HomeWordCardSection', () => {
     onWordPress: jest.fn(),
     onExampleSentencePress: jest.fn(),
     onMoreExamplePress: jest.fn(),
-    onSkip: jest.fn(),
-    onLearned: jest.fn(),
   };
 
   it('renders the current word and background next word without crashing', () => {

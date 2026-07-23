@@ -16,21 +16,11 @@ import type { RootStackParamList } from '@app/navigation/types';
 
 import type { SetupFacade } from '../../application/setupContracts';
 
-const TOTAL_STEPS = 7;
-export const SETUP_ITEM_HEIGHT = 44;
-export const SETUP_HOURS = Array.from({ length: 24 }, (_, index) =>
-  index.toString().padStart(2, '0'),
+export const SETUP_TOTAL_STEPS = 5;
+export const SETUP_TIME_OPTIONS = Array.from(
+  { length: 24 },
+  (_, index) => `${index.toString().padStart(2, '0')}:00`,
 );
-export const SETUP_MINUTES = Array.from({ length: 60 }, (_, index) =>
-  index.toString().padStart(2, '0'),
-);
-export const SETUP_HOURS_EXTENDED = [...SETUP_HOURS, ...SETUP_HOURS, ...SETUP_HOURS];
-export const SETUP_MINUTES_EXTENDED = [...SETUP_MINUTES, ...SETUP_MINUTES, ...SETUP_MINUTES];
-
-const normalizedWheelValue = (offset: number, values: readonly string[]): string => {
-  const index = Math.round(offset / SETUP_ITEM_HEIGHT);
-  return values[((index % values.length) + values.length) % values.length];
-};
 
 export function useSetupController(facade: SetupFacade, reducedMotion = false) {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
@@ -52,10 +42,6 @@ export function useSetupController(facade: SetupFacade, reducedMotion = false) {
   );
   const [isGenerating, setIsGenerating] = useState(false);
   const [waitingForSettings, setWaitingForSettings] = useState(false);
-  const startHourRef = useRef<any>(null);
-  const startMinuteRef = useRef<any>(null);
-  const endHourRef = useRef<any>(null);
-  const endMinuteRef = useRef<any>(null);
   const lottieRef = useRef<LottieView>(null);
   const progressAnim = useRef(new Animated.Value(20)).current;
   const fadeAnim = useRef(new Animated.Value(1)).current;
@@ -150,8 +136,20 @@ export function useSetupController(facade: SetupFacade, reducedMotion = false) {
     }
   };
 
+  const setStartTime = (time: string) => {
+    const [hour, minute = '00'] = time.split(':');
+    setStartHour(hour);
+    setStartMinute(minute);
+  };
+
+  const setEndTime = (time: string) => {
+    const [hour, minute = '00'] = time.split(':');
+    setEndHour(hour);
+    setEndMinute(minute);
+  };
+
   const handleNext = async () => {
-    if (currentStep === TOTAL_STEPS) {
+    if (currentStep === SETUP_TOTAL_STEPS) {
       await completeSetup();
     } else if (currentStep === 3) {
       goToStep(notificationPermissionGranted ? 5 : 4);
@@ -165,10 +163,7 @@ export function useSetupController(facade: SetupFacade, reducedMotion = false) {
   const handleBack = () => {
     if (currentStep <= 1) {
       navigation.goBack();
-    } else if (
-      (currentStep === 5 || currentStep === 6 || currentStep === 7) &&
-      !notificationPermissionGranted
-    ) {
+    } else if (currentStep === 5 && !notificationPermissionGranted) {
       goToStep(3);
     } else {
       goToStep(currentStep - 1);
@@ -191,37 +186,12 @@ export function useSetupController(facade: SetupFacade, reducedMotion = false) {
 
   useEffect(() => {
     Animated.spring(progressAnim, {
-      toValue: (currentStep / TOTAL_STEPS) * 100,
+      toValue: (currentStep / SETUP_TOTAL_STEPS) * 100,
       useNativeDriver: false,
       friction: 8,
       tension: 40,
     }).start();
   }, [currentStep, progressAnim]);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      if (currentStep === 5) {
-        startHourRef.current?.scrollTo({
-          y: (SETUP_HOURS.indexOf(startHour) + SETUP_HOURS.length) * SETUP_ITEM_HEIGHT,
-          animated: false,
-        });
-        startMinuteRef.current?.scrollTo({
-          y: (SETUP_MINUTES.indexOf(startMinute) + SETUP_MINUTES.length) * SETUP_ITEM_HEIGHT,
-          animated: false,
-        });
-      } else if (currentStep === 6) {
-        endHourRef.current?.scrollTo({
-          y: (SETUP_HOURS.indexOf(endHour) + SETUP_HOURS.length) * SETUP_ITEM_HEIGHT,
-          animated: false,
-        });
-        endMinuteRef.current?.scrollTo({
-          y: (SETUP_MINUTES.indexOf(endMinute) + SETUP_MINUTES.length) * SETUP_ITEM_HEIGHT,
-          animated: false,
-        });
-      }
-    }, 100);
-    return () => clearTimeout(timer);
-  }, [currentStep, endHour, endMinute, startHour, startMinute]);
 
   useEffect(() => {
     if (!waitingForSettings || currentStep !== 4) return;
@@ -237,16 +207,6 @@ export function useSetupController(facade: SetupFacade, reducedMotion = false) {
     return () => clearInterval(interval);
   }, [currentStep, facade, waitingForSettings]);
 
-  const wheelHandler =
-    (values: readonly string[], setter: (value: string) => void, ref: React.RefObject<any>) =>
-    (event: any) => {
-      const y = event.nativeEvent.contentOffset.y;
-      setter(normalizedWheelValue(y, values));
-      const index = Math.round(y / SETUP_ITEM_HEIGHT);
-      const snappedY = index * SETUP_ITEM_HEIGHT;
-      if (y !== snappedY) ref.current?.scrollTo({ y: snappedY, animated: true });
-    };
-
   return {
     currentStep,
     nativeLanguage,
@@ -261,34 +221,32 @@ export function useSetupController(facade: SetupFacade, reducedMotion = false) {
     }),
     fadeAnim,
     animatedAnimation,
-    startHourRef,
-    startMinuteRef,
-    endHourRef,
-    endMinuteRef,
+    startTime: `${startHour}:${startMinute}`,
+    endTime: `${endHour}:${endMinute}`,
     setNativeLanguage,
     setTargetLanguage,
     setLevel,
     setFrequency,
+    setStartTime,
+    setEndTime,
     handleNext,
     handleBack,
-    handleStartHourScroll: wheelHandler(SETUP_HOURS, setStartHour, startHourRef),
-    handleStartMinuteScroll: wheelHandler(SETUP_MINUTES, setStartMinute, startMinuteRef),
-    handleEndHourScroll: wheelHandler(SETUP_HOURS, setEndHour, endHourRef),
-    handleEndMinuteScroll: wheelHandler(SETUP_MINUTES, setEndMinute, endMinuteRef),
     takeLevelTest: () => navigation.navigate('LevelTest', { nativeLanguage, targetLanguage }),
     buttonDisabled:
       (currentStep === 1 && !nativeLanguage) ||
       (currentStep === 2 && !targetLanguage) ||
       (currentStep === 3 && !level),
-    stepTitle: {
-      white: t(`setup.step${currentStep}TitleWhite`),
-      green: t(`setup.step${currentStep}TitleGreen`),
-    },
-    stepSubtitle: t(`setup.step${currentStep}Subtitle`),
+    stepTitle:
+      currentStep === 5
+        ? { white: t('settings.dailyReminder'), green: '' }
+        : {
+            white: t(`setup.step${currentStep}TitleWhite`),
+            green: t(`setup.step${currentStep}TitleGreen`),
+          },
     buttonTitle:
       currentStep === 4
         ? t('setup.enableNotifications')
-        : currentStep === 7
+        : currentStep === SETUP_TOTAL_STEPS
           ? t('setup.startLearning')
           : t('common.continue'),
   };

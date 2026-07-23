@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { StyleSheet } from 'react-native';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
 import type { StackNavigationProp } from '@react-navigation/stack';
@@ -56,7 +57,7 @@ export default function ForgotPasswordScreen() {
       keyboardAvoiding
       testID="forgot-password-screen"
     >
-      <Stack gap={isSmallHeight ? 'lg' : '2xl'}>
+      <Stack gap={isSmallHeight ? 'lg' : '2xl'} style={styles.formContent}>
         <Stack gap="sm">
           <AppText accessibilityRole="header" variant="screenTitle">
             {t('forgotPassword.title')}
@@ -96,3 +97,11 @@ export default function ForgotPasswordScreen() {
     </AppScrollView>
   );
 }
+
+const styles = StyleSheet.create({
+  formContent: {
+    width: '100%',
+    maxWidth: 500,
+    alignSelf: 'center',
+  },
+});

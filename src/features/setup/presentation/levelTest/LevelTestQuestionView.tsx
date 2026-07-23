@@ -40,11 +40,7 @@ export function LevelTestQuestionView({
 }: LevelTestQuestionViewProps) {
   const { colors } = useTheme();
   return (
-    <Screen
-      contentStyle={styles.screenContent}
-      edges={['top', 'left', 'right']}
-      testID="level-test-question"
-    >
+    <Screen edges={['top', 'left', 'right']} testID="level-test-question">
       <View style={styles.header}>
         <IconButton
           accessibilityLabel="Exit level test"
@@ -87,7 +83,7 @@ export function LevelTestQuestionView({
           ))}
         </View>
       </ScrollView>
-      <BottomActionBar>
+      <BottomActionBar style={styles.bottomBar}>
         {selectedAnswer ? (
           <AppButton label={nextLabel} onPress={onNext} testID="level-test-next" />
         ) : null}
@@ -97,7 +93,7 @@ export function LevelTestQuestionView({
 }
 
 const styles = StyleSheet.create({
-  screenContent: {
+  bottomBar: {
     paddingHorizontal: 0,
   },
   header: {
@@ -114,16 +110,16 @@ const styles = StyleSheet.create({
   },
   content: {
     flexGrow: 1,
-    paddingVertical: 24,
-    gap: 32,
+    paddingVertical: 20,
+    gap: 24,
   },
   wordCard: {
     maxWidth: '92%',
-    paddingHorizontal: 32,
-    paddingVertical: 20,
+    paddingHorizontal: 24,
+    paddingVertical: 16,
   },
   options: {
-    gap: 12,
-    paddingBottom: 32,
+    gap: 10,
+    paddingBottom: 24,
   },
 });

@@ -15,11 +15,5 @@ export type { LevelStepProps, LevelOption } from './LevelStep';
 export { NotificationPermissionStep } from './NotificationPermissionStep';
 export type { NotificationPermissionStepProps } from './NotificationPermissionStep';
 
-export { NotificationScheduleStartStep } from './NotificationScheduleStartStep';
-export type { NotificationScheduleStartStepProps } from './NotificationScheduleStartStep';
-
-export { NotificationScheduleEndStep } from './NotificationScheduleEndStep';
-export type { NotificationScheduleEndStepProps } from './NotificationScheduleEndStep';
-
-export { SetupCompleteStep } from './SetupCompleteStep';
-export type { SetupCompleteStepProps } from './SetupCompleteStep';
+export { ReminderScheduleStep } from './ReminderScheduleStep';
+export type { ReminderScheduleStepProps } from './ReminderScheduleStep';

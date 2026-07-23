@@ -12,7 +12,6 @@ import type { VocabularyWord } from '@features/vocabulary';
 import { useResponsiveLayout } from '@shared/responsive';
 import { FavoriteStarIcon } from './FavoriteStarIcon';
 import { homeWordCardStyles as styles } from './homeWordCardStyles';
-import { VocabularyCardActions } from './VocabularyCardActions';
 import { VocabularyCardBackground } from './VocabularyCardBackground';
 import { VocabularyCardHeader } from './VocabularyCardHeader';
 
@@ -64,8 +63,6 @@ export interface HomeWordCardSectionProps {
   onWordPress: () => void;
   onExampleSentencePress: () => void;
   onMoreExamplePress: () => void;
-  onSkip: () => void;
-  onLearned: () => void;
 }
 
 function clamp(value: number, min: number, max: number): number {
@@ -98,21 +95,19 @@ export function HomeWordCardSection({
   onWordPress,
   onExampleSentencePress,
   onMoreExamplePress,
-  onSkip,
-  onLearned,
 }: HomeWordCardSectionProps) {
   const { width, height, orientation, contentMaxWidth, horizontalGutter, isSmallHeight } =
     useResponsiveLayout();
-  const deckWidth = Math.max(280, Math.min(contentMaxWidth, width - horizontalGutter * 2));
+  const deckWidth = Math.max(280, Math.min(560, contentMaxWidth, width - horizontalGutter * 2));
   const deckHeight =
     orientation === 'landscape'
       ? clamp(height * 0.54, 220, 360)
-      : clamp(height * (isSmallHeight ? 0.46 : 0.5), 320, 520);
+      : clamp(height * (isSmallHeight ? 0.44 : 0.48), 300, 480);
   const cardSize = { width: deckWidth, height: deckHeight };
   const swipeThreshold = deckWidth * 0.25;
 
   return (
-    <View style={[styles.cardArea, localStyles.cardArea]}>
+    <View style={styles.cardArea}>
       <View style={[styles.cardStackContainer, cardSize]}>
         <VocabularyCardBackground
           word={nextWord}
@@ -322,23 +317,11 @@ export function HomeWordCardSection({
           </Animated.View>
         )}
       </View>
-      <View style={{ width: deckWidth }}>
-        <VocabularyCardActions
-          skipLabel={t('home.skip')}
-          learnedLabel={t('home.learned')}
-          disabled={!currentWord}
-          onSkip={onSkip}
-          onLearned={onLearned}
-        />
-      </View>
     </View>
   );
 }
 
 const localStyles = StyleSheet.create({
-  cardArea: {
-    gap: 10,
-  },
   measuredContent: {
     width: '100%',
   },

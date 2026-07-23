@@ -2,7 +2,7 @@ import { act, renderHook, waitFor } from '@testing-library/react-native';
 import { Animated } from 'react-native';
 
 import type { SetupFacade } from '../../../application/setupContracts';
-import { SETUP_ITEM_HEIGHT, useSetupController } from '../useSetupController';
+import { useSetupController } from '../useSetupController';
 
 const mockGoBack = jest.fn();
 const mockNavigate = jest.fn();
@@ -99,10 +99,6 @@ describe('useSetupController', () => {
     expect(result.current.currentStep).toBe(5);
 
     await act(async () => result.current.handleNext());
-    await act(async () => result.current.handleNext());
-    expect(result.current.currentStep).toBe(7);
-
-    await act(async () => result.current.handleNext());
 
     expect(facade.complete).toHaveBeenCalledWith(
       expect.objectContaining({
@@ -110,6 +106,10 @@ describe('useSetupController', () => {
         targetLanguage: 'english',
         level: 'beginner',
         notificationPermissionGranted: true,
+        startHour: '09',
+        startMinute: '00',
+        endHour: '21',
+        endMinute: '00',
         frequency: 'every2hours',
         user: {
           uid: 'user-1',
@@ -162,22 +162,23 @@ describe('useSetupController', () => {
     unmount();
   });
 
-  it('normalizes wheel offsets and snaps non-aligned positions', () => {
+  it('uses the requested schedule defaults and updates combined time fields', () => {
     const facade = makeFacade();
     const { result, unmount } = renderHook(() => useSetupController(facade));
-    const scrollTo = jest.fn();
-    result.current.startHourRef.current = { scrollTo };
+
+    expect(result.current.startTime).toBe('09:00');
+    expect(result.current.endTime).toBe('21:00');
+    expect(result.current.frequency).toBe('every2hours');
 
     act(() => {
-      result.current.handleStartHourScroll({
-        nativeEvent: { contentOffset: { y: SETUP_ITEM_HEIGHT * 25 + 3 } },
-      });
+      result.current.setStartTime('10:00');
+      result.current.setEndTime('20:00');
+      result.current.setFrequency('every3hours');
     });
 
-    expect(scrollTo).toHaveBeenCalledWith({
-      y: SETUP_ITEM_HEIGHT * 25,
-      animated: true,
-    });
+    expect(result.current.startTime).toBe('10:00');
+    expect(result.current.endTime).toBe('20:00');
+    expect(result.current.frequency).toBe('every3hours');
 
     unmount();
   });

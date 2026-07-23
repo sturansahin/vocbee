@@ -7,6 +7,7 @@ import {
   type GestureResponderEvent,
   type PressableProps,
   type StyleProp,
+  type TextStyle,
   type ViewStyle,
 } from 'react-native';
 import { MINIMUM_TOUCH_TARGET } from '@shared/responsive';
@@ -28,6 +29,7 @@ export interface AppButtonProps extends Omit<
   leadingIcon?: AppButtonIcon;
   trailingIcon?: AppButtonIcon;
   style?: StyleProp<ViewStyle>;
+  labelStyle?: StyleProp<TextStyle>;
 }
 
 function renderIcon(icon: AppButtonIcon | undefined, color: string): ReactNode {
@@ -44,6 +46,7 @@ export function AppButton({
   leadingIcon,
   trailingIcon,
   style,
+  labelStyle,
   accessibilityLabel = label,
   ...props
 }: AppButtonProps) {
@@ -122,7 +125,7 @@ export function AppButton({
         ) : (
           <>
             {renderIcon(leadingIcon, foreground)}
-            <AppText variant="button" style={{ color: foreground }}>
+            <AppText variant="button" style={[{ color: foreground }, labelStyle]}>
               {label}
             </AppText>
             {renderIcon(trailingIcon, foreground)}

@@ -74,7 +74,7 @@ export default function FavoritesScreen({ facade }: FavoritesScreenProps) {
   };
 
   return (
-    <Screen contentStyle={styles.screenContent} testID="favorites-screen">
+    <Screen testID="favorites-screen">
       <AppHeader
         backAccessibilityLabel={t('common.back', { defaultValue: 'Back' })}
         onBack={() => navigation.goBack()}
@@ -129,11 +129,9 @@ export default function FavoritesScreen({ facade }: FavoritesScreenProps) {
 }
 
 const styles = StyleSheet.create({
-  screenContent: {
-    paddingHorizontal: 0,
-  },
   listContent: {
-    paddingVertical: 12,
+    paddingVertical: 16,
+    paddingBottom: 32,
     gap: 12,
   },
   card: {

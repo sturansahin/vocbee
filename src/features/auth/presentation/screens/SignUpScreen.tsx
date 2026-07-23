@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
-import { Platform, StyleSheet } from 'react-native';
-import { AntDesign } from '@expo/vector-icons';
+import { Platform, Pressable, StyleSheet } from 'react-native';
+import { AntDesign, MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import type { StackNavigationProp } from '@react-navigation/stack';
 import { useTranslation } from 'react-i18next';
 
 import type { RootStackParamList } from '@app/navigation/types';
 import { useResponsiveLayout } from '@shared/responsive';
+import { useTheme } from '@shared/theme';
 import {
   AppButton,
   AppHeader,
   AppInput,
   AppScrollView,
-  AppSwitch,
   AppText,
   Divider,
   Inline,
@@ -34,12 +34,13 @@ export function SignUpScreen({ gateway }: SignUpScreenProps) {
   const { signUp, signInWithGoogle, signInWithApple, signOut } = useAuth();
   const { showAlert } = useAlert();
   const { isSmallHeight } = useResponsiveLayout();
+  const { colors } = useTheme();
   const { t } = useTranslation();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [hasAcceptedPrivacyPolicy, setHasAcceptedPrivacyPolicy] = useState(false);
+  const [hasAcceptedPrivacyPolicy, setHasAcceptedPrivacyPolicy] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSignUp = async () => {
@@ -101,7 +102,7 @@ export function SignUpScreen({ gateway }: SignUpScreenProps) {
         onBack={() => navigation.goBack()}
         title={t('auth.signUp')}
       />
-      <Stack gap={isSmallHeight ? 'lg' : '2xl'}>
+      <Stack gap={isSmallHeight ? 'lg' : '2xl'} style={styles.formContent}>
         <Stack gap="xs">
           <AppText accessibilityRole="header" variant="screenTitle">
             {t('auth.startYourLanguage')}
@@ -152,23 +153,33 @@ export function SignUpScreen({ gateway }: SignUpScreenProps) {
           />
         </Stack>
 
-        <Inline align="center">
-          <AppSwitch
-            accessibilityLabel={t('auth.acceptPrivacyPrefix')}
-            onValueChange={setHasAcceptedPrivacyPolicy}
+        <Inline align="flex-start" style={styles.consentRow}>
+          <Pressable
+            accessibilityLabel={`${t('auth.acceptPrivacyPrefix')} ${t('settings.privacyPolicy')}`}
+            accessibilityRole="checkbox"
+            accessibilityState={{ checked: hasAcceptedPrivacyPolicy }}
+            onPress={() => setHasAcceptedPrivacyPolicy((accepted) => !accepted)}
+            style={styles.checkbox}
             testID="privacy-consent-checkbox"
-            value={hasAcceptedPrivacyPolicy}
-          />
+          >
+            <MaterialIcons
+              color={hasAcceptedPrivacyPolicy ? colors.accent : colors.textSecondary}
+              name={hasAcceptedPrivacyPolicy ? 'check-box' : 'check-box-outline-blank'}
+              size={26}
+            />
+          </Pressable>
           <AppText color="textSecondary" style={styles.consentCopy} variant="caption">
-            {t('auth.acceptPrivacyPrefix')}
+            {t('auth.acceptPrivacyPrefix')}{' '}
+            <AppText
+              accessibilityRole="link"
+              onPress={() => void gateway.openPrivacyPolicy()}
+              style={[styles.privacyPolicyLabel, { color: colors.accent }]}
+              testID="privacy-policy-link"
+              variant="caption"
+            >
+              {t('settings.privacyPolicy')}
+            </AppText>
           </AppText>
-          <AppButton
-            fullWidth={false}
-            label={t('settings.privacyPolicy')}
-            onPress={() => void gateway.openPrivacyPolicy()}
-            testID="privacy-policy-link"
-            variant="ghost"
-          />
         </Inline>
 
         <AppButton
@@ -213,11 +224,29 @@ export function SignUpScreen({ gateway }: SignUpScreenProps) {
 }
 
 const styles = StyleSheet.create({
+  checkbox: {
+    width: 44,
+    height: 44,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   consentCopy: {
     flex: 1,
+    paddingTop: 12,
+  },
+  consentRow: {
+    width: '100%',
   },
   divider: {
     flex: 1,
+  },
+  formContent: {
+    width: '100%',
+    maxWidth: 520,
+    alignSelf: 'center',
+  },
+  privacyPolicyLabel: {
+    textDecorationLine: 'underline',
   },
   socialButton: {
     flex: 1,

@@ -14,7 +14,7 @@ import { useTheme } from '@shared/theme';
 import { AppText } from './AppText';
 
 export interface AppInputProps extends Omit<TextInputProps, 'style'> {
-  label: string;
+  label?: string;
   helperText?: string;
   errorText?: string;
   leading?: ReactNode;
@@ -49,9 +49,11 @@ export function AppInput({
 
   return (
     <View style={[styles.container, { gap: spacing.sm }, containerStyle]}>
-      <AppText nativeID={`${inputId}-label`} variant="bodyStrong">
-        {label}
-      </AppText>
+      {label ? (
+        <AppText nativeID={`${inputId}-label`} variant="bodyStrong">
+          {label}
+        </AppText>
+      ) : null}
       <View
         style={[
           styles.inputFrame,
@@ -71,7 +73,7 @@ export function AppInput({
         {leading}
         <TextInput
           accessibilityHint={supportingText}
-          accessibilityLabel={label}
+          accessibilityLabel={label ?? props.placeholder}
           accessibilityState={{ disabled: !editable }}
           editable={editable}
           nativeID={inputId}

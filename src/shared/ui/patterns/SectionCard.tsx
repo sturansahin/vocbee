@@ -1,6 +1,6 @@
 import React, { type ReactNode } from 'react';
 import { StyleSheet, View, type StyleProp, type ViewStyle } from 'react-native';
-import { useTheme } from '@shared/theme';
+import { useTheme, type TypographyRole } from '@shared/theme';
 import { AppText } from '../primitives/AppText';
 import { Surface } from '../primitives/Surface';
 
@@ -9,16 +9,23 @@ export interface SectionCardProps {
   description?: string;
   children: ReactNode;
   style?: StyleProp<ViewStyle>;
+  titleVariant?: TypographyRole;
 }
 
-export function SectionCard({ title, description, children, style }: SectionCardProps) {
+export function SectionCard({
+  title,
+  description,
+  children,
+  style,
+  titleVariant = 'sectionTitle',
+}: SectionCardProps) {
   const { borderDefault } = useTheme().colors;
   const { spacing } = useTheme();
 
   return (
     <View style={[styles.wrapper, { gap: spacing.sm }, style]}>
       {title ? (
-        <AppText accessibilityRole="header" variant="sectionTitle">
+        <AppText accessibilityRole="header" variant={titleVariant}>
           {title}
         </AppText>
       ) : null}

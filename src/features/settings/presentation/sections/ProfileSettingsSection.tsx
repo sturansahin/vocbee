@@ -45,7 +45,7 @@ export function ProfileSettingsSection({
   onPressEditProfile,
 }: ProfileSettingsSectionProps) {
   return (
-    <View style={[styles.profileSection, { paddingTop: 24 }]}>
+    <View style={[styles.profileSection, { paddingTop: 16 }]}>
       <TouchableOpacity
         accessibilityLabel={editProfileLabel}
         accessibilityRole="button"
@@ -97,17 +97,17 @@ export function ProfileSettingsSection({
 const styles = StyleSheet.create({
   profileSection: {
     alignItems: 'center',
-    marginBottom: 32,
+    marginBottom: 24,
   },
   avatarContainer: {
     position: 'relative',
     marginBottom: 16,
   },
   avatar: {
-    width: 112,
-    height: 112,
-    borderRadius: 56,
-    borderWidth: 4,
+    width: 96,
+    height: 96,
+    borderRadius: 48,
+    borderWidth: 3,
   },
   editBadge: {
     position: 'absolute',
@@ -119,7 +119,8 @@ const styles = StyleSheet.create({
   },
   profileName: {
     fontFamily: FONT_FAMILY,
-    fontSize: 24,
+    fontSize: 22,
+    lineHeight: 30,
   },
   profileEmail: {
     fontFamily: FONT_FAMILY,
