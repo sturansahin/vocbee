@@ -53,8 +53,6 @@ describe('HomeWordCardSection', () => {
     currentWord: word,
     nextWord,
     wordsLength: 2,
-    showTutorial: false,
-    tutorialStep: 1,
     isCurrentWordFavorite: false,
     cardRef: { current: null },
     favoriteRef: { current: null },
@@ -72,6 +70,7 @@ describe('HomeWordCardSection', () => {
     onWordPress: jest.fn(),
     onExampleSentencePress: jest.fn(),
     onMoreExamplePress: jest.fn(),
+    onCardLayout: jest.fn(),
   };
 
   it('renders the current word and background next word without crashing', () => {

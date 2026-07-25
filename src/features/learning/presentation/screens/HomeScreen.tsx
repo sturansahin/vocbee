@@ -54,6 +54,7 @@ export default function HomeScreen({ facade }: HomeScreenProps) {
     facade,
     session.loadState === 'ready' && session.words.length > 0,
     session.currentWordIndex,
+    `${layout.width}x${layout.height}`,
   );
   const shouldShowAds = !isAdFree && !monetizationLoading;
   const speechLanguage = getLearningSpeechLanguage(session.targetLanguage);
@@ -217,106 +218,98 @@ export default function HomeScreen({ facade }: HomeScreenProps) {
 
   return (
     <Screen testID="home-ready" constrainWidth={false} contentStyle={styles.container}>
-      {header}
-      <View style={surfaceStyle}>
-        <HomeProgressSection
-          isLoading={false}
+      <View
+        ref={tutorial.rootRef}
+        collapsable={false}
+        onLayout={tutorial.onRootLayout}
+        style={styles.tutorialRoot}
+      >
+        {header}
+        <View style={surfaceStyle}>
+          <HomeProgressSection
+            isLoading={false}
+            isDarkMode={isDarkMode}
+            textColor={colors.textPrimary}
+            textSecondaryColor={colors.textSecondary}
+            primaryColor={colors.accent}
+            surfaceLightColor={colors.surfaceMuted}
+            borderColor={colors.borderDefault}
+            initialLoadingPlaceholderColor="transparent"
+            initialLoadingAccentColor="transparent"
+            levelCode={session.currentLevel}
+            levelDescription={levelDescription}
+            learnedCount={session.learnedCount}
+            totalCount={session.totalCount}
+            wordsLabel={t('home.words')}
+            progressPercentage={progress}
+          />
+        </View>
+        <HomeWordCardSection
+          colors={colors}
           isDarkMode={isDarkMode}
-          textColor={colors.textPrimary}
-          textSecondaryColor={colors.textSecondary}
-          primaryColor={colors.accent}
-          surfaceLightColor={colors.surfaceMuted}
-          borderColor={colors.borderDefault}
-          initialLoadingPlaceholderColor="transparent"
-          initialLoadingAccentColor="transparent"
-          levelCode={session.currentLevel}
-          levelDescription={levelDescription}
-          learnedCount={session.learnedCount}
-          totalCount={session.totalCount}
-          wordsLabel={t('home.words')}
-          progressPercentage={progress}
+          t={t}
+          currentWord={session.currentWord}
+          nextWord={session.nextWord}
+          wordsLength={session.words.length}
+          isCurrentWordFavorite={wordActions.isFavorite}
+          {...tutorial.refs}
+          position={swipe.position}
+          rotate={swipe.rotate}
+          panHandlers={swipe.panHandlers}
+          beePositions={bees.beePositions}
+          beesAnimating={bees.beesAnimating}
+          beeStaticAnimation={BEE_STATIC_ANIMATION}
+          beeActiveAnimation={BEE_ACTIVE_ANIMATION}
+          onToggleFavorite={() => void wordActions.toggleFavorite()}
+          onWordPress={() => void wordActions.speakWord()}
+          onExampleSentencePress={() => void wordActions.speakExample()}
+          onMoreExamplePress={() => {
+            const word = session.currentWord;
+            if (!word) return;
+            if (tutorial.tutorialStep === 6) void tutorial.complete();
+            navigation.navigate('ExampleSentences', {
+              ...word,
+              pronunciation: word.pronunciation ?? null,
+            });
+          }}
+          onCardLayout={tutorial.onCardLayout}
+        />
+        {shouldShowAds && (
+          <View style={[styles.banner, { backgroundColor: colors.background }]}>
+            <SafeBannerAd unitId={facade.getBannerAdUnitId()} />
+          </View>
+        )}
+        <HomeTutorialSection
+          showTutorial={tutorial.showTutorial}
+          tutorialLayouts={tutorial.tutorialLayouts}
+          tutorialStep={tutorial.tutorialStep}
+          onTutorialComplete={() => void tutorial.complete()}
+          onTutorialNext={() =>
+            tutorial.tutorialStep < 6
+              ? tutorial.setTutorialStep(tutorial.tutorialStep + 1)
+              : void tutorial.complete()
+          }
+        />
+        <HomeModals
+          streakCelebrationVisible={engagement.celebration !== null}
+          streakCelebrationKey={engagement.celebration?.id ?? 0}
+          streakCelebrationCount={engagement.celebration?.count ?? 0}
+          streakCelebrationLabel={engagement.celebration?.label ?? ''}
+          streakCelebrationMessage={engagement.celebration?.message ?? ''}
+          onStreakCelebrationComplete={engagement.completeCelebration}
+          reviewPromptVisible={engagement.reviewPromptVisible}
+          onReviewPromptDismiss={engagement.dismissReview}
+          onReviewRateInStore={engagement.rateInStore}
+          onReviewSendFeedback={engagement.sendFeedback}
         />
       </View>
-      <HomeWordCardSection
-        colors={colors}
-        isDarkMode={isDarkMode}
-        t={t}
-        currentWord={session.currentWord}
-        nextWord={session.nextWord}
-        wordsLength={session.words.length}
-        showTutorial={tutorial.showTutorial}
-        tutorialStep={tutorial.tutorialStep}
-        isCurrentWordFavorite={wordActions.isFavorite}
-        {...tutorial.refs}
-        position={swipe.position}
-        rotate={swipe.rotate}
-        panHandlers={swipe.panHandlers}
-        beePositions={bees.beePositions}
-        beesAnimating={bees.beesAnimating}
-        beeStaticAnimation={BEE_STATIC_ANIMATION}
-        beeActiveAnimation={BEE_ACTIVE_ANIMATION}
-        onToggleFavorite={() => void wordActions.toggleFavorite()}
-        onWordPress={() => void wordActions.speakWord()}
-        onExampleSentencePress={() => void wordActions.speakExample()}
-        onMoreExamplePress={() => {
-          const word = session.currentWord;
-          if (!word) return;
-          if (tutorial.tutorialStep === 6) void tutorial.complete();
-          navigation.navigate('ExampleSentences', {
-            ...word,
-            pronunciation: word.pronunciation ?? null,
-          });
-        }}
-      />
-      {shouldShowAds && (
-        <View style={[styles.banner, { backgroundColor: colors.background }]}>
-          <SafeBannerAd unitId={facade.getBannerAdUnitId()} />
-        </View>
-      )}
-      <HomeTutorialSection
-        showTutorial={tutorial.showTutorial}
-        tutorialLayouts={tutorial.tutorialLayouts}
-        tutorialStep={tutorial.tutorialStep}
-        currentWord={session.currentWord}
-        isCurrentWordFavorite={wordActions.isFavorite}
-        colors={colors}
-        isDarkMode={isDarkMode}
-        t={t}
-        onToggleFavorite={() => void wordActions.toggleFavorite()}
-        onWordPress={() => void wordActions.speakWord()}
-        onExampleSentencePress={() => void wordActions.speakExample()}
-        onMoreExamplePress={() => {
-          if (tutorial.tutorialStep === 6) void tutorial.complete();
-          navigation.navigate('ExampleSentences', {
-            ...session.currentWord!,
-            pronunciation: session.currentWord!.pronunciation ?? null,
-          });
-        }}
-        onTutorialComplete={() => void tutorial.complete()}
-        onTutorialNext={() =>
-          tutorial.tutorialStep < 6
-            ? tutorial.setTutorialStep(tutorial.tutorialStep + 1)
-            : void tutorial.complete()
-        }
-      />
-      <HomeModals
-        streakCelebrationVisible={engagement.celebration !== null}
-        streakCelebrationKey={engagement.celebration?.id ?? 0}
-        streakCelebrationCount={engagement.celebration?.count ?? 0}
-        streakCelebrationLabel={engagement.celebration?.label ?? ''}
-        streakCelebrationMessage={engagement.celebration?.message ?? ''}
-        onStreakCelebrationComplete={engagement.completeCelebration}
-        reviewPromptVisible={engagement.reviewPromptVisible}
-        onReviewPromptDismiss={engagement.dismissReview}
-        onReviewRateInStore={engagement.rateInStore}
-        onReviewSendFeedback={engagement.sendFeedback}
-      />
     </Screen>
   );
 }
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
+  tutorialRoot: { flex: 1 },
   stats: {
     alignSelf: 'stretch',
     flexGrow: 0,

@@ -10,17 +10,6 @@ const initialMetrics = {
   insets: { top: 47, left: 0, right: 0, bottom: 34 },
 };
 
-const word = {
-  id: 1,
-  word: 'Haus',
-  pronunciation: '/haʊs/',
-  translation: 'House',
-  sentence1: 'Das ist ein Haus',
-  sentence2: 'This is a house',
-  nativeSentence1: 'Bu bir ev',
-  nativeSentence2: '',
-};
-
 const layoutRect = { x: 0, y: 0, width: 100, height: 40 };
 const layouts = {
   card: layoutRect,
@@ -33,15 +22,6 @@ const layouts = {
 const baseProps = {
   tutorialLayouts: layouts,
   tutorialStep: 3,
-  currentWord: word,
-  isCurrentWordFavorite: false,
-  colors: { textPrimary: '#000000', accent: '#FFC814', shadow: '#000000' },
-  isDarkMode: false,
-  t: (key: string) => key,
-  onToggleFavorite: jest.fn(),
-  onWordPress: jest.fn(),
-  onExampleSentencePress: jest.fn(),
-  onMoreExamplePress: jest.fn(),
   onTutorialComplete: jest.fn(),
   onTutorialNext: jest.fn(),
 };
@@ -70,7 +50,7 @@ describe('HomeTutorialSection', () => {
   });
 
   it('renders the tutorial overlay when visible with layouts available', () => {
-    const { getByText } = render(
+    const { getByTestId, getByText, queryByText } = render(
       <SafeAreaProvider initialMetrics={initialMetrics}>
         <ThemeProvider>
           <HomeTutorialSection {...baseProps} showTutorial />
@@ -78,5 +58,8 @@ describe('HomeTutorialSection', () => {
       </SafeAreaProvider>,
     );
     expect(getByText('homeTutorial.next')).toBeTruthy();
+    expect(getByTestId('home-tutorial-spotlight')).toBeTruthy();
+    // The overlay must never recreate the card's word/icon/button as a detached highlight.
+    expect(queryByText('Haus')).toBeNull();
   });
 });

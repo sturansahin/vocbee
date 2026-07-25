@@ -5,6 +5,7 @@ import {
   Text,
   TouchableOpacity,
   View,
+  type LayoutChangeEvent,
   type PanResponderInstance,
 } from 'react-native';
 import LottieView from 'lottie-react-native';
@@ -44,8 +45,6 @@ export interface HomeWordCardSectionProps {
   currentWord: VocabularyWord | undefined;
   nextWord: VocabularyWord | undefined;
   wordsLength: number;
-  showTutorial: boolean;
-  tutorialStep: number;
   isCurrentWordFavorite: boolean;
   cardRef: React.Ref<any>;
   favoriteRef: React.Ref<any>;
@@ -63,6 +62,7 @@ export interface HomeWordCardSectionProps {
   onWordPress: () => void;
   onExampleSentencePress: () => void;
   onMoreExamplePress: () => void;
+  onCardLayout: (event: LayoutChangeEvent) => void;
 }
 
 function clamp(value: number, min: number, max: number): number {
@@ -76,8 +76,6 @@ export function HomeWordCardSection({
   currentWord,
   nextWord,
   wordsLength,
-  showTutorial,
-  tutorialStep,
   isCurrentWordFavorite,
   cardRef,
   favoriteRef,
@@ -95,6 +93,7 @@ export function HomeWordCardSection({
   onWordPress,
   onExampleSentencePress,
   onMoreExamplePress,
+  onCardLayout,
 }: HomeWordCardSectionProps) {
   const { width, height, orientation, contentMaxWidth, horizontalGutter, isSmallHeight } =
     useResponsiveLayout();
@@ -108,7 +107,13 @@ export function HomeWordCardSection({
 
   return (
     <View style={styles.cardArea}>
-      <View style={[styles.cardStackContainer, cardSize]}>
+      <View
+        ref={cardRef}
+        testID="home-word-card-frame"
+        collapsable={false}
+        onLayout={onCardLayout}
+        style={[styles.cardStackContainer, cardSize]}
+      >
         <VocabularyCardBackground
           word={nextWord}
           wordsLength={wordsLength}
@@ -122,14 +127,13 @@ export function HomeWordCardSection({
           <Animated.View
             key={currentWord.id}
             testID="home-word-card"
-            ref={cardRef}
             collapsable={false}
             style={[
               styles.cardContainer,
               cardSize,
               {
                 transform: [{ translateX: position.x }, { translateY: position.y }, { rotate }],
-                zIndex: showTutorial && tutorialStep <= 2 ? 10000 : 10,
+                zIndex: 10,
               },
             ]}
             {...panHandlers}
@@ -191,10 +195,7 @@ export function HomeWordCardSection({
                   accessibilityLabel={t('home.favorites')}
                   accessibilityRole="button"
                   accessibilityState={{ selected: isCurrentWordFavorite }}
-                  style={[
-                    styles.favoriteButton,
-                    { zIndex: showTutorial && tutorialStep === 3 ? 100 : 1 },
-                  ]}
+                  style={styles.favoriteButton}
                   onPress={onToggleFavorite}
                   activeOpacity={0.7}
                 >
@@ -214,16 +215,10 @@ export function HomeWordCardSection({
                   pronunciationColor={colors.textSecondary}
                   translationColor={colors.accent}
                   wordContainerRef={wordRef}
-                  wordContainerStyle={{ zIndex: showTutorial && tutorialStep === 4 ? 100 : 1 }}
                   onPressWord={onWordPress}
                 />
 
-                <View
-                  style={[
-                    styles.cardLowerSectionStruct,
-                    { zIndex: showTutorial && tutorialStep >= 5 ? 100 : 1 },
-                  ]}
-                >
+                <View style={styles.cardLowerSectionStruct}>
                   <View
                     style={[
                       StyleSheet.absoluteFillObject,
@@ -267,7 +262,6 @@ export function HomeWordCardSection({
                       styles.fullWidthButton,
                       {
                         backgroundColor: isDarkMode ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)',
-                        zIndex: showTutorial && tutorialStep === 6 ? 100 : 1,
                       },
                     ]}
                     onPress={onMoreExamplePress}

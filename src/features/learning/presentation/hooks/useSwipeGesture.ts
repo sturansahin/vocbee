@@ -97,30 +97,40 @@ export function useSwipeGesture(options: SwipeGestureOptions) {
 
   useEffect(() => {
     tutorialAnimationRef.current?.stop();
+    position.stopAnimation();
     if (!tutorialVisible || tutorialStep > 2 || reducedMotion) {
       reset();
       return;
     }
-    const x = tutorialStep === 1 ? 30 : -30;
+
+    // Always restart from the card's resting position when the lesson changes. Without this,
+    // stopping the step-one loop can leave its presentation value in-flight and make the
+    // step-two left nudge appear static on some devices.
+    position.setValue({ x: 0, y: 0 });
+    const distance = Math.min(48, Math.max(30, viewportWidth * 0.09));
+    const x = tutorialStep === 1 ? distance : -distance;
     tutorialAnimationRef.current = Animated.loop(
       Animated.sequence([
+        Animated.delay(reducedMotion ? 0 : 180),
         Animated.timing(position, {
           toValue: { x, y: 0 },
-          duration: 800,
+          duration: 620,
           easing: Easing.inOut(Easing.ease),
           useNativeDriver: false,
         }),
         Animated.timing(position, {
           toValue: { x: 0, y: 0 },
-          duration: 800,
+          duration: 620,
           easing: Easing.inOut(Easing.ease),
           useNativeDriver: false,
         }),
+        Animated.delay(reducedMotion ? 0 : 180),
       ]),
+      { resetBeforeIteration: true },
     );
     tutorialAnimationRef.current.start();
     return () => tutorialAnimationRef.current?.stop();
-  }, [position, reducedMotion, reset, tutorialStep, tutorialVisible]);
+  }, [position, reducedMotion, reset, tutorialStep, tutorialVisible, viewportWidth]);
 
   const rotate = useMemo(
     () =>

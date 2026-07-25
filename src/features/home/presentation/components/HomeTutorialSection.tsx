@@ -1,40 +1,16 @@
 // src/features/home/presentation/components/HomeTutorialSection.tsx
-// Pure presentational extraction of the tutorial highlight renderer + overlay wrapper from
-// screens/HomeScreen.tsx (ADIM 2, UI-only extraction — docs/architecture.md). VERBATIM JSX/styles:
-// `renderTutorialHighlight` (steps 3-6 floating highlight clones) and the `HomeTutorialOverlay`
-// wrapper (absolute-fill container + step-advance callback wiring). All step/word state and
-// handlers (favorite toggle, word press, example press, more-example press, tutorial
-// complete/advance) are owned by HomeScreen and passed in as props — no logic lives here.
+// Keeps the overlay above the Home content while all spotlight targets remain the real, measured
+// controls inside HomeWordCardSection. No cloned icon/text/button is rendered here.
 
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import HomeTutorialOverlay, { LayoutRect } from './HomeTutorialOverlay';
-import type { VocabularyWord } from '@features/vocabulary';
-import { FavoriteStarIcon } from './FavoriteStarIcon';
-import { useResponsiveLayout } from '@shared/responsive';
-import { FONT_FAMILY } from '@shared/theme';
-
-type TutorialLayoutKey = 'card' | 'favoriteButton' | 'word' | 'exampleSentence' | 'moreExample';
-type TutorialLayouts = Record<TutorialLayoutKey, LayoutRect>;
+import { StyleSheet, View } from 'react-native';
+import HomeTutorialOverlay from './HomeTutorialOverlay';
+import type { TutorialLayouts } from './homeTutorialLayout';
 
 export interface HomeTutorialSectionProps {
   showTutorial: boolean;
   tutorialLayouts: TutorialLayouts | null;
   tutorialStep: number;
-  currentWord: VocabularyWord | undefined;
-  isCurrentWordFavorite: boolean;
-  colors: {
-    textPrimary: string;
-    accent: string;
-    shadow: string;
-  };
-  isDarkMode: boolean;
-  t: (key: string) => string;
-
-  onToggleFavorite: () => void;
-  onWordPress: () => void;
-  onExampleSentencePress: () => void;
-  onMoreExamplePress: () => void;
   onTutorialComplete: () => void;
   onTutorialNext: () => void;
 }
@@ -43,220 +19,31 @@ export function HomeTutorialSection({
   showTutorial,
   tutorialLayouts,
   tutorialStep,
-  currentWord,
-  isCurrentWordFavorite,
-  colors,
-  isDarkMode,
-  t,
-  onToggleFavorite,
-  onWordPress,
-  onExampleSentencePress,
-  onMoreExamplePress,
   onTutorialComplete,
   onTutorialNext,
 }: HomeTutorialSectionProps) {
-  const { moderateScale } = useResponsiveLayout();
-
   if (!showTutorial || !tutorialLayouts) {
     return null;
   }
 
-  const renderTutorialHighlight = (targetLayout: LayoutRect, step: number) => {
-    if (!currentWord) return null;
-
-    const absoluteHighlightStyle = {
-      position: 'absolute' as const,
-      left: targetLayout.x,
-      top: targetLayout.y,
-      width: targetLayout.width,
-      height: targetLayout.height,
-      zIndex: 9101,
-    };
-
-    if (step === 3) {
-      return (
-        <TouchableOpacity
-          accessibilityLabel={t('home.favorites')}
-          accessibilityRole="button"
-          style={[absoluteHighlightStyle, styles.tutorialIconHighlight]}
-          onPress={onToggleFavorite}
-          activeOpacity={0.7}
-          hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
-        >
-          <View style={{ width: 26, height: 26, justifyContent: 'center', alignItems: 'center' }}>
-            <FavoriteStarIcon
-              color={colors.accent}
-              filled={isCurrentWordFavorite}
-              size={24}
-              style={styles.tutorialIconGlow}
-            />
-          </View>
-        </TouchableOpacity>
-      );
-    }
-
-    if (step === 4) {
-      return (
-        <View style={[absoluteHighlightStyle, styles.tutorialWordHighlight]}>
-          <TouchableOpacity
-            accessibilityLabel={currentWord.word}
-            accessibilityRole="button"
-            onPress={onWordPress}
-            activeOpacity={0.7}
-            style={styles.tutorialWordTouchable}
-          >
-            <Text
-              style={[
-                styles.wordTitle,
-                { color: colors.textPrimary, fontSize: moderateScale(36) },
-                styles.tutorialWordText,
-              ]}
-              adjustsFontSizeToFit
-              numberOfLines={1}
-            >
-              {currentWord.word}
-            </Text>
-          </TouchableOpacity>
-        </View>
-      );
-    }
-
-    if (step === 5) {
-      return (
-        <View style={[absoluteHighlightStyle, styles.tutorialSentenceHighlight]}>
-          <TouchableOpacity
-            accessibilityLabel={currentWord.sentence1}
-            accessibilityRole="button"
-            onPress={onExampleSentencePress}
-            activeOpacity={0.7}
-            style={styles.tutorialSentenceTouchable}
-          >
-            <Text
-              style={[
-                styles.cardExampleText,
-                { color: colors.textPrimary },
-                styles.tutorialSentenceText,
-              ]}
-            >
-              {currentWord.sentence1}
-            </Text>
-          </TouchableOpacity>
-        </View>
-      );
-    }
-
-    if (step === 6) {
-      return (
-        <TouchableOpacity
-          accessibilityLabel={t('home.moreExample')}
-          accessibilityRole="button"
-          style={[
-            absoluteHighlightStyle,
-            styles.tutorialRaisedButton,
-            styles.tutorialMoreExampleButton,
-            {
-              backgroundColor: isDarkMode ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)',
-              shadowColor: colors.shadow,
-            },
-          ]}
-          onPress={onMoreExamplePress}
-          activeOpacity={0.85}
-        >
-          <Text style={[styles.fullWidthButtonText, { color: colors.textPrimary }]}>
-            {t('home.moreExample')}
-          </Text>
-        </TouchableOpacity>
-      );
-    }
-
-    return null;
-  };
-
   return (
-    <View style={[StyleSheet.absoluteFill, { zIndex: 9000 }]} pointerEvents="box-none">
+    <View style={styles.overlayLayer} pointerEvents="box-none">
       <HomeTutorialOverlay
         visible={showTutorial}
         onComplete={onTutorialComplete}
         currentStep={tutorialStep}
-        renderHighlight={renderTutorialHighlight}
         onNext={onTutorialNext}
         layouts={tutorialLayouts}
-        shadowColor={colors.shadow}
       />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  wordTitle: {
-    fontFamily: FONT_FAMILY,
-    marginBottom: 4,
-    letterSpacing: 1,
-    textAlign: 'center',
-    paddingHorizontal: 40,
-    maxWidth: '100%',
-  },
-  cardExampleText: {
-    fontFamily: FONT_FAMILY,
-    fontSize: 15,
-    lineHeight: 22,
-    textAlign: 'center',
-    paddingHorizontal: 40,
-  },
-  fullWidthButtonText: {
-    fontFamily: FONT_FAMILY,
-    fontSize: 14,
-    fontWeight: '600',
-    letterSpacing: 0.5,
-  },
-  tutorialIconHighlight: {
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  tutorialIconGlow: {
-    textShadowColor: 'rgba(255, 215, 0, 0.45)',
-    textShadowOffset: { width: 0, height: 0 },
-    textShadowRadius: 12,
-  },
-  tutorialWordHighlight: {
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  tutorialWordTouchable: {
-    width: '100%',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  tutorialWordText: {
-    textShadowColor: 'rgba(0, 0, 0, 0.35)',
-    textShadowOffset: { width: 0, height: 2 },
-    textShadowRadius: 8,
-  },
-  tutorialSentenceHighlight: {
-    justifyContent: 'center',
-  },
-  tutorialSentenceTouchable: {
-    width: '100%',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  tutorialSentenceText: {
-    textShadowColor: 'rgba(0, 0, 0, 0.35)',
-    textShadowOffset: { width: 0, height: 2 },
-    textShadowRadius: 8,
-  },
-  tutorialRaisedButton: {
-    shadowOffset: { width: 0, height: 6 },
-    shadowOpacity: 0.18,
-    shadowRadius: 12,
-    elevation: 12,
-  },
-  tutorialMoreExampleButton: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingHorizontal: 12,
-    borderBottomLeftRadius: 32,
-    borderBottomRightRadius: 32,
+  overlayLayer: {
+    ...StyleSheet.absoluteFillObject,
+    zIndex: 9000,
+    elevation: 9000,
   },
 });
 
