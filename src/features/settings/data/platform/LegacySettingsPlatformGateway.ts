@@ -14,7 +14,12 @@ import { openStoreReviewPage } from '@features/review';
 import { forceSync } from '@features/sync';
 import { clearAllLocalData } from '@shared/storage';
 import appConfig from '../../../../../app.json';
-import i18n, { getDeviceLanguage, isUsingSystemLanguage, setToDeviceLanguage } from '@shared/i18n';
+import i18n, {
+  getDeviceLanguage,
+  isUsingSystemLanguage,
+  setAppLanguage,
+  setToDeviceLanguage,
+} from '@shared/i18n';
 
 import type { SettingsPlatformGateway } from '../../application/contracts';
 
@@ -68,7 +73,7 @@ export class LegacySettingsPlatformGateway implements SettingsPlatformGateway {
   }
 
   async changeLanguage(language: string): Promise<void> {
-    await i18n.changeLanguage(language);
+    await setAppLanguage(language);
     await this.rescheduleNotificationsIfEnabled();
   }
 

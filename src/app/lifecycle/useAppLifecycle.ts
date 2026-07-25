@@ -22,6 +22,7 @@ import {
 import { recordReviewAppLaunch } from '@features/review';
 import { autoSync } from '@features/sync';
 import { notificationFacade, type NotificationResponsePayload } from '@features/notifications';
+import { syncLanguageWithSystem } from '@shared/i18n';
 import { STORAGE_KEYS } from '@shared/storage';
 
 export function useAppLifecycle() {
@@ -30,6 +31,7 @@ export function useAppLifecycle() {
   const appState = useRef(AppState.currentState);
   const notificationMaintenanceInFlight = useRef(false);
   const notificationPermissionGateInFlight = useRef(false);
+  const languageSyncInFlight = useRef(false);
   const handledNotificationResponses = useRef<Set<string>>(new Set());
   const checkedNotificationPermissionUsers = useRef<Set<string>>(new Set());
   const reviewLaunchRecordedUsers = useRef<Set<string>>(new Set());
@@ -180,6 +182,25 @@ export function useAppLifecycle() {
     }
   }, [user, hasCompletedSetup, notificationSettings.enabled]);
 
+  const syncSystemLanguage = useCallback(
+    async (reason: 'startup' | 'resume') => {
+      if (languageSyncInFlight.current) return;
+      languageSyncInFlight.current = true;
+
+      try {
+        const result = await syncLanguageWithSystem();
+        if (result.changed && user && hasCompletedSetup && notificationSettings.enabled) {
+          await notificationFacade.reschedule();
+        }
+      } catch (error) {
+        console.error(`[Localization] System language sync failed (${reason})`, error);
+      } finally {
+        languageSyncInFlight.current = false;
+      }
+    },
+    [user, hasCompletedSetup, notificationSettings.enabled],
+  );
+
   // Determine initial route based on app state
   useEffect(() => {
     const determineInitialRoute = async () => {
@@ -283,6 +304,13 @@ export function useAppLifecycle() {
     ensureAuthenticatedUserNotificationPermission();
   }, [user, isLoading, hasCompletedSetup, ensureAuthenticatedUserNotificationPermission]);
 
+  // Reconcile the JS locale with the OS/per-app language on every launch. This
+  // also migrates iOS installs that were pinned by the legacy @user_language cache.
+  useEffect(() => {
+    if (isLoading) return;
+    void syncSystemLanguage('startup');
+  }, [isLoading, syncSystemLanguage]);
+
   useEffect(() => {
     if (!user) return;
     if (isLoading) return;
@@ -355,7 +383,9 @@ export function useAppLifecycle() {
       if (appState.current === 'active' && nextAppState.match(/inactive|background/)) {
         notificationFacade.setBackgroundTime();
       }
-      if (appState.current.match(/inactive|background/) && nextAppState === 'active') {
+      if (/inactive|background/.test(appState.current) && nextAppState === 'active') {
+        void syncSystemLanguage('resume');
+
         notificationFacade
           .getLastResponse()
           .then((lastResponse) => consumeNotificationResponse(lastResponse, 'resume'))
@@ -388,6 +418,7 @@ export function useAppLifecycle() {
     consumeNotificationResponse,
     isMonetizationLoading,
     isAdFree,
+    syncSystemLanguage,
   ]);
 
   return {

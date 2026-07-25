@@ -59,6 +59,7 @@ export const STORAGE_KEYS = {
 
   // ─── i18n (i18n.ts) ──────────────────────────────────────────
   USER_LANGUAGE: '@user_language',
+  LAST_SYSTEM_LANGUAGE: '@last_system_language',
 
   // ─── App review prompt (reviewPromptService.ts) ───────────────
   APP_REVIEW_PROMPT_STATE: '@VocBee:appReviewPromptState',

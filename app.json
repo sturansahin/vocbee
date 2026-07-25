@@ -134,7 +134,59 @@
           "cameraPermission": "VocBee needs camera access to take a profile photo."
         }
       ],
-      "expo-localization",
+      [
+        "expo-localization",
+        {
+          "supportedLocales": {
+            "ios": [
+              "en",
+              "tr",
+              "de",
+              "fr",
+              "es",
+              "it",
+              "pt",
+              "ru",
+              "ar",
+              "zh",
+              "ja",
+              "ko",
+              "hi",
+              "id",
+              "vi",
+              "th",
+              "am",
+              "fa",
+              "sr",
+              "sw",
+              "ur"
+            ],
+            "android": [
+              "en",
+              "tr",
+              "de",
+              "fr",
+              "es",
+              "it",
+              "pt",
+              "ru",
+              "ar",
+              "zh",
+              "ja",
+              "ko",
+              "hi",
+              "id",
+              "vi",
+              "th",
+              "am",
+              "fa",
+              "sr",
+              "sw",
+              "ur"
+            ]
+          }
+        }
+      ],
       "expo-apple-authentication",
       "expo-tracking-transparency",
       "@react-native-google-signin/google-signin"

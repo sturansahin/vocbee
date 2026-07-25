@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, StyleSheet, View } from 'react-native';
+import { Image, Platform, StyleSheet, View } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { isUserLevel } from '@features/vocabulary';
 import { LANGUAGES, LEVELS } from '@shared/i18n';
@@ -25,6 +25,11 @@ export function SettingsPreferenceModals({ controller: c }: SettingsPreferenceMo
     c.setIsSystemLanguage(false);
     await c.facade.changeLanguage(language);
     c.closeModal();
+  };
+
+  const openSystemLanguageSettings = async () => {
+    c.closeModal();
+    await c.facade.openSystemSettings();
   };
 
   const changeLevel = async (level: string) => {
@@ -63,24 +68,32 @@ export function SettingsPreferenceModals({ controller: c }: SettingsPreferenceMo
             label={t('settings.systemDefault')}
             description={c.facade.getDeviceLanguage().toUpperCase()}
             leading={<MaterialIcons name="phone-iphone" size={22} color={colors.accent} />}
-            selected={c.isSystemLanguage}
-            onPress={() => void useSystemLanguage()}
+            selected={Platform.OS === 'ios' || c.isSystemLanguage}
+            onPress={() =>
+              void (Platform.OS === 'ios' ? openSystemLanguageSettings() : useSystemLanguage())
+            }
           />
-          {LANGUAGES.map((language) => {
-            const selected = !c.isSystemLanguage && c.selectedLanguage === language.code;
-            return (
-              <SelectionRow
-                key={language.id}
-                label={language.name}
-                description={language.nativeName}
-                leading={
-                  <Image source={language.flagIcon} style={localStyles.flag} resizeMode="contain" />
-                }
-                selected={selected}
-                onPress={() => void changeLanguage(language.code || 'en')}
-              />
-            );
-          })}
+          {Platform.OS !== 'ios'
+            ? LANGUAGES.map((language) => {
+                const selected = !c.isSystemLanguage && c.selectedLanguage === language.code;
+                return (
+                  <SelectionRow
+                    key={language.id}
+                    label={language.name}
+                    description={language.nativeName}
+                    leading={
+                      <Image
+                        source={language.flagIcon}
+                        style={localStyles.flag}
+                        resizeMode="contain"
+                      />
+                    }
+                    selected={selected}
+                    onPress={() => void changeLanguage(language.code || 'en')}
+                  />
+                );
+              })
+            : null}
         </View>
       </AppModal>
 

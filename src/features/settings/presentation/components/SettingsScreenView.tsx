@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, View } from 'react-native';
+import { Platform, ScrollView, View } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import { LANGUAGES, LEVELS } from '@shared/i18n';
@@ -105,7 +105,13 @@ export function SettingsScreenView({ controller: c }: SettingsScreenViewProps) {
           selectedLanguageName={
             LANGUAGES.find((language) => language.code === c.selectedLanguage)?.name
           }
-          onPressLanguageRow={() => c.openModal('language')}
+          onPressLanguageRow={() => {
+            if (Platform.OS === 'ios') {
+              void c.facade.openSystemSettings();
+              return;
+            }
+            c.openModal('language');
+          }}
         />
 
         <NotificationSettingsSection

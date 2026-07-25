@@ -324,4 +324,14 @@ describe('SettingsScreenContent', () => {
     fireEvent.press(getByTestId('app-modal-backdrop'));
     expect(queryByText('settings.selectLevel')).toBeNull();
   });
+
+  it('opens native app settings for language selection on iOS', async () => {
+    const facade = makeFacade();
+    const { getByText, queryByText } = renderScreen(facade);
+
+    fireEvent.press(getByText('settings.language'));
+
+    await waitFor(() => expect(facade.openSystemSettings).toHaveBeenCalledTimes(1));
+    expect(queryByText('settings.selectLanguage')).toBeNull();
+  });
 });

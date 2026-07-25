@@ -187,6 +187,7 @@ export const clearAllLocalData = async (options: ClearAllLocalDataOptions = {}):
       STORAGE_KEYS.GRAMMAR_CACHE,
       // i18n language preference
       STORAGE_KEYS.USER_LANGUAGE,
+      STORAGE_KEYS.LAST_SYSTEM_LANGUAGE,
       // App review prompt state
       STORAGE_KEYS.APP_REVIEW_PROMPT_STATE,
       // User profile cache

@@ -2,48 +2,50 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import { getLocales } from 'expo-localization';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Platform } from 'react-native';
 import resources from '../../../locales';
 import { STORAGE_KEYS } from '@shared/storage';
 import { applyRTLLayout } from './rtl';
 
 const USER_LANGUAGE_KEY = STORAGE_KEYS.USER_LANGUAGE;
+const LAST_SYSTEM_LANGUAGE_KEY = STORAGE_KEYS.LAST_SYSTEM_LANGUAGE;
+const supportedLanguages = Object.keys(resources);
+
+function normalizeLanguageCode(language?: string | null): string | null {
+  const normalized = language?.trim().toLowerCase().split(/[-_]/)[0];
+  return normalized && supportedLanguages.includes(normalized) ? normalized : null;
+}
+
+// Get the current OS/per-app language and constrain it to translations bundled by VocBee.
+export const getDeviceLanguage = (): string => {
+  return normalizeLanguageCode(getLocales()[0]?.languageCode) ?? 'en';
+};
+
+export async function detectInitialLanguage(): Promise<string> {
+  // iOS already owns per-app language selection. Old versions cached the detected
+  // language as if it were a manual choice, which prevented iOS Settings changes
+  // from taking effect. Clear that ambiguous legacy value on every iOS launch.
+  if (Platform.OS === 'ios') {
+    await AsyncStorage.removeItem(USER_LANGUAGE_KEY);
+    return getDeviceLanguage();
+  }
+
+  const savedLanguage = normalizeLanguageCode(await AsyncStorage.getItem(USER_LANGUAGE_KEY));
+  return savedLanguage ?? getDeviceLanguage();
+}
 
 const LANGUAGE_DETECTOR = {
   type: 'languageDetector' as const,
   async: true,
   detect: async (callback: (lang: string) => void) => {
     try {
-      // 1. Check for manually selected language
-      const savedLanguage = await AsyncStorage.getItem(USER_LANGUAGE_KEY);
-      if (savedLanguage) {
-        return callback(savedLanguage);
-      }
-
-      // 2. Check device language
-      const deviceLanguage = getLocales()[0]?.languageCode;
-
-      // Check if we support this language, otherwise fallback to 'en'
-      // The resources object keys are our supported languages
-      const supportedLanguages = Object.keys(resources);
-
-      if (deviceLanguage && supportedLanguages.includes(deviceLanguage)) {
-        return callback(deviceLanguage);
-      }
-
-      return callback('en');
+      callback(await detectInitialLanguage());
     } catch (error) {
       console.log('Error reading language', error);
       callback('en');
     }
   },
   init: () => {},
-  cacheUserLanguage: async (language: string) => {
-    try {
-      await AsyncStorage.setItem(USER_LANGUAGE_KEY, language);
-    } catch (error) {
-      console.log('Error saving language', error);
-    }
-  },
 };
 
 i18n
@@ -65,15 +67,25 @@ i18n.on('languageChanged', (lng: string) => {
   applyRTLLayout(lng);
 });
 
-// Get device language code
-export const getDeviceLanguage = (): string => {
-  const deviceLanguage = getLocales()[0]?.languageCode;
-  const supportedLanguages = Object.keys(resources);
+export interface SystemLanguageSyncResult {
+  language: string;
+  changed: boolean;
+}
 
-  if (deviceLanguage && supportedLanguages.includes(deviceLanguage)) {
-    return deviceLanguage;
+export const setAppLanguage = async (language: string): Promise<string> => {
+  const normalized = normalizeLanguageCode(language);
+  if (!normalized) {
+    throw new Error(`Unsupported app language: ${language}`);
   }
-  return 'en';
+
+  // On iOS, the per-app language selected in Settings is authoritative.
+  if (Platform.OS === 'ios') {
+    return setToDeviceLanguage();
+  }
+
+  await AsyncStorage.setItem(USER_LANGUAGE_KEY, normalized);
+  await i18n.changeLanguage(normalized);
+  return normalized;
 };
 
 // Set app to use device language (removes saved preference)
@@ -90,8 +102,40 @@ export const setToDeviceLanguage = async (): Promise<string> => {
   }
 };
 
+export const syncLanguageWithSystem = async (): Promise<SystemLanguageSyncResult> => {
+  const savedLanguage = await AsyncStorage.getItem(USER_LANGUAGE_KEY);
+  const shouldFollowSystem = Platform.OS === 'ios' || savedLanguage === null;
+  const currentLanguage = normalizeLanguageCode(i18n.resolvedLanguage || i18n.language);
+
+  if (!shouldFollowSystem) {
+    return {
+      language: currentLanguage ?? normalizeLanguageCode(savedLanguage) ?? 'en',
+      changed: false,
+    };
+  }
+
+  if (Platform.OS === 'ios' && savedLanguage !== null) {
+    await AsyncStorage.removeItem(USER_LANGUAGE_KEY);
+  }
+
+  const systemLanguage = getDeviceLanguage();
+  const lastSystemLanguage = normalizeLanguageCode(
+    await AsyncStorage.getItem(LAST_SYSTEM_LANGUAGE_KEY),
+  );
+  const changed = currentLanguage !== systemLanguage || lastSystemLanguage !== systemLanguage;
+
+  if (currentLanguage !== systemLanguage) {
+    await i18n.changeLanguage(systemLanguage);
+  }
+  await AsyncStorage.setItem(LAST_SYSTEM_LANGUAGE_KEY, systemLanguage);
+
+  return { language: systemLanguage, changed };
+};
+
 // Check if using system default (no saved preference)
 export const isUsingSystemLanguage = async (): Promise<boolean> => {
+  if (Platform.OS === 'ios') return true;
+
   try {
     const savedLanguage = await AsyncStorage.getItem(USER_LANGUAGE_KEY);
     return savedLanguage === null;
