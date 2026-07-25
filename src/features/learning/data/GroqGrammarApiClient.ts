@@ -15,7 +15,7 @@ import type { GrammarResponse } from '../domain/grammarTypes';
 
 const APP_CONFIG_GRAMMAR_PROXY_URL = appConfig.expo.extra?.grammarProxyUrl ?? '';
 const GRAMMAR_PROXY_URL = (
-  process.env.EXPO_PUBLIC_GRAMMAR_PROXY_URL || (!__DEV__ ? APP_CONFIG_GRAMMAR_PROXY_URL : '')
+  process.env.EXPO_PUBLIC_GRAMMAR_PROXY_URL || APP_CONFIG_GRAMMAR_PROXY_URL
 ).trim();
 const GROQ_API_KEY_DEV = __DEV__ ? process.env.EXPO_PUBLIC_GROQ_API_KEY || '' : '';
 const FETCH_TIMEOUT_MS = 30_000; // 30 second timeout for API calls
@@ -90,7 +90,7 @@ function recordRateLimitHit(): void {
 // ─────────────────────────────────────────────────────────────────────────────
 
 interface GrammarApiResponse {
-  error?: { message?: string };
+  error?: { code?: string; message?: string };
   choices?: Array<{ message: { content: string } }>;
   sentence1?: GrammarResponse['sentence1'];
   sentence2?: GrammarResponse['sentence2'];
@@ -240,7 +240,7 @@ Follow the output format exactly.`,
     const data = (await response.json()) as GrammarApiResponse;
 
     if (!response.ok) {
-      throw new Error(data.error?.message || 'Failed to fetch explanation');
+      throw new Error(data.error?.message || data.error?.code || 'Failed to fetch explanation');
     }
 
     // Proxy returns the parsed result directly; direct Groq returns choices array

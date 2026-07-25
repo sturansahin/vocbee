@@ -93,6 +93,19 @@ describe('groqService', () => {
       );
     });
 
+    it('surfaces proxy error codes when no error message is provided', async () => {
+      mockFetch.mockResolvedValueOnce({
+        ok: false,
+        json: async () => ({
+          error: { code: 'INVALID_AUTH_TOKEN' },
+        }),
+      });
+
+      await expect(explainGrammar('Proxy error 1', 'Proxy error 2', 'Turkish')).rejects.toThrow(
+        'INVALID_AUTH_TOKEN',
+      );
+    });
+
     it('throws error on invalid JSON response', async () => {
       mockFetch.mockResolvedValueOnce({
         ok: true,
@@ -125,6 +138,23 @@ describe('groqService', () => {
       });
 
       await explainGrammar('Test 1', 'Test 2', 'Turkish');
+
+      expect(mockFetch).toHaveBeenCalledWith(
+        'https://vocbee-proxy.vercel.app/api/grammarProxy',
+        expect.any(Object),
+      );
+    });
+
+    it('falls back to the app config endpoint when the environment variable is missing', async () => {
+      delete process.env.EXPO_PUBLIC_GRAMMAR_PROXY_URL;
+      jest.resetModules();
+      explainGrammar = require('../GroqGrammarApiClient').requestGrammarExplanation;
+      mockFetch.mockResolvedValueOnce({
+        ok: true,
+        json: async () => mockSuccessResponse,
+      });
+
+      await explainGrammar('App config test 1', 'App config test 2', 'Turkish');
 
       expect(mockFetch).toHaveBeenCalledWith(
         'https://vocbee-proxy.vercel.app/api/grammarProxy',

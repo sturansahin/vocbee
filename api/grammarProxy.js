@@ -157,7 +157,7 @@ async function verifyFirebaseAuth(req) {
   }
 
   try {
-    return await getAuth(getAdminApp()).verifyIdToken(match[1], true);
+    return await getAuth(getAdminApp()).verifyIdToken(match[1]);
   } catch (error) {
     throw new HttpError(401, 'INVALID_AUTH_TOKEN');
   }
@@ -208,10 +208,9 @@ async function checkRateLimit(key) {
     return;
   }
 
-  if (process.env.NODE_ENV === 'production') {
-    throw new HttpError(503, 'RATE_LIMIT_NOT_CONFIGURED');
-  }
-
+  // Fall back to a per-instance limiter when Redis is not configured. On serverless
+  // deployments this is best-effort, while configured Upstash environments keep
+  // using the shared limiter above.
   const now = Date.now();
   const timestamps = (memoryRateLimit.get(key) || []).filter(
     (timestamp) => now - timestamp < RATE_LIMIT_WINDOW_SECONDS * 1000,
