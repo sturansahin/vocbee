@@ -74,13 +74,14 @@ describe('HomeWordCardSection', () => {
   };
 
   it('renders the current word and background next word without crashing', () => {
-    const { getByText } = render(
+    const { getAllByText, getByText } = render(
       <ThemeProvider>
         <HomeWordCardSection {...baseProps} />
       </ThemeProvider>,
     );
     expect(getByText('Haus')).toBeTruthy();
-    expect(getByText('Das ist ein Haus')).toBeTruthy();
+    expect(getByText('Das ist ein Haus').props.numberOfLines).toBe(2);
+    expect(getAllByText('Bu bir ev').every((node) => node.props.numberOfLines === 2)).toBe(true);
   });
 
   it('renders nothing for the top card when there is no current word', () => {

@@ -68,12 +68,20 @@ export function VocabularyCardBackground({
             />
             <View style={styles.exampleSentencesContainer}>
               <View style={styles.exampleSentenceTouchable}>
-                <Text style={[styles.cardExampleText, { color: colors.textPrimary }]}>
+                <Text
+                  style={[styles.cardExampleText, { color: colors.textPrimary }]}
+                  numberOfLines={2}
+                  ellipsizeMode="tail"
+                >
                   {word.sentence1}
                 </Text>
               </View>
               <View style={[styles.thinDivider, { backgroundColor: colors.borderDefault }]} />
-              <Text style={[styles.cardTranslationText, { color: colors.textSecondary }]}>
+              <Text
+                style={[styles.cardTranslationText, { color: colors.textSecondary }]}
+                numberOfLines={2}
+                ellipsizeMode="tail"
+              >
                 {word.nativeSentence1}
               </Text>
             </View>

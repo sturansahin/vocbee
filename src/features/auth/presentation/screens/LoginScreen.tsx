@@ -14,14 +14,7 @@ export function LoginScreen() {
   const controller = useLoginController();
 
   return (
-    <AppScrollView
-      contentContainerStyle={[
-        styles.content,
-        { justifyContent: layout.isSmallHeight ? 'flex-start' : 'center' },
-      ]}
-      keyboardAvoiding
-      testID="login-screen"
-    >
+    <AppScrollView contentContainerStyle={styles.content} keyboardAvoiding testID="login-screen">
       <Stack gap={layout.isSmallHeight ? 'lg' : '2xl'} style={styles.formContent}>
         <Stack gap="lg">
           <AppInput
@@ -113,6 +106,7 @@ export function LoginScreen() {
 const styles = StyleSheet.create({
   content: {
     paddingVertical: 20,
+    justifyContent: 'center',
   },
   authLinkLabel: {
     fontSize: 13,

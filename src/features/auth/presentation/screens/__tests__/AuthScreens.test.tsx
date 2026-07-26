@@ -1,6 +1,7 @@
 // file: screens/__tests__/AuthScreens.test.tsx
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
+import { StyleSheet } from 'react-native';
 import { LoginScreen } from '../LoginScreen';
 import { SignUpScreen } from '../SignUpScreen';
 
@@ -144,6 +145,14 @@ describe('AuthScreens', () => {
   });
 
   describe('LoginScreen', () => {
+    it('centers the form in the available safe-area height', () => {
+      const { getByTestId } = render(<LoginScreen />);
+
+      expect(StyleSheet.flatten(getByTestId('login-screen').props.contentContainerStyle)).toEqual(
+        expect.objectContaining({ justifyContent: 'center' }),
+      );
+    });
+
     it('renders email and password inputs', () => {
       const { getByPlaceholderText, queryByText } = render(<LoginScreen />);
 

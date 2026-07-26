@@ -12,6 +12,7 @@ import LottieView from 'lottie-react-native';
 import type { VocabularyWord } from '@features/vocabulary';
 import { useResponsiveLayout } from '@shared/responsive';
 import { FavoriteStarIcon } from './FavoriteStarIcon';
+import { getHomeWordCardHeight } from './homeWordCardLayout';
 import { homeWordCardStyles as styles } from './homeWordCardStyles';
 import { VocabularyCardBackground } from './VocabularyCardBackground';
 import { VocabularyCardHeader } from './VocabularyCardHeader';
@@ -65,10 +66,6 @@ export interface HomeWordCardSectionProps {
   onCardLayout: (event: LayoutChangeEvent) => void;
 }
 
-function clamp(value: number, min: number, max: number): number {
-  return Math.min(Math.max(value, min), max);
-}
-
 export function HomeWordCardSection({
   colors,
   isDarkMode,
@@ -95,13 +92,9 @@ export function HomeWordCardSection({
   onMoreExamplePress,
   onCardLayout,
 }: HomeWordCardSectionProps) {
-  const { width, height, orientation, contentMaxWidth, horizontalGutter, isSmallHeight } =
-    useResponsiveLayout();
+  const { width, height, orientation, contentMaxWidth, horizontalGutter } = useResponsiveLayout();
   const deckWidth = Math.max(280, Math.min(560, contentMaxWidth, width - horizontalGutter * 2));
-  const deckHeight =
-    orientation === 'landscape'
-      ? clamp(height * 0.54, 220, 360)
-      : clamp(height * (isSmallHeight ? 0.44 : 0.48), 300, 480);
+  const deckHeight = getHomeWordCardHeight(height, orientation);
   const cardSize = { width: deckWidth, height: deckHeight };
   const swipeThreshold = deckWidth * 0.25;
 
@@ -243,13 +236,21 @@ export function HomeWordCardSection({
                         activeOpacity={0.75}
                         style={styles.exampleSentenceTouchable}
                       >
-                        <Text style={[styles.cardExampleText, { color: colors.textPrimary }]}>
+                        <Text
+                          style={[styles.cardExampleText, { color: colors.textPrimary }]}
+                          numberOfLines={2}
+                          ellipsizeMode="tail"
+                        >
                           {currentWord.sentence1}
                         </Text>
                       </TouchableOpacity>
                     </View>
                     <View style={[styles.thinDivider, { backgroundColor: colors.borderDefault }]} />
-                    <Text style={[styles.cardTranslationText, { color: colors.textSecondary }]}>
+                    <Text
+                      style={[styles.cardTranslationText, { color: colors.textSecondary }]}
+                      numberOfLines={2}
+                      ellipsizeMode="tail"
+                    >
                       {currentWord.nativeSentence1}
                     </Text>
                   </View>
