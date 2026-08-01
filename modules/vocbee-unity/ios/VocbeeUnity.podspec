@@ -16,8 +16,13 @@ Pod::Spec.new do |s|
   s.static_framework = true
 
   s.dependency 'ExpoModulesCore'
-  s.source_files = '**/*.{h,m,mm,swift}'
+  s.source_files = 'VocbeeUnityModule.swift'
 
+  unity_xcframework = File.join(__dir__, 'UnityFramework.xcframework')
   unity_framework = File.join(__dir__, 'UnityFramework.framework')
-  s.vendored_frameworks = 'UnityFramework.framework' if File.directory?(unity_framework)
+  if File.directory?(unity_xcframework)
+    s.vendored_frameworks = 'UnityFramework.xcframework'
+  elsif File.directory?(unity_framework)
+    s.vendored_frameworks = 'UnityFramework.framework'
+  end
 end

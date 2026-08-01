@@ -242,7 +242,7 @@ class VocbeeUnityActivity : Activity() {
 
     internal fun finishForEvent(eventType: String?) {
       if (eventType == "finished") {
-        requestUnload()
+        activeActivity.get()?.window?.decorView?.postDelayed({ requestUnload() }, 250L)
       }
     }
 

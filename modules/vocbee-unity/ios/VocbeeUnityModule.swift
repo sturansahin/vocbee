@@ -89,7 +89,7 @@ public final class VocbeeUnityModule: Module {
         )
         _ = module.unityHost.unload()
       } else if eventType == "finished" {
-        _ = module.unityHost.unload()
+        module.unityHost.scheduleUnloadAfterEvent()
       }
     }
   }
@@ -101,13 +101,13 @@ private final class VocbeeUnityHost: NSObject {
   private var framework: NSObject?
   private var pendingSessionJson: String?
   private var unityReady = false
+  private var unloadScheduled = false
 
   var isRuntimeAvailable: Bool {
     if NSClassFromString(unityFrameworkClassName) != nil {
       return true
     }
-    guard let path = Bundle.main.privateFrameworksPath?.appendingPathComponent(unityFrameworkName)
-    else {
+    guard let path = unityFrameworkPath() else {
       return false
     }
     return FileManager.default.fileExists(atPath: path)
@@ -154,6 +154,20 @@ private final class VocbeeUnityHost: NSObject {
     return sendPendingSessionIfReady()
   }
 
+  func scheduleUnloadAfterEvent() {
+    guard !unloadScheduled else {
+      return
+    }
+    unloadScheduled = true
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) { [weak self] in
+      guard let self else {
+        return
+      }
+      self.unloadScheduled = false
+      _ = self.unload()
+    }
+  }
+
   func unload() -> [String: Any] {
     pendingSessionJson = nil
     unityReady = false
@@ -190,6 +204,7 @@ private final class VocbeeUnityHost: NSObject {
     framework = nil
     pendingSessionJson = nil
     unityReady = false
+    unloadScheduled = false
     restoreHostWindow()
   }
 
@@ -200,7 +215,7 @@ private final class VocbeeUnityHost: NSObject {
 
     var principalClass = NSClassFromString(unityFrameworkClassName)
     if principalClass == nil {
-      guard let path = Bundle.main.privateFrameworksPath?.appendingPathComponent(unityFrameworkName),
+      guard let path = unityFrameworkPath(),
         let bundle = Bundle(path: path)
       else {
         return nil
@@ -305,6 +320,15 @@ private final class VocbeeUnityHost: NSObject {
       .flatMap { $0.windows }
       .first { $0.isKeyWindow }
   }
+}
+
+private func unityFrameworkPath() -> String? {
+  guard let frameworksPath = Bundle.main.privateFrameworksPath else {
+    return nil
+  }
+  return URL(fileURLWithPath: frameworksPath)
+    .appendingPathComponent(unityFrameworkName)
+    .path
 }
 
 private func classObjectResult(_ targetClass: AnyClass, selectorName: String) -> AnyObject? {

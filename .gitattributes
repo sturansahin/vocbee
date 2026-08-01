@@ -1,3 +1,4 @@
 ios/.xcode.env text eol=lf
 modules/vocbee-unity/android/libs/*.aar filter=lfs diff=lfs merge=lfs -text
 modules/vocbee-unity/ios/UnityFramework.framework/** filter=lfs diff=lfs merge=lfs -text
+modules/vocbee-unity/ios/UnityFramework.xcframework/** filter=lfs diff=lfs merge=lfs -text
