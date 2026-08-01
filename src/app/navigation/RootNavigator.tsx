@@ -1,7 +1,5 @@
 // src/app/navigation/RootNavigator.tsx
-// Extracted VERBATIM from App.tsx (AppContent's NavigationContainer render) in Phase 2
-// (docs/architecture.md). Behavior unchanged: same routes, same order, same theme mapping,
-// same screenOptions. No new routes/screens.
+// App-level navigation composition (docs/architecture.md).
 
 import React, { useMemo } from 'react';
 import {
@@ -12,6 +10,7 @@ import {
 } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from 'expo-status-bar';
+import { GameLauncherScreen } from '@app/presentation';
 import type { RootStackParamList } from './types';
 import { useTheme } from '@shared/theme';
 import { FavoritesScreen } from '@features/favorites';
@@ -72,6 +71,9 @@ export function RootNavigator({ initialRoute, navigationRef }: RootNavigatorProp
 
         {/* Favorites Screen */}
         <Stack.Screen name="Favorites" component={FavoritesScreen} />
+
+        {/* Unity word game launcher */}
+        <Stack.Screen name="Game" component={GameLauncherScreen} />
 
         {/* Detail Screens */}
         <Stack.Screen name="ExampleSentences" component={ExampleSentencesScreen} />

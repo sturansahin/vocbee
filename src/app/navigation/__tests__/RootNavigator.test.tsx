@@ -1,6 +1,5 @@
-// Verifies RootNavigator registers EXACTLY the expected routes, in order, with no additions
-// (supports the Phase 2 contract: no new routes / flow unchanged). Navigation libs and screen
-// modules are mocked so the heavy screens (and their Firebase imports) are never loaded.
+// Verifies RootNavigator registers exactly the expected routes in order. Navigation libs and
+// screens are mocked so their native/SDK dependencies are never loaded.
 
 import React from 'react';
 import { render } from '@testing-library/react-native';
@@ -40,6 +39,7 @@ jest.mock('@features/auth', () => ({
   SignUpScreen: () => null,
 }));
 jest.mock('@features/favorites', () => ({ FavoritesScreen: () => null }));
+jest.mock('@app/presentation', () => ({ GameLauncherScreen: () => null }));
 jest.mock('@features/learning', () => ({
   HomeScreen: () => null,
   ExampleSentencesScreen: () => null,
@@ -78,6 +78,7 @@ describe('RootNavigator', () => {
       'MainTabs',
       'Settings',
       'Favorites',
+      'Game',
       'ExampleSentences',
     ]);
   });

@@ -9,6 +9,7 @@ export type RootStackParamList = {
   MainTabs: undefined;
   Settings: undefined;
   Favorites: undefined;
+  Game: undefined;
   ExampleSentences: {
     word: string;
     pronunciation?: string | null;

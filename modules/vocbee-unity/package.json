@@ -1,0 +1,9 @@
+{
+  "name": "vocbee-unity",
+  "version": "0.1.0",
+  "description": "Local Expo module boundary for the VocBee Unity game.",
+  "main": "index.ts",
+  "private": true,
+  "license": "UNLICENSED",
+  "author": "VocBee"
+}

@@ -144,6 +144,7 @@ export default function HomeScreen({ facade }: HomeScreenProps) {
       streakAccessibilityLabel={t('home.streakAccessibilityLabel', {
         count: session.streakSummary.currentStreak,
       })}
+      gameAccessibilityLabel={t('game.open')}
       favoritesAccessibilityLabel={t('home.favorites')}
       settingsAccessibilityLabel={t('home.settings')}
       onPressStreak={() =>
@@ -160,6 +161,7 @@ export default function HomeScreen({ facade }: HomeScreenProps) {
           ),
         })
       }
+      onPressGame={() => navigation.navigate('Game')}
       onPressFavorites={() => navigation.navigate('Favorites')}
       onPressSettings={() => navigation.navigate('Settings')}
     />

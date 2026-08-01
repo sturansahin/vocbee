@@ -212,6 +212,7 @@ describe('HomeScreen', () => {
     const screen = renderHome(createFacade());
     await waitFor(() => expect(screen.getByTestId('home-ready')).toBeTruthy());
 
+    expect(screen.getByLabelText('game.open')).toBeTruthy();
     expect(screen.queryByTestId('home-skip-action')).toBeNull();
     expect(screen.queryByTestId('home-learned-action')).toBeNull();
   });

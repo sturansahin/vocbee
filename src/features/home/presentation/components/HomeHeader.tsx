@@ -16,9 +16,11 @@ interface HomeHeaderProps {
   streakTextColor: string;
   streakAccentColor: string;
   streakAccessibilityLabel: string;
+  gameAccessibilityLabel?: string;
   favoritesAccessibilityLabel: string;
   settingsAccessibilityLabel: string;
   onPressStreak?: () => void;
+  onPressGame?: () => void;
   onPressFavorites?: () => void;
   onPressSettings?: () => void;
   showPlaceholders?: boolean;
@@ -34,9 +36,11 @@ export function HomeHeader({
   streakTextColor,
   streakAccentColor,
   streakAccessibilityLabel,
+  gameAccessibilityLabel,
   favoritesAccessibilityLabel,
   settingsAccessibilityLabel,
   onPressStreak,
+  onPressGame,
   onPressFavorites,
   onPressSettings,
   showPlaceholders = false,
@@ -82,6 +86,13 @@ export function HomeHeader({
               accessibilityLabel={streakAccessibilityLabel}
               onPress={onPressStreak}
             />
+            {gameAccessibilityLabel && onPressGame ? (
+              <IconButton
+                accessibilityLabel={gameAccessibilityLabel}
+                onPress={onPressGame}
+                icon={<Feather name="play-circle" size={24} color={iconColor} />}
+              />
+            ) : null}
             <IconButton
               accessibilityLabel={favoritesAccessibilityLabel}
               onPress={onPressFavorites}

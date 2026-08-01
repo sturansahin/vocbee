@@ -99,6 +99,13 @@ export default {
     skip: 'GEÇ',
     tapToSeeExamples: 'Örnek cümleleri görmek için dokun',
   },
+  game: {
+    open: 'Kelime oyununu aç',
+    title: 'VocBee Koşu',
+    description: 'Öğrendiğin kelimeleri üç şeritli kısa bir oyunda pekiştir.',
+    start: 'Oyunu başlat',
+    launchError: 'Oyun açılamadı. Lütfen tekrar dene.',
+  },
   notifications: {
     streakReminderTitle: '🔥 Serini kaybetme',
     streakReminderBody: 'Bugün bitmeden bir kelime kaydır, serini canlı tut.',

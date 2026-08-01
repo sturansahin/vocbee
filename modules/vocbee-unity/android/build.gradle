@@ -1,0 +1,25 @@
+plugins {
+  id 'com.android.library'
+  id 'expo-module-gradle-plugin'
+}
+
+group = 'com.vocbee'
+version = '0.1.0'
+
+android {
+  namespace 'com.vocbee.unity'
+  defaultConfig {
+    versionCode 1
+    versionName '0.1.0'
+  }
+}
+
+dependencies {
+  def unityLibrary = rootProject.findProject(':unityLibrary')
+  def unityAar = file('libs/unityLibrary-release.aar')
+  if (unityLibrary != null) {
+    implementation unityLibrary
+  } else if (unityAar.exists()) {
+    implementation files(unityAar)
+  }
+}

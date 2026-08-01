@@ -189,7 +189,8 @@
       ],
       "expo-apple-authentication",
       "expo-tracking-transparency",
-      "@react-native-google-signin/google-signin"
+      "@react-native-google-signin/google-signin",
+      "./modules/vocbee-unity/app.plugin.js"
     ],
     "extra": {
       "supportsRTL": true,
