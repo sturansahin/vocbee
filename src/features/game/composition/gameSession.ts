@@ -1,5 +1,5 @@
 import * as Crypto from 'expo-crypto';
-import { AccessibilityInfo } from 'react-native';
+import { AccessibilityInfo, Appearance } from 'react-native';
 
 import { getCurrentLevel, getLearnedWords } from '@features/progress';
 import { getLanguagePair, getStoredVocabulary } from '@features/vocabulary';
@@ -25,6 +25,7 @@ export async function prepareGameSession(): Promise<GameSessionV1> {
     vocabulary,
     learnedWordIds,
     reducedMotion,
+    theme: Appearance.getColorScheme() === 'dark' ? 'dark' : 'light',
   });
 
   if (!validateGameSession(session)) throw new Error('Invalid game session generated');

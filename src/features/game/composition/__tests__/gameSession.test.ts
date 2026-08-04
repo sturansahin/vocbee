@@ -1,4 +1,4 @@
-import { AccessibilityInfo } from 'react-native';
+import { AccessibilityInfo, Appearance } from 'react-native';
 
 import { prepareGameSession } from '../gameSession';
 
@@ -16,8 +16,12 @@ jest.mock('@features/vocabulary', () => ({
 }));
 jest.mock('../../../../../modules/vocbee-unity', () => ({ openGame: jest.fn() }));
 
-it('passes the platform reduced-motion preference into the game session', async () => {
+it('passes the platform accessibility and theme preferences into the game session', async () => {
   jest.spyOn(AccessibilityInfo, 'isReduceMotionEnabled').mockResolvedValueOnce(true);
+  jest.spyOn(Appearance, 'getColorScheme').mockReturnValueOnce('dark');
 
-  await expect(prepareGameSession()).resolves.toMatchObject({ reducedMotion: true });
+  await expect(prepareGameSession()).resolves.toMatchObject({
+    reducedMotion: true,
+    theme: 'dark',
+  });
 });

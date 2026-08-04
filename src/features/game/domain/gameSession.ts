@@ -23,6 +23,8 @@ export type GameRoundV1 = {
   correctWordId: number;
 };
 
+export type GameTheme = 'light' | 'dark';
+
 export type GameSessionV1 = {
   schemaVersion: typeof GAME_SESSION_SCHEMA_VERSION;
   bridgeVersion: typeof GAME_BRIDGE_VERSION;
@@ -32,6 +34,7 @@ export type GameSessionV1 = {
   nativeLanguage: string;
   targetLanguage: string;
   reducedMotion: boolean;
+  theme: GameTheme;
   contentState: 'ready' | 'placeholder';
   rounds: GameRoundV1[];
 };
@@ -44,6 +47,7 @@ export type BuildGameSessionInput = {
   vocabulary: VocabularyWord[];
   learnedWordIds: number[];
   reducedMotion?: boolean;
+  theme?: GameTheme;
   random?: () => number;
 };
 
@@ -118,6 +122,7 @@ function placeholderSession(input: BuildGameSessionInput): GameSessionV1 {
     nativeLanguage: input.nativeLanguage?.trim() ?? '',
     targetLanguage: input.targetLanguage?.trim() ?? '',
     reducedMotion: input.reducedMotion ?? false,
+    theme: input.theme ?? 'light',
     contentState: 'placeholder',
     rounds: [],
   };
@@ -234,6 +239,7 @@ export function validateGameSession(value: unknown): value is GameSessionV1 {
     !isBoundedText(session.sessionId, 100) ||
     !isLevel(session.level) ||
     typeof session.reducedMotion !== 'boolean' ||
+    (session.theme !== 'light' && session.theme !== 'dark') ||
     (session.contentState !== 'ready' && session.contentState !== 'placeholder') ||
     !Array.isArray(session.rounds) ||
     session.rounds.length > MAX_GAME_ROUNDS ||
