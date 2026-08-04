@@ -39,7 +39,6 @@ jest.mock('@features/auth', () => ({
   SignUpScreen: () => null,
 }));
 jest.mock('@features/favorites', () => ({ FavoritesScreen: () => null }));
-jest.mock('@app/presentation', () => ({ GameLauncherScreen: () => null }));
 jest.mock('@features/learning', () => ({
   HomeScreen: () => null,
   ExampleSentencesScreen: () => null,
@@ -78,7 +77,6 @@ describe('RootNavigator', () => {
       'MainTabs',
       'Settings',
       'Favorites',
-      'Game',
       'ExampleSentences',
     ]);
   });

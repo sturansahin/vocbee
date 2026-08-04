@@ -16,6 +16,7 @@ import {
   StreakAlertContent,
 } from '@features/streak';
 import { SafeBannerAd, useMonetization } from '@features/monetization';
+import { launchGameSession } from '@features/game';
 import { useReducedMotion, useResponsiveLayout } from '@shared/responsive';
 import { useTheme } from '@shared/theme';
 import { Screen, useAlert } from '@shared/ui';
@@ -80,6 +81,12 @@ export default function HomeScreen({ facade }: HomeScreenProps) {
     reducedMotion,
     session.currentWord?.id,
   );
+
+  const handleGamePress = useCallback(() => {
+    void launchGameSession().catch(() =>
+      showAlert({ title: t('common.error'), message: t('game.launchError') }),
+    );
+  }, [showAlert, t]);
 
   const handleSwipe = useCallback(
     async (direction: 'left' | 'right') => {
@@ -161,7 +168,7 @@ export default function HomeScreen({ facade }: HomeScreenProps) {
           ),
         })
       }
-      onPressGame={() => navigation.navigate('Game')}
+      onPressGame={handleGamePress}
       onPressFavorites={() => navigation.navigate('Favorites')}
       onPressSettings={() => navigation.navigate('Settings')}
     />

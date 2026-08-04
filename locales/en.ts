@@ -99,9 +99,6 @@ export default {
   },
   game: {
     open: 'Open word game',
-    title: 'VocBee Run',
-    description: 'Reinforce your learned words in a quick three-lane challenge.',
-    start: 'Start game',
     launchError: 'The game could not be opened. Please try again.',
   },
   notifications: {

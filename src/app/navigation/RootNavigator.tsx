@@ -10,7 +10,6 @@ import {
 } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from 'expo-status-bar';
-import { GameLauncherScreen } from '@app/presentation';
 import type { RootStackParamList } from './types';
 import { useTheme } from '@shared/theme';
 import { FavoritesScreen } from '@features/favorites';
@@ -71,9 +70,6 @@ export function RootNavigator({ initialRoute, navigationRef }: RootNavigatorProp
 
         {/* Favorites Screen */}
         <Stack.Screen name="Favorites" component={FavoritesScreen} />
-
-        {/* Unity word game launcher */}
-        <Stack.Screen name="Game" component={GameLauncherScreen} />
 
         {/* Detail Screens */}
         <Stack.Screen name="ExampleSentences" component={ExampleSentencesScreen} />

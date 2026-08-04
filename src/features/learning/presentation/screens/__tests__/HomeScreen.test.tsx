@@ -5,6 +5,13 @@ import type { HomeFacade, HomeSessionSnapshot } from '@features/learning';
 import { DEFAULT_STREAK_SUMMARY } from '@features/streak';
 import HomeScreen, { getTutorialSwipeNextStep } from '../HomeScreen';
 
+const mockLaunchGameSession = jest.fn();
+const mockShowAlert = jest.fn();
+
+jest.mock('@features/game', () => ({
+  launchGameSession: () => mockLaunchGameSession(),
+}));
+
 jest.mock('@shared/ui', () => {
   const ReactModule = require('react');
   const { Pressable, Text, View } = require('react-native');
@@ -44,7 +51,7 @@ jest.mock('@shared/ui', () => {
     ErrorState: State,
     IconButton,
     Screen,
-    useAlert: () => ({ showAlert: jest.fn() }),
+    useAlert: () => ({ showAlert: mockShowAlert }),
   };
 });
 jest.mock('@shared/theme', () => ({
@@ -188,6 +195,11 @@ function renderHome(facade: HomeFacade, options?: Omit<RenderOptions, 'wrapper'>
 }
 
 describe('HomeScreen', () => {
+  beforeEach(() => {
+    mockLaunchGameSession.mockReset().mockResolvedValue(undefined);
+    mockShowAlert.mockReset();
+  });
+
   it('keeps the loading state visible until the facade resolves', () => {
     const facade = createFacade({ loadSession: jest.fn(() => new Promise(() => undefined)) });
     const { getByTestId } = renderHome(facade);
@@ -215,6 +227,30 @@ describe('HomeScreen', () => {
     expect(screen.getByLabelText('game.open')).toBeTruthy();
     expect(screen.queryByTestId('home-skip-action')).toBeNull();
     expect(screen.queryByTestId('home-learned-action')).toBeNull();
+  });
+
+  it('opens Unity directly from the game button', async () => {
+    const screen = renderHome(createFacade());
+    await waitFor(() => expect(screen.getByTestId('home-ready')).toBeTruthy());
+
+    fireEvent.press(screen.getByLabelText('game.open'));
+
+    await waitFor(() => expect(mockLaunchGameSession).toHaveBeenCalledTimes(1));
+  });
+
+  it('shows an alert when Unity cannot open', async () => {
+    mockLaunchGameSession.mockRejectedValueOnce(new Error('Unity unavailable'));
+    const screen = renderHome(createFacade());
+    await waitFor(() => expect(screen.getByTestId('home-ready')).toBeTruthy());
+
+    fireEvent.press(screen.getByLabelText('game.open'));
+
+    await waitFor(() =>
+      expect(mockShowAlert).toHaveBeenCalledWith({
+        title: 'common.error',
+        message: 'game.launchError',
+      }),
+    );
   });
 
   it('renders the empty state for a session without words', async () => {

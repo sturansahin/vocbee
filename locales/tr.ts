@@ -101,9 +101,6 @@ export default {
   },
   game: {
     open: 'Kelime oyununu aç',
-    title: 'VocBee Koşu',
-    description: 'Öğrendiğin kelimeleri üç şeritli kısa bir oyunda pekiştir.',
-    start: 'Oyunu başlat',
     launchError: 'Oyun açılamadı. Lütfen tekrar dene.',
   },
   notifications: {
