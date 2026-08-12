@@ -40,7 +40,7 @@ export function SignUpScreen({ gateway }: SignUpScreenProps) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [hasAcceptedPrivacyPolicy, setHasAcceptedPrivacyPolicy] = useState(true);
+  const [hasAcceptedPrivacyPolicy, setHasAcceptedPrivacyPolicy] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSignUp = async () => {

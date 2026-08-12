@@ -213,7 +213,7 @@ describe('AuthScreens', () => {
       expect(getByText('auth.fullName')).toBeTruthy();
       expect(getByPlaceholderText('auth.enterEmail')).toBeTruthy(); // Adjusted to placeholder from component
       expect(getByTestId('privacy-consent-checkbox').props.accessibilityState).toEqual({
-        checked: true,
+        checked: false,
       });
     });
 
@@ -234,7 +234,6 @@ describe('AuthScreens', () => {
       fireEvent.changeText(getByPlaceholderText('auth.enterEmail'), 'new@example.com');
       fireEvent.changeText(getByPlaceholderText('auth.createPassword'), 'pass123456');
       fireEvent.changeText(getByPlaceholderText('auth.confirmPasswordPlaceholder'), 'pass123456');
-      fireEvent.press(getByTestId('privacy-consent-checkbox'));
 
       fireEvent.press(getByTestId('signup-submit'));
 
@@ -254,6 +253,7 @@ describe('AuthScreens', () => {
       fireEvent.changeText(getByPlaceholderText('auth.createPassword'), 'pass123456');
       fireEvent.changeText(getByPlaceholderText('auth.confirmPasswordPlaceholder'), 'pass123456');
 
+      fireEvent.press(getByTestId('privacy-consent-checkbox'));
       fireEvent.press(getByTestId('signup-submit'));
 
       await waitFor(() => {
