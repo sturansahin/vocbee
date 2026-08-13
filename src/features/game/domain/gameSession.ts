@@ -8,7 +8,6 @@ import {
 
 export const GAME_SESSION_SCHEMA_VERSION = 1 as const;
 export const GAME_BRIDGE_VERSION = 1 as const;
-export const MAX_GAME_ROUNDS = 12;
 
 export type GameChoiceV1 = {
   wordId: number;
@@ -139,7 +138,7 @@ export function buildGameSession(input: BuildGameSessionInput): GameSessionV1 {
     return placeholderSession(input);
   }
 
-  const targets = shuffleArray(viableTargets, random).slice(0, MAX_GAME_ROUNDS);
+  const targets = shuffleArray(viableTargets, random);
   const correctLanes = shuffleArray(
     targets.map((_, index) => index % 3),
     random,
@@ -242,7 +241,6 @@ export function validateGameSession(value: unknown): value is GameSessionV1 {
     (session.theme !== 'light' && session.theme !== 'dark') ||
     (session.contentState !== 'ready' && session.contentState !== 'placeholder') ||
     !Array.isArray(session.rounds) ||
-    session.rounds.length > MAX_GAME_ROUNDS ||
     !isBoundedText(session.nativeLanguage, 50, session.contentState === 'placeholder') ||
     !isBoundedText(session.targetLanguage, 50, session.contentState === 'placeholder')
   ) {

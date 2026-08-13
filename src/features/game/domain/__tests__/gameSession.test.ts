@@ -28,7 +28,7 @@ it('builds a validated learned-word session and falls back to empty placeholder 
 
   expect(validateGameSession(session)).toBe(true);
   expect(session.contentState).toBe('ready');
-  expect(session.rounds).toHaveLength(12);
+  expect(session.rounds).toHaveLength(15);
   expect(
     session.rounds.every(
       (round) =>
@@ -36,6 +36,19 @@ it('builds a validated learned-word session and falls back to empty placeholder 
         round.choices.filter(({ wordId }) => wordId === round.correctWordId).length === 1,
     ),
   ).toBe(true);
+
+  const differentlyShuffled = buildGameSession({
+    sessionId: 'session-shuffled',
+    level: 'A1',
+    nativeLanguage: 'turkish',
+    targetLanguage: 'english',
+    vocabulary,
+    learnedWordIds: vocabulary.map(({ id }) => id),
+    random: () => 0,
+  });
+  expect(differentlyShuffled.rounds.map(({ wordId }) => wordId)).not.toEqual(
+    session.rounds.map(({ wordId }) => wordId),
+  );
 
   const placeholder = buildGameSession({
     sessionId: 'session-2',
