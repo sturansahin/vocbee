@@ -41,7 +41,7 @@ public final class VocbeeUnityModule: Module {
         self.unityEventObserver = nil
       }
       DispatchQueue.main.async { [unityHost = self.unityHost] in
-        _ = unityHost.unload()
+        unityHost.deactivate()
       }
       if VocbeeUnityModule.activeModule === self {
         VocbeeUnityModule.activeModule = nil
@@ -63,13 +63,14 @@ public final class VocbeeUnityModule: Module {
     }.runOnQueue(.main)
 
     AsyncFunction("unloadGame") {
-      unityHost.unload()
+      unityHost.returnToHost()
     }.runOnQueue(.main)
   }
 
   fileprivate static func emitFromUnity(_ eventJson: String) {
     let parsed = parseJSONObject(eventJson)
-    let payload = parsed == nil
+    let payload =
+      parsed == nil
       ? "{\"type\":\"error\",\"code\":\"INVALID_EVENT_JSON\"}"
       : eventJson
     let eventType = parsed?["type"] as? String
@@ -87,9 +88,9 @@ public final class VocbeeUnityModule: Module {
           eventName,
           ["json": "{\"type\":\"error\",\"code\":\"UNITY_MESSAGE_FAILED\"}"]
         )
-        _ = module.unityHost.unload()
+        _ = module.unityHost.returnToHost()
       } else if eventType == "finished" {
-        module.unityHost.scheduleUnloadAfterEvent()
+        module.unityHost.scheduleReturnToHostAfterEvent()
       }
     }
   }
@@ -101,7 +102,9 @@ private final class VocbeeUnityHost: NSObject {
   private var framework: NSObject?
   private var pendingSessionJson: String?
   private var unityReady = false
-  private var unloadScheduled = false
+  private var returnScheduled = false
+  private var lifecycleGeneration = 0
+  private var listenerRegistered = false
 
   var isRuntimeAvailable: Bool {
     if NSClassFromString(unityFrameworkClassName) != nil {
@@ -114,7 +117,11 @@ private final class VocbeeUnityHost: NSObject {
   }
 
   func open(sessionJson: String) -> [String: Any] {
-    hostWindow = currentKeyWindow()
+    lifecycleGeneration &+= 1
+    returnScheduled = false
+    if hostWindow == nil {
+      hostWindow = currentKeyWindow()
+    }
     pendingSessionJson = sessionJson
     guard let framework = loadFramework() else {
       pendingSessionJson = nil
@@ -128,7 +135,6 @@ private final class VocbeeUnityHost: NSObject {
       unityReady = false
       guard setExecuteHeader(framework),
         setDataBundleId(framework),
-        callWithObject(framework, selectorName: "registerFrameworkListener:", value: self),
         runEmbedded(framework)
       else {
         pendingSessionJson = nil
@@ -142,7 +148,7 @@ private final class VocbeeUnityHost: NSObject {
     }
 
     guard sendPendingSessionIfReady() else {
-      _ = unload()
+      _ = returnToHost()
       return failure(code: "UNITY_MESSAGE_FAILED", message: "Unity did not accept the session.")
     }
 
@@ -154,21 +160,29 @@ private final class VocbeeUnityHost: NSObject {
     return sendPendingSessionIfReady()
   }
 
-  func scheduleUnloadAfterEvent() {
-    guard !unloadScheduled else {
+  func scheduleReturnToHostAfterEvent() {
+    guard !returnScheduled else {
       return
     }
-    unloadScheduled = true
+    returnScheduled = true
+    let scheduledGeneration = lifecycleGeneration
     DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) { [weak self] in
       guard let self else {
         return
       }
-      self.unloadScheduled = false
-      _ = self.unload()
+      guard self.lifecycleGeneration == scheduledGeneration else {
+        return
+      }
+      self.returnScheduled = false
+      _ = self.returnToHost()
     }
   }
 
-  func unload() -> [String: Any] {
+  func returnToHost() -> [String: Any] {
+    // Unity 6 can execute one more display-link frame after unloadApplication tears down
+    // lighting state. Keep Unity loaded for the process lifetime and pause it instead.
+    lifecycleGeneration &+= 1
+    returnScheduled = false
     pendingSessionJson = nil
     unityReady = false
     guard let framework else {
@@ -176,13 +190,31 @@ private final class VocbeeUnityHost: NSObject {
       return success()
     }
     guard objectResult(framework, selectorName: "appController") != nil else {
-      finishUnload()
+      restoreHostWindow()
       return success()
     }
-    guard callVoid(framework, selectorName: "unloadApplication") else {
-      return failure(code: "NATIVE_CALL_FAILED", message: "UnityFramework could not unload.")
+    guard callWithBool(framework, selectorName: "pause:", value: true) else {
+      return failure(code: "NATIVE_CALL_FAILED", message: "UnityFramework could not pause.")
     }
+    restoreHostWindow()
     return success()
+  }
+
+  func deactivate() {
+    lifecycleGeneration &+= 1
+    returnScheduled = false
+    pendingSessionJson = nil
+    unityReady = false
+
+    if let framework {
+      if objectResult(framework, selectorName: "appController") != nil {
+        _ = callWithBool(framework, selectorName: "pause:", value: true)
+      }
+      unregisterListener(from: framework)
+    }
+    framework = nil
+    frameworkBundle = nil
+    restoreHostWindow()
   }
 
   @objc private func unityDidUnload(_ notification: Notification) {
@@ -195,21 +227,22 @@ private final class VocbeeUnityHost: NSObject {
 
   private func finishUnload() {
     if let framework {
-      _ = callWithObject(
-        framework,
-        selectorName: "unregisterFrameworkListener:",
-        value: self
-      )
+      unregisterListener(from: framework)
     }
     framework = nil
+    frameworkBundle = nil
     pendingSessionJson = nil
     unityReady = false
-    unloadScheduled = false
+    returnScheduled = false
+    lifecycleGeneration &+= 1
     restoreHostWindow()
   }
 
   private func loadFramework() -> NSObject? {
     if let framework {
+      guard registerListenerIfNeeded(on: framework) else {
+        return nil
+      }
       return framework
     }
 
@@ -237,7 +270,40 @@ private final class VocbeeUnityHost: NSObject {
       return nil
     }
     framework = instance
+    guard registerListenerIfNeeded(on: instance) else {
+      framework = nil
+      return nil
+    }
     return instance
+  }
+
+  private func registerListenerIfNeeded(on framework: NSObject) -> Bool {
+    if listenerRegistered {
+      return true
+    }
+    guard
+      callWithObject(
+        framework,
+        selectorName: "registerFrameworkListener:",
+        value: self
+      )
+    else {
+      return false
+    }
+    listenerRegistered = true
+    return true
+  }
+
+  private func unregisterListener(from framework: NSObject) {
+    guard listenerRegistered else {
+      return
+    }
+    _ = callWithObject(
+      framework,
+      selectorName: "unregisterFrameworkListener:",
+      value: self
+    )
+    listenerRegistered = false
   }
 
   private func setExecuteHeader(_ framework: NSObject) -> Bool {
@@ -262,13 +328,14 @@ private final class VocbeeUnityHost: NSObject {
     guard framework.responds(to: selector) else {
       return false
     }
-    typealias Method = @convention(c) (
-      AnyObject,
-      Selector,
-      Int32,
-      UnsafeMutablePointer<UnsafeMutablePointer<CChar>?>?,
-      NSDictionary
-    ) -> Void
+    typealias Method =
+      @convention(c) (
+        AnyObject,
+        Selector,
+        Int32,
+        UnsafeMutablePointer<UnsafeMutablePointer<CChar>?>?,
+        NSDictionary
+      ) -> Void
     let method = unsafeBitCast(framework.method(for: selector), to: Method.self)
     method(framework, selector, CommandLine.argc, CommandLine.unsafeArgv, NSDictionary())
     return true
@@ -281,13 +348,14 @@ private final class VocbeeUnityHost: NSObject {
     guard framework.responds(to: selector) else {
       return false
     }
-    typealias Method = @convention(c) (
-      AnyObject,
-      Selector,
-      UnsafePointer<CChar>,
-      UnsafePointer<CChar>,
-      UnsafePointer<CChar>
-    ) -> Void
+    typealias Method =
+      @convention(c) (
+        AnyObject,
+        Selector,
+        UnsafePointer<CChar>,
+        UnsafePointer<CChar>,
+        UnsafePointer<CChar>
+      ) -> Void
     let method = unsafeBitCast(framework.method(for: selector), to: Method.self)
     unityGameObject.withCString { gameObject in
       unityLoadSessionMethod.withCString { functionName in
@@ -419,7 +487,7 @@ private func gameInfo(runtimeAvailable: Bool) -> [String: Any] {
     "platform": "ios",
     "runtimeAvailable": runtimeAvailable,
     "unityVersion": NSNull(),
-    "error": runtimeAvailable ? NSNull() : unityUnavailable
+    "error": runtimeAvailable ? NSNull() : unityUnavailable,
   ]
 }
 
