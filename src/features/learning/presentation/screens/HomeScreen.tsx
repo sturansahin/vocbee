@@ -1,5 +1,5 @@
-import React, { useCallback } from 'react';
-import { StyleSheet, View } from 'react-native';
+import React, { useCallback, useRef, useState } from 'react';
+import { Animated, Easing, StyleSheet, Text, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import type { StackNavigationProp } from '@react-navigation/stack';
 import { useTranslation } from 'react-i18next';
@@ -18,7 +18,7 @@ import {
 import { SafeBannerAd, useMonetization } from '@features/monetization';
 import { launchGameSession } from '@features/game';
 import { useReducedMotion, useResponsiveLayout } from '@shared/responsive';
-import { useTheme } from '@shared/theme';
+import { HEADER_FONT_FAMILY, useTheme } from '@shared/theme';
 import { Screen, useAlert } from '@shared/ui';
 import type { RootStackParamList } from '@app/navigation/types';
 import { createSwarmAnimation } from '../../../../../assets/animations/swarmAnimation';
@@ -50,6 +50,8 @@ export default function HomeScreen({ facade }: HomeScreenProps) {
   const { isAdFree, isLoading: monetizationLoading } = useMonetization();
   const { showAlert } = useAlert();
   const { t } = useTranslation();
+  const [isLaunchingGame, setIsLaunchingGame] = useState(false);
+  const gameLaunchProgress = useRef(new Animated.Value(0)).current;
   const session = useLearningSession(facade);
   const tutorial = useTutorialOverlay(
     facade,
@@ -83,10 +85,29 @@ export default function HomeScreen({ facade }: HomeScreenProps) {
   );
 
   const handleGamePress = useCallback(() => {
-    void launchGameSession().catch(() =>
-      showAlert({ title: t('common.error'), message: t('game.launchError') }),
-    );
-  }, [showAlert, t]);
+    if (isLaunchingGame) return;
+
+    setIsLaunchingGame(true);
+    gameLaunchProgress.setValue(reducedMotion ? 1 : 0);
+    const reveal = reducedMotion
+      ? Promise.resolve()
+      : new Promise<void>((resolve) => {
+          Animated.timing(gameLaunchProgress, {
+            toValue: 1,
+            duration: 240,
+            easing: Easing.out(Easing.cubic),
+            useNativeDriver: true,
+          }).start(() => resolve());
+        });
+
+    void reveal
+      .then(() => launchGameSession())
+      .catch(() => showAlert({ title: t('common.error'), message: t('game.launchError') }))
+      .finally(() => {
+        setIsLaunchingGame(false);
+        gameLaunchProgress.setValue(0);
+      });
+  }, [gameLaunchProgress, isLaunchingGame, reducedMotion, showAlert, t]);
 
   const handleSwipe = useCallback(
     async (direction: 'left' | 'right') => {
@@ -311,6 +332,53 @@ export default function HomeScreen({ facade }: HomeScreenProps) {
           onReviewRateInStore={engagement.rateInStore}
           onReviewSendFeedback={engagement.sendFeedback}
         />
+        {isLaunchingGame ? (
+          <View
+            accessibilityElementsHidden
+            importantForAccessibility="no-hide-descendants"
+            pointerEvents="none"
+            style={styles.gameLaunchOverlay}
+            testID="game-launch-transition"
+          >
+            <Animated.View
+              style={[
+                styles.gameLaunchBurst,
+                {
+                  transform: [
+                    {
+                      scale: gameLaunchProgress.interpolate({
+                        inputRange: [0, 1],
+                        outputRange: [0.1, 18],
+                      }),
+                    },
+                  ],
+                },
+              ]}
+            />
+            <Animated.View
+              style={[
+                styles.gameLaunchLabel,
+                {
+                  opacity: gameLaunchProgress.interpolate({
+                    inputRange: [0, 0.35, 1],
+                    outputRange: [0, 1, 1],
+                  }),
+                  transform: [
+                    {
+                      scale: gameLaunchProgress.interpolate({
+                        inputRange: [0, 1],
+                        outputRange: [0.82, 1],
+                      }),
+                    },
+                  ],
+                },
+              ]}
+            >
+              <Text style={styles.gameLaunchBee}>✦</Text>
+              <Text style={styles.gameLaunchText}>VOCBEE RUNNER</Text>
+            </Animated.View>
+          </View>
+        ) : null}
       </View>
     </Screen>
   );
@@ -328,4 +396,39 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   banner: { alignItems: 'center', justifyContent: 'center' },
+  gameLaunchOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    alignItems: 'center',
+    backgroundColor: '#171109',
+    justifyContent: 'center',
+    overflow: 'hidden',
+    zIndex: 999,
+  },
+  gameLaunchBurst: {
+    position: 'absolute',
+    width: 120,
+    height: 120,
+    borderRadius: 60,
+    backgroundColor: '#FFC518',
+  },
+  gameLaunchLabel: {
+    alignItems: 'center',
+    borderWidth: 3,
+    borderColor: '#FFC518',
+    borderRadius: 24,
+    backgroundColor: '#2E261F',
+    paddingHorizontal: 28,
+    paddingVertical: 18,
+  },
+  gameLaunchBee: {
+    color: '#FFC518',
+    fontSize: 34,
+    lineHeight: 40,
+  },
+  gameLaunchText: {
+    color: '#FFF7D6',
+    fontFamily: HEADER_FONT_FAMILY,
+    fontSize: 18,
+    letterSpacing: 2,
+  },
 });
