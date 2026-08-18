@@ -1,4 +1,5 @@
 import type { VocabularyWord } from '@features/vocabulary';
+import { gameRunnerTranslations } from '../../../../../locales/gameRunner';
 
 import { buildGameSession, validateGameSession } from '../gameSession';
 
@@ -23,6 +24,9 @@ it('builds a validated learned-word session and falls back to empty placeholder 
     targetLanguage: 'english',
     vocabulary,
     learnedWordIds: vocabulary.map(({ id }) => id),
+    uiLanguage: 'en',
+    isRtl: false,
+    uiText: gameRunnerTranslations.en,
     random: () => 0.5,
   });
 
@@ -44,6 +48,9 @@ it('builds a validated learned-word session and falls back to empty placeholder 
     targetLanguage: 'english',
     vocabulary,
     learnedWordIds: vocabulary.map(({ id }) => id),
+    uiLanguage: 'en',
+    isRtl: false,
+    uiText: gameRunnerTranslations.en,
     random: () => 0,
   });
   expect(differentlyShuffled.rounds.map(({ wordId }) => wordId)).not.toEqual(
@@ -55,6 +62,9 @@ it('builds a validated learned-word session and falls back to empty placeholder 
     level: 'A1',
     vocabulary,
     learnedWordIds: [],
+    uiLanguage: 'en',
+    isRtl: false,
+    uiText: gameRunnerTranslations.en,
   });
   expect(placeholder.contentState).toBe('placeholder');
   expect(placeholder.rounds).toEqual([]);

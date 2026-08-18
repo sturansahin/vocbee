@@ -19,27 +19,42 @@ import fa from './fa';
 import sr from './sr';
 import sw from './sw';
 import ur from './ur';
+import { gameRunnerTranslations, type GameRunnerLanguageCode } from './gameRunner';
+
+function withGameRunner<T extends Record<string, unknown>>(
+  language: GameRunnerLanguageCode,
+  translation: T,
+) {
+  const game = (translation.game ?? {}) as Record<string, unknown>;
+  return {
+    ...translation,
+    game: {
+      ...game,
+      runner: gameRunnerTranslations[language],
+    },
+  };
+}
 
 export default {
-  en: { translation: en },
-  tr: { translation: tr },
-  de: { translation: de },
-  fr: { translation: fr },
-  es: { translation: es },
-  it: { translation: it },
-  pt: { translation: pt },
-  ru: { translation: ru },
-  ar: { translation: ar },
-  zh: { translation: zh },
-  ja: { translation: ja },
-  ko: { translation: ko },
-  hi: { translation: hi },
-  id: { translation: id },
-  vi: { translation: vi },
-  th: { translation: th },
-  am: { translation: am },
-  fa: { translation: fa },
-  sr: { translation: sr },
-  sw: { translation: sw },
-  ur: { translation: ur },
+  en: { translation: withGameRunner('en', en) },
+  tr: { translation: withGameRunner('tr', tr) },
+  de: { translation: withGameRunner('de', de) },
+  fr: { translation: withGameRunner('fr', fr) },
+  es: { translation: withGameRunner('es', es) },
+  it: { translation: withGameRunner('it', it) },
+  pt: { translation: withGameRunner('pt', pt) },
+  ru: { translation: withGameRunner('ru', ru) },
+  ar: { translation: withGameRunner('ar', ar) },
+  zh: { translation: withGameRunner('zh', zh) },
+  ja: { translation: withGameRunner('ja', ja) },
+  ko: { translation: withGameRunner('ko', ko) },
+  hi: { translation: withGameRunner('hi', hi) },
+  id: { translation: withGameRunner('id', id) },
+  vi: { translation: withGameRunner('vi', vi) },
+  th: { translation: withGameRunner('th', th) },
+  am: { translation: withGameRunner('am', am) },
+  fa: { translation: withGameRunner('fa', fa) },
+  sr: { translation: withGameRunner('sr', sr) },
+  sw: { translation: withGameRunner('sw', sw) },
+  ur: { translation: withGameRunner('ur', ur) },
 };

@@ -11,7 +11,7 @@ const USER_LANGUAGE_KEY = STORAGE_KEYS.USER_LANGUAGE;
 const LAST_SYSTEM_LANGUAGE_KEY = STORAGE_KEYS.LAST_SYSTEM_LANGUAGE;
 const supportedLanguages = Object.keys(resources);
 
-function normalizeLanguageCode(language?: string | null): string | null {
+export function normalizeLanguageCode(language?: string | null): string | null {
   const normalized = language?.trim().toLowerCase().split(/[-_]/)[0];
   return normalized && supportedLanguages.includes(normalized) ? normalized : null;
 }
@@ -20,6 +20,10 @@ function normalizeLanguageCode(language?: string | null): string | null {
 export const getDeviceLanguage = (): string => {
   return normalizeLanguageCode(getLocales()[0]?.languageCode) ?? 'en';
 };
+
+export function getResolvedAppLanguage(): string {
+  return normalizeLanguageCode(i18n.resolvedLanguage || i18n.language) ?? 'en';
+}
 
 export async function detectInitialLanguage(): Promise<string> {
   // iOS already owns per-app language selection. Old versions cached the detected

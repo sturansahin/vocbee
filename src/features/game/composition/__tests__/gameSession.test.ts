@@ -1,5 +1,6 @@
 import { AccessibilityInfo, Appearance } from 'react-native';
 import type { VocabularyWord } from '@features/vocabulary';
+import { gameRunnerTranslations } from '../../../../../locales/gameRunner';
 
 import { buildGameSession } from '../../domain/gameSession';
 import { prepareGameSession, prepareGameSessionJson } from '../gameSession';
@@ -20,6 +21,20 @@ jest.mock('@features/vocabulary', () => ({
   shuffleArray: <T>(values: T[]) => [...values],
 }));
 jest.mock('../../../../../modules/vocbee-unity', () => ({ openGame: jest.fn() }));
+jest.mock('@shared/i18n', () => {
+  const translations = jest.requireActual('../../../../../locales/gameRunner')
+    .gameRunnerTranslations as typeof gameRunnerTranslations;
+  return {
+    getResolvedAppLanguage: () => 'en',
+    i18n: {
+      getFixedT: (language: keyof typeof translations) => (key: string) => {
+        const field = key.replace('game.runner.', '') as keyof (typeof translations)['en'];
+        return translations[language][field];
+      },
+    },
+    isRTLLanguage: (language: string) => ['ar', 'fa', 'ur'].includes(language),
+  };
+});
 
 function word(id: number, padded = false): VocabularyWord {
   const suffix = `-${id}`;
@@ -57,6 +72,9 @@ it('passes the platform accessibility and theme preferences into the game sessio
   expect(session).toMatchObject({
     reducedMotion: true,
     theme: 'dark',
+    uiLanguage: 'en',
+    isRtl: false,
+    uiText: gameRunnerTranslations.en,
   });
   expect(session.rounds).toHaveLength(15);
 });
@@ -78,6 +96,9 @@ it('keeps the largest shuffled round prefix that fits the 64 KiB bridge limit', 
     targetLanguage: 'english',
     vocabulary,
     learnedWordIds,
+    uiLanguage: 'en',
+    isRtl: false,
+    uiText: gameRunnerTranslations.en,
     random: () => 0,
   });
 

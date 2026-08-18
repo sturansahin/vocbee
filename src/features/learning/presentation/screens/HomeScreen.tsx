@@ -102,7 +102,10 @@ export default function HomeScreen({ facade }: HomeScreenProps) {
 
     void reveal
       .then(() => launchGameSession())
-      .catch(() => showAlert({ title: t('common.error'), message: t('game.launchError') }))
+      .catch((error: unknown) => {
+        console.error('[Game] Launch failed', error);
+        showAlert({ title: t('common.error'), message: t('game.launchError') });
+      })
       .finally(() => {
         setIsLaunchingGame(false);
         gameLaunchProgress.setValue(0);

@@ -6,8 +6,34 @@ import {
   type VocabularyWord,
 } from '@features/vocabulary';
 
-export const GAME_SESSION_SCHEMA_VERSION = 1 as const;
+export const GAME_SESSION_SCHEMA_VERSION = 2 as const;
 export const GAME_BRIDGE_VERSION = 1 as const;
+
+export type GameUiTextV1 = {
+  tapToPlay: string;
+  readySubtitle: string;
+  wordLabel: string;
+  comboTemplate: string;
+  correctFeedback: string;
+  wrongFeedback: string;
+  swipeHint: string;
+  pauseTitle: string;
+  pauseSubtitle: string;
+  resume: string;
+  restart: string;
+  returnHome: string;
+  newRecord: string;
+  runCompleted: string;
+  scoreTemplate: string;
+  bestScoreTemplate: string;
+  bestComboTemplate: string;
+  heartsTemplate: string;
+  playAgain: string;
+  startScreen: string;
+  noHearts: string;
+  wrongWord: string;
+  heartsRenewed: string;
+};
 
 export type GameChoiceV1 = {
   wordId: number;
@@ -24,7 +50,7 @@ export type GameRoundV1 = {
 
 export type GameTheme = 'light' | 'dark';
 
-export type GameSessionV1 = {
+export type GameSessionV2 = {
   schemaVersion: typeof GAME_SESSION_SCHEMA_VERSION;
   bridgeVersion: typeof GAME_BRIDGE_VERSION;
   vocabularySchemaVersion: typeof VOCABULARY_SCHEMA_VERSION;
@@ -34,6 +60,9 @@ export type GameSessionV1 = {
   targetLanguage: string;
   reducedMotion: boolean;
   theme: GameTheme;
+  uiLanguage: string;
+  isRtl: boolean;
+  uiText: GameUiTextV1;
   contentState: 'ready' | 'placeholder';
   rounds: GameRoundV1[];
 };
@@ -47,6 +76,9 @@ export type BuildGameSessionInput = {
   learnedWordIds: number[];
   reducedMotion?: boolean;
   theme?: GameTheme;
+  uiLanguage: string;
+  isRtl: boolean;
+  uiText: GameUiTextV1;
   random?: () => number;
 };
 
@@ -111,7 +143,7 @@ function distractorsFor(target: PreparedWord, words: PreparedWord[]): PreparedWo
   );
 }
 
-function placeholderSession(input: BuildGameSessionInput): GameSessionV1 {
+function placeholderSession(input: BuildGameSessionInput): GameSessionV2 {
   return {
     schemaVersion: GAME_SESSION_SCHEMA_VERSION,
     bridgeVersion: GAME_BRIDGE_VERSION,
@@ -122,12 +154,15 @@ function placeholderSession(input: BuildGameSessionInput): GameSessionV1 {
     targetLanguage: input.targetLanguage?.trim() ?? '',
     reducedMotion: input.reducedMotion ?? false,
     theme: input.theme ?? 'light',
+    uiLanguage: input.uiLanguage.trim().toLowerCase(),
+    isRtl: input.isRtl,
+    uiText: { ...input.uiText },
     contentState: 'placeholder',
     rounds: [],
   };
 }
 
-export function buildGameSession(input: BuildGameSessionInput): GameSessionV1 {
+export function buildGameSession(input: BuildGameSessionInput): GameSessionV2 {
   const random = input.random ?? Math.random;
   const nativeLanguage = input.nativeLanguage?.trim() ?? '';
   const targetLanguage = input.targetLanguage?.trim() ?? '';
@@ -192,6 +227,56 @@ function isSafeWordId(value: unknown): value is number {
   return Number.isSafeInteger(value) && (value as number) >= 0;
 }
 
+const PLAIN_UI_TEXT_FIELDS = [
+  'tapToPlay',
+  'readySubtitle',
+  'wordLabel',
+  'correctFeedback',
+  'wrongFeedback',
+  'swipeHint',
+  'pauseTitle',
+  'pauseSubtitle',
+  'resume',
+  'restart',
+  'returnHome',
+  'newRecord',
+  'runCompleted',
+  'playAgain',
+  'startScreen',
+  'noHearts',
+  'wrongWord',
+  'heartsRenewed',
+] as const;
+
+const TEMPLATE_UI_TEXT_FIELDS = {
+  comboTemplate: ['count'],
+  scoreTemplate: ['score'],
+  bestScoreTemplate: ['score'],
+  bestComboTemplate: ['count'],
+  heartsTemplate: ['current', 'max'],
+} as const;
+
+function isValidTemplate(value: unknown, requiredTokens: readonly string[]): value is string {
+  if (!isBoundedText(value, 180)) return false;
+  const tokens = Array.from(value.matchAll(/\{([a-z]+)\}/g), (match) => match[1]);
+  const remainder = value.replace(/\{[a-z]+\}/g, '');
+  return (
+    !remainder.includes('{') &&
+    !remainder.includes('}') &&
+    tokens.every((token) => requiredTokens.includes(token)) &&
+    requiredTokens.every((token) => tokens.filter((candidate) => candidate === token).length === 1)
+  );
+}
+
+export function validateGameUiText(value: unknown): value is GameUiTextV1 {
+  if (!value || typeof value !== 'object') return false;
+  const text = value as Record<string, unknown>;
+  if (!PLAIN_UI_TEXT_FIELDS.every((field) => isBoundedText(text[field], 180))) return false;
+  return Object.entries(TEMPLATE_UI_TEXT_FIELDS).every(([field, tokens]) =>
+    isValidTemplate(text[field], tokens),
+  );
+}
+
 function isValidRound(value: unknown, roundIds: Set<string>): value is GameRoundV1 {
   if (!value || typeof value !== 'object') return false;
   const round = value as Partial<GameRoundV1>;
@@ -228,9 +313,9 @@ function isValidRound(value: unknown, roundIds: Set<string>): value is GameRound
   return choiceIds.has(round.correctWordId) && round.wordId === round.correctWordId;
 }
 
-export function validateGameSession(value: unknown): value is GameSessionV1 {
+export function validateGameSession(value: unknown): value is GameSessionV2 {
   if (!value || typeof value !== 'object') return false;
-  const session = value as Partial<GameSessionV1>;
+  const session = value as Partial<GameSessionV2>;
   if (
     session.schemaVersion !== GAME_SESSION_SCHEMA_VERSION ||
     session.bridgeVersion !== GAME_BRIDGE_VERSION ||
@@ -239,6 +324,10 @@ export function validateGameSession(value: unknown): value is GameSessionV1 {
     !isLevel(session.level) ||
     typeof session.reducedMotion !== 'boolean' ||
     (session.theme !== 'light' && session.theme !== 'dark') ||
+    !isBoundedText(session.uiLanguage, 12) ||
+    !/^[a-z]{2,3}$/.test(session.uiLanguage) ||
+    typeof session.isRtl !== 'boolean' ||
+    !validateGameUiText(session.uiText) ||
     (session.contentState !== 'ready' && session.contentState !== 'placeholder') ||
     !Array.isArray(session.rounds) ||
     !isBoundedText(session.nativeLanguage, 50, session.contentState === 'placeholder') ||

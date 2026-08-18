@@ -3,9 +3,15 @@ import { AccessibilityInfo, Appearance } from 'react-native';
 
 import { getCurrentLevel, getLearnedWords } from '@features/progress';
 import { getLanguagePair, getStoredVocabulary } from '@features/vocabulary';
+import { getResolvedAppLanguage, i18n, isRTLLanguage } from '@shared/i18n';
 
 import { openGame } from '../../../../modules/vocbee-unity';
-import { buildGameSession, validateGameSession, type GameSessionV1 } from '../domain/gameSession';
+import {
+  buildGameSession,
+  validateGameSession,
+  type GameSessionV2,
+  type GameUiTextV1,
+} from '../domain/gameSession';
 
 const MAX_SESSION_JSON_BYTES = 64 * 1024;
 
@@ -28,7 +34,40 @@ function utf8ByteLength(value: string): number {
   return bytes;
 }
 
-function fitSessionToBridge(session: GameSessionV1): GameSessionV1 {
+const GAME_UI_TEXT_KEYS: readonly (keyof GameUiTextV1)[] = [
+  'tapToPlay',
+  'readySubtitle',
+  'wordLabel',
+  'comboTemplate',
+  'correctFeedback',
+  'wrongFeedback',
+  'swipeHint',
+  'pauseTitle',
+  'pauseSubtitle',
+  'resume',
+  'restart',
+  'returnHome',
+  'newRecord',
+  'runCompleted',
+  'scoreTemplate',
+  'bestScoreTemplate',
+  'bestComboTemplate',
+  'heartsTemplate',
+  'playAgain',
+  'startScreen',
+  'noHearts',
+  'wrongWord',
+  'heartsRenewed',
+];
+
+export function resolveGameUiText(language: string): GameUiTextV1 {
+  const translate = i18n.getFixedT(language);
+  return Object.fromEntries(
+    GAME_UI_TEXT_KEYS.map((key) => [key, translate(`game.runner.${key}`)]),
+  ) as GameUiTextV1;
+}
+
+function fitSessionToBridge(session: GameSessionV2): GameSessionV2 {
   if (utf8ByteLength(JSON.stringify(session)) <= MAX_SESSION_JSON_BYTES) return session;
 
   let low = 3;
@@ -47,7 +86,7 @@ function fitSessionToBridge(session: GameSessionV1): GameSessionV1 {
   return { ...session, rounds: session.rounds.slice(0, low) };
 }
 
-export async function prepareGameSession(): Promise<GameSessionV1> {
+export async function prepareGameSession(): Promise<GameSessionV2> {
   const [level, languagePair, reducedMotion] = await Promise.all([
     getCurrentLevel(),
     getLanguagePair(),
@@ -57,6 +96,7 @@ export async function prepareGameSession(): Promise<GameSessionV1> {
     getStoredVocabulary(level),
     getLearnedWords(level),
   ]);
+  const uiLanguage = getResolvedAppLanguage();
   const session = buildGameSession({
     sessionId: Crypto.randomUUID(),
     level,
@@ -66,6 +106,9 @@ export async function prepareGameSession(): Promise<GameSessionV1> {
     learnedWordIds,
     reducedMotion,
     theme: Appearance.getColorScheme() === 'dark' ? 'dark' : 'light',
+    uiLanguage,
+    isRtl: isRTLLanguage(uiLanguage),
+    uiText: resolveGameUiText(uiLanguage),
   });
 
   if (!validateGameSession(session)) throw new Error('Invalid game session generated');
@@ -76,7 +119,7 @@ export async function prepareGameSessionJson(): Promise<string> {
   return JSON.stringify(await prepareGameSession());
 }
 
-export async function launchGameSession(): Promise<GameSessionV1> {
+export async function launchGameSession(): Promise<GameSessionV2> {
   const session = await prepareGameSession();
   const result = await openGame(JSON.stringify(session));
   if (!result.ok) throw new Error(`${result.code}: ${result.message}`);
