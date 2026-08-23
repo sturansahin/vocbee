@@ -35,6 +35,11 @@ if (!existsSync(simulatorProject)) {
 }
 
 function buildFramework(project, sdk, derivedData, architecture) {
+  // Unity's generated Xcode project copies managed metadata into the framework.
+  // Reusing DerivedData can leave that copy stale even after a fresh Unity export,
+  // so always rebuild each framework from a clean generated-products directory.
+  rmSync(derivedData, { recursive: true, force: true });
+
   const args = [
     '-project',
     project,

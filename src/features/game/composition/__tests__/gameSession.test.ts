@@ -40,7 +40,7 @@ function word(id: number, padded = false): VocabularyWord {
   const suffix = `-${id}`;
   const label = (prefix: string) =>
     padded
-      ? `${prefix}${'ı'.repeat(80 - prefix.length - suffix.length)}${suffix}`
+      ? `${prefix}${'🐝'.repeat(80 - prefix.length - suffix.length)}${suffix}`
       : `${prefix}${suffix}`;
 
   return {
@@ -76,12 +76,14 @@ it('passes the platform accessibility and theme preferences into the game sessio
     isRtl: false,
     uiText: gameRunnerTranslations.en,
   });
-  expect(session.rounds).toHaveLength(15);
+  expect(session.newWords.contentState).toBe('placeholder');
+  expect(session.review.contentState).toBe('ready');
+  expect(session.review.rounds).toHaveLength(15);
 });
 
-it('keeps the largest shuffled round prefix that fits the 64 KiB bridge limit', async () => {
+it('keeps the capped dual-mode session within the 64 KiB bridge limit', async () => {
   const vocabulary = Array.from({ length: 300 }, (_, index) => word(index + 1, true));
-  const learnedWordIds = vocabulary.map(({ id }) => id);
+  const learnedWordIds = vocabulary.slice(0, 150).map(({ id }) => id);
   mockGetStoredVocabulary.mockResolvedValueOnce(vocabulary);
   mockGetLearnedWords.mockResolvedValueOnce(learnedWordIds);
   jest.spyOn(AccessibilityInfo, 'isReduceMotionEnabled').mockResolvedValueOnce(false);
@@ -102,17 +104,15 @@ it('keeps the largest shuffled round prefix that fits the 64 KiB bridge limit', 
     random: () => 0,
   });
 
-  expect(session.rounds.length).toBeGreaterThanOrEqual(3);
-  expect(session.rounds.length).toBeLessThan(fullSession.rounds.length);
-  expect(session.rounds).toEqual(fullSession.rounds.slice(0, session.rounds.length));
+  expect(session.newWords.rounds.length).toBeGreaterThanOrEqual(3);
+  expect(session.review.rounds.length).toBeGreaterThanOrEqual(3);
+  expect(session.newWords.rounds).toHaveLength(15);
+  expect(session.review.rounds).toHaveLength(30);
+  expect(session.newWords.rounds).toEqual(
+    fullSession.newWords.rounds.slice(0, session.newWords.rounds.length),
+  );
+  expect(session.review.rounds).toEqual(
+    fullSession.review.rounds.slice(0, session.review.rounds.length),
+  );
   expect(Buffer.byteLength(sessionJson, 'utf8')).toBeLessThanOrEqual(64 * 1024);
-  expect(
-    Buffer.byteLength(
-      JSON.stringify({
-        ...session,
-        rounds: fullSession.rounds.slice(0, session.rounds.length + 1),
-      }),
-      'utf8',
-    ),
-  ).toBeGreaterThan(64 * 1024);
 });

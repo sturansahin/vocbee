@@ -4,6 +4,7 @@ export * from './feedback/EmptyState';
 export * from './feedback/ErrorState';
 export * from './feedback/LoadingState';
 export * from './feedback/OfflineState';
+export * from './feedback/SplashAnimation';
 export * from './feedback/ToastRegion';
 export * from './layout/AppHeader';
 export * from './layout/AppScrollView';

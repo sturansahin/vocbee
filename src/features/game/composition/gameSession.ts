@@ -9,7 +9,7 @@ import { openGame } from '../../../../modules/vocbee-unity';
 import {
   buildGameSession,
   validateGameSession,
-  type GameSessionV2,
+  type GameSessionV3,
   type GameUiTextV1,
 } from '../domain/gameSession';
 
@@ -37,6 +37,9 @@ function utf8ByteLength(value: string): number {
 const GAME_UI_TEXT_KEYS: readonly (keyof GameUiTextV1)[] = [
   'tapToPlay',
   'readySubtitle',
+  'learnNewWords',
+  'reviewLearnedWords',
+  'notEnoughWords',
   'wordLabel',
   'comboTemplate',
   'correctFeedback',
@@ -67,26 +70,36 @@ export function resolveGameUiText(language: string): GameUiTextV1 {
   ) as GameUiTextV1;
 }
 
-function fitSessionToBridge(session: GameSessionV2): GameSessionV2 {
+function fitSessionToBridge(session: GameSessionV3): GameSessionV3 {
   if (utf8ByteLength(JSON.stringify(session)) <= MAX_SESSION_JSON_BYTES) return session;
 
-  let low = 3;
-  let high = session.rounds.length - 1;
-  const fits = (roundCount: number) =>
-    utf8ByteLength(JSON.stringify({ ...session, rounds: session.rounds.slice(0, roundCount) })) <=
-    MAX_SESSION_JSON_BYTES;
+  const minimumNewWords = session.newWords.contentState === 'ready' ? 3 : 0;
+  const minimumReview = session.review.contentState === 'ready' ? 3 : 0;
+  let newWordCount = session.newWords.rounds.length;
+  let reviewCount = session.review.rounds.length;
+  const resize = (): GameSessionV3 => ({
+    ...session,
+    newWords: { ...session.newWords, rounds: session.newWords.rounds.slice(0, newWordCount) },
+    review: { ...session.review, rounds: session.review.rounds.slice(0, reviewCount) },
+  });
 
-  while (low < high) {
-    const middle = Math.ceil((low + high) / 2);
-    if (fits(middle)) low = middle;
-    else high = middle - 1;
+  let fitted = resize();
+  while (utf8ByteLength(JSON.stringify(fitted)) > MAX_SESSION_JSON_BYTES) {
+    const canTrimNewWords = newWordCount > minimumNewWords;
+    const canTrimReview = reviewCount > minimumReview;
+    if (!canTrimNewWords && !canTrimReview) {
+      throw new Error('Game session cannot fit the 64 KiB bridge limit');
+    }
+
+    if (canTrimReview && (!canTrimNewWords || reviewCount >= newWordCount)) reviewCount -= 1;
+    else newWordCount -= 1;
+    fitted = resize();
   }
 
-  if (!fits(low)) throw new Error('Game session cannot fit the 64 KiB bridge limit');
-  return { ...session, rounds: session.rounds.slice(0, low) };
+  return fitted;
 }
 
-export async function prepareGameSession(): Promise<GameSessionV2> {
+export async function prepareGameSession(): Promise<GameSessionV3> {
   const [level, languagePair, reducedMotion] = await Promise.all([
     getCurrentLevel(),
     getLanguagePair(),
@@ -119,7 +132,7 @@ export async function prepareGameSessionJson(): Promise<string> {
   return JSON.stringify(await prepareGameSession());
 }
 
-export async function launchGameSession(): Promise<GameSessionV2> {
+export async function launchGameSession(): Promise<GameSessionV3> {
   const session = await prepareGameSession();
   const result = await openGame(JSON.stringify(session));
   if (!result.ok) throw new Error(`${result.code}: ${result.message}`);

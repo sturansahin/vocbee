@@ -6,12 +6,17 @@ import {
   type VocabularyWord,
 } from '@features/vocabulary';
 
-export const GAME_SESSION_SCHEMA_VERSION = 2 as const;
+export const GAME_SESSION_SCHEMA_VERSION = 3 as const;
 export const GAME_BRIDGE_VERSION = 1 as const;
+export const NEW_WORD_ROUND_LIMIT = 15;
+export const REVIEW_ROUND_LIMIT = 30;
 
 export type GameUiTextV1 = {
   tapToPlay: string;
   readySubtitle: string;
+  learnNewWords: string;
+  reviewLearnedWords: string;
+  notEnoughWords: string;
   wordLabel: string;
   comboTemplate: string;
   correctFeedback: string;
@@ -50,7 +55,12 @@ export type GameRoundV1 = {
 
 export type GameTheme = 'light' | 'dark';
 
-export type GameSessionV2 = {
+export type GameModeContentV1 = {
+  contentState: 'ready' | 'placeholder';
+  rounds: GameRoundV1[];
+};
+
+export type GameSessionV3 = {
   schemaVersion: typeof GAME_SESSION_SCHEMA_VERSION;
   bridgeVersion: typeof GAME_BRIDGE_VERSION;
   vocabularySchemaVersion: typeof VOCABULARY_SCHEMA_VERSION;
@@ -63,8 +73,8 @@ export type GameSessionV2 = {
   uiLanguage: string;
   isRtl: boolean;
   uiText: GameUiTextV1;
-  contentState: 'ready' | 'placeholder';
-  rounds: GameRoundV1[];
+  newWords: GameModeContentV1;
+  review: GameModeContentV1;
 };
 
 export type BuildGameSessionInput = {
@@ -79,6 +89,8 @@ export type BuildGameSessionInput = {
   uiLanguage: string;
   isRtl: boolean;
   uiText: GameUiTextV1;
+  newWordRoundLimit?: number;
+  reviewRoundLimit?: number;
   random?: () => number;
 };
 
@@ -93,11 +105,10 @@ function normalizeLabel(value: string): string {
   return value.trim().normalize('NFKC').toLowerCase();
 }
 
-function prepareLearnedWords(
+function prepareWords(
   vocabulary: VocabularyWord[],
-  learnedWordIds: number[],
+  include: (wordId: number) => boolean,
 ): PreparedWord[] {
-  const learnedIds = new Set(learnedWordIds);
   const seenIds = new Set<number>();
   const seenLabels = new Set<string>();
   const prepared: PreparedWord[] = [];
@@ -109,7 +120,7 @@ function prepareLearnedWords(
     const normalizedTranslation = normalizeLabel(translation);
 
     if (
-      !learnedIds.has(candidate.id) ||
+      !include(candidate.id) ||
       !Number.isSafeInteger(candidate.id) ||
       candidate.id < 0 ||
       !normalizedWord ||
@@ -143,37 +154,23 @@ function distractorsFor(target: PreparedWord, words: PreparedWord[]): PreparedWo
   );
 }
 
-function placeholderSession(input: BuildGameSessionInput): GameSessionV2 {
-  return {
-    schemaVersion: GAME_SESSION_SCHEMA_VERSION,
-    bridgeVersion: GAME_BRIDGE_VERSION,
-    vocabularySchemaVersion: VOCABULARY_SCHEMA_VERSION,
-    sessionId: input.sessionId,
-    level: input.level,
-    nativeLanguage: input.nativeLanguage?.trim() ?? '',
-    targetLanguage: input.targetLanguage?.trim() ?? '',
-    reducedMotion: input.reducedMotion ?? false,
-    theme: input.theme ?? 'light',
-    uiLanguage: input.uiLanguage.trim().toLowerCase(),
-    isRtl: input.isRtl,
-    uiText: { ...input.uiText },
-    contentState: 'placeholder',
-    rounds: [],
-  };
+function placeholderMode(): GameModeContentV1 {
+  return { contentState: 'placeholder', rounds: [] };
 }
 
-export function buildGameSession(input: BuildGameSessionInput): GameSessionV2 {
-  const random = input.random ?? Math.random;
-  const nativeLanguage = input.nativeLanguage?.trim() ?? '';
-  const targetLanguage = input.targetLanguage?.trim() ?? '';
-  const words = prepareLearnedWords(input.vocabulary, input.learnedWordIds);
+function buildModeContent(
+  mode: 'new' | 'review',
+  vocabulary: VocabularyWord[],
+  include: (wordId: number) => boolean,
+  roundLimit: number,
+  sessionId: string,
+  random: () => number,
+): GameModeContentV1 {
+  const words = prepareWords(vocabulary, include);
   const viableTargets = words.filter((target) => distractorsFor(target, words).length >= 2);
+  if (viableTargets.length < 3) return placeholderMode();
 
-  if (!nativeLanguage || !targetLanguage || viableTargets.length < 3) {
-    return placeholderSession(input);
-  }
-
-  const targets = shuffleArray(viableTargets, random);
+  const targets = shuffleArray(viableTargets, random).slice(0, Math.max(3, roundLimit));
   const correctLanes = shuffleArray(
     targets.map((_, index) => index % 3),
     random,
@@ -201,7 +198,7 @@ export function buildGameSession(input: BuildGameSessionInput): GameSessionV2 {
           : [firstChoice, secondChoice, correctChoice];
 
     return {
-      roundId: `${input.sessionId}:${index}`,
+      roundId: `${sessionId}:${mode}:${index}`,
       wordId: target.id,
       prompt: target.translation,
       choices,
@@ -209,12 +206,59 @@ export function buildGameSession(input: BuildGameSessionInput): GameSessionV2 {
     };
   });
 
+  return { contentState: 'ready', rounds };
+}
+
+function placeholderSession(input: BuildGameSessionInput): GameSessionV3 {
+  return {
+    schemaVersion: GAME_SESSION_SCHEMA_VERSION,
+    bridgeVersion: GAME_BRIDGE_VERSION,
+    vocabularySchemaVersion: VOCABULARY_SCHEMA_VERSION,
+    sessionId: input.sessionId,
+    level: input.level,
+    nativeLanguage: input.nativeLanguage?.trim() ?? '',
+    targetLanguage: input.targetLanguage?.trim() ?? '',
+    reducedMotion: input.reducedMotion ?? false,
+    theme: input.theme ?? 'light',
+    uiLanguage: input.uiLanguage.trim().toLowerCase(),
+    isRtl: input.isRtl,
+    uiText: { ...input.uiText },
+    newWords: placeholderMode(),
+    review: placeholderMode(),
+  };
+}
+
+export function buildGameSession(input: BuildGameSessionInput): GameSessionV3 {
+  const random = input.random ?? Math.random;
+  const nativeLanguage = input.nativeLanguage?.trim() ?? '';
+  const targetLanguage = input.targetLanguage?.trim() ?? '';
+
+  if (!nativeLanguage || !targetLanguage) return placeholderSession(input);
+
+  const learnedIds = new Set(input.learnedWordIds);
+  const newWords = buildModeContent(
+    'new',
+    input.vocabulary,
+    (wordId) => !learnedIds.has(wordId),
+    input.newWordRoundLimit ?? NEW_WORD_ROUND_LIMIT,
+    input.sessionId,
+    random,
+  );
+  const review = buildModeContent(
+    'review',
+    input.vocabulary,
+    (wordId) => learnedIds.has(wordId),
+    input.reviewRoundLimit ?? REVIEW_ROUND_LIMIT,
+    input.sessionId,
+    random,
+  );
+
   return {
     ...placeholderSession(input),
     nativeLanguage,
     targetLanguage,
-    contentState: 'ready',
-    rounds,
+    newWords,
+    review,
   };
 }
 
@@ -230,6 +274,9 @@ function isSafeWordId(value: unknown): value is number {
 const PLAIN_UI_TEXT_FIELDS = [
   'tapToPlay',
   'readySubtitle',
+  'learnNewWords',
+  'reviewLearnedWords',
+  'notEnoughWords',
   'wordLabel',
   'correctFeedback',
   'wrongFeedback',
@@ -313,9 +360,29 @@ function isValidRound(value: unknown, roundIds: Set<string>): value is GameRound
   return choiceIds.has(round.correctWordId) && round.wordId === round.correctWordId;
 }
 
-export function validateGameSession(value: unknown): value is GameSessionV2 {
+function validateModeContent(
+  value: unknown,
+  roundIds: Set<string>,
+): value is GameModeContentV1 {
   if (!value || typeof value !== 'object') return false;
-  const session = value as Partial<GameSessionV2>;
+  const content = value as Partial<GameModeContentV1>;
+  if (
+    (content.contentState !== 'ready' && content.contentState !== 'placeholder') ||
+    !Array.isArray(content.rounds)
+  ) {
+    return false;
+  }
+
+  if (content.contentState === 'placeholder') return content.rounds.length === 0;
+  return (
+    content.rounds.length >= 3 &&
+    content.rounds.every((round) => isValidRound(round, roundIds))
+  );
+}
+
+export function validateGameSession(value: unknown): value is GameSessionV3 {
+  if (!value || typeof value !== 'object') return false;
+  const session = value as Partial<GameSessionV3>;
   if (
     session.schemaVersion !== GAME_SESSION_SCHEMA_VERSION ||
     session.bridgeVersion !== GAME_BRIDGE_VERSION ||
@@ -328,17 +395,24 @@ export function validateGameSession(value: unknown): value is GameSessionV2 {
     !/^[a-z]{2,3}$/.test(session.uiLanguage) ||
     typeof session.isRtl !== 'boolean' ||
     !validateGameUiText(session.uiText) ||
-    (session.contentState !== 'ready' && session.contentState !== 'placeholder') ||
-    !Array.isArray(session.rounds) ||
-    !isBoundedText(session.nativeLanguage, 50, session.contentState === 'placeholder') ||
-    !isBoundedText(session.targetLanguage, 50, session.contentState === 'placeholder')
+    !session.newWords ||
+    !session.review
   ) {
     return false;
   }
 
-  if (session.contentState === 'placeholder') return session.rounds.length === 0;
-  if (session.rounds.length < 3) return false;
-
   const roundIds = new Set<string>();
-  return session.rounds.every((round) => isValidRound(round, roundIds));
+  if (
+    !validateModeContent(session.newWords, roundIds) ||
+    !validateModeContent(session.review, roundIds)
+  ) {
+    return false;
+  }
+
+  const isPlaceholder =
+    session.newWords.contentState === 'placeholder' && session.review.contentState === 'placeholder';
+  return (
+    isBoundedText(session.nativeLanguage, 50, isPlaceholder) &&
+    isBoundedText(session.targetLanguage, 50, isPlaceholder)
+  );
 }

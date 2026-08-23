@@ -15,6 +15,15 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/sturansahin/vocbee.git' }
   s.static_framework = true
 
+  # Unity's Apple Silicon simulator export contains an arm64 slice only.
+  # Propagate that constraint to both the pod and its host target so Release
+  # builds do not request an unavailable x86_64 UnityFramework slice.
+  simulator_arch_settings = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'x86_64'
+  }
+  s.pod_target_xcconfig = simulator_arch_settings
+  s.user_target_xcconfig = simulator_arch_settings
+
   s.dependency 'ExpoModulesCore'
   s.source_files = 'VocbeeUnityModule.swift'
 

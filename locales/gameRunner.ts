@@ -1,6 +1,9 @@
 export type GameRunnerTranslation = {
   tapToPlay: string;
   readySubtitle: string;
+  learnNewWords: string;
+  reviewLearnedWords: string;
+  notEnoughWords: string;
   wordLabel: string;
   comboTemplate: string;
   correctFeedback: string;
@@ -54,6 +57,9 @@ export const gameRunnerTranslations: Record<GameRunnerLanguageCode, GameRunnerTr
   am: {
     tapToPlay: 'ለመጫወት ይንኩ',
     readySubtitle: 'ቃላትን ሰብስብ • ተከታታይነትህን ጠብቅ',
+    learnNewWords: 'አዲስ ቃላትን ተማር',
+    reviewLearnedWords: 'የተማርካቸውን ድገም',
+    notEnoughWords: 'ለመጫወት በቂ ቃላት የሉም',
     wordLabel: 'ቃል',
     comboTemplate: 'ተከታታይ ×{count}',
     correctFeedback: 'በጣም ጥሩ!\n+1',
@@ -79,6 +85,9 @@ export const gameRunnerTranslations: Record<GameRunnerLanguageCode, GameRunnerTr
   ar: {
     tapToPlay: 'انقر للعب',
     readySubtitle: 'اجمع الكلمات • حافظ على سلسلتك',
+    learnNewWords: 'تعلّم كلمات جديدة',
+    reviewLearnedWords: 'راجع الكلمات المتعلّمة',
+    notEnoughWords: 'لا توجد كلمات كافية للعب',
     wordLabel: 'الكلمة',
     comboTemplate: 'السلسلة ×{count}',
     correctFeedback: 'رائع!\n+1',
@@ -104,6 +113,9 @@ export const gameRunnerTranslations: Record<GameRunnerLanguageCode, GameRunnerTr
   de: {
     tapToPlay: 'ZUM SPIELEN TIPPEN',
     readySubtitle: 'WÖRTER SAMMELN • SERIE HALTEN',
+    learnNewWords: 'NEUE WÖRTER LERNEN',
+    reviewLearnedWords: 'GELERNTE WÖRTER ÜBEN',
+    notEnoughWords: 'NICHT GENUG WÖRTER ZUM SPIELEN',
     wordLabel: 'WORT',
     comboTemplate: 'SERIE ×{count}',
     correctFeedback: 'KLASSE!\n+1',
@@ -129,6 +141,9 @@ export const gameRunnerTranslations: Record<GameRunnerLanguageCode, GameRunnerTr
   en: {
     tapToPlay: 'TAP TO PLAY',
     readySubtitle: 'COLLECT WORDS • KEEP YOUR STREAK',
+    learnNewWords: 'LEARN NEW WORDS',
+    reviewLearnedWords: 'REVIEW LEARNED WORDS',
+    notEnoughWords: 'NOT ENOUGH WORDS TO PLAY',
     wordLabel: 'WORD',
     comboTemplate: 'STREAK ×{count}',
     correctFeedback: 'GREAT!\n+1',
@@ -154,6 +169,9 @@ export const gameRunnerTranslations: Record<GameRunnerLanguageCode, GameRunnerTr
   es: {
     tapToPlay: 'TOCA PARA JUGAR',
     readySubtitle: 'RECOGE PALABRAS • MANTÉN TU RACHA',
+    learnNewWords: 'APRENDER PALABRAS NUEVAS',
+    reviewLearnedWords: 'REPASAR PALABRAS APRENDIDAS',
+    notEnoughWords: 'NO HAY SUFICIENTES PALABRAS',
     wordLabel: 'PALABRA',
     comboTemplate: 'RACHA ×{count}',
     correctFeedback: '¡GENIAL!\n+1',
@@ -179,6 +197,9 @@ export const gameRunnerTranslations: Record<GameRunnerLanguageCode, GameRunnerTr
   fa: {
     tapToPlay: 'برای بازی لمس کنید',
     readySubtitle: 'کلمه‌ها را جمع کن • زنجیره‌ات را حفظ کن',
+    learnNewWords: 'یادگیری واژه‌های جدید',
+    reviewLearnedWords: 'مرور واژه‌های آموخته‌شده',
+    notEnoughWords: 'واژه کافی برای بازی وجود ندارد',
     wordLabel: 'کلمه',
     comboTemplate: 'زنجیره ×{count}',
     correctFeedback: 'عالی!\n+1',
@@ -204,6 +225,9 @@ export const gameRunnerTranslations: Record<GameRunnerLanguageCode, GameRunnerTr
   fr: {
     tapToPlay: 'TOUCHE POUR JOUER',
     readySubtitle: 'RAMASSE LES MOTS • GARDE TA SÉRIE',
+    learnNewWords: 'APPRENDRE DE NOUVEAUX MOTS',
+    reviewLearnedWords: 'RÉVISER LES MOTS APPRIS',
+    notEnoughWords: 'PAS ASSEZ DE MOTS POUR JOUER',
     wordLabel: 'MOT',
     comboTemplate: 'SÉRIE ×{count}',
     correctFeedback: 'SUPER !\n+1',
@@ -229,6 +253,9 @@ export const gameRunnerTranslations: Record<GameRunnerLanguageCode, GameRunnerTr
   hi: {
     tapToPlay: 'खेलने के लिए टैप करें',
     readySubtitle: 'शब्द जमा करें • अपनी लय बनाए रखें',
+    learnNewWords: 'नए शब्द सीखें',
+    reviewLearnedWords: 'सीखे हुए शब्द दोहराएँ',
+    notEnoughWords: 'खेलने के लिए पर्याप्त शब्द नहीं हैं',
     wordLabel: 'शब्द',
     comboTemplate: 'लय ×{count}',
     correctFeedback: 'बहुत बढ़िया!\n+1',
@@ -254,6 +281,9 @@ export const gameRunnerTranslations: Record<GameRunnerLanguageCode, GameRunnerTr
   id: {
     tapToPlay: 'KETUK UNTUK BERMAIN',
     readySubtitle: 'KUMPULKAN KATA • JAGA RENTETANMU',
+    learnNewWords: 'PELAJARI KATA BARU',
+    reviewLearnedWords: 'ULANGI KATA YANG DIPELAJARI',
+    notEnoughWords: 'KATA BELUM CUKUP UNTUK BERMAIN',
     wordLabel: 'KATA',
     comboTemplate: 'RENTETAN ×{count}',
     correctFeedback: 'HEBAT!\n+1',
@@ -279,6 +309,9 @@ export const gameRunnerTranslations: Record<GameRunnerLanguageCode, GameRunnerTr
   it: {
     tapToPlay: 'TOCCA PER GIOCARE',
     readySubtitle: 'RACCOGLI LE PAROLE • MANTIENI LA SERIE',
+    learnNewWords: 'IMPARA PAROLE NUOVE',
+    reviewLearnedWords: 'RIPASSA LE PAROLE IMPARATE',
+    notEnoughWords: 'NON CI SONO ABBASTANZA PAROLE',
     wordLabel: 'PAROLA',
     comboTemplate: 'SERIE ×{count}',
     correctFeedback: 'GRANDE!\n+1',
@@ -304,6 +337,9 @@ export const gameRunnerTranslations: Record<GameRunnerLanguageCode, GameRunnerTr
   ja: {
     tapToPlay: 'タップしてプレイ',
     readySubtitle: '単語を集めよう • 連続記録を守ろう',
+    learnNewWords: '新しい単語を学ぶ',
+    reviewLearnedWords: '学習済みの単語を復習',
+    notEnoughWords: 'プレイする単語が足りません',
     wordLabel: '単語',
     comboTemplate: '連続 ×{count}',
     correctFeedback: 'すごい！\n+1',
@@ -329,6 +365,9 @@ export const gameRunnerTranslations: Record<GameRunnerLanguageCode, GameRunnerTr
   ko: {
     tapToPlay: '탭하여 플레이',
     readySubtitle: '단어를 모으세요 • 연속 기록을 지키세요',
+    learnNewWords: '새 단어 배우기',
+    reviewLearnedWords: '배운 단어 복습하기',
+    notEnoughWords: '플레이할 단어가 부족해요',
     wordLabel: '단어',
     comboTemplate: '연속 ×{count}',
     correctFeedback: '훌륭해요!\n+1',
@@ -354,6 +393,9 @@ export const gameRunnerTranslations: Record<GameRunnerLanguageCode, GameRunnerTr
   pt: {
     tapToPlay: 'TOQUE PARA JOGAR',
     readySubtitle: 'COLETE PALAVRAS • MANTENHA SUA SEQUÊNCIA',
+    learnNewWords: 'APRENDER PALAVRAS NOVAS',
+    reviewLearnedWords: 'REVISAR PALAVRAS APRENDIDAS',
+    notEnoughWords: 'NÃO HÁ PALAVRAS SUFICIENTES',
     wordLabel: 'PALAVRA',
     comboTemplate: 'SEQUÊNCIA ×{count}',
     correctFeedback: 'ÓTIMO!\n+1',
@@ -379,6 +421,9 @@ export const gameRunnerTranslations: Record<GameRunnerLanguageCode, GameRunnerTr
   ru: {
     tapToPlay: 'НАЖМИТЕ, ЧТОБЫ ИГРАТЬ',
     readySubtitle: 'СОБИРАЙТЕ СЛОВА • ДЕРЖИТЕ СЕРИЮ',
+    learnNewWords: 'УЧИТЬ НОВЫЕ СЛОВА',
+    reviewLearnedWords: 'ПОВТОРИТЬ ИЗУЧЕННЫЕ СЛОВА',
+    notEnoughWords: 'НЕДОСТАТОЧНО СЛОВ ДЛЯ ИГРЫ',
     wordLabel: 'СЛОВО',
     comboTemplate: 'СЕРИЯ ×{count}',
     correctFeedback: 'ОТЛИЧНО!\n+1',
@@ -404,6 +449,9 @@ export const gameRunnerTranslations: Record<GameRunnerLanguageCode, GameRunnerTr
   sr: {
     tapToPlay: 'ДОДИРНИ ЗА ИГРУ',
     readySubtitle: 'СКУПЉАЈ РЕЧИ • ЧУВАЈ НИЗ',
+    learnNewWords: 'УЧИ НОВЕ РЕЧИ',
+    reviewLearnedWords: 'ПОНОВИ НАУЧЕНЕ РЕЧИ',
+    notEnoughWords: 'НЕМА ДОВОЉНО РЕЧИ ЗА ИГРУ',
     wordLabel: 'РЕЧ',
     comboTemplate: 'НИЗ ×{count}',
     correctFeedback: 'ОДЛИЧНО!\n+1',
@@ -429,6 +477,9 @@ export const gameRunnerTranslations: Record<GameRunnerLanguageCode, GameRunnerTr
   sw: {
     tapToPlay: 'GUSA ILI UCHEZE',
     readySubtitle: 'KUSANYA MANENO • LINDA MFULULIZO WAKO',
+    learnNewWords: 'JIFUNZE MANENO MAPYA',
+    reviewLearnedWords: 'RUDIA MANENO ULIYOJIFUNZA',
+    notEnoughWords: 'HAKUNA MANENO YA KUTOSHA KUCHEZA',
     wordLabel: 'NENO',
     comboTemplate: 'MFULULIZO ×{count}',
     correctFeedback: 'VIZURI SANA!\n+1',
@@ -454,6 +505,9 @@ export const gameRunnerTranslations: Record<GameRunnerLanguageCode, GameRunnerTr
   th: {
     tapToPlay: 'แตะเพื่อเล่น',
     readySubtitle: 'เก็บคำศัพท์ • รักษาสถิติต่อเนื่อง',
+    learnNewWords: 'เรียนรู้คำศัพท์ใหม่',
+    reviewLearnedWords: 'ทบทวนคำศัพท์ที่เรียนแล้ว',
+    notEnoughWords: 'มีคำศัพท์ไม่เพียงพอสำหรับเล่น',
     wordLabel: 'คำศัพท์',
     comboTemplate: 'ต่อเนื่อง ×{count}',
     correctFeedback: 'เยี่ยมมาก!\n+1',
@@ -479,6 +533,9 @@ export const gameRunnerTranslations: Record<GameRunnerLanguageCode, GameRunnerTr
   tr: {
     tapToPlay: 'OYNAMAK İÇİN DOKUN',
     readySubtitle: 'KELİMELERİ TOPLA • SERİNİ KORU',
+    learnNewWords: 'YENİ KELİMELER ÖĞREN',
+    reviewLearnedWords: 'ÖĞRENDİKLERİNİ TEKRARLA',
+    notEnoughWords: 'OYUN İÇİN YETERLİ KELİME YOK',
     wordLabel: 'KELİME',
     comboTemplate: 'SERİ ×{count}',
     correctFeedback: 'HARİKA!\n+1',
@@ -504,6 +561,9 @@ export const gameRunnerTranslations: Record<GameRunnerLanguageCode, GameRunnerTr
   ur: {
     tapToPlay: 'کھیلنے کے لیے ٹیپ کریں',
     readySubtitle: 'الفاظ جمع کریں • اپنا سلسلہ قائم رکھیں',
+    learnNewWords: 'نئے الفاظ سیکھیں',
+    reviewLearnedWords: 'سیکھے ہوئے الفاظ دہرائیں',
+    notEnoughWords: 'کھیلنے کے لیے کافی الفاظ نہیں ہیں',
     wordLabel: 'لفظ',
     comboTemplate: 'سلسلہ ×{count}',
     correctFeedback: 'بہت خوب!\n+1',
@@ -529,6 +589,9 @@ export const gameRunnerTranslations: Record<GameRunnerLanguageCode, GameRunnerTr
   vi: {
     tapToPlay: 'CHẠM ĐỂ CHƠI',
     readySubtitle: 'THU THẬP TỪ • GIỮ CHUỖI CỦA BẠN',
+    learnNewWords: 'HỌC TỪ MỚI',
+    reviewLearnedWords: 'ÔN LẠI TỪ ĐÃ HỌC',
+    notEnoughWords: 'KHÔNG ĐỦ TỪ ĐỂ CHƠI',
     wordLabel: 'TỪ',
     comboTemplate: 'CHUỖI ×{count}',
     correctFeedback: 'TUYỆT VỜI!\n+1',
@@ -554,6 +617,9 @@ export const gameRunnerTranslations: Record<GameRunnerLanguageCode, GameRunnerTr
   zh: {
     tapToPlay: '点击开始',
     readySubtitle: '收集单词 • 保持连胜',
+    learnNewWords: '学习新单词',
+    reviewLearnedWords: '复习已学单词',
+    notEnoughWords: '没有足够的单词可供游戏',
     wordLabel: '单词',
     comboTemplate: '连胜 ×{count}',
     correctFeedback: '太棒了！\n+1',

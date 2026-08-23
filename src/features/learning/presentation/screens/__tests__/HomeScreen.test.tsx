@@ -1,5 +1,5 @@
 import React, { type ReactNode } from 'react';
-import { fireEvent, render, waitFor, type RenderOptions } from '@testing-library/react-native';
+import { act, fireEvent, render, waitFor, type RenderOptions } from '@testing-library/react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import type { HomeFacade, HomeSessionSnapshot } from '@features/learning';
 import { DEFAULT_STREAK_SUMMARY } from '@features/streak';
@@ -30,6 +30,12 @@ jest.mock('@shared/ui', () => {
     );
   const AppModal = ({ visible, children, actions }: any) =>
     visible ? ReactModule.createElement(View, null, children, actions) : null;
+  const SplashAnimation = ({ onRevealComplete, ...props }: any) => {
+    ReactModule.useEffect(() => {
+      onRevealComplete?.();
+    }, [onRevealComplete]);
+    return ReactModule.createElement(View, props);
+  };
   const State = ({ title, message, actionLabel, retryLabel, onAction, onRetry }: any) =>
     ReactModule.createElement(
       View,
@@ -51,6 +57,7 @@ jest.mock('@shared/ui', () => {
     ErrorState: State,
     IconButton,
     Screen,
+    SplashAnimation,
     useAlert: () => ({ showAlert: mockShowAlert }),
   };
 });
@@ -236,6 +243,30 @@ describe('HomeScreen', () => {
     fireEvent.press(screen.getByLabelText('game.open'));
 
     await waitFor(() => expect(mockLaunchGameSession).toHaveBeenCalledTimes(1));
+  });
+
+  it('uses the shared splash transition without the old runner title', async () => {
+    let finishLaunch: (() => void) | undefined;
+    mockLaunchGameSession.mockReturnValueOnce(
+      new Promise<void>((resolve) => {
+        finishLaunch = resolve;
+      }),
+    );
+    const screen = renderHome(createFacade());
+    await waitFor(() => expect(screen.getByTestId('home-ready')).toBeTruthy());
+
+    fireEvent.press(screen.getByLabelText('game.open'));
+
+    await waitFor(() =>
+      expect(
+        screen.getByTestId('game-launch-transition', { includeHiddenElements: true }),
+      ).toBeTruthy(),
+    );
+    expect(screen.queryByText('VOCBEE RUNNER', { includeHiddenElements: true })).toBeNull();
+
+    await act(async () => {
+      finishLaunch?.();
+    });
   });
 
   it('shows an alert when Unity cannot open', async () => {
