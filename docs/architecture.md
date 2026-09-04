@@ -1,7 +1,7 @@
 # VocBee Production Architecture
 
 Durum: Aktif  
-Son güncelleme: 2026-07-20
+Son güncelleme: 2026-09-04
 
 Bu belge production kaynak kodu için güncel mimari sözleşmedir. Tamamlanmış refactor fazlarına ait
 plan, prompt, audit ve taşıma tarifleri kaynak gerçekliği değildir; gerektiğinde Git geçmişinden
@@ -78,6 +78,8 @@ Navigation route contract'ı `src/app/navigation/types.ts`, route wiring'i
   `docs/progress-v2-rollout.md`.
 - Legacy progress cleanup varsayılan olarak yasaktır:
   `docs/firestore-legacy-cleanup-runbook.md`.
+- Unity game catalog, review campaign, native bridge ve release değişiklikleri ayrı production
+  kapılarına uyar: `docs/game-all-words-review-victory-production-plan.md`.
 
 ## 5. UI/UX mimari yönü
 
