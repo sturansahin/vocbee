@@ -61,6 +61,8 @@ jobs:
         run: npm run test:ui
       - name: Firestore cleanup CLI safety tests
         run: npm run firestore:cleanup:check && npm run test:firestore-cleanup
+      - name: Game vocabulary catalogs
+        run: npm run game:vocabulary:check && npm run test:game-vocabulary
       - run: npm run test:ci
       - run: npm run coverage:check
       - name: Install Cloud Functions deps

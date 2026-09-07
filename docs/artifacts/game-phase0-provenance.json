@@ -77,7 +77,7 @@
   },
   "contract": {
     "fixture": "docs/artifacts/game-session-v4.fixture.json",
-    "sha256": "49dfaa0f91579c03fc737fc5e35ce62f45bfc6f1a7afbb6ab29ae9ac39a4577e",
+    "sha256": "3d6eaf1f0b1d1c7f5640ce24aeef26fce1c6f1bd68aae08c4d16ad4a995be013",
     "hostRuntimeAccepted": false,
     "unityRuntimeAccepted": false,
     "evidence": "The fixture is locked and structurally validated; both authoritative runtimes still require schemaVersion 3."

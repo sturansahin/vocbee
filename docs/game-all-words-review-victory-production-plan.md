@@ -1,8 +1,8 @@
 # VocBee Game — Gömülü Kelime Kataloğu Production Planı
 
-Durum: **Phase 0 production gate aktif ve BLOCKED; gate geçmeden Phase 1 başlamaz**
+Durum: **Phase 1 uygulandı ve kendi gate'i geçti; Phase 0 release blockerları hâlâ açık**
 
-Son güncelleme: 2026-09-04
+Son güncelleme: 2026-09-07
 
 Kapsam: React Native/Expo host, Android/iOS Unity bridge ve Unity oyun runtime'ı
 
@@ -524,6 +524,18 @@ hashlerini doğrular; aşağıdaki çıkış şartlarından biri eksikse non-zer
 - `generateGameVocabulary.cjs` ve manifest üretimini ekle.
 - `--check` ve kontrollü `--sync-unity <project-root>` uygula.
 - Package/CI scriptlerini ekle.
+
+Uygulanan production sözleşmesi:
+
+- Tek kaynak `assets/vocabulary/*.txt`; çıktı yalnız sıralı `id + word` alanlarını içerir.
+- `scripts/gameVocabularyLock.json`, bütün `21 × 5 × id × normalize(word)` kimliklerini ve
+  `catalogVersion + catalogHash` çiftini kilitler. Aynı version altında içerik değişikliği veya
+  herhangi bir dilde ID anlamı kayması fail-closed durur.
+- Host manifesti `src/features/game/generated/catalog-manifest.json`, Unity çıktısı
+  `Assets/VocBee/Resources/Vocabulary` altındadır. Unity `.meta` GUID'leri de deterministiktir.
+- `catalogVersion=1`, `catalogHash=6d0cff7d0b611c0ebf96e6f0534fa73b2443875e1e4681ac29b3817ba0de3985`.
+- 105 compact katalog toplamı `3.637.397` byte'tır.
+- CI `game:vocabulary:check` ve `test:game-vocabulary` komutlarını blocking çalıştırır.
 
 Çıkış kapısı:
 

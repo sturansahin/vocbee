@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "catalogVersion": 1,
+  "catalogHash": "6d0cff7d0b611c0ebf96e6f0534fa73b2443875e1e4681ac29b3817ba0de3985",
+  "identity": {
+    "normalization": "NFKC+uppercase",
+    "entryCount": 111132,
+    "sha256": "475d68656cc3827b319ca562d0c0559ee720b8c80e78081b558fc4b5a27f49aa"
+  }
+}

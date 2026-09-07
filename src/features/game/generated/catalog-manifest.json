@@ -1,0 +1,562 @@
+{
+  "manifestSchemaVersion": 1,
+  "catalogVersion": 1,
+  "catalogHash": "6d0cff7d0b611c0ebf96e6f0534fa73b2443875e1e4681ac29b3817ba0de3985",
+  "languages": [
+    "amharic",
+    "arabic",
+    "chinese",
+    "english",
+    "french",
+    "german",
+    "hindi",
+    "indonesian",
+    "italian",
+    "japanese",
+    "korean",
+    "persian",
+    "portuguese",
+    "russian",
+    "serbian",
+    "spanish",
+    "swahili",
+    "thai",
+    "turkish",
+    "urdu",
+    "vietnamese"
+  ],
+  "levels": [
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "C1"
+  ],
+  "files": {
+    "amharic_A1.bytes": {
+      "sha256": "fa6825e9ce1d0994d0b357a372a7e814501277716584b28a93fba91fb6a88af5",
+      "wordCount": 898,
+      "byteLength": 28363
+    },
+    "amharic_A2.bytes": {
+      "sha256": "42bfd78960baefd8ddbb5b59c1c6c013c42c56da7d622c1214bea413c1c6fbd8",
+      "wordCount": 867,
+      "byteLength": 28252
+    },
+    "amharic_B1.bytes": {
+      "sha256": "fcd7f549daaa1bdfe40cefbf5d32e327a45a50ee12253434088b3eebfd01f147",
+      "wordCount": 805,
+      "byteLength": 26834
+    },
+    "amharic_B2.bytes": {
+      "sha256": "4bf4031b64cf9b6ff53d887518301c00ff97c8a46ca91404774477da428f16eb",
+      "wordCount": 1424,
+      "byteLength": 48515
+    },
+    "amharic_C1.bytes": {
+      "sha256": "370ca4d7fc9c7e0f625377aec3e7406f6e4116986a5f39832f7c26fec280d0d7",
+      "wordCount": 1298,
+      "byteLength": 44827
+    },
+    "arabic_A1.bytes": {
+      "sha256": "8d0088791ad93266703281fa5fca4e7ff9b07efb1d4c1dee704418c4d0ffbc69",
+      "wordCount": 898,
+      "byteLength": 26750
+    },
+    "arabic_A2.bytes": {
+      "sha256": "e43fbf7ccf1b7ec99d16395c5d1a3fbf1af74d6c83699d2d65801e55bb057472",
+      "wordCount": 867,
+      "byteLength": 26405
+    },
+    "arabic_B1.bytes": {
+      "sha256": "49e81a99edc19dbc03cdce7716ed15ea116c79ed41c5f73be8b903150f8ce6e7",
+      "wordCount": 805,
+      "byteLength": 24948
+    },
+    "arabic_B2.bytes": {
+      "sha256": "d4fd1adf370433579cd8ed5f6868629ca0c0f3acd0f2e7907455b6d30ab842bd",
+      "wordCount": 1424,
+      "byteLength": 44990
+    },
+    "arabic_C1.bytes": {
+      "sha256": "fa3f2d3ca51297bc98df18a183e95846372357ba253a2a381197ba707ec30a46",
+      "wordCount": 1298,
+      "byteLength": 41644
+    },
+    "chinese_A1.bytes": {
+      "sha256": "467cc8c97f3172d0f5f6ac08b4319082d2b389add571ddf1ff233886de7377cd",
+      "wordCount": 898,
+      "byteLength": 24483
+    },
+    "chinese_A2.bytes": {
+      "sha256": "b95a678c140f347735e84066ae21c6d3aef70e39a6e765eacdc980855aa3c8cb",
+      "wordCount": 867,
+      "byteLength": 24792
+    },
+    "chinese_B1.bytes": {
+      "sha256": "d9c206eaa44c40b7c3c3a2b5e180eb3b58f291946a7fc751e4da25a2dd3329f0",
+      "wordCount": 805,
+      "byteLength": 30795
+    },
+    "chinese_B2.bytes": {
+      "sha256": "4a2d7c34c4325648c5a05fbca43012b0fa7d235076436e22183c72c87984b4ef",
+      "wordCount": 1424,
+      "byteLength": 64339
+    },
+    "chinese_C1.bytes": {
+      "sha256": "fadc9c424d029b7acac8c168523e7afb120642474559954eae594cc8db44cf0e",
+      "wordCount": 1298,
+      "byteLength": 59250
+    },
+    "english_A1.bytes": {
+      "sha256": "321abafaf4453d96922541bd36439891fa70b93d347621a2dd80818e037e5c98",
+      "wordCount": 898,
+      "byteLength": 23627
+    },
+    "english_A2.bytes": {
+      "sha256": "ff0608a336e51c5cf27a22f7776828c79b1936437a9633a4213aec03d219a9de",
+      "wordCount": 867,
+      "byteLength": 23515
+    },
+    "english_B1.bytes": {
+      "sha256": "cc702fc787628ef6a8ee5950f8793e64f5b3b03ce594c62e07d7bd00192ab614",
+      "wordCount": 805,
+      "byteLength": 22276
+    },
+    "english_B2.bytes": {
+      "sha256": "1edbbaf06adc26fd0532c5fe6e684a4ae83485b8c2afc15b39d4c6b06984fa76",
+      "wordCount": 1424,
+      "byteLength": 40511
+    },
+    "english_C1.bytes": {
+      "sha256": "5f079d0eeb544381e76e5ab22248e2fdf3a202d0c47681d35cf7d4f7a9fc6777",
+      "wordCount": 1298,
+      "byteLength": 37540
+    },
+    "french_A1.bytes": {
+      "sha256": "cf88829903c11caa9ff07da829e371da71c73072225d1c622c76426ef4e1835d",
+      "wordCount": 898,
+      "byteLength": 29504
+    },
+    "french_A2.bytes": {
+      "sha256": "4526a6aeebd1530c06d2be060b03c768d9f6e5a439ef38720008607fbc23c3bc",
+      "wordCount": 867,
+      "byteLength": 31838
+    },
+    "french_B1.bytes": {
+      "sha256": "f31d603dcdcdc2bb13d2b3b2edf1c33a6cc466c102279b19802df9d6012495ca",
+      "wordCount": 805,
+      "byteLength": 31036
+    },
+    "french_B2.bytes": {
+      "sha256": "50ffa2d3d32978fc73d512d683e3c418ab9f6d51445d49e91cfc02896ffc0980",
+      "wordCount": 1424,
+      "byteLength": 48419
+    },
+    "french_C1.bytes": {
+      "sha256": "2ba35229383d08eeb13ad8864c3439350d10d85d44971d93af151aa5c5975217",
+      "wordCount": 1298,
+      "byteLength": 39062
+    },
+    "german_A1.bytes": {
+      "sha256": "9c7c9023798dccbb965be741d63943ccdab217e242a3261546e9d42086d7e801",
+      "wordCount": 898,
+      "byteLength": 25298
+    },
+    "german_A2.bytes": {
+      "sha256": "44162dd137724f04e9befd02e33cc5f9fd791d2242188e8fd44a6299edad2bcf",
+      "wordCount": 867,
+      "byteLength": 24824
+    },
+    "german_B1.bytes": {
+      "sha256": "376311b34218222379b55d2d3b9701e34f8ea65b6939c0c7ccfbc6c1fc89fead",
+      "wordCount": 805,
+      "byteLength": 23166
+    },
+    "german_B2.bytes": {
+      "sha256": "77bc47667254241a75336ea8a1556d6248b9213f6043c1d523f9e5d0c5a2dbeb",
+      "wordCount": 1424,
+      "byteLength": 42196
+    },
+    "german_C1.bytes": {
+      "sha256": "ca6ef8041abd6a847a8103d09d987d3231e782726a5c3deff88bb4fc41250976",
+      "wordCount": 1298,
+      "byteLength": 39223
+    },
+    "hindi_A1.bytes": {
+      "sha256": "05a6ca48beff245a560ac7f1c7058f24cb5f67321c6fe7947408883c0e5fffdc",
+      "wordCount": 898,
+      "byteLength": 32517
+    },
+    "hindi_A2.bytes": {
+      "sha256": "c69f44a7099b06b51c16f707765cdb62d15a02a32c2edf83b9e8a7eac0e25fcc",
+      "wordCount": 867,
+      "byteLength": 33842
+    },
+    "hindi_B1.bytes": {
+      "sha256": "b70376a8e2dca53fad80b96db7208f742079f251229cd55b6b06ee33ac31bc04",
+      "wordCount": 805,
+      "byteLength": 32336
+    },
+    "hindi_B2.bytes": {
+      "sha256": "9d44456763e557e1b6f509486960f4d9edb0e9c9b35c798debd452fd1b451cdb",
+      "wordCount": 1424,
+      "byteLength": 58917
+    },
+    "hindi_C1.bytes": {
+      "sha256": "4b4d33fb619563dc09aebe7813f44833f5e5b0f9268430cb58a52628268d8680",
+      "wordCount": 1298,
+      "byteLength": 54906
+    },
+    "indonesian_A1.bytes": {
+      "sha256": "78ef80a3bd450ad17663a9a714a8f61ddea815b6d16074693980e0914e72c269",
+      "wordCount": 898,
+      "byteLength": 24695
+    },
+    "indonesian_A2.bytes": {
+      "sha256": "63ff0162ac5a782d05dcf872aac9ca60d79f752b4520fdf3bc615594545fe7a4",
+      "wordCount": 867,
+      "byteLength": 24581
+    },
+    "indonesian_B1.bytes": {
+      "sha256": "f92afc4fd4a449bac22d559d68c0008f90fc56b67398a52b572e9fc23571f41a",
+      "wordCount": 805,
+      "byteLength": 23073
+    },
+    "indonesian_B2.bytes": {
+      "sha256": "cb3705396e3feac402033f180cf1e3e8d57772b33ec8a79dd58a7824bb3fffa7",
+      "wordCount": 1424,
+      "byteLength": 41962
+    },
+    "indonesian_C1.bytes": {
+      "sha256": "ffc556e6de35bd5ffeba738bd0371e0f46d68dfbd81cd78954513c7023eb652f",
+      "wordCount": 1298,
+      "byteLength": 38913
+    },
+    "italian_A1.bytes": {
+      "sha256": "151d89fddb1a18706275bd78099549f530d2b71d250ba823aacb1e2e4f21ad38",
+      "wordCount": 898,
+      "byteLength": 24633
+    },
+    "italian_A2.bytes": {
+      "sha256": "f8fc1e5ed5455748f7f55f7ba747c72af5248e6b5b3ba7c021c191ffe7a37d74",
+      "wordCount": 867,
+      "byteLength": 24853
+    },
+    "italian_B1.bytes": {
+      "sha256": "de08d22f2ce14b07ffd681574b9d3e5a6403b6c62ef7ce7f1a7e2579f00d35bd",
+      "wordCount": 805,
+      "byteLength": 23418
+    },
+    "italian_B2.bytes": {
+      "sha256": "b302633bbedf4827fe4ab817d7a170cbf1842c30fd5f605684d888ded4ec8cfe",
+      "wordCount": 1424,
+      "byteLength": 42435
+    },
+    "italian_C1.bytes": {
+      "sha256": "fbef82b7f299100e9ba082138ca38f79a7650e84ec74b063f00910eda5731618",
+      "wordCount": 1298,
+      "byteLength": 39156
+    },
+    "japanese_A1.bytes": {
+      "sha256": "1ebc800aa5e9d8ed8f8d5da8b0272e31096084598b4d659823f110edf515c076",
+      "wordCount": 898,
+      "byteLength": 25672
+    },
+    "japanese_A2.bytes": {
+      "sha256": "279423c04f238d90266ab4b8024619d05dc773c3af3391f5c4b80efb0066686a",
+      "wordCount": 867,
+      "byteLength": 29015
+    },
+    "japanese_B1.bytes": {
+      "sha256": "98e25c5fab96f94785ba59395b7edac5fb77969a14a9114bdbb3cc665b8d8a5c",
+      "wordCount": 805,
+      "byteLength": 25174
+    },
+    "japanese_B2.bytes": {
+      "sha256": "c78655dc3b738b79321ead3c5720ab145331daf49d47106d3d0e8b46cb9f9d7d",
+      "wordCount": 1424,
+      "byteLength": 44130
+    },
+    "japanese_C1.bytes": {
+      "sha256": "0f2f259d54ea591fe19012d2accf6377764bcd86b5925f369eaade6ef0c01e5f",
+      "wordCount": 1298,
+      "byteLength": 39780
+    },
+    "korean_A1.bytes": {
+      "sha256": "dbb110ded92c096fe85e9f0427c37ff8fa02de7915b074735e1312f01e7562e5",
+      "wordCount": 898,
+      "byteLength": 25293
+    },
+    "korean_A2.bytes": {
+      "sha256": "fa407532ad1b78e50c83e2d535a9fcfe39616a49538d047e568b480f01e38afe",
+      "wordCount": 867,
+      "byteLength": 25119
+    },
+    "korean_B1.bytes": {
+      "sha256": "36558e5686ae394a4bcc4f4a60977982989fcfa8026ce64a6d8adff15cb7148e",
+      "wordCount": 805,
+      "byteLength": 23806
+    },
+    "korean_B2.bytes": {
+      "sha256": "d0526d414b528e026107ba65108bb222d4b9ea4644c156955a0e573d3d4e4b8c",
+      "wordCount": 1424,
+      "byteLength": 42882
+    },
+    "korean_C1.bytes": {
+      "sha256": "8ce2d8ffc92e2d236916c3d7acec8953b285d27fd32af383243fb9b0e933fc56",
+      "wordCount": 1298,
+      "byteLength": 39146
+    },
+    "persian_A1.bytes": {
+      "sha256": "546e6d0d8a4f457087c1a3a8275e48010609ac6e0c675d87c458a47a7cbc2adb",
+      "wordCount": 898,
+      "byteLength": 27952
+    },
+    "persian_A2.bytes": {
+      "sha256": "8962dbb1827d2b64993f4b6f459fbc86877c60fdc2907fb8095abec10e4dc5bb",
+      "wordCount": 867,
+      "byteLength": 27939
+    },
+    "persian_B1.bytes": {
+      "sha256": "87121d259c5089d763bfcdabaaf283b422532acc1391228e45d3bb78dd74b1da",
+      "wordCount": 805,
+      "byteLength": 26487
+    },
+    "persian_B2.bytes": {
+      "sha256": "a22058487624d44ad406e5ab5acf85506b72ae9d80720eb9f2ec7cedf49bb214",
+      "wordCount": 1424,
+      "byteLength": 48341
+    },
+    "persian_C1.bytes": {
+      "sha256": "bd9140517b7e85b60775489816d3685f1554587f79bc62b0a365da2dbe526c74",
+      "wordCount": 1298,
+      "byteLength": 44937
+    },
+    "portuguese_A1.bytes": {
+      "sha256": "0c9ff05236a5e95f476292ee41aac355d0610512f8d49baa2e5a1ecd8c97a94a",
+      "wordCount": 898,
+      "byteLength": 25094
+    },
+    "portuguese_A2.bytes": {
+      "sha256": "ad8d6c694edcf89c36758ceb8a25dbc15632d2f189ce512c193030abc2632288",
+      "wordCount": 867,
+      "byteLength": 25295
+    },
+    "portuguese_B1.bytes": {
+      "sha256": "1b183e83c980ad1d2c8bd6f0dd4661651c6bcfa3d0bb82b687bc1f65e30b8ea3",
+      "wordCount": 805,
+      "byteLength": 23459
+    },
+    "portuguese_B2.bytes": {
+      "sha256": "48de9fd1951dcb0af917ac8961b2e24084b597995d9cc3168694a8e941916779",
+      "wordCount": 1424,
+      "byteLength": 42266
+    },
+    "portuguese_C1.bytes": {
+      "sha256": "7782f0a0f12edd129afc31c32d05af0cff0e40dea21af05edec48b787fc0116e",
+      "wordCount": 1298,
+      "byteLength": 38842
+    },
+    "russian_A1.bytes": {
+      "sha256": "64656ed4eec3408b469d7ebeb8b9464a3b5321169c330b7d0553e1346aab84b5",
+      "wordCount": 898,
+      "byteLength": 30329
+    },
+    "russian_A2.bytes": {
+      "sha256": "6ee6544e7c94410821f5849faf8ac3941d8d7c2c4ad5c4d2716f0ae4b1ceacb1",
+      "wordCount": 867,
+      "byteLength": 31023
+    },
+    "russian_B1.bytes": {
+      "sha256": "168963c8cc34a65c95b0a67923881f7d1c09a311c835a330d045b3980d03e8d6",
+      "wordCount": 805,
+      "byteLength": 29902
+    },
+    "russian_B2.bytes": {
+      "sha256": "7bf0cd1876a335a14e488e1485195c3bcbc98a885b5e459c0fba1bf3f929210a",
+      "wordCount": 1424,
+      "byteLength": 54872
+    },
+    "russian_C1.bytes": {
+      "sha256": "fafdefcece446f09ea507ad1842d98c81936da48d141dbbe6841ead044960e71",
+      "wordCount": 1298,
+      "byteLength": 51747
+    },
+    "serbian_A1.bytes": {
+      "sha256": "d0d705aa83500ed7174d3512db6d7d5ece39d856e3e2e98d51278d7634be0278",
+      "wordCount": 898,
+      "byteLength": 29484
+    },
+    "serbian_A2.bytes": {
+      "sha256": "5cd747b5f4ecda6ce8c7e7b1d10b1a162f2ee97953cd0f629f80eb7f238a360e",
+      "wordCount": 867,
+      "byteLength": 29730
+    },
+    "serbian_B1.bytes": {
+      "sha256": "8ce3679398df33607f89bc4a0982d33f830c6e158914c1eb336b403084ee4787",
+      "wordCount": 805,
+      "byteLength": 28429
+    },
+    "serbian_B2.bytes": {
+      "sha256": "f92c7757d1607be8d69510dfa9444ac7bf00fb000a9655b4f794cde891509123",
+      "wordCount": 1424,
+      "byteLength": 51856
+    },
+    "serbian_C1.bytes": {
+      "sha256": "0ebd84229a79905f15311798a0e728c1dec472049d53b15132a1e18524c40e21",
+      "wordCount": 1298,
+      "byteLength": 48871
+    },
+    "spanish_A1.bytes": {
+      "sha256": "8beec06449ca1da4f89a308c26ed2b663c5d1f7be67a9aafc0d6c551376c434e",
+      "wordCount": 898,
+      "byteLength": 24470
+    },
+    "spanish_A2.bytes": {
+      "sha256": "0217c3e95f48266cb69cd97e7cb5e35c2d1c888cc25b66d025ab27c0ba2c3621",
+      "wordCount": 867,
+      "byteLength": 24886
+    },
+    "spanish_B1.bytes": {
+      "sha256": "336c5d7a80d75149a47dd563e03a3c592f2907f4326460917a7a43e0f8ec2540",
+      "wordCount": 805,
+      "byteLength": 24088
+    },
+    "spanish_B2.bytes": {
+      "sha256": "b01df24834a050f249523dea9a3c94a003625a2b938b6481d23cbe33e12bda51",
+      "wordCount": 1424,
+      "byteLength": 42613
+    },
+    "spanish_C1.bytes": {
+      "sha256": "e9201e9f8663447bad1faec9036f2f69fb5b2fa6c1fdafa03f5f0a23aff95f61",
+      "wordCount": 1298,
+      "byteLength": 39495
+    },
+    "swahili_A1.bytes": {
+      "sha256": "3f17d634e7919fe0582fa6eb1ec58ff00a835ad7b4d2e61037bc6365a43d638d",
+      "wordCount": 898,
+      "byteLength": 24554
+    },
+    "swahili_A2.bytes": {
+      "sha256": "adec04f8de8b84e9bce36629c83aa2645834a10fc590228fb580608c8d666c9d",
+      "wordCount": 867,
+      "byteLength": 24370
+    },
+    "swahili_B1.bytes": {
+      "sha256": "e554b104fb16c64f52652a50cdadfef826b4a52b48289a85aae4cd30f5ca041e",
+      "wordCount": 805,
+      "byteLength": 23060
+    },
+    "swahili_B2.bytes": {
+      "sha256": "fffafa45c1b9ee1b1398794b900c2ef1d344052681ac7d1412e0e3faa29f5c0f",
+      "wordCount": 1424,
+      "byteLength": 41429
+    },
+    "swahili_C1.bytes": {
+      "sha256": "43d9eb1031988c9459c93b5e176da4c8dab8215efa0c1300a4c32a18c6d8c569",
+      "wordCount": 1298,
+      "byteLength": 38473
+    },
+    "thai_A1.bytes": {
+      "sha256": "0643b164e0c6bcf693f18117c8985d8af46a7fc77056b87681be0cee9b871b6b",
+      "wordCount": 898,
+      "byteLength": 34952
+    },
+    "thai_A2.bytes": {
+      "sha256": "61dcb25e14461f7ccadff3e5eecf936d86d2726d4041812d2c5a1d11c17f6f7f",
+      "wordCount": 867,
+      "byteLength": 37853
+    },
+    "thai_B1.bytes": {
+      "sha256": "52e866fa79237a91eb7527b87639eaa223d5809c829165e0130da80251e3ad77",
+      "wordCount": 805,
+      "byteLength": 35449
+    },
+    "thai_B2.bytes": {
+      "sha256": "ca4513bf1f8c6e0a4d7ce26a1ba49db3835bea51473df2aa394769ad29630bf2",
+      "wordCount": 1424,
+      "byteLength": 65713
+    },
+    "thai_C1.bytes": {
+      "sha256": "6b86c87c45d3dd13dbb5b0e4c54ab130840ed0f361a1735aafb193c731740da7",
+      "wordCount": 1298,
+      "byteLength": 62350
+    },
+    "turkish_A1.bytes": {
+      "sha256": "5302077303b06ee7ca7bc9405d1a209080ffe1e2cb3fae8c37ec6b284a4d38c6",
+      "wordCount": 898,
+      "byteLength": 25061
+    },
+    "turkish_A2.bytes": {
+      "sha256": "39e940617a75cd8e829e517a30c4815db6fae3f4127565d3f5c729fc9689be97",
+      "wordCount": 867,
+      "byteLength": 25896
+    },
+    "turkish_B1.bytes": {
+      "sha256": "6d5054be59ae4075e6043c573cfb7d48b9f96e063dfed3b4f4c522ad77f6a939",
+      "wordCount": 805,
+      "byteLength": 24187
+    },
+    "turkish_B2.bytes": {
+      "sha256": "73889ea6a87561122394ac9439a09a380e23ec47f4f4513d807085126f0a114b",
+      "wordCount": 1424,
+      "byteLength": 42919
+    },
+    "turkish_C1.bytes": {
+      "sha256": "b7891bda190a6306f64bff3be5a7c68b1f2f605e67a2cb3233626864795b22f7",
+      "wordCount": 1298,
+      "byteLength": 40899
+    },
+    "urdu_A1.bytes": {
+      "sha256": "c1c60e96c7c544d073cc9bb893235ccd49ca01c332a04b74478362152e41c7c5",
+      "wordCount": 898,
+      "byteLength": 27628
+    },
+    "urdu_A2.bytes": {
+      "sha256": "0b288980982fe074a84f6014e0aaaf9be4a10a852a8eb9ba2feec698fab2e65e",
+      "wordCount": 867,
+      "byteLength": 28014
+    },
+    "urdu_B1.bytes": {
+      "sha256": "5d57d44fd72f5e4f652f3696c54e2eed89805a3c44d4be0174aa62eb8ca1354a",
+      "wordCount": 805,
+      "byteLength": 27286
+    },
+    "urdu_B2.bytes": {
+      "sha256": "5bbbf11d6bef0d97fee496b8b8fa2ca2b9abe8d0873a8399c61bbe0350dbcdcc",
+      "wordCount": 1424,
+      "byteLength": 49738
+    },
+    "urdu_C1.bytes": {
+      "sha256": "fc432b45a8e2099b9f41eeeed801b7a898c23b5c6bb5d21d1c2554c721e11bce",
+      "wordCount": 1298,
+      "byteLength": 49221
+    },
+    "vietnamese_A1.bytes": {
+      "sha256": "4b7a4fbf39fe9859db3031c545b233f416acc808ef41e327e3646971ca1fc801",
+      "wordCount": 898,
+      "byteLength": 26417
+    },
+    "vietnamese_A2.bytes": {
+      "sha256": "407742207c2d2c8da31b554dc5cc8335cecd66747b40574f6feda9009ddcbeca",
+      "wordCount": 867,
+      "byteLength": 26946
+    },
+    "vietnamese_B1.bytes": {
+      "sha256": "db7ca28791c31a31fb446e31d3307030bf58718ffeb4782dd77a9c0737f21aba",
+      "wordCount": 805,
+      "byteLength": 25392
+    },
+    "vietnamese_B2.bytes": {
+      "sha256": "6db1e2d5d1176ead5e2e26ddf3c666fa90444b3e4aedbea9a2f7c6e92fb0e0cc",
+      "wordCount": 1424,
+      "byteLength": 46469
+    },
+    "vietnamese_C1.bytes": {
+      "sha256": "02fb679e8b6944faac5d608092dfa14cc66bde52bf9f53b39f2de4753d4a2f21",
+      "wordCount": 1298,
+      "byteLength": 43238
+    }
+  }
+}

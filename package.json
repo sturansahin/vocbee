@@ -36,6 +36,9 @@
     "unity:ios:framework": "node scripts/buildUnityIosFramework.cjs",
     "game:phase0:check": "node scripts/checkGamePhase0.cjs",
     "test:game-phase0": "node --test scripts/__tests__/gamePhase0.test.cjs",
+    "game:vocabulary:generate": "node scripts/generateGameVocabulary.cjs",
+    "game:vocabulary:check": "node scripts/generateGameVocabulary.cjs --check",
+    "test:game-vocabulary": "node --test scripts/__tests__/generateGameVocabulary.test.cjs",
     "check:server-deps": "node scripts/check-server-dependency-boundary.cjs",
     "prettier:check": "prettier --check . --ignore-unknown --end-of-line auto",
     "format": "prettier --write . --ignore-unknown --end-of-line auto"
