@@ -1,6 +1,6 @@
 # VocBee Game — Gömülü Kelime Kataloğu Production Planı
 
-Durum: **Aktif; Phase 0 doğrulanmadan implementasyon başlamaz**
+Durum: **Phase 0 production gate aktif ve BLOCKED; gate geçmeden Phase 1 başlamaz**
 
 Son güncelleme: 2026-09-04
 
@@ -106,16 +106,21 @@ otomasyonla değil, Unity EditMode'da timersız hızlı simulation ile doğrulan
 - Home focus/AppState active olduğunda streak summary'yi zaten yeniler; Home için yeni refresh
   mekanizması yazılmayacaktır.
 
-### 3.3 Unity source/artifact blocker'ı
+### 3.3 Unity source/artifact durumu
 
-- Checked-in Android AAR ve iOS XCFramework Unity `6000.3.14f1` çıktısıdır.
-- Host schema 3 üretirken mevcut export edilmiş Unity kodu schema 1 ve kökte
-  `contentState + rounds` beklemektedir.
-- Önceki planda varsayılan `RoundDeck`/`VocbeeWorldSettings` yapısı checked-in exportta yoktur.
-- Otoriter Unity source checkout bu workspace içinde bulunmamaktadır.
+- Otoriter checkout `vocbee-game-2026-07-28_17-23-42`, `main` branch ve
+  `d13f3d73706c5a080095568ec053be86ec17895e` commitidir.
+- Checkout ve iki checked-in artifact Unity `6000.3.14f1 (d68c3f99a318)` kullanır.
+- Gerçek build scene'i `Assets/VocBee/Scenes/VocbeeRunner.unity`; gerçek runtime akışında
+  `VocbeeRunner`, looping `RoundDeck`, gate schedule ve ortak immutable `TrackSpeed` vardır.
+- Otoriter source ile host bugün schema 3'tür. Checked-in Android AAR içindeki IL2CPP metadata
+  `GameSessionV1`, iOS XCFramework ise `GameSessionV3` içerir.
+- Android AAR yerel eski exportla byte-for-byte eşleşir; iOS artifactin en yakın source adayı
+  `7188d3c834d9adac3bb3579f871c7b8a7cdc019c` commitidir. Hiçbir artifact source commitini
+  gömmediği için bu eşlemeler production provenance sayılmaz.
 
-Phase 0'da gerçek Unity repo/commit bulunmalı ve Android/iOS artifactlerin kaynağı kesinleşmelidir.
-Bu sağlanmadan tahmini Unity dosya yapısına kod yazılmaz.
+Android ve iOS aynı pinned source revisiondan yeniden üretilip artifact hashleri kaydedilmeden
+Phase 0 geçmez.
 
 ### 3.4 Inferno
 
@@ -489,6 +494,20 @@ Update channel/runtimeVersion bulunmamaktadır.
 - Android/iOS export provenance kaydedilir.
 - Inferno asset, lisans ve URP/mobil uyumluluğu doğrulanır.
 - GameSession V4 fixture'ı host ve Unity için sabitlenir.
+
+Production gate:
+
+```text
+npm run game:phase0:check
+```
+
+Canonical fixture `docs/artifacts/game-session-v4.fixture.json`, hash/provenance ve blocker kaydı
+`docs/artifacts/game-phase0-provenance.json` dosyasındadır. Gate source remote/branch/commit ve
+Unity sürümünü, gerçek scene/deck/schedule/speed markerlarını, fixture hash/şeklini ve artifact
+hashlerini doğrular; aşağıdaki çıkış şartlarından biri eksikse non-zero döner.
+
+`d13f3d73706c5a080095568ec053be86ec17895e` commitinde Unity `6000.3.14f1` batchmode ile
+`Vocbee.Game.Tests` EditMode filtresi 33/33 başarılıdır.
 
 Çıkış kapısı:
 

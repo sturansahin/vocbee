@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-09-04",
+  "phase0Status": "blocked",
+  "host": {
+    "repository": "https://github.com/sturansahin/vocbee.git",
+    "branch": "master",
+    "baselineCommit": "a41877c081bb4cd3dbe19c006d596a45bc1ea41b",
+    "runtimeSessionSchemaVersion": 3
+  },
+  "unity": {
+    "repository": "https://github.com/sturansahin/vocbee-game-2026-07-28_17-23-42.git",
+    "branch": "main",
+    "commit": "d13f3d73706c5a080095568ec053be86ec17895e",
+    "editorVersion": "6000.3.14f1",
+    "editorRevision": "d68c3f99a318",
+    "editModeTest": {
+      "commit": "d13f3d73706c5a080095568ec053be86ec17895e",
+      "editorVersion": "6000.3.14f1",
+      "filter": "Vocbee.Game.Tests",
+      "result": "passed",
+      "total": 33,
+      "passed": 33,
+      "failed": 0,
+      "skipped": 0
+    },
+    "sourceChecks": [
+      {
+        "id": "UNITY_BUILD_SCENE",
+        "path": "ProjectSettings/EditorBuildSettings.asset",
+        "contains": ["Assets/VocBee/Scenes/VocbeeRunner.unity"]
+      },
+      {
+        "id": "UNITY_SESSION_SCHEMA",
+        "path": "Assets/VocBee/Scripts/GameSession.cs",
+        "contains": ["class GameSessionV3", "const int SchemaVersion = 3"]
+      },
+      {
+        "id": "UNITY_DECK_FLOW",
+        "path": "Assets/VocBee/Scripts/Runtime/Gameplay/RoundDeck.cs",
+        "contains": ["class RoundDeck", "internal Entry Next()", "Shuffle();"]
+      },
+      {
+        "id": "UNITY_GATE_SCHEDULE",
+        "path": "Assets/VocBee/Scripts/VocbeeRunner.cs",
+        "contains": ["private void AdvanceGate()", "_world.ShowGateAt(gateStartZ);", "LoadNextRound();"]
+      },
+      {
+        "id": "UNITY_WORLD_SPEED",
+        "path": "Assets/VocBee/Scripts/Runtime/World/VocbeeWorld.cs",
+        "contains": ["GateTrackZ -= _settings.TrackSpeed * deltaTime;", "_trackOffset + _settings.TrackSpeed * deltaTime"]
+      }
+    ]
+  },
+  "artifacts": {
+    "android": {
+      "path": "modules/vocbee-unity/android/libs/unityLibrary-release.aar",
+      "sha256": "6c2a36033ff49249cc5878991c1e113948d83a6ef701f282f33879b1f2967936",
+      "unityVersion": "6000.3.14f1",
+      "buildGuid": "244768d4106f40ab944737be93fb3f1d",
+      "observedSessionSchemaVersion": 1,
+      "candidateSourceCommit": "735010becc95b3f2a1d55a8ffb75454ec5d3a250",
+      "verifiedSourceCommit": null,
+      "evidence": "AAR SHA-256 equals the ignored local Android export; embedded IL2CPP metadata contains GameSessionV1. No source revision is embedded."
+    },
+    "ios": {
+      "path": "modules/vocbee-unity/ios/UnityFramework.xcframework",
+      "sha256": "471cab17d4fe6e714decc790e42048911fd953e00fcfb25810c567d098022ed8",
+      "unityVersion": "6000.3.14f1",
+      "deviceBuildGuid": "42581591fdc642f0b4f618f6a4a9ff55",
+      "simulatorBuildGuid": "5cd595881b0644d4b3d16f30aad5b207",
+      "observedSessionSchemaVersion": 3,
+      "candidateSourceCommit": "7188d3c834d9adac3bb3579f871c7b8a7cdc019c",
+      "verifiedSourceCommit": null,
+      "evidence": "Both slices contain GameSessionV3 and RoundDeck. Host and Unity commits were made seconds apart, but no source revision is embedded."
+    }
+  },
+  "contract": {
+    "fixture": "docs/artifacts/game-session-v4.fixture.json",
+    "sha256": "49dfaa0f91579c03fc737fc5e35ce62f45bfc6f1a7afbb6ab29ae9ac39a4577e",
+    "hostRuntimeAccepted": false,
+    "unityRuntimeAccepted": false,
+    "evidence": "The fixture is locked and structurally validated; both authoritative runtimes still require schemaVersion 3."
+  },
+  "inferno": {
+    "status": "missing",
+    "path": null,
+    "guid": null,
+    "license": null,
+    "mobileUrpCompatibility": null,
+    "evidence": "No path containing inferno and no matching license or attribution file exists in the authoritative Unity checkout."
+  }
+}

@@ -34,6 +34,8 @@
     "api:check": "node --check api/deleteAccount.js && node --check api/grammarProxy.js",
     "unity:android:library": "node scripts/buildUnityAndroidLibrary.cjs",
     "unity:ios:framework": "node scripts/buildUnityIosFramework.cjs",
+    "game:phase0:check": "node scripts/checkGamePhase0.cjs",
+    "test:game-phase0": "node --test scripts/__tests__/gamePhase0.test.cjs",
     "check:server-deps": "node scripts/check-server-dependency-boundary.cjs",
     "prettier:check": "prettier --check . --ignore-unknown --end-of-line auto",
     "format": "prettier --write . --ignore-unknown --end-of-line auto"
