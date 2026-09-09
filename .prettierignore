@@ -13,6 +13,6 @@ assets/
 docs/
 package-lock.json
 functions/package-lock.json
-src/features/game/generated/catalog-manifest.json
+src/features/game/generated/*.json
 *.md
 *.log

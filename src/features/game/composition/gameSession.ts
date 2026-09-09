@@ -2,18 +2,13 @@ import * as Crypto from 'expo-crypto';
 import { AccessibilityInfo, Appearance } from 'react-native';
 
 import { getCurrentLevel, getLearnedWords } from '@features/progress';
-import { getLanguagePair, getStoredVocabulary } from '@features/vocabulary';
+import { getLanguagePair } from '@features/vocabulary';
 import { getResolvedAppLanguage, i18n, isRTLLanguage } from '@shared/i18n';
 
-import { openGame } from '../../../../modules/vocbee-unity';
-import {
-  buildGameSession,
-  validateGameSession,
-  type GameSessionV3,
-  type GameUiTextV1,
-} from '../domain/gameSession';
+import { onGameEvent, openGame } from '../../../../modules/vocbee-unity';
+import { buildGameSession, type GameSessionV4, type GameUiTextV1 } from '../domain/gameSession';
 
-const MAX_SESSION_JSON_BYTES = 64 * 1024;
+export const GAME_SESSION_JSON_BUDGET_BYTES = 32 * 1024;
 
 function utf8ByteLength(value: string): number {
   let bytes = 0;
@@ -28,8 +23,6 @@ function utf8ByteLength(value: string): number {
         index += 1;
       } else bytes += 3;
     } else bytes += 3;
-
-    if (bytes > MAX_SESSION_JSON_BYTES) return bytes;
   }
   return bytes;
 }
@@ -70,52 +63,45 @@ export function resolveGameUiText(language: string): GameUiTextV1 {
   ) as GameUiTextV1;
 }
 
-function fitSessionToBridge(session: GameSessionV3): GameSessionV3 {
-  if (utf8ByteLength(JSON.stringify(session)) <= MAX_SESSION_JSON_BYTES) return session;
-
-  const minimumNewWords = session.newWords.contentState === 'ready' ? 3 : 0;
-  const minimumReview = session.review.contentState === 'ready' ? 3 : 0;
-  let newWordCount = session.newWords.rounds.length;
-  let reviewCount = session.review.rounds.length;
-  const resize = (): GameSessionV3 => ({
-    ...session,
-    newWords: { ...session.newWords, rounds: session.newWords.rounds.slice(0, newWordCount) },
-    review: { ...session.review, rounds: session.review.rounds.slice(0, reviewCount) },
-  });
-
-  let fitted = resize();
-  while (utf8ByteLength(JSON.stringify(fitted)) > MAX_SESSION_JSON_BYTES) {
-    const canTrimNewWords = newWordCount > minimumNewWords;
-    const canTrimReview = reviewCount > minimumReview;
-    if (!canTrimNewWords && !canTrimReview) {
-      throw new Error('Game session cannot fit the 64 KiB bridge limit');
-    }
-
-    if (canTrimReview && (!canTrimNewWords || reviewCount >= newWordCount)) reviewCount -= 1;
-    else newWordCount -= 1;
-    fitted = resize();
+function stringifyGameSession(session: GameSessionV4): string {
+  const json = JSON.stringify(session);
+  const bytes = utf8ByteLength(json);
+  if (bytes > GAME_SESSION_JSON_BUDGET_BYTES) {
+    throw new Error(
+      `Game session is ${bytes} bytes; maximum is ${GAME_SESSION_JSON_BUDGET_BYTES} bytes`,
+    );
   }
-
-  return fitted;
+  return json;
 }
 
-export async function prepareGameSession(): Promise<GameSessionV3> {
+function isFinishedEventForSession(eventJson: string, sessionId: string): boolean {
+  try {
+    const event: unknown = JSON.parse(eventJson);
+    return (
+      !!event &&
+      typeof event === 'object' &&
+      !Array.isArray(event) &&
+      (event as Record<string, unknown>).type === 'finished' &&
+      (event as Record<string, unknown>).sessionId === sessionId
+    );
+  } catch {
+    return false;
+  }
+}
+
+export async function prepareGameSession(): Promise<GameSessionV4> {
   const [level, languagePair, reducedMotion] = await Promise.all([
     getCurrentLevel(),
     getLanguagePair(),
     AccessibilityInfo.isReduceMotionEnabled().catch(() => false),
   ]);
-  const [vocabulary, learnedWordIds] = await Promise.all([
-    getStoredVocabulary(level),
-    getLearnedWords(level),
-  ]);
+  const learnedWordIds = await getLearnedWords(level);
   const uiLanguage = getResolvedAppLanguage();
-  const session = buildGameSession({
+  return buildGameSession({
     sessionId: Crypto.randomUUID(),
     level,
     nativeLanguage: languagePair?.native,
     targetLanguage: languagePair?.target,
-    vocabulary,
     learnedWordIds,
     reducedMotion,
     theme: Appearance.getColorScheme() === 'dark' ? 'dark' : 'light',
@@ -123,18 +109,30 @@ export async function prepareGameSession(): Promise<GameSessionV3> {
     isRtl: isRTLLanguage(uiLanguage),
     uiText: resolveGameUiText(uiLanguage),
   });
-
-  if (!validateGameSession(session)) throw new Error('Invalid game session generated');
-  return fitSessionToBridge(session);
 }
 
 export async function prepareGameSessionJson(): Promise<string> {
-  return JSON.stringify(await prepareGameSession());
+  return stringifyGameSession(await prepareGameSession());
 }
 
-export async function launchGameSession(): Promise<GameSessionV3> {
+export async function launchGameSession(): Promise<GameSessionV4> {
   const session = await prepareGameSession();
-  const result = await openGame(JSON.stringify(session));
-  if (!result.ok) throw new Error(`${result.code}: ${result.message}`);
-  return session;
+  const sessionJson = stringifyGameSession(session);
+  let subscription: { remove(): void } | null = null;
+  const removeListener = () => {
+    subscription?.remove();
+    subscription = null;
+  };
+  subscription = onGameEvent((eventJson) => {
+    if (isFinishedEventForSession(eventJson, session.sessionId)) removeListener();
+  });
+
+  try {
+    const result = await openGame(sessionJson);
+    if (!result.ok) throw new Error(`${result.code}: ${result.message}`);
+    return session;
+  } catch (error) {
+    removeListener();
+    throw error;
+  }
 }

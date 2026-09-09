@@ -1,6 +1,6 @@
 # VocBee Game — Gömülü Kelime Kataloğu Production Planı
 
-Durum: **Phase 1 uygulandı ve kendi gate'i geçti; Phase 0 release blockerları hâlâ açık**
+Durum: **Phase 2 uygulandı ve kendi gate'i geçti; Phase 0 release blockerları hâlâ açık**
 
 Son güncelleme: 2026-09-07
 
@@ -97,24 +97,24 @@ otomasyonla değil, Unity EditMode'da timersız hızlı simulation ile doğrulan
 
 ### 3.2 Host
 
-- `src/features/game/domain/gameSession.ts` hazır roundlar ve schema 3 üretir.
-- New mode 15, review mode 30 round ile sınırlıdır.
-- `src/features/game/composition/gameSession.ts`, session 64 KiB'ı aşarsa roundları ayrıca
-  sessizce kırpar.
+- `src/features/game/domain/gameSession.ts` schema 4 katalog metadata ve learned ID snapshotı üretir.
+- Host artık vocabulary, prompt, choice, round veya new/review deck üretmez.
+- Session kırpılmaz; 32 KiB iç bütçe aşılırsa launch açık hatayla durur.
 - `modules/vocbee-unity/index.ts` direct JSON için 64 KiB hard limit uygular.
-- `onGameEvent` native event API'si vardır ancak aktif completion consumer'ı yoktur.
+- Native event listener `openGame()` çağrısından önce kurulur ve aktif sessionın `finished`
+  eventinde temizlenir; `reviewCompleted` consumerı Phase 4 kapsamındadır.
 - Home focus/AppState active olduğunda streak summary'yi zaten yeniler; Home için yeni refresh
   mekanizması yazılmayacaktır.
 
 ### 3.3 Unity source/artifact durumu
 
 - Otoriter checkout `vocbee-game-2026-07-28_17-23-42`, `main` branch ve
-  `d13f3d73706c5a080095568ec053be86ec17895e` commitidir.
+  `2ed0e5ef0b494dc28df3ceaa2c98d6079bf4122f` commitidir.
 - Checkout ve iki checked-in artifact Unity `6000.3.14f1 (d68c3f99a318)` kullanır.
 - Gerçek build scene'i `Assets/VocBee/Scenes/VocbeeRunner.unity`; gerçek runtime akışında
   `VocbeeRunner`, looping `RoundDeck`, gate schedule ve ortak immutable `TrackSpeed` vardır.
-- Otoriter source ile host bugün schema 3'tür. Checked-in Android AAR içindeki IL2CPP metadata
-  `GameSessionV1`, iOS XCFramework ise `GameSessionV3` içerir.
+- Host bugün schema 4, otoriter Unity source schema 3'tür. Checked-in Android AAR içindeki IL2CPP
+  metadata `GameSessionV1`, iOS XCFramework ise `GameSessionV3` içerir.
 - Android AAR yerel eski exportla byte-for-byte eşleşir; iOS artifactin en yakın source adayı
   `7188d3c834d9adac3bb3579f871c7b8a7cdc019c` commitidir. Hiçbir artifact source commitini
   gömmediği için bu eşlemeler production provenance sayılmaz.
@@ -402,6 +402,7 @@ Asset doğrulandıktan sonra minimum entegrasyon yapılır:
 | --- | --- |
 | `scripts/generateGameVocabulary.cjs` | 105 compact catalog, manifest, `--check`, `--sync-unity` |
 | `src/features/game/generated/catalog-manifest.json` | Hostun version/hash kaynağı |
+| `src/features/game/generated/catalog-ids.json` | Hostun level bazlı learned ID allowlisti |
 | `src/features/game/domain/gameSession.ts` | V4 type/validator; hazır round ve 15/30 limitlerini kaldır |
 | `src/features/game/composition/gameSession.ts` | Level/language/learned snapshot; silent trim'i kaldır; V4 launch |
 | `src/features/game/composition/gameEventCoordinator.ts` | Aktif session event validation ve streak çağrısı |
@@ -490,7 +491,7 @@ Update channel/runtimeVersion bulunmamaktadır.
 
 - Otoriter Unity repo/branch/commit bulunur.
 - Gerçek scene, deck/schedule ve world speed akışı okunur.
-- Host schema 3 ile checked-in Unity schema 1 mismatch'i reproduce edilir.
+- Tarihsel host schema 3 ile checked-in Android Unity schema 1 mismatch'i reproduce edilir.
 - Android/iOS export provenance kaydedilir.
 - Inferno asset, lisans ve URP/mobil uyumluluğu doğrulanır.
 - GameSession V4 fixture'ı host ve Unity için sabitlenir.
@@ -531,7 +532,7 @@ Uygulanan production sözleşmesi:
 - `scripts/gameVocabularyLock.json`, bütün `21 × 5 × id × normalize(word)` kimliklerini ve
   `catalogVersion + catalogHash` çiftini kilitler. Aynı version altında içerik değişikliği veya
   herhangi bir dilde ID anlamı kayması fail-closed durur.
-- Host manifesti `src/features/game/generated/catalog-manifest.json`, Unity çıktısı
+- Host manifesti ve ID allowlisti `src/features/game/generated`, Unity çıktısı
   `Assets/VocBee/Resources/Vocabulary` altındadır. Unity `.meta` GUID'leri de deterministiktir.
 - `catalogVersion=1`, `catalogHash=6d0cff7d0b611c0ebf96e6f0534fa73b2443875e1e4681ac29b3817ba0de3985`.
 - 105 compact katalog toplamı `3.637.397` byte'tır.
@@ -553,6 +554,19 @@ Uygulanan production sözleşmesi:
 - Catalog metadata ve mevcut presentation metadata ekle.
 - 15/30 target limitlerini ve `fitSessionToBridge()` silent trim'ini kaldır.
 - Event listener'ı launch öncesi kur.
+
+Uygulanan production sözleşmesi:
+
+- `GameSessionV4` yalnız schema/bridge/catalog metadata, language pair, level, learned ID snapshotı
+  ve küçük presentation metadata taşır.
+- Language/level allowlist generated cataloglardan gelir; duplicate, negative, unsafe ve catalogda
+  olmayan learned ID'ler explicit hata koduyla reddedilir.
+- Canonical V4 fixture host validator tarafından kabul edilir; catalog version/hash mismatch ve
+  aynı native/target language fail-closed durur.
+- B2'deki 1.424 learned ID eksiksiz taşınır ve 32 KiB bütçenin altında kalır; silent trim yoktur.
+- Launch yalnız `getCurrentLevel()`, `getLanguagePair()` ve `getLearnedWords(level)` read'lerini
+  yapar. Listener `openGame()` öncesinde kurulur, launch hatasında veya aktif `finished` eventinde
+  kaldırılır.
 
 Çıkış kapısı:
 

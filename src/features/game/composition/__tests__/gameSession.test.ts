@@ -1,26 +1,37 @@
 import { AccessibilityInfo, Appearance } from 'react-native';
-import type { VocabularyWord } from '@features/vocabulary';
 import { gameRunnerTranslations } from '../../../../../locales/gameRunner';
 
-import { buildGameSession } from '../../domain/gameSession';
-import { prepareGameSession, prepareGameSessionJson } from '../gameSession';
+import {
+  GAME_SESSION_JSON_BUDGET_BYTES,
+  launchGameSession,
+  prepareGameSession,
+  prepareGameSessionJson,
+} from '../gameSession';
 
+const mockGetCurrentLevel = jest.fn();
 const mockGetLearnedWords = jest.fn();
-const mockGetStoredVocabulary = jest.fn();
+const mockGetLanguagePair = jest.fn();
+const mockOnGameEvent = jest.fn();
+const mockOpenGame = jest.fn();
+const mockRemoveListener = jest.fn();
+let gameEventListener: ((eventJson: string) => void) | undefined;
 
-jest.mock('expo-crypto', () => ({ randomUUID: () => 'session-1' }));
+jest.mock('expo-crypto', () => ({
+  randomUUID: () => '123e4567-e89b-42d3-a456-426614174000',
+}));
 jest.mock('@features/progress', () => ({
-  getCurrentLevel: async () => 'A1',
+  getCurrentLevel: () => mockGetCurrentLevel(),
   getLearnedWords: (...args: unknown[]) => mockGetLearnedWords(...args),
 }));
 jest.mock('@features/vocabulary', () => ({
   VOCABULARY_SCHEMA_VERSION: 2,
-  getLanguagePair: async () => ({ native: 'turkish', target: 'english' }),
-  getStoredVocabulary: (...args: unknown[]) => mockGetStoredVocabulary(...args),
-  isLevel: (value: unknown) => value === 'A1',
-  shuffleArray: <T>(values: T[]) => [...values],
+  getLanguagePair: () => mockGetLanguagePair(),
+  isLevel: (value: unknown) => ['A1', 'A2', 'B1', 'B2', 'C1'].includes(value as string),
 }));
-jest.mock('../../../../../modules/vocbee-unity', () => ({ openGame: jest.fn() }));
+jest.mock('../../../../../modules/vocbee-unity', () => ({
+  onGameEvent: (listener: (eventJson: string) => void) => mockOnGameEvent(listener),
+  openGame: (...args: unknown[]) => mockOpenGame(...args),
+}));
 jest.mock('@shared/i18n', () => {
   const translations = jest.requireActual('../../../../../locales/gameRunner')
     .gameRunnerTranslations as typeof gameRunnerTranslations;
@@ -36,83 +47,86 @@ jest.mock('@shared/i18n', () => {
   };
 });
 
-function word(id: number, padded = false): VocabularyWord {
-  const suffix = `-${id}`;
-  const label = (prefix: string) =>
-    padded
-      ? `${prefix}${'🐝'.repeat(80 - prefix.length - suffix.length)}${suffix}`
-      : `${prefix}${suffix}`;
-
-  return {
-    id,
-    word: label('target'),
-    translation: label('prompt'),
-    sentence1: '',
-    sentence2: '',
-    nativeSentence1: '',
-    nativeSentence2: '',
-  };
-}
-
 beforeEach(() => {
   jest.clearAllMocks();
+  gameEventListener = undefined;
+  mockGetCurrentLevel.mockResolvedValue('A1');
+  mockGetLanguagePair.mockResolvedValue({ native: 'turkish', target: 'english' });
   mockGetLearnedWords.mockResolvedValue([]);
-  mockGetStoredVocabulary.mockResolvedValue([]);
+  mockOpenGame.mockResolvedValue({ ok: true });
+  mockOnGameEvent.mockImplementation((listener) => {
+    gameEventListener = listener;
+    return { remove: mockRemoveListener };
+  });
 });
 
-it('passes the platform accessibility and theme preferences into the game session', async () => {
-  const vocabulary = Array.from({ length: 15 }, (_, index) => word(index + 1));
-  mockGetStoredVocabulary.mockResolvedValueOnce(vocabulary);
-  mockGetLearnedWords.mockResolvedValueOnce(vocabulary.map(({ id }) => id));
+it('builds the V4 session from read-only state and presentation preferences', async () => {
+  mockGetLearnedWords.mockResolvedValueOnce([42, 1]);
   jest.spyOn(AccessibilityInfo, 'isReduceMotionEnabled').mockResolvedValueOnce(true);
   jest.spyOn(Appearance, 'getColorScheme').mockReturnValueOnce('dark');
 
   const session = await prepareGameSession();
 
   expect(session).toMatchObject({
+    schemaVersion: 4,
+    catalogVersion: 1,
+    nativeLanguage: 'turkish',
+    targetLanguage: 'english',
+    learnedWordIds: [1, 42],
     reducedMotion: true,
     theme: 'dark',
     uiLanguage: 'en',
     isRtl: false,
     uiText: gameRunnerTranslations.en,
   });
-  expect(session.newWords.contentState).toBe('placeholder');
-  expect(session.review.contentState).toBe('ready');
-  expect(session.review.rounds).toHaveLength(15);
+  expect(mockGetLearnedWords).toHaveBeenCalledWith('A1');
+  expect(session).not.toHaveProperty('rounds');
+  expect(session).not.toHaveProperty('newWords');
+  expect(session).not.toHaveProperty('review');
 });
 
-it('keeps the capped dual-mode session within the 64 KiB bridge limit', async () => {
-  const vocabulary = Array.from({ length: 300 }, (_, index) => word(index + 1, true));
-  const learnedWordIds = vocabulary.slice(0, 150).map(({ id }) => id);
-  mockGetStoredVocabulary.mockResolvedValueOnce(vocabulary);
+it('keeps the complete B2 learned snapshot below 32 KiB without trimming', async () => {
+  const learnedWordIds = Array.from({ length: 1_424 }, (_, index) => index + 1);
+  mockGetCurrentLevel.mockResolvedValueOnce('B2');
   mockGetLearnedWords.mockResolvedValueOnce(learnedWordIds);
-  jest.spyOn(AccessibilityInfo, 'isReduceMotionEnabled').mockResolvedValueOnce(false);
-  jest.spyOn(Appearance, 'getColorScheme').mockReturnValueOnce('light');
 
   const sessionJson = await prepareGameSessionJson();
   const session = JSON.parse(sessionJson);
-  const fullSession = buildGameSession({
-    sessionId: 'session-1',
-    level: 'A1',
-    nativeLanguage: 'turkish',
-    targetLanguage: 'english',
-    vocabulary,
-    learnedWordIds,
-    uiLanguage: 'en',
-    isRtl: false,
-    uiText: gameRunnerTranslations.en,
-    random: () => 0,
+
+  expect(session.learnedWordIds).toEqual(learnedWordIds);
+  expect(Buffer.byteLength(sessionJson, 'utf8')).toBeLessThanOrEqual(
+    GAME_SESSION_JSON_BUDGET_BYTES,
+  );
+});
+
+it('registers the session listener before launch and cleans it up safely', async () => {
+  const order: string[] = [];
+  mockOnGameEvent.mockImplementationOnce((listener) => {
+    order.push('listener');
+    gameEventListener = listener;
+    return { remove: mockRemoveListener };
+  });
+  mockOpenGame.mockImplementationOnce(async () => {
+    order.push('open');
+    return { ok: true };
   });
 
-  expect(session.newWords.rounds.length).toBeGreaterThanOrEqual(3);
-  expect(session.review.rounds.length).toBeGreaterThanOrEqual(3);
-  expect(session.newWords.rounds).toHaveLength(15);
-  expect(session.review.rounds).toHaveLength(30);
-  expect(session.newWords.rounds).toEqual(
-    fullSession.newWords.rounds.slice(0, session.newWords.rounds.length),
+  const session = await launchGameSession();
+
+  expect(order).toEqual(['listener', 'open']);
+  expect(JSON.parse(mockOpenGame.mock.calls[0][0])).toMatchObject({
+    schemaVersion: 4,
+    sessionId: session.sessionId,
+  });
+  gameEventListener?.('{bad json');
+  gameEventListener?.(
+    JSON.stringify({ type: 'finished', sessionId: '00000000-0000-4000-8000-000000000000' }),
   );
-  expect(session.review.rounds).toEqual(
-    fullSession.review.rounds.slice(0, session.review.rounds.length),
-  );
-  expect(Buffer.byteLength(sessionJson, 'utf8')).toBeLessThanOrEqual(64 * 1024);
+  expect(mockRemoveListener).not.toHaveBeenCalled();
+  gameEventListener?.(JSON.stringify({ type: 'finished', sessionId: session.sessionId }));
+  expect(mockRemoveListener).toHaveBeenCalledTimes(1);
+
+  mockOpenGame.mockResolvedValueOnce({ ok: false, code: 'UNITY_LAUNCH_FAILED', message: 'failed' });
+  await expect(launchGameSession()).rejects.toThrow('UNITY_LAUNCH_FAILED: failed');
+  expect(mockRemoveListener).toHaveBeenCalledTimes(2);
 });

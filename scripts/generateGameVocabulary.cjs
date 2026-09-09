@@ -23,6 +23,7 @@ const HOST_MANIFEST = path.join(
   'generated',
   'catalog-manifest.json',
 );
+const HOST_IDS = path.join(path.dirname(HOST_MANIFEST), 'catalog-ids.json');
 const LOCK_FILE = path.join(__dirname, 'gameVocabularyLock.json');
 const UNITY_OUTPUT = path.join('Assets', 'VocBee', 'Resources', 'Vocabulary');
 const MANIFEST_FILE = 'catalog-manifest.json';
@@ -195,11 +196,20 @@ function buildCatalogSet(sourceDir = SOURCE_DIR) {
     files,
   };
   const manifestBytes = Buffer.from(`${JSON.stringify(manifest, null, 2)}\n`, 'utf8');
+  const idsBytes = Buffer.from(
+    `${JSON.stringify(
+      Object.fromEntries(
+        LEVELS.map((level) => [level, referenceByLevel.get(level).map(({ id }) => id)]),
+      ),
+    )}\n`,
+    'utf8',
+  );
   return {
     catalogs,
     identityLock: createIdentityLock(catalogs),
     manifest,
     manifestBytes,
+    idsBytes,
     outputs,
     totalBytes,
   };
@@ -340,7 +350,10 @@ function run(options) {
   if (options.check) {
     checkOutputs(
       path.dirname(HOST_MANIFEST),
-      new Map([[path.basename(HOST_MANIFEST), build.manifestBytes]]),
+      new Map([
+        [path.basename(HOST_MANIFEST), build.manifestBytes],
+        [path.basename(HOST_IDS), build.idsBytes],
+      ]),
     );
     if (unityOutput) {
       checkOutputs(unityOutput, expectedUnityOutputs(build), unityMeta('Vocabulary', true));
@@ -348,6 +361,7 @@ function run(options) {
   } else {
     mkdirSync(path.dirname(HOST_MANIFEST), { recursive: true });
     writeFileSync(HOST_MANIFEST, build.manifestBytes);
+    writeFileSync(HOST_IDS, build.idsBytes);
     if (unityOutput) {
       syncOutputs(unityOutput, expectedUnityOutputs(build), unityMeta('Vocabulary', true));
     }

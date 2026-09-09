@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "recordedAt": "2026-09-04",
+  "recordedAt": "2026-09-07",
   "phase0Status": "blocked",
   "host": {
     "repository": "https://github.com/sturansahin/vocbee.git",
     "branch": "master",
     "baselineCommit": "a41877c081bb4cd3dbe19c006d596a45bc1ea41b",
-    "runtimeSessionSchemaVersion": 3
+    "runtimeSessionSchemaVersion": 4
   },
   "unity": {
     "repository": "https://github.com/sturansahin/vocbee-game-2026-07-28_17-23-42.git",
     "branch": "main",
-    "commit": "d13f3d73706c5a080095568ec053be86ec17895e",
+    "commit": "2ed0e5ef0b494dc28df3ceaa2c98d6079bf4122f",
     "editorVersion": "6000.3.14f1",
     "editorRevision": "d68c3f99a318",
     "editModeTest": {
@@ -78,9 +78,9 @@
   "contract": {
     "fixture": "docs/artifacts/game-session-v4.fixture.json",
     "sha256": "3d6eaf1f0b1d1c7f5640ce24aeef26fce1c6f1bd68aae08c4d16ad4a995be013",
-    "hostRuntimeAccepted": false,
+    "hostRuntimeAccepted": true,
     "unityRuntimeAccepted": false,
-    "evidence": "The fixture is locked and structurally validated; both authoritative runtimes still require schemaVersion 3."
+    "evidence": "The locked fixture is accepted by the host V4 validator; the authoritative Unity runtime still requires schemaVersion 3."
   },
   "inferno": {
     "status": "missing",

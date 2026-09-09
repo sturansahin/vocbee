@@ -36,6 +36,10 @@ test('builds all compact catalogs deterministically from the locked IDs', () => 
 
   assert.equal(first.outputs.size, 105);
   assert.equal(first.totalBytes, 3_637_397);
+  assert.equal(
+    Object.values(JSON.parse(first.idsBytes)).reduce((sum, ids) => sum + ids.length, 0),
+    5_292,
+  );
   assert.deepEqual(first.manifest, second.manifest);
   assert.deepEqual([...first.outputs], [...second.outputs]);
   verifyLock(first, lock);
