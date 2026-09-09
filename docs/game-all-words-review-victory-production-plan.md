@@ -1,8 +1,8 @@
 # VocBee Game — Gömülü Kelime Kataloğu Production Planı
 
-Durum: **Phase 2 uygulandı ve kendi gate'i geçti; Phase 0 release blockerları hâlâ açık**
+Durum: **Phase 3 uygulandı ve kendi gate'i geçti; Phase 0 release blockerları hâlâ açık**
 
-Son güncelleme: 2026-09-07
+Son güncelleme: 2026-09-09
 
 Kapsam: React Native/Expo host, Android/iOS Unity bridge ve Unity oyun runtime'ı
 
@@ -113,8 +113,8 @@ otomasyonla değil, Unity EditMode'da timersız hızlı simulation ile doğrulan
 - Checkout ve iki checked-in artifact Unity `6000.3.14f1 (d68c3f99a318)` kullanır.
 - Gerçek build scene'i `Assets/VocBee/Scenes/VocbeeRunner.unity`; gerçek runtime akışında
   `VocbeeRunner`, looping `RoundDeck`, gate schedule ve ortak immutable `TrackSpeed` vardır.
-- Host bugün schema 4, otoriter Unity source schema 3'tür. Checked-in Android AAR içindeki IL2CPP
-  metadata `GameSessionV1`, iOS XCFramework ise `GameSessionV3` içerir.
+- Host ve test edilmiş Phase 3 Unity working tree bugün schema 4'tür. Checked-in Android AAR
+  içindeki IL2CPP metadata `GameSessionV1`, iOS XCFramework ise `GameSessionV3` içerir.
 - Android AAR yerel eski exportla byte-for-byte eşleşir; iOS artifactin en yakın source adayı
   `7188d3c834d9adac3bb3579f871c7b8a7cdc019c` commitidir. Hiçbir artifact source commitini
   gömmediği için bu eşlemeler production provenance sayılmaz.
@@ -584,6 +584,21 @@ Uygulanan production sözleşmesi:
 - Dictionary ID join ve learned/new partition.
 - Bir/iki target destekleyen mode availability.
 - On-demand round/distractor factory.
+
+Uygulanan production sözleşmesi:
+
+- Unity V4 sessionı 64 KiB sınırı, UUID, schema/catalog metadata, language pair, presentation
+  metadata ve unique safe learned ID kurallarıyla fail-closed doğrular.
+- Embedded manifest doğrulandıktan sonra yalnız seçili native ve target `TextAsset` katalogları
+  load/parse edilir; parse sonrası üç asset de `Resources.UnloadAsset` ile bırakılır.
+- İki katalog dictionary'ye çevrilir, ID parity ve unknown learned ID kontrol edilir; sorted
+  learned/new partition session boyunca tutulur ve yeni session/destroy sırasında temizlenir.
+- Bir veya iki targetlı modlar full-level distractorlarla aktiftir. Roundlar target çekildiğinde
+  üretilir; ID, normalized target label ve native prompt collisionları elenir, correct lane
+  deterministik olarak dengelenir.
+- Missing/mismatch/invalid katalog recoverable error eventi ve iki modu kapalı ready ekranı üretir.
+- Unity `6000.3.14f1` üzerinde 41/41 EditMode ve PlayMode smoke başarılıdır; EditMode suite'i
+  A1–C1 partitionı, selected-two load sınırını ve 21 dilin bütün A1 targetlarını doğrular.
 
 Çıkış kapısı:
 

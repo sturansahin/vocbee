@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "recordedAt": "2026-09-07",
+  "recordedAt": "2026-09-09",
   "phase0Status": "blocked",
   "host": {
     "repository": "https://github.com/sturansahin/vocbee.git",
@@ -15,12 +15,14 @@
     "editorVersion": "6000.3.14f1",
     "editorRevision": "d68c3f99a318",
     "editModeTest": {
-      "commit": "d13f3d73706c5a080095568ec053be86ec17895e",
+      "commit": null,
+      "baseCommit": "2ed0e5ef0b494dc28df3ceaa2c98d6079bf4122f",
+      "workingTree": true,
       "editorVersion": "6000.3.14f1",
       "filter": "Vocbee.Game.Tests",
       "result": "passed",
-      "total": 33,
-      "passed": 33,
+      "total": 41,
+      "passed": 41,
       "failed": 0,
       "skipped": 0
     },
@@ -33,7 +35,7 @@
       {
         "id": "UNITY_SESSION_SCHEMA",
         "path": "Assets/VocBee/Scripts/GameSession.cs",
-        "contains": ["class GameSessionV3", "const int SchemaVersion = 3"]
+        "contains": ["class GameSessionV4", "const int SchemaVersion = 4"]
       },
       {
         "id": "UNITY_DECK_FLOW",
@@ -79,8 +81,8 @@
     "fixture": "docs/artifacts/game-session-v4.fixture.json",
     "sha256": "3d6eaf1f0b1d1c7f5640ce24aeef26fce1c6f1bd68aae08c4d16ad4a995be013",
     "hostRuntimeAccepted": true,
-    "unityRuntimeAccepted": false,
-    "evidence": "The locked fixture is accepted by the host V4 validator; the authoritative Unity runtime still requires schemaVersion 3."
+    "unityRuntimeAccepted": true,
+    "evidence": "The locked V4 fixture shape is accepted by both host and Unity validators; Unity evidence is from the tested Phase 3 working tree and remains unpinned until commit."
   },
   "inferno": {
     "status": "missing",
