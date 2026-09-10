@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-09-10",
+  "status": "blocked",
+  "catalogHash": "6d0cff7d0b611c0ebf96e6f0534fa73b2443875e1e4681ac29b3817ba0de3985",
+  "unity": {
+    "sourceCommit": "231f2f105aa1b378a25d3c859e06d3610abf5d28",
+    "version": "6000.3.14f1",
+    "revision": "d68c3f99a318",
+    "editMode": { "passed": 50, "failed": 0, "skipped": 0 },
+    "playMode": { "passed": 1, "failed": 0, "skipped": 0 }
+  },
+  "android": {
+    "artifact": "modules/vocbee-unity/android/libs/unityLibrary-release.aar",
+    "sha256": "3e80e98f704a689edb2884bde30e6d639cef18fafa562b8e44b597ecd7b80d11",
+    "byteLength": 35529385,
+    "buildGuid": "e67192d73ef54b57867087a15abe5e27",
+    "embeddedProvenanceVerified": true,
+    "embeddedSessionSchemaVersion": 4,
+    "previousByteLength": 32121075,
+    "byteDelta": 3408310,
+    "percentDelta": 10.61,
+    "aabMeasurement": {
+      "status": "blocked",
+      "reason": "The local Unity Android SDK has Build Tools 36 only; Expo dependency resolution requires licensed Build Tools 35. No release AAB was produced."
+    },
+    "deviceSmoke": {
+      "status": "blocked",
+      "reason": "adb reported zero connected devices."
+    }
+  },
+  "ios": {
+    "deviceExport": {
+      "status": "passed",
+      "buildGuid": "bc6ef8ee28c34a9ca24b932a53fa3bdc",
+      "byteLength": 1185558985,
+      "sessionSchemaVersion": 4
+    },
+    "simulatorArm64Export": {
+      "status": "passed",
+      "buildGuid": "c0cfc0bdf7b3437284f8e803d412d7a6",
+      "byteLength": 1090986719,
+      "sessionSchemaVersion": 4
+    },
+    "frameworkAndArchive": {
+      "status": "blocked",
+      "reason": "xcodebuild and an iOS signing/device environment are unavailable on Windows. The checked-in XCFramework remains the rollback artifact and was not overwritten."
+    }
+  },
+  "performance": {
+    "status": "blocked",
+    "reason": "No low/medium-tier physical Android device or physical iOS device is connected for FPS/RAM profiling."
+  },
+  "rollback": {
+    "status": "ready",
+    "hostCommit": "3155adbab964a0b6ce917b47fd01bd2608ca220b",
+    "unityCommit": "f88f01727d90206999cd61c4b5202e549b9df279",
+    "androidSha256": "6c2a36033ff49249cc5878991c1e113948d83a6ef701f282f33879b1f2967936",
+    "iosSha256": "471cab17d4fe6e714decc790e42048911fd953e00fcfb25810c567d098022ed8"
+  },
+  "blockers": [
+    "ANDROID_AAB_SIZE_NOT_MEASURED",
+    "ANDROID_DEVICE_SMOKE_NOT_RUN",
+    "IOS_FRAMEWORK_ARCHIVE_NOT_BUILT",
+    "IOS_DEVICE_SMOKE_NOT_RUN",
+    "LOW_DEVICE_FPS_RAM_NOT_PROFILED"
+  ]
+}

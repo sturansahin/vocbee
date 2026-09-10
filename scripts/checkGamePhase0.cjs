@@ -100,6 +100,13 @@ function validateV4Fixture(value, supportedLanguages) {
   return errors;
 }
 
+function validateArtifactProvenance(value, expected) {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return ['must be one object'];
+  return Object.entries(expected)
+    .filter(([key, expectedValue]) => value[key] !== expectedValue)
+    .map(([key]) => `${key} mismatch`);
+}
+
 function runGit(cwd, ...args) {
   return execFileSync('git', ['-c', `safe.directory=${cwd}`, ...args], {
     cwd,
@@ -137,6 +144,17 @@ function collectGateBlockers(evidence) {
     editModeTest.editorVersion !== evidence.unity.editorVersion
   ) {
     blockers.push('UNITY_EDITMODE_NOT_VERIFIED');
+  }
+  const playModeTest = evidence.unity.playModeTest;
+  if (
+    !playModeTest ||
+    playModeTest.result !== 'passed' ||
+    playModeTest.failed !== 0 ||
+    playModeTest.passed !== playModeTest.total ||
+    playModeTest.commit !== evidence.unity.commit ||
+    playModeTest.editorVersion !== evidence.unity.editorVersion
+  ) {
+    blockers.push('UNITY_PLAYMODE_NOT_VERIFIED');
   }
   for (const [platform, artifact] of Object.entries(evidence.artifacts)) {
     if (artifact.verifiedSourceCommit !== evidence.unity.commit) {
@@ -234,6 +252,27 @@ function checkPhase0({ unityProject } = {}) {
       : sha256File(artifactPath);
     if (actual !== artifact.sha256)
       failures.push(`${platform.toUpperCase()}_ARTIFACT_HASH_MISMATCH`);
+
+    const provenancePath = artifact.provenancePath && path.join(root, artifact.provenancePath);
+    if (!provenancePath || !existsSync(provenancePath)) {
+      failures.push(`${platform.toUpperCase()}_PROVENANCE_MISSING`);
+      continue;
+    }
+    const expected = {
+      schemaVersion: 1,
+      sourceCommit: evidence.unity.commit,
+      catalogHash: fixture.catalogHash,
+      unityVersion: evidence.unity.editorVersion,
+      ...(platform === 'android'
+        ? { buildTarget: 'Android', buildGuid: artifact.buildGuid }
+        : {
+            deviceBuildGuid: artifact.deviceBuildGuid,
+            simulatorBuildGuid: artifact.simulatorBuildGuid,
+          }),
+    };
+    for (const error of validateArtifactProvenance(readJson(provenancePath), expected)) {
+      failures.push(`${platform.toUpperCase()}_PROVENANCE_INVALID: ${error}`);
+    }
   }
 
   const blockers = collectGateBlockers(evidence);
@@ -251,4 +290,10 @@ if (require.main === module) {
   if (result.status !== 'passed') process.exitCode = 1;
 }
 
-module.exports = { collectGateBlockers, sha256File, sha256Tree, validateV4Fixture };
+module.exports = {
+  collectGateBlockers,
+  sha256File,
+  sha256Tree,
+  validateArtifactProvenance,
+  validateV4Fixture,
+};

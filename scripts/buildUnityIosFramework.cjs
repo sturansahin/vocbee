@@ -1,6 +1,6 @@
-const { existsSync, rmSync } = require('node:fs');
+const { existsSync, readFileSync, rmSync, writeFileSync } = require('node:fs');
 const { dirname, join } = require('node:path');
-const { spawnSync } = require('node:child_process');
+const { execFileSync, spawnSync } = require('node:child_process');
 
 if (process.platform !== 'darwin') throw new Error('Unity iOS framework build requires macOS.');
 
@@ -26,12 +26,42 @@ const simulatorFramework = join(
   'UnityFramework.framework',
 );
 const destination = join(root, 'modules', 'vocbee-unity', 'ios', 'UnityFramework.xcframework');
+const provenanceName = 'vocbee-build-provenance.json';
 
 if (!existsSync(deviceProject)) {
   throw new Error('Run VocBee/Export iOS Library in Unity first.');
 }
 if (!existsSync(simulatorProject)) {
   throw new Error('Run VocBee/Export iOS Simulator Library in Unity first.');
+}
+
+const deviceProvenance = JSON.parse(readFileSync(join(deviceExport, provenanceName), 'utf8'));
+const simulatorProvenance = JSON.parse(readFileSync(join(simulatorExport, provenanceName), 'utf8'));
+const unityProject = process.env.VOCBEE_UNITY_PROJECT || join(root, '..', 'vocbee-game');
+const git = ['-c', `safe.directory=${unityProject}`];
+const sourceCommit = execFileSync('git', [...git, 'rev-parse', 'HEAD'], {
+  cwd: unityProject,
+  encoding: 'utf8',
+}).trim();
+const dirty = execFileSync('git', [...git, 'status', '--porcelain=v1'], {
+  cwd: unityProject,
+  encoding: 'utf8',
+}).trim();
+const catalog = JSON.parse(
+  readFileSync(join(root, 'src', 'features', 'game', 'generated', 'catalog-manifest.json'), 'utf8'),
+);
+
+if (
+  dirty ||
+  deviceProvenance.sourceCommit !== sourceCommit ||
+  simulatorProvenance.sourceCommit !== sourceCommit ||
+  deviceProvenance.catalogHash !== catalog.catalogHash ||
+  simulatorProvenance.catalogHash !== catalog.catalogHash ||
+  deviceProvenance.unityVersion !== simulatorProvenance.unityVersion ||
+  deviceProvenance.buildTarget !== 'iOS' ||
+  simulatorProvenance.buildTarget !== 'iOS'
+) {
+  throw new Error('Unity iOS provenance does not match clean source/catalog state.');
 }
 
 function buildFramework(project, sdk, derivedData, architecture) {
@@ -83,4 +113,19 @@ const result = spawnSync(
   { stdio: 'inherit' },
 );
 if (result.status !== 0 || !existsSync(destination)) process.exit(result.status || 1);
+writeFileSync(
+  join(destination, provenanceName),
+  `${JSON.stringify(
+    {
+      schemaVersion: 1,
+      sourceCommit,
+      catalogHash: catalog.catalogHash,
+      unityVersion: deviceProvenance.unityVersion,
+      deviceBuildGuid: deviceProvenance.buildGuid,
+      simulatorBuildGuid: simulatorProvenance.buildGuid,
+    },
+    null,
+    2,
+  )}\n`,
+);
 console.log(`UnityFramework XCFramework created at ${destination}`);

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "recordedAt": "2026-09-09",
+  "recordedAt": "2026-09-10",
   "phase0Status": "blocked",
   "host": {
     "repository": "https://github.com/sturansahin/vocbee.git",
@@ -11,18 +11,29 @@
   "unity": {
     "repository": "https://github.com/sturansahin/vocbee-game-2026-07-28_17-23-42.git",
     "branch": "main",
-    "commit": "aecc9b7c0c65028255928a5bc83470802bb23f0c",
+    "commit": "231f2f105aa1b378a25d3c859e06d3610abf5d28",
     "editorVersion": "6000.3.14f1",
     "editorRevision": "d68c3f99a318",
     "editModeTest": {
-      "commit": null,
-      "baseCommit": "aecc9b7c0c65028255928a5bc83470802bb23f0c",
-      "workingTree": true,
+      "commit": "231f2f105aa1b378a25d3c859e06d3610abf5d28",
+      "baseCommit": "231f2f105aa1b378a25d3c859e06d3610abf5d28",
+      "workingTree": false,
       "editorVersion": "6000.3.14f1",
       "filter": "Vocbee.Game.Tests",
       "result": "passed",
       "total": 50,
       "passed": 50,
+      "failed": 0,
+      "skipped": 0
+    },
+    "playModeTest": {
+      "commit": "231f2f105aa1b378a25d3c859e06d3610abf5d28",
+      "workingTree": false,
+      "editorVersion": "6000.3.14f1",
+      "filter": "Vocbee.Game.PlayModeTests",
+      "result": "passed",
+      "total": 1,
+      "passed": 1,
       "failed": 0,
       "skipped": 0
     },
@@ -68,22 +79,34 @@
           "_bridge.EmitReviewCompleted(_session.level, _deck.Count);",
           "private const float VictoryCelebrationSeconds = 2.4f;"
         ]
+      },
+      {
+        "id": "UNITY_EXPORT_PROVENANCE",
+        "path": "Assets/VocBee/Editor/VocbeeLibraryExport.cs",
+        "contains": [
+          "Unity exports require a clean, committed source revision.",
+          "vocbee-build-provenance.json",
+          "sourceCommit = sourceCommit"
+        ]
       }
     ]
   },
   "artifacts": {
     "android": {
       "path": "modules/vocbee-unity/android/libs/unityLibrary-release.aar",
-      "sha256": "6c2a36033ff49249cc5878991c1e113948d83a6ef701f282f33879b1f2967936",
+      "provenancePath": "modules/vocbee-unity/android/libs/vocbee-build-provenance.json",
+      "sha256": "3e80e98f704a689edb2884bde30e6d639cef18fafa562b8e44b597ecd7b80d11",
+      "byteLength": 35529385,
       "unityVersion": "6000.3.14f1",
-      "buildGuid": "244768d4106f40ab944737be93fb3f1d",
-      "observedSessionSchemaVersion": 1,
-      "candidateSourceCommit": "735010becc95b3f2a1d55a8ffb75454ec5d3a250",
-      "verifiedSourceCommit": null,
-      "evidence": "AAR SHA-256 equals the ignored local Android export; embedded IL2CPP metadata contains GameSessionV1. No source revision is embedded."
+      "buildGuid": "e67192d73ef54b57867087a15abe5e27",
+      "observedSessionSchemaVersion": 4,
+      "candidateSourceCommit": "231f2f105aa1b378a25d3c859e06d3610abf5d28",
+      "verifiedSourceCommit": "231f2f105aa1b378a25d3c859e06d3610abf5d28",
+      "evidence": "Clean Unity export and Gradle release build succeeded; the AAR contains assets/vocbee-build-provenance.json and IL2CPP metadata contains GameSessionV4 plus reviewCompleted."
     },
     "ios": {
       "path": "modules/vocbee-unity/ios/UnityFramework.xcframework",
+      "provenancePath": "modules/vocbee-unity/ios/UnityFramework.xcframework/vocbee-build-provenance.json",
       "sha256": "471cab17d4fe6e714decc790e42048911fd953e00fcfb25810c567d098022ed8",
       "unityVersion": "6000.3.14f1",
       "deviceBuildGuid": "42581591fdc642f0b4f618f6a4a9ff55",
@@ -91,7 +114,7 @@
       "observedSessionSchemaVersion": 3,
       "candidateSourceCommit": "7188d3c834d9adac3bb3579f871c7b8a7cdc019c",
       "verifiedSourceCommit": null,
-      "evidence": "Both slices contain GameSessionV3 and RoundDeck. Host and Unity commits were made seconds apart, but no source revision is embedded."
+      "evidence": "The checked-in slices still contain GameSessionV3 and have no provenance. Fresh device/simulator Xcode exports from the pinned Phase 5 source contain GameSessionV4, but macOS xcodebuild/device verification is still required before replacement."
     }
   },
   "contract": {
@@ -99,7 +122,7 @@
     "sha256": "3d6eaf1f0b1d1c7f5640ce24aeef26fce1c6f1bd68aae08c4d16ad4a995be013",
     "hostRuntimeAccepted": true,
     "unityRuntimeAccepted": true,
-    "evidence": "The locked V4 fixture shape is accepted by both host and Unity validators; Unity evidence is from the tested Phase 4 working tree and remains unpinned until commit."
+    "evidence": "The locked V4 fixture is accepted by host and Unity at tested commit 231f2f105aa1b378a25d3c859e06d3610abf5d28."
   },
   "inferno": {
     "status": "verified",

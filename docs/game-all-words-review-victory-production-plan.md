@@ -1,8 +1,8 @@
 # VocBee Game — Gömülü Kelime Kataloğu Production Planı
 
-Durum: **Phase 3 uygulandı ve kendi gate'i geçti; Phase 0 release blockerları hâlâ açık**
+Durum: **Phase 5 otomasyonu ve Android artifacti uygulandı; iOS archive/cihaz gate'leri açık**
 
-Son güncelleme: 2026-09-09
+Son güncelleme: 2026-09-10
 
 Kapsam: React Native/Expo host, Android/iOS Unity bridge ve Unity oyun runtime'ı
 
@@ -651,6 +651,23 @@ Uygulanan production sözleşmesi:
 - Android AAR, iOS device ve simulator frameworkü aynı source/catalog revisiondan export et.
 - Host/Unity manifest ve artifact revisionlarını doğrula.
 - AAB/iOS archive boyut farkını ölç.
+
+Uygulanan production sözleşmesi:
+
+- Unity exportu dirty/uncommitted source'u reddeder ve her platform çıktısına source commit,
+  catalog hash, Unity version ve build GUID içeren provenance sidecar'ı yazar.
+- Pinned source `231f2f105aa1b378a25d3c859e06d3610abf5d28` üzerinde 50/50 EditMode ve
+  gerçek scene/session yükleyen 1/1 PlayMode testi geçer.
+- Android AAR temiz exporttan yeniden üretilmiştir; artifact içindeki provenance ve IL2CPP
+  `GameSessionV4`/`reviewCompleted` metadata'sı doğrulanmıştır. Boyut 32.121.075 byte'tan
+  35.529.385 byte'a çıkmıştır (`+3.408.310`, `%10,61`).
+- Aynı source/catalog revisionından iOS device ve arm64 simulator Xcode exportları üretilmiş ve
+  V4 metadata/provenance doğrulanmıştır. Windows'ta `xcodebuild`, signing ve gerçek cihaz olmadığı
+  için checked-in XCFramework güvenli biçimde değiştirilmemiştir.
+- CI mevcut blocking generator/host testlerine Phase 0/provenance contract testini ekler.
+  Ayrıntılı release kanıtı `docs/artifacts/game-phase5-release.json` dosyasındadır.
+- AAB ölçümü yerel SDK'da lisanslı Build Tools 35 bulunmadığı için, iOS archive ve gerçek cihaz
+  FPS/RAM smoke'ları ise gerekli donanım/macOS olmadığı için fail-closed blocker olarak kalır.
 
 Çıkış kapısı:
 
