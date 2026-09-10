@@ -11,18 +11,18 @@
   "unity": {
     "repository": "https://github.com/sturansahin/vocbee-game-2026-07-28_17-23-42.git",
     "branch": "main",
-    "commit": "2ed0e5ef0b494dc28df3ceaa2c98d6079bf4122f",
+    "commit": "aecc9b7c0c65028255928a5bc83470802bb23f0c",
     "editorVersion": "6000.3.14f1",
     "editorRevision": "d68c3f99a318",
     "editModeTest": {
       "commit": null,
-      "baseCommit": "2ed0e5ef0b494dc28df3ceaa2c98d6079bf4122f",
+      "baseCommit": "aecc9b7c0c65028255928a5bc83470802bb23f0c",
       "workingTree": true,
       "editorVersion": "6000.3.14f1",
       "filter": "Vocbee.Game.Tests",
       "result": "passed",
-      "total": 41,
-      "passed": 41,
+      "total": 50,
+      "passed": 50,
       "failed": 0,
       "skipped": 0
     },
@@ -40,7 +40,11 @@
       {
         "id": "UNITY_DECK_FLOW",
         "path": "Assets/VocBee/Scripts/Runtime/Gameplay/RoundDeck.cs",
-        "contains": ["class RoundDeck", "internal Entry Next()", "Shuffle();"]
+        "contains": [
+          "enum DeckPolicy",
+          "internal bool TryNext(out Entry entry)",
+          "_policy == DeckPolicy.Finite"
+        ]
       },
       {
         "id": "UNITY_GATE_SCHEDULE",
@@ -50,7 +54,20 @@
       {
         "id": "UNITY_WORLD_SPEED",
         "path": "Assets/VocBee/Scripts/Runtime/World/VocbeeWorld.cs",
-        "contains": ["GateTrackZ -= _settings.TrackSpeed * deltaTime;", "_trackOffset + _settings.TrackSpeed * deltaTime"]
+        "contains": [
+          "internal void SetSpeed(float speed)",
+          "GateTrackZ -= _currentSpeed * deltaTime;",
+          "_trackOffset + _currentSpeed * deltaTime"
+        ]
+      },
+      {
+        "id": "UNITY_REVIEW_VICTORY",
+        "path": "Assets/VocBee/Scripts/VocbeeRunner.cs",
+        "contains": [
+          "private void BeginReviewVictory()",
+          "_bridge.EmitReviewCompleted(_session.level, _deck.Count);",
+          "private const float VictoryCelebrationSeconds = 2.4f;"
+        ]
       }
     ]
   },
@@ -82,14 +99,14 @@
     "sha256": "3d6eaf1f0b1d1c7f5640ce24aeef26fce1c6f1bd68aae08c4d16ad4a995be013",
     "hostRuntimeAccepted": true,
     "unityRuntimeAccepted": true,
-    "evidence": "The locked V4 fixture shape is accepted by both host and Unity validators; Unity evidence is from the tested Phase 3 working tree and remains unpinned until commit."
+    "evidence": "The locked V4 fixture shape is accepted by both host and Unity validators; Unity evidence is from the tested Phase 4 working tree and remains unpinned until commit."
   },
   "inferno": {
-    "status": "missing",
-    "path": null,
-    "guid": null,
-    "license": null,
-    "mobileUrpCompatibility": null,
-    "evidence": "No path containing inferno and no matching license or attribution file exists in the authoritative Unity checkout."
+    "status": "verified",
+    "path": "Assets/VocBee/Effects/VocbeeInferno.prefab",
+    "guid": "f2ea1f56e9eb03c4d8a86791fa3cda13",
+    "license": "Original VocBee project asset; no third-party source or attribution required.",
+    "mobileUrpCompatibility": "URP Particles/Unlit, max 160 particles, low-quality noise, GPU instancing, reduced-motion emission 12/s.",
+    "evidence": "Asset metadata and limits are recorded in Assets/VocBee/Effects/README.md; the prefab is serialized in VocbeeRunner.unity and imported successfully by Unity 6000.3.14f1."
   }
 }

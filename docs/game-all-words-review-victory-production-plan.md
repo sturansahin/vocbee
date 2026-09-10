@@ -617,6 +617,23 @@ Uygulanan production sözleşmesi:
 - Mutable capped speed.
 - Inferno/reduced-motion/result entegrasyonu.
 
+Uygulanan production sözleşmesi:
+
+- `RoundDeck`, New için looping ve Review için tek cycle finite politika uygular; retry aynı
+  policy ile deck'i yeniden karıştırıp sıfırlar.
+- Review completion yalnız benzersiz doğru target sayısı finite deck sayısına ulaştığında bir kez
+  oluşur; ilk yanlış completion state'ini kapatır ve mevcut loss akışını kullanır.
+- Unity minimum `reviewCompleted` eventini üretir. Host coordinator yalnız aktif session/seviye
+  için ilk geçerli eventi mevcut idempotent `recordDailyStudyAction()` servisine yönlendirir ve
+  `finished` sonrasında listener'ı temizler.
+- Gate ve pist aynı mutable world speed değerini kullanır. Inspector defaultları base `9`, multiplier
+  `1.45`, curve `20`; retry, Play Again ve mode değişimi base değere döner, pause/resume değeri korur.
+- `Assets/VocBee/Effects/VocbeeInferno.prefab` (`f2ea1f56e9eb03c4d8a86791fa3cda13`)
+  original Unity-native URP ParticleSystem'dir; üçüncü taraf lisansı yoktur. VFX 2,4 saniyede
+  temizlenir, reduced-motion emisyonu düşürür ve null/broken asset yalnız warning üretir.
+- Unity `6000.3.14f1` üzerinde 50/50 EditMode ve PlayMode scene smoke başarılıdır. Host tam
+  regresyonu 111/111 suite ve 572/572 test ile geçer.
+
 Çıkış kapısı:
 
 - Her seviye için full new/review fast simulation bütün targetları ilk cycle'da bir kez görüyor.

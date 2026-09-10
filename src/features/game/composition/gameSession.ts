@@ -5,8 +5,9 @@ import { getCurrentLevel, getLearnedWords } from '@features/progress';
 import { getLanguagePair } from '@features/vocabulary';
 import { getResolvedAppLanguage, i18n, isRTLLanguage } from '@shared/i18n';
 
-import { onGameEvent, openGame } from '../../../../modules/vocbee-unity';
+import { openGame } from '../../../../modules/vocbee-unity';
 import { buildGameSession, type GameSessionV4, type GameUiTextV1 } from '../domain/gameSession';
+import { startGameEventCoordinator } from './gameEventCoordinator';
 
 export const GAME_SESSION_JSON_BUDGET_BYTES = 32 * 1024;
 
@@ -74,21 +75,6 @@ function stringifyGameSession(session: GameSessionV4): string {
   return json;
 }
 
-function isFinishedEventForSession(eventJson: string, sessionId: string): boolean {
-  try {
-    const event: unknown = JSON.parse(eventJson);
-    return (
-      !!event &&
-      typeof event === 'object' &&
-      !Array.isArray(event) &&
-      (event as Record<string, unknown>).type === 'finished' &&
-      (event as Record<string, unknown>).sessionId === sessionId
-    );
-  } catch {
-    return false;
-  }
-}
-
 export async function prepareGameSession(): Promise<GameSessionV4> {
   const [level, languagePair, reducedMotion] = await Promise.all([
     getCurrentLevel(),
@@ -118,21 +104,14 @@ export async function prepareGameSessionJson(): Promise<string> {
 export async function launchGameSession(): Promise<GameSessionV4> {
   const session = await prepareGameSession();
   const sessionJson = stringifyGameSession(session);
-  let subscription: { remove(): void } | null = null;
-  const removeListener = () => {
-    subscription?.remove();
-    subscription = null;
-  };
-  subscription = onGameEvent((eventJson) => {
-    if (isFinishedEventForSession(eventJson, session.sessionId)) removeListener();
-  });
+  const stopEventCoordinator = startGameEventCoordinator(session);
 
   try {
     const result = await openGame(sessionJson);
     if (!result.ok) throw new Error(`${result.code}: ${result.message}`);
     return session;
   } catch (error) {
-    removeListener();
+    stopEventCoordinator();
     throw error;
   }
 }

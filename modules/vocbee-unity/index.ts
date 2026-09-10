@@ -5,6 +5,23 @@ import { Platform } from 'react-native';
 export const VOCBEE_UNITY_BRIDGE_VERSION = 1 as const;
 
 export type GamePlatform = 'android' | 'ios' | 'unsupported';
+export type GameLevel = 'A1' | 'A2' | 'B1' | 'B2' | 'C1';
+
+export type ReviewCompletedGameEvent = {
+  type: 'reviewCompleted';
+  eventVersion: 1;
+  bridgeVersion: typeof VOCBEE_UNITY_BRIDGE_VERSION;
+  sessionId: string;
+  level: GameLevel;
+  targetCount: number;
+};
+
+export type FinishedGameEvent = {
+  type: 'finished';
+  sessionId: string;
+};
+
+export type GameLifecycleEvent = ReviewCompletedGameEvent | FinishedGameEvent;
 
 export type GameBridgeErrorCode =
   | 'HOST_ACTIVITY_UNAVAILABLE'
