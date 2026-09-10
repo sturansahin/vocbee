@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-09-10",
+  "status": "blocked",
+  "releaseCandidate": {
+    "hostCommit": null,
+    "unityCommit": "231f2f105aa1b378a25d3c859e06d3610abf5d28",
+    "catalogHash": "6d0cff7d0b611c0ebf96e6f0534fa73b2443875e1e4681ac29b3817ba0de3985",
+    "androidSha256": "3e80e98f704a689edb2884bde30e6d639cef18fafa562b8e44b597ecd7b80d11",
+    "iosSha256": null,
+    "androidBuildId": null,
+    "iosBuildId": null
+  },
+  "approval": { "status": "pending", "id": null },
+  "rollback": {
+    "status": "ready",
+    "hostCommit": "3155adbab964a0b6ce917b47fd01bd2608ca220b",
+    "unityCommit": "f88f01727d90206999cd61c4b5202e549b9df279"
+  },
+  "policy": {
+    "rolloutPercentages": [5, 25, 50, 100],
+    "minimumObservationHours": 24,
+    "minimumSessions": 100,
+    "minimumCrashFreeSessionsPercent": 99.5,
+    "maximumAndroidAnrRatePercent": 0.47,
+    "maximumGameLaunchErrorRatePercent": 1,
+    "maximumCatalogMismatchCount": 0
+  },
+  "stages": {
+    "internalBuild": { "status": "not_started", "evidence": null },
+    "playInternal": { "status": "not_started", "evidence": null },
+    "testflight": { "status": "not_started", "evidence": null },
+    "production5": { "status": "not_started", "evidence": null, "monitoring": null },
+    "production25": { "status": "not_started", "evidence": null, "monitoring": null },
+    "production50": { "status": "not_started", "evidence": null, "monitoring": null },
+    "production100": { "status": "not_started", "evidence": null, "monitoring": null }
+  },
+  "blockers": [
+    "PHASE5_NOT_PASSED",
+    "RELEASE_CANDIDATE_NOT_PINNED",
+    "PRODUCTION_APPROVAL_MISSING"
+  ]
+}

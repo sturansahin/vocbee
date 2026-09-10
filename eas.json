@@ -1,7 +1,8 @@
 {
   "cli": {
     "version": ">= 3.0.0",
-    "appVersionSource": "remote"
+    "appVersionSource": "remote",
+    "requireCommit": true
   },
   "build": {
     "development": {
@@ -23,6 +24,7 @@
       }
     },
     "production": {
+      "distribution": "store",
       "env": {
         "EXPO_PUBLIC_GRAMMAR_PROXY_URL": "https://vocbee-proxy.vercel.app/api/grammarProxy",
         "EXPO_PUBLIC_REVENUECAT_IOS_API_KEY": "appl_MZXWENkeyhjqCHRptMNhbzqgtsz"
@@ -33,6 +35,24 @@
     }
   },
   "submit": {
-    "production": {}
+    "internal": {
+      "android": {
+        "track": "internal",
+        "releaseStatus": "completed"
+      }
+    },
+    "production-5": {
+      "android": {
+        "track": "production",
+        "releaseStatus": "inProgress",
+        "rollout": 0.05
+      }
+    },
+    "production": {
+      "android": {
+        "track": "production",
+        "releaseStatus": "draft"
+      }
+    }
   }
 }

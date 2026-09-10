@@ -291,6 +291,7 @@ if (require.main === module) {
 }
 
 module.exports = {
+  checkPhase0,
   collectGateBlockers,
   sha256File,
   sha256Tree,

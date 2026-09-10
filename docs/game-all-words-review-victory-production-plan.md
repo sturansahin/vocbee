@@ -1,6 +1,6 @@
 # VocBee Game — Gömülü Kelime Kataloğu Production Planı
 
-Durum: **Phase 5 otomasyonu ve Android artifacti uygulandı; iOS archive/cihaz gate'leri açık**
+Durum: **Phase 6 rollout guard uygulandı; Phase 5 blockerları nedeniyle rollout başlatılmadı**
 
 Son güncelleme: 2026-09-10
 
@@ -683,6 +683,22 @@ Uygulanan production sözleşmesi:
 - Küçük production yüzdesi.
 - Crash/ANR, launch error ve catalog mismatch kontrolü.
 - Gate temizse kademeli genişletme.
+
+Uygulanan production sözleşmesi:
+
+- `game:rollout:check`, canlı Phase 0 gate'ini ve Phase 5 release kanıtını doğrulamadan internal
+  build dahil hiçbir rollout aşamasını hazır saymaz.
+- Aşamalar `internal-build → Play internal/TestFlight → %5 → %25 → %50 → %100` sırasındadır;
+  production başlangıcı explicit approval ID gerektirir.
+- `%5` sonrasındaki her genişletme önceki aşamada en az 24 saat/100 session, en az `%99,5`
+  crash-free session, en fazla `%0,47` Android ANR, en fazla `%1` game launch error ve sıfır
+  catalog mismatch ister.
+- EAS clean commit zorunluluğu etkinleştirilmiştir. Android internal submit profili internal track'e,
+  ilk production profili `%5` in-progress rollout'a gider; varsayılan production submit draft kalır.
+- Operasyon sırası ve rollback adımları `docs/game-rollout-runbook.md`, makine-okunur durum
+  `docs/artifacts/game-phase6-rollout.json` içindedir.
+- Phase 5 iOS artifact/cihaz blockerları açık olduğu için hiçbir EAS build, store upload veya
+  production yüzdesi bu aşamada tetiklenmemiştir.
 
 ## 10. Test matrisi
 
