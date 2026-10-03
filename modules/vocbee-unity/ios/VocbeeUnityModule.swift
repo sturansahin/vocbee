@@ -52,14 +52,15 @@ public final class VocbeeUnityModule: Module {
       gameInfo(runtimeAvailable: unityHost.isRuntimeAvailable)
     }
 
-    AsyncFunction("openGame") { (sessionJson: String) in
+    AsyncFunction("openGame") { (sessionJson: String, promise: Promise) in
       guard isJSONObject(sessionJson) else {
-        return failure(
+        promise.resolve(failure(
           code: "INVALID_SESSION_JSON",
           message: "sessionJson must contain one JSON object up to 64 KiB."
-        )
+        ))
+        return
       }
-      return unityHost.open(sessionJson: sessionJson)
+      unityHost.open(sessionJson: sessionJson, promise: promise)
     }.runOnQueue(.main)
 
     AsyncFunction("unloadGame") {
@@ -89,8 +90,15 @@ public final class VocbeeUnityModule: Module {
           ["json": "{\"type\":\"error\",\"code\":\"UNITY_MESSAGE_FAILED\"}"]
         )
         _ = module.unityHost.returnToHost()
+      } else if eventType == "sessionReady", parsed?["bridgeVersion"] as? Int == bridgeVersion {
+        module.unityHost.handleSessionReady(parsed?["sessionId"] as? String)
+      } else if eventType == "error" {
+        module.unityHost.handleLaunchError(
+          sessionId: parsed?["sessionId"] as? String,
+          code: parsed?["code"] as? String ?? "UNITY_LAUNCH_FAILED"
+        )
       } else if eventType == "finished" {
-        module.unityHost.scheduleReturnToHostAfterEvent()
+        module.unityHost.scheduleReturnToHostAfterEvent(sessionId: parsed?["sessionId"] as? String)
       }
     }
   }
@@ -105,6 +113,10 @@ private final class VocbeeUnityHost: NSObject {
   private var returnScheduled = false
   private var lifecycleGeneration = 0
   private var listenerRegistered = false
+  private var launchPromise: Promise?
+  private var launchSessionId: String?
+  private var launchTimeout: DispatchWorkItem?
+  private var loadingWindow: UIWindow?
 
   var isRuntimeAvailable: Bool {
     if NSClassFromString(unityFrameworkClassName) != nil {
@@ -116,7 +128,38 @@ private final class VocbeeUnityHost: NSObject {
     return FileManager.default.fileExists(atPath: path)
   }
 
-  func open(sessionJson: String) -> [String: Any] {
+  func open(sessionJson: String, promise: Promise) {
+    guard launchPromise == nil else {
+      promise.resolve(failure(code: "UNITY_LAUNCH_FAILED", message: "A game launch is already in progress."))
+      return
+    }
+    guard let sessionId = parseJSONObject(sessionJson)?["sessionId"] as? String, !sessionId.isEmpty else {
+      promise.resolve(failure(code: "INVALID_SESSION_JSON", message: "The game session must have a sessionId."))
+      return
+    }
+    guard let windowScene = (hostWindow ?? currentKeyWindow())?.windowScene else {
+      promise.resolve(failure(code: "HOST_ACTIVITY_UNAVAILABLE", message: "The host window is not available."))
+      return
+    }
+
+    hostWindow = hostWindow ?? currentKeyWindow()
+    launchPromise = promise
+    launchSessionId = sessionId
+    showLoadingWindow(in: windowScene)
+    let timeout = DispatchWorkItem { [weak self] in
+      self?.handleLaunchError(sessionId: sessionId, code: "UNITY_LAUNCH_FAILED")
+    }
+    launchTimeout = timeout
+    DispatchQueue.main.asyncAfter(deadline: .now() + 30, execute: timeout)
+
+    let result = open(sessionJson: sessionJson)
+    if result["ok"] as? Bool != true {
+      finishLaunch(result)
+      _ = returnToHost()
+    }
+  }
+
+  private func open(sessionJson: String) -> [String: Any] {
     lifecycleGeneration &+= 1
     returnScheduled = false
     if hostWindow == nil {
@@ -160,8 +203,55 @@ private final class VocbeeUnityHost: NSObject {
     return sendPendingSessionIfReady()
   }
 
-  func scheduleReturnToHostAfterEvent() {
-    guard !returnScheduled else {
+  func handleSessionReady(_ sessionId: String?) {
+    guard launchPromise != nil, sessionId == launchSessionId else {
+      return
+    }
+    loadingWindow?.isHidden = true
+    loadingWindow = nil
+    finishLaunch(success())
+  }
+
+  func handleLaunchError(sessionId: String?, code: String) {
+    guard launchPromise != nil,
+      sessionId == nil || sessionId == "" || sessionId == launchSessionId
+    else {
+      return
+    }
+    finishLaunch(failure(code: "UNITY_LAUNCH_FAILED", message: "The game menu could not start: \(code)"))
+    _ = returnToHost()
+  }
+
+  private func finishLaunch(_ result: [String: Any]) {
+    launchTimeout?.cancel()
+    launchTimeout = nil
+    let promise = launchPromise
+    launchPromise = nil
+    promise?.resolve(result)
+  }
+
+  private func showLoadingWindow(in scene: UIWindowScene) {
+    let controller = UIViewController()
+    controller.view.backgroundColor = .black
+    let spinner = UIActivityIndicatorView(style: .large)
+    spinner.color = .white
+    spinner.translatesAutoresizingMaskIntoConstraints = false
+    controller.view.addSubview(spinner)
+    NSLayoutConstraint.activate([
+      spinner.centerXAnchor.constraint(equalTo: controller.view.centerXAnchor),
+      spinner.centerYAnchor.constraint(equalTo: controller.view.centerYAnchor),
+    ])
+    spinner.startAnimating()
+
+    let window = UIWindow(windowScene: scene)
+    window.rootViewController = controller
+    window.windowLevel = .alert + 1
+    loadingWindow = window
+    window.isHidden = false
+  }
+
+  func scheduleReturnToHostAfterEvent(sessionId: String?) {
+    guard !returnScheduled, sessionId == launchSessionId else {
       return
     }
     returnScheduled = true
@@ -185,6 +275,8 @@ private final class VocbeeUnityHost: NSObject {
     returnScheduled = false
     pendingSessionJson = nil
     unityReady = false
+    finishLaunch(failure(code: "UNITY_LAUNCH_FAILED", message: "The game launch was closed before the menu was ready."))
+    launchSessionId = nil
     guard let framework else {
       restoreHostWindow()
       return success()
@@ -194,6 +286,7 @@ private final class VocbeeUnityHost: NSObject {
       return success()
     }
     guard callWithBool(framework, selectorName: "pause:", value: true) else {
+      restoreHostWindow()
       return failure(code: "NATIVE_CALL_FAILED", message: "UnityFramework could not pause.")
     }
     restoreHostWindow()
@@ -205,6 +298,8 @@ private final class VocbeeUnityHost: NSObject {
     returnScheduled = false
     pendingSessionJson = nil
     unityReady = false
+    finishLaunch(failure(code: "UNITY_LAUNCH_FAILED", message: "The game launcher was closed."))
+    launchSessionId = nil
 
     if let framework {
       if objectResult(framework, selectorName: "appController") != nil {
@@ -226,6 +321,8 @@ private final class VocbeeUnityHost: NSObject {
   }
 
   private func finishUnload() {
+    finishLaunch(failure(code: "UNITY_LAUNCH_FAILED", message: "Unity closed before the menu was ready."))
+    launchSessionId = nil
     if let framework {
       unregisterListener(from: framework)
     }
@@ -380,6 +477,8 @@ private final class VocbeeUnityHost: NSObject {
 
   private func restoreHostWindow() {
     hostWindow?.makeKeyAndVisible()
+    loadingWindow?.isHidden = true
+    loadingWindow = nil
   }
 
   private func currentKeyWindow() -> UIWindow? {

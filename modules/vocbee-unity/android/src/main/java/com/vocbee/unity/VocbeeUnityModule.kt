@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import expo.modules.kotlin.functions.Queues
+import expo.modules.kotlin.Promise
 import expo.modules.kotlin.modules.Module
 import expo.modules.kotlin.modules.ModuleDefinition
 import java.lang.ref.WeakReference
@@ -15,6 +16,13 @@ private const val MAX_JSON_BYTES = 64 * 1024
 private const val UNITY_UNAVAILABLE = "UNITY_RUNTIME_UNAVAILABLE"
 
 class VocbeeUnityModule : Module() {
+  private val mainHandler = Handler(Looper.getMainLooper())
+  private var launchPromise: Promise? = null
+  private var launchSessionId: String? = null
+  private val launchTimeout = Runnable {
+    emitFatal("UNITY_LAUNCH_FAILED", launchSessionId)
+  }
+
   override fun definition() = ModuleDefinition {
     Name("VocbeeUnity")
     Events(EVENT_NAME)
@@ -24,6 +32,10 @@ class VocbeeUnityModule : Module() {
     }
 
     OnDestroy {
+      mainHandler.post {
+        finishLaunch(failure("UNITY_LAUNCH_FAILED", "The game launcher was closed."))
+        VocbeeUnityActivity.requestUnload()
+      }
       if (activeModule.get() === this@VocbeeUnityModule) {
         activeModule.clear()
       }
@@ -33,13 +45,17 @@ class VocbeeUnityModule : Module() {
       gameInfo()
     }
 
-    AsyncFunction("openGame") { sessionJson: String ->
+    AsyncFunction("openGame") { sessionJson: String, promise: Promise ->
       if (!isJsonObject(sessionJson)) {
-        failure("INVALID_SESSION_JSON", "sessionJson must contain one JSON object up to 64 KiB.")
+        promise.resolve(failure("INVALID_SESSION_JSON", "sessionJson must contain one JSON object up to 64 KiB."))
       } else {
         val activity = appContext.currentActivity
         val context = appContext.reactContext
-        when {
+        val result = when {
+          launchPromise != null -> failure("UNITY_LAUNCH_FAILED", "A game launch is already in progress.")
+          JSONObject(sessionJson).optString("sessionId").isEmpty() -> failure(
+            "INVALID_SESSION_JSON", "The game session must have a sessionId."
+          )
           activity == null || context == null -> failure(
             "HOST_ACTIVITY_UNAVAILABLE",
             "The host Activity is not available."
@@ -49,12 +65,17 @@ class VocbeeUnityModule : Module() {
             "The Unity Android runtime has not been exported yet."
           )
           else -> try {
+            launchPromise = promise
+            launchSessionId = JSONObject(sessionJson).getString("sessionId")
+            mainHandler.postDelayed(launchTimeout, 30_000L)
             VocbeeUnityRuntime.open(activity, sessionJson)
-            success()
+            null
           } catch (_: Throwable) {
-            failure("UNITY_LAUNCH_FAILED", "The Unity Android Activity could not be opened.")
+            finishLaunch(failure("UNITY_LAUNCH_FAILED", "The Unity Android Activity could not be opened."))
+            null
           }
         }
+        if (result != null) promise.resolve(result)
       }
     }.runOnQueue(Queues.MAIN)
 
@@ -62,6 +83,14 @@ class VocbeeUnityModule : Module() {
       VocbeeUnityActivity.requestUnload()
       success()
     }.runOnQueue(Queues.MAIN)
+  }
+
+  private fun finishLaunch(result: Bundle) {
+    mainHandler.removeCallbacks(launchTimeout)
+    val promise = launchPromise
+    launchPromise = null
+    launchSessionId = null
+    promise?.resolve(result)
   }
 
   private fun gameInfo() = Bundle().apply {
@@ -105,15 +134,34 @@ class VocbeeUnityModule : Module() {
         if (eventType == "ready") {
           VocbeeUnityActivity.onUnityReady()
         }
-        VocbeeUnityActivity.finishForEvent(eventType)
+        val module = activeModule.get()
+        val sessionId = parsed?.optString("sessionId")
+        if (module?.launchPromise != null &&
+          (sessionId.isNullOrEmpty() || sessionId == module.launchSessionId)) {
+          when (eventType) {
+            "sessionReady" -> if (sessionId == module.launchSessionId &&
+              parsed?.optInt("bridgeVersion") == BRIDGE_VERSION &&
+              VocbeeUnityActivity.revealSession(sessionId!!)) {
+              module.finishLaunch(module.success())
+            }
+            "error", "finished" -> {
+              module.finishLaunch(module.failure(
+                "UNITY_LAUNCH_FAILED", "The game menu could not start: ${parsed?.optString("code") ?: eventType}"
+              ))
+              VocbeeUnityActivity.requestUnload()
+            }
+          }
+        }
+        VocbeeUnityActivity.finishForEvent(eventType, sessionId)
       }
     }
 
-    internal fun emitFatal(code: String) {
+    internal fun emitFatal(code: String, sessionId: String? = null) {
       emitFromUnity(
         JSONObject()
           .put("type", "error")
           .put("code", code)
+          .put("sessionId", sessionId)
           .toString()
       )
     }

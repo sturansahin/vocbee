@@ -13,6 +13,27 @@ npm run game:rollout:check -- internal-build
 
 Phase 5 kanıtında blocker, eksik artifact provenance veya dirty source varsa rollout durur.
 
+## Oyun açılışı doğrulaması
+
+Native Android/iOS açılışı, Unity'nin aynı `sessionId` ve `bridgeVersion` ile gönderdiği
+`sessionReady` olayını bekler. Unity bu olayı menü kamerasının bir karesi çizildikten sonraki
+karede gönderir. Bu sırada native yükleme katmanı Unity görüntüsünü ve dokunmaları örter;
+`openGame` ancak katman kaldırılınca başarılı sonuçlanır. Hata, iptal veya 30 saniyelik
+zaman aşımı ana uygulamaya dönüp açılış hatasını gösterir.
+
+Bu değişiklik host ve Unity birlikte yeniden derlenerek gönderilmelidir. Eski AAR/XCFramework
+`sessionReady` göndermediğinden kullanılamaz; paket provenance'ı düzeltilmiş Unity commit'iyle
+eşleşmelidir. Mevcut temiz kaynak/provenance kontrolleri atlanmaz.
+
+Her iki platformda ilk açılış, oyundan çıkıp tekrar giriş, açılış sırasında arka plana geçiş
+ve hatalı katalog kontrol edilir. İlk görünür Unity karesi yerelleştirilmiş başlangıç menüsü
+olmalı; gameplay karesi, eski oturum veya geçici İngilizce menü görünmemelidir. Açılış
+başarısızlığından sonra oyun düğmesi tekrar kullanılabilmelidir.
+
+Unity'deki `VocbeeRunnerPlayModeTests` çalıştırılır. Çizim bildirimi regresyon testi gerçek
+Game view gerektirdiği için Editor `-runTests -testPlatform PlayMode` ile, `-batchmode` ve
+`-nographics` olmadan çalıştırılır; görüntü üretmeyen batch çalıştırmada bu test atlanır.
+
 ## Aşamalar
 
 1. Internal build
@@ -63,4 +84,3 @@ Phase 5 kanıtında blocker, eksik artifact provenance veya dirty source varsa r
 Store rollout durdurulur. `game-phase6-rollout.json` içindeki rollback host/Unity commit çifti ve
 Phase 5'te kayıtlı artifact hashleri birlikte geri alınır; tek platform artifacti veya yalnız
 session schema geri alınmaz. Learned progress silinmez.
-

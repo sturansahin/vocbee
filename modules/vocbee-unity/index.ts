@@ -149,6 +149,7 @@ export async function openGame(sessionJson: string): Promise<GameActionResult> {
   }
 
   try {
+    // Native launch resolves only after this session's menu frame is rendered and revealed.
     return await nativeModule.openGame(sessionJson);
   } catch {
     return failure('NATIVE_CALL_FAILED', 'The native game launcher failed.');

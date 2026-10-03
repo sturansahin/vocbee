@@ -3,12 +3,16 @@ package com.vocbee.unity
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
+import android.widget.FrameLayout
+import android.widget.ProgressBar
 import java.lang.ref.WeakReference
 import java.lang.reflect.Proxy
+import org.json.JSONObject
 
 private const val SESSION_JSON_EXTRA = "com.vocbee.unity.SESSION_JSON"
 private const val UNITY_PLAYER_CLASS = "com.unity3d.player.UnityPlayer"
@@ -40,6 +44,8 @@ class VocbeeUnityActivity : Activity() {
   private var unloadRequested = false
   private var unityReady = false
   private var pendingSessionJson: String? = null
+  private var sessionId: String? = null
+  private var loadingCover: FrameLayout? = null
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -57,18 +63,14 @@ class VocbeeUnityActivity : Activity() {
       val playerView = findPlayerView(player)
         ?: throw IllegalStateException("Unity player view is unavailable")
       (playerView.parent as? ViewGroup)?.removeView(playerView)
-      setContentView(
-        playerView,
-        ViewGroup.LayoutParams(
-          ViewGroup.LayoutParams.MATCH_PARENT,
-          ViewGroup.LayoutParams.MATCH_PARENT
-        )
-      )
+      val root = FrameLayout(this)
+      root.addView(playerView, FrameLayout.LayoutParams(-1, -1))
+      setContentView(root)
       unityPlayer = player
+      loadSession(intent)
       callNoArg(player, "resume")
       call(player, "windowFocusChanged", true)
-      playerView.requestFocus()
-      loadSession(intent)
+      loadingCover?.requestFocus()
     } catch (_: Throwable) {
       VocbeeUnityModule.emitFatal("UNITY_LAUNCH_FAILED")
       finish()
@@ -102,6 +104,9 @@ class VocbeeUnityActivity : Activity() {
   }
 
   override fun onDestroy() {
+    if (loadingCover != null) {
+      VocbeeUnityModule.emitFatal("UNITY_LAUNCH_FAILED", sessionId)
+    }
     if (!unloadRequested) {
       unityPlayer?.let { callNoArg(it, "unload") }
     }
@@ -113,7 +118,24 @@ class VocbeeUnityActivity : Activity() {
   }
 
   private fun loadSession(intent: Intent?) {
-    pendingSessionJson = intent?.getStringExtra(SESSION_JSON_EXTRA) ?: return
+    val sessionJson = intent?.getStringExtra(SESSION_JSON_EXTRA) ?: return
+    pendingSessionJson = sessionJson
+    sessionId = JSONObject(sessionJson).optString("sessionId")
+    val root = findViewById<ViewGroup>(android.R.id.content).getChildAt(0) as FrameLayout
+    if (loadingCover == null) {
+      loadingCover = FrameLayout(this).apply {
+        setBackgroundColor(Color.BLACK)
+        isClickable = true
+        isFocusableInTouchMode = true
+        addView(ProgressBar(this@VocbeeUnityActivity), FrameLayout.LayoutParams(
+          ViewGroup.LayoutParams.WRAP_CONTENT,
+          ViewGroup.LayoutParams.WRAP_CONTENT,
+          android.view.Gravity.CENTER
+        ))
+      }
+      root.addView(loadingCover, FrameLayout.LayoutParams(-1, -1))
+    }
+    loadingCover?.requestFocus()
     sendPendingSession()
   }
 
@@ -123,10 +145,11 @@ class VocbeeUnityActivity : Activity() {
       return
     }
     window.decorView.post {
+      if (sessionJson != pendingSessionJson || unloadRequested) return@post
       if (sendMessage(sessionJson)) {
         pendingSessionJson = null
       } else {
-        VocbeeUnityModule.emitFatal("UNITY_MESSAGE_FAILED")
+        VocbeeUnityModule.emitFatal("UNITY_MESSAGE_FAILED", sessionId)
         requestUnloadAndFinish()
       }
     }
@@ -206,6 +229,9 @@ class VocbeeUnityActivity : Activity() {
       return
     }
     unloadRequested = true
+    if (loadingCover != null) {
+      VocbeeUnityModule.emitFatal("UNITY_LAUNCH_FAILED", sessionId)
+    }
     unityPlayer?.let { callNoArg(it, "unload") }
     finishFromUnity()
   }
@@ -240,9 +266,12 @@ class VocbeeUnityActivity : Activity() {
       return true
     }
 
-    internal fun finishForEvent(eventType: String?) {
-      if (eventType == "finished") {
-        activeActivity.get()?.window?.decorView?.postDelayed({ requestUnload() }, 250L)
+    internal fun finishForEvent(eventType: String?, sessionId: String?) {
+      val activity = activeActivity.get() ?: return
+      if (eventType == "finished" && sessionId == activity.sessionId) {
+        activity.window.decorView.postDelayed({
+          if (activity.sessionId == sessionId) activity.requestUnloadAndFinish()
+        }, 250L)
       }
     }
 
@@ -253,6 +282,15 @@ class VocbeeUnityActivity : Activity() {
           sendPendingSession()
         }
       }
+    }
+
+    internal fun revealSession(readySessionId: String): Boolean {
+      val activity = activeActivity.get() ?: return false
+      if (activity.unloadRequested || activity.sessionId != readySessionId) return false
+      activity.loadingCover?.let { (it.parent as? ViewGroup)?.removeView(it) }
+      activity.loadingCover = null
+      activity.unityPlayer?.let { activity.findPlayerView(it)?.requestFocus() }
+      return true
     }
   }
 }

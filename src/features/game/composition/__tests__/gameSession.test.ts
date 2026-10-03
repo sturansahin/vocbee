@@ -130,3 +130,28 @@ it('registers the session listener before launch and cleans it up safely', async
   await expect(launchGameSession()).rejects.toThrow('UNITY_LAUNCH_FAILED: failed');
   expect(mockRemoveListener).toHaveBeenCalledTimes(2);
 });
+
+it('keeps the launch pending until the native menu is ready and propagates startup failure', async () => {
+  let finishNativeLaunch!: (result: { ok: boolean; code?: string; message?: string }) => void;
+  const nativeLaunch = new Promise((resolve) => {
+    finishNativeLaunch = resolve;
+  });
+  let started!: () => void;
+  const nativeStarted = new Promise<void>((resolve) => {
+    started = resolve;
+  });
+  mockOpenGame.mockImplementationOnce(() => {
+    started();
+    return nativeLaunch;
+  });
+  let completed = false;
+  const launch = launchGameSession().finally(() => {
+    completed = true;
+  });
+
+  await nativeStarted;
+  expect(completed).toBe(false);
+  finishNativeLaunch({ ok: false, code: 'UNITY_LAUNCH_FAILED', message: 'menu timeout' });
+  await expect(launch).rejects.toThrow('UNITY_LAUNCH_FAILED: menu timeout');
+  expect(mockRemoveListener).toHaveBeenCalledTimes(1);
+});
